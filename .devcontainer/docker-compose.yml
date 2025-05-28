@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  tex:
+    build:
+      dockerfile: Dockerfile    
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    volumes:
+      - ..:/workspace:cached
+    networks:
+      get-network:
+
+networks:
+  get-network:
+    name: get-network
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.16.111.0/24

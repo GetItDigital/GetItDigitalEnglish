@@ -1,0 +1,7 @@
+\begin{circuitikz}
+    \draw (0,0) to[short, o-] (4,0) -- (4,1.5) to[L=$L_\mathrm{E}$] (2,1.5) to[R=$R_\mathrm{E}$, i<_=$I_\mathrm{E}$, -o] (0,1.5) to[open, v=$U_\mathrm{E}$] (0,0);
+    \draw (5,1.5) node[elmech](GM){GM};
+    \draw (GM.north) -- (5,3) -- (6,3) to[R=$R_\mathrm{A}$, i=$I_\mathrm{A}$, -o] (8,3) to[open, v=$U_\mathrm{A}$] (8,0)
+    (GM.south) -- (5,0) to[short, -o] (8,0)
+    (6,3) to[open, v=$U_\mathrm{q}$] (6,0);
+\end{circuitikz}

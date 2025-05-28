@@ -1,0 +1,12 @@
+\begin{circuitikz}
+    \draw (0,0) to[open, v<=$\underline{U}_1$] ++(0,3)
+    to[short, i=$\underline{I}_1$, o-] ++(1,0)
+    to[R=$R_1$] ++(2,0)
+    to[L=$L_{\sigma 1}$] ++(2,0) coordinate (x1)
+    to[L=$L_{\sigma 2}^\prime$] ++(2,0)
+    to[R=$R_2^\prime$] ++(2,0)
+    to[short, i=$\underline{I}_2^\prime$, -o] ++(1,0)
+    to[open, v=$\underline{U}_2^\prime$] ++(0,-3)
+    to[short, o-o] (0,0)
+    (x1) to[L=$L_\mathrm{h}$, *-*, i=$\underline{I}_\mu$] ++(0,-3);
+\end{circuitikz}

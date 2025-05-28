@@ -1,0 +1,8 @@
+{
+	"name": "LaTeX Container",
+	"service": "tex",
+	"dockerComposeFile": "docker-compose.yml",
+	"workspaceFolder": "/workspace",
+	"shutdownAction": "stopCompose",
+	"extensions": ["james-yu.latex-workshop"]
+}

@@ -1,0 +1,305 @@
+\immediate\write18{makeindex -g -s Arbeit.ist TeXAux/Skript.idx}
+\immediate\write18{cat TeXAux/Skript.nlo | sort | uniq -w 55 | makeindex -i -s nomencl.ist -o TeXAux/Skript.nls}
+\immediate\write18{cd TeXAux;gnuplot *.gnuplot;cd ..;}
+
+\documentclass[twoside, a4paper]{article}
+\usepackage{beamerarticle}
+\pdfminorversion=6
+
+\input{settings}
+
+% Pakete nur für das Skript
+\usepackage{fancyhdr}      		% Unterstrichene Kopfzeilen: selbstdefinierbar
+\usepackage{sanitize-umlaut}	   % Umlaute im Index
+\usepackage[pdftex,bookmarks,bookmarksopen=false,colorlinks,bookmarksnumbered]{hyperref} % Links im PDF anklickbar
+\hypersetup{% \ref Links im Skript umfärben
+    ,urlcolor=blue
+    ,citecolor=blue
+    ,linkcolor=blue
+    }
+\usepackage{hf-tikz}	% Highlighting Text/Math, Ref: https://tex.stackexchange.com/questions/52598/beamer-highlighting-aligned-math-with-overlay
+% example1: \tikzmarkin<2->[above offset={\hfoffuppera},below offset={\hfofflowera},blend mode=multiply]{a} R = \frac{U}{I} \tikzmarkend{a}
+% example2: \tikzmarkin<2-3>[above left offset={0,\hfoffuppera}, below right offset={0,\hfofflowera}]{markerid} \int^{\pi}_{0}f(x)\d x \tikzmarkend{markerid}
+% option: blend mode=multiply (to not overshadow stuff behind the highlight box) and (in beamer mode) <n>, <n->, <n-m> for overlay (ignored in article)
+% Alternativ: eigenes \highlight command s.u.
+\usepackage[Option]{overpic}	% Text auf Bild platzieren
+
+\usepackage{enumitem} % Aufzählungen nummerisch oder alphabetisch
+\usepackage{todonotes}	%Anmerkungen und to-dos erstellen
+
+\usepackage{beamervideo} % Videoerstellung
+
+%Tabellenbefehle
+\usepackage{ragged2e}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{J}[1]{>{\justifying\arraybackslash}p{#1}}
+
+% Symbolverzeichnis
+\makenomenclature
+\makeindex                      % Indizierung aktiv
+
+% Seitengrößen
+\topmargin-.7cm                 % oberen Rand verkürzen
+\textheight23.3cm               % Kerntextbereich vergrößern
+\textwidth15.35cm               % Bereichsverbreiterung
+\oddsidemargin0.5cm             % Den linken Rand verschmälern
+\evensidemargin0.5cm            % Den linken Rand verschmälern (gerade S.)
+\parindent0em                   % erste Zeile eines Absatzes nicht einrücken
+\parskip1.5ex                   % Absatzabstand
+
+% Seitentitel
+\fancyhead{}
+\fancyhead[EL,OR]{\thepage}% E - Even, O - Odd, R - Right, L - Left, C - Center
+\fancyfoot{}
+\newcommand{\sectionversion}{\tiny{Stand: \today}}
+\fancyfoot[EL,OR]{}
+
+\newcommand{\setheadempty}{\fancyhead[ER,OL]{}} % Seitennummerierung im Kopf
+% Deklaration des Dokumentenkopfes:
+\newcommand{\sectiontitle}{}
+\newcommand{\newsection}[1]{\section{#1}\renewcommand{\sectiontitle}{#1}}
+
+\newcommand{\setheadleftmark}{\fancyhead[ER,OL]{\leftmark}}
+% Deklaration des Anhangs:
+\newcommand{\setheadanhang}{
+	\fancyhead[OL]{Anhang \thesection : \sectiontitle}
+}
+\newcommand{\setheadkapitel}{
+	\fancyhead[OL]{\textsc{Kapitel \thesection : \sectiontitle}}
+   \fancyhead[ER]{GET it digital Modul \GetItDigitalModulnumber : \GetItDigitalModulname}
+	\fancyfoot[EL,OR]{}
+}
+
+
+% eigene Befehle
+\renewcommand{\d}{\mathrm{d}}	%für das Differential d/dt, überschreibt \d für "Punkt unter"
+\newcommand{\ftx}[1]{}
+\newcommand{\fta}[1]{\FloatBarrier\section{#1}}
+\newcommand{\ftb}[1]{\subsection{#1}}
+\newcommand{\ftc}[1]{\subsubsection{#1}}
+\newcommand{\s}[1]{\mode<article>{#1}} % skript only
+\renewcommand{\b}[1]{\mode<beamer>{#1}} % beamer only
+\newcommand{\f}[4]{\begin{figure}[H]\centering\includegraphics[#1]{#3}\caption{#4}\end{figure}}
+\newcommand{\fu}[2]{\begin{figure}[H]\centering{#1}\caption{#2}\end{figure}}
+\newcommand{\fo}[5]{\begin{figure}[H]\centering\begin{overpic}[#1]{#3}{#4}\end{overpic}\caption{#5}\end{figure}}
+\newcommand{\foo}[5]{\begin{figure}[H]\begin{overpic}[#1]{#3}{#4}\end{overpic}\end{figure}}
+\newcommand{\resizeboxb}[3]{#3} % resizebox but only apply in beamer (width, height, content)
+\newcommand{\resizeboxsb}[3]{\resizebox{#1\textwidth}{!}{#3}} % #1: width skript, #2: width beamer, #3: content e.g. \resizeboxx{0.8}{1}{stuff}
+\newenvironment{eq}{\begin{equation}}{\end{equation}}
+\newenvironment{eqa}{\align}{\endalign}
+
+%Übungsaufgaben
+\newcommand{\Aufgabe}[1]{}
+\renewcommand{\Loesung}[1]{}
+
+%Beispiel
+\newtcbtheorem[number within=section]{bsp}{Beispiel}{enhanced,
+	before skip=1cm,
+	after skip=1cm,
+	colframe=GETgreen,
+	colbacktitle=GETgreen,
+	colback=white,
+	boxrule=0.5mm,
+	attach boxed title to top left={xshift=1.14cm,yshift*=-\tcboxedtitleheight/2}, varwidth boxed title*=-3cm,
+	boxed title style={frame code={
+					\path[left color=tcbcolback,right color=tcbcolback,
+					middle color=tcbcolback]
+					([xshift=1.6mm]frame.north west)[rounded corners=0.5mm]
+					-- ([xshift=1.6mm]frame.north east)
+					-- ([xshift=-1mm]frame.south east)
+					-- ([xshift=-1mm]frame.south west)
+					-- cycle;
+					\path[left color=tcbcolback,right color=tcbcolback,
+					middle color=tcbcolback]
+					([xshift=-3mm]frame.north west)[rounded corners=0.5mm]
+					-- ([xshift=0.3mm]frame.north west)
+					-- ([xshift=-2.2mm]frame.south west)
+					-- ([xshift=-5.5mm]frame.south west)
+					-- cycle;
+					\path[left color=tcbcolback,right color=tcbcolback,
+					middle color=tcbcolback]
+					([xshift=-7.6mm]frame.north west)[rounded corners=0.5mm]
+					-- ([xshift=-4.3mm]frame.north west)
+					-- ([xshift=-6.8mm]frame.south west)
+					-- ([xshift=-10.1mm]frame.south west)
+					-- cycle;
+				},interior engine=empty,
+		},
+	fonttitle=\bfseries,
+	title={#2},#1,breakable}{bsp}
+
+
+
+% Highlighting (requires: hf-tikz, xargs und eigene \s, \b commands für skript only bzw. beamer only)
+\s{\newcommandx*\highlight[5][3=\hfofflower, 4=\hfoffupper,5=2]{\tikzmarkin[blend mode=multiply]{#1}(0,#3)(0,#4)#2\tikzmarkend{#1}}} 		% #5 reserved, compatibility with beamer
+\b{\newcommandx*\highlight[5][3=\hfofflower, 4=\hfoffupper,5=2]{\tikzmarkin<#5>[blend mode=multiply]{#1}(0,#3)(0,#4)#2\tikzmarkend{#1}}}	% Overlay <2,4> geht nicht, wegen Komma, <2-4> z.B. schon
+\s{\b{
+% usage: \highlight{markerid}{markercontent}[offset below][offset upper][beamer overlay]
+% Beispiele: (mit prädefinierten upper und lower offset values aus Settings.tex)
+$\highlight{id}{f(t)=\sin(\omega t)}$\quad
+$\highlight{ida}{\frac{1}{2}=\int f(t) \d t}[\hfofflowera][\hfoffuppera]$\quad
+$\highlight{idb}{\frac{\frac{\int^1_0 11}{\int^1_0 12}}{\frac{\int^1_0 21}{\int^1_0 22}}}[\hfofflowerb][\hfoffupperb][2-4]$
+}}
+
+
+\pagenumbering{roman}
+\setcounter{secnumdepth}{3}
+
+% Das Ende der Seiten muss nicht immer auf gleicher Höhe sein
+\raggedbottom
+
+% Nummerierung von Formeln und Bilder
+\numberwithin{figure}{section}
+\numberwithin{equation}{section}
+\numberwithin{table}{section}
+
+% Symbolverzeichnis
+\renewcommand\nomgroup[1]{%
+	\item[\bfseries
+	\ifstrequal{#1}{F}{Formelzeichen}{%
+		\ifstrequal{#1}{C}{Konstanten}{%
+			\ifstrequal{#1}{E}{Einheiten}{}}}%
+	]}
+\newcommand{\nomunit}[1]{%
+	\renewcommand{\nomentryend}{\hspace*{\fill}#1}}
+\renewcommand{\nomname}{Verwendete Größen und Formelzeichen}
+
+
+%PDF Eigenschaften
+
+\hypersetup{
+	pdftitle={GET it digital},
+	pdfsubject={Modul \GetItDigitalModulnumber: \GetItDigitalModulname},
+	pdfauthor={\GetItDigitalAutorenListe}
+}
+
+
+% Fett-Text bei Aufzählungen
+\setlist[enumerate]{font=\bfseries}
+\setlist[itemize]{font=\bfseries}
+
+\title{Modul \GetItDigitalModulnumber: \GetItDigitalModulname}
+\author{}
+\institute{GET it digital}
+\date{\today}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+
+	\begin{minipage}[c][2cm][c]{0.3\textwidth}
+		\includegraphics[angle=270,width=\linewidth]{FHAachen-logo2010}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[c][2cm][c]{0.3\textwidth}
+		\includegraphics[width=\linewidth]{Logo_Uni_Paderborn}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[c][2cm][c]{0.3\textwidth}
+		\includegraphics[width=\linewidth]{BUW_Logo-weiss-auf-gruen-rgb}
+	\end{minipage}
+	\\
+	\begin{minipage}[c][2cm][c]{0.3\textwidth}
+		\includegraphics[width=\linewidth]{Fachhochschule_Südwestfalen_logo}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[c][2cm][c]{0.3\textwidth}
+		\includegraphics[width=\linewidth]{logo-hrw}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[c][2cm][c]{0.3\textwidth}
+		\begin{center}
+			\includegraphics[width=0.7\linewidth]{FH_Dortmund-logo}
+		\end{center}
+	\end{minipage}
+
+	\vfill
+	\vspace{23ex}
+	{{\large GET it digital} \\[10ex]
+		\large Modul \GetItDigitalModulnumber:\\[0.5ex]}
+	{\huge \GetItDigitalModulname\\[20ex]}
+
+	{\large
+		\GetItDigitalAutoren
+	}
+\end{center}
+\vfill
+
+\begin{minipage}[t]{0.36\textwidth}
+	Ein Kooperationsvorhaben \\
+	empfohlen durch die\\[0.3cm]
+	\includegraphics[width=\linewidth]{dh_nrw.jpg}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+	gefördert durch\\[1cm]
+	\includegraphics[width=\linewidth]{mkw.jpg}
+\end{minipage}
+
+
+
+\newpage
+\pagestyle{fancyplain}
+\ \\
+\vfill
+{\hfill Stand: \today}\\
+{\includegraphics[width=0.2\linewidth]{by.png}}\\
+Weiternutzung als OER ausdrücklich erlaubt: Dieses Werk und dessen Inhalte sind lizenziert unter CC BY 4.0. Ausgenommen von der Lizenz
+sind die verwendeten Logos sowie alle anders gekennzeichneten Elemente. Nennung gemäß \href{https://open-educational-resources.de/oer-tullu-regel/}{TULLU-Regel} bitte wie folgt: \glqq GET it digital Modul \GetItDigitalModulnumber: \GetItDigitalModulname\grqq\ von \GetItDigitalAutorenListe \ Lizenz: CC BY 4.0.
+
+Der Lizenzvertrag ist hier abrufbar:\\
+\url{https://creativecommons.org/licenses/by/4.0/deed.de}\\
+Das Werk ist online verfügbar unter:\\
+\url{\GetItDigitalLink}
+\newpage
+
+{\setlength{\parskip}{0.05ex}    %Verringerter Zeilenabstand für Verzeichnisse
+	\tableofcontents
+	\newpage
+}
+
+\printnomenclature
+\cleardoublepage
+
+\pagestyle{fancyplain}
+\pagenumbering{arabic}
+\setheadkapitel
+
+\cleardoublepage
+
+\input{Inhalt}
+
+
+\cleardoublepage
+\appendix
+\setheadanhang
+
+\section{Übungsaufgaben}
+\renewcommand{\Aufgabe}[1]{#1}
+\renewcommand{\Loesung}[1]{}
+\input{Aufgaben}
+
+\section{Lösungen zu den Übungsaufgaben}
+\renewcommand{\Aufgabe}[1]{}
+\renewcommand{\Loesung}[1]{#1}
+\input{Aufgaben}
+
+% Literaturverzeichnis
+% \clearpage
+% \fancyhead[OL]{\textsc{Literaturverzeichnis}}
+% \include{Literatur}
+
+% Index erstellen
+\clearpage
+\fancyhead[OL]{\textsc{Index}}
+\addcontentsline{toc}{section}{Index}
+\printindex
+% \clearpage
+% \fancyhead[OL]{\textsc{Index}}
+% \addcontentsline{toc}{section}{Index}
+% \printindex
+
+
+\end{document}

@@ -1,0 +1,13 @@
+\begin{tikzpicture}[domain=0.9:10, samples=92]
+    \draw[->] (-0.2,0) -- (10.4,0) node[right] {$M$};
+    \draw[->] (0,-0.1) -- (0,5.2) node[above] {$n$};
+    \draw (0,-0.1) node[below] {$0$};
+    \draw (-0.1,0) node[left] {$0$};
+    \draw[blue, smooth] plot[id=Gleichstrommaschine1] function{ 1.5/ sqrt(0.1*x) };
+    \draw[dashed] (0,2.5) -- (10,2.5);
+    \draw[dashed] (3.6,0) -- (3.6,5);
+    \draw (3.6,0) node[below] {$M_\mathrm{n}$};
+    \draw (0,2.5) node[left] {$n_\mathrm{n}$};
+    \draw[red] (0,2.8) -- (10,1.966666)  (6.8,4.5) -- (7,4.5) node[right]{Fremderregt};
+    \draw[blue] (6.8,4) -- (7,4) node[right]{Reihenschluss};
+\end{tikzpicture}

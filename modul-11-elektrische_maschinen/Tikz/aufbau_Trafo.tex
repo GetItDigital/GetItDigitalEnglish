@@ -1,0 +1,83 @@
+\def\bi{3.0}%Breite innen
+			\def\hi{4.0}%Höhe innen
+			\def\ba{5.0}%breite außen
+			\def\ha{6.0}%Höhe außen
+			\def\dx{0.8}%x-Verschiebung
+			\def\dy{0.5}%y-Verschiebung
+			\def\dr{0.02}% round corner correction
+			\def\countPrim{8}%Anzahl Primärwindungen
+			\def\countSek{12}%Anzahl Sekundärwindungen
+			
+			%Berechnungen
+			\def\lx{(\ba/2 - \bi/2)}%Breite Schenkel
+			\def\ly{(\ha/2 - \hi/2)}%Höhe Schenkel
+			\def\dyPrim{((\hi-\dy) / (\countPrim+1)/4)} %y-Verschiebung Wicklung Primärseite
+			\def\dySek{((\hi-\dy) / (\countSek+1)/4)} %y-Verschiebung Wicklung Sekundärseite
+			
+			
+			\begin{circuitikz}[thick, every node/.style={transform shape, scale=1}, decoration={markings, mark=at position 0.5 with {\arrow{latex}}}]%global scale/.style={scale=1.0}, rotate=-5, xslant=-0.1
+				\begin{scope}[even odd rule]
+					\filldraw[rounded corners=2pt, fill=gray, rotate=-0, opacity=1.0] (\dx,\dy) rectangle ++(\ba,\ha) ({\lx+\dx},{\ly+\dy}) rectangle ++(\bi, \hi);%hinten
+					\fill [rounded corners=2pt, fill=gray] (\ba, 0) --++ (0, \dy+\dr+\dr) --++(\dx, 0) --cycle;%rechte Seite
+					\fill [rounded corners=2pt, fill=gray] (0, \ha) --++ (\dx+\dr+\dr, 0) --++(0, \dy)--cycle;%obere Seite
+					\filldraw[rounded corners=2pt, fill=gray!50, rotate=-0] (0,0) rectangle ++(\ba, \ha) ({\lx},{\ly}) rectangle ++(\bi, \hi);%vorne
+					\draw (\ba-\dr,\dr) --++(\dx, \dy);%Eckverbindungen
+					\draw (\ba-\dr,\ha-\dr) --++(\dx, \dy);%Eckverbindungen
+					\draw (\dr,\ha-\dr) --++(\dx, \dy);%Eckverbindungen
+				\end{scope}
+				
+				%Primärwicklung
+				%Zuleitung oben
+				\draw[rounded corners=2pt, blue, thick, postaction={decorate}] (-1,{\ly+\dr+\hi-\dy}) coordinate (U1oben)%Startpunkt oben
+				-- ++(1,0) node[black, above, pos=0.4] {$\underline{I}_1$}; %Zuleitung
+				%oberste Wicklung Primärwicklung
+				\draw[rounded corners=2pt, blue, thick]
+				(0,{\ly+\dr+\hi-\dy}) %Startpunkt oben
+				-- ++({\lx}, {-\dyPrim})% vordere Linie
+				-- ++({\dx + 0.07},{-\dyPrim + \dy})%Linie nach hinten
+				-- ++(-0.06,0.06); %Kreis rechts nach hinten
+				%restliche Primärwicklungen
+				\foreach \n in {2,...,\countPrim}
+					{
+						\draw[rounded corners=2pt, blue, thick]
+						(0,{\ly+\n*(\dyPrim * 4) + 0.08}) %Startpunkt oben
+						-- ++(-0.07, -0.08)%Kreis links
+						-- ++({\lx + 0.07}, {-\dyPrim})% vordere Linie
+						-- ++({\dx + 0.07},{-\dyPrim + \dy})%Linie nach hinten
+						-- ++(-0.06,0.06); %Kreis rechts nach hinten
+					}
+				%untere Zuleitung Primärwicklung
+				\draw [blue, thick, postaction={decorate}] (0, {\ly+((\hi-\dy) / (\countPrim+1))}) -- +(-1,0) coordinate (U1unten);
+				%Primärspannung
+				\draw (U1oben) to[open, v^=$\underline{U}_1$, o-o] (U1unten);
+				
+				%Sekundärwicklung
+				%obere Zuleitung
+				\draw [red, thick, postaction={decorate}] ({\ba+\dx + 1},{\ly+\hi-\dySek}) coordinate (U2oben)
+				-- ++(-0.83,0) node[black, above, pos=0.4] {$\underline{I}_2$};
+				%oberste Windung Sekundärwicklung
+				\draw[rounded corners=2pt, red, thick]
+				({\bi+\lx},{\ly+\hi-\dy-\dySek + 0.08}) %Startpunkt unten
+				-- ++(-0.07, -0.08)%Kreis links
+				-- ++({\lx + 0.07}, {\dySek})% vordere Linie
+				-- ++({\dx + 0.07}, {-\dySek + \dy}) coordinate(TO)
+				-- ++(0.1,0);%Linie nach hinten
+				%restliche Sekundärwicklungen
+				\foreach \n in {2,...,\countSek}
+					{
+						\draw[rounded corners=2pt, red, thick]
+						({\bi+\lx},{\ly+\n*(\dySek * 4) - \dySek + 0.08}) %Startpunkt unten
+						-- ++(-0.07, -0.08)%Kreis links
+						-- ++({\lx + 0.07}, {\dySek})% vordere Linie
+						-- ++({\dx + 0.07}, {-\dySek + \dy})%Linie nach hinten
+						-- ++(-0.06,0.06); %Kreis rechts nach hinten
+					}
+				%untere Zuleitung Sekundärwicklung
+				\draw [red, thick, postaction={decorate}] (\ba+\dx-\dr,{\ly+\dy+((\hi-\dy) / (\countSek+1))})-- +(1,0) coordinate (U2unten);
+				%Primärspannung
+				\draw (U2oben) to[open, v=$\underline{U}_2$, o-o] (U2unten);
+				
+				%Richtungspfeile Fluss
+				\draw[dashed, rounded corners=10pt, <-] ({\ba*3/5},{\ly/2}) -- ({\ba-\lx/2},{\ly/2}) -- ++(0,{\ha-\ly}) -- ++({-\ba+\lx},0) -- ++(0,{-\ha+\ly}) -- ++({\ba*2/5},0) node[right] {$\varPhi$};
+				
+			\end{circuitikz}

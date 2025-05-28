@@ -1,5 +1,5 @@
 
-\usepackage{../Templates/beamerthemeGetItDigital}  %äquivalent zu \usetheme{GetItDigital}, nur dass der Ordner Templates benutzt wird.
+
 \usepackage[utf8]{inputenc}         % Zeichenkodierung auf UTF-8
 \usepackage[ngerman]{babel}         % Deutsche Texte, Sonderzeichen
 \usepackage{color, colortbl}		% Farben, Tabellenfarben
@@ -54,6 +54,12 @@
 %\usepackage{varwidth}
 
 \usepackage{svg}					%Einbindung von svg-Grafiken
+
+\usepackage{overpic}	                            % Text auf Bild platzieren
+
+\usepackage{silence}                                        % Suppress warnings with \WarningFilter
+\WarningFilter{latex}{You have requested package}           % Suppress warning about package location
+\usepackage{../Templates/beamervideo}                       % Videoerstellung
 
 % Optionen des Grafikpakets TikZ
 \usetikzlibrary{arrows}				% schönere Pfeilspitzen

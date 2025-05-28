@@ -1,6 +1,6 @@
 {
 	"name": "LaTeX Container",
-	"service": "tex",
+	"service": "tex_getitdigital",
 	"dockerComposeFile": "docker-compose.yml",
 	"workspaceFolder": "/workspace",
 	"shutdownAction": "stopCompose",

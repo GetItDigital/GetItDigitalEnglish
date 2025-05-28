@@ -1,8 +1,5 @@
 
-% Modulspezifische Settings einbinden
-\input{Modulsettings.tex}
-
-\usetheme{GetItDigital}
+\usepackage{../Templates/beamerthemeGetItDigital}  %äquivalent zu \usetheme{GetItDigital}, nur dass der Ordner Templates benutzt wird.
 \usepackage[utf8]{inputenc}         % Zeichenkodierung auf UTF-8
 \usepackage[ngerman]{babel}         % Deutsche Texte, Sonderzeichen
 \usepackage{color, colortbl}		% Farben, Tabellenfarben
@@ -66,10 +63,10 @@
 \usetikzlibrary{patterns}           % gefüllte Flächen
 \usetikzlibrary{shapes.geometric}	% Geometrische Formen (z.B. Dreieck für Verstärker)
 \usepgfplotslibrary{fillbetween}	% Fläche zwischen zwei Kurven
-\tikzset{>=stealth'}				% schönere Pfeilspitzen 
+\tikzset{>=stealth'}				% schönere Pfeilspitzen
 
 % Bilder in getrenntem Pfad:
-\graphicspath{{Bilder/}}
+\graphicspath{{Bilder/}{../Templates/Bilder/}}
 
 
 % eigene Befehle
@@ -111,7 +108,7 @@
 		\tikz \draw[] (0,0) -- (65:1.5ex) --++ (-65:1.5ex) --cycle;%
 		\fi}}
 
-% Farbige Spannungs und Strompfeile 
+% Farbige Spannungs und Strompfeile
 % Ref: Circuitikz Manual, Kapitel Advanced voltages, currents and flows https://texdoc.org/serve/circuitikz/0#subsection.5.8 (v. 1.6.7)
 \ctikzset{bipole voltage style/.style={color=voltage}} % voltage label color
 \ctikzset{bipole current style/.style={color=red}} 	% current label color
@@ -191,6 +188,10 @@
 \definecolor{Red}{rgb}{255, 0, 0}					%Reines rot z.B. zum durchstreichen von Elementen die sich wegkürzen
 \definecolor{plotgreen}{RGB}{0,200,0}				% green
 \definecolor{green1}{RGB}{0,200,0}					% green
+\definecolor{magnetfeld}{RGB}{255,128,0}
+\definecolor{statorw1}{RGB}{230,103,35}
+\definecolor{statorw2}{RGB}{169,82,0}
+\definecolor{statorw3}{RGB}{215,25,0}
 
 %Farbkommandos für Gleichungen (equation color)
 % usage: \ec[optional color]{mathsymbols} for any color or e.g. \ecg{mathsymbols} for green mathsymbols
@@ -222,21 +223,21 @@
 					middle color=tcbcolback]
 					([xshift=1.6mm]frame.north west)[rounded corners=0.5mm]
 					-- ([xshift=1.6mm]frame.north east)
-					-- ([xshift=-1mm]frame.south east) 
+					-- ([xshift=-1mm]frame.south east)
 					-- ([xshift=-1mm]frame.south west)
 					-- cycle;
 					\path[left color=tcbcolback,right color=tcbcolback,
 					middle color=tcbcolback]
 					([xshift=-3mm]frame.north west)[rounded corners=0.5mm]
 					-- ([xshift=0.3mm]frame.north west)
-					-- ([xshift=-2.2mm]frame.south west) 
+					-- ([xshift=-2.2mm]frame.south west)
 					-- ([xshift=-5.5mm]frame.south west)
 					-- cycle;
 					\path[left color=tcbcolback,right color=tcbcolback,
 					middle color=tcbcolback]
 					([xshift=-7.6mm]frame.north west)[rounded corners=0.5mm]
 					-- ([xshift=-4.3mm]frame.north west)
-					-- ([xshift=-6.8mm]frame.south west) 
+					-- ([xshift=-6.8mm]frame.south west)
 					-- ([xshift=-10.1mm]frame.south west)
 					-- cycle;
 				},interior engine=empty,
@@ -259,21 +260,21 @@
 					middle color=tcbcolback]
 					([xshift=1.6mm]frame.north west)[rounded corners=0.5mm]
 					-- ([xshift=1.6mm]frame.north east)
-					-- ([xshift=-1mm]frame.south east) 
+					-- ([xshift=-1mm]frame.south east)
 					-- ([xshift=-1mm]frame.south west)
 					-- cycle;
 					\path[left color=tcbcolback,right color=tcbcolback,
 					middle color=tcbcolback]
 					([xshift=-3mm]frame.north west)[rounded corners=0.5mm]
 					-- ([xshift=0.3mm]frame.north west)
-					-- ([xshift=-2.2mm]frame.south west) 
+					-- ([xshift=-2.2mm]frame.south west)
 					-- ([xshift=-5.5mm]frame.south west)
 					-- cycle;
 					\path[left color=tcbcolback,right color=tcbcolback,
 					middle color=tcbcolback]
 					([xshift=-7.6mm]frame.north west)[rounded corners=0.5mm]
 					-- ([xshift=-4.3mm]frame.north west)
-					-- ([xshift=-6.8mm]frame.south west) 
+					-- ([xshift=-6.8mm]frame.south west)
 					-- ([xshift=-10.1mm]frame.south west)
 					-- cycle;
 				},interior engine=empty,
@@ -303,7 +304,7 @@
 }
 
 
-% Farbige Spannungs und Strompfeile 
+% Farbige Spannungs und Strompfeile
 % Ref: Circuitikz Manual, Kapitel Advanced voltages, currents and flows https://texdoc.org/serve/circuitikz/0#subsection.5.8 (v. 1.6.7)
 \ctikzset{!vi/.style={no v symbols, no i symbols}}  		% add option for argument "!vi" to remove voltage and current arrows
 
@@ -313,4 +314,3 @@
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
 \newcolumntype{J}[1]{>{\justifying\arraybackslash}p{#1}}
-

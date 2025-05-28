@@ -1,15 +1,11 @@
+\immediate\write18{makeindex -g -s ../Templates/Arbeit.ist TeXAux/Skript.idx}
+\immediate\write18{cat TeXAux/Skript.nlo | sort | uniq -w 55 | makeindex -i -s nomencl.ist -o TeXAux/Skript.nls}
+\immediate\write18{cd TeXAux;gnuplot *.gnuplot;cd ..;}
+
 \documentclass[aspectratio=1610]{beamer}
-\input{settings}
-
-% Pakete nur für die Folien
-\usepackage{environ}				% Erstellen von eigenen Environments
-\usepackage[beamer]{hf-tikz}		% Highlighting Text/Math, Ref: https://tex.stackexchange.com/questions/52598/beamer-highlighting-aligned-math-with-overlay
-% example1: \tikzmarkin<2->[above offset={\hfoffuppera},below offset={\hfofflowera},blend mode=multiply]{a} R = \frac{U}{I} \tikzmarkend{a}
-% example2: \tikzmarkin<2-3>[above left offset={0,\hfoffuppera}, below right offset={0,\hfofflowera}]{markerid} \int^{\pi}_{0}f(x)\d x \tikzmarkend{markerid}
-% option: blend mode=multiply (to not overshadow stuff behind the highlight box) and (in beamer mode) <n>, <n->, <n-m> for overlay (ignored in article)
-\usepackage[Option]{overpic}	% Text auf Bild platzieren
-\usepackage{beamervideo} % Videoerstellung
-
+\input{Modulsettings.tex}					% Modulspezifische Settings einbinden
+\input{../Templates/Settings.tex}	 		% Allgemeine Settings einbinden
+\input{../Templates/FolienSettings.tex}	 	% Allgemeine Foliensettings einbinden
 
 % keine Navigationssymbole:
 \setbeamertemplate{navigation symbols}{}
@@ -33,7 +29,7 @@
 \newcommand{\foo}[5]{\begin{figure}[H]\begin{overpic}[#2]{#3}{#4}\end{overpic}\end{figure}}
 \newcommand{\todo}[1]{}
 \newcommand{\missingfigure}[1]{}
-\newcommand{\resizeboxb}[3]{\resizebox{#1}{#2}{#3}} % resizebox but only apply in beamer (width, height, content) 
+\newcommand{\resizeboxb}[3]{\resizebox{#1}{#2}{#3}} % resizebox but only apply in beamer (width, height, content)
 \newcommand{\resizeboxsb}[3]{\resizebox{#2\textwidth}{!}{#3}} % e.g. \resizeboxx{0.8}{1}{stuff} % #1: width skript, #2: width beamer, #3: content
 \newenvironment{eq}{\begin{equation*}}{\end{equation*}}
 \NewEnviron{eqa}{%
@@ -78,7 +74,7 @@ $\highlight{idb}{\frac{\frac{\int^1_0 11}{\int^1_0 12}}{\frac{\int^1_0 21}{\int^
 \begin{frame}{Lizenz}
 	\begin{center}\includegraphics[width=0.2\linewidth]{by.png}\end{center}
 	Weiternutzung als OER ausdrücklich erlaubt: Dieses Werk und dessen Inhalte sind lizenziert unter CC BY 4.0. Ausgenommen von der Lizenz
-	sind die verwendeten Logos sowie alle anders gekennzeichneten Elemente. Nennung gemäß \href{https://open-educational-resources.de/oer-tullu-regel/}{TULLU-Regel} bitte wie folgt: \glqq GET it digital Modul \GetItDigitalModulnumber: \GetItDigitalModulname\grqq\ von \GetItDigitalAutorenListe \ Lizenz: CC BY 4.0.\\[2ex]	
+	sind die verwendeten Logos sowie alle anders gekennzeichneten Elemente. Nennung gemäß \href{https://open-educational-resources.de/oer-tullu-regel/}{TULLU-Regel} bitte wie folgt: \glqq GET it digital Modul \GetItDigitalModulnumber: \GetItDigitalModulname\grqq\ von \GetItDigitalAutorenListe \ Lizenz: CC BY 4.0.\\[2ex]
 	Der Lizenzvertrag ist hier abrufbar:\\
 	https://creativecommons.org/licenses/by/4.0/deed.de\\
 	Das Werk ist online verfügbar unter:\\

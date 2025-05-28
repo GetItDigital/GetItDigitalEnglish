@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  tex:
+  tex_getitdigital:
     build:
-      dockerfile: Dockerfile    
+      dockerfile: Dockerfile
     command: /bin/sh -c "while sleep 1000; do :; done"
     volumes:
       - ..:/workspace:cached

@@ -1,0 +1,65 @@
+
+\beamertemplatenavigationsymbolsempty
+
+\setbeamertemplate{title page}
+{
+    % Background Image
+	\begin{tikzpicture}[remember picture,overlay]
+		\node[above right,inner sep=0pt] at (current page.south west)
+		{
+            \IfFileExists{Bilder/GETitDigital_Titel.png}
+                {\includegraphics[width=\paperwidth]{GETitDigital_Titel}}
+                {\includegraphics[width=\paperwidth]{GETitDigital_Titel_Blank}}
+		};
+	\end{tikzpicture}
+    \vfill
+    {\color{white}\centering\bf\insertauthor  
+        
+    }
+    \medskip
+    {\color{white}\centering\Large\bf\inserttitle
+        
+    }
+    \vfill
+    \vfill
+    \vfill
+    {\color{white}\hfill\tiny\insertdate
+        
+    }
+}
+
+
+% Defines the space above the baseline of the title.
+\def \abovestrut {\vrule height 2.2ex depth 0ex width 0ex}
+% Defines the space below the baseline of the title.
+\def \belowstrut {\vrule height 0ex depth 0.6ex width 0ex}
+% Those two are needed to keep the headline at the same size.
+
+
+
+% Show total page numbers and current page number
+\setbeamertemplate{footline}{
+    \begin{beamercolorbox}[sep=2pt]{footline}
+        \abovestrut\hspace{1em}\insertshortauthor\: $\cdot$ \insertshorttitle \hfill
+        \insertframenumber/\inserttotalframenumber \hspace{2pt}\belowstrut
+    \end{beamercolorbox}
+}
+
+
+\setbeamerfont{frametitle}{size=\Large}
+\setbeamertemplate{frametitle}
+{
+    \nointerlineskip
+    \begin{beamercolorbox}[sep=2pt,leftskip=2pt,rightskip=0pt,wd=\paperwidth]{frametitle}
+        \usebeamerfont{frametitle}
+        \abovestrut\insertframetitle
+        {\ifx\insertframesubtitle\@empty
+                {\belowstrut\par}%
+                \else%
+                {\par\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\insertframesubtitle\belowstrut\par}
+            \fi
+        }%
+    \end{beamercolorbox}
+    \nointerlineskip
+}
+

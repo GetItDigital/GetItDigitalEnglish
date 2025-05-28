@@ -1,0 +1,316 @@
+
+% Modulspezifische Settings einbinden
+\input{Modulsettings.tex}
+
+\usetheme{GetItDigital}
+\usepackage[utf8]{inputenc}         % Zeichenkodierung auf UTF-8
+\usepackage[ngerman]{babel}         % Deutsche Texte, Sonderzeichen
+\usepackage{color, colortbl}		% Farben, Tabellenfarben
+\usepackage{multirow}			   	% Tabellen
+\usepackage{booktabs}				% better tables (\toprule, \midrule, \bottomrule)
+\usepackage{ifthen}                 % Konditionen
+\usepackage{makeidx}                % automatische Index-Generierung
+\usepackage[german]{nomencl}        % Nomenklatur (Symbolverzeichnis)
+\usepackage{etoolbox}               % Gliederung von der Nomenklatur
+\usepackage{icomma}				    % kein Leerzeichen hinter einem Komma, wenn es in einer Zahl steht
+\usepackage{amsmath}                % Mathematische Symbole
+\usepackage{amsfonts}               % Mathematische Symbole
+\usepackage{amssymb}                % Mathematische Symbole
+\usepackage{mathtools}				% Addon for amsmath (z.B. für \mathclap)
+\usepackage{cancel}				    % Durchstreichen von Formelteilen
+\usepackage{textcomp, gensymb}	    % Grad-Zeichen
+\usepackage{xargs}					% Eigene Kommandos mit optionalen Argumenten definieren \newcommandx* für eigenes \highlight command basierend auf hf-tikz
+\usepackage{booktabs}	   			% Für schönere horizontale Linien (FH Aachen)
+\usepackage[intlimits]{esint}		% Schönere Integrale
+\usepackage{siunitx}	   			% Für SI-Einheiten (FH Aachen)
+\usepackage{colortbl}	   			% Farben (FH Aachen)
+\usepackage{subcaption}             % Für Unterabbildungen (FH Aachen)
+%\usepackage{caption}                % Caption (FH Aachen)
+\usepackage[nice]{nicefrac}			% Math fracs in nice!
+\usepackage{xfrac}					% newer than nicefrac \sfrac{}{} > \nicefrac{}{}
+\usepackage{bm}						% Hervorhebung von Teilen einer Formel
+
+% float-Positionierungen:
+\usepackage{float}  			    % Gleitobjekte mit H genau an die angegebene Stelle positionieren.
+\usepackage{placeins} 			    % neuer Befehl: \FloatBarrier  zu dem Zeitpunkt werden alle Floats gesetzt.
+
+% Schaltpläne und LaTeX-Grafiken
+\usepackage[nosiunitx,european,straightvoltages]{circuitikz}
+\usepackage{tikz}
+\usepackage{siunitx}
+\usepackage{pgfplots}			    % Bode Diagramme
+\usepackage{mathrsfs}				% Laplace Zeichen
+%tabellen damit schaltungen ausgerrichtet sind
+\usepackage{array}
+\setlength{\marginparwidth}{2cm}	%Eingefügt von Jonas, um die To-Dos richtig darzustellen
+
+%Lernziele, Merksätze und Beispiele
+\usepackage{varwidth}
+\usepackage[most,skins,breakable]{tcolorbox}
+% Grid Overlay zur Positionierungshilfe - DEBUGGING ONLY
+%\usepackage[texcoord,grid,gridcolor=red!60,subgridcolor=green!60,gridunit=mm]{eso-pic}
+\usepackage{graphicx}				% for subfigures and resizeboxtikz
+\usepackage{adjustbox}[export]		% crop images relative to image width/height
+\usepackage{tcolorbox}				% Farbige Boxen für Definitionen, Beispiele etc.
+\tcbuselibrary{skins}
+\tcbuselibrary{breakable}			% für Seitenumbrüche in tcolorbox
+%\usepackage{varwidth}
+
+\usepackage{svg}					%Einbindung von svg-Grafiken
+
+% Optionen des Grafikpakets TikZ
+\usetikzlibrary{arrows}				% schönere Pfeilspitzen
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{angles}				% Winkelberechnung und Darstellung
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{patterns}           % gefüllte Flächen
+\usetikzlibrary{shapes.geometric}	% Geometrische Formen (z.B. Dreieck für Verstärker)
+\usepgfplotslibrary{fillbetween}	% Fläche zwischen zwei Kurven
+\tikzset{>=stealth'}				% schönere Pfeilspitzen 
+
+% Bilder in getrenntem Pfad:
+\graphicspath{{Bilder/}}
+
+
+% eigene Befehle
+\newcommand{\red}[1]{\textcolor[rgb]{1.00,0.00,0.00}{#1}}
+\newcommand{\blue}[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand{\Hz}{\operatorname{Hz}} % für gerades Hz
+\newcommand{\dB}{\operatorname{dB}} % für gerades dB (Dezibel)
+\newcommand{\dBm}{\operatorname{dBm}} % für gerades dBm {Dezibel auf 1 mW bezogen}
+\renewcommand{\Re}{\operatorname{Re}} % für gerades Re für Realteil wie in physics package (statt Fraktur-R wie in plain TeX)
+\renewcommand{\Im}{\operatorname{Im}} % für gerades Im für Imaginärteil wie in phycis package (statt Fraktur-I wie in plain TeX)
+\newcommand{\dt}[1][{}]{\frac{\mathrm{d}^{#1}}{\mathrm{d}t^{#1}}} % \dt = d/dt ; \dt[2] = d^2/dt^2
+% Note: \Re, \Im in Superscript/Subscript immer mit {}, Bsp. ^{\Im} oder _{\Re} statt ^\Im oder _\Re damit beide styles funktionieren
+\newcommand{\alttexxt}[1]{} % Alternativtext für Bilder. Wird zur Zeit noch ignoeriert.
+
+% Durchstreichen von Formelteilen
+\definecolor{Red}{rgb}{1,0,0}
+\newcommand{\colorcancel}[2]{\renewcommand{\CancelColor}{\color{#2}}\cancel{#1}}	% \colorcancel{text to cancel}{color}
+\newcommand{\redcancel}[2][red]{\renewcommand{\CancelColor}{\color{#1}}\cancel{#2}} % \redcancel[optional color]{text to cancel} <=compatible=> \cancel{text to cancel}
+
+% Multi Footnotes (gleiche Nummer, gleicher Text)
+\newcommand{\footm}{\footnotemark} %https://tex.stackexchange.com/questions/86650/how-to-display-the-footnote-in-the-bottom-of-the-slide-while-using-columns
+\newcommand*{\footmc}[1][0]{\addtocounter{footnote}{#1}\footnotemark[\value{footnote}]{}}% footmark with either same number (default) or by optional argument incremented number
+\newcommand{\foott}[1]{\footnotetext{#1}}
+% 	blabla\footm         ... undso\footmc\\ % 1...1
+% 	blabla\footmc[-1]    ... undso\footmc\\ % 2...2
+%	blabla\footmc[-1]    ... undso\footmc 	% 3...3
+%	\foott{1st info} \foott{2nd info} \foott{3rd info}	 % footnotetexts
+\newcommand\CMT[1]\null% Intra-Line Comments à la \CMT{this is a comment} https://www.reddit.com/r/LaTeX/comments/1cmq3v/intraline_comments_comment_without_commenting_out/
+
+% Symbole für Stern- und Dreieckschaltung
+\newcommand{\Stern}{{\ifmmode%
+		\text{\tikz \draw[] (0,0) -- (90:.9ex) -- (0,0) -- (-45:1.1ex) -- (0,0) -- (225:1.1ex);}%
+		\else%
+		\tikz \draw[] (0,0) -- (90:.9ex) -- (0,0) -- (-45:1.1ex) -- (0,0) -- (225:1.1ex);%
+		\fi}}
+\newcommand{\Dreieck}{{\ifmmode%
+		\text{\tikz \draw[] (0,0) -- (65:1.5ex) --++ (-65:1.5ex) --cycle;}%
+		\else%
+		\tikz \draw[] (0,0) -- (65:1.5ex) --++ (-65:1.5ex) --cycle;%
+		\fi}}
+
+% Farbige Spannungs und Strompfeile 
+% Ref: Circuitikz Manual, Kapitel Advanced voltages, currents and flows https://texdoc.org/serve/circuitikz/0#subsection.5.8 (v. 1.6.7)
+\ctikzset{bipole voltage style/.style={color=voltage}} % voltage label color
+\ctikzset{bipole current style/.style={color=red}} 	% current label color
+\ctikzset{!vi/.style={no v symbols, no i symbols}}	% add option for argument "!vi" to remove voltage and current arrows
+\ctikzset{!v/.style={no v symbols}}	% add option for argument "!v" to remove voltage arrows
+\ctikzset{!i/.style={no i symbols}}	% add option for argument "!i" to remove current arrows
+
+\newcommand{\varronly}[1]{% {node}
+	\draw [color=voltage] (#1-Vfrom) .. controls (#1-Vcont1) and (#1-Vcont2) .. (#1-Vto) node [currarrow, sloped, anchor=tip, allow upside down, pos=1]{} % arrow
+}
+\newcommand{\iarronly}[1]{% {node}
+	%\draw [red, -] (#1-Ifrom) -- (#1-Ipos); % arrow shaft (optional)
+	\node [color=red, currarrow, anchor=center,	rotate=\ctikzgetdirection{#1-Iarrow}] at (#1-Ipos) {} % arrow tip
+}
+
+% modified versions of above commands to draw arrows and labels together in one command with optional color argument
+\newcommand{\varrmore}[3][voltage]{% [color]{node}{label}
+    \draw[color=#1] (#2-Vfrom) .. controls (#2-Vcont1) and (#2-Vcont2) .. (#2-Vto) node [currarrow, sloped, anchor=tip, allow upside down, pos=1]{}; % arrow
+    \node[color=#1, anchor=\ctikzgetanchor{#2}{Vlab}, inner sep=2pt] at (#2-Vlab) {#3} % label
+	% note: label offset [...,inner sep=2pt] copied from internal macro definition, s. /usr/share/texlive/texmf-dist/tex/latex/circuitikz/circuitikz-1.2.7-body.tex line 23009)
+}
+\newcommand{\iarrmore}[3][red]{% [color]{node}{label}
+	%\draw[#1,-] (#2-Ifrom) -- (#2-Ipos); % arrow shaft (optional)
+	\node[color=#1, currarrow, anchor=center, rotate=\ctikzgetdirection{#2-Iarrow}] at (#2-Ipos) {}; % arrow tip
+	\node[color=#1, anchor=\ctikzgetanchor{#2}{Ilab}] at (#2-Ipos) {#3} % label
+}
+
+
+
+% logarithmische Achsen für den Bode-Plot
+\pgfplotsset{
+	compat=1.18,
+	log x ticks with fixed point/.style={
+		xticklabel={
+			\pgfkeys{/pgf/fpu=true}
+			\pgfmathparse{exp(\tick)}%
+			\pgfmathprintnumber[fixed relative, precision=3]{\pgfmathresult}
+			\pgfkeys{/pgf/fpu=false}
+		}
+	},
+	log y ticks with fixed point/.style={
+		yticklabel={
+			\pgfkeys{/pgf/fpu=true}{\tiny }
+			\pgfmathparse{exp(\tick)}%
+			\pgfmathprintnumber[fixed relative, precision=3]{\pgfmathresult}
+			\pgfkeys{/pgf/fpu=false}
+		}
+	}
+}
+
+
+% Für minipage, weil \columns nur in Beamer funktioniert
+\newlength\Colsep
+\setlength\Colsep{10pt}
+
+% Für hf-tikz, Offsets to adjust vertical bounds highlight boxes for typical equation sizes
+%\usepackage{xparse} % needed for hf-tikz
+\def\hfoffupper{0.3} 	% e.g. for 1
+\def\hfoffuppera{0.45} 	% e.g. for \frac{1}{1}
+\def\hfoffupperb{0.7}	% e.g. for \frac{\frac{\int^1_0 11}{\int^1_0 12}}{\frac{\int^1_0 21}{\int^1_0 22}}
+\def\hfoffupperc{0.9}
+\def\hfofflower{-0.12}	% analog zu upper offset
+\def\hfofflowera{-0.21}
+\def\hfofflowerb{-0.55}
+\def\hfofflowerc{-0.7}
+
+%Farbdefinitionen
+\definecolor{GETgreen}{RGB}{25,185,145}				%Titelstreifen der Folien
+\definecolor{leiter}{RGB}{207,163,118}				%elektrischer Leiter
+\definecolor{magnetfeld}{RGB}{255,128,0}			%magnetisches Feld
+\definecolor{flaeche}{RGB}{121,179,205}				%Querschnittsfläche
+\definecolor{voltage}{RGB}{26, 91, 144}				%Spannungspfeile
+\definecolor{spannung}{RGB}{26, 91, 144}			%farbe für spannung definieren
+\definecolor{current}{RGB}{200, 0, 0}				%Strompfeile
+\definecolor{strom}{RGB}{200, 0, 0}					%farbe für strom definieren
+\definecolor{durchflutung}{RGB}{25, 210, 220}		%magnetiche Durchflutung Theta
+\definecolor{Red}{rgb}{255, 0, 0}					%Reines rot z.B. zum durchstreichen von Elementen die sich wegkürzen
+\definecolor{plotgreen}{RGB}{0,200,0}				% green
+\definecolor{green1}{RGB}{0,200,0}					% green
+
+%Farbkommandos für Gleichungen (equation color)
+% usage: \ec[optional color]{mathsymbols} for any color or e.g. \ecg{mathsymbols} for green mathsymbols
+% ref: https://tex.stackexchange.com/questions/21598/how-to-color-math-symbols
+\newcommand{\ec}[2][black]{{\color{#1}#2}}	% set text/equation coloring, default black
+\newcommand{\eci}[1]{{\color{red}#1}}		% current color
+\newcommand{\ecv}[1]{{\color{voltage}#1}} 	% voltage color
+\newcommand{\ecr}[1]{{\color{red}#1}} 		% red color
+\newcommand{\ecg}[1]{{\color{green}#1}} 	% green color
+\newcommand{\ecb}[1]{{\color{blue}#1}} 		% blue color
+\newcommand{\ecp}[1]{{\color{purple}#1}} 	% purple color
+\newcommand{\ecy}[1]{{\color{yellow}#1}} 	% yellow color
+\newcommand{\ecc}[1]{{\color{cyan}#1}} 		% cyan color
+\newcommand{\eco}[1]{{\color{orange}#1}} 	% orange color
+
+%Lernziel
+\newtcolorbox{Lernziele}[1]{enhanced,
+	before skip=1cm,
+	after skip=1cm,
+	colframe=GETgreen,
+	colbacktitle=GETgreen,
+	colback=white!95!black,
+	boxrule=0.5mm,
+	title={Lernziele: #1},
+	attach boxed title to top left={xshift=1.14cm,yshift*=-\tcboxedtitleheight/2}, varwidth boxed title*=-3cm,
+	boxed title style={
+			frame code={
+				\path[left color=tcbcolback,right color=tcbcolback,
+					middle color=tcbcolback]
+					([xshift=1.6mm]frame.north west)[rounded corners=0.5mm]
+					-- ([xshift=1.6mm]frame.north east)
+					-- ([xshift=-1mm]frame.south east) 
+					-- ([xshift=-1mm]frame.south west)
+					-- cycle;
+					\path[left color=tcbcolback,right color=tcbcolback,
+					middle color=tcbcolback]
+					([xshift=-3mm]frame.north west)[rounded corners=0.5mm]
+					-- ([xshift=0.3mm]frame.north west)
+					-- ([xshift=-2.2mm]frame.south west) 
+					-- ([xshift=-5.5mm]frame.south west)
+					-- cycle;
+					\path[left color=tcbcolback,right color=tcbcolback,
+					middle color=tcbcolback]
+					([xshift=-7.6mm]frame.north west)[rounded corners=0.5mm]
+					-- ([xshift=-4.3mm]frame.north west)
+					-- ([xshift=-6.8mm]frame.south west) 
+					-- ([xshift=-10.1mm]frame.south west)
+					-- cycle;
+				},interior engine=empty,
+		},fonttitle=\bfseries
+	}
+
+%Merksatz
+\newtcolorbox{Merksatz}[1]{enhanced,
+	before skip=1cm,
+	after skip=1cm,
+	colframe=GETgreen,
+	colbacktitle=GETgreen,
+	colback=GETgreen!5!white,
+	boxrule=0.5mm,
+	title={Merke: #1},
+	attach boxed title to top left={xshift=1.14cm,yshift*=-\tcboxedtitleheight/2}, varwidth boxed title*=-3cm,
+	boxed title style={
+			frame code={
+				\path[left color=tcbcolback,right color=tcbcolback,
+					middle color=tcbcolback]
+					([xshift=1.6mm]frame.north west)[rounded corners=0.5mm]
+					-- ([xshift=1.6mm]frame.north east)
+					-- ([xshift=-1mm]frame.south east) 
+					-- ([xshift=-1mm]frame.south west)
+					-- cycle;
+					\path[left color=tcbcolback,right color=tcbcolback,
+					middle color=tcbcolback]
+					([xshift=-3mm]frame.north west)[rounded corners=0.5mm]
+					-- ([xshift=0.3mm]frame.north west)
+					-- ([xshift=-2.2mm]frame.south west) 
+					-- ([xshift=-5.5mm]frame.south west)
+					-- cycle;
+					\path[left color=tcbcolback,right color=tcbcolback,
+					middle color=tcbcolback]
+					([xshift=-7.6mm]frame.north west)[rounded corners=0.5mm]
+					-- ([xshift=-4.3mm]frame.north west)
+					-- ([xshift=-6.8mm]frame.south west) 
+					-- ([xshift=-10.1mm]frame.south west)
+					-- cycle;
+				},interior engine=empty,
+		},fonttitle=\bfseries
+	}
+
+
+% logarithmische Achsen für den Bode-Plot
+\pgfplotsset{
+	compat=1.18,
+	log x ticks with fixed point/.style={
+		xticklabel={
+			\pgfkeys{/pgf/fpu=true}
+			\pgfmathparse{exp(\tick)}%
+			\pgfmathprintnumber[fixed relative, precision=3]{\pgfmathresult}
+			\pgfkeys{/pgf/fpu=false}
+		}
+	},
+	log y ticks with fixed point/.style={
+		yticklabel={
+			\pgfkeys{/pgf/fpu=true}{\tiny }
+			\pgfmathparse{exp(\tick)}%
+			\pgfmathprintnumber[fixed relative, precision=3]{\pgfmathresult}
+			\pgfkeys{/pgf/fpu=false}
+		}
+	}
+}
+
+
+% Farbige Spannungs und Strompfeile 
+% Ref: Circuitikz Manual, Kapitel Advanced voltages, currents and flows https://texdoc.org/serve/circuitikz/0#subsection.5.8 (v. 1.6.7)
+\ctikzset{!vi/.style={no v symbols, no i symbols}}  		% add option for argument "!vi" to remove voltage and current arrows
+
+%Tabellenbefehle
+\usepackage{ragged2e}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{J}[1]{>{\justifying\arraybackslash}p{#1}}
+

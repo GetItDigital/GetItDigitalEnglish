@@ -1,0 +1,45 @@
+\immediate\write18{makeindex -g -s ../Templates/Arbeit.ist TeXAux/Skript.idx}
+\immediate\write18{cat TeXAux/Skript.nlo | sort | uniq -w 55 | makeindex -i -s nomencl.ist -o TeXAux/Skript.nls}
+\immediate\write18{cd TeXAux;gnuplot *.gnuplot;cd ..;}
+
+\documentclass[aspectratio=1610]{beamer}
+\input{Modulsettings.tex}					% Modulspezifische Settings einbinden
+\input{../Templates/Settings.tex}	 		% Allgemeine Settings einbinden
+\input{../Templates/FolienSettings.tex}	 	% Allgemeine Foliensettings einbinden
+
+
+\newcommand{\sectiontitle}{}
+%\newcommand{\subsectiontitle}{}
+\newcommand{\newsection}[1]{\section{#1}}
+
+
+\title{Modul \GetItDigitalModulnumber : \GetItDigitalModulname}
+\author{GET it digital}
+\date{Stand: \today}
+
+\begin{document}
+
+% Fett-Text bei Aufzählungen und in Folien in Farbe GETgreen
+\setbeamercolor{enumerate item}{fg=GETgreen}
+\setbeamerfont{enumerate item}{series=\bfseries}
+\setbeamercolor{itemize item}{fg=GETgreen}
+\setbeamerfont{itemize item}{series=\bfseries}
+
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}{Lizenz}
+	\begin{center}\includegraphics[width=0.2\linewidth]{by.png}\end{center}
+	Weiternutzung als OER ausdrücklich erlaubt: Dieses Werk und dessen Inhalte sind lizenziert unter CC BY 4.0. Ausgenommen von der Lizenz
+	sind die verwendeten Logos sowie alle anders gekennzeichneten Elemente. Nennung gemäß \href{https://open-educational-resources.de/oer-tullu-regel/}{TULLU-Regel} bitte wie folgt: \glqq GET it digital Modul \GetItDigitalModulnumber: \GetItDigitalModulname\grqq\ von \GetItDigitalAutorenListe \ Lizenz: CC BY 4.0.\\[2ex]
+	Der Lizenzvertrag ist hier abrufbar:\\
+	https://creativecommons.org/licenses/by/4.0/deed.de\\
+	Das Werk ist online verfügbar unter:\\
+	\GetItDigitalLink
+\end{frame}
+
+\input{Inhalt}
+
+\end{document}

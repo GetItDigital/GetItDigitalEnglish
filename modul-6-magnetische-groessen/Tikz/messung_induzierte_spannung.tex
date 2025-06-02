@@ -1,0 +1,7 @@
+\begin{tikzpicture}[scale=0.9]
+    \draw (0,0) -- ++ (1.3,-0.65) -- ++(0,0.7) coordinate (u1);
+    \draw (3.6,-1.8) -- ++ (-1.3,0.65) -- ++(0,0.7) coordinate (u2);
+    \draw (u2) to[open, o-o] (u1);
+    \draw[->, color=voltage, thick] (2.15, -0.38) -- (1.45, 0);
+    \draw [color=voltage] (2, -0.2) node[above] {$u_{\mathrm{i}}$};
+\end{tikzpicture}

@@ -5,3 +5,41 @@
 % example1: \tikzmarkin<2->[above offset={\hfoffuppera},below offset={\hfofflowera},blend mode=multiply]{a} R = \frac{U}{I} \tikzmarkend{a}
 % example2: \tikzmarkin<2-3>[above left offset={0,\hfoffuppera}, below right offset={0,\hfofflowera}]{markerid} \int^{\pi}_{0}f(x)\d x \tikzmarkend{markerid}
 % option: blend mode=multiply (to not overshadow stuff behind the highlight box) and (in beamer mode) <n>, <n->, <n-m> for overlay (ignored in article)
+
+% keine Navigationssymbole:
+\setbeamertemplate{navigation symbols}{}
+
+
+
+% eigene Befehle
+\renewcommand{\d}{\mathrm{d}}	%für das Differential d/dt, überschreibt \d für "Punkt unter"
+\newcommand{\s}[1]{} % skript only
+\renewcommand{\b}[1]{#1} % beamer only
+\newcommand{\ftx}[1]{\frametitle{#1}}
+\newcommand{\fta}[1]{\frametitle{#1}\only<1>{\section{#1}}}
+\newcommand{\ftb}[1]{\frametitle{#1}\only<1>{\subsection{#1}}}
+\newcommand{\ftc}[1]{\frametitle{#1}}
+
+\newcommand{\f}[4]{ \begin{center} \includegraphics[#2]{#3}\end{center}}
+\newcommand{\fu}[2]{ \begin{center} #1 \end{center}}	%z.B. für die Circuitikz Umgebung
+\newcommand{\fo}[5]{\begin{figure}[H]\centering\begin{overpic}[#2]{#3}{#4}\end{overpic}\end{figure}}
+\newcommand{\foo}[5]{\begin{figure}[H]\begin{overpic}[#2]{#3}{#4}\end{overpic}\end{figure}}
+\newcommand{\todo}[1]{}
+\newcommand{\missingfigure}[1]{}
+\newcommand{\resizeboxb}[3]{\resizebox{#1}{#2}{#3}} % resizebox but only apply in beamer (width, height, content)
+\newcommand{\resizeboxsb}[3]{\resizebox{#2\textwidth}{!}{#3}} % e.g. \resizeboxx{0.8}{1}{stuff} % #1: width skript, #2: width beamer, #3: content
+\newenvironment{eq}{\begin{equation*}}{\end{equation*}}
+\NewEnviron{eqa}{%
+	\begin{align*}
+		\BODY
+	\end{align*}
+}
+\newenvironment{bsp}[2][\ ]{}{}
+
+%Highlighting
+\newcommandx*\highlight[5][3=\hfofflower, 4=\hfoffupper,5=2]{\tikzmarkin<#5>[blend mode=multiply]{#1}(0,#3)(0,#4)#2\tikzmarkend{#1}}
+% usage: \highlight{markerid}{markercontent}[offset below][offset upper][beamer overlay]
+% Beispiele: (mit prädefinierten upper und lower offset values aus Settings.tex)
+% $\highlight{id}{f(t)=\sin(\omega t)}$\quad
+% $\highlight{ida}{\frac{1}{2}=\int f(t) \d t}[\hfofflowera][\hfoffuppera]$\quad
+% $\highlight{idb}{\frac{\frac{\int^1_0 11}{\int^1_0 12}}{\frac{\int^1_0 21}{\int^1_0 22}}}[\hfofflowerb][\hfoffupperb][2-4]$

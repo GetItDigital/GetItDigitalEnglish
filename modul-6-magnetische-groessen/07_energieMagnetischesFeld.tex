@@ -1,0 +1,82 @@
+\section{Energie im magnetischen Feld}
+\begin{frame} \ftx{Energie im magnetischen Feld} 
+	\s{Um die Energie, die in einer Spule gespeichert ist, zu berechnen, wird die in der Abbildung \ref{AbbSpule1} illustrierte Ringkernspule an eine Gleichspannungsquelle angeschlossen. Zum Zeitpunkt $t = 0$ wird die Spannungsquelle eingeschaltet. Die Spannung an der Spule ist dadurch zu jedem Zeitpunkt $t > 0$ gleich der Quellenspannung $U$. 
+	Der durch die Spule geleitene Strom wird nach Gleichung \ref{GLInduktivitaet2} linear ansteigen. Die dadurch zugeführte Energie erzeugt eine Flussdichte im Spulenkern. 
+	Um die Energie zu berechnen, die der Spule zugeführt wird, kann bekannte Gleichung der elektrischen Leistung \ref{GlArbeit} umgeformt werden und anschließend die Spannung durch Gleichung \ref{GLInduktivitaet2} ersetzt werden. 
+	Als Ergebnis dieser Umformung erhält die Änderung der magnetischen Energie $\mathrm{d}W_{\mathrm{L}}$, welche aus der Multiplikation von Induktivität $L$, dem Strom durch die Induktität $i_{\mathrm{L}}$ und der Änderungsrate des Stroms durch die Induktität $\mathrm{d}i_{\mathrm{L}}$ errechnet (siehe Gleichung \ref{GlÄnderungmagnetischeEnergie}).
+	
+		
+	% \f{width=0.5\textwidth}{width=0.5\textwidth}{Spule}{Ringkernspule mit einer angelegten Spannung \label{AbbSpule1}{\tiny(Quelle: \cite[Abbildung 6.26]{Albach})}}	
+
+		\fo{width=0.35\textwidth}{width=0.35\textwidth}{Ringspule_MagFeld}{
+			\put(6, 53){\color{current}$I$}
+			\put(11, 1){\color{current}$I$}
+			\put(76, 15){\color{magnetfeld}$\ell_{\mathrm{m}}$}
+		}{{\bf Geschlossene Ringkernspule.} \label{AbbSpule1}}	
+	}	
+	\b{
+		\begin{figure}[htbp]
+			\centering
+			\begin{minipage}{0.4\textwidth}
+				\centering
+				\fo{width=0.8\textwidth}{width=0.8\textwidth}{Ringspule_MagFeld}{
+					\put(6, 53){\color{current}$I$}
+					\put(11, 1){\color{current}$I$}
+					\put(76, 15){\color{magnetfeld}$\ell_{\mathrm{m}}$}
+				}{\bf Geschlossene Ringkernspule.}
+			\end{minipage}
+			\hfill
+			\begin{minipage}{0.54\textwidth}
+				\begin{eqa}
+					\onslide<1->{p &= \frac{\d W}{\d t} = u\cdot i \qquad u = L\cdot\frac{\d i}{\d t}}\\
+					\onslide<2->{\d W_{\mathrm{m}} &= u_{\mathrm{L}}\cdot i_{\mathrm{L}} \cdot \d t = L\cdot \frac{\d i}{\d t}\cdot i_{\mathrm{L}}\cdot \d t = L\cdot i_{\mathrm{L}} \cdot \d i_{\mathrm{L}}}
+				\end{eqa}
+				
+				\begin{eqa}
+				\begin{aligned}
+					\onslide<3->{W_{\mathrm{m}} &= L\cdot \int\limits_0^I i_{\mathrm{L}}\cdot \mathrm{d}i_{\mathrm{L}} = \frac{1}{2}\cdot L\cdot I^2 \\
+					&= \frac{1}{2}\cdot N \cdot \varPhi \cdot I}
+				\end{aligned}
+				\end{eqa}
+			\end{minipage}
+		\end{figure}
+	}
+	\s{
+		\begin{eqa}				
+				p &= \frac{\d W}{\d t} = u\cdot i \label{GlArbeit}\\
+				u &= L\cdot\frac{\d i}{\d t} \tag{\ref{GLInduktivitaet2}}\\
+				\d W_{\mathrm{m}}&=u_{\mathrm{L}}\cdot i_{\mathrm{L}} \cdot \d t = L\cdot \frac{\d i}{\d t}\cdot i_{\mathrm{L}}\cdot \d t = L\cdot i_{\mathrm{L}} \cdot \d i_{\mathrm{L}} \label{GlÄnderungmagnetischeEnergie}
+		\end{eqa}
+
+	Die Gesamtenergie ist das Integral über $\d W_{\mathrm{m}}$ vom Anfangswert $i_{\mathrm{L}}=0$ bis zum statischen Endwert $i_{\mathrm{L}} = I$. 
+	Unter der Voraussetzung einer konstanten Induktivität $L$ gilt dann:
+	
+	\begin{equation}
+	W_m = L \cdot \int_0^{I_L} i_L \cdot \d i_L = \frac{1}{2} \cdot L \cdot I^2 = \frac{1}{2} \cdot N \cdot \varPhi \cdot I
+	\end{equation}}
+	\nomenclature[FF]{$F$}{Kraft \nomunit{N}}
+	\nomenclature[FP]{$P$}{Wirkleistung \nomunit{W}}
+	\nomenclature[FW]{$W$}{Energie \nomunit{J}}
+
+\end{frame}
+\begin{frame} \ftx{Energie im magnetischen Feld} 
+	\s{Die magnetische Energie kann auch aus den Feldgrößen durch Integration mit der magnetischen Flussdichte errechnet werden:
+	\begin{equation}
+		W_{\mathrm{m}} = \ell_{\mathrm{m}}\cdot A\cdot \int\limits_0^{B_L} H\d B = \ell_{\mathrm{m}}\cdot A \cdot \frac{B_{\mathrm{L}}^2}{2\cdot \mu_{\mathrm{r}}\cdot \mu_0} 
+	\end{equation}}
+	\b{Berechnung über die Feldgrößen:
+	\begin{equation}
+		\begin{aligned}
+		\onslide<1->{W_{\mathrm{m}} &= \ell_{\mathrm{m}}\cdot A\cdot \int\limits_0^{B_L} H\d B \\
+		  &= \ell_{\mathrm{m}}\cdot A \cdot \frac{B_{\mathrm{L}}^2}{2\cdot \mu_{\mathrm{r}}\cdot \mu_0}} \\[10pt]
+		\onslide<2->{\frac{W_{\mathrm{m}}}{V} &= \frac{B_{\mathrm{L}}^2}{2\cdot \mu_0} = \frac{F}{A}}
+		\end{aligned}
+	\end{equation}}
+	\pause
+	\s{Bei einem Elektromagneten hat die Energiedichte im Luftspalt (also die Energie pro Volumen des Luftspalts) eine besondere Bedeutung: Sie steht für die \glqq Kraft des Elektromagneten\grqq. Die maximale Kraftwirkung befindet sich genau am Übergang vom Luftspalt zum Eisenkern -- entspricht also einem theoretisch unendlich schmalen Luftspalt. Da der Luftspalt, wie der Name schon sagt, meistens mit Luft gefüllt ist, ist im Normalfall $\mu_{\mathrm{r}} = 1$ und kann weggelassen werden.
+	
+	\begin{eq}
+		\frac{W_{\mathrm{m}}}{V} = \frac{B_{\mathrm{L}}^2}{2\cdot \mu_0} = \frac{F}{A}
+	\end{eq}
+	}
+\end{frame}

@@ -1,0 +1,80 @@
+\section{Skin-Effekt}
+\begin{frame} \ftx{Skin-Effekt}
+    \s{
+        Der Skin-Effekt beschreibt das Phänomen, dass sich die Stromübertragung eines mit Wechselstrom durchflossenen Leiters vom Kern zu dessen äußerem Rand verlagert. Dieser Effekt basiert auf dem Prinzip der Induktion und tritt daher ausschließlich bei der Wechselstromübertragung auf.
+        
+        Der Wechselstrom verursacht stetig sich ändernde magnetische Felder. Diese magnetischen Felder wirken gemäß der Lenz´schen Regel der Ursache entgegen und sind im Leiterinneren stärker ausgeprägt als in den Randbereichen. Es kommt zu einer elekrischen Feldschwächung im Leiterinneren, sodass die Stromübertragung an den Rand des Leiters stattfindet.  Wie weit der Wechselstrom in den Leiter eindringt, wird mit der Skin-Tiefe $\delta$ (Delta) beschrieben. Dabei gilt, dass mit steigender Frequenz die Feldschwächung im Kern zunimmt. Die Tabelle \ref{Skin-Tiefe} veranschaulicht die Auswirkungen des Skin-Effekts am Beispiel einer Kupferleitung. Während bei einer Frequenz von 5\,Hz die Skin-Tiefe 29,7\,mm beträgt, so schrumpft diese bei einer Frequenz von 500\,Hz auf 2,97\,mm.   
+    }
+
+    \begin{minipage}{0.45\textwidth}
+        \fo{width=\textwidth}{width=\textwidth}{Skin-Effekt1}{
+            \put(8, 38){\color{current}$I$}
+            \put(90, 80){\color{gray}$\delta$}
+        }{{\bf Skin-Effekt.} Die Skin-Tiefe $\delta$ beschreibt, wie Tief der Wechselstrom in den Leiter eindringt.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \b{            
+            Wechselspannung nutzt nur die Oberfläche eines Leiters.\pause
+
+            \begin{eq}
+                \delta = \sqrt{\frac{\rho_\mathrm{R}}{\pi \cdot \mu \cdot f}}
+            \end{eq}\pause
+        }
+        \begin{table}[H]
+            \s{
+                    \caption{{\bf Exemplarische Übersicht zur Skin-Tiefe.} Eindringtiefe in eine Kupferleitung in Abhängigkeit der Frequenz:}
+                    \vspace{0.5cm}
+                }\label{Skin-Tiefe}
+            \centering
+                \begin{tabular}{lc}
+                    \bf{Frequenz} & \bf{Skin-Tiefe $\delta_{Cu}$} \\
+                    \midrule
+                    $5\,\mathrm{Hz}$          & $29,7\,\mathrm{mm}$\\
+                    $50\,\mathrm{Hz}$         & $9,38\,\mathrm{mm}$\\
+                    $500\,\mathrm{Hz}$       & $2,97\,\mathrm{mm}$\\
+                    $500\,\mathrm{kHz}$       & $93,8\,\mu\mathrm{m}$         
+                \end{tabular}%
+                \s{\vspace{1.5cm}}
+        \end{table}
+    \end{minipage}
+    \s{    
+        \vspace{0.5cm}
+
+        Zur Berechnung des Skin-Effekts wird die Skin-Tiefe $\delta$ ermittelt. Die Skin-Tiefe wird durch die Wurzel des spezifischen Widerstands $\rho_\mathrm{R}$ geteilt durch das Produkt der Frequenz $f$, der Zahl Pi $\pi$ und der materialabhängigen magnetischen Permeabilität $\mu$ errechnet (siehe Gleichung \ref{GlSkinTiefe}).
+        
+        \begin{eq}
+            \delta = \sqrt{\frac{\rho_\mathrm{R}}{\pi \cdot \mu \cdot f}} \label{GlSkinTiefe}
+        \end{eq}
+        \begin{Merksatz}{Skin-Effekt}
+            Der Skin-Effekt verursacht die Verdrängung von Wechselstrom an den Rand des Leiters.
+        \end{Merksatz}
+        
+    }
+\end{frame}
+
+
+
+
+\begin{frame}\ftx{Beispiel: Skin-Tiefe}
+    \begin{bsp}{Skin-Tiefe}{}
+        Ein Kupferleiter wird mit Strom der Frequenz $f = 50 \, \mathrm{Hz}$ durchflossen. Für den Leiter sind folgende Werte gegeben:
+        \begin{itemize}
+            \item Absolute magnetische Permeabilität: $\mu = 4\pi \cdot 10^{-7} \, \frac{\mathrm{Vs}}{\mathrm{Am}}$
+            \item Spezifischer Widerstand: $\rho_{R} = 0,01721 \, \frac{\Omega\cdot\mathrm{mm}^2}{\mathrm{m}}$
+        \end{itemize}
+        Berechnen Sie die Skin-Tiefe $\delta$ des Leiters.
+        
+        \begin{align*}
+            \onslide<2-> {\delta &= \sqrt{\frac{\rho_\mathrm{R}}{\pi \cdot \mu \cdot f}}} \\
+            \onslide<3-> {\delta &= \sqrt{\frac{0,01721 \, \frac{\Omega\cdot\mathrm{mm}^2}{\mathrm{m}}}{\pi\cdot 4\pi \cdot 10^{-7} \, \frac{\mathrm{Vs}}{\mathrm{Am}} \cdot 50 \, \mathrm{Hz}}}} \\
+            \onslide<4-> {\delta &\approx 9,34 \, \mathrm{mm}}
+        \end{align*}
+    \end{bsp}
+\end{frame}
+
+\nomenclature[FF]{$f$}{Frequenz \nomunit{Hz}}
+\nomenclature[F0]{$\rho_{\mathrm{R}}$}{spezifischer Widerstand \nomunit{$\frac{\Omega\cdot \mathrm{mm}^2}{\mathrm{m}}$}}
+\nomenclature[F0]{$\delta$}{Eindringtiefe in den Leiter durch den Skin-Effekt (Skin-Tiefe) \nomunit{$\mathrm{m}$}}
+
+

@@ -1,0 +1,88 @@
+\def\bi{3.0}%Breite innen
+\def\hi{2.0}%Höhe innen
+\def\ba{5.0}%breite außen	
+\def\ha{4.0}%Höhe außen		
+\def\dx{0.8}%x-Verschiebung
+\def\dy{0.5}%y-Verschiebung		
+\def\dr{0.02}% round corner correction		
+\def\countPrim{4}%Anzahl Primärwindungen
+
+%Berechnungen
+\def\lx{(\ba/2 - \bi/2)}%Breite Schenkel
+\def\ly{(\ha/2 - \hi/2)}%Höhe Schenkel
+\def\dyPrim{((\hi-\dy) / (\countPrim+1)/4)} %y-Verschiebung Wicklung Primärseite
+
+\begin{circuitikz}[thick, every node/.style={transform shape, scale=1}, decoration={markings, mark=at position 0.5 with {\arrow{latex}}}]%global scale/.style={scale=1.0}, rotate=-5, xslant=-0.1
+	\begin{scope}[even odd rule]
+		\filldraw[rounded corners=2pt, fill=gray, rotate=-0, opacity=1.0] (\dx,\dy) rectangle ++(\ba,\ha) ({\lx+\dx},{\ly+\dy}) rectangle ++(\bi, \hi);%hinten
+		\fill [rounded corners=2pt, fill=gray] (\ba, 0) --++ (0, \dy+\dr+\dr) --++(\dx, 0) --cycle;%rechte Seite
+		\fill [rounded corners=2pt, fill=gray] (0, \ha) --++ (\dx+\dr+\dr, 0) --++(0, \dy)--cycle;%obere Seite
+		\filldraw[rounded corners=2pt, fill=gray!50, rotate=-0] (0,0) rectangle ++(\ba, \ha) ({\lx},{\ly}) rectangle ++(\bi, \hi);%vorne
+		\draw (\ba-\dr,\dr) --++(\dx, \dy);%Eckverbindungen
+		\draw (\ba-\dr,\ha-\dr) --++(\dx, \dy);%Eckverbindungen
+		\draw (\dr,\ha-\dr) --++(\dx, \dy);%Eckverbindungen
+	\end{scope}
+
+
+
+	%Richtungspfeile Fluss und Flächen
+	\draw[magnetfeld, very thick, rounded corners=10pt, <-] ({\ba*0.4},{\ly/2}) -- ({\ba*0.55},{\ly/2});
+	%Fläche unten
+	\fill[fill=gray, fill opacity=1, blend mode=screen] ({\ba/2},0) -- ++(0,{\ly}) -- ++({\dx},{\dy}) -- ++(0,{-\ly});
+	\draw ({\ba/2},0) node[below] {$A_4$};
+	\draw[magnetfeld, very thick, rounded corners=10pt] ({\ba*0.55},{\ly/2}) -- ({\ba*0.7},{\ly/2}) node[right] {$\ell_4$};
+	\draw[magnetfeld, very thick, rounded corners=10pt] ({\ba*0.8},{\ly/2}) -- ({\ba-\lx/2},{\ly/2}) -- ({\ba-\lx/2},{\ha*0.55});
+	%Fläche rechts
+	\fill[fill=gray, fill opacity=1, blend mode=screen] ({\ba-\lx+\dx},{\ha/(1.1+\dy)}) -- ++({\lx},0) -- ++({-\dx},{-\dy}) -- ++({-\lx},0);
+	\draw ({\ba+\dx},{\ha/(1.1+\dy)}) node[right] {$A_3$};
+	\draw[magnetfeld, very thick, rounded corners=10pt] ({\ba-\lx/2},{\ha*0.55}) -- ({\ba-\lx/2},{\ha*0.6}) node[above] {$\ell_3$};
+	\draw[magnetfeld, very thick, rounded corners=10pt] ({\ba*0.55},{\ha-\ly/2}) -- ({\ba*0.45},{\ha-\ly/2}) node[left] {$\ell_2$};
+	%Fläche oben
+	\fill[fill=gray, fill opacity=1, blend mode=screen] ({\ba/2},{\ha-\ly}) -- ++(0,{\ly}) -- ++({\dx},{\dy}) -- ++(0,{-\ly});
+	\draw ({\ba/2},{\ha-\ly}) node[below] {$A_2$};
+	\draw[magnetfeld, very thick, rounded corners=10pt] ({\ba-\lx/2},{\ha*0.75}) -- ({\ba-\lx/2},{\ha-\ly/2}) -- ({\ba*0.55},{\ha-\ly/2});
+	\draw[magnetfeld, very thick, rounded corners=10pt] ({\ba*0.35},{\ha-\ly/2}) -- ({\lx/2},{\ha-\ly/2}) -- ({\lx/2},{\ha*0.75}) node[below] {$\ell_1$};
+	\draw[magnetfeld, very thick, rounded corners=10pt] ({\lx/2},{\ha*0.32}) -- ({\lx/2},{\ly/2}) -- ({\ba*0.3},{\ly/2}) node[right] {$\varPhi$};
+	%Fläche links
+	\fill[fill=gray, fill opacity=1, blend mode=screen] (\dx,{\ha/2.5}) -- ++({\lx},0) -- ++({-\dx},{-\dy}) -- ++({-\lx},0);
+	\draw ({\dx+\lx},{\ha/2.5+0.2}) node[right] {$A_1$};
+	\draw[magnetfeld, very thick, rounded corners=10pt] ({\lx/2},{\ha*0.6}) -- ({\lx/2},{\ha*0.32});
+
+	%Primärwicklung
+	%Zuleitung oben
+	\draw[rounded corners=2pt, current, thick, postaction={decorate}] (-1,{\ly+\dr+\hi-\dy}) coordinate (U1oben)%Startpunkt oben
+	-- ++(1,0) node[current, above, pos=0.4] {$\underline{I}$}; %Zuleitung
+	%oberste Wicklung Primärwicklung
+	\draw[rounded corners=2pt, current, thick]
+	(0,{\ly+\dr+\hi-\dy}) %Startpunkt oben
+	-- ++({\lx}, {-\dyPrim})% vordere Linie
+	-- ++({\dx + 0.07},{-\dyPrim + \dy})%Linie nach hinten
+	-- ++(-0.06,0.06); %Kreis rechts nach hinten
+	%restliche Primärwicklungen
+	\foreach \n in {2,...,\countPrim}
+		{
+			\draw[rounded corners=2pt, current, thick]
+			(0,{\ly+\n*(\dyPrim * 4) + 0.08}) %Startpunkt oben
+			-- ++(-0.07, -0.08)%Kreis links
+			-- ++({\lx + 0.07}, {-\dyPrim})% vordere Linie
+			-- ++({\dx + 0.07},{-\dyPrim + \dy})%Linie nach hinten
+			-- ++(-0.06,0.06); %Kreis rechts nach hinten
+		}
+	%untere Zuleitung Primärwicklung
+	\draw [current, thick, postaction={decorate}] (0, {\ly+((\hi-\dy) / (\countPrim+1))}) -- +(-1,0) coordinate (U1unten);
+	%Primärspannung
+	\draw (U1oben) to[voltage, open, v^=$\underline{U}$, o-o] (U1unten);
+	\draw [-{Triangle[scale=1.2]}, color=voltage] (-1,2.4) -- (-1,1.44);
+\end{circuitikz}
+\begin{circuitikz}
+	\draw [opacity=0](-1,0) -- ++(1,0); % Abstandhalter nach links
+	\draw (0,0) coordinate (Uo) to[open, v=$\varTheta$] ++(0,-1) coordinate (Uu); % Quelle
+	%\draw [-{Triangle[scale=1.2]}, color=voltage] (Uo) -- (Uu);		
+	\draw (Uo) to[short, o-] ++(1,0) to[short] ++(0,0.5) coordinate (R2l);
+	\draw (R2l) to[short] ++(0.5,0) to[R=$R_{m2}$] ++(2,0) coordinate (R2r); % R2
+	\draw (R2r) to[color=magnetfeld, short, i=$\varPhi$] ++(0.5,0) coordinate (R3o);
+	\draw (R3o) to[R=$R_{m3}$] ++(0,-3) coordinate (R3u); % R3
+	\draw (R3u) to[R=$R_{m4}$] ++(-3,0) coordinate (R4l); % R4
+	\draw (R4l) to[R=$R_{m1}$] ++(0,1.5) coordinate (R1o); % R1
+	\draw (R1o) to[short, -o] (Uu);
+\end{circuitikz}

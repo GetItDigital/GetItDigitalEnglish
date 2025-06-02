@@ -1,0 +1,77 @@
+\section{Induktion\label{KapInduktion}}
+\begin{frame} \ftx{Induktion}
+	\index{Induktion}
+	\s{
+		Die Induktion beschreibt das Entstehen einer elektrischen Spannung in einem Leiter durch die zeitliche Änderung des magnetischen Flusses. Die Änderung des magnetischen Flusses lässt sich auf verschiedene Weisen hervorrufen.
+		In Abbildung \ref{Induktion1} wird die Induktion anhand eines sich bewegenden Leiters in einem magnetischen Feld dargestellt. Wie im vorangegangenen Beispiel (Abbildung \ref{Lorentz1}) wird auch hier ein Leiter vom Magnetfeld eines Permanentmagneten durchsetzt, jedoch mit dem Unterschied, dass diesmal kein Strom durch den Leiter fließt. 
+		Stattdessen sind die Enden des Leiters an ein Spannungsmessgerät angeschlossen. Wird nun der Leiter mit einer äußeren Kraft bewegt, wirkt die Lorentzkraft auf die Elektronen im Leiter. Durch die Bewegung entsteht eine Ladungstrennung im Leiter. Diese Ladungstrennung wird Induktionsspannung genannt. Solange der Leiter oder das induzierende Magnetfeld in Bewegung ist, kann eine Spannung am Messgerät abgelesen werden.
+		\fo{width=0.45\textwidth}{}{Induktion_neu}{
+			\put(15, 35){\color{gray}$v$}
+			\put(78, 72){\color{magnetfeld}$N$}
+			\put(78, 33){\color{magnetfeld}$S$}
+			\put(15, 23){\color{magnetfeld}$\vec{B},\,\varPhi $}
+			\put(49, 39){\color{gray}$\ell$}
+			\put(17, 73){\input{Tikz/messung_induzierte_spannung}
+			}
+		}{{\bf Versuchsaufbau zur Messung einer induzierten Spannung.} Wird durch Bewegung des Leiters ein zeitlich veränderliches Magnetfeld erzeugt, bewirkt die Lorentzkraft im Leiter eine Ladungstrennung, wodurch eine messbare Spannung induziert wird. \label{Induktion1}}
+
+		Vereinfacht lässt sich die induzierte Spannung mittels der Gleichung \ref{GlvereinfachtInduktionsgesetz} berechnen. Die Höhe der induzierten Spannung $u_{\mathrm{i}}$ hängt von der magnetischen Flussdichte $B$, der Länge des Leiters im Magnetfeld $\ell$, der Geschwindigkeit der Bewegung oder Flussänderung $v$ und der Anzahl der Leiter im Magnetfeld $N$ ab. Da diese Spannung zeitveränderlich ist, wird das Formelzeichen $u_{\mathrm{i}}$ klein geschrieben.
+			\begin{eq}
+				u_{\mathrm{i}} = B\cdot \ell\cdot v\cdot N \label{GlvereinfachtInduktionsgesetz}
+			\end{eq}\\
+	
+		Allgemein gilt, dass die induzierte Spannung $u_{\mathrm{i}}$ die zeitliche Änderung des magnetischen Flusses ${\d \varPhi}/{\d t}$ multipliziert mit der Anzahl der Leiter N ist. Dies spiegelt sich im allgemeinen Induktionsgesetz (Gleichung \ref{GlInduktionsgesetz}) wider. 
+		Das negative Vorzeichen ist auf die Lenzsche Regel zurückzuführen. Diese besagt, dass Ursache und Wirkung sich immer entgegengesetzt verhalten.
+	}
+	
+	\b{
+		\begin{minipage}{0.4\textwidth}
+			\fo{}{width=\textwidth}{Induktion_neu}{
+				\put(15, 34){\color{gray}$v$}
+				\put(78, 72){\color{magnetfeld}$N$}
+				\put(78, 33){\color{magnetfeld}$S$}
+				\put(11, 23){\color{magnetfeld}$\vec{B},\,\varPhi $}
+				\put(49, 39){\color{gray}$\ell$}
+				\put(17, 73){\begin{tikzpicture}[scale=0.73]
+					\draw (0,0) -- ++ (1.3,-0.65) -- ++(0,0.7) coordinate (u1);
+					\draw (3.6,-1.8) -- ++ (-1.3,0.65) -- ++(0,0.7) coordinate (u2);
+					\draw (u2) to[open, o-o] (u1);
+					\draw[->, color=voltage, thick] (2.15, -0.38) -- (1.45, 0);
+					\draw [color=voltage] (2, -0.2) node[above] {$u_{\mathrm{i}}$};
+				\end{tikzpicture}
+				}
+			}{}
+		\end{minipage}%
+		\pause%
+		\hfill%
+		\begin{minipage}{0.57\textwidth}
+			\begin{eq}
+				u_{\mathrm{i}} = B\cdot \ell\cdot v\cdot N
+			\end{eq}\\
+			Die Höhe der induzierten Spannung hängt ab von:
+			\begin{itemize}
+				\item der magnetischen Flussdichte $B$
+				\item der Länge des Leiters im Magnetfeld $\ell$
+				\item der Geschwindigkeit der Bewegung oder \\Flussänderung $v$
+				\item der Anzahl der Leiter im Magnetfeld $N$
+			\end{itemize}
+		\end{minipage}
+	}
+	% \f{trim=0 0cm 0 0,clip,width=0.5\textwidth}{trim=0 0cm 0 0,clip,width=0.45\textwidth}{Induktion1}{Messung der induzierten Spannung \label{Induktion1}{\tiny(Quelle: \cite[Kapitel 5.6.1]{Tkotz})}}
+
+\end{frame}
+\begin{frame} \ftx{Induktion}
+
+	\b{Allgemeines Induktionsgesetz:}
+	\begin{eq}
+		u_{\mathrm{i}} = -N\cdot \frac{\d \varPhi}{\d t}\label{GlInduktionsgesetz}
+	\end{eq} 
+	\pause
+\s{\begin{Merksatz}{Induktion}
+	Die Induktion ist die elektrische Spannung $u_{\mathrm{i}}$, die durch eine Änderung des magnetischen Flusses ${\d \varPhi}/{\d t}$ entsteht.
+\end{Merksatz}}
+	\b{Lenzsche Regel\index{Lenzsche Regel}:
+	\par	
+	\center{Ursache und Wirkung sind stets entgegengesetzt.}
+	}
+\end{frame}

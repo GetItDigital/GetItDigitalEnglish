@@ -1,0 +1,210 @@
+\immediate\write18{makeindex -g -s Arbeit.ist TeXAux/Skript.idx}
+\immediate\write18{cat TeXAux/Skript.nlo | sort | uniq -w 55 | makeindex -i -s nomencl.ist -o TeXAux/Skript.nls}
+\immediate\write18{cd TeXAux;gnuplot *.gnuplot;cd ..;}
+
+\documentclass[twoside, a4paper]{article}
+\usepackage{beamerarticle}
+\pdfminorversion=6
+
+\input{../Templates/Settings.tex}	 		% Allgemeine Settings einbinden
+\input{../Templates/SkriptSettings.tex}	 	% Allgemeine Foliensettings einbinden
+
+
+%PDF Eigenschaften
+\hypersetup{
+	pdftitle={GET it digital},
+	pdfauthor={verschiedene Autoren}
+}
+
+\graphicspath{
+	{modul-01-elektrische-grundgroessen/Bilder/}
+	{modul-02-energie-und-leistung/Bilder/}
+	{modul-03-elektrische-bauelemente/Bilder/}
+	{modul-04-grundlegende-gleichstromnetzwerke/Bilder/}
+	{modul-05-erweiterte-gleichstromnetzwerke/Bilder/}
+	{modul-06-magnetische-groessen/Bilder/}
+	{modul-07-periodische-groessen/Bilder/}
+	{modul-08-schaltungen-variabler-frequenz/Bilder/}
+	{modul-09-halbleiterbauelemente/Bilder/}
+	{modul-10-operationsverstaerker/Bilder/}
+	{modul-11-elektrische-maschinen/Bilder/}
+	{modul-12-schaltvorgaenge/Bilder/}
+}
+
+
+
+%\title{Modul \GetItDigitalModulnumber: \GetItDigitalModulname}
+%\author{}
+\institute{GET it digital}
+\date{\today}
+
+\begin{document}
+\renewcommand{\partname}{Modul}
+\thispagestyle{empty}
+\begin{center}
+
+	\begin{minipage}[c][2cm][c]{0.3\textwidth}
+		\includegraphics[angle=270,width=\linewidth]{FHAachen-logo2010}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[c][2cm][c]{0.3\textwidth}
+		\includegraphics[width=\linewidth]{Logo_Uni_Paderborn}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[c][2cm][c]{0.3\textwidth}
+		\includegraphics[width=\linewidth]{BUW_Logo-weiss-auf-gruen-rgb}
+	\end{minipage}
+	\\
+	\begin{minipage}[c][2cm][c]{0.3\textwidth}
+		\includegraphics[width=\linewidth]{Fachhochschule_Südwestfalen_logo}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[c][2cm][c]{0.3\textwidth}
+		\includegraphics[width=\linewidth]{logo-hrw}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[c][2cm][c]{0.3\textwidth}
+		\begin{center}
+			\includegraphics[width=0.7\linewidth]{FH_Dortmund-logo}
+		\end{center}
+	\end{minipage}
+
+	\vfill
+	%\vspace{23ex}
+	{\large GET it digital} \\[10ex]
+	{\large Grundlagen der Elektrotechnik}\\[10ex]
+	\ \\
+\end{center}
+\vfill
+
+\begin{minipage}[t]{0.36\textwidth}
+	Ein Kooperationsvorhaben \\
+	empfohlen durch die\\[0.3cm]
+	\includegraphics[width=\linewidth]{dh_nrw.jpg}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+	gefördert durch\\[1cm]
+	\includegraphics[width=\linewidth]{mkw.jpg}
+\end{minipage}
+
+
+
+\newpage
+\pagestyle{fancyplain}
+
+Die einzelnen Module wurden erstellt von:
+\begin{itemize}
+	\item Modul 1 und 4: Universität Paderborn, Henrik Bode
+	\item Modul 2 und 3: Fachhochschule Aachen, Michael Hillgärtner, Sven Micun, Filimon Stergianos
+	\item Modul 5: Fachhochschule Dortmund, Martin Kiel, Torben Meibeck
+	\item Modul 6 und 11: Bergische Universität Wuppertal, Ralf Wegener, Grzegorz Lisicki, Josef Kirschner
+	\item Modul 7: Fachhochschule Dortmund, Stefan Kempen, Torben Meibeck
+	\item Modul 8 und 12: Fachhochschule Südwestfalen, Matthias Werle
+	\item Modul 9 und 10: Hochschule Ruhr West, Marvin Kaminski, Kerstin Siebert, Jonas Brodmann, Dominik Thiem
+\end{itemize}
+
+\vfill
+{\hfill Stand: \today}\\
+{\includegraphics[width=0.2\linewidth]{by.png}}\\
+Weiternutzung als OER ausdrücklich erlaubt: Dieses Werk und dessen Inhalte sind lizenziert unter CC BY 4.0. Ausgenommen von der Lizenz
+sind die verwendeten Logos sowie alle anders gekennzeichneten Elemente. Nennung gemäß \href{https://open-educational-resources.de/oer-tullu-regel/}{TULLU-Regel} bitte wie folgt: \glqq GET it digital \grqq\ von verschiedenen Autoren \\ Lizenz: CC BY 4.0.
+
+Der Lizenzvertrag ist hier abrufbar:\\
+\url{https://creativecommons.org/licenses/by/4.0/deed.de}\\
+Das Werk ist online verfügbar unter:\\
+\url{https://getitdigital.uni-wuppertal.de/module/komplett/Skript.pdf}
+\newpage
+
+{\setlength{\parskip}{0.05ex}    %Verringerter Zeilenabstand für Verzeichnisse
+	\tableofcontents
+	\newpage
+}
+
+\printnomenclature
+\cleardoublepage
+
+\pagestyle{fancyplain}
+\pagenumbering{arabic}
+\setheadkapitel
+
+\cleardoublepage
+\part{Elektrische Grundgrößen}
+%\import{\localpath modul-1-elektrische-grundgroessen/}{Inhalt}
+
+\cleardoublepage
+\part{Energie und Leistung}
+%\import{\localpath modul-2-energie-und-leistung/}{Inhalt}
+
+\cleardoublepage
+\part{Elektrische Bauelemente}
+%\import{\localpath modul-3-elektrische-bauelemente/}{Inhalt}
+
+\cleardoublepage
+\part{Grundlegende Gleichstromnetzwerke}
+%\import{\localpath modul-4-grundlegende-gleichstromnetzwerke/}{Inhalt}
+
+\cleardoublepage
+\part{Erweiterte Gleichstromnetzwerke}
+%\import{\localpath modul-5-erweiterte-gleichstromnetzwerke/}{Inhalt}
+
+\cleardoublepage
+\part{Magnetische Größen}
+%\import{\localpath modul-6-magnetische-groessen/}{Inhalt}
+
+\cleardoublepage
+\part{Periodische Größen}
+%\import{\localpath modul-7-periodische-groessen/}{Inhalt}
+
+\cleardoublepage
+\part{Schaltungen variabler Frequenz}
+%\import{\localpath modul-8-schaltungen-variabler-frequenz/}{Inhalt}
+
+\cleardoublepage
+\part{Halbleiterbauelemente}
+%\import{\localpath modul-9-halbleiterbauelemente/}{Inhalt}
+
+\cleardoublepage
+\part{Operationsverstärker}
+%\import{\localpath modul-10-operationsverstaerker/}{Inhalt}
+
+\cleardoublepage
+\part{Elektrische Maschinen}
+\import{\localpath modul-11-elektrische-maschinen/}{Inhalt}
+
+\cleardoublepage
+\part{Schaltvorgänge}
+%\import{\localpath modul-12-schaltvorgaenge/}{Inhalt}
+
+
+\cleardoublepage
+\appendix
+\setheadanhang
+
+%\section{Übungsaufgaben}
+%\renewcommand{\Aufgabe}[1]{#1}
+%\renewcommand{\Loesung}[1]{}
+%\input{Aufgaben}
+
+%\section{Lösungen zu den Übungsaufgaben}
+%\renewcommand{\Aufgabe}[1]{}
+%\renewcommand{\Loesung}[1]{#1}
+%\input{Aufgaben}
+
+%\clearpage
+%\fancyhead[OL]{\textsc{Bildernachweis}}
+%\listoffigures
+
+% Literaturverzeichnis
+%\clearpage
+%\fancyhead[OL]{\textsc{Literaturverzeichnis}}
+%\input{Literatur}
+
+% Index erstellen
+\clearpage
+\fancyhead[OL]{\textsc{Index}}
+\addcontentsline{toc}{section}{Index}
+\printindex
+
+
+\end{document}

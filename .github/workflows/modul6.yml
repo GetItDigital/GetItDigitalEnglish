@@ -11,7 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      imnge: ghcr.io/getitdigital/texcontainer:main
+      image: ghcr.io/getitdigital/texcontainer:main
 
     steps:
     - name: checkout

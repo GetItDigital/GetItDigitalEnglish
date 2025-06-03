@@ -21,18 +21,8 @@ jobs:
       id: skript
       working-directory: ./modul-06-magnetische-groessen
       run: latexmk -interaction=nonstopmode -file-line-error -pdf --shell-escape -outdir=TeXAux Skript.tex
-    - name: Upload Skript
-      uses: actions/upload-artifact@v2
-      with:
-        name: artifacts
-        path: modul-06-magnetische-groessen/TeXAux/Skript.pdf
 
     - name: compile Folien
       id: folien
       working-directory: ./modul-06-magnetische-groessen
       run: latexmk -interaction=nonstopmode -file-line-error -pdf --shell-escape -outdir=TeXAux Folien.tex
-    - name: Upload Folien
-      uses: actions/upload-artifact@v2
-      with:
-        name: artifacts
-        path: modul-06-magnetische-groessen/TeXAux/Folien.pdf

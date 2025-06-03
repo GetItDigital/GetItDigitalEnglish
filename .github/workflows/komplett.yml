@@ -1,0 +1,28 @@
+name: Komplett
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/getitdigital/texcontainer:main
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+
+    - name: compile Skript
+      id: skript
+      working-directory: ./
+      run: latexmk -interaction=nonstopmode -file-line-error -pdf --shell-escape -outdir=TeXAux Skript.tex
+    - name: Upload Skript as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: Komplett-Skript
+        path: TeXAux/Skript.pdf

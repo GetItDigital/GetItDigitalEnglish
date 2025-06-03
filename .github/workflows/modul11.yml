@@ -1,4 +1,4 @@
-name: Modul 6
+name: Modul 11
 
 on:
   push:
@@ -19,20 +19,20 @@ jobs:
 
     - name: compile Skript
       id: skript
-      working-directory: ./modul-06-magnetische-groessen
+      working-directory: ./modul-11-elektrische-maschinen
       run: latexmk -interaction=nonstopmode -file-line-error -pdf --shell-escape -outdir=TeXAux Skript.tex
     - name: Upload Skript as artifact
       uses: actions/upload-artifact@v4
       with:
-        name: Modul-06-Skript
-        path: modul-06-magnetische-groessen/TeXAux/Skript.pdf
+        name: Modul-11-Skript
+        path: modul-11-elektrische-maschinen/TeXAux/Skript.pdf
 
     - name: compile Folien
       id: folien
-      working-directory: ./modul-06-magnetische-groessen
+      working-directory: ./modul-11-elektrische-maschinen
       run: latexmk -interaction=nonstopmode -file-line-error -pdf --shell-escape -outdir=TeXAux Folien.tex
     - name: Upload Folien as artifact
       uses: actions/upload-artifact@v4
       with:
-        name: Modul-06-Folien
-        path: modul-06-magnetische-groessen/TeXAux/Folien.pdf
+        name: Modul-11-Folien
+        path: modul-11-elektrische-maschinen/TeXAux/Folien.pdf

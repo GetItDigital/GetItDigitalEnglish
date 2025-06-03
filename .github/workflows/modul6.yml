@@ -1,0 +1,28 @@
+name: Compile Modul 6
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      imnage: ghcr.io/getitdigital/texcontainer:main
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+
+    - name: compile Skript
+      id: skript
+      working-directory: ./modul-06-magnetische-groessen
+      run: latexmk -interaction=nonstopmode -file-line-error -pdf --shell-escape -outdir=TeXAux Skript.tex
+
+    - name: compile Folien
+      id: folien
+      working-directory: ./modul-06-magnetische-groessen
+      run: latexmk -interaction=nonstopmode -file-line-error -pdf --shell-escape -outdir=TeXAux Folien.tex

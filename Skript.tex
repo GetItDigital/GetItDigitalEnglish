@@ -10,6 +10,9 @@
 \input{../Templates/SkriptSettings.tex}	 	% Allgemeine Foliensettings einbinden
 
 
+\newcommand{\GetItDigitalModulnumber}{0}
+\usepackage{import}				% relatives input
+
 %PDF Eigenschaften
 \hypersetup{
 	pdftitle={GET it digital},
@@ -17,6 +20,7 @@
 }
 
 \graphicspath{
+	{Templates/Bilder/}
 	{modul-01-elektrische-grundgroessen/Bilder/}
 	{modul-02-energie-und-leistung/Bilder/}
 	{modul-03-elektrische-bauelemente/Bilder/}
@@ -31,12 +35,9 @@
 	{modul-12-schaltvorgaenge/Bilder/}
 }
 
-
-
-%\title{Modul \GetItDigitalModulnumber: \GetItDigitalModulname}
-%\author{}
 \institute{GET it digital}
 \date{\today}
+
 
 \begin{document}
 \renewcommand{\partname}{Modul}
@@ -126,55 +127,57 @@ Das Werk ist online verfügbar unter:\\
 
 \pagestyle{fancyplain}
 \pagenumbering{arabic}
-\setheadkapitel
+\fancyhead[OL]{\textsc{Kapitel \thesection : \sectiontitle}}
+\fancyhead[ER]{GET it digital}
+\fancyfoot[EL,OR]{}
 
 \cleardoublepage
 \part{Elektrische Grundgrößen}
-%\import{\localpath modul-1-elektrische-grundgroessen/}{Inhalt}
+%\import{modul-01-elektrische-grundgroessen/}{Inhalt}
 
 \cleardoublepage
 \part{Energie und Leistung}
-%\import{\localpath modul-2-energie-und-leistung/}{Inhalt}
+%\import{modul-02-energie-und-leistung/}{Inhalt}
 
 \cleardoublepage
 \part{Elektrische Bauelemente}
-%\import{\localpath modul-3-elektrische-bauelemente/}{Inhalt}
+%\import{modul-03-elektrische-bauelemente/}{Inhalt}
 
 \cleardoublepage
 \part{Grundlegende Gleichstromnetzwerke}
-%\import{\localpath modul-4-grundlegende-gleichstromnetzwerke/}{Inhalt}
+%\import{modul-04-grundlegende-gleichstromnetzwerke/}{Inhalt}
 
 \cleardoublepage
 \part{Erweiterte Gleichstromnetzwerke}
-%\import{\localpath modul-5-erweiterte-gleichstromnetzwerke/}{Inhalt}
+%\import{modul-05-erweiterte-gleichstromnetzwerke/}{Inhalt}
 
 \cleardoublepage
 \part{Magnetische Größen}
-%\import{\localpath modul-6-magnetische-groessen/}{Inhalt}
+%\import{modul-06-magnetische-groessen/}{Inhalt}
 
 \cleardoublepage
 \part{Periodische Größen}
-%\import{\localpath modul-7-periodische-groessen/}{Inhalt}
+%\import{modul-07-periodische-groessen/}{Inhalt}
 
 \cleardoublepage
 \part{Schaltungen variabler Frequenz}
-%\import{\localpath modul-8-schaltungen-variabler-frequenz/}{Inhalt}
+%\import{modul-08-schaltungen-variabler-frequenz/}{Inhalt}
 
 \cleardoublepage
 \part{Halbleiterbauelemente}
-%\import{\localpath modul-9-halbleiterbauelemente/}{Inhalt}
+%\import{modul-09-halbleiterbauelemente/}{Inhalt}
 
 \cleardoublepage
 \part{Operationsverstärker}
-%\import{\localpath modul-10-operationsverstaerker/}{Inhalt}
+%\import{modul-10-operationsverstaerker/}{Inhalt}
 
 \cleardoublepage
 \part{Elektrische Maschinen}
-\import{\localpath modul-11-elektrische-maschinen/}{Inhalt}
+\import{modul-11-elektrische-maschinen/}{Inhalt}
 
 \cleardoublepage
 \part{Schaltvorgänge}
-%\import{\localpath modul-12-schaltvorgaenge/}{Inhalt}
+%\import{modul-12-schaltvorgaenge/}{Inhalt}
 
 
 \cleardoublepage

@@ -27,6 +27,7 @@ jobs:
         name: Komplett-Skript
         path: TeXAux/Skript.pdf
     - name: upload to server
+      shell: bash
       run: |
         echo "Uploading Skript.pdf to server"
         which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )

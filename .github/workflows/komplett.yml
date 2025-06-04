@@ -26,3 +26,12 @@ jobs:
       with:
         name: Komplett-Skript
         path: TeXAux/Skript.pdf
+    - name: upload to server
+      uses: Dylan700/sftp-upload-action@latest
+      with:
+        server: ${{ secrets.SFTP_SERVER }}
+        username: ${{ secrets.SFTP_USERNAME }}
+        key: ${{ secrets.SFTP_KEY }}
+        port: 22
+        uploads: |
+          TeXAux/Skript.pdf => ./Skript.pdf

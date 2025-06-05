@@ -18,13 +18,15 @@ jobs:
       uses: actions/checkout@v4
       with:
         fetch-depth: 2
-    # ensure changed-files can read repo files from git
+
+    # Test if files in this module are changed
     - name: Configure Git Safe Directory
       run: git config --global --add safe.directory /__w/GetItDigital/GetItDigital
     - name: Get changed files in the docs folder
       id: changed-files-specific
       uses: tj-actions/changed-files@ed68ef82c095e0d48ec87eccea555d944a631a4c # v46
-
+      with:
+        files: modul-06-magnetische-groessen/*
     - name: List all changed files
       env:
         ALL_CHANGED_FILES: ${{ steps.changed-files-specific.outputs.all_changed_files }}
@@ -33,6 +35,7 @@ jobs:
           echo "$file was changed"
         done
 
+    # Compile Skript only if files in this module are changed
     - name: compile Skript
       id: skript
       if: steps.changed-files-specific.outputs.any_changed == 'true'
@@ -44,6 +47,7 @@ jobs:
         name: Modul-06-Skript
         path: modul-06-magnetische-groessen/TeXAux/Skript.pdf
 
+    # Compile Slides only if files in this module are changed
     - name: compile Folien
       id: folien
       if: steps.changed-files-specific.outputs.any_changed == 'true'

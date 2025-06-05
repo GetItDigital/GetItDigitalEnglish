@@ -17,8 +17,15 @@ jobs:
     - name: checkout
       uses: actions/checkout@v4
 
+    - name: Get changed files in the docs folder
+      id: changed-files-specific
+      uses: tj-actions/changed-files@ed68ef82c095e0d48ec87eccea555d944a631a4c # v46
+      with:
+        files: modul-06-magnetische-groessen/*
+
     - name: compile Skript
       id: skript
+      if: steps.changed-files-specific.outputs.any_changed == 'true'
       working-directory: ./modul-06-magnetische-groessen
       run: latexmk -interaction=nonstopmode -file-line-error -pdf --shell-escape -outdir=TeXAux Skript.tex
     - name: Upload Skript as artifact
@@ -29,6 +36,7 @@ jobs:
 
     - name: compile Folien
       id: folien
+      if: steps.changed-files-specific.outputs.any_changed == 'true'
       working-directory: ./modul-06-magnetische-groessen
       run: latexmk -interaction=nonstopmode -file-line-error -pdf --shell-escape -outdir=TeXAux Folien.tex
     - name: Upload Folien as artifact

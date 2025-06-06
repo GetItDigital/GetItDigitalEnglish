@@ -26,14 +26,9 @@ jobs:
       id: changed-files-specific
       uses: tj-actions/changed-files@ed68ef82c095e0d48ec87eccea555d944a631a4c # v46
       with:
-        files: modul-06-magnetische-groessen/*
-    - name: List all changed files
-      env:
-        ALL_CHANGED_FILES: ${{ steps.changed-files-specific.outputs.all_changed_files }}
-      run: |
-        for file in ${ALL_CHANGED_FILES}; do
-          echo "$file was changed"
-        done
+        files: |
+          modul-06-magnetische-groessen/*
+          Templates/*
 
     # Compile Skript only if files in this module are changed
     - name: compile Skript
@@ -42,6 +37,7 @@ jobs:
       working-directory: ./modul-06-magnetische-groessen
       run: latexmk -interaction=nonstopmode -file-line-error -pdf --shell-escape -outdir=TeXAux Skript.tex
     - name: Upload Skript as artifact
+      if: steps.changed-files-specific.outputs.any_changed == 'true'
       uses: actions/upload-artifact@v4
       with:
         name: Modul-06-Skript
@@ -54,6 +50,7 @@ jobs:
       working-directory: ./modul-06-magnetische-groessen
       run: latexmk -interaction=nonstopmode -file-line-error -pdf --shell-escape -outdir=TeXAux Folien.tex
     - name: Upload Folien as artifact
+      if: steps.changed-files-specific.outputs.any_changed == 'true'
       uses: actions/upload-artifact@v4
       with:
         name: Modul-06-Folien

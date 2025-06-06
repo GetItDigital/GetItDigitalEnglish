@@ -16,22 +16,41 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 2
 
+    # Test if files in this module are changed
+    - name: Configure Git Safe Directory
+      run: git config --global --add safe.directory /__w/GetItDigital/GetItDigital
+    - name: Get changed files in the docs folder
+      id: changed-files-specific
+      uses: tj-actions/changed-files@ed68ef82c095e0d48ec87eccea555d944a631a4c # v46
+      with:
+        files: |
+          modul-11-elektrische-maschinen/*
+          Templates/*
+
+    # Compile Skript only if files in this module are changed
     - name: compile Skript
       id: skript
+      if: steps.changed-files-specific.outputs.any_changed == 'true'
       working-directory: ./modul-11-elektrische-maschinen
       run: latexmk -interaction=nonstopmode -file-line-error -pdf --shell-escape -outdir=TeXAux Skript.tex
     - name: Upload Skript as artifact
+      if: steps.changed-files-specific.outputs.any_changed == 'true'
       uses: actions/upload-artifact@v4
       with:
         name: Modul-11-Skript
         path: modul-11-elektrische-maschinen/TeXAux/Skript.pdf
 
+    # Compile Slides only if files in this module are changed
     - name: compile Folien
+      if: steps.changed-files-specific.outputs.any_changed == 'true'
       id: folien
       working-directory: ./modul-11-elektrische-maschinen
       run: latexmk -interaction=nonstopmode -file-line-error -pdf --shell-escape -outdir=TeXAux Folien.tex
     - name: Upload Folien as artifact
+      if: steps.changed-files-specific.outputs.any_changed == 'true'
       uses: actions/upload-artifact@v4
       with:
         name: Modul-11-Folien

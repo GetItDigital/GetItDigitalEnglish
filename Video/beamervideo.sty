@@ -17,15 +17,19 @@
 \newwrite\speechouts
 \newwrite\speechRenderVideoScript
 \newwrite\speechRenderVideoFileList
-\newcounter{videopage}
 
 % Zähler zum Überprüfen, ob ein Dokument geöffnet ist (um das Bash-Skript ggf. abzuschließen, bevor ein neues geöffnet wird)
 \newif\iffileopened
 \fileopenedfalse
 
-% Video-Counter erstellen und auf Null setzten
-\newcounter{videocounter}
+% benötgte Counter erstellen und auf Null setzten
+\newcounter{videopage}              %Nummer
+\newcounter{actualvideopage}        %Nummer der letzten Seite, die in einem Video verwendet wurde
+\setcounter{actualvideopage}{0}
+\newcounter{videocounter}           %Zähler für die Videonummer
 \setcounter{videocounter}{0}
+\newcounter{slidecounter}           %Zähler für die Anzahl der speech-Kommandos auf dieser Folie
+\setcounter{slidecounter}{0}
 
 \newcommand{\newvideofile}[2]{
     \iffileopened
@@ -37,7 +41,7 @@
 
     %Open other files
     \immediate\openout\speechRenderVideoFileList=\jobname-RenderVideoFilelist-#1.txt
-    \immediate\write\speechRenderVideoFileList{file '../Videovorlagen/intro_resample.mp4'}
+    \immediate\write\speechRenderVideoFileList{file '../../Video/Videovorlagen/intro_resample.mp4'}
     \immediate\write\speechRenderVideoFileList{file 'video/video-titel.mp4'}
     \immediate\openout\speechRenderVideoScript=\jobname-RenderVideo-#1.sh
     \stepcounter{videocounter} % Video-Counter um 1 erhöhen
@@ -48,12 +52,14 @@
 \newcommand{\docBegin}[2]{
     \immediate\write\speechRenderVideoScript{\detokenize{eval 'echo "\def\vtitel{#2}" > Videotiteltext.tex' | tr -d ' '}}
     \immediate\write\speechRenderVideoScript{cd ..}
+    \immediate\write\speechRenderVideoScript{cp ../Templates/VideoTitle.tex VideoTitle.tex}
     \immediate\write\speechRenderVideoScript{latexmk -pdf -output-directory=TeXAux VideoTitle.tex}
+    \immediate\write\speechRenderVideoScript{rm VideoTitle.tex}
     \immediate\write\speechRenderVideoScript{cd TeXAuX}
     \immediate\write\speechRenderVideoScript{convert -limit memory 2GB -limit map 2GB -density 350 -colorspace sRGB VideoTitle.pdf video/VideoTitle_\printvideoname.png}
     \immediate\write\speechRenderVideoScript{rm VideoTitle.*}
-    \immediate\write\speechRenderVideoScript{ffmpeg -y -loop 1 -i video/VideoTitle_\printvideoname.png -i ../Videovorlagen/Stille4.wav -c:v libx264 -r 25 -vf "scale=-1:1080,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:white" -pix_fmt yuv420p -t 4 -color_trc bt709 -colorspace bt709 -color_primaries bt709 video/video-titel.mp4}
-    \immediate\write\speechRenderVideoScript{ffmpeg -y -loop 1 -i video/Folien-1.png -i ../Videovorlagen/Stille4.wav -c:v libx264 -r 25 -vf "scale=-1:1080,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:white" -pix_fmt yuv420p -t 4 -color_trc bt709 -colorspace bt709 -color_primaries bt709 video/video-License.mp4}
+    \immediate\write\speechRenderVideoScript{ffmpeg -y -loop 1 -i video/VideoTitle_\printvideoname.png -i ../../Video/Videovorlagen/Stille4.wav -c:v libx264 -r 25 -vf "scale=-1:1080,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:white" -pix_fmt yuv420p -t 4 -color_trc bt709 -colorspace bt709 -color_primaries bt709 video/video-titel.mp4}
+    \immediate\write\speechRenderVideoScript{ffmpeg -y -loop 1 -i video/Folien-1.png -i ../../Video/Videovorlagen/Stille4.wav -c:v libx264 -r 25 -vf "scale=-1:1080,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:white" -pix_fmt yuv420p -t 4 -color_trc bt709 -colorspace bt709 -color_primaries bt709 video/video-License.mp4}
 }
 
 \newcommand{\docEnd}{
@@ -63,7 +69,7 @@
         \immediate\write\speechRenderVideoScript{ffmpeg -y -f concat -safe 0 -i \jobname-RenderVideoFilelist-\printvideoname.txt -fflags +genpts -c copy ../Videos/\GetItDigitalModulnumber_\thevideocounter_\printvideoname.mp4}
 
         \immediate\write\speechRenderVideoFileList{file 'video/video-License.mp4'}
-        \immediate\write\speechRenderVideoFileList{file '../Videovorlagen/outro_resample.mp4'}
+        \immediate\write\speechRenderVideoFileList{file '../../Video/Videovorlagen/outro_resample.mp4'}
         %write empty line after file list, otherwise last video is missing
         \immediate\write\speechRenderVideoFileList{ }
         %close Files
@@ -76,21 +82,51 @@
 \newcommand{\speech}[3]{
     \mode<beamer>{
         \only<1>{
-            %export Speech-Text in one File per pdf-Page
-            \immediate\openout\speechouts=tts-\jobname-#1-#2.txt
-            \immediate\write\speechouts{#3}
-            \immediate\closeout\speechouts
-
-            %Seitenzahl ermitteln. Das Speech-command ist am Ende der Folien, das commando wird bei der ersten Subpage ausgeführt, die Subpage muss also dazuaddiert und um zwei reduziert werden, da die Nummerierung bei 0 beginnt.
+            %Seitenzahl ermitteln. Das Speech-command ist am Ende der Folien, das kommando wird bei der ersten Subpage ausgeführt, die Subpage muss also dazuaddiert und um zwei reduziert werden, da die Nummerierung bei 0 beginnt.
             \setcounter{videopage}{\value{page}}
             \addtocounter{videopage}{#2}
             \addtocounter{videopage}{-2}
 
-            %create video for this slide
-            \immediate\write\speechRenderVideoScript{ffmpeg -y -loop 1 -i video/Folien-\arabic{videopage}.png -i ../TTS/tts-\jobname-#1-#2.wav -c:v libx264 -r 25 -vf "scale=-1:1080,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:white" -pix_fmt yuv420p -t XX video/video-#1-#2.mp4}
+            \ifnum\value{videopage}=\value{actualvideopage}
+                \addtocounter{slidecounter}{1}
+            \else
+                \setcounter{actualvideopage}{\value{videopage}}
+                \setcounter{slidecounter}{0}
+            \fi
 
-            %write pause and video filenames to concat-filelist
-            \immediate\write\speechRenderVideoFileList{file 'video/video-#1-#2.mp4'}
+            %Seite und Subseite für silence-Kommando speichern
+            \def\actualPage{#1}
+            \def\actualSubPage{#2}
+
+            %export Speech-Text in one File per pdf-Page
+            \immediate\openout\speechouts=tts-\jobname-#1-#2-\arabic{slidecounter}.txt
+            \immediate\write\speechouts{#3}
+            \immediate\closeout\speechouts
+
+            %create video for this slide
+            \immediate\write\speechRenderVideoScript{ffmpeg -y -loop 1 -i video/Folien-\arabic{videopage}.png -i ../TTS/tts-\jobname-#1-#2-\arabic{slidecounter}.wav -c:v libx264 -r 25 -vf "scale=-1:1080,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:white" -pix_fmt yuv420p -t XX video/video-#1-#2-\arabic{slidecounter}.mp4}
+
+            %video filenames to concat-filelist
+            \immediate\write\speechRenderVideoFileList{file 'video/video-#1-#2-\arabic{slidecounter}.mp4'}
+        }
+    }
+}
+
+\newcommand{\silence}[1]{
+    \mode<beamer>{
+        \only<1>{
+             %create silence for this slide
+            \immediate\write\speechRenderVideoScript{ffmpeg -y -loop 1 -i video/Folien-\arabic{videopage}.png -i ../../Video/Videovorlagen/Stille02.wav -c:v libx264 -r 25 -vf "scale=-1:1080,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:white" -pix_fmt yuv420p -t 0.2 -color_trc bt709 -colorspace bt709 -color_primaries bt709 video/video-\actualPage-\actualSubPage-\arabic{slidecounter}-silence.mp4}
+
+            \newcount\X
+            \X=#1
+            \loop
+            %write silence to concat-filelist
+            \immediate\write\speechRenderVideoFileList{file 'video/video-\actualPage-\actualSubPage-\arabic{slidecounter}-silence.mp4'}
+            \advance \X by -1
+            \ifnum \X>0
+            \repeat
+
         }
     }
 }

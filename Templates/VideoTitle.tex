@@ -1,0 +1,41 @@
+\documentclass[aspectratio=1610]{beamer}
+\input{Modulsettings.tex}					% Modulspezifische Settings einbinden
+\input{../Templates/Settings.tex}	 		% Allgemeine Settings einbinden
+\input{../Templates/FolienSettings.tex}	 	% Allgemeine Foliensettings einbinden
+
+\newcommand{\vtitel}{Videotitel}
+
+\begin{document}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north west, outer sep=0, inner sep=0] at (current page.north west) {
+        \includegraphics[width=\paperwidth,height=\paperheight]{GETitDigital_Titel}
+    };
+\end{tikzpicture}
+
+\vfill
+\vfill
+
+\title{Modul \GetItDigitalModulnumber : \GetItDigitalModulname}
+\author{GET it digital}
+{\color{white}\centering\bf\insertauthor
+
+}
+\medskip
+{\color{white}\centering\Large\bf\inserttitle
+
+}
+\vfill
+
+\IfFileExists{TeXAux/Videotiteltext.tex}{\input{TeXAux/Videotiteltext.tex}}{Datei nicht gefunden}
+
+\color{white}\centering\Large\bf\vtitel
+
+\vfill
+\vfill
+\vfill
+\vfill
+\vfill
+\vfill
+
+\end{document}

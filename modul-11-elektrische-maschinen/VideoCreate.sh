@@ -3,7 +3,6 @@
 [ ! -d "Videos" ] && mkdir "Videos"
 
 cd TeXAux
-echo "Empty video folder."
 rm -f -r video
 mkdir video
 echo "Creating PNG files from PDF..."

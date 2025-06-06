@@ -1,0 +1,35 @@
+\subsection{Kirchhoffsche Gesetze 2\label{AufgabeKirchhoff2}}
+\Aufgabe{
+    Berechnen Sie für die Schaltung den Gesamtwiderstand $R_{\mathrm{ges}}$ zwischen den Punkten A und B, die Ströme $I_0$, $I_3$, $I_5$ und die Spannung $U_6$.
+    Folgende Werte sind gegeben: \newline
+    $R_1 = 5 \ \Omega; R_2 = 10 \ \Omega; R_3 = 15 \ \Omega; R_4 = 20 \ \Omega; R_5 = 25 \ \Omega; R_6 = 40 \ \Omega; U_0 = 80 \ V$. \newline
+    \begin{tikzpicture}
+        \draw(0,0) to[V,v<,name=U0,-*] (0,3)
+        to[R,l=$R_1$,name=R1,-*] (3,3)
+        to[short] (3,4)
+        to[R,l=$R_2$,name=R2](6,4)
+        to[short](6,5)
+        to[R,l=$R_4$,name=R4](9,5)
+        to[short](9,0)
+        to[short,i_,-*,name=rueck](0,0);
+        \draw(3,3) to[short](3,2)
+        to[R,i,l=$R_3$,name=R3](6,2)
+        to[short](6,1)
+        to[R,v_,l=$R_6$,name=R6,-*](9,1);
+        \draw(6,4) to[short,*-*](6,2);
+        \draw(6,3) to [R,i,l=$R_5$,name=R5,*-*](9,3);
+ 
+        \varrmore{U0}{$U_0$};
+        \varrmore{R6}{$U_6$};
+        \iarrmore{R3}{$I_3$};
+        \iarrmore{rueck}{$I_0$};
+        \iarrmore{R5}{$I_5$};
+ 
+        \node at (-0.3,0) {B};
+        \node at (-0.3,3) {A};
+    \end{tikzpicture}
+}
+
+\Loesung{
+	Hier entsteht eine Musterlösung...
+}

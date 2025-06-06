@@ -1,0 +1,789 @@
+\newvideofile{messen}{Messen von Strom und Spannung}
+
+\section{Messen von Strom und Spannung}
+
+
+
+\begin{frame}
+	\ftx{Spannungsmessung im Gleichstromkreis}
+	\subsection{Spannungsmessung im Gleichstromkreis}
+
+	\s{
+
+	Die elekrische Spannung, die über einem Bauelement über einer Zusammenschaltung mehrerer Bauelementen
+	 abfällt, kann mit Hilfe eines Spannungsmessgerätes (auch Voltmeter genannt) ermittelt werden.
+	Dazu muss das Voltmeter \textbf{parallel} zu diesem Bauelement angebracht werden. Eine Unterbrechung des 
+	Stromkreises ist dazu in der Regel nicht notwendig.
+
+	\begin{figure}[h!]
+		\begin{center}			
+		\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
+
+		\begin{tikzpicture}
+			\draw(2.2,0) to[short] (0,0)
+			to[V,v<, name=U0] (0,2)
+			to[R=$R_\mathrm{i}$,-o] (2.2,2)
+			to[short,-*](3,2)
+			to[R,v^,i_,name=R, l_=$R_{\mathrm{a}}$] (3,0)
+			to[short,](2.2,0);		
+			\draw(3,2)[blue] to[short, *-] (5.7,2)
+			to[short](5.7,1)
+			node[component]{V} to[short](5.7,0)
+		%	to[rmeterwa,t=V](5.7,0)
+			to[short,-*](3,0);
+			\draw(3,0)to[short,-o](2.2,0);
+			\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
+			to[short] (1.8,2.8)
+			to[short] (1.8,-0.5)
+			to[short] (-1.2,-0.5);
+
+			\varrmore{U0}{$U_0$};
+			\iarrmore{R}{$I$};
+			\varrmore{R}{$U_\mathrm{mess}$};
+			\node[blue] at (4.2,2.3) {Ideales Voltmeter};
+		\end{tikzpicture}
+		\end{center}
+		\label{fig:voltmeterideal}
+		\caption{Eine reale Spannungsquelle (Kasten links) speist einen Lastwiderstand $R_\mathrm{a}$.
+		Die darüber abfallende Spannung wird mit einem idealen Voltmeter (blau) gemessen}	
+	\end{figure}
+
+	\begin{Merksatz}{Innenwiderstand ideales Voltmeter}
+			Ein ideales Voltmeter (siehe Abbildung \ref{fig:voltmeterideal}) besitzt einen unendlich hohen Innenwiderstand.
+
+	\end{Merksatz}
+
+	Folglich fließt kein Strom \glqq am Lastwiderstand vorbei\grqq{} durch das Messgerät, und die Spannungsmessung
+	erfolgt vollständig \textbf{rückwirkungsfrei}.
+
+	Ein reales Voltmeter besitzt einen endlichen Innenwiderstand $R_\mathrm{iV}$, welcher parallel
+	zum Voltmeter geschaltet ist (siehe Abbildung \ref{fig:voltmeterreal}). Der durch diesen Innenwiderstand 
+	fließende Strom verfälscht das
+	Messergebnis, weswegen dieser so hoch wie möglich sein sollte. In modernen, elektronischen
+	Spannungsmessgeräten ist er üblicherweise in der Größenordnung von $10^6 \, \Omega$ bis $10^9 \, \Omega$ 
+	 
+
+		\begin{figure}[h!]
+		\begin{center}
+			
+\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
+
+
+\begin{tikzpicture}
+	\draw(2.2,0) to[short] (0,0)
+	to[V,v<,name=U0] (0,2)
+	to[R=$R_{\mathrm{i}}$,-o] (2.2,2)
+	to[short,-*](2.85,2)
+	to[R=$R_{\mathrm{a}}$,v,i,name=R] (2.85,0)
+	to[short,-o](2.2,0);		
+	\draw(2.85,2)[blue] to[short,-*] (4.35,2)
+	to[short] (5.7,2)
+	to[short](5.7,1)
+	node[component]{V} to[short](5.7,0)
+	%to[rmeterwa,t=V](5.7,0)
+	to[short,-*](2.85,0);
+	\draw(4.35,2)[blue] to[R=$R_{\mathrm{iV}}$,i,name=R_iV,-*] (4.35,0);
+	\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
+	to[short] (1.8,2.8)
+	to[short] (1.8,-0.5)
+	to[short] (-1.2,-0.5);
+
+	\varrmore{U0}{$U_0$};
+	\iarrmore{R}{$I_\mathrm{R}$};
+	\varrmore{R}{$U$};
+	\iarrmore{R_iV}{$I_\mathrm{R_\mathrm{iV}}$};
+	\node[blue] at (4.2,2.3) {Reales Voltmeter};
+\end{tikzpicture}
+
+		\end{center}
+		\label{fig:voltmeterreal}
+		\caption{Messung der Spannung $U$ über einem Lastwiderstand $R_\mathrm{a}$ durch ein reales
+		 Voltmeter mit endlichem Innenwiderstand $R_\mathrm{iV}$}
+		
+	\end{figure}
+
+	Die um den Messfehler durch den Innenwiderstand $R_\mathrm{iV}$ korrigierte
+	 Spannung $U_\mathrm{korr}$ lässt sich unter Kenntnis des Innenwiderstandes der Spannungsquelle
+	 $R_\mathrm{i}$ wie folgt berechnen:
+
+	 \begin{equation*}
+		U_{\mathrm{korr}}= U\cdot\left(1+\frac{R_{\mathrm{i}}||R_{\mathrm{a}}}{R_{\mathrm{iV}}}\right)
+	\end{equation*}
+
+	}
+
+	\b{
+
+
+	\begin{columns}
+		\column[c]{0.5\textwidth}
+		%Für die Messung der Spannung werden Spannungsmesser bzw. Voltmeter verwendet. Diese werden parallel zu den betreffenden Schaltungsknoten geschaltet. Der Stromkreis muss somit nicht
+		%unterbrochen werden. Auch das reale Voltmeter besitzt einen Innenwiderstand, sodass die gemessene Spannung von der eigentlichen Spannung abweicht.
+		%Die Korrekturspannung ergibt sich zu:
+		 \textbf{Spannungsmessung} im Gleichstromkreis:
+		\begin{itemize}
+			\item Messung mit \textbf{Voltmeter}
+			\item Messgeräts \textbf{parallel} zum Bauteil (keine Unterbrechung des Stromkreises notwendig)
+			\only<2->{
+			\item reales Voltmeter: \textbf{Innenwiderstand} $R_\mathrm{iV} >> R_\mathrm{mess}$
+			\item um Innenwiderstand korrigierte Messspannung $U_\mathrm{korr}$:
+			\begin{equation*}
+				U_{\mathrm{korr}}= U\cdot\left(1+\frac{R_{\mathrm{i}}||R_{\mathrm{a}}}{R_{\mathrm{iV}}}\right)
+			\end{equation*}
+			}
+		\end{itemize}
+		%Für ein genaues Messergebnis muss der Innenwiderstand des Voltmeters somit möglichst groß sein.
+		\only<1>{
+			\phantom{test}\\
+			\phantom{test}\\
+			\phantom{test}\\
+			\phantom{test}\\
+			\phantom{test}\\
+			\phantom{test}\\
+			\phantom{test}\\
+			}
+		 \column[c]{0.5\textwidth}
+%		 \begin{circuitikz}
+%            \draw(2,0) to[short] (0,0)
+%			to[V=$U_{\mathrm{0}}$] (0,2)
+%            to[R=$R_{\mathrm{i}}$,-*] (2,2)
+%            to[short,-*](3,2)
+%            to[R=$R$, i=\red{$I$}] (3,0)
+%            to[short,-*](2,0);		
+%			\draw(3,2) to[short] (5.5,2)
+%			to[rmeterwa,t=V](5.5,0)
+%			to[short,-*](3,0);
+%			\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
+%			to[short] (1.8,2.8)
+%			to[short] (1.8,-0.5)
+%			to[short] (-1.2,-0.5);
+%        \end{circuitikz}
+
+
+\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
+
+
+
+		\begin{tikzpicture}
+            \draw(2.2,0) to[short] (0,0)
+			to[V,v<, name=U0] (0,2)
+            to[R=$R_\mathrm{i}$,-o] (2.2,2)
+            to[short,-*](3,2)
+            to[R,v^,i_,name=R, l_=$R_{\mathrm{a}}$] (3,0)
+            to[short,](2.2,0);		
+			\draw(3,2)[blue] to[short, *-] (5.7,2)
+			to[short](5.7,1)
+			node[component]{V} to[short](5.7,0)
+		%	to[rmeterwa,t=V](5.7,0)
+			to[short,-*](3,0);
+			\draw(3,0)to[short,-o](2.2,0);
+			\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
+			to[short] (1.8,2.8)
+			to[short] (1.8,-0.5)
+			to[short] (-1.2,-0.5);
+
+			\varrmore{U0}{$U_0$};
+			\iarrmore{R}{$I$};
+			\varrmore{R}{$U_\mathrm{mess}$};
+			\node[blue] at (4.2,2.3) {Ideales Voltmeter};
+        \end{tikzpicture}
+
+%		\begin{circuitikz}
+%			\draw(2,0) to[short] (0,0)
+%			to[V=$U_0$] (0,2)
+%            to[R=$R_{\mathrm{i}}$,-*] (2,2)
+%            to[short,-*](3,2)
+%            to[R=$R$, i=\red{$I_R$}] (3,0)
+%            to[short,-*](2,0);		
+%			\draw(3,2) to[short,-*] (4,2)
+%			to[short] (5.5,2)
+%			to[rmeterwa,t=V](5.5,0)
+%			to[short,-*](3,0);
+%			\draw(4,2) to[R=$R_{\mathrm{iV}}$, i=\red{$I_{\mathrm{iV}}$},-*] (4,0);
+%			\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
+%			to[short] (1.8,2.8)
+%			to[short] (1.8,-0.5)
+%			to[short] (-1.2,-0.5);
+%        \end{circuitikz}
+
+ \vspace*{10pt}
+
+ \pause
+
+		\begin{tikzpicture}
+			\draw(2.2,0) to[short] (0,0)
+			to[V,v<,name=U0] (0,2)
+            to[R=$R_{\mathrm{i}}$,-o] (2.2,2)
+            to[short,-*](2.85,2)
+            to[R=$R_{\mathrm{a}}$,v,i,name=R] (2.85,0)
+            to[short,-o](2.2,0);		
+			\draw(2.85,2)[blue] to[short,-*] (4.35,2)
+			to[short] (5.7,2)
+			to[short](5.7,1)
+			node[component]{V} to[short](5.7,0)
+			%to[rmeterwa,t=V](5.7,0)
+			to[short,-*](2.85,0);
+			\draw(4.35,2)[blue] to[R=$R_{\mathrm{iV}}$,i,name=R_iV,-*] (4.35,0);
+			\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
+			to[short] (1.8,2.8)
+			to[short] (1.8,-0.5)
+			to[short] (-1.2,-0.5);
+
+			\varrmore{U0}{$U_0$};
+			\iarrmore{R}{$I_\mathrm{R}$};
+			\varrmore{R}{$U$};
+			\iarrmore{R_iV}{$I_\mathrm{R_\mathrm{iV}}$};
+			\node[blue] at (4.2,2.3) {Reales Voltmeter};
+        \end{tikzpicture}
+	 \end{columns}
+	 \speech{folie32}{1}{Die elektrische Spannung, die über einem Bauelement bei einer Zusammenschaltung mehrerer Bauelemente abfällt, kann mit Hilfe eines Spannungsmessgerätes 
+	 ermittelt werden. Dieses Messgerät wird auch als Voltmeter bezeichnet. Für die Messung der Spannung muss das Voltmeter parallel zu dem zu vermessenden Bauelement angebracht werden. 
+	 Eine Unterbrechung des Stromkreises ist dazu in der Regel nicht notwendig.}
+\speech{folie32}{2}{Ein ideales Voltmeter besitzt einen unendlich hohen Innenwiderstand. Folglich fließt kein Strom am Lastwiderstand vorbei durch das Messgerät. 
+Die Spannungsmessung erfolgt vollständig rückwirkungsfrei. Ein reales Voltmeter besitzt einen endlichen Innenwiderstand, welcher parallel zur eigentlich Spannungsmessung geschaltet ist. 
+Der blau markierte Teil stellt das Voltmeter bis zu den Anschlussklemmen dar. Der durch diesen Innenwiderstand fließende Strom verfälscht das Messergebnis, da dieser nicht mehr
+durch das eigentlich zu messende Bauteil fließt, der Spannungsabfall darüber also geringer wird. Folglich sollte der Innenwiderstand so groß wie möglich sein.
+In modernen, elektronischen Spannungsmessgeräten ist er üblicherweise in der Größenordnung von zwischen einem Megaohm bis zu einem Gigaohm.
+Sind sowohl der Innenwiderstand als auch der zu vermessende Widerstand bekannt, so kann mittels eines Korrekturterms die Spannung errechnet werden, die ohne den Einfluss des Messgerätes hier abfallen würde.}
+
+}
+
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+	\subsection{Strommessung im Gleichstromkreis}
+
+
+
+	\s{
+	Die Stromstärke $I$, welche durch ein Bauelement fließt, lässt sich mit Hilfe eines Strommessgerätes (auch Amperemeter genannt) bestimmen.
+	Im Gegensatz zur Spannungsmessung muss das Amperemeter \textbf{in Reihe} zum Bauelement geschaltet werden. 
+	Eine Unterbrechung des Stromkreises ist dazu erforderlich. \\
+
+	\begin{Merksatz}{Innenwiderstand ideales Amperemeter}
+			Ein ideales Ampereter (siehe Abbildung \ref{fig:amperemeterideal}) hat keinen Innenwiderstand.
+	\end{Merksatz}
+
+ 
+	Folglich kann der Strom rückwirkungsfrei durch es hindurchfließen.
+
+
+	\begin{figure}[h!]
+		\begin{center}			
+		\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
+
+		\begin{tikzpicture}
+            \draw(2,0) to[short] (0,0)
+			to[V,v<,name=U0] (0,2)
+            to[R=$R_{\mathrm{i}}$,-*] (2,2);
+			
+            \draw(5.5,2)to[R,i_,name=R,l_=$R_{\mathrm{a}}$] (5.5,0)
+            to[short,-*](2,0);
+			\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
+			to[short] (1.8,2.8)
+			to[short] (1.8,-0.5)
+			to[short] (-1.2,-0.5);
+			\draw(2,2)[red]
+			to[short](3.75,2)
+			node[component]{A} to[short](5.5,2);
+            %to[rmeterwa,t=A, -o](5.5,2);
+			\varrmore{U0}{$U_0$};
+			\iarrmore{R}{$I$};
+			\node[red] at (4.2,2.9) {Ideales Amperemeter};
+        \end{tikzpicture}
+		\end{center}
+		\label{fig:amperemeterideal}
+		\caption{Eine reale Spannungsquelle (Kasten links) speist einen Lastwiderstand $R_\mathrm{a}$.
+		Der durch den Lastwiderstand fließende Strom $I$ von einem idealen Amperemeter (rot) gemessen}	
+	\end{figure}
+
+	Ein \textbf{reales Amperemeter} verfügt über einen in Reihe geschalteten Innenwiderstand $R_\mathrm{iA}$
+	(Abbildung \ref{fig:amperemeterreal}). Auch hier wird das Messergebnis durch diesen Innenwiderstand beeinflusst.
+	Je nach Messbereich liegt dieser bei elektronischen Amperemetern typischerweise im Bereich einiger $\mu \Omega$ bis weniger $\mathrm{m} \Omega$.
+
+
+	\begin{figure}[h!]
+		\begin{center}			
+		\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
+
+		\begin{tikzpicture}
+            \draw(2,0) to[short] (0,0)
+			to[V,v<,name=U0] (0,2)
+            to[R=$R_{\mathrm{i}}$] (2,2);
+			
+			\draw(5.5,2)
+            to[R,i_,name=R,l_=$R_{\mathrm{a}}$] (5.5,0)
+            to[short,-*](2,0);
+			\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
+			to[short] (1.8,2.8)
+			to[short] (1.8,-0.5)
+			to[short] (-1.2,-0.5);
+			\draw(2,2)[red]
+			to[R=$R_{\mathrm{iA}}$, o-] (4,2)
+			to[short](4.75,2)
+			node[component]{A} to[short](5.5,2);
+         %   to[rmeterwa,t=A, -o](5.5,2);
+			\varrmore{U0}{$U_0$};
+			\iarrmore{R}{$I$};
+			\node[red] at (4.2,2.9) {Reales Amperemeter};
+        \end{tikzpicture}
+		\end{center}
+		
+		\caption{Messung der Stromstärke $I$ durch einen Lastwiderstand $R_\mathrm{a}$ durch ein 
+		reales Amperemeter mit Innenwiderstand $R_\mathrm{iA}$ (rot)}	
+		\label{fig:amperemeterreal}
+	\end{figure}
+
+	Unter Kenntnis der Innenwiderstände lässt sich auch beim Amperemeter der Messfehler herausrechnen.
+	Die korrigierte Stromstärke $I_\mathrm{korr}$, bei der der Einfluss des Messgerätes herausgerechnet wird,
+	lässt sich mit Hilfe folgender Formel ermitteln:
+
+	\begin{equation*}
+		I_{\mathrm{korr}}= I\cdot\left(1+\frac{R_{\mathrm{iA}}}{R_{\mathrm{i}}+R_{\mathrm{a}}}\right)
+	\end{equation*}
+	
+
+
+	}
+	\ftx{Strommessung im Gleichstromkreis}
+
+	\b{
+
+	\begin{columns}
+		\column[c]{0.5\textwidth}
+		%Die Messung des Stroms in einem elektrischen Stromkreis erfolgt mithilfe eines Strommessers bzw. Amperemeters. Dazu wird der Stromkreis an der Stelle, an welcher
+		%der Strom gemessen werden soll, aufgetrennt und das Messgerät eingebracht (sieihe Abbildung). Das Amperemeter muss also in Reihe geschaltet werden. Ein realer Strommesser weist
+		%allerdings einen Innenwiderstand auf, welcher den gemessen Strom verfälscht. Dieser ergibt sich zu:
+		\textbf{Strommessung} im Gleichstromkreis:
+		\begin{itemize}
+			\item Messung mit \textbf{Amperemeter}
+			\item Messgerät \textbf{in Reihe} zum Bauteil (Stromkreis auftrennen!)
+			\only<2->{
+			\item reales Amperemeter: Innenwiderstand $R_{\mathrm{iA}} << R_\mathrm{a}$
+			
+			\item Um den Innenwiderstand $R_{\mathrm{iA}}$ korrigierte Messtromstärke $I_\mathrm{korr}$:
+			\begin{equation*}
+				I_{\mathrm{korr}}= I\cdot\left(1+\frac{R_{\mathrm{iA}}}{R_{\mathrm{i}}+R_{\mathrm{a}}}\right)
+			\end{equation*}
+			}
+ 
+		\end{itemize}
+
+
+		\only<1>{
+			\phantom{test}\\
+			\phantom{test}\\
+			\phantom{test}\\
+			\phantom{test}\\
+			\phantom{test}\\
+			\phantom{test}\\
+			\phantom{test}\\
+			}
+
+		%Somit muss für ein genaus Messergebnis der Innenwiderstand des Messgeräts möglichst niedrig ausfallen.
+		 \column[c]{0.5\textwidth}
+%		 \begin{circuitikz}
+%            \draw(2,0) to[short] (0,0)
+%			to[V=$U_{\mathrm{0}}$] (0,2)
+%            to[R=$R_{\mathrm{i}}$,-*] (2,2)
+%            to[rmeterwa,t=A](5.5,2)
+%            to[R=$R$, i=\red{$I$}] (5.5,0)
+%            to[short,-*](2,0);
+%			\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
+%			to[short] (1.8,2.8)
+%			to[short] (1.8,-0.5)
+%			to[short] (-1.2,-0.5);
+%        \end{circuitikz}
+\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
+
+		\begin{tikzpicture}
+            \draw(2,0) to[short] (0,0)
+			to[V,v<,name=U0] (0,2)
+            to[R=$R_{\mathrm{i}}$,-*] (2,2);
+			
+            \draw(5.5,2)to[R,i_,name=R,l_=$R_{\mathrm{a}}$] (5.5,0)
+            to[short,-*](2,0);
+			\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
+			to[short] (1.8,2.8)
+			to[short] (1.8,-0.5)
+			to[short] (-1.2,-0.5);
+			\draw(2,2)[red]
+			to[short](3.75,2)
+			node[component]{A} to[short](5.5,2);
+            %to[rmeterwa,t=A, -o](5.5,2);
+			\varrmore{U0}{$U_0$};
+			\iarrmore{R}{$I$};
+			\node[red] at (4.2,2.9) {Ideales Amperemeter};
+        \end{tikzpicture}
+
+%		\begin{circuitikz}
+%            \draw(2,0) to[short] (0,0)
+%			to[V=$U_{\mathrm{0}}$] (0,2)
+%            to[R=$R_{\mathrm{i}}$,-*] (2,2)
+%			to[R=$R_{\mathrm{iA}}$] (4,2)
+%            to[rmeterwa,t=A](5.5,2)
+%            to[R=$R$, i=\red{$I$}] (5.5,0)
+%            to[short,-*](2,0);
+%			\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
+%			to[short] (1.8,2.8)
+%			to[short] (1.8,-0.5)
+%			to[short] (-1.2,-0.5);
+%        \end{circuitikz}
+
+\pause
+
+		\begin{tikzpicture}
+            \draw(2,0) to[short] (0,0)
+			to[V,v<,name=U0] (0,2)
+            to[R=$R_{\mathrm{i}}$] (2,2);
+			
+			\draw(5.5,2)
+            to[R,i_,name=R,l_=$R_{\mathrm{a}}$] (5.5,0)
+            to[short,-*](2,0);
+			\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
+			to[short] (1.8,2.8)
+			to[short] (1.8,-0.5)
+			to[short] (-1.2,-0.5);
+			\draw(2,2)[red]
+			to[R=$R_{\mathrm{iA}}$, o-] (4,2)
+			to[short](4.75,2)
+			node[component]{A} to[short](5.5,2);
+         %   to[rmeterwa,t=A, -o](5.5,2);
+			\varrmore{U0}{$U_0$};
+			\iarrmore{R}{$I$};
+			\node[red] at (4.2,2.9) {Reales Amperemeter};
+        \end{tikzpicture}
+
+	 \end{columns}
+
+\speech{folie33}{1}{ Die Stromstärke, welche durch ein Bauelement fließt, lässt sich mit Hilfe eines Strommessgerätes, auch Amperemeter genannt, bestimmen. 
+Im Gegensatz zur Spannungsmessung muss das Amperemeter in Reihe zum Bauelement geschaltet werden, damit der Strom, der durch das Bauelement fließt, auch durch das Amperemeter fließt. 
+Eine Unterbrechung des Stromkreises ist dazu in aller Regel erforderlich.}
+\speech{folie33}{2}{Ein ideales Ampereter hat keinen Innenwiderstand, so dass der Strom rückwirkungsfrei durch es hindurchfließen kann.
+Ein reales Amperemeter hat jedoch einen in Reihe geschalteten Innenwiderstand.
+Auch hier wird das Messergebnis durch diesen Innenwiderstand beeinflusst. Je nach Messbereich liegt dieser bei elektronischen Amperemetern typischerweise im Bereich einige milli ohm
+ bis mikro ohm.
+Unter Kenntnis des Innenwiderstandes und des zu messenden Widerstandes lässt sich auch beim Amperemeter der Messfehler herausrechnen.}
+
+}
+\end{frame}
+
+
+\begin{frame}
+	\subsection{Strom- und spannungsrichtiges Messen}
+
+
+	\s{
+		
+	Sollen sowohl die Spannung als auch die Stromstärke in einer Schaltung gemessen werden, beeinflussen
+	 sich die realen Messgeräte durch ihre Innenwiderstände gegenseitig. Abhängig von der Qualität der
+	 zur Verfügung stehenden Messgeräte und der Priorisierung der Messgrößen untereinander wird 
+	 zwischen stromrichtiger und spannungsrichtiger Messung unterschieden. \\
+
+	 \subsubsection{Stromrichtiges Messen}
+
+	Bei der \textbf{stromrichtigen} Messung (Abbildung \ref{fig:stromrichtig}), welche auch Spannungsfehler-Schaltung
+	 genannt wird, wird ein höherer Fokus auf die genaue Bestimmung der Stromstärke gelegt. 
+	 Bei dieser Schaltung zeigt das Amperemeter den durch den Lastwiderstand fließenden Strom an, das Voltmeter
+	 misst jedoch die Summe der Spannungsabfälle von Amperemeter und Lastwiderstand:
+
+	 \begin{equation*}
+		U_\mathrm{mess} = U + U_\mathrm{Amperemeter}
+	 \end{equation*}
+
+
+	
+	\begin{figure}[h!]
+		\begin{center}			
+		\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
+
+		\begin{tikzpicture}
+            \draw(2,0) to[short] (0,0)
+			to[V,v<,name=U0] (0,2)
+            to[R=$R_{\mathrm{i}}$,-o] (2,2)
+            to[short,-*](3,2)
+			to[short](3,1)
+			node[component]{V} to[short](3,0)
+            %to[rmeterwa=$R_{\mathrm{iV}}$,t=V] (3,0)
+            to[short,-o](2,0);	
+			
+			\draw(3,2) 
+			to[short](4,2)
+			node[component]{A} to[short](5,2)
+		
+			%to[rmeterwa=$R_{\mathrm{iA}}$,t=A] (5,2)
+			to[R=$R_{\mathrm{a}}$, v, i, name = Rlast](5,0)
+			to[short,-*](3,0);
+			\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
+			to[short] (1.8,2.8)
+			to[short] (1.8,-0.5)
+			to[short] (-1.2,-0.5);
+
+			\varrmore{U0}{$U_0$};
+			\varrmore{Rlast}{$U$};
+			\iarrmore{Rlast}{$I$};
+        \end{tikzpicture}
+		\end{center}
+		
+		
+		\caption{Stromrichtige Messchaltung zur Bestimmung der Stromstärke $I$ sowie der Spannung $U$ an einem Lastwiderstand $R_\mathrm{a}$}	
+		\label{fig:stromrichtig}
+	\end{figure}
+
+	Die Spannungsfehlerschaltung bietet sich tendenziell für Schaltungen mit verhätnismäßig hohen Lastwiderständen an. 
+	Als Faustregel für den Einsatz dieser Messchaltung dient häufig folgende Ungleichung:
+	\begin{equation*}
+		R_{\mathrm{iA}} \ll R_{\mathrm{a}}
+	\end{equation*}
+
+
+
+
+	
+
+
+
+	}
+	\ftx{Strom- und spannungsrichtiges Messen I}
+
+	\b{
+
+		\begin{columns}
+		\column[c]{0.5\textwidth}
+		 Bei \textbf{gleichzeitiger} Messung von Strom und Spannung:
+		 \begin{itemize}
+			\item gegenseitige \textbf{Beeinflussung} der Innenwiderstände \textbf{der Messgeräte}
+		 \end{itemize}
+
+
+		 \vspace{5pt}
+			
+		 \textbf{Stromrichtige} Messung:
+
+		 \begin{itemize}
+			\item höherer Fokus auf Stromstärke
+			\item $U_\mathrm{mess} = U_\mathrm{Ra} + U_\mathrm{Amperemeter}$ 
+			\item Verwendung, wenn gilt:
+		\end{itemize}
+		
+		\begin{equation*}
+			R_{\mathrm{iA}} \ll R_{\mathrm{a}}
+		\end{equation*}
+
+	
+
+ 
+ 
+		 \column[c]{0.5\textwidth}
+%		 \begin{circuitikz}
+%            \draw(2,0) to[short] (0,0)
+%			to[V=$U_{\mathrm{0}}$] (0,2)
+%            to[R=$R_{\mathrm{i}}$,-*] (2,2)
+%            to[short,-*](3,2)
+%            to[rmeterwa=$R_{\mathrm{iV}}$,t=V] (3,0)
+%            to[short,-*](2,0);		
+%			\draw(3,2) to[rmeterwa=$R_{\mathrm{iA}}$,t=A] (5,2)
+%			to[R=$R_{\mathrm{Last}}$](5,0)
+%			to[short,-*](3,0);
+%			\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
+%			to[short] (1.8,2.8)
+%			to[short] (1.8,-0.5)
+%			to[short] (-1.2,-0.5);
+%        \end{circuitikz}
+
+\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
+
+		\begin{tikzpicture}
+            \draw(2,0) to[short] (0,0)
+			to[V,v<,name=U0] (0,2)
+            to[R=$R_{\mathrm{i}}$,-o] (2,2)
+            to[short,-*](3,2)
+			to[short](3,1)
+			node[component]{V} to[short](3,0)
+            %to[rmeterwa=$R_{\mathrm{iV}}$,t=V] (3,0)
+            to[short,-o](2,0);	
+			
+			
+
+			\draw(3,2) 
+			to[short](4,2)
+			node[component]{A} to[short](5,2)
+			
+			%to[rmeterwa=$R_{\mathrm{iA}}$,t=A] (5,2)
+			to[R=$R_{\mathrm{a}}$, v, i, name = Rlast](5,0)
+			to[short,-*](3,0);
+			\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
+			to[short] (1.8,2.8)
+			to[short] (1.8,-0.5)
+			to[short] (-1.2,-0.5);
+
+			\varrmore{U0}{$U_0$};
+			\varrmore{Rlast}{$U$};
+			\iarrmore{Rlast}{$I$};
+        \end{tikzpicture}
+
+	 \end{columns}
+	 \speech{folie34}{1}{Sollen sowohl die Spannung als auch die Stromstärke in einer Schaltung gemessen werden, beeinflussen sich die realen Messgeräte durch ihre Innenwiderstände gegenseitig. 
+Abhängig von der Qualität der zur Verfügung stehenden Messgeräte und der Priorisierung der Messgrößen untereinander unterscheiden wir zwischen stromrichtiger und spannungsrichtiger Messung. 
+Bei der stromrichtigen Messung wird ein höherer Fokus auf die genaue Bestimmung der Stromstärke gelegt. Aus diesem Grund wird sie auch Spannungsfehler Schaltung genannt. 
+Bei dieser Schaltung zeigt das Amperemeter den durch den Lastwiderstand fließenden Strom an, das Voltmeter misst jedoch die Summe der Spannungsabfälle von Amperemeter und Lastwiderstand. 
+Betrachten wir die nebenstehende Abbildung sehen wir, dass das daran liegt, dass das Amperemeter und der Lastwiderstand auf einem Zweig sind, der parallel zum Voltmeter ist.
+Die Spannungsfehlerschaltung bietet sich tendenziell für Schaltungen mit verhältnismäßig hohen Lastwiderständen an. 
+Als Faustregel gilt häufig, dass diese Schaltung verwendet wird, wenn der zu messende Widerstand deutlich größer als der Innenwiderstand des Amperemeters ist.}
+
+	}
+
+\end{frame}
+
+\begin{frame}
+
+\s{
+	\subsubsection{Spannungsrichtiges Messen}
+	Im Gegensatz zur stromrichtigen Messchaltung misst das Voltmeter in der spannungsrichtigen Messschaltung
+	 die korrekte am Widerstand abfallende Spannung (siehe Abbildung \ref{fig:spannungsrichtig}). 
+		Das Amperemeter hingegen misst den Strom, welcher durch die Parallelschaltung aus Spannungsmesser und Lastwiderstand fließt.
+		Diese Messanordnung ist zu empfehlen, wenn ein höherer Fokus auf die korrekte Messung der Spannung gelegt werden soll,
+		 oder für die Widerstände gilt: 
+		\begin{equation*}
+			R_{\mathrm{iV}} \gg R_{\mathrm{a}}
+		\end{equation*}
+
+		\begin{figure}[h!]
+			\begin{center}			
+			\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
+	
+			\begin{tikzpicture}
+				\draw(2,0) to[short] (0,0)
+				to[V,v<,name=U0] (0,2)
+				to[R=$R_{\mathrm{i}}$,-*] (2,2)
+				to[short](2.75,2)
+				node[component]{A} to[short](3.5,2)
+			   % to[rmeterwa=$R_{\mathrm{iA}}$,t=A,-*](3.5,2)
+				to[R=$R_{\mathrm{a}}$, v, i, name = Rlast] (3.5,0)
+				to[short,-*](2,0);		
+				\draw(3.5,2) to[short] (5.2,2)
+				to[short](5.2,1)
+				node[component]{V} to[short](5.2,0)
+				%to[rmeterwa=$R_{\mathrm{iV}}$, t=V](5.2,0)
+				to[short,-*](3.5,0);
+				\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
+				to[short] (1.8,2.8)
+				to[short] (1.8,-0.5)
+				to[short] (-1.2,-0.5);
+	
+				\varrmore{U0}{$U_0$};
+				\varrmore{Rlast}{$U$};
+				\iarrmore{Rlast}{$I$};
+			\end{tikzpicture}
+	
+			\end{center}
+			\label{fig:spannungsrichtig}
+			\caption{Stromrichtige Messchaltung zur Bestimmung der Stromstärke $I$ sowie der Spannung $U$ an einem Lastwiderstand $R_\mathrm{a}$}	
+
+		\end{figure}
+	
+
+
+
+
+
+
+		Bei unklaren Verhältnissen, ob die stromrichtige oder die spannungsrichtige Messung verwendet werden sollte,
+		kann folgende Faustregel verwendet werden:
+
+		\begin{Merksatz}{Faustregel für strom-/spannungsrichtiges Messen}
+				\begin{itemize}
+			\item Stromrichtig: $R_{\mathrm{a}} > \sqrt{R_{\mathrm{iA}} \cdot R_{\mathrm{iV}}}$
+			\item Spannungsrichtig: $R_{\mathrm{a}} < \sqrt{R_{\mathrm{iA}} \cdot R_{\mathrm{iV}}}$
+		\end{itemize}
+
+		\end{Merksatz}
+
+	
+}
+
+
+	\ftx{Strom- und spannungsrichtiges Messen II}
+	\b{
+
+		\begin{columns}
+		\column[c]{0.5\textwidth}
+			\textbf{Spannungsrichtige} Messung:
+		\begin{itemize}
+			\item höherer Fokus auf Spannung
+			\item $I_\mathrm{mess} = I_\mathrm{Ra} + I_\mathrm{Voltmeter}$ 
+			\item Verwendung, wenn gilt:
+		\end{itemize}
+		 \begin{equation*}
+			R_{\mathrm{iV}} \gg R_{\mathrm{a}}
+		\end{equation*}
+ 
+		Bei nicht eindeutigen Verhältnissen:
+		\begin {itemize}
+			\item stromrichtiges Messen für  $R_{\mathrm{a}} > \sqrt{R_{\mathrm{iA}} \cdot R_{\mathrm{iV}}}$
+			\item spannungsrichtiges Messen für $R_{\mathrm{a}} < \sqrt{R_{\mathrm{iA}} \cdot R_{\mathrm{iV}}}$
+		\end{itemize}
+
+		 \column[c]{0.5\textwidth}
+%		 \begin{circuitikz}
+%            \draw(2,0) to[short] (0,0)
+%			to[V=$U_{\mathrm{0}}$] (0,2)
+%            to[R=$R_{\mathrm{i}}$,-*] (2,2)
+%            to[rmeterwa=$R_{\mathrm{iA}}$,t=A,-*](3.5,2)
+%            to[R=$R_{\mathrm{Last}}$] (3.5,0)
+%            to[short,-*](2,0);		
+%			\draw(3.5,2) to[short] (5.2,2)
+%			to[rmeterwa=$R_{\mathrm{iV}}$, t=V](5.2,0)
+%			to[short,-*](3.5,0);
+%			\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
+%			to[short] (1.8,2.8)
+%			to[short] (1.8,-0.5)
+%			to[short] (-1.2,-0.5);
+%        \end{circuitikz}
+
+		\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
+		\begin{tikzpicture}
+            \draw(2,0) to[short] (0,0)
+			to[V,v<,name=U0] (0,2)
+            to[R=$R_{\mathrm{i}}$,-*] (2,2)
+			to[short](2.75,2)
+			node[component]{A} to[short](3.5,2)
+           % to[rmeterwa=$R_{\mathrm{iA}}$,t=A,-*](3.5,2)
+		   to[R=$R_{\mathrm{a}}$, v, i, name = Rlast] (3.5,0)
+            to[short,-*](2,0);		
+			\draw(3.5,2) to[short] (5.2,2)
+			to[short](5.2,1)
+			node[component]{V} to[short](5.2,0)
+			%to[rmeterwa=$R_{\mathrm{iV}}$, t=V](5.2,0)
+			to[short,-*](3.5,0);
+			\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
+			to[short] (1.8,2.8)
+			to[short] (1.8,-0.5)
+			to[short] (-1.2,-0.5);
+
+			\varrmore{U0}{$U_0$};
+			\varrmore{Rlast}{$U$};
+			\iarrmore{Rlast}{$I$};
+        \end{tikzpicture}
+
+		
+
+
+	 \end{columns}
+	
+	 \speech{folie35}{1}{Im Gegensatz zur stromrichtigen Messchaltung misst das Voltmeter in der spannungsrichtigen Messschaltung die korrekte am Widerstand abfallende Spannung. 
+	 Aus diesem Grund befindet ist das Voltmeter ausschließlich zum Lastwiderstand parallelgeschaltet. Das Amperemeter ist in Reihe zu den beiden Elementen. 
+	 Also misst das Amperemeter den Strom, der durch die Parallelschaltung aus Spannungsmesser und Lastwiderstand fließt. 
+	 Diese Messanordnung ist zu empfehlen, wenn ein höherer Fokus auf die korrekte Messung der Spannung gelegt werden soll oder für die Widerstände gilt, dass der Innenwiderstand des Voltmeters viel größer als
+	 der zu vermessende Widerstand ist.
+Bei unklaren Verhältnissen, ob die stromrichtige oder die spannungsrichtige Messung verwendet werden sollte, kann man sich an folgender Empfehlung orientieren: 
+Ist die Wurzel aus RiA mal RiV größer als der zu vermessende Widerstand, so sollte man die stromrichtige Messung anwenden. Ist dieser kleiner, so verwendet man die spannungsrichtige Messung.}
+}
+
+\end{frame}
+

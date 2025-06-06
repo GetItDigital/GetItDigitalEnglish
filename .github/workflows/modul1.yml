@@ -1,4 +1,4 @@
-name: Modul 1
+name: Modul 01
 
 on:
   push:
@@ -53,5 +53,5 @@ jobs:
       if: steps.changed-files-specific.outputs.any_changed == 'true'
       uses: actions/upload-artifact@v4
       with:
-        name: Modul-06-Folien
+        name: Modul-01-Folien
         path: modul-01-elektrische-grundgroessen/TeXAux/Folien.pdf

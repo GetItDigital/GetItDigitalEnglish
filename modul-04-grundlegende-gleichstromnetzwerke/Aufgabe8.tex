@@ -1,0 +1,37 @@
+\subsection{Kirchhoffsche Gestze 4\label{AufgabeKirchhoff4}}
+\Aufgabe{
+    Gegeben ist die dargestellte Schaltung aus den drei Widerständen $R_1, R_2$ und $R_3$ und
+    den beiden Quellen $U_{\mathrm{Q}}$ und $I_{\mathrm{Q}}$. \newline
+    
+    \begin{center}
+    \begin{tikzpicture}
+        \draw(3,3) to[short,*-](2,3)
+        to[R,l_=$R_1$](0,3)
+        to[V,v_,name=UQ](0,0)
+        to[short](7,0)
+        to[I,i<,name=IQ](7,3)
+        to[short,-*](4,3);
+        \draw(2,0)to[R,l=$R_2$,*-*](2,3);
+        \draw(5,0)to[R,l=$R_3$,*-*](5,3);
+ 
+        \varrmore{UQ}{$U_{\mathrm{Q}}$};
+        \iarrmore{IQ}{$I_{\mathrm{Q}}$};
+ 
+        \node at (3.2,3.3){A};
+        \node at (3.8,3.3){B};
+    \end{tikzpicture}
+    \end{center}
+    \begin {enumerate}[label=\alph*)]
+        \item Bestimmen Sie den Innenwiderstand der Schaltung bezüglich der Klemmen A und B.
+        \item Berechnen Sie die Leerlaufspannung $U_{\mathrm{ABL}}$ zwischen den Klemmen A und B.
+        \item Geben Sie die Ersatzspannungsquelle für die Schaltung nach dem vorstehenden Bild an und kennzeichne die Größen.
+        \item Welche Verlustleistung $P_{\mathrm{V}}$ wird in der Schaltung nach dem vorstehenden Bild umgesetzt?
+        \item Die Klemmen A und B werden kurzgeschlossen. Welcher Strom $I_{\mathrm{K}}$ fließt durch diese Verbindung
+        zwischen den Klemmen A und B?
+        \item Welche Spannung $U_{\mathrm{AB}}$ stellt sich ein, wenn an die Klemmen A und B ein Widerstand $R$ angeschlossen wird? $(R_1 = R_2 = R_3 = R)$    
+    \end{enumerate}
+}
+
+\Loesung{
+	Hier entsteht eine Musterlösung...
+}

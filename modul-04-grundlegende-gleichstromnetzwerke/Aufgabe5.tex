@@ -1,0 +1,63 @@
+\subsection{Kirchhoffsche Gesetze\label{AufgabeKirchhoff1}}
+\Aufgabe{
+    Berechnen Sie für die Schaltungen die Ströme, Spannungen und Leistungen an den Widerständen. Zeichnen Sie zu Ihren Ergebnissen
+    alle Strom- und Spannungspfeile ein. Folgende Werte sind gegeben: \newline
+    \phantom{text}\\
+    $U_0 = 12 \ V; I_0 = 3 \ A; R_1 = 2 \ \Omega; R_2 = 4 \ \Omega; R_3 = 3 \ \Omega; R_4 = 3 \ \Omega$
+    \newline
+    \phantom{text}\\
+    a)
+ %   \newline
+    \begin{center}
+        
+   
+    \begin{tikzpicture}
+        \draw(0,0) to[V,v<,i_,name=U0,-*] (0,3)
+        to[short,-*] (2,3)
+        to[short,-*] (4,3)
+        to[short] (6,3)
+        to[R,i_,l=$R_3$,name=R3](6,0)
+        to[short,-*] (4,0)
+        to[short,-*](2,0)
+        to[short,-*](0,0);
+        \draw(2,3) to[R,v,i_,l=$R_1$,name=R1](2,0);
+        \draw(4,3) to[R,i_,l=$R_2$,name=R2](4,0);
+ 
+        \varrmore{U0}{$U_0$};
+        \varrmore{R1}{$U_1$};
+        \iarrmore{U0}{$I_{\mathrm{ges}}$};
+        \iarrmore{R3}{$I_3$};
+        \iarrmore{R1}{$I_1$};
+        \iarrmore{R2}{$I_2$};
+ 
+        \node at (-0.3,0) {B};
+        \node at (-0.3,3) {A};
+    \end{tikzpicture}
+
+     \end{center}
+   % \newline
+    b)
+   % \newline
+    \begin{center}
+        
+   
+    \begin{tikzpicture}
+        \draw(0,0) to[I,i_,name=I0,-*] (0,3)
+        to[R,i_,l=$R_1$,name=R1,-*] (3,3)
+        to[short] (6,3)
+        to[R,i_,l=$R_3$,name=R3](6,0)
+        to[R,i_,l=$R_4$,name=R4,-*](3,0)
+        to[short,-*](0,0);
+        \draw(3,3) to[R,i_,l=$R_2$,name=R2](3,0);
+ 
+        \iarrmore{I0}{$I_0$};
+ 
+        \node at (-0.3,0) {B};
+        \node at (-0.3,3) {A};
+    \end{tikzpicture}
+    \end{center}
+}
+
+\Loesung{
+	Hier entsteht eine Musterlösung...
+}

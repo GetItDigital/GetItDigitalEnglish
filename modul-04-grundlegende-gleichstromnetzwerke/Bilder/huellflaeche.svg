@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="huellflaeche.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.0000001"
+     inkscape:cx="179.5"
+     inkscape:cy="320.99999"
+     inkscape:window-width="1920"
+     inkscape:window-height="1002"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="-18.384776"
+       y="98.287842"
+       width="537.40115"
+       height="359.21024"
+       id="rect54524" />
+    <marker
+       style="overflow:visible;"
+       id="Arrow2Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6) rotate(180) translate(0,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path22805" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow2Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path22799" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.455897;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+       id="path846-2"
+       cx="73.203522"
+       cy="84.166611"
+       rx="21.54957"
+       ry="8.1945343"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <ellipse
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.455897;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+       id="path846"
+       cx="73.153687"
+       cy="75.744972"
+       rx="21.54957"
+       ry="8.1945343"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 51.463466,75.889296 0.0453,8.32207"
+       id="path1115"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:#cccccc;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 94.830703,75.445974 v 9.218958"
+       id="path1117"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:#cccccc;stroke:#cccccc;stroke-width:0.50335;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+       d="m 271.15055,348.87948 c -23.45757,-0.60539 -45.62181,-5.23276 -59.79916,-12.48465 -7.82052,-4.0003 -13.41711,-9.1993 -15.25315,-14.16955 -0.81361,-2.20249 -0.7988,-6.25941 0.0305,-8.36342 1.29305,-3.28047 4.37661,-6.98061 8.03705,-9.64412 l 1.69186,-1.23108 1.08323,0.62994 c 12.58604,7.31919 29.76191,11.91233 52.09043,13.92992 6.54267,0.5912 26.26305,0.86303 33.29452,0.13672 22.63088,-2.33765 40.49291,-6.48482 53.29829,-13.77626 2.02882,-1.34887 2.09834,-0.80088 3.75014,0.4643 8.54058,6.54156 10.77948,14.19846 6.18307,21.14573 -7.37866,11.15249 -30.81024,19.94494 -60.22999,22.60067 -4.70736,0.42493 -17.05874,0.97137 -19.91513,0.88107 -0.87897,-0.0278 -2.79674,-0.0815 -4.26169,-0.11927 z"
+       id="path1368"
+       transform="scale(0.26458333)"
+       sodipodi:nodetypes="ssssscsssccsssss"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:#cccccc;stroke:#cccccc;stroke-width:0.124724;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+       d="m 194.99723,314.79521 -0.0172,-24.46302 0.35807,1.4414 2.09546,3.35862 c 1.9159,2.2285 2.34823,2.82467 5.07929,5.00549 1.32467,1.05778 3.57104,2.6814 3.4547,2.77634 -0.11634,0.0949 -1.8662,2.6117 -2.93729,3.47013 -2.51697,2.01724 -4.61725,2.61307 -5.36071,4.96418 l -2.34622,7.74333 z"
+       id="path1407"
+       transform="scale(0.26458333)"
+       sodipodi:nodetypes="ccccsssscc"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:#cccccc;stroke:#cccccc;stroke-width:0.0444903;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+       d="m 346.9234,303.46408 c 0.22566,0.67374 -0.59618,-0.20728 -0.35015,-0.37949 1.35013,-0.94506 4.42813,-3.11681 5.59141,-4.15903 0.45918,-0.41141 1.68323,-1.63768 2.07006,-2.07383 1.62159,-1.82836 2.8029,-3.65648 3.53555,-5.47143 l 0.12705,-0.31473 0.006,5.45487 c 0.003,3.00017 0.003,7.90294 0,10.89503 l 0.2295,10.30316 c -1.78565,-3.05187 -6.46927,-10.74579 -9.70905,-13.24648 -0.84507,-0.65228 -0.67031,-1.43696 -1.50037,-1.00807 z"
+       id="path1676"
+       transform="scale(0.26458333)"
+       sodipodi:nodetypes="cssssccccsc"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <ellipse
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.456;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+       id="path846-21"
+       cx="73.244904"
+       cy="48.536213"
+       rx="4.5564036"
+       ry="1.732638"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 68.593229,48.551041 0.05846,25.840322"
+       id="path6632"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 77.923087,48.454201 0.06285,25.95986"
+       id="path6634"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.456;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+       id="path846-21-1"
+       sodipodi:type="arc"
+       sodipodi:cx="73.320648"
+       sodipodi:cy="74.407066"
+       sodipodi:rx="4.5564036"
+       sodipodi:ry="1.732638"
+       sodipodi:start="0"
+       sodipodi:end="3.1415927"
+       sodipodi:arc-type="arc"
+       d="m 77.877052,74.407066 a 4.5564036,1.732638 0 0 1 -2.278202,1.500509 4.5564036,1.732638 0 0 1 -4.556404,0 4.5564036,1.732638 0 0 1 -2.278201,-1.500509"
+       sodipodi:open="true"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.387569;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+       id="rect7567"
+       width="8.7201357"
+       height="19.485428"
+       x="68.964561"
+       y="54.465801"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;fill:#ad2917;fill-opacity:1;stroke-width:0.264583"
+       x="75.457626"
+       y="41.809673"
+       id="text10695"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan10693"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic';fill:#ad2917;fill-opacity:1;stroke-width:0.264583"
+         x="75.457626"
+         y="41.809673">$I$</tspan></text>
+    <g
+       id="g19741"
+       transform="translate(18.520833,-0.66145833)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       style="fill:#ad2917;fill-opacity:1">
+      <rect
+         style="fill:#ad2917;fill-opacity:1;stroke:#ffffff;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+         id="rect19413"
+         width="0.59531248"
+         height="6.0854168"
+         x="54.636459"
+         y="38.298435" />
+      <path
+         style="fill:#ad2917;fill-opacity:1;stroke:#ad2917;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 53.941927,44.367317 1.951302,-0.03307 -0.884701,1.744596 z"
+         id="path19448"
+         sodipodi:nodetypes="cccc" />
+    </g>
+    <g
+       id="g19741-5"
+       transform="translate(-3.0100017,60.722998)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       style="fill:#ad2917;fill-opacity:1">
+      <rect
+         style="fill:#ad2917;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+         id="rect19413-4"
+         width="0.59531248"
+         height="6.0854168"
+         x="57.705158"
+         y="-30.203482"
+         transform="rotate(51.917831)" />
+      <path
+         style="fill:#ad2917;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 54.160631,29.9886 1.229576,1.515526 -1.918894,0.379678 z"
+         id="path19448-4"
+         sodipodi:nodetypes="cccc" />
+    </g>
+    <g
+       id="g19741-3"
+       transform="rotate(17.306121,-110.31934,97.216006)"
+       style="fill:#ad2917;fill-opacity:1;stroke:none"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <rect
+         style="fill:#ad2917;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+         id="rect19413-2"
+         width="0.59531248"
+         height="6.0854168"
+         x="54.636459"
+         y="38.298435" />
+      <path
+         style="fill:#ad2917;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 53.941927,44.367317 1.951302,-0.03307 -0.884701,1.744596 z"
+         id="path19448-48"
+         sodipodi:nodetypes="cccc" />
+    </g>
+    <g
+       id="g19741-6"
+       transform="rotate(-35.173934,150.43904,18.549813)"
+       style="fill:#ad2917;fill-opacity:1;stroke:none"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <rect
+         style="fill:#ad2917;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+         id="rect19413-0"
+         width="0.59531248"
+         height="6.0854168"
+         x="54.636459"
+         y="38.298435" />
+      <path
+         style="fill:#ad2917;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 53.941927,44.367317 1.951302,-0.03307 -0.884701,1.744596 z"
+         id="path19448-2"
+         sodipodi:nodetypes="cccc" />
+    </g>
+    <g
+       id="g19741-7"
+       transform="rotate(-77.369398,102.00004,37.993221)"
+       style="fill:#ad2917;fill-opacity:1;stroke:none"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <rect
+         style="fill:#ad2917;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+         id="rect19413-25"
+         width="0.59531248"
+         height="6.0854168"
+         x="54.636459"
+         y="38.298435" />
+      <path
+         style="fill:#ad2917;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 53.941927,44.367317 1.951302,-0.03307 -0.884701,1.744596 z"
+         id="path19448-47"
+         sodipodi:nodetypes="cccc" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;fill:#ad2917;fill-opacity:1;stroke-width:0.264583"
+       x="97.204514"
+       y="90.898239"
+       id="text10695-2"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan10693-1"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic';fill:#ad2917;fill-opacity:1;stroke-width:0.264583"
+         x="97.204514"
+         y="90.898239">$\vec{J}$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;stroke-width:0.264583"
+       x="89.428383"
+       y="60.71027"
+       id="text24421"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan24419"
+         style="stroke-width:0.264583"
+         x="89.428383"
+         y="60.71027">Draht</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;stroke-width:0.264583"
+       x="86.622055"
+       y="44.714191"
+       id="text25997"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan25995"
+         style="stroke-width:0.264583"
+         x="86.622055"
+         y="44.714191">Hüllfläche 1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;stroke-width:0.264583"
+       x="86.154327"
+       y="100.6537"
+       id="text27273"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan27271"
+         style="stroke-width:0.264583"
+         x="86.154327"
+         y="100.6537">Hüllfläche 2</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 75.396732,47.988243 9.635067,-3.928861"
+       id="path29354"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 88.025218,59.77483 74.46129,61.832804"
+       id="path29356"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;stroke-width:0.264583"
+       x="9.5054216"
+       y="95.694427"
+       id="text30782"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan30780"
+         style="stroke-width:0.264583"
+         x="9.5054216"
+         y="95.694427">Blechausschnitt</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="9.5054216"
+         y="100.10414"
+         id="tspan30784" /></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 57.227578,76.639641 33.584504,91.977688"
+       id="path31097"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.321617px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 5.8804064,81.7461 C 5.9941154,81.291265 24.016959,63.609549 24.016959,63.609549 L 5.5392801,45.13187"
+       id="path31184"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.321617px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 24.016959,63.609549 48.63491,56.27533"
+       id="path31186"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <g
+       id="g19741-2"
+       transform="matrix(0.38450486,-0.294022,0.59354107,0.47638238,-37.271608,51.473088)"
+       style="fill:#ad2917;fill-opacity:1;stroke:none"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g31320"
+         transform="matrix(1.1769377,0.0844351,-0.20874485,1.2404749,10.292652,-20.485346)"
+         style="fill:#ad2917;fill-opacity:1">
+        <rect
+           style="fill:#ad2917;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+           id="rect19413-42"
+           width="0.59531248"
+           height="6.0854168"
+           x="54.636459"
+           y="38.298435" />
+        <path
+           style="fill:#ad2917;fill-opacity:1;stroke:none;stroke-width:0.354101px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 53.538755,44.31975 2.611495,-0.04426 -1.184026,2.334853 z"
+           id="path19448-3"
+           sodipodi:nodetypes="cccc" />
+      </g>
+      <g
+         id="g31320-6"
+         transform="matrix(-0.42557487,0.79181977,-1.9575779,0.17026824,126.57068,16.132008)"
+         style="fill:#ad2917;fill-opacity:1;stroke:none">
+        <rect
+           style="fill:#ad2917;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+           id="rect19413-42-8"
+           width="0.59531248"
+           height="6.0854168"
+           x="54.636459"
+           y="38.298435" />
+        <path
+           style="fill:#ad2917;fill-opacity:1;stroke:none;stroke-width:0.384529px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 53.619101,44.400591 2.782851,-0.257847 -1.543402,2.798685 z"
+           id="path19448-3-7"
+           sodipodi:nodetypes="cccc" />
+      </g>
+      <g
+         id="g31320-2"
+         transform="matrix(0.93818924,-0.65466464,1.6184959,0.44555513,-24.248231,89.974711)"
+         style="fill:#ad2917;fill-opacity:1;stroke:none">
+        <rect
+           style="fill:#ad2917;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+           id="rect19413-42-4"
+           width="0.59531248"
+           height="6.0854168"
+           x="54.636459"
+           y="38.298435" />
+        <path
+           style="fill:#ad2917;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 53.39901,44.574052 3.109124,-0.481576 -1.381109,2.474931 z"
+           id="path19448-3-1"
+           sodipodi:nodetypes="cccc" />
+      </g>
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.232749;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+         id="path31527"
+         cx="95.904976"
+         cy="23.973818"
+         transform="matrix(0.850969,0.52521592,-0.83928054,0.5436986,0,0)"
+         rx="1.5555609"
+         ry="1.9651184" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;fill:#ad2917;fill-opacity:1;stroke-width:0.264583"
+       x="12.28039"
+       y="49.30431"
+       id="text10695-0"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan10693-14"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic';fill:#ad2917;fill-opacity:1;stroke-width:0.264583"
+         x="12.28039"
+         y="49.30431"
+         dy="0 0 0 0">$I_1$<tspan
+   style="font-size:2.11667px;fill:#ad2917;fill-opacity:1"
+   id="tspan32808" /></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;fill:#ad2917;fill-opacity:1;stroke-width:0.264583"
+       x="11.316503"
+       y="79.920944"
+       id="text10695-0-1"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan10693-14-1"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic';fill:#ad2917;fill-opacity:1;stroke-width:0.264583"
+         x="11.316503"
+         y="79.920944">$I_3$</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic';fill:#ad2917;fill-opacity:1;stroke-width:0.264583"
+         x="11.316503"
+         y="84.330658"
+         dy="0 1.26"
+         id="tspan49297" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;fill:#ad2917;fill-opacity:1;stroke-width:0.264583"
+       x="43.63607"
+       y="62.474922"
+       id="text10695-0-3"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-4-grundlegende-gleichstromnetzwerke\Bilder\huellflaechen.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan10693-14-17"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic';fill:#ad2917;fill-opacity:1;stroke-width:0.264583"
+         x="43.63607"
+         y="62.474922"
+         dy="0 0">$I_2$<tspan
+   style="font-size:2.11667px;fill:#ad2917;fill-opacity:1"
+   id="tspan32808-5" /></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text54522"
+       style="font-size:13.3333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;white-space:pre;shape-inside:url(#rect54524)" />
+  </g>
+</svg>

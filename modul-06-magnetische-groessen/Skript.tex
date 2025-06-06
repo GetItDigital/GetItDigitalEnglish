@@ -1,4 +1,4 @@
-\immediate\write18{makeindex -g -s Arbeit.ist TeXAux/Skript.idx}
+\immediate\write18{makeindex -g -s ../Templates/Arbeit.ist TeXAux/Skript.idx}
 \immediate\write18{cat TeXAux/Skript.nlo | sort | uniq -w 55 | makeindex -i -s nomencl.ist -o TeXAux/Skript.nls}
 \immediate\write18{cd TeXAux;gnuplot *.gnuplot;cd ..;}
 
@@ -9,7 +9,7 @@
 \input{Modulsettings.tex}					% Modulspezifische Settings einbinden
 \input{../Templates/Settings.tex}	 		% Allgemeine Settings einbinden
 \input{../Templates/SkriptSettings.tex}	 	% Allgemeine Foliensettings einbinden
-
+\usepackage[disabled]{../Video/beamervideo}  % Videoerstellung deaktiviert
 
 %PDF Eigenschaften
 \hypersetup{
@@ -24,74 +24,8 @@
 \date{\today}
 
 \begin{document}
-\thispagestyle{empty}
-\begin{center}
 
-	\begin{minipage}[c][2cm][c]{0.3\textwidth}
-		\includegraphics[angle=270,width=\linewidth]{FHAachen-logo2010}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[c][2cm][c]{0.3\textwidth}
-		\includegraphics[width=\linewidth]{Logo_Uni_Paderborn}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[c][2cm][c]{0.3\textwidth}
-		\includegraphics[width=\linewidth]{BUW_Logo-weiss-auf-gruen-rgb}
-	\end{minipage}
-	\\
-	\begin{minipage}[c][2cm][c]{0.3\textwidth}
-		\includegraphics[width=\linewidth]{Fachhochschule_Südwestfalen_logo}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[c][2cm][c]{0.3\textwidth}
-		\includegraphics[width=\linewidth]{logo-hrw}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[c][2cm][c]{0.3\textwidth}
-		\begin{center}
-			\includegraphics[width=0.7\linewidth]{FH_Dortmund-logo}
-		\end{center}
-	\end{minipage}
-
-	\vfill
-	\vspace{23ex}
-	{{\large GET it digital} \\[10ex]
-		\large Modul \GetItDigitalModulnumber:\\[0.5ex]}
-	{\huge \GetItDigitalModulname\\[20ex]}
-
-	{\large
-		\GetItDigitalAutoren
-	}
-\end{center}
-\vfill
-
-\begin{minipage}[t]{0.36\textwidth}
-	Ein Kooperationsvorhaben \\
-	empfohlen durch die\\[0.3cm]
-	\includegraphics[width=\linewidth]{dh_nrw.jpg}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.5\textwidth}
-	gefördert durch\\[1cm]
-	\includegraphics[width=\linewidth]{mkw.jpg}
-\end{minipage}
-
-
-
-\newpage
-\pagestyle{fancyplain}
-\ \\
-\vfill
-{\hfill Stand: \today}\\
-{\includegraphics[width=0.2\linewidth]{by.png}}\\
-Weiternutzung als OER ausdrücklich erlaubt: Dieses Werk und dessen Inhalte sind lizenziert unter CC BY 4.0. Ausgenommen von der Lizenz
-sind die verwendeten Logos sowie alle anders gekennzeichneten Elemente. Nennung gemäß \href{https://open-educational-resources.de/oer-tullu-regel/}{TULLU-Regel} bitte wie folgt: \glqq GET it digital Modul \GetItDigitalModulnumber: \GetItDigitalModulname\grqq\ von \GetItDigitalAutorenListe \ Lizenz: CC BY 4.0.
-
-Der Lizenzvertrag ist hier abrufbar:\\
-\url{https://creativecommons.org/licenses/by/4.0/deed.de}\\
-Das Werk ist online verfügbar unter:\\
-\url{\GetItDigitalLink}
-\newpage
+\input{../Templates/SkriptTitle.tex}	% Titelseite
 
 {\setlength{\parskip}{0.05ex}    %Verringerter Zeilenabstand für Verzeichnisse
 	\tableofcontents

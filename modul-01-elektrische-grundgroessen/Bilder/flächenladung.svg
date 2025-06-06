@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="flächenladung_neu.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="3.9156336"
+     inkscape:cx="426.49547"
+     inkscape:cy="366.99041"
+     inkscape:window-width="1920"
+     inkscape:window-height="1002"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:pageshadow="2"
+     showgrid="false" />
+  <defs
+     id="defs1">
+    <rect
+       x="291.46505"
+       y="300.13315"
+       width="243.06813"
+       height="107.99015"
+       id="rect24865" />
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#f46969;fill-opacity:1;stroke:#000000;stroke-width:0.163171;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.65268, 0.65268;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 154.28271,87.74607 h -47.30084 l -20.20141,17.95628 h 47.30085"
+       id="path64062-5" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.163171;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.65268, 0.65268;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 134.08131,105.70235 20.2014,-17.95628"
+       id="path64064-5" />
+    <g
+       id="g5607-7"
+       transform="matrix(0.2980777,0,0,0.2980777,104.31242,12.925788)">
+      <text
+         xml:space="preserve"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.9148px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold Italic';letter-spacing:0px;white-space:pre;inline-size:35.6127;display:inline;stroke-width:0.893613"
+         x="288.2117"
+         y="179.31223"
+         id="text2792-9-0-2-0-5"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\kraft1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         inkscape:transform-center-x="2.2428949"
+         inkscape:transform-center-y="-0.37382339"
+         transform="matrix(0.82738775,0,0,0.82738775,-169.57787,90.055238)"><tspan
+           x="288.2117"
+           y="179.31223"
+           id="tspan43019"><tspan
+             style="font-size:15.4343px;font-family:Calibri;-inkscape-font-specification:'Calibri Bold Italic'"
+             id="tspan43017">$Q$</tspan></tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:3.83497px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;stroke-width:0.102722"
+       x="107.41012"
+       y="110.88753"
+       id="text7240-7"><tspan
+         sodipodi:role="line"
+         id="tspan7238-0"
+         style="font-size:3.83497px;stroke-width:0.102722"
+         x="107.41012"
+         y="110.88753" /></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text24863"
+       style="font-size:13.3333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;white-space:pre;shape-inside:url(#rect24865)" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;stroke-width:0.264583"
+       x="104.4133"
+       y="114.38911"
+       id="text27929"><tspan
+         sodipodi:role="line"
+         id="tspan27927"
+         style="stroke-width:0.264583"
+         x="104.4133"
+         y="114.38911">$\mathrm{d}A$</tspan></text>
+    <path
+       id="path34-1-0"
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.868127;stroke-opacity:1"
+       d="m 118.95722,95.497348 v 1.551594 h -1.47708 v 0.642039 h 1.47708 v 1.551596 h 0.6112 v -1.551596 h 1.47708 v -0.642039 h -1.47708 v -1.551594 z" />
+  </g>
+</svg>

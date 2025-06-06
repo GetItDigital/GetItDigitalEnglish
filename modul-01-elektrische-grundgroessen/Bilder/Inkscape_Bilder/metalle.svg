@@ -1,0 +1,3583 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="metalle.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.45254834"
+     inkscape:cx="1048.5068"
+     inkscape:cy="795.49513"
+     inkscape:window-width="1920"
+     inkscape:window-height="1002"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1030">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop1026" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop1028" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-7"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-4"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-0"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-7-6"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-4-4"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-0-3"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-7-64"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-4-9"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-0-39"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-7-8"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-4-0"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-0-8"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-7-1"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-4-5"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-0-6"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-7-80"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-4-55"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-0-4"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-7-6-0"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-4-4-7"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-0-3-8"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-7-6-3"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-4-4-9"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-0-3-0"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-7-6-8"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-4-4-0"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-0-3-81"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-8"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-4"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-9"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-2"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-82"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-6"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-21"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-3"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-45"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-28"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-87"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-85"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-7"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-1"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-11"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-7-0"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-1-0"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-11-6"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-7-5"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-1-8"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-11-2"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-7-3"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-1-7"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-11-9"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-7-4"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-1-85"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-11-0"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-4"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-8"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-4-2"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-7-6-86"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-4-4-6"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-0-3-80"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-9-6"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-4-7"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-8-3"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-7-6-0-5"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-4-4-7-9"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-0-3-8-0"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-6-5"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-82-2"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-2-9"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-7-6-3-1"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-4-4-9-9"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-0-3-0-0"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-45-4"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-3-1"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-21-1"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-7-6-8-3"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-4-4-0-2"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-0-3-81-6"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-85-6"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-87-7"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-28-3"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-85-6-6"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-85-6-8"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-85-6-1"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-85-6-88"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-85-6-4"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-85-6-9"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-85-6-5"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-85-6-62"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-7-6-86-5"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-4-4-6-9"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-0-3-80-2"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-9-6-1"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-7-6-0-5-1"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-4-4-7-9-7"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-0-3-8-0-8"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-2-9-9"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-7-6-3-1-2"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-4-4-9-9-5"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-0-3-0-0-7"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-45-4-5"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-3-1-9"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-7-6-8-3-0"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-4-4-0-2-0"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-0-3-81-6-4"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4519006,0,0,2.132938,-62.077353,-50.831827)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-85-6-2"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-28-3-4"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-3-1-9-7"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1030"
+       id="radialGradient1032-6-8-3-1-9-8"
+       cx="42.684734"
+       cy="44.958492"
+       fx="42.684734"
+       fy="44.958492"
+       r="9.1984053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4970969,0,0,2.2209951,23.740019,-27.815641)" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.375501px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 240.73492,128.96517 4.44291,15.72865 -19.67575,21.69469 6.34702,30.37257 9.52051,8.67786 17.13696,0.54237 35.5433,10.30498 34.90856,-5.42366 33.00449,-2.16948 10.78994,2.16948 14.59813,2.71184 8.25112,-13.01682 15.23283,-10.84736 27.29216,-15.72864 -1.90409,-14.64392 1.90409,-30.37256 z"
+       id="path4577-2"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 23.564453,164.53776 2.89388,11.98893 -12.815755,16.53646 4.134114,23.15104 6.201172,6.61458 11.16211,0.41341 23.151041,7.85482 22.73763,-4.13411 21.497395,-1.65365 7.028,1.65365 9.50846,2.06706 5.37435,-9.92188 9.92187,-8.26823 17.77669,-11.98893 -1.24023,-11.16211 1.24023,-23.15104 z"
+       id="path4577"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <g
+       id="g2376"
+       transform="matrix(1.6773772,0,0,1.6773772,202.40791,8.56066)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846"
+         cx="42.581379"
+         cy="45.061848"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+         id="path922"
+         cx="42.581379"
+         cy="45.061848"
+         rx="11.213786"
+         ry="11.265461" />
+    </g>
+    <g
+       id="g2599"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g2376-4"
+         transform="translate(16.949871,133.73861)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-7"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-7);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-3"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-2"
+         transform="translate(7.8548189,146.86442)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-5"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-4);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-31"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-6"
+         transform="translate(-1.2402326,159.99023)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-6"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-0);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-9"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+    </g>
+    <g
+       id="g3352"
+       transform="translate(14.05599,0.82682292)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g2376-4-6"
+         transform="translate(233.78418,96.84164)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-7-8"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-7-6);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-3-3"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-2-3"
+         transform="translate(216.52425,119.47592)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-5-1"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-4-4);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-31-0"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-6-5"
+         transform="translate(199.26433,142.11019)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-6-1"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-0-3);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-9-4"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+    </g>
+    <g
+       id="g3194-5-61"
+       transform="matrix(0.31413083,0,0,0.31413083,223.64331,157.20495)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-9"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-9);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-78"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-8"
+       transform="matrix(0.31413083,0,0,0.31413083,244.72729,136.12097)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-5"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-4);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-7"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-6"
+       transform="matrix(0.31413083,0,0,0.31413083,255.8894,115.03699)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-3"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-8);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-1"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g2599-2"
+       transform="translate(17.828369)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g2376-4-0"
+         transform="translate(16.949871,133.73861)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-7-5"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-7-64);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-3-1"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-2-2"
+         transform="translate(7.8548189,146.86442)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-5-19"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-4-9);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-31-3"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-6-1"
+         transform="translate(-1.2402326,159.99023)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-6-7"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-0-39);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-9-1"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+    </g>
+    <g
+       id="g4092-1"
+       transform="translate(-109.34733,-57.464201)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g3194-5-89-8"
+         transform="matrix(0.31413083,0,0,0.31413083,132.69278,232.85926)">
+        <circle
+           style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-0-4-4-5"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-6-8-7-0);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+           id="path922-6-5-95-3"
+           cx="130.32796"
+           cy="72.036949"
+           rx="11.420492"
+           ry="11.730549" />
+      </g>
+      <g
+         id="g3194-5-02-3"
+         transform="matrix(0.31413083,0,0,0.31413083,141.58113,219.21668)">
+        <circle
+           style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-0-4-63-1"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-6-8-1-0);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+           id="path922-6-5-94-8"
+           cx="130.32796"
+           cy="72.036949"
+           rx="11.420492"
+           ry="11.730549" />
+      </g>
+      <g
+         id="g3194-5-90-4"
+         transform="matrix(0.31413083,0,0,0.31413083,150.46948,205.57411)">
+        <circle
+           style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-0-4-93-2"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-6-8-11-6);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+           id="path922-6-5-77-5"
+           cx="130.32796"
+           cy="72.036949"
+           rx="11.420492"
+           ry="11.730549" />
+      </g>
+    </g>
+    <g
+       id="g2599-0"
+       transform="translate(35.656738)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g2376-4-7"
+         transform="translate(16.949871,133.73861)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-7-7"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-7-8);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-3-7"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-2-23"
+         transform="translate(7.8548189,146.86442)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-5-7"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-4-0);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-31-1"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-6-8"
+         transform="translate(-1.2402326,159.99023)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-6-6"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-0-8);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-9-2"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+    </g>
+    <g
+       id="g2599-7"
+       transform="translate(53.485109)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g2376-4-1"
+         transform="translate(16.949871,133.73861)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-7-3"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-7-1);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-3-4"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-2-9"
+         transform="translate(7.8548189,146.86442)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-5-4"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-4-5);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-31-8"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-6-2"
+         transform="translate(-1.2402326,159.99023)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-6-3"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-0-6);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-9-8"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+    </g>
+    <g
+       id="g4092-4"
+       transform="translate(-93.637695,-55.397143)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g3194-5-89-4"
+         transform="matrix(0.31413083,0,0,0.31413083,132.69278,232.85926)">
+        <circle
+           style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-0-4-4-8"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-6-8-7-5);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+           id="path922-6-5-95-4"
+           cx="130.32796"
+           cy="72.036949"
+           rx="11.420492"
+           ry="11.730549" />
+      </g>
+      <g
+         id="g3194-5-02-8"
+         transform="matrix(0.31413083,0,0,0.31413083,141.58113,219.21668)">
+        <circle
+           style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-0-4-63-0"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-6-8-1-8);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+           id="path922-6-5-94-2"
+           cx="130.32796"
+           cy="72.036949"
+           rx="11.420492"
+           ry="11.730549" />
+      </g>
+      <g
+         id="g3194-5-90-5"
+         transform="matrix(0.31413083,0,0,0.31413083,150.46948,205.57411)">
+        <circle
+           style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-0-4-93-9"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-6-8-11-2);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+           id="path922-6-5-77-56"
+           cx="130.32796"
+           cy="72.036949"
+           rx="11.420492"
+           ry="11.730549" />
+      </g>
+    </g>
+    <g
+       id="g4092-0"
+       transform="translate(-76.687826,-55.397143)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g3194-5-89-6"
+         transform="matrix(0.31413083,0,0,0.31413083,132.69278,232.85926)">
+        <circle
+           style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-0-4-4-58"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-6-8-7-3);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+           id="path922-6-5-95-1"
+           cx="130.32796"
+           cy="72.036949"
+           rx="11.420492"
+           ry="11.730549" />
+      </g>
+      <g
+         id="g3194-5-02-5"
+         transform="matrix(0.31413083,0,0,0.31413083,141.58113,219.21668)">
+        <circle
+           style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-0-4-63-2"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-6-8-1-7);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+           id="path922-6-5-94-0"
+           cx="130.32796"
+           cy="72.036949"
+           rx="11.420492"
+           ry="11.730549" />
+      </g>
+      <g
+         id="g3194-5-90-1"
+         transform="matrix(0.31413083,0,0,0.31413083,150.46948,205.57411)">
+        <circle
+           style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-0-4-93-8"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-6-8-11-9);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+           id="path922-6-5-77-58"
+           cx="130.32796"
+           cy="72.036949"
+           rx="11.420492"
+           ry="11.730549" />
+      </g>
+    </g>
+    <g
+       id="g2599-9"
+       transform="translate(71.313477)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g2376-4-4"
+         transform="translate(16.949871,133.73861)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-7-85"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-7-80);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-3-0"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-2-24"
+         transform="translate(7.8548189,146.86442)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-5-44"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-4-55);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-31-2"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-6-56"
+         transform="translate(-1.2402326,159.99023)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-6-78"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-0-4);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-9-43"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+    </g>
+    <g
+       id="g3352-2"
+       transform="translate(55.569377,0.82682292)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g2376-4-6-1"
+         transform="translate(233.78418,96.84164)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-7-8-6"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-7-6-0);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-3-3-1"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-2-3-6"
+         transform="translate(216.52425,119.47592)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-5-1-1"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-4-4-7);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-31-0-8"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-6-5-3"
+         transform="translate(199.26433,142.11019)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-6-1-3"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-0-3-8);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-9-4-1"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+    </g>
+    <g
+       id="g3194-5-63"
+       transform="matrix(0.31413083,0,0,0.31413083,294.75008,113.38334)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-34"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-6);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-19"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-5"
+       transform="matrix(0.31413083,0,0,0.31413083,280.69409,136.53438)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-79"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-82);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-4"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-9"
+       transform="matrix(0.31413083,0,0,0.31413083,270.3588,161.33907)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-7"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-2);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-0"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3352-21"
+       transform="translate(97.082801,0.82682292)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g2376-4-6-9"
+         transform="translate(233.78418,96.84164)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-7-8-3"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-7-6-3);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-3-3-4"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-2-3-2"
+         transform="translate(216.52425,119.47592)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-5-1-3"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-4-4-9);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-31-0-5"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-6-5-6"
+         transform="translate(199.26433,142.11019)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-6-1-9"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-0-3-0);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-9-4-0"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+    </g>
+    <g
+       id="g3194-5-56"
+       transform="matrix(0.31413083,0,0,0.31413083,309.21948,165.8866)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-6"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-45);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-03"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-81"
+       transform="matrix(0.31413083,0,0,0.31413083,316.66088,148.93673)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-2"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-3);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-9"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-7"
+       transform="matrix(0.31413083,0,0,0.31413083,331.13028,124.95886)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-8"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-21);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-44"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3352-20"
+       transform="translate(138.5962,1.2402344)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g2376-4-6-16"
+         transform="translate(233.78418,96.84164)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-7-8-7"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-7-6-8);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-3-3-7"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-2-3-23"
+         transform="translate(216.52425,119.47592)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-5-1-5"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-4-4-0);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-31-0-0"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-6-5-0"
+         transform="translate(199.26433,142.11019)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-6-1-7"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-0-3-81);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-9-4-16"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+    </g>
+    <g
+       id="g3194-5-0"
+       transform="matrix(0.31413083,0,0,0.31413083,345.59969,144.3892)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-0"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-85);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-60"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-51"
+       transform="matrix(0.31413083,0,0,0.31413083,369.57755,126.61251)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-70"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-87);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-04"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-1"
+       transform="matrix(0.31413083,0,0,0.31413083,335.67781,158.44519)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-21"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-28);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-6"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g4092"
+       transform="translate(-128.57096,-56.223959)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g3194-5-89"
+         transform="matrix(0.31413083,0,0,0.31413083,132.69278,232.85926)">
+        <circle
+           style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-0-4-4"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-6-8-7);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+           id="path922-6-5-95"
+           cx="130.32796"
+           cy="72.036949"
+           rx="11.420492"
+           ry="11.730549" />
+      </g>
+      <g
+         id="g3194-5-02"
+         transform="matrix(0.31413083,0,0,0.31413083,141.58113,219.21668)">
+        <circle
+           style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-0-4-63"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-6-8-1);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+           id="path922-6-5-94"
+           cx="130.32796"
+           cy="72.036949"
+           rx="11.420492"
+           ry="11.730549" />
+      </g>
+      <g
+         id="g3194-5-90"
+         transform="matrix(0.31413083,0,0,0.31413083,150.46948,205.57411)">
+        <circle
+           style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-0-4-93"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-6-8-11);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+           id="path922-6-5-77"
+           cx="130.32796"
+           cy="72.036949"
+           rx="11.420492"
+           ry="11.730549" />
+      </g>
+    </g>
+    <g
+       id="g4092-17"
+       transform="translate(-59.737956,-54.156909)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g3194-5-89-5"
+         transform="matrix(0.31413083,0,0,0.31413083,132.69278,232.85926)">
+        <circle
+           style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-0-4-4-3"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-6-8-7-4);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+           id="path922-6-5-95-33"
+           cx="130.32796"
+           cy="72.036949"
+           rx="11.420492"
+           ry="11.730549" />
+      </g>
+      <g
+         id="g3194-5-02-1"
+         transform="matrix(0.31413083,0,0,0.31413083,141.58113,219.21668)">
+        <circle
+           style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-0-4-63-9"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-6-8-1-85);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+           id="path922-6-5-94-7"
+           cx="130.32796"
+           cy="72.036949"
+           rx="11.420492"
+           ry="11.730549" />
+      </g>
+      <g
+         id="g3194-5-90-0"
+         transform="matrix(0.31413083,0,0,0.31413083,150.46948,205.57411)">
+        <circle
+           style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-0-4-93-96"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-6-8-11-0);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+           id="path922-6-5-77-4"
+           cx="130.32796"
+           cy="72.036949"
+           rx="11.420492"
+           ry="11.730549" />
+      </g>
+    </g>
+    <rect
+       style="opacity:0.712389;fill:#4d4d4d;stroke:#000000;stroke-width:0.365001;paint-order:stroke markers fill"
+       id="rect4714"
+       width="128.59125"
+       height="3.3199453"
+       x="23.564453"
+       y="161.2178"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="opacity:0.712389;fill:#4d4d4d;stroke:#000000;stroke-width:0.569731;paint-order:stroke markers fill"
+       id="rect4714-3"
+       width="197.39218"
+       height="5.2694364"
+       x="240.73491"
+       y="123.69574"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;stroke-width:0.264583"
+       x="300.96353"
+       y="86.816406"
+       id="text6293"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan6291"
+         style="font-size:8.46667px;stroke-width:0.264583"
+         x="300.96353"
+         y="86.816406">positiver</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;stroke-width:0.264583"
+         x="300.96353"
+         y="97.399742"
+         id="tspan6295">Atomkern</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;stroke-width:0.264583"
+       x="392.74091"
+       y="93.844398"
+       id="text20657"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan20655"
+         style="font-size:8.46667px;stroke-width:0.264583"
+         x="392.74091"
+         y="93.844398">Elektron</tspan></text>
+    <g
+       id="g3194-1"
+       transform="matrix(0.58371043,0,0,0.58371043,306.74522,37.784589)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-2"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-4);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-3"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g2376-5"
+       transform="matrix(0.92474526,0,0,0.92474526,4.9486451,100.33236)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-73"
+         cx="42.581379"
+         cy="45.061848"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-8);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+         id="path922-38"
+         cx="42.581379"
+         cy="45.061848"
+         rx="11.213786"
+         ry="11.265461" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:5.60579px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;stroke-width:0.175181"
+       x="66.5569"
+       y="145.70229"
+       id="text6293-2"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan6291-8"
+         style="font-size:5.60579px;stroke-width:0.175181"
+         x="66.5569"
+         y="145.70229">positiver</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:5.60579px;stroke-width:0.175181"
+         x="66.5569"
+         y="152.70952"
+         id="tspan6295-7">Atomkern</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.60579px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;stroke-width:0.175181"
+       x="124.84226"
+       y="148.70189"
+       id="text20657-3"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan20655-8"
+         style="font-size:5.60579px;stroke-width:0.175181"
+         x="124.84226"
+         y="148.70189">Elektron</tspan></text>
+    <g
+       id="g3194-1-8"
+       transform="matrix(0.48234467,0,0,0.48234467,54.851209,106.03435)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\metals_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-2-8"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-4-2);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-3-4"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <path
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.375501px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 259.86591,253.36959 4.44291,15.72865 -19.67575,21.69469 6.34702,30.37257 9.52051,8.67786 17.13696,0.54237 35.5433,10.30498 34.90856,-5.42366 33.00449,-2.16948 10.78994,2.16948 14.59813,2.71184 8.25112,-13.01682 15.23283,-10.84736 27.29216,-15.72864 -1.90409,-14.64392 1.90409,-30.37256 z"
+       id="path4577-2-9"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <g
+       id="g3352-3"
+       transform="translate(33.186978,125.23124)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g2376-4-6-7"
+         transform="translate(233.78418,96.84164)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-7-8-4"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-7-6-86);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-3-3-19"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-2-3-5"
+         transform="translate(216.52425,119.47592)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-5-1-7"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-4-4-6);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-31-0-00"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-6-5-35"
+         transform="translate(199.26433,142.11019)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-6-1-0"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-0-3-80);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-9-4-4"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+    </g>
+    <g
+       id="g3194-5-61-6"
+       transform="matrix(0.31413083,0,0,0.31413083,242.7743,281.60937)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-9-4"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-9-6);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-78-6"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-8-0"
+       transform="matrix(0.31413083,0,0,0.31413083,263.85828,260.52539)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-5-0"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-4-7);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-7-3"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-6-2"
+       transform="matrix(0.31413083,0,0,0.31413083,275.02039,239.44141)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-3-8"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-8-3);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-1-9"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3352-2-4"
+       transform="translate(74.700365,125.23124)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g2376-4-6-1-0"
+         transform="translate(233.78418,96.84164)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-7-8-6-7"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-7-6-0-5);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-3-3-1-2"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-2-3-6-4"
+         transform="translate(216.52425,119.47592)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-5-1-1-2"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-4-4-7-9);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-31-0-8-5"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-6-5-3-1"
+         transform="translate(199.26433,142.11019)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-6-1-3-2"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-0-3-8-0);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-9-4-1-0"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+    </g>
+    <g
+       id="g3194-5-63-6"
+       transform="matrix(0.31413083,0,0,0.31413083,313.88107,237.78776)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-34-4"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-6-5);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-19-2"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-5-4"
+       transform="matrix(0.31413083,0,0,0.31413083,299.82508,260.9388)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-79-7"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-82-2);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-4-3"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-9-5"
+       transform="matrix(0.31413083,0,0,0.31413083,289.48979,285.74349)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-7-3"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-2-9);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-0-8"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3352-21-3"
+       transform="translate(116.21379,125.23124)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g2376-4-6-9-4"
+         transform="translate(233.78418,96.84164)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-7-8-3-4"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-7-6-3-1);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-3-3-4-2"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-2-3-2-0"
+         transform="translate(216.52425,119.47592)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-5-1-3-6"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-4-4-9-9);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-31-0-5-7"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-6-5-6-5"
+         transform="translate(199.26433,142.11019)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-6-1-9-0"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-0-3-0-0);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-9-4-0-0"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+    </g>
+    <g
+       id="g3194-5-56-3"
+       transform="matrix(0.31413083,0,0,0.31413083,328.35047,290.29102)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-6-5"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-45-4);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-03-1"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-81-3"
+       transform="matrix(0.31413083,0,0,0.31413083,335.79187,273.34115)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-2-1"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-3-1);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-9-7"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-7-7"
+       transform="matrix(0.31413083,0,0,0.31413083,350.26127,249.36328)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-8-4"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-21-1);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-44-1"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3352-20-1"
+       transform="translate(157.72719,125.64465)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g2376-4-6-16-3"
+         transform="translate(233.78418,96.84164)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-7-8-7-7"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-7-6-8-3);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-3-3-7-1"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-2-3-23-4"
+         transform="translate(216.52425,119.47592)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-5-1-5-3"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-4-4-0-2);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-31-0-0-8"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-6-5-0-9"
+         transform="translate(199.26433,142.11019)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-6-1-7-0"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-0-3-81-6);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-9-4-16-0"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+    </g>
+    <g
+       id="g3194-5-0-2"
+       transform="matrix(0.31413083,0,0,0.31413083,364.73068,268.79362)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-0-0"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-85-6);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-60-6"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-51-3"
+       transform="matrix(0.31413083,0,0,0.31413083,388.70854,251.01693)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-70-9"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-87-7);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-04-6"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-1-6"
+       transform="matrix(0.31413083,0,0,0.31413083,354.8088,282.84961)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-21-4"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-28-3);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-6-6"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <rect
+       style="opacity:0.712389;fill:#4d4d4d;stroke:#000000;stroke-width:0.569731;paint-order:stroke markers fill"
+       id="rect4714-3-6"
+       width="197.39218"
+       height="5.2694364"
+       x="259.86591"
+       y="248.10016"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <g
+       id="g3194-5-0-2-0"
+       transform="matrix(0.31413083,0,0,0.31413083,247.62117,238.13025)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-0-0-6"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-85-6-6);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-60-6-3"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-0-2-8"
+       transform="matrix(0.31413083,0,0,0.31413083,232.73836,238.13025)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-0-0-3"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-85-6-8);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-60-6-7"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-0-2-7"
+       transform="matrix(0.31413083,0,0,0.31413083,284.41479,235.33972)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-0-0-62"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-85-6-1);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-60-6-76"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-0-2-2"
+       transform="matrix(0.31413083,0,0,0.31413083,296.40372,235.33972)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-0-0-65"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-85-6-88);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-60-6-6"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-0-2-08"
+       transform="matrix(0.31413083,0,0,0.31413083,338.36498,235.85648)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-0-0-38"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-85-6-4);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-60-6-39"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-0-2-3"
+       transform="matrix(0.31413083,0,0,0.31413083,365.75349,236.16654)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-0-0-34"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-85-6-9);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-60-6-2"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-0-2-24"
+       transform="matrix(0.31413083,0,0,0.31413083,376.91561,236.16654)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-0-0-0"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-85-6-5);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-60-6-0"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-0-2-85"
+       transform="matrix(0.31413083,0,0,0.31413083,328.2364,235.33972)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-0-0-05"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-85-6-62);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-60-6-8"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;stroke-width:0.264583"
+       x="296.96997"
+       y="241.69067"
+       id="text20657-6"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_uberschuss.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan20655-1"
+         style="font-size:11.2889px;stroke-width:0.264583"
+         x="296.96997"
+         y="241.69067">Elektronenüberschuss</tspan></text>
+    <path
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.375501px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 260.27931,399.62661 4.44291,15.72865 -19.67575,21.69469 6.34702,30.37257 9.52051,8.67786 17.13696,0.54237 35.5433,10.30498 34.90856,-5.42366 33.00449,-2.16948 10.78994,2.16948 14.59813,2.71184 8.25112,-13.01682 15.23283,-10.84736 27.29216,-15.72864 -1.90409,-14.64392 1.90409,-30.37256 z"
+       id="path4577-2-9-1"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_mangel.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <g
+       id="g3352-3-3"
+       transform="translate(33.600384,271.48826)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_mangel.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g2376-4-6-7-1"
+         transform="translate(233.78418,96.84164)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-7-8-4-6"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-7-6-86-5);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-3-3-19-5"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-2-3-5-1"
+         transform="translate(216.52425,119.47592)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-5-1-7-3"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-4-4-6-9);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-31-0-00-9"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-6-5-35-9"
+         transform="translate(199.26433,142.11019)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-6-1-0-1"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-0-3-80-2);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-9-4-4-1"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+    </g>
+    <g
+       id="g3194-5-81-3-8-8"
+       transform="matrix(0.31413083,0,0,0.31413083,263.3308,406.07865)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_mangel.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-2-1-0-6"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-3-1-9-8);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-9-7-6-3"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-61-6-5"
+       transform="matrix(0.31413083,0,0,0.31413083,243.1877,427.86639)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_mangel.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-9-4-8"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-9-6-1);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-78-6-2"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3352-2-4-6"
+       transform="translate(75.113771,271.48826)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_mangel.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g2376-4-6-1-0-2"
+         transform="translate(233.78418,96.84164)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-7-8-6-7-8"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-7-6-0-5-1);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-3-3-1-2-8"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-2-3-6-4-7"
+         transform="translate(216.52425,119.47592)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-5-1-1-2-0"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-4-4-7-9-7);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-31-0-8-5-2"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-6-5-3-1-7"
+         transform="translate(199.26433,142.11019)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-6-1-3-2-9"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-0-3-8-0-8);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-9-4-1-0-4"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+    </g>
+    <g
+       id="g3194-5-81-3-8-0"
+       transform="matrix(0.31413083,0,0,0.31413083,299.91772,408.14572)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_mangel.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-2-1-0-2"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-3-1-9-7);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-9-7-6-0"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-9-5-3"
+       transform="matrix(0.31413083,0,0,0.31413083,289.90319,432.00051)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_mangel.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-7-3-6"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-2-9-9);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-0-8-1"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3352-21-3-7"
+       transform="translate(116.62719,271.48826)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_mangel.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g2376-4-6-9-4-6"
+         transform="translate(233.78418,96.84164)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-7-8-3-4-3"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-7-6-3-1-2);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-3-3-4-2-4"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-2-3-2-0-6"
+         transform="translate(216.52425,119.47592)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-5-1-3-6-6"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-4-4-9-9-5);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-31-0-5-7-5"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-6-5-6-5-4"
+         transform="translate(199.26433,142.11019)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-6-1-9-0-9"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-0-3-0-0-7);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-9-4-0-0-6"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+    </g>
+    <g
+       id="g3194-5-56-3-8"
+       transform="matrix(0.31413083,0,0,0.31413083,328.76387,436.54804)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_mangel.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-6-5-0"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-45-4-5);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-03-1-4"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-81-3-8"
+       transform="matrix(0.31413083,0,0,0.31413083,336.20527,419.59817)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_mangel.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-2-1-0"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-3-1-9);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-9-7-6"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3352-20-1-6"
+       transform="translate(158.14059,271.90167)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_mangel.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g2376-4-6-16-3-3"
+         transform="translate(233.78418,96.84164)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-7-8-7-7-9"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-7-6-8-3-0);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-3-3-7-1-2"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-2-3-23-4-9"
+         transform="translate(216.52425,119.47592)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-5-1-5-3-2"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-4-4-0-2-0);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-31-0-0-8-6"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+      <g
+         id="g2376-6-5-0-9-0"
+         transform="translate(199.26433,142.11019)">
+        <circle
+           style="fill:#ff0000;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="path846-6-1-7-0-0"
+           cx="42.581379"
+           cy="45.061848"
+           r="11.162109" />
+        <ellipse
+           style="opacity:0.712389;fill:url(#radialGradient1032-0-3-81-6-4);fill-opacity:1;stroke-width:0.445998;paint-order:stroke markers fill"
+           id="path922-9-4-16-0-5"
+           cx="42.581379"
+           cy="45.061848"
+           rx="11.213786"
+           ry="11.265461" />
+      </g>
+    </g>
+    <g
+       id="g3194-5-0-2-26"
+       transform="matrix(0.31413083,0,0,0.31413083,365.14408,415.05064)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_mangel.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-0-0-5"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-85-6-2);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-60-6-5"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <g
+       id="g3194-5-1-6-8"
+       transform="matrix(0.31413083,0,0,0.31413083,355.2222,429.10663)"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_mangel.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <circle
+         style="fill:#0000ff;stroke-width:0.365001;paint-order:stroke markers fill"
+         id="path846-0-4-21-4-9"
+         cx="130.32796"
+         cy="72.036949"
+         r="11.162109" />
+      <ellipse
+         style="opacity:0.712389;fill:url(#radialGradient1032-6-8-28-3-4);fill-opacity:1;stroke-width:0.459286;paint-order:stroke markers fill"
+         id="path922-6-5-6-6-7"
+         cx="130.32796"
+         cy="72.036949"
+         rx="11.420492"
+         ry="11.730549" />
+    </g>
+    <rect
+       style="opacity:0.712389;fill:#4d4d4d;stroke:#000000;stroke-width:0.569731;paint-order:stroke markers fill"
+       id="rect4714-3-6-6"
+       width="197.39218"
+       height="5.2694364"
+       x="260.2793"
+       y="394.35718"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_mangel.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;stroke-width:0.264583"
+       x="297.38336"
+       y="387.94769"
+       id="text20657-6-5"
+       inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\Materialsammlung\Kapitel 1\Inkscape_Bilder\e_mangel.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan20655-1-5"
+         style="font-size:11.2889px;stroke-width:0.264583"
+         x="297.38336"
+         y="387.94769">Elektronenmangel</tspan></text>
+  </g>
+</svg>

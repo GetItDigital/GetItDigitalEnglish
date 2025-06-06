@@ -1,0 +1,43 @@
+\subsection{Kirchhoffsche Gestze 3\label{AufgabeKirchhoff3}}
+\Aufgabe{
+    Für die Brückenschaltung sind folgende Werte gegeben: $R_1 = 4\ \mathrm{k}\Omega, R_2=20 \ \mathrm{k}\Omega, R_3 = 6 \ \mathrm{k}\Omega, R_4 = 20 \ \mathrm{k}\Omega$. \newline
+    Der Innenwiderstand des Voltmeters kann als unendlich groß angenommen werden. Berechnen Sie die folgenden Größen:
+    \begin{enumerate}[label=\alph*)]
+        \item  $I_{13}$ und $I_{24}$
+        \item $U_1,\ U_2, \ U_3$ und $U_4$
+        \item Die Spannung zwischen den Punkten A und B.
+        \item Wann wäre die Brücke abgeglichen, d. h. wann ist die Spannung zwischen den Punkten A und B Null?
+        Stellen Sie die Abgleichbedingung in möglichst allgemeiner Form als Funktion der Widerstände $R_1$ bis $R_4$ dar.      
+    \end{enumerate}
+    \begin{center}
+        
+   
+    \begin{tikzpicture}
+        \draw(0,0)to[short,i,name=zu,o-*](0,3)
+        to [R,i^,name=R1,-*](2,5)
+        to [R,-*](4,3)
+        to [R,-*](2,1)
+        to [R,i<^,name=R2](0,3);
+        \draw(4,3) to[short,-o](4,0);
+        \draw(2,5)to[rmeterwa,t=V](2,1);
+ 
+        \iarrmore{zu}{$I$};
+        \iarrmore{R1}{$I_{13}$};
+        \iarrmore{R2}{$I_{24}$};
+ 
+        \node at (0,-0.4) {+};
+        \node at (4,-0.4) {-};
+        \node at (2,5.4) {A};
+        \node at (2,0.6) {B};
+        \node at (0.6,4.4) {$R_1$}; % für waagerechte Beschriftung des Widerstandes
+        \node at (0.6,1.6) {$R_2$}; % für waagerechte Beschriftung des Widerstandes
+        \node at (3.4,4.4) {$R_3$}; % für waagerechte Beschriftung des Widerstandes
+        \node at (3.4,1.6) {$R_4$}; % für waagerechte Beschriftung des Widerstandes
+        \draw[->] (0.5,0) -- (3.5,0) node[midway,below] {24 V};
+    \end{tikzpicture}
+\end{center}
+}
+
+\Loesung{
+	Hier entsteht eine Musterlösung...
+}

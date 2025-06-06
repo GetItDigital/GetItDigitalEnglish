@@ -1,0 +1,574 @@
+\newvideofile{strom}{Die elektrische Stromstärke}
+
+
+\section{Die elektrische Stromstärke}
+
+\begin{frame}
+	\ftx{Lernziele: Die Elektrische Stromstärke}
+
+	\begin{Lernziele}{Die Elektrische Stromstärke}
+        Die Studierenden können
+        \begin{itemize}
+			\item die Begriffe der elektrischen Stromstärke und der elektrischen Stromdichte erläutern und
+			anwenden
+            \item die elektrische Stromstärke sowie die elektrische Stromdichte in einfachen Anordnungen berechnen
+            \item die Driftgeschwindigkeit von Elektronen in einfachen Anordnungen bestimmen
+
+        \end{itemize}
+    \end{Lernziele}
+		\speech{lernziele_strom}{1}{In diesem Video werden wir uns die elektrische Stromstärke einmal genauer anschauen.
+			Am Ende dieser Lerneinheit solltet ihr die Begriffe der elektrischen Stromstärke und der elektrischen Stromdichte erläutern und
+			anwenden können, aber auch die elektrische Stromstärke sowie die elektrische Stromdichte in einfachen Anordnungen berechnen. 
+			Weiterhin werden wir uns mit der Driftgeschwindigkeit von Elektronen in einfachen Anordnungen beschäftigen.}
+
+\end{frame}
+
+
+\subsection{Das elektrische Strömungsfeld}
+
+\s{
+
+Die vorherigen Kapitel beziehen sich ausschließlich auf ruhende Ladungsträger.
+Folglich wird dieser Teilbereich der Elektrotechnik als Elektrostatik bezeichnet.
+
+
+
+Auf molekularer Ebene bewegen sich die freien Elektronen in einem elektrischen Leiter ständig in zufällige Richtungen.
+Im Mittel gleicht sich die Bewegung der einzelnen Elektronen jedoch aus. 
+Liegt an einem Leiter ein elektrisches Feld $\vec{E}$ an, so werden die frei 
+beweglichen Elektronen in diesem in Richtung der positiv geladenen Elektrode angezogen (siehe Abbildung \ref{fig:stromfeld}).
+Zusätzlich zur zufälligen, ungerichteten Bewegung wird eine \textbf{gerichtete Bewegungskomponente} hinzugefügt.
+Liegt eine solche gerichtete Bewegung von Teilchen vor, wird von einem \textbf{Strömungsfeld} gesprochen.
+
+
+ \begin{figure}[h!]
+	\centering
+	\includesvg[width=0.6\textwidth]{strömungsfeld.svg}
+	\caption{Elektrischer Leiter mit eingeprägter elektrischer Feldstärke $\vec{E}$. Die Driftbewegung der Elektronen $\vec{v}_\mathrm{el}$ verläuft in entgegengesetzter Richtung zur Feldstärke.}
+	\label{fig:stromfeld}
+\end{figure}
+
+
+ Neben Elektronen in Leitern kann ein elektrisches Strömungsfeld auch durch geladene Ionen in Gasen
+  oder Flüssigkeiten hervorgerufen werden.
+
+Im Fall einer im zeitlichen Mittel konstanten Ladungsträgerbewegung, was im abgebildeten
+ Leiter durch ein konstantes elektrisches Feld erreicht wird, liegt ein stationäres elektrisches
+  Strömungsfeld vor.
+
+
+
+
+}
+
+
+\begin{frame}
+	\ftx{Das elektrische Strömungsfeld}
+	\b{
+
+	
+	\begin{columns}
+       \column[c]{0.5\textwidth}
+	   Strömungsfeld: \textbf{gerichtete} Bewegung von Teilchen\\
+	   \phantom{Hallo Welt!}\\
+	   \phantom{Hallo Welt!}\\
+	
+	   Stationäres Stromungsfeld: \textbf{zeitlich konstanter} Teilchenstrom\\
+	   
+	   \phantom{Hallo Welt!}\\
+	   \phantom{Hallo Welt!}\\
+	
+	   Stationäres elektrisches Strömungsfeld: strömende Teilchen \textbf{elektrische Ladungsträger}
+	   
+	   
+	   
+	
+
+		\column[c]{0.5\textwidth}
+
+		\begin{figure}[h!]
+			\centering
+			\includesvg[width=\textwidth]{strömungsfeld.svg}
+			
+		\end{figure}
+
+    \end{columns}
+
+	\speech{stroemungsfeld}{1}{
+		In den vorherigen Videos haben wir uns ausschließlich ruhende Ladungsträger angeschaut, weswegen dieser
+Teilbereich der Elektrotechnik als Elektrostatik bezeichnet wird. Nun wollen wir uns jedoch mit der Bewegung von Ladungsträgern beschäftigen. 
+Auf molekularer Ebene bewegen sich die freien Elektronen in einem elektrischen Leiter ständig in
+zufällige Richtungen. Im Mittel gleicht sich die Bewegung der einzelnen Elektronen jedoch aus. Liegt wie in diesem Beispiel hier
+an einem Leiter ein elektrisches Feld an, so werden die frei beweglichen Elektronen in diesem in
+Richtung der positiv geladenen Elektrode angezogen. 
+Dadurch wird der zufälligen, ungerichteten Bewegung eine gerichtete Bewegungskomponente hinzugefügt, und es wird von einem Strömungsfeld gesprochen.
+Neben Elektronen in Leitern kann ein solches elektrisches Strömungsfeld auch durch geladene Ionen in Gasen
+oder Flüssigkeiten hervorgerufen werden.
+Im Fall einer im zeitlichen Mittel konstanten Ladungsträgerbewegung, was im hier abgebildeten Leiter
+durch ein konstantes elektrisches Feld erreicht wird, liegt ein stationäres elektrisches Strömungsfeld vor.}
+}
+\end{frame}
+
+
+
+\subsection{Der elektrische Strom}
+
+
+\s{
+Als elektrische Stromstärke $I$ wird die gerichtete Bewegung (Driftbewegung) von elektrischen Ladungsträgern bezeichnet.
+Die Richtung der elektrischen Stromstärke ist so definiert, dass sie vom höheren Potential (positiv geladene Elektrode)
+zum niedrigeren Potential verläuft. Damit verläuft sie in die gleiche Richtung wie die elektrische Feldstärke,
+jedoch in die zur Driftgeschwindigkeit der Elektronen entgegengesetzen Richtung (siehe Abbildung \ref{fig:strom}). 
+
+
+ \begin{figure}[h!]
+	\centering
+	\includesvg[width=0.6\textwidth]{strom.svg}
+	\caption{Elektrischer Leiter mit elektrischer Feldstärke $\vec{E}$ und resultierender elektrischer Stromstärke $I$.}
+	\label{fig:strom}
+\end{figure}
+
+
+Die Elektronen erreichen eine feldstärkeabhängige
+Driftgeschwindigkeit $\vec{v}_\mathrm{el}$. Zusammenstöße mit den Metallatomen aus der Gitterstruktur behindern
+die freie Bewegung der Elektronen, und wirken dieser als eine Art Widerstand entgegen. 
+
+
+\begin{equation}
+	\vec{v}_\mathrm{el} = - b_\mathrm{el} \cdot \vec{E}
+	\label{eq:driftgeschw}
+\end{equation}
+
+
+
+
+\begin{equation*}
+	[ \vec{v}_\mathrm{el} ]  = \frac{\mathrm{m}}{\mathrm{s}}
+\end{equation*}
+
+Der Proportionalitätsfaktor $b_\mathrm{el}$ zwischen der 
+Driftgeschwindigkeit $\vec{v}_\mathrm{el}$ und der elektrischen Feldstärke $\vec{E}$ wird als 
+Elektronenbeweglichkeit bezeichnet.
+
+\begin{equation*}
+	[b_\mathrm{el}] = \frac{\mathrm{m}^2}{\mathrm{Vs}}
+\end{equation*}
+
+
+
+
+Neben der Driftgeschwindigkeit $\vec{v}_\mathrm{el}$ ist auch die Anzahl der Elektronen $N_\mathrm{el}$
+sowie deren Ladungsmenge $\Delta Q$ zur Ermittlung der elektrischen Stromstärke $I$ relevant.
+
+\begin{figure}[h!]
+	\centering
+	\includesvg[width=0.6\textwidth]{strom1.svg}
+	\caption{Illustration der Elektronenbewegung durch einen elektrischen Leiter}
+	\label{fig:strom1}
+\end{figure}
+
+ 
+Die Ladungsmenge $\Delta Q$ entspricht
+
+\begin{equation*}	
+	\Delta Q = e \cdot N_\mathrm{el} = e \cdot n_\mathrm{el} \cdot V_1 \,
+\end{equation*}
+
+wobei $n_\mathrm{el}$ die Dichte der Ladungsträger im Volumen $V_1$ angibt.
+
+Mit $V_1 = \Delta s \cdot A$ und $\Delta s = v_\mathrm{el}  \cdot \Delta t$ ergibt sich: 
+
+\begin{equation*}	
+	\Delta Q =  e \cdot n_\mathrm{el} \cdot v_\mathrm{el} \cdot \Delta t \cdot A
+\end{equation*}
+
+Über die Definition der Driftgeschwindigkeit (\ref{eq:driftgeschw}) führt dies zu:
+
+\begin{equation*}	
+	\Delta Q =  e \cdot n_\mathrm{el} \cdot b_\mathrm{el} \cdot E \cdot \Delta t \cdot A \, ,
+\end{equation*}
+
+woraus sich die Änderung der Ladungsmenge $\Delta Q$ pro Zeiteinheit $\Delta t$ herleiten lässt:
+
+\begin{equation*}	
+	\frac{\Delta Q}{\Delta t} =  e \cdot n_\mathrm{el} \cdot b_\mathrm{el} \cdot E \cdot A
+\end{equation*}
+
+
+
+
+\subsection{Definition der elektrischen Stromstärke}
+
+Diese so ermittelte Ladungsänderung über die Zeit wird als \textbf{elektrische Stromstärke} $I$ bezeichnet:
+
+\begin{equation}
+	I = \frac{\Delta Q}{\Delta t}
+	\label{eq:stromdef}
+\end{equation}
+
+
+
+\begin{equation*}
+	[I] = \mathrm{Ampere} = \mathrm{A}
+\end{equation*}
+
+
+
+Aus dieser Definition der Stromstärke folgt, dass eine über einen Zeitraum aufaddierte elektrische 
+Stromstärke die in dieser Zeit transporte Ladungsmenge $Q$ ergibt:
+
+\begin{equation}
+	Q = \int_{t_1}^{t_2} i(t) \, \mathrm{d} t	
+\end{equation}
+
+Neben der gesamten elektrischen Stromstärke $I$ ist oft auch der auf den Leiterquerschnitt bezogene Strom von Interesse.
+Zur Berechnung dieser \textbf{Stromdichte} $J$ wird die Stromstärke $\Delta I$ durch ein elementar kleines Flächenelement $\Delta A$
+betrachtet: 
+
+\begin{equation}
+	J = \frac{\Delta I}{\Delta A}
+\end{equation}
+
+Ist die elektrische Stromstärke $I$ über eine Fläche gleichmäßig verteilt, lässt sich dies vereinfachen:
+
+\begin{equation}
+	J = \frac{I}{A}
+\end{equation}
+
+Da die Stromstärke $I$ über den gesamten Leiter hinweg identisch bleibt, ändert sich bei einer 
+Querschnittsverkleinerung des Leiters auch die resultierende elektrische Stromdichte $J$ (siehe Abbildung \ref{fig:stromdichte}).
+
+\begin{figure}[h!]
+	\centering
+	\includesvg[width=0.6\textwidth]{stromdichte.svg}
+	\caption{Zusammenhang zwischen der Stromdichte $J_1$ bei Querschnitt $A_1$ und $J_2$ bei $A_2$}
+	\label{fig:stromdichte}
+\end{figure}
+
+Hier gilt:
+
+\begin{equation*}
+	J_1 \cdot A_1 = J_2 \cdot A_2 = I
+\end{equation*}
+
+
+
+
+
+\begin{bsp}{}{}
+
+	Durch eine Kupferleitung mit dem Querschnitt $A = 1 \mathrm{mm}^2$ fließt ein Strom von $I = 8 \mathrm{A}$. 
+	Ein $\mathrm{mm}^3$ enthält etwa $ 8,5 \cdot 10^{19}$ Atome. Jeweils 1 Elektron pro Atom sei am Ladungstransport beteiligt.
+
+	\begin{center}
+		\includesvg[width=0.5\textwidth]{radialfeld.svg}
+	\end{center}
+	
+
+	
+
+	Mit welcher Driftgeschwindigkeit bewegen sich die Elektronen im Mittel durch die Leitung?
+
+	\begin{equation*}
+		\vec{v}_\mathrm{el} = - b_\mathrm{el} \cdot \vec{E}
+	\end{equation*}
+
+	Da sich die negativ geladenen Elektronen entgegen der Feldrichtung $\vec{E}$ (und somit auch entgegen der
+	 technischen Stromrichtung $I$) bewegen, ist die Richtung der Driftgeschwindigkeit ausreichend beschrieben,
+	 und es genügt, den Betrag $v_\mathrm{el}$ zu berechen.
+
+
+	mit dem Zusammenhang
+
+	\begin{equation*}
+	 I = e \cdot n_\mathrm{el} \cdot b_\mathrm{el} \cdot E  \cdot A\\
+\rightarrow E = \frac{I}{e \cdot n_\mathrm{el} \cdot b_\mathrm{el} \cdot A}
+	\end{equation*}
+
+	
+
+	ergibt sich:
+
+\begin{equation*}
+	v_\mathrm{el} = \cancel{b_\mathrm{el}} \cdot \frac{I}{e \cdot n_\mathrm{el} \cdot \cancel{b_\mathrm{el}} \cdot A}
+\end{equation*}	
+
+Einsetzen der Zahlenwerte:
+
+\begin{equation*}
+	v_\mathrm{el} = \frac{8 \mathrm{A}}{1,602 \cdot 10^{-19} \, \mathrm{As} \cdot 8,5 \cdot 10^{19} \, \mathrm{mm}^{-3} \cdot 1 \, \mathrm{mm}^2 }
+\end{equation*}	
+
+
+\begin{equation*}
+	v_\mathrm{el} = 0,59 \frac{\mathrm{mm}}{s} 
+\end{equation*}	
+
+Die Elektronen bewegen sich im Mittel also mit 0,59 mm/s. Da sich innerhalb des Leiters die elektrische Feldstärke
+jedoch mit Lichtgeschwindigkeit fortbewegt, setzen sich alle Elektronen des Leiters praktisch gleichzeitig in Bewegen.
+Vergleichbar ist dies mit einem vollständig mit Murmeln gefüllten Rohr. Im Moment des hereinschiebens einer weiteren 
+Murmel fällt auf der anderen Seite eine Murmel heraus, obwohl sich die einzelnen Murmeln nur langsam bewegen. 
+
+
+
+
+
+
+\end{bsp}
+
+}
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+\begin{frame}
+	\b{
+	\ftx{Elektrischer Strom I}
+
+	
+
+	
+
+	
+	\begin{columns}
+       \column[c]{0.6\textwidth}
+
+	   Elektrischer Strom: gerichtete Driftbewegung von Ladungsträgern\\
+
+	   \phantom{text}\\
+	   \phantom{text}\\
+
+
+	   Feldstärkeabhängige Driftgeschwindigkeit $\vec{v}_\mathrm{el}$:
+
+		\phantom{.}\\
+		\phantom{text}\\
+
+		
+		$\vec{v}_\mathrm{el} = - b_\mathrm{el} \cdot \vec{E}$\\
+
+		\phantom{.}\\
+
+		
+
+		mit:\\
+		 $\vec{v}_\mathrm{el}$ = Driftgeschwindigkeit der Elektronen in $\mathrm{m/s}$\\
+
+		 $b_\mathrm{el}$ = Elektronenbeweglichkeit in $\mathrm{cm}^2/\mathrm{Vs}$
+
+
+
+
+
+	
+
+		
+		\column[c]{0.4\textwidth}
+
+
+		\begin{figure}[h!]
+						\centering
+						\includesvg[width=\textwidth]{strömungsfeld.svg}
+						
+					\end{figure}
+    \end{columns}
+		\speech{strom1}{1}{
+		Diese gerichtete Bewegung von elektrischen Ladungsträgern wird als elektrische Stromstärke  mit dem Formelbuchstaben Ih bezeichnet. Dabei ist ihre Richtung so definiert, 
+		dass sie vom höheren Potential zum niedrigeren Potential, also von Plus nach Minus verläuft. 
+Damit verläuft sie in die gleiche Richtung wie die bereits bekannte elektrische Feldstärke.
+Da Elektronen jedoch negativ geladen sind, also vom Pluspol angezogen werden, bewegen diese sich im Mittel in die entgegengesetzte Richtung.
+Um auf diesen Fakt aufmerksam zu machen, wird in einigen Zusammenhängen inoffiziell zwischen der technischen Stromrichtung und der physikalischen Stromrichtung,
+ welche die Elektronenbewegung beschreibt, unterschieden.
+In Abhängigkeit von der eletrischen Feldstärke erreichen die Elektronen eine mittlere Geschwindigkeit, die sogenannte Driftgeschwindigkeit, welche wir hier mit V E L bezeichnen. 
+Zwar werden die Elektronen durchgehend vom elektrischen Feld beschleunigt, jedoch behindern Kollisionen der Elektronen mit 
+Metallatomen aus der Gitterstruktur die freie Bewegung der Elektronen, und wirken dieser
+als eine Art Widerstand entgegen.
+Dabei wird der Proportionalitätsfaktor B E L zwischen der Driftgeschwindigkeit V EL und der elektrischen Feldstärke als Elektronenbeweglichkeit bezeichnet.}
+	}
+\end{frame}
+
+\begin{frame}
+	\b{
+	\ftx{Elektrischer Strom II}
+
+	
+	\begin{columns}
+       \column[c]{0.6\textwidth}
+	  Ladungsträgertransport innerhalb eines Leiters:\\
+
+		\phantom{.}\\
+
+		\phantom{text}\\
+		$\Delta Q = e \cdot N_\mathrm{el} $\\
+
+		\phantom{text}\\
+
+		$\Delta Q = e \cdot n_\mathrm{el} \cdot V_1$\\
+
+		\phantom{text}\\
+
+	$\Delta Q = e \cdot n_\mathrm{el} \cdot b_\mathrm{el} \cdot E \cdot \Delta t \cdot A$
+
+		\phantom{.}\\
+
+		mit:\\
+		$N_\mathrm{el} =$ Anzahl Ladungsträger in betrachtetem Volumen\\
+
+		$n_\mathrm{el} = $  Ladungsträgerdichte in $1/\mathrm{m}^3$
+
+
+
+
+
+
+	
+
+		
+		\column[c]{0.4\textwidth}
+		
+
+
+		\begin{figure}[h!]
+			\centering
+			\includesvg[width=\textwidth]{strom1.svg}
+			
+		\end{figure}
+
+    \end{columns}
+	\speech{strom2}{1}{Neben der Driftgeschwindigkeit ist auch die Anzahl der Elektronen sowie die damit verbundene Ladungsmenge
+ zur Ermittlung der elektrischen Stromstärke relevant.
+ Die gesamte Ladungsmenge, die sich bewegt, wird als Delta Kuh, also der Anderung von Kuh bezeichnet. 
+ Sie ist das Produkt der Elementarladung E mit der Anzahl der freien Ladungsträger im betrachteten Raumabschnitt. Bei vielen Metallen wie beispielsweise Kupfer 
+ geht man in der Regel davon aus, dass es pro Kupferatom im Schnitt etwa Ein freies, schwach gebundenes Elektron gibt, welches zum Ladungstransport genutzt werden kann.
+ Die absolute Anzahl der Ladungsträger, Groß N, erhält man über die Dichte dieser Ladungsträger pro Volumen, multipliziert mit dem betrachteten Volumen, hier also das dunkelgelb
+  hinterlegte Volumen V eins. Die Ladungsträgerdichte ist eine Materialabhängige Eigenschaft, welche beispielsweise in Tabellenbüchern nachgeschlagen werden kann.
+  Das Volumen V eins kann als Produkt der Fläche A mit der betrachteten Strecke Delta S gesehen werden, die das Produkt der Driftgeschwindigkeit V EL mit dem betrachteten
+   Zeitabschnitt Delta T repräsentiert. Mit dem Wissen aus der vorherigen Folie, dass die Driftgeschwindigkeit aus dem Produkt der Elektronenbeweglichkeit B EL mit dem elektrischen Feld
+   berechnet werden kann, erhalten wir für die Änderung der Ladungsmenge Delta Kuh gleich die Elementarladung 
+   mal der Ladungsträgerdichte und Elektronenbeweglichkeit, multipliziert mit dem E Feld, der vergangenen Zeit und der Querschnittsfläche des Leiters.
+	}
+
+
+
+
+	}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+	\b{
+	\ftx{Definition der elektrischen Stromstärke}
+
+	\begin{columns}
+		\column[c]{0.5\textwidth}
+	
+		Stromstärke $I:$ Ladungsmenge $\Delta Q$ in $\Delta t$ durch Leiter \\
+
+		\phantom{.}\\
+
+
+
+\begin{Merksatz}{}
+	$I = \frac{\Delta Q}{\Delta t}$\\
+\end{Merksatz}
+
+\begin{equation*}
+	[ I ] = \mathrm{Ampere} = \mathrm{A}
+\end{equation*}
+
+
+\phantom{text}\\
+
+
+
+$ I = e \cdot n_\mathrm{el} \cdot b_\mathrm{el} \cdot E  \cdot A$\\
+
+
+
+
+
+		
+	
+
+		\column[c]{0.5\textwidth}
+
+
+		\begin{figure}[h!]
+			\centering
+			\includesvg[width=\textwidth]{strom.svg}
+			
+		\end{figure}
+
+	
+
+	\end{columns}
+	\speech{stromstaerke}{1}{
+		Die elektrische Stromstärke ist also die Ladungsänderung pro Zeitänderung, oder mathematisch ausgedrückt die zeitliche Ableitung der Ladung.
+		Daraus folgt, dass man aus dem Aufsummieren beziehungsweise Integrieren der elektrischen Ströme die transportierte Ladungsmenge Q ermitteln kann, welche beispielsweise in einem Bauteil gespeichert wird.
+		Die elektrische Stromstärke wird in Ampere angegeben, und ist eine unserer sieben S Ih Basiseinheiten, aus denen alle anderen Größen abgeleitet werden können.}
+	}
+\end{frame}
+
+
+\begin{frame}
+	\b{
+	\ftx{Definition der elektrischen Stromdichte}
+
+	\begin{columns}
+		\column[c]{0.5\textwidth}
+	
+		Stromstärke $J:$ Stromstärke $\Delta I$ pro Leiterquerschnitt $\Delta A$ \\
+
+		\phantom{.}\\
+
+
+
+\begin{Merksatz}{}
+	$J = \frac{\Delta I}{\Delta A}$\\
+\end{Merksatz}
+
+\begin{equation*}
+	[ J ] = \frac{\mathrm{A}}{\mathrm{m}^2}
+\end{equation*}
+
+
+\phantom{text}\\
+
+\begin{equation*}
+	J_1 \cdot A_1 = J_2 \cdot A_2 = I
+\end{equation*}
+
+	\column[c]{0.5\textwidth}
+
+	\begin{figure}[h!]
+		\centering
+		\includesvg[width=\textwidth]{stromdichte.svg}	
+	\end{figure}
+
+	\end{columns}
+	\speech{stromdichte}{1}{Neben der gesamten elektrischen Stromstärke ist oft auch der auf den Leiterquerschnitt bezogene
+Strom von Interesse. 
+Zur Berechnung dieser sogenannten Stromdichte mit dem Formelzeichen J wird die Stromstärke Delta I durch ein
+elementar kleines Flächenelement Delta A betrachtet. 
+Ist die elektrische Stromstärke über die betrachtete Fläche gleichmäßig verteilt, wie es in vielen der von uns betrachteten Anwendungen der Fall ist, lässt sich dies vereinfachen, und 
+die Stromdichte kann über J gleich I durch A ermittelt werden.
+Zur Verdeutlichung des Konzepts schauen wir uns den hier gezeigten Leiter mit einer Querschnittsänderung rechts an.
+Da die Stromstärke I über den gesamten Leiter hinweg identisch bleibt, haben die Elektronen nach der Verkleinerung des Querschnitts weniger Platz, sie rücken also näher zusammen.
+Als Ergebnis steigt die Stromdichte in diesem Fall.}
+}
+\end{frame}
+
+
+

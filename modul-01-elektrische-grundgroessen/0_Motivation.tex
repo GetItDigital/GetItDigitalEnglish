@@ -1,0 +1,394 @@
+\newvideofile{Motivation}{Physikalische Größen und das SI-Einheitensystem}
+\section{Motivation}
+
+
+
+\s{
+	Die Elektrotechnik durchdringt nahezu jeden Bereich unseres modernen Lebens. Die Spanne reicht
+	 von der Energieversorgung über die Steuerungstechnik bis hin zur IT-Technik. 
+	Egal ob Smartphone, Auto oder moderne Haushaltsgeräte, tagtäglich werden 
+	zahlreiche Gegenstände genutzt, die oben diese Disziplin nicht denkbar wären.
+	Die Elektrotechnik hat in den letzten Jahrzehnten bahnbrechende Innovationen 
+	ermöglicht und ist der Treiber für zahlreiche Entwicklungen. Im Bereich der 
+	erneuerbaren Energien basieren Photovoltaikanlagen, Windkraftwerke und 
+	intelligente Stromnetze auf fortschrittlichen elektrotechnischen Konzepten. Für das Internet
+	 der Dinge (IoT) erfordert die Vernetzung von Alltagsgegenständen miniaturisierte Sensoren,
+	  Mikrocontroller und Kommunikationsmodule und die Entwicklung leistungsfähiger KI-Systeme wäre
+	   ohne spezialisierte Hardwarekomponenten wie GPUs oder CPUs nicht möglich.
+	Fachwissen aus diesem Bereich ist jedoch nicht nur für Studierende der Elektrotechnik relevant.
+	 Auch steigt die Relevanz der grundlegenden Inhalte für Studierende sämtlicher weiterer
+	  ingenieurstechnischer sowie verwandter Studiengänge stetig an. Die moderne 
+	  Produktentwicklung wird mit interdisziplinären Projektteams umgesetzt.
+
+	  \begin{itemize}
+		\item 	Maschinenbau: Auch wenn die Maschinenbauingenieur*innen nicht unmittelbar an der
+		 Entwicklung elektrisch/elektronischer Komponenten beteiligt sind, brauchen sie ein 
+		 grundlegendes Verständnis für die am Entwicklungsprojekt beteiligten Kolleg*innen. 
+		 Beispielsweise bei der Entwicklung von Robotersystemen oder automatisierten Fertigungsanlagen 
+		 ist eine enge Zusammenarbeit zwischen Maschinenbau und Elektrotechnik unerlässlich.
+		\item 	Informatik: Die Schnittstelle zwischen Hardware und Software wird immer wichtiger.
+		 Informatiker*innen müssen verstehen, wie ihre Programme mit der zugrundeliegenden 
+		 Elektronik interagieren.
+		\item 	Medizintechnik: Moderne medizinische Geräte wie MRT-Scanner oder Herzschrittmacher 
+		sind ohne fundierte elektrotechnische Kenntnisse nicht denkbar.
+
+	  \end{itemize}
+	Dieses Skript unterstützt bei dem Erlernen der benötigten Grundlagen. Es vermittelt nicht nur theoretisches Wissen, sondern zeigt auch praktische Anwendungen und interdisziplinäre Verknüpfungen auf. Ziel ist es, ein solides Fundament zu schaffen, auf dem Studierende verschiedener Ingenieurdisziplinen aufbauen können.
+	Die hier erlernten Konzepte bilden die Basis für das Verständnis komplexerer Systeme und bereiten auf die Herausforderungen einer zunehmend digitalisierten und vernetzten Welt vor. Von den Grundlagen der Elektrizität bis hin zu fortgeschrittenen Themen wie Signalverarbeitung oder Regelungstechnik - dieses Skript legt den Grundstein für eine erfolgreiche Karriere in einer Welt, die maßgeblich von der Elektrotechnik geprägt ist.
+	
+}
+
+\newpage
+
+\section{Physikalische Größen - Definitionen und Maßeinheiten}
+
+
+\begin{frame}{}
+	\ftx{Lernziele: Beschreibung physikalischer Größen}
+
+	\begin{Lernziele}{Beschreibung physikalischer Größen}
+        Die Studierenden können
+        \begin{itemize}
+            \item physikalische Größen mit Maßzahl und Maßeinheit angeben
+            \item die sieben SI-Basiseinheiten sowie die davon abgeleiteten Einheiten nutzen sowie ihren
+			jeweiligen Größen zuordnen
+			\item Zahlenwerte mit Hilfe von Zehnerpotenzen sowie deren Bezeichnung angeben und ineinander
+			umrechnen
+        \end{itemize}
+    \end{Lernziele}
+	\speech{Lernziele_groessen}{1}{Jeweils zu Beginn und Ende eines jeden Kapitels sollen die konkreten Lernziele für dieses definiert werden, um Ihnen auf der einen Seite schon
+	 jetzt zu zeigen, was in diesem Kapitel auf 
+	Sie zukommen und besonders wichtig sein wird, und Ihnen auf der anderen Seite am Ende des Kapitels die Möglichkeit zu geben, zu rekapitulieren, ob die zentralen Inhalte des Kapitels verstanden wurden.
+	Das erste Kapitel ist ein Einleitungskapitel, in welchem die Grundlagen zur korrekten Beschreibung aller physikalischer Größen, welche in der Elektrotechnik benötigt werden, beschrieben sind.
+	Am Ende dieses Kapitels sollten Sie sämtliche physikalischen Größen mit Maßzahl sowie Maßeinheit angeben können, einen Überblick über die SI-Basiseinheiten sowie die ihnen zugeordneten abgeleiteten 
+	Einheiten gewonnen haben, sowie sehr kleine beziehungsweise sehr große Zahlenwerte korrekt mit ihren Zehnerpotenzen angeben können.
+	}
+	
+\end{frame}
+
+\begin{frame}
+	\ftb{Das SI-Einheitensystem}
+
+
+	\s{
+	Jede physikalische Größe wird immer als Kombination von Zahlenwert (Maßzahl) und ihrer Maßeinheit (auch Dimension genannt) 
+	beschrieben. Wenige einheitenlose Größen bilden hier eine Ausnahme, die Maßeinheit von diesen ist "1". Vor der Einheit kann - falls erforderlich - das Kürzel einer Zehnerpotenz stehen, die den 
+	Zahlenwert skaliert (siehe Abschnitt \textit{Zehnerpotenzen}). Der Zahlenwert und die Einheit werden durch ein Leerzeichen getrennt. Beispiel: $1000\,\mathrm{m} = 1\,\mathrm{km}$.\\
+	
+	Diese Einheiten sind im internationalen Einheitensystem, dem SI-System (Système International),
+	 definiert und bilden die Grundlage aller physikalischen Größen. Es gibt sieben SI-Basisgrößen, welche mit Hilfe von fundamentalen physikalischen Konstanten definiert werden können.
+	Diese Konstanten können experimentell mit ausreichend hoher Genauigkeit bestimmt werden, um eine zuverlässige Grundlage unseres gesamten Einheitensystems zu bilden. 
+	Neben den so definierten Grundeinheiten gibt es noch weitere, sogenannte abgeleitete Einheiten, die sich auf die Grundeinheiten zurückführen lassen.
+
+	Abseits des SI-Systems und seiner abgeleiteten Größen gibt es eine Vielzahl weiterer Einheiten, wie beispielsweise die
+	 angelsächsischen Größen Pfund, Inch oder die Meile, die an dieser Stelle nicht weiter verwendet werden.
+
+	}
+
+
+
+
+
+
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{SI-Größe} & \textbf{Formelzeichen} & \textbf{Einheit} & \textbf{Basis} \\ \hline
+			\only<2->{Zeit} & \only<2->{$t$} & \only<2->{Sekunde, s} & \only<2->{$\Delta\nu$} \\ \hline
+			\only<3->{Länge} & \only<3->{$\ell$} & \only<3->{Meter, m} & \only<3->{$c, \mathrm{s}$} \\ \hline
+			\only<4->{Masse} & \only<4->{$m$} & \only<4->{Kilogramm, kg} & \only<4->{$h, \mathrm{s, m}$} \\ \hline
+			\only<5->{Stromstärke} & \only<5->{$I$} & \only<5->{Ampere, A} & \only<5->{$e, s$} \\ \hline
+			\only<6->{Temperatur} & \only<6->{$T$} & \only<6->{Kelvin, K} & \only<6->{$k_\mathrm{B}, \mathrm{s, m, kg}$} \\ \hline
+			\only<7->{Stoffmenge} & \only<7->{$n$} & \only<7->{Mol, mol} & \only<7->{$N_\mathrm{A}$} \\ \hline
+			\only<8->{Lichtstärke} & \only<8->{$I_v$} & \only<8->{Candela, cd} & \only<8->{$K_{\mathrm{cd}}, \mathrm{s, m, kg}$} \\ \hline
+		\end{tabular}
+		\caption{SI-Einheiten und ihre Basisgrößen}
+		\label{tab:si_units}
+	\end{table}
+
+
+	\b{
+	\only<2>{Eine Sekunde ist das 9.192.631.770-fache der Periodendauer des
+	 Hyperfeinstrukturübergangs $\Delta v$ im Cäsium-Atom $ ^{133}Cs.$ \\
+
+	 \phantom{.}\\
+	$\Delta \nu$ = 9.192.631.770 Hz \quad    (Hyperfeinstrukturübergang $ ^{133}$Cs)}
+
+	\only<3>{Ein Meter ist die Länge der Strecke, die das Licht im Vakuum während der Dauer
+	von $t = \frac{1}{299.792.458}$ s zurücklegt.
+
+	\phantom{.}\\
+
+	$c = 299.792.458 \frac{\mathrm{m}}{\mathrm{s}}$  \quad (Lichtgeschwindigkeit) }
+
+	
+	
+	\only<4>{Das Kilogramm ist seit Mai 2019 vom genau definierten Planckschen Wirkungsquantum
+abhängig:  $1 \mathrm{kg} = \frac{h}{6,626 070 15\cdot 10^-{34}} \frac{\mathrm{s}}{\mathrm{m}^2}$
+
+\phantom{.}\\
+
+$h = 6,626 070 15 \cdot 10^{-34} \mathrm{Js}$  \quad (Plancksches Wirkungsquantum)
+}
+	
+
+\only<5>{Das Ampere ist seit 2019 durch die Elementarladung definiert. Ein Ampere ist der
+Stromfluss von $\frac{e}{1,602176634} \cdot 10^{-19} \, \frac{1}{\mathrm{s}}$ 
+Elementarladungen pro Sekunde.\\
+
+
+\phantom{.}\\
+
+$e = 1,602 176 634 \cdot 10^{-19} \mathrm{As}$ \quad (Elementarladung)
+}
+
+
+\only<6>{Ein Kelvin entspricht einer Änderung der thermodynamischen Temperatur, die mit
+einer Änderung der thermischen Energie ($kT$) um $1,380649 \cdot 10^{-23} \, \mathrm{J}$ einhergeht.
+
+\phantom{.}\\
+
+$k_\mathrm{B} = 1,380 649 · 10^{-23} \, \frac{\mathrm{kg \cdot m^2}}{\mathrm{s^2 \cdot K}} $ \quad (Boltzmann-Konstante)
+}
+
+\only<7>{Ein Mol ist die Stoffmenge eines Systems, das $6,022 140 76 \cdot 10^{23}$ eines bestimmten
+Einzelteilchens enthält.\\
+
+\phantom{.}\\
+
+$N_\mathrm{A} = 6,022 140 76 \cdot 10^{23} \frac{1}{\mathrm{mol}}$  \quad (Avogadro-Konstante)
+}
+
+\only<8>{Eine Candela ist die Lichtstärke einer Strahlungsquelle, die mit einer Frequenz von
+540 THz emittiert und die eine Strahlungsintensität in dieser Richtung 
+von $\frac{1}{683} \frac{\mathrm{W}}{\mathrm{sr}}$ hat. \quad (sr = Raumwinkel Steradiant)\\
+
+\phantom{.}\\
+
+$K_\mathrm{cd}(540 \mathrm{THz}) = 683 \, \frac{\mathrm{lm}}{\mathrm{W}}$ \quad (Photometrisches Strahlungsäquivalent)
+}
+
+}
+
+\s{
+
+Die aktuell gültigen Definitionen der in obiger Tabelle aufgeführten Einheiten sind: 
+
+\begin{itemize}
+	\item Eine Sekunde ist das 9.192.631.770-fache der Periodendauer des
+	 Hyperfeinstrukturübergangs $\Delta \nu$ im Cäsium-Atom $ ^{133}Cs.$ \\
+
+
+	\item Ein Meter ist die Länge der Strecke, die das Licht im Vakuum während der Dauer
+	von $t = \frac{1}{299.792.458}$ s zurücklegt.
+
+	\item Das Kilogramm ist seit Mai 2019 vom genau definierten Planckschen Wirkungsquantum
+	abhängig:  $1 \mathrm{kg} = \frac{h}{6,626 070 15\cdot 10^-{34}} \frac{\mathrm{s}}{\mathrm{m}^2}$
+
+	\item Das Ampere ist seit 2019 durch die Elementarladung definiert. Ein Ampere ist der
+	Stromfluss von $\frac{e}{1,602176634} \cdot 10^{-19} \frac{1}{\mathrm{s}}$ 
+	Elementarladungen pro Sekunde.\\
+
+    \item Ein Kelvin entspricht einer Änderung der thermodynamischen Temperatur, die mit
+	einer Änderung der thermischen Energie ($kT$) um $1,380649 \cdot 10^{-23} \, \mathrm{J}$ einhergeht.
+
+	\item Ein Mol ist die Stoffmenge eines Systems, das $6,022 140 76 \cdot 10^{23}$ eines bestimmten
+    Einzelteilchens enthält.
+
+	\item Eine Candela ist die Lichtstärke einer Strahlungsquelle, die mit einer Frequenz von
+	540 THz emittiert und die eine Strahlungsintensität in dieser Richtung 
+	von $\frac{1}{683} \frac{\mathrm{W}}{\mathrm{sr}}$ hat. 
+\end{itemize}	
+
+Die zur Definition des SI-Systems verwendeten Naturkonstanten sind:
+
+\begin{itemize}
+	\item Hyperfeinstrukturübergang: $ ^{133} Cs \Delta v  = 9.192.631.770\,\mathrm{Hz}$
+
+	\item Lichtgeschwindigkeit: $c = 299.792.458\,\frac{\mathrm{m}}{\mathrm{s}}$
+
+	\item Plancksches Wirkungsquantum: $h = 6,626 070 15 \cdot 10^{-34}\,\mathrm{Js}$
+	
+	\item Elementarladung: $e = 1,602 176 634 \cdot 10^{-19}\,\mathrm{As}$
+	
+	\item Boltzmann-Konstante: $k_\mathrm{B} = 1,380 649 · 10^{-23} \, \frac{\mathrm{kg \cdot m^2}}{\mathrm{s^2 \cdot K}} $
+
+	\item Avogadro-Konstante: $N_\mathrm{A} = 6,022 140 76 \cdot 10^{23}\,\frac{1}{\mathrm{mol}}$
+
+	\item Photometrisches Strahlungsäquivalent einer monochromatischen Strahlung der Frequenz $540\,\mathrm{THz}$: $K_\mathrm{cd}(540\,\mathrm{THz}) = 683 \, \frac{\mathrm{lm}}{\mathrm{W}}$
+\end{itemize}
+
+
+}
+
+
+\speech{SI-Einheiten}{1}{Jede physikalische Größe wird immer als Kombination von Zahlenwert, auch Maßzahl genannt, und ihrer Maßeinheit beziehungsweise Dimension beschrieben.
+Diese Einheiten sind im internationalen Einheitensystem, dem S I System, definiert.Es gibt sieben S Ih Basisgrößen, welche
+mit Hilfe von fundamentalen physikalischen Konstanten definiert werden können. Diese Konstanten
+können experimentell mit ausreichend hoher Genauigkeit bestimmt werden, um eine zuverlässige
+Grundlage unseres gesamten Einheitensystems zu bilden. Alle weiteren physikalischen Einheiten lassen sich aus diesen sieben Basisgrößen herleiten.
+}
+\speech{SI-Einheiten}{2}{Die erste Basisgröße ist die Zeit, welche mit dem Formelbuchstaben T abgekürzt wird, und deren Einheit die Sekunde ist.}
+\speech{SI-Einheiten}{3}{Die Grundeinheit der Länge ist der Meter}
+\speech{SI-Einheiten}{4}{Die Masse M von Körpern wird in Kilogramm angegeben}
+\speech{SI-Einheiten}{5}{In der Elektrotechnik besonders häufig vorkommend ist die elektrische Stromstärke I, die in Ampere angegeben wird.}
+\speech{SI-Einheiten}{6}{Die Temperatur T wird in technischen Prozessen üblicherweise in Kelvin angegeben.}
+\speech{SI-Einheiten}{7}{Die Stoffmenge N, welche in Mohl angegeben wird, spielt zumindest in den Grundlagen der elektrotechnik meist eine eher kleinere Rolle}
+\speech{SI-Einheiten}{8}{Ähnlich sieht es bei der in Candela gemessenen Lichtstärke aus.}
+
+\end{frame}
+
+\begin{frame}{Abgeleitete SI-Einheiten}
+
+\s{Aus diesen sieben Grundeinheiten werden weitere 22 Größen mit eigener Bezeichnung hergeleitet. 
+Einige für die Elektrotechnik wichtige Beispiele sind nachfolgend aufgeführt:}	
+	
+
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\textbf{Größe} & \textbf{Formel} & \textbf{Einheit} & \textbf{Basiseinheit} \\ \hline
+		\only<2->{Kraft} & \only<2->{F} & \only<2->{Newton, N} & \only<2->{1 N = 1 kg m/s$^2$} \\ \hline
+		\only<3->{Energie} & \only<3->{E} & \only<3->{Joule, J} & \only<3->{1 J = 1 Ws = 1 Nm = 1 kg m$^2$/s$^2$} \\ \hline
+		\only<4->{Leistung} & \only<4->{P} & \only<4->{Watt, W} & \only<4->{1 W = 1 J/s = 1 kg m$^2$/s$^3$} \\ \hline
+		\only<5->{Spannung} & \only<5->{U} & \only<5->{Volt, V} & \only<5->{1 V = 1 W/A = 1 Nm/As = 1 kg m$^2$/s$^3$A} \\ \hline
+		\only<6->{Ladung} & \only<6->{Q} & \only<6->{Coulomb, C} & \only<6->{1 C = 1 As} \\ \hline
+		\only<7->{Widerstand} & \only<7->{R} & \only<7->{Ohm, $\Omega$} & \only<7->{1 $\Omega$ = 1 V/A = 1 kg m$^2$/s$^3$A$^2$} \\ \hline
+		\only<8->{Kapazität} & \only<8->{C} & \only<8->{Farad, F} & \only<8->{1 F = 1 As/V = 1 s$^4$A$^2$/kg m$^2$} \\ \hline
+		\only<9->{Induktivität} & \only<9->{L} & \only<9->{Henry, H} & \only<9->{1 H = 1 Vs/A = 1 kg m$^2$/s$^2$A$^2$} \\ \hline
+		\only<10->{magn. Fluss} & \only<10->{$\Phi$} & \only<10->{Weber, Wb} & \only<10->{1 Wb = 1 Vs = 1 kg m$^2$/s$^2$A} \\ \hline
+		\only<11->{Flussdichte} & \only<11->{B} & \only<11->{Tesla, T} & \only<11->{1 T = 1 Vs/m$^2$ = 1 kg/s$^2$A} \\ \hline
+	\end{tabular}
+	\caption{Größen und ihre Basiseinheiten}
+	\label{tab:groessen_basiseinheiten}
+\end{table}
+
+\b{
+
+\only<2>{Kraft ist Masse mal Beschleunigung: $F = m \cdot a$}
+\only<3>{Oft vergleichbar mit Arbeit, wichtig für Energieerhaltung, Einheit auch Wattsekunde}
+\only<4>{Leistung ist Arbeit pro Zeit}
+\only<5>{”Stärke“einer Spannungsquelle - Analog zum Druck in einer Leitung}
+\only<6>{Menge an freien Elementarladungen}
+\only<7>{"Reibung" von elektrischem Strom}
+\only<8>{Fähigkeit, Ladungen zu speichern}
+\only<9>{Zentrale Eigenschaft einer elektrischen Spule}
+\only<10>{Analoge Eigenschaft eines Magnetfeldes zum elektrischen Strom}
+\only<11>{Gibt Stärke des magnetischen Flusses an, z.B. im MRT}
+
+}
+
+\s{Wichtig: In Gleichungen mit physikalischen Größen treten auf beiden Seiten des Gleichheitszeichens sowohl Maßzahlen als auch Maßeinheiten auf.
+Eine Überprüfung der Einheiten auf Gleichheit (im Zweifel heruntergebrochen auf auf die SI-Basiseinheiten) liefert oft eine gute Kontrolle hinsichtlich der Plausibilität der Rechnung.}
+
+
+
+\speech{abgeleitete-einheiten}{1}{Aus diesen sieben Grundeinheiten werden alle weiteren Einheiten abgeleitet, von denen zweiundzwanzig eine eigene Bezeichnung haben. 
+Einige für die Elektrotechnik wichtige Beispiele sind nachfolgend aufgeführt.}
+\speech{abgeleitete-einheiten}{2}{Die Einheit der Kraft F ist das Newton. Dieses kann über die S I Basiseinheiten Kilogramm mal Meter geteilt durch Sekunde zum Quadrat ausgedrückt werden.}
+\speech{abgeleitete-einheiten}{3}{Die Energie wird in Joule gemessen.}
+\speech{abgeleitete-einheiten}{4}{Die Einheit der Leistung ist das Watt. Durch einen Vergleich der Basiseinheiten lässt sich manchmal sehen, wie die beiden Größen Zusammenhängen. Während die Energie Kilogramm mal Meter quadrat durch Sekunde Quadrat ist, wird die Leistung mit Kilogramm mal Meter Quadrat durch Sekunde hoch drei angegeben. Ein Watt ist also ein Joule geteilt durch Sekunde, also ein Joule pro Sekunde.}
+\speech{abgeleitete-einheiten}{5}{Weitere in den Grundlagen der Elektrotechnik wichtige Einheiten sind die Spannung U.}
+\speech{abgeleitete-einheiten}{6}{Die Ladung Q wird in Coulomb angegeben.}
+\speech{abgeleitete-einheiten}{7}{Der elektrische Widerstand R, gemessen in Ohm , .}
+\speech{abgeleitete-einheiten}{8}{Die Kapazität C in Farad gibt beispielsweise die Speicherfähigkeit eines Kondensators an.}
+\speech{abgeleitete-einheiten}{9}{Die Induktivität  in Henry ist die zentrale Eigenschaft einer Spule,.}
+\speech{abgeleitete-einheiten}{10}{Eigene Bezeichnungen haben auch die beiden magnetischen Größen magnetischer Fluss Vieh.}
+\speech{abgeleitete-einheiten}{11}{sowie die Flussdichte B, welche in Tesla gemessen wird.}
+
+\end{frame}
+	
+
+   
+
+
+\begin{frame}
+
+	\ftb{Zehnerpotenzen}
+
+
+	\s{Zur besseren Lesbarkeit sehr kleiner oder großer Zahlenwerte können Einheiten mit 
+	Zehnerpotenzen skaliert werden. Dazu wird die Bezeichnung der Zehnerpotenz ohne Leerzeichen direkt 
+	vor die Einheit geschrieben. Oft wird dabei diejenige Zehnerpotenz gewählt, bei der die Zahl vor dem Komma möglichst wenige Stellen hat.
+	
+	Eine andere Möglichkeit zur Verbesserung der Lesbarkeit ist die sogenannte Exponentialdarstellung. Dabei wird die Maßzahl mit der entsprechenden Zehnerpotenz direkt multipliziert.
+	Die Anzahl der verwendeten Nachkommastellen muss physikalisch sinnvoll sein. Ist dazu nichts weiter bekannt, werden meist zwei Nachkommastellen verwendet.
+	
+	} 
+
+	
+
+
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|c|c||c|c|}
+			\hline
+			\textbf{Bezeichnung} & \textbf{Potenz} & \textbf{Potenz} & \textbf{Bezeichnung} \\ \hline
+			\only<2->{Dezi, d} & \only<2->{$10^{-1}$} & \only<2->{$10^1$} & \only<2->{Deka, da} \\ \hline
+			\only<3->{Zenti, c} & \only<3->{$10^{-2}$} & \only<3->{$10^2$} & \only<3->{Hekto, h} \\ \hline
+			\only<4->{Milli, m} & \only<4->{$10^{-3}$} & \only<4->{$10^3$} & \only<4->{Kilo, k} \\ \hline
+			\only<5->{Mikro, $\mu$} & \only<5->{$10^{-6}$} & \only<5->{$10^6$} & \only<5->{Mega, M} \\ \hline
+			\only<6->{Nano, n} & \only<6->{$10^{-9}$} & \only<6->{$10^9$} & \only<6->{Giga, G} \\ \hline
+			\only<7->{Piko, p} & \only<7->{$10^{-12}$} & \only<7->{$10^{12}$} & \only<7->{Tera, T} \\ \hline
+			\only<8->{Femto, f} & \only<8->{$10^{-15}$} & \only<8->{$10^{15}$} & \only<8->{Peta, P} \\ \hline
+			\only<9->{Atto, a} & \only<9->{$10^{-18}$} & \only<9->{$10^{18}$} & \only<9->{Exa, E} \\ \hline
+		\end{tabular}
+		\label{tab:zehnerpotenzen}
+	\end{table}
+
+	\s{
+
+	Achtung: Bei Gewichtsangaben werden Präfixe nicht auf die SI-Basiseinheit Kilogramm
+	(kg), sondern auf die Einheit Gramm (g) angewendet.
+
+	Bei potenzierten Einheiten, wie zum Beispiel Flächen oder Volumeneinheiten, bezieht sich der
+	 Skalierungspräfix immer auf die Grundeinheit, er muss also auch potenziert werden.
+
+	 \begin{align*}
+		1 \, \mathrm{m^1} &= 100^1 \cdot 10^{-2} \, \mathrm{m} = 100 \, \mathrm{cm} \\
+		1 \, \mathrm{m^2} &= 100^2 \cdot (10^{-2} \, \mathrm{m})^2 = 10.000 \, \mathrm{cm^2} \\
+		1 \, \mathrm{m^3} &= 100^3 \cdot (10^{-2} \, \mathrm{m})^3 = 1.000.000 \, \mathrm{cm^3}
+	\end{align*}
+
+	 %\begin{eqa}
+	%	1\, \mathrm{m} = 100 \cdot 10^{-2} \, \mathrm{m} = 100 \mathrm{cm}\nonumber\\
+	%	1 \, \mathrm{m^2} = 100^2 \cdot (10^{-2} \, \mathrm{m})^2  = 10.000 \, \mathrm{cm}\nonumber\\
+	%	1 \, \mathrm{m^3} = 100^3 \cdot (10^{-2} \, \mathrm{m})^3  = 1.000.000 \, \mathrm{cm}^3\nonumber
+	 %\end{eqa}
+
+	%1 \, \mathrm{m} = 100 \cdot 10^{-2} \, \mathrm{m} = 100 \mathrm{cm}
+
+	%1 \, \mathrm{m^2} = 100^2 \cdot (10^{-2} \, \mathrm{m})^2  = 10.000 \, \mathrm{cm}^2
+
+	%1 \, \mathrm{m^3} = 100^3 \cdot (10^{-2} \, \mathrm{m})^3  = 1.000.000 \, \mathrm{cm}^3
+
+	 
+
+	
+
+	}
+
+	\b{
+	\hspace{75pt}\only<10->{$1 \, \mathrm{m} = 100 \cdot 10^{-2} \, \mathrm{m} = 100\,\mathrm{cm}$}
+
+	\hspace{75pt}\only<11->{$1 \, \mathrm{m^2} = 100^2 \cdot (10^{-2} \, \mathrm{m})^2  = 10.000 \, \mathrm{cm}^2$}
+
+	\hspace{75pt}\only<12->{$1 \, \mathrm{m^3} = 100^3 \cdot (10^{-2} \, \mathrm{m})^3  = 1.000.000 \, \mathrm{cm}^3$}
+
+
+	}
+
+	\speech{zehnerpotenzen}{2}{Zur besseren Lesbarkeit sehr kleiner oder großer Zahlenwerte können Einheiten mit Zehnerpotenzen
+	skaliert werden. Dazu wird die Bezeichnung der Zehnerpotenz ohne Leerzeichen direkt vor die Einheit geschrieben. Oft wird dabei diejenige Zehnerpotenz gewählt, bei der die Zahl vor dem Komma
+	möglichst wenige Stellen hat. 
+	Eine andere Möglichkeit zur Verbesserung der Lesbarkeit ist die sogenannte Exponentialdarstellung.
+	Dabei wird die Maßzahl mit der entsprechenden Zehnerpotenz direkt multipliziert. Die Anzahl der
+	verwendeten Nachkommastellen muss physikalisch sinnvoll sein. Ist dazu nichts weiter bekannt, werden meist zwei Nachkommastellen verwendet.}
+	\speech{zehnerpotenzen}{3}{Während im Alltag häufig von Zentimetern, also Zehn hoch minus zwei Metern, gesprochen wird, hat es sich im wissenschaftlichen Kontext durchgesetzt, die Potenzen als Vielfache von drei beziehungsweise minus drei zu wählen.}
+	\speech{zehnerpotenzen}{9}{, Die gebräuchlichen Präfixe für kleine Werte sind also Milli, Mikro, Nano und Piko, hingegen sind Femto und Atto in der Praxis eher weniger gebräuchlich. Große Werte werden mit den Präfixen Kilo, Mega, Giga, Tera und Peta beschrieben.}
+	\speech{zehnerpotenzen}{12}{Sind die Einheiten selber in Potenzierter Form angegeben, ist beim Umrechnen dieser in einen anderen Präfix vorsicht geboten. Während ein Meter einhundert Zentimetern 
+	entspricht, muss bei einem Quadratmeter die einhundert ebenfalls quadriert werden, und so sind dies bereits Zehntausend Quadratzentimeter. Ein Kubikmeter sind folglich einhundert hoch drei, also eine Million Kubikzentimeter.}
+\end{frame}

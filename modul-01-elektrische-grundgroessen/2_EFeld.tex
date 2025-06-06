@@ -1,0 +1,630 @@
+\newvideofile{E_Feld}{Das elektrische Feld}
+\section{Das elektrische Feld}
+
+ 
+
+\begin{frame}{}
+
+	\begin{Lernziele}{Das elektrische Feld}
+        Die Studierenden 
+        \begin{itemize}
+			\item entwickeln ein "Gefühl" für elektrische Felder
+			\item elektrische Felder beschreiben und für einfache Ladungsanordnungen berechnen
+			\item das Verhalten elektrischer Felder an Leitern charakterisieren
+			
+			
+	%		\item die elektrische Spannung aus anderen Feldgrößen errechnen 
+	%		\item Bestimmung des Zusammenhanges zwischen Ladung, elektrischer Flussdichte, Feldstärke und Permittivität im 
+	%		Homogenfeld
+        \end{itemize}
+    \end{Lernziele}
+	\speech{Lernziele_Efeld}{1}{In diesem Video wird das elektrische Feld eingeführt. Zunächst sollen die konkreten Lernziele für dieses Unterkapitel definiert werden, 
+	um Sie auf der einen Seite auf das, was in diesem Kapitel auf Sie zukommen wird, vorzubereiten, und Ihnen am Ende des Kapitels die Möglichkeit zu geben, zu kontrollieren, ob die zentralen
+	Inhalte des Kapitels verstanden wurden. 
+	Eines der übergelagerten Grundziele ist die Entwicklung eines Feldgefühls für elektrische Felder. Sie mögen sich zunächst einmal fragen, wieso ist ein solches Feldgefühl wichtig,
+	 zumal es heutzutage zahlreiche Programme zur Simulation
+	der verschiedensten Felder gibt. Zur Beurteilung, ob die simulierten Felder plausibel erscheinen, oder ob nicht doch in der Software Randbedingungen 
+	falsch gesetzt wurden, ist ein solches Feldgefühl jedoch entscheidend. 
+	Mit diesem Wissen werden Sie elektrische Felder beschreiben sowie für einfache Ladungsanordnungen berechnen können. Ein weiterer Fokus wird auf dem Verhalten der 
+	elektrischen Felder liegen, wenn sie auf elektrische Leiter wie beispielsweise Metalle treffen. ,
+	} 
+\end{frame}	
+
+
+\begin{frame}
+	\ftb{Charakterisierung des elektrischen Feldes}
+
+	\s{Wie gezeigt haben elektrische Ladungen einen direkten Einfluss auf andere Ladungen.
+	Dies geschieht dadurch, dass sie die Eigenschaften des Raums um sich herum verändern. Diese Veränderungen 
+	können durch ein Feldmodell 
+	beschrieben werden. Der Feldbegriff ist in der Physik von fundamentaler Bedeutung. Beispiele
+	hierfür sind das Temperaturfeld, in dem die Temperatur abhängig von seinem Ort durch eine skalare Größe
+	 beschrieben wird.
+	Neben solchen skalaren Feldern gibt es auch Vektorfelder, in denen jedem Ort neben einer Größe auch
+	eine Richtung, in die sie wirkt, zugeschrieben wird. Beispiele hierfür sind das Gravitationsfeld oder ein
+	Strömungsfeld, welches beispielsweise die Richtung und Geschwindigkeit von Wasserteilchen beschreibt.
+
+	Das \textbf{elektrische Feld} wird durch \textbf{Größe} (in Newton) sowie die \textbf{Richtung} 
+	der \textbf{Kraft} $\vec{F_\mathrm{E}}$ auf eine positive Probeladung $Q_2$ beschrieben und 
+	durch Feldlinien charakterisiert. Dargestellt wird diese Anordnung in Abbildung \ref{fig:efeld_def}.
+
+	\begin{figure}[h!]
+		\centering
+	
+		\includesvg[width=0.2\textwidth]{kraft_e.svg}
+		\caption{Anziehende Kraftwirkung $F_2$ einer Probeladung $Q_2$ in Richtung ruhender Ladung $Q_1$}
+		\label{fig:efeld_def}
+	\end{figure}
+
+
+
+
+	Die elektrische Feldstärke ist also:
+
+
+	%\begin{equation*}
+	\begin{Merksatz}{}
+		$\mathrm{Elektrische \, Feldst\ddot{a}rke} = \frac{\mathrm{Kraft \, auf \, Ladung}}{\mathrm{Ladung}} $
+	\end{Merksatz}	
+	%\end{equation*}
+\phantom{.}
+
+	%\begin{equation}
+	%	\vec{E} 
+	%	
+	%\end{equation}
+
+	\begin{equation}
+		\vec{E_1} = \frac{\vec{F_2}}{Q_2}  \quad \quad \left[ \frac{\mathrm{N}}{\mathrm{C}} =  \frac{\frac{\mathrm{kg \cdot m}}{\mathrm{s}}}{\mathrm{A \cdot s}} = \frac{\mathrm{V}}{\mathrm{m}} \right]
+		\label{eq:e_feld}
+	\end{equation}
+
+
+	Nachteilig an dieser Definition erscheint auf den ersten Blick, dass die elektrische Feldstärke von der
+	Probeladung $Q_2$ abhängig zu sein scheint. 
+	Durch Einsetzen des Coulombschen Gesetzes (Gleichung \ref{eq:coulomb}) in Gleichung \ref{eq:e_feld} lässt sich jedoch zeigen, 
+	dass die Kraft $F_2$ immer proportional zur Probeladung $Q_2$ steigt. Ihr Verhältnis liefert also immer den
+	gleichen Betrag für die elektrische Feldstärke, und diese wird, wie in Abbildung \ref{fig:efeld1} gezeigt, unabhängig von der Probeladung:
+
+
+	\begin{equation}
+		\vec{E_1} = \frac{\vec{F_2}}{Q_2} =\frac{1}{4 \pi \varepsilon_0} \cdot \frac{Q_1 \cdot Q_2}{r^2} \cdot \frac{1}{Q_2} = \frac{1}{4 \pi \varepsilon_0} \cdot \frac{Q_1}{r^2}
+		\label{e_feld2}
+	\end{equation}
+
+
+	\begin{figure}[h!]
+		\centering
+	
+		\includesvg[width=0.2\textwidth]{definition_e.svg}
+		\caption{Das durch $Q_1$ hervorgerufene elektrische Feld ist unabhängig von jeglicher Probeladung}
+		\label{fig:efeld1}
+	\end{figure}
+	
+
+	}
+
+
+	%\subsection{Charakterisierung des elektrischen Feldes}
+	\b{
+
+	\begin{columns}
+        \column[c]{0.5\textwidth}
+
+		%\vspace{-30pt}
+
+		Elektrisches Feld $\vec{E}$ definiert durch:\\
+		\vspace{5pt}
+
+		\textbf{Größe} (in Newton)\\
+		\textbf{Richtung} \\
+		einer \textbf{Kraft} $\vec{F}_{\mathrm{E}}$ 
+		auf pos. Probeladung\\
+
+		\visible<2->{
+		\vspace{15pt}
+		Charakterisiert durch \textbf{Feldlinien}\\
+		$\rightarrow$ Vektorfeld\\
+
+		\textbf{Nachteil:}\\
+		Feldstärke \textbf{unabhängig} von Probeladung
+		}
+		
+		
+\vspace{-10pt}
+\visible<3->{
+
+		\begin{Merksatz}{}
+			$\vec{E_1} = \frac{\vec{F_2}}{Q_2}$  
+
+		\end{Merksatz}
+		%\phantom{text}\\
+		\vspace{-5pt}
+$ [E] =  \frac{\mathrm{N}}{\mathrm{C}} =  \frac{\mathrm{V}}{\mathrm{m}} $
+
+}
+
+
+
+
+		%\textbf{Feldlinien} beginnen und enden immer auf Ladungen (oft Leiteroberflächen).
+
+        \column[c]{0.5\textwidth}
+		\begin{columns}
+			\column[c]{0.5\textwidth}
+			
+			\begin{figure}[h!]
+				\centering
+			
+				\includesvg[width=1\textwidth]{kraft_e.svg}
+				%\caption{Anziehende Kraftwirkung $F_2$ einer Probeladung $Q_2$ Richtung ruhender Ladung $Q_1$}
+			\end{figure}
+			
+		
+			
+				\column[c]{0.5\textwidth}
+				
+				\visible<3->{
+
+				\begin{figure}[h!]
+					\centering
+				
+					\includesvg[width=1\textwidth]{definition_e.svg}
+					%\caption{Das durch $Q_1$ hervorgerufene elektrische Feld ist unabhängig von jeglicher Probeladung}
+				\end{figure}
+
+				}
+			\end{columns}	
+
+			\visible<4->{
+
+			\begin{equation*}
+				\vec{E_1} = \frac{\vec{F_2}}{Q_2} =\frac{1}{4 \pi \varepsilon_0} \cdot \frac{Q_1 \cdot Q_2}{r^2} \cdot \frac{1}{Q_2} = \frac{1}{4 \pi \varepsilon_0} \cdot \frac{Q_1}{r^2}
+		%		\label{e_feld2}
+			\end{equation*}
+			}
+		
+			\vspace*{0.2cm}
+
+
+		%	\pause
+		%	Definition: Die elektrische Feldstärke $\vec{E}$ in N/As ist die elektrostatische Kraft auf eine Probeladung, normiert auf die Ladungsmenge $Q$ der Probeladung
+		%	\begin{equation*}
+		%		\vec{E} = \frac{\vec{F}_{\mathrm{E}}}{Q}
+		%	\end{equation*}
+			
+    \end{columns}
+
+	}
+	\speech{Charakterisierung_Efeld}{1}{Aus dem vorherigen Video wissen wir, dass elektrische Ladungen einen direkten Einfluss auf andere Ladungen haben. Dies geschieht
+	dadurch, dass sie die Eigenschaften des Raums um sich herum verändern. Diese Veränderungen können durch ein Feldmodell beschrieben werden, zu dessen Vorstellung wir uns einiger
+	 Analogien zum Gravitationsfeld bedienen können. In diesem wirkt die Gravitationskraft einer großen Masse wie die der Erde auf eine Probemasse, während wir in unserem Beispiel 
+	 statt der Erde einen negativ geladenen Leiter, welcher einen Elektronenüberschuss hat, sowie anstatt der Probemasse eine
+	positiv geladene Probeladung nutzen. Die positive Probeladung wird durch den negativ geladenen Leiter angezogen, das heißt, sie erfährt eine elektrostatische Kraft F nach unten. 
+	Diese wahrgenommene Veränderung des Raumes wird als elektrisches Feld bezeichnet. Dieses Feld wird durch die Größe und Richtung der elektrischen Kraft F auf eine positive 
+	Probeladung Q beschrieben und durch Feldlinien charakterisiert. Feldlinien kennen Sie schon vom Gravitationsfeld, nur jetzt handelt es sich um ein Feld, welches nicht auf eine Masse, 
+	sondern auf eine Ladung wirkt.}
+	\speech{Charakterisierung_Efeld}{2}{Genau wie beim Gravitationsfeld gibt es den Nachteil, dass die erzeugte Kraftwirkung von unserem Probekörper abhängig ist, 
+	das vom Leiter erzeugte Feld jedoch unabhängig von der Probeladung beschreibbar sein sollte.}
+	\speech{Charakterisierung_Efeld}{3}{Um dieses Problem zu umgehen, wenden wir das gleiche Prinzip wie bei der Bestimmung des Gravitationsfeldes an. 
+	Um die Stärke des Gravitationsfeldes zu bestimmen, wird die ermittelte Gravitationskraft 
+	F durch die Masse unserer Probemasse geteilt. Im Fall des elektrischen Feldes nehmen wir die gemessene Kraft F und beziehen sie auf, also teilen sie durch die positive Probeladung, 
+	auf welche die Kraft wirkt.
+	Im rechten Bild befindet sich also nur noch eine Feldlinie des elektrischen Feldes E ohne Probeladung, welche ermittelt wurde, indem die elektrstatische Kraft F durch die Probeladung Q
+	 geteilt wurde.}
+	\speech{Charakterisierung_Efeld}{4}{Durch Einsetzen der Formel der Coulombkraft in diesen Zusammenhang lässt sich die Stärke des elektrischen Feldes, hier ausgehend von einer Punktladung Q 1, mit der Formel E gleich 1 geteilt durch vier pi Epsilon 0 Mal Q 1 geteilt durch R Quadrat direkt berechnen. ,}	
+
+
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+	\ftb{Elektrische Leiter und elektrostatische Felder I}
+
+	\s{Im vorherigen Kapitel wird die Wirkung von Punktladungen auf das elektrische Feld untersucht. 
+	Da im Alltag elektrische Felder jedoch häufig von geladenen, elektrischen Leitern (wie Metallen) ausgehen,
+	werden sie hier gesondert aufgeführt. 
+
+	Liegt ein Elektronenüberschuss vor, wird - wie in Abbildung \ref{fig:leiter} dargestellt - die positive Probeladung $Q$ 
+	 in Richtung der Plattenoberflächen angezogen. Auch die Feldlinien $\vec{E}$ des elektrischen Feldes verlaufen in Richtung der 
+	 Leiteroberfläche. Im Falle eines Elektronenmangels wird die Probeladung abgestoßen, auch die Feldlinien führen vom positiven Leiter weg.
+
+
+	\begin{figure}[h!]
+		\centering
+		\includesvg[width=0.5\textwidth]{leiter_pos_neg.svg}
+		\caption{Richtung der elektrischen Feldstärke $\vec{E}$ von einem negativ (links) sowie positiv (rechts) 
+		geladenen Leiter auf eine positive Probeladung}
+		\label{fig:kraftwirkung}
+	\end{figure}
+
+
+	Da die Elektronen innerhalb eines Leiters frei beweglich sind, würden diese im Falle eines elektrischen Feldes innerhalb 
+	eines Leiters durch dieses Feld angezogen (oder abgestoßen) werden, bis sich das Feld innerhalb des Leiters 
+	ausgeglichen hat (siehe Abbildung \ref{fig:leiterausgleich}). Folglich kann in diesem Fall kein elektrisches Feld 
+	innerhalb eines Leiters existieren
+
+
+	\begin{figure}[h!]
+		\centering
+		\includesvg[width=0.5\textwidth]{Fehlvorstellung.svg}
+		\caption{Freier Ladungsträger wird durch das elektrische Feld augenblicklich an den Leiterrand gezogen. Innerhalb des Leiters kann deshalb kein
+		elektrostatisches Feld existieren.}
+		\label{fig:leiterausgleich}
+	\end{figure}
+
+	Dies führt zu der Erkenntnis, dass die elektrischen Feldlinien zwangsläufig \textbf{senkrecht} auf der
+	Oberfläche von Leitern stehen müssen (siehe Abbildung \ref{fig:e_vertikal}). Eine schräg stehende Feldlinie ließe sich sonst vektoriell
+	 in eine senkrecht und eine horizontal auf der Leiteroberfläche verlaufende Komponente zerlegen. Da diese 
+	 horizontale Komponente augenblicklich durch die sich bewegenden Ladungsträger ausgleichen wird, kann 
+	 sie nicht existieren. Dieser Effekt tritt ausschließlich bei elektrisch leitenden Materialien auf, in nicht leitenden Materialien
+	  (sogenannten Isolatoren) gibt es keine beweglichen Ladungsträger, welche die horizontale Komponente ausgleichen können.
+
+
+	 \begin{figure}[h!]
+		\centering
+		\includesvg[width=0.5\textwidth]{feldlinien_senkrecht.svg}
+		\caption{Durch die Eliminierung der horizontalen Komponente $\vec{E_2}$ des elektrischen Feldes bleibt ausschließlich die vertikale Komponente $\vec{E_1}$ bestehen, welche senkrecht auf der Leiteroberfläche steht. }
+		\label{fig:e_vertikal}
+	\end{figure}
+
+	
+	}
+	
+	
+	\b{
+
+	\begin{columns}
+       \column[c]{0.65\textwidth}
+
+	   \textbf{Feldlinien} beginnen und enden immer auf Ladungen (oft Leiteroberflächen).
+		
+		
+		\phantom{.}\\
+
+		
+			Elektronenüberschuss:\\
+			$\rightarrow$ Pos. Probeladung wird angezogen\\
+			$\rightarrow$ Feldlinien zeigen zum Leiter
+			
+			\phantom{.}\\
+
+
+			Elektronenmangel:\\
+			$\rightarrow$ Pos. Probeladung wird abgestoßen\\
+			$\rightarrow$ Feldlinien zeigen vom Leiter weg
+			
+
+			\begin{Merksatz}{}
+				In Leitern verschwindet das\\
+				 elektrostatische Feld
+			\end{Merksatz}
+	
+		\column[c]{0.35\textwidth}
+		\begin{figure}[h!]
+			\centering
+			\includesvg[width=0.5\textwidth]{leiter_el.svg}
+		%	\caption{Elektrische Feldrichtung sowie Kraftwirkung von einem negativ (links) sowie positiv (rechts) 
+		%	geladenen Leiter auf eine positive Probeladung}
+		%	\label{fig:leiter}
+		\end{figure}   
+
+		\begin{figure}[h!]
+			\centering
+			\includesvg[width=0.5\textwidth]{leiter_prot.svg}
+		%	\caption{Elektrische Feldrichtung sowie Kraftwirkung von einem negativ (links) sowie positiv (rechts) 
+		%	geladenen Leiter auf eine positive Probeladung}
+		%	\label{fig:leiter}
+		\end{figure}   
+
+	
+	
+	
+	
+	
+	\end{columns}
+\speech{Leiter-Felder}{1}{
+Wir haben zuvor das elektrische Feld durch Punktladungen betrachtet. In der praktischen Anwendung gehen elektrische Felder jedoch sehr häufig von geladenen
+elektrischen Leitern aus, wie wir sie beispielsweise als metallische Bauteile verwenden. Daher betrachten wir gesondert, wie elektrische Felder mit Leitern wechselwirken.
+Dabei beginnen oder enden Feldlinien immer auf Ladungen, bei Leitern sind dies die Oberflächenladungen: Folglich ist die Leiteroberfläche immer der Start,
+ beziehungsweise Endpunkt von elektrischen Feldlinien. Im Inneren von elektrischen Leitern verschwindet das elektrostatische Feld. 
+Wenn ein Leiter einen Elektronenüberschuss aufweist und somit negativ geladen ist, wird eine positive Probeladung Q in Richtung der Oberfläche dieses Leiters angezogen.
+Entsprechend zeigen die elektrischen Feldlinien zum negativ geladenen Leiter hin.
+Liegt hingegen ein Elektronenmangel vor und der Leiter ist positiv geladen, wird eine positive Probeladung von diesem Leiter abgestoßen. 
+Die Feldlinien zeigen in diesem Fall vom positiv geladenen Leiter weg.}
+
+	}
+\end{frame}
+
+
+
+\begin{frame}
+	\b{
+	\ftx{Leiter und elektrostatische Felder II}
+
+	\begin{columns}
+
+		\column[c]{0.5\textwidth}
+
+		Bewegliche Ladungsträger:\\
+		$\rightarrow$ Leiteroberfläche\\
+		$\rightarrow$ Elektrostatisches Feld wird kompensiert
+		
+
+
+
+		\column[c]{0.5\textwidth}
+
+
+		\begin{figure}[h!]
+			\centering
+			\includesvg[width=1\textwidth]{Fehlvorstellung.svg}
+		%	\caption{Freier Ladungsträger wird durch das elektrische Feld augenblicklich an den Leiterrand gezogen. Innerhalb des Leiters kann deshalb kein
+			%elektrostatisches Feld existieren.}
+		%	\label{fig:leiterausgleich}
+		\end{figure}
+
+	\end{columns}
+
+	\pause
+
+	\begin{columns}
+
+		\column[c]{0.55\textwidth}
+
+		Vektorielle Zerlegung von $\vec{E}$\\
+		$\rightarrow$ Horizontale Komponente elimieniert
+		
+
+		\begin{Merksatz}{}
+			Elektrische Feldlinien stehen senkrecht auf Leitern
+		\end{Merksatz}
+		
+
+
+
+		\column[c]{0.45\textwidth}
+
+
+		\begin{figure}[h!]
+			\centering
+			\includesvg[width=1\textwidth]{feldlinien_senkrecht.svg}
+		
+		\end{figure}
+	\end{columns}
+\speech{Leiter-Felder2}{1}{Betrachten wir einmal genauer die Effekte von elektrischen Feldern innerhalb von elektrischen Leitern. 
+Wie wir bereits wissen befinden sich innerhalb von ihnen zahlreiche bewegliche Ladungsträger, in Metallen sind dies hauptsächlich freie Elektronen.
+Wenn ein äußeres elektrisches Feld auf einen Leiter wirkt, würden diese durch das Feld angezogen oder abgestoßen werden, bis sich das
+Feld innerhalb des Leiters ausgeglichen hat. Folglich kann kein elektrostatisches Feld innerhalb eines Leiters existieren.}
+	
+
+\speech{Leiter-Felder2}{2}{
+Eine weitere Konsequenz der frei beweglichen Ladungsträger innerhalb von Leitern ist, dass die elektrischen Feldlinien zwangsläufig senkrecht auf der Oberfläche von 
+Leitern stehen müssen  Eine schräg stehende Feldlinie ließe sich sonst vektoriell in eine senkrecht und eine horizontal auf der Leiteroberfläche verlaufende Komponente zerlegen.
+Da diese horizontale Komponente augenblicklich durch die sich bewegenden Ladungsträger
+ausgleichen werden würde, kann sie nicht existieren. Dieser Effekt tritt ausschließlich bei elektrisch leitenden
+Materialien auf. In nicht leitenden Materialien, sogenannten Isolatoren, gibt es keine beweglichen
+Ladungsträger, welche eine horizontale Komponente ausgleichen könnten.}
+}
+
+\end{frame}	
+	
+
+
+
+
+
+\subsection{Beispiele elektrischer Felder}
+
+\begin{frame}
+	\ftx{Beispiele elektrischer Felder I}
+
+	\s{Das einfachste elektrische Feld ist das \textbf{Homogenfeld}. In diesem Feld sind sowohl
+	 der Betrag als auch die Richtung der elektrischen Feldstärke $\vec{E}$ an jedem Punkt konstant. Eine sich in diesem Feld
+	  befindliche Probeladung erfährt also an jeder Stelle die gleiche Kraftwirkung.
+	 Erzeugen lässt sich ein solches Feld wie in Abbildung \ref{fig:homogenfeld} dargestellt beispielsweise zwischen zwei  parallelen Metallplatten, welche
+	  mit unterschiedlichen Ladungen $Q$ aufgeladen sind. Die Feldlinien verlaufen grundsätzlich von der 
+	  positiv aufgeladenen zur negativ aufgeladenen Metallplatte. Häufig wird die Dichte, in der die
+	   Feldlinien eingezeichnet sind, als Maß für die Stärke des elektrischen Feldes verwendet. 
+	   Je dichter die Feldlinien eingezeichnet sind, desto stärker ist das elektrische Feld an dieser Stelle.
+
+	  \begin{figure}[h!]
+		\centering
+		\includesvg[width=0.3\textwidth]{elektr_homogenfeld.svg}
+		\caption{Ein elektrisches Homogenfeld zwischen zwei unterschiedlich geladenen Metallplatten}
+		\label{fig:homogenfeld}
+	\end{figure}
+
+
+	Das elektrische Feld einer Punktladung wird auch als \textbf{Radialfeld} (siehe Abbildung \ref{fig:punktladung}) bezeichnet. Unter der
+	idealisierten Annahme, dass sich unendlich weit entfert eine Hülle mit 
+	entgegengesetzter Ladung befindet, breiten sich die Feldlinien geradelinig aus. 
+	In ihrer symmetrischen Anordnung zeigen sie bei positiven Punktladungen in Richtung der negativen Hülle,
+	bei negativen Punktladungen in Richtung der Punktladung. 
+
+	\begin{figure}[h!]
+		\centering
+		\includesvg[width=0.26\textwidth]{feld_Punktladung.svg}
+		\caption{Radiales elektrische Feld einer positiven Punktladung. }
+		\label{fig:punktladung}
+	\end{figure}
+
+
+	Die elektrische Feldstärke $\vec{E}$ ist direkt proportional zur Ladung $Q$, verringert sich 
+	jedoch mit zunehmendem Abstand $r$ von ihr quadratisch. Errechnet werden kann ihr Betrag über:
+
+
+	\begin{equation}
+				E = \frac{1}{4 \pi \varepsilon_0} \frac{Q}{r^2}
+	\end{equation}
+
+
+	
+
+		
+
+
+	Die mit zunehmendem Abstand $r$ von der Punktladung schwächer werdende elektrische Feldstärke
+	zeigt sich neben dem mathematischen Zusammenhang auch in dem größer werdenden Abstand zwischen den Feldlinien.
+
+
+	Kompliziertere elektrische Felder ergeben sich schon beim Hinzufügen einer zweiten Punktladung. 
+	Im Fall von zwei betragsgleichen Ladungen unterschiedlichen Vorzeichens 
+	(Abbildung \ref{fig:anziehende_ladungen}) ergibt sich zwischen den Ladungen ein
+	nahezu gleichmäßiges Feld, während es weiter außen bedeutend schwächer wird. 
+
+	\begin{figure}[h!]
+		\centering
+		\includesvg[width=0.44\textwidth]{feldlinien.svg}
+		\caption{Das elektrische Feld von zwei betragsgleichen Ladungen unterschiedlichen Vorzeichens}
+		\label{fig:anziehende_ladungen}
+	\end{figure}
+
+	Der Fall mit zwei identischen Punktladungen zeigt wie in Abbildung \ref{fig:abstoßendeladungen} eine Besonderheit des elektrischen Feldes. 
+	Während sich die Feldlinien im Rest des Raumes erwartbar von den positiven Ladungen 
+	wegzeigen, gibt es zwischen den Punktladungen einen freien Raum ohne Feldlinien.
+	Dies liegt daran, dass sich die entgegengesetzten Feldlinien in diesem Zwischenraum gegenseitig kompensieren. 
+	Im Punkt zwischen beiden Ladungen liegt keine elektrische Feldstärke vor, auf der Ebene zwischen den Ladungen
+	neutralisieren sich die jeweiligen horizontalen Kompenenten, und es liegt lediglich ein elektrisches Feld in der jeweiligen 
+	vertikalen Richtung vor.
+
+	
+	\begin{figure}[h!]
+		\centering
+		\includesvg[width=0.4\textwidth]{feldlinien_protonen.svg}
+		\caption{Das elektrische Feld von zwei betragsgleichen Ladungen gleichen Vorzeichens}
+		\label{fig:abstoßendeladungen}
+	\end{figure}
+
+%
+
+	\newpage
+
+ 	}
+	
+	\b{
+
+
+	\begin{columns}
+       \column[c]{0.5\textwidth}
+	   \begin{figure}[h!]
+		\centering
+		\includesvg[width=0.7\textwidth]{elektr_homogenfeld.svg}
+	\end{figure}
+
+	
+		\column[c]{0.7\textwidth}
+		
+		\visible<2->{
+		\begin{figure}[h!]
+			\centering
+			\includesvg[width=0.6\textwidth]{feld_Punktladung.svg}
+			
+			\label{fig:e_punktladung}	
+		\end{figure}
+		}
+
+	
+
+
+
+	\end{columns}
+	\begin{columns}
+		\column[c]{0.5\textwidth}
+		Elektrisches Homogenfeld zwischen zwei Leiterplatten
+
+
+		\column[c]{0.5\textwidth}
+		\visible<2->{
+		Radialfeld einer positiven Punktladung
+		}
+	\end{columns}
+		\speech{beispiele_felder1}{1}{
+		Schauen wir uns zum Abschluss dieses Unterkapitels einmal ein paar Beispielanordnungen von elektrischen Feldern an.
+		Das einfachste elektrische Feld ist das Homogenfeld. In diesem Feld sind sowohl der Betrag als
+auch die Richtung der elektrischen Feldstärke E an jedem Punkt konstant. Eine sich in diesem Feld
+befindliche Probeladung erfährt also an jeder Stelle die gleiche Kraftwirkung. Erzeugen lässt sich ein
+solches Feld wie hier dargestellt beispielsweise zwischen zwei parallelen Metallplatten,
+welche mit unterschiedlichen Ladungen aufgeladen sind. Die Feldlinien verlaufen hierbei grundsätzlich von
+der positiv zur negativ aufgeladenen Metallplatte. Häufig wird die Dichte, in der die
+Feldlinien eingezeichnet sind, als Maß für die Stärke des elektrischen Feldes verwendet. Je dichter die
+Feldlinien beieinander sind, desto stärker ist das elektrische Feld an dieser Stelle.
+		}
+
+\speech{beispiele_felder1}{2}{
+Das elektrische Feld einer Punktladung wird auch als Radialfeld bezeichnet.
+Unter der idealisierten Annahme, dass sich unendlich weit entfernt eine Hülle mit entgegengesetzter
+Ladung befindet, breiten sich die Feldlinien geradlinig aus. In ihrer symmetrischen Anordnung zeigen
+sie bei positiven Punktladungen in Richtung der negativen Hülle, bei negativen Punktladungen in Richtung dieser Punktladung.
+Die elektrische Feldstärke E ist proportional zur Ladung Q, verringert sich jedoch mit zunehmendem Abstand r von ihr quadratisch.
+Neben diesem mathematischen Zusammenhang lässt sich bei größerem Radius auch in dem immer größer werdenden Abstand zwischen den Feldlinien eine Abschwächung des Feldes erkennen.}
+
+	}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\b{
+	\ftx{Beispiele elektrischer Felder II}	
+	\begin{columns}
+		\column[t]{0.5\textwidth}
+		\vspace{10pt}
+		\begin{figure}[h!]
+			\centering
+			\includesvg[width=0.7\textwidth]{feldlinien.svg}
+		\end{figure}
+		
+		
+		\column[t]{0.5\textwidth}
+		\visible<2->{
+		
+		\begin{figure}[h!]
+			\centering
+			\includesvg[width=0.75\textwidth]{feldlinien_protonen.svg}
+		\end{figure}
+		}
+		\vspace{10pt}
+		
+
+
+	\end{columns}	
+
+	\begin{columns}
+		\column[c]{0.5\textwidth}
+		Elektrisches Feld sich anziehender Punktladungen
+
+		\visible<2->{
+		\column[c]{0.5\textwidth}
+		Elektrisches Feld sich abstoßender Punktladungen
+		}
+	
+
+	\end{columns}
+
+
+	}
+	\speech{beispiele_felder2}{1}{
+		Kompliziertere elektrische Felder ergeben sich schon beim Hinzufügen einer zweiten Punktladung. 
+	Im Fall von zwei betragsgleichen Ladungen unterschiedlichen Vorzeichens 
+	ergibt sich im Bereich zwischen den Ladungen ein nahezu gleichmäßiges Feld, während es weiter außen bedeutend schwächer wird.}
+
+	\speech{beispiele_felder2}{2}{
+	Liegen jedoch zwei identische Punktladungen vor, zeigt sich eine Besonderheit des elektrischen Feldes. 
+	Während die Feldlinien im Rest des Raumes wie es zu erwarten ist von den positiven Ladungen 
+	wegzeigen, gibt es zwischen den Punktladungen einen freien Raum ohne Feldlinien.
+	Dies liegt daran, dass sich die entgegengesetzten Feldlinien in diesem Zwischenraum gegenseitig kompensieren. 
+	Im Punkt genau zwischen beiden Ladungen geht die Feldstärke sogar auf null herunter, während sich die jeweiligen horizontalen Komponenten auf der Ebene zwischen den Ladungen
+	neutralisieren. Folglich liegt lediglich ein elektrisches Feld in der jeweiligen vertikalen Richtung vor.}
+
+\end{frame}
+
+
+
+\newpage
+

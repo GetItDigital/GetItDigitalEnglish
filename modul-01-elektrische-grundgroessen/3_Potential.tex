@@ -1,0 +1,1214 @@
+\newvideofile{Potential}{Das elektrische Potential}
+
+\section{Das elektrische Potential}
+
+
+
+\begin{frame}
+	\ftx{Lernziele: Das elektrische Potential}
+
+	\begin{Lernziele}{Das elektrische Potential}
+        Die Studierenden können
+        \begin{itemize}
+			\item Verschiebearbeit von Ladungen im elektrischen Feld berechnen
+			\item Äquipotentialflächen bestimmen und einzeichnen
+			\item elektrische Spannungen aus gegebenen Feldgrößen bestimmen
+			
+			
+	%		\item die elektrische Spannung aus anderen Feldgrößen errechnen 
+	%		\item Bestimmung des Zusammenhanges zwischen Ladung, elektrischer Flussdichte, Feldstärke und Permittivität im 
+	%		Homogenfeld
+        \end{itemize}
+    \end{Lernziele}
+	\speech{lernziele_potential}{1}{In diesem Video werden wir uns anschauen, was es heißt, Arbeit in einem elektrischen Feld zu verrichten, und werden daraufhin das elektrische Potential einführen.
+	Ihr solltet also lernen, wie man die Verschiebearbeit von Ladungen im elektrischen Feld berechnet, wie man Äquipotentialflächen bestimmt, und wie sich letztendlich eine 
+	elektrische Spannung aus gegebenen Feldgrößen ermitteln lässt.}
+
+
+\end{frame}	
+
+
+
+\subsection{Arbeit im elektrischen Feld}
+
+
+
+
+
+
+\begin{frame}
+
+
+	\s{
+
+	Befindet sich eine Ladung innerhalb eines elektrischen Feldes, so wird eine Kraft 
+	auf sie ausgeübt. Wird die Ladung nun innerhalb des Feldes bewegt, muss eine Arbeit verrichtet werden.
+	Analog ist hier das Gravitationsfeld zu sehen, bei dem eine Arbeit verrichtet werden muss, wenn eine Masse angehoben wird,
+	also die potentielle Energie des Objektes erhöht wird.
+	Dieser Abschnitt ist als kurzer Vorgriff auf Modul 2 \textit{Energie und Leistung} zu sehen, in welchem
+	 die elektrische Arbeit genau definiert wird.
+
+	 
+	Das Vorzeichen einer verrichteten Arbeit ist abhängig davon, ob die Arbeit auf das betrachtete System (hier: Potentielle Energie der Probeladung $Q$ im elektrischen Feld $\vec{E}$)
+	oder auf den Erzeuger dieser Arbei bezogen wird. 
+	In diesem Skript wird sich auf den Erzeuger bezogen. Muss dieser eine Arbeit verrichten, um die potentielle Energie des Systems zu erhöhen, ist die verrichtete Arbeit als negativ anzusehen.
+	Wird eine Arbeit vom System freigesetzt, sprich die potentielle Energie der Prodeladung sinkt, ist die Arbeit positiv.
+
+
+
+	Physikalisch gesehen ist die Arbeit das Produkt aus der Kraft, die benötigt wird, um die Ladung 
+	zu bewegen, multipliziert mit der zurückgelegten Wegstrecke. Mit der Erkenntnis aus 
+	Kapitel 4.1, dass die elektrische Feldstärke der Quotient aus der Kraft auf eine Ladung pro Ladung ist
+	 (siehe Gleichung \ref{eq:e_feld}),
+	lässt sich die zum Bewegen der Ladung benötigte Arbeit ermitteln.
+
+	Nachfolgend soll berechnet werden, welche Arbeit $W$ bei der positiven Probeladung $Q$ aus Abbildung \ref{fig:arbeitefeld} freigesetzt wird,
+	wenn sie sich entlang der Feldlinien in Richtung der negativ geladenen Leiterplatte bewegt.
+
+	\begin{figure}[h!]
+		\centering
+		\includesvg[width=0.5\textwidth]{homogenfeld_w.svg}
+		\caption{Probeladung $Q$ in einem elektrischen Homogenfeld $\vec{E}$}
+		\label{fig:arbeitefeld}
+	\end{figure}
+
+
+	
+	Die Verlauf der elektrischen Feldstärke sowie Richtung von $\vec{E}$ gegenüber dem Weg $x$ lässt sich wie in Abbildung \ref{fig:evsx} gezeigt darstellen.
+
+
+
+	\begin{figure}[h!]
+		\centering
+		\includesvg[width=0.5\textwidth]{homogenfeld_elektr_arbeit.svg}
+		\caption{Feldstärke $E(x)$ im betrachteten Aufbau aus Abbildung \ref{fig:arbeitefeld}}
+		\label{fig:evsx}
+	\end{figure}
+
+
+
+		
+\begin{equation*}
+	W = \int_{d}^{0}  \vec{F} \, d \vec{x} 
+\end{equation*}
+
+Da die Richtung des elektrischen Feldes $\vec{E}$ der Raumrichtung $x$ 
+entgegengesetzt ist, führt ein Eliminieren der Vektorpfeile zu einem negativen Vorzeichen vor dem Integral.
+Durch Einsetzen der Kraft $F$ in Gleichung \ref{eq:e_feld} ergibt sich:
+
+\begin{equation*}
+	W = - Q \int_{d}^{0} E \cdot \mathrm{d}x 
+\end{equation*}
+
+Lösen des Integrals und Einsetzen der Integrationsgrenzen ergibt:
+
+\begin{equation*}
+	 W = -Q \cdot E \, [x]_d^0 = -Q \cdot E (0-d) 
+\end{equation*} 
+
+\begin{equation*}
+	 W = Q \cdot E \cdot d
+\end{equation*}
+
+Die Differenz der zu- oder abgeführten Arbeit einer Ladung im elektrischen Feld beträgt also:
+
+\begin{equation}
+	\Delta W = Q \cdot E \cdot \Delta x 
+\end{equation}
+
+\begin{bsp}{}{}
+
+	Für die in Abbildung \ref{fig:arbeitefeld} dargestellte Probeladung soll erreichnet werden, wie viel Energie auf ihrem Weg vom
+    Startpunkt zur negativen Platte freigesetzt wird.\\
+\phantom{text}\\
+
+	Die Probeladung betrage $Q= 1 \mu \mathrm{C}$, der Abstand zur Platte betrage 0,1 m und das 
+	elektrische Feld sei $E= 200$ V/m.
+
+	Die Arbeit $W$ berechnet sich dann zu 
+
+	\begin{equation*}
+		W= Q \cdot E \cdot d = 1 \cdot 10^{-6} \mathrm{C} \cdot 200 \mathrm{V/m} \cdot 0,1 \mathrm{m} = 2 \cdot 10^{-5} \mathrm{J} 
+	\end{equation*}
+\end{bsp}
+
+Analog zu einem Objekt im Gravitationsfeld führt das elektrische Feld einer Ladung Energie zu.
+Dadurch wird diese beschleunigt, und die potentielle Energie wird in kinetische Energie
+ umgewandelt.
+
+
+ Es ist unmittelbar einsichtig, dass der Betrag der im elektrischen Feld
+gespeicherten und nutzbaren potentiellen Energie der Probeladung
+$Q$ vom Ort $x$ der Probeladung linear abhängig ist (siehe Abbildung \ref{fig:zusammenhangEA}). Verfügt die Probeladung
+ bereits im Vorfeld über eine kinetische Energie, oder geht das elektrische Feld über den betrachteten Abschnitt hinaus,
+ lässt sich die Gleichung um den zusätzlichen Term $W_0$ erweitern:
+
+
+ \begin{equation}
+	W(x) = Q \cdot E \cdot x + W_0
+ \end{equation}
+
+
+
+ \begin{figure}[h!]
+	\centering
+	\includesvg[width=0.5\textwidth]{homogenfeld_elektr_arbeit2.svg}
+	\caption{Linearer Zusammenhang zwischen dem Ort $x$ und der potentiellen Energie $W(x)$ der Probeladung.}
+	\label{fig:zusammenhangEA}
+\end{figure}
+
+
+ 
+
+Der Übergang zwischen der im elektrischen Feld gespeicherten potentiellen Energie in die kinetische Energie
+der Probeladung kann über das Schaubild in Abbildung \ref{fig:ubergang} dargestellt werden.
+
+\begin{figure}[h!]
+	\centering
+	\includesvg[width=0.5\textwidth]{energieumwandlung.svg}
+	\caption{Übergang von potentieller Energie im elektrischen Feld zu potentieller Energie in der Probeladung}
+	\label{fig:ubergang}
+\end{figure}
+
+
+
+
+ Zur allgemeinen Beschreibung muss die technisch nutzbare Feldenergie unabhängig von der Probeladung $Q$ sein.
+Dazu wird die potentielle Energie auf ein Arbeitspotential normiert. 
+
+ \begin{equation*}
+	\frac{W(x)}{Q} =  E \cdot x + \frac{W_0}{Q}
+ \end{equation*}
+
+ 
+
+	}
+
+	\ftx{Arbeit im elektrischen Feld}
+	\b{
+	\begin{columns}
+       \column[c]{0.5\textwidth}
+		%Bekannt: Elektrisches Feld fügt Kraft auf Ladungen aus.
+
+		
+
+
+		\textbf{Arbeit} zur Bewegung von Ladungen im E-Feld erforderlich \\
+
+		\phantom{.}\\
+		
+		Arbeit $W$ $\widehat{=}$ Kraft $\cdot$ Weg\\
+
+		[$W$] = J (Joule)
+
+		
+		\phantom{.}\\
+
+		Vorzeichen betrachterabhängig, hier aus Erzeugersicht:
+
+		Negative Arbeit $\rightarrow$ Erhöhung potentieller Energie im System
+
+
+
+
+	%	\color{black} Frage: Welche Arbeit $W$ wird der Probeladung $Q$ auf ihrem Weg vom positiven Leiter
+	%	 zum negativen Leiter zugeführt?
+
+	\begin{columns}
+		\column[c]{0.5\textwidth}
+
+
+
+	\begin{figure}[h!]
+		\centering
+		\includesvg[width=\textwidth]{homogenfeld_w_folien.svg}
+	%	\caption{Probeladung $Q$ in einem elektrischen Homogenfeld $\vec{E}$}
+	\end{figure}
+
+	\column[c]{0.5\textwidth}
+
+
+
+	\begin{figure}[h!]
+		\centering
+		\includesvg[width=\textwidth]{homogenfeld_w_graph_folien.svg}
+	%	\caption{Probeladung $Q$ in einem elektrischen Homogenfeld $\vec{E}$}
+	\end{figure}
+
+
+		
+		\end{columns}		
+
+		\pause
+
+
+		\column[c]{0.5\textwidth}
+
+
+
+		\begin{eqa}
+			W = \int_{d}^{0}  \vec{F} \, d \vec{x} =  Q \int_{d}^{0} \vec{E} \cdot d\vec{x} \\
+			\mathrm{mit} \, \vec{E} = \frac{\vec{F}}{Q}\\
+			 W = -Q \cdot E \int_{d}^{0} dx = -Q \cdot E \, [x]_d^0 \\
+			 W = -Q \cdot E (0-d) = Q \cdot E \cdot d
+		\end{eqa}
+
+
+		\begin{Merksatz}{}
+			$\Delta W = Q \cdot E \cdot \Delta x$
+		\end{Merksatz}
+
+		%\begin{equation}
+		%\begin{eqa}
+		%	W = -Q \cdot E \int_{d}^{0} dx = -Q \cdot E \, [x]_d^0
+		%\end{eqa}
+			
+	
+		%W = \int_{d}^{0}\overrightarrow{F} \, d \overrightarrow{x} = - Q \int_{d}^{0} \overrightarrow{E} \cdot d\overrightarrow{x} 
+		
+		%\end{equation}
+
+		%mit $\overrightarrow{E} = \frac{\overrightarrow{F}}{Q}$
+
+
+	
+
+	%W = -Q \cdot E \int_{d}^{0} dx = -Q \cdot E \, [x]_d^0
+
+	
+
+	%W = -Q \cdot E (0-d) = Q \cdot \overrightarrow{E} \cdot\overrightarrow{d}
+
+
+
+	%\Rightarrow \Delta W = Q \cdot E \cdot \Delta x
+
+		
+
+
+
+
+    \end{columns}
+		\speech{Arbeit_E_feld}{1}{
+			
+	Befindet sich eine Ladung innerhalb eines elektrischen Feldes, so wird eine Kraft 
+	auf sie ausgeübt. Wenn wir diese Ladung nun entgegen dieser Kraft bewegen möchten, müssen wir dazu eine Arbeit verrichten.
+	Analog ist hier das Gravitationsfeld zu sehen, bei dem eine Arbeit verrichtet werden muss, wenn eine Masse angehoben wird,
+	also die potentielle Energie des Objektes erhöht wird.
+	Das Vorzeichen einer verrichteten Arbeit ist abhängig davon, ob die Arbeit auf das betrachtete System selber, welches hier die potentielle Energie der Probeladung Q im
+	elektrischen Feld oder auf den Verrichter dieser Arbeit bezogen wird. 
+	Wir wollen uns hier auf den Verrichter beziehen, sprich wenn wir eine Arbeit verrichten, um die potentielle Energie des Systems zu erhöhen, ist die verrichtete 
+	Arbeit als negativ anzusehen.
+	Wird eine Arbeit vom System freigesetzt, sprich die potentielle Energie der Probeladung sinkt, ist die Arbeit positiv.}
+
+	\speech{Arbeit_E_feld}{2}{Physikalisch gesehen ist die Arbeit das Produkt aus der Kraft, die benötigt wird, um die Ladung 
+	zu bewegen, multipliziert mit der zurückgelegten Wegstrecke. Auf dieser Folie ist dieser Zusammenhang allgemeingültig mit dem Integral der Kraft über die Wegstrecke 
+	ausgedrückt. Mit dem Wissen, dass die elektrische Feldstärke der Quotient aus der Kraft auf eine Ladung pro Ladung selbst ist,
+	lässt sich die zum Bewegen der Ladung benötigte Arbeit ermitteln.}	
+
+	}
+
+\end{frame}
+
+
+
+
+\begin{frame}
+	\b{
+	\ftx{Arbeit im elektrischen Feld II}
+	\begin{columns}
+      
+		%	\phantom{.}\\
+		
+
+%			\begin{eq}	
+%				[W] = \rm{J} \, (Joule)
+%			\end{eq}
+
+		
+
+		\column[c]{0.5\textwidth}
+		\begin{columns}
+
+
+			\column[c]{0.5\textwidth}
+			\begin{figure}[h!]
+				\centering
+				\includesvg[width=\textwidth]{homogenfeld_w_folien.svg}
+				%\caption{Probeladung $Q$ in einem elektrischen Homogenfeld $\vec{E}$}
+				%\label{fig:anziehende_ladungen}
+			\end{figure}	
+			%\f{width=\textwidth}{width=\textwidth}{arbeit_1.png}{Dummytext}
+			\column[c]{0.5\textwidth}
+			\begin{figure}[h!]
+				\centering
+				\includesvg[width=\textwidth]{homogenfeld_w_graph_folien.svg}
+			%	\caption{Probeladung $Q$ in einem elektrischen Homogenfeld $\vec{E}$}
+			%	\label{fig:anziehende_ladungen}
+			\end{figure}	
+			
+			
+			
+		\end{columns}
+ \column[c]{0.5\textwidth}
+
+			\visible<2->{
+
+	   	\begin{figure}[h!]
+				\centering
+				\includesvg[width=0.75\textwidth]{energieumwandlung.svg}
+			%	\caption{Probeladung $Q$ in einem elektrischen Homogenfeld $\vec{E}$}
+			%	\label{fig:anziehende_ladungen}
+			\end{figure}	
+			}
+
+		\end{columns}
+    
+
+		\visible<3->{
+
+
+	 \begin{eq}
+		W(x) = Q \cdot E \cdot x + W_0
+	 \end{eq}
+
+	 
+
+
+	}
+	\visible<4->{
+
+	\vspace{20pt}
+
+	Problem: Abhängigkeit von Probeladung $Q$\\
+
+
+	$\rightarrow$ \textbf{Normierung} von $W(x)$ auf $Q$ als Arbeitspotential
+
+
+
+	\begin{eq}
+		\frac{W(x)}{Q} = E \cdot x + \frac{W_0}{Q}
+	 \end{eq}
+	}
+
+
+\speech{Arbeit_E_feld2}{1}{	 
+Analog zu einem Objekt im Gravitationsfeld führt das elektrische Feld einer Ladung Energie zu.
+Dadurch wird diese beschleunigt, und die potenzielle Energie wird in kinetische Energie
+ umgewandelt. Je weiter oben sich die Probeladung also im Homogenfeld befindet, desto mehr potentielle Enerwie ist gespeichert. Das Elektrische Feld wird hier negativ eingezeichnet,
+da die Feldlinien der hier gewählten Zählrichtung von X entgegenstehen.}
+\speech{Arbeit_E_feld2}{2}{	
+ Den Übergang zwischen der im elektrischen Feld gespeicherten potenziellen Energie in die kinetische
+Energie der Probeladung kann man sich wie in diesem Schaubild gezeigt vorstellen. Die potenzielle Energie der Ladung im elektrischen Feld wird 
+in kinetische Energie der Probeladung umgewandelt.}
+
+\speech{Arbeit_E_feld2}{3}{	 
+ Verfügt die Probeladung bereits im Vorfeld über eine kinetische Energie, oder geht das elektrische Feld über den betrachteten Abschnitt hinaus,
+ lässt sich die Gleichung um den zusätzlichen Term W Null erweitern.}
+\speech{Arbeit_E_feld2}{4}{	 
+ Möchte man die technisch nutzbare Feldenergie jedoch allgemein beschreiben, muss diese Größe unabhängig von unserer Probeladung Q sein.
+Dazu wird die potenzielle Energie durch die Ladung Q geteilt, und auf ein allgemeingültiges Arbeitspotenzial normiert.}
+
+}
+\end{frame}
+
+\subsection{Definition des elektrischen Potentials}
+\begin{frame}
+	\ftx{Definition des elektrischen Potentials}
+
+	\s{
+
+	Die potentielle Energie normiert auf die betrachtete Ladung Q ist das \textbf{elektrische Potential} $\varphi$
+	des elektrischen Feldes. Dieses ist für jeden Punkt im Raum unabhängig von weiteren Einflussfaktoren direkt bestimmbar.
+	 Das Potentialfeld ist im Gegensatz zum elektrischen Feld ein Skalarfeld. Das bedeutet, dass jedem Punkt im
+	Raum unabhängig von weiteren Einflussfaktoren ein eindeutiges elektrisches Potential zugeordnet werden kann, 
+	jedoch keine Richtung dieser Größe im Raum vorliegt.
+
+	 \begin{equation}
+		\varphi = \frac{W}{Q}
+	 \end{equation}
+	 \begin{equation*}
+		[\varphi] = \text{V} \ (\text{Volt})
+	 \end{equation*}
+
+	
+
+	 Abbildung \ref{fig:potihomogen} zeigt ein elektrisches Homogenfeld, in welches die Potentiallinie eingezeichnet ist, auf welcher sich die
+	Ladung $Q$ gerade befindet. Mit zunehmender Entfernung von der positiven Platte in $x$-Richtung steigt das Potential 
+	 an, und kann wie folgt berechnet werden:
+
+	 \begin{equation}
+		\varphi(x) = E \cdot x + \varphi_0
+	\label{eq:potential}
+	 \end{equation}
+
+
+	 \begin{figure}[h!]
+		\centering
+		\includesvg[width=0.5\textwidth]{potential_homogenfeld.svg}
+		\caption{Elektrisches Homogenfeld mit eingezeichneter Potentiallinie $\varphi(x)$}
+		\label{fig:potihomogen}
+	\end{figure}
+
+	
+	 Die Steigung des Potentials  ist durch die elektrische Feldstärke $\vec{E}$ bestimmt. 
+	 Das elektrische Potential $\varphi$ und die elektrische Feldstärke hängen durch den negativen Gradienten des Potentials 
+	 zusammen. Dieser Zusammenhang wird in Abbildung \ref{fig:potigraph} verdeutlicht. 
+	
+
+
+
+ 
+
+	 \begin{figure}[h!]
+		\centering
+		\includesvg[width=0.5\textwidth]{homogenfeld_phi_graph.svg}
+		\caption{Zusammenhang zwischen dem elektrischen Potential $\varphi$ und der elektrischen Feldstärke $E$ im Homogenfeld}
+		\label{fig:potigraph}
+	\end{figure}
+	
+
+	 Die Beziehung kann im Homogenfeld durch die folgende Gleichung ausgedrückt werden:
+
+	 \begin{equation}
+		E = - \frac{\Delta \varphi}{\Delta x} 
+	 \end{equation}
+
+	 In inhomogenen, dreidimensionalen Feldern gilt die allgemeine Gleichung, bei der der Gradient von $\varphi$ in jede Raumrichtung errechnet wird: 
+
+	 \begin{equation}
+		E = - \mathrm{grad} \,\varphi (x,y,z)  = \left( \frac{\partial \varphi}{\partial x}, \frac{\partial \varphi}{\partial y}, \frac{\partial \varphi}{\partial z} \right)
+	 \end{equation}
+
+
+	 Um das elektrische Potential an einem Punkt vollständig zu beschreiben, muss wie in Gleichung \ref{eq:potential} 
+	 aufgeführt als notwendige Randbedingung ein Bezugspotential $\varphi_0$ gewählt werden, welches eindeutig definiert ist. 
+	 Prinzipiell ist dieses Potential beliebig wählbar, in der Regel wird jedoch eine Bezugselektrode gewählt, für die das Potential
+	 gleich null gesetzt wird. Im Fall des in Abbildung \ref{fig:potihomogen} gezeigten Aufbaus wäre dies:
+
+	 
+
+	 \begin{equation*}
+		\varphi_0 = \varphi(x=0) = 0
+	 \end{equation*}
+
+	 
+
+
+
+
+	}
+	\b{
+	\begin{columns}
+       \column[c]{0.5\textwidth}
+	  % \vspace{-20pt}
+	 %  Die potentielle Energie normiert auf die betrachtete Ladung $Q$ ist das
+	  % Potential $\varphi$ des elektrischen Feldes.
+	  \hspace{-2pt}Normierung der potentiellen Energie:
+	   \begin{equation*}
+		\mathrm{Potential} \, \varphi = \frac{W}{Q}
+	   \end{equation*}
+	   \vspace{-10pt} \begin{equation*}
+		[\varphi] = \mathrm{Volt} = \mathrm{V} 
+	   \end{equation*}
+
+	
+
+
+	   Im elektrischen Homogenfeld: 
+
+	   \begin{figure}[h!]
+		\centering
+		\includesvg[width=0.8\textwidth]{potential_homogenfeld_folien.svg}
+	
+	\end{figure}
+
+	
+
+		
+		\begin{equation*}
+			\varphi(x) = E \cdot x + \varphi_0
+		\end{equation*}
+	
+
+		\column[c]{0.5\textwidth}
+
+		\pause
+
+		\begin{figure}[h!]
+			\centering
+			\includesvg[width=\textwidth]{homogenfeld_phi_graph_folien.svg}
+	
+		\end{figure}
+
+
+
+		\begin{equation*}
+			E = - \frac{\Delta \varphi}{\Delta x}
+		 \end{equation*}
+
+
+		
+	\vspace{5pt}
+		Bezugspunkt notwendig:
+		\vspace{-5pt}
+		\begin{equation*}
+			\varphi_0 = \varphi(x=0) =0 
+		\end{equation*}
+	\end{columns}	
+
+	\speech{Def_Potential}{1}{	 
+	Diese auf die betrachtete Ladung Q normierte potentielle Energie wird also als das Potential Phi
+	des elektrischen Feldes bezeichnet. Da eine Ladung an jedem Punkt im Raum eine im Vergleich zum Bezugspunkt positive, negative oder identische potentielle Energie hat, 
+	ist auch das Potential an jedem Punkt unabhängig von weiteren Einflussfaktoren direkt bestimmbar.
+	Das Potentialfeld ist im Gegensatz zum elektrischen Feld ein Skalarfeld. Das bedeutet, dass jedem Punkt im
+	Raum ein eindeutiges elektrisches Potential zugeordnet werden kann, dieses Potential jedoch keine Richtung hat, in die es wirkt.}
+	\speech{Def_Potential}{2}{Hier zu sehen ist ein elektrisches Homogenfeld, in welches die Potenziallinie eingezeichnet ist, auf welcher sich die
+	Ladung Q gerade befindet. Mit zunehmender Entfernung von der positiven Platte in X Richtung steigt das Potential weiter an.
+	Die Steigung des Potenzials ist durch die elektrische Feldstärke E bestimmt, wie diese Grafik hier verdeutlicht.
+	Wie Eingangs erwähnt, muss zur Bestimmung des elektrischen Potenzials im Raum wie auch Potential des Gravitationsfeldes ein Bezugspotential festgelegt werden.
+	Während beim Bezugspotential häufig die Erdoberfläche verwendet wird, nutzen wir hier die negativ geladene Platte, welche bei X
+	gleich Null liegt, und setzen das Potential dort auf Null Volt.}
+
+	}
+\end{frame}			
+		
+
+		
+
+
+
+
+
+\begin{frame}
+	\ftb{Zusammenhang zwischen Arbeit und Potential}
+	
+	\s{Im homogenen elektrischen Feld ist das Potential $\varphi$ wie Formel \ref{eq:potential} zeigt
+	ausschließlich von der Entfernung $x$ zur Bezugselektrode abhängig.
+	Dies bedeutet, dass alle Flächen, die senkrecht zum Feld stehen, ein konstantes Potential haben. 
+	Solche Flächen werden als Äquipotentialflächen bezeichnet, wie sie in Abbildung \ref{fig:potentialdifferenz} mit Hilfe der grünen Linien dargestellt sind.
+	Es muss keine Arbeit verrichtet werden, um eine Ladung entlang einer solchen Fläche zu bewegen.
+
+
+	\begin{figure}[h!]
+		\centering
+		\includesvg[width=0.5\textwidth]{potentialdifferenz.svg}
+		\caption{Elektrisches Homogenfeld, in dem sich eine Probeladung $Q$ von der Äquipotentiallinie $\varphi(x_1)$ auf 
+	die Äquipotentiallinie $\varphi(x_2)$ bewegt}
+		\label{fig:potentialdifferenz}
+	\end{figure}
+
+
+	Die potentielle Energie $W_{12}$ einer Probeladung $Q$, die durch das elektrische Feld von einem Punkt $x_1$ nach $x_2$
+	bewegt wird, kann durch die Potentialdifferenz zwischen diesen Punkten beschrieben werden. Die Reihenfolge der Indizes der
+	 Arbeit $W_{12}$ beschreibt dabei die Bewegungsrichtung.
+
+	Wird eine Probeladung wie in Abbildung \ref{fig:potentialdifferenz} gezeigt von der Äquipotentialfläche $\varphi(x_1)$ nach $\varphi(x_2)$ bewegt,
+	nimmt sie dabei die folgende Energie auf:
+
+	\begin{equation*}
+		W_{12} = Q \cdot (\varphi_1 - \varphi_2)
+	\end{equation*}
+
+
+
+
+	
+	
+	\begin{figure}[h!]
+		\centering
+		\includesvg[width=0.5\textwidth]{phi_diff_graph.svg}
+		\caption{Darstellung des Potentialverlaufs $\varphi(x)$ innerhalb des elektrischen Homogenfeldes}
+		\label{fig:potentialgraph}
+	\end{figure}
+
+
+
+
+
+	Bei der in Abbildung \ref{fig:potentialgraph} getroffenen Wahl der Bezugsfläche von $\varphi_2 = 0$ ergibt sich für die zugeführte Arbeit 
+	das Ergebnis:
+
+	\begin{equation*}
+		W_{12} = Q \cdot (\varphi_1 - 0) = Q \cdot \varphi_1
+	\end{equation*}
+
+
+	Mit Hilfe des nachfolgenden Gedankenexperimentes lässt sich eine weitere zentrale Eigenschaft des elektrischen Feldes aufzeigen.
+
+	Wie in Abbildung \ref{fig:wirbelfrei} gezeigt wird eine Probeladung $Q$ in einem Homogenfeld 
+	zwischen den Punkten 1-4 in einem geschlossenem Umlauf bewegt. Die bei diesem Vorgang zu verrichtenden Teilenergien werden betrachtet.
+	So wird bei einer Bewegung vom Punkt 1 zu Punkt 2 eine Arbeit von $W_{12} = Q \cdot (\varphi_1 - \varphi_2)$ verrichtet, 
+	und von Punkt 4 zu Punkt 1 die Energie $W_{41} = Q \cdot (\varphi_4 - \varphi_1)$.
+
+
+	\begin{figure}[h!]
+		\centering
+		\includesvg[width=0.5\textwidth]{wirbelfrei.svg}
+		\caption{Darstellung des Potentialverlaufs $\varphi(x)$ innerhalb des elektrischen Homogenfeldes}
+		\label{fig:wirbelfrei}
+	\end{figure}
+
+
+
+	Die für einen gesamten Umlauf benötigte Energie ergibt sich durch die Aufsummierung der vier Teilenergien: 
+
+	
+	\begin{equation*}
+		\begin{split}
+			W_\mathrm{ges} = Q \cdot (\varphi_1 - \varphi_2) + Q \cdot (\varphi_2 - \varphi_3)
+			+ Q \cdot (\varphi_3 - \varphi_4) + Q \cdot (\varphi_4 - \varphi_1)
+		\end{split}
+	\end{equation*}
+
+	Da die Ladung $Q$ in allen Termen identisch ist, ergibt sich durch das Ausklammern von $Q$:
+
+
+	\begin{equation*}
+			W_\mathrm{ges} = Q \cdot (\varphi_1 - \varphi_2 + \varphi_2 - \varphi_3
+			+ \varphi_3 - \varphi_4 + \varphi_4 - \varphi_1) 
+	\end{equation*}
+	
+	\begin{equation*}
+		\rightarrow W_\mathrm{ges} = Q \cdot 0 = 0
+	\end{equation*}
+
+	Für einen geschlossenen Umlauf einer Probeladung im Homogenfeld ist also keine Energie erforderlich,
+	 da sie ausschließlich vom Anfangs- und Endpunkt der Bewegung, nicht jedoch vom gewählten Weg abhängig ist. 
+
+	Folglich wird beim elektrischen Feld auch von einem \textbf{wirbelfreien Quellenfeld} gesprochen.
+	Dies bedeutet, dass die Feldlinien keine geschlossenen Linien bilden, sondern jeweils einen Anfang (auf positiven Ladungen)
+	und einen Endpunkt (auf negativen Ladungen) haben.
+	
+	Diese Betrachtung gilt nicht nur für das Homogenfeld, sondern trifft auf jedes elektrostatische Feld zu.
+
+
+
+	
+	
+
+
+	\begin{bsp}{Arbeit im Radialfeld}{}
+		In folgendem Beispiel soll die Probeladung $Q_1$ vom Abstand $r_1$ auf den Abstand $r_2$ an die Feste Ladung Q herangeführt werden.
+
+		\begin{center}
+		\includesvg[width=0.5\textwidth]{radialfeld.svg}	
+		\end{center}
+
+		
+		
+		
+
+		$Q$ betrage 1 C, $Q_1$ 1 mC. Welche Arbeit ist erforderlich, wenn $r_1 = 1$ m und $r_2 = 50$ cm seien?
+
+		\[
+W_{12} = Q_1 \int_{r_1}^{r_2} \vec{E} \cdot d\vec{r}
+\]
+\[
+W_{12} = Q_1 \int_{r_1}^{r_2} \left( \frac{Q}{4 \pi \varepsilon_0 r^2} \right) dr
+\]
+\[
+W_{12} = Q_1 \cdot \frac{Q}{4 \pi \varepsilon_0} \int_{r_1}^{r_2} \frac{1}{r^2} dr
+\]
+Die Stammfunktion von $\frac{1}{r^2}$ beträgt $-\frac{1}{r}$.
+\[
+W_{12} = Q_1 \cdot \frac{Q}{4 \pi \varepsilon_0} \left( -\frac{1}{r} \bigg|_{r_1}^{r_2} \right) = Q_1 \cdot \frac{Q}{4 \pi \varepsilon_0} \left( -\frac{1}{r_2} + \frac{1}{r_1} \right)
+\]
+wobei $\frac{Q}{4 \pi \varepsilon_0} \frac{1}{r}$ dem Potential $\varphi(r)$ entspricht.
+
+\[
+W_{12} = Q_1 \cdot (\varphi(r_1) - \varphi(r_2))
+\]
+
+Einsetzen der gegebenen Werte:
+\[
+W_{12} = (1 \cdot 10^{-3} \, \text{C}) \cdot \frac{1 \, \text{C}}{4 \pi \varepsilon_0} \left( \frac{1}{1 \, \text{m}} - \frac{1}{0{,}5 \, \text{m}} \right)
+\]
+\[
+W_{12} = -8,98755 \times 10^{6} \, \text{J}
+\]
+Folglich müssen etwa 8,99 Megajoule aufgewendet werden, um die Ladung $Q_1$ zu verschieben. 
+	\end{bsp}	
+
+
+	}
+
+	\b{
+
+	\begin{columns}
+      \column[c]{0.4\textwidth}
+		Potential nur abhängig von Ortskoordinate $x$ in Feldrichtung.
+
+		\phantom{.}\\
+
+		Flächen gleichen Potentials: $\rightarrow$ \textbf{Äquipotentialflächen}
+
+		\phantom{text}\\
+		\visible<2->{
+
+
+		\begin{equation*}
+			W_{12} = Q \cdot (\varphi_1 - \varphi_2)
+		\end{equation*}
+		
+		\phantom{text}\\
+
+
+		Mit Bezugspotential $\varphi_2 = 0$:
+
+		\begin{equation*}
+			W_{12} = Q \cdot (\varphi_1 - 0) = Q \cdot \varphi_1
+		\end{equation*}
+	
+
+		}
+
+
+		\column[c]{0.6\textwidth}
+
+		\begin{figure}[h!]
+			\centering
+			\includesvg[width=\textwidth]{potentialdifferenz_folien.svg}
+		\end{figure}
+
+		\vspace{10pt}
+
+		\visible<2->{
+		\begin{figure}[h!]
+			\centering
+			\includesvg[width=0.8\textwidth]{phi_diff_graph_folien.svg}
+		\end{figure}
+		}
+
+
+
+
+		
+
+	\end{columns}
+
+	\speech{zusammenhang_Arbeit_Poti}{1}{Im homogenen elektrischen Feld ist das Potential Phi ausschließlich von der Entfernung zur Bezugselektrode abhängig.
+	Dies bedeutet, dass alle Flächen, die senkrecht zum Feld stehen, ein konstantes Potential haben. 
+	Solche Flächen werden als Äquipotentialflächen bezeichnet, und sind hier beispielhaft mit Hilfe der grünen Linien dargestellt.
+	Es muss keine Arbeit verrichtet werden, um eine Ladung entlang einer solchen Fläche zu bewegen.}
+
+	\speech{zusammenhang_Arbeit_Poti}{2}{Möchte man hingegen die Probeladung von der Äquipotentiallinie Vieh von X eins auf die Äquipotentiallinie Vieh von X Zwei bewegen, 
+	muss eine entsprechende Arbeit verrichtet werden,die durch die Potentialdifferenz zwischen diesen Punkten beschrieben werden kann. Die Reihenfolge der Indizes der
+	Arbeit beschreibt dabei die Bewegungsrichtung. Ist wie in diesem Beispiel das Potential auf X zwei das Bezugspotential, erhalten wir für die Arbeit von X eins nach X zwei 
+	das Ergebnis W gleich Q mal Vieh 1. 
+	 Bei einem positiven Potential ist dieser Ausdruck also auch positiv, das heißt, dass keine Energie zugefügt werden muss, sondern das System potentielle Energie
+	freigibt und in Bewegungsenergie umwandelt.}
+	}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+
+	\b{
+	\ftx{Wirbelfreies Feld}
+
+
+		\begin{columns}
+			\column[c]{0.6\textwidth}
+
+			\vspace{-10pt}
+			
+			Zunächst Betrachtung der Teilenergien bei einem geschlossenen Umlauf
+			 im Homogenfeld.
+
+			 \vspace*{5pt}
+			 \visible<2->{
+
+			Die gesamte Energie ergibt sich durch
+ 		die Aufsummierung der Teilenergien:
+			 }
+
+		 \visible<3->{
+
+			\begin{equation*}
+				\begin{split}
+					W_\mathrm{ges} = Q \cdot (\varphi_1 - \varphi_2) + Q \cdot (\varphi_2 - \varphi_3)\\
+					+ Q \cdot (\varphi_3 - \varphi_4) + Q \cdot (\varphi_4 - \varphi_1)
+				\end{split}
+			\end{equation*}
+			\begin{equation*}
+					W_\mathrm{ges} = Q \cdot (\varphi_1 - \varphi_2 + \varphi_2 - \varphi_3
+					+ \varphi_3 - \varphi_4 + \varphi_4 - \varphi_1) 
+			\end{equation*}
+			\vspace{-10pt}
+			\begin{equation*}
+				W_\mathrm{ges} = Q \cdot 0 = 0
+			\end{equation*}
+		}
+
+
+		 \vspace*{5pt}
+
+		 \visible<4->{
+		
+		Energie im elektrischen Feld ist nur von Anfangs- 
+		und Endpunkt und nicht vom Weg abhängig. Es ist ein „wirbelfreies“ Feld.
+		 }
+			
+		
+			\column[c]{0.4\textwidth}
+				\includesvg[width=1\textwidth]{wirbelfrei.svg}
+
+				\vspace{30pt}
+				\visible<4->{
+					\underline{Kennzeichen}:
+					\begin{itemize}
+						\item keine geschlossenen Feldlinien
+						\item Feldlinien beginnen und enden auf Ladungen
+					\end{itemize}
+				}
+			
+    \end{columns}
+	\speech{wirbelfrei}{1}{	
+		Mit Hilfe eines Gedankenexperimentes können wir eine weitere zentrale Eigenschaft des
+elektrischen Feldes aufzeigen.
+Wir betrachten eine Probeladung Kuh, die sich in einem Homogenfeld zwischen den Punkten
+eins bis vier in einem geschlossenen Umlauf bewegt.}
+
+\speech{wirbelfrei}{3}{	
+Dabei schauen wir uns die bei diesem Vorgang zu verrichtenden Teilenergien genauer an. So wird bei einer Bewegung vom Punkt 1 zu Punkt 2 eine Arbeit von Weh eins zwei gleich Q mal Vieh eins minus Vieh zwei verrichtet.
+ und von Punkt 4 zu Punkt 1 die Arbeit W vier eins gleich Q mal Phi vier minus phi eins.
+Klammern wir aus der Energiesumme für den gesamten Umlauf die Ladung Q nun aus und fassen alle Potentiale zusammen, stellen wir fest, dass sich alle Potenziale letztendlich herauskürzen.}
+ \speech{wirbelfrei}{4}{Für einen geschlossenen Umlauf einer Probeladung im Homogenfeld ist also keine Energie erforderlich, 
+da sie ausschließlich vom Anfangs- und Endpunkt der Bewegung, nicht jedoch vom gewählten Weg abhängig ist.
+Folglich wird beim elektrischen Feld auch von einem wirbelfreien Quellenfeld gesprochen. Dies
+bedeutet, dass die Feldlinien keine geschlossenen Linien bilden, sondern jeweils einen Anfang, welcher auf positiven Ladungen ist, und einen Endpunkt auf negativen Ladungen haben.
+Diese Betrachtung gilt nicht nur für das Homogenfeld, sondern trifft auf jedes elektrostatische Feld zu.}
+	}
+\end{frame}	
+
+
+\begin{frame}
+	\ftb{Definition der elektrischen Spannung}
+
+	\s{
+
+	Die aus dem elektrischen Feld für einen technischen Prozess nutzbare
+	Energie ist durch die  \textbf{Potentialdifferenz} zwischen Anfangs- und
+	Endpunkt des Weges gegeben.  Durch ihre fundamentale Bedeutung in der Elektrotechnik wird sie mit einem
+	Namen und Formelbuchstaben bedacht, und wird als \textbf{elektrische Spannung} $U$ bezeichnet: 
+
+	\begin{equation}
+		U_{12} = \varphi_1 - \varphi_2
+		\label{eq:spannung}
+	\end{equation}
+
+	\begin{equation*}
+		[U] = \text{V} \ (\text{Volt})
+	 \end{equation*}
+
+	 Durch die Reihenfolge der Indizes wird - analog zur Potentialdifferenz - die Zählrichtung des Spannungspfeiles angegeben.
+	 In Abbildung \ref{fig:defispannung} beschreibt die Spannung $U_{12}$ also die Potentialdifferenz zwischen den Potientialen $\varphi_1$ und $\varphi_2$.
+	 Durch die Eigenschaften der Äquipotentialflächen ist es hierbei vollkommen unerheblich, von welchem Punkt von $\varphi_1$ gestartet wird
+	 und welcher Punkt auf $\varphi_2$ das Ziel darstellt. Auch der Pfad, welcher zwischen den Punkten gewählt wird, ist für die Spannung zwischen
+	 den Punkten unerheblich.
+	 
+
+	 \begin{figure}[h!]
+		\centering
+		\includesvg[width=0.3\textwidth]{spannung.svg}
+		\caption{Spannung $U_{12}$ zwischen den beiden Äquipotentiallinien $\varphi_1$ und $\varphi_2$}
+		\label{fig:defispannung}
+	\end{figure}
+
+	 
+
+	 Der Zusammenhang zwischen der elektrischen Feldstärke und dem Potential ist bereits aus Gleichung \ref{eq:potential} 
+	 bekannt und wird (bei einem Bezugspotential von $\varphi_0 = 0)$ mit $\varphi (x) = E \cdot x$ angegeben.
+	 
+	 Eingesetzt in die Definition der Spannung (Gleichung \ref{eq:spannung}) ergibt sich:
+
+	 \begin{equation*}
+		 U = \varphi(x= d) - \varphi(x= 0) = E \cdot d - E \cdot 0
+	 \end{equation*}
+
+	Die elektrische Spannung $U$ kann in einem wie in Abbildung \ref{fig:spannunghomogen} dargestellten Homogenfeld wie folgt berechnet werden,
+	  sofern die Wegstrecke $d$ parallel zu den Feldlinien liegt:
+
+	 
+	  \begin{figure}[h!]
+		\centering
+		\includesvg[width=0.4\textwidth]{spannung_homogenfeld.svg}
+		\caption{Elektrische Spannung $U$ im Homogenfeld}
+		\label{fig:spannunghomogen}
+	\end{figure}
+
+	 
+
+
+
+	\begin{equation}
+	 U = E \cdot d
+	\end{equation}
+
+	
+	Alternativ kann aus einer gegebenen Spannung $U$ bei bekannter Wegstrecke $d$ auch die elektrische Feldstärke berechnet werden:
+	
+	\begin{equation}
+		E = \frac{U}{d}
+	   \end{equation}
+
+	In Abbildung \ref{fig:spannunggraph} lässt sich erkennen, dass die Spannung nichts anderes als die über die Wegstrecke $d$ aufintegrierte Feldstärke $E$ ist.
+	
+
+	\begin{figure}[h!]
+		\centering
+		\includesvg[width=0.4\textwidth]{homogenfeld_spannung_graph.svg}
+		\caption{Zusammenhang zwischen elektrischer Spannung $U$ und elektrischem Homogenfeld $E$}
+		\label{fig:spannunggraph}
+	\end{figure}
+
+
+
+	Während dieses Integral im Homogenfeld durch eine Multiplikation von elektrischem Feld $E$ und Wegstrecke $d$ ermittelt
+	werden kann, ist dies bei inhomogenen Feldern nur durch das Lösen des Integrals möglich:
+	
+	\begin{equation}
+		U_{12} =\int_{1}^{2} \vec{E} \cdot d \vec{s}
+	\end{equation}
+
+	Zu beachten ist hierbei, dass es sich bei dem Produkt $\vec{E} \cdot \mathrm{d} \vec{s}$ um Vektoren handelt. Zeigen sie in die
+	gleiche Richtung, dürfen die Vektorpfeile eliminiert werden, andernfalls muss das Skalarprodukt verwendet werden: 
+
+
+		\begin{equation*}
+			\vec{E} \cdot \, \mathrm{d} \vec{s} =  E \cdot \mathrm{d} s \cdot \mathrm{cos} (\alpha)
+		\end{equation*}
+
+
+		\begin{figure}[h!]
+			\centering
+			\includesvg[width=0.5\textwidth]{skalarprodukt.svg}
+			\caption{Skalarprodukt aus Feldstärke $\vec{E}$ und Wegstück d$\vec{s}$}
+			\label{fig:skalarprodukt}
+		\end{figure}
+	
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	}
+
+	\newpage
+
+	\b{
+	\begin{columns}
+      \column[c]{0.65\textwidth}
+		\textbf{Potentialdifferenz} bestimmt nutzbare Energie\\
+		$\rightarrow$  \textbf{Spannung} $U$: 
+
+
+
+		\begin{equation*}
+			U_{12} = (\varphi_1 - \varphi_2)
+		\end{equation*}
+
+		\begin{equation*}
+			[U] = \mathrm{Volt} = \mathrm{V} \, 
+		\end{equation*}
+		
+		\phantom{text}\\
+
+		Indexreihenfolge: Start- und Zielpunkt
+
+
+		\column[c]{0.35\textwidth}
+
+
+		\begin{figure}[h!]
+			\centering
+			\includesvg[width=\textwidth]{spannung.svg}
+		\end{figure}
+
+
+		\begin{figure}[h!]
+			\centering
+			\includesvg[width=\textwidth]{spannung_homogenfeld.svg}
+		\end{figure}
+	
+	
+
+
+
+
+	\end{columns}
+	\speech{def_spannung}{1}{
+	Wie wir gesehen haben ist die aus dem elektrischen Feld für einen technischen Prozess nutzbare
+	Energie nur durch die Potentialdifferenz zwischen Anfangs und
+	Endpunkt des Weges beschrieben. Durch ihre fundamentale Bedeutung in der Elektrotechnik wird sie deshalb mit einem
+	eigenen Namen und Formelbuchstaben bedacht, und wird als elektrische Spannung U bezeichnet: 
+	Wie bei der Potentialdifferenz auch wird die Zählrichtung des Spannungspfeils durch die Reihenfolge der Indizes angegeben.
+	Hier beschreibt die Spannung U eins zwei also die Potentialdifferenz zwischen den Potientialen Vieh eins und Vieh 2.
+	Durch die Eigenschaften der Äquipotentialflächen ist es hierbei vollkommen unerheblich, von welchem Punkt von Vieh eins gestartet wird
+	und welcher Punkt auf Phi zwei das Ziel darstellt. Auch der Pfad, welcher zwischen den Punkten gewählt wird, ist für die Spannung zwischen
+	den Punkten unerheblich.}
+	 
+
+
+	 
+
+
+	}
+\end{frame}
+
+
+\begin{frame}
+
+	\b{
+	\ftx{Zusammenhang zwischen Spannung und Feldstärke I}
+	
+
+	
+	\begin{columns}
+      \column[c]{0.6\textwidth}
+		\vspace{-10pt}
+	  	Im \textbf{Homogenfeld:}
+
+		\begin{equation*}
+			\varphi(x) = E \cdot x
+		\end{equation*}
+
+		
+
+		\begin{equation*}
+			U = \varphi(x= d) - \varphi(x= 0) 
+		\end{equation*}
+
+		\begin{equation*}
+			U =  E \cdot d - E \cdot 0
+		\end{equation*}
+   
+
+	%	aus der elektrischen Feldstärke und dem Abstand von Anfangs- und Endpunkt des betrachteten Weges
+
+	\phantom{text}\\
+
+
+		\begin{Merksatz}{}
+			\begin{equation*}
+				U = E \cdot d
+			\end{equation*}
+
+			\begin{equation*}
+				E =  \frac{U}{d}
+			\end{equation*}
+
+
+		\end{Merksatz}
+		
+
+
+
+		\column[c]{0.4\textwidth}
+
+
+		\begin{figure}[h!]
+			\centering
+			\includesvg[width=\textwidth]{spannung_homogenfeld.svg}
+		\end{figure}
+
+		\begin{figure}[h!]
+			\centering
+			\includesvg[width=\textwidth]{homogenfeld_spannung_graph_folie.svg}
+
+		\end{figure}
+	\end{columns}
+	
+
+
+
+	\speech{zusammenhang_spannung_feld1}{1}{Der Zusammenhang zwischen der elektrischen Feldstärke und dem Potential ist bereits von den vorherigen Folien
+	 bekannt und wird bei einem Bezugspotential von null für x gleich null mit Phi von x gleich E mal x angegeben.
+	 In diesem Beispiel habe der Abstand der beiden Platten, zwischen denen wir die Spannung messen wollen, den Abstand D.
+	 Eingesetzt in die Definition der Spannung  ergibt sich folglich U gleich E mal D minus E mal Null. 
+	 Die Spannung in einem Homogenfeld kann also über E mal D beschrieben werden, umgeformt kann das elektrische Feld also auch über E gleich U durch D ermittelt werden.
+	sofern die Wegstrecke D parallel zu den Feldlinien liegt.}
+	}
+\end{frame}
+
+
+\begin{frame}
+
+	\b{
+	\ftx{Zusammenhang zwischen Spannung und Feldstärke II}
+	
+	\begin{columns}
+      \column[c]{0.6\textwidth}
+
+	  Spannung $\widehat{=}$ aufintegrierter Feldstärke: 
+
+
+	  \begin{figure}[h!]
+		\centering
+		\includesvg[width=0.7\textwidth]{homogenfeld_spannung_graph_folie.svg}
+	\end{figure}
+	
+
+
+	  
+
+ 
+	 Allgemeines Feld:
+		
+	  \begin{Merksatz}{}
+
+		\begin{equation*}
+			U_{12} = \int_{1}^{2} \vec{E} \, \mathrm{d}\vec{s}
+		\end{equation*}
+
+	\end{Merksatz}
+
+		\column[c]{0.4\textwidth}
+
+
+	Wiederholung Skalarprodukt:
+
+	\begin{figure}[h!]
+		\centering
+		\includesvg[width=0.9\textwidth]{skalarprodukt.svg}
+		
+	\end{figure}
+	
+
+		\begin{equation*}
+			\vec{E} \cdot \, \mathrm{d} \vec{s} =  E \, \mathrm{d} s \cdot \mathrm{cos} (\alpha)
+		\end{equation*}
+
+
+
+
+
+
+	\end{columns}
+	\speech{zusammenhang_spannung_feld2}{1}{
+		Die für das Homogenfeld geltende Formel U gleich E mal D legt nahe, dass es sich bei der Spannung um die über die Wegstrecke aufintegrierte elektrische Feldstärke handelt.
+		Während dieses Integral im Homogenfeld durch eine Multiplikation ermittelt werden kann, ist dies bei inhomogenen Feldern also nur durch das Lösen der Gleichung
+	U eins zwei gleich Integral von Punkt eins bis Punkt zwei des elektrischen Feldes D S. 
+	Zu beachten ist hierbei, dass es sich bei dem Produkt E D S um Vektoren handelt. Zeigen sie in
+	die gleiche Richtung, dürfen die Vektorpfeile einfach eliminiert werden, andernfalls muss das Skalarprodukt
+	verwendet werden. Dieses kann aus dem einfachen Produkt der beiden Faktoren sowie dem Kosinus des eingeschlossenen Winkels zwischen ihnen errechnet werden.}
+	}
+\end{frame}
+
+
+

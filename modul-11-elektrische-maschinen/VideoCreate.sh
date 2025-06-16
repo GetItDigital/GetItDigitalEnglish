@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[ ! -d "TeXAux/Video.pdf" ] && echo "Video.pdf not found. Please compile Video.tex first." && exit 1
+[ ! -f "TeXAux/Video.pdf" ] && echo "Video.pdf not found. Please compile Video.tex first." && exit 1
 [ ! -d "Videos" ] && mkdir "Videos"
 
 cd TeXAux

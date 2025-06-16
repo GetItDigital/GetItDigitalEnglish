@@ -12,7 +12,7 @@ echo "PNGs done."
 
 # Alle erzeugten WAVs auf ihre Dauer untersuchen und die Dauer in Folien-RenderVideo.sh in der passenden Zeile hinter "-t " einfügen
 tts_dir="../TTS"
-for filename in Folien-RenderVideo-*.sh; do
+for filename in Video-RenderVideo-*.sh; do
     for audio_file in "$tts_dir"/*.wav; do
         # Ermittle die Dauer der Audiodateien in "filename"
         duration=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$audio_file")
@@ -22,7 +22,7 @@ for filename in Folien-RenderVideo-*.sh; do
 done
 
 echo "Render Videos"
-for filename in Folien-RenderVideo-*.sh; do
+for filename in Video-RenderVideo-*.sh; do
     chmod ugo+x $filename
     ./$filename
 done

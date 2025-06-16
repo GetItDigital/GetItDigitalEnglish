@@ -1,3 +1,4 @@
+\newvideofile{Durchflutung}{Durchflutung}
 \subsection{Elektromagnetismus\label{SectionElektromagentismus}}
 
 \s{Ein magnetisches Feld kann, außer durch einen Permanentmagneten, auch durch einen elektrischen Strom erzeugt werden. Dabei ergibt sich ein kreisförmiges magnetisches Feld um den stromdurchflossenen Leiter.
@@ -8,6 +9,20 @@
 	\end{Merksatz}
 }
 
+\b{
+	%Videoframe 
+	\begin{frame}{Lernziele}
+		\begin{Lernziele}{Einführung in den Magnetismus}
+			\begin{itemize}
+				\item Ihr könnt die Entstehung elektromagnetischer Felder erklären
+				\item Ihr könnt das magnetische Durchflutung definieren 
+				\item Ihr könnt magnetische Felder berechnen
+			\end{itemize}
+		\end{Lernziele}
+	\speech{LernzieleElektromagnetismus}{1}{Elektromagnetische Felder spielen eine zentrale Rolle in der Elektrotechnik: Von der Energieübertragung, über die drahtlose Kommunikation, bis hin zu grundlegenden Bauelementen. Ihr Ursprung liegt immer im elektrischen Strom.
+	In diesem Video erhaltet ihr einen Einblick in die Entstehung elektromagnetischer Felder. Danach führen wir die zentrale physikalische Größe der magnetischen Durchflutung Theta ein und leiten sie aus dem Durchflutungsgesetz her. Zum Schluss wenden wir das Gelernte in zwei praxisnahen Rechenbeispielen an.}
+	\end{frame}
+	}
 \begin{frame} \ftx{Elektromagnetismus}
 	\s{
 		\fo{width=\textwidth}{width=\textwidth}{Magnetisches_Feld_Leiter_und_Leiterschleife}{
@@ -34,7 +49,24 @@
 			}{}
 		\end{minipage}
 	}
+	\speech{elektromagnetischesFeld}{1}{In der Abbildung ist ein Leiter zusehen. Durch den Leiter fließt von unten nach oben ein Strom I. Sobald Strom durch einen Leiter fließt, bildet sich darum herum ein Magnetfeld. Die Richtung dieses Magnetfeldes lässt sich mit der sogenannten Rechte-Hand-Regel leicht bestimmen.
+	Um die Rechte-Hand-Regel anzuwenden, nehmen wir unsere rechte Hand und formen diese zu einer Faust. Den Daumen strecken wir dabei nach oben ab, so, als würden wir jemandem den "Daumen hoch" zeigen. Der Daumen zeigt dabei die Richtung des Stromflusses an.
+	Und die gekrümmten Finger geben uns die Richtung des Magnetfeldes an, das sich um den Leiter herum bildet. Mit dieser einfachen Regel kann man sich die Richtung des Magnetfeldes ganz anschaulich merken: Also Daumen gleich Stromrichtung und die restlichen Finger gleich Magnetfeldrichtung.
+	Wichtig ist nur, dass es "rechte" Hand-Regel heißt, weil die rechte Hand benutzt werden muss. Insbesondere Linkshänder neigen sehr gerne in Stresssituation dazu, die Faust mit der linken Hand zu machen. Daher achtet immer drauf, tatsächlich die rechte Hand hierfür zu nutzen! 
+	}
+	\speech{elektromagnetischesFeld}{2}{Nun haben wir natürlich nicht nur einfache Leiter, die senkrecht auftreten, sondern wir haben sehr häufig Strukturen, die eine geschlossene Leiterschleife sind.
+	Wenn ein Strom durch eine geschlossene Leiterschleife fließt, entsteht auch hier ein Magnetfel, ganz ähnlich wie beim einzelnen geraden Leiter.
+	Und auch in diesem Fall können wir die Rechte-Hand-Regel anwenden, um die Richtung des Magnetfelds zu bestimmen.
+	Das Besondere an der Schleife ist jetzt: Sie ist geschlossen.
+	Das bedeutet, wir haben zwei Stromrichtungen: Ein Mal hin, ein Mal zurück.
+	Und genau diese beiden Stromrichtungen führen dazu, dass sich die Magnetfelder der gegenüberliegenden Leiterstücke verstärken.
+	Man kann sich das so vorstellen: Auf der einen Seite der Schleife zeigt das Magnetfeld gemäß der Rechten-Hand-Regel in eine bestimmte Richtung.
+	Und auf der anderen Seite, wo der Strom in die entgegengesetzte Richtung fließt, zeigt das Magnetfeld ebenfalls – angepasst an die Stromrichtung – in eine gleichgerichtete Richtung innerhalb der Schleife.
+	So entsteht im Inneren der Leiterschleife ein verstärktes Magnetfeld, während sich die Magnetfelder außerhalb der Schleife zum Teil gegenseitig aufheben.
+	Und genau diesen Effekt, dass sich die Feldlinien im Inneren addieren, machen sich manche Antennentypen zunutze, zum Beispiel die sogenannten Ringantennen.
+}
 \end{frame}
+
 \nomenclature[EA]{A}{Ampere - elektrischer Strom}
 \s{\subsection{Durchflutung\label{durchflutung}}}
 \begin{frame} \ftx{Magnetische Durchflutung}
@@ -93,9 +125,31 @@
 		}{{\bf Durchflutung einer Spule.} Die Durchflutung entspricht dem Gesamtstrom durch eine durchflutete Fläche. Die elektrische Durchflutung einer Spule ist daher abhängig von der Wicklungszahl und der Stromstärke. Für die Darstellung in einer zweidimensionalen Grafik wird das Symbol $\otimes$ für den Stromfluss \glqq in die Bildfläche hinein\grqq, $\odot$ für \glqq aus der Bildfläche heraus\grqq\ verwendet. \label{Magnet5}}
 		\index{Magnetischer Fluss}
 	}
+	\speech{Durchflutung}{1}{Eine wichtige Größe des Elektromagnetismus ist die magnetische Durchflutung. Sie wird auch einfach Durchflutung oder magnetische Spannung genannt, manchmal sogar elektrische Durchflutung. Wir bezeichnen sie mit dem griechischen Buchstaben Theta.
+	Der Begriff Durchflutung kommt aus dem Durchflutungsgesetz. Dieses besagt, dass die Durchflutung Theta gleich dem Gesamtstrom einer von ihm durchfluteten Fläche ist. Das sc hauen wir uns jetzt einmal genauer an.
+	Wir nehmen uns als Beispiel eine Ringspule wie in der Abbildung und schauen uns das magnetische Feld an. In der Abbildung ist der Querschnitt einer Spule zu erkennen. Auf der linken Seite sind die Leiter dargestellt, bei denen der Strom aus der Bildebene heraustritt. Diese Leiter werden in der Regel mit einem Punkt im Leiter dargestellt. Die Leiter rechts stellen die Leiter dar, in bei denen sich der Strom in die Bildebene hinein bewegt. Diese sind mit einem x im Leiter dargestellt. Da auf beiden Seiten sechs Leiter aufgezeigt werden, handelt es sich in diesem Beispiel um eine Spule mit sechsfacher Wicklung. Fließt nun Strom durch die Spule, bildet sich ein magnetisches Feld in und um die Spule. Dieses wird durch die orange-farbenden Feldlinien dargestellt.}
+	\speech{Durchflutung}{2}{Das Durchflutungsgesetz besagt, dass die Summe der Ströme geteilt durch diese Fläche gleich der Durchflutung ist. Vereinfacht könnte man also sagen, dass die Durchflutung Theta die Summer alle Ströme der Leiter N ist. Da wir in diesem Beispiel sechs Leiter haben, auch Windungen genannt, summieren wir also diese sechs Ströme, die durch die einzelnen Windungen fließen auf und erhalten als Ergebnis die Durchflutung Theta. Als Formel betrachtet ist die Durchflutung Theta der Strom I, der durch den Leiter oder die Spule fließt, multipliziert mit der Windungsanzahl N der Spule. Da wir die Summe aller Ströme betrachten, ist die Einheit der Durchflutung logischerweise die gleiche, wie die des Stroms, also Ampere.
+	Daran muss man sich erstmal gewöhnen, denn wir sagen zu der Durchflutung ja auch magnetische Spannung. Und eine Spannung geben wir im elektrischen Kreis nun mal in Volt an und der Strom wird in Ampere ausgedrückt. Beim Magnetismus das anders. Die magnetische Spannung wird in Ampere gemessen. Wichtig ist aber, dass wir uns die vereinfachte Formel, Theta ist gleich N mal I, für die Berechnungen der Durchflutung merken.}
+	\speech{Durchflutung}{3}{Wenn wir uns den allgemeinen Fall anschauen, dann wird es etwas komplizierter. Dann müssen wir alle Ströme, die durch den Leiter fließen, aufaddieren. Jedoch ist es nicht immer gegeben das jedes Elektron dem Stromfluss folgt. Sie können sich auch quer über die Fläche bewegen. Wir betrachten für die allgemeine Berechnung den wirksamen Strom. Dieser ist die Summe aller gerichteten Strompfade, die die Fläche, in unseren Beispiel den Leiter, durchfluten. Jedes freie Elektron, das dem angelegten elektrischen Feld in der Fläche A folgt oder sich entgegen bewegt, bildet einen Strompfad. Und um die Stromdichte zu bestimmt muss nun jeder dieser Strompfade über die Fläche infinitisimal betrachtet werden. Die infinitismale Betrachtung der Elemente wird Euch wahrscheinlich aus der Schulzeit von der Integral- beziehungsweise aus der Differenzialrechnung bekannt sein.
+	Für die Berechnung der einzelnen Strompfade in der Fläche, in der sich der Strom verteilt, verwenden wir das sogenannte Flächenintegral der Stromdichte.
+	Wir fragen uns nun: Wie verteilt sich der Strom über eine Fläche? Anstatt: Wie viel Strom I fließt durch den Draht? 
+	Dazu brauchen wir die zwei vektoriellen Größen, die Stromdichte J, und die Fläche A.
+	Die Stromdichte J beschreibt, wie viel Strom pro Fläche an einem bestimmten Punkt fließt, und in welche Richtung.
+	Man kann sich das so vorstellen: Wir zerteilen die Fläche in viele, viele kleine Flächenstücke. Und für jedes dieser Stücke schauen wir, wie stark dort der Strom fließt.
+	Diese kleinen Flächenstücke nennt man Differenzialflächen, symbolisiert durch den Vektor d A.
+	Damit wir nun ausrechnen können, wie viel Strom durch die gesamte Fläche hindurchgeht, nehmen wir für jedes kleine Flächenstück die Stromdichte J an dieser Stelle und rechnen das sogenannte Skalarprodukt mit dem Flächenvektor d A. Das bedeutet:
+	Wir betrachten nur den Anteil des Stroms, der in oder gegen die Stromrichtung durch die Fläche hindurchgeht.
+	Für die Durchflutung zählt nur der wirksame Strom, der den Strompfaden folgt. Wenn Strom seitlich entlang der Fläche verläuft, trägt er nichts zur Durchflutung bei.}
+	\speech{Durchflutung}{4}{Dies ist aber nicht die einzige Variante, wie man die Durchflutung berechnen kann. 
+	Es gibt eine zweite Berechnungsweise. Statt auf die Ströme durch die Fläche zu schauen, können wir auch das magnetische Feld betrachten, welches die Ströme erzeugen. 
+	Wir haben schon erfahren, dass das Magnetfeld außerhalb der Spule von der Summe aller Strompfade in der Fläche A abhängt. Sozusagen erzeugt jeder Strompfad sein eigenes Teilmagnetfeld. Diese aufsummiert bilden das Magnetfeld. Um nun dieses gesamte Magnetfeld zu berechnen, bilden wir das geschlossene Linienintegral der magnetischen Feldstärke. Es ist eine weitere Form zur Berechnung der Durchflutung und verbindet das Magnetfeld direkt mit den Strömen, die es verursacht. Zusammen mit der behandelten Definition der Durchflutung bildet die Berechnung der magnetischen Feldstärke über das geschlossene Linienintegral das Durchflutungsgesetz. 
+	Schauen wir uns hierzu die Formel genauer an. Zuerst haben wie hier ein weiteres Integral, nämlich ein Integral mit einem Kreis drin. Dies ist ein geschlossenes Linienintegral. Es beschreibt die magnetische Feldstärke, die wir im folgenden mit H bezeichnen, entlang des Randes von der zuvor betrachten Fläche A. Wir gehen am Rand dieser geschlossenen Linie einmal um diese Fläche A herum. Das ist Strecke d s, über die wir integrieren. Entlang dieser geschlossenen Linie ist die magnetische Feldstärke H konstant. Das besondere hier ist nun: Obwohl sich die Linie in einem zweidimensionalen Raum bewegt, handelt es sich um eine eindimensionale Strecke. Nämlich immer nur geradeaus, dem Rand der Spule folgend. Und das ist durch dieses geschlossene Linienintegral abzubilden.
+	Über diese Strecke müssen wir nun integrieren. Folglich bewegen wir uns nur in einer Dimension und deswegen wird hier nur ein Integralzeichen verwendet. Der Kreis im Integralzeichen verdeutlicht, dass es sich um ein geschlossenes Integral handelt.
+	Die magnetische Feldstärke bezeichnet die Stärke des Magnetfeldes auf dieser Feldlinie. Folglich dient die magnetische Feldstärke der Quantifizierung eines Magnetfeldes. 
+	Je näher man dabei der Spule ist, desto größer ist die magnetische Feldstärke. Sie nimmt mit der Entfernung zur Spule umgekehrt proportional ab.}
 \end{frame}
 
-
+\newvideofile{MagnetischeFeldstaerke}{Magnetische Feldstärke}
 \begin{frame} \ftx{Magnetische Feldstärke}
 	\index{Magnetische Feldstärke}
 	
@@ -140,7 +194,15 @@
 			
 		\end{minipage}
 	}
-	
+	\speech{VereinfachteDurchflutung}{1}{Nun gibt es noch eine Möglichkeit die Berechnung über das Linienintegral zu vereinfachen. Wenn die magnetische Feldstärke H über die zu integrierende Linie konstant ist, kann sie vor das Integral gezogen werden, und dies ist häufig der Fall.
+	Denn die magnetische Feldstärke ist immer dann konstant, wenn sich diese gesamte Feldlinie im gleichen Material befindet. Das ist in den allermeisten Fällen gegeben. Folglich können wir in unserem Beispiel die magnetische Feldstärke H vor das Integral ziehen. Sie bleibt aber weiterhin eine vektorielle Größe. 
+	Die Formel lautet somit nun H mal das Integral über d-s.   
+	Aber auch das Integral d-s lässt sich vereinfachen. Das Integral beschreibt die Summe aller kleinen Wegstücke entlang der Feldlinie. Wenn wir nur den Betrag betrachten, entspricht das der gesamten Länge dieser Linie. Deshalb wird aus dem Integral ganz einfach:
+	H mal L-m, wobei L-m die mittlere Länge der Feldlinie ist. Die mittlere Feldlinie beschreibt den mittleren Umfang dieses Körpers, der durch die Spule durchflutet wird. 
+	In unserem Beispiel betrachten wir eine Ringspule. Das ist eine typische Bauform einer Spule.
+	Dabei wird ein Draht spiralförmig um einen ringförmigen Spulenkörper gewickelt. Dieser Spulenkörper besteht meistens aus einem speziellen magnetischen Material, zum Beispiel Ferrit. 
+	Die mittlere Feldlinienlänge beschreibt die Strecke, die eine typische Magnetfeldlinie genau durch die Mitte des Spulenkerns zurücklegt. Bei einem ringförmigen Spulenkörper lässt sich die mittlere Feldlinienlänge durch die Berechnung des mittleren Durchmesseres der Spule ermitteln, also dem äußeren Durchmesser der Spule plus dem inneren Durchmesser, geteilt durch 2, multipliziert mit Pi.
+	Da wir entlang eines Weges integrieren, also über eine Strecke in Metern, wird die magnetische Feldstärke die Einheit Ampere pro Meter angegeben. Denn laut dem Durchflutungsgesetz ergibt das Integral der magnetischen Feldstärke entlang eines geschlossenen Weges genau die Summe aller Ströme, die durch die umschlossene Fläche fließen. Diese Stromsumme hat die Einheit Ampere. Wenn also die Länge in Metern eingesetzt wird, dann muss die Feldstärke entsprechend in Ampere pro Meter heraus kommen.}
 \end{frame}
 
 \begin{frame} \ftx{Beispiel: Magnetische Feldstärke}
@@ -149,7 +211,8 @@
 		\b{Eine Ringspule mit $1000$ Windungen und einer mittleren Feldlinienlänge von $50\,\mathrm{cm}$ wird von einer Stromstärke von $100\,\mathrm{mA}$ durchflossen. Wie groß ist die magnetische Feldstärke?}%
 		\begin{eqa}
 			\onslide<2->\varTheta &= H \cdot \ell_{\mathrm{m}} = N\cdot I\nonumber\\
-			\onslide<3->H&=\frac{N\cdot I}{\ell_{\mathrm{m}}}\onslide<4->=\frac{1000\cdot 0,1\,\mathrm{A}}{0,5\,\mathrm{m}} = 200\,\tfrac{\mathrm{A}}{\mathrm{m}}\nonumber
+			\onslide<3->H&=\frac{N\cdot I}{\ell_{\mathrm{m}}}
+			\onslide<4->=\frac{1000\cdot 0,1\,\mathrm{A}}{0,5\,\mathrm{m}} = 200\,\tfrac{\mathrm{A}}{\mathrm{m}}\nonumber
 			\onslide<1->
 		\end{eqa}
 	\end{bsp}\onslide<5->
@@ -157,10 +220,22 @@
 	\begin{bsp}{Magnetische Feldstärke über den Kreisumfang}{}
 		Ein gerader Leiter wird mit einem Strom von $I=50\,\mathrm{A}$ durchflossen. Wie groß ist die magnetische Feldstärke in einem Abstand von $r=20\,\mathrm{cm}$?
 		\begin{equation*}
-			\onslide<6->H=\frac{N\cdot I}{\ell_{\mathrm{m}}}\onslide<7->=\frac{1\cdot50\,\mathrm{A}}{2\pi\cdot 0,2\,\mathrm{m}} = 39,79\,\tfrac{\mathrm{A}}{\mathrm{m}}
+			\onslide<6->H=\frac{N\cdot I}{\ell_{\mathrm{m}}}
+			\onslide<7->=\frac{1\cdot50\,\mathrm{A}}{2\pi\cdot 0,2\,\mathrm{m}} = 39,79\,\tfrac{\mathrm{A}}{\mathrm{m}}
 		\end{equation*}
 		\s{Die mittlere Feldlinienlänge $\ell_{\mathrm{m}}$ kann durch den Kreisumfang ermittelt werden und wird deshalb mit der Formel zur Berechnung des Kreisumfangs $2\pi\cdot r$ ersetzt.}
 	\end{bsp}
+\speech{RechnungDurchflutung}{1}{Lasst uns das ganze mal ein an einer Beispielaufgabe direkt üben. Nehmen wir an, das wir eine  Ringsspule mit 1000 Windungen und einer mittleren Feldlinienlänge von 50 cm haben , welche mit einer Stromstärke von 100 mA durchflossen wird . Wie groß ist die magnetische Feldstärke? Die Formeln zur Berechnung haben wie zuvor kennengelernt.}
+\speech{RechnungDurchflutung}{2}{Wir hatten über das Durchflutungsgesetz die zwei Gleichungen kennengelernt. Theta ist gleich H mal L m, also die magnetische Feldstärke mal die mittlere Feldlinienlänge. Über das Durchflutungsgesetz ist das vereinfacht betrachtet gleich N mal I. Im Normalfall wäre das natürlich das Flächenintegral JdA, aber in unserem Fall gehen wir davon aus das die magnetische Feldstärke im Spulenkörper konstant ist.}
+\speech{RechnungDurchflutung}{3}{Das Ganze werden wir nun zur magnetischen Feldstärke umstellen. Stellen wir die Formel um, erhalten wir H ist gleich N mal I durch L M. Die Vektoren können wir in unserem Fall vernachlässigen, da ja nur der Betrag der magnetischen Feldstärke hier gefragt ist und nicht die Richtung. Die Richtung wäre bei einer Spule auch eindeutig gegeben. In der Ringspule verläuft sie kreisförmig und deshalb wir hier mit Skalaren rechnen.}
+\speech{RechnungDurchflutung}{4}{Nun haben unsere Formel erstellt und können nun unsere Werte einsetzen. N sind 1000 Windungen. Diese sind einheitenlos. Der Strom I hat 100 milli Ampere.
+100 milli Ampere entsprechen natürlich 0,1 Amper. Und wir haben eine mittlere Feldlinienlänge von 20 zenti meter. Diese sind 0,2 meter gleichzusetzen. Denn wir geben die Feldstärke Ampere pro Meter herauskommen folglich formen wir die Einheiten in die passenden Größen, also den Strom in Ampere und die mittlere Feldlinienlänge in Meter.
+Rechnen wir aus und erhalten wir 200 Ampere pro Meter. Das wäre jetzt also ein Beispiel für eine Ringspule, die von einem Draht umwickelt ist. Die gleichen Gleichungen kann man aber auch einsetzen, um das Feld um einen beliebigen Leiter zu errechnen.}
+\speech{RechnungDurchflutung}{5}{In der zweiten Beispielaufgabe wollen wir nun die magnetische Feldstärke der Feldlinien in einem gewissen Abstand zu einem stromdurchflossenen Leiter bestimmen.
+Das machen wir über die gleiche Formel. In der Aufgabe wird ein gerader Leiter mit einem Strom von I gleich 50 Ampere durchflossen. Nun wollen wir die magnetische Feldstärke mit einem Abstand von 20 zenti meter von dem Leiter berechnen.}
+\speech{RechnungDurchflutung}{6}{Für die Rechnung brauchen wir im Prinzip brauchen wir unsere Ursprungsformel nicht umformen. Es bleibt bei der Formel h ist gleich n mal I durch l m.
+Die Variabel N und die Variabel l m sind nicht direkt ersichtlich. Diese müssen wir mit etwas logik ermitteln.}
+\speech{RechnungDurchflutung}{7}{gut, wir haben einen einzigen geraden Leiter, also wird unser n natürlich 1 sein. Denn wir haben keine Spule mit mehreren Leitern in den wir das Feld messen, sondern wir haben nur einen Leiter. Also ist N gleich 1. Und die mittlere Feldlinienlänge ist jetzt der Umfang dieser Feldlinie. In unserer Rechnugn also Umfang eines Kreises mit dem Radius von 20 zenti meter. Den Umfang des Kreises berechnen wir mit 2 Pi mal r. Also setzen wir ein, n ist gleich 1, der Strom ist 50 Ampere, also haben wir im Zähler 1 mal 50 Ampere und im Nenner 2 Pi mal 0,2 meter. Setzen wir die Werte ein, bekommen wir als Ergebnis 39,79 Ampere pro Meter.}
 \end{frame}
 
 \s{\subsection{Magnetischer Fluss und Flussdichte\label{Flussdichte}}}
@@ -298,7 +373,7 @@
 		Dieser Vorgang wird Remanenz\index{Remanenz} genannt. Die verbleibende magnetische Flussdichte bei einer magnetischen Feldstärke von Null ist die Remanenzflussdichte $B_{\mathrm{r}}$. 
 		Um den Stoff wieder komplett zu untmagnetisieren\index{Entmagnetisieren}, wird eine umgekehrte magnetische Feldstärke, die Koerzitivfeldstärke\index{Koerzitivfeldstärke} $H_{\mathrm{c}}$, benötigt.\index{Magnetisierungskennlinie}
 		\fu{
-			\input{Tikz/magnetisierungskurve_ferro}
+			\input{Tikz/src/magnetisierungskurve_ferro}
 		}{{\bf Magnetisierungskurve eines ferromagnetischen Materials.} Die magnetische Feldstärke und die magnetische Flussdichte verhalten sich nicht linear zueinander. \label{Hysterese}}
 		
 		Anhand der Koerzitivfeldstärke werden ferromagnetische Materialien in hart- und weichmagnetische Materialien unterschieden. Hartmagnetische Werkstoffe (z. B. starke Dauermagnete aus Neodym-Eisen-Bor) verfügen dabei über einen Wert für $H_{\mathrm{c}}$ größer als $10\cdot 10^{3}\,\frac{\mathrm{A}}{\mathrm{m}}$, bei weichmagentischen Werkstoffen (z. B. Magnetkerne aus Mangan-Zink-Ferrit) liegt $H_{\mathrm{c}}$ bei kleiner als $500\,\frac{\mathrm{A}}{\mathrm{m}}$. Hartmagnetische Werkstoffe werden hauptsächlich für Permanentmagnete eingesetzt.\\

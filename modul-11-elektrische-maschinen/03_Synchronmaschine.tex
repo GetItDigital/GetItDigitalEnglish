@@ -64,15 +64,15 @@
 			\put(91,10.4){\line(-1,1){12.4}}\put(91.3,10.4){Statorwicklung 3}
 		}{}
 	}
-
+	
 \end{frame}
 
 
 
 \begin{frame}\ftb{Feldverläufe}
-	\s{	
+	\s{
 		\fo{width=\textwidth}{}{Synchronmaschine_Feldverlaeufe}{
-			\put(10.23,23.3){\input{Tikz/synchronmaschine_feldverlaeufe_drehfeld}
+			\put(10.23,23.3){\input{Tikz/src/synchronmaschine_feldverlaeufe_drehfeld}
 			}
 			
 			\put(12.5, 21.5){\color{statorw1}$I_1$} \put(38, 21.5){\color{statorw1}$I_1$} \put(63.6, 21.5){\color{statorw1}$I_1$} \put(89.3, 21.5){\color{statorw1}$I_1$}
@@ -80,30 +80,30 @@
 			\put(0, 1.5){\color{statorw3}$I_3$} \put(25.5, 1.5){\color{statorw3}$I_3$} \put(51, 1.5){\color{statorw3}$I_3$} \put(77, 1.5){\color{statorw3}$I_3$}
 		}{{\bf Richtung des Drehfeldvektors.} Der Rotor dreht sich synchron zu den sinusförmigen, um 120$\degree$ zueinander versetzten Drehfeldern des Stators.}
 	}
-	\b{	
+	\b{
 		\fo{}{height=0.8\textheight}{Synchronmaschine_Feldverlaeufe_a1}{
 			\put(-47,60){\begin{tikzpicture}[domain=0:0.3, samples=360, scale=0.838]
-				\foreach \n in {1,...,4}{
-					\draw[very thin, color=gray] (\n*4, 1) -- (\n*4,-1);
-				}
-				\draw (-0.1,0) -- (12.1,0);
-				\draw[->] (0,-1.1) -- (0,1.2) node[above] {$I$};
-				\draw (0.2, 0) node[below] {0};
-				\foreach \n in {1,...,6}{
-					\draw (\n*2, 0.1) -- (\n*2,-0.1);
-					\fill[fill=white] (\n*2 - 0.1,-0.6) rectangle ++(0.2,0.5); % weißes Overlay über Linie hinter Zahlen
-					\draw (\n*2, 0) node[below] {\pgfmathparse{60*\n}\pgfmathprintnumber[]{\pgfmathresult}\degree};
-				}
-				\draw[color=statorw1, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf1a1] function{3 * cos(0.0556 * pi * x)};
-				\draw[color=statorw1] (-0.3,0.55) node[above] {$I_1$};
-				\draw[color=statorw2, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf3a1] function{3 * cos(0.0556 * pi * x - pi * 2/3)};
-				\draw[color=statorw2] (-0.3,-0.1) node[above] {$I_2$};
-				\draw[color=statorw3, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf2a1] function{3 * cos(0.0556 * pi * x + pi * 2/3)};
-				\draw[color=statorw3] (-0.3,-0.75) node[above] {$I_3$};
+					\foreach \n in {1,...,4}{
+							\draw[very thin, color=gray] (\n*4, 1) -- (\n*4,-1);
+						}
+					\draw (-0.1,0) -- (12.1,0);
+					\draw[->] (0,-1.1) -- (0,1.2) node[above] {$I$};
+					\draw (0.2, 0) node[below] {0};
+					\foreach \n in {1,...,6}{
+							\draw (\n*2, 0.1) -- (\n*2,-0.1);
+							\fill[fill=white] (\n*2 - 0.1,-0.6) rectangle ++(0.2,0.5); % weißes Overlay über Linie hinter Zahlen
+							\draw (\n*2, 0) node[below] {\pgfmathparse{60*\n}\pgfmathprintnumber[]{\pgfmathresult}\degree};
+						}
+					\draw[color=statorw1, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf1a1] function{3 * cos(0.0556 * pi * x)};
+					\draw[color=statorw1] (-0.3,0.55) node[above] {$I_1$};
+					\draw[color=statorw2, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf3a1] function{3 * cos(0.0556 * pi * x - pi * 2/3)};
+					\draw[color=statorw2] (-0.3,-0.1) node[above] {$I_2$};
+					\draw[color=statorw3, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf2a1] function{3 * cos(0.0556 * pi * x + pi * 2/3)};
+					\draw[color=statorw3] (-0.3,-0.75) node[above] {$I_3$};
 				\end{tikzpicture}
 			}
 			\put(28, 51){\color{statorw1}$I_1$}
-			\put(48, 3){\color{statorw2}$I_2$} 
+			\put(48, 3){\color{statorw2}$I_2$}
 			\put(-1, 3){\color{statorw3}$I_3$}
 		}{}
 	}
@@ -113,100 +113,100 @@
 	\begin{frame}\ftb{Feldverläufe}
 		\fo{}{height=0.8\textheight}{Synchronmaschine_Feldverlaeufe_a2}{
 			\put(-47,60){\begin{tikzpicture}[domain=0:12, samples=360, scale=0.838]
-				\foreach \n in {1,...,4}{
-					\draw[very thin, color=gray] (\n*4, 1) -- (\n*4,-1);
-				}
-				\draw (-0.1,0) -- (12.1,0);
-				\draw[->] (0,-1.1) -- (0,1.2) node[above] {$I$};
-				\draw (0.2, 0) node[below] {0};
-				\foreach \n in {1,...,6}{
-					\draw (\n*2, 0.1) -- (\n*2,-0.1);
-					\fill[fill=white] (\n*2 - 0.1,-0.6) rectangle ++(0.2,0.5); % weißes Overlay über Linie hinter Zahlen
-					\draw (\n*2, 0) node[below] {\pgfmathparse{60*\n}\pgfmathprintnumber[]{\pgfmathresult}\degree};
-				}
-				\draw[color=statorw1, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf1a2] function{3 * cos(0.0556 * pi * x)};
-				\draw[color=statorw1] (-0.3,0.55) node[above] {$I_1$};
-				\draw[color=statorw2, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf3a2] function{3 * cos(0.0556 * pi * x - pi * 2/3)};
-				\draw[color=statorw2] (-0.3,-0.1) node[above] {$I_2$};
-				\draw[color=statorw3, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf2a2] function{3 * cos(0.0556 * pi * x + pi * 2/3)};
-				\draw[color=statorw3] (-0.3,-0.75) node[above] {$I_3$};
+					\foreach \n in {1,...,4}{
+							\draw[very thin, color=gray] (\n*4, 1) -- (\n*4,-1);
+						}
+					\draw (-0.1,0) -- (12.1,0);
+					\draw[->] (0,-1.1) -- (0,1.2) node[above] {$I$};
+					\draw (0.2, 0) node[below] {0};
+					\foreach \n in {1,...,6}{
+							\draw (\n*2, 0.1) -- (\n*2,-0.1);
+							\fill[fill=white] (\n*2 - 0.1,-0.6) rectangle ++(0.2,0.5); % weißes Overlay über Linie hinter Zahlen
+							\draw (\n*2, 0) node[below] {\pgfmathparse{60*\n}\pgfmathprintnumber[]{\pgfmathresult}\degree};
+						}
+					\draw[color=statorw1, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf1a2] function{3 * cos(0.0556 * pi * x)};
+					\draw[color=statorw1] (-0.3,0.55) node[above] {$I_1$};
+					\draw[color=statorw2, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf3a2] function{3 * cos(0.0556 * pi * x - pi * 2/3)};
+					\draw[color=statorw2] (-0.3,-0.1) node[above] {$I_2$};
+					\draw[color=statorw3, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf2a2] function{3 * cos(0.0556 * pi * x + pi * 2/3)};
+					\draw[color=statorw3] (-0.3,-0.75) node[above] {$I_3$};
 				\end{tikzpicture}
 			}
 			\put(28, 51){\color{statorw1}$I_1$}
-			\put(48, 3){\color{statorw2}$I_2$} 
+			\put(48, 3){\color{statorw2}$I_2$}
 			\put(-1, 3){\color{statorw3}$I_3$}
 		}{}
 	\end{frame}
 	\begin{frame}\ftb{Feldverläufe}
 		\fo{}{height=0.8\textheight}{Synchronmaschine_Feldverlaeufe_a3}{
 			\put(-47,60){\begin{tikzpicture}[domain=0:24, samples=360, scale=0.838]
-				\foreach \n in {1,...,4}{
-					\draw[very thin, color=gray] (\n*4, 1) -- (\n*4,-1);
-				}
-				\draw (-0.1,0) -- (12.1,0);
-				\draw[->] (0,-1.1) -- (0,1.2) node[above] {$I$};
-				\draw (0.2, 0) node[below] {0};
-				\foreach \n in {1,...,6}{
-					\draw (\n*2, 0.1) -- (\n*2,-0.1);
-					\fill[fill=white] (\n*2 - 0.1,-0.6) rectangle ++(0.2,0.5); % weißes Overlay über Linie hinter Zahlen
-					\draw (\n*2, 0) node[below] {\pgfmathparse{60*\n}\pgfmathprintnumber[]{\pgfmathresult}\degree};
-				}
-				\draw[color=statorw1, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf1a3] function{3 * cos(0.0556 * pi * x)};
-				\draw[color=statorw1] (-0.3,0.55) node[above] {$I_1$};
-				\draw[color=statorw2, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf3a3] function{3 * cos(0.0556 * pi * x - pi * 2/3)};
-				\draw[color=statorw2] (-0.3,-0.1) node[above] {$I_2$};
-				\draw[color=statorw3, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf2a3] function{3 * cos(0.0556 * pi * x + pi * 2/3)};
-				\draw[color=statorw3] (-0.3,-0.75) node[above] {$I_3$};
+					\foreach \n in {1,...,4}{
+							\draw[very thin, color=gray] (\n*4, 1) -- (\n*4,-1);
+						}
+					\draw (-0.1,0) -- (12.1,0);
+					\draw[->] (0,-1.1) -- (0,1.2) node[above] {$I$};
+					\draw (0.2, 0) node[below] {0};
+					\foreach \n in {1,...,6}{
+							\draw (\n*2, 0.1) -- (\n*2,-0.1);
+							\fill[fill=white] (\n*2 - 0.1,-0.6) rectangle ++(0.2,0.5); % weißes Overlay über Linie hinter Zahlen
+							\draw (\n*2, 0) node[below] {\pgfmathparse{60*\n}\pgfmathprintnumber[]{\pgfmathresult}\degree};
+						}
+					\draw[color=statorw1, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf1a3] function{3 * cos(0.0556 * pi * x)};
+					\draw[color=statorw1] (-0.3,0.55) node[above] {$I_1$};
+					\draw[color=statorw2, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf3a3] function{3 * cos(0.0556 * pi * x - pi * 2/3)};
+					\draw[color=statorw2] (-0.3,-0.1) node[above] {$I_2$};
+					\draw[color=statorw3, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf2a3] function{3 * cos(0.0556 * pi * x + pi * 2/3)};
+					\draw[color=statorw3] (-0.3,-0.75) node[above] {$I_3$};
 				\end{tikzpicture}
 			}
 			\put(28, 51){\color{statorw1}$I_1$}
-			\put(48, 3){\color{statorw2}$I_2$} 
+			\put(48, 3){\color{statorw2}$I_2$}
 			\put(-1, 3){\color{statorw3}$I_3$}
 		}{}
 	\end{frame}
 	\begin{frame}\ftb{Feldverläufe}
 		\fo{}{height=0.8\textheight}{Synchronmaschine_Feldverlaeufe_a1}{
 			\put(-47,60){\begin{tikzpicture}[domain=0:36, samples=360, scale=0.838]
-				\foreach \n in {1,...,4}{
-					\draw[very thin, color=gray] (\n*4, 1) -- (\n*4,-1);
-				}
-				\draw (-0.1,0) -- (12.1,0);
-				\draw[->] (0,-1.1) -- (0,1.2) node[above] {$I$};
-				\draw (0.2, 0) node[below] {0};
-				\foreach \n in {1,...,6}{
-					\draw (\n*2, 0.1) -- (\n*2,-0.1);
-					\fill[fill=white] (\n*2 - 0.1,-0.6) rectangle ++(0.2,0.5); % weißes Overlay über Linie hinter Zahlen
-					\draw (\n*2, 0) node[below] {\pgfmathparse{60*\n}\pgfmathprintnumber[]{\pgfmathresult}\degree};
-				}
-				\draw[color=statorw1, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf1] function{3 * cos(0.0556 * pi * x)};
-				\draw[color=statorw1] (-0.3,0.55) node[above] {$I_1$};
-				\draw[color=statorw2, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf3] function{3 * cos(0.0556 * pi * x - pi * 2/3)};
-				\draw[color=statorw2] (-0.3,-0.1) node[above] {$I_2$};
-				\draw[color=statorw3, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf2] function{3 * cos(0.0556 * pi * x + pi * 2/3)};
-				\draw[color=statorw3] (-0.3,-0.75) node[above] {$I_3$};
+					\foreach \n in {1,...,4}{
+							\draw[very thin, color=gray] (\n*4, 1) -- (\n*4,-1);
+						}
+					\draw (-0.1,0) -- (12.1,0);
+					\draw[->] (0,-1.1) -- (0,1.2) node[above] {$I$};
+					\draw (0.2, 0) node[below] {0};
+					\foreach \n in {1,...,6}{
+							\draw (\n*2, 0.1) -- (\n*2,-0.1);
+							\fill[fill=white] (\n*2 - 0.1,-0.6) rectangle ++(0.2,0.5); % weißes Overlay über Linie hinter Zahlen
+							\draw (\n*2, 0) node[below] {\pgfmathparse{60*\n}\pgfmathprintnumber[]{\pgfmathresult}\degree};
+						}
+					\draw[color=statorw1, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf1] function{3 * cos(0.0556 * pi * x)};
+					\draw[color=statorw1] (-0.3,0.55) node[above] {$I_1$};
+					\draw[color=statorw2, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf3] function{3 * cos(0.0556 * pi * x - pi * 2/3)};
+					\draw[color=statorw2] (-0.3,-0.1) node[above] {$I_2$};
+					\draw[color=statorw3, scale=1/3, smooth, very thick] plot[id=drehfeldverlauf2] function{3 * cos(0.0556 * pi * x + pi * 2/3)};
+					\draw[color=statorw3] (-0.3,-0.75) node[above] {$I_3$};
 				\end{tikzpicture}
 			}
 			\put(28, 51){\color{statorw1}$I_1$}
-			\put(48, 3){\color{statorw2}$I_2$} 
+			\put(48, 3){\color{statorw2}$I_2$}
 			\put(-1, 3){\color{statorw3}$I_3$}
 		}{}
 	\end{frame}
 }
 
- 
+
 \begin{frame}\ftx{Feldverläufe}
 	\s{Bei der Synchronmaschine bewirkt die magnetische Kopplung zwischen Stator und Rotor das Drehmoment. Im Motorbetrieb folgt das Rotorfeld dem Statorfeld. Die mechanische Drehzahl muss daher immer gleich der elektrischen Drehfrequenz sein. Zwischen dem Stator und dem Rotor befindet sich der lastabhängige sogenannte Polradwinkel\index{Polradwinkel} $\vartheta$. \nomenclature[F]{$\vartheta$}{Polradwinkel der Synchronmaschine \nomunit{$\degree$}} Bei $\vartheta=90\degree$ ist das Drehmoment am größten. Wird im Motorbetrieb der Polradwinkel durch eine zu hohe Belastung größer als $90\degree$, sinkt das erzeugte Drehmoment und die Maschine \glqq kippt\grqq -- das heißt, sie bleibt schlagartig stehen.}
 	\begin{itemize}
 		\item Der Statorfluss entsteht durch die Überlagerung der Flüsse der drei Wicklungen.
-		\uncover<2>{\item Der Läuferfluss entsteht durch die Erregerwicklung.}
+		      \uncover<2>{\item Der Läuferfluss entsteht durch die Erregerwicklung.}
 	\end{itemize}
-		
+	
 \end{frame}
- 
+
 \begin{frame}\ftx{Drehmoment}
 	\fu{
-		\input{Tikz/drehmomentkennlinie_synchron}
-		}{{\bf Drehmomentkennlinie in Abhängigkeit vom Polradwinkel.}}
+		\input{Tikz/src/drehmomentkennlinie_synchron}
+	}{{\bf Drehmomentkennlinie in Abhängigkeit vom Polradwinkel.}}
 \end{frame}
 
 
@@ -216,24 +216,8 @@
 	\s{Im Netzbetrieb ist die Klemmenspannung $U_1$ und die Frequenz $\omega$ fest vorgegeben. Das ist ein häufiger Betriebsfall für die Synchronmaschine.}
 	\b{Komplexes einphasiges ESB des Vollpolgenerators (z.B. im Netzbetrieb):}
 	\fu{
-		\begin{circuitikz}[scale=0.75]
-			\draw (0,4)
-			to[short,o-,i=$\underline{I}_1$](1,4)
-			to[R, l=$R_1$](3,4)
-			to[L, l=$X_{1\sigma}$, -*](5,4)
-			to[L, l=$X_\mathrm{h}$](7,4)
-			to[V, v=$\underline{U}_\mathrm{p}$](7,0)
-			to[short,-*] (5,0)
-			to[short,-o] (0,0);
-			\draw (0,0) to[open, l=$\underline{U}_1$] (0,4)
-			(0,0.5) [->] (0,3.5) -- (0,0.5);
-			\draw (5,0) to[open, l=$\underline{U}_\mathrm{q}$] (5,4)
-			(5,0.5) [->] (5,3.5) -- (5,0.5);
-			\draw (9,1)
-			to[short, o-](9,2)
-			to[L](11,2)
-			to[short, -o, i=$I_\mathrm{E}$](11,1);
-	\end{circuitikz}}{{\bf Komplexes einphasiges ESB eines Vollpolgenerators.} Beispielsweise im Netzbetrieb.}%selbst erstellt
+		\input{Tikz/src/ESB_vollpolgenerator}
+		}{{\bf Komplexes einphasiges ESB eines Vollpolgenerators.} Beispielsweise im Netzbetrieb.}
 \end{frame}
 
 

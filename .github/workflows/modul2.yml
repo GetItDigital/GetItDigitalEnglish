@@ -1,0 +1,81 @@
+name: Modul 02
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/getitdigital/texcontainer:main
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 2
+
+    # Test if files in this module are changed
+    - name: Configure Git Safe Directory
+      run: git config --global --add safe.directory /__w/GetItDigital/GetItDigital
+    - name: Get changed files in the docs folder
+      id: changed-files-specific
+      uses: tj-actions/changed-files@ed68ef82c095e0d48ec87eccea555d944a631a4c # v46
+      with:
+        files: |
+          modul-02-energie-und-leistung/*
+          Templates/*
+
+    # Compile Skript only if files in this module are changed
+    - name: compile Skript
+      id: skript
+      if: steps.changed-files-specific.outputs.any_changed == 'true'
+      working-directory: ./modul-02-energie-und-leistung
+      run: latexmk -interaction=nonstopmode -file-line-error -pdf --shell-escape -outdir=TeXAux Skript.tex
+    - name: Upload Skript as artifact
+      if: steps.changed-files-specific.outputs.any_changed == 'true'
+      uses: actions/upload-artifact@v4
+      with:
+        name: Modul-02-Skript
+        path: modul-02-energie-und-leistung/TeXAux/Skript.pdf
+    - name: upload to Skript server
+      if: steps.changed-files-specific.outputs.any_changed == 'true'
+      shell: bash
+      run: |
+        echo "Uploading Skript.pdf to server"
+        which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
+        mkdir -p ~/.ssh
+        eval $(ssh-agent -s)
+        [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+        chmod 400 ~/.ssh/config
+        ssh-add <(echo "${{secrets.SFTP_KEY}}")
+        sftp -o StrictHostKeyChecking=no ${{secrets.SFTP_USERNAME}}@${{secrets.SFTP_SERVER}}:modul-2-energie-und-leistung <<< $'put modul-02-energie-und-leistung/TeXAux/Skript.pdf'
+
+    # Compile Slides only if files in this module are changed
+    - name: compile Folien
+      id: folien
+      if: steps.changed-files-specific.outputs.any_changed == 'true'
+      working-directory: ./modul-02-energie-und-leistung
+      run: latexmk -interaction=nonstopmode -file-line-error -pdf --shell-escape -outdir=TeXAux Folien.tex
+    - name: Upload Folien as artifact
+      if: steps.changed-files-specific.outputs.any_changed == 'true'
+      uses: actions/upload-artifact@v4
+      with:
+        name: Modul-02-Folien
+        path: modul-02-energie-und-leistung/TeXAux/Folien.pdf
+    - name: upload to Folien server
+      if: steps.changed-files-specific.outputs.any_changed == 'true'
+      shell: bash
+      run: |
+        echo "Uploading Folien.pdf to server"
+        which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
+        mkdir -p ~/.ssh
+        eval $(ssh-agent -s)
+        [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+        chmod 400 ~/.ssh/config
+        ssh-add <(echo "${{secrets.SFTP_KEY}}")
+        sftp -o StrictHostKeyChecking=no ${{secrets.SFTP_USERNAME}}@${{secrets.SFTP_SERVER}}:modul-2-energie-und-leistung <<< $'put modul-02-energie-und-leistung/TeXAux/Folien.pdf'

@@ -11,25 +11,27 @@
         
             \b{
                 \only<1>{
-                    \fo{}{width=\textwidth}{Hall-EffektA}{
-                    \put(7, 53.5){\color{current}$I$}
-                    \put(81, 11){\color{current}$I$}}{}
-                }
-                \only<2>{
-                    \fo{}{width=\textwidth}{Hall-EffektB}{
+                    \foo{}{width=\textwidth}{Hall-EffektA}{
                     \put(7, 53.5){\color{current}$I$}
                     \put(81, 11){\color{current}$I$}
-                    \put(37, 69){\color{magnetfeld}$B$}}{}
+                    }{}
+                }
+                \only<2>{
+                    \foo{}{width=\textwidth}{Hall-EffektB}{
+                    \put(7, 53.5){\color{current}$I$}
+                    \put(81, 11){\color{current}$I$}
+                    \put(37, 69){\color{magnetfeld}$B$}
+                    }{}
                 }
                 \only<3>{
-                \fo{}{width=\textwidth}{Hall-EffektC}{
+                \foo{}{width=\textwidth}{Hall-EffektC}{
                     \put(7, 53.5){\color{current}$I$}
                     \put(81, 11){\color{current}$I$}
                     \put(91, 30.5){\color{gray}$d$}
                     \put(37, 69){\color{magnetfeld}$B$}
                     \put(53, 52){\color{voltage}$U_H$}
-                }{}
-            }
+                    }{}
+                }
             }
             
             \only<4->{

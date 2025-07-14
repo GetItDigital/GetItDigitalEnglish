@@ -1,0 +1,18 @@
+\begin{circuitikz}                                         
+    \draw (0,0) [V^<, name=Uq] to (0,3);
+    \draw (0,3) to [R, l=$R_\mathrm{i}$, v, name=Ri, -o] (4,3);
+    \draw (0,0) to [short, -o] (4,0);
+
+    \draw [ultra thick,->] (4.8,1.5) -- (6.5,1.5);
+
+    \draw (8,0) [I, name=Iq] to (8,3);
+    \draw (8,3) to [short, -*] (10,3)
+        to [R, i, name=Ri, -*] (10,0)
+        to (8,0);
+    \draw (10,0) to [short, -o] (12,0);
+    \draw (10,3) to [short, -o] (12,3);
+    \iarrmore{Iq}{$I_\mathrm{q}$};
+    \varrmore{Uq}{$U_\mathrm{q}$};
+    \iarrmore{Ri}{$I_\mathrm{Ri}$};
+    \varrmore{Ri}{$U_\mathrm{Ri}$};
+\end{circuitikz}

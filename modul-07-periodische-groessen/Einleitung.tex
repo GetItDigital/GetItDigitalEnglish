@@ -1,0 +1,95 @@
+%Einleitung
+
+\begin{frame}
+    \fta{Einleitung}
+    
+    \s{
+        In den vorangegangenen Modulen wurden die grundsätzlichen physikalischen Gegebenheiten und die Grundbauteile besprochen. 
+        Außerdem wurden die grundlegenden technischen Verhaltensweisen in Gleichstromnetzwerken geklärt. Bei den Gleichstromnetzwerken
+        werden die elektrischen Netzwerke mit einem DC-Strom (Direct Current) versorgt, Wechselstromnetzwerke mit einem AC-Strom 
+        (Alternating Current). Der DC-Strom fließt dauerhaft in eine Richtung. Beim AC-Strom wechselt die Stromrichtung regelmäßig 
+        seine Richtung. Die Regelmäßigkeit des Wechsels der Stromrichtung des Wechslestromes erfolgt periodisch nach einer bestimmten
+        Frequenz. Beispielsweise ist der ideale elektrische Widerstand als Bauteil nicht frequenzabhängig. Zusätzlich Bauteile, wie der 
+        Kondensator oder eine Spule, weisen bei unterschiedlichen Frequenzen verschiedene komplexe Widerstände auf. Um diese periodischen
+        Größen zu bestimmen werden die folgenden Themengebiete besprochen:
+
+        \begin{itemize}
+            \item Zeigerdiagramm
+            \item Komplexe Wechselstromrechnung
+            \item Effektivwert
+            \item Scheinleistung, Wirkleistung und Blindleistung
+            \item Drehstrom
+            \item Mitsystem, Gegensystem und Nullsystem
+        \end{itemize}
+
+        \fu{
+        \resizebox{0.7\textwidth}{!}{
+        \begin{tikzpicture}
+            \draw[very thin,color=gray] (-0.1,-0.1) grid (6.2,2.1);
+            \draw[->] (-0.2,0) -- (6.4,0) node[right] {$\Re$};
+			\draw[->] (0,-0.1) -- (0,2.2) node[above] {$\Im$};
+            \draw[->, color=voltage] (0,0) coordinate (U) -- (6,0) coordinate (B) node[below] {$\underline{U}_\mathrm{1}$};
+            \draw[->, color=red] (0,0.02) -- (3,0.02) node[below]	 {$\underline{I}_\mathrm{1}$};
+            \draw[->, color=red] (3,0.02) -- (3,2.02) coordinate (D);
+            \draw[color = red] (3,1)node[right]	 {$\underline{I}_\mathrm{c}$};
+            \draw[->, color=red] (0,0.02) -- (3,2.02);
+            \draw[color=red](2.3,1.9) node	 {$\underline{I}_\mathrm{2}$};
+            \draw[->, color=voltage](6,0) -- (6,2) coordinate (C);
+            \draw[color=voltage](6.2,1.3) node	 {$\underline{U}_\mathrm{2}$};
+            \draw[->, color=voltage](0,0) -- (6,2);
+            \draw[color=voltage](4.8,1.2) node	 {$\underline{U}_\mathrm{E}$};
+            %Winkel
+            \draw pic[draw, voltage, angle radius = 2cm, ->] {angle = B--U--C};
+            \draw pic[draw, red, angle radius = 1.2cm, ->] {angle = B--U--D};
+            \draw[red] (0.7,0.8) node{$\varphi_\mathrm{2}$};
+            \draw[voltage] (2.32,0.2) node{$\varphi_\mathrm{1}$};
+        \end{tikzpicture}
+        }
+    }{{\bf Zeigerdiagramm.} Die Größen Spannung und Strom in der Darstellung als Zeiger. \label{ZeigerBeispiel}}
+    }
+
+    \b{
+        Eine Sinusschwingung weist über der Zeit unterschiedliche Spannungswerte auf. Wiederholen sich die exakten Sinusschwingungen,
+        handelt es sich um einen zetlich periodischen Vorgang. 
+        Im Modul 7 'Periodische Größen' werden die folgenden Themegebiete behandelt:\\
+
+        \begin{minipage}[t]{0.45\textwidth}
+            \begin{itemize}
+                \vspace{\baselineskip}
+                \item Zeigerdiagramm
+                \item Komplexe Wechselstromrechnung
+                \item Effektivwert
+                \item Scheinleistung, Wirkleistung und Blindleistung
+                \item Drehstrom
+                \item Mitsystem, Gegensystem und Nullsystem
+            \end{itemize}
+        \end{minipage}
+        \begin{minipage}[t]{0.54\textwidth}
+        \fu{
+            \resizebox{\textwidth}{!}{
+            \begin{tikzpicture}
+                \draw[very thin,color=gray] (-0.1,-0.1) grid (6.2,2.1);
+                \draw[->] (-0.2,0) -- (6.4,0) node[right] {$\Re$};
+                \draw[->] (0,-0.1) -- (0,2.2) node[above] {$\Im$};
+                \draw[->, color=voltage] (0,0) coordinate (U) -- (6,0) coordinate (B) node[below] {$\underline{U}_\mathrm{1}$};
+                \draw[->, color=red] (0,0.02) -- (3,0.02) node[below]	 {$\underline{I}_\mathrm{1}$};
+                \draw[->, color=red] (3,0.02) -- (3,2.02) coordinate (D);
+                \draw[color = red] (3,1)node[right]	 {$\underline{I}_\mathrm{c}$};
+                \draw[->, color=red] (0,0.02) -- (3,2.02);
+                \draw[color=red](2.3,1.9) node	 {$\underline{I}_\mathrm{2}$};
+                \draw[->, color=voltage](6,0) -- (6,2) coordinate (C);
+                \draw[color=voltage](6.2,1.3) node	 {$\underline{U}_\mathrm{2}$};
+                \draw[->, color=voltage](0,0) -- (6,2);
+                \draw[color=voltage](4.8,1.2) node	 {$\underline{U}_\mathrm{E}$};
+                %Winkel
+                \draw pic[draw, voltage, angle radius = 2cm, ->] {angle = B--U--C};
+                \draw pic[draw, red, angle radius = 1.2cm, ->] {angle = B--U--D};
+                \draw[red] (0.7,0.8) node{$\varphi_\mathrm{2}$};
+                \draw[voltage] (2.32,0.2) node{$\varphi_\mathrm{1}$};
+            \end{tikzpicture}
+            }
+        }{}
+        \end{minipage}
+    }
+\end{frame}
+\newpage

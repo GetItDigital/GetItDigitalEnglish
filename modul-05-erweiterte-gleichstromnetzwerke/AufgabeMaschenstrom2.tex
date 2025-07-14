@@ -1,0 +1,128 @@
+\subsection{Maschenstromverfahren 2}
+\Aufgabe{
+    
+    Im folgenden Netzwerk wird ein Netzwerk bestehend aus drei Widerständen und zwei Spannungsquellen dargestellt.
+    Führen Sie die Analyse des Netzwerkes mit dem Maschenstromverfahren durch. 
+
+    \textbf{Werte:}
+    \[
+    R_1 = 4{,}7\,\text{k}\Omega \quad R_2 = 3{,}3\,\text{k}\Omega \quad R_3 = 2{,}2 \text{k} \Omega \quad U_1 = 24\,\text{V} \quad U_2 = 12\,\text{V}
+    \]
+
+    \begin{center}
+        \input{Tikz/A8Masch2.tex}
+    \end{center}
+        
+    \begin{itemize}
+        \item[\bf a)] Vorbereitung des Netzwerkes
+        \item[\bf b)] Maschen und Maschenströme definieren
+        \item[\bf c)] Widerstandsmatrix bestimmen
+        \item[\bf d)] Quellspannungen zuordnen
+        \item[\bf e)] Gleichungssystem aufstellen
+    \end{itemize}
+    }
+
+\Loesung{
+	\begin{itemize}
+        \item[\bf a)]
+        Vorbereitung des Netzwerkes:\\
+        Das Netzwerk besteht aus:
+        \begin{itemize}
+            \item Zwei Spannungsquellen: \(U_1\) und \(U_2\),
+            \item Drei Widerständen: \(R_1\), \(R_2\), \(R_3\),
+            \item Drei mögliche Maschen.
+        \end{itemize}
+        Es sind Spannungsquellen und Widerstandswerte vorhanden.
+
+		\item[\bf b)]
+		Maschen und Maschenströme definieren:\\
+        \begin{itemize}
+            \item \(M_1\): Maschenstrom in der linken Masche,
+            \item \(M_2\): Maschenstrom in der rechten Masche,
+            \item Der Strom \(I_\mathrm{R2}\) durch \(R_2\) ergibt sich zu: \[ I_\mathrm{R2} =  \begin{bmatrix} I_{M1} \\ I_{M2} \end{bmatrix} \]
+        \end{itemize}
+
+        \item[\bf c)]
+        Widerstandsmatrix bestimmen:
+        \[
+        \mathbf{R_M} = 
+        \begin{bmatrix}
+        R_1 + R_2 & -R_2 \\
+        -R_2 & R_2 + R_3
+        \end{bmatrix}
+        \]
+        Einsetzen der Werte:
+        \[
+        \mathbf{R_M} = 
+        \begin{bmatrix}
+        4{,}7\ \Omega + 3{,}3\ \Omega & -3{,}3\ \Omega \\
+        -3{,}3\ \Omega & 3{,}3\ \Omega + 2{,}2\ \Omega
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+        8{,}0\ \Omega & -3{,}3\ \Omega \\
+        -3{,}3\ \Omega & 5{,}5\ \Omega
+        \end{bmatrix}
+        \]
+
+        \item[\bf d)]
+        Quellspannungen zuordnen:\\
+        \begin{eq}
+            \mathbf{U_M} = \begin{bmatrix} U_1 \\ -U_2 \end{bmatrix} = \begin{bmatrix} 24\ V \\ -12\ V \end{bmatrix}  \nonumber
+        \end{eq}
+
+        \item[\bf e)]
+        Gleichungssystem aufstellen:\\
+
+        \[
+        \mathbf{R_M} \cdot \mathbf{I_M} = \mathbf{U_M},
+        \]
+        wobei:
+        \[
+        \mathbf{R_M} = 
+        \begin{bmatrix}
+        8{,}0\ \Omega & -3{,}3\ \Omega \\
+        -3{,}3\ \Omega & 5{,}5\ \Omega
+        \end{bmatrix}, \quad
+        \mathbf{I_M} = 
+        \begin{bmatrix}
+        I_{M1} \\
+        I_{M2}
+        \end{bmatrix}, \quad
+        \mathbf{U_M} = 
+        \begin{bmatrix}
+        24\ V \\
+        -12\ V
+        \end{bmatrix}.
+        \]
+
+        Das Lösen des Gleichungssystems liefert:
+        \begin{eq}
+            I_{M1} = 2{,}79\,\text{mA} \quad \text{und} \quad I_{M2} = -0{,}507\,\text{mA}     \nonumber
+        \end{eq}
+        
+        Daraus ergeben sich:
+        \begin{eqa}
+            I_\mathrm{R1} &= I_\mathrm{M1} = 2,79\ mA    \nonumber \\
+            I_\mathrm{R2} &= I_\mathrm{M1} + (-I_\mathrm{M2}) = 2,79\ mA + 0,507\ mA = 3,297\ mA     \nonumber  \\
+            I_\mathrm{R3} &= -I_\mathrm{M2} = 0,507\ mA            \nonumber
+        \end{eqa}
+
+        und
+
+        \begin{eqa}
+            U_\mathrm{R1} &= R_1 \cdot I_\mathrm{R1} = 4,7\ k\Omega \cdot 2,79\ mA = 13,12\ V    \nonumber \\
+            U_\mathrm{R2} &= R_2 \cdot I_\mathrm{R1} = 3,3\ k\Omega \cdot 3,297\ mA = 10,88\ V    \nonumber  \\
+            U_\mathrm{R3} &= R_3 \cdot I_\mathrm{R1} = 2,2\ k\Omega \cdot 0,507\ mA = 1,12\ V           \nonumber
+        \end{eqa}
+
+        Überprüfung der Maschen:
+
+        \begin{eqa}
+            U_\mathrm{1} &= U_\mathrm{R1} + U_\mathrm{R2} = 24\ V    \nonumber \\
+            U_\mathrm{2} &= U_\mathrm{R2} + U_\mathrm{R3} = 12\ V           \nonumber
+        \end{eqa}
+        
+
+	\end{itemize}
+}

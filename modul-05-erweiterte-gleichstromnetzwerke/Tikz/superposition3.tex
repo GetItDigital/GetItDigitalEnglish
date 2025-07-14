@@ -1,0 +1,22 @@
+\begin{circuitikz}
+    \draw
+    (0,2) to [V, name=Ug] (0,0)
+    (0,2) to [R=$R_\mathrm{i}$, i, v, name=Ri] (0,4)
+    (0,4) to [short,-*] (4,4)
+    (12,4) to [short,-*] (8,4)
+    (4,4) to [R=$R_1$, i, v, name=R1] (4,0)
+    (4,4) to [R=$R_3$, i, v, name=R3] (8,4)
+    (8,4) to [R=$R_2$, i, v, name=R2] (8,0)
+    (12,0) to [short,-*] (8,0)
+    to [short,-*] (4,0)
+    to [short] (0,0); 
+    \varrmore{Ug}{$U_\mathrm{g}$};
+    \varrmore{Ri}{$U_\mathrm{Ri}$};
+    \iarrmore{Ri}{$I_\mathrm{U}$};
+    \varrmore{R1}{$U_{1}$};
+    \iarrmore{R1}{$I_{1}$};
+    \varrmore{R2}{$U_{2}$};
+    \iarrmore{R2}{$I_{2}$};
+    \varrmore{R3}{$U_{3}$};
+    \iarrmore{R3}{$I_{3}$};
+\end{circuitikz}

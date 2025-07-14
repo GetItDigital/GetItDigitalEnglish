@@ -1,0 +1,24 @@
+\begin{circuitikz}
+    \draw
+    (0,0) to [I, name=I0] (0,4)
+    to [short,-*,i=\red{$I_0$}] (4,4)
+    to [short,-*] (8,4)
+    to [short,i=\red{$I_3$}] (12,4)
+    (4,4) to [R=$R_1$,i=\red{$I_1$},v=$U_\mathrm{R1}$] (4,0)
+    (8,4) to [V, name=U1] (8,2)
+    (8,2) to [R=$R_2$,i=\red{$I_2$},v=$U_\mathrm{R2}$] (8,0)
+    (12,4) to [V, name=U2] (12,2)
+    (12,2) to [R=$R_3$,i=\red{$I_3$},v=$U_\mathrm{R3}$] (12,0)
+    to[short,-*,i=\red{$I_3$}] (8,0)
+    to[short,-*] (4,0)
+    to[short,i=\red{$I_0$}] (0,0);
+    \iarrmore{I0}{$I_0$};
+    \varrmore{U1}{$U_1$};
+    \varrmore{U2}{$U_2$};
+    \draw[->,shift={(6,2)},blue] (150:0.8) arc (150:-150:0.8) node at(0,0){$M_1$};
+    \draw[->,shift={(10,2)},blue] (150:0.8) arc (150:-150:0.8) node at(0,0){$M_2$};
+    \draw (4,4) node[above] {$K_1$};
+    \draw (8,4) node[above] {$K_1$};
+    \draw (4,0) node[below] {$K_2$};
+    \draw (8,0) node[below] {$K_2$};
+\end{circuitikz}

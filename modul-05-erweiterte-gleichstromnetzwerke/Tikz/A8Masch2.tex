@@ -1,0 +1,21 @@
+\begin{circuitikz} 
+            \draw (0,0) to [V^<, name=U1] (0,4)
+            to [R, l=$R_1$, v, i, name=R1,-*] (4,4)
+            to [R, l=$R_3$, v<, i<, name=R3] (8,4)
+            to [V, name=U2] (8,0)
+            to [short, -*] (4,0) 
+            to [short] (0,0)
+            (4,4) to [R, l=$R_\mathrm{2}$, v, i, name=R2] (4,0);
+            
+            \varrmore{U1}{$U_\mathrm{1}$};
+            \varrmore{U2}{$U_\mathrm{2}$};
+            \varrmore{R1}{$U_\mathrm{R1}$};
+            \iarrmore{R1}{$I_\mathrm{R1}$};
+            \varrmore{R2}{$U_\mathrm{R2}$};
+            \iarrmore{R2}{$I_\mathrm{R2}$};
+            \varrmore{R3}{$U_\mathrm{R3}$};
+            \iarrmore{R3}{$I_\mathrm{R3}$};
+            
+            \draw[->,shift={(2,2)},voltage] (150:0.8) arc (150:-150:0.8) node at(0,0){$M_1$};
+            \draw[->,shift={(6,2)},voltage] (150:0.8) arc (150:-150:0.8) node at(0,0){$M_2$};
+        \end{circuitikz}

@@ -1,0 +1,59 @@
+\subsection{Superposition 1}
+\Aufgabe{
+    Gegeben ist unten stehendes Netzwerk.
+
+    \begin{figure}[H]
+        \resizebox{0.6\textwidth}{!}{%  
+        \input{Tikz/A4Super1.tex}
+        }\centering                                                           
+    \end{figure}
+
+    Bestimmen Sie mit Hilfe des Superpositionsverfahrens die Spannung, die über dem Widerstand $R_L$ abfällt.
+    Befolgen Sie hierzu die folgenden Schritte:
+        
+    \begin{itemize}
+            \item[\bf a)]
+                Bestimmen Sie den Anteil von $U_g$.
+            \item[\bf b)]
+                Bestimmen Sie den Anteil von $I_g$.
+            \item[\bf c)]
+                Führen Sie die Ergebnisse durch den Überlagerungssatz zusammen.
+    \end{itemize}
+    }
+
+\Loesung{
+	\begin{itemize}
+        \item[\bf a)]
+        Anteil von $U_g$:\\
+        \begin{figure}[H]
+            \resizebox{0.6\textwidth}{!}{%  
+            \input{Tikz/B4Super1.tex}
+            }\centering                                                           
+        \end{figure}
+
+        \begin{eq}
+            U_\mathrm{RL}(U_\mathrm{g}) = \frac{R_\mathrm{L}}{R_\mathrm{i} + R_\mathrm{L}} \cdot U_\mathrm{g}       \nonumber
+        \end{eq}
+
+		\item[\bf b)]
+		Anteil von $I_g$:\\
+        \begin{figure}[H]
+            \resizebox{0.65\textwidth}{!}{%  
+            \input{Tikz/B4Super1_zwei.tex}
+            }\centering                                                           
+        \end{figure}
+
+        \begin{eq}
+            U_\mathrm{RL}(I_\mathrm{g}) = \frac{R_\mathrm{i} \cdot R_\mathrm{i}}{R_\mathrm{i} + R_\mathrm{L}} \cdot I_\mathrm{g}       \nonumber
+        \end{eq}
+
+        \item[\bf c)]
+        Überlagerungssatz:\\
+
+        \begin{eq}
+            U_\mathrm{RL} = U_\mathrm{RL}(U_\mathrm{g}) + U_\mathrm{RL}(I_\mathrm{g}) = 
+            \frac{R_\mathrm{L}}{R_\mathrm{i} + R_\mathrm{L}} \cdot U_\mathrm{g} + 
+            \frac{R_\mathrm{i} \cdot R_\mathrm{i}}{R_\mathrm{i} + R_\mathrm{L}} \cdot I_\mathrm{g}       \nonumber
+        \end{eq}
+	\end{itemize}
+}

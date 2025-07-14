@@ -1,0 +1,42 @@
+\begin{circuitikz}
+    \draw (18,3) to [I, i, name=Iq02,*-*] (18,0); 
+    \draw (18,0) to (16,0) 
+        to [R, l=$G_0$, v, i, name=G02](16,3)
+        to (18,3) 
+        to (18,6);          
+    \draw (18,6) to [short, -*] (23,6)                                          
+        to [R, l=$G_1$, v, i, name=G12, -*] (23,0)                 
+        to (18,0);                                                    
+    \draw (23,0) to (28,0);                                                  
+    \draw (28,3) to [I, i, name=Iq22,*-*] (28,0);                         
+    \draw (23,6) to [R, l=$G_3$, v, i, name=G32] (28,6)                                      
+        to (28,3);                                  
+    \draw (28,0) to (30,0);                                   
+    \draw (28,3) to (30,3);                                   
+    \draw (30,0) to [R, l=$G_2$, v, i, name=G22] (30,3); 
+    
+    \iarrmore{G02}{$I_0$};
+    \varrmore{G02}{$U_\mathrm{G0}$};
+    \iarrmore{G12}{$I_1$};
+    \varrmore{G12}{$U_\mathrm{G1}$};
+    \iarrmore{G22}{$I_2$};
+    \varrmore{G22}{$U_\mathrm{G2}$};
+    \iarrmore{G32}{$I_3$};
+    \varrmore{G32}{$U_\mathrm{G3}$};
+    \iarrmore{Iq02}{$I_\mathrm{q0}$};
+    \iarrmore{Iq22}{$I_\mathrm{q2}$};
+
+    \draw[red](23.5,0.5) node {$K_0$};
+    \draw[red](23,6.5) node {$K_1$};
+    \draw[red](17.5,3.5) node {$K_1$};
+    \draw[red](28.5,3.5) node {$K_2$};
+
+    \pause
+    \draw[blue, very thick](16,2.07) to (16,3)
+    to (18,3) to (18,6) to (23,6) to (23,3.57); 
+    \draw[blue, very thick](23,6) to (24.95,6);
+
+    \pause
+    \draw[green, very thick, dashed](23,6) to (24.95,6);
+    \draw[green, very thick, dashed](26.05,6) to (28,6) to (28,3);
+\end{circuitikz}

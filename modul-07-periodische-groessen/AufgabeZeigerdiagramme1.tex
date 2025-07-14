@@ -1,0 +1,54 @@
+\subsection{Zeigerdiagramme 1}
+\Aufgabe{
+    
+    Gegeben sei die Spannung $\hat{U} = 325\ V \cdot \mathrm{e}^{\mathrm{j}30^\circ}$.
+
+    \begin{itemize}
+        \item [\bf a)] Zeichnen Sie das Zeigerdiagramm für die Spannung $\hat{U}$ im komplexen Zahlenraum.
+        \item [\bf b)] Berechnen Sie die Real- und Imaginärteile der komplexen Spannung $\hat{U}$.
+        \item [\bf c)] Erklären Sie die Bedeutung des Phasenwinkels in Bezug auf die Wechselspannung.
+    \end{itemize}
+}
+
+\Loesung{
+	\begin{itemize}
+
+	\item[\bf a)]
+	Zeigerdiagramm für die Spannung $\hat{U}$ \\
+
+    \begin{figure}[H]
+        \centering
+        \resizebox{0.3\textwidth}{!}{
+        \begin{tikzpicture}
+            % Achsen zeichnen
+            \draw[->] (-0.5,0) -- (3,0) node[right] {$\Re$};
+            \draw[->] (0,-0.5) -- (0,1.5) node[above] {$\Im$};
+        
+            % Zeiger zeichnen
+            \draw[->, thick, color=voltage] (0,0) -- ({2 * cos(30)},{2 * sin(30)}) node[above right] {$\hat{U}$};
+        
+            % Winkel markieren
+            \draw[->] (0,0) -- (0.5,0) node[below] {$0^\circ$};
+        
+            % Beschriftung
+            \node at (2,0.8) {$30^\circ$};
+        \end{tikzpicture}
+        } 
+    \end{figure} 
+
+	\item[\bf b)] 
+        Die Real- und Imaginärteile der Spannung $\hat{U}$ können mit den folgenden Formeln berechnet werden:
+
+        \begin{eqa}
+            U_{\text{Re}} &= \hat{U} \cdot \cos(\varphi) = 325 \cdot \cos(30^\circ) \approx 281,46\ V      \nonumber   \\
+            U_{\text{Im}} &= \hat{U} \cdot \sin(\varphi) = 325 \cdot \sin(30^\circ) = 162,5\ V   \nonumber
+        \end{eqa}
+
+	\item[\bf c)] 
+    Der Phasenwinkel $\varphi$ beschreibt den zeitlichen Versatz zwischen der Spannung und dem Strom in einem Wechselstromkreis. 
+    Ein positiver Phasenwinkel deutet darauf hin, dass die Spannung der Strom nachfolgt (induktive Last), während ein negativer 
+    Phasenwinkel anzeigt, dass der Strom der Spannung nachfolgt (kapazitive Last). 
+
+\end{itemize}
+
+}

@@ -1,0 +1,15 @@
+\begin{circuitikz}
+            \draw (0,0) to (0,1) to [I, name=I1] (0,3) to (0,4) to [short, -*] (4,4)
+            (0,0) to [short, -*] (4,0);
+            \draw (4,2) to [V, name=U1] (4,0) 
+            (4,2) to [R=$R_\mathrm{i}$, i, v, name=Ri] (4,4);
+            \draw (4,4) to (8,4) to (8,3) 
+            to [R=$R_\mathrm{L}$, i, v, name=RL] (8,1) to (8,0) to (4,0);
+            
+            \varrmore{U1}{$U_\mathrm{g}$};
+            \iarrmore{I1}{$I_\mathrm{g}$};
+            \varrmore{Ri}{$U_\mathrm{Ri}$};
+            \iarrmore{Ri}{$I_\mathrm{i}$};
+            \varrmore{RL}{$U_\mathrm{RL}$};
+            \iarrmore{RL}{$I_\mathrm{L}$};
+        \end{circuitikz}

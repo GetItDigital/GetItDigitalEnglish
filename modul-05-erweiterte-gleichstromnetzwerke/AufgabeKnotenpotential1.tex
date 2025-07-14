@@ -1,0 +1,48 @@
+\subsection{Knotenpotentialverfahren 1}
+\Aufgabe{
+    Gegeben ist das Netzwerk einer realen Spannungsquelle $U_\mathrm{q} = 3,6\ V$ mit einem Innenwiderstand
+    vo $R_\mathrm{i} = 0,2\ \Omega$.
+
+    \begin{figure}[H]
+        \resizebox{0.3\textwidth}{!}{%  
+        \input{Tikz/A5Knot1.tex}
+        }\centering                                                           
+    \end{figure}
+
+    Wandeln Sie die angegebene reale Spannungsquelle in eine reale Stromquelle um.
+    Befolgen Sie hierzu die folgenden Schritte:
+        
+    \begin{itemize}
+            \item[\bf a)]
+                Bestimmen Sie den Leitwert des Widerstandwertes. 
+            \item[\bf b)]
+                Wandeln Sie die reale Spannungsquelle in eine reale Stromquelle um. 
+            \item[\bf c)]
+                Berechnen Sie den Stromwert der umgewandelten Stromquelle.
+        \end{itemize}
+    }
+
+\Loesung{
+	\begin{itemize}
+        \item[\bf a)]
+            Leitwert:    \\
+            \begin{eq}
+                G_\mathrm{i} = \frac{1}{R_\mathrm{i}} = \frac{1}{0,2\ \Omega} = 5\ \mathrm{S}   \nonumber
+            \end{eq}
+
+		\item[\bf b)]
+		    Stromquelle:    \\
+            \begin{figure}[H]
+                \resizebox{0.3\textwidth}{!}{%  
+                \input{Tikz/B5Knot1.tex}  
+                }\centering                                                           
+            \end{figure}
+
+        \item[\bf c)]
+            Stromwert: \\
+            \begin{eq}
+                I_\mathrm{q} = U_\mathrm{q} \cdot G_\mathrm{i} = 3,6\ \mathrm{V} \cdot 5\ \mathrm{S} = 72\ \mathrm{A}     \nonumber
+            \end{eq}
+
+	\end{itemize}
+}

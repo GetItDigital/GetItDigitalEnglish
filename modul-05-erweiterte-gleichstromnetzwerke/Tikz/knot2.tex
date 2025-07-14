@@ -1,0 +1,56 @@
+\begin{circuitikz}                                        
+    \draw (0,0) [V^<, i, name=U0] to (0,3);            
+    \draw (0,3) [R, l_=$R_0$, v^>, name=R0] to (0,6) ;          
+    \draw (0,6) to [short, -*] (5,6)                                          
+        to [R, l=$R_1$, v, i, name=R1, -*] (5,0)                 
+        to (0,0);                                                    
+    \draw (5,0) to (10,0);                                                  
+    \draw (10,3) to [I, i, name=Iq,*-*] (10,0);                         
+    \draw (5,6) to [R, l=$R_3$, v, i, name=R3] (10,6)                                      
+        to (10,3);                                  
+    \draw (10,0) to (12,0);                                   
+    \draw (10,3) to (12,3);                                   
+    \draw (12,0) [R, l=$R_2$, v, i, name=R2] to (12,3); 
+    \draw[red,line width= 0.1 mm] (0,3) circle[radius = 2.6 cm];
+    
+    \varrmore{R0}{$U_\mathrm{R0}$};
+    \iarrmore{R1}{$I_1$};
+    \varrmore{R1}{$U_\mathrm{R1}$};
+    \iarrmore{R2}{$I_2$};
+    \varrmore{R2}{$U_\mathrm{R2}$};
+    \iarrmore{R3}{$I_3$};
+    \varrmore{R3}{$U_\mathrm{R3}$};
+    \iarrmore{U0}{$I_0$};
+    \varrmore{U0}{$U_0$};
+    \iarrmore{Iq}{$I_\mathrm{q2}$};
+
+    \draw [ultra thick,->] (13,3) -- (15,3);
+                                                    
+    \draw (18,3) to [I, i, name=Iq02,*-*] (18,0); 
+    \draw (18,0) to (16,0) 
+        to [R, l=$G_0$, v, i, name=G02](16,3)
+        to (18,3) 
+        to (18,6);          
+    \draw (18,6) to [short, -*] (23,6)                                          
+        to [R, l=$G_1$, v, i, name=G12, -*] (23,0)                 
+        to (18,0);                                                    
+    \draw (23,0) to (28,0);                                                  
+    \draw (28,3) to [I, i, name=Iq22,*-*] (28,0);                         
+    \draw (23,6) to [R, l=$G_3$, v, i, name=G32] (28,6)                                      
+        to (28,3);                                  
+    \draw (28,0) to (30,0);                                   
+    \draw (28,3) to (30,3);                                   
+    \draw (30,0) to [R, l=$G_2$, v, i, name=G22] (30,3); 
+    \draw[red,line width= 0.1 mm] (17,1.5) circle[radius = 2.6 cm];
+    
+    \iarrmore{G02}{$I_0$};
+    \varrmore{G02}{$U_\mathrm{G0}$};
+    \iarrmore{G12}{$I_1$};
+    \varrmore{G12}{$U_\mathrm{G1}$};
+    \iarrmore{G22}{$I_2$};
+    \varrmore{G22}{$U_\mathrm{G2}$};
+    \iarrmore{G32}{$I_3$};
+    \varrmore{G32}{$U_\mathrm{G3}$};
+    \iarrmore{Iq02}{$I_\mathrm{q0}$};
+    \iarrmore{Iq22}{$I_\mathrm{q2}$};
+\end{circuitikz}

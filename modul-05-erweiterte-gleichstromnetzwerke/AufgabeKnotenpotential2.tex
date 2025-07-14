@@ -1,0 +1,66 @@
+\subsection{Knotenpotentialverfahren 2}
+\Aufgabe{
+    Im folgenden Netzwerk werden zwei parallel verschaltete Ersatzschaltbilder von Batteriezellen dargestellt. 
+    Sie bestehen aus den Spannungsquellen $U_1$ und $U_2$ sowie den Innenwiderständen $R_{i1}$ und $R_{i2}$. 
+    Führen Sie die Analyse mit dem Knotenpotentialverfahren durch. 
+
+    \begin{center}
+        \input{Tikz/A6Knot2.tex}
+    \end{center}
+
+    \begin{enumerate}
+        \item[\bf a)] Formen Sie das Netzwerk um, sodass das Knotenpotentialverfahren anwendbar wird.  
+        \item[\bf b)] Stellen Sie die Kontenadmittanzmatrix (KAM) auf.
+        \item[\bf c)] Stellen Sie den Vektor der Knoteneinströmungen (I) auf.
+        \item[\bf d)] Lösen Sie das Gleichungssystem und berechnen Sie die Spannung $U_0$ zwischen den Klemmen $A$ und $B$.
+    \end{enumerate}
+    }
+
+\Loesung{
+	\begin{itemize}
+        \item[\bf a)]
+            Umwandlung:
+
+            \begin{figure}[H]
+                \input{Tikz/B6Knot2.tex}
+                \centering
+            \end{figure}
+
+            \begin{eq}
+                I_1 = \frac{U_1}{R_\mathrm{i1}} = \frac{0,8\ V}{4,8\ \Omega} = 166\ mA      \qquad
+                I_2 = \frac{U_2}{R_\mathrm{i2}} = \frac{1,5\ V}{0,8\ \Omega} = 1,875\ A      \nonumber
+            \end{eq}
+
+            \begin{eq}
+                G_\mathrm{i1} = \frac{1}{R_\mathrm{i1}} = \frac{1}{4,8\ \Omega} = 208\ m\Omega      \qquad
+                G_\mathrm{i2} = \frac{1}{R_\mathrm{i2}} = \frac{1}{0,8\ \Omega} = 1,25\ \Omega      \nonumber
+            \end{eq}
+
+		\item[\bf b)]
+            Kontenadmittanzmatrix:
+
+            \begin{eq}
+                KAM = (G_\mathrm{i1} + G_\mathrm{i2}) = 208\ m\Omega + 1,25\ \Omega     \nonumber
+            \end{eq}
+
+        \item[\bf c)]
+            Vektor der Knoteneinströmungen: \\
+
+            \begin{eq}
+                I = (I_1 + I_2) = 166\ mA + 1,875\ A    \nonumber
+            \end{eq}
+
+        \item[\bf d)]
+            Gleichungssystem lösen:\\
+
+            \begin{eqa}
+                KAM \cdot U &= I     \nonumber\\ 
+                (G_\mathrm{i1} + G_\mathrm{i2}) \cdot U_0 &= (I_1 + I_2)     \nonumber\\ 
+                (208\ m\Omega + 1,25\ \Omega) \cdot U_0 &= (166\ mA + 1,875\ A)  \nonumber\\ 
+                U_0 = \frac{I_1 + I_2}{G_\mathrm{i1} + G_\mathrm{i2}} 
+                &= \frac{166\ mA + 1,875\ A}{208\ m\Omega + 1,25\ \Omega} 
+                = 1,4\ V    \nonumber
+            \end{eqa}
+
+	\end{itemize}
+}

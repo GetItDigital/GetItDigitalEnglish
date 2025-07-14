@@ -1,0 +1,213 @@
+\subsection{Drehstrom 2}
+\Aufgabe{
+    Es ist ein symmetrisches Drehstromsystem mit folgenden Spannungen gegeben:
+   
+    $\underline{U}_1=230~V$, $\underline{U}_2=230~V\cdot \underline{a}^2$, $\underline{U}_3=230~V\cdot \underline{a}$
+ 
+    Die Impedanzen haben alle den Wert $Z=10\Omega $
+ 
+    Für alle Aufgabenteile gilt: Lösen Sie die Aufgaben mit dem geringstmöglichen Aufwand!
+ 
+    \begin{itemize}
+        \item [\bf a)] Zeichnen Sie die dreiphasigen und einphasigen ESB in Stern- und Dreieckschaltung und beschrifften Sie die ESB korrekt!
+        \item [\bf b)] Berechnen Sie den Betrag der Verbraucherspannungen sowohl für die Stern- als auch die Dreieckschaltung!
+        \item [\bf c)] Berechnen Sie die komplexen Verbraucherspannungen in der Dreieckschaltung!
+        \item [\bf d)] Zeichnen Sie die Zeigerdiagramme der Verbaucherspannungen für die Stern- und Dreieckschaltung!
+        \item [\bf e)] Berechnen Sie die komplexen Lastströme für die Sternschaltung und den Betrag der Lastströme für die Dreieckschaltung!
+        \item [\bf f)] Berechnen Sie die Scheinleistung für die Stern- und Dreieckschaltung!
+    \end{itemize}
+}
+
+
+\Loesung{
+	\begin{itemize}
+
+	\item[\bf a)]
+        
+        ESBs der Sternschaltung:\\
+        \resizebox{0.7\textwidth}{!}{%
+        \begin{circuitikz}
+            \draw (0, 0) to[short,] (0, 4)
+            to[sV, v<=230 V, anchor=west] (2, 4)
+            to[short, i=?] (4, 4)
+            to[short] (10, 4)
+            to[R=10\ohm] (12, 4)
+            to[short,] (12, 0);
+        
+            \draw (0, 2) to[sV, v<=$230 V\cdot \underline{a}^2$, anchor=west, *-] (2, 2)
+            to[short, i=?] (4, 2)
+            to[short] (10, 2)
+            to[R=10\ohm, -*] (12, 2);
+        
+            \draw (0, 0) to[sV, v<=$230 V\cdot\underline{a}$, anchor=west] (2, 0)
+            to[short, i=?] (4, 0)
+            to[short] (10, 0)
+            to[R=10\ohm] (12, 0);
+        
+            \draw (-0.5, 2) node {$N_{\mathrm{Q}}$}
+            (12.5, 2) node {$N_{\mathrm{V}}$};
+        
+            \draw [->](5.5, 3.8) -- (5.5, 2.2);
+            \draw (5.8, 3) node {?};
+            \draw [->](5.5, 1.8) -- (5.5, 0.2);
+            \draw (5.8, 1) node {?};
+            \draw [<-](7.5, 3.8) -- (7.5, 0.2);
+            \draw (7.8, 1) node {?};  
+        \end{circuitikz}%
+        }
+         
+        \begin{circuitikz}
+            \draw (0, 0) to[sV, v<=230 V] (0, 2)
+            to[short, i=?] (5, 2)
+            to[R=10\ohm, v=?] (5, 0)
+            to[short] (0, 0);
+        \end{circuitikz}
+
+        ESBs der Dreieckschaltung:\\
+ 
+        \resizebox{0.7\textwidth}{!}{%
+        \begin{circuitikz}
+            \draw (0, 0) to[short] (0, 4)
+            to[sV, v<=230 V] (2, 4)
+            to[short, i=?] (5, 4)
+            to[short] (13, 4)
+            to[R=10\ohm, i<=?] (13, 0);
+        
+            \draw (0, 2) to[sV, v<=$230\cdot \underline{a}^2 V$, *-] (2, 2)
+            to[short, i=?] (5, 2)
+            to[short] (9, 2)
+            to[R=10\ohm, label distance = 2.5, i<=?, *-*] (13, 4);
+    
+            \draw (0, 0) to[sV, v<=$230 V\cdot \underline{a}$] (2, 0)
+            to[short, i=?] (5, 0)
+            to[short] (13, 0)
+            to[R=10\ohm, i_<=?, *-*] (9, 2);
+    
+            \draw (-0.5, 2) node {$N_Q$};
+        
+            \draw [->](5, 3.8) -- (5, 2.2);
+            \draw (5.3, 3) node {?};
+            \draw [->](5, 1.8) -- (5, 0.2);
+            \draw (5.3, 1) node {?};
+            \draw [<-](7, 3.8) -- (7, 0.2);
+            \draw (7.3, 1) node {?};
+        \end{circuitikz}%
+        }
+    
+        \begin{circuitikz}
+            \draw (0, 0) to[sV, v<=230 V] (0, 2)
+            to[short, i=?] (5, 2)
+            to[R=$\frac{10\ohm}{3}$, v=?] (5, 0)
+            to[short] (0, 0);
+        \end{circuitikz}
+ 
+    \item[\bf b)]
+        Der Betrag Verbraucherspannungen ist in der Sternschaltung gleich der Quellspannung: 230 V\\
+        Der Betrag Verbraucherspannungen ist in der Dreieckschaltung $\sqrt{3}$ mal größer als in der Sternschaltung: $230 V\cdot \sqrt{3}=398,37 V\approx 400 V$
+ 
+    \item[\bf c)]
+ 
+        Die komplexe Verbaucherspannungen in der Dreieckschaltung errechnet sich aus den Differenzen der Sternspannungen.
+        
+        \begin{eqa}
+            \underline{U}_\mathrm{L1L2}&=\underline{U}_\mathrm{L1}-\underline{U}_\mathrm{L2}=230 V-230 V\cdot \underline{a}^2 \notag \\
+            &=230 V(1-(-\frac{1}{2}-j\frac{\sqrt{3}}{2}))=\sqrt{3}\cdot 230 V(\frac{3}{2}+j\frac{1}{2}) \notag \\
+            &=\sqrt{3}\cdot 230 V\cdot e^{j\cdot 30^\circ} \notag
+        \end{eqa}
+        \begin{eqa}
+            \underline{U}_\mathrm{L2L3}&=\underline{U}_\mathrm{L2}-\underline{U}_\mathrm{L3}=230 V\cdot \underline{a}^2-230 V\cdot \underline{a} \notag \\
+            &=230 V(-\frac{1}{2}-j\frac{\sqrt{3}}{2}-(-\frac{1}{2}+j\frac{\sqrt{3}}{2}))=\sqrt{3}\cdot 230 V(-j) \notag \\
+            &=\sqrt{3}\cdot 230 V\cdot e^{-j\cdot 90^\circ} \notag
+        \end{eqa}
+        \begin{eqa}
+            \underline{U}_\mathrm{L3L1}&=\underline{U}_\mathrm{L3}-\underline{U}_\mathrm{L1}=230 V\cdot \underline{a}-230 V \notag \\
+            &=230 V(-\frac{1}{2}+j\frac{\sqrt{3}}{2}-1)=\sqrt{3}\cdot 230 V(-\frac{\sqrt{3}}{2}+j\frac{1}{2}) \notag \\
+            &=\sqrt{3}\cdot 230 V\cdot e^{j\cdot 150^\circ} \nonumber
+        \end{eqa}
+ 
+	\item[\bf d)]
+ 
+    Zeigerdiagramme der Verbaucherspannungen für die Stern- und Dreieckschaltung:\\
+
+    \begin{figure}
+        \centering
+        \resizebox{0.6\textwidth}{!}{%
+        \begin{tikzpicture}
+            \draw [->, gray] (0, 0) coordinate (A)-- (4,0) coordinate (B);
+            \draw [->, gray] (4, 0) -- (6.002, 3.465);
+            \draw [->, gray] (0, 0) -- (-2, 3.464) coordinate (C);
+            \draw [->, gray] (-2, 3.464) -- (-6.002, 3.465);
+            \draw [->, gray] (0, 0) -- (-2, -3.464) coordinate (D);
+            \draw [->, gray] (-2, -3.464) -- (0, -6.93);
+        
+        
+            \draw (2.5, 0.3) node[anchor=center] {$\underline{U}_\mathrm{L1}$};
+            \draw (-1.5, -1.7) node[anchor=center] {$\underline{U}_\mathrm{L2}$};
+            \draw (-0.4, 1.7) node[anchor=center] {$\underline{U}_\mathrm{L3}$};
+            \draw (-4, 3.8) node[anchor=center] {-$\underline{U}_\mathrm{L1}$};
+            \draw (5.8, 1.5) node[anchor=center] {-$\underline{U}_\mathrm{L2}$};
+            \draw (-1.8, -4.6) node[anchor=center] {-$\underline{U}_\mathrm{L3}$};
+            \draw (2.7, 2.2) node[anchor=center] {$\underline{U}_\mathrm{L1L2}$};
+            \draw (0.7, -2.8) node[anchor=center] {$\underline{U}_\mathrm{L2L3}$};
+            \draw (-3.2, 1.5) node[anchor=center] {$\underline{U}_\mathrm{L3L1}$};
+        
+        
+            %\draw pic[draw, angle radius = 13, ->] {angle = B--A--C};
+        
+    
+            \draw [->] (0, 0) -- (6.002, 3.465);
+            \draw [->] (0, 0) -- (0, -6.93);
+            \draw [->] (0, 0) -- (-6.002, 3.465);
+        \end{tikzpicture}%
+    }
+    \end{figure}
+ 
+    \item[\bf e)]
+ 
+        Der Strom wird über das Ohmsche Gesetz berechnet. Für die Sternschaltung gilt:
+        
+        \begin{eqa}
+            \underline{I}_1&=\frac{\underline{U}_\mathrm{L1}}{\underline{Z}}=\frac{230 V}{10\ohm}=23 A \notag \\
+            \underline{I}_2&=\frac{\underline{U}_\mathrm{L2}}{\underline{Z}}=\frac{230 V\cdot \underline{a}^2}{10\ohm}=23 A\cdot\underline{a}^2  \notag \\
+            \underline{I}_3&=\frac{\underline{U}_\mathrm{L3}}{\underline{Z}}=\frac{230 V\cdot \underline{a}}{10\ohm}=23 A\cdot\underline{a}   \notag
+        \end{eqa}
+        
+        Bei dem Dreieckstrom wird zwischen dem Strangstrom und dem Dreieckstrom, also dem Strom durch die Verbraucher unterschieden.
+        Der Strom in den Verbauchersträngen kann mit den Spannung über die Verbraucher in der Dreieckschaltung errechnet werden:
+        
+        \begin{eqa}
+            I_\Dreieck&=\frac{U\Dreieck}{Z}=\frac{400V}{10\ohm}=40 A \notag
+        \end{eqa}
+        
+        Der Strom im Strang ist wiederum um $\sqrt{3}$ größer, als in den Verbauchersträngen:
+        \begin{eqa}
+            I_\mathrm{str}=\sqrt{3}\cdot I_\Dreieck=\sqrt{3}\cdot 40 A=69,28 A \notag
+        \end{eqa}
+        
+        Dieser Wert entspricht dem dreifachen Wert des Stroms in einer Sternschaltung
+ 
+ 
+    \item[\bf f)]
+ 
+        Die allgemein Leistungsgleichung ist folgende:
+        
+        \begin{eqa}
+            S=\sqrt{3}\cdot U_\Dreieck \cdot I_\mathrm{str} \notag
+        \end{eqa}
+        
+        Welcher Strom eingesetzt werden muss, hängt von der jeweiligen Schaltung ab.
+        Wie in Aufgabe 5. berechnet ist der Strangstrom in der Dreieckschaltung um den Faktor 3 größer als in der Sternschaltung
+        
+        Für die Sternschaltung gilt:
+        \begin{eqa}
+            S=\sqrt{3}\cdot U\cdot I=\sqrt{3}\cdot 400 V \cdot 23 A=15.934 VA \notag
+        \end{eqa}
+        
+        Und für die Dreieckschaltung gilt:
+        \begin{eqa}
+            S=\sqrt{3}\cdot U\cdot I=\sqrt{3}\cdot 400 V \cdot 3\cdot 23 A=47.804 VA \notag
+        \end{eqa}
+
+\end{itemize}
+
+}

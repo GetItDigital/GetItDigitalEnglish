@@ -1,0 +1,47 @@
+\begin{circuitikz}                                                      
+    \draw (-1,0) to (-3,0)
+        to [R=$G_0$, i<, v_<, name=R0] (-3,-4)
+        to (-1,-4)
+        (-1,2) to (-1,0)
+        to [I_>, i, name=I0,*-*] (-1,-4)                
+        to (-1,-6)  
+        to [short, -*] (3,-6) 
+        to [R=$G_4$, i<, v_<, name=R4, -*] (3,-2)             
+        to [R=$G_3$, i<, v_<, name=R3, -*] (3,2)
+        to (5,2)               
+        to [I<, name=I1,*-*] (9,2)
+        to (11,2)
+        (5,2) to (5,4)                           
+        to [R=$G_1$ , i, v, name=R1] (9,4)
+        to (9,2);                             
+    \draw (-1,2) to (3,2);                                       
+    \draw (3,-2) to [R=$G_5$ ,i, v_>, name=R5, -*] (11,-2);  
+    \draw (11,2) to (11,-6)                                       
+        to  (9,-6);                                                     
+    \draw (9,-6) to  [I, name=I2,*-*] (5,-6)                                       
+        to (3,-6);                                                     
+    \draw (5,-6) to (5,-8)                                         
+        to [R=$G_2$, i, v_>, name=R2] (9,-8)                    
+        to (9,-6); 
+        
+    \draw[red](3,-6.5) node {$K_0$};
+    \draw[red](2.5,-2) node {$K_1$};
+    \draw[red](3,2.5) node {$K_2$};
+    \draw[red](11.5,-2) node {$K_3$};
+    
+    \iarrmore{I0}{$I_\mathrm{q0}$};
+    \iarrmore{I1}{$I_\mathrm{q1}$};
+    \iarrmore{I2}{$I_\mathrm{q2}$};
+    \varrmore{R0}{$U_\mathrm{G0}$};
+    \iarrmore{R0}{$I_0$};
+    \varrmore{R1}{$U_\mathrm{G1}$};
+    \iarrmore{R1}{$I_1$};
+    \varrmore{R2}{$U_\mathrm{G2}$};
+    \iarrmore{R2}{$I_2$};
+    \varrmore{R3}{$U_\mathrm{G3}$};
+    \iarrmore{R3}{$I_3$};
+    \varrmore{R4}{$U_\mathrm{G4}$};
+    \iarrmore{R4}{$I_4$};
+    \varrmore{R5}{$U_\mathrm{G5}$};
+    \iarrmore{R5}{$I_5$};
+\end{circuitikz} 

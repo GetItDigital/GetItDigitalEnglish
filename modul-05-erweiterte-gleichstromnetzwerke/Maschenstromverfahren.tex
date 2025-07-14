@@ -1,0 +1,675 @@
+\newpage
+\begin{frame}
+    \fta{Maschenstromverfahren}
+
+    \s{
+        Neben der Knotenpotentialanalyse zur Untersuchung von elektrischen Netzwerken kann auch das Maschenstromverfahren
+        zur Berechnung herangezogen werden. Beim Maschenstromverfahren wird ein Gleichungssystem 
+        aufgestellt, mit welchem die Maschenströme ermittelt werden können. Um das Gleichungssystem des Maschenstromverfahrens 
+        aufstellen zu können, müssen einige Vorbereitungen getroffen werden. In den folgenden Schritten soll das elektrische 
+        Netzwerk aus der Abbildung \ref{BildMaschenstromverfahren} mittels des Maschenstromverfahrens berechnet werden. 
+    }
+
+    \b{
+		\begin{itemize}
+			\item Vorbereitung des Netzwerkes
+			\item Maschen definieren
+			\item Widerstandsmatrix bestimmen
+			\item Quellenspannungen zuordnen
+			\item Gleichungssystem aufstellen
+		\end{itemize}
+	}
+
+	\fu{   
+        \resizebox{0.7\textwidth}{!}{%                                         
+        \begin{circuitikz}                                        
+        \draw (0,0) [V^<, i, name=U0] to (0,3);            
+        \draw (0,3) [R, l_=$R_0$, v^>, name=R0] to (0,6) ;          
+        \draw (0,6) to [short, -*] (5,6)                                          
+            to [R, l=$R_1$, v, i, name=R1, -*] (5,0)                 
+            to (0,0);                                                    
+
+        \draw (5,0) to (10,0)                                        
+            to (10,1.5);                                                  
+        \draw (10,4.5) to [I, i, name=Iq,*-*] (10,1.5);                         
+        \draw (10,4.5) to (10,6)                                      
+            to (5,6);                                  
+        \draw (10,1.5) to (12,1.5);                                   
+        \draw (10,4.5) to (12,4.5);                                   
+        \draw (12,1.5) [R, l=$R_2$, v, i, name=R2] to (12,4.5); 
+        
+        \varrmore{R0}{$U_\mathrm{R0}$};
+		\iarrmore{R1}{$I_1$};
+        \varrmore{R1}{$U_\mathrm{R1}$};
+		\iarrmore{R2}{$I_2$};
+        \varrmore{R2}{$U_\mathrm{R2}$};
+		\iarrmore{U0}{$I_0$};
+        \varrmore{U0}{$U_0$};
+        \iarrmore{Iq}{$I_\mathrm{q}$};
+        \end{circuitikz}
+        }                                                  
+    }{{\bf Netzwerk für das Maschenstromverfahren.} Elektrisches Netzwerk mit einer Spannungsquelle, einer Stromquelle und drei Widerständen. Anhand des Netzwerkes wird 
+    das Maschenstromverfahren erläutert. \label{BildMaschenstromverfahren}}     
+\end{frame}
+
+
+\begin{frame}
+    \ftx{Lernziele Maschenstromverfahren}
+
+	\begin{Lernziele}{Maschenstromverfahren}
+        Die Studierenden 
+        \begin{itemize}
+            \item kennen die Schritte des Maschenstromverfahrens.
+            \item können das Maschenstromverfahren auf elektrische Netzwerke anwenden. 
+        \end{itemize}                   
+    \end{Lernziele}
+
+\end{frame}
+
+
+\begin{frame}
+\ftb{Vorbereitung des Netzwerkes}
+
+    \s{
+        Das Maschenstromverfahren arbeitet mit Spannungsquellen und Widerstandswerten. Hierfür müssen eventuelle Stromquellen
+        in Spannungsquellen transformiert werden. Diese Art der Umwandlung einer Stromquelle in eine Spannungsquelle wird noch
+        einmal in der Abbildung \ref{BildMasch1} dargestellt. Hier wird aus der Stromquelle und dem parallel liegenden 
+        Innenwiderstand eine Spannungsquelle mit einem in reihe liegenden Innenwiderstand. 
+    }
+
+
+    \fu{                                     
+        \begin{circuitikz}                                         
+        \draw (0,0) [I, name=Iq] to (0,3);
+        \draw (0,3) to [short, -*] (2,3)
+            to [R=$R_\mathrm{i}$, -*] (2,0)
+            to (0,0);
+        \draw (2,0) to [short, -o] (4,0);
+        \draw (2,3) to [short, -o] (4,3);
+        \draw (8,0) [V^<, name=Uq] to (8,3);
+        \draw (8,3) to [R, l=$R_\mathrm{i}$, v, name=Ri, -o] (12,3);
+        \draw (8,0) to [short, -o] (12,0);
+        \draw [ultra thick,->] (4.8,1.5) -- (6.5,1.5); 
+        
+		\iarrmore{Iq}{$I_\mathrm{q}$};
+        \varrmore{Uq}{$U_\mathrm{q}$};
+        \varrmore{Ri}{$U_\mathrm{Ri}$};
+        \end{circuitikz}                                                
+    }{{\bf Umwandlung einer Stromquelle.} Umwandlung einer Stromquelle mit Parallelwiderstand zur Spannungsquelle mit Serienwiderstand. \label{BildMasch1}}   
+
+    \s{
+        Die Gleichung \ref{GleichungUmrechnungStromquelle} zeigt die Berechnung des Spannungswertes der Spannungsquelle 
+        aus dem angegebenen Stromwert der Stromquelle und dem Widerstandswert des Innenwiderstands. 
+    }
+
+    \begin{eq}
+         U_\mathrm{q} = R_\mathrm{i} \cdot I_\mathrm{q} \label{GleichungUmrechnungStromquelle}
+    \end{eq}
+
+    \s{
+        Außerdem müssen mögliche Leitwerte von elektrischen Widerständen in Widerstandswerte geändert werden. In der Gleichung 
+        \ref{GleichungUmrechnungLeitwert} wird gezeigt, wie der Widerstandswert aus dem Kehrwert des Leitwerts ermittelt wird. 
+    }
+
+    \begin{eq}               
+         R_\mathrm{i} = \frac{1}{G_\mathrm{i}} \label{GleichungUmrechnungLeitwert}
+    \end{eq}
+
+\end{frame}
+
+\begin{frame}
+    \ftx{Vorbereitung des Netzwerkes}
+
+    \s{
+        In der Abbildung \ref{BildMasch2} wird die Umwandlung der Stromquelle des vorgestellten Netzwerkes in eine Spannungsquelle
+        durchgeführt. Aus der Parallelschaltung der Stromquelle und des Widerstandes $R_2$ wird eine Reihenschaltung bestehend
+        aus der neuen Spannungsquelle und dem Widerstand $R_2$.
+    }
+
+    \b{
+        Umwandlung der Stromquelle in eine Spannungsquelle:
+        \begin{itemize}
+            \item Die Stromquelle mit einer Spannungsquelle ersetzen
+            \item Aus dem Parallelwiderstand wird ein Reihenwiderstand
+        \end{itemize}
+    }
+
+    \fu{                                     % Beginn Bild Netzwerk 1 mit rotem Kreis
+		\resizebox{\textwidth}{!}{%
+        \begin{circuitikz}                                        
+            \draw (0,0) [V^<, i, name=U0] to (0,3);            
+            \draw (0,3) [R, l_=$R_0$, v^>, name=R0] to (0,6) ;          
+            \draw (0,6) to [short, -*] (5,6)                                          
+                to [R, l=$R_1$, v, i, name=R1, -*] (5,0)                 
+                to (0,0);                                                    
+    
+            \draw (5,0) to (10,0)                                        
+                to (10,1.5);                                                  
+            \draw (10,4.5) to [I, i, name=Iq,*-*] (10,1.5);                         
+            \draw (10,4.5) to (10,6)                                      
+                to (5,6);                                  
+            \draw (10,1.5) to (12,1.5);                                   
+            \draw (10,4.5) to (12,4.5);                                   
+            \draw (12,1.5) [R, l=$R_2$, v, i, name=R2] to (12,4.5); 
+            \draw[red,line width= 0.1 mm] (11,3) circle[radius = 2.6 cm];
+
+            \varrmore{R0}{$U_\mathrm{R0}$};
+            \iarrmore{R1}{$I_1$};
+            \varrmore{R1}{$U_\mathrm{R1}$};
+            \iarrmore{R2}{$I_2$};
+            \varrmore{R2}{$U_\mathrm{R2}$};
+            \iarrmore{U0}{$I_0$};
+            \varrmore{U0}{$U_0$};
+            \iarrmore{Iq}{$I_\mathrm{q}$};
+        
+            \draw [ultra thick,->] (15,3) -- (17,3); 
+
+            \draw (20,0) [V^<, i, name=U02] to (20,3);            
+            \draw (20,3) [R, l_=$R_0$, v^>, name=R02] to (20,6) ;          
+            \draw (20,6) to [short, -*] (25,6)                                          
+                to [R, l=$R_1$, v, i, name=R12, -*] (25,0)                 
+                to (20,0);                                                    
+            \draw (25,0) to (30,0)
+            to [V^<, i, name=U1] (30,3)
+            to [R, l=$R_2$, v, name=R22] (30,6)
+            to (25,6);                
+            \draw[red,line width= 0.1 mm] (30,3) circle[radius = 2.6 cm];
+
+            \varrmore{R02}{$U_\mathrm{R0}$};
+            \iarrmore{R12}{$I_1$};
+            \varrmore{R12}{$U_\mathrm{R1}$};
+            \varrmore{R22}{$U_\mathrm{R2}$};
+            \iarrmore{U02}{$I_0$};
+            \varrmore{U02}{$U_0$};
+            \iarrmore{U1}{$I_2$};
+            \varrmore{U1}{$U_1$};
+        \end{circuitikz}  
+        }                                           
+    }{{\bf Umwandlung einer Stromquelle in einem elektrischen Netzwerk.} Umwandlung der Stromquelle mit Parallelwiderstand 
+    des zu berechnenden Netzwerkes in eine Spannungsquelle mit Reihenwiderstand. Die Transformation der Quelle findet im roten 
+    Kreis statt. \label{BildMasch2}}   
+\end{frame}
+
+\begin{frame}
+    \ftx{Maschenstromverfahren}
+
+    \begin{Merksatz}{Maschenstromverfahren}
+        Für das Maschenstromverfahren werden zur Analyse eines elektrischen Netzwerkes Spannungsquellen und Widerstandswerte 
+        benötigt.
+    \end{Merksatz}
+
+\end{frame}
+
+
+\begin{frame}
+\ftb{Maschen definieren}
+
+    \s{
+        Für die Maschenstromanalyse müssen die Maschen festgelegt werden. Über den Maschen werden die Maschenströme
+        festgelegt. Außerdem werden den Maschen die Widerstände zugeordnet. In der Abbildung \ref{BildMasch3} wird 
+        das vorgestellte Netzwerk mit den eingezeichneten Maschen $M_1$ und $M_2$ dargestellt. 
+    } 
+    
+    \b{
+		\begin{itemize}
+			\item Festlegung der Maschen und Maschenströme
+		\end{itemize}
+	}
+
+    \fu{    
+        \resizebox{0.7\textwidth}{!}{%                                                 
+        \begin{circuitikz}                                                       
+        \draw[blue,->,shift={(2.5,3)}] (120:1 cm) arc (120:-90:1 cm) node at(0,0){$M_1$}; 
+        \draw[blue,->,shift={(7.5,3)}] (120:1 cm) arc (120:-90:1 cm) node at(0,0){$M_2$}; 
+        
+        \draw (0,0) [V^<, i, name=U0] to (0,3);            
+        \draw (0,3) [R, l_=$R_0$, v^>, name=R0] to (0,6) ;          
+        \draw (0,6) to [short, -*] (5,6)                                          
+            to [R, l=$R_1$, v, i, name=R1, -*] (5,0)                 
+            to (0,0);                                                    
+        \draw (5,0) to (10,0)
+            to [V^<, i, name=U1] (10,3)
+            to [R, l=$R_2$, v, name=R2] (10,6)
+            to (5,6);  
+
+        \varrmore{R0}{$U_\mathrm{R0}$};
+        \iarrmore{R1}{$I_1$};
+        \varrmore{R1}{$U_\mathrm{R1}$};
+        \varrmore{R2}{$U_\mathrm{R2}$};
+        \iarrmore{U0}{$I_0$};
+        \varrmore{U0}{$U_0$};
+        \iarrmore{U1}{$I_2$};
+        \varrmore{U1}{$U_1$};
+                                                  
+        \end{circuitikz} 
+        }                                                            
+    }{{\bf Maschen im elektrischen Netzwerk.} Festlegung der Maschen $M_1$ und $M_2$ sowie der zugehörigen Maschenströme. 
+    \label{BildMasch3}}                                                
+
+    \s{
+        
+        Durch alle Komponenten welche sich an der Masche $M_1$ befinden, fließt der Maschenstrom $I_\mathrm{M1}$. So wie auch 
+        alle Komponenten an der Masche $M_2$ von dem Maschenstrom $I_\mathrm{M2}$ durchflossen werden. Die beiden Maschenströme
+        $I_\mathrm{M1}$ und $I_\mathrm{M2}$ werden vektoriell in der Gleichung \ref{GleichungMaschenströme} notiert. 
+    }
+
+    \begin{eq}
+        I_\mathrm{M} = 
+        \begin{bmatrix}
+            I_\mathrm{M1} \\
+            \\
+            I_\mathrm{M2} \\
+        \end{bmatrix} \label{GleichungMaschenströme}
+    \end{eq}      
+
+\end{frame}
+
+
+\begin{frame}
+    \ftb{Widerstandsmatrix bestimmen}
+
+    \s{
+        In der Masche $M_1$ trifft der Maschenstrom $I_{M1}$ auf die beiden Widerstände $R_0$ und $R_1$. Die Masche $M_1$ wird in 
+        der Abbildung \ref{BildWiderstandsmatrix} in blau dargestellt. Der Maschenstrom $I_{M2}$ der Masche $M_2$ durchfließt die 
+        Widerstände $R_1$ und $R_2$. Der Widerstand $R_1$ ist somit teil der beiden Maschen $M_1$ und $M_2$ und wird von beiden 
+        Maschenströmen durchflossen. Wird ein Widerstand von mehreren Maschenströmen durchflossen gilt dieser als Kopplungswiderstand 
+        zwischen den Maschen. 
+
+        In der Widerstandsmatrix nach Gleichung
+        \ref{GleichungWiderstandsmatrix} werden die Widerstände der Maschen und die Kopplungswiderstände zugeordnet. Hier werden
+        die Umlaufwiderstände aus den Maschen in die Hauptdiagonale eingetragen. Das heißt, dass die Reihenschaltung $R_0 + R_1$ 
+        das Element der ersten Spalte und Zeile für die erste Masche wird. Die Reihenschaltung $R_1 + R_2$ wird in das Element 
+        der zweiten Spalte und Zeile für die zweite Masche eingetragen. In die übrigen Elemente der Widerstandsmatrix werden 
+        die Kopplungswiderstände zwischen den jeweiligen Maschen eingetragen. Der Kopplungswiderstand bekommt ein positives 
+        Vorzeichen, wenn beide Maschenströme in die selbe Richtung fließen und ein negatives, wenn diese entgegengesetzt fließen. 
+        Die Widerstandsmatrix wird in der Wechselstromtechnik auch als Maschenimpedanzmatrix bezeichnet. 
+    }
+
+    \b{
+		\begin{itemize}
+			\item<2-> Hauptdiagonale mit den Widerstandswerten, welche direkt an den Maschen liegen
+			\item<3-> Übrige Elemente mit den Widerstandswerten, welche direkt zwischen beteiligten Maschen liegen
+		\end{itemize}
+	}
+
+    \fu{    
+        \resizebox{0.7\textwidth}{!}{%                                                 
+        \begin{circuitikz}                                                       
+        \draw[blue,->,shift={(2.5,3)}] (120:1 cm) arc (120:-90:1 cm) node at(0,0){$M_1$}; 
+        \draw[blue,->,shift={(7.5,3)}] (120:1 cm) arc (120:-90:1 cm) node at(0,0){$M_2$}; 
+        
+        \draw (0,0) [V^<, i, name=U0] to (0,3);            
+        \draw (0,3) [R, l_=$R_0$, v^>, name=R0] to (0,6) ;          
+        \draw (0,6) to [short, -*] (5,6)                                          
+            to [R, l=$R_1$, v, i, name=R1, -*] (5,0)                 
+            to (0,0);                                                    
+        \draw (5,0) to (10,0)
+            to [V^<, i, name=U1] (10,3)
+            to [R, l=$R_2$, v, name=R2] (10,6)
+            to (5,6);  
+
+        \varrmore{R0}{$U_\mathrm{R0}$};
+        \iarrmore{R1}{$I_1$};
+        \varrmore{R1}{$U_\mathrm{R1}$};
+        \varrmore{R2}{$U_\mathrm{R2}$};
+        \iarrmore{U0}{$I_0$};
+        \varrmore{U0}{$U_0$};
+        \iarrmore{U1}{$I_2$};
+        \varrmore{U1}{$U_1$};
+
+        \pause
+		\draw[blue, very thick](0,5) to (0,6) to (5,6) to (5,3.5); 
+		\draw[blue, very thick](5,2.5) to (5,0) to (0,0) to (0,1);
+		\draw[blue, very thick](0,2) to (0,4);
+
+		\pause
+		\draw[green, very thick, dashed](5,6) to (5,3.5);
+		\draw[green, very thick, dashed](5,0) to (5,2.5);
+                                                  
+        \end{circuitikz} 
+        }                                                            
+    }{{\bf Festlegung der Zweige.} Elektrisches Netzwerk mit hervorgehobenen Zweigen zur Erstellung der Widerstandsmatrix für das Maschenstromverfahren
+    \label{BildWiderstandsmatrix}}
+
+    \b{
+		\only<1>{
+		\begin{eq}
+			R_\mathrm{M} =
+			\begin{bmatrix} 
+				0 & 0 \\
+				\\
+				0 & 0 \\
+			\end{bmatrix} 
+		\end{eq}
+		}
+		\only<2>{
+		\begin{eq}
+			R_\mathrm{M} =
+			\begin{bmatrix} 
+				\color{blue}{R_0 + R_1} & 0 \\
+				\\
+				0 & R_1 + R_2 \\
+			\end{bmatrix} 
+		\end{eq}
+		}
+		\only<3>{
+		\begin{eq}
+			R_\mathrm{M} =
+			\begin{bmatrix} 
+				\color{blue}{R_0 + R_1} & \color{green}{-R_1} \\
+				\\
+				\color{green}{-R_1} & R_1 + R_2 \\
+			\end{bmatrix} 
+		\end{eq}
+		}
+	}
+
+    \s{
+    \begin{eq}
+        R_\mathrm{M} =
+        \begin{bmatrix} 
+            \color{blue}{R_0 + R_1} & \color{green}{-R_1} \\
+			\\
+			\color{green}{-R_1} & R_1 + R_2 \\
+        \end{bmatrix} \label{GleichungWiderstandsmatrix}
+    \end{eq}
+    }
+\end{frame}
+
+
+\begin{frame}
+    \ftb{Quellenspannungen zuordnen}
+
+    \s{
+        Den Maschen müssen die Spannungsquellen, die sogennanten Quellspannungen zugeordnet werden. In der Masche $M_1$ liegt die 
+        Quellenspannung $U_0$. Die Masche $M_2$ weist die Quellenspannung $U_1$ auf. Bei übereinstimmender Richtung von Spannungspfeil 
+        und Maschenrichtung ergibt sich ein negatives Vorzeichen für die Quellspannungen. Sind die Richtungen von Spannungspfeil und
+        dem Maschenumlauf entgegengesetzt wird das Vorzeichen der Quellspannung positiv. Für den Fall, dass in einer Masche keine Quelle 
+        vohanden ist, wird eine $0$ eingetragen.
+    }
+   
+    \begin{eq}
+        U_\mathrm{M} = 
+        \begin{bmatrix}
+            U_0 \\
+            \\
+            -U_1 \\
+        \end{bmatrix} \label{GleichungQuellspannungen}
+    \end{eq}
+
+\end{frame}
+
+
+\begin{frame}
+\ftb{Gleichungssystem aufstellen}
+
+\s{
+    Nach dem ohmschen Gesetz wird die elektrische Spannung als Produkt aus dem elektrischen Widerstand und Strom berechnet. 
+    Bei der Maschenstromanalyse werden zur Berechnung des Vektors der Maschenströme $I_\mathrm{M}$ die Widerstandsmatrix $R_\mathrm{M}$ und der 
+    Vektor der Quellspannungen $U_\mathrm{M}$ verwendet. Das Gleichungssystem wird in der Gleichung \ref{GleichungMasche1} abgebildet.  
+    }
+
+\begin{eq}
+\begin{bmatrix} 
+    R_0 + R_1 & -R_1 \\
+    \\
+    -R_1 & R_1 + R_2 \\
+\end{bmatrix}   
+\cdot
+\begin{bmatrix}
+    I_\mathrm{M1} \\
+    \\
+    I_\mathrm{M2} \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+    U_0 \\
+    \\
+    -U_1 \\
+\end{bmatrix} \label{GleichungMasche1}
+\end{eq}
+
+\s{
+    Die gesuchte Größen werden aus den Maschenströmen berechnet. Beispielsweise werden die Ströme $I_0$, $I_1$ und $I_2$ gesucht.
+    Die Ergebnisse der Maschenströme sind mit den Strömen gleichzusetzen, welche lediglich von einem Maschenstrom durchflossen werden. 
+    In dem vorgestellten elektrischen Netzwerk beträgt der Strom der Masche $M_1: I_\mathrm{M1} = I_0$ und der Masche $M_2: I_\mathrm{M2} = -I_2$. Der
+    Strom durch den Widerstand $R_1$ lässt sich beispielsweise über die Knotengleichung berechnen: $I_1 = I_0 + I_2$.
+}
+
+\end{frame}
+\newpage
+
+
+%%-------------------------NETZWERK2------------------------------%%
+
+
+
+\begin{frame}
+    \ftx{Beispiel Maschenstromverfahren}
+    \begin{bsp}{Maschenstromverfahren}{}
+
+    \s{
+        Analyse des elektrischen Netzwerk aus der Abbildung \ref{BildMasch4} mittels der Maschenstromanalyse. 
+    }
+
+    \begin{enumerate}
+        \only<1>{	
+            \item[]
+
+    Für die Maschenstromanalyse sollen die folgenden Schritte bearbeitet werden:
+
+    \begin{itemize}
+        \item[a)] Vorbereitung des Netzwerkes
+		\item[b)] Maschen und Maschenströme definieren
+		\item[c)] Widerstandsmatrix bestimmen
+		\item[d)] Quellspannungen zuordnen
+		\item[e)] Gleichungssystem aufstellen
+    \end{itemize}
+
+    \fu{  
+        \resizebox{0.4\textwidth}{!}{%                                     
+        \begin{circuitikz}                                         
+        \draw (-1,2) to [R=$R_0$, v_<, name=R0] (-1,-2)               
+            to [V_>, i, name=U0] (-1,-6)                             
+            to (3,-6)                                                   
+            to [R=$R_4$, i^<, v_<, name=R4, -*] (3,-2)             
+            to [R=$R_3$, i^<, v_<, name=R3, -*] (3,2)               
+            to [V^<, i_>, name=U1] (7,2)                           
+            to [R=$R_1$ , v, name=R1] (11,2);                             
+        \draw (-1,2) to (3,2);                                       
+        \draw (3,-2) to [R=$R_5$ ,i, v_>, name=R5, -*] (11,-2);  
+        \draw (11,2) to (11,-6)                                       
+            to  (9,-6);                                                     
+        \draw (9,-6) to  [I, name=Iq,*-*] (5,-6)                                       
+            to (3,-6);                                                     
+        \draw (5,-6) to (5,-8)                                         
+            to [R=$R_2$, i, v_>, name=R2] (9,-8)                    
+            to (9,-6); 
+        
+        \varrmore{U0}{$U_0$};
+        \iarrmore{U0}{$I_0$};
+        \varrmore{U1}{$U_1$};
+        \iarrmore{U1}{$I_1$};
+        \iarrmore{Iq}{$I_\mathrm{q}$};
+        \varrmore{R0}{$U_\mathrm{R0}$};
+        \varrmore{R1}{$U_\mathrm{R1}$};
+        \varrmore{R2}{$U_\mathrm{R2}$};
+        \iarrmore{R2}{$I_2$};
+        \varrmore{R3}{$U_\mathrm{R3}$};
+        \iarrmore{R3}{$I_3$};
+        \varrmore{R4}{$U_\mathrm{R4}$};
+        \iarrmore{R4}{$I_4$};
+        \varrmore{R5}{$U_\mathrm{R5}$};
+        \iarrmore{R5}{$I_5$};
+        \end{circuitikz}  
+        }                  
+    }{{\bf Beispiel.} Maschenstromanalyse an einem elektrischen Netzwerk. \label{BildMasch4}}                                            
+    
+        }
+
+
+        \only<2>{			
+            \item[a)] Vorbereitung des Netzwerkes:
+			\begin{figure}[H]
+                \resizebox{0.7\textwidth}{!}{%
+                    \begin{circuitikz}
+                        \draw (-1,2) to [R=$R_0$, v_<, name=R0] (-1,-2)               
+                            to [V_>, i, name=U0] (-1,-6)                             
+                            to (3,-6)                                                   
+                            to [R=$R_4$, i^<, v_<, name=R4, -*] (3,-2)             
+                            to [R=$R_3$, i^<, v_<, name=R3, -*] (3,2)               
+                            to [V^<, i_>, name=U1] (7,2)                           
+                            to [R=$R_1$ , v, name=R1] (11,2);                             
+                        \draw (-1,2) to (3,2);                                       
+                        \draw (3,-2) to [R=$R_5$ ,i, v_>, name=R5, -*] (11,-2);  
+                        \draw (11,2) to (11,-6)  
+                            to [R=$R_2$ , v_<, name=R2]  (7,-6)
+                            to [V, i, name=U2] (3,-6);                                       
+                        \draw[red,line width= 0.1 mm] (7.5,-6) circle[radius=3cm];
+        
+                        \varrmore{U0}{$U_0$};
+                        \iarrmore{U0}{$I_0$};
+                        \varrmore{U1}{$U_1$};
+                        \iarrmore{U1}{$I_1$};
+                        \varrmore{U2}{$U_2$};
+                        \iarrmore{U2}{$I_2$};
+                        \varrmore{R0}{$U_\mathrm{R0}$};
+                        \varrmore{R1}{$U_\mathrm{R1}$};
+                        \varrmore{R2}{$U_\mathrm{R2}$};
+                        \varrmore{R3}{$U_\mathrm{R3}$};
+                        \iarrmore{R3}{$I_3$};
+                        \varrmore{R4}{$U_\mathrm{R4}$};
+                        \iarrmore{R4}{$I_4$};
+                        \varrmore{R5}{$U_\mathrm{R5}$};
+                        \iarrmore{R5}{$I_5$};
+                    \end{circuitikz}	
+                    }\centering                                                           
+                \end{figure}
+            }
+        \only<3>{
+            \item[b)] Maschen und Maschenströme definieren:
+            \onslide<3>{
+                \begin{figure}[H]
+                \resizebox{0.4\textwidth}{!}{%                                                        
+                    \begin{circuitikz}                                                      
+                        \draw[blue,->,shift={(1,-2)}] (120:1 cm) arc (120:-90:1 cm) node at(0,0){$M_1$}; 
+                        \draw[blue,->,shift={(7,0)}] (120:1 cm) arc (120:-90:1 cm) node at(0,0){$M_2$};  
+                        \draw[blue,->,shift={(7,-4)}] (120:1 cm) arc (120:-90:1 cm) node at(0,0){$M_3$};
+                        
+                        \draw (-1,2) to [R=$R_0$, v_<, name=R0] (-1,-2)               
+                            to [V_>, i, name=U0] (-1,-6)                             
+                            to (3,-6)                                                   
+                            to [R=$R_4$, i^<, v_<, name=R4, -*] (3,-2)             
+                            to [R=$R_3$, i^<, v_<, name=R3, -*] (3,2)               
+                            to [V^<, i_>, name=U1] (7,2)                           
+                            to [R=$R_1$ , v, name=R1] (11,2);                             
+                        \draw (-1,2) to (3,2);                                       
+                        \draw (3,-2) to [R=$R_5$ ,i, v_>, name=R5, -*] (11,-2);  
+                        \draw (11,2) to (11,-6)  
+                            to [R=$R_2$ , v_<, name=R2]  (7,-6)
+                            to [V, i, name=U2] (3,-6);
+                        
+                        \varrmore{U0}{$U_0$};
+                        \iarrmore{U0}{$I_0$};
+                        \varrmore{U1}{$U_1$};
+                        \iarrmore{U1}{$I_1$};
+                        \varrmore{U2}{$U_2$};
+                        \iarrmore{U2}{$I_2$};
+                        \varrmore{R0}{$U_\mathrm{R0}$};
+                        \varrmore{R1}{$U_\mathrm{R1}$};
+                        \varrmore{R2}{$U_\mathrm{R2}$};
+                        \varrmore{R3}{$U_\mathrm{R3}$};
+                        \iarrmore{R3}{$I_3$};
+                        \varrmore{R4}{$U_\mathrm{R4}$};
+                        \iarrmore{R4}{$I_4$};
+                        \varrmore{R5}{$U_\mathrm{R5}$};
+                        \iarrmore{R5}{$I_5$};
+                    \end{circuitikz} 
+                    }\centering                                                           
+                \end{figure}
+            \pause
+            
+            \begin{eq}
+                I_\mathrm{M} = 
+                \begin{bmatrix}  
+                    I_\mathrm{M1} \\
+                    \\
+                    I_\mathrm{M2} \\
+                    \\
+                    I_\mathrm{M3} \\ 
+                \end{bmatrix}\nonumber
+            \end{eq}
+
+            }
+        }
+        \only<4>{
+            \item[c)] Widerstandsmatrix bestimmen:
+            \onslide<4>{
+                \begin{eq}
+                    R_\mathrm{M} =
+                    \begin{bmatrix}                    
+                        R_0 + R_3 + R_4 & -R_3 & -R_4 \\
+                        \\
+                        -R_3 & R_1 + R_3 + R_5 & -R_5\\
+                        \\
+                        -R_4 & -R_5 & R_2 + R_4 + R_5 \\
+                    \end{bmatrix} \nonumber
+                \end{eq} 
+            }
+        }
+        \only<5>{
+            \item[d)] Quellspannungen zuordnen:
+            \onslide<5>{
+                \begin{eq}
+                    U_\mathrm{M} = 
+                    \begin{bmatrix} 
+                        U_0 \\
+                        \\
+                        U_1 \\
+                        \\
+                        -U_2\\
+                    \end{bmatrix} \nonumber
+                \end{eq} 
+            }
+        }
+        \only<6>{
+            \item[e)] Gleichungssystem aufstellen:
+            \onslide<6>{
+                \begin{eq}
+                    \begin{bmatrix} 
+                        R_0 + R_3 + R_4 & -R_3 & -R_4 \\
+                        \\
+                        -R_3 & R_1 + R_3 + R_5 & -R_5\\
+                        \\
+                        -R_4 & -R_5 & R_2 + R_4 + R_5 \\
+                    \end{bmatrix}   
+                    \cdot
+                    \begin{bmatrix}
+                        I_\mathrm{M1} \\
+                        \\
+                        I_\mathrm{M2} \\
+                        \\
+                        I_\mathrm{M3} \\
+                    \end{bmatrix}
+                    =
+                    \begin{bmatrix}
+                        U_0 \\
+                        \\
+                        U_1 \\
+                        \\
+                        -U_2\\
+                    \end{bmatrix}\nonumber
+                \end{eq} 
+                \pause
+                Ströme Berechnen: 
+                \begin{eqa}   
+                    I_3 = I_0 - I_1\nonumber\\
+                    I_4 = I_3 - I_5\nonumber\\
+                    I_0 = I_4 - I_2\nonumber\\
+                    -I_5 = I_2 + I_1\nonumber
+                \end{eqa}  
+            }
+        }
+    \end{enumerate}
+\end{bsp}{}{}
+\end{frame}

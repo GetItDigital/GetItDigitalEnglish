@@ -1,0 +1,14 @@
+\begin{circuitikz}
+    \draw(0,4) to [short,o-] (2,4)
+    (2,4) to [R=$R_1$,-*] (2,2)
+    to [R=$R_2$,-*] (2,0)
+    to[short,-o] (4,0)
+    (2,2) to[short,-o] (4,2)
+    (0,0) to[short,o-] (2,0);
+    \draw[->] (0,3.5) -- (0,0.5);
+    \draw[->] (4,1.5) -- (4,0.5);
+    \draw(-0.5,2) node {$U_\mathrm{E}$};
+    \draw(4.5,1) node {$U_\mathrm{A}$};
+    \draw[red](1,-0.2) rectangle (3,4.2);
+    \draw[red](3.5,3) node {$T$};
+\end{circuitikz}

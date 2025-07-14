@@ -1,0 +1,53 @@
+\subsection{Knoten- und Maschenanalyse 3}
+\Aufgabe{
+    Gegeben ist unten stehendes Netzwerk.
+
+    \begin{figure}[H]
+        \resizebox{\textwidth}{!}{%  
+        \input{Tikz/A3KnotMasch3.tex}
+        }\centering                                                           
+    \end{figure}
+
+    
+
+    \begin{itemize}
+        \item[\bf a)]
+            Markieren und bennen Sie alle Ströme und Spannungen!
+        \item[\bf b)]
+            Stellen Sie die Gleichungen für alle Knoten auf!
+        \item[\bf c)]
+            Stellen Sie die Gleichungen für alle Maschen auf!
+    \end{itemize}
+}
+
+\Loesung{
+	\begin{itemize}
+        \item[\bf a)]
+        Netzwerk mit Strömen und Spannungen:\\
+        \begin{figure}[H]
+            \resizebox{\textwidth}{!}{%  
+            \input{Tikz/B3KnotMasch3.tex}
+            }\centering                                                           
+        \end{figure}
+
+		\item[\bf b)]
+		Knotengleichungen:
+        \begin{eqa}
+            K_0 : -I_1+I_3-I_5 &=0 \nonumber\\
+            K_1 : +I_1-I_3+I_4 &=0 \nonumber\\
+            K_2 : -I_4+I_6+I_9 &=0 \nonumber\\
+            K_3 : +I_2-I_8-I_9 &=0 \nonumber\\
+            K_4 : -I_2-I_7+I_8 &=0 \nonumber\\
+            K_5 : +I_5-I_6-I_7 &=0 \nonumber
+        \end{eqa}
+
+        \item[\bf c)]
+        Maschengleichungen:
+        \begin{eqa}
+            M_1 : U_1-U_\mathrm{Ri}-U_\mathrm{R1}-U_\mathrm{R2}-U_\mathrm{R3} &=0 \nonumber\\
+            M_2 : U_\mathrm{R3}+U_\mathrm{R4}+U_\mathrm{R5}+U_\mathrm{R6} &=0 \nonumber\\
+            M_3 : -U_\mathrm{R6}+U_\mathrm{R7}-U_2+U_\mathrm{R9} &=0 \nonumber\\
+            M_4 : U_2-U_\mathrm{R8} &=0 \nonumber
+        \end{eqa}
+	\end{itemize}
+}

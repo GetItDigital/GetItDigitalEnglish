@@ -1,0 +1,51 @@
+\subsection{Effektivwert 1}
+\Aufgabe{
+
+    Gegeben sei eine sinusförmige Spannung
+    
+    \begin{eq}
+        u(t) = 150\ V \cdot \sin(100\pi t)  \nonumber
+    \end{eq}
+
+    wobei $t$ in Sekunden und die Spannung $u(t)$ in Volt angegeben sind.\\
+
+    Berechnen Sie für diese Spannung:
+
+    \begin{itemize}
+        \item[\bf a)] Den \textbf{arithmetischen Mittelwert} $\bar{u}$ der Spannung über eine Periode.
+        \item[\bf b)] Den \textbf{Effektivwert} $U_{Eff}$ der Spannung.
+    \end{itemize}
+}
+
+\Loesung{
+	\begin{itemize}
+
+	\item[\bf a)]
+        Der arithmetische Mittelwert einer Funktion u(t) über eine Periode T ist gegeben durch:
+        \begin{eq}
+            \bar{u} = \frac{1}{T} \int_0^T u(t) dt  \nonumber
+        \end{eq}
+        
+        Da $u(t)$ eine Sinusfunktion darstellt und die Sinuswelle über eine Periode symmetrisch ist, heben 
+        sich die positiven und negativen Teile der Welle gegenseitig auf. Daher ist der arithmetische 
+        Mittelwert für jede Sinuswelle immer null:
+        
+        \begin{eq}
+            \bar{u} = 0 \nonumber
+        \end{eq}
+
+    \item[\bf b)]
+        Der Effektivwert einer Sinusspannung $u(t)$ wird durch die folgende Formel berechnet:
+        \begin{eq}
+            U_{Eff} = \frac{\hat{U}}{\sqrt{2}}   \nonumber
+        \end{eq}
+        
+        In diesem Fall ist $\hat{U} = 150\ V$, die Amplitude der Spannung.
+        
+        \begin{eq}
+            U_{Eff} = \frac{150\ V}{\sqrt{2}} \approx \frac{150\ V}{1.414} \approx 106.1\ V  \nonumber
+        \end{eq}
+	
+\end{itemize}
+
+}

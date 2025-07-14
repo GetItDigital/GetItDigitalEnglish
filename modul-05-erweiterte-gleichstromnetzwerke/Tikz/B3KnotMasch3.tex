@@ -1,0 +1,47 @@
+\begin{circuitikz}
+                \draw (0,2) to [V, name=U1] (0,0)
+                (0,2) to [R=$R_\mathrm{i}$, i, v, name=Ri] (0,4)
+                to [short] (2,4)
+                to [R=$R_\mathrm{1}$, i, v, name=R1,-*] (4,4)
+                to (4,3) to [R=$R_\mathrm{3}$, i, v, name=R3] (4,1) to [short,-*] (4,0)
+                to [R=$R_\mathrm{2}$, i, v, name=R2] (2,0) to (0,0);
+                \draw (4,0) to (5,0) to [R=$R_\mathrm{5}$, i, v, name=R5] (7,0) to [short,-*] (8,0)
+                to (8,1) to [R=$R_\mathrm{6}$, i, v, name=R6] (8,3) to [short,-*] (8,4)
+                to (7,4) to [R=$R_\mathrm{4}$, i, v, name=R4] (5,4) to (4,4);
+                \draw (8,0) to (9,0) to [R=$R_\mathrm{7}$, i, v, name=R7] (11,0) to [short,-*] (12,0)
+                (12,4) to (12,3) to [V, i, name=U2] (12,1) to [short,-*] (12,0) 
+                (12,4) to (11,4) to [R=$R_\mathrm{9}$, i, v, name=R9] (9,4) to (8,4);
+                \draw (12,4) to [short,*-] (16,4) to (16,3) to [R=$R_\mathrm{8}$, i, v, name=R8] (16,1) to (16,0) to (12,0);
+                
+                \varrmore{U1}{$U_1$};
+                \varrmore{U2}{$U_2$};
+                \iarrmore{U2}{$I_\mathrm{2}$};
+                \varrmore{Ri}{$U_\mathrm{Ri}$};
+                \iarrmore{Ri}{$I_\mathrm{1}$};
+                \varrmore{R1}{$U_\mathrm{R1}$};
+                \varrmore{R2}{$U_\mathrm{R2}$};
+                \varrmore{R3}{$U_\mathrm{R3}$};
+                \iarrmore{R3}{$I_\mathrm{3}$};
+                \varrmore{R4}{$U_\mathrm{R4}$};
+                \iarrmore{R4}{$I_\mathrm{4}$};
+                \varrmore{R5}{$U_\mathrm{R5}$};
+                \iarrmore{R5}{$I_\mathrm{5}$};
+                \varrmore{R6}{$U_\mathrm{R6}$};
+                \iarrmore{R6}{$I_\mathrm{6}$};
+                \varrmore{R7}{$U_\mathrm{R7}$};
+                \iarrmore{R7}{$I_\mathrm{7}$};
+                \varrmore{R8}{$U_\mathrm{R8}$};
+                \iarrmore{R8}{$I_\mathrm{8}$};
+                \varrmore{R9}{$U_\mathrm{R9}$};
+                \iarrmore{R9}{$I_\mathrm{9}$};
+                \draw[<-,shift={(2,2)},blue] (150:0.8) arc (150:-150:0.8) node at(0,0){$M_1$};
+                \draw[<-,shift={(6,2)},blue] (150:0.8) arc (150:-150:0.8) node at(0,0){$M_2$};
+                \draw[<-,shift={(10,2)},blue] (150:0.8) arc (150:-150:0.8) node at(0,0){$M_3$};
+                \draw[<-,shift={(14,2)},blue] (150:0.8) arc (150:-150:0.8) node at(0,0){$M_4$};
+                \draw (4,0) node[below] {$K_0$};
+                \draw (4,4) node[above] {$K_1$};
+                \draw (8,4) node[above] {$K_2$};
+                \draw (12,4) node[above] {$K_3$};
+                \draw (8,0) node[below] {$K_5$};
+                \draw (12,0) node[below] {$K_4$};
+            \end{circuitikz}

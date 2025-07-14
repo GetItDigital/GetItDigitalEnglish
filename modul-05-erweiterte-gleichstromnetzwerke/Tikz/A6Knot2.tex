@@ -1,0 +1,15 @@
+\begin{circuitikz} 
+            \draw (1,5.5) to [short, o-*] (1,5)
+            (0,5) to [short] (2,5)
+            (1,5.5) node [left] {A};
+            \draw (0,1) [V<, name=U1] to (0,3);
+            \draw (0,3) to [R=$R_\mathrm{i1}$] (0,5)
+            (2,1) [V<, name=U2] to (2,3);
+            \draw (2,3) to [R=$R_\mathrm{i2}$] (2,5)
+            (1,0.5) to [short, o-*] (1,1)
+            (0,1) to [short] (2,1)
+            (1,0.5) node [left] {B};
+            
+            \varrmore{U1}{$U_\mathrm{1}$};
+            \varrmore{U2}{$U_\mathrm{2}$};
+        \end{circuitikz}

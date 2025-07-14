@@ -1,0 +1,27 @@
+\begin{circuitikz}
+            \draw (0,2) to [V, name=U1] (0,0)
+            (0,2) to [R=$R_\mathrm{i}$, i, v, name=Ri] (0,4)
+            to [short] (2,4)
+            to [R=$R_\mathrm{1}$, i, v, name=R1] (4,4)
+            to (4,3) to [R=$R_\mathrm{3}$, i, v, name=R3] (4,1) to [short] (4,0)
+            to [R=$R_\mathrm{2}$, i, v, name=R2] (2,0) to (0,0);
+
+            \draw (8,1) to [short, i, name=s1, -*] (10,2)
+            (8,3) to [short, i, name=s2] (10,2)
+            (10,2) to [short, i, name=s3] (10,4)
+            (12,2) to [short, i, name=s4] (10,2)
+            (10,2) to [short, i, name=s5] (10,0);
+            
+            \varrmore{U1}{$U_1$};
+            \varrmore{Ri}{$U_\mathrm{Ri}$};
+            \varrmore{R1}{$U_\mathrm{R1}$};
+            \varrmore{R2}{$U_\mathrm{R2}$};
+            \varrmore{R3}{$U_\mathrm{R3}$};
+            \iarrmore{s1}{$I_\mathrm{1}$};
+            \iarrmore{s2}{$I_\mathrm{2}$};
+            \iarrmore{s3}{$I_\mathrm{3}$};
+            \iarrmore{s4}{$I_\mathrm{4}$};
+            \iarrmore{s5}{$I_\mathrm{5}$};
+            \draw[<-,shift={(2,2)},blue] (150:0.8) arc (150:-150:0.8) node at(0,0){$M_1$};
+            \draw (10,2) node[below right] {$K_0$};
+        \end{circuitikz}

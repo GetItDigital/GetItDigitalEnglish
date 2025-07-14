@@ -1,0 +1,8 @@
+\begin{circuitikz}
+                    \draw (8,0) [V^<, name=Uq] to (8,3);
+                    \draw (8,3) to [R, l=$R_\mathrm{i}$, v, name=Ri, -o] (12,3);
+                    \draw (8,0) to [short, -o] (12,0);
+                    
+                    \varrmore{Uq}{$U_\mathrm{q}$};
+                    \varrmore{Ri}{$U_\mathrm{Ri}$};
+                    \end{circuitikz}  

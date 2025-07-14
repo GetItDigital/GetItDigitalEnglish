@@ -1,0 +1,437 @@
+% Kapitel 3 - Ortskurven
+%           - Impedanzortskurven
+%           - Admittanzortskurven
+%           - Ortskurven Grundschaltungen
+\section{Ortskurven}
+\begin{frame}\ftx{\secname}
+\index{Ortskurve}%
+\s{%
+    Die Darstellung von Ortskurven ist ein Mittel zur Visualisierung der parameterabhängigen Veränderung von komplexen Größen. 
+    Zur Analyse des frequenzvariablen Verhaltens von Eintoren bieten sich Impedanz- und Admittanzortskurven an. 
+    In diesen kann die Veränderung der Impedanz respektive der Admittanz in Abhängigkeit der (Kreis-)Frequenz dargestellt werden.
+}%
+    \begin{Lernziele}{Ortskurven}
+        Studierende lernen:
+        \begin{itemize}
+            \item Ortskurven kennen und mögliche Anwendungsbereiche kennen.
+            \item Ortskurven prinzipiell zu konstruieren und zu interpretieren.
+            \item Impedanz- und Admittanzortskurven von Grundschaltungen kennen.
+        \end{itemize}
+    \end{Lernziele}
+\end{frame}
+
+\subsection{Definition Ortskurve}
+\begin{frame}[t]\ftx{\subsecname}
+\s{%
+    Eine Ortskurve ist die graphische Darstellungen einer komplexen Größe $\underline{z}$ % komplexer Zeiger statt Größe ? 
+    in Abhängigkeit eines reellen Parameters $p$ in der komplexen Ebene\cite[Vgl. ]{weissgerber2}:
+   \begin{equation}\begin{aligned}
+        \label{eq:def:ortskurve}
+        \underline{z}(p) 
+            &= \Re\{\underline{z}(p)\} + \mathrm{j}\Im\{\underline{z}(p)\} 
+                &&\text{mit }\underline{z}\in\mathbb{C};\ p\in\mathbb{R}
+    \end{aligned}\end{equation}%
+    Ortskurven werden in vielen verschiedenen Bereichen angewandt, um mögliche Zustände eines Systems zu visualisieren.
+    Abbildung \ref{fig:ortskurve:stromortskurve:asm} zeigt exemplarisch die Stromortskurve einer Asynchronmaschine in der komplexen Ebene, 
+    auch Heylandkreis oder Ossannakreis genannt. [QUELLE:XYZ] Zu Erkennen ist der komplexe Statorstrom $\underline{I}_s$
+    in Abhängigkeit des Schlupfes $s$. 
+    Die Darstellungsform eignet sich beispielsweise zur Visualisierung verschiedener Betriebszustände, 
+    im Fall der Asynchronmaschine sind das der Motor-, Brems- und Generatorbetrieb.
+    \fu{\includegraphics{Tikz/pdf/plot_stromortskurve_asynchronmaschine.pdf}}{%
+        Beispiel Stromortskurve einer Asynchrommaschine mit Betriebszuständen\label{fig:ortskurve:stromortskurve:asm}%
+    }%
+    Im Beispiel der Stromortskurve einer Asynchronmaschine lassen sich zudem verschiedene Leistungswerte graphisch ermitteln
+    wie in Abbildung \ref{fig:ortskurve:stromortskurve:asm:leistung} exemplarisch dargestellt ist. 
+    Die Beispiele dienen der Veranschaulichung der Definition und möglicher Anwendungsbereiche von Ortskurven,
+    weshalb von einer Herleitung beider Beispiele abgesehen wird. 
+    \fu{\includegraphics{Tikz/pdf/plot_stromortskurve_asynchronmaschine_leistung.pdf}}{%
+        Beispiel Stromortskurve einer Asynchrommaschine mit Leistungsgrößen\label{fig:ortskurve:stromortskurve:asm:leistung}%
+    }%
+    Ortskurven eignen sich gut zur Visualisierung von Systemzuständen, -größen und deren Einfluss aufeinander.
+}
+
+\b{%
+    \centering
+    \textbf{Def. Ortskurve:} Darstellung eines komplexen Zeigers 
+    $\underline{z}(p) = \Re\{\underline{z}(p)\} + \mathrm{j}\Im\{\underline{z}(p)\}$\newline
+    \hphantom{Def. Ortskurve} in komplexer Ebene in Abhängigkeit eines realen Parameter $p$.
+    \begin{minipage}{\textwidth}\centering%
+    \begin{minipage}{0.5\textwidth}\centering%
+        \only<2-3| handout:2-3>{\resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_stromortskurve_asynchronmaschine.pdf}}}%
+        \only<4-| handout:4->{\resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_stromortskurve_asynchronmaschine_leistung.pdf}}}%
+    \end{minipage}\hspace{0.05\textwidth}%
+    \begin{minipage}{0.45\textwidth}%\centering
+        \onslide<3-| handout:3->{\textbf{Anwendungsbereiche?}\vspace{1cm}\\}%
+        \onslide<4-| handout:4->{\textbf{Visualisierung von:}\vspace{1mm}\\
+            \quad - Systemzuständen\\
+            \quad - Systemgrößen\\
+            \quad - Einfluss von Systemgrößen
+        }%
+    \end{minipage}%
+    \end{minipage}\hfill\vspace{5pt}%
+
+    \only<2-| handout:2->{\textbf{Beispiel:} Stromortskurve einer Asynchrommaschine für $\underline{I}_s(s)$}
+}
+\end{frame}
+
+
+\subsection{Zusammenhang Zeigerdiagramm und Ortskurve}
+\begin{frame}\ftx{\subsecname}
+\index{Zeigerdiagramm}
+    \s{
+        Ein Zeiger im Zeigerdiagramm stellt eine komplexe Größe stationär in der komplexen Ebene dar.
+        Die Darstellungsform dient der Visualisierung von Phasenverschiebungen und Betragsverhältnissen.
+        Typische Größen für Wechselstromkreise sind unter anderem Spannung, Strom, Leistung und Impedanz.
+
+        Ortskurven beschreiben die Bahn, die ein Zeiger bei Variation eines Parameters durchläuft.
+        Die Ortskurve kann so als Verallgemeinerung eines Zeigers im Zeigerdiagramm verstanden werden. \cite[Vgl.]{weissgerber2}% VGL REF: Weißgerber, Elektrotechnik für Ingenieure, Kapitel 5 Ortskurven       
+        Übliche Parameter sind Frequenz und Bauteilgrößen. %Übliche Größen sind Impedanz und Admittanz.
+
+        Die Hervorhebung einzelner Zeiger mit Angabe des variierenden Parameters kann 
+        den Verlauf der Ortskurve verdeutlichen und die Interpretation erleichtern.
+        Positionsänderungsrate und -richtung geben Aufschluss über die Dynamik des Systems.
+    }%
+    %\b{% Visualisierung allgemeiner <1>Zeiger, <2>Zeigerschar und <3>Ortskurve
+    %    %Todo: Visualisierung Zeiger $\to$ Zeigerschar (Ortskurve) 
+    %    %Z.B. Zeiger mit Overlays einblenden, dann Kreis als Kurve (Vgl. Stromortskurve vorher) Ist schöner als nur Text.
+    %}
+    \b{
+        Zeigerdiagramm:\\\quad Zeigt Größe in komplexer Ebene als Zeiger (eines Punktes). 
+    }%
+    \begin{Merksatz}{Ortskurve}
+        Zeigt Größe in komplexer Ebene parameterabhängig als Kurve (Punkteschar).
+    \end{Merksatz}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\s{
+\subsection{Impedanzortskurve}
+\begin{frame}\ftx{\subsecname}
+
+    In Impedanzortskurven wird die Impedanz eines Systems in Abhängigkeit eines Parameters dargestellt.
+
+    Beispiel \ref{bsp:ortskurve:z:rvar} zeigt eine Impedanzortskurve für eine variable Bauteilgröße.
+
+    Beispiel \ref{bsp:ortskurve:z:fvar} zeigt eine Impedanzortskurve für variable Frequenz.
+
+\begin{bsp}{
+    Impedanzortskurve RL-Glied, Widerstand variabel}{ortskurve:z:rvar}% Überschrift, Label
+    Konstruktion der Impedanzortskurve einer RL-Serienschaltung für variablen Widerstand $R$.
+    Die Schaltung ist in Abbildung \ref{fig:circ:rls:Rvar} abgebildet.
+
+    % alttext: Schaltbild R und L in Serie, Beschriftung R und jwL
+    \fu{\begin{tikzpicture}
+            \draw (0,0) 
+                to[R,l=$R$,o-] (2,0) 
+                to[L,l=$\mathrm{j}\omega L$,-o] (4,0);
+        \end{tikzpicture}
+    }{RL-Glied (Serienschaltung)\label{fig:circ:rls:Rvar}}
+
+    Die Impedanz des RL-Gliedes ist gegeben durch:
+
+    \begin{equation*}
+        \underline{Z} = R + \mathrm{j}\omega L
+    \end{equation*}
+
+    Sei $R$ variabel und beschrieben als ($p$-fache) Vielfache eines Referenzwiderstandes $R_0$ 
+    mit $p$ im geschlossenen Intervall $[0,3]$, so gilt:
+
+    \begin{equation*}
+        R(p) = p \cdot R_0 \quad\text{mit } p \in [0,3]
+    \end{equation*}
+
+    Seien $\omega$ und $L$ konstant, sowie die Reaktanz $\omega L$ gleich einer Referenzreaktanz $X_0$:
+
+    \begin{equation*}
+        \omega L = X_0 \quad \text{mit } \omega,\ L = konst.
+    \end{equation*}
+
+    Impedanz $\underline{Z}$ in Abhängigkeit von $p$:
+
+    \begin{equation*}
+        \underline{Z}(p) = p \cdot R_0 + \mathrm{j}X_0
+    \end{equation*}
+
+    \fu{\includegraphics{Tikz/pdf/plot_ortskurve_RLs_Rvar.pdf}}% R=p*R0, p in [0,3]; wL=konst.
+        {Impedanzortskurve RL-Glied (Serie)\label{fig:plot:rls:Rvar}}
+
+\end{bsp}
+
+\begin{bsp}{Impedanzortskurve RL-Glied, Frequenz variabel}{ortskurve:z:fvar}% Überschrift, Label
+
+    Konstruktion der Impedanzortskurve der RL-Serienschaltung in Abbildung \ref{fig:circ:RLs:wLvar} 
+    für variable Frequenz $f$ und oder variable Induktivität $L$.
+    Aufbau wie in Beispiel \ref{bsp:ortskurve:z:rvar}, jedoch mit variabler Frequenz $\omega$.
+
+    \fu{\captionsetup{labelformat=empty}
+        \begin{tikzpicture}
+            \draw (0,0) 
+                to[R,l=$R$,o-] (2,0) 
+                to[L,l=$\mathrm{j}\omega L$,-o] (4,0);
+        \end{tikzpicture}
+    }% wL=p*w0L0, p in [0,3]; R=konst.
+    {RL-Glied (Serienschaltung)\label{fig:circ:RLs:wLvar}}
+
+    Gesamtimpedanz allgemein: 
+    \begin{align*}
+        \underline{Z}   &= R + \mathrm{j}\omega L \\
+                        &= R + \mathrm{j}X
+    \end{align*}
+
+    Die Gesamt-Reaktanz $X$ des RL-Gliedes ist proportional zu $\omega$ und proportional zu $L$.
+    Das heißt eine Veränderung von $\omega$ hat den selben Einfluss wie eine Veränderung von $L$ 
+    auf die Impedanz des RL-Gliedes.
+    
+    Mit $X$ als Vielfache $p$ einer Referenz-Reaktanz $X_0$ und $R=R_0$ gilt:
+
+    \begin{equation*}
+        \underline{Z} = R_0 + p \cdot \mathrm{j}X_0 
+    \end{equation*}
+
+    In der komplexen Ebene dargestellt:
+    \fu{\captionsetup{labelformat=empty}%
+        \includegraphics{Tikz/pdf/plot_ortskurve_RLs_wLvar.pdf}}% wL=p*w0L0, p in [0,3]; R=konst.
+        {RL-Glied (Serienschaltung)}
+
+\end{bsp}
+\end{frame}
+}% end skript only, 
+% note: column environment breaks bsp-box -> \s{frame with bsp-box}, \b{frame with columns}
+\b{
+\subsection{Impedanzortskurve - RL-Glied , $R$ variabel}
+\begin{frame}\ftx{\subsecname}
+\begin{columns}
+    \column{0.5\textwidth}\centering
+    \begin{tikzpicture}
+        \draw (0,0) 
+            to[R,l=$R$,o-] (2,0) 
+            to[L,l=$\mathrm{j}\omega L$,-o] (4,0);
+    \end{tikzpicture}\hfill%
+    %
+    \begin{equation*}
+        \underline{Z}=R+\mathrm{j}\omega L
+    \end{equation*}
+
+    \begin{align}
+        \underline{Z} &= p \cdot R_0 + \mathrm{j}X_0\\
+        \text{mit}\ p &\in [0,3]\\
+        R_0,\ X_0 &= konst.
+    \end{align}
+
+    \column[c]{0.5\textwidth}
+    \includegraphics{Tikz/pdf/plot_ortskurve_RLs_Rvar.pdf}
+\end{columns}
+\end{frame}
+
+\subsection{Impedanzortskurve - RLs-Glied, $\omega$ variabel}
+\begin{frame}\ftx{\subsecname}
+\begin{columns}
+    \column{0.5\textwidth}\centering
+    \begin{tikzpicture}
+        \draw (0,0) 
+            to[R,l=$R$,o-] (2,0) 
+            to[L,l=$\mathrm{j}\omega L$,-o] (4,0);
+    \end{tikzpicture}\hfill%
+    %
+    \begin{equation*}
+        \underline{Z}=R+\mathrm{j}\omega L
+    \end{equation*}
+
+    \begin{align}
+        \underline{Z} &= R_0 + \mathrm{j}p\omega_0L_0\\ % TODO change this align block
+        \text{mit}\ p &\in [0,3]\\
+        R_0,\ X_0 &= konst.
+    \end{align}
+
+    \column{0.5\textwidth}
+    \includegraphics{Tikz/pdf/plot_ortskurve_RLs_wLvar.pdf}
+\end{columns}
+\end{frame}
+}% end beamer only
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Admittanzortskurve - Inversion von Ortskurven}
+\begin{frame}\ftx{\subsecname}
+
+\s{
+    Analog zur Impedanzkurve bezeichnet eine Admittanzkurve die Ortskurve einer Admittanz. 
+    Die Admittanz $\underline{Y}$ entspricht algebraisch dem Kehrwert der Impedanz $\underline{Z}$ und vice versa:
+
+    \begin{equation}
+        \underline{Y} = \frac{1}{\underline{Z}} \quad \leftrightarrow \quad \underline{Z} = \frac{1}{\underline{Y}}
+    \end{equation}
+
+    Die Umformung von Impedanz zu Admittanz und umgekehrt ist jeweils ein Spezialfall der Möbius-Transformation.
+
+    Für die Beziehung zwischen Admittanz- und Impedanzortskurven gelten daher folgende allgemeinen Eigenschaften von Möbius-Transformation:
+    \cite[Vgl. ]{behrends}
+
+    \begin{itemize}
+        \item Winkeltreue: $\angle(\underline{Z_1},\underline{Z_2}) = \angle(\underline{Y_1},\underline{Y_2}) \qquad \text{mit } \underline{Y}_i = \underline{Z}_i^{-1},\ i \in [1,2]$ 
+        \item Kreisverwandschaft: Kreise und Geraden werden auf Kreise und Geraden abgebildet
+    \end{itemize}
+
+    Die Kehrwertbildung entspricht im speziellen der Inversion, einem Elementartyp der Möbius-Transformation. 
+    Eine Inversion von Ortskurven führt zu den in Tabelle \ref{tab:moebiusinversion} 
+    aufgelisteten geometrischen Umformungen von Kreisen und Geraden. 
+    Abbildung \ref{fig:plot:moebiusinversion} zeigt exemplarisch die Inversion eines Gitters durch den Ursprung.
+}
+    % alttext:
+    % Gerade durch Ursprung zu Gerade durch Ursprung
+    % Gerade nicht durch Ursprung zu Kreis durch Ursprung
+    % Kreis durch Ursprung zu Gerade nicht durch Ursprung
+    % Kreis nicht durch Ursprung zu Kreis nicht durch Ursprung
+    \definecolor{Gray}{gray}{0.97}
+    \begin{table}[H]\centering
+        \s{\caption{Typische Formen bei Inversion von Ortskurven}
+            \label{tab:moebiusinversion}}
+        \begin{tabular}[h]{|r|r|}
+            \hline\rowcolor{Gray}
+                \textbf{ursprüngliche Ortskurve} &
+                \textbf{invertierte Ortskurve} \\
+            \hline
+                Gerade \phantom{nicht} durch den Ursprung &
+                Gerade \phantom{nicht} durch den Ursprung \\
+            \hline
+                Gerade nicht durch den Ursprung &
+                Kreis\quad \phantom{nicht} durch den Ursprung \\
+            \hline
+                Kreis\quad \phantom{nicht} durch den Ursprung &
+                Gerade nicht durch den Ursprung \\
+            \hline
+                Kreis\quad nicht durch den Ursprung &
+                Kreis\quad nicht durch den Ursprung \\
+            \hline
+        \end{tabular}
+    \end{table}
+    \fu{\includegraphics{Tikz/pdf/plot_ortskurven_inversion.pdf}}{%
+        Beispiel Möbius-Transformation, Inversion von Gitter\protect\footnotemark\label{fig:plot:moebiusinversion}%
+    }
+    \footnotetext{Angelehnt an MoebiusInversion.svg von Chrislb, CC-BY-SA-2.0-DE, 2005, \url{https://commons.wikimedia.org/wiki/File:MoebiusInversion.svg}}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Ortskurven von Grundschaltungen}
+\begin{frame}\ftx{\subsecname}
+\s{
+    Tabelle \ref{tab:ortskurven:grundschaltungen} zeigt eine Übersicht der Impedanz- und Admittanzortskurven 
+    für die vier Grundschaltungen RL- und RC-Glied jeweils in Serien- und Parallelschaltung. 
+
+    Ortskurven schwingungsfähiger LC- und RLC-Glieder unterscheiden sich von den hier dargestellen Ortskurven dadurch, 
+    dass der Blindanteil der Impedanz bzw. Admittanz je nach Frequenzbereich sowohl induktiv als auch kapazitiv sein kann,
+    je nachdem welcher Anteil überwiegt.
+}
+% TABELLE
+% Note: \resizebox{Breite}{Höhe}{Content}
+\begin{table}\centering
+    \s{\caption{Ortskurven der Grundschaltungen RL- und RC-Glied}
+        \label{tab:ortskurven:grundschaltungen}
+    }
+    \begin{tabular}[h]{|c|c|c|}
+        \hline\s{$\vphantom{\bigg|}$}% Headerrow a bit bigger, oneliner-text vertically centered
+        \textbf{Grundschaltung} & \textbf{$\mathbf{\underline{Z}}$-Ortskurve} & \textbf{$\mathbf{\underline{Y}}$-Ortskurve}
+        \\\hline% RL-Serie
+        \parbox[c][4cm][c]{3.75cm}{\centering
+            \begin{tikzpicture}\draw(0,0)to[short,o-](0.25,0)to[R,l=$R$](1.75,0)to[L,l=$L$](3.25,0)to[short,-o](3.5,0);
+            \end{tikzpicture}
+        }&
+        \parbox[c][4cm][c]{3.75cm}{\centering% \parbox[...][Höhe][...]{Breite}{Content}
+            \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_R_RLZ_R.pdf}}\newline
+            \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_R_RLZ_L.pdf}}
+        }&
+        \parbox[c][4cm][c]{3.75cm}{\centering% \parbox[...][Höhe][...]{Breite}{Content}
+            \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_R_RLY_R.pdf}}\newline
+            \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_R_RLY_L.pdf}}
+        }\\\hline% RC-Serie
+        \parbox[c][4cm][c]{3.75cm}{\centering
+            \begin{tikzpicture}\draw(0,0)to[short,o-](0.25,0)to[R,l=$R$](1.75,0)to[C,l=$C$](3.25,0)to[short,-o](3.5,0);
+            \end{tikzpicture}
+        }&
+        \parbox[c][4cm][c]{3.75cm}{\centering% \parbox[...][Höhe][...]{Breite}{Content}
+            \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_R_RCZ_R.pdf}}\newline
+            \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_R_RCZ_C.pdf}}
+        }&
+        \parbox[c][4cm][c]{3.75cm}{\centering% \parbox[...][Höhe][...]{Breite}{Content}
+            \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_R_RCY_R.pdf}}\newline
+            \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_R_RCY_C.pdf}}
+        }
+        \s{%Start Skript only, Tabellenteil 2
+        \\\hline% RL-Parallel
+        \parbox[c][4cm][c]{3.75cm}{\centering
+            \begin{tikzpicture}\draw(0,0)to[short,o-]
+                (0.5,0)--(0.5,+0.75)to[R,l=$R$](2,+0.75)--(2,0)
+                (0.5,0)--(0.5,-0.75)to[L,l=$L$](2,-0.75)--(2,0)to[short,-o](2.5,0);
+            \end{tikzpicture}
+        }&
+        \parbox[c][4cm][c]{3.75cm}{\centering% \parbox[...][Höhe][...]{Breite}{Content}
+            \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_P_RLZ_R.pdf}}\newline
+            \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_P_RLZ_L.pdf}}
+        }&
+        \parbox[c][4cm][c]{3.75cm}{\centering% \parbox[...][Höhe][...]{Breite}{Content}
+            \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_P_RLY_R.pdf}}\newline
+            \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_P_RLY_L.pdf}}
+        }
+        \\\hline% RC-Parallel
+        \parbox[c][4cm][c]{3.75cm}{\centering
+            \begin{tikzpicture}\draw(0,0)to[short,o-]
+                (0.5,0)--(0.5,+0.75)to[R,l=$R$](2,+0.75)--(2,0)
+                (0.5,0)--(0.5,-0.75)to[C,l=$C$](2,-0.75)--(2,0)to[short,-o](2.5,0);
+            \end{tikzpicture}
+        }&
+        \parbox[c][4cm][c]{3.75cm}{\centering% \parbox[...][Höhe][...]{Breite}{Content}
+            \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_P_RCZ_R.pdf}}\newline
+            \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_P_RCZ_C.pdf}}
+        }&
+        \parbox[c][4cm][c]{3.75cm}{\centering% \parbox[...][Höhe][...]{Breite}{Content}
+            \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_P_RCY_R.pdf}}\newline
+            \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_P_RCY_C.pdf}}
+        }
+        }%Ende Skript only, Tabellenteil 2
+        \\\hline
+    \end{tabular}
+\end{table}
+\b{\frametitle{\subsecname{} - in Reihe}} 
+\end{frame}
+\b{%Start beamer only - Tabellenteil 2
+\begin{frame}
+\frametitle{\subsecname{} - in Parallel}
+    \begin{table}\centering
+        \begin{tabular}[h]{|c|c|c|}
+            \hline
+            \textbf{Grundschaltung} & \textbf{$\mathbf{\underline{Z}}$-Ortskurve} & \textbf{$\mathbf{\underline{Y}}$-Ortskurve}
+            \\\hline% RL-Parallel
+            \parbox[c][4cm][c]{3.75cm}{\centering
+                \begin{tikzpicture}\draw(0,0)to[short,o-]
+                    (0.5,0)--(0.5,+0.75)to[R,l=$R$](2,+0.75)--(2,0)
+                    (0.5,0)--(0.5,-0.75)to[L,l=$L$](2,-0.75)--(2,0)to[short,-o](2.5,0);
+                \end{tikzpicture}
+            }&
+            \parbox[c][4cm][c]{3.75cm}{\centering% \parbox[...][Höhe][...]{Breite}{Content}
+                \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_P_RLZ_R.pdf}}\newline
+                \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_P_RLZ_L.pdf}}
+            }&
+            \parbox[c][4cm][c]{3.75cm}{\centering% \parbox[...][Höhe][...]{Breite}{Content}
+                \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_P_RLY_R.pdf}}\newline
+                \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_P_RLY_L.pdf}}
+            }
+            \\\hline% RC-Parallel
+            \parbox[c][4cm][c]{3.75cm}{\centering
+                \begin{tikzpicture}\draw(0,0)to[short,o-]
+                    (0.5,0)--(0.5,+0.75)to[R,l=$R$](2,+0.75)--(2,0)
+                    (0.5,0)--(0.5,-0.75)to[C,l=$C$](2,-0.75)--(2,0)to[short,-o](2.5,0);
+                \end{tikzpicture}
+            }&
+            \parbox[c][4cm][c]{3.75cm}{\centering% \parbox[...][Höhe][...]{Breite}{Content}
+                \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_P_RCZ_R.pdf}}\newline
+                \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_P_RCZ_C.pdf}}
+            }&
+            \parbox[c][4cm][c]{3.75cm}{\centering% \parbox[...][Höhe][...]{Breite}{Content}
+                \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_P_RCY_R.pdf}}\newline
+                \resizebox{3.75cm}{!}{\includegraphics{Tikz/pdf/plot_ortskurve_minimal_P_RCY_C.pdf}}
+            }
+            \\\hline
+        \end{tabular}
+    \end{table}
+\end{frame}
+}%Ende beamer only - Tabellenteil 2

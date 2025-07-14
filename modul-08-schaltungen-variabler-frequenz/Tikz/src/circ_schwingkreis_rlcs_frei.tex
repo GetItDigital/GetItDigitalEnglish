@@ -1,0 +1,22 @@
+% RLC Schwingkreis Serie freie Schwingung
+\begin{tikzpicture}%
+    % invisible boundbox
+    \draw[draw=none](-2.75,-2.25) rectangle (+2.00,+2.75); % set draw=black (debug) or draw=none (final)
+    
+    % draw RLC-Glied (ohne Pfad oben)
+    \draw (0,2)% Uc+
+    to [C, name=C, l=$C$, v, i>^, !vi] (0,-2)% Uc-
+    to [short] (1.5,-2)
+    to [L, l=$L$] (1.5,0)
+    to [R, l=$R$] (1.5,2);% Ur+
+
+    % draw switch
+    \draw (0,2) node[anchor=south,yshift=2pt]{$t=0$}
+    to [short] (0.5,2) to[spst,o-o] (1,2) 
+    to [short](1.5,2);
+
+    % draw arrows
+    \varrmore{C}{$u$};
+    \iarrmore{C}{$i$};
+
+\end{tikzpicture}

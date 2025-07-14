@@ -1,0 +1,64 @@
+% Bode-Diagramm für RC-Tiefpass Vgl. 1. Ordnung, 2. Ordnung
+% 1. Ordnung: RC-Tiefpass
+% 2. Ordnung: 2x RC-Tiefpass in Reihe
+% R*C=1e2 Hz
+
+\begin{tikzpicture}[x=1cm,y=1cm]
+% Amplitudengang
+\begin{axis}[
+    name=AxisAmplitudengang,
+    xmode=log,
+    ymode=log,
+    xmin=1e0, xmax=1e4,
+    ymin=0.5e-4, ymax=2e0,
+    ylabel={$A(\omega)$},
+    xlabel={$\omega$},
+    width=12cm,
+    height=6cm,
+    grid=major,
+    domain=1e0:1e4,
+    samples=161,
+    legend pos=south west,
+]
+    % 1. Ordnung: A(w) = 1 / ( 1 + (w*R*C)^2 )^0.5
+    \addplot[color=red, very thick] {1 / sqrt( 1 + (x*1e-2)^2 )};
+    \addlegendentry{einfaches RC-Glied}
+    % 2. Ordnung: A(W) = 1 / ( (1-(w*R*C)^2)^2 + (3*w*R*C)^2 )^0.5
+    \addplot[color=blue, very thick] {1 / sqrt( (1-(x*1e-2)^2)^2 + (3*x*1e-2)^2 )};
+    \addlegendentry{doppeltes RC-Glied}
+    
+    s% 2. Ordnung entkoppelt: A(w) = A_1(w) * A_1(w)
+    s\addplot[color=blue, dotted, thick] {1 / ( 1 + (x*1e-2)^2 )};
+    s\addlegendentry{doppelt, entkoppelt}
+\end{axis}
+
+% Phasengang
+\begin{axis}[
+    at={($(AxisAmplitudengang.south west)+(0,-5.5cm)$)}, % Position relativ zu anderem Plot
+    xmode=log,
+    ymode=normal,
+    xmin=1e0, xmax=1e4,
+    ymin=-190, ymax=+10,
+    ytick distance=45,
+    xlabel={$\omega$},
+    ylabel={$\varphi(\omega)\,[\degree]$},
+    width=12cm,
+    height=6cm,
+    grid=major,
+    domain=1e0:1e4,
+    samples=161,
+    legend pos=south west,
+]
+    % 1. Ordnung: phi(w) = -atan( w*R*C )
+    \addplot[color=red, very thick] {-atan( x*1e-2 )};
+    %\addlegendentry{einfaches RC-Glied}
+    % 2. Ordnung: phi(w) = -2*atan( w*R*C )
+    \addplot[color=blue, very thick, domain=1e0:0.99999e2] {-atan( (3*x*1e-2) / (1-(x*1e-2)^2) )}; 
+    \addplot[color=blue, very thick, domain=1.00001e2:1e4, forget plot] {-atan( (3*x*1e-2) / (1-(x*1e-2)^2) ) -180}; % Sprung wegen atan Def.-Bereich 
+    %\addlegendentry{doppeltes RC-Glied}
+    
+    % 2. Ordnung entkoppelt: phi(w) = phi_1(w) + phi_1(w)
+    \addplot[color=blue, dotted, thick] {-2*atan( x*1e-2 )};
+    %\addlegendentry{doppelt, entkoppelt}
+\end{axis}
+\end{tikzpicture}

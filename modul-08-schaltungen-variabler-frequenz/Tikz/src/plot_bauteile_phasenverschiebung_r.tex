@@ -1,0 +1,25 @@
+% Phasenverschiebung an Widerstand
+\begin{tikzpicture}[x=1cm,y=1cm]
+    \draw[draw=none] (-1,-0.75) rectangle (7,2.5); % boundbox
+\begin{axis}[
+    ylabel={Widerstand $R$},
+    %xlabel=$\omega t$,
+    xmin=0, xmax=2.5, % in pi
+    ymin=-1.5, ymax=1.5,
+    xtick={0,0.5,1,1.5,2,2.5},
+    xticklabels={$0$, $\frac{\pi}{2}$, $\pi$, $\frac{3}{2}\pi$, $2\pi$, $\omega t$}, % last one is x-axis label
+    %ytick={-1,0,1},
+    yticklabels={},
+    width=8cm,
+    height=4cm,
+    grid=major,
+    domain=0:2.5,
+    legend pos=north east,
+    %legend style={at={(0.5,-0.1)},anchor=north},
+]
+    \addplot[gray,forget plot] coordinates {(0,0) (2.5,0)}; % x-axis
+    \addplot[thick, samples=100, voltage]{sin(deg(x*pi))};
+    \addplot[thick, samples=100, red]{0.75*sin(deg(x*pi))};
+    \legend{$\ecv{u_R}$,$\eci{i_R}$}
+\end{axis}
+\end{tikzpicture}

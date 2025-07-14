@@ -1,0 +1,25 @@
+%Aus EGI Skript (BUW) von Ralf Wegener übernommen, minimal angepasst
+\begin{tikzpicture}%
+%   invisible boundbox
+    \draw[draw=none](-4.5,-1.25) rectangle (+4.5,+1.25);% gleiche Höhe wie bei circ_zweitor.tex
+    % Quelle, Zweitor, Last
+    \draw(-3.5,0) node[dipchip, hide numbers, num pins=6, no topmark, external pins width=0](A){Quelle};%
+    \draw(0,0) node[dipchip, hide numbers, num pins=6, no topmark, external pins width=0](B){Zweitor};%
+    \draw(3.5,0) node[dipchip, hide numbers, num pins=6, no topmark, external pins width=0](C){Last};%
+    % Verbindungen
+    \draw(B.bpin 1) to[short,-o, name=i11, i_<=$\underline{I}_1$, !i] ++(-1,0) coordinate(In1) node[above]{A} to[short] (A.bpin 6);%
+    \draw(B.bpin 3) to[short,-o, name=i12, i_>=$\underline{I}_1$, !i] ++(-1,0) coordinate(In2) node[below]{B} to[short] (A.bpin 4);%
+    \draw(B.bpin 6) to[short,-o, name=i21,  i>=$\underline{I}_2$, !i] ++(1,0) coordinate(Out1) node[above]{C} to[short] (C.bpin 1);%
+    \draw(B.bpin 4) to[short,-o, name=i22,  i<=$\underline{I}_2$, !i] ++(1,0) coordinate(Out2) node[below]{D} to[short] (C.bpin 3);%
+    \draw(In1) to[open, name=u1, v=$\underline{U}_1$, !v] (In2);%
+    \draw(Out1) to[open, name=u2, v^=$\underline{U}_2$, !v] (Out2);%
+
+    %draw arrows
+    \varronly{u1};
+    \varronly{u2};
+    \iarronly{i11};
+    \iarronly{i12};
+    \iarronly{i21};
+    \iarronly{i22};
+    
+\end{tikzpicture}%

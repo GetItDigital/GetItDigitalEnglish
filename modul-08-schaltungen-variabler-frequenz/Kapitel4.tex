@@ -1,0 +1,1678 @@
+% Kapitel 4 - Resonanzkreise, Schwingungen, Ortskurven
+%       - Resonanzkreis, Resonanzfrequenz
+%       - Schwingungen, Dämpfung
+%       - Ortskurven, Pol-Nullstellen-Diagramm
+
+
+\section{Resonanzkreise}
+\label{sec:resonanzkreise}
+\begin{frame}\ftx{\secname}%
+\index{Resonanzkreis}%
+\index{Schwingkreis}
+% Einleitung
+\s{
+    Resonanzkreise, auch Schwingkreise genannt, sind schwingungsfähige Stromkreise, 
+    die auf Anregung mit einer bestimmten Frequenz stark reagieren (Resonanzfall).
+    Unterschieden werden die zwei Typen des Parallel-Resonanzkreises und Serien-Resonanzkreises.
+
+    Schwingungsfähig ist ein System, wenn es Energie in zwei Formen speichern und zwischen beiden Formen hin und her wandeln kann.
+    Resonanzkreise verfügen daher immer über eine Kapazität (elektrischer Speicher) und eine Induktivität (magnetischer Speicher).
+
+    Anwendung finden Resonanzkreise unter anderem im Bereich der Energie-, Mess- und Kommunikationstechnik.
+    Dort werden sie zum Beispiel zur Filterung von Netzrückwirkungen oder Signalen eingesetzt.
+    
+    Resonanzkreise können unter Umständen zu unerwünschten Effekten wie extreme Über- oder Unterspannungen führen. 
+}
+\begin{Lernziele}{Resonanzkreise}
+    Studierende lernen:
+    \begin{itemize}
+        \item Resonanzkreise zu erkennen und zu berechnen
+        \item Resonanzfrequenz, Kennwiderstand und Güte zu bestimmen
+        \item Resonanzkurven zu berechnen, zu beschreiben und zu zeichnen
+    \end{itemize}
+\end{Lernziele}
+\end{frame}
+
+%-------------------------------------------------------------------------------------------------%
+
+\subsection{Resonanzerscheinung}
+\begin{frame}\ftx{\subsecname}
+\index{Resonanzerscheinung}%
+\index{Schwingung>freie Schwingung}%
+\index{Schwingung>erzwungene Schwingung}%
+%Folien: Schaltbild Schwingkreis RLCs frei schwingend und angeregt + Zeitplots (abklingend mit w0 bzw. konst. Amplitude mit wq)
+%Skript: Zusätzlich Beschreibung: Wenn Systeme schwingungsfähig sind (Energieumwandlungsfähig mit zwei Speichern), 
+%   dann mögliche Resonanz bei Anregung mit Frequenz nahe der Resonanzfrequenz (oder vielfachem davon). 
+%   Wenn Resonanzfrequenz gleich Frequenz externer Anregung -> Aufschwingen (Resonanzerscheinung, instabiler Zustand).
+\s{% skript only
+    Eine Resonanz tritt auf, wenn schwingungsfähige Systeme mit einer Frequenz nahe ihrer Resonanzfrequenz angeregt werden.
+
+    In diesem Abschnitt werden zunächst der Zustand einer freien Schwingung und der einer erzwungener Schwingung beschrieben. 
+    In Unterkapitel \ref{sec:resonanzkreise:definition} wird die Bedingung für Resonanz mathematisch festgelegt 
+    und im Folgekapitel in Beispiel \ref{bsp:resonanz:lc} für einen Serien- und Parallel-Schwingkreis berechnet.
+
+    % Ein Beispiel aus der Mechanik ist ein Pendel, bei welchem Energie zwischen kinetischer Energie und Lageenergie und und her pendelt. 
+    % Schlechtes Beispiel? Frequenz abhängig von Winkel der Auslenkung außer bei Zykloider (?) Bahn ... Vgl. Zykloid Pendel oder so
+    % In elektrischen Systemen kann Energie beispielsweise in Induktivitäten (magnetisch) und in Kapazitäten (elektrisch) Energie.
+
+    % Freie Schwingung
+    Abbildung \ref{fig:resonanzkreise:rlcs:frei} zeigt exemplarisch das Schaltbild eines RLC-Serienschwingkreises.
+    Die Reihenschaltung aus R, L und C ist über den gezeigten Schalter kurzschließbar. 
+    Zum Zeitpunkt $t=0$ schließt der Schalter, dabei 
+    beträgt die Spannung der Kapazität den Wert $U_0>0$ (Kapazität geladen)
+    und es fließt kein Strom $I=0$ (Induktivität entladen).
+
+    \begin{figure}[H]\centering
+        \begin{subfigure}{0.4\textwidth}\centering
+            \includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_frei.pdf}% Schaltbild
+            \caption{Schaltbild}
+            \label{fig:resonanzkreise:rlcs:frei:circ}
+        \end{subfigure}%
+        \begin{subfigure}{0.58\textwidth}\centering
+            \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_zeitverlauf_RLCs_gedaempft.pdf}}% Plot
+            \caption{Freie Schwingung}
+            \label{fig:resonanzkreise:rlcs:frei:plot}
+        \end{subfigure}
+    \caption{RLC-Serienschwingkreis, frei schwingend}
+    \label{fig:resonanzkreise:rlcs:frei}
+    \end{figure}
+
+    Abbildung \ref{fig:resonanzkreise:rlcs:frei:plot} zeigt den Zeitverlauf der Kapazitätsspannung $u$
+    und des Stromes $i$ durch den RLC-Serienschwingkreis ab $t=0$. %(Serie: $I = I_C = I_L = I_R$)
+    Der Resonanzkreis befindet sich im Zustand freier Schwingung. 
+    Das heißt Ströme und Spannungen oszillieren ohne äußere Anregung mit der \textbf{Eigenfrequenz}\index{Eigenfrequenz} $f_d$ 
+    (gedämpft) des Resonanzkreises.
+
+    Die Amplituden klingen aufgrund der Dämpfung ($R>0$) ab. 
+    Sie lassen sich jeweils durch eine Exponentialkurve beschreiben, 
+    welche den jeweiligen Zeitverlauf einhüllt (gestrichelte Kurve).
+    Für genauere Berechnungen von Ausgleichsvorgängen, siehe Modul 12: Schaltvorgänge.% \ref Modul
+
+    Die Energie $E$ pendelt zwischen 
+    der elektrischen Form im $\vec{\underline{E}}$-Feld der Kapazität ($E_{el} \sim u^2$) und 
+    der magnetischen Form im $\vec{\underline{H}}$-Feld der Induktivität ($E_{mag} \sim i^2$). 
+    Anhand der Minima beziehungsweise Maxima und der Nullstellen beider Zeitverläufe ist erkennbar, 
+    wie die Energie in jeder Periode zwei mal hin- und zurück gewandelt wird. 
+
+    Aufgrund der reellen (Verlust-)Leistung im ohmschen Widerstand ($R > 0$), 
+    wird bei jeder Energieumwandlung ein Teil der Energie in Form von Wärme im Widerstand umgesetzt.
+    Der Widerstand dämpft den Schwingkreis und führt zum Abklingen von Strom und Spannung in Zustand freier Schwingung.
+
+    Die Eigenkreisfrequenz $\omega_d = 2\pi f_d$ ist unabhängig von der Amplitude.
+    Bei ungedämpften Systemen entspricht sie exakt der \textbf{Resonanzkreisfrequenz} $\omega_0$.
+    Bei leicht gedämpften Systemen ist $\omega_d$ geringfügig kleiner als $\omega_0$.
+    Stark gedämpfte Systeme schwingen nicht, sondern klingen aperiodisch ab.
+    %\index{Eigenfrequenz>ungedämpft}%
+    %\index{Eigenfrequenz>gedämpft}%
+
+    % Erzwungene Schwingung
+    Abbildung \ref{fig:resonanzkreise:rlcs:erzwungen:circ} zeigt zum Vergleich einen RLC-Serienschwingkreis
+    mit Anregung durch eine ideale Spannungsquelle $u_e$ an einer Kapazität (erzwungene Schwingung). 
+    Abbildung \ref{fig:resonanzkreise:rlcs:erzwungen:plot} zeigt den eingeschwungenen Zeitverlauf 
+    von Strom und Spannung der Kapazität bei sinusförmiger Anregung. 
+%    (Achtung! Ideale Spanungsquelle an Kapazität ohne Innenwiderstand mit $i_C \rightarrow \infty$ bei Spannungssprüngen.) 
+
+    \begin{figure}[H]\centering
+        \begin{subfigure}{0.4\textwidth}\centering
+            \includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_erzwungen.pdf}% Schaltbild
+            \caption{Schaltbild}
+            \label{fig:resonanzkreise:rlcs:erzwungen:circ}
+        \end{subfigure}\hfill%
+        \begin{subfigure}{0.58\textwidth}\centering
+            \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_zeitverlauf_RLCs_angeregt.pdf}}% Plot
+            \caption{Erzwungene Schwingung}
+            \label{fig:resonanzkreise:rlcs:erzwungen:plot}
+        \end{subfigure}
+    \caption{RLC-Serienschwingkreis, erzwungene Schwingung}
+    \label{fig:resonanzkreise:rlcs:erzwungen}
+    \end{figure}
+
+    Strom und Spannung schwingen im eingeschwungenen Zustand mit der Frequenz der Spannungsquelle, 
+    welche in diesem Fall auch Erregerfrequenz genannt wird. 
+
+    Entspricht die Erregerfrequenz der Resonanzfrequenz, tritt der \textbf{Resonanzfall} ein.
+    Dies kann durch Variation der Erregerfrequenz oder der Bauteilgrößen $L$ oder $C$ geschehen.
+}%Ende Skript only
+\b{%Start beamer only
+\noindent\begin{minipage}[c][4cm][c]{\textwidth}\centering% upper half
+    \begin{minipage}[c][4cm][c]{0.25\textwidth}\centering% left
+        \resizebox*{!}{0.35\textheight}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_frei.pdf}}%ignores minipage's height
+    \end{minipage}\hfill%
+    \begin{minipage}[c][4cm][c]{0.38\textwidth}\centering% middle
+        Freie Schwingung:\newline
+        \resizebox*{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_zeitverlauf_RLCs_gedaempft.pdf}}
+    \end{minipage}\hfill%
+    \begin{minipage}[c][4cm][c]{0.35\textwidth}% right
+        Randbedingung:
+        \begin{equation}\begin{aligned}
+            u(t=0) &= U_0\\
+            i(t=0) &= 0%\ \mathrm{A}
+        \end{aligned}\end{equation}
+        \quad mit Eigenkreisfrequenz $\omega_d$,
+
+        \quad abklingend (gedämpft)
+    \end{minipage}
+\end{minipage}
+
+\noindent\begin{minipage}[c][4cm][c]{\textwidth}\centering% lower half
+    \begin{minipage}[c][4cm][c]{0.25\textwidth}\centering% left
+        \resizebox{!}{0.35\textheight}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_erzwungen.pdf}}
+    \end{minipage}\hfill
+    \begin{minipage}[c][4cm][c]{0.38\textwidth}\centering% middle
+        Erzwungene Schwingung:\newline
+        \resizebox*{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_zeitverlauf_RLCs_angeregt.pdf}}
+    \end{minipage}\hfill%
+    \begin{minipage}[c][4cm][c]{0.35\textwidth}% right
+        Erregerspannung:
+        \begin{equation}u_e(t) = \hat{U}\sin(\omega_e t)\end{equation}
+        \quad mit Erregerkreisfrequenz $\omega_e$
+    \end{minipage}
+\end{minipage}
+}% Ende Beamer only
+\end{frame}
+%-------------------------------------------------------------------------------------------------%
+
+\subsection[Definitionen]{Definition Resonanzbedingung, -frequenz, Güte, Kennwiderstand}
+\label{sec:resonanzkreise:definition}
+\begin{frame}\ftx{\subsecname}
+\s{%Start Skript only
+    Für Resonanzkreise gilt im Resonanzfall, dass der Imaginärteil der Impedanz gleich null wird.
+    Respektive gilt, dass der Imaginärteil der Admittanz gleich null wird 
+    sowie Strom und Spannung an den Ausgangsklemmen in Phase liegen.
+    % -> Imaginärteil der Leistung null
+    % Leistung maximal (Vgl. Impedanzkurven)
+
+    Als Resonanzbedingung gilt an den Ausgangsklemmen des Resonanzkreises:
+
+    \index{Resonanzbedingung}%
+    \begin{equation}\begin{aligned}\label{eq:resonanzbedingung}
+        \varphi_{u0} - \varphi_{i0} &\overset{!}{=} 0 &&\text{Phasenverschiebung gleich null}\\\leftrightarrow
+        \Im\{ \underline{Z}_0 \}    &\overset{!}{=} 0 &&\text{Reaktanz gleich null}
+    \end{aligned}\end{equation}
+
+    Frequenzvariable Größen sind im Resonanzfall im Folgenden mit Index $0$ gekennzeichnet:
+
+    \begin{equation*}
+        \underline{Z},\ \underline{U},\ \underline{I},\ \varphi_{u},\ \varphi_{i}
+        = \underline{Z}_0,\ \underline{U}_0,\ \underline{I}_0,\ \varphi_{u0},\ \varphi_{i0}
+        \quad \text{für}\quad \omega=\omega_0
+    \end{equation*}
+
+    \index{Resonanzfrequenz}%
+    Die \textbf{Resonanzfrequenz} $f_0$ ist die Frequenz, bei der eine Anregung den Resonanzfall erzeugt 
+    beziehungsweise die Resonanzbedingung erfüllt. 
+    Teilweise wird die \textbf{Resonanzkreisfrequenz} $\omega_0$ auch unpräziserweise als Resonanzfrequenz bezeichnet.
+    Allgemein gilt $\omega_0 = 2\pi f_0$.
+
+    \index{Kennwiderstand}%
+    \index{Kennleitwert}%
+    Bei einfachen RLC-Schwingkreisen hebt sich im Resonanzfall die Reaktanz $X_L$ der Induktivität und $X_C$ der Kapazität gegenseitig auf.
+    Betragsmäßig sind diese gleich groß, weshalb deren Betrag im Resonanzfall auch als \textbf{Kennwiderstand} $X_k$ bezeichnet wird.
+    Analog dazu ist der \textbf{Kennleitwert} $B_k$ definiert als der Betrag des Leitwertes der Induktivität und der Kapazität im Resonanzfall:
+
+    \begin{align}
+        X_k = |X_{L,0}| &= |X_{C,0}|\label{eq:kennwiderstand}\\
+        B_k = |B_{L,0}| &= |B_{C,0}| = \frac{1}{X_k}\label{eq:kennleitwert}
+    \end{align}
+
+    Kennwiderstand und -leitwert haben die gleichen Einheiten wie Impedanz [$\Omega$] und Admittanz [$\mathrm{S}$]. 
+
+    \index{Güte}%
+    Die \textbf{Güte} $Q$, auch Gütefaktor oder Resonanzschärfe genannt, ist eine einheitenlose Größe.
+    Sie ist allgemein definiert als das Verhältnis des Blindleistungsbetrages der Induktivität oder der Kapazität 
+    zur (Wirk-)Leistung des Schwingkreises im Resonanzfall:
+
+    \begin{align}\label{eq:q:leistung}
+        Q &= \frac{|Q_{L,0}|}{P_{R,0}} = \frac{|Q_{C,0}|}{P_{R,0}}&&\text{allgemein}
+    \end{align}
+    %\intertext{
+        Die Güte ist manchmal auch im Speziellen für Reihen- oder für Parallelschwingkreise definiert.
+
+        Bei RLC-Reihenschwingkreisen entspricht die Güte dem Verhältnis von Kennwiderstand $X_k$ zu ohmschem Widerstand $R$,
+        bei RLC-Parallelschwingkreisen entspricht die Güte dem Verhältnis von Kennleitwert $B_k$ zu ohmschem Leitwert $G$:
+    %}
+    \begin{align}
+        Q &= \frac{X_k}{R}&&\text{im Reihenschwingkreis}\label{eq:q:kennwiderstand}\\
+        Q &= \frac{Y_k}{G}&&\text{im Parallelschwingkreis}\label{eq:q:kennleitwert}\\
+    %\end{align} 
+    \intertext{
+        \index{Überspannung}%
+        \index{Überstrom}%
+        \index{Resonanz, >Spannungs- (spannungsbezogen)}%
+        \index{Resonanz, >Strom- (strombezogen)}%
+        Damit beschreibt die Güte auch das Verhältnis möglicher 
+        Überspannungen zu Quellenspannungen für Reihenschwingkreise bei Spannungsresonanz beziehungsweise das Verhältnis von 
+        Überströmen zu Quellenströmen für Parallelschwingkreise bei Stromresonanz:
+    }
+    %\begin{align}
+        Q &= \frac{U_{L,0}}{U_{q}} = \frac{U_{C,0}}{U_{q}} && \text{bei Spannungsresonanz}\label{eq:q:spannung}\\
+        Q &= \frac{I_{L,0}}{I_{q}} = \frac{I_{C,0}}{I_{q}} && \text{bei Stromresonanz}\label{eq:q:strom}
+    \end{align}
+    
+    %Die Güte ist wie in \ref{} gezeigt ist Indikator für die Steilheit des Phasenganges und gibt in Zusammenhang mit dem Kennwiderstand
+    %auch Auskufnt für die Dämpfung eines Resonanzkreises.
+
+}%Ende Skript only
+\b{%
+\begin{columns}
+    \column[c]{0.02\textwidth}\rotatebox{90}{\textbf{Grundtypen}}
+    \column[c]{0.3\textwidth}
+
+    Reihen-Resonanzkreis
+    \resizebox{!}{0.8\textwidth}{\includegraphics{Tikz/pdf/circ_schwingkreis_lcs.pdf}}
+
+    Parallel-Resonanzkreis
+    \resizebox{!}{0.8\textwidth}{\includegraphics{Tikz/pdf/circ_schwingkreis_lcp.pdf}}
+
+    \column[c]{0.6\textwidth}
+    \begin{align*}
+        \textbf{Resonanzbedingung} && \Im\{\underline{Z}\} &\overset{!}{=} 0
+            \vphantom{\bigg|}\\
+        \textbf{Resonanzfrequenz} && f_0% &\quad\text{mit }\omega_0=2\pi f_0
+            \vphantom{\bigg|}\\
+        \textbf{Kennwiderstand} && X_k &= |X_{L,0}| = |X_{C,0}|
+            \vphantom{\bigg|}\\
+        \textbf{Kennleitwert} && B_k &= \frac{1}{X_k}% = |B_{L,0}| = |B_{C,0}|
+            \vphantom{\bigg|}\\
+        \textbf{Güte} && Q &= \frac{|Q_{L,0}|}{P_{0}} = \frac{|Q_{C,0}|}{P_{0}}
+            \vphantom{\bigg|}\\
+        %\textbf{seriell, Güte} && Q_s &= \frac{X_k}{R} = \frac{U_{L,0}}{U}
+        %    \vphantom{\bigg|}\\
+        %\textbf{parallel, Güte} && Q_p &= \frac{Y_k}{G} = \frac{I_{L,0}}{I}
+        %    \vphantom{\bigg|}\\
+        \textbf{Eigenfrequenz}&& f_d &\quad\text{(gedämpft)}
+            \vphantom{\bigg|}\\
+        \textbf{Eigenfrequenz}&& f_0 &\quad\text{(ungedämpft)}
+            \vphantom{\bigg|}
+    \end{align*}
+
+\end{columns}
+}
+\end{frame}
+
+%-------------------------------------------------------------------------------------------------%
+
+\subsection{Resonanzfrequenz am Beispiel idealer LC-Schwingkreise}
+\begin{frame}\ftx{\subsecname}
+\index{Schwingkreis>LC-Reihenschwingkreis}%
+\index{Schwingkreis>LC-Parallelschwingkreis}%
+\s{%Start Skript only
+    In Beispiel \ref{bsp:resonanz:lc} wird exemplarisch die Resonanzkreisfrequenz 
+    für ideale LC-Serien- und LC-Parallel-Schwingkreise bestimmt.
+
+    Anhand der Beispiele wird rechnerisch verdeutlicht, weshalb in Reihenschwingkreisen
+    eine Resonanz durch Spannungen und in Parallelschwingkreisen durch Ströme hervorgerufen wird.
+    Zur Unterscheidung wird deshalb auch von einer \textbf{spannungsbezogenen} und 
+    einer \textbf{strombezogenen} Resonanz gesprochen. % 
+
+\begin{bsp}{Resonanz in LC-Schwingkreisen}{resonanz:lc}
+    Berechnung der Resonanzfrequenz $\omega_0$ für LC-Serien- und LC-Parallelschwingkreise.
+    \begin{figure}[H]\centering
+        \begin{subfigure}{0.48\textwidth}\centering
+            \resizebox{6cm}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_lcs_komplex.pdf}}% textwidth different as below
+            \captionsetup{labelformat=empty}
+            \caption{LC-Serienschwingkreis}
+            \label{fig:circ:lcs}
+        \end{subfigure}\hfill%
+        \begin{subfigure}{0.48\textwidth}\centering
+            \resizebox{6cm}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_lcp_komplex.pdf}}% textwidth different as above
+            \captionsetup{labelformat=empty}
+            \caption{LC-Parallelschwingkreis}
+            \label{fig:circ:lcp}
+        \end{subfigure}
+    \end{figure}
+
+    \begin{minipage}{\textwidth}\centering%Beide Spalten
+        \begin{minipage}{0.48\textwidth}\centering%Linke Spalte
+            Bei Anregung mit Spannung $\underline{U}$:
+            \begin{align*}
+                \underline{U}
+                &= \underline{I} \cdot \left(\mathrm{j}\omega L + \frac{1}{\mathrm{j}\omega C}\right) \\
+                &= \underline{I} \cdot \mathrm{j}\bigg(\underbrace{\omega L - \frac{1}{\omega C}}_{=0\ \text{Resonanz}}\bigg) \\
+                &\omega_0 L - \frac{1}{\omega_0 C} = 0 \\
+                \Rightarrow \underline{I} &\rightarrow \infty \quad \text{für} \quad \underline{U} = konst.
+            \end{align*}
+            \textbf{Spannungsbezogene Resonanz}\newline
+            im Serienschwingkreis
+        \end{minipage}\hfill%
+        \begin{minipage}{0.48\textwidth}\centering%Rechte Spalte
+            Bei Anregung mit Strom $\underline{I}$:
+            \begin{align*}
+                \underline{I}
+                &= \underline{U} \cdot \left(\mathrm{j}\omega C + \frac{1}{\mathrm{j}\omega L}\right) \\
+                &= \underline{U} \cdot \mathrm{j} \bigg(\underbrace{\omega C - \frac{1}{\omega L}}_{=0\ \text{Resonanz}}\bigg)\\
+                &\omega_0 C - \frac{1}{\omega_0 L} = 0 \\
+                \Rightarrow \underline{U} &\rightarrow \infty\quad \text{für} \quad \underline{I} = konst.
+            \end{align*}
+            \textbf{Strombezogene Resonanz}\newline
+            im Parallelschwingkreis
+        \end{minipage}
+
+        \begin{equation*}
+            \omega_0 = \frac{1}{\sqrt{LC}}
+        \end{equation*}
+        Die \textbf{Resonanzfrequenz} ist für beide Schwingkreise gleich.
+    \end{minipage}
+\end{bsp}
+
+%Dies liegt daran, dass sich bei Reihen-Anordnung die Spannungen und bei Parallel-Anordnung die Ströme jeweils über/durch $L$ und $C$ gegenseitig aufheben.
+Im Resonanzfall heben sich im idealen Reihenschwingkreis die Spannungen über $L$ und $C$ gegenseitig auf.
+Daher können theoretisch beliebig hohe Spannungen über $L$ und $C$ entstehen.
+In realen Schhaltungen wird die Spannung jedoch durch den ohmschen Widerstand $R$ begrenzt. 
+[Vgl. RLC-Schwingkreis in Kapitel \ref{sec:resonanzkreise:rlcs}]
+
+Analog gilt das gleiche im Resonanzfall für die Ströme durch $L$ und $C$ im Parallelschwingkreis.
+
+Die Resonanzfrequenz einfacher RLC-Schwingkreise ist identisch mit der idealer LC-Schwingkreise,
+da der Widerstand $R$ sich nicht auf den Blindanteil der Impedanz auswirkt,
+mit $R$, $L$ und $C$ alle in Reihe oder alle parallel.
+
+}%Ende Skript only
+\b{%Start Beamer only
+\noindent\begin{minipage}{0.5\textwidth}\centering%Linke Spalte
+    \begin{tabular}{l|c}
+        \rotatebox[origin=l]{90}{\quad in Reihe}
+        &\resizebox{!}{0.4\textheight}{\includegraphics{Tikz/pdf/circ_schwingkreis_lcs_komplex.pdf}}
+        \\\rotatebox[origin=c]{90}{spannungsbezogen}
+        &$\begin{aligned}
+            \underline{U}
+            &= \underline{I} \cdot \left(\mathrm{j}\omega L + \frac{1}{\mathrm{j}\omega C}\right) \\
+            &= \underline{I} \cdot \mathrm{j}\bigg(\underbrace{\omega L - \frac{1}{\omega C}}_{=\mathrlap{\,0\ \mathrm{Resonanz}}}\bigg) \\
+            &\omega_0 L - \frac{1}{\omega_0 C} = 0 \\
+            \Rightarrow \underline{I} &\rightarrow \infty \quad \text{für} \quad \underline{U} = konst.
+        \end{aligned}$
+    \end{tabular}
+\end{minipage}\hfill%
+\noindent\begin{minipage}{0.5\textwidth}\centering%Rechte Spalte
+    \begin{tabular}{c|r}
+        \resizebox{!}{0.4\textheight}{\includegraphics{Tikz/pdf/circ_schwingkreis_lcp_komplex.pdf}}
+        &\rotatebox[origin=l]{90}{\quad parallel}
+        \\$\begin{aligned}
+            \underline{I}
+            &= \underline{U} \cdot \left(\mathrm{j}\omega C + \frac{1}{\mathrm{j}\omega L}\right) \\
+            &= \underline{U} \cdot \mathrm{j} \bigg(\underbrace{\omega C - \frac{1}{\omega L}}_{=\mathrlap{\,0\ \mathrm{Resonanz}}}\bigg)\\
+            &\omega_0 C - \frac{1}{\omega_0 L} = 0 \\
+            \Rightarrow \underline{U} &\rightarrow \infty\quad \text{für} \quad \underline{I} = konst.
+        \end{aligned}$
+        &\rotatebox[origin=c]{90}{strombezogen}
+    \end{tabular}
+\end{minipage}\vspace{-2.5mm}
+\begin{equation*}
+    \omega_0 = \frac{1}{\sqrt{LC}}
+\end{equation*}
+}%Ende Beamer only
+\end{frame}
+
+%-------------------------------------------------------------------------------------------------%
+
+\subsection{RLC-Reihenschwingkreis - Resonanzverhalten}\label{sec:resonanzkreise:rlcs}
+\index{Schwingkreis>RLC-Reihenschwingkreis}%
+\begin{frame}\ftx{\subsecname}
+\b{%
+\begin{minipage}{0.4\textwidth}%
+\resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2.pdf}}\newline
+
+\begin{tcolorbox}[colback=white,colframe=GETgreen!25!black,toprule=0.5pt,rightrule=0.5pt,bottomrule=0.5pt,leftrule=0.5pt,
+    title=\textbf{Resonanzbedingung (allg.)},center title,colbacktitle=GETgreen!5!white,coltitle=black,titlerule=0.5pt,left=2pt,right=2pt]
+    \centering
+    Phasenverschiebung zwischen\newline
+    $\underline{U}$ und $\underline{I}$ entspricht $\varphi = 0$.\newline
+    Oder:
+    \begin{equation}
+        \Im\left\{\frac{\underline{U}}{\underline{I}}\right\} =
+        \Im\left\{\underline{Z}\right\} \overset{!}{=} 0
+    \end{equation}
+\end{tcolorbox}
+\end{minipage}\hfill%
+\begin{minipage}{0.55\textwidth}
+    \begin{equation}
+        \underline{Z} = R + \mathrm{j}\Big(\underbrace{\omega L - \frac{1}{\omega C}}_{=\mathrlap{\ 0\quad\text{für}\ \omega=\omega_0}}\Big)
+    \end{equation}
+    \begin{tcolorbox}[colback=white,colframe=GETgreen!25!black,
+        toprule=0.5pt,bottomrule=0.5pt,rightrule=0.5pt,leftrule=0.5pt,
+        top=2pt,bottom=2pt,left=2pt,right=2pt,middle=2pt]
+        Fall 1: $\mathbf{\displaystyle{\omega < \omega_0}}$ 
+        \tcblower
+        $\rightarrow\left(\omega L - \frac{1}{\omega C}\right) < 0$ \hfill ohmsch-kapazitiv
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[colback=white,colframe=GETgreen!25!black,
+        toprule=0.5pt,bottomrule=0.5pt,rightrule=0.5pt,leftrule=0.5pt,
+        top=2pt,bottom=2pt,left=2pt,right=2pt,middle=2pt]
+        Fall 2: $\mathbf{\displaystyle{\omega = \omega_0}}$ \hfill (Resonanzfall)
+        \tcblower
+        $\rightarrow\left(\omega L - \frac{1}{\omega C}\right) = 0$ \hfill rein ohmsch
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[colback=white,colframe=GETgreen!25!black,
+        toprule=0.5pt,bottomrule=0.5pt,rightrule=0.5pt,leftrule=0.5pt,
+        top=2pt,bottom=2pt,left=2pt,right=2pt,middle=2pt]
+        Fall 3: $\mathbf{\displaystyle{\omega > \omega_0}}$ 
+        \tcblower
+        $\rightarrow\left(\omega L - \frac{1}{\omega C}\right) > 0$ \hfill ohmsch-induktiv
+    \end{tcolorbox}
+\end{minipage}
+}%
+\s{%
+    In diesem Unterkapitel wird exemplarisch das Resonanzverhalten eines RLC-Serienschwingkreis untersucht.
+    Der Schwingkreis ist in Abbildung \ref{fig:circ:rlcs} gezeigt und entspricht dem idealen LC-Serienschwingkreis
+    aus Beispiel \ref{bsp:resonanz:lc} mit einem zusätzlichen ohmschen Widerstand $R$ in Reihe.
+
+    \fu{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2.pdf}}{Schaltbild RLC-Serienschwingkreis\label{fig:circ:rlcs}}
+
+    Die Impedanz $\underline{Z}$ des RLC-Serienschwingkreis aus Abbildung \ref{fig:circ:rlcs} ist gegeben durch:
+
+    \begin{align}
+        \underline{U} &= \underline{I} \cdot \left(R + \mathrm{j}\omega L - \mathrm{j}\frac{1}{\omega C}\right)\\
+        \underline{Z} &= R + \mathrm{j}\left(\omega L - \frac{1}{\omega C}\right)\label{eq:rlcs:z}
+    \end{align}
+    
+    Im Resonanzfall verschwindet nach Gleichung \ref{eq:resonanzbedingung} der Imaginärteil der Impedanz.
+    Foglich heben sich bei dieser Anordnung die Reaktanzen von Induktivität und Kapazität auf.
+    Durch einsetzen von $\underline{Z}$ in die Resonanzbedingung lässt sich die Resonanzfrequenz $\omega_0$ bestimmen:
+
+    \begin{equation}\label{eq:rlcs:w0}
+        \begin{aligned}
+            \Im\{\underline{Z}\} = \left(\omega L - \frac{1}{\omega C}\right) &\overset{!}{=} 0 \\
+            \omega_0 L - \frac{1}{\omega_0 C} &= 0 &&\Rightarrow& \omega_0 &= \frac{1}{\sqrt{LC}}
+        \end{aligned}
+    \end{equation}
+
+    Da die Reaktanz der Induktivität positiv und proportional zur Frequenz ist ($X_L \sim \omega$),
+    und da die Reaktanz der Kapazität negativ und proportional zum Kehrwert der Frequenz ist ($-X_C \sim \frac{1}{\omega}$),
+    überwiegt für Frequenzen oberhalb der Resonanzfrequenz der induktive Anteil und für Frequenzen unterhalb der kapazitive Anteil.
+
+    Daraus ergibt sich die folgende Fallunterscheidung für den RLC-Serienschwingkreis:
+
+    \begin{equation}
+        \Im\{\underline{Z}\} =
+    \begin{cases}
+        \omega L - \frac{1}{\omega C} < 0 & \qquad \omega < \omega_0 \qquad\text{ohmsch-kapazitiv}\vphantom{\Big|}\\
+        \omega L - \frac{1}{\omega C} = 0 & \qquad \omega = \omega_0 \qquad\text{rein ohmsch}\vphantom{\Big|}\\
+        \omega L - \frac{1}{\omega C} > 0 & \qquad \omega > \omega_0 \qquad\text{ohmsch-induktiv}\vphantom{\Big|}
+    \end{cases}
+    \label{eq:rlcs:fallunterscheidung}
+    \end{equation}
+
+    Die Fallunterscheidung wird in Abbildung \ref{fig:plot:rlcs:zeigerdiagramm} anhand eines Zeigerdiagramms 
+    und in Abbildung \ref{fig:plot:rlcs:impedanzkurve} anhand einer Impedanzkurve verdeutlicht.
+
+    \textbf{Exkurs: Freie Schwingung als Grenzfall der Resonanz} % Sonanz (Hall), Solsonanz (Alleinhall?), Suisonanz (Selbsthall)
+    
+    Die Bezeichnung Resonanz, von lateinisch \textit{resonare} (widerhallen), 
+    bezieht sich, der Wortbedeutung entsprechend, immer auf Systemzustände bei externer Anregung.
+
+    Wie in Abbildung \ref{fig:resonanzkreise:rlcs:frei} gezeigt 
+    schwingt ein geladener RLC-Serienschwingkreis bei Kurzschluss der äußeren Anschlussklemmen im Zustand freier Schwingung mit dessen Eigenfrequenz.
+    
+    Der Kurzschluss kann als ideale Spannungsquelle (Innenwiderstand $R_i=0$) mit Spannung $U=0$ betrachtet werden.
+    Die Eigenfrequenz (mit Dämpfung) ergibt sich aus der Lösung der homogenen Differentialgleichung des Schwingkreises. 
+    Mehr dazu in Modul 12: Schaltvorgänge.%TODO VERWEIS MODUL
+        
+    Knoten- und Maschengleichungen:
+
+    \begin{align*}
+        u(t) &= u_R + u_L + u_C \overset{!}{=} 0 \\
+        i(t) &= i_R = i_L = i_C
+    \end{align*}
+  
+    DGL:
+
+    \begin{align*}u(t)=
+        i R + L \frac{\d i}{\d t} + \frac{1}{C} \int i \d t &\overset{!}{=} 0 \\
+        L \frac{\d^2i}{\d t^2} + R \frac{\mathrm{d}i}{\d t} + \frac{1}{C} i &\overset{!}{=} 0 
+    \end{align*}
+
+    Ansatz:
+
+    \begin{align*}
+        i(t) 
+            &= k \mathrm{e}^{\lambda t}&%\rightarrow
+        \frac{\d i}{\d t}
+            &= k\lambda \mathrm{e}^{\lambda t}&%\rightarrow
+        \frac{\d^2 i}{\d t^2}
+            &= k\lambda^2 \mathrm{e}^{\lambda t}
+    \end{align*}
+    
+    Einsetzen:
+
+    \begin{align*}
+        L \frac{\d^2i}{\d t^2} + R \frac{\mathrm{d}i}{\d t} + \frac{1}{C} i &= 0 \\
+        k \cdot \bigg( \underbrace{L \lambda^2 + R \lambda + \frac{1}{C}}_{=\mathclap{\ 0}} \bigg) \mathrm{e}^{\mathrm{j} \lambda t} &= 0
+    \end{align*}
+
+    Auflösen:
+    \begin{equation*}
+        \lambda_{1/2} = -\frac{R}{2L} \pm \mathrm{j} \sqrt{\frac{1}{LC} - \left(\frac{R}{2L}\right)^2}
+    \end{equation*}
+
+    Wie in Modul 12 näher erläutert wird, ergibt sich für den Fall, dass $\frac{1}{LC} > \left(\frac{R}{2L}\right)^2$ (geringe Dämpfung) 
+    eine komplexe Lösung. Nur in diesem Fall kann der Resonanzkreis frei schwingen mit, wobei
+    der Realteil der Lösung die Abklingkonstante und der Imaginärteil (Wurzelterm) die Eigenkreisfrequenz $\omega_d$ definieren:
+
+    \begin{equation*}
+        \omega_{d} = \sqrt{\frac{1}{LC} - \left(\frac{R}{2L}\right)^2}
+    \end{equation*}
+}
+\end{frame}
+
+%.................................................................................................%
+
+\subsubsection{Fallunterscheidung im Zeigerdiagramm}
+\begin{frame}\ftx{\subsubsecname}
+\b{%
+\begin{minipage}{0.4\textwidth}%
+\resizebox{0.825\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2_const_i.pdf}}
+\end{minipage}\hfill%
+\begin{minipage}{0.6\textwidth}
+\begin{align}\underline{U}
+    &= \underline{U}_R\ +\ \underline{U}_L\ +\ \underline{U}_C&
+        \underline{I} &= konst.\\
+    &= \underline{I} \cdot \big[R + \mathrm{j}\big(\underbrace{\omega L - \frac{1}{\omega C}}_{=\mathrlap{\ \Im\{\underline{Z}\}}}\big)\big]&
+        \omega_0 &= \frac{1}{\sqrt{LC}}
+\end{align}
+\end{minipage}\vfill
+\begin{minipage}{\textwidth}\centering
+    \begin{minipage}{0.3\textwidth}\centering \rotatebox{90}{Fall 1 \quad ohmsch-kapazitiv}
+    \resizebox{!}{0.5\textheight}{\includegraphics{Tikz/pdf/plot_zeigerdiagramm_rlcs_2.pdf}}\newline $\qquad\omega < \omega_0$
+    \end{minipage}\hfill%
+    \begin{minipage}{0.3\textwidth}\centering \rotatebox{90}{Fall 2 \quad rein ohmsch}
+    \resizebox{!}{0.5\textheight}{\includegraphics{Tikz/pdf/plot_zeigerdiagramm_rlcs_3.pdf}}\newline $\qquad\omega = \omega_0$
+    \end{minipage}\hfill%
+    \begin{minipage}{0.3\textwidth}\centering \rotatebox{90}{Fall 3 \quad ohmsch-induktiv}
+    \resizebox{!}{0.5\textheight}{\includegraphics{Tikz/pdf/plot_zeigerdiagramm_rlcs_1.pdf}}\newline $\qquad\omega > \omega_0$
+    \end{minipage}
+\end{minipage}
+}%
+\s{%
+Abbildung \ref{fig:plot:rlcs:zeigerdiagramm} zeigt für alle drei Fälle exemplarisch ein Zeigerdiagramm.
+Gezeigt sind die entstehenden Spannungen über $R$, $L$ und $C$, sowie die Gesamtspannung $\underline{U}$ bei einer Anregung mit konstantem Strom $\underline{I}$.
+Die maßstabsgetreuen Längenverhältnisse $\frac{U_L}{U_C}$ entsprechen: $\frac{1}{2}$, $\frac{\sqrt{2}}{\sqrt{2}}$, $\frac{2}{1}$.
+%für die Frequenzen $\omega = \frac{\omega_0}{2}$, $\omega = \omega_0$ und $\omega = 2\omega_0$.
+
+\begin{figure}[H]\centering
+    \captionsetup[subfigure]{justification=centering,}%
+    \begin{subfigure}{0.3\textwidth}\centering
+        \includegraphics{Tikz/pdf/plot_zeigerdiagramm_rlcs_2.pdf}
+        \caption{Fall 1: $\omega < \omega_0$\newline(ohmsch-kapazitiv)}
+    \end{subfigure}\hfill%
+    \begin{subfigure}{0.3\textwidth}\centering
+        \includegraphics{Tikz/pdf/plot_zeigerdiagramm_rlcs_3.pdf}
+        \caption{Fall 2: $\omega = \omega_0$\newline(rein ohmsch)}
+    \end{subfigure}\hfill%
+    \begin{subfigure}{0.3\textwidth}\centering
+        \includegraphics{Tikz/pdf/plot_zeigerdiagramm_rlcs_1.pdf}
+        \caption{Fall 3: $\omega > \omega_0$\newline(ohmsch-induktiv)}
+    \end{subfigure}
+    \s{\caption{Zeigerdiagramm RLC-Serienschwingkreis}}
+    \label{fig:plot:rlcs:zeigerdiagramm}
+\end{figure}
+
+Da es sich um einen passiven Schwingkreis handelt (Verbraucherpfeilsystem), 
+ist die Wirkleistung $P$ des Schwingkreis immer positiv mit $P=\Re\{\underline{U}\cdot\underline{I}\}$.
+
+Bei reell eingeprägtem Strom $\underline{I}$ ist der Realanteil der Gesamtspannung $\underline{U}$ daher immer positiv.
+Der Zeiger der Gesamtspannung $\underline{U}$ deutet also entweder in den ersten Quadranten (ohmsch-induktiv), 
+in den vierten Quadranten (ohmsch-kapazitiv) oder auf die reale Achse (rein ohmsch).
+}
+\end{frame}
+
+%.................................................................................................%
+
+% TODO: extra frame Impedanzkurve (basic, Werte ablesen, ohne Güte)
+
+\subsubsection{Fallunterscheidung in Impedanzkurve}
+\begin{frame}\ftx{\subsubsecname}
+\s{%
+Für den Reihenschwingkreis aus Abbildung \ref{fig:circ:rlcs} ergibt sich die Impedanz zu:
+\begin{equation}
+    \begin{aligned}\underline{Z}
+        &= R + \mathrm{j}\left(X_L + X_C\right) \\
+        &= R + \mathrm{j}\left(\omega L - \frac{1}{\omega C}\right)
+    \end{aligned}
+\end{equation}
+
+Die kapazitive Reaktanz (hyperbolisch) überwiegt für Frequenzen unterhalb der Resonanzfrequenz, 
+die induktive Reaktanz (linear) überwiegt für Frequenzen oberhalb der Resonanzfrequenz
+wie in Gleichung \ref{eq:rlcs:fallunterscheidung} gezeigt ist. 
+
+Abbildung \ref{fig:plot:rlcs:impedanzkurve} zeigt die Impedanzkurve eines RLC-Serienschwingkreises
+in Abhängigkeit der Frequenz bezogen auf die Resonanzfrequenz $\sfrac{f}{f_0}$ äquivivalent $\sfrac{\omega}{\omega_0}$.
+Gezeigt sind die Beträge der Impedanz $|\underline{Z}|$, der Reaktanz $|X|$,
+der Reaktanz der Induktivität $|X_L|$, der Reaktanz der Kapazität $|X_C|$ und des ohmschen Widerstandes $R$.
+
+\begin{figure}[H]\centering
+    \includegraphics{Tikz/pdf/plot_rlcs_impedanzkurve.pdf}
+    \caption[Impedanzkurve RLC-Serienschwingkreis]{Impedanzkurve RLC-Serienschwingkreis\newline mit $R=10\ \Omega$, $L=10\ \mathrm{mH}$, $C=10\ \mu\mathrm{F}$}
+    \label{fig:plot:rlcs:impedanzkurve}
+\end{figure}
+
+Wie in der Impedanzkurve zu erkennen ist, ist die Impedanz im Resonanzfall rein ohmsch und entspricht dem ohmschen Widerstand $R$:
+\begin{equation}\label{eq:rlcs:z0}
+    \underline{Z}_0 = R
+\end{equation}
+
+Die Reaktanz der Induktivität $X_L$ (positiv) und die Reaktanz der Kapazität $X_C$ (negativ) heben sich im Resonanzfall auf (Schnittpunkt der Kurven).
+Die Beträge beider Reaktanzen sind im Resonanzfall gleich und entsprechen dem Kennwiderstand $X_k$:
+
+\begin{equation}\label{eq:rlcs:xk}
+    \begin{aligned}
+        X_k &= |X_{L,0}| = |X_{C,0}| = \sqrt{\frac{L}{C}} \\
+        &= \omega_0 L \ \ = \frac{1}{\omega_0 C} 
+    \end{aligned}
+\end{equation}
+
+Zu erkennen ist noch, dass der Betrag der Impedanz sich für sehr niedrige Frequenzen $\omega << \omega_0$ 
+dem kapazitiven Verlauf annähert mit $\lim_{\omega\rightarrow 0}|Z|=|X_C|$ und für sehr hohe Frequenzen $\omega >> \omega_0$
+dem induktiven Verlauf annähert mit $\lim_{\omega\rightarrow \infty}|Z|=|X_L|$.
+}
+\b{%
+\begin{minipage}{0.3\textwidth}%
+\resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2.pdf}}
+\begin{align}
+    \intertext{\small Resonanzbedingung}
+    \onslide<1->{\Im\{\underline{Z}\} &\overset{!}= 0}\\
+    \intertext{\small Resonanzfrequenz}
+    \onslide<1->{\omega_0 &= \frac{1}{\sqrt{LC}}}\\
+    \intertext{\small Resonanzimpedanz}
+    \onslide<1->{\underline{Z}_0 &= R}
+\end{align}
+\end{minipage}\hfill%
+\begin{minipage}{0.65\textwidth}\centering
+    \begin{equation}
+        \smash{\underline{Z} = R + \mathrm{j}\left(\omega L - \frac{1}{\omega C}\right)}
+    \end{equation}
+    \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcs_impedanzkurve.pdf}}
+    \begin{equation}
+        \smash{X_k = |X_{L,0}| = |X_{C,0}| = \sqrt{\frac{L}{C}}}
+    \end{equation}
+\end{minipage}
+}
+\end{frame}
+
+%.................................................................................................%
+
+\subsubsection[Resonanzkurve und Gütefaktor]{Resonanzkurve und Gütefaktor eines RLC-Reihenschwingkreises}
+\begin{frame}[t]\ftx{\subsubsecname}
+\s{%
+Die Impedanz eines RLC-Serienschwingkreises lässt wie in Gleichung \ref{eq:rlcs:z} über die 
+Bauteilgrößen $R$, $L$ und $C$ in Abhängigkeit der Frequenz $\omega$ ausdrücken:
+
+\begin{equation}
+    \underline{Z} = R + \mathrm{j}\left(\omega L - \frac{1}{\omega C}\right)
+\end{equation}
+
+Mithilfe der Resonanzkreisfrequenz aus Gleichung \ref{eq:rlcs:w0} kann die Kreisfrequenz auf diese normiert werden.
+Hierfür werden die $\omega$ der Reaktanz-Terme mit $\omega_0$ erweitert ($\omega=\omega\frac{\omega_0}{\omega_0}$).
+Dadurch lassen sich die Reaktanzen $X_L$ und $X_C$ mithilfe des Kennwiderstandes $X_k$ aus Gl. \ref{eq:rlcs:xk} ausdrücken:
+
+\begin{equation}\label{eq:rlcs:zxk}
+    \begin{aligned}
+    \underline{Z}
+    &= R + \mathrm{j}\left( \omega L \frac{\omega_0}{\omega_0} - \frac{1}{\omega C}\frac{\omega_0}{\omega_0}\right)\\
+    &= R + \mathrm{j}\left( X_{L,0} \frac{\omega}{\omega_0} + X_{C,0} \frac{\omega}{\omega_0}\right)\\
+    &= R + \mathrm{j}\left( \frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right) X_k
+    \end{aligned}
+\end{equation}
+
+Dabei gilt:
+
+\begin{align}
+    X_L &= +X_k \frac{\omega}{\omega_0} &= +\sqrt{\frac{L}{C}}\cdot\frac{\omega \sqrt{LC}}{1} &= \omega L &&\text{(linear)}\label{eq:rlcs:xlw0}\\
+    X_C &= -X_k \frac{\omega_0}{\omega} &= -\sqrt{\frac{L}{C}}\cdot\frac{1}{\omega \sqrt{LC}} &= -\frac{1}{\omega C} &&\text{(hyperbolisch)}\vphantom{\Big|}\label{eq:rlcs:xcw0}\\
+    X_k &= \sqrt{\frac{L}{C}}&\text{mit}\quad\omega_0 &= \frac{1}{\sqrt{LC}} &&\text{(konstant)}\label{eq:rlcs:xkw0}
+\end{align}
+
+\index{Güte}%
+Wie in Gleichung \ref{eq:q:kennwiderstand} konstatiert, ist die Güte $Q$ eines Reihenschwingkreises 
+das Verhältnis dessen Kennwiderstandes $X_k$ zum dessen ohmschen Widerstand $R$. 
+Dadurch lässt sich die Impedanz des Schwingkreises normiert auf dessen Kennwiderstand $X_k$ mithilfe der Güte $Q$ ausdrücken:
+
+\begin{equation}\label{eq:rlcs:znorm}
+    \frac{\underline{Z}}{X_k} = \frac{1}{Q} + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right) \vphantom{\Big|}
+    \qquad\text{mit}\quad Q = \frac{X_k}{R}
+\end{equation}
+
+\index{relative Verstimmung}%
+Der Term $\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}$ wird auch als relative Verstimmung $\nu_r$ bezeichnet.\cite{hagmann}
+
+Abbildung \ref{fig:plot:rlcs:resonanzkurve:impedanz} zeigt exemplarisch mehrere Resonanzkurven eines RLC-Serienschwingkreises für unterschiedliche Gütefaktoren $Q$ zum Vergleich.
+Die y-Achse zeigt den Impedanzbetrag normiert auf den Kennwiderstand $X_k$ und die x-Achse zeigt die Frequenz normiert auf die Resonanzfrequenz $\omega_0$. 
+
+\fu{\includegraphics{Tikz/pdf/plot_rlcs_impedanzkurve_guete.pdf}}{Resonanzkurve der Impedanz, RLC-Serienschwingkreis, Vergleich Güten\label{fig:plot:rlcs:resonanzkurve:impedanz}}
+%\begin{figure}[H]\centering
+%    \begin{subfigure}{\textwidth}\centering
+%        \includegraphics{Tikz/pdf/plot_rlcs_impedanzkurve_guete_noxaxis.pdf}
+%    \end{subfigure}
+%    \begin{subfigure}{\textwidth}\centering
+%        \includegraphics{Tikz/pdf/plot_rlcs_phikurve_guete.pdf}
+%    \end{subfigure}
+%    \caption{Resonanzkurve der Impedanz und Phase eines RLC-Serienschwingkreis\newline Vergleich von Güten}
+%    \label{fig:plot:rlcs:resonanzkurve}
+%\end{figure}
+Im Bereich der Resonanzfrequenz zeigt sich der deutlichste Unterschied der einzelnen Impedanzkurven für unterschiedliche Gütefaktoren.
+Wie in Gleichung \ref{eq:rlcs:z0} gezeigt ist, gilt im Resonanzfall: $Z_0 = R$.
+
+Eine hohe Güte bedeutet, dass der Schwingkreis bei Resonanzfrequenz eine sehr geringe Impedanz bezogen auf den Kennwiderstand $X_k$ aufweist.
+Der Gütefaktor ist daher auch Maß für die Schwingungsfähigkeit des Schwingkreises beziehungsweise umgekehrt für die Dämpfung.
+
+Dabei gilt für den Serienschwingkreis:
+\begin{equation}
+    Q = \frac{X_k}{R} = \frac{\sqrt{\frac{L}{C}}}{R}
+\end{equation}
+
+Für Frequenzen weit unterhalb der Grenzfrequenz $\omega << \omega_0$ und weit oberhalb $\omega >> \omega_0$
+dominieren die Blindanteile der Impedanz wie in Kapitel \ref{sec:resonanzkreise:rlcs} gezeigt ist. 
+Daher ist der Einfluss der Güte auf die Impedanz bei diesen Frequenzen gering (Annäherung der Kurven).
+
+\fu{\includegraphics{Tikz/pdf/plot_rlcs_phikurve_guete.pdf}}{Resonanzkurve der Phase, RLC-Serienschwingkreis, Vergleich Güten\label{fig:plot:rlcs:resonanzkurve:phi}}
+
+Abbildung \ref{fig:plot:rlcs:resonanzkurve:phi} zeigt die Phasenkurve des Schwingkreises für unterschiedliche Güten mit $\varphi = \varphi_U - \varphi_I$.
+Für Frequenzen deutlich unterhalb der Resonanzfrequenz $\omega << \omega_0$ ist die Phasenverschiebung $\varphi$ nahezu $-90^\circ$ (rein kapazitiv).
+Für Frequenzen deutlich oberhalb der Resonanzfrequenz $\omega >> \omega_0$ ist die Phasenverschiebung $\varphi$ nahezu $+90^\circ$ (rein induktiv).
+
+Je höher die Güte (Resonanzschärfe), desto steiler ist der Übergang im Bereich der Resonanzfrequenz von kapazitiv zu induktiv.
+}%
+\b{%
+\begin{minipage}{0.3\textwidth}%
+\resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2.pdf}}
+\begin{align}
+    \underline{Z} &= R + \mathrm{j}\left(\omega L - \frac{1}{\omega C}\right)\\
+    %    \intertext{\small Frequenz normiert}
+    %\underline{Z} &= R + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)X_k\\
+        \intertext{normiert}
+    \frac{\underline{Z}}{X_k} &= \frac{1}{Q} + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)\\
+        \intertext{Güte und Kennwiderstand}
+    Q &= \frac{X_k}{R} \qquad X_k = \sqrt{\frac{L}{C}}
+\end{align}
+\end{minipage}\hfill%
+\begin{minipage}{0.65\textwidth}\centering
+    \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcs_impedanzkurve_guete_noxaxis.pdf}}
+    \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcs_phikurve_guete.pdf}}
+\end{minipage}
+}%
+\end{frame}
+
+%-------------------------------------------------------------------------------------------------%
+\subsubsection[Spannungsresonanz]{Spannungsresonanz am Beispiel eines RLC-Reihenschwingkreises}
+\begin{frame}\ftx{\subsubsecname\ I}
+\index{Resonanz, >Spannungs- (spannungsbezogen)}%
+\s{%
+    Bei Anregung eines Serienschwingkreises mit einer konstanten Spannungsquelle $\underline{U}_q$ 
+    kann es zu einer \textbf{Spannungsresonanz} kommen, die sich durch Überspannungen an $L$ und $C$ auszeichnet.
+
+    Untersucht sei der RLC-Serienschwingkreis aus Abbildung \ref{fig:circ:rlcs} mit der Impedanz $\underline{Z}$ aus Gleichung \ref{eq:rlcs:z}.
+    Die Spannung $\underline{U}$ über den Schwingkreis entspricht der konstanten Quellenspannung $\underline{U}_q$ an dessen Außenklemmen
+    wie in Abbildung \ref{fig:circ:rlcs:uq} gezeigt.
+
+    \fu{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2_const_u.pdf}}{Schaltbild RLC-Serienschwingkreis mit konstanter Spannungsquelle\label{fig:circ:rlcs:uq}}
+
+    Mit der Knoten- und Maschengleichung:
+
+    \begin{equation*}\begin{aligned}    % U_L = Uq * (Zk * w/w0)/(sqrt(R^2 + Zk^2 * (w/w0 - w0/w)^2)) 
+        \underline{U} &= \underline{U}_R + \underline{U}_L + \underline{U}_C = \underline{U}_q\\
+        \underline{I} &= \underline{I}_R = \underline{I}_L = \underline{I}_C
+    \end{aligned}\end{equation*}
+
+    und der Bauteil-Impedanzen folgen die komplexen Spannungsteiler:
+
+    \begin{align*}
+        \frac{\underline{U}_R}{\underline{U}} &= \frac{\underline{I}}{\underline{I}}
+            \cdot \frac{R}{R+\mathrm{j}\left(\omega L-\frac{1}{\omega C}\right)}\\
+        \frac{\underline{U}_L}{\underline{U}} &= \frac{\underline{I}}{\underline{I}}
+            \cdot \frac{\mathrm{j}\omega L}{R+\mathrm{j}\left(\omega L-\frac{1}{\omega C}\right)}\\
+        \frac{\underline{U}_C}{\underline{U}} &= \frac{\underline{I}}{\underline{I}}
+            \cdot \frac{\frac{1}{\mathrm{j}\omega C}}{R+\mathrm{j}\left(\omega L-\frac{1}{\omega C}\right)}
+    \end{align*}
+
+    Nach Kürzen der Ströme bleiben die frequenzvariablen Impedanzterme. 
+    Die einzelnen Spannungen ergeben sich durch deren Multiplikation mit der Spannung $\underline{U}$.
+
+    Um die frequenzabhängigen Spannungen zu normieren, lassen sich die Reaktanzen wie in Gleichung \ref{eq:rlcs:xk} 
+    mithilfe des Kennwiderstandes $X_k$ und der Resonanzkreisfrequenz $\omega_0$ aus Gleichung \ref{eq:rlcs:w0} ausdrücken. 
+    Mit der so normierten Impedanz aus Gleichung \ref{eq:rlcs:zxk} ergibt sich für die Spannungsteiler die Terme:
+
+    \begin{align*}
+        \frac{\underline{U}_R}{\underline{U}} &= 
+            \frac{R}{R+\mathrm{j}\left(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\right)X_k}\\
+        \frac{\underline{U}_L}{\underline{U}} &=
+            \frac{\mathrm{j}X_k\frac{\omega}{\omega_0}}{R+\mathrm{j}\left(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\right)X_k}\\
+        \frac{\underline{U}_C}{\underline{U}} &= 
+            \frac{-\mathrm{j}X_k\frac{\omega_0}{\omega}}{R+\mathrm{j}\left(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\right)X_k}
+    \end{align*}
+
+    Abbildung \ref{fig:plot:rlcs:spannungsresonanz} zeigt die Beträge der Spannungen $U_R$, $U_L$, $U_C$ des RLC-Serienschwingkreises 
+    in Abhängigkeit der Kreisfrequenz normiert auf die Resonanzkreisfrequenz.
+    Die Normierung auf $\omega_0$ ermöglicht zum Beispiel den Vergleich der Güte von Reihenschwingkreisen mit unterschiedlichen Resonanzfrequenzen.
+
+    \fu{\includegraphics{Tikz/pdf/plot_rlcs_spannung_resonanz.pdf}}%
+    {Resonanzkurve der Spannung am RLC-Serienschwingkreis\newline
+    $U_q=10\ \mathrm{V},\ Q=3,162$\label{fig:plot:rlcs:spannungsresonanz}}
+
+    Wie in der Abbildung zu erkennen ist, ergibt sich im Bereich der Resonanzfrequenz $\omega = \omega_0$ 
+    eine deutlich höhere Spannung über $L$ und $C$ im Vergleich zum ohmschen Widerstand $R$. 
+    
+    Das Maß der Spannungsüberhöhung bei der Resonanzkreisfrequenz wird durch die Güte ausgedrückt. 
+    Wie in Gleichung \ref{eq:q:spannung} definiert ist, entspricht sie dem Verhältnis von Überspannung der Scheinwiderstände ($X_L$, $X_C$) $U_{L,0}$, $U_{C,0}$
+    zu Spannung des Wirkwiderstandes ($R$) $U_{R,0}$ im Resonanzfall ($omega = \omega_0$). 
+
+    \begin{equation}
+        Q = \frac{U_{L,0}}{U} = \frac{U_{C,0}}{U} = \frac{X_k}{R}
+    \end{equation}
+
+    Wie in der Graphik zu erkennen ist, sind die Spannungsbeträge $|U_L|$ und $|U_C|$ nicht exakt bei der Resonanzfrequenz maximal!
+
+    \textbf{Exkurs: Herleitung der Güte über die Blindleistung}
+
+    Allgemein gilt für die Scheinleistung eines Bauteiles:
+    \begin{align}\label{eq:ql}\underline{S}
+        &= S \cdot \mathrm{e}^{\mathrm{j}\varphi} \\
+        &= U \cdot I \cos{\varphi} + \mathrm{j} U \cdot I \sin{\varphi} \\
+        &= P \cdot \mathrm{j} Q
+    \end{align}
+
+    Induktivität und Kapazität können als Scheinwiderstände lediglich Blindleistung aufnehmen und abgeben. 
+    Mit $\varphi_L = +90\degree$ und $\varphi_C = -90\degree$ folgt für den Resonanzfall für die Blindleistung beider Bauteile:
+
+    \begin{equation}\label{eq:blindleistung:rlcs}
+        \begin{aligned}
+            Q_L &= U_L I_L \cdot \sin{(+\frac{\pi}{2})} = + U_L \cdot I_L \vphantom{\big|}\\
+            Q_C &= U_C I_C \cdot \sin{(-\frac{\pi}{2})} = - U_L \cdot I_L \vphantom{\big|}
+        \end{aligned}
+    \end{equation}
+
+    Bei Anregung mit einer konstanten Spannungsquelle $\underline{U}_q$ fließt im Reihenschwingkreis
+    der gleiche Strom $\underline{I}$ durch alle Bauteile. 
+
+    Mit der allgemeinen Definition der Güte über die Blindleistung in Gleichung \ref{eq:q:leistung}
+    der Induktivität $Q_L$ respektive der Kapazität $Q_C$ und der Wirkleistung $P$ des Schwingkreises 
+    im Resonanzfall folgt für den Reihenschwingkreis:
+
+    \begin{equation}\label{eq:rlcs:q:guete}
+        \begin{aligned}
+            Q &= \frac{|Q_{L,0}|}{P_0} = \frac{U_{L,0}I_L}{U_{R,0}I_R} = \frac{U_{L,0}I}{U_{R,0}I} = \frac{U_{L,0}}{U}\\
+            &= \frac{|Q_{C,0}|}{P_0} = \frac{U_{C,0}I_C}{U_{R,0}I_R} = \frac{U_{C,0}I}{U_{R,0}I} = \frac{U_{C,0}}{U}
+        \end{aligned}
+    \end{equation}
+
+    Die Güte entspricht deshalb wie in Gleichung \ref{eq:rlcs:q:guete} gezeigt und in Gleichung \ref{eq:q:spannung} konstatiert, 
+    dem Verhältnis der Überspannung der Scheinwiderstände ($L$, $C$) gegenüber der Spannung des Wirkwiderstandes ($R$) im Resonanzfall.
+
+    Über die Spannungsteiler-Regel lässt sich die Güte durch einsetzen der Reaktanzen für den Resonanzfall auch als Verhältnis von 
+    Kennwiderstand zu Wirkwiderstand ausdrücken wie in Gleichung \ref{eq:q:kennwiderstand} konstatiert. 
+    Mit $X_k$ aus Gl. \ref{eq:rlcs:xk} und $\underline{Z}$ aus Gl. \ref{eq:rlcs:z} gilt:
+
+    \begin{equation}\begin{aligned}
+        \frac{U_{L,0}}{U}
+        &= \frac{\redcancel{I}}{\redcancel{I}} \cdot \frac{|\mathrm{j}X_{L,0}|}{\big|R + \mathrm{j}(X_{L,0}+X_{C,0})\big|}\vphantom{\Bigg|}\\
+        &= \frac{|X_{L,0}|}{ \big|R + \mathrm{j}( \underbrace{X_{L,0} + X_{C,0}}_{=\mathrlap{\ 0}})\big|}\vphantom{\Bigg|}\\
+        &= \frac{|X_{L,0}|}{R} = \frac{X_k}{R} = Q
+    \end{aligned}\end{equation}
+}
+\b{%
+\begin{minipage}{0.3\textwidth}%
+\resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2_const_u.pdf}}
+\begin{align}
+    %\underline{U} &= \underline{U}_R + \underline{U}_L + \underline{U}_C = \underline{U}_q\\
+    %\underline{I} &= \underline{I}_R = \underline{I}_L = \underline{I}_C \\
+        \intertext{Spannungsteiler (Bsp.)}
+    \frac{\underline{U}_L}{\underline{U}} &= \frac{\mathrm{j}\left(\frac{\omega}{\omega_0}\right)}{\frac{1}{Q}+\mathrm{j}\left(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\right)}\\
+        \intertext{Güte und Überspannung}
+    Q &= \frac{X_k}{R} = \frac{U_{L,0}}{U} = \frac{U_{C,0}}{U}
+\end{align}
+\end{minipage}\hfill%
+\begin{minipage}{0.65\textwidth}\centering
+    \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcs_spannung_resonanz.pdf}}\newline% TODO RENAME
+    $U_q(\omega_0) \Rightarrow$ Überspannung!
+\end{minipage}
+}
+\end{frame}
+
+\b{%
+\begin{frame}{Nebenrechnung}
+\begin{minipage}{0.3\textwidth}%
+    \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2_const_u.pdf}}
+    \begin{align}
+        \underline{U} &= \underline{U}_R + \underline{U}_L + \underline{U}_C = \underline{U}_q\\
+        \underline{I} &= \underline{I}_R = \underline{I}_L = \underline{I}_C \\
+        \underline{Z} &= R + \mathrm{j}(\omega L - \frac{1}{\omega C}) \\
+        \mathllap{\Im\{\underline{Z}\}} &\overset{!}{=} 0 \Rightarrow \omega_0 =\frac{1}{\sqrt{LC}}\\
+        X_k &= |X_{L,0}| = |X_{C,0}| =  \mathrlap{\sqrt{\frac{L}{C}}}\\
+        Q &= \frac{U_{L,0}I}{U_{R,0} I} = \frac{U_{L,0}}{U_q} = \frac{X_k}{R}
+    \end{align}
+\end{minipage}\hfill%
+\begin{minipage}{0.65\textwidth}\centering
+    \begin{align*}
+        \frac{\underline{U}_R}{\underline{U}} &= \frac{\underline{I}}{\underline{I}}
+            \cdot \frac{R}{R+\mathrm{j}\left(\omega L-\frac{1}{\omega C}\right)}\\
+        \frac{\underline{U}_L}{\underline{U}} &= \frac{\underline{I}}{\underline{I}}
+            \cdot \frac{\mathrm{j}\omega L}{R+\mathrm{j}\left(\omega L-\frac{1}{\omega C}\right)}\\
+        \frac{\underline{U}_C}{\underline{U}} &= \frac{\underline{I}}{\underline{I}}
+            \cdot \frac{\frac{1}{\mathrm{j}\omega C}}{R+\mathrm{j}\left(\omega L-\frac{1}{\omega C}\right)}\\
+        \intertext{normiert}
+        \frac{\underline{U}_R}{\underline{U}} &= 
+            \frac{\sfrac{1}{Q}}{\frac{1}{Q}+\mathrm{j}\left(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\right)}\\
+        \frac{\underline{U}_L}{\underline{U}} &=
+            \frac{+\mathrm{j}\frac{\omega}{\omega_0}}{\frac{1}{Q}+\mathrm{j}\left(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\right)}\\
+        \frac{\underline{U}_C}{\underline{U}} &= 
+            \frac{-\mathrm{j}\frac{\omega_0}{\omega}}{\frac{1}{Q}+\mathrm{j}\left(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\right)}
+    \end{align*}
+\end{minipage}
+\end{frame}
+}
+
+%-------------------------------------------------------------------------------------------------%
+\subsubsection{Stromkurve des RLC-Reihenschwingkreises}\label{sec:resonanzkreise:rlcs:stromkurve}
+\begin{frame}\ftx{\subsubsecname\ II}
+\s{
+    Bei Anregung mit konstanter Spannung $\underline{U}_q$ ergibt sich für den RLC-Serienschwingkreis aus Abbildung \ref{fig:circ:rlcs:uq}
+    ein frequenzabhängiger Stromverlauf. Dieser ist betragsmäßig in Abbildung \ref{fig:plot:rlcs:uq:i} für verschiedene Gütefaktoren $Q$ dargestellt.
+   
+    \fu{\includegraphics{Tikz/pdf/plot_rlcs_stromkurve_uq_guete.pdf}}{%
+        Stromkurve des RLC-Serienschwingkreises bei konstanter Spannung\newline$X_k=31,6\ \Omega,\ U_q=10\ \mathrm{V},\ Q=var.$%
+        \label{fig:plot:rlcs:uq:i}%
+    }%
+    
+    Der Strombetrag wird maximal bei Resonanzfrequenz wie der Graphik zu entnehmen ist.
+    Wie in Abbildung \ref{fig:plot:rlcs:impedanzkurve} gezeigt ist, 
+    ist die Impedanz im Resonanzfall minimal und entspricht dem ohmschen Widerstand $R$.
+
+    Allgemein gilt für den Strom $\underline{I}$ der folgende Zusammenhang mit der Impedanz $\underline{Z}$ 
+    aus Gleichung \ref{eq:rlcs:zxk} und Resonanzfrequenz $\omega_0$ aus Gleichung \ref{eq:rlcs:w0}:
+
+    \begin{equation}
+        \begin{aligned}
+            \underline{I} 
+            &= \frac{\underline{U}}{\underline{Z}} \\
+            &= \frac{\underline{U}_q}{R + \mathrm{j}\left(\omega L - \frac{1}{\omega C}\right)} \\
+            &= \frac{\underline{U}_q}{R + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)X_k}
+        \end{aligned}
+    \end{equation}
+
+    Der Maximalstrom $I_0$ ergibt sich für eine reelle Quellenspannung $\underline{U}_q = U_q$ 
+    aus dem Teiler der Quellenspannung durch den Widerstand $R$: 
+
+    \begin{equation}
+        I_0 = \frac{U_q}{R} \qquad \text{mit} \quad \underline{Z}_0 = R
+    \end{equation}
+
+    Das heißt sowohl der Gesamtstrom $\underline{I}$ als auch dessen Wirkanteil $\Re\{\underline{I}\}$ werden durch den Widerstand $R$ begrenzt.
+
+    Für den Strom $\underline{I}$ bezogen auf den Maximalstrom $I_0$ gilt mit der Güte aus Gleichung \ref{eq:rlcs:q:guete}:
+
+    \begin{equation}\label{eq:rlcs:inorm}
+        \begin{aligned}
+            \frac{\underline{I}}{I_0} 
+            &= \frac{U_q}{\underline{Z}} \cdot \frac{R}{U_q} 
+            =  \frac{R}{\underline{Z}}\\
+            &= \frac{1}{1 + \mathrm{j} \left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right) Q}
+        \end{aligned}
+    \end{equation}
+}
+\b{%
+    \begin{minipage}{0.3\textwidth}%
+    \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2_const_u.pdf}}
+    \begin{align}
+        \intertext{Strom}
+        %\underline{I} &= \frac{\underline{U}_q}{\underline{Z}}\\
+        \underline{I} &= \frac{I_0}{1 + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)Q}\\
+        \intertext{Maximalstrom, Güte}
+        \underline{I}_0 &= \frac{\underline{U}_q}{R}
+        \qquad Q = \frac{X_k}{R}        
+    \end{align}
+    \end{minipage}\hfill%
+    \begin{minipage}{0.65\textwidth}\centering
+        \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcs_stromkurve_uq_guete.pdf}}\newline
+        Strom maximal bei $\omega_0$
+
+        Begrenzung durch $R$
+    \end{minipage}
+}
+\end{frame}
+
+\b{%
+\begin{frame}\ftx{Nebenrechnung}%
+\begin{minipage}{0.3\textwidth}%
+    \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2_const_u.pdf}}
+    \begin{align}
+        \underline{Z} &= R + \mathrm{j}(X_L + X_C) \\
+        X_L &= +X_k \frac{\omega}{\omega_0} = \omega L \\
+        X_C &= -X_k \frac{\omega_0}{\omega} = -\frac{1}{\omega C}\\
+        X_k &= |X_{L,0}| = |X_{C,0}| = \sqrt{\frac{L}{C}}\\
+        Q &= \frac{X_k}{R} \quad \omega_0 = \frac{1}{\sqrt{LC}}
+    \end{align}
+\end{minipage}\hfill%
+\begin{minipage}{0.65\textwidth}\centering
+    \begin{equation}
+        \begin{aligned}
+    \underline{I} &= \frac{\underline{U}_q}{\underline{Z}} \\
+    &= \frac{\underline{U}_q}{R + \mathrm{j}\left(\omega L - \frac{1}{\omega C}\right)} \\
+    &= \frac{\underline{U}_q}{R + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)X_k} \\
+    &= \frac{\underline{U}_q}{R} \cdot \frac{1}{1 + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)\frac{X_k}{R}} \\
+    &= \underline{I}_0 \cdot \frac{1}{1 + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)Q}
+        \end{aligned}
+    \end{equation}
+\end{minipage}
+\end{frame}
+}
+
+%-------------------------------------------------------------------------------------------------%
+\subsubsection{Spannungskurve des RLC-Reihenschwingkreis}
+\begin{frame}\ftx{\subsubsecname}
+% RLCs an Iq
+\b{%
+    \begin{minipage}{0.3\textwidth}%
+    \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2_const_i.pdf}}
+    \begin{align}
+        \intertext{Stromquelle}
+        \underline{I} &= I_q\\
+        \intertext{Spannung}
+        \underline{U} &= I_q \cdot \underline{Z}\\
+        \intertext{Impedanz}
+        \underline{Z} &= R + \mathrm{j}X
+    \end{align}
+    \end{minipage}\hfill%
+    \begin{minipage}{0.65\textwidth}\centering
+        \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcs_impedanzkurve_guete.pdf}}\newline
+        Spannungskurve $\sim$ Impedanzkurve
+    \end{minipage}
+}%
+\s{%
+    Wird ein RLC-Serienschwingkreis mit einem konstanten Strom $\underline{I}_q$ wie in Abbildung \ref{fig:circ:rlcs:iq}
+    angeregt, ergeben sich Bauteilspannungen.
+
+    \fu{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2_const_i.pdf}}{Schaltbild RLC-Serienschwingkreis mit konstanter Stromquelle\label{fig:circ:rlcs:iq}}
+
+    Die Bauteilspannungen sind dabei direkt proportional zu den jeweiligen Impedanzen. Für die Gesamtspannung gilt:
+
+    \begin{equation*}
+        \underline{U} = \underline{I}_q \cdot \underline{Z}
+    \end{equation*}
+
+    Die Spannungskurve entspricht daher exakt dem Verlauf der Impedanzkurve in Abbildung \ref{fig:plot:rlcs:resonanzkurve:impedanz}.
+}%
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RLC-Parallelschwingkreis - Resonanzverhalten
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Viel Copy-Paste von Kapitel "RLC-Serienschwingkreis - Resonanzverhalten"
+\subsection{RLC-Parallelschwingkreis - Resonanzverhalten}\label{sec:resonanzkreise:rlcp}
+\index{Schwingkreis>RLC-Parallelschwingkreis}%
+\begin{frame}\ftx{\subsecname}%
+    \b{%
+        \begin{minipage}{0.4\textwidth}%
+        \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2.pdf}}\newline
+        
+        \begin{tcolorbox}[colback=white,colframe=GETgreen!25!black,toprule=0.5pt,rightrule=0.5pt,bottomrule=0.5pt,leftrule=0.5pt,
+            title=\textbf{Resonanzbedingung (allg.)},center title,colbacktitle=GETgreen!5!white,coltitle=black,titlerule=0.5pt,left=2pt,right=2pt]
+            \centering
+            Phasenverschiebung zwischen\newline
+            $\underline{U}$ und $\underline{I}$ entspricht $\varphi = 0$.\newline
+            Oder:
+            \begin{equation}
+                \Im\left\{\frac{\underline{I}}{\underline{U}}\right\} =
+                \Im\left\{\underline{Y}\right\} \overset{!}{=} 0
+            \end{equation}
+        \end{tcolorbox}
+        \end{minipage}\hfill%
+        \begin{minipage}{0.55\textwidth}
+            \begin{equation}
+                \underline{Y} = G + \mathrm{j}\Big(\underbrace{\omega C - \frac{1}{\omega L}}_{=\mathrlap{\ 0\quad\text{für}\ \omega=\omega_0}}\Big)
+            \end{equation}
+            \begin{tcolorbox}[colback=white,colframe=GETgreen!25!black,
+                toprule=0.5pt,bottomrule=0.5pt,rightrule=0.5pt,leftrule=0.5pt,
+                top=2pt,bottom=2pt,left=2pt,right=2pt,middle=2pt]
+                Fall 1: $\mathbf{\displaystyle{\omega < \omega_0}}$ 
+                \tcblower
+                $\rightarrow\left(\omega C - \frac{1}{\omega L}\right) < 0$ \hfill ohmsch-induktiv
+            \end{tcolorbox}
+        
+            \begin{tcolorbox}[colback=white,colframe=GETgreen!25!black,
+                toprule=0.5pt,bottomrule=0.5pt,rightrule=0.5pt,leftrule=0.5pt,
+                top=2pt,bottom=2pt,left=2pt,right=2pt,middle=2pt]
+                Fall 2: $\mathbf{\displaystyle{\omega = \omega_0}}$ \hfill (Resonanzfall)
+                \tcblower
+                $\rightarrow\left(\omega C - \frac{1}{\omega L}\right) = 0$ \hfill rein ohmsch
+            \end{tcolorbox}
+        
+            \begin{tcolorbox}[colback=white,colframe=GETgreen!25!black,
+                toprule=0.5pt,bottomrule=0.5pt,rightrule=0.5pt,leftrule=0.5pt,
+                top=2pt,bottom=2pt,left=2pt,right=2pt,middle=2pt]
+                Fall 3: $\mathbf{\displaystyle{\omega > \omega_0}}$ 
+                \tcblower
+                $\rightarrow\left(\omega C - \frac{1}{\omega L}\right) > 0$ \hfill ohmsch-kapazitiv
+            \end{tcolorbox}
+        \end{minipage}
+        }%
+        \s{%
+            In diesem Unterkapitel wird das Resonanzverhalten eines RLC-Parallelschwingkreis untersucht.
+            Der Schwingkreis ist in Abbildung \ref{fig:circ:rlcp} gezeigt und entspricht dem idealen LC-Parallelschwingkreis
+            aus Beispiel \ref{bsp:resonanz:lc} mit einem zusätzlichen parallelen ohmschen Widerstand $R$.
+            
+            Die Untersuchung erfolgt analog zu jener für den RLC-Serienschwingkreis in Kapitel \ref{sec:resonanzkreise:rlcs}.
+            Im Parallelschwingkreis wird dabei vornehmlich die Admittanz $\underline{Y}$ betrachtet.
+            Dadurch ergeben sich ähnliche Fallunterscheidungen und Rechenwege wie im Serienschwingkreis,
+            wobei die Rollen von Strom und Spannung, von Induktivität und Kapazität, sowie von Widerstand und Leitwert vertauscht sind:
+
+            \begin{equation}
+                \underline{Y} = \underline{Z}^{-1} = G + \mathrm{j}B = \frac{\underline{I}}{\underline{U}}
+            \end{equation}
+        
+            \fu{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2.pdf}}{Schaltbild RLC-Parallelschwingkreis\label{fig:circ:rlcp}}
+        
+            Die Admittanz $\underline{Y}$ des RLC-Parallelschwingkreis aus Abbildung \ref{fig:circ:rlcp} ist gegeben durch:
+        
+            \begin{align}
+                \underline{I} &= \underline{U} \cdot \left(G + \mathrm{j}B_C + \mathrm{j}B_L\right)\\
+                \underline{Y} &= G + \mathrm{j}\left(\omega C - \frac{1}{\omega L}\right)\label{eq:rlcp:y}
+            \end{align}
+            
+            Im Resonanzfall verschwindet nach Gleichung \ref{eq:resonanzbedingung} der Imaginärteil der Impedanz respektive Admittanz.
+            Folglich heben sich bei dieser Anordnung die Suszeptanzen von Induktivität $B_L$ und Kapazität $B_C$ auf.
+            Durch einsetzen von $\underline{Y}$ in die Resonanzbedingung lässt sich die Resonanzfrequenz $\omega_0$ bestimmen:
+        
+            \begin{equation}\label{eq:rlcp:w0}
+                \begin{aligned}
+                    \Im\{\underline{Y}\} = \left(\omega C - \frac{1}{\omega L}\right) &\overset{!}{=} 0 \\
+                    \omega_0 C - \frac{1}{\omega_0 L} &= 0 &&\Rightarrow& \omega_0 &= \frac{1}{\sqrt{LC}}
+                \end{aligned}
+            \end{equation}
+        
+            Da die Suszeptanz der Kapazität positiv und proportional zur Frequenz ist ($B_C = \omega C \sim \omega$),
+            und da die Suszeptanz der Induktivität negativ und proportional zum Kehrwert der Frequenz ist ($-B_L \sim \frac{1}{\omega}$),
+            überwiegt für Frequenzen unterhalb der Resonanzfrequenz der induktive Anteil und für Frequenzen oberhalb der kapazitive Anteil.
+        
+            Daraus ergibt sich die folgende Fallunterscheidung für den RLC-Serienschwingkreis:
+        
+            \begin{equation}
+                \Im\{\underline{Y}\} =
+            \begin{cases}
+                \omega C - \frac{1}{\omega L} < 0 & \qquad \omega < \omega_0 \qquad\text{ohmsch-induktiv}\vphantom{\Big|}\\
+                \omega C - \frac{1}{\omega L} = 0 & \qquad \omega = \omega_0 \qquad\text{rein ohmsch}\vphantom{\Big|}\\
+                \omega C - \frac{1}{\omega L} > 0 & \qquad \omega > \omega_0 \qquad\text{ohmsch-kapazitiv}\vphantom{\Big|}
+            \end{cases}
+            \label{eq:rlcp:fallunterscheidung}
+            \end{equation}
+        
+            Die Fallunterscheidung wird in Abbildung \ref{fig:plot:rlcp:zeigerdiagramm} anhand eines Zeigerdiagramms 
+            und in Abbildung \ref{fig:plot:rlcp:admittanzkurve} anhand einer Admittanzkurve verdeutlicht.
+        }%
+\end{frame}
+
+%-------------------------------------------------------------------------------------------------%
+
+\subsubsection{Fallunterscheidung im Zeigerdiagramm}
+\begin{frame}[t]\ftx{\subsubsecname}
+    \b{%
+    \begin{minipage}{0.4\textwidth}%
+    \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2_const_u.pdf}}
+    \end{minipage}\hfill%
+    \begin{minipage}{0.6\textwidth}%
+    \begin{align}\underline{I}
+        &= \underline{I}_R\ +\ \underline{I}_L\ +\ \underline{I}_C&
+            \underline{U} &= konst.\\
+        &= \underline{U} \cdot \big[G + \mathrm{j}\big(\underbrace{\omega C - \frac{1}{\omega L}}_{=\mathrlap{\ \Im\{\underline{Y}\}}}\big)\big]&
+            \omega_0 &= \frac{1}{\sqrt{LC}}
+    \end{align}
+    \end{minipage}\vfill
+    \begin{minipage}{\textwidth}\centering
+        \begin{minipage}{0.3\textwidth}\centering \rotatebox{90}{Fall 1 \quad ohmsch-induktiv}
+        \resizebox{!}{0.5\textheight}{\includegraphics{Tikz/pdf/plot_zeigerdiagramm_rlcp_2.pdf}}\newline $\qquad\omega < \omega_0$
+        \end{minipage}\hfill%
+        \begin{minipage}{0.3\textwidth}\centering \rotatebox{90}{Fall 2 \quad rein ohmsch}
+        \resizebox{!}{0.5\textheight}{\includegraphics{Tikz/pdf/plot_zeigerdiagramm_rlcp_3.pdf}}\newline $\qquad\omega = \omega_0$
+        \end{minipage}\hfill%
+        \begin{minipage}{0.3\textwidth}\centering \rotatebox{90}{Fall 3 \quad ohmsch-kapazitiv}
+        \resizebox{!}{0.5\textheight}{\includegraphics{Tikz/pdf/plot_zeigerdiagramm_rlcp_1.pdf}}\newline $\qquad\omega > \omega_0$
+        \end{minipage}
+    \end{minipage}
+    }%
+    \s{%
+    Abbildung \ref{fig:plot:rlcp:zeigerdiagramm} zeigt für alle drei Fälle exemplarisch ein Zeigerdiagramm.
+
+    Gezeigt sind die entstehenden Ströme durch $R$, $L$ und $C$, sowie der Gesamtstrom $\underline{I}$ bei Anregung mit konstanter Spannung $\underline{U}$.
+    Die maßstabsgetreuen Längenverhältnisse $\frac{I_L}{I_C}$ entsprechen: $\frac{1}{2}$, $\frac{\sqrt{2}}{\sqrt{2}}$, $\frac{2}{1}$.
+    %für die Frequenzen $\omega = \frac{\omega_0}{2}$, $\omega = \omega_0$ und $\omega = 2\omega_0$.
+
+    \begin{figure}[H]\centering
+        \captionsetup[subfigure]{justification=centering,}
+        \begin{subfigure}{0.3\textwidth}\centering
+            \includegraphics{Tikz/pdf/plot_zeigerdiagramm_rlcp_2.pdf}
+            \caption{Fall 1: $\omega < \omega_0$\newline(ohmsch-induktiv)}
+        \end{subfigure}\hfill%
+        \begin{subfigure}{0.3\textwidth}\centering
+            \includegraphics{Tikz/pdf/plot_zeigerdiagramm_rlcp_3.pdf}
+            \caption{Fall 2: $\omega = \omega_0$\newline(rein ohmsch)}
+        \end{subfigure}\hfill%
+        \begin{subfigure}{0.3\textwidth}\centering
+            \includegraphics{Tikz/pdf/plot_zeigerdiagramm_rlcp_1.pdf}
+            \caption{Fall 3: $\omega > \omega_0$\newline(ohmsch-kapazitiv)}
+        \end{subfigure}
+        \s{\caption{Zeigerdiagramm RLC-Parallelschwingkreis}}
+        \label{fig:plot:rlcp:zeigerdiagramm}
+    \end{figure}
+
+    Da es sich um einen passiven Schwingkreis handelt (Verbraucherzählpfeilsystem), 
+    ist die Wirkleistung $P$ des Schwingkreises immer positiv mit $P=\Re\{\underline{U}\cdot\underline{I}\}$.
+    
+    Bei angelegter Spannung $\underline{U}$ (mit Phasenwinkel $0$ eingezeichnet) 
+    ist der Realanteil des Gesamtstrom $\underline{I}$ immer positiv.
+    Der Zeiger des Gesamtstrom $\underline{I}$ deutet also entweder in den ersten Quadranten (ohmsch-induktiv), 
+    auf die reale Achse (rein ohmsch) oder in den vierten Quadranten (ohmsch-kapazitiv).
+    }
+\end{frame}
+
+%-------------------------------------------------------------------------------------------------%
+
+\subsubsection{Fallunterscheidung in Admittanzkurve}
+\begin{frame}[t]\ftx{\subsubsecname}
+\s{%
+    Für den Parallelschwingkreis aus Abbildung \ref{fig:circ:rlcp} ergibt sich die Admittanz wie in Gleichung \ref{eq:rlcp:y} zu:
+    \begin{equation}
+        \begin{aligned}\underline{Y}
+            &= G + \mathrm{j}\left(B_C + B_L\right) \\
+            &= G + \mathrm{j}\left(\omega C - \frac{1}{\omega L}\right)
+        \end{aligned}
+    \end{equation}
+    
+    Die induktive Suszeptanz (hyperbolisch) überwiegt für Frequenzen unterhalb der Resonanzfrequenz, 
+    die kapazitive Suszeptanz (linear) überwiegt für Frequenzen oberhalb der Resonanzfrequenz
+    wie in Gleichung \ref{eq:rlcp:fallunterscheidung} gezeigt ist. 
+    
+    Abbildung \ref{fig:plot:rlcp:admittanzkurve} zeigt die Admittanzkurve eines RLC-Parallelschwingkreises
+    in Abhängigkeit der Frequenz bezogen auf die Resonanzfrequenz $\sfrac{f}{f_0}$ äquivalent $\sfrac{\omega}{\omega_0}$.
+    Gezeigt sind die Beträge der Admittanz $|\underline{Y}|$, der Suszeptanz $|B|$,
+    der Suszeptanz der Kapazität $|B_C|$, der Suszeptanz der Induktivität $|B_L|$ und der ohmsche Leitwert $G$.
+    
+    \begin{figure}[H]\centering
+        \includegraphics{Tikz/pdf/plot_rlcp_admittanzkurve.pdf} % TODO WIP
+        \caption[Admittanzkurve RLC-Parallelschwingkreis]%
+        {Admittanzkurve RLC-Parallelschwingkreis\newline mit $R=10\ \Omega$, $L=10\ \mathrm{mH}$, $C=10\ \mu\mathrm{F}$}
+        \label{fig:plot:rlcp:admittanzkurve}
+    \end{figure}
+    
+    Wie in der Admittanzkurve zu erkennen ist, ist die Admittanz im Resonanzfall rein ohmsch und entspricht exakt dem ohmschen Leitwert $G$:
+    \begin{equation}
+        \underline{Y}_0 = G
+    \end{equation}
+    
+    Die Suszeptanzen der Kapazität $B_C$ (positiv) und der Induktivität $B_L$ (negativ) heben sich im Resonanzfall auf (Schnittpunkt der Kurven).
+    Die Beträge beider Suszeptanzen sind im Resonanzfall gleich und entsprechen dem Kennleitwert $B_k$:
+    
+    \begin{equation}\label{eq:rlcp:bk}
+        \begin{aligned}
+            B_k &= |B_{C,0}| = |B_{L,0}| = \sqrt{\frac{C}{L}} \\
+            &= \omega_0 C \ \ = \frac{1}{\omega_0 L} 
+        \end{aligned}
+    \end{equation}
+    
+    Zu erkennen ist noch, dass der Betrag der Admittanz sich für sehr niedrige Frequenzen $\omega << \omega_0$ 
+    dem induktiven Verlauf annähert mit $\lim_{\omega\rightarrow 0}|Y|=|B_L|$ und für sehr hohe Frequenzen $\omega >> \omega_0$
+    dem kapazitiven Verlauf annähert mit $\lim_{\omega\rightarrow \infty}|Y|=|B_C|$.
+    }
+    \b{%
+    \begin{minipage}{0.3\textwidth}%
+    \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2.pdf}}
+    \begin{align}
+        \intertext{\small Resonanzbedingung}
+        \onslide<1->{\Im\{\underline{Y}\} &\overset{!}= 0}\\
+        \intertext{\small Resonanzfrequenz}
+        \onslide<1->{\omega_0 &= \frac{1}{\sqrt{LC}}}\\
+        \intertext{\small Resonanzadmittanz}
+        \onslide<1->{\underline{Y}_0 &= G}
+    \end{align}
+    
+    \end{minipage}\hfill%
+    \begin{minipage}{0.65\textwidth}\centering
+        \begin{equation}
+            \smash{\underline{Y} = G + \mathrm{j}\left(\omega C - \frac{1}{\omega L}\right)}
+        \end{equation}
+        \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcp_admittanzkurve.pdf}}
+        \begin{equation}
+            \smash{B_k = |B_{C,0}| = |B_{L,0}| = \sqrt{\frac{C}{L}}}
+        \end{equation}
+    \end{minipage}
+}
+\end{frame}
+
+
+%-------------------------------------------------------------------------------------------------%
+
+\subsubsection[Resonanzkurve und Gütefaktor]{Resonanzkurve und Gütefaktor eines RLC-Parallelschwingkreis}
+\begin{frame}\ftx{\subsubsecname}
+    \s{%
+    Die Admittanz eines RLC-Parallelschwingkreis lässt wie in Gleichung \ref{eq:rlcp:y} über die 
+    Bauteilgrößen $R$, $L$ und $C$ in Abhängigkeit der Frequenz $\omega$ ausdrücken mit:
+    
+    \begin{equation}
+        \underline{Y} = G + \mathrm{j}B = \frac{1}{R} + \mathrm{j}\left(\omega C - \frac{1}{\omega L}\right)
+    \end{equation}
+    
+    Mithilfe der Resonanzkreisfrequenz aus Gleichsung \ref{eq:rlcp:w0} kann die Kreisfrequenz auf diese normiert werden.
+    Die Berechnung erfolgt analog zur Frequenznormierung bei der Impedanz des RLC-Serienschwingkreises in Gleichung \ref{eq:rlcs:zxk}.
+    Die Suszeptanzen $B_C$ und $B_L$ werden dafür mithilfe des Kennleitwertes $B_k$ aus Gl. \ref{eq:rlcp:bk} 
+    und dem Frequenzverhältnis von $\omega$ zu $\omega_0$ beschrieben. Für die Admittanz folgt:
+    
+    \begin{equation}\label{eq:rlcp:ybk}
+        \begin{aligned}
+        \underline{Y}
+        &= G + \mathrm{j}\left( \omega C \frac{\omega_0}{\omega_0} - \frac{1}{\omega L}\frac{\omega_0}{\omega_0}\right)\\
+        &= G + \mathrm{j}\left( B_{C,0} \frac{\omega}{\omega_0} - B_{L,0} \frac{\omega}{\omega_0}\right)\\
+        &= G + \mathrm{j}\left( \frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right) B_k
+        \end{aligned}
+    \end{equation}
+    
+    Dabei gilt:
+    
+    \begin{align}
+        B_C &= +B_k \frac{\omega}{\omega_0} &%=+\sqrt{\frac{C}{L}}\cdot\frac{\omega \sqrt{LC}}{1}
+        &= \omega C &&\text{(linear)}\label{eq:rlcp:bc}\\
+        B_L &= -B_k \frac{\omega_0}{\omega} &%=-\sqrt{\frac{C}{L}}\cdot\frac{1}{\omega \sqrt{LC}}
+        &= -\frac{1}{\omega L} &&\text{(hyperbolisch)}\vphantom{\Big|}\label{eq:rlcp:bl}\\
+        B_k &= \sqrt{\frac{C}{L}}&\text{mit}\quad\omega_0 &= \frac{1}{\sqrt{LC}} &&\text{(konstant)}\label{eq:rlcp:bkw0}
+    \end{align}
+    
+    Wie in Gleichung \ref{eq:q:kennleitwert} konstatiert, lässt sich die Güte $Q$ eines Parallelschwingkreises 
+    durch das Verhältnis von Kennleitwert $B_k$ zum Wirkleitwert $G$ beschreiben. 
+    Die Definition unterscheidet sich in dieser Hinsicht von jener im Serienschwingkreis. 
+
+    Über die allgemeine Definition der Güte in Gleichung \ref{eq:q:leistung} anhand des Verhältnisses von Blindleistung zu Wirkleistung
+    lässt sich die spezielle Güte-Definition für den Parallelschwingkreis ableiten. 
+    Gleiches gilt für den Serienschwingkreis wie in Gleichung \ref{eq:rlcs:q:guete} gezeigt ist.:
+
+    \begin{equation}\label{eq:rlcp:q}
+        \begin{aligned}
+        Q &= \frac{|Q_{L,0}|}{P_0} = \frac{U \cdot I_{L,0}}{U\cdot I_R} = \frac{I_{L,0}}{I_R} = \frac{|B_{L,0}|}{G}\\
+         & = \frac{|Q_{C,0}|}{P_0} = \frac{U \cdot I_{C,0}}{U\cdot I_R} = \frac{I_{C,0}}{I_R} = \frac{|B_{C,0}|}{G} = \frac{B_k}{G}
+        \end{aligned}
+    \end{equation}
+
+    Dadurch lässt sich die Impedanz des Schwingkreises normiert auf dessen Kennleitwert $B_k$ mithilfe der Güte $Q$ ausdrücken:
+    
+    \begin{equation}\label{eq:rlcp:ynorm}
+        \frac{\underline{Y}}{B_k} = \frac{1}{Q} + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right) \vphantom{\Big|}
+        \qquad\text{mit}\quad Q = \frac{B_k}{G}
+    \end{equation}
+    
+    Der Term $\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}$ wird auch als relative Verstimmung $\nu_r$ bezeichnet.\cite{hagmann}
+
+    Abbildung \ref{fig:plot:rlcp:resonanzkurve} zeigt exemplarisch mehrere Resonanzkurven eines RLC-Parallelschwingkreises für unterschiedliche Gütefaktoren $Q$ zum Vergleich.
+    Die y-Achse zeigt den Admittanzbetrag normiert auf den Kennleitwert $B_k$ und die x-Achse zeigt die Kreisfrequenz normiert auf die Resonanzkreisfrequenz $\omega_0$.
+    
+    \fu{\includegraphics{Tikz/pdf/plot_rlcp_admittanzkurve_guete.pdf}}{Resonanzkurve RLC-Parallelschwingkreis, Vergleich Gütefaktoren\label{fig:plot:rlcp:resonanzkurve}}
+    
+    Die Bauteilgrößen sind gleich gewählt wie für die Impedanzkurve des RLC-Serienschwingkreises in Abbildung \ref{fig:plot:rlcs:impedanzkurve}.
+    Anhand der Gleichungen \ref{eq:rlcp:ybk} und \ref{eq:rlcp:ynorm} zeigt sich, dass die normierte Darstellung bei beiden Kurven den direkten Vergleich
+    der Gütefaktoren ermöglicht. 
+
+    Im Bereich der Resonanzfrequenz zeigt sich der deutlichste Unterschied der einzelnen Admittanzkurven für unterschiedliche Gütefaktoren.
+    Mit $\underline{Y}_0 = G = \frac{B_k}{Q}$ entspricht die Admittanz im Resonanzfall direkt dem ohmschen Leitwert $G$ 
+    und ist umgekehrt proportional zur Güte.
+        
+    Die Güte ist Maß für die Schwingungsfähigkeit des Schwingkreises und Maß für die umgekehrte Dämpfung des Schwingkreises.
+    Im Gegensatz zu einem Reihenschwingkreis bedeutet eine hohe Güte im Parallelschwingkreis einen 
+    geringen Wirkleitwert $G$ (hoher Wirkwiderstand $R$) im Verhältnis zu einem
+    hohen Blindleitwert $B$ (geringer Blindwiderstand $X$).
+    }%
+    \b{%
+    \begin{minipage}{0.3\textwidth}%
+    \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2.pdf}}
+    \begin{align}
+        \underline{Y} &= G + \mathrm{j}\left(\omega C - \frac{1}{\omega L}\right)\\
+            \intertext{normiert}
+        \frac{\underline{Y}}{B_k} &= \frac{1}{Q} + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)\\
+            \intertext{Güte und Kennleitwert}
+        Q &= \frac{B_k}{G} \qquad B_k = \sqrt{\frac{C}{L}}
+    \end{align}
+    \end{minipage}\hfill%
+    \begin{minipage}{0.65\textwidth}\centering
+        \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcp_admittanzkurve_guete_noxaxis.pdf}}
+        \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcp_phikurve_guete.pdf}}
+    \end{minipage}
+    }
+    \end{frame}    
+
+%-------------------------------------------------------------------------------------------------%
+
+\subsubsection{Stromresonanz am Beispiel eines RLC-Parallelschwingkreises}
+\begin{frame}\ftx{\subsubsecname}
+\index{Resonanz, >Strom- (strombezogen)}%
+    \s{%
+        Bei Anregung eines Parallelschwingkreises mit einer konstanten Stromquelle $\underline{I}_q$ 
+        kann es zu einer \textbf{Stromresonanz} kommen, die sich durch Überströmen zwischen $L$ und $C$ auszeichnet.
+    
+        Untersucht sei der RLC-Parallelschwingkreis aus Abbildung \ref{fig:circ:rlcp} mit der Admittanz $\underline{Y}$ aus Gleichung \ref{eq:rlcp:y}.
+        Der Strom $\underline{I}$ durch den Schwingkreis entspricht dem konstanten Quellenstrom $\underline{I}_q$ an dessen Außenklemmen
+        wie in Abbildung \ref{fig:circ:rlcp:iq} gezeigt ist.
+
+        \fu{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2_const_i.pdf}}{Schaltbild RLC-Parallelschwingkreis mit konstanter Stromquelle\label{fig:circ:rlcp:iq}}
+    
+        Mit der Knoten- und Maschengleichung:
+        \begin{equation*}\begin{aligned}    % U_L = Uq * (Zk * w/w0)/(sqrt(R^2 + Zk^2 * (w/w0 - w0/w)^2)) 
+            \underline{U} &= \underline{U}_R = \underline{U}_L = \underline{U}_C\\
+            \underline{I} &= \underline{I}_R + \underline{I}_L + \underline{I}_C = \underline{I}_q \\
+        \end{aligned}\end{equation*}
+        und der Bauteil-Admittanzen folgen die komplexen Stromteiler:
+        \begin{align*}
+            \frac{\underline{I}_R}{\underline{I}} &= \frac{\underline{U}}{\underline{U}}\cdot\frac{\underline{Y}_R}{\underline{Y}}
+            =\frac{G}{G+\mathrm{j}\left(\omega C-\frac{1}{\omega L}\right)}
+            \vphantom{\bigg|}\\
+            \frac{\underline{I}_L}{\underline{I}} &= \frac{\underline{U}}{\underline{U}}\cdot\frac{\underline{Y}_L}{\underline{Y}} 
+            =\frac{\frac{1}{\mathrm{j}\omega L}}{G+\mathrm{j}\left(\omega C-\frac{1}{\omega L}\right)}
+            \vphantom{\bigg|}\\
+            \frac{\underline{I}_C}{\underline{I}} &= \frac{\underline{U}}{\underline{U}}\cdot\frac{\underline{Y}_C}{\underline{Y}} 
+            =\frac{\mathrm{j}\omega C}{G+\mathrm{j}\left(\omega C-\frac{1}{\omega L}\right)}
+            \vphantom{\bigg|}
+        \end{align*}
+    
+        Die Stromverhältnisse von Bauteilströmen zu Gesamtstrom entsprechen dem frequenzvariablen Verhältnis von Bauteiladmittanz zu Gesamtadmittanz.
+        Die Berechnung des Stromteilers über die Admittanzen bietet sich in Parallelschaltungen aufgrund der einfachen Addition der Einzeladmittanzen
+        an ähnlich wie die Berechnung über die Impedanz in Serienschaltungen.
+  
+        Um die frequenzabhängigen Ströme zu normieren, lassen sich die Suszeptanzen wie in Gleichung \ref{eq:rlcp:bk} 
+        mithilfe des Kennleitwerts $B_k$ und der Resonanzkreisfrequenz $\omega_0$ aus Gleichung \ref{eq:rlcp:w0} ausdrücken. 
+        Mit der so normierten Admittanz aus Gleichung \ref{eq:rlcp:ybk} ergeben sich für die Spannungsteiler die Terme:
+    
+        \begin{equation}\label{eq:rlcp:ibk:iq}
+            \begin{aligned}
+            \frac{\underline{I}_R}{\underline{I}} &= 
+                \frac{G}{G+\mathrm{j}\left(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\right)B_k}\\
+            \frac{\underline{I}_L}{\underline{I}} &= 
+                \frac{-\mathrm{j}\frac{\omega_0}{\omega}B_k}{G+\mathrm{j}\left(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\right)B_k}\\
+            \frac{\underline{I}_C}{\underline{I}} &=
+                \frac{\mathrm{j}\frac{\omega}{\omega_0}B_k}{G+\mathrm{j}\left(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\right)B_k}
+            \end{aligned}
+        \end{equation}
+    
+        Abbildung \ref{fig:plot:rlcp:stromresonanz} zeigt die Beträge der Ströme $I_R$, $I_L$, $I_C$  
+        in Abhängigkeit der Kreisfrequenz normiert auf die Resonanzkreisfrequenz.
+    
+        \fu{\includegraphics{Tikz/pdf/plot_rlcp_strom_resonanz.pdf}}%
+        {Resonanzkurve des Stromes am RLC-Parallelschwingkreis\newline
+        $U_q=10\ \mathrm{V},\ Q=3,162$\label{fig:plot:rlcp:stromresonanz}}
+    
+        Wie in der Abbildung zu erkennen ist, ergibt sich im Bereich der Resonanzkreisfrequenz $\omega = \omega_0$ 
+        eine Stromüberhöhung bei $L$ und $C$ im Vergleich zum ohmschen Widerstand $R$.
+        Dabei liegt das jeweilige Maximum des Stromes nicht exakt bei $\omega_0$, sondern 
+        für $L$ leicht unterhalb und für $C$ leicht oberhalb der Resonanzfrequenz.
+   
+        \index{Güte}%
+        Die Güte entspricht wie in Gleichung \ref{eq:rlcp:q} gezeigt und in Gleichung \ref{eq:q:strom} konstatiert,
+        dem Verhältnis des Überstromes zum Gesamtstrom im Resonanzfall. Im Resonanzfall gilt $I_0 = I_{R,0} = I_{q,0}$.
+        Deshalb lässt sich die Güte der Stromteiler-Regel entsprechend als Verhältnis von Kennleitwert $B_k$ zu Wirkleitwert $G$ ausdrücken:
+
+        \begin{equation}
+            Q = \frac{I_{L,0}}{I} = \frac{I_{C,0}}{I} = \frac{B_k}{G}
+        \end{equation}
+
+        Die frequenzabhängigen Stromverhältnisse ausgedrückt durch die Güte $Q$ mit $\underline{Y}$ aus Gleichung \ref{eq:rlcp:ynorm}:
+
+        \begin{equation}\label{eq:rlcp:ibk:iq:q}
+            \begin{aligned}
+                \frac{\underline{I}_R}{\underline{I}} &= 
+                \frac{\frac{1}{Q}}{\frac{1}{Q}+\mathrm{j}\left(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\right)}\\
+            \frac{\underline{I}_L}{\underline{I}} &= 
+                \frac{-\mathrm{j}\frac{\omega_0}{\omega}}{\frac{1}{Q}+\mathrm{j}\left(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\right)}\\
+            \frac{\underline{I}_C}{\underline{I}} &=
+                \frac{\mathrm{j}\frac{\omega}{\omega_0}}{\frac{1}{Q}+\mathrm{j}\left(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\right)}
+            \end{aligned}
+        \end{equation}
+    }%
+    \b{%
+    \begin{minipage}{0.3\textwidth}%
+    \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2_const_i.pdf}}
+    \begin{align}    % I_C = Iq * (Bk * w/w0)/(sqrt(G^2 + Bk^2 * (w/w0 - w0/w)^2)) 
+        \underline{U} &= \underline{U}_R = \underline{U}_L = \underline{U}_C \\
+        \underline{I} &= \underline{I}_R + \underline{I}_L + \underline{I}_C = \underline{I}_q\\
+            \intertext{Stromteiler (Bsp.)}
+        \frac{\underline{I}_C}{\underline{I}} &= \frac{\mathrm{j}\left(\frac{\omega}{\omega_0}\right)}{\frac{1}{Q}+\mathrm{j}\left(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\right)}\\
+            \intertext{Güte und Überstrom}
+        Q &= \frac{B_k}{G} = \frac{I_{C,0}}{I} = \frac{I_{L,0}}{I}
+    \end{align}
+    \end{minipage}\hfill%
+    \begin{minipage}{0.65\textwidth}\centering
+        \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcp_strom_resonanz.pdf}}% 
+        Stromqelle $I_q(\omega_0) \Rightarrow$ Überstrom!
+    \end{minipage}
+    }
+    \end{frame}
+
+%-------------------------------------------------------------------------------------------------%
+
+\subsubsection{Spannungskurve des RLC-Parallelschwingkreis}
+\begin{frame}\ftx{\subsubsecname\ II}
+\s{
+    Bei Anregung mit konstantem Strom $\underline{I}_q$ wie in Abbildung \ref{fig:circ:rlcp:iq} 
+    ergibt sich für den RLC-Parallelschwingkreis aus Abbildung \ref{fig:circ:rlcp:iq}
+    ein frequenzabhängiger Spannungsverlauf. Dieser ist betragsmäßig in Abbildung \ref{fig:plot:rlcp:iq:u} für verschiedene Gütefaktoren $Q$ dargestellt.
+   
+    \fu{\includegraphics{Tikz/pdf/plot_rlcp_spannungskurve_iq_guete.pdf}}{%
+        Spannungskurve des RLC-Parallelschwingkreises bei konstantem Strom\newline$B_k=31,6\ \mathrm{mS},\ I_q=10\ \mathrm{mA},\ Q=var.$%
+        \label{fig:plot:rlcp:iq:u}%
+    }%
+    
+    Das Spannungsverhalten des RLC-Parallelschwingkreis ist analog zum Stromverhalten des RLC-Serienschwingkreises, 
+    wie es in Kapitel \ref{sec:resonanzkreise:rlcs:stromkurve} beschrieben wurde. 
+
+    Mit der Admittanz normiert auf den Kennleitwert aus Gleichung \ref{eq:rlcp:ynorm},
+    den Kirchhoffschen Regeln und dem ohmschen Gesetz folgt für die Spannung $\underline{U}$:
+
+    \begin{equation}\label{eq:rlcp:u:iq:bknorm}
+        \begin{aligned}
+            \underline{U} 
+            &= \frac{\underline{I}}{\underline{Y}} \\
+            &= \frac{\underline{I}_q}{G + \mathrm{j}\left(\omega L - \frac{1}{\omega C}\right)} \\
+            &= \frac{\underline{I}_q}{G + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)B_k}
+        \end{aligned}
+    \end{equation}
+
+    Die Maximalspannung $U_0$ ergibt sich im Resonanzfall. 
+    Sie entspricht dem Teiler des reellen Quellenstrom $\underline{I}_q = I_q$ 
+    durch den Wirkleitwert $G$: 
+
+    \begin{equation}
+        U_0 = \frac{I_q}{G} \qquad \text{mit} \quad \underline{Y}_0 = G
+    \end{equation}
+
+    Dadurch werden die komplexe Gesamtspannung $\underline{U}$ als auch deren Wirkanteil $\Re\{\underline{U}\}$ 
+    durch den Leitwert $G$ und den Quellenstrom $I_q$ begrenzt.
+
+    Für die Spannung $\underline{U}$ normiert auf die Maximalspannung $U_0$ folgt aus Gl. \ref{eq:rlcp:u:iq:bknorm}:
+
+    \begin{equation}\label{eq:rlcp:unorm}
+        \begin{aligned}
+            \frac{\underline{U}}{U_0} 
+            &= \dfrac{\dfrac{I_q}{\underline{Y}}}{\dfrac{I_q}{G}} 
+            =  \frac{G}{\underline{Y}}\\
+            &= \frac{1}{1 + \mathrm{j} \left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right) Q}
+        \end{aligned}
+    \end{equation}
+
+    Der normierte Spannungsverlauf des RLC-Parallelschwingkreises entspricht also 
+    exakt dem normierten Stromverlauf des RLC-Serienschwingkreises mit Abbildung \ref{fig:plot:rlcs:spannungsresonanz}
+    und Gleichung \ref{eq:rlcs:inorm}.
+}%
+\b{%
+    \begin{minipage}{0.3\textwidth}%
+    \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2_const_i.pdf}}
+    \begin{align}
+        \intertext{Spannung}
+        %\underline{I} &= \frac{\underline{U}_q}{\underline{Z}}\\
+        \underline{U} &= \frac{U_0}{1 + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)Q}\\
+        \intertext{Maximalspannung, Güte}
+        \underline{U}_0 &= \frac{\underline{I}_q}{G}
+        \qquad Q = \frac{B_k}{G}        
+    \end{align}
+    \end{minipage}\hfill%
+    \begin{minipage}{0.65\textwidth}\centering
+        \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcp_spannungskurve_iq_guete.pdf}}\newline
+        Spannung maximal bei $\omega_0$
+
+        Begrenzung durch $G$
+    \end{minipage}
+}
+\end{frame}
+
+\b{
+\begin{frame}{Nebenrechnung}
+\begin{minipage}{0.3\textwidth}
+    \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2_const_i.pdf}}
+    \begin{align}
+        \underline{Y} &= G + \mathrm{j}(B_L + B_C) \\
+        B_L &= -B_k \frac{\omega_0}{\omega} = -\frac{1}{\omega L}\\
+        B_C &= +B_k \frac{\omega}{\omega_0} = \omega C \\
+        B_k &= |B_{L,0}| = |X_{C,0}| = \sqrt{\frac{C}{L}}\\
+        Q &= \frac{B_k}{G} \quad \omega_0 = \frac{1}{\sqrt{LC}}
+    \end{align}
+\end{minipage}\hfill%
+\begin{minipage}{0.65\textwidth}\centering
+    \begin{equation}
+        \begin{aligned}
+    \underline{U} &= \frac{\underline{I}_q}{\underline{Y}} \\
+    &= \frac{\underline{I}_q}{G + \mathrm{j}\left(\omega C - \frac{1}{\omega L}\right)} \\
+    &= \frac{\underline{I}_q}{G + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)B_k} \\
+    &= \frac{\underline{I}_q}{G} \cdot \frac{1}{1 + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)\frac{B_k}{G}} \\
+    &= \underline{U}_0 \cdot \frac{1}{1 + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)Q}
+        \end{aligned}
+    \end{equation}
+\end{minipage}
+\end{frame}
+}
+
+%-------------------------------------------------------------------------------------------------%
+
+\subsubsection{Stromkurve des RLC-Parallelschwingkreises}
+\begin{frame}\ftx{\subsubsecname}
+% RLCp an Uq
+\b{
+    \begin{minipage}{0.3\textwidth}
+    \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2_const_u.pdf}}
+    \begin{align}
+        \intertext{Spannungsquelle}
+        \underline{U} &= U_q
+        \intertext{Strom}
+        \underline{I} &= U_q \cdot \underline{Y}\\
+        \intertext{Admittanz}
+        \underline{Y} &= G + \mathrm{j}B
+    \end{align}
+    \end{minipage}\hfill%
+    \begin{minipage}{0.65\textwidth}\centering
+        \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcp_admittanzkurve_guete.pdf}}\newline
+        Stromkurve $\sim$ Admittanzkurve
+    \end{minipage}
+}
+\s{
+    Die Stromkurve des RLC-Parallelschwingkreises bei Anregung mit einer konstanten Spannungsquelle $\underline{U}_q$
+    ergibt sich aus der Admittanz $\underline{Y}$ und der Spannungsquelle $\underline{U}_q$:
+
+    \begin{equation*}
+        \underline{I} = \underline{U}_q \cdot \underline{Y}
+    \end{equation*}
+
+    Damit ist der Strom $\underline{I}$ direkt proportional zur Admittanz $\underline{Y}$ und damit zur Kreisfrequenz $\omega$.
+    Die Stromkurve des RLC-Parallelschwingkreises entspricht also der Admittanzkurve des Schwingkreises
+    wie sie in Abbildung \ref{fig:plot:rlcp:resonanzkurve} dargestellt ist.
+}
+\end{frame}

@@ -1,0 +1,25 @@
+% LC Schwingkreis Serie
+\begin{tikzpicture}
+    \draw[draw=none](-0.25,-2.05) rectangle (5.25,1.75);% bbox % set draw=black (debug) or draw=none (final)
+    
+    % draw nodes
+    \draw
+    (0,-1.25) node[] (U+) {}
+    (5,-1.25) node[] (U-) {};
+    
+    % draw LC-Glied
+    \draw (0,0) %U+
+    to [L, name=L, i>^=$\underline{I}$, l=$L$, v=$\underline{U}_L$, o-,!vi] (3,0)
+    to [C, name=C, l=$C$,v=$\underline{U}_C$,-o,!v] (5,0);
+    
+    % draw 
+    \draw
+    (U+) to [open, name=u, v=$\underline{U}$, !v] (U-);	
+
+    %draw arrows
+    \varronly{u};
+    \varronly{L};
+    \varronly{C};
+    \iarronly{L};
+
+\end{tikzpicture}

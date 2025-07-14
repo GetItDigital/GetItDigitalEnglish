@@ -1,0 +1,77 @@
+% Inversion eines orthognalen Gitters in der komplexen Ebene
+% durch Kehrwertbildung zu Kreisen in der komplexen Ebene vice versa
+%
+% Geraden bei 
+% Im-Teil von -2 (rot gestrichelt), -1 (rot), +1 (blau) und +2 (blau gestrichelt) in horizontal
+% Re-Teil von -2 (orange gestrichelt), -1 (orange), +1 (grün) und +2 (grün gestrichelt) in vertikal
+% alle mit Re- respektive Im-Teil variabel von -\infty bis +\infty (Pfeilspitze)
+%
+% Inversion durch Kehrwert -> Kreise 
+%
+% Kreise mit Radius 1 (nicht gestrichelt) und  Radius 0.5 (gestrichelt)
+% rot von (0,0) gegen den Uhrzeigersinn über (0,-1) nach (0,0)
+% blau von (0,0) mit dem Uhrzeigersinn über (0,1) nach (0,0)
+% orange von (0,0) mit Uhrzeigersinn über (1,0) nach (0,0)
+% grün von (0,0) gegen den Uhrzeigersinn über (-1,0) nach (0,0)
+\begin{tikzpicture}
+\begin{axis}[
+	name=plotgeraden,
+	%xlabel={$\Re\{\underline{z}\}$},
+	%ylabel={$\Im\{\underline{z}\}$},
+	axis lines=center,
+	xmin=-2.5, xmax=+2.5,
+	ymin=-2.5, ymax=+2.5,
+	xtick={-2,-1,1,2},xticklabels={,,$1$,},
+	ytick={-2,-1,1,2},yticklabels={,,$\mathrm{j}$,},
+	width=6cm,
+	height=6cm,
+]
+	% Achsen
+	\draw[purple] (axis cs:-2.5,0) -- (axis cs:2.5,0);
+	\draw[brown] (axis cs:0,-2.5) -- (axis cs:0,2.5);
+	% horizontale Geraden
+	\draw[->,blue] (axis cs:-2.5,-1) -- (axis cs:2.5,-1);
+	\draw[->,blue,dashed] (axis cs:-2.5,-2) -- (axis cs:2.5,-2);
+	\draw[->,red] (axis cs:-2.5,1) -- (axis cs:2.5,1);
+	\draw[->,red,dashed] (axis cs:-2.5,2) -- (axis cs:2.5,2);
+	% vertikale Geraden
+	\draw[->,plotgreen] (axis cs:-1,-2.5) -- (axis cs:-1,2.5);
+	\draw[->,plotgreen,dashed] (axis cs:-2,-2.5) -- (axis cs:-2,2.5);
+	\draw[->,orange] (axis cs:1,-2.5) -- (axis cs:1,2.5);
+	\draw[->,orange,dashed] (axis cs:2,-2.5) -- (axis cs:2,2.5);
+\end{axis}
+\draw[<->] ($(plotgeraden.east)+(5mm,0)$) -- ($(plotgeraden.east)+(15mm,0)$);
+\node[above] at ($(plotgeraden.east)+(10mm,0)$) {$\frac{1}{(\,)}$};
+\node[below] at ($(plotgeraden.east)+(10mm,0)$) {\small Invers.};
+\begin{axis}[
+	at={($(plotgeraden.south east)+(2cm,0)$)},
+	name=plotkreise,
+	%xlabel={$\Re\{\underline{z}^{-1}\}$},
+	%ylabel={$\Im\{\underline{z}^{-1}\}$},
+	axis lines=center,
+	xmin=-2.5, xmax=+2.5,
+	ymin=-2.5, ymax=+2.5,
+	xtick={-2,-1,1,2},xticklabels={,,,$1$},
+	ytick={-2,-1,1,2},yticklabels={,,,$\mathrm{j}$},
+	width=6cm,
+	height=6cm,
+]
+% Achsen
+\draw[purple] (axis cs:-2.5,0) -- (axis cs:2.5,0);
+\draw[brown] (axis cs:0,-2.5) -- (axis cs:0,2.5);
+% Kreise der horizontalen Geraden
+\draw[blue] (axis cs:0,1) circle [radius=1];
+\draw[blue, dashed] (axis cs:0,0.5) circle [radius=0.5];
+\draw[->,blue] (axis cs:0.1,+0.01) -- (axis cs:0,0);
+\draw[red] (axis cs:0,-1) circle [radius=1]; 
+\draw[red, dashed] (axis cs:0,-0.5) circle [radius=0.5];
+\draw[->,red] (axis cs:0.1,-0.01) -- (axis cs:0,0);
+% Kreise der vertikalen Geraden
+\draw[plotgreen] (axis cs:-1,0) circle [radius=1];
+\draw[plotgreen, dashed] (axis cs:-0.5,0) circle [radius=0.5];
+\draw[->,plotgreen] (axis cs:-0.01,-0.1) -- (axis cs:0,0);
+\draw[orange] (axis cs:1,0) circle [radius=1];
+\draw[orange, dashed] (axis cs:0.5,0) circle [radius=0.5];
+\draw[->,orange] (axis cs:+0.01,-0.1) -- (axis cs:0,0);
+\end{axis}
+\end{tikzpicture}

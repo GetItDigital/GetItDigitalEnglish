@@ -1,0 +1,31 @@
+% Admittanzortskurve für R1=p*5 Ohm, w*C=5 Ohm, R2=20 Ohm 
+% mit R1 und C in Reihe, R2 parallel zur Reihenschaltung
+\begin{tikzpicture}
+    \begin{axis}[
+        axis lines=center,
+        xlabel={$\Re\{\underline{Y}\}$},
+        ylabel={$\Im\{\underline{Y}\}$},
+        xmin=-0.075,xmax=+0.275,
+        ymin=-0.075,ymax=+0.275,
+        xtick={-0.05, 0.1, 0.15, 0.2},
+        ytick={-0.05, 0.1, 0.15, 0.2},
+        xticklabels={,$0{,}1\,\mathrm{S}$,,$0{,}2\,\mathrm{S}$},% protect comma in ticklabel https://latex.org/forum/viewtopic.php?t=35838
+        yticklabels={,$0{,}1\,\mathrm{S}$,,$0{,}2\,\mathrm{S}$},% 
+        width=6cm, height=6cm,%
+    ]
+        % Hilfslinien
+        \addplot[dashed, gray] coordinates{(0.05,0)(0.05,0.2)};
+        \addplot[gray, mark=x] coordinates{(0.05,0.1)};
+        % Ortskurve
+        \draw[mark=none,thick,red] (0.05,0) arc[start angle=-90, end angle=90, radius=0.1];
+        % Punkte
+        \addplot[blue, thick, mark=x] coordinates{(0.05,0.20)} node[below, xshift={2pt}]{$\scriptstyle{p \to 0}$};    % p->0
+        \addplot[blue, thick, mark=x] coordinates{(0.15,0.10)} node[left, ]{$\scriptstyle{p=1}$};            % p=1
+        \addplot[blue, thick, mark=x] coordinates{(0.13,0.04)} node[above left, ]{$\scriptstyle{p=2}$};            % p=2
+        \addplot[blue, thick, mark=x] coordinates{(0.05,0.00)} node[above, xshift={2pt}]{$\scriptstyle{p \to \infty}$};   % p->infty
+        % gesucht für 45° Phasenverschiebung
+        \addplot[plotgreen, thick, mark=x] coordinates{(0.14114,0.14114)};
+        \addplot[plotgreen, dotted] coordinates{(0,0)(0.14114,0.14114)}
+            node[right]{$\scriptstyle{\underline{Y}(\varphi=45^\circ)}$};
+\end{axis}
+\end{tikzpicture}

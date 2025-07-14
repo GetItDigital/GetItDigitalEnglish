@@ -1,0 +1,41 @@
+% RLC-Serienschwingkreis - Spannungskurven |U_R|, |U_L|, |U_C| von w/w0
+\def\Uq{10}%    10 V
+\def\R{10}%     10 Ohm
+\def\L{10e-3}%  10 mH
+\def\C{10e-6}%  10 uF
+\def\Xk{31.623}% Xk = sqrt(L/C) = 31.623 Ohm
+\def\Q{3.1623}% Güte Q = Xk/R
+% w0 = 1/sqrt(LC) = 3162.278 Hz
+\begin{tikzpicture}[x=1cm,y=1cm]
+    \draw[draw=none] (-1.05,-1) rectangle (10.75,6.75); % boundbox (not matching width and height, don't know why) % set draw=black (debug) or draw=none (final)
+    \begin{axis}[
+        xlabel={$\omega/\omega_0$},
+        ylabel={$|U|\ [\mathrm{V}]$},
+        ylabel style={yshift=-0.2cm},
+        xmin=0, xmax=2,
+        ymin=0, ymax=40,
+        domain=0.01:2,% division by zero if x=0
+        width=12cm,
+        height=8cm,
+        samples=100,
+        grid=both,
+        xtick={0,0.25,0.5,0.75,1,1.25,1.5,1.75,2},
+    ]
+    % Spannungsteiler: |U_bauteil| = Uq * |Z_bauteil| / |Z| 
+    % R = +Xk / Q
+    % XL= +Xk *(w/w0) 
+    % XC= -Xk *(w0/w)
+    % |Z|= Xk * sqrt( (1/Q)^2 + (w/w0 - w0/w)^2 )
+    \addplot[thick, color=blue,]        {\Uq};\label{leg_Uq}
+    \addplot[thick, color=black,]       {\Uq * (1 /\Q) / (sqrt((1/\Q)^2 + (x-1/x)^2))}; \label{leg_UR}
+    \addplot[thick, color=orange,domain=0:0.999]             {\Uq*(1/x-x)/ (sqrt((1/\Q)^2 + (x-1/x)^2))}; \label{leg_UX}
+    \addplot[thick, color=orange,domain=1.001:2,forget plot] {\Uq*(x-1/x)/ (sqrt((1/\Q)^2 + (x-1/x)^2))};%better resolution as with abs()
+    \addplot[thick, color=plotgreen,  dashed,]{\Uq * (1 * x) / (sqrt((1/\Q)^2 + (x-1/x)^2))}; \label{leg_UL}
+    \addplot[thick, color=red,dashed,]{\Uq * (1 / x) / (sqrt((1/\Q)^2 + (x-1/x)^2))}; \label{leg_UC}
+    \addlegendentry{$|\underline{U}_{q}|$}
+    \addlegendentry{$|\underline{U}_{R}|$}
+    \addlegendentry{$|\underline{U}_{X}|$}
+    \addlegendentry{$|\underline{U}_{L}|$}
+    \addlegendentry{$|\underline{U}_{C}|$}
+    \end{axis}
+\end{tikzpicture}

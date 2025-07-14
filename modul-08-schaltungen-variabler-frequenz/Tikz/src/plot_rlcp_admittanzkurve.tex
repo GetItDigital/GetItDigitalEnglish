@@ -1,0 +1,49 @@
+% RLC-Parallelschwingkreis - Admittanzkurve |Y|,G,|B|,|B_C|,|B_L| von w/w0 
+\def\G{10e-3}%     10 mS
+\def\L{10e-3}%  10 mH
+\def\C{10e-6}%  10 uF
+\def\Bk{31.623e-3}% Bk = sqrt(C/L) = 31.623 mS
+% w0 = 1/sqrt(LC) = 3162.278 Hz
+% Güte Q = Bk/G -> G = Bk/Q
+\begin{tikzpicture}[x=1cm,y=1cm]
+    \draw[draw=none] (-1.05,-1) rectangle (10.75,6.75); % boundbox (not matching width and height, don't know why) % set draw=black (debug) or draw=none (final)
+    \begin{axis}[
+        xlabel={$\omega/\omega_0$},
+        ylabel={$|\underline{Y}|\ [\mathrm{mS}]$},% 1e3*Y[S] = Y[mS]
+        ylabel style={yshift=-0.35cm},
+        xmin=0, xmax=2,
+        domain=0:2,
+        ymin=0, ymax=100,
+        width=12cm,
+        height=8cm,
+        samples=400,
+        xtick={0,0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75,2},
+        grid=both,
+        mark=none,
+    ]
+    % Y = G + jB = G + j(B_C+B_L) = G + j*Bk*(w/w0 - w0/w)
+    % |Y| = sqrt(G^2 + B^2) = sqrt( G^2 + Bk^2*(w/w0 - w0/w)^2 )
+    % G = konst.
+    % |B| = |Bk*(w/w0 - w0/w)|
+    % |B_C| = |Bk*(w/w0)|
+    % |B_L| = |-Bk*(w0/w)|
+    \addplot[domain=0.2:2, thick, color=blue]           {1e3*sqrt( \G^2 + \Bk^2*(x-1/x)^2 )}; % |Y|
+    \addplot[domain=0.0:2, thick, color=black]          {1e3*\G}; % G
+    \addplot[domain=0.2:2, thick, color=orange]         {1e3*abs( \Bk*(x-1/x) )}; % |B|
+    \addplot[domain=0.2:2, thick,color=plotgreen,dashed]   {1e3*abs( \Bk*(1/x) )}; % |B_L|
+    \addplot[domain=0.0:2, thick,color=red,dashed,]     {1e3*abs( \Bk*(x) )}; % |B_C|
+    \addlegendentry{$|\underline{Y}|$} 
+    \addlegendentry{$G$}
+    \addlegendentry{$|B|$}
+    \addlegendentry{$|B_L|$}
+    \addlegendentry{$|B_C|$}
+    % w0 Grenze (Fallunterscheidung)
+    \addplot[mark=none, dashed, color=black] coordinates {(1,0)(1,100)}
+        node[pos=0.7, sloped,above,yshift=-2pt]{rein-$\vphantom{\big|}$}
+        node[pos=0.7, sloped,below,yshift=+2pt]{ohmsch$\vphantom{\big|}$}
+        node[pos=0.9, left]{ohmsch-induktiv$\vphantom{\big|}$}
+        node[pos=0.9, right]{ohmsch-kapazitiv$\vphantom{\big|}$}
+    ;
+    \end{axis}
+\end{tikzpicture}
+% TODO: Adjust order of plotting vs order of legend, Ref: https://tex.stackexchange.com/questions/375074/ordering-of-legend-vs-zorder

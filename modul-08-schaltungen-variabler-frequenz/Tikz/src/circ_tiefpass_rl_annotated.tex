@@ -1,0 +1,39 @@
+% RL-Tiefpass 1. Ordnung
+\begin{tikzpicture}
+    % invisible boundbox
+    \draw[draw=none](-0.75,-0.25) rectangle (+4.75,+3); % gleiche Maße wie bei 
+    % circ_tiefpass_rc_annotated.tex
+    % circ_hochpass_rc_annotated.tex
+    % circ_tiefpass_rl_annotated.tex
+    % circ_hochpass_rl_annotated.tex
+
+    %\draw(0,3) node[anchor=north] {\text{Tiefpass}}; % Beschriftung
+
+    % draw nodes
+    \draw 
+    (0,2) node[anchor=east] (U1+) {}
+    (0,0) node[anchor=east] (U1-) {}
+    (4,2) node[anchor=west] (U2+) {}
+    (4,0) node[anchor=west] (U2-) {};
+
+    % draw RL-Glied
+    \draw (0,2) %U1+ 
+    to [L, l=$L$, o-*] (3,2)					% L
+    to [R, l=$R$, *-*] (3,0)					% R
+    to [short, *-o] (0,0); %U1-
+
+    % draw U2 conenctions
+    \draw 
+    (3,2) to [short, *-o] (4,2) %U2+
+    (3,0) to [short, *-o] (4,0); %U2-
+
+    % draw U1 and U2
+    \draw 
+    (U1+) to [open, name=u1, v=$\underline{U}_1$, !v] (U1-)	
+    (U2+) to [open, name=u2, v^=$\underline{U}_2$, !v] (U2-);
+    
+    %draw arrows
+    \varronly{u1};
+    \varronly{u2};
+    
+\end{tikzpicture}

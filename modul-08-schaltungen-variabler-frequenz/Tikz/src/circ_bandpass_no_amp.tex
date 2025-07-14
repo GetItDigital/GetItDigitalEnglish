@@ -1,0 +1,40 @@
+% Schaltbild Bandpass, 2. Ordnung als Reihenschaltung aus Tiefpass, Hochpass
+\begin{tikzpicture}%
+    %   invisible boundbox
+    \draw[draw=none](-4.25,-0.25) rectangle (+4.25,+3);
+
+    % Tiefpass
+    \draw (-4,2) % U11+
+        to[R, l=$R_1$, o-] (-1,2) to[C, l=$C_1$] (-1,0) to[short, -o] (-4,0); % U11-
+    \draw (-1,2) to[short, -*] (0.5,2); % U12+
+    \draw (-1,0) to[short, -*] (0.5,0); % U12-
+    % -0.1 x-offset für R bei TP in Referenz zu C bei HP für Platz zu Spannungspfeil (U12), weil C1 breiter als R2,
+
+    % Hochpass
+    \draw (0.5,2) % U21+ 
+        to[C, l=$C_2$, *-] (3,2) to[R, l=$R_2$] (3,0) to[short, -*] (0.5,0); % U21-
+    \draw (3,2) to[short, -o] (4,2); % U22+
+    \draw (3,0) to[short, -o] (4,0); % U22-
+
+    % Beschriftung
+    \draw (-2.5,0.4) node{Tiefpass};
+    \draw (+1.5,0.4) node{Hochpass};
+
+    % Spannungen
+    \draw (-4,2) to[open, name=u1, v=$\underline{U}_{1}$, !v] (-4,0);
+    \draw (0.5,2) to[open, name=u12, v^=$\underline{U}_{1\smash{2}}$, !v] (0.5,0);
+    \draw (+4,2) to[open, name=u2, v^=$\underline{U}_{2}$, !v] (4,0);
+
+    %draw arrows
+    \varronly{u1};
+    \varronly{u12};
+    \varronly{u2};
+    
+    % Spannungsfolger zur Entkopplung
+    \ctikzset{amplifiers/scale=0.2,amp symbol font={\footnotesize}}
+    \draw[thick,draw=black,fill=white] (-0.65,1.6) rectangle (0.15,2.4); 
+    \draw (-0.25,2) node[plain amp](OP){};
+    \draw (OP.in up) -- ++(0,0.2) -- ++(+0.475,0) -- ++(0,-0.3) -- ++(0.15,0);
+    \draw (OP.in down) -- ++(0,0.1) -- ++(-0.15,0);
+    \node[above,yshift=8pt] at (OP.up){Spannungsfolger};
+\end{tikzpicture}%

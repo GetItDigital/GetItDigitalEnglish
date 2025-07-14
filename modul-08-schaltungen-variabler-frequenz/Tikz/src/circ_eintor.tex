@@ -1,0 +1,18 @@
+% Schaltsymbol eines Eintor (Zweipol)
+\begin{tikzpicture}%
+%   invisible boundbox
+    \draw[draw=none](-2,-1.25) rectangle (+2,+1.25);% gleiche wie bei circ_zweitor.tex
+%   Eintor (Zweipol)
+    \node[draw=none,align=center] {Eintor\\Zweipol};
+    \draw(0,0) node[dipchip, hide numbers, num pins=4, no topmark, external pins width=0](A){};%            Mittelpunkt des Zweipols
+    \draw(0,0) node[dipchip, hide numbers, num pins=2, no topmark, external pins width=0, opacity=0](B){};% Ref. Pins mittig
+    \draw(B.bpin 1) to[short, -o, name=i, i_<=$I$, !i] ++(-0.5,0) coordinate(In);%
+    \draw(B.bpin 2) to[short,-o, name=i2, i>=$I$, !i] ++(0.5,0) coordinate(Out);%
+    \draw(-1.75,+0.75) to [open, name=u, v^=$U$, !v] (+1.75,+0.75);%
+
+    %draw arrows
+    \iarronly{i};
+    \iarronly{i2};
+    \varronly{u};
+    
+\end{tikzpicture}%

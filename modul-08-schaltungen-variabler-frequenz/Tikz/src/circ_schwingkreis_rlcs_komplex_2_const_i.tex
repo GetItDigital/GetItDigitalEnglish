@@ -1,0 +1,33 @@
+% RLC Schwingkreis Serie
+\begin{tikzpicture}
+    %  invisible boundbox
+    \draw[draw=none](-0.75,-2.5) rectangle (+6.75,+1); % like RLCp: (7.5 x 3.5) % set draw=black (debug) or draw=none (final)
+    %\draw[draw=black](-0.75,-1.75) rectangle (+6.75,+1); % RLCs without iq/uq
+
+    % draw RLC-Glied
+    \draw (-0.5,0) %U+
+    to [short, name=i, i>^=$\underline{I}$, !i, o-] (0,0)
+    to [R, l=$R$] (2,0)
+    to [L, l=$\mathrm{j}\omega L$] (4,0)
+    to [bipole label style={xshift=+17pt,yshift=-5pt},C, l=$\dfrac{1}{\mathrm{j}\omega C}$] (6,0)% alt. yshift=5pt, bbox höher
+    to [short, -o] (6.5,0); %U-
+
+    % draw nodes for U arrows
+    \draw (0,-0.6)
+    to [open, name=R, v=$\underline{U}_R$, !v](2,-0.6)
+    to [open, name=L, v=$\underline{U}_L$, !v](4,-0.6)
+    to [open, name=C, v=$\underline{U}_C$, !v](6,-0.6);
+    
+    %draw arrows
+    \iarronly{i};
+    \varronly{R};
+    \varronly{L};
+    \varronly{C};
+
+    % Iq Stromquelle
+    \draw (-0.5,0)
+    to [short, *-] (-0.5,-1.75)
+    to [isource, name=Iq, i<_=$\underline{I}_q$, !vi] (6.5,-1.75)
+    to [short, -*] (6.5,0);
+    \iarronly{Iq};
+\end{tikzpicture}

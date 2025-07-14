@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+    % roughly same size as plot_tan_atan_mirror.tex
+    % invisible boundbox
+    %\draw[draw=black](-0.75,-0.5) rectangle (+7.5,+6.25);
+    \begin{axis}[
+        ymin = 0.1, ymax = 1.1,
+        xmin = 0, xmax = 5,
+        minor x tick num=1,
+        domain=0.01:5,
+        samples=41,
+    ]
+        % plots
+        \addplot+[mark=none, color=red, thick]{1/(1+x^2)^0.5} node[pos=0.4,anchor=north]{\large $\frac{1}{\sqrt{1+x^2}}$};
+        \addplot+[mark=none, color=blue, dashed, restrict y to domain=0:2]{1/x}; %approximation x>>1
+        \addplot+[mark=none, color=blue, dashed]{1};% approximation x<<1
+        
+        % labels                
+        \addplot+[mark=none] coordinates{(3.0,1.0)} node[anchor=north,blue]{\large $\frac{1}{1} \approx \left.\frac{1}{\sqrt{1+x^2}}\right\rvert_{x\ll 1}$};
+        \addplot+[mark=none] coordinates{(3.0,0.5)} node[anchor=south,blue]{\large $\frac{1}{x} \approx \left.\frac{1}{\sqrt{1+x^2}}\right\rvert_{x\gg 1}$};
+        
+        % axis labels within plot
+        \addplot+[mark=none] coordinates{(0.4,0.60)} node[black] {\large $A(x)$};
+        \addplot+[mark=none] coordinates{(2.5,0.15)} node[black] {\large $x$};
+    \end{axis}
+\end{tikzpicture}

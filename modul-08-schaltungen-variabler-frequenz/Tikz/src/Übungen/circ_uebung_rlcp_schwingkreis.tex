@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    %draw circuit
+    \draw(0,0.5) to[short, name= I, i=$\underline{I}$, o-*, !i](0,0);
+    \draw(-1.75,0) to[short](1.75,0);
+    \draw(-1.75,0) to[R, l=$R$](-1.75,-2);
+    \draw(0,0) to[C, l=$C$](0,-2);
+    \draw(1.75,0) to[L, l=$L$](1.75,-2);
+    \draw(-1.75,-2) to[short](1.75,-2);
+    \draw(0,-2.5) to[short, o-*](0,-2);
+ 
+    %draw voltage/current arrow
+    \iarronly{I};
+    
+\end{tikzpicture}

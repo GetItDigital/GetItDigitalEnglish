@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+    % Axis Enviroment
+       \draw[thick, ->](-0.5,0)--(5,0);
+       \draw[very thick](5,-0.3)node{$\mathrm{Re}$};
+       \draw[thick, <-](0,+0.5)--(0,-2);
+       \draw[very thick](-0.4,0.2)node{$\mathrm{jIm}$};
+    % Ortskurve
+        \draw [very thick](0,-1.6) arc [start angle=-90, end angle=90, radius=0.8];
+        \draw [->, thick](1,-0.8) arc[start angle=0, end angle=-30, radius=0.8];
+        \draw [ thick](1,-0.8) arc[start angle=0, end angle=30, radius=0.8];
+        \draw [very thick](1.2,-0.8)node{$\mathrm{R}$};
+\end{tikzpicture}

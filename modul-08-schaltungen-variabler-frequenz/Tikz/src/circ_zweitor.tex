@@ -1,0 +1,23 @@
+% Schaltsymbol eines Zweitors (Vierpols)
+\begin{tikzpicture}%
+%   invisible boundbox
+    \draw[draw=none](-2,-1.25) rectangle (+2,+1.25);% gleiche wie bei circ_eintor.tex
+%   Zweitor (Vierpol)
+    \node[draw=none] {Zweitor};%
+    \draw(0,0) node[dipchip, hide numbers, num pins=6, no topmark, external pins width=0](C){};% Mittelpunkt des Vierpols
+    \draw(C.bpin 1) to[short,-o, name=i11, i_<, !i] ++(-0.5,0) coordinate(In1);%
+    \draw(C.bpin 3) to[short,-o, name=i12, i_>, !i] ++(-0.5,0) coordinate(In2);%
+    \draw(C.bpin 6) to[short,-o, name=i21, i>,  !i] ++(0.5,0) coordinate(Out1);%
+    \draw(C.bpin 4) to[short,-o, name=i22, i<,  !i] ++(0.5,0) coordinate(Out2);%
+    \draw(In1) to[open, name=u1, v=$\underline{U}_1$, !v] (In2);%
+    \draw(Out1) to[open, name=u2, v^=$\underline{U}_2$, !v] (Out2);%
+
+    %draw arrows
+    \varronly{u1};
+    \varronly{u2};
+    %\iarrmore{i11}{$I_{11}$};
+    %\iarrmore{i12}{$I_{12}$};
+    %\iarrmore{i21}{$I_{21}$};
+    %\iarrmore{i22}{$I_{22}$};
+    
+\end{tikzpicture}%

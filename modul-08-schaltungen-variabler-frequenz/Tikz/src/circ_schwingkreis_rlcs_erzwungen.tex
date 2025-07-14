@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+    % invisible boundbox
+    \draw[draw=none](-2.75,-2.25) rectangle (+2.00,+2.75); % set draw=black (debug) or draw=none (final)
+    
+    % draw RLC-Glied
+    \draw (0,2)% Uc+
+    to [C, l=$C$, name=C, i>^, !i] (0,-2)% Uc-
+    to [short] (1.5,-2)
+    to [L, l=$L$] (1.5,0)
+    to [R, l=$R$] (1.5,2)
+    to [short] (0,2);
+
+    % draw Uq
+    \draw (0,2)
+    to [short](-1.5,2)% Uq+
+    %node [anchor=south,color=voltage]{$u(t) = \hat{U}\sin(\omega t)$}
+    to [sV](-1.5,-2)% Uq-
+    to [short](0,-2);
+    
+    \draw(-2.1,1.5)
+    to [open, name=u, v, !v](-2.1,-1.5);
+
+    %draw arrows
+    \varrmore{u}{$\mathclap{u_e}$};% label too far left from arrow without \mathllap
+    \iarrmore{C}{$i$};
+
+\end{tikzpicture}

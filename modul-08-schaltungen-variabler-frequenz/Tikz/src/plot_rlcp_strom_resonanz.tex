@@ -1,0 +1,41 @@
+% RLC-Parallelschwingkreis - Stromkurven |I_R|,|I_L|,|I_C| von w/w0
+\def\Iq{10}%    10 mA
+\def\G{10e-3}%  10 mS
+\def\L{10e-3}%  10 mH
+\def\C{10e-6}%  10 uF
+\def\Bk{31.623e-3}% Bk = sqrt(C/L) = 31.623 mS
+\def\Q{3.1623}% Güte Q = Bk/G
+% w0 = 1/sqrt(LC) = 3162.278 Hz
+\begin{tikzpicture}[x=1cm,y=1cm]
+    \draw[draw=none] (-1.05,-1) rectangle (10.75,6.75); % boundbox (not matching width and height, don't know why) % set draw=black (debug) or draw=none (final)
+    \begin{axis}[
+        xlabel={$\omega/\omega_0$},
+        ylabel={$|I|\ [\mathrm{mA}]$},
+        ylabel style={yshift=-0.2cm},
+        xmin=0, xmax=2,
+        ymin=0, ymax=40,
+        domain=0.01:2,% division by zero if x=0
+        width=12cm,
+        height=8cm,
+        samples=100,
+        grid=both,
+        xtick={0,0.25,0.5,0.75,1,1.25,1.5,1.75,2},
+    ]
+    % Stromteiler: |I_bauteil| = Iq * |Y_bauteil| / |Y| 
+    % G = +Bk / Q
+    % BC= +Bk *(w/w0) 
+    % BL= -Bk *(w0/w)
+    % |Y|= Bk * sqrt( (1/Q)^2 + (w/w0 - w0/w)^2 )
+    \addplot[thick, color=blue,]        {\Iq}; \label{leg_Iq}
+    \addplot[thick, color=black,]       {\Iq * (1 /\Q) / (sqrt((1/\Q)^2 + (x-1/x)^2))}; \label{leg_IR}
+    \addplot[thick, color=orange,domain=0:0.999]            {\Iq * (1/x-x) / (sqrt((1/\Q)^2 + (x-1/x)^2))}; \label{leg_IX}
+    \addplot[thick, color=orange,domain=1.001:2,forget plot]{\Iq * (x-1/x) / (sqrt((1/\Q)^2 + (x-1/x)^2))}; %better resolution as with abs()
+    \addplot[thick, color=red,dashed,]  {\Iq * (1 * x) / (sqrt((1/\Q)^2 + (x-1/x)^2))}; \label{leg_IC}
+    \addplot[thick, color=plotgreen,dashed]{\Iq * (1 / x) / (sqrt((1/\Q)^2 + (x-1/x)^2))}; \label{leg_IL}
+    \addlegendentry{$|\underline{I}_{q}|$}
+    \addlegendentry{$|\underline{I}_{R}|$}
+    \addlegendentry{$|\underline{I}_{X}|$}
+    \addlegendentry{$|\underline{I}_{C}|$}
+    \addlegendentry{$|\underline{I}_{L}|$}
+    \end{axis}
+\end{tikzpicture}

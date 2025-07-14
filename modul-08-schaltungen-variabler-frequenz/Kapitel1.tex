@@ -1,0 +1,963 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                               START KAPITEL 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\section{Frequenzgang, Amplitudengang, Phasengang}
+\label{sec:frequenzgang}
+\begin{frame}\ftx{\secname}
+\s{% Einleitung
+    In diesem Kapitel beschäftigen wir uns mit dem Frequenzgang, Amplitudengang und Phasengang von Zweitoren. 
+    Diese dienen zur Beschreibung des frequenzvariablen Verhaltens elektrischer Netze in Form von Zweitoren wie in Abbildung \ref{fig:zweitor} gezeigt. 
+    Am Beispiel einfacher passiver Filterschaltungen werden wir die Begriffe Frequenz-, Amplituden- und Phasengang einführen und deren Bedeutung und Anwendung erläutern. 
+
+    \fu{\includegraphics{Tikz/pdf/circ_zweitor.pdf}
+    }{Schaltsymbol eines Zweitors (Vierpols) mit Eingang (links) und Ausgang (rechts)\label{fig:zweitor}} % in Folien im folgenden Kapitel (Frequenzgang, Amplitudengang, Phasengang)
+}%\s Ende
+\begin{Lernziele}{Frequenzgang, Amplitudengang, Phasengang}
+    Studierende lernen:
+    \begin{itemize}
+        \item Frequenzgänge anhand der Schaltungstopologie algebreaisch zu bestimmen
+        \item die Funktionsweise einfacher Hoch- und Tiefpassfiltern zu verstehen
+        \item das Grenzverhalten von Vierpolen anhand ihrer Frequenzgänge zu analysieren
+    \end{itemize}
+\end{Lernziele}
+\end{frame}
+
+\begin{frame}\ftx{\secname}
+\b{%
+    \begin{minipage}[t][3.5cm][t]{\textwidth}% upper half
+        \textbf{Analyse frequenzvariablen Verhaltens elektrischer Netze \only<3->{(Zweitore)}}
+        \begin{figure}
+            \centering
+            \only<beamer:1-2| handout:0>{\includegraphics{Tikz/pdf/circ_zweitor_quelle_last.pdf}}%
+            \only<beamer:3-| handout>{\includegraphics{Tikz/pdf/circ_zweitor_longpins.pdf}}%
+        \end{figure}%
+    \end{minipage}
+    \hspace{0.02\linewidth}% for vertical alignment % ref: https://tex.stackexchange.com/questions/378548/vertical-alignment-of-side-by-side-minipages
+    \begin{minipage}[c][4cm][c]{0.48\textwidth}% left col
+        \only<2>{$\mathrlap{\textbf{Wie sieht das Übertragungsverhalten aus?}}$}%
+        \onslide<3->{\textbf{Linear und zeitinvariant (LZI):}}
+        \begin{itemize}
+            \item<4-> Sinusform am Eingang $u_1(\omega t)$
+            \item<5-> $\rightarrow$ Sinusform am Ausgang $u_2(\omega t)$
+            \item<5-> $\rightarrow$ Frequenz gleich $\omega_2 = \omega_1$
+            \item<6-> $\rightarrow$ Phasenverschiebung $\Delta\varphi = ?$
+            \item<6-> $\rightarrow$ Amplitudenverhältnis $\frac{\hat{U}_2}{\hat{U}_1} = ?$
+        \end{itemize}
+    \end{minipage}
+    \hspace{0.02\linewidth}% for vertical alignment
+    \begin{minipage}[c][4cm][c]{0.48\textwidth}% right col
+        % first plot variant used for beamer and handout, next plot variants only for beamer
+        \only<beamer:4|  handout:0>{\includegraphics{Tikz/pdf/plot_sin_comp_amplitude_phase01.pdf}}% If broken slide animations, delete TexAux files and recompile
+        \only<beamer:5-6|  handout>{\includegraphics{Tikz/pdf/plot_sin_comp_amplitude_phase02.pdf}}% If broken slide animations, delete TexAux files and recompile
+        \only<beamer:7|  handout:0>{\includegraphics{Tikz/pdf/plot_sin_comp_amplitude_phase03.pdf}}% If too long, comment out some of the \only<n>{...} lines
+        \only<beamer:8|  handout:0>{\includegraphics{Tikz/pdf/plot_sin_comp_amplitude_phase04.pdf}}% 
+        \only<beamer:9| handout:0>{\includegraphics{Tikz/pdf/plot_sin_comp_amplitude_phase05.pdf}}% 
+        \only<beamer:10| handout:0>{\includegraphics{Tikz/pdf/plot_sin_comp_amplitude_phase06.pdf}}% 
+        \only<beamer:11| handout:0>{\includegraphics{Tikz/pdf/plot_sin_comp_amplitude_phase07.pdf}}% 
+        % Currently linear change in amplitude and phase. Could also use "real" change, e.g. Tiefpass behaviour  
+    \end{minipage}%
+}%
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection[Definitionen]{Definition Frequenzgang, Amplitudengang und Phasengang}
+\begin{frame}\ftx{\subsecname}
+\begin{columns}[t]
+    \column{0.45\textwidth}% left col
+        \b{%
+            \textbf{Zweitor (Vierpol):}
+            \fu{\includegraphics{Tikz/pdf/circ_zweitor.pdf}}{}% im Skript im vorigen Kapitel (Wiederholung)
+            \pause%
+            \textbf{Linear, zeitinvariant (LZI)}: 
+            \begin{equation}\begin{aligned}
+                u_1(t)& = \hat{U}_1 \cdot \sin(\omega t)\\
+                \xrightarrow{LZI}\  u_2(t)& = \hat{U}_2 \cdot \sin(\omega t + \varphi)
+            \end{aligned}\end{equation}%  
+            \begin{itemize}
+                \item[] Sinusform bleibt erhalten
+                \item[] Frequenz gleich $\omega_2 = \omega_1$
+            \end{itemize}%
+        }%
+    \column{0.55\textwidth}% right col
+        \b{%
+        \pause%
+            \textbf{Frequenzgang:}%
+            \begin{align}
+                \underline{F}(\mathrm{j}\omega) &= \frac{\underline{U}_2}{\underline{U}_1} = A(\omega)\cdot\mathrm e^{\mathrm j\varphi(\omega)}\\[-12pt]% onslide breaks line spacing, manual adjustment
+                \onslide<4->{\intertext{\textbf{Amplitudengang:}}%
+                A(\omega) &= |\underline{F}(\mathrm{j}\omega)| = \frac{|\underline{U}_2|}{|\underline{U}_1|}\\
+                &= \sqrt{\left(\Re\{\underline{F}(\mathrm{j}\omega)\}\right)^2 + \left(\Im\{\underline{F}(\mathrm{j}\omega)\}\right)^2}\\[-12pt]% onslide breaks line spacing, manual adjustment
+                }% end onslide
+                \onslide<5->{\intertext{\textbf{Phasengang:}}%
+                \varphi(\omega) &= \angle \underline{F}(\mathrm{j}\omega) = \angle \underline{U}_2 - \angle \underline{U}_1\\
+                &= \arctan\left(\frac{\Im\{\underline{F}(\mathrm{j}\omega)\}}{\Re\{\underline{F}(\mathrm{j}\omega)\}}\right)%
+                }% end onslide
+            \end{align}
+        }%
+        \s{%
+            % Definition Frequenzgang
+            \index{Frequenzgang}%
+            \index{lineares zeitinvariantes System}%
+            Der \textbf{Frequenzgang} $\underline{F}(\mathrm{j}\omega)$, auch komplexer Amplitudengang genannt, 
+            beschreibt das Verhältnis von Ausgangs- zu Eingangssignal eines linearen zeitinvarainten Systems (LZI-System) bei sinusförmiger Anregung.
+            Er bietet eine Möglichkeit frequenzabhängiges Verhalten von Zweitoren zu untersuchen, 
+            ist ein Spezialfall der Laplace-Übertragungsfunktion aus der Systemtheorie und 
+            wird wie folgt definiert:
+
+            \begin{equation}
+                \underline{F}(\mathrm{j}\omega) = \frac{\underline{U}_2}{\underline{U}_1}% F(jw)=U2/U1
+                \label{eq:def:F}
+            \end{equation}
+
+            % Amplituden und Phasenänderung
+            \index{Amplitudengang}%
+            \index{Phasengang}%
+            Aufgrund der Linearität von LZI-Systemen bleiben Frequenz und Sinusform am Ausgang erhalten. 
+            Amplitude und Phase können sich in Abhängigkeit der Frequenz vom Eingang zum Ausgang ändern. 
+            Erkennbar ist dies insbesondere in der Schreibweise in Polarkoordinaten. 
+
+            \begin{equation}
+                \underline{F}(\mathrm{j}\omega) = A(\omega)\cdot\mathrm e^{\mathrm j\varphi(\omega)}% F(jw)=A*exp(jphi)
+                \label{eq:def:Fpolar}
+            \end{equation}
+            Der \textbf{Amplitudengang} $A(\omega)$ beschreibt die relative Amplitudenänderung 
+            zwischen Aus- und Eingangsspannung und entspricht dem Betrag des Frequenzganges.
+            Der \textbf{Phasengang} $\varphi(\omega)$ hingegen, beschreibt die absolute Phasenänderung
+            zwischen Aus- und Eingangsspannung und entspricht der Phase des Frequenzganges.
+            Über $\underline{F}(\mathrm{j}\omega)$ können wir beide wie folgt definieren: 
+
+            \begin{align}
+                \label{eq:def:A}
+                A(\omega)       & = |\underline{F}(\mathrm{j}\omega)|&
+                                & = \sqrt{\left(\Re\{\underline{F}(\mathrm{j}\omega)\}\right)^2 + \left(\Im\{\underline{F}(\mathrm{j}\omega)\}\right)^2}&
+                                & = \frac{|\underline{U}_2|}{|\underline{U}_1|}\\
+                \label{eq:def:phi}
+                \varphi(\omega) & = \angle \underline{F}(\mathrm{j}\omega)&
+                                & = \arctan\left(\frac{\Im\{\underline{F}(\mathrm{j}\omega)\}}{\Re\{\underline{F}(\mathrm{j}\omega)\}}\right)&
+                                & = \angle \underline{U}_2 - \angle \underline{U}_1
+            \end{align}
+        }
+% Hinweis: Spannungsbezug Regel, Strombezug nicht betrachtet 
+%Der Frequenzgang bezieht sich in der Regel auf Spannungen, nicht auf Ströme, da in der Regel Spannungs- 
+%statt Stromquellen verwendet werden. In diesem Skript bezieht sich der Frequenzgang daher immer auf Spannungen.
+\end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Frequenzgang am Beispiel eines einfachen Tiefpass-Filters}
+\label{sec:frequenzgang:tiefpass:herleitung}
+\begin{frame}[t]\ftx{\subsecname}
+\begin{columns}[T]%
+\column{0.45\textwidth}% left col
+    \s{\index{Filter>Tiefpass}%
+        Das Zweitor in Abbildung \ref{circ:filter:rctief} stellt einen einfachen Tiefpass-Filter (kurz Tiefpass) dar.
+        Der Name Tiefpass leitet sich von dem Verhalten her, dass Signale tiefer Frequenzen nahezu unverändert passieren,
+        Signale hoher Frequenzen jedoch stark gedämpft (gefiltert) werden.
+        Die Funktionsweise und das Verhalten des Tiefpasses lassen sich gut mittels einer Frequenzganganalyse veranschaulichen.
+
+        \fu{\includegraphics{Tikz/pdf/circ_tiefpass_rc_annotated.pdf}}{Schaltbild, RC-Tiefpass 1. Ordnung\label{circ:filter:rctief}}%
+
+        Der gezeigte Tiefpass besteht aus einer Serienschaltung aus $R$ und $C$ mit Eingangsspannung $\underline{U}_1$
+        über beiden Elementen und Ausgangsspannung $\underline{U}_2$ über $C$.
+        Da die Einzelelemente $R$ und $C$ lineare, zeitinvariante (LZI-)Bauteile sind, 
+        ist auch der daraus zusammen gesetzte Tiefpass ein LZI-System.
+        Das bedeutet, dass bei Anregung der Schaltung mit einer sinusförmigen Eingangsspannung $u_1(t)$ (links),
+        die Ausgangsspannung $u_2(t)$ (rechts) ebenfalls sinusförmig ist und die gleiche Frequenz besitzt wie die Eingangsspannung.
+    }%
+    \b{%
+    {\centering
+    \vspace{-7.5mm}%
+    \onslide<1->{\includegraphics{Tikz/pdf/circ_tiefpass_rc_annotated.pdf}}%
+    }\vspace{3mm}%
+        
+    \textbf{RC-Tiefpass 1. Ordnung}}
+    \begin{equation}
+        \begin{aligned}
+            u_1(t)& = \hat{U}_1 \cdot \sin(\omega t)\\\xrightarrow{LZI}\ 
+            u_2(t)& = \hat{U}_2 \cdot \sin(\omega t + \varphi)
+        \end{aligned}
+    \end{equation}%
+    \pause%
+\column{0.55\textwidth}% right col
+    \s{%
+        Die LZI-Eigenschaft ist Voraussetzung zur Bestimmung des Frequenzganges und die Anwendung der komplexen Wechselstromrechnung.
+        Zusätzliche Voraussetzung ist die Annahme einer sinusförmigen Anregung im eingeschwungenen Zustand, von der wir zwecks Analyse ausgehen.
+        Statt der Ein- und Ausgangsspannung $u_1(t)$ und $u_2(t)$ im Zeitbereich betrachten wir die entsprechende
+        komplexe Ein- und Ausgangsspannung $\underline{U}_1$ und $\underline{U}_2$ im Frequenzbereich wie im Schaltbild dargestellt.
+
+        Der Frequenzgang $\underline{F}(\mathrm{j}\omega)$ entspricht nach Gleichung \ref{eq:def:F} 
+        dem komplexen Spannungsverhältnis von Ausgangs- zu Eingangsspannung $\underline{U}_2/\underline{U}_1$.
+        Gemäß komplexer Spannungsteilerregel entspricht das Spannungsverhältnis dem Verhältnis der Impedanz am Ausgang (Impedanz der Kapazität) und 
+        der Impedanz am Eingang (Summe der Impedanz von Kapazität und Widerstand), kurz $\frac{\underline{Z}_C}{R + \underline{Z}_C}$.
+
+        Gleichung \ref{eq:tiefpass:frequenzgang} zeigt den ermittelten Frequenzgang des Tiefpasses.
+        Zur Vereinfachung wurden Nenner und Zähler rationalisiert, der Nenner sortiert und der Term
+        (optional) in kartesische Koordinaten umgeformt. (Vergleich kommentierte Nebenrechnung \ref{eq:tiefpass:frequenzgang:nebenrechnung}):
+    }%
+    \b{%
+        \textbf{Frequenzgang:}%
+        \begin{align}% lesser space above than \begin{equation}\begin{align} ... as in skript version below
+            \underline{F}(\mathrm{j}\omega)   & = \frac{\underline{U}_2}{\underline{U}_1} 
+                                    = \frac{\frac{1}{\mathrm{j}\omega C}}{R + \frac{1}{\mathrm{j}\omega C}}
+                                    = \frac{1}{\mathrm{j}\omega CR + 1} \\
+                                    & = \frac{1}{1 + \mathrm{j}\omega CR}
+                                    = \frac{1 - \mathrm{j}\omega CR}{1 + (\omega CR)^2}
+        \end{align}%
+        \pause%
+    }%
+    \s{%
+        \begin{equation}
+            \begin{aligned}
+                \underline{F}(\mathrm{j}\omega)   & = \frac{\underline{U}_2}{\underline{U}_1}
+                                        = \frac{\frac{1}{\mathrm{j}\omega C}}{R + \frac{1}{\mathrm{j}\omega C}}
+                                        = \frac{1}{\mathrm{j}\omega CR + 1} \\
+                                        & = \frac{1}{1 + \mathrm{j}\omega CR}
+                                        = \frac{1 - \mathrm{j}\omega CR}{1 + (\omega CR)^2}
+            \end{aligned}\label{eq:tiefpass:frequenzgang}
+        \end{equation}
+    }%
+
+    \s{
+        Damit haben wir den $\underline{F}(\mathrm{j}\omega)$ in Abhängigkeit von $\omega$ 
+        und den Bauteilgrößen $C$ und $R$ ermittelt. 
+        Mittels Betragsbildung lässt sich daraus gemäß \eqref{eq:def:A} der Amplitudengang 
+        und durch Phasenberechnung gemäß \eqref{eq:def:phi} der Phasengang bestimmen.
+        
+        Zur Betragsbildung bietet sich die Form $\frac{1}{1+\mathrm{j}\omega CR}$ an.
+        Da der Betrag im Zähler direkt ablesbar $1$ beträgt, muss nur der Betrag im Nenner 
+        bestimmen werden wie sie in \eqref{eq:tiefpass:ampli} gezeigt ist.
+        Alternativ kann auch die kartesische Form aus \eqref{eq:tiefpass:frequenzgang} in 
+        \eqref{eq:def:A} eingesetzt werden. 
+
+        Für den Phasengang $\varphi(\omega)$ bietet sich die kartesische Schreibweise in 
+        der Form $\frac{1-\mathrm{j}\omega CR}{1+(\omega CR)^2}$ an.
+        In dieser lassen sich der Real- und Imaginärteil leicht ablesen. 
+        Der Nenner hat dabei als rein reelle Größe keinen Einfluss auf die Phasenlage 
+        wie in \eqref{eq:tiefpass:phase} gezeigt ist.
+    }%
+    
+    \b{\textbf{Amplituden- und Phasengang:}
+        \begin{align}
+            A(\omega)       &= |\underline{F}(\mathrm{j}\omega)| = \frac{|\underline{U}_2|}{|\underline{U}_1|}
+                            &= \frac{1}{\sqrt{1 + (\omega CR)^2}} \\%
+            \varphi(\omega) &= \arctan\left(\frac{\Im\{\underline{F}\}}{\Re\{\underline{F}\}}\right)
+                            &= \arctan\left(-\omega CR\right)        
+        \end{align}
+    }
+    \s{% Ohne Überschrift, Rechnung etwas ausführlicher
+        \begin{align}
+            A(\omega)       &= |\underline{F}(\mathrm{j}\omega)| = \left|\frac{1}{1+\mathrm{j}\omega CR}\right|
+                                &&= \frac{\left|\qquad\!1\!\qquad\right|}{\left|1+\mathrm{j}\omega CR\right|} % Extra step
+                            &= \frac{1}{\sqrt{1 + (\omega CR)^2}} \label{eq:tiefpass:ampli}\\
+            \varphi(\omega) &= \angle \underline{F}(\mathrm{j}\omega) = \angle\left(\frac{1 - \mathrm{j}\omega CR}{\redcancel{1+(\omega CR)^2}}\right)
+                                &&= \arctan\left( \dfrac{ \dfrac{-\omega CR}{\redcancel{1+(\omega CR)^2}} }{ \dfrac{1}{\redcancel{1+(\omega CR)^2}} } \right) % Extra step
+                            &= \arctan\left(-\omega CR\right) \label{eq:tiefpass:phase}
+        \end{align}
+
+        Alternativ kann der Phasengang auch aus der nicht kartesischen Form des Frequenzganges bestimmt werden. 
+        Der Phasengang ergibt sich aus der Phasenlage des Zählers subtrahiert mit der Phasenlage des Nenners: 
+        
+        \begin{align}
+            \varphi(\omega) 
+            &= \angle \left(\frac{1}{1+\mathrm{j}\omega CR}\right) 
+            = \underbrace{\arctan\left(\frac{0}{\redcancel{1}}\right)}_{\varphi_{Zaehler}}-\underbrace{\arctan\left(\frac{\omega CR}{\redcancel{1}}\right)}_{\varphi_{Nenner}}
+            &= \arctan\left(-\omega CR\right) \label{eq:tiefpass:phase:alternative}
+        \end{align}
+
+        Die Herangehensweise bietet sich vor allem an, wenn sich Betrag und/oder Phase des Zählers direkt ablesen lassen. 
+        Dadurch kann ein Rechenschritt zum Umrechnen in kartesische Koordinaten gespaart werden.
+
+        Im folgenden Exkurs wird die seperate Betrachtung von Zähler und Nenner von Frequenzgängen näher erläutert:
+
+        \textbf{Exkurs Berechnung komplexer Zahlen in (kartesischen) Descartes- und Polar-Koordinaten}
+
+        Der Frequenzgang nimmt in der Regel die Form eines komplexen gebrochen rationalen Bruches an. 
+        Das bedeutet, dass sowohl Nenner als auch Zähler sich als komplexe Polynome darstellen lassen:
+        
+        \begin{equation}
+            \label{eq:def:F:komplexgebrochenrationalerbruch}
+            \underline{F}(\mathrm{j}\omega) 
+                = \frac{\underline{F}_Z(\mathrm{j}\omega)}{\underline{F}_N(\mathrm{j}\omega)}
+                = \frac{a_n \omega^n + \dots + a_1 \omega + a_0}{b_m \omega^m + \dots + b_1 \omega + b_0} \qquad \text{mit} 
+                \qquad a_i, b_j \in \mathbb{C} 
+                \qquad n,m,\omega \in \mathbb{R} 
+                %\qquad i \in \left[0,...,n\right] 
+                %\qquad j \in \left[0,...,m\right]
+        \end{equation}
+        
+        Liegt $\underline{F}(\mathrm{j}\omega)$ nun als komplexer Bruch vor mit Zähler und Nenner in kartesischen Koordinaten, 
+        so können wir $A(\omega)$ und $\varphi(\omega)$ durch seperate Betragsbildung und Phasenberechnung von Zähler und Nenner bestimmen.
+        Hierfür werden die Formeln aus \eqref{eq:def:A} und \eqref{eq:def:phi} für Zähler (Index $Z$) und Nenner (Index $N$) angewandt. 
+        Da Amplituden- und der Phasengang wie in \eqref{eq:def:Fpolar} gezeigt die Polar-Koordinaten (Amplitude und Phase) des Frequenzganges 
+        darstellen ergibt sich folgendes Berechnungsschema:
+
+        \begin{align}
+            \label{eq:def:F:bruch}
+            \underline{F}(\mathrm{j}\omega) 
+                            & = \frac{\underline{F}_Z(\mathrm{j}\omega)}{\underline{F}_N(\mathrm{j}\omega)}&
+                            & = \frac{|\underline{F}_Z| \cdot \mathrm{e}^{\mathrm{j}\angle{\underline{F}_Z}}}{|\underline{F}_N| \cdot \mathrm{e}^{\mathrm{j}\angle{\underline{F}_N}}}&
+                            & = \frac{A_Z}{A_N} \cdot \mathrm{e}^{\mathrm{j} (\varphi_Z - \varphi_N)}
+                            \vphantom{\Bigg|}\\
+            \label{eq:def:A:bruch}
+            A(\omega)       & = |\underline{F}(\mathrm{j}\omega)|&
+                            & = \frac{|\underline{F}_Z|}{|\underline{F}_N|}&
+                            & = \frac{A_Z}{A_N}&
+                            \vphantom{\Bigg|}\\
+            \label{eq:def:phi:bruch}
+            \varphi(\omega) & = \angle \underline{F}(\mathrm{j}\omega)&
+                            & = \angle{\underline{F}_Z} - \angle{\underline{F}_N}&
+                            & = \varphi_Z - \varphi_N
+        \end{align}
+
+        Im Allgemeinen bietet sich für Multiplikationen und Divisionen komplexer Zahlen die Berechnung in Polarkoordinaten (mit Betrag und Argument) an.
+        Eine Multiplikation/Division führt bei komplexen Zahlen zur Multiplikation/Division der Beträge und Addition/Subtraktion der Argumente.
+        Bei Additionen und Subtraktionen eignet sich die kartesische Form mit Real- und Imaginärteil besser für Berechnungen, 
+        da diese direkt addiert/subtrahiert werden können.
+    }
+\end{columns}
+    \CMT{% COMMENT ANFANG
+    \begin{align}
+        \underline{z}   
+        &= \Re\{\underline{z}\} + \mathrm{j} \Im\{\underline{z}\}  &
+            &= x + \mathrm{j}y &
+            &\text{mit}\quad x,y \in \mathbb{R} \\
+        &= |\underline{z}|\cdot \mathrm{e}^{\mathrm{j}\angle{\underline{z}}} &
+            &= a \cdot \mathrm{e}^{\mathrm{j} \beta} &
+            &\text{mit}\quad a,\beta \in \mathbb{R}\\
+    \end{align}
+    }% COMMENT ENDE
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Grenzverhalten am Beispiel eines einfachen Tiefpass-Filters}
+\label{sec:frequenzgang:tiefpass:grenzverhalten}
+\begin{frame}[t]\ftx{\subsecname}
+\b{
+    \begin{columns}[T]
+        \column{0.45\textwidth}% column links 1/2
+            {\centering%
+            \vspace{-7.5mm}%
+            \onslide<1->{\includegraphics{Tikz/pdf/circ_tiefpass_rc_annotated.pdf}}%
+            \vspace{2mm}%
+
+            \onslide<5->{\resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_tiefpass_mini_ampli_lin_samesize.pdf}}}
+
+            \onslide<5->{\resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_tiefpass_mini_phase_lin_samesize.pdf}}}
+            }%
+        \column{0.55\textwidth}% column rechts 2/2
+            \b{\textbf{Grenzverhalten:} für $f \rightarrow 0$ und $f \rightarrow \infty$\\[-12pt]%
+            }%
+            % Rechnung
+            \begin{align}
+                \onslide<1->{\underline{F}(\mathrm{j}\omega)&=A(\omega)\cdot\mathrm e^{\mathrm j\varphi(\omega)} = \frac{1}{1 + \mathrm{j}\omega CR} &&}\\[+8pt] % extra space
+                \onslide<2->{A(\omega)      &=\frac{1}{\sqrt{1 + (\omega CR)^2}}                                    &&\\}%
+                \onslide<3->{%
+                                            &\lim_{\omega \rightarrow 0}A(\omega) = \frac{1}{1}                     &&=1\\
+                                            &\lim_{\omega \rightarrow \infty}A(\omega) = \frac{1}{\sqrt{\infty}}    &&=0\\[+8pt] % extra space
+                }%
+                \onslide<2->{\varphi(\omega)&=\arctan\left(-\omega CR\right)                                        &&\\}%
+                \onslide<4->{%
+                                            &\lim_{\omega \rightarrow 0}         \varphi(\omega) = \arctan(0)       &&=0\degree\\
+                                            &\lim_{\omega \rightarrow \infty}    \varphi(\omega) = \arctan(-\infty) &&=-90\degree
+                }%   
+            \end{align}
+    \end{columns}
+}
+\s{
+    In diesem Kapitel wird das Grenzverhalten des Tiefpass-Filters 1. Ordnung aus dem vorigen Kapitel (s. Abbildung \ref{circ:filter:rctief}) für sehr hohe und sehr niedrige Frequenzen untersucht.
+    Dazu werden die Grenzwerte des Amplitudengangs $A(\omega)$ und des Phasengangs $\varphi(\omega)$ bestimmt, sowie die Ergebnisse beschrieben, interpretiert und grafisch dargestellt.
+    
+    \textbf{Grenzwerte:}
+
+    Für den Amplitudengang aus Gleichung \ref{eq:tiefpass:ampli} ergeben sich
+    für $f \rightarrow 0$ und $f \rightarrow \infty$ die folgenden Grenzwerte:
+
+    \begin{align}
+        &&A(\omega) &=\frac{1}{\sqrt{1 + (\omega CR)^2}}    &                                           &                           &   &    &&\nonumber\\
+        &&          &                                       &   \lim_{\omega \rightarrow 0}A(\omega)    &=\frac{1}{1}               &   &=1  &&\label{eq:tiefpass:ampli:lim}\\
+        &&          &                                       &   \lim_{\omega \rightarrow \infty}A(\omega)&=\frac{1}{\sqrt{\infty}}  &   &=0  &&\nonumber
+    %\end{align}
+    \\\intertext{%
+        Für den Phasengang aus Gleichung \ref{eq:tiefpass:phase} ergeben sich analog dazu die Grenzwerte:%
+    }%
+    %Für den Phasengang aus Gleichung \ref{eq:tiefpass:phase} ergeben sich analog dazu die Grenzwerte:
+    %\begin{align}
+        &&\varphi(\omega)   &=\arctan\left(-\omega CR\right)&                                                   &                   &   &           &&\nonumber\\
+        &&                  &                               &   \lim_{\omega \rightarrow 0}\varphi(\omega)      &=\arctan(0)        &   &=0\degree  &&\label{eq:tiefpass:phase:lim}\\
+        &&                  &                               &   \lim_{\omega \rightarrow \infty}\varphi(\omega) &=\arctan(-\infty)  &   &=-90\degree&&\nonumber
+    \end{align}
+
+    An Gleichung \ref{eq:tiefpass:ampli:lim} ist zu erkennen, dass der Tiefpass bei sehr niedrigen Frequenzen kaum dämpft ($A(\omega) \rightarrow 1$), 
+    bei sehr hohen Frequenzen hingegen stark dämpft ($A(\omega) \rightarrow 0$). 
+    
+    An Gleichung \ref{eq:tiefpass:phase:lim} ist zu erkennen, dass der Tiefpass bei sehr niedrigen Frequenzen (bei kaum Dämpfung) kaum Phasenverschiebung aufweist ($\varphi(\omega) \rightarrow 0\degree$),
+    bei sehr hohen Frequenzen (starke Dämpfung) hingegen eine Phasenverschiebung bis $-90\degree$ aufweist. 
+
+    \textbf{Erklärung des Grenzverhaltens anhand des Schaltbildes:}
+
+    Das Grenzverhalten bezüglich Amplitudenänderung und Phasenverschiebung lässt sich gut anhand des 
+    Schaltbildes \ref{circ:filter:rctief} erklären. % TODO: Schaltbilder für Grenzfälle mit Spannungspfeilen und Impedanzen einfügen
+    
+    Im Grenzfall einer Gleichspannung ($f=0$) am Eingang sperrt die Kapazität ($X_C \rightarrow \infty$). 
+    Ihr Verhalten entspricht hier zwei offenen Klemmen, wodurch die gesamte Eingangsspannung am Ausgang $U_2$ über der Kapazität $C$ anliegt. 
+    Die relative Amplitudenänderung beträgt daher $1$ (ungedämpft) und die Phasenverschiebung $0\degree$ (in Phase). 
+
+    Bei sehr hohen Frequenzen ($f\rightarrow \infty$) verhält sich die Kapazität wie ein Kurzschluss ($X_C \rightarrow 0$).
+    Damit geht die Ausgangsspannung gegen null (starke Dämpfung, $A\rightarrow 0$) und die Eingangsspannung liegt annäherend vollständig über $R$ an.
+    Eingangsspannung und Strom liegen dadurch näherungsweise in Phase. Die Phasenverschiebung von Ausgangsspannug über der Kapazität
+    zu Eingangsspannung beträgt dadurch näherungsweise $-90\degree$.
+    
+    \textbf{Visualisierung:}
+
+    % Hinweis zur Visualisierung der Funktionen
+    Um eine Vorstellung des Verhaltens von Amplituden- und Phasengang zu bekommen, können wir die Funktionen graphisch darstellen. 
+
+    Der Amplitudengang $A(\omega)$ und der Phasengang $varphi(\omega)$ sind in 
+    Abbildung \ref{plot:tiefpass:ampli:mini:lin} und \ref{plot:tiefpass:phase:mini:lin} dargestellt.
+    Beide Graphen sind mit linearen Skalen dargestellt, wobei die Skalierungen beider x-Achsen für $\omega \left[\mathrm{Hz}\right]$ identisch sind. 
+    Eine Veränderung des Faktors $CR$ führt in linearer Darstellung lediglich zu einer Stauchung oder Streckung der Graphen in x-Richtung, 
+    weshalb auf eine explizite Angabe der Werte verzichtet wurde. 
+
+    \begin{figure}[h]\centering
+        \begin{subfigure}{0.45\textwidth}\centering
+            \includegraphics{Tikz/pdf/plot_tiefpass_mini_ampli_lin_samesize.pdf}
+            \caption{Amplitudengang $A(\omega)$, lineare Achsen}
+            \label{plot:tiefpass:ampli:mini:lin}
+        \end{subfigure}
+        \begin{subfigure}{0.45\textwidth}\centering
+        \includegraphics{Tikz/pdf/plot_tiefpass_mini_phase_lin_samesize.pdf}
+            \caption{Phasengang $\varphi(\omega)$, lineare Achsen}
+            \label{plot:tiefpass:phase:mini:lin}
+        \end{subfigure}
+        \caption{Lineardarstellung des Amplitudengang und Phasengang eines Tiefpass 1. Ordnung}
+%        \caption{Amplitudengang $A(\omega)$ und Phasengang $\varphi(\omega)$ eines Tiefpass 1. Ordnung, lineare Achsen}
+        \label{plot:tiefpass:mini:lin}
+    \end{figure}
+
+    % Hinweis: Logarithmische Skala für Frequenzgang
+    In Kapitel \ref{sec:frequenzganglog} wird die Darstellung des Frequenzganges mit logarithmischer Skala eingeführt.
+    Auch die Definition der \textbf{Grenzfrequenz} $f_g$ (respektive der Grenzkreisfrequenz $\omega_g$) zur Unterteilung 
+    des Frequenzbereichs in einen \textbf{Durchlassbereich} und einen \textbf{Sperrbereich} wird dort erläutert.
+
+    \textbf{Exkurs zur Herleitung der Graphenform:}
+    % Erklärung der Graphenform für A(omega) anhand von Näherungen (Potenzfunktion)
+
+    Die Graphenform des Amplitudengangs $A(\omega)$  in linearer Darstellung lässt sich daran erklären, dass dieser sich 
+    für sehr niedrige Frequenzen ($f \rightarrow 0$) der waagrechten Gerade $A=1$ annähert und 
+    für sehr hohe Frequenzen ($f \rightarrow \infty$) der Potenzfunktion $\frac{1}{\omega CR}$ annähert.
+    Abbildung \ref{plot:tiefpass:ampli:lin:approx} zeigt diese Näherungen für $A(x)=\frac{1}{\sqrt{1+x^2}}$ mit $x=\omega CR$.
+
+    \fu{\includegraphics{Tikz/pdf/plot_tiefpass_ampli_lin_approx.pdf}}{
+        Amplitudengang Tiefpass 1. Ordnung, lineare Achsen, Näherungen mit $x=\omega CR$ \label{plot:tiefpass:ampli:lin:approx}
+    }
+
+    % Erklärung der Graphenform für phi(omega) anhand von Tangensfunktion
+    Die Form des Phasenganges lässt sich leicht aus der Form einer (Arcus-)Tangensfunktion ableiten.
+    Abbildung \ref{plot:tiefpass:phase:lin:approx} zeigt die Tangensfunktion und dessen Umkehrfunktion Arcustangens, sowie deren 
+    jeweiligen Spiegelungen an der y-Achse in linearer Darstellung.
+    
+    \fu{\includegraphics{Tikz/pdf/plot_tan_atan_mirror.pdf}}{
+        Phasengang Tiefpass 1. Ordnung, lineare Achsen, Vergleich Tangens/Arcustangens \label{plot:tiefpass:phase:lin:approx}
+    }
+
+    Die Umkehrung der jeweiligen Funktion ist durch Spiegelung des Graphen an der Winkelhalbierenden 
+    (schwarz gestrichelte Gerade) und Tausch der x- und y-Achse erreichbar,
+    vorrausgesetzt die jeweilige Funktion ist stetig monoton wachsend oder stetig monoton fallend. 
+    Der Tangens ist daher zur Bildung des Arcustangens auf den Winkelbereich $-90\degree$ bis $+90\degree$ beschränkt 
+    bei einem Wertebereich von $-\infty$ bis $+\infty$.
+    Aufgrund der nicht darstellbaren Polstellen ist der dargestellte Wertebereich auf $-6$ bis $+6$ beschränkt.
+
+    Der Phasengang des Tiefpass 1. Ordnung entspricht dem abgebildeten $\arctan(-x)$ für $x=\omega CR >0$. 
+    Da es physikalisch keine negativen Frequenzen gibt, gilt $\omega>0 \rightarrow x>0$, wodurch der Wertebereich des Phasengangs 
+    nur den halben Wertebereich des Arcustangens abdeckt, also von $-90\degree$ bis $0\degree$.
+}%
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Frequenzgang am Beispiel eines einfachen Hochpass-Filters}
+\label{sec:frequenzgang:hochpass:herleitung}
+\begin{frame}\ftx{\subsecname}
+    \begin{columns}
+        \column[T]{0.45\textwidth}% left col
+            \s{\index{Filter>Hochpass}%
+                Ein Hochpass-Filter (kurz Hochpass) funktioniert ähnlich einem Tiefpass-Filter. 
+                Dem Namen entsprechend passieren beim Hochpass jedoch Signale hoher Frequenzen nahezu ungedämpft (ungefiltert), 
+                während Signale niedriger Frequenzen stark gedämpft (gefiltert) werden.  
+
+                % Aufbau (Schaltbild)
+                Abbildung \ref{circ:filter:rchoch} zeigt exemplarisch einen RC-Hochpass erster Ordnung, 
+                der im Folgenden näher untersucht wird.
+                Der Hochpass besteht aus einer einfach Serienschaltung von Widerstand $R$ und Kapazität $C$. 
+                Die Eingangsspannung $\underline{U}_1$ liegt über $R$ und $C$ in Reihe an, 
+                während die Ausgangsspannung $\underline{U}_2$ über $R$ abgegriffen wird.
+                Der Aufbau ist identisch mit dem RC-Tiefpass erster Ordnung, 
+                nur dass die Ausgangsspannung über $R$ statt über $C$ anliegt.
+   
+                \fu{\includegraphics{Tikz/pdf/circ_hochpass_rc_annotated.pdf}}{Schaltbild, RC-Hochpass 1. Ordnung\label{circ:filter:rchoch}}%
+
+                Die Herleitung des Frequenzganges erfolgt analog zum Vorgehen beim Tiefpass 
+                in Kapitel \ref{sec:frequenzgang:tiefpass:herleitung}.
+                Da es sich beim Hochpass um ein LZI-System handelt gilt: 
+                \begin{equation}
+                \begin{aligned}
+                                        u_1(t)& = \hat{U}_1 \cdot \sin(\omega t)\\
+                    \xrightarrow{LZI}   u_2(t)& = \hat{U}_2 \cdot \sin(\omega t + \varphi)
+                \end{aligned}%
+                \end{equation}
+            }%
+            \b{%
+                {\centering
+                \vspace{-7.5mm}%
+                \includegraphics{Tikz/pdf/circ_hochpass_rc_annotated.pdf}%
+                }\vspace{3mm}%
+
+                \textbf{RC-Hochpass 1. Ordnung}
+
+                \begin{align}% less space above than \begin{equation}\begin{align} ... as in skript version above
+                                        u_1(t)& = \hat{U}_1 \cdot \sin(\omega t)\\
+                    \xrightarrow{LZI}\  u_2(t)& = \hat{U}_2 \cdot \sin(\omega t + \varphi)
+                \end{align}%
+            }%
+
+        \column[t]{0.55\textwidth}% right col
+            \s{%
+                Das heißt, bei sinusförmiger Eingangsspannung $u_1(t)$, ist auch die Ausgangsspannung $u_2(t)$ 
+                sinusförmig mit gleicher Frequenz wie die Eingangsspannung.
+
+                Der Frequenzgang lässt sich dadurch gemäß Gleichung \ref{eq:def:F} bestimmen,
+                indem die komplexe Wechselspannungen $\underline{U}_2$ am Ausgang und $\underline{U}_1$ am Eingang 
+                ins Verhältnis gesetzt werden. Dadurch erhalten wir:
+
+                \begin{equation}
+                    \begin{aligned}
+                        \underline{F}(\mathrm{j}\omega)   & = \frac{\underline{U}_2}{\underline{U}_1} 
+                                                = \frac{R}{R + \frac{1}{\mathrm{j}\omega C}} 
+                                                = \frac{1}{1 + \frac{1}{\mathrm{j}\omega CR}} \\
+                                                & = \frac{1}{1 - \mathrm{j}\ \frac{1}{\omega CR}} 
+                                                = \frac{1 + \mathrm{j}\ \frac{1}{\omega CR}}{1 + \frac{1}{(\omega CR)^2}}
+                    \end{aligned}\label{eq:hochpass:frequenzgang}
+                \end{equation}
+            }%
+            \b{%
+                \textbf{Frequenzgang:}%
+                \begin{align}% lesser space above than \begin{equation}\begin{align} ... as in skript version below
+                    \underline{F}(\mathrm{j}\omega)   & = \frac{\underline{U}_2}{\underline{U}_1} 
+                                            = \frac{R}{R + \frac{1}{\mathrm{j}\omega C}} 
+                                            = \frac{1}{1 + \frac{1}{\mathrm{j}\omega CR}} \\
+                                            & = \frac{1}{1 - \mathrm{j}\ \frac{1}{\omega CR}} 
+                                            = \frac{1 + \mathrm{j}\ \frac{1}{\omega CR}}{1 + \frac{1}{(\omega CR)^2}}
+                \end{align}
+            }%
+            \s{%
+                Für den Amplitudengang $A(\omega)$ und den Phasengang $\varphi(\omega)$ ergeben sich die folgenden Gleichungen:
+            
+                \begin{align}
+                    A(\omega)       &= |\underline{F}(\mathrm{j}\omega)| = \left|\frac{1}{1-\mathrm{j}\frac{1}{\omega CR}}\right|
+                                    &= \frac{1}{\sqrt{1 + \frac{1}{(\omega CR)^2}}} \label{eq:hochpass:ampli}\\
+                    \varphi(\omega) &= \angle \underline{F}(\mathrm{j}\omega) = \angle\left(\frac{1 + \mathrm{j}\frac{1}{\omega CR}}{1 + \frac{1}{(\omega CR)^2}}\right)
+                                    &= \arctan\left(\frac{1}{\omega CR}\right)\label{eq:hochpass:phase}
+                \end{align}
+            }%
+            \b{%
+                \textbf{Amplituden- und Phasengang:}
+                \begin{align} % Leicht gekürzt gegenüber Skriptversion
+                    A(\omega)       &= |\underline{F}(\mathrm{j}\omega)| = \frac{|\underline{U}_2|}{|\underline{U}_1|}
+                                    &= \frac{1}{\sqrt{1 + \frac{1}{(\omega CR)^2}}} \\
+                    \varphi(\omega) &= \arctan\left(\frac{\Im\{\underline{F}\}}{\Re\{\underline{F}\}}\right)
+                                    &= \arctan\left(\frac{1}{\omega CR}\right)\\
+                \end{align}
+            }%
+    \end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Grenzverhalten am Beispiel eines einfachen Hochpass-Filters}
+\label{sec:frequenzgang:hochpass:grenzverhalten}
+\begin{frame}\ftx{\subsecname}
+% beamer links: Schaltbild, lineare Plots A(\omega), \varphi(\omega)
+% beamer rechts: Rechnung Grenzverhalten von A und \varphi für f=0 und f->\inf
+\b{%
+    \begin{columns}[T]
+        \column{0.45\textwidth}% column links 1/2
+            {\centering\vspace{-4mm}%
+            \includegraphics{Tikz/pdf/circ_hochpass_rc_annotated.pdf}%
+            \vspace{2mm}
+
+            \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_hochpass_mini_ampli_lin_samesize.pdf}}
+
+            \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_hochpass_mini_phase_lin_samesize.pdf}}
+            }
+        \column{0.55\textwidth}% column rechts 2/2
+            \textbf{Grenzverhalten:} für $f \rightarrow 0$ und $f \rightarrow \infty$
+            % Rechnung
+            \begin{align}
+                \underline{F}(\mathrm{j}\omega)&=A(\omega)\cdot\mathrm e^{\mathrm j\varphi(\omega)} = \frac{1}{1 - \mathrm{j}\frac{1}{\omega CR}} &&\\
+                &&&\\[-12pt]% little empty line for extra space
+                    A(\omega)                   &=\frac{1}{\sqrt{1 + \left(\frac{1}{\omega CR}\right)^2}}               &&\\
+                                                &\lim_{\omega \rightarrow 0}A(\omega) = \frac{1}{\infty}                &&=0\\
+                                                &\lim_{\omega \rightarrow \infty}A(\omega) = \frac{1}{1}                &&=1\\
+                                                &&&\\[-12pt]% little empty line for extra space
+                    \varphi(\omega)&=\arctan\left(\frac{1}{\omega CR}\right)                                            &&\\
+                                                &\lim_{\omega \rightarrow 0}         \varphi(\omega) = \arctan(+\infty) &&=+90\degree\\
+                                                &\lim_{\omega \rightarrow \infty}    \varphi(\omega) = \arctan(0)       &&=0\degree
+            \end{align}
+    \end{columns}
+}%
+\s{%
+    Das Grenzverhalten des Hochpass-Filters 1. Ordnung aus Kapitel \ref{sec:frequenzgang:hochpass:herleitung} 
+    wird in diesem Kapitel für sehr hohe und sehr niedrige Frequenzen untersucht.
+    Die Grenzwertbestimmung des Amplitudengangs $A(\omega)$ und des Phasengangs $\varphi(\omega)$ erfolgt analog 
+    zu der des Tiefpass-Filter wie in Kapitel \ref{sec:frequenzgang:tiefpass:grenzverhalten} beschrieben. 
+    
+    \textbf{Grenzwerte:}
+
+    Für den Amplitudengang aus Gleichung \ref{eq:hochpass:ampli} ergeben sich die folgenden Grenzwerte 
+    für $f \rightarrow 0$ und $f \rightarrow \infty$:
+    
+    \begin{align}
+        &&A(\omega) &=\frac{1}{\sqrt{1 + \left(\frac{1}{\omega CR}\right)^2}}&  &                   &&          &&\nonumber\\
+        &&          &&  \lim_{\omega \rightarrow \infty}A(\omega)               &=\frac{1}{\infty}  &&=0        &&\label{eq:tiefpass:ampli:lim}\\
+        &&          &&  \lim_{\omega \rightarrow 0}A(\omega)                    &=\frac{1}{\sqrt{1}}&&=1        &&\nonumber
+    %\end{align}
+    \\\intertext{%
+    Für den Phasengang aus Gleichung \ref{eq:hochpass:phase} folgt analog dazu:
+    }%
+    %\begin{align}
+        &&\varphi(\omega)   &=\arctan\left(\frac{1}{\omega CR}\right)&          &                   &&          &&\nonumber\\
+        &&          &&  \lim_{\omega \rightarrow 0}\varphi(\omega)              &=\arctan(\infty)   &&=+90\degree&&\label{eq:tiefpass:phase:lim}\\
+        &&          &&  \lim_{\omega \rightarrow \infty}\varphi(\omega)          &=\arctan(0)        &&=0\degree &&\nonumber
+    \end{align}
+
+    Das heißt, bei sehr niedrigen Frequenzen dämpft der Hochpass stark ($A(\omega) \rightarrow 0$) mit Phasenverschiebung bis $+90\degree$
+    und bei sehr hohen Frequenzen kaum ($A(\omega) \rightarrow 1$) mit Phasenverschiebung bis $0\degree$.
+
+    Anhand des Schaltbildes \ref{circ:filter:rchoch} lässt sich dieses Grenzverhalten gut erklären.
+    Bei Gleichspannung ($f=0$) sperrt die Kapazität, wodurch die gesamte Eingangsspannung über dieser abfällt.
+     
+    Bei sehr kleinen Frequenzen ($f \to 0$) liegt die Eingangsspannung näherungsweise vollständig über der Kapazität an. 
+    Der Strom eilt der Eingangsspannung bis $+90\degree$ voraus, wodurch sich eine positive Phasenverschiebung 
+    bis $+90\degree$ zur Ausgangsspannung über dem Widerstand ergibt.
+
+    Bei sehr hohen Frequenzen ($f \rightarrow \infty$) verhält sich die Kapazität wie ein Kurzschluss, 
+    wodurch die Eingangsspannung näherungsweise vollständig über dem Widerstand am Ausgang anliegt.
+    Dadurch sind Ausgangs- und Eingangsspannung näherungsweise gleich in Amplitude und in Phase.
+
+    \textbf{Visualisierung:}
+
+    Abbildung \ref{plot:hochpass:mini:lin} zeigt den Amplitudengang $A(\omega)$ und den Phasengang $\varphi(\omega)$ des Hochpass 1. Ordnung in linearer Darstellung
+    mit gleicher Skalierung und gleichem Wertebereich für die x-Achsen.
+
+    \begin{figure}[h]\centering
+        \begin{subfigure}{0.45\textwidth}\centering
+            \includegraphics{Tikz/pdf/plot_hochpass_mini_ampli_lin_samesize.pdf}
+            \caption{Amplitudengang $A(\omega)$, lineare Achsen}
+            \label{plot:hochpass:ampli:mini:lin}
+        \end{subfigure}
+        \begin{subfigure}{0.45\textwidth}\centering
+        \includegraphics{Tikz/pdf/plot_hochpass_mini_phase_lin_samesize.pdf}
+            \caption{Phasengang $\varphi(\omega)$, lineare Achsen}
+            \label{plot:hochpass:phase:mini:lin}
+        \end{subfigure}
+        \caption{Lineardarstellung des Amplitudengang und Phasengang eines Hochpass 1. Ordnung}
+%        \caption{Amplitudengang $A(\omega)$ und Phasengang $\varphi(\omega)$ eines Hochpass 1. Ordnung, lineare Achsen}
+        \label{plot:hochpass:mini:lin}
+    \end{figure}
+
+    Eine logarithmische Darstellung des Frequenzganges wird in Kapitel \ref{sec:frequenzganglog:vergleichtiefpasshochpass} eingeführt.
+}%
+\end{frame}
+
+            
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Vergleich passive Filter 1. Ordnung mit $L$ und $R$}
+\label{sec:frequenzgang:rlfilter}
+\begin{frame}\ftx{\subsecname}
+\s{%
+    Tiefpass und Hochpass lassen sich auch mit einer Induktivität $L$ und einem Widerstand $R$ realisieren. 
+    In Tabelle \ref{tab:filter:rl:vergleich:circeq} sind die Schaltbilder für RL-Filter 1. Ordnung 
+    und ihre RC-Pendants gegenübergestellt. Zudem ist zu jedem Schaltbild die Formel für den Frequenzgang aufgeführt.
+}%
+% BRAILLE TABELLE als Kommentarblock
+% Titel: Vergleich Schaltbild und Frequenzgang für RL- und RC-Filter 1. Ordnung
+% 3 Zeilen, 6 Spalten mit $w=\omega$:
+\b{\s{%
+\begin{tabular}{|c|cc|cc|c|}%
+\hline
+. % Header
+    & Tiefpass
+    & Frequenzgang
+    & Hochpass
+    & Frequenzgang
+    & Grenzfrequenz \\
+\hline
+RL % Zeile 1
+    & TP U1 über RL mit U2 über R
+    & TP $F(jw)=1/(1+j*wL/R)$
+    & HP U1 über RL mit U2 über L
+    & HP $F(jw)=1/(1-j*R/(wL))$
+    & $w_g = R/L$ \\
+\hline
+RC % Zeile 2
+    & TP U1 über RC mit U2 über C
+    & TP $F(jw)=1/(1+j*wRC)$
+    & HP U1 über RC mit U2 über R
+    & HP $F(jw)=1/(1-j/(wRC))$
+    & $w_g = 1/(RC)$ \\
+\hline
+\end{tabular}%
+}}
+
+% NICHT BRAILLE TABELLE zum TeXen
+\begin{table}[h]\centering
+    \s{\caption{Vergleich Schaltbild und Frequenzgang für RL- und RC-Filter 1. Ordnung}}%
+    \label{tab:filter:rl:vergleich:circeq}
+    \resizeboxsb{1}{1}{% 90% textwidth skript, 100% textwidth beamer
+        \begin{tabular}{|c|c l|c l|c|}
+            \hline$\vphantom{\Big|}$ % empty cell, vphantom padding for rowheight
+                &   \textbf{Tiefpass}
+                &   $\quad\underline{F}(\mathrm{j}\omega)$
+                &   \textbf{Hochpass}
+                &   $\quad\underline{F}(\mathrm{j}\omega)$
+                &   $\omega_g$
+            \\\hline\parbox[c][2cm][c]{0.3cm}{\rotatebox[origin=c]{90}{\textbf{RL}}}
+                &   \parbox[c][2cm][c]{3.0cm}{\resizebox{\linewidth}{!}{\includegraphics{Tikz/pdf/circ_tiefpass_rl_annotated.pdf}}} % resizebox breaks tikz without parbox around
+                &   \parbox[c][2cm][c]{1.7cm}{$\dfrac{1}{1+\mathrm{j} \omega \frac{L}{R}}$}
+                &   \parbox[c][2cm][c]{3.0cm}{\resizebox{\linewidth}{!}{\includegraphics{Tikz/pdf/circ_hochpass_rl_annotated.pdf}}}
+                &   \parbox[c][2cm][c]{1.7cm}{$\dfrac{1}{1-\mathrm{j}\frac{R}{\omega L}}$}
+                &   \parbox[c][2cm][c]{0.5cm}{$\dfrac{R}{L}$}
+            \\\hline\parbox[c][2cm][c]{0.3cm}{\rotatebox[origin=c]{90}{\textbf{RC}}}
+                &   \parbox[c][2cm][c]{3.0cm}{\resizebox{\linewidth}{!}{\includegraphics{Tikz/pdf/circ_tiefpass_rc_annotated.pdf}}}
+                &   \parbox[c][2cm][c]{1.7cm}{$\dfrac{1}{1+\mathrm{j}\omega RC}$}
+                &   \parbox[c][2cm][c]{3.0cm}{\resizebox{\linewidth}{!}{\includegraphics{Tikz/pdf/circ_hochpass_rc_annotated.pdf}}}
+                &   \parbox[c][2cm][c]{1.7cm}{$\dfrac{1}{1-\mathrm{j}\frac{1}{\omega RC}}$}
+                &   \parbox[c][2cm][c]{0.5cm}{\centering $\dfrac{1}{RC}$}
+            \\\hline
+        \end{tabular}
+    }%
+\end{table}
+
+\s{%
+    Im Vergleich der Schaltbilder ist zu erkennen, dass die RL- und RC-Varianten sich lediglich in der Anordnung von $L$ und $R$
+    beziehungsweise $R$ und $C$ unterscheiden. 
+    Die Frequenzgänge der RL- und RC-Varianten unterscheiden sich nur im Faktor $\dfrac{L}{R}$ und $RC$ vor $\omega$ voneinander.
+    Wie in Kapitel \ref{sec:frequenzganglog:grenzfrequenz} noch näher erläutert wird, entspricht dieser Faktor dem Kehrwert der Grenzkreisfrequenz 
+    $\omega_g$, welche vollständigkeitshalber mit in der Tabelle aufgeführt ist.
+}%
+
+\end{frame}
+
+%-------------------------------------------------------------------------------------------------%
+% Aufgabenstellung + Schaltbild in einem Frame:
+
+\subsection{Beispiel Filterschaltung: Aufgabe}
+\begin{frame}\ftx{\subsecname}
+\begin{bsp}{Filterschaltung: Aufgabe}{}% label as second madatory argument is printed in Folien, can't escape with \b{...} -> no label for this bsp
+\noindent%
+\begin{minipage}{\textwidth}
+    \begin{minipage}[c]{0.44\textwidth}
+        \fu{\includegraphics{Tikz/pdf/circ_aufgabe_filter.pdf}}{Filterschaltung, passiv}% Schaltbild
+        \b{\vfill}%
+        \begin{align*}
+        u_1(t) &= \hat{U}_1\cdot \sin(\omega t)             & \underline{U}_1 &= \hat{U}_1\\
+        u_2(t) &= \hat{U}_2\cdot \sin(\omega t + \varphi)   & \underline{U}_2 &= \hat{U}_2 \cdot \mathrm{e}^{\mathrm{j}\varphi}
+        \end{align*}
+        \b{\vfill}
+    \end{minipage}\hfill
+    \begin{minipage}[c]{0.52\textwidth}
+        \textbf{Aufgabe:}\\\b{\vfill}
+        a) Leiten Sie $\underline{F}(\mathrm{j}\omega) = \frac{\underline{U}_2}{\underline{U}_1}$ allgemein her.\\
+        \b{\vfill}
+        b) Zeichnen Sie Betrag und Phase von $\underline{F}(\mathrm{j}\omega)$ für:
+        \begin{itemize}
+            \item[] $R_1 = 900\ \Omega$
+            \item[] $R_2 = 100\ \Omega$
+            \item[] $C = 1,25\ \mu \mathrm{F}$
+        \end{itemize}
+        \b{\vfill}
+        c) Bei welcher Frequenz $f$ ist $\hat{U}_2 = \frac{1}{2}\hat{U}_1$? \\
+        Welche Phasenverschiebung besitzt $u_2$ nun gegenüber $u_1$?
+    \end{minipage}	
+\end{minipage}
+\end{bsp}%
+\end{frame}%
+%
+%-------------------------------------------------------------------------------------------------%
+%
+\begin{frame}[allowframebreaks]\ftx{\subsecname - Lösung}% EVIL: allowed (auto/manual) framebreaks
+\begin{bsp}{Filterschaltung: Lösung}{}% label as second madatory argument is printed in Folien, can't escape with \b{...} -> no label for this bsp
+\textbf{Lösung a) Frequenzgang allgemein}
+    \begin{align*}
+        \underline{F}(\mathrm{j}\omega) &= \frac{R_1 || \underline{Z}_C}{R_2 + ( R_1 || \underline{Z}_C)} 
+        = \left.\frac{\frac{\frac{R_1}{\mathrm{j}\omega C}}{R_1 + \frac{1}{\mathrm{j}\omega C}}}{
+            R_2 + \frac{\frac{R_1}{\mathrm{j}\omega C}}{R_1 + \frac{1}{\mathrm{j}\omega C}}}\quad \right| 
+            \cdot \frac{R_1 + \frac{1}{\mathrm{j}\omega C}}{R_1 + \frac{1}{\mathrm{j}\omega C}}
+        \\[+2pt]
+        &= \frac{\frac{R_1}{\mathrm{j}\omega C}}{R_1\cdot R_2 + \frac{R_2}{\mathrm{j}\omega C}+\frac{R_1}{\mathrm{j}\omega C}}
+	    = \highlight{hfid_polar}{\frac{R_1}{R_1+R_2+\mathrm{j}\omega CR_1R_2}}[\hfofflowerb][\hfoffupperb][2]
+            &&\hat{=}{} \frac{a+jb}{c+jd} 
+            & a,b,c,d &\in \mathbb{R}
+        \\[+6pt]
+        &= \highlight{hfid_kart}{\frac{R_1(R_1+R_2)-\mathrm{j}\omega CR_1^2R_2}{(R_1+R_2)^2+(\omega CR_1R_2)^2}}[\hfofflowerb][\hfoffupperb][3]
+        \quad\text{(kartesisch)}
+            &&\hat{=}{} \frac{a'+jb'}{c'}
+            & a',b',c' &\in \mathbb{R}
+    \end{align*}\vspace{-15pt}%
+%--8<---------------cut here---------------start------------->8---%
+\b{\framebreak}% MANUAL EVIL PAGEBREAK ...(auto breaks here anyway)
+%--8<---------------cut here---------------end--------------->8---%
+\b{% F(jw) allg. aus Frame vorher
+\begin{equation*}
+    \underline{F}(\mathrm{j}\omega) 
+    = 
+    \underbrace{
+        \frac{R_1}{R_1+R_2+\mathrm{j}\omega CR_1R_2}
+    }_{\mathrel{
+        \hat{=}{} \frac{a+jb}{c+jd}
+    }}%
+    = 
+    \underbrace{%
+        \frac{R_1(R_1+R_2)-\mathrm{j}\omega CR_1^2R_2}{(R_1+R_2)^2+(\omega CR_1R_2)^2}
+    }_{\mathrel{
+        \hat{=}{} \frac{a'+jb'}{c'}
+    }}%
+\end{equation*}%
+}%
+    \begin{align*}
+        &\text{Betrag:}&
+            |A(\omega)| &= \frac{R_1}{\sqrt{(R_1+R_2)^2+(\omega CR_1R_2)^2}}&
+            &\text{mit}&
+            |\underline{F}(\mathrm{j}\omega)| &= \frac{\sqrt{a^2+b^2}}{\sqrt{c^2+d^2}}\\
+        &\text{Phase:}&
+            \varphi(\omega) &= \arctan\left(\frac{-\omega C R_1^2R_2}{R_1(R_1+R_2)}\right)&
+            &\text{mit}&
+            \varphi(\omega) &= \arctan\left(\frac{b'}{a'}\right)\\[+2pt]
+        &&
+            &= \arctan\left(\frac{-\omega C R_1R_2}{R_1+R_2}\right)\\[-4pt]
+        &\text{Altern.:}&
+            \varphi(\omega ) &= \arctan(0) - \arctan\left(\frac{\omega CR_1R_2}{R_1+R_2}\right)&
+            &\text{mit}&
+            %\varphi(\omega) &= \arctan\left(\frac{b}{a}\right) - \arctan\left(\frac{d}{c}\right)% too big
+            %\varphi(\omega) &= \varphi_{Z} - \varphi_{N}
+            %\varphi(\omega) &= \underbrace{\varphi_{Z}}_{\mathclap{\text{\tiny{Zähler}}}} - \underbrace{\varphi_{N}}_{\mathclap{\text{\tiny{Nenner}}}}
+            \varphi(\omega) &= \overbrace{\varphi_{Z}}^{\mathclap{\scriptscriptstyle{\arctan(\frac{b}{a})}\ \ }} - \overbrace{\varphi_{N}}^{\mathclap{\ -\ \scriptscriptstyle{\arctan(\frac{d}{c})}}}
+    \end{align*}
+
+%--8<---------------cut here---------------start------------->8---%
+\b{\framebreak}% EVIL PAGEBREAK ... didn't want to copy whole box
+% Empty line after this, otherwise frame might break later on
+%--8<---------------cut here---------------end--------------->8---%
+
+\textbf{Lösung b) Grenzverhalten und Skizze}
+
+    \noindent%
+    \begin{minipage}{\textwidth}
+        \begin{minipage}[c][6cm][c]{0.48\textwidth}
+
+            $A(\omega) = \frac{R_1}{\sqrt{(R_1+R_2)^2+(\omega CR_1R_2)^2}}$ \\
+
+            \qquad $\ \ \ \ \lim \limits_{\omega \to 0} A(\omega) = \frac{R_1}{R_1+R_2} = 0,9$\\
+            
+            \qquad $\ \ \ \ \lim \limits_{\omega \to \infty} A(\omega) = \frac{R_1}{\infty} = 0$\\
+            
+            $\varphi(\omega) = \arctan(-\frac{\omega CR_1R_2}{R_1+R_2})$\\
+
+            \qquad $\lim \limits_{\omega \to 0} \varphi(\omega) = \arctan(0) = 0$\\
+
+            \qquad $\lim \limits_{\omega \to \infty} \varphi(\omega) = \arctan(-\infty) = -90\degree$\\
+        \end{minipage}\hfill
+        \begin{minipage}[c][6cm][c]{0.48\textwidth}
+            \resizeboxsb{0.75}{0.75}{% 90% textwidth skript, 100% textwidth beamer
+            \includegraphics{Tikz/pdf/plot_beispiel_filter_amplitudengang_lin.pdf}%
+            }% end resizeboxsb
+            \hfill
+            \resizeboxsb{0.75}{0.75}{% 90% textwidth skript, 100% textwidth beamer
+            \includegraphics{Tikz/pdf/plot_beispiel_filter_phasengang_lin.pdf}%
+            }% end resizeboxsb
+        \end{minipage}
+    \end{minipage}
+
+%--8<---------------cut here---------------start------------->8---
+\b{\framebreak}% EVIL PAGEBREAK ... didn't want to copy whole box
+% Empty line after this, otherwise frame might break later on
+%--8<---------------cut here---------------end--------------->8---
+
+\textbf{Lösung c) Bestimmten Arbeitspunkt ermitteln}\vspace{+5pt}
+
+	Ges.: Frequenz $f_{1}$ bei der $\hat{U}_2 = \frac{1}{2}\hat{U}_1$ und Phasenverschiebung $u_2$ zu $u_1$ bei $f_1$:\b{\hfill}\vspace{-10pt}%
+    \begin{align*}%
+        A(\omega_1) &= \frac{R_1}{\sqrt{(R_1+R_2)^2+(\omega CR_1R_2)^2}} \overset{!}{=} \frac{1}{2} & 
+        &\text{mit}&
+        A(\omega) = \frac{U_2}{U_1} = \frac{\hat{U}_2}{\hat{U}_1} \overset{!}{=} \left.\frac{1}{2}\right|_{f=f_1}
+        \\[+2pt]
+        &\Rightarrow \frac{(R_1+R_2)^2 + (\omega_1 CR_1R_2)^2}{R_1^2} = 4 &
+        &\Rightarrow &
+        (R_1+R_2)^2 + (\omega_1 C R_1R_{\mathrm{C}})^2 = 4R_1^2
+        \\
+        &\Rightarrow (\omega_1 CR_1R_2)^2 = 4R_1^2 - (R_1+R_2)^2 &
+        &\Rightarrow&
+        \omega_1 = \pm \frac{\sqrt{4R_1^2 - (R_1^2 + 2R_1R_2 + R_2^2)}}{CR_1R_2}
+        \\[+2pt]
+        \omega_1 &= 1,3304\cdot 10^4\ \frac{1}{\mathrm{s}},\ f_1 = 2,117\ \mathrm{kHz} &
+        &\text{mit}&
+        \omega_1 < 0 \text{ unphysikalisch},\ f=\frac{\omega}{2\pi}
+        \\
+        \varphi(\omega_1) &= \arctan(-1,4967) = -56,25\degree &
+        &\text{mit}&
+        \varphi(\omega) = \arctan\left(\frac{\Im\{\underline{F}\}}{\Re\{\underline{F}\}}\right)
+    \end{align*}
+	% Reference for +- symbol with paranthesis around minus, +- mit runden Klammern um das Minus:
+	% https://tex.stackexchange.com/questions/17550/plus-minus-symbol-with-parenthesis-around-the-minus-sign
+\end{bsp}% splitted bsp-box with evil framebreaks to stretch content over multiple frames
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% ADDITIONAL STUFF AND CODE DUMP --- OUT-COMMENTED / OR SKRIPT & BEAMERONLY -> NOT COMPILED   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\s{\b{ % Ansatz eins, Zweipol mit Rechteck manuell gezeichnet
+\section{testframe}
+\begin{frame}\ftx{\secname}
+    \fu{ % Schaltsymbole: Zweipol und Vierpol
+        \begin{subfigure}{0.48\textwidth}\centering
+            \begin{tikzpicture}
+                \draw[draw=black](-2,-1.25) rectangle (+2,+1.25); %invisible boundbox
+                % Zweipol
+                \node[draw=none,align=center] {Zweipol\\Eintor}; % linebreak only with align=...
+                \draw[thick](-0.75,-0.5) rectangle (0.75,0.5);
+                \draw(-0.75,0) to [short, -o, i>=$I$] ++(-0.5,0);
+                \draw(+0.75,0) to [short, -o, i>=$I$] ++(0.5,0);
+                \draw(-1.25,0.75) to [open, v^=$U$] (1.25,0.75);
+            \end{tikzpicture}
+        \end{subfigure}\hfill
+        \begin{subfigure}{0.48\textwidth}\centering
+            \begin{tikzpicture}
+                \draw[draw=black](-2,-1.25) rectangle (+2,+1.25); %invisible boundbox
+                % Vierpol
+                %\draw (0,0) node{Vierpol\\Zweitor}; % might work also with node's "text width=3cm" option
+                %\draw (0,0) node[text width=3cm]{Vierpol Zweipol}; % also doesnt work maybe smaller ... crap
+                \node[draw=none,align=left] {Vierpol\\Zweitor};
+                \draw(0,0) node[dipchip, hide numbers, num pins=6, no topmark, external pins width=0](C){}; % Mittelpunkt des Vierpols
+                \draw(C.bpin 1) to[short,-o, i_<=$I_1$] ++(-0.5,0) coordinate(In1);
+                \draw(C.bpin 3) to[short,-o, i_>=$I_1$] ++(-0.5,0) coordinate(In2);
+                \draw(C.bpin 6) to[short,-o, i>=$I_2$] ++(0.5,0) coordinate(Out1);
+                \draw(C.bpin 4) to[short,-o, i<=$I_2$] ++(0.5,0) coordinate(Out2);
+                \draw(In1) to[open, v=$U_1$] (In2);
+                \draw(Out1) to[open, v^=$U_2$] (Out2);
+            \end{tikzpicture}
+        \end{subfigure}
+    }{Vergleich: Schaltsymbole eines allgemeinen Zwei- und Vierpols\label{fig:vgl:zweipolvierpol:DEBUG}}	
+\end{frame}
+}}% end outcommented

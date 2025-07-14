@@ -1,0 +1,114 @@
+% Asynchronmaschine Ortskurve
+
+% Da die Ortskurve der Asynchronmaschine nicht wie normal Re=x und Im=y ist, sondern Re=-Im und Im = Re, wurden die x und y Argumente verschoben und das Vorzeichen vom Imaginärteil geändert.
+
+% Diese Parameter sind Beispielhaft für eine Asynchronmaschine und es wurden der Statorwiderstand und die Statorinduktivität vernachlässigt, da sie im stationären  Zustand vernachlässigbar sind.
+
+% U_s = 400V
+% R_s = 0 Ohm im stat. Zustand vernachlässigbar
+% X_s = 20 Ohm 
+% R_r´ = 0.5 Ohm
+% X_r´ = 1.5 Ohm
+
+% I_mu = U_s / j X_s = 400V / j 2 Ohm = 200 A / j
+% I_s = I_mu - U_s / (R_r´/s + j X_r´)
+% s=1 (520, 160) Koordinaten für die Node
+
+\def\U_s{400}
+\def\R_s{0}
+\def\X_s{20}
+\def\R_r{0.5}
+\def\X_r{1}
+
+
+\begin{tikzpicture}
+    \begin{axis}[
+        xmin=-50, xmax=630,
+        ymin=-260, ymax=420,
+        xlabel={Im},
+        ylabel={Re},
+	    axis x line=center,
+        axis line style={-},
+        axis y line=center,
+        xtick={100, 200, 300, 400, 500, 600},
+        xticklabels={-100, -200, -300, -400, -500, -600},
+        width=10cm,
+        height=10cm,
+    ]
+
+    \addplot[domain=0.01:1, samples=300, blue] % Motor
+    ({(\U_s * \X_r)/(\R_r^2/x^2 + \X_r) +\U_s / 20},
+    {(\U_s * \R_r /x)/(\R_r^2/x^2 + \X_r)});
+
+    \addplot[domain=-0.01:-1, samples=300, color=green1] % Generator Teil 1
+    ({(\U_s * \X_r)/(\R_r^2/x^2 + \X_r) +\U_s / 20},
+    {(\U_s * \R_r /x)/(\R_r^2/x^2 + \X_r)});
+
+    \addplot[domain=1:100, samples=300, red] % Bremse
+    ({(\U_s * \X_r)/(\R_r^2/x^2 + \X_r) +\U_s / 20},
+    {(\U_s * \R_r /x)/(\R_r^2/x^2 + \X_r)});
+
+    \addplot[domain=-1:-100, samples=300, color=green1] % Generator TEil 2
+    ({(\U_s * \X_r)/(\R_r^2/x^2 + \X_r)+ \U_s / 20},
+    {(\U_s * \R_r /x)/(\R_r^2/x^2 + \X_r)});
+
+    \draw[->, color=blue, thick](0,0) -- (0,400) ; % U_s
+    \node[blue, anchor=east] at (0, 250) {$\underline{U}_s$};
+
+    \draw[->, color=blue](0,0) -- (220,200); % I_s
+    \node[color=blue] at (100, 130) {$\underline{I}_s$};
+
+    \draw[->, color=blue](0,0) -- (20,0); % I_mu
+    \draw[->, color=blue](20,-40) -- (10,-5); % I_mu->
+    \node[color=blue] at (40, -60) {$\underline{I}_{\mu}$};
+
+    \draw[color=blue, ->](220,200) -- (20,0); % I_r´
+    \draw[color=blue](150, 90)node{$\underline{I}_r`$};
+
+    \node[color=blue] at (280, 160) {$s=1$}; % s=1
+    \fill[blue] (340,160) circle (0.05cm);
+
+    \node[color=blue, anchor=south] at (220, 200) {$s_k$}; % s_k
+    \fill[blue] (220,200) circle (0.05cm);
+    \node[color=green1, anchor=north] at (220, -200) {$-s_k$}; % -s_k
+    \fill[green] (220,-200) circle (0.05cm);
+
+    \node[color=blue] at (100,-60){$s=0$}; % s=0
+    \draw[color=blue, ->](70,-40) -- (20, 0); % Pfeil für s=0 weil kein Platz
+    \fill[blue] (20,0) circle (0.05cm);
+
+    \fill[blue] (420,0) circle (0.05cm);
+    \node[color=blue,anchor=west] at (320,20) {$s \rightarrow \infty$}; % s -> infty
+
+    \draw[->, black](0,0) -- (-50,0); % X - Achse geflipped
+
+    \draw[blue, <->] (220,250) arc [start angle=90, end angle=53.1, radius=250]; % Motor
+    \node[blue] at (300, 270) {Motor};
+
+    \draw[red, <->] (470,0) arc [start angle=0, end angle=53.1, radius=250]; % Bremse
+    \node[red] at (520, 100) {Bremse};
+
+    \draw[green1, <->] (470,0) arc [start angle=0, end angle=-90, radius=250]; % Generator
+    \node[green1] at (520, -100) {Generator};
+
+    \draw[orange] (20,0) -- (340,160); % Leistungsgerade
+    \node[orange, scale=0.75] at (300, 90) {Leistungsgerade};
+
+    \draw[purple] (220,0) -- (220,100); % P_Läufer
+    \node[purple, anchor=west, scale=0.75] at (220, 50){$P_{L"aufer}$};
+    %\node[purple] at (220, 50) {$ P_{Läufer} $};
+
+    \draw[black] (220,100) -- (220,200); % P_Mech
+    \node[black, anchor=east, scale=0.75] at (220, 120){$P_{Mech}$};
+
+    \end{axis}
+\end{tikzpicture}
+% Grün ändern +
+% Legende weg und mit den Pfeilen tauschen+
+% Richtige Maschinenwerte einsetzen +
+% Achsenbeschriftung anpassen+
+% Achsen flippen +
+% wieso ir? +
+% Ir ist falsch +
+% komplexe ströme(unterstrich) +
+% axis cs: statt \draw und die Koordinate (hab node gemacht)+

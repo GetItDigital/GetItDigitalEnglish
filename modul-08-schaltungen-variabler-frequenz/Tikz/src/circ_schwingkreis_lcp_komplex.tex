@@ -1,0 +1,31 @@
+% LC Schwingkreis Parallel
+\begin{tikzpicture}
+    \draw[draw=none](-0.25,-2.25) rectangle (5.25,2.25);% bbox % set draw=black (debug) or draw=none (final)
+
+    % draw nodes
+    \draw
+    (0,-1.75) node[] (U+) {}
+    (5,-1.75) node[] (U-) {};
+    
+    % draw LC-Glied
+    \draw(0,0) to [short, name=i, i=$\underline{I}$, o-*, !i] (1,0);
+    \draw (1,0) 
+    to [short] (1,1.25)
+    to [L, name=L, l=$\mathrm{j}\omega L$,i>^=$\underline{I}_L$, !vi] (4,1.25)
+    to [short, -*] (4,0);
+    \draw 
+    (4,0) to [short] (4,-1.25) % added
+    (1,-1.25) to [bipole label style={yshift=+5pt},C,name=C,i>^=$\underline{I}_C$,l=$\dfrac{1}{\mathrm{j}\omega C}$,!vi] (4,-1.25)% added
+    (1,-1.25) to [short] (1,0); % added
+    \draw (4,0) to [short, -o] (5,0);
+    % draw U ->
+    \draw
+    (U+) to [open, name=u, v=$\underline{U}$, !v] (U-);	
+
+    %draw arrows
+    \varronly{u};
+    \iarronly{i};
+    \iarronly{C};
+    \iarronly{L};
+    
+\end{tikzpicture}

@@ -1,0 +1,146 @@
+%Hier den Inhalt mit \input einfügen und die folgenden Zeilen entfernen
+
+%\input{nomenclature.tex}
+
+\input{Kapitel0}    % Wiederholung
+\newpage
+
+\input{Kapitel1}    % Frequenzgang, Amplitudengang, Phasengang
+\newpage
+
+\input{Kapitel2}    % Logarithmische Darstellung Frequenzgang
+\newpage
+
+\input{Kapitel3}    % Ortskurven
+\newpage
+
+\input{Kapitel4}    % Resonanzkreise, Schwingungen, Ortskurven
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NOTIZEN ZUM INHALT DES MODULS %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Allgemeiner Aufbau:
+% -------------------
+% Kapitel 0 - Modulüberblick und Wiederholung
+% Kapitel 1 - Frequenzgang, Amplitudengang, Phasengang
+% Kapitel 2 - Logarithmische Darstellung Frequenzgang
+% Kapitel 3 - Ortskurven
+% Kapitel 4 - Resonanzkreise, Schwingungen
+% Kapitel 5 - Netzwerkberechnung
+
+% Inhaltsübersicht:
+% ----------------
+% Kapitel 0 - Wiederholung
+%       - Bauteile L, C: DGL, Zeigerdiagramm
+%       - Bauteile R, L, C: Tabelle (Symbol, DGL Zeit-/Frequ.-bereich, Z, R, X)
+%       - Vierpol analog zum Zweipol betrachten
+%
+% Kapitel 1 - Frequenzgang, Amplitudengang, Phasengang
+%       - Definition
+%       - Einfache passive Filterschaltungen (Tiefpass, Hochpass)
+%           - Grenzverhalten f=0, f->\inf
+%           - lineare Plots A, Phi
+%           - Grenzfrequenz
+%           - Vergleich Tiefpass, Hochpass (RC, RL)
+%       - Grenzfrequenz, Zeitkonstante
+%
+% Kapitel 2 - Logarithmische Darstellung, Frequenzgang und Grenzfrequenz
+%       - Logarithmische Skalen,
+%           - ? mathematische Vergleich (exponentieller Verlauf -> Gerade)
+%       - Dezibel Definition
+%       - Bode-Diagramme
+%           - Beispiel Tiefpass, Hochpass 1. Ordnungs
+%           - Beispiel Bandpass 2. Ordnung
+%           - Ordnung von Filtern
+%
+% Kapitel 3 - Ortskurven
+%       - Definition
+%       - Ortskurven (Z, Y), Bsp. RL-Glied (R var, f var)
+%       - Grundschaltungen RL-, RC-Glied (Serie, Parallel)
+%
+% Kapitel 4 - Resonanzkreise, Schwingungen
+%       - Resonanzkreis, Resonanzfrequenz
+%       - Schwingungen, Dämpfung
+%       - Ortskurven, Pol-Nullstellen-Diagramm
+%
+% Kapitel 5 - Netzwerkberechnung
+%       - Matrizen, Verweis auf Modul Gleichstromnetzwerke
+%       - Beispiel mit komplexen Widerständen
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%         D U M P   Z O N E   ---    T E S T S   A N D   T R Y O U T S            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\s{% Skript only
+\section{Nebenrechnungen}
+\begin{frame}{\secname}
+
+    % Nebenrechnung 1
+    Frequenzgang eines RC-Tiefpass 1. Ordnung. [Nebenrechnung zu Gleichung \eqref{eq:tiefpass:frequenzgang}]
+    \begin{equation}
+        \begin{aligned}
+            \underline{F}(\mathrm{j}\omega)
+                & = \frac{\underline{U}_2}{\underline{U}_1}
+                    %&&\left|\ \right.
+                    &&\left|\ =\frac{Z_C}{\left(Z_R + Z_C\right)} \frac{\cdot\redcancel{\underline{I}}}{\cdot\redcancel{\underline{I}}}\right.
+                    &&\ \text{Komplexe Spannungsteilerregel}\\
+                &= \frac{\frac{1}{\mathrm{j}\omega C}}{R + \frac{1}{\mathrm{j}\omega C}}
+                    &&\left|\ \cdot \frac{\mathrm{j}\omega C}{\mathrm{j}\omega C}\right.
+                    &&\ \text{Rationalisieren}\\
+                &= \frac{1}{\mathrm{j}\omega CR + 1}
+                    &&\left|\ \vphantom{\frac{0}{0}}\right.
+                    &&\ \text{Umformen}\\
+                &= \frac{1}{1 + \mathrm{j}\omega CR}
+                    &&\left|\ \cdot \frac{1 - \mathrm{j}\omega CR}{1 - \mathrm{j}\omega CR}\right.
+                    &&\ \text{Optional für kartesische Form}\\
+                &= \frac{1 - \mathrm{j}\omega CR}{1 + (\omega CR)^2}
+                % Alternativ \Big| oder \Bigg| für größere vertikale Striche (absolute Größe)
+            \label{eq:tiefpass:frequenzgang:nebenrechnung}
+        \end{aligned}
+    \end{equation}
+\end{frame}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\CMT{
+\section{NOTES}
+\begin{frame}{\secname}
+
+    Notes:
+    \begin{itemize}
+        \item https://www.falstad.com/afilter/ Circuit Simulator (Amplitudengang, Auswahl typischer Filter)
+        \item[] e.g. frame, itemize, column, tikzpicture, figure with subfigure, minipage, etc.
+        \item[] Weiterführende Quellen
+    \end{itemize}
+\end{frame}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Beispiel für Bandsperre als Parallelschaltung von Tiefpass und Hochpass (Innerhalb des \CMT{} Kommentars)
+% https://www.falstad.com/afilter/
+\CMT{
+$ 3 0.000005 5 50 5 50
+% 0 5290848.156670315
+w 264 128 248 128 0
+w 200 56 200 128 0
+O 264 56 408 56 0
+170 200 56 168 56 2 20 4000 5 0.1
+c 200 128 248 128 0 0.000001 0
+c 264 56 264 128 0 0.000001 0
+r 200 56 264 56 0 100
+r 264 128 264 216 0 1
+g 264 216 264 248 0
+}
+% RLC Bandpass:
+% https://www.falstad.com/circuit/e-bandpass.html
+% In Moodle als iframe einbindbar (via weburl oder selbst gehosted)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        L I T E R A T U R   U N D   Q U E L L E N A N G A B E N                                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Literatur und Quellen}
+% \begin{frame}
+% \s{\cleardoublepage}
+% \input{literatur.tex}
+% \end{frame}

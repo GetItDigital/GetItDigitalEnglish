@@ -1,0 +1,57 @@
+% Bodediagramm einer RLC-Schaltung:
+% R1 in Serie zu LC-Parallelschaltung in Serie zu R2
+% U1 über allen Bauelementen, U2 über R2
+% R1 = 10 Ohm, R2 = 20 Ohm, L = 10 mH, C = 1 µF
+% w0 = 1/sqrt(LC)= 1e4 s^-1
+\begin{tikzpicture}[x=1cm,y=1cm]
+    % Amplitudengang mit Polstelle bei w0!
+    \begin{axis}[
+        name=AxisAmplitudengang,
+        xmode=log,
+        ymode=log,
+        xmin=1e1, xmax=1e7,
+        ymin=0.5e-2, ymax=2e0,
+        ylabel={$A(\omega)$},
+        xtick={1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7},
+        xticklabels={$10^{-3}$,$10^{-2}$,$10^{-1}$,$1$,$10^1$,$10^2$,$10^3$},
+        %extra y ticks={0.666},
+        %extra y tick labels={$\mathllap{\scriptscriptstyle\frac{R_2}{R_1+R_2}\qquad}$},
+        mark=none,
+        grid=none,
+        width=12cm,
+        height=5cm,
+    ]
+        % A(w)=R2/sqrt( (R1+R2)^2 + (1/( wC - (1/(w*L)) )^2 )
+        \addplot[color=black, very thick, samples=161, domain=1e1:0.999e4] {20 / ( sqrt( (10+20)^2 + (1/( x*1e-6 - (1/(x*10e-3)) ))^2 ) )};
+        \addplot[color=black, very thick, samples=161, domain=1.001e4:1e7] {20 / ( sqrt( (10+20)^2 + (1/( x*1e-6 - (1/(x*10e-3)) ))^2 ) )}; 
+        % Grenzwert
+        \node[pin=-30:{$\frac{R_2}{R_1+R_2}$}] at (axis cs:1e1,0.666) {};
+    \end{axis}
+    % Phasengang mit Sprung bei w0!
+    \begin{axis}[
+        at={($(AxisAmplitudengang.south west)+(0,-4cm)$)}, % Position relativ zu anderem Plot
+        xmode=log,
+        ymode=normal,
+        xmin=1e1, xmax=1e7,
+        ymin=-100, ymax=+100,
+        xlabel={$\omega/\omega_0$},
+        ylabel={$\varphi(\omega)\,[\degree]$},
+        xtick={1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7},
+        xticklabels={$10^{-3}$,$10^{-2}$,$10^{-1}$,$1$,$10^1$,$10^2$,$10^3$},
+        ytick={-90, -45, 0, 45, 90},
+        mark=none,
+        grid=none,
+        width=12cm,
+        height=5cm,
+    ]
+        % phi=atan( (1/( wC - (1/(w*L)) )) / (R1+R2) )
+        \addplot[color=black, very thick, samples=161, domain=1e1:0.999e4] {atan( (1/( x*1e-6 - (1/(x*10e-3)) )) / (10+20) )};
+        \addplot[color=black, very thick, samples=161, domain=1.001e4:1e7] {atan( (1/( x*1e-6 - (1/(x*10e-3)) )) / (10+20) )};
+        
+        % Hilfslinien
+        \addplot[color=black, dotted, samples=2, domain=1e1:1e7] coordinates{(1e4,-100) (1e4,+100)};
+        \addplot[color=black, dotted, samples=2, domain=1e1:1e7] {+00};
+        \addplot[color=black, dashed, samples=2, domain=1e1:1e4] {+90};
+        \addplot[color=black, dashed, samples=2, domain=1e1:1e4] {-90};
+    \end{axis}
+\end{tikzpicture}

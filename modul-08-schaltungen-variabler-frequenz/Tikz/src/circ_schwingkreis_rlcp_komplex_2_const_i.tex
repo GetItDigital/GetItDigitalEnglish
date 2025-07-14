@@ -1,0 +1,39 @@
+% RLC Schwingkreis Parallel
+\begin{tikzpicture}
+    %  invisible boundbox
+    \draw[draw=none](-3.75,-0.25) rectangle (+3.75,+3.25); % like RLCs: (7.5 x 2.75) % set draw=black (debug) or draw=none (final)
+        
+    % draw RLC-Glied
+    \draw (0,3.0) to [short, name=I, i>^=$\underline{I}$, o-*] (0,2.5); % U+
+    \draw (0,0.5) to [short, *-o] (0,0); % U-
+
+    \draw (0,2.5)
+    to [short, *-] (-1.5,2.5)
+    to [R, name=R, l=$R$, i>^=$\underline{I}_R$, !i] (-1.5,0.5)
+    to [short, -*] (0,0.5);
+
+    \draw (0,2.5)
+    to [L, name=L, l=$\mathrm{j}\omega L$, i>^=$\underline{I}_L$, !i, *-*] (0,0.5);
+
+    \draw (0,2.5)
+    to [short, *-] (+1.5,2.5)
+    to [bipole label style={yshift=+5pt},C, l=$\dfrac{1}{\mathrm{j}\omega C}$, name=C, i>^=$\underline{I}_C$, !i] (+1.5,0.5)
+    to [short, -*] (0,0.5); 
+
+    % draw voltage arrows [v^=...] above
+    \draw (3,3) to [open, name=U, v^=$\underline{U}$, !v] (3,0);
+    \varronly{U};
+
+    % draw arrow [i>^=...] incoming above
+    \iarronly{I};
+    \iarronly{C};
+    \iarronly{L};
+    \iarronly{R};
+
+    % Iq Stromquelle
+    \draw (0,0) 
+    to [short, *-] (-2.75,0)
+    to [isource, name=Iq, i=$\underline{I}_q$, !vi] (-2.75,3)
+    to [short, -*] (0,3);
+    \iarronly{Iq};
+\end{tikzpicture}

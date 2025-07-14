@@ -148,3 +148,11 @@
 \newcommand{\nomunit}[1]{%
 	\renewcommand{\nomentryend}{\hspace*{\fill}#1}}
 \renewcommand{\nomname}{Verwendete Größen und Formelzeichen}
+
+% Bibliographie
+\usepackage[
+	backend=biber,
+	sorting=none,% Sortierung nach Reihenfolge der Zitate
+]{biblatex} %biblatex mit biber laden
+\addbibresource{Templates/Literatur.bib}
+\usepackage[nottoc,notlot,notlof]{tocbibind}	%% Literaturverzeichnis im TOC

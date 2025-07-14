@@ -2,44 +2,39 @@
 
 # alternative to TiKz library externalize: https://tikz.dev/library-external
 #
-# create one .pdf for each TiKz picture with standalone documentclass (paralell execution)
+# create one .pdf, .png and .svg for each TiKz picture using documentclass standalone (multithreading by parallel compilation)
 #
 # USAGE: 		bash tikz_externalize.sh
 #
-# DEPENDENCIES:
-# programs:		pdf2svg				(will try to install automatically if not found)
-# files: 		Settings.tex		(contains settings for tikzpictures)
-#				tikz_standalone.tex	(contains standalone documentclass for tikzpictures)
-#				._tikz_standalone_settings.sh	(creates tikz_standalone_settings.tex)
-#
 # DIRECTORY STRUCTURE:
 #	./
-#	├── Settings.tex
-#	└── Tikz/
-#	    ├── sh/
-#	    │   ├── ._tikz_standalone_settings.sh
-#	    │   └── tikz_externalize.sh
-#	    ├── src/
-#	    │   ├── <file1>.tex
-#	    │   ├── ...
-#	    │   └── <filem>.tex
-#	    └── tikz_standalone.tex
+#	├── Templates
+#	│   └── Settings.tex
+#	└── module-xyz/ 
+#		└── Tikz/
+#			├── sh/
+#			│	└── tikz_externalize.sh
+#			└── src/
+#				├── <file1>.tex
+#				├── ...
+#				└── <filem>.tex
 #
 # OUTPUTS: (for each .tex file in ./src/)
 #	./
-#	└── Tikz/
-#	    ├── pdf/
-#	    │   ├── <file1>.pdf
-#	    │   ├── ...
-#	    │   └── <filem>.pdf
-#	    ├── png/
-#	    │   ├── <file1>.png
-#	    │   ├── ...
-#	    │   └── <filem>.png
-#	    └── svg/
-#	        ├── <file1>.svg
-#	        ├── ...
-#	        └── <filem>.svg
+#	└── module-xyz/ 
+#		└── Tikz/
+#			├── pdf/
+#			│   ├── <file1>.pdf
+#			│   ├── ...
+#			│   └── <filem>.pdf
+#			├── png/
+#			│   ├── <file1>.png
+#			│   ├── ...
+#			│   └── <filem>.png
+#			└── svg/
+#				├── <file1>.svg
+#				├── ...
+#				└── <filem>.svg
 #
 # Note: file- and subdirectory names should not contain spaces or special characters
 #
@@ -59,8 +54,18 @@ TIMEOUT=45 				# timeout in seconds for waiting for each individual .pdf file to
 WAITTIME=1				# wait time in seconds for each individual .pdf before moving and converting to .svg
 TIKZBORDER="1pt"		# border around tikzpicture in .pdf, recommended: "1pt"
 
-# VARIABLES (default directory names)
-# ------------------------------------
+# LaTeX Template
+# --------------
+
+PREFIX="""% compilable standalone document for Tikz pictures created by ${0}
+\documentclass[border = ${TIKZBORDER}, multi={tikzpicture}]{standalone}
+\input{Settings.tex} % Attention! Symlink pointing to MAINDIR/Templates/Setting.tex 
+\begin{document}
+"""
+
+POSTFIX="""
+\end{document}
+"""
 
 # WORKING DIRECTORY
 # ----------------
@@ -69,8 +74,7 @@ cd "$(dirname "$0")" # ref: https://stackoverflow.com/questions/3349105/how-can-
 cd ../src # $tikzdir
 
 # PATHS: relative Tikz/src/ (no trailing "/" allowed)
-maindir=../.. 	# source directory with Folien.tex, Skript.tex, Inhalt.tex, Kapitel*.tex, ...
-templatedir=../../../Templates # source directory with templates
+settingsdir=../../../Templates # source directory with templates
 tikzdir=.. 		# source directory with tikz_standalone.tex
 shdir=../sh 	# source directory with .sh scripts
 srcdir=. 		# source directory with tikzpictures as *.tex files
@@ -80,6 +84,7 @@ svgdir=../svg 	# output directory for generated tikzpicture, SVG-format
 auxdir=../TeXAux # output directory for auxillary files for LaTeX Compilation; might have to match $auxdir in other .sh scripts
 errorlog=$auxdir/errorlog.txt # errorlog file
 
+settingsdirabs=$( realpath $settingsdir ) # absolute path to $settingsdir
 srcdirabs=$( realpath $srcdir ) # absolute path to $srcdir
 tikzdirabs=$( realpath $tikzdir ) # absolute path to $tikzdir
 
@@ -114,17 +119,15 @@ pressed_ctrl_c=
 trap "pressed_ctrl_c=1" SIGINT # used to break loops in subshells
 
 # check file dependencies
-for file in $templatedir/Settings.tex \
-	$tikzdir/tikz_standalone.tex \
-	$shdir/._tikz_standalone_settings.sh
-do
-	if [ ! -f $file ] ; then echo "Error: $file not found, please create file or check path. Nothing to do." ; exit 1 ; fi
-done
+if [ ! -f $settingsdir/Settings.tex ] ; then 
+	echo "Error: $settingsdir/Settings.tex not found, please create file or check path. Nothing to do."
+	exit 1
+fi
 
 # check direcotry structure
 if [[ ! -d  $srcdir ]] ; then
 	echo "Error: $srcdir not found, please create directory with tikzpictures or check path. Nothing to do."
-	# exit 1
+	exit 1
 fi
 
 # cleanup
@@ -135,34 +138,8 @@ if [[ $FROMSCRATCH == true ]] ; then
 	rm -r $svgdir/*
 fi
 
-# PREPERATIONS (directories, installation)
-# ----------------------------------------
-
-# replace sudo if not needed
-# ref: https://askubuntu.com/questions/937506/ignore-sudo-in-bash-script-if-using-root
-# muru's solution tweaked with Lekensteyn remark (bash, sh compatible)
-if [[ $(id -u) = 0 ]]; then
-    echo "I'm root! Ignore 'sudo' command"
-    sudo () # define sudo
-    {
-        printf "\nexecute\t '$@'\n\tinstead of 'sudo $@'\n"
-        $@ # replaces "sudo sth" with "sth"
-    } # caveat: "sudo -s sth" -> "-s sth"
-fi
-
-# install dependencies
-for program in pdf2svg; do
-	if [[ $program == pdf2svg && $EXPORTPDF2SVG == false ]] ; then continue ; fi
-	if [ $( dpkg-query -W -f='${Status}' $program 2>/dev/null | grep -c "ok installed" ) -eq 0 ]; then
-		printf "Error: $program not found, try to install $program with\n\tsudo apt update -y ; apt upgrade -y ; apt install -y $program ; sudo apt autoremove -y" >&2
-		sudo apt update -y ; sudo apt upgrade -y ; sudo apt install -y $program ; sudo apt autoremove -y
-	fi
-done
-
-
-# create ./TeXAux/tikz_standalone_settings.tex (overwrite if exists)
 mkdir -p $auxdir
-bash $shdir/._tikz_standalone_settings.sh
+
 
 # PRECOMPILE TIKZPICTURES: .tex -> .pdf -> .svg, .png
 # ---------------------------------------------------
@@ -170,6 +147,7 @@ bash $shdir/._tikz_standalone_settings.sh
 echo "/--------------------t-i-k-z---e-x-t-e-r-n-a-l-i-z-e-.-s-h---------------------\\"
 for directory in $( find $srcdir -maxdepth 5 -type d ) ; do # for ./src and all subdirectories
 	directoryname=$( echo "$directory" | sed -e "s/\.\///" ) # remove leading "./" from directory
+	echo $directory
 
 	mkdir -p ${pdfdir}/${directoryname} # create similar directory structure in pdfdir
 	mkdir -p ${pngdir}/${directoryname} # create similar directory structure in pngdir
@@ -177,20 +155,19 @@ for directory in $( find $srcdir -maxdepth 5 -type d ) ; do # for ./src and all 
 	mkdir -p ${auxdir}/${directoryname} # create similar directory structure in auxdir
 	mkdir -p ${auxdir}/md5/${directoryname} # create similar directory structure in auxdir for md5sums
 
-	cp $auxdir/tikz_standalone_settings.tex ${auxdir}/${directoryname} 2>/dev/null # supress "same file error" for Tikz/TeXAux/tikz_standalone_settings.tex (line only relevant for subdirs)
-
 	srcdirlink=$srcdirabs/$directoryname
+	settingslink=$settingsdirabs/Settings.tex
 	rm ${auxdir}/${directoryname}/srcdirlink 2>/dev/null
 	ln -s $srcdirlink ${auxdir}/${directoryname}/srcdirlink # create symlink from $auxdir/$directoryname to corresponding $directory (in Tikz/src/) to easily \input{} src files
+	ln -s $settingslink ${auxdir}/${directoryname}/Settings.tex # create symlink from $auxdir/$dictoryname/Settings.tex to Settings.tex
 done
 
-stats ; echo -e "Note: (no count of md5sum changes)\n"
+stats
 echo -e "Start Compiling TiKz pictures... in parallel execution, no threadlimit! \n\tWARNING: CPU load high! --> STOP with Ctrl+C <--)\n"
 
 # progressbar: "Progress: |...  | 100% (0/N)"
 # based on Chris F.A. Johnson progress indicator: https://community.spiceworks.com/t/progress-status-by-printing-dots/891271/7
 # plus stdout overwriting: https://stackoverflow.com/questions/11283625/overwrite-last-line-on-terminal
-# init
 
 # print initial progressbar(s)
 if [[ $EXPORTPDF2SVG == true ]] ; then print_progbar $srcdir $svgdir svg 2 ; fi
@@ -234,7 +211,7 @@ for directory in $( find $srcdir -maxdepth $MAXSUBDIRDEPTH -type d ) ; do # loop
 		fi
 		md5_new=$(md5sum $filepath | cut -d ' ' -f 1)
 
-		# Note: subshell workaround - execute if requirements are met instead of exiting if not they aren't met
+		# Note: subshell workaround - execute if requirements are met (instead of exiting if they are not met)
 		# Ref: https://stackoverflow.com/questions/13726764/while-loop-subshell-dilemma-in-bash
 
 		# execute if md5sum changed or output files do not exist
@@ -242,23 +219,15 @@ for directory in $( find $srcdir -maxdepth $MAXSUBDIRDEPTH -type d ) ; do # loop
 			|| [[ ! -f "$pdfdir/$pathstem.pdf" ]] \
 			|| [[ ! -f "$pngdir/$pathstem.png" && $EXPORTPDF2PNG == true ]] \
 			|| [[ ! -f "$svgdir/$pathstem.svg" && $EXPORTPDF2SVG == true ]] ; then
+
 			# create compilable .tex in $auxdir
-			cp ${tikzdirabs}/tikz_standalone.tex ${auxdir}/${directoryname}/compilable_${filename}
-
-			# remove prefix-ing path to tikz_standalone_settings.tex
-			sed -i "s/\\\\IfFileExists{[^}]*tikz_standalone_settings\.tex}/\\\\IfFileExists{tikz_standalone_settings.tex}/g"  ${auxdir}/${directoryname}/compilable_${filename}
-			sed -i "s/\\\\input{[^}]*tikz_standalone_settings\.tex}/\\\\input{tikz_standalone_settings.tex}/g"  ${auxdir}/${directoryname}/compilable_${filename}
-
-			# replace content between \begin{document} and \end{document} with \input{srcdirlink/$filename}
-			perl -i -0777 -pe 's/\\begin{document}((?:(?!\\end{document}}).)*)\\end{document}/\\begin{document}\n\\input{srcdirlink\/DUMMYTEXT}\n\\end{document}/s'  ${auxdir}/${directoryname}/compilable_${filename}
-			perl -i -pe "s/DUMMYTEXT/$filename/s"  ${auxdir}/${directoryname}/compilable_${filename}
-
-			# set border around tikzpicture
-			sed -i "s/border[\ ]=[\ ]*[0-9]*[a-zA-Z]*/border=$TIKZBORDER/g" ${auxdir}/${directoryname}/compilable_${filename}
+			echo "$PREFIX" > ${auxdir}/${directoryname}/compilable_${filename} # overwrite/create >
+			echo "\input{srcdirlink/${filename}} % Attention! Symlink pointing to Tikz sourcefile." >> ${auxdir}/${directoryname}/compilable_${filename} # append >>
+			echo "$POSTFIX" >> ${auxdir}/${directoryname}/compilable_${filename} # append >>
 
 			# compile .pdf and move to $pdfdir
 			printf "\tCompiling $filename ...\n"
-			pdflatex -interaction=nonstopmode -output-directory ${auxdir}/${directoryname} ${auxdir}/${directoryname}/compilable_${filename} & pdflatexid=$! # compile (unsure about -output-directory option), get pid
+			pdflatex -interaction=nonstopmode -output-directory ${auxdir}/${directoryname} ${auxdir}/${directoryname}/compilable_${filename} & pdflatexid=$! # compile, get pid
 			trap "kill $pdflatexid 2> /dev/null" SIGINT SIGTERM # kill pdflatex on ctrl+c
 
 			# DEBUG
@@ -300,7 +269,6 @@ kill "$bgid" ; wait # kill progressbar
 # remove temporary files
 if [[ $REMOVECOMPILABLES == true ]] ; then
 	rm -r $auxdir/*/compilable_* 2>/dev/null # remove compilable files
-	rm -r $auxdir/*/tikz_standalone_settings.tex 2>/dev/null # remove tikz_standalone_settings.tex
 	rm -r $auxdir/*/srcdirlink 2>/dev/null # remove srcdirlink
 fi
 

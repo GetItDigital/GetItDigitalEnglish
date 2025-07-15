@@ -53,19 +53,6 @@ TIMEOUT=45 				# timeout in seconds for waiting for each individual .pdf file to
 MAXTHREADNUMBER=10		# maximum number of parallel threads for compilation
 TIKZBORDER="1pt"		# border around tikzpicture in .pdf, recommended: "1pt"
 
-# LaTeX Template
-# --------------
-
-PREFIX="""% compilable standalone document for Tikz pictures created by ${0}
-\documentclass[border = ${TIKZBORDER}, multi={tikzpicture}]{standalone}
-\input{Settings.link} % Attention! Symlink pointing to MAINDIR/Templates/Setting.tex 
-\begin{document}
-"""
-
-POSTFIX="""
-\end{document}
-"""
-
 # WORKING DIRECTORY
 # ----------------
 origdir=$( pwd ) # save original directory
@@ -104,7 +91,7 @@ fi
 echo "/--------------------t-i-k-z---e-x-t-e-r-n-a-l-i-z-e-.-s-h---------------------\\"
 
 mkdir -p $auxdir
-for directory in $( find $srcdir -maxdepth 5 -type d ) ; do # for all source subdirectories
+for directory in $( find $srcdir -maxdepth $MAXSUBDIRDEPTH -type d ) ; do # for all source subdirectories
 	directoryname=$( echo "$directory" | sed -e "s/\.\///" ) # remove leading "./" 
 
 	# create output subdirectories
@@ -113,10 +100,6 @@ for directory in $( find $srcdir -maxdepth 5 -type d ) ; do # for all source sub
 	mkdir -p ${svgdir}/${directoryname}
 	mkdir -p ${auxdir}/${directoryname}
 	mkdir -p ${auxdir}/md5/${directoryname}
-
-	# create symlinks in auxillary subdirectories
-	ln -s "${srcdirabs}/${directoryname}" "${auxdir}/${directoryname}/srcdir.link" # e.g.Tikz/TeXAux/subdir1/srcdir.link -> Tikz/src/subdir1
-	ln -s "${settingsdirabs}/Settings.tex" "${auxdir}/${directoryname}/Settings.link" # e.g. Tikz/TeXAux/subdir1/Settings.tex -> ../Templates/Settings.tex
 done
 
 stats
@@ -157,9 +140,19 @@ for directory in $( find $srcdir -maxdepth $MAXSUBDIRDEPTH -type d ) ; do # loop
 			|| [[ ! -f "${pngdir}/${pathstem}.png" && $EXPORTPDF2PNG == true ]] \
 			|| [[ ! -f "${svgdir}/${pathstem}.svg" && $EXPORTPDF2SVG == true ]] ; then
 
+			# LaTeX Template
+			# --------------
+			PREFIX="""
+				% compilable standalone document for Tikz pictures created by ${0}
+				\documentclass[border = ${TIKZBORDER}, multi={tikzpicture}]{standalone}
+				\input{${settingsdirabs}/Settings.tex}
+				\begin{document}"""
+			POSTFIX="""
+				\end{document}"""
+
 			# create compilable .tex in $auxdir
 			echo "$PREFIX" > ${auxdir}/${directoryname}/compilable_${stem}.tex # overwrite/create >
-			echo "\input{srcdir.link/${stem}.tex} % Attention! Symlink pointing to Tikz sourcefile." >> ${auxdir}/${directoryname}/compilable_${stem}.tex # append >>
+			echo "\input{${srcdirabs}/${directoryname}/${stem}.tex}" >> ${auxdir}/${directoryname}/compilable_${stem}.tex # append >>
 			echo "$POSTFIX" >> ${auxdir}/${directoryname}/compilable_${stem}.tex # append >>
 
 			# wait until thread number is below maximum

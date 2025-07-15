@@ -49,7 +49,6 @@ EXPORTPDF2SVG=true 		# if set true, export .pdf to .svg files
 EXPORTPDF2PNG=true 		# if set true, export .pdf to .png files
 REMOVECOMPILABLES=true	# if set true, remove temporary compilable files after creating .pdf files
 MAXSUBDIRDEPTH=5 		# depth of subdirectories to be included in src/ (default: 5)
-PROGBARLENGTH=50 		# length of progressbar "|...  |", display: "Progress: |...  | 100% (0/N)"
 TIMEOUT=45 				# timeout in seconds for waiting for each individual .pdf file to be created
 WAITTIME=1				# wait time in seconds for each individual .pdf before moving and converting to .svg
 TIKZBORDER="1pt"		# border around tikzpicture in .pdf, recommended: "1pt"
@@ -95,24 +94,6 @@ stats(){
 	echo -e "\t$( find $pdfdir -maxdepth $MAXSUBDIRDEPTH -type f -name "*.pdf" | wc -l )\t.pdf files in\t$( realpath $pdfdir )"
 	if [[ $EXPORTPDF2PNG == true ]] ; then echo -e "\t$( find $pngdir -maxdepth $MAXSUBDIRDEPTH -type f -name "*.png" | wc -l )\t.png files in\t$( realpath $pngdir )" ; fi
 	if [[ $EXPORTPDF2SVG == true ]] ; then echo -e "\t$( find $svgdir -maxdepth $MAXSUBDIRDEPTH -type f -name "*.svg" | wc -l )\t.svg files in\t$( realpath $svgdir )" ; fi
-}
-
-print_progbar(){
-	# $1: srcdir, $2: outdir, $3: fileextension, $4: lineskips
-	# usage e.g.: print_progbar $srcdir $outdir pdf 1
-	counttotal=$( find $1 -maxdepth $MAXSUBDIRDEPTH -type f -name "*.tex" | wc -l )
-	countdone=$(  find $2 -maxdepth $MAXSUBDIRDEPTH -type f -name "*.$3"  | wc -l )
-	bardone=$(( $PROGBARLENGTH * $countdone / $counttotal ))
-	barundone=$(( $PROGBARLENGTH - $bardone ))
-	percentdone=$(( 100 * $countdone / $counttotal ))
-	case $4 in
-		0) lineskips="" ;; # no line skips
-		1) lineskips="\n" ;; # one line skip
-		2) lineskips="\n\n" ;; # two line skips
-		3) lineskips="\n\n\n" ;; # three line skips
-		*) lineskips=0 ;; # default: no line skips
-	esac
-	printf "\e[${4}A\e[KProgress: |%s%s| %3d%% (%d/%d) ${3}${lineskips}" "$( printf "%${bardone}s" | tr ' ' '.' )" "$( printf "%${barundone}s" | tr ' ' ' ' )" $percentdone $countdone $counttotal
 }
 
 pressed_ctrl_c=
@@ -164,27 +145,6 @@ done
 
 stats
 echo -e "Start Compiling TiKz pictures... in parallel execution, no threadlimit! \n\tWARNING: CPU load high! --> STOP with Ctrl+C <--)\n"
-
-# progressbar: "Progress: |...  | 100% (0/N)"
-# based on Chris F.A. Johnson progress indicator: https://community.spiceworks.com/t/progress-status-by-printing-dots/891271/7
-# plus stdout overwriting: https://stackoverflow.com/questions/11283625/overwrite-last-line-on-terminal
-
-# print initial progressbar(s)
-if [[ $EXPORTPDF2SVG == true ]] ; then print_progbar $srcdir $svgdir svg 2 ; fi
-if [[ $EXPORTPDF2PNG == true ]] ; then print_progbar $srcdir $pngdir png 1 ; fi
-print_progbar $srcdir $pdfdir pdf 0
-# run progressbar updater in background
-while [ ! "$pressed_ctrl_c" ] ;
-do
-	# update progressbar(s)
-	if [[ $EXPORTPDF2SVG == true ]] ; then print_progbar $srcdir $svgdir svg 3 ; fi
-	if [[ $EXPORTPDF2PNG == true ]] ; then print_progbar $srcdir $pngdir png 2 ; fi
-	print_progbar $srcdir $pdfdir pdf 1
-	sleep 0.5
-done &
-bgid=$!
-trap 'kill $bgid' SIGINT SIGTERM # kill progressbar on ctrl+c
-printf "\n"
 
 touch $errorlog # create errorlog file
 

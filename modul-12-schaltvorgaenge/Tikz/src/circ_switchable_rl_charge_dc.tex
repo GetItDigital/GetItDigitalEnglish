@@ -1,0 +1,27 @@
+% RL Ladeschaltung mit Wechselschalter erweitertes LAbeling
+\begin{tikzpicture}
+    \def\switcharrow{up arrow} % Schalterstellung: up arrow/down arrow
+    
+    \ctikzset{bipoles/cuteswitch/thickness=0.3} %Liniendicke für bessere Lesbarkeit reduzieren
+    
+    %Switch Circuit
+    \draw(2,1.69)
+        node[cute spdt \switcharrow, rotate = 180](s1){}% Cute Switch
+        (s1.center) node[left, xshift= -5]{t=0};%Label 
+    \draw(s1.out 2) -- (0,2.11);% nach Uq+
+    \draw([yshift=-0.5mm] s1.cout 1) to[short,-*] (1.70,0);%nach Uq-
+    %RL Circuit
+    \draw(0,2.11) 
+    to[V, name=v, v_>=$U_q$, !v](0,0)
+    to[short](5,0) 
+    to[L, l=$L$, name= L, v<=$u_L$, !v](5,1.685)
+    to[R, l=$R$, name=R, v<=$u_R$, i^<=$i$, !vi](s1.in);
+    
+    % Strom- und Spannungspfeile mit Label
+    \varronly{v};
+    \varronly{L};
+    \varronly{R};
+    \iarronly{R};
+    \draw(s1.in) to[open, name=U, v^=$u$, !v] ++(0,-1.685); \varronly{U}; % Note: \varrmore label spacing too large for [open] node
+
+\end{tikzpicture} 

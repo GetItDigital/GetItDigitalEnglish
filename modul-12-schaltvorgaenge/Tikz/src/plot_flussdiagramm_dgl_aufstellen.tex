@@ -1,0 +1,112 @@
+% Zeitbereich & Bildbereich Darstellung
+% Flussdiagramm? 
+
+\pgfmathsetmacro{\localboxwidth}{4}
+\pgfmathsetmacro{\localboxheight}{2}
+\pgfmathsetmacro{\localboxdistancex}{1}
+\pgfmathsetmacro{\localboxdistancey}{2}
+\pgfmathsetmacro{\localbboxthickness}{0.5}
+
+\begin{tikzpicture}
+    % total width: 3xboxwidth + 2xboxdistancex + 2xboxthickness
+    % total height: 2xboxheight + boxdistancey + 2xboxthickness
+    \draw ( $ ( - \localbboxthickness , - \localboxdistancey - \localboxheight - \localbboxthickness ) $ ) rectangle 
+        ++( $ ( 3 * \localboxwidth + 2 * \localboxdistancex + 2 * \localbboxthickness , + 2 * \localboxheight + \localboxdistancey + 2 * \localbboxthickness ) $ ); % boundbox
+
+    % Zeit A: Knoten-/Maschen-Gleichungen
+    \draw[fill=white,draw=black,align=center] (0,0) % Position absolute: (x,y)
+        rectangle ++(\localboxwidth,\localboxheight)
+        node(ZeitA)[pos=0]{} % nodeID with coordinates left bottom
+        node(ZeitAmid)[pos=0.5]{} % nodeID with coordinates midway
+        node[pos=0.5,yshift=0.525cm] {Knoten-/Maschen-Gl.}
+        node[pos=0.5,yshift=-0.275cm]{%
+        $\displaystyle{\sum_{j=1}^{n} i_j = 0 \hspace{6pt} \sum_{k=1}^{m} u_k = 0}$
+    };
+
+    \draw[->]( $ (ZeitAmid) + (0.5*\localboxwidth+0.5*\localboxdistancex,-0.05*\localboxheight) + (+150:0.4*\localboxdistancex) $ ) arc (+150:+30:0.4*\localboxdistancex) node [midway,above]{\small mit};
+    \draw[<-]( $ (ZeitAmid) + (0.5*\localboxwidth+0.5*\localboxdistancex,-0.05*\localboxheight) + (-150:0.4*\localboxdistancex) $ ) arc (-150:-30:0.4*\localboxdistancex) node [midway,above,yshift=-2pt]{*};
+%    \draw[->]( $ (ZeitAmid) + (0.5*\localboxwidth,0) + (0.125*\localboxdistancex,0) $ ) -- ++( $ (0.75*\localboxdistancex,0) $ );
+
+    % Zeit B: Komponenten-Gleichungen
+    \draw[fill=white,draw=black,align=center] ($ (ZeitA) + (\localboxwidth,0) + (\localboxdistancex,0) $) % Position relative: $(nodeID) + (xoffset,yoffset)$
+        rectangle ++(\localboxwidth,\localboxheight)
+        node(ZeitB)[pos=0]{} % nodeID with coordinates left bottom
+        node(ZeitBmid)[pos=0.5]{} % nodeID with coordinates midway
+        node[pos=0.5,yshift=0.525cm] {Komponenten-Gl.}
+        node[pos=0.5,yshift=-0.275cm]{%
+        \small nach Zielgröße auflösen\\
+        \small ggf. $\frac{\mathrm{d}}{\mathrm{d}t}$, $\int\mathrm{d}t$ anwenden
+    };
+
+    \draw[->]( $ (ZeitBmid) + (0.5*\localboxwidth,0) + (0.125*\localboxdistancex,0) $ ) -- ++( $ (0.75*\localboxdistancex,0) $ );
+
+    % Zeit C: DGL
+    \draw[fill=white,draw=black,align=center] ($ (ZeitB) + (\localboxwidth,0) + (\localboxdistancex,0) $) % Position relative: $(nodeID) + (xoffset,yoffset)$
+        rectangle ++(\localboxwidth,\localboxheight)
+        node(ZeitC)[pos=0]{} % nodeID with coordinates left bottom
+        node(ZeitCmid)[pos=0.5]{} % nodeID with coordinates midway
+        node[pos=0.5,yshift=0.525cm]{Differentialgleichung}
+        node[pos=0.5,yshift=-0.275cm]{$\displaystyle{\sum_{i=0}^{n} a_i \cdot f^{(i)}  = b} $}
+    ;
+
+    \draw[->]( $ (ZeitAmid) + (+0.125*\localboxwidth,-0.5*\localboxheight-0.125*\localboxdistancey) $ ) -- ++( $ (0,-0.75*\localboxdistancey) $ )
+        node[midway,left,align=center,xshift=-2pt]{\small Komplexe\\\small Wechselstrom-\\\small rechnung}
+    ;
+
+    % Bild A: Knoten-/Maschen-Gleichungen, kompl.
+    \draw[fill=white,draw=black,align=center] ($ (ZeitA) - (0,\localboxheight) -(0,\localboxdistancey) $) % Position relative: $(nodeID) + (xoffset,yoffset)$
+        rectangle ++(\localboxwidth,\localboxheight)
+        node(BildA)[pos=0]{} % nodeID with coordinates left bottom
+        node(BildAmid)[pos=0.5]{} % nodeID with coordinates midway
+        node[pos=0.5,yshift=0.525cm]{Knoten-/Maschen-Gl.}
+        node[pos=0.5,yshift=-0.275cm]{%
+        $\displaystyle{\sum_{j=1}^{n} \underline{I}_j = 0, \hspace{6pt} \sum_{k=1}^{m} \underline{U}_k = 0}$
+    };
+
+    \draw[->]( $ (BildAmid) + (0.5*\localboxwidth+0.5*\localboxdistancex,-0.05*\localboxheight) + (+150:0.4*\localboxdistancex) $ ) arc (+150:+30:0.4*\localboxdistancex) node [midway,above]{\small mit};
+    \draw[<-]( $ (BildAmid) + (0.5*\localboxwidth+0.5*\localboxdistancex,-0.05*\localboxheight) + (-150:0.4*\localboxdistancex) $ ) arc (-150:-30:0.4*\localboxdistancex) node [midway,above,yshift=-2pt]{*};
+    \draw ( $ (BildAmid) + (0.5*\localboxwidth+0.5*\localboxdistancex,0) $ ) node[mark=asterisk]{};
+    %\draw[->]( $ (BildAmid) + (0.5*\localboxwidth,0) + (0.125*\localboxdistancex,0) $ ) -- ++( $ (0.75*\localboxdistancex,0) $ );
+
+    % Bild B: Impedanz-Gleichungen
+    \draw[fill=white,draw=black,align=center] ($ (BildA) + (\localboxwidth,0) + (\localboxdistancex,0) $) % Position relative: $(nodeID) + (xoffset,yoffset)$
+        rectangle ++(\localboxwidth,\localboxheight)
+        node(BildB)[pos=0]{} % nodeID with coordinates left bottom
+        node(BildBmid)[pos=0.5]{} % nodeID with coordinates midway
+        node[pos=0.5,yshift=0.525cm] {Impedanz-Gl.}
+        node[pos=0.5,yshift=-0.275cm]{%
+        \small nach Zielgröße auflösen\\
+        \small Strom-/Spg.-teiler mögl.
+    };
+
+    \draw[->]( $ (BildBmid) + (0.5*\localboxwidth,0) + (0.125*\localboxdistancex,0) $ ) -- ++( $ (0.75*\localboxdistancex,0) $ );
+
+    % Bild C: Impedanz-Gleichungen
+    \draw[fill=white,draw=black,align=center] ($ (BildB) + (\localboxwidth,0) + (\localboxdistancex,0) $) % Position relative: $(nodeID) + (xoffset,yoffset)$
+        rectangle ++(\localboxwidth,\localboxheight)
+        node(BildC)[pos=0]{} % nodeID with coordinates left bottom
+        node(BildCmid)[pos=0.5]{} % nodeID with coordinates midway
+        node[pos=0.5,yshift=0.525cm] {Algebraische Gleichung}
+        node[pos=0.5,yshift=-0.275cm]{%
+        $\displaystyle{
+            \sum_{i=0}^{n}a_i \cdot 
+            \smash{\left(\mathrm{j}\omega\right)^{i} \cdot \underline{F} } = B \vphantom{\sum{i=0}^{n}}}%
+        $}
+    ;
+
+    \draw[->]( $ (BildCmid) + (-0.125*\localboxwidth,0.5*\localboxheight+0.125*\localboxdistancey) $ ) -- ++( $ (0,0.75*\localboxdistancey) $ )
+        node[midway,right]{$\left(\mathrm{j}\omega\right)^i\,\widehat{=}\,\left(\frac{\mathrm{d}}{\mathrm{d}t}\right)^i$}
+    ;
+    
+
+    %\draw[->](10,-2.5) -- (10,-0.5) node[pos=0.5, right]{$\mathrm{j}\omega\widehat{=}\frac{\mathrm{d}}{\mathrm{d}t}$};
+
+    % Trennung Zeit- und Bildbereich
+    \draw( $ (ZeitB) + (0.5*\localboxwidth,-0.25*\localboxdistancey) $ ) node [align=center] {Zeitbereich};
+    \draw( $ (ZeitB) + (0.5*\localboxwidth,-0.75*\localboxdistancey) $ ) node [align=center] {Frequenzbereich};
+    \draw[dotted]( $ (ZeitA) + (+0.75*\localboxwidth,-0.5*\localboxdistancey) $ )--( $ (ZeitC) + (+0.25*\localboxwidth,-0.5*\localboxdistancey) $ );
+
+    % Anmerkung: knoten-/maschenweise vorgehen
+    \draw ( $ (BildA) + (\localboxwidth+0.5*\localboxdistancex,-0.5*\localbboxthickness) $ ) node{\makebox[0cm][l]{\tiny *knoten-/maschenweise vorgehen}};% makebox for left alignment relative to node coordinates
+
+\end{tikzpicture}

@@ -1,0 +1,14 @@
+% ET3 Übung 7.2 von Prof. Judith Ackers
+% u1 über R und L, uL über L
+\begin{tikzpicture}
+    \draw(0,0)
+    to[R, l_=$R$, o-](3,0)
+    to[L, l_=$L$, name=ul, v^=$u_L$, !v](3,-2)
+    to[short, -o](0,-2);
+    \draw(0,0)
+    to[open, name=u1, v=$u_1$, !v](0,-2);
+
+    %draw Spannungspfeil
+    \varronly{u1};
+    \varronly{ul};
+\end{tikzpicture}

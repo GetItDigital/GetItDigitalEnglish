@@ -1,0 +1,87 @@
+% Aufladevorgang RLC-Serienschwingkreis an Gleichspannung
+% AxisEnv 1: Spannung am Kondensator
+% AxisEnv 2: Strom am Kondensator
+%
+% Vergleich der Fälle: 1) aperiodischer Fall, 2) aperiodischer Grenzfall und 3) periodischer Fall
+% Anfangsbedingungen: u_C(0) = 0, i_L(0) = 0
+%
+\pgfmathsetmacro\Uq{1} % U_q
+% delta = R/(2L) 
+\pgfmathsetmacro\deltaA{1} % aperiodischer Fall
+\pgfmathsetmacro\deltaB{1} % aperiodischer Grenzfall
+\pgfmathsetmacro\deltaC{1} % periodischer Fall
+% omega_0 = 1/sqrt(LC)
+\pgfmathsetmacro\omeganullA{0.75} % aperiodischer Fall
+\pgfmathsetmacro\omeganullB{1} % aperiodischer Grenzfall
+\pgfmathsetmacro\omeganullC{3} % periodischer Fall
+%
+% abgeleitete Werte
+% lambda = -R/(2L) +/- sqrt( (R/(2L))^2 - 1/(LC) ) 
+% 		= -delta +/- sqrt( delta^2 - omega_0^2 )  	mit delta = R/(2L) und omega_0 = 1/sqrt(LC)
+% 		= -delta +/- kappa							mit kappa = sqrt( delta^2 - omega_0^2 )
+%
+% A: aperiodischer Fall (delta > omega_0)
+\pgfmathsetmacro\kappaA{sqrt(\deltaA^2-\omeganullA^2)} 
+\pgfmathsetmacro\KeinsA{\Uq*1/((-\deltaA+\kappaA)/(-\deltaA-\kappaA)-1)} 
+\pgfmathsetmacro\KzweiA{\Uq*1/((-\deltaA-\kappaA)/(-\deltaA+\kappaA)-1)}
+%
+% B: aperiodischer Grenzfall (delta = omega_0)
+\pgfmathsetmacro\kappaB{0}
+\pgfmathsetmacro\KeinsB{-\Uq}
+\pgfmathsetmacro\KzweiB{-\Uq*\deltaB}
+%
+% C: periodischer Fall (delta < omega_0)
+\pgfmathsetmacro\omegad{sqrt(\omeganullC^2-\deltaC^2)}%
+%\pgfmathsetmacro\phiC{atan(\omegad/\deltaC)}% Möglichkeit A: Falsch: mit  sin(x)/cos(x) = tan(x) = sin(180-x)/cos(180-x) !!! 2 Möglichkeiten wegen Periodizität/Symmetrie
+\pgfmathsetmacro\phiC{atan(\omegad/\deltaC)}% Möglichkeit B: erfüllt du/dt(0)=0 ... : mit x = 180 - atan(sin(x)/cos(x)) OR x = atan(sin(x)/cos(x))
+% test
+\pgfmathsetmacro\Cnull{-\Uq/sin(\phiC)}
+%
+\begin{tikzpicture}[x=1cm,y=1cm]
+	\begin{axis}[
+		name=AxisSpannung,
+		%%%%%%% START SAME OPTIONS %%%%%%%
+		xmin=-0.01, xmax=7.5,
+		ymin=-0.25, ymax=2, % 2.5 auf 5cm, vorher 1.475 auf 3.5cm 
+		xlabel={$t$},
+		ylabel={$u_C$},
+		axis x line=center,
+		axis y line=center,
+		ylabel style={anchor=east, at={(ticklabel cs:0.95)}},
+		ticks=none,
+		mark=none,
+		grid=none,
+		width=7cm,
+		height=5cm,
+		%%%%%%% END OF SAME OPTIONS %%%%%%%
+	]
+		\node at (0,\Uq)[black,anchor=east,yshift=-1pt]{$U_q$};				% u_max label
+		\addplot[color=black,dashed,	domain=-0.1:7.4] {\Uq};          	% u_max Grenze
+
+		\node at (5,1.5)[draw=none,align=left,scale=0.75]{%
+		$\ec[red]{u_C(t)}$: period. Fall\\%
+		$\ec[violet]{u_C(t)}$: aperiod. Grenzf.\\%
+		$\ec[blue]{u_C(t)}$: aperiod. Fall%
+		}; % u_L label
+
+		% Fall 1: aperiodischer Fall
+		% u_C(t) = U_q + (K_1*e^(lambda_1*t) + K_2*e^(lambda_2*t))
+		\addplot[thick, color=blue, domain=0:7.4, samples=61]{\Uq + \KeinsA*e^((-\deltaA+\kappaA)*x) + \KzweiA*e^((-\deltaA-\kappaA)*x)}; % uc = Uq + K1 * e^(lambda1*t) + K2 * e^(lambda2*t) 
+		%\addplot[thick, dotted, color=orange, domain=0:5.4, samples=61]{\Uq + \KeinsA*e^((-\deltaA+\kappaA)*x)}; % Uq + K1 * e^(lambda1*t) 
+		%\addplot[thick, dashed, color=orange, domain=0:5.4, samples=61]{\Uq + \KzweiA*e^((-\deltaA-\kappaA)*x)}; % Uq + K2 * e^(lambda2*t)
+
+		% Fall 2: aperiodischer Grenzfall
+		% u_C(t) = U_q + (K_1 + K_2*t) * e^(lambda*t)
+		\addplot[thick, color=violet, domain=0:7.4,samples=61]{\Uq + (\KeinsB + \KzweiB*x) * e^(-\deltaB*x)}; % uc = Uq + (K1 + K2*t) * e^(lambda*t)
+
+		% Fall 3: periodischer Fall
+		% u_C(t) = U_q + C_0 * sin(omega*t+phi_0) * e^(-delta*t)
+		\addplot[thick, color=red, domain=0:7.4,samples=256, smooth]{\Uq + \Cnull * sin(\omegad*(180/pi)*x+\phiC) * e^(-\deltaC*x)}; % uc = Uq + C0 * sin(omega*t+phi0) * e^(-delta*t) <-- ??? 
+		%\addplot[thick, color=red, domain=0:7.4,samples=151]{\Uq + ( -\Uq*(\deltaC/\omegad)*sin(\omegad*x*360) - \Uq*cos(\omegad*x*360) ) * e^(-\deltaC*x)}; % uc = Uq + [C1*sin(omega*t) + C2*cos(omega*t)] * e^(-delta*t)
+
+		% Güte Q
+		\draw [->](0.8,0.04) .. controls (0.6, 0.25) and (0.2,0.275) .. (0.1,0.3)
+		node[pos=0.3,above,scale=0.75]{$Q$}; % Q-Pfeil
+	
+	\end{axis}
+\end{tikzpicture}

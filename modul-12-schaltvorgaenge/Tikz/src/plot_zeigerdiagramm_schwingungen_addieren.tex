@@ -1,0 +1,108 @@
+% Addition zweier Schwingungen gleicher Frequenz
+% Zeitverlauf- und Zeigerdiagramm
+\def\amplitudeA{0.75}% amplitudeA*sin(wt+phiA)
+\def\phiA{0}% in degrees
+\def\amplitudeB{1}% amplitudeB*sin(wt+phiB)
+\def\phiB{+90}% in degrees
+\def\anglewatched{0}% clockwise (set to 0), counter clockwise (set to 360) [with phiA=0, phiB=-90]
+\begin{tikzpicture}[x=1cm,y=1cm]
+    \begin{axis}[%
+        name=Zeitverlaufdiagramm,
+        axis lines=center,
+        xlabel=$\omega_d t$,
+        ylabel=$\ecv{u(t)}$,
+        xlabel style={xshift=0.75cm, yshift=-0.25cm},% set after(!) axis lines=center
+        xmin=-0.375, xmax=2.125,
+        ymin=-1.75, ymax=1.75,
+        width=10cm, height=6cm,
+        xtick distance=0.5, minor x tick num=1, xticklabels={,$0$,$\pi$,$2\pi$,$3\pi$,$4\pi$}, xticklabel style={yshift=-1.75cm},
+        ytick distance=1.0, minor y tick num=1, yticklabels={\empty},
+        grid=both, 
+        grid style={line width=.1pt, draw=gray!10}, major grid style={line width=.2pt,draw=gray!50},
+        domain=-0.375:2.125,
+        samples=100,
+        clip=false,
+    ]
+        % draw plots
+        \addplot[thick,blue, domain=-0.375:2.075]    {\amplitudeA*cos(x*360+\phiA)}; % Schwingung A
+        \addplot[thick,red, domain=-0.375:2.075 ]    {\amplitudeB*cos(x*360+\phiB)}; % Schwingung B
+        \addplot[thick,GETgreen, domain=-0.375:2.075]  {\amplitudeA*cos(x*360+\phiA) + \amplitudeB*cos(x*360+\phiB)}; % Schwingung C = A + B
+        
+        % draw vertical line as marker (watched angle für Imaginärteil(!) zum Vergleichen)
+        %\addplot[mark=*,GETgreen] coordinates {({(\anglewatched-90)/360},{ \amplitudeA*cos(\anglewatched-90+\phiA) + \amplitudeB*cos(\anglewatched-90+\phiB) })}; % green anglewatch marker, on height of Im{z0}
+
+        % Phasenverschiebung
+        \draw[|->|,red] ({0+\phiA/360},{+0.075}) -- ({0-\phiB/360},{+0.075}) node[midway, above]{};
+        \draw[|->|,GETgreen] ({0+\phiA/360},{-0.075}) -- ({0-atan( (\amplitudeA*sin(\phiA)+\amplitudeB*sin(\phiB)) / (\amplitudeA*cos(\phiA)+\amplitudeB*cos(\phiB)) )/360},{-0.075}) node[midway, below]{$\ \psi$};
+        \draw[dotted, red] ({0-\phiB/360},{+0.075}) -- ({0-\phiB/360},{\amplitudeB});
+        \draw[dotted, GETgreen] ({0-atan( (\amplitudeA*sin(\phiA)+\amplitudeB*sin(\phiB)) / (\amplitudeA*cos(\phiA)+\amplitudeB*cos(\phiB)) )/360},{-0.075}) 
+            -- ({0-atan( (\amplitudeA*sin(\phiA)+\amplitudeB*sin(\phiB)) / (\amplitudeA*cos(\phiA)+\amplitudeB*cos(\phiB)) )/360},{sqrt( (\amplitudeA*cos(\phiA)+\amplitudeB*cos(\phiB))^2+(\amplitudeA*sin(\phiA)+\amplitudeB*sin(\phiB))^2)});
+
+        % Beschriftung
+        \draw[thick, blue] ({1-\phiA/360+0.05},{\amplitudeA}) node[above]{${z_1}$};
+        \draw[thick, red ] ({1-\phiB/360-0.05},{\amplitudeB}) node[above]{${z_2}$};
+        \draw[thick, GETgreen] ({1-atan( (\amplitudeA*sin(\phiA)+\amplitudeB*sin(\phiB)) / (\amplitudeA*cos(\phiA)+\amplitudeB*cos(\phiB)) )/360}, {sqrt( (\amplitudeA*cos(\phiA)+\amplitudeB*cos(\phiB))^2+(\amplitudeA*sin(\phiA)+\amplitudeB*sin(\phiB))^2)}) node[above]{$z_0$}; 
+
+        % Amplitudenlinien 
+        \draw[dotted, blue](0,{-\amplitudeA}) -- (3,{-\amplitudeA});
+        \draw[dotted, red] (0,{-\amplitudeB}) -- (3,{-\amplitudeB});
+        \draw[dotted, GETgreen] (0, -{sqrt( (\amplitudeA*cos(\phiA)+\amplitudeB*cos(\phiB))^2+(\amplitudeA*sin(\phiA)+\amplitudeB*sin(\phiB))^2)}) -- (3, -{sqrt( (\amplitudeA*cos(\phiA)+\amplitudeB*cos(\phiB))^2+(\amplitudeA*sin(\phiA)+\amplitudeB*sin(\phiB))^2)});
+
+    \end{axis}
+    \begin{axis}[
+        at={($(Zeitverlaufdiagramm.south east)+(0.75cm,0cm)$)},
+        name=Zeigerdiagramm,
+        axis lines=center,
+        %x dir=reverse, % x-Achse umdrehen ... dann Koordinaten alle ebenfalls ändern und alles 90° drehen für quasi Re-Achse nach oben, Im-Achse nach links
+        xmin=-1.75,xmax=+1.75,
+        ymin=-1.75,ymax=+1.75,
+        width=6cm, height=6cm,
+        xtick distance=1, xticklabels={\empty}, minor x tick num=1,
+        ytick distance=1, yticklabels={\empty}, minor y tick num=1,
+        grid=none,% none, minor, major, both
+        grid style={line width=.1pt, draw=gray!10},major grid style={line width=.2pt,draw=gray!50},
+        clip=false,
+    ]
+        % Kreise
+        \draw[fill=none, thick, blue]  (0,0) circle [radius=\amplitudeA];
+        \draw[fill=none, thick, red]   (0,0) circle [radius=\amplitudeB];
+        \draw[fill=none, thick, GETgreen] (0,0) circle [radius={sqrt( (\amplitudeA*cos(\phiA)+\amplitudeB*cos(\phiB))^2+(\amplitudeA*sin(\phiA)+\amplitudeB*sin(\phiB))^2)}];
+        
+        % Zeiger
+        \draw[->,thick,blue]    (0,0) -- 
+                                ({\amplitudeA*cos(\phiA+\anglewatched)},{\amplitudeA*sin(\phiA+\anglewatched)});
+        \draw[->,thick,red]     (0,0) -- 
+                                ({\amplitudeB*cos(\phiB+\anglewatched)},{\amplitudeB*sin(\phiB+\anglewatched)});
+        \draw[->,thick,red,opacity=0.5]% parallel, start from tip of blue arrow to form a triangle     
+                                ({\amplitudeA*cos(\phiA+\anglewatched)},{\amplitudeA*sin(\phiA+\anglewatched)}) -- 
+                                ({\amplitudeA*cos(\phiA+\anglewatched)+\amplitudeB*cos(\phiB+\anglewatched)},
+                                 {\amplitudeB*sin(\phiB+\anglewatched)+\amplitudeA*sin(\phiA+\anglewatched)});
+        \draw[->,thick, blue,opacity=0.5]% parallel, start from tip of red arrow to form a triangle
+                                ({\amplitudeB*cos(\phiB+\anglewatched)},{\amplitudeB*sin(\phiB+\anglewatched)}) -- 
+                                ({\amplitudeA*cos(\phiA+\anglewatched)+\amplitudeB*cos(\phiB+\anglewatched)},
+                                 {\amplitudeB*sin(\phiB+\anglewatched)+\amplitudeA*sin(\phiA+\anglewatched)});
+        \draw[->,thick,GETgreen](0,0) -- 
+                                ({\amplitudeA*cos(\phiA+\anglewatched)+\amplitudeB*cos(\phiB+\anglewatched)},
+                                {\amplitudeB*sin(\phiB+\anglewatched)+\amplitudeA*sin(\phiA+\anglewatched)});
+
+        % Winkel
+        \draw[->,black] (30:{1.1*sqrt( (\amplitudeA*cos(\phiA)+\amplitudeB*cos(\phiB))^2+(\amplitudeA*sin(\phiA)+\amplitudeB*sin(\phiB))^2)}) % (start angle:radius), radius=1.1*amplitudeC
+            arc [start angle=30, end angle=60, radius={1.1*sqrt( (\amplitudeA*cos(\phiA)+\amplitudeB*cos(\phiB))^2+(\amplitudeA*sin(\phiA)+\amplitudeB*sin(\phiB))^2)}] % Orientation (counter clockwise)
+            node[midway, above, yshift=-4pt, sloped] {$\omega t$} % working
+        ;
+        \draw[->,red]       ({\anglewatched}:0.40) arc [start angle={\anglewatched}, end angle={\anglewatched+\phiB}, radius=0.40]% from 0 degree to phiB
+            %node[midway, above, yshift=-4pt, sloped] {$\varphi_2$}% wrong radius ... ?
+        ;
+        \draw[->,GETgreen] ({\anglewatched}:0.55) arc [start angle={\anglewatched}, end angle={(\anglewatched + atan( (\amplitudeA*sin(\phiA)+\amplitudeB*sin(\phiB)) / (\amplitudeA*cos(\phiA)+\amplitudeB*cos(\phiB)) ) )}, radius=0.55];
+
+        %\draw[->,blue]    ({\anglewatched}:0.25) arc [start angle={\anglewatched}, end angle={(\anglewatched + \phiA)}, radius=0.25]; % für \phiA = 0 unpraktisch! (nur Spitze, kein Bogen)
+
+        % Beschriftung
+        \draw (-1.5,1) node[align=left]{%
+            $\ec[GETgreen]{\underline{Z}_0}$\\
+            $\ec[blue]{\underline{Z}_1}$\\
+            $\ec[red]{\underline{Z}_2}$%
+        };
+        
+    \end{axis}
+\end{tikzpicture}

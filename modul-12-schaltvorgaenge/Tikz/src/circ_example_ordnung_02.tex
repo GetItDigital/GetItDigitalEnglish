@@ -1,0 +1,9 @@
+% RLC-Glied (Parallel)
+\begin{tikzpicture}[x=1cm,y=1cm]
+    \draw[draw=none] (-2,+0.25) rectangle (+2,-3.75); % bounding box (4x4)
+    \draw (0,-0.5) to [short, o-] % U+
+        (0,-1) to [C, l=$C$, *-*] (0,-3) % Zweig mittig
+        (0,-1) -- (-1.4,-1) to [R, l=$R$] (-1.4,-3) -- (0,-3) % Zweig links
+        (0,-1) -- (+1.4,-1) to [L, l=$L$] (+1.4,-3) -- (0,-3) % Zweig rechts
+        to [short, -o] (0,-3.5); % U-
+\end{tikzpicture}

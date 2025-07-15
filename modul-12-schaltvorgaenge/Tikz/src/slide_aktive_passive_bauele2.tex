@@ -1,0 +1,56 @@
+% für Folien Seite 14 
+
+\begin{tikzpicture}
+    \draw(-2,-6.125)[opacity=0] rectangle (12,2); % Boundbox
+
+    \draw(1, 1.5) node [align=center, scale= 1.25]{\underline{Schaltung}};
+
+    % Schaltungselemente in Rechteck:
+    \draw (-0.35,1) rectangle(2.35,-6);
+    \draw (0,0.25) to [R, l=$R$, o-] (2,0.25) to [short, -o] (2,0.25);
+    \draw (0,-0.75) to [L, l=$L$, o-] (2,-0.75) to [short, -o] (2,-0.75);
+    \draw (0,-1.95) to [C, l=$C$, o-] (2,-1.95) to [short, -o] (2,-1.95);
+    \draw (0,-2.65) to [short, o-o] (2,-2.65);
+    \draw (0,-3.75) to [voltage source, l=$\ecv{U}$, o-] (2,-3.75) to [short, -o] (2,-3.75);
+    \draw (0,-5) to [current source, l_=$\ecr{I}$, o-] (2,-5) to [short, -o] (2,-5);
+   
+    % Einteilung in:
+    % passiv (oben, label links)
+    \draw(-0.6,-1.25) node{$\left\{\begin{array}{rcl}\\ \\ \\ \\ \\ \\ \\\end{array}\right.$};
+    \draw(-0.8, -1.25) node[left]{passiv};
+    % aktiv (unten, label links)  
+    \draw(-0.6,-4.4) node{$\left\{\begin{array}{rcl}\\ \\ \\ \\ \\\end{array}\right.$};
+    \draw(-0.8, -4.4) node[left]{aktiv};
+    % Energie-speicher (oben, label rechts)
+    \onslide<3->{% start overlay
+        \draw(2.6,-1.35) node[rotate=180](Energiespeicher){$\left\{\begin{array}{rcl}\\ \\ \\ \\\end{array}\right.$};
+        \draw(Energiespeicher) node[xshift=0.2cm, align=center, right]{Energie-\\speicher};
+    }% end overlay
+
+    % new Plot
+    \onslide<2->{% start overlay
+        \draw(8,1.5) node[ align=center, scale=1.25]{\underline{Gleichungen}};
+
+        \draw(8,0.5) node[left]{\underline{Komponenten}};
+        \draw(8,-0.25) node[left]{Widerstand};
+        \draw(8,-0.25) node[right]{$\ecv{u_R}=R \cdot \eci{i_R}$};
+        \draw(8,-1) node[left]{Induktivität};
+        \draw(8,-1) node[right]{$\ecv{u_L} = L \cdot \frac{\mathrm{d}}{\mathrm{d}t}\cdot \eci{i_L}$};
+        \draw(8,-1.75) node[left]{Kapazität};
+        \draw(8,-1.75) node[right]{$\eci{i_C} = C \cdot \frac{\mathrm{d}}{\mathrm{d}t} \cdot \ecv{u_C}$};
+
+        \draw(8,-3) node[left]{\underline{Kirchhoff}};
+        \draw(8,-3.75) node [left]{Knoten:};
+        \draw(8,-3.75) node [right]{$\displaystyle{\sum_{}^{} \eci{i} = 0} \vphantom{\sum_{}^{}}$};
+
+        \draw(8,-4.5) node[left]{Maschen:};
+        \draw(8,-4.5) node[right]{$\displaystyle{\sum_{}^{} \ecv{u} = 0} \vphantom{\sum_{}^{}}$};
+    }\onslide<3->{% next overlay
+        \draw[dashed, GETgreen](8,-0.65) rectangle (10.8,-2.15); % Highlighting
+        \draw[GETgreen](9.3,-2.5)node[align=center]{Energiespeicher};
+        \draw(7,-5.5) node[align=center]{%
+            \textbf{Energiespeicher in Schaltungen}\\
+            \textbf{führen zu Schaltvorgängen und DGLen.}
+        }; 
+    }% end overlay
+\end{tikzpicture}

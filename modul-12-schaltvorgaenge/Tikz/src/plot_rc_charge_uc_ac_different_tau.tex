@@ -1,0 +1,128 @@
+% Schaltvorgang: Kapazität wird über Widerstand an Wechselspannung angeschlossen
+%
+% AxisEnv 1: Quellspannung u_q(t) = Û_q * sin(omega*t + phi_q)
+% AxisEnv 2: Spannung an Kapazität u_C(t) = u_{C,e}(t) + u_{C,f}(t) für t_0 = ... (Fall A)
+% AxisEnv 3: Spannung an Kapazität u_C(t) = u_{C,e}(t) + u_{C,f}(t) für t_0 = ... (Fall B)
+
+% Allgemein Variablen
+\def\ampuq{1} 		% Amptlitude Û_q
+\def\phiuq{0} 		% Phase phi_q in Grad -> u_q(t) = Û_q * sin(omega*t + phi_q)
+\def\omegauq{1} 	% Kreisfrequenz omega in Hz -> für t=x=1s -> omega*x = 1 = 360°
+\def\tnullA{0.125}	% Fall A: Schaltzeitpunkt t_0 
+\def\tnullB{0.125} 	% Fall B: Schaltzeitpunkt t_0 
+\def\ttauA{2*pi} 	% Zeitkonstante tau = R*C
+\def\ttauB{20*pi} 	% Zeitkonstante tau = R*C
+% ACHTUNG: Einstellbare Variablen, theoretisch von einander abhängig, ohne x-Achsen-Beschriftung aber egal (omega beliebig und t bzw. t_0 auch)
+
+\def\phiqc{-45} 	% Phase \phi_{qc} = phi_q - arctan(omega*R*C) in Grad, Phasenverschiebung zwischen u_q und u_C [Zwischen 0 und -90° !]
+\begin{tikzpicture}[x=1cm,y=1cm]
+	\begin{axis}[
+		name=AxisUq,
+		%%%%%%% START SAME OPTIONS %%%%%%% 
+		xmin=-0.5, xmax=2.5, % x = \omega*t [Grad] / 360° = t / T
+		ymin=-1.125, ymax=1.375, % \delta y = 2.5 auf 3.5cm
+		xlabel={$t$},
+		ylabel={$\ecv{u_q}(t)$},
+		axis x line=center,
+		axis y line=center,
+		ylabel style={anchor=east, at={(ticklabel cs:0.95)}},
+		ticks=none,
+		mark=none,
+		grid=none,
+		width=7cm,
+		height=3.5cm,
+		%%%%%%% END OF SAME OPTIONS %%%%%%%
+	]
+		% Hilfslinien 
+		\addplot[color=black,dashed,domain=-0.5:2.45] {+\ampuq};          			% +Û_q
+		\addplot[color=black,dashed,domain=-0.5:2.45] {-\ampuq};          			% -Û_q
+		% Plots
+		\addplot[color=voltage,very thick,samples=161,domain=-0.5:2.45] {\ampuq*cos(\omegauq*x*360 + \phiuq)};% u_q(t)
+		% Koordinaten
+		\coordinate (X1_1) at (\tnullA,1.5);
+		\coordinate (X2_1) at (\tnullB,1.5);
+	\end{axis}
+	\begin{axis}[
+		at={($(AxisUq.south west)+(0,-0.5cm)$)}, % Position 2. Plot
+		anchor=north west,
+		name=AxisUc1,
+		%%%%%%% START SAME OPTIONS %%%%%%%
+		xmin=-0.5, xmax=2.5, % x = \omega*t [Grad] / 360° = t / T
+		ymin=-1.125, ymax=1.375, % \delta y = 2.5 auf 3.5cm
+		xlabel={$t$},
+		ylabel={$\ecv{u_C}(t)$},
+		axis x line=center,
+		axis y line=center,
+		ylabel style={anchor=east, at={(ticklabel cs:0.95)}},
+		ticks=none,
+		mark=none,
+		grid=none,
+		width=7cm,
+		height=3.5cm,
+		%%%%%%% END OF SAME OPTIONS %%%%%%%
+		clip=false,
+	]
+		% Hilfslinien 
+		\addplot[color=black,dashed,domain=-0.5:2.45] {+\ampuq};          			% +Û_q
+		\addplot[color=black,dashed,domain=-0.5:2.45] {-\ampuq};          			% -Û_q
+		%\addplot[color=black, thick, dashed, ] coordinates {(\tnullA, {-\ampuq*cos(\omegauq*\tnullA*360 + \phiuq + \phiqc)}) (\tnullA,0)}; % Sprung u_{C,f}(t_0)
+		% Plots
+		\addplot[color=black, thick,samples=161,domain=\tnullA:2.45] {\ampuq*cos(\omegauq*x*360 + \phiuq + \phiqc)};% u_{C,e}(t) eingeschwungen
+		\addplot[color=black, thick, dashed, samples=161, domain=\tnullA:2.45] {-\ampuq*exp(-(x-\tnullA)/\ttauA)*cos(\omegauq*\tnullA*360 + \phiuq + \phiqc)};% u_{C,f}(t) flüchtig
+		\addplot[color=voltage, very thick, samples=161, domain=\tnullA:2.45] {% u_C(t) = u_{C,e}(t) + u_{C,f}(t) Überlagerung
+			\ampuq*cos(\omegauq*x*360 + \phiuq + \phiqc)								% u_{C,e}(t) eingeschwungen
+			-\ampuq*exp(-(x-\tnullA)/\ttauA)*cos(\omegauq*\tnullA*360 + \phiuq + \phiqc)} % u_{C,f}(t) flüchtig
+		;
+		\addplot[color=voltage, very thick, samples=2, domain=-0.5:\tnullA] {0}; % u_C(t) = 0 für t < t_0
+		% Beschriftung
+		\node[coordinate, pin={+45:$u_{C,\mathrm{e}}$}] at ($(\tnullA + 0.125,{\ampuq*cos(45)})$) {};% 1/8 T = 45° nach t_0 für u_{C,e}
+		\node[coordinate, pin={-80:$u_{C,\mathrm{f}}$}] at ($(\tnullA + 0.125,{-\ampuq*exp(-0.125/\ttauA)})$) {};% 1/8 T = 45° nach t_0 für u_{C,f}
+		\node[coordinate, pin={-10:$\ecv{u_C}$}] at ($(\tnullA + 0.555,{\ampuq*cos(200)-\ampuq*exp(-0.555/\ttauA)})$) {};% 5/9 T = 200° nach t_0 für  u_C
+	\end{axis}
+	\begin{axis}[
+		at={($(AxisUc1.south west)+(0,-0.5cm)$)}, % Position 3. Plot
+		anchor=north west,
+		name=AxisUc2,
+		%%%%%%% START SAME OPTIONS %%%%%%%
+		xmin=-0.5, xmax=2.5, % x = \omega*t [Grad] / 360° = t / T
+		ymin=-1.125, ymax=1.375, % \delta y = 2.5 auf 3.5cm
+		xlabel={$t$},
+		ylabel={$\ecv{u_C}(t)$},
+		axis x line=center,
+		axis y line=center,
+		xlabel style={xshift= -0.2cm},
+		ylabel style={anchor=east, at={(ticklabel cs:0.95)}},
+		ticks=none,
+		mark=none,
+		grid=none,
+		width=7cm,
+		height=3.5cm,
+		%%%%%%% END OF SAME OPTIONS %%%%%%%
+		clip=false,
+	]
+		% Hilfslinien 
+		\addplot[color=black,dashed,domain=-0.5:2.45] {+\ampuq};          			% +Û_q
+		\addplot[color=black,dashed,domain=-0.5:2.45] {-\ampuq};          			% -Û_q
+		%\addplot[color=black, thick, dashed, ] coordinates {(\tnullB, {-\ampuq*cos(\omegauq*\tnullB*360 + \phiuq + \phiqc)}) (\tnullB,0)}; % Sprung u_{C,f}(t_0)
+		% Plots
+		\addplot[color=black,thick,samples=161,domain=\tnullB:2.45] {\ampuq*cos(\omegauq*x*360 + \phiuq + \phiqc)};% u_{C,e}(t) eingeschwungen
+		\addplot[color=black, thick, dashed, samples=161, domain=\tnullB:2.45] {-\ampuq*exp(-(x-\tnullB)/\ttauB)*cos(\omegauq*\tnullB*360 + \phiuq + \phiqc)};% u_{C,f}(t) flüchtig
+		\addplot[color=voltage, very thick, samples=161, domain=\tnullB:2.45] {% u_C(t) = u_{C,e}(t) + u_{C,f}(t) Überlagerung
+			\ampuq*cos(\omegauq*x*360 + \phiuq + \phiqc)								% u_{C,e}(t) eingeschwungen
+			-\ampuq*exp(-(x-\tnullB)/\ttauB)*cos(\omegauq*\tnullB*360 + \phiuq + \phiqc)} % u_{C,f}(t) flüchtig
+		;
+		\addplot[color=voltage, very thick, samples=2, domain=-0.5:\tnullB] {0}; % u_C(t) = 0 für t < t_0
+		% Beschriftung
+		%\node[coordinate, pin={+45:$u_{C,\mathrm{e}}$}] at ($(\tnullB + 0.125,{\ampuq*cos(45)})$) {};% 1/8 T = 45° nach t_0 für u_{C,e}
+		\node[coordinate, pin={-90:$\tau \gg T$}] at ($(\tnullB + 2,{-\ampuq*exp(-2/\ttauB)})$) {};% 
+		\node[coordinate, pin={-25:$\ecv{u_C}$}] at ($(\tnullB + 0.666,{\ampuq*cos(240)-\ampuq*exp(-0.666/\ttauB)})$) {};% 4/6 T = 240° nach t_0 für u_C
+		% Koordinaten
+		\coordinate (X1_2) at (\tnullA,-1.5);
+		\coordinate (X2_2) at (\tnullB,-1.5);
+	\end{axis}
+		%Schaltzeitpunkte
+		\draw[color=gray, densely dotted] (X1_1) -- (X1_2);
+		%\draw[color=gray, densely dotted] (X2_1) -- (X2_2);
+		\node[yshift=-0.3cm] at (X1_2) {$t_0$};
+		%\node[yshift=-0.3cm] at (X2_2) {$t_1$};
+\end{tikzpicture}

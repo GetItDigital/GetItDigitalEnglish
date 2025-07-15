@@ -1,4 +1,4 @@
-name: Modul 08
+name: Modul 12
 
 on:
   push:
@@ -27,21 +27,21 @@ jobs:
       uses: tj-actions/changed-files@ed68ef82c095e0d48ec87eccea555d944a631a4c # v46
       with:
         files: |
-          modul-08-schaltungen-variabler-frequenz/*
+          modul-12-schaltvorgaenge/*
           Templates/*
 
     # Compile Skript only if files in this module are changed
     - name: compile Skript
       id: skript
       if: steps.changed-files-specific.outputs.any_changed == 'true'
-      working-directory: ./modul-08-schaltungen-variabler-frequenz
+      working-directory: ./modul-12-schaltvorgaenge
       run: latexmk -interaction=nonstopmode -file-line-error -pdf --shell-escape -outdir=TeXAux Skript.tex
     - name: Upload Skript as artifact
       if: steps.changed-files-specific.outputs.any_changed == 'true'
       uses: actions/upload-artifact@v4
       with:
-        name: Modul-08-Skript
-        path: modul-08-schaltungen-variabler-frequenz/TeXAux/Skript.pdf
+        name: Modul-12-Skript
+        path: modul-12-schaltvorgaenge/TeXAux/Skript.pdf
     - name: upload to Skript server
       if: steps.changed-files-specific.outputs.any_changed == 'true'
       shell: bash
@@ -53,20 +53,20 @@ jobs:
         [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
         chmod 400 ~/.ssh/config
         ssh-add <(echo "${{secrets.SFTP_KEY}}")
-        sftp -o StrictHostKeyChecking=no ${{secrets.SFTP_USERNAME}}@${{secrets.SFTP_SERVER}}:modul-8-schaltungen-variabler-frequenz <<< $'put modul-08-schaltungen-variabler-frequenz/TeXAux/Skript.pdf'
+        sftp -o StrictHostKeyChecking=no ${{secrets.SFTP_USERNAME}}@${{secrets.SFTP_SERVER}}:modul-12-schaltvorgaenge <<< $'put modul-12-schaltvorgaenge/TeXAux/Skript.pdf'
 
     # Compile Slides only if files in this module are changed
     - name: compile Folien
       if: steps.changed-files-specific.outputs.any_changed == 'true'
       id: folien
-      working-directory: ./modul-08-schaltungen-variabler-frequenz
+      working-directory: ./modul-12-schaltvorgaenge
       run: latexmk -interaction=nonstopmode -file-line-error -pdf --shell-escape -outdir=TeXAux Folien.tex
     - name: Upload Folien as artifact
       if: steps.changed-files-specific.outputs.any_changed == 'true'
       uses: actions/upload-artifact@v4
       with:
-        name: Modul-08-Folien
-        path: modul-08-schaltungen-variabler-frequenz/TeXAux/Folien.pdf
+        name: Modul-12-Folien
+        path: modul-12-schaltvorgaenge/TeXAux/Folien.pdf
     - name: upload to Folien server
       if: steps.changed-files-specific.outputs.any_changed == 'true'
       shell: bash
@@ -78,4 +78,4 @@ jobs:
         [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
         chmod 400 ~/.ssh/config
         ssh-add <(echo "${{secrets.SFTP_KEY}}")
-        sftp -o StrictHostKeyChecking=no ${{secrets.SFTP_USERNAME}}@${{secrets.SFTP_SERVER}}:modul-8-schaltungen-variabler-frequenz <<< $'put modul-08-schaltungen-variabler-frequenz/Folien.pdf'
+        sftp -o StrictHostKeyChecking=no ${{secrets.SFTP_USERNAME}}@${{secrets.SFTP_SERVER}}:modul-12-schaltvorgaenge <<< $'put modul-12-schaltvorgaenge/Folien.pdf'

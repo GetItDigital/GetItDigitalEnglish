@@ -1,0 +1,983 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                               START KAPITEL 2 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section[Grundlagen]{Grundlagen der Berechnung von Schaltvorgängen}% Ev. nur "Grundlagen" ...
+\label{sec:grundlagen}
+\begin{frame}\ftx{\secname}
+\s{
+    % Einführung
+    Grundlage der Berechnung von Schaltvorgängen sind Differentialgleichungen (DGL).
+    %Betrachtet werden lineare, zeitinvariante (LZI) Schaltungen mit Energiespeichern (Kapazitäten, Induktivitäten).
+
+    % Problemstellung
+    Die Aufstellung der Kirchhoffschen Regeln bei Schaltungen mit Energiespeichern führt zu DGL 
+    von Spannungen an beziehungsweise Strömen in den jeweiligen Komponenten.
+    Das bedeutet, dass die jeweiligen Momentanwerte von Spannungen und Strömen nicht ausreichen, 
+    um den Zustand des Systems zu beschreiben.
+
+    % Lösung
+    Die Zeitverläufe von Spannungen und Strömen während Schaltvorgängen lassen sich durch Lösung 
+    ihrer jeweiligen DGL bestimmen. 
+}
+\begin{Lernziele}{Grundlagen}
+    \s{Studierende lernen:}%
+    \begin{itemize}\b{\setlength\itemsep{0.7em}}
+        \item{grundlegende Begriffe kennen und verstehen (Definitionen)}% Wissen
+        \item{Berechnungsmethoden im Zeit- und Bildbereich (Laplace) kennen} % Wissen, Anwendung
+        \item{DGLen für Schaltungsgrößen von LZI-Schaltungen aufzustellen} % Anwendung
+        \item{DGL-Eigenschaften aus Schaltungseigenschaften abzuleiten} % Verstehen, Analyse
+        \item{Zeitverläufe bei Schaltvorgängen zu bestimmen (DGLen zu lösen)}% Anwendung
+    \end{itemize}
+\end{Lernziele}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Definitionen}
+\label{sec:grundlagen:definitionen}
+\begin{frame}\ftx{\subsecname}
+\s{
+    Tabelle \ref{tab:definitions} zeigt eine Übersicht wichtiger Begriffe mit Kurzform der hier verwendeten Definitionen.
+    Bestimmte Begriffe werden in den folgenden Abschnitten genauer erläutert und diskutiert. 
+    
+    Speziell die hier verwendeten Definitionen für Transienten, Ausgleichs-, Einschwing- und Schaltvorgänge
+    werden in Abschnitt \ref{sec:grundlagen:definitionen:diskussion} in Abgrenzung zur Definition in anderen Quellen 
+    erläutert und die Wahl der hier getroffenen Definition begründet.
+    
+    Die Tabelle dient als Referenz für die Verwendung der Begriffe in diesem Modul und kann nach Art eines Glossars verwendet werden.
+}
+\begin{table}[h]
+    \b{\renewcommand{\thefootnote}{\fnsymbol{footnote}}} % https://www.sascha-frank.com/footnote.html
+    \resizeboxb{0.95\textwidth}{!}{%
+    \s{\caption{Gruppierte Begriffe mit Definitionen in Kurzform}}
+        \label{tab:definitions}
+        \index{Schalten}\index{Schalter}%
+        \index{Eigenschaft>harmonisch}\index{Eigenschaft>periodisch}\index{Eigenschaft>zeitinvariant}%
+        \index{Eigenschaft>homogen}\index{Eigenschaft>linear}\index{Eigenschaft>Ordnung}%
+        \index{Größe>Abklingkonstante}\index{Größe>Dämpfungskonstante}\index{Größe>Eigenfrequenz}%
+        \index{Größe>Resonanzfrequenz}\index{Größe>Zeitkonstante}%
+        \index{Vorgang>Ausgleichsvorgang}\index{Vorgang>Einschwingvorgang}\index{Vorgang>Schaltvorgang}\index{Vorgang>Transiente}%
+        \centering
+        \begin{tabular}{@{}crl@{}} % remove inter/border column space with @{}: https://tex.stackexchange.com/questions/490181/actual-split-cell-in-tabular
+            \toprule
+            \textbf{\rlap{G.}}& \textbf{Begriffe} & \textbf{Definitionen} \\
+            \midrule
+            \multirow{ 2}{*}{\rotatebox[origin=c]{90}{\textbf{allg.}}} 
+            & Schalten & \glqq durch Betätigen eines Schalters in einen (Betriebs)zustand versetzen\grqq \s{\cite{duden}}\b{[\footnote{Duden online}]} \\
+            & Schalter & Komponente, hier zum öffnen oder schließen einer elektr. Verbindung \\
+            % Etwas schalten durch betätigen eines Schalters; ein Schalter kann nur betätigt werden, nicht geschalten. ?
+            &&\\[-4pt]%\midrule
+            \multirow{ 8}{*}{\rotatebox[origin=c]{90}{\textbf{Eigenschaften}}} % 6 rows, but multirow 7 for space (bigger rows inbetween)
+            \s{& harmonisch$^1$        & sinusförmig, beschreibt Schwingung der Form: $y(t) = \hat{X} \cdot \sin(\omega t + \varphi)$ \\}
+            & periodisch$^1$        & \glqq in gleichen Abständen, regelmäßig [auftretend, wiederkehrend]\grqq \s{\cite{duden}}\b{[\footnotemark[\value{footnote}]]}\\% Hier: in der Regel auf Zeitabstände bezogen \\
+            & zeitinvariant$^1$     & invariant/unveränderlich über die Zeit\\
+            & gewöhnlich$^2$  & Ableitung(en) nach einer unabhängigen Variable (z.B. Zeit $t$), Vgl. partiell\\
+            & homogen$^2$     & Form gewöhnlich: $\sum a_i(t) \dt[i]\, f_i(y(t)) \overset{!}{=} 0$ \quad mit Störfunktion $b=0$ $\vphantom{\Big|}$\\
+            & linear$^2$      & Form gewöhnlich: $\sum a_i(t) \dt[i]\, y(t) = b(t)$\qquad d.h. mit $\dt[i]\, y(t)$ linear $\vphantom{\Big|}$\\
+            & Ordnung$^2$     & \makebox[7mm][l]{$n$} $[1]$ d.h. höchstens Ableitung der Ordnung $n$ in DGL \\
+            \s{%
+            &&\\[-4pt]%\midrule
+            \multirow{ 5}{*}{\rotatebox[origin=c]{90}{\textbf{Größen}}} 
+            & Abklingkonst.     & \makebox[7mm][l]{$\delta$} $[\mathrm{Hz}]$ Maß für die Dämpfung linear gedämpfter Schwingungssysteme\\ %\todo{Bezug DGL} 
+            & Dämpfungskonst.   & \makebox[7mm][l]{$\delta$} $[\mathrm{Hz}]$ synonym zu Abklingkonstante\\ %\todo{Bezug DGL} 
+            & Eigenfreq.        & \makebox[7mm][l]{$f_{0/d}$} $[\mathrm{Hz}]$ Freq. mit der ein System (un/)gedämpft selbst schwingen kann \\
+            & Resonanzfreq.     & \makebox[7mm][l]{$f_0$}    $[\mathrm{Hz}]$ Freq. bei der ein System in Resonanz tritt, gleich unged. Eigenfreq. \\
+            & Zeitkonstante     & \makebox[7mm][l]{$\tau$}   $[\mathrm{s}]$ Maß für Steilheit von Exponentialverläufen der Form $\mathrm{e}^{-\sfrac{t}{\tau}}$ \\ %\todo{Bezug DGL} 
+            }%
+            &&\\[-4pt]%\midrule
+            \multirow{ 4}{*}{\rotatebox[origin=c]{90}{\textbf{Vorgänge}}} 
+            & Ausgleichsvorg.   & Vorgang in einem System, dass einen stationären Zustand anstrebt \\
+            \s{& Ausschwingvorg.& Ausgleichsvorgang, schwingend, exergon (spontan) \\}
+            & Einschwingvorg.   & Ausgleichsvorgang, schwingend, endergon (nicht spontan) \\
+            % ALTERNATIV: Ausgleichsvorgang energie unabhängig (Prozess beim Zustreben eines stationären Zustandes)
+            % ALTERNATIV: Einschwingvorgang, nur wenn dieser schwingt ()
+            & Schaltvorg.       & nicht stationärer Zustand nach Schalten\\% Anm.: Schließt instabile Zustände mit ein \\
+            & Transiente        & Ausgleichsvorgang (synonym), Vgl. transient (adj.) \\
+            %Dt. (hin)über(/durch)gehen\\% Ggt. persistent (adj.) von Lat. \textit{persistere} --verharren-- \\
+            % ALTERNATIV: eher das von ... bis ... betonen? Wegen "Übergang" als freie Übersetzung. Mh...
+            \s{%
+            &&\\[-4pt]%\midrule
+            \multirow{ 4}{*}{\rotatebox[origin=c]{90}{\textbf{Zustände}}} 
+            & eingeschwungen    & stationär nach Einschwingvorgang \\
+            & persistent        & stationär von Lat. \textit{persistere}, Dt. verharren, Ggt. von transient \\
+            & stationär         & zeitlich konstante/periodische Größen (z.B. bei DC/AC) \cite[S. 362]{hagmann} \\
+            & transient         & übergangsweise von Lat. \textit{transire}, Dt. (hin)übergehen, Ggt. von persistent \\
+            }\\[-10pt]%
+            \bottomrule%
+            \\[-10pt]%
+            \rlap{$^1$\footnotesize{allgemein} \qquad $^2$\footnotesize{bezogen auf DGL}}&&
+        \end{tabular}%line break
+        }% end resizebox
+    \b{\renewcommand{\thefootnote}{\arabic{footnote}}} % https://www.sascha-frank.com/footnote.html
+    \end{table}
+\end{frame}
+
+%------------------------------------------------------------------------------------------------%
+
+\s{% Skript only
+\subsubsection{Erläuterungen}
+\label{sec:grundlagen:definitionen:erlaeuterungen}
+\begin{frame}\ftx{\subsubsecname}
+    %\todo{engl. Übersetzung ergänzen bei Ausgleich-, Einschwingvorgang und Transiente: engl. transient}
+
+    \underline{ZUSTÄNDE}:
+
+    \textbf{ausgeglichen}\index{Zustand>ausgeglichen}:
+        Beschreibt einen stationären Zustand nach einem Ausgleichsvorgang.
+
+    \textbf{eingeschwungen}\index{Zustand>eingeschwungen}:
+        Beschreibt einen statiönären Zustand direkt nach einem Einschwingvorgang.
+        Der Begriff wird in der Regel auch für stationäre Zustände nach Ausgleichsvorgängen verwendet, 
+        bei denen keine Schwingung auftritt, und zudem unabhängig von der Energieflussrichtung.
+
+    \textbf{stationär}\index{Zustand>stationär}: Zustandsbeschreibung 
+        für zeitlich konstante Größen (z.B. bei Gleichspannungsversorgung) 
+        oder zeitlich periodische Größen (z.B. bei Wechselspannungspannungs) \cite[S. 362]{hagmann}
+        % Note, musss kein Gleichgewichtszustand sein. z.B. durch externe Energiezufuhr konstant gehalten (Regelung) https://link.springer.com/chapter/10.1007/978-3-642-88485-6_5
+
+    \underline{GRÖSSEN}:
+
+    Die Größen \textbf{Abklingkonstante}, \textbf{Dämpfungskonstante}, \textbf{Eigenfrequenz}, \textbf{Resonanzfrequenz} 
+    und \textbf{Zeitkonstante} sind wichtige Kenngrößen für die Beschreibung des Schwingverhaltens von Systemen.
+    Sie sind in Kapitel \ref{sec:schaltvorgaengezeitbereich:rlc} am Beispiel eines RLC-Reihenschwingkreises genauer erläutert.
+    
+    \underline{FÄLLE}: 
+    
+    Die Fallunterscheidung von \textbf{aperiodischem Fall}, \textbf{aperiodischem Grenzfall}, \textbf{periodischem Fall}
+    bei linearen, zeitinvarainten, schwingungsfähigen Systemen ist in Kapitel \ref{sec:schaltvorgaengezeitbereich:rlc:fallunterscheidung}
+    am Beispiel eines RLC-Reihenschwingkreises erläutert.
+
+\end{frame}
+}% Ende Skript only
+
+%------------------------------------------------------------------------------------------------%
+
+\s{% Skript only
+\subsubsection{Diskussion und Abgrenzung}
+\label{sec:grundlagen:definitionen:diskussion}
+\begin{frame}\ftx{\subsubsecname}
+    Dieser Abschnitt ist für das Verständnis der Modulinhalte nicht zwingend erforderlich und als Ergänzung zu verstehen.
+    Da einige der in Tabelle \ref{tab:definitions} aufgeführten Begriffe in der Literatur unterschiedlich verwendet werden, ist die Wahl 
+    der Definitionen hier begründet und abgegrenzt.
+
+	Verlinkung deutsch- und englischsprachiger Wikipediaartikel [Stand 15.11.2024]:
+	\begin{itemize}
+        \item dt. Ausgleichsvorgang $\leftrightarrow$    engl. transient state                  % dt. Wiki.-Art.: stat. $\to$ Veränd.$\to$ stat.
+        \item dt. Einschwingvorgang $\to$     engl. transient response $\to$ dt. Transiente     % dt. Wiki.-Art: Veränderung $\to$ stationär
+        \item dt. Transiente $\leftrightarrow$ engl. transient response
+    \end{itemize}
+
+    \underline{VORGÄNGE}:
+
+    \textbf{Ausgleichsvorgang}\index{Vorgang>Ausgleichsvorgang}, m.
+        \begin{itemize}
+            \item Weißgerber: Vorgang von stationärer Zustand nach Eingriff bis stationärer Zustand
+            \item Hagmann: Vorgang ab Veränderung bis stationär %(entspricht engl. Wikipedia für transient)
+            \item hier, angelehnt an Hagemann: Vorgang wenn bestimmter stationärer Zustand angestrebt wird
+        \end{itemize}
+        Wie Hagmann, nur dass quasi \glqq unterbrochene\grqq\ Ausgleichsvorgänge ebenfalls als Ausgleichsvorgänge bezeichnet werden.
+        Diese Definition schließt Anwendungsfälle in der Leistungselektronik wie bei Hoch- und Tiefsetzstellern 
+        unter der Annahme von realen Bauteilen ($R>0$) mit ein.  
+
+    \textbf{Schaltvorgang}\index{Vorgang>Schaltvorgang}, m.
+
+        \begin{itemize}
+            \item Weißgerber: Ausgleichsvorgang nach Schalten\cite[S. 1]{weissgerber3}
+                % Heißt: stationär -> schalten -> schaltvorgang, nicht stationär -> stationär
+            \item Hagmann: Synonym Ausgleichsvorgang, Unmittelbar nach Schaltungsänderung[sic!], geht über in stationären Zustand\cite[S. 362]{hagmann}
+                % Heißt: schalten -> schaltvorgang, nicht stationär -> bis?
+            \item hier: Ausgleichsvorgang ausgelöst durch Schalten (angelehnt an Hagmann)
+        \end{itemize}
+
+        In diesem Modul bezieht sich der Begriff Schaltvorgang nur den Vorgang nach(!) dem Schalten, welche durch dieses ausgelöst werden.
+        Mit der hier verwendeten Definition lassen sich vom Schalten unabhängige Ausgleichsvorgänge ausschließen. 
+
+    % Anm. zu a: Weißgerber 3, S. 1: "Häufigste Ursache von Ausgleichsvorgängen sind die sogenannten Schaltvorgänge, das sind Ausgleichsvorgänge nach dem Schließen oder Öffnen eines Schalters im Netzwerk."
+    % ... Ursache von Ausgleichsvorgängen sind Schaltvorgänge ... also Ausgleichsvorgänge ... Ouroboroesk?
+
+    \textbf{Ausschwingvorgang}\index{Vorgang>Ausschwingvorgang}, m.
+
+        Bezeichnet hier exergone Ausgleichsvorgänge, das heißt Ausgleichsvorgänge, die sich bei positiver Netto-\underline{Energieabfuhr} vollziehen. 
+        Entsprechend Wortbedeutung im wörtlichen Sinn, ist ein Ausschwingvorgang das Gegenstück zum Einschwingvorgang.
+
+    \textbf{Einschwingvorgang}\index{Vorgang>Einschwingvorgang}, m.
+
+        Bezeichnet hier im engeren Sinn endergone Ausgleichsvorgänge, das heißt Ausgleichsvorgänge, die sich bei positiver Netto-\underline{Energiezufuhr} vollziehen. 
+        Wird üblicherweise wie hier im weiteren Sinn synonym für alle Ausgleichsvorgänge verwendet.
+        Bezieht sich hier wie üblich sowohl auf Abläufe, die schwingend als auch nicht schwingend verlaufen. [Vgl. der Worte schwingen, Schwung]
+        Die Definition ist gewählt, um eine feinere Klassifizierung möglicher Ausgleichsvorgänge zu erleichtern.
+    
+    \textbf{Transiente}\index{Vorgang>Transiente}, w. % Vollständigkitshalber
+
+        Hier synonym zu Ausgleichsvorgang betrachtet, frei übersetzbar mit \glqq Übergang\grqq aus dem Lateinischen.
+        % Der Begriff bezeichnet beispielsweise störungsausgelöste zeitlich begrenzte nicht periodisch auftretende Vorgänge in der Regelungstechnik. % QUELLE, Netztechnik? (Zdrallek?)
+        Vergleich transient (adj.) von Lat. \textit{transire} Dt. (hin-)über(/durch)-gehen, 
+	    Gegenteil von persistent (adj.) von Lat. \textit{persistere} Dt. verharren.
+
+\end{frame}
+}% Ende Skript only
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Berechnungsmethoden}
+\label{sec:grundlagen:berechnungsmethoden}
+\begin{frame}\ftx{\subsecname für Schaltvorgänge}
+\s{%
+    % Methoden
+    Um die Zeitverläufe von Spannungen und Strömen in Schaltungen zu berechnen,
+    kann prinzipiell im Zeitbereich oder im Bildbereich vorgegangen werden. 
+
+    \begin{itemize}
+        \item Lösung der Differentialgleichung im Zeitbereich
+        \item Lösung der Differentialgleichung im Bildbereich (mit Hilfe der Laplace-Transformation)
+    \end{itemize}
+
+    % Flussdiagramm
+    Die Berechnung im Bildbereich basiert auf der Umformung mittels der Laplace-Transformation.
+    Abbildung \ref{fig:plot:flussdiagrammbildbereich} zeigt den prinzipiellen Ablauf zur Berechnung
+    von Schaltvorgängen im Bildbereich im Vergleich zur Berechnung im Zeitbereich. 
+
+    \fu{\includegraphics{Tikz/pdf/plot_flussdiagramm_dgl_berechnungsmethoden.pdf}}{Flussdiagramm, Berechnungsmethoden für Schaltvorgänge\label{fig:plot:flussdiagrammbildbereich}}
+
+    Die Benennung und Darstellung beider Methoden sind angelehnt an \cite[S. 51]{weissgerber3}, 
+    finden sich jedoch in ähnlicher Form auch in anderen Lehrbüchern zur Elektrotechnik, Regelungstechnik und Systemtheorie. 
+    Beiden Methoden ist gemein, dass sie auf der Lösung einer aufgestellten DGL basieren.
+
+    % Kurze Erklärung
+    Die Lösung der DGL im Zeitbereich ist die allgemeinste Methode,
+    wobei der Rechenaufwand je nach Komplexität der DGL stark variieren kann.
+    Diese Methode ist in diesem Modul am ausführlichsten behandelt und 
+    basiert auf der Zerlegung in flüchtigen und eingeschwungenen Zustand.
+    
+    Die Lösung der DGL im Bildbereich mithilfe der Laplace-Transformation ist eine spezielle Methode, 
+    die bei linearen, zeitinvarianten Systemen mit Energiespeichern angewendet werden kann.
+    Gegenüber der Lösung im Zeitbereich bietet sie den Vorteil, dass die Differentialgleichung in eine algebraische Gleichung überführt wird.
+    Dadurch kann in vielen Fällen die Lösung einfacher und schneller erfolgen. 
+    Das Verfahren bietet sich bei verschwindenden Anfangsbedingungen an, da die Laplace-Transformation 
+    sonst umständlich wird.
+}%
+\b{% Folie: Berechnungsmethoden für Schaltvorgänge
+    % Bild: Flussdiagramm, Berechnungsmethoden für Schaltvorgänge
+    Schaltvorgänge können im Zeit- und Bildbereich berechnet werden.
+    \begin{center}
+        \resizebox{0.75\textwidth}{!}{\includegraphics{Tikz/pdf/plot_flussdiagramm_dgl_berechnungsmethoden.pdf}}
+    \end{center}
+    Beide Methoden basieren auf dem Lösen von Differentialgleichungen.
+}%
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Differentialgleichungen}
+\label{sec:grundlagen:dgl}
+\begin{frame}\ftx{\subsecname}
+\s{% Anfang Skript only
+    Zu Beginn der Berechnung von Schaltvorgängen steht die Aufstellung der Differentialgleichungen (DGL).
+    Die DGL für Spannungen und Ströme basieren basieren prinzipiell auf den Kirchhoffschen Regeln: 
+    \begin{align}
+        \text{Knotenregel:}     & \qquad \sum_{j=1}^{n} \eci{i}_j = 0 \qquad \text{mit $n$ Stromzweigen im Knoten}\label{eq:grundlagen:kirchhoff:knotenregel} \\
+        \text{Maschenregel:}    & \qquad \sum_{k=1}^{m} \ecv{u}_k = 0 \qquad \text{mit $m$ Teilspannungen in Masche}\label{eq:grundlagen:kirchhoff:maschenregel}
+    \end{align}
+
+    und den folgenden Strom-Spannungs-Beziehungen (Komponenten-Gl.) für $R$, $L$ und $C$.:
+    \begin{align}
+        &\text{Widerstand:}  & \ecv{u_R}(t) &= R \cdot \eci{i_R}(t) \vphantom{\dt} &&\label{eq:grundlagen:bauteilgleichung:widerstand}\\
+        &\text{Induktivität:}& \ecv{u_L}(t) &= L \cdot \dt\, \eci{i_L}(t)          &&\label{eq:grundlagen:bauteilgleichung:induktivitaet}\\
+        &\text{Kapazität:}   & \eci{i_C}(t) &= C \cdot \dt\, \ecv{u_C}(t)          &&\label{eq:grundlagen:bauteilgleichung:kapazitaet}
+    \end{align}
+    In welcher Reihenfolge die Gleichungen am geschicktesten aufgestellt, umgeformt und ineinander eingesetzt werden ist 
+    abhängig von der jeweiligen Schaltungstopologie und der Zielgröße. 
+
+    Ähnlich wie beim Lösen von DGLen 
+    (Vgl. Kap. \ref{sec:grundlagen:berechnungsmethoden} und Abb. \ref{fig:plot:flussdiagrammbildbereich} zu Berechnungsmethoden)
+    kann auch beim Aufstellen der DGLen sowohl im Zeitbereich als auch im Bildbereich vorgegangen werden. 
+    Die Methode im Zeitbereich ist die in diesem Modul ausführlicher behandelte Methode. 
+    Abbildung \ref{fig:plot:dglaufstellen} zeigt schematisch beide Vorgehensweisen im Vergleich. 
+
+    % Bild: Aufstellungsmethoden für DGL (Zeitbereich, Bildbereich)
+    \fu{\includegraphics{Tikz/pdf/plot_flussdiagramm_dgl_aufstellen.pdf}}{Flussdiagramm, Aufstellungsmethoden für Differentialgleichungen\label{fig:plot:dglaufstellen}}
+
+    % Kirchhoff + Bauteilgleichungen
+    Bei einfachen Schaltungen mit einer einzelnen Masche (reine Reihenschaltung) oder zwei einzelnen Knoten (reine Parallelschaltung)
+    lassen sich die Differentialgleichungen direkt aus den Kirchhoffschen Regeln und den Bauteilgleichungen aufstellen (Zeitbereich).
+    Gegebenenfalls muss die aufgestellte Gleichung noch differenziert werden, um die benötigten Ableitungen zu erhalten
+    (beziehungsweise um Integrale zu entfernen). 
+    Bei komplexeren Netzwerken ist der Rechenaufwand deutlich größer. 
+
+    Eine Möglichkeit den Rechenaufwand zu minimieren, ist mit Methoden der komplexen Wechselstromrechnung zu arbeiten (Bildbereich). 
+    Der Ansatz funktioniert ebenso für DC-Schaltungen, da nicht wirklich mit Frequenzen gerechnet wird. 
+    Sinn und Zweck ist die Aufstellung der DGL durch algebraische Umformung der komplexen Kirchhoffschen Regeln.
+    Hierbei werden die Schaltungselemente durch Impedanzen respektive Admittanzen ersetzt und die zu untersuchende Größe
+    beispielsweise durch einen komplexen Spannungsteilers bestimmt. 
+    Die Umformung zur DGL geschieht durch Rücktransformation der komplexen Größen in den Zeitbereich.
+    $\mathrm{j}\omega$ wird dabei durch $\frac{\mathrm{d}}{\mathrm{d} t}$ ersetzt. 
+    
+    Der Vorteil des Ansatzes im Bildbereich ist, dass komplexe Spannungs- und Stromteiler anwendbar sind. 
+    Dadurch bietet sich der Ansatz vor allem bei gemischten Reihen- und Parallelschaltungen an.  
+
+    Ein ähnlicher Ansatz wäre das Maschenstromverfahren in Matrixform mit komplexen Größen. [Vgl. Modul 7] 
+    Dieses wird an dieser Stelle jedoch nicht weiter betrachtet.
+
+    % Beispiele
+}% Ende Skript only
+\b{% Folie: Schaltungselemente + Kirchhoff + Komponentengleichungen
+    \includegraphics{Tikz/pdf/slide_aktive_passive_bauele2.pdf}
+}%
+\end{frame}
+
+\begin{frame}\ftx{\subsecname}% 
+\b{% Folie: Aufstellungsmethoden für DGL (Zeitbereich, Bildbereich)
+    Mögliche Vorgehensweisen zum Aufstellen von Differentialgleichungen:\\[5pt]
+    \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_flussdiagramm_dgl_aufstellen.pdf}}
+}
+\end{frame}
+
+%------------------------------------------------------------------------------------------------%
+\begin{frame}[t]\ftx{\subsecname aufstellen, Beispiel}
+    \b{% Beamer only Beispiel, Start
+    % Obere Hälfte
+    \begin{minipage}{\textwidth}\centering\vspace{5pt}%
+        \includegraphics{Tikz/pdf/circ_switchable_rc_charge_dc.pdf}
+    \end{minipage}
+
+    % Untere Hälfte
+    \begin{minipage}{\textwidth}%
+        % Slide 1
+        \only<beamer:1-2| handout:1>{%
+        \vspace{1em}\underline{\textbf{Zeitbereich:}}\qquad Gesucht sei $\ecv{u_C(t\geq0)}$.%
+        \vspace{3pt}
+        \begin{equation*}\begin{aligned}
+        \begin{split}
+            &t\geq0&\textbf{Kirchhoff:}&&&&&\textbf{Komponenten:}\\
+                &\text{Knoten:}& \eci{i_R} = \eci{i_C} &= \eci{i} &&&& \eci{i_C} = C \cdot \dt\, \ecv{u_C}\\
+                &\text{Masche:}& \ecv{u_R} + \ecv{u_C} &= \ecv{u} &&&& \ecv{u_R} = R \cdot \eci{i_R}\\[+5pt]
+            \hline\\[-10pt]%
+            \onslide<2->{% start overlay
+                && R \cdot \eci{i_R} + \ecv{u_C} &= \ecv{U_q} \\
+                &\textbf{DGL: }& RC \cdot \dt \ecv{u_C} + \ecv{u_C} &= \ecv{U_q} &&&&\quad\text{1. Ord.}
+            }% end overlay
+        \end{split}\end{aligned}
+        \end{equation*}
+        }%
+        % Slide 2
+        \only<beamer:3| handout:2>{%
+        \vspace{1em}\underline{\textbf{Bildbereich:}}\qquad Gesucht sei $\ecv{u_C(t\geq0)}$.%%
+        \begin{align*}
+            \ecv{\underline{U}_C} &= \ecv{\underline{U}_q} \cdot \frac{ \frac{1}{\mathrm{j}\omega C} }{R + \frac{1}{\mathrm{j}\omega C} } \vphantom{\bigg|}\\
+            \left(R + \frac{1}{\mathrm{j}\omega C}\right) \cdot \ecv{\underline{U}_C} &= \ecv{\underline{U}_q} \cdot \frac{1}{\mathrm{j}\omega C} \vphantom{\bigg|}\\
+            \left(\mathrm{j}\omega \cdot RC + 1\right) \cdot \ecv{\underline{U}_C} &= \ecv{\underline{U}_q} \vphantom{\bigg|}\\
+            \textbf{DGL}:\quad RC\cdot \dt\, \ecv{u_C} + \ecv{u_C} &= \ecv{U_q} \vphantom{\bigg|}
+        \end{align*}
+        }%
+    \end{minipage}
+    }% Beamer only Beispiel, Ende
+    \end{frame}
+
+%------------------------------------------------------------------------------------------------%
+
+\subsubsection{Eigenschaften und allgemeine Form}
+\label{sec:grundlagen:dgl:eigenschaften}
+\begin{frame}\ftx{\subsubsecname}
+\s{%
+    % Komponenten Eingrenzung
+    In allen hier untersuchten Schaltungen kommen ausschließlich folgende Komponenten zum Einsatz:
+    Kapazitäten, Induktivitäten, ohmsche Widerstände, ideale Spannungsquellen, ideale Stromquellen, 
+    ideale elektrische Leiter und ideale Schalter. 
+    In den Schaltungen kommen keine weiteren Bauteile wie z.B. Transistoren, Dioden oder Operationsverstärker vor.
+    % Hier: Bild mit Liste von Schaltsymbolen? Wie in Folien nur horizontal
+
+    % Andere Einflüsse ausschließen
+    Zur Berechnung von Schaltvorgängen wird in diesem Modul stets von idealen Bauteilen in isothermen, homogenen, isotropen Medien ausgegangen. 
+    Weitere Einflüsse wie Temperaturabhängigkeiten, nichtlineare Effekte oder Ähnliches werden nicht betrachtet.
+
+    % LZI-Systeme (Zeitinvarianz abschnittsweise), Komponenten
+    Die aufgezählten Komponenten sind alle \textbf{linear}\index{Eigenschaft>Linearität} und 
+    \textbf{zeitinvariant}\index{Eigenschaft>Zeitinvarianz}. 
+    Die gleichen Eigenschaften gelten auch für Schaltungen, die sich nur diesen Komponenten zusammen setzen.
+    Das heißt, es handelt sich um lineare, zeitinvariante Systeme (LZI-Systeme)\index{lineare, zeitinvariante Systeme (LZI-Systeme)}. 
+    Die Zeitinvarianz für Schalter gilt dabei eingeschränkt (abschnittsweise) für alle Zeiträume außerhalb von Schaltzeitpunkten 
+    und uneingeschränkt für alle anderen Komponenten.
+
+    % DGL-Eigenschaften:
+    Aus den Eigenschaften der Schaltungen lassen sich folgende für Eigenschaften der DGLs ableiten:%
+    \begin{itemize}
+        \item \makebox[4cm][l]{\textbf{gewöhnlich}}           \makebox[2cm][l]{}                (nur abhängig von einer Variable, hier der Zeit)
+        \item \makebox[4cm][l]{\textbf{linear}}               \makebox[2cm][l]{}                (Linearität)
+        \item \makebox[4cm][l]{\textbf{konst. Koeffizienten}} \makebox[2cm][l]{$a_i=konst.$}    (Zeitinvarianz)
+        \item \makebox[4cm][l]{\textbf{inhomogen}}            \makebox[2cm][l]{$b(t)\neq 0$}    (bei Anregung durch Spannungs- oder Stromquellen)
+        \item \makebox[4cm][l]{\textbf{homogen}}              \makebox[2cm][l]{$b(t)= 0$}       (ohne Anregung durch Spannungs- oder Stromquellen)
+    \end{itemize} 
+
+    Für eine betrachtete Schaltungsgröße $y$ in Abhängigkeit der Zeit $t$ ergibt sich daraus 
+    die folgende Form für gewöhnliche, inhomogene, lineare DGLs mit konstanten Koeffizienten:
+
+    % DGL allgemein
+    \begin{align}\label{eq:grundlagen:dgl:inhomogen}
+        \sum_{i=0}^{n} a_i \cdot \frac{\d^i y(t)}{\d t^i} &= b(t)\\\nonumber
+        \mathclap{\text{mit} \quad a_i, b(t) \in \mathbb{R}; \quad i, n \in \mathbb{N}}
+    \end{align}
+
+    Mit der \textbf{Ordnung}\index{Differentialgleichung>Ordnung} $n$, 
+    der \textbf{Störfunktion}\index{Differentialgleichung>Störfunktion} $b(t)$ und den \textbf{konstanten Koeffizienten} $a_i$. 
+
+}%
+\b{%
+    \centering%
+    \includegraphics{Tikz/pdf/slide_aktive_passive_bauele.pdf}
+}%
+\end{frame}
+
+%------------------------------------------------------------------------------------------------%
+
+\subsubsection{Ordnung von Differentialgleichungen}
+\label{sec:grundlagen:dgl:ordnung}
+\begin{frame}\ftx{\subsubsecname}
+\s{%
+    Der Aufbau einer Schaltung bestimmt die Form der Differentialgleichungen (DGLs) zur Beschreibung ihrer Systemgrößen (Ströme, Spannungen).
+    Die Ordnung der DGL entspricht direkt der Anzahl an Energiespeichern, welche nicht zu einem Energiespeicher zusammengefasst werden können.\cite[S. 4]{weissgerber3}
+    
+    % Beispiele
+    Abbildung \ref{fig:plot:beispielordnungdgl} zeigt exemplarisch mehrere Schaltungen und die Ordnung der zugehörigen DGL.
+}%
+    \begin{figure}[H]\centering
+        \begin{subfigure}{0.24\textwidth}\centering
+            \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_example_ordnung_01.pdf}}
+            \s{\caption*{1 Energiespeicher\newline $\rightarrow$ DGL 1. Ord.}}%
+            \b{\caption*{1 En.sp. $\rightarrow$ 1. Ord.}}%
+        \end{subfigure}
+        \begin{subfigure}{0.24\textwidth}\centering
+            \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_example_ordnung_02.pdf}}
+            \s{\caption*{2 Energiespeicher\newline $\rightarrow$ DGL 2. Ord.}}%
+            \b{\caption*{2 En.sp. $\rightarrow$ 2. Ord.}}%
+        \end{subfigure}
+        \begin{subfigure}{0.24\textwidth}\centering
+            \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_example_ordnung_03.pdf}}
+            \s{\caption*{2 Energiespeicher\newline $\rightarrow$ DGL 2. Ord.}}%
+            \b{\caption*{2 En.sp. $\rightarrow$ 2. Ord.}}%
+        \end{subfigure}
+        \begin{subfigure}{0.24\textwidth}\centering
+            \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_example_ordnung_04.pdf}}
+            \s{\caption*{2 Energiespeicher\newline $\rightarrow$ DGL 2. Ord.}}%
+            \b{\caption*{2 En.sp. $\rightarrow$ 2. Ord.}}%
+        \end{subfigure}
+        \s{\caption{Beispiel Schaltungen und Ordnung der Differentialgleichung}}
+        \label{fig:plot:beispielordnungdgl}
+    \end{figure}
+\s{%
+    Die Ordnung der DGL bestimmt die Anzahl der Konstanten in der allgemeinen Lösung der DGL.
+}%
+\b{%
+    \renewcommand{\thefootnote}{\fnsymbol{footnote}}% https://www.sascha-frank.com/footnote.html
+    \centering
+    Anzahl Energiespeicher\footnotemark \ $=$\  Ordnung der DGL
+    \footnotetext{nicht zusammenfassbar}
+    \renewcommand{\thefootnote}{\arabic{footnote}}
+}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Berechnungsverfahren im Zeitbereich}
+\label{sec:grundlagen:zeitbereich}
+\begin{frame}\ftx{\subsecname}
+\s{
+    Die Berechnung von Schaltvorgängen im Zeitbereich basiert auf der Lösung der Differentialgleichungen (DGLs) 
+    für die Schaltungsgrößen. Allgemein exestieren für DGLs unendlich viele Lösungen. 
+    
+    % Anfangsbedingungen
+    Wichtig für die Eingrenzung der allgemeinen Lösung ist die Kenntnis der \textbf{Anfangsbedingungen}\index{Anfangsbedingungen} (AB).
+    Die AB sind Werte von Schaltungsgrößen zu einem bestimmten Zeitpunkt $t_0$ während des Beobachtungszeitraums (Schaltvorgang).
+    Dabei handelt es sich beiselsweise um Spannungen oder Ströme einzelner Bauteile oder um deren Ableitungen.
+
+    % Problem und Lösung
+    Für DGL $n$-ter Ordnung sind $n$ AB notwendig, um eine eindeutige Lösung zu erhalten.
+    Sind die AB nicht explizit gegeben, können diese gegebenenfalls durch die Schaltungstopologie und 
+    den Zustand unmittelbar vor dem Schalten hergeleitet werden. 
+    Dabei ist zu unterscheiden, welche Schaltungsgrößen springen können und welche stetig sind.
+        
+    % Lösungsmethoden
+    Da es sich bei Induktivitäten und Kapazitäten um Energiespeicher handelt,
+    ist deren Verhalten zu einem Zeitpunkt $t$ abhängig von der bis dahin zu-/abgeführten Energie.
+
+    In kurzer Gegenüberstellung gilt mit $E = \int p(t) \,\d t = \int u(t) \cdot i(t) \,\d t$ und den Gl. 
+    \ref{eq:grundlagen:bauteilgleichung:induktivitaet} und \ref{eq:grundlagen:bauteilgleichung:kapazitaet}:
+    \begin{align}
+        \textbf{Kapazität:}     && E_{el}  &= \frac{1}{2} C \cdot \ecv{u}^2  &&\Rightarrow\qquad \ecv{u} = stetig && \text{(Speicher el. Energie)} \\[+4pt]
+        \textbf{Induktivität:}  && E_{mag} &= \frac{1}{2} L \cdot \eci{i}^2  &&\Rightarrow\qquad \eci{i} = stetig && \text{(Speicher mag. Energie)}
+    \end{align}
+    Da Energie sich nur mit endlicher Geschwindigkeit bewegen kann, gilt \textbf{Stetigkeit} für $u_C$ und $i_L$:
+    \begin{align}
+        \ecv{u}_{C,t-} &= \ecv{u}_{C,t+} & 
+        \eci{i}_{L,t-} &= \eci{i}_{L,t+} \\
+        \text{mit}\quad 
+        \lim_{\pm\infty \rightarrow t} \ecv{u}_C(t) &= \ecv{u}_{C,t\pm} & 
+        \lim_{\pm\infty \rightarrow t} \eci{i}_L(t) &= \eci{i}_{L,t\pm}
+    \end{align}
+    Das bedeutet, dass die Spannung einer Kapazität ebenso wie der Strom einer Induktivität 
+    unmittelbar vor dem Schalten gleich groß ist wie zu Beginn des folgenden Schaltvorganges.
+    % Herleitung theoretisch direkt mit Komponentengleichung möglich. Sprung einer Größe heißt d/dt nicht definiert.
+}% New Equations for Beamer, otherwise spacing is wrong (empty line above \align environment) with \s{}\begin{align}
+\b{
+    \underline{Jede DGL hat unendlich viele Lösungen.}
+    \vspace{0.25cm}
+    \pause
+
+    Eine eindeutige Lösung für DGL $n$-ter Ordnung braucht $n$ \textbf{Anfangsbedingungen}.
+    \vspace{0.10cm}
+    \pause
+
+    \textbf{Def. Anfangsbed.:} Wert beliebiger Schaltungsgröße $y(t)$ während Schaltvorgang.
+    \vspace{0.25cm}%
+    \pause%
+    \\[-10pt]\noindent\rule{\textwidth}{0.4pt} % horizontale Linie \rule[height above baseline]{width}{thickness}
+    
+    Mit:
+    \begin{align}
+        \textbf{Kapazität:}     && E_{el}  &= \frac{1}{2} C \cdot \ecv{u}^2  &&\Longrightarrow\qquad \ecv{u} = stetig && \text{(Speicher el. Energie)} \\[+4pt]
+        \textbf{Induktivität:}  && E_{mag} &= \frac{1}{2} L \cdot \eci{i}^2  &&\Longrightarrow\qquad \eci{i} = stetig && \text{(Speicher mag. Energie)}
+    \end{align}%
+    \pause%
+    gilt unmittelbar vor und nach einem Schaltzeitpunkt:
+    \begin{align}
+        \ecv{u_{C,t-}} &= \ecv{u_{C,t+}} & 
+        \eci{i_{L,t-}} &= \eci{i_{L,t+}} \\
+        \text{mit}\quad 
+        \lim_{\pm\infty \rightarrow t} \ecv{u_C(t)} &= \ecv{u_{C,t\pm}} & 
+        \lim_{\pm\infty \rightarrow t} \eci{i_L(t)} &= \eci{i_{L,t\pm}}
+    \end{align}
+    
+}
+\end{frame}
+%------------------------------------------------------------------------------------------------%
+
+\subsubsection{Zerlegung von Ausgleichsvorgängen und Lösung der inhomogenen DGL}
+\label{sec:grundlagen:zeitbereich:zerlegung}
+\begin{frame}\ftx{\subsubsecname}
+\begin{columns}
+\column[t]{0.5\textwidth}
+\b{%
+    \makebox[5cm][r]{Zerlegung der \textbf{Systemgröße}} $y(t)$ in:\\
+    \makebox[5cm][r]{\textbf{eingeschwungener Zustand}} $\ecb{y_{\mathrm{e}}}(t)$\\
+    \makebox[5cm][r]{und \textbf{flüchtiger Zustand}} $\ecr{y_{\mathrm{f}}}(t)$.
+    \vspace{0.5cm}%
+    \pause%
+}
+\s{% Zerlegung: flüchtig, eingeschwungen
+    Der sich ergebende Zeitverlauf einer Größe $y(t)$ kann während eines Ausgleichsvorgangs zerlegt werden
+    in einen \textbf{flüchtigen Zustand}\index{Zustand>flüchtig} $y_f$ und 
+    in einen \textbf{eingeschwungenen Zustand}\index{Zustand>eingeschwungen} $y_e$. 
+    \begin{equation}\label{eq:grundlagen:zerlegung}
+        y(t) := y_{\mathrm{f}}(t) + y_{\mathrm{e}}(t)
+    \end{equation}
+    % Def. Flüchtiger Zustand und Eingeschwungener Zustand
+    Der eingeschwungene Zustand $y_{\mathrm{e}}$ beschreibt den stationäre Zustand, den die Größe $y$ anstrebt.
+    Der flüchtige Zustand $y_{\mathrm{f}}$, auch freier Zustand genannt, repräsentiert den abklingenden Teil von $y$:
+    \begin{align}
+        \lim_{t \to \infty} y_{\mathrm{e}}(t) &=  \lim_{t \to \infty} y(t) & 
+            y_{\mathrm{e}} &= \text{stationär}  \label{eq:grundlagen:eingeschwungen}\\
+        \lim_{t \to \infty} y_{\mathrm{f}}(t) &=  0  & 
+            y_{\mathrm{f}} &= y - y_{\mathrm{e}} \label{eq:grundlagen:fluechtig} 
+    \end{align}
+    % Bildbeschreibung
+    Abbildung \ref{plot:example:fluechtig_eingeschwungen} zeigt exemplarisch einen Ausgleichsvorgang mit Zerlegung einer Größe $y(t)$ 
+    in einen flüchtigen und eingeschwungenen Zustand. Die Darstellung entspricht dem Spannungsverlauf einer Kapazität 
+    beim Laden mit Gleichspannung über einen ohmschen Widerstand wie in Beispiel \ref{bsp:rc:chargedc}.
+
+    % Bild
+    \begin{figure}[H]\centering
+        \includegraphics{Tikz/pdf/plot_example_fluechtig_eingeschwungen.pdf}
+        \caption{Ausgleichsvorgang zerlegt in eingeschwungenen und flüchtigen Zustand}
+        \label{plot:example:fluechtig_eingeschwungen}
+    \end{figure}%
+}%
+\b{%
+    \includegraphics{Tikz/pdf/plot_example_fluechtig_eingeschwungen_def.pdf}%
+    \pause%
+}%
+\s{%
+    % Herleitung DGL eingeschwungen, flüchtig
+    Da die Größe $y(t)$ nach Gleichung \ref{eq:grundlagen:eingeschwungen} für $t \to \infty$ in $y_e(t)$ übergeht, 
+    muss $y_e(t)$ ebenfalls die DGL aus Gleichung \ref{eq:grundlagen:dgl:inhomogen} inklusive Störterm $b$ erfüllen:
+    % DGL eingeschwungen
+    \begin{align}\label{eq:grundlagen:dgl:eingeschwungen}
+        \sum_{i=0}^{n} a_i \cdot \frac{\d^i(t)}{\d t^i}\,y_{\mathrm{e}} &= b(t)%\\\nonumber
+        %\text{mit} \quad a_i, b(t) \in \mathbb{R}; \quad i, n &\in \mathbb{N}
+    \end{align}
+    Ziehen wir die DGL für $y_e$ aus Gl. \ref{eq:grundlagen:dgl:eingeschwungen} 
+    von der allgemeinen inhomogenen DGL aus Gl. \ref{eq:grundlagen:dgl:inhomogen} ab, erhalten wir mit 
+    der Zerlegung nach Gl. \ref{eq:grundlagen:zerlegung} die homogene DGL für den flüchtigen Zustand:
+    % DGL flüchtig
+    \begin{align}\label{eq:grundlagen:dgl:fluechtig}
+        \sum_{i=0}^{n} a_i \cdot \frac{\d^i(t)}{\d t^i}\,y_{\mathrm{f}} = 0
+    \end{align}
+    % Erklärung - Vergleich Lösungen der inhomogenen DGL
+    Mathematisch entspricht die Zerlegung des Zeitverlaufs $y(t)$ in einen flüchtigen und eingeschwungenen Zustand 
+    der Zerlegung der \textbf{Lösung der inhomogenen DGL}\index{Differentialgleichung>Lösung der inhomogenen} $y$
+    in die \textbf{Lösung der homogenen DGL}\index{Differentialgleichung>Lösung der homogenen} $y_{\mathrm{h}}$ (ohne Störterm) und 
+    in eine \textbf{partikuläre Lösung}\index{Differentialgleichung>partikulare Lösung} $y_{\mathrm{p}}$ der inhomogenen DGL mit: 
+    \begin{align}
+        \text{homogene Lösung}\qquad y_{\mathrm{h}} &= y_{\mathrm{f}} \qquad \text{flüchtiger Zustand}\\
+        \text{partikuläre Lösung}\qquad y_{\mathrm{p}} &= y_{\mathrm{e}} \qquad \text{eingeschw. Zustand}
+    \end{align}
+    %Und den zugehörigen DGL: 
+    %\begin{align*}
+    %    \sum_{i=0}^{n} a_i \cdot \dt[i]\, y_{\mathrlap{\mathrm{h}}\hphantom{h}}(t) &= 0 \\
+    %    \sum_{i=0}^{n} a_i \cdot \dt[i]\, y_{\mathrlap{\mathrm{p}}\hphantom{h}}(t) &= b(t) \\    
+    %\end{align*}
+    Die Zerlegung von Ausgleichsvorgängen in einen eingeschwungenen und einen flüchtigen Zustand 
+    findet sich in ähnlicher Form in den Lehrbüchern von Albach\cite{albach}, Hagmann\cite{hagmann} und Weißgerber\cite{weissgerber3}.  
+}%
+\column[t]{0.5\textwidth}
+\b{%
+    \makebox[5cm][r]{Entspricht der Zerlegung von} $y$ in:\\
+    \makebox[5cm][r]{eine \textbf{partikuläre Lösung}} $\ecb{y_{\mathrm{p}}}$\\
+    \makebox[5cm][r]{und die \textbf{allg. homogene Lösung}} $\ecr{y_{\mathrm{h}}}$
+
+    \begin{equation*}
+    % y - y_e = y_f mit y_e = y_p und y_f = y_h
+        y(t) - 
+        \underbrace{
+            \ecb{y_{\mathrm{e}}}(t)
+        }_{\displaystyle \ecb{y_{\mathrm{p}}}(t)}
+        = \underbrace{
+            \ecr{y_{\mathrlap{\mathrm{f}}\hphantom{h}}}(t)
+        }_{\displaystyle \ecr{y_{\mathrm{h}}}(t)} 
+    \end{equation*}%
+    \pause%
+    \qquad mit
+    \begin{equation*}\begin{aligned}%
+    % inhom. DGL - DGL eingeschwungen = hom. DGL (flüchtig)
+    \begin{split}
+        \sum a_i\cdot \dt[i]\ y_{\hphantom{e}} &= b(t) \\
+    \mathllap{\huge\mathbf - \hspace{5pt}} 
+        \ec[blue]{\sum a_i \cdot \dt[i]\ y_{\mathrlap{\mathrm{e}}\hphantom{e}}} &\ec[blue]{{}= b(t)}\\[+5pt]
+    \hline\\[-15pt]
+    \mathllap{\huge\mathbf = \hspace{5pt}} 
+        \ec[red]{\sum a_i \cdot \dt[i]\ y_{\mathrlap{\mathrm{f}}\hphantom{e}}} &\ec[red]{{}= 0}
+    \end{split}\end{aligned}
+    \end{equation*}
+}%
+\end{columns}
+\end{frame}
+
+%------------------------------------------------------------------------------------------------%
+
+\subsubsection{Berechnung der homogenen Lösung}
+\label{sec:grundlagen:dgl:homogeneloesung}
+\begin{frame}\ftx{\subsubsecname}
+\b{%
+    \begin{align}
+        &\textbf{Homogene DGL:}& 
+            \sum_{i=0}^{n} a_i \cdot \dt[i]\, y_{\mathrm{h}} &= 0 &
+            &\text{(gew., lin., konst. Koeff.)}\vphantom{\bigg|}\\[4pt]
+        &\text{Ansatz:}&
+            y_{\mathrm{h}}(t) &= K \cdot \mathrm{e}^{\lambda t} &
+            &\text{(Exponentialfkt.)}\vphantom{\bigg|}\\
+        &\text{Char. Polynom:}&
+            \sum_{i=0}^{n} a_i \cdot \lambda^i &= 0 \quad\Rightarrow\quad \lambda_i = ... &
+            &\text{(Eigenwerte: $\lambda$)} \\[4pt]
+        &\text{1. Lösungsansatz:}&
+            y_{\mathrm{h}}(t) &= \sum_{i=1}^{n} K_i \cdot \mathrm{e}^{\lambda_i t} &
+            &\text{ für $\lambda_i \neq \lambda_{i-1} \ \forall \ i$} \\
+        &\text{2. Lösungsansatz:}&
+            y_{\mathrm{h}}(t)&= \sum_{j=1}^{m} K_j \cdot t^{j-1}  \cdot \mathrm{e}^{\lambda t} &
+            &\text{ für $\lambda_j = \lambda \ \forall \ j$}\\[6pt]
+        &\textbf{allg. hom. Lösung:}&
+            y_{\mathrm{h}}(t)&= \ ... \ = y_{\mathrm{f}} &
+            &\text{(Linearkombination)}
+    \end{align}
+}%
+\s{%
+    % Ausgangsposition
+    Für die Lösung von gewöhnlicher, linearer, homogener DGLen mit konstanten Koeffizienten der Form:
+    
+    \begin{equation}\label{eq:grundlagen:dgl:homogen}
+        \sum_{i=0}^{n} a_i \cdot \dt[i]\, y_{\mathrm{h}} = 0
+    \end{equation}
+
+    wird in der Regel der Ansatz einer Exponentialfunktion verwendet:
+
+    % Ansatz homogene Lösung
+    \begin{equation}\label{eq:grundlagen:dglexponentialansatz}
+        y_{\mathrm{h}}(t) = K \cdot \mathrm{e}^{\lambda t}
+    \end{equation}
+
+    %Eine mögliche Herleitung für den Exponentialansatz erfolgt für DGL erster Ordnung durch Trennung der Variablen.
+    %Durch Integration der getrennten Variablen mit definierten Integrationsgrenzen 
+    %(untere Grenzen: $t=0$ und $y(0)=y_0$; obere Grenze: $t=t_1$ und $y(t_1)=y_1$) ergibt sich \cite[S. 364]{hagmann}:
+    % Ref: Hagmann, Grundlagen Elektrotechnik, AULA Verlag, Aufl. 18, 2020 --- S. 364
+    % -> DGL 1. Ord. -> Trennung der Variablen -> Exponentialansatz
+    %\begin{align*}
+    %    \dt y_{\mathrm{h}} &= \lambda \cdot y_{\mathrm{h}} \\
+    %    \frac{\d y_{\mathrm{h}}}{y_{\mathrm{h}}} &= \lambda \,\d t \\
+    %    \int_{y_0}^{y_1} \frac{1}{y_{\mathrm{h}}} \,\d y_{\mathrm{h}} &= \lambda \int_{0}^{t_1} \d t \\
+    %    \ln{\left(\frac{y_0}{y_1}\right)} &= \lambda \cdot t_1 \\
+    %    \frac{y_0}{y_1} &=  \mathrm{e}^{\lambda t_1}\\
+    %\end{align*}
+
+    % Eigenwerte lambda
+    Dabei ist $K$ eine Konstante und $\lambda$ die Lösung des charakteristischen Polynoms und wird
+    auch als \textbf{Eigenwert}\index{Differentialgleichung>Eigenwert} bezeichnet. 
+    Durch Einsetzen des Exponential-Ansatzes in \ref{eq:grundlagen:dgl:homogen}, Differenzieren und Ausklammern:
+    % Charakteristische Polynom
+    \begin{align}
+        %\sum_{i=0}^{n} a_i \cdot \dt[i]\, y_{\mathrm{h}}(t) &= 0 \nonumber\\
+        \sum_{i=0}^{n} a_i \cdot \dt[i]\, K \cdot \mathrm{e}^{\lambda t} &= 0 \nonumber\\[2pt]
+        \left(\sum_{i=0}^{n} a_i \cdot \lambda^i \right) K \cdot \mathrm{e}^{\lambda t} &= 0 \nonumber\\[4pt]
+    \intertext{kann das \textbf{charakteristische Polynom}\index{Differentialgleichung>Charakteristische Polynom} aufgestellt werden:}
+        \sum_{i=0}^{n} a_i \cdot \lambda^i &= 0
+    \end{align}
+
+    % Höhere Ordnung, Anzahl Eigenwerte, komplexe Werte
+    Die maximale Anzahl an Eigenwerten ist gegeben durch die Ordnung einer DGL. 
+    Da die Koeffizienten $a_i$ reell sind, müssen die Eigenwerte $\lambda_i$ ebenfalls reell sein, oder paarweise komplex konjugiert.
+
+    % Konvergenz, Bedingung
+    \textbf{Bedingung:} Um die homogene Differentialgleichung in Gleichung \ref{eq:grundlagen:dgl:homogen} 
+    zu erfüllen, muss der Realteil aller Eigenwerte negativ sein $\Re\{\underline{\lambda}_i\}<0$. 
+    Nur dann konvergieren die Exponentialterme aus dem Ansatz in Gleichung \ref{eq:grundlagen:dglexponentialansatz}
+    für $t \to \infty$.
+
+    % Homogene Lösung
+    Die \textbf{allgemeine homogene Lösung} $y_{\mathrm{h}}$ einer DGL $n$-ter Ordnung ist die Linearkombination
+    von $n$ linear unabhängigen Lösungen der homogenen DGL.
+
+    Die Form der Lösung hängt davon ab, ob es sich um unterschiedliche Eigenwerte, gleiche Eigenwerte (Mehrfache Nullstellen des charakteristischen Polynoms) 
+    oder paarweise komplex konjugierte Eigenwerte handelt.
+
+    Sind alle Eigenwerte $\lambda_i$ verschieden, ergibt sich die homogene Lösung zu:
+    \begin{equation}\label{eq:grundlagen:homogeneloesung:lambdaungleich}
+        y_{\mathrm{h}}(t) = \sum_{i=1}^{n} K_i \cdot \mathrm{e}^{\lambda_i t} \qquad \text{für} \quad \lambda_i \neq \lambda_j \ \forall \ i,j
+    \end{equation}
+    Bei paarweise komplex konjugierten Eigenwerten kann diese Lösung umformuliert werden. [Herleitung in Abschnitt \ref{sec:schaltvorgaengezeitbereich:rlc:herleitung}.]
+    Für $\lambda_1 = \lambda_2^* = a + \mathrm{j} b \in \mathbb{C}$ ergibt sich für die homogene Lösung:
+    \begin{equation}\label{eq:grundlagen:homogeneloesung:lambdakomplex}
+        \begin{aligned}
+        y_{\mathrm{h}}(t) &= K_1 \cdot \mathrm{e}^{a \cdot t} \cdot \cos(b \cdot t) + K_2 \cdot \mathrm{e}^{a \cdot t} \cdot \sin(b \cdot t) \\
+        &= C_0 \cdot \mathrm{e}^{a \cdot t} \cdot \cos(b \cdot t + \varphi_0)
+        \end{aligned}
+    \end{equation}
+    Sind alle Eigenwerte $\lambda_i$ gleich ergibt sich die homogene Lösung zu:
+    \begin{equation}\label{eq:grundlagen:homogeneloesung:lambdagleich}
+        y_{\mathrm{h}}(t) = \sum_{i=1}^{n} K_i \cdot t^{i-1}  \cdot \mathrm{e}^{\lambda t} \qquad \text{für} \quad \lambda = \lambda_i \ \forall \ i
+    \end{equation}
+    % Gemischte Nullstellen
+    Bei gemischten Nullstellen ergibt sich die Lösung aus einer Kombination der obigen Lösungen wie in
+    Beispiel \ref{bsp:grundlagen:linearunabhaengige_loesungen_homo_dgl} gezeigt ist.
+
+    \begin{bsp}{Linear unabhängige Lösungen einer DGL}{grundlagen:linearunabhaengige_loesungen_homo_dgl}
+        Dieses Beispiel ist nahezu unverändert übernommen aus \cite[S. 241]{albach}. 
+        Gesucht ist die allgemeine Lösung der folgenden homogenen DGL 5. Ordnung:
+        \begin{equation*}
+            %\dt[5] y(t) + 7 \dt[4] y(t) + 26 \dt[3] y(t) + 62 \dt[2] y(t) + 8 \dt y(t) + 75 y(t) = 0
+            \dt[\ecr{5}] y(t) + \ecb{7} \dt[\ecr{4}] y(t) + \ecb{26} \dt[\ecr{3}] y(t) + \ecb{62} \dt[\ecr{2}] y(t) + \ecb{8} \dt y(t) + \ecb{75} y(t) = 0
+        \end{equation*}
+        Das charakteristische Polynom:
+        \begin{equation*}
+            %\lambda^5 + 7 \cdot \lambda^4 + 26 \cdot \lambda^3 + 62 \cdot \lambda^2 + 85 \cdot \lambda + 75 = 0
+            \lambda^{\ecr{5}} + \ecb{7} \cdot \lambda^{\ecr{4}} + \ecb{26} \cdot \lambda^{\ecr{3}} + \ecb{62} \cdot \lambda^{\ecr{2}} + \ecb{85} \cdot \lambda + \ecb{75} = 0
+        \end{equation*}
+        besitzt eine einfache und zwei doppelte, konjugierte, komplexe Nullstellen:
+        \begin{equation*}
+            \lambda_1 = -3, \quad \lambda_2 = \lambda_3 = -1+\mathrm{2j}, \quad \lambda_4 = \lambda_5 = -1-\mathrm{2j}
+        \end{equation*}
+        Mit den Ansätzen aus Gl. \ref{eq:grundlagen:homogeneloesung:lambdaungleich}, \ref{eq:grundlagen:homogeneloesung:lambdakomplex} und
+        \ref{eq:grundlagen:homogeneloesung:lambdagleich} ergibt sich die allgemeine Lösung zu:
+        \begin{equation*}
+            y_{\mathrm{h}}(t) = K_1 \cdot \mathrm{e}^{-3 t} + (K_2 + K_3 \cdot t) \cdot \mathrm{e}^{-t} \sin(2t) + (K_4 + K_5 \cdot t) \cdot \mathrm{e}^{-t} \cos(2t)
+        \end{equation*}
+    \end{bsp}
+}% Ende Skript only
+\end{frame}
+
+\begin{frame}[t]\ftx{Beispiel: Linear unabhängige Lösungen einer DGL}% top-alignment wegen Sprung durch \pause
+\b{\vspace{5pt}% % Beispiel aus bsp-box gekürzt
+    Gesucht ist die allgemeine Lösung der folgenden homogenen DGL 5. Ordnung:\footnotemark
+    \begin{equation*}
+        % \dt[5] y(t) + 7 \dt[4] y(t) + 26 \dt[3] y(t) + 62 \dt[2] y(t) + 8 \dt y(t) + 75 y(t) = 0
+        \only<1,2| handout:0>{%
+            \dt[5] y(t) + 7 \dt[4] y(t) + 26 \dt[3] y(t) + 62 \dt[2] y(t) + 8 \dt y(t) + 75 y(t) = 0
+        }%
+        \only<3-| handout:1>{
+            \dt[\ecr{5}] y(t) + \ecb{7} \dt[\ecr{4}] y(t) + \ecb{26} \dt[\ecr{3}] y(t) + \ecb{62} \dt[\ecr{2}] y(t) + \ecb{8} \dt y(t) + \ecb{75} y(t) = 0
+        }%
+    \end{equation*}
+
+    \pause%
+
+    Das charakteristische Polynom:
+    \begin{equation*}
+        %\lambda^5 + 7 \cdot \lambda^4 + 26 \cdot \lambda^3 + 62 \cdot \lambda^2 + 85 \cdot \lambda + 75 = 0
+        \only<2| handout:0>{%
+            \lambda^5 + 7 \cdot \lambda^4 + 26 \cdot \lambda^3 + 62 \cdot \lambda^2 + 85 \cdot \lambda + 75 = 0
+        }%
+        \only<3-| handout:1>{%
+            \lambda^{\ecr{5}} + \ecb{7} \cdot \lambda^{\ecr{4}} + \ecb{26} \cdot \lambda^{\ecr{3}} + \ecb{62} \cdot \lambda^{\ecr{2}} + \ecb{85} \cdot \lambda + \ecb{75} = 0
+        }%
+    \end{equation*}
+
+    \pause\pause%
+
+    besitzt eine einfache und zwei doppelte, konjugierte, komplexe Nullstellen:
+    \begin{equation*}
+        %\lambda_1 = -3, \quad \lambda_2 = \lambda_3 = -1+\mathrm{2j}, \quad \lambda_4 = \lambda_5 = -1-\mathrm{2j}
+        \only<4| handout:0>{%
+            \lambda_1 = -3, \quad \lambda_2 = \lambda_3 = -1+\mathrm{2j}, \quad \lambda_4 = \lambda_5 = -1-\mathrm{2j}
+        }%
+        \only<5-| handout:1>{%
+            \lambda_1 = \ec[teal]{-3}, \quad \lambda_2 = \lambda_3 = \ec[purple]{-1}\ec[violet]{{}+{}2}\mathrm{j}, \quad \lambda_4 = \lambda_5 = \ec[purple]{-1}\ec[violet]{{}-{}2}\mathrm{j}
+        }%
+    \end{equation*}
+    
+    \pause\pause%
+
+    Die allgemeine Lösung lautet:
+    \begin{equation*}
+        %y_{\mathrm{h}}(t) = K_1 \cdot \mathrm{e}^{-3 t} + (K_2 + K_3 \cdot t) \cdot \mathrm{e}^{-t} \sin(2t) + (K_4 + K_5 \cdot t) \cdot \mathrm{e}^{-t} \cos(2t)
+        y_{\mathrm{h}}(t) = K_1 \cdot \mathrm{e}^{\ec[teal]{-3} t} + (K_2 + K_3 \cdot t) \cdot \mathrm{e}^{\ec[purple]{-}t} \sin(\ec[violet]{2}t) + (K_4 + K_5 \cdot t) \cdot \mathrm{e}^{\ec[purple]{-}t} \cos(\ec[violet]{2}t)
+    \end{equation*}
+    \footnotetext{leicht verändert aus: Manfred Albach, {\em Elektrotechnik 2}, Pearson Deutschland GmbH 3. Auflage, 2020.}
+}%
+\end{frame}
+    
+
+%------------------------------------------------------------------------------------------------%
+
+\subsubsection{Berechnung der Partikulären Lösung}
+\label{sec:grundlagen:zeitbereich:partikulaereloesung}
+\begin{frame}\ftx{\subsubsecname}
+\s{%
+    Für die Berechnung einer partikulären Lösung $y_{\mathrm{p}}$ einer inhomogenen DGL 
+    können verschiedene Methoden gewählt werden. 
+    Eine Möglichkeit ist einen Lösungsansatz ähnlich der Anregung zu wählen. 
+    
+    % Lösungsansatz
+    Speziell für Schaltvorgänge gilt, dass $y_{\mathrm{p}}$ dem eingeschwungenen Zustand entspricht
+    wie in Abs. \ref{sec:grundlagen:zeitbereich:zerlegung} hergeleitet wurde. Daraus folgt für lineare, zeitinvariante Schaltelementen:
+
+    \begin{itemize}
+        \item Bei DC-Anregung (Gleichgrößen) ist die partikuläre Lösung ebenfalls eine Gleichgröße
+        \item Bei AC-Anregung (Wechselgrößen) ist die partikuläre Lösung ebenfalls eine Wechselgröße
+    \end{itemize}
+
+    Die Bestimmung kann durch Methoden der statischen Netzwerkberechnung erfolgen. 
+    Hierfür reichen die Kirchhoffschen Regeln, die Gleichungen für die Bauelemente $R$, $L$ und $C$
+    und den daraus resultierenden Strom- und Spannungsteilerregeln. 
+    Für Wechselgrößen werden die komplexen Wechselstrom-Äquivalente der aufgezählten Methoden verwendet.
+
+    \textbf{Transformation von DGLen sinusförmiger Größen in den komplexen Zahlenraum:}
+
+    Da bei AC-Anregung die DGL \ref{eq:grundlagen:dgl:eingeschwungen} für den eingeschwungenen Zustand für Wechselgrößen gilt, 
+    kann die DGL in den komplexen Zahlenraum transformiert werden. Das Vorgehen entspricht der Transformation 
+    der differentiellen Strom- und Spannungsbeziehungen für $R$, $L$ und $C$ zu deren komplexen Strom- und Spannungsbeziehungen
+    anhand deren jeweiligen Impedanz $\underline{Z}$ respektive Admittanz $\underline{Y}$. 
+
+    Eine sinusförmige Größe $y(t)$ mit Amplitude $\hat{Y}$ und einem Nullphasenwinkel $\varphi$ lässt sich mit komplexem Amplitudenzeiger (Phasor) $\underline{\hat{Y}}$ 
+    wie folgt beschreiben [Vgl. Modul 7]:
+    \begin{align*}
+        y(t) &= \hat{Y} \cdot \cos(\omega t + \varphi) = \Re\left\{ \underline{\hat{Y}} \cdot \mathrm{e}^{\mathrm{j} \omega t} \right\} &
+            &\Longleftrightarrow& 
+            \underline{\hat{Y}} &= \hat{Y} \cdot \mathrm{e}^{\mathrm{j} \varphi} 
+            \vphantom{\bigg|}\\
+    % for preview comment out \intertext{}
+    \intertext{Ableitungen nach der Zeit $\dt$ werden im komplexen Zahlenraum durch $\mathrm{j} \omega$ ersetzt:}
+        \dt y(t) &= \hat{Y} \cdot \omega \cdot \cos(\omega t + \varphi + \frac{\pi}{2}) &
+            &\Longleftrightarrow& 
+            \mathrm{j} \omega \cdot  \underline{\hat{Y}} &= \hat{Y} \cdot \omega \cdot \mathrm{e}^{\mathrm{j} \left(\varphi + \frac{\pi}{2}\right)}
+    \end{align*}
+    Der Faktor $\mathrm{j}\omega$ entspricht rücktransformiert dem Vorfaktor $\omega$ und einer Phasenverschiebung von $\sfrac{\pi}{2}$. 
+    Dadurch gilt allgemein bei DGLen sinusförmiger Größen (Index $ac$) der Form in Gleichung \ref{eq:grundlagen:dgl:inhomogen}: 
+    \begin{equation}
+        \sum_{i=0}^n a_i \cdot \left(\dt\right)^i y_{ac} = b_{ac}
+        \qquad \Longleftrightarrow \qquad 
+        \sum_{i=0}^n a_i \cdot \left(\mathrm{j}\omega\right)^i \cdot \underline{\hat{Y}} = \underline{\hat{B}}
+        \label{eq:grundlagen:dgl:komplex}
+    \end{equation}
+    Alternativ kann auch der Imaginärteil komplexer Amplitudenzeiger zur Darstellung von sinusförmiger Wechselgrößen verwendet werden. 
+    [Vergleich Modul 7 - Periodische Größen]
+
+}%
+    %Todo: Beispiel RC mit DC Anregung und mit AC Anregung gegenübergestellt.
+\b{%
+    Der \textbf{eingeschwungene Zustand} $y_{\mathrm{e}}$ entspricht der \textbf{partikulären Lösung} $y_{\mathrm{p}}$.
+    \vspace{2mm}
+
+    In LZI-Systemen gilt eingeschwungen:
+    \begin{align}
+        \text{DC-Anregung:} && y_{\mathrm{p}}(t) &= \text{konst.} &&\text{(Gleichgröße)}\\
+        \text{AC-Anregung:} && y_{\mathrm{p}}(t) &= \hat{Y} \cdot \sin(\omega t + \varphi) &&\text{(Wechselgröße)}
+    \end{align}
+
+    Dadurch sind die bekannten \textbf{Methoden der Netzwerkberechnung anwendbar}.
+    \vspace{2mm}
+
+    \begin{itemize}
+        \item[] DC: Kapazitäten wie offene Schaltungen und Induktivitäten wie Kurzschlüsse
+        \item[] AC: Komplexe Wechselstromrechnung (Impedanzen, Admittanzen)
+    \end{itemize}
+}
+\end{frame}
+%------------------------------------------------------------------------------------------------%
+
+\subsubsection{Zusammenfassung}
+\label{sec:grundlagen:zeitbereich:zusammenfassung}
+\begin{frame}\ftx{\subsubsecname}
+\s{
+    Das Berechnen von Ausgleichsvorgängen im Zeitbereich besteht zum einen im Aufstellen einer passenden DGL
+    und zum anderen auf dem Lösen der aufgestellten DGL. Merkbox \ref{merk:berechnungsverfahren:zeitbereich} fasst die
+    die Berechnung von Ausgleichsvorgängen im Zeitbereich zu fünf Schritten zusammen. 
+    Die Schritte sind stark angelehnt die Vorgehensweise von Weißgerber \cite[S. 6]{weissgerber3}.
+}
+    \begin{Merksatz}{Verfahren für DGL}
+        \label{merk:berechnungsverfahren:zeitbereich}%\qquad\qquad Bsp. inhomogen, linear, 2. Ord.
+            \begin{itemize}\b{\setlength\itemsep{0.7em}}
+            \item[1.] \makebox[4.5cm][l]{Differentialgleich. aufstellen}    (lin., gew.)    \hfill $\sum a_i\cdot \frac{\d^i y}{\d t^i} = b $
+            %\item[2.] \makebox[4.5cm][l]{Flüchtiger Zustand}                (homo. Lsg.)    \hfill EW:\quad $\sum a_i \cdot \lambda^i = 0$
+            %\item[] \hfill z.B. \quad $y_{\mathrm{f}} = \sum K_i \, \mathrm{e}^{\lambda_i t}$
+            \item[2.] \makebox[4.5cm][l]{Flüchtiger Zustand}                (homo. Lsg.)    \hfill $y_{\mathrm{f}} \overset{*}{=} \sum K_i^{'} \cdot \mathrm{e}^{\lambda_i t}$
+            \item[3.] \makebox[4.5cm][l]{Eingeschwung. Zustand}             (part. Lsg.)    \hfill $y_{\mathrm{e}} = y(t \to \infty)$
+            \item[4.] \makebox[4.5cm][l]{Überlagern}                        (allg. Lsg.)    \hfill $y = y_{\mathrm{f}} + y_{\mathrm{e}}$
+            \item[5.] \makebox[4.5cm][l]{Konstante(n) bestimmen}            (Anfangsbed.)   \hfill $i_L, u_C = stetig$
+        \end{itemize}
+        \vspace{5pt}
+        \tiny%
+        \begin{equation*}\,^{*}\text{mit}\qquad
+            \begin{aligned}
+            K_i^{'} &= \left\{ 
+            \begin{split}
+                &K_i \hphantom{{}\cdot t^{k}}
+                    \qquad\text{für}\quad\mathrlap{
+                         \lambda_i \neq \lambda_j \qquad \forall\quad i,j
+                    }\hspace{5cm}\text{(einfache NS)}\\
+                &K_i \cdot t^{k}
+                    \qquad\text{für}\quad\mathrlap{
+                        \lambda_{i} = \lambda_{i-k} \quad \text{mit} \quad k \in [0,\ 1,\ \dots,\ m{-}1]
+                    }\hspace{5cm}\text{($m$-fache NS, $k$-ter gleicher EW)}% k+1-ter EW bzw. ... k-ter gleicher EW
+            \end{split} \right.
+        \end{aligned}
+        \end{equation*}
+        \normalsize%
+    \end{Merksatz}
+\s{
+    Die Reihenfolge der Schritte 2. und 3. ist prinzipiell beliebig. 
+    In der Mathematik ist die gezeigte Reihenfolge üblicher mit der Bestimmung der allgemeinen homogenen Lösung 
+    vor der Lösung der partikulären Lösung(en). 
+    Aus elektrotechnischer Sicht kann es sich anbieten zunächst die den eingeschwungenen Zustand (partikuläre Lösung) 
+    zu bestimmen. 
+}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\s{\b{% Auskommentiert
+\subsection{Berechnungsverfahren im Bildbereich}
+\label{sec:grundlagen:bildbereich}
+\begin{frame}\ftx{\subsecname}
+ Laplace...
+\end{frame}
+}}% Ende Auskommentiert
+%------------------------------------------------------------------------------------------------%

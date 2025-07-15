@@ -1,0 +1,14 @@
+    % RLp-RCp Glied: (R||L) + (R||C) in Reihe
+    \begin{tikzpicture}[x=1cm,y=1cm]
+        \draw[draw=none] (-0.25,+1.75) rectangle (3.75,-2.25); % bounding box (4x4)
+        \draw
+        (0,0) to [short, o-] % U+
+                (0.5,0) to [R, l=$R_1$, *-*](2,0) % Pfad oben, mittig
+                (0.5,0) --   
+                (0.5,1) to [L, l=$L$]       (2,1) % Pfad oben, parallel
+                                         -- (2,0)
+                                         -- (3,0)
+        (2,0) to [C, l_=$C$, *-*]   (2,-2)  % Pfad rechts mittig
+        (3,0) to [R, l=$R_2$]       (3,-2)  % Pfad rechts parallel
+        to [short, -o] (0,-2); % U-
+    \end{tikzpicture}

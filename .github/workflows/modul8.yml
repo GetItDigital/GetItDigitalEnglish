@@ -30,6 +30,11 @@ jobs:
           modul-08-schaltungen-variabler-frequenz/*
           Templates/*
 
+    #run tikz_externalize
+    - name: Tikz Externalize
+      working-directory: ./modul-08-schaltungen-variabler-frequenz
+      run: Tikz/sh/tikz_externalize.sh
+
     # Compile Skript only if files in this module are changed
     - name: compile Skript
       id: skript

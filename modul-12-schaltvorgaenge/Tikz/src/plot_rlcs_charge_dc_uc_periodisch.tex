@@ -1,0 +1,61 @@
+% Aufladevorgang RLC-Serienschwingkreis an Gleichspannung
+% Periodischer Fall (delta < omega_0)
+
+% Anfangsbedingungen: u_C(0) = 0, i_L(0) = 0
+%
+\pgfmathsetmacro\Uq{1} 			% U_q
+\pgfmathsetmacro\deltaC{1} 	% delta = R/(2L) 
+\pgfmathsetmacro\omeganullC{4} 	% omega_0 = 1/sqrt(LC)
+%
+\pgfmathsetmacro\omegad{sqrt(\omeganullC^2-\deltaC^2)}%
+%\pgfmathsetmacro\phiC{atan(\omegad/\deltaC)}% Möglichkeit A: Falsch: mit  sin(x)/cos(x) = tan(x) = sin(180-x)/cos(180-x) !!! 2 Möglichkeiten wegen Periodizität/Symmetrie
+\pgfmathsetmacro\phiC{atan(\omegad/\deltaC)}% Möglichkeit B: erfüllt du/dt(0)=0 ... : mit x = 180 - atan(sin(x)/cos(x)) OR x = atan(sin(x)/cos(x))
+\pgfmathsetmacro\Cnull{-\Uq/sin(\phiC)}% C0=-Uq/sin(phi0)
+%
+\begin{tikzpicture}[x=1cm,y=1cm]
+	\begin{axis}[
+		xmin=-0.01, xmax=5,
+		ymin=-0.25, ymax=2.25, % 2.5 auf 5cm, vorher 1.475 auf 3.5cm 
+		xlabel={$t$},
+		ylabel={$u_C$},
+		axis x line=center,
+		axis y line=center,
+		ylabel style={anchor=east, at={(axis cs:0,2)}},
+		xtick={\empty},xticklabels={\empty},
+		ytick={\empty},yticklabels={\empty},
+		mark=none,
+		grid=none,
+		width=7cm,
+		height=5cm,
+		extra y ticks={0,\Uq,\Uq-\Cnull,\Uq+\Cnull},
+		extra y tick labels={$0$,$U_q$,,},
+		clip=false,
+	]
+		% Hilfslinien
+		\addplot[color=black,dashed,	domain=-0.1:4.9] {\Uq};          	% Asymptote uC(t->infty)
+		\addplot[color=gray, dotted, 	domain=-0.1:4.9] {\Uq-\Cnull};	 	% Grenze Schwinganteil
+		\addplot[color=gray, dotted, 	domain=-0.1:4.9] {\Uq+\Cnull};		% Grenze Schwinganteil
+		\addplot[color=gray, domain=0:4.9, samples=256, smooth, dotted]{\Uq + \Cnull * sin(\omegad*(180/pi)*x+\phiC)}; % Schwinganteil: Uq + C0 * sin(omegad*t+phi0)
+		\addplot[color=purple, domain=0:4.9, samples=256, smooth, dashed]{\Uq + \Cnull * e^(-\deltaC*x)}; % Einhüllende: uc = Uq + C0 * e^(-delta*t)
+		\addplot[color=purple, domain=0:4.9, samples=256, smooth, dashed]{\Uq - \Cnull * e^(-\deltaC*x)}; % Einhüllende: uc = Uq - C0 * e^(-delta*t)
+
+		% Plot
+		\addplot[thick, color=red, domain=0:4.9,samples=256, smooth]{\Uq + \Cnull * sin(\omegad*(180/pi)*x+\phiC) * e^(-\deltaC*x)}; % u_C(t) = U_q + C_0 * sin(omega*t+phi_0) * e^(-delta*t)
+
+		% Konstanten
+		%\draw[->,>=stealth,red] (axis cs:{(0-\phiC*(pi/180))/\omegad},\Uq) -- (axis cs:0,\Uq) node[midway,above]{$\phi_0$}; 	% Möglichkeit A: Falsch: mit  t1=(0-phiC)/omegad, Zeitabstand 0 bis falscher Nulldurchgang
+		\draw[|<->|,>=stealth,blue] (axis cs:0,\Uq) -- (axis cs:{(pi-\phiC*(pi/180))/\omegad},\Uq) node[midway,above]{$\scriptstyle \widehat{=}\varphi_0$}; 	% Möglichkeit B: Richtig: mit t2=(pi-phiC)/omegad, Zeitabstand 0 bis richtiger Nulldurchgang für Nullphasenwinkel
+		\draw[|<->|,>=stealth,blue] (axis cs:{(pi-\phiC*(pi/180))/\omegad},\Uq) -- (axis cs:{(pi-\phiC*(pi/180))/\omegad},\Uq+\Cnull) node[midway,right]{$\scriptstyle C_0$};
+		\draw[dashed,>=stealth,plotgreen] (axis cs:0,\Uq-\Cnull) -- (axis cs:1/\deltaC,\Uq); % Asymptote der Einhüllenden für 1/delta = tau
+		\draw[dashed,>=stealth,plotgreen] (axis cs:1/\deltaC,\Uq) -- (axis cs:1/\deltaC,-0.2); % Schnittpunkt Asymptote der Einhüllenden mit Endwert, Linie bis x-Achse für 1/delta (tau)
+		\draw[|<->|,>=stealth,plotgreen] (axis cs:0,-0.2) -- (axis cs:{1/\deltaC},-0.2) node[midway,below]{$\scriptstyle \delta^{-1}$};% 1/delta (tau)
+		\draw[|<->|,>=stealth,plotgreen] (axis cs:{(2.5*pi-\phiC*(pi/180))/\omegad},-0.2) -- (axis cs:{(4.5*pi-\phiC*(pi/180))/\omegad},-0.2) node[midway,below]{$\scriptstyle 2\pi\cdot\omega_d^{-1}$};% 1/omega_d (T_d)
+
+		% Legende
+		
+		% Debug
+		%\draw node at (5,2){$\phiC$};
+		%\draw node at (5,1.5){$\Cnull$};
+
+	\end{axis}
+\end{tikzpicture}

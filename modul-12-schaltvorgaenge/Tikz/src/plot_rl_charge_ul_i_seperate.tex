@@ -1,0 +1,56 @@
+% Aufladevorgang RL Strom und Spannung
+% AxisEnv 1: Spannung an der Spule
+% AxisEnv 2: Strom an der Spule
+\begin{tikzpicture}[x=1cm,y=1cm]
+	\begin{axis}[
+		name=AxisSpannung,
+		%%%%%%% START SAME OPTIONS %%%%%%%
+		xmin=-1, xmax=5.5,
+		ymin=-0.125, ymax=1.35,
+		xlabel={$t$},
+		ylabel={$u(t)$},
+		axis x line=center,
+		axis y line=center,
+		ylabel style={anchor=east, at={(ticklabel cs:0.95)}},
+		ticks=none,
+		mark=none,
+		grid=none,
+		width=7cm,
+		height=3.5cm,
+		%%%%%%% END OF SAME OPTIONS %%%%%%%
+	]
+		\node at (2,1)[black,anchor=south west,yshift=-1pt]{$U_q$};				% u_max label
+		\addplot[color=black,dashed,	domain=-1:5.4] {1};          			% u_max Grenze
+		\addplot[color=voltage,very thick,	domain=-1:0] {0};           		% t<0
+		\addplot[color=voltage, very thick] coordinates {(0,1)(0,0)}; 			% Sprung
+		\addplot[color=voltage,very thick,	domain=0:5.4,samples=61] {e^(-x)};	% t>0 
+		\node at (1,0.5)[voltage,anchor=west]{$u_L$};							% u_L label
+		%\addplot[color=black,dashed, domain=0:1]{x}; % Gradient in t=0, schneidet Asymptote bei t=tau
+	\end{axis}
+	\begin{axis}[
+		at={($(AxisSpannung.south west)+(0,-0.25cm)$)}, % Position 2. Plot
+		anchor=north west,
+		name=AxisStrom,
+		%%%%%%% START SAME OPTIONS %%%%%%%
+		xmin=-1, xmax=5.5,
+		ymin=-0.125, ymax=1.35,
+		xlabel={$t$},
+		ylabel={$i(t)$},
+		axis x line=center,
+		axis y line=center,
+		ylabel style={anchor=east, at={(ticklabel cs:0.95)}},
+		ticks=none,
+		mark=none,
+		grid=none,
+		width=7cm,
+		height=3.5cm,
+		%%%%%%% END OF SAME OPTIONS %%%%%%%
+		clip=false,
+	]
+		\node at (2,1)[black,anchor=south west,yshift=-1pt]{$U_q/R$};		% i_max label
+		\addplot[color=black,dashed,	domain=-1:5.4] {1};          		% i_max Grenze
+        \addplot[color=red,very thick,	domain=0:5.4,samples=61] {1-e^(-x)}; % t>0
+        \addplot[color=red,very thick,	domain=-1:0] {0};  					% t<0
+		\node at (1,0.5)[red,anchor=west]{$i$}; 							% i label
+	\end{axis}
+\end{tikzpicture}

@@ -1,0 +1,27 @@
+% RL Ladeschaltung mit zweitem Widerstand und Wechselschalter erweitertes Labeling
+\begin{tikzpicture}
+
+    \ctikzset{bipoles/cuteswitch/thickness=0.3} %Liniendicke für bessere Lesbarkeit reduzieren
+    
+    %Switch Circuit
+    \draw(2,1.69)
+        node[cute spdt up arrow, rotate = 180](s1){}% Cute Switch, Position des Schalters mit up/down veränderbar
+        (s1.center) node[left, xshift= -5]{t=0};%Label 
+    \draw(s1.out 2) -- (0.5,2.11);% nach Uq+
+    \draw([yshift=-0.5mm] s1.cout 1) to[short,-*] (1.70,-0.5);%nach Uq-
+    %RRL Circuit
+    \draw(0.5,2.11) 
+        to[V, name=Uq, v_>=$U_q$, !v](0.5,-0.5)
+        to[short](6.25,-0.5) 
+        to[L, l=$L$, name=L, v<=$u_L$, i^<=$i_L$, !vi](6.25,1.685)
+        to[short, name=iL, -*, !i](5,1.685)
+        to[R, l=$R_1$, name=R1, i^<=$i_1$, !i](s1.in);
+    \draw(5,1.685)
+        to[R, l_=$R_2$, name=R2, i>_=$i_2$, -*, !i](5,-0.5);
+    % Spannungspfeile
+    \varronly{Uq};
+    \varronly{L};
+    \iarronly{R1};
+    \iarronly{R2};
+    \iarronly{L};
+\end{tikzpicture} 

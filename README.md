@@ -1,6 +1,6 @@
 ## GETitDigital
 
-Mit dem Vorhaben GET it digital soll ein vollumfängliches, didaktisch aufbereitetes, digitales Lehr-/Lernangebot für die Grundlagen der ElektroTechnik  (GET) in der Form von OER entstehen. Ein Verbund von 6 Hochschulen mit der Fachkompetenz aus teilweise jahrzehnte-langer Lehrerfahrung in diesem Grundlagenfach hat sich mit der Förderung durch das Land Nordrhein-Westfalen im Projekt GETitDigital zusammengetan, um dieses Projektziel zu erreichen. 
+Mit dem Vorhaben "GET it digital" soll ein vollumfängliches, didaktisch aufbereitetes, digitales Lehr-/Lernangebot für die Grundlagen der ElektroTechnik  (GET) in der Form von OER entstehen. Ein Verbund von 6 Hochschulen mit der Fachkompetenz aus teilweise jahrzehntelanger Lehrerfahrung in diesem Grundlagenfach hat sich mit der Förderung durch das Land Nordrhein-Westfalen im Projekt GET it Digital zusammengefunden, um dieses Ziel zu verfolgen. 
 
 Das Projekt besteht aus 12 Teilmodulen
 

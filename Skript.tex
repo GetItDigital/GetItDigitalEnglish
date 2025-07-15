@@ -2,8 +2,9 @@
 \immediate\write18{cat TeXAux/Skript.nlo | sort | uniq -w 55 | makeindex -i -s nomencl.ist -o TeXAux/Skript.nls}
 \immediate\write18{cd TeXAux;gnuplot *.gnuplot;cd ..;}
 \immediate\write18{modul-08-schaltungen-variabler-frequenz/Tikz/sh/tikz_externalize.sh}
+\immediate\write18{modul-12-schaltvorgaenge/Tikz/sh/tikz_externalize.sh}
 
-\documentclass[twoside, a4paper]{article}
+\documentclass[twoside, a4paper]{book}
 \usepackage{beamerarticle}
 \pdfminorversion=6
 
@@ -11,9 +12,10 @@
 \input{../Templates/SkriptSettings.tex}	 	% Allgemeine Foliensettings einbinden
 \usepackage[disabled]{../Video/beamervideo}  % Videoerstellung deaktiviert
 
-
 \newcommand{\GetItDigitalModulnumber}{0}
+\newcommand{\GetItDigitalModulname}{}
 \usepackage{import}				% relatives input
+
 
 %PDF Eigenschaften
 \hypersetup{
@@ -42,6 +44,7 @@
 
 
 \begin{document}
+\renewcommand{\chaptername}{Modul}
 \renewcommand{\partname}{Modul}
 \thispagestyle{empty}
 \begin{center}
@@ -125,61 +128,62 @@ Das Werk ist online verfügbar unter:\\
 }
 
 \printnomenclature
+\addcontentsline{toc}{chapter}{Verwendete Größen und Formelzeichen}
 \cleardoublepage
 
 \pagestyle{fancyplain}
 \pagenumbering{arabic}
 \fancyhead[OL]{\textsc{Kapitel \thesection : \sectiontitle}}
-\fancyhead[ER]{GET it digital}
+\fancyhead[ER]{GET it digital Modul \GetItDigitalModulnumber : \GetItDigitalModulname}
 \fancyfoot[EL,OR]{}
 
 \cleardoublepage
-\part{Elektrische Grundgrößen}
+\newchapter{Elektrische Grundgrößen}
 \import{modul-01-elektrische-grundgroessen/}{Inhalt}
 
 \cleardoublepage
-\part{Energie und Leistung}
+\newchapter{Energie und Leistung}
 \import{modul-02-energie-und-leistung/}{Inhalt}
 
 \cleardoublepage
-\part{Elektrische Bauelemente}
+\newchapter{Elektrische Bauelemente}
 \import{modul-03-elektrische-bauelemente/}{Inhalt}
 
 \cleardoublepage
-\part{Grundlegende Gleichstromnetzwerke}
+\newchapter{Grundlegende Gleichstromnetzwerke}
 \import{modul-04-grundlegende-gleichstromnetzwerke/}{Inhalt}
 
 \cleardoublepage
-\part{Erweiterte Gleichstromnetzwerke}
+\newchapter{Erweiterte Gleichstromnetzwerke}
 \import{modul-05-erweiterte-gleichstromnetzwerke/}{Inhalt}
 
 \cleardoublepage
-\part{Magnetische Größen}
+\newchapter{Magnetische Größen}
 \import{modul-06-magnetische-groessen/}{Inhalt}
 
 \cleardoublepage
-\part{Periodische Größen}
+\newchapter{Periodische Größen}
 \import{modul-07-periodische-groessen/}{Inhalt}
 
 \cleardoublepage
-\part{Schaltungen variabler Frequenz}
+\newchapter{Schaltungen variabler Frequenz}
 \import{modul-08-schaltungen-variabler-frequenz/}{Inhalt}
 
 \cleardoublepage
-\part{Halbleiterbauelemente}
+\newchapter{Halbleiterbauelemente}
 %\import{modul-09-halbleiterbauelemente/}{Inhalt}
 
 \cleardoublepage
-\part{Operationsverstärker}
+\newchapter{Operationsverstärker}
 %\import{modul-10-operationsverstaerker/}{Inhalt}
 
 \cleardoublepage
-\part{Elektrische Maschinen}
+\newchapter{Elektrische Maschinen}
 \import{modul-11-elektrische-maschinen/}{Inhalt}
 
 \cleardoublepage
-\part{Schaltvorgänge}
-%\import{modul-12-schaltvorgaenge/}{Inhalt}
+\newchapter{Schaltvorgänge}
+\import{modul-12-schaltvorgaenge/}{Inhalt}
 
 
 \cleardoublepage
@@ -200,6 +204,7 @@ Das Werk ist online verfügbar unter:\\
 \clearpage
 \fancyhead[OL]{\textsc{Literaturverzeichnis}}
 \printbibliography
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
 
 % Index erstellen
 \clearpage

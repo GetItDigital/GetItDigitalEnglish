@@ -1,0 +1,24 @@
+% RC Entladeschaltung mit Wechselschalter erweitertes Labeling
+\begin{tikzpicture}
+
+    \ctikzset{bipoles/cuteswitch/thickness=0.3} %Liniendicke für bessere Lesbarkeit reduzieren
+    
+    %Switch Circuit
+    \draw(2,1.69)
+        node[cute spdt down arrow, rotate = 180](s1){}% Cute Switch, Position des Schalters mit up/down veränderbar
+        (s1.center) node[left, xshift= -5]{t=0};%Label 
+    \draw(s1.out 2) -- (0,2.11);% nach Uq+
+    \draw([yshift=-0.5mm] s1.cout 1) to[short,-*] (1.70,0);%nach Uq-
+    %RC Circuit
+    \draw(0,2.11) 
+    to[V, name=v, v_>=$U_q$, !v](0,0)
+    to[short](5,0) 
+    to[C, l=$C$, name= C, v<=$u_C$, !v](5,1.685)
+    to[R, l=$R$, name=R, v<=$u_R$, i^<=$i$, !vi](s1.in);
+    % Spannungs- und Strompfeile
+    \varronly{v};
+    \varronly{C};
+    \varronly{R};
+    \iarronly{R};
+
+\end{tikzpicture} 

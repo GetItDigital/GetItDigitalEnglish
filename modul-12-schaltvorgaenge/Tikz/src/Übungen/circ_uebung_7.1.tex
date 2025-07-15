@@ -1,0 +1,22 @@
+% ET3 Übung 7.1 von Prof. Judith Ackers
+% Uq über R1 + (R2 || C3), U2 über C3
+\begin{tikzpicture}
+    %draw circuit
+    \draw(0,0)
+    to[R, l=$R_1$, name=R1, i=$\underline{I_1}$, v=$\underline{U_1}$, !vi](2.5,0)
+    to[short](3,0)
+    to[short, name=I3, i=$\underline{I_3}$, !i](5,0)
+    to[C, l_=$C_3$, name= C, v^=$\underline{U_2}$, !v](5,-3)
+    to[short](0,-3);
+    \draw(0,0)
+    to[V, name=Uq, v_=$\underline{U_q}$](0,-3);
+    \draw(3,0)
+    to[R, l_=$R_2$, name=R2, i>_=$\underline{I_2}$, *-*, !i](3,-3);
+
+    %draw Spannung- und Stromspfeile
+    \varronly{R1};
+    \varronly{C};
+    \iarronly{R1};
+    \iarronly{R2};
+    \iarronly{I3};
+\end{tikzpicture}

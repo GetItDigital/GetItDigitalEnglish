@@ -1,0 +1,104 @@
+%für Folien Seite 15
+
+\begin{tikzpicture}[x=1cm, y=1cm]
+    \draw(-2,-6.125)[opacity=0] rectangle (12,2); % Boundbox
+    
+    \draw(1, 1.5) node [align=center, scale= 1.25]{\underline{Schaltung}};
+
+    % Nodes
+    \node (DGL-groessen) at (9.5,-4.25) {};
+
+    % Schaltungselemente in Rechteck:
+    \draw (-0.35,1) rectangle(2.35,-6);
+    \draw (0,0.25) to [R, l=$R$, o-] (2,0.25) to [short, -o] (2,0.25);
+    \draw (0,-0.75) to [L, l=$L$, o-] (2,-0.75) to [short, -o] (2,-0.75);
+    \draw (0,-1.95) to [C, l=$C$, o-] (2,-1.95) to [short, -o] (2,-1.95);
+    \draw (0,-2.65) to [short, o-o] (2,-2.65);
+    \draw (0,-3.75) to [voltage source, l=$\ecv{U}$, o-] (2,-3.75) to [short, -o] (2,-3.75);
+    \draw (0,-5) to [current source, l_=$\ecr{I}$, o-] (2,-5) to [short, -o] (2,-5);
+
+    % Einteilung in:
+    % passiv (oben, label links)
+    \draw(-0.6,-1.25) node{$\left\{\begin{array}{rcl}\\ \\ \\ \\ \\ \\ \\\end{array}\right.$};
+    \draw(-0.8, -1.25) node[left]{passiv};
+    % aktiv (unten, label links)  
+    \draw(-0.6,-4.4) node{$\left\{\begin{array}{rcl}\\ \\ \\ \\ \\\end{array}\right.$};
+    \draw(-0.8, -4.4) node[left]{aktiv};
+    % Energie-speicher (oben, label rechts)
+    \draw(2.6,-1.35) node[rotate=180](Energiespeicher){$\left\{\begin{array}{rcl}\\ \\ \\ \\\end{array}\right.$};
+    \draw(Energiespeicher) node[xshift=0.2cm, align=center, right]{Energie-\\speicher};
+
+   
+    % new Plot
+    \draw(8,1.5) node[align=center, scale=1.25]{\underline{Eigenschaften}};
+
+    % System-Eigenschaften (links) --> DGL-Eigenschaften (rechts) 
+    \onslide<1->{% start overlay
+      % links
+      \draw(5,0.5) node{\underline{System}};
+      \draw(5,0.25)--(5,-0.25)--(5.5,-0.25);
+      \draw(6.25,-0.25) node[align=center, text centered]{Energie-\\speicher};% Energiespeicher
+      
+      % rechts
+      \draw[thick,->](7.25,-0.25)--(8.25,-0.25);
+      \draw(9,-0.25)node{\underline{DGL}};% --> DGL
+
+      % links
+      \draw(5,-0.25)--(5,-1)--(5.5,-1);
+      \draw(6.25,-1) node{linear};% linear
+
+      % rechts
+      \draw[thick,->](7.25,-1)--(8.25,-1);
+      \draw(9,-0.5)--(9,-1)--(9.5,-1);
+      \draw(10.75,-1) node{linear};% --> linear
+
+      % links
+      \draw(5,-1)--(5,-1.75)--(5.5,-1.75);
+      \draw(6.25,-1.75) node[align=center, text centered]{zeit-\\invariant};% zeitinvariant
+
+      % rechts
+      \draw[thick,->](7.25,-1.75)--(8.25,-1.75);
+      \draw(9,-1)--(9,-1.75)--(9.5,-1.75);
+      \draw(10.75,-1.75) node[text centered, align=center]{Konstante \\ Koeffizienten};% --> konst. Koeffizienten
+    }% end overlay
+
+
+    % new Plot
+    \onslide<2->{% start overlay
+      % DGL-Gleichung
+      %\draw[GETgreen](3, -3.75) rectangle(7, -5.25);
+      \draw(5,-4.5) node[draw=GETgreen,text=black,align=center]{%
+        ${\displaystyle
+          \sum_{i=0}^{n} a_i \cdot \frac{\mathrm{d}^i}{\mathrm{d}t^i}{\,}  y(t) = b(t)
+          %\vphantom{\sum_{i=0}^{n}}
+        }$%
+      };
+      
+      % DGL-Größen
+      %\draw(8, -2.75) node [align=center, scale=1.25]{\underline{DGL}};
+      %\draw(7.95,-3.5) node [right, align=center]{Konstante Koeffizienten};
+      %\draw(7.25,-3.5) node [right]{$a_i$ : };
+      %\draw(7.25,-4.25) node [right]{$y(t)$ : Systemgröße};
+      %\draw(7.25,-5) node [right]{$b(t)$ : Störgröße};
+      %\draw(7.25,-5.75) node [right]{$n$ : Ordnung der DGL};
+
+      \node[fill=white,draw=none,shape=rectangle,align=center] at ({DGL-groessen}) {%
+      % Ref: https://tex.stackexchange.com/questions/220820/itemize-list-inside-a-tikzpicture-node
+      %\framebox{%\Large
+      %{\begin{varwidth}{\linewidth}%
+        \setlength{\tabcolsep}{2pt}
+        \begin{tabular}{rl}
+          %\toprule
+          & \underline{DGL-Größen} \\[2pt]
+          \toprule%\midrule
+          $n$     :& Ordnung der DGL \\[2pt]
+          $a_i$   :& Konst. Koeffizienten \\[2pt]
+          $y(t)$  :& Schaltungsgröße \\[2pt]
+          $b(t)$  :& Störgröße \\%[2pt]
+          \bottomrule
+        \end{tabular}
+      %\end{varwidth}}
+      %}
+      };
+    }% end overlay
+\end{tikzpicture}

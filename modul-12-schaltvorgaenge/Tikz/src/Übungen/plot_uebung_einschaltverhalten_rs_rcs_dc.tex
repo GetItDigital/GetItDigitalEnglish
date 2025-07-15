@@ -1,0 +1,45 @@
+% plot u_C(t), u_2(t) und i(t) ab t>=0
+% u1 = Uq = konst. für t>=0
+% u1 über Serienschaltung R1 + R2 + C
+% u_2 über R_2 und C 
+% u_C(t=0) = 0
+\begin{tikzpicture}[x=1cm,y=1cm]
+\begin{axis}[
+    axis lines=center,
+    xlabel={$t$},
+    xmin=-1.25, xmax=5.5,
+    ymin=-0.25, ymax=1.25,
+    xtick={0,1,2,3,4,5},
+    ytick={0,0.4,1},
+    xticklabels={$0$,$\tau$,,,,$5\tau$},
+    yticklabels={$0$,$\scriptstyle \frac{R_2}{R_1+R_2}\cdot \ecv{U_q}$,$\ecv{U_q}$},
+    grid=none,
+    width=8cm,
+    height=5cm,
+]
+    % Hilfslinien und Grenzwerte
+    \addplot[gray, dashed, domain=0:5.5]{1};% Asymptote für t>5tau 
+    \addplot[black,dotted] coordinates {(0.0,0) (1,1)};% für tau bei u_C
+    \addplot[black,dotted] coordinates {(0,0.4) (1,0)};% für tau bei u_{R_2}
+    \addplot[black,dotted] coordinates {(0,0.4) (1,1)};% für tau bei u_2
+    \addplot[gray, dashed] coordinates {(1.0,0) (1,1)};% tau
+
+    % u_C(t)
+    \addplot[blue, thick, domain=-1.25:0]{0};                               % t<=0
+    \addplot[blue, thick, domain=-0:5.5, samples=100]{1-exp(-x)}
+        node[pos=0.4,below right]{$\ec[blue]{u_C}$};                        % t>=0
+
+    % u_2(t)
+    \addplot[voltage, thick, domain=-1.25:0, densely dashed]{0};            % t<=0
+    \addplot[voltage, thick] coordinates {(0,0) (0,0.4)};                   % t=0, Sprung
+    \addplot[voltage, thick, domain=-0:5.5, samples=100]{1-0.6*exp(-x)}     % t>=0
+        node[pos=0.4, above right, yshift=5pt]{$\ecv{u_2}\,\ec[black]{=}\,\ec[blue]{u_C}\,\ec[black]{+}\,\ec[purple]{u_{R_2}}$};
+
+    % u_{R_1}(t) = i(t)*R_1
+    \addplot[purple, thick, domain=-1.25:0, dashed]{0};                     % t<0
+    \addplot[purple, thick, dashed] coordinates {(0,0) (0,0.4)};            % t=0, Sprung
+    \addplot[purple, thick, domain=-0:5.5, samples=100]{0.4*exp(-x)}        % t>0 
+        node[pos=0.4, above right]{$\ec[purple]{u_{R_2}}\,\ec[black]{=}\,\eci{i}\,\ec[black]{\cdot R_2}$};
+        % Note: \ec[color]{...} broken in node's inlinemath. Does not return to default color after command argument is colored
+\end{axis}
+\end{tikzpicture}

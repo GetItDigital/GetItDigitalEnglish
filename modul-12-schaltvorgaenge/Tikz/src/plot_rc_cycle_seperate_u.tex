@@ -1,0 +1,84 @@
+% Auf- und Entladevorgang eines Kondensators mittels Schalter
+% AxisEnv 1: Spannung der Spannungsquelle
+% AxisEnv 2: Spannung am Kondensator
+% AxisEnv 3: Strom am Kondensator
+\begin{tikzpicture}[x=1cm,y=1cm]
+	\begin{axis}[
+		name=AxisQuelle,
+		%%%%%%% START SAME OPTIONS %%%%%%%
+		xmin=0, xmax=13,
+		ymin=-0.125, ymax=1.25,
+		xlabel={$t$},
+		ylabel={$u(t)$},
+		axis x line=center,
+		axis y line=center,
+		ylabel style={anchor=east, at={(ticklabel cs:0.95)}},
+		ticks=none,
+		mark=none,
+		grid=none,
+		width=7cm,
+		height=3.5cm,
+		%%%%%%% END OF SAME OPTIONS %%%%%%%
+	]
+		\addplot[color=voltage,very thick,	domain=0:1.05] {0};           		
+		\addplot[color=voltage, very thick] coordinates {(1,1.014)(1,0)}; 
+		\addplot[color=voltage,very thick,	domain=1:7] {1};
+		\addplot[color=voltage, very thick] coordinates {(7,1.014)(7,0)};
+		\addplot[color=voltage,very thick,	domain=6.95:12.8] {0};
+		%\node at (1,0.5)[voltage,anchor=west]{$u_q$};
+		%\addplot[color=black,dashed, domain=0:1]{x}; % Gradient in t=0, schneidet Asymptote bei t=tau
+	\end{axis}
+	\begin{axis}[
+		at={($(AxisQuelle.south west)+(0,-0.25cm)$)}, % Position 2. Plot
+		anchor=north west,
+		name=AxisSpannung,
+		%%%%%%% START SAME OPTIONS %%%%%%%
+		xmin=0, xmax=13,
+		ymin=-0.125, ymax=1.25,
+		xlabel={$t$},
+		ylabel={$u_C(t)$},
+		axis x line=center,
+		axis y line=center,
+		ylabel style={anchor=east, at={(ticklabel cs:0.95)}},
+		ticks=none,
+		mark=none,
+		grid=none,
+		width=7cm,
+		height=3.5cm,
+		%%%%%%% END OF SAME OPTIONS %%%%%%%
+	]
+		%\addplot[color=black,dashed,	domain=0:12.9] {1};          			% Asymptote für t gegen unendlich (UQ)
+		\addplot[color=voltage,very thick,	domain=0:1.05] {0};           	
+		\addplot[color=voltage,very thick,	domain=1:7.04,samples=61] {1-e^(-x+1)};% t>0 
+		\addplot[color=voltage,very thick,	domain=7:12.8,samples=61] {e^(-x+7)};% t>0 
+		\node at (11,1.15)[black,anchor=west]{$\hat{U}_q$};
+		%\addplot[color=black,dashed, domain=0:1]{x}; % Gradient in t=0, schneidet Asymptote bei t=tau
+	\end{axis}
+	\begin{axis}[
+		at={($(AxisSpannung.south west)+(0,-0.25cm)$)}, % Position 3. Plot
+		anchor=north west,
+		name=AxisStrom,
+		%%%%%%% START SAME OPTIONS %%%%%%%
+		xmin=0, xmax=13,
+		ymin=-1.25, ymax=1.25,
+		xlabel={$t$},
+		ylabel={$i(t)$},
+		axis x line=center,
+		axis y line=center,
+		ylabel style={anchor=east, at={(ticklabel cs:0.95)}},
+		ticks=none,
+		mark=none,
+		grid=none,
+		width=7cm,
+		height=5cm,
+		%%%%%%% END OF SAME OPTIONS %%%%%%%
+		clip=false,
+	]
+		\addplot[color=red,very thick,	domain=0:1] {0};  						% t<0
+		\addplot[color=red, very thick] coordinates {(1,1)(1,0)}; 				% Stromsprung
+        \addplot[color=red,very thick,	domain=1:7,samples=61] {e^(-x+1)}; 		% Stromverlauf
+		\addplot[color=red, very thick] coordinates {(7,-1)(7,0)}; 				% Stromsprung
+		\addplot[color=red,very thick,	domain=7:12.8,samples=61] {-e^(-x+7)}; 	% Stromverlauf
+		%\node at (1,0.5)[red,anchor=west]{$i$}; 
+	\end{axis}
+\end{tikzpicture}

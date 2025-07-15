@@ -1,0 +1,100 @@
+% Ladevorgang einer Induktivität L in Serie mit Widerstand R an idealer DC-Spannungsquelle Uq ab t=0 mit i(0)=0
+% AxisEnv 1: Spannung der Spannungsquelle
+% AxisEnv 2: Spannung an Induktivität
+% AxisEnv 3: Strom durch Induktivität
+\begin{tikzpicture}[x=1cm,y=1cm]
+	\begin{axis}[
+		name=AxisQuelle,
+		%%%%%%% START SAME OPTIONS %%%%%%%
+		xmin=-0.5, xmax=19.5,
+		ymin=-0.125, ymax=1.375,
+		xlabel={$t$},
+		ylabel={$u_1(t)$},
+		axis x line=center,
+		axis y line=center,
+		%ylabel style={anchor=east, at={(ticklabel cs:0.95)}},
+		ylabel style={yshift=3pt},
+		xtick distance=1, ytick distance=1,
+		xticklabels={},yticklabels={},
+		mark=none,
+		grid=none,
+		width=10cm,
+		height=3.5cm,
+		extra x ticks={1,5,10},
+		extra x tick labels={$\tau$,$5\tau$,$t_1$},
+		%%%%%%% END OF SAME OPTIONS %%%%%%%
+		extra y ticks={1},
+		extra y tick labels={$U_0$},
+	]
+		\addplot[color=voltage,very thick,	domain=-1:0] {0};% t<0           		
+		\addplot[color=voltage, very thick] coordinates {(0,0)(0,1)};% t=0 
+		\addplot[color=voltage,very thick,	domain=0:10] {1};% 0<t<t_1
+		\addplot[color=voltage, very thick] coordinates {(10,1)(10,0)};% 5=t_1
+		\addplot[color=voltage,very thick,	domain=10:20] {0};% t>t_1
+	\end{axis}
+	\begin{axis}[
+		at={($(AxisQuelle.south west)+(0,-0.25cm)$)}, % Position 2. Plot
+		anchor=north west,
+		name=AxisSpannung,
+		%%%%%%% START SAME OPTIONS %%%%%%%
+		xmin=-0.5, xmax=19.5,
+		ymin=-1.375, ymax=1.375,
+		xlabel={$t$},
+		ylabel={$u_L(t)$},
+		axis x line=center,
+		axis y line=center,
+		%ylabel style={anchor=east, at={(ticklabel cs:0.95)}},
+		ylabel style={yshift=3pt},
+		xtick distance=1, ytick distance=1,
+		xticklabels={},yticklabels={},
+		mark=none,
+		grid=none,
+		width=10cm,
+		height=5cm,
+		extra x ticks={1,5,10},
+		extra x tick labels={$\tau$,$5\tau$,$t_1$},
+		extra y ticks={-1,1},
+		extra y tick labels={$-U_0$,$\hphantom{+}U_0$},
+		%%%%%%% END OF SAME OPTIONS %%%%%%%
+	]
+		%\addplot[color=black,dashed, domain=0:20] {+1}; % Grenzwert
+		\addplot[color=black,dashed, domain=0:10] {-1}; % Grenzwert
+		\addplot[color=voltage,very thick,	domain=-1:0] {0};  						% t<0
+		\addplot[color=voltage, very thick] coordinates {(0,0)(0,1)}; 				% t=0 Stromsprung
+		\addplot[color=voltage,very thick,	domain=0:10,samples=61] {e^(-x)}; 		% 0<t<t_1 Stromverlauf
+		\addplot[color=voltage, very thick] coordinates {(10,0)(10,-1)}; 				% t=t_1 Stromsprung
+		\addplot[color=voltage,very thick,	domain=10:20,samples=61] {-e^(-x+10)};	% t>t_1 Stromverlauf
+		%\addplot[color=black,dashed, domain=0:1]{x}; % Gradient in t=0, schneidet Asymptote bei t=tau
+	\end{axis}
+	\begin{axis}[
+		at={($(AxisSpannung.south west)+(0,-0.25cm)$)}, % Position 3. Plot
+		anchor=north west,
+		name=AxisStrom,
+		%%%%%%% START SAME OPTIONS %%%%%%%
+		xmin=-0.5, xmax=19.5,
+		ymin=-0.125, ymax=1.375,
+		xlabel={$t$},
+		ylabel={$i_L(t)$},
+		axis x line=center,
+		axis y line=center,
+		%ylabel style={anchor=east, at={(ticklabel cs:0.95)}},
+		ylabel style={yshift=3pt},
+		xtick distance=1, ytick distance=1,
+		xticklabels={},yticklabels={},
+		mark=none,
+		grid=none,
+		width=10cm,
+		height=3.5cm,
+		extra x ticks={1,5,10},
+		extra x tick labels={$\tau$,$5\tau$,$t_1$},
+		extra y ticks={1},
+		extra y tick labels={$U_0/R$},
+		%%%%%%% END OF SAME OPTIONS %%%%%%%
+		clip=false,
+	]
+		\addplot[color=black,dashed, domain=0:5] {1}; % Asymptote
+		\addplot[color=current,very thick,	domain=-1:0] {0};           	
+		\addplot[color=current,very thick,	domain=0:10,samples=61] {1-e^(-x)};% t>0 
+		\addplot[color=current,very thick,	domain=10:20,samples=61] {e^(-x+10)};% t>0 
+	\end{axis}
+\end{tikzpicture}

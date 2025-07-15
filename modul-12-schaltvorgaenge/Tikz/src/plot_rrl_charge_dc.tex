@@ -1,0 +1,84 @@
+% Aufladevorgang RRL Strom und Spannung
+% AxisEnv 1: Spannung an der Spule und den Widerständen, wobei U_L = U_R2
+% AxisEnv 2: Strom an der Spule und beiden Widerständen
+\begin{tikzpicture}[x=1cm,y=1cm]
+	\begin{axis}[
+		name=AxisSpannung,
+		%%%%%%% START SAME OPTIONS %%%%%%%
+		xmin=-1, xmax=5.5,
+		ymin=-0.125, ymax=1.6,
+		xlabel={$t$},
+		ylabel={$u(t)$},
+		axis x line=center,
+		axis y line=center,
+		ylabel style={anchor=east, at={(ticklabel cs:0.95)}},
+		ticks=none,
+		mark=none,
+		grid=none,
+		width=7cm,
+		height=4.5cm,
+        clip=false, % Verhindert Abschneiden der Labels
+		%%%%%%% END OF SAME OPTIONS %%%%%%%
+	]
+        %Asymptoten mit Labels
+		\addplot[color=black,dashed,	domain=0:5.4] {0.25};			
+		\addplot[color=black,dashed,	domain=0:5.4] {1};  	
+		\addplot[color=black,dashed,	domain=0:5.4] {1.25};
+        \node at (-1,1.1)[black,anchor=south west,yshift=-1pt]{$U_q$};
+        \node at (-2.4,0.79)[black,anchor=south west,yshift=-1pt]{$U_q \cdot \frac{R_2}{R_1 + R_2}$};
+        \node at (-2.4,0.04)[black,anchor=south west,yshift=-1pt]{$U_q \cdot \frac{R_1}{R_1 + R_2}$};
+        %Labels
+        \node at (3,1.4)[color=green!50!blue,anchor=west]{$u_{R1}$};	
+        \node at (1,0.5)[voltage,anchor=west]{$u_L = u_{R2}$};	
+        %Plots	
+        \addplot[color=voltage,very thick,	domain=0:5.4,samples=61] {e^(-x)}; 		       		
+		\addplot[color=green!50!blue,very thick,	domain=0:5.4,samples=61] {-e^(-x)+1.25};	
+		\addplot[color=voltage,very thick,	domain=-0.5:0] {0}; 		       		
+		\addplot[color=green!50!blue,very thick, dashed, domain=-0.5:0] {0};		
+		%Sprünge
+		\addplot[color=voltage, very thick] coordinates {(0,0)(0,1)};
+		\addplot[color=green!50!blue, very thick, dashed] coordinates {(0,0)(0,0.25)};					
+											
+	\end{axis}
+	\begin{axis}[
+		at={($(AxisSpannung.south west)+(0,-0.25cm)$)}, % Position 2. Plot
+		anchor=north west,
+		name=AxisStrom,
+		%%%%%%% START SAME OPTIONS %%%%%%%
+		xmin=-1, xmax=5.5,
+		ymin=-0.125, ymax=1.5,
+		xlabel={$t$},
+		ylabel={$i(t)$},
+		axis x line=center,
+		axis y line=center,
+		ylabel style={anchor=east, at={(ticklabel cs:0.95)}},
+		ticks=none,
+		mark=none,
+		grid=none,
+		width=7cm,
+		height=4cm,
+		%%%%%%% END OF SAME OPTIONS %%%%%%%
+		clip=false,
+		]
+        %Asymptoten mit Labels
+        \addplot[color=black,dashed,	domain=0:5.4] {0.35};
+		\addplot[color=black,dashed,	domain=0:5.4] {1}; 
+        \node at (-1,0.8)[black,anchor=south west,yshift=-1pt]{$\frac{U_q}{R_1}$};			
+        \node at (-1.6,0.14)[black,anchor=south west,yshift=-1pt]{$\frac{U_q}{R_1 + R_2}$};	
+        %Labels    
+        \node at (2,1.15)[red,anchor=west]{$i_{R1}$}; 	
+        \node at (2,0.2)[color=blue!25!red,anchor=west]{$i_{R2}$}; 	
+        \node at (1,0.5)[color=green!25!red,anchor=west]{$i_L$};
+		%Sprünge
+		\addplot[color=blue!25!red, very thick] coordinates {(0,0)(0,0.35)};					
+		\addplot[color=red, very thick, dashed] coordinates {(0,0)(0,0.35)};	
+        %Plots 
+        \addplot[color=green!25!red,very thick,	domain=0:5.4,samples=61] {-e^(-x)+1};	
+        \addplot[color=red,very thick,	domain=0:5.4,samples=61] {-0.65*e^(-1.25*x)+1};	
+        \addplot[color=blue!25!red,very thick,	domain=0:5.4,samples=61] {0.35*e^(-x)}; 	
+		\addplot[color=green!25!red, very thick, dash pattern=on 3pt off 6pt, domain=-0.5:0] {0};	
+        \addplot[color=blue!25!red, very thick, dash pattern=on 3pt off 6pt, domain=-0.3729:0] {0}; 	
+		\addplot[color=red, very thick, dash pattern=on 3pt off 6pt, domain=-0.246:0] {0};	
+		\draw[dash pattern=on 3pt off 6pt] (0,0) -- (4,0);
+	\end{axis}
+\end{tikzpicture} 

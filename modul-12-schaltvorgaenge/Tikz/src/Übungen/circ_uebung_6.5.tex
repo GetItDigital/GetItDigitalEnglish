@@ -1,0 +1,25 @@
+% RC Ladeschaltung mit Wechselschalter 
+\begin{tikzpicture}
+    \ctikzset{bipoles/cuteswitch/thickness=0.3}
+
+    %Switch Circuit
+    \draw(2,1.69)
+        node[cute spdt up arrow, rotate = 180](s1){}% Cute Switch, Position des Schalters mit up/down veränderbar
+        (s1.center) node[left, xshift= -5]{t=0};%Label 
+    \draw(s1.out 2) -- (0,2.11);% nach Uq+
+    \draw([yshift=-0.5mm] s1.cout 1) to[short,-*] (1.70,0);%nach Uq-
+    %RC Circuit
+    \draw(0,2.11) 
+    to[V, name=Uq, v_>, !v](0,0)
+    to[short](7,0);
+    \draw(5,0)
+    to[R, l=$R_2$, name=R2, v<, !v, *-*](5,1.685)
+    to[R, l=$R_1$, name=R1, v<, i^<, !vi](s1.in);
+    \draw(5,1.685) 
+    to[short](7,1.685)
+    to[C, l^=$C$, name=C, v^, !v](7,0);
+    
+    % Strom- und Spannungspfeile mit Label
+    \varrmore{Uq}{$U_q$};
+    
+\end{tikzpicture} 

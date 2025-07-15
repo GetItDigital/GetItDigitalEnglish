@@ -39,6 +39,7 @@
 % Deklaration des Dokumentenkopfes:
 \newcommand{\sectiontitle}{}
 \newcommand{\newsection}[1]{\section{#1}\renewcommand{\sectiontitle}{#1}}
+\newcommand{\newchapter}[1]{\chapter{#1}\renewcommand{\GetItDigitalModulname}{#1}\renewcommand{\GetItDigitalModulnumber}{\thechapter}}
 
 \newcommand{\setheadleftmark}{\fancyhead[ER,OL]{\leftmark}}
 % Deklaration des Anhangs:
@@ -154,5 +155,5 @@
 	backend=biber,
 	sorting=none,% Sortierung nach Reihenfolge der Zitate
 ]{biblatex} %biblatex mit biber laden
-\addbibresource{Templates/Literatur.bib}
+\addbibresource{../Templates/Literatur.bib}
 \usepackage[nottoc,notlot,notlof]{tocbibind}	%% Literaturverzeichnis im TOC

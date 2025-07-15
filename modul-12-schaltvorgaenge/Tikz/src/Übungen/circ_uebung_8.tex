@@ -1,0 +1,16 @@
+% Schaltbild für ET3 Übung 8, Vorlesung Prof. Exknowski
+% Uq an H Brücke (Uq+ an H+ und Uq- an H-)
+% H Brückenstränge: 
+% R1 in H+l, R2 in H+r, 
+% C1 in H-l, C2 in H-r, 
+% Schalter in H Mitte
+% Schalter zu: Uq an (R1||R2)+(C1||R3)
+% Schalter offen: Uq an (R1+C1)||(R2+R3)
+\begin{tikzpicture}
+    \draw (0,4) to [vsource, name=Uq, v, !v] (0,0);
+    \draw (0,4) to [short, -*] (2,4) to [R, name=R1, label=$R_1$] (2,2) to [C, name=C1, label=$C_1$] (2,0) to [short, *-] (0,0); % linker Strang
+    \draw (2,4) to [short, *-] (4,4) to [R, name=R2, label=$R_2$] (4,2) to [R, name=R3, label=$R_3$, i, !i] (4,0) to [short, -*] (2,0); % rechter Strang
+    \draw (2,2) to [switch, *-*] (4,2); % Schalter
+    \varrmore{Uq}{$U_q$}; % Spannungspfeil und farbiges Label
+    \iarrmore{R3}{$i_3$};
+\end{tikzpicture}

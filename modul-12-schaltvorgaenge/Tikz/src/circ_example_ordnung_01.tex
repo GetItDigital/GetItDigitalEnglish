@@ -1,0 +1,8 @@
+    % RC-Glied%
+    \begin{tikzpicture}[x=1cm,y=1cm]
+        \draw[draw=none] (-0.5,+1.25) rectangle (3.5,-2.75); % bounding box (4x3.5)
+        \draw
+            (0,0) to [R, l=$R$, o-] (2,0) to [short, -o] (3,0)
+            (2,0) to [C, l=$C$, *-*] (2,-2)
+            (0,-2) to [short, o-] (2,-2) to [short, -o] (3,-2);
+    \end{tikzpicture}

@@ -1,0 +1,2461 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                               START KAPITEL 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section[Berechnung im Zeitbereich]{Schaltvorgänge im Zeitbereich berechnen}
+\label{sec:schaltvorgaengezeitbereich}
+\begin{frame}\ftx{\secname}
+\s{%
+    In diesem Kapitel werden Schaltvorgänge in elektrischen Schaltungen im Zeitbereich betrachtet.
+    Es wird zwischen Schaltvorgängen bei Gleichspannung und Wechselspannung unterschieden.
+    Die Betrachtung erfolgt für RC- und RL-Glieder, sowie RLC-Glieder.
+}%
+    \begin{Lernziele}{Schaltvorgänge}
+        Studierende lernen:
+        \begin{itemize}
+            \item Schaltvorgänge bei im Zeitbereich zu berechnen % Anwendung, Verstehen
+            \item das Schaltverhalten von RC-, RL- und RLC-Gliedern kennen und verstehen % Verstehen
+            \item die Möglichkeit kennen Schaltvorgänge bei AC-Anregung zu minimieren% Wissen, Anwendung
+            \item das Schwingverhalten von Schwingkreisen zu verstehen und zu analysieren % Analyse
+        \end{itemize}
+    \end{Lernziele}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{bei Gleichspannung}
+\label{sec:schaltvorgaengezeitbereich:dc}
+\begin{frame}\ftx{Schaltvorgänge \subsecname}
+\s{%
+    In diesem Kapitel werden Lade- und Entladevorgänge von Kapazitäten und Induktivitäten
+    jeweils in Reihe mit einem Widerstand bei Gleichspannung berechnet und dargestellt.
+
+    %Die resultierenden DGL der RC- als auch der RL-Glieder sind linear und erster Ordnung.
+    %Aus dem Lösungsansatz der homogenen DGL ergibt sich ein exponentieller Verlauf der Spannung.
+    %Anhand dessen wird die Zeitkonstante $\tau$\index{Größe>Zeitkonstante} eingeführt und erläutert.
+    Schaltvorgänge bei sinusförmiger Anregung folgen in Kapitel \ref{sec:schaltvorgaengezeitbereich:ac}.
+}%
+\b{%
+    \centering
+    \begin{minipage}{0.48\textwidth}%\centering % linksbündig
+        Schaltvorgänge bei Gleichspannung sind:
+        \vspace{0.5em}
+        \begin{itemize}
+            \item Ladevorgänge,
+            \item Entladevorgänge.
+        \end{itemize}
+        \vspace{0.5em}
+        \pause
+        Berechnung zunächst für:
+        \vspace{0.5em}
+        \begin{itemize}
+            \item eine Kapazität $C$
+            \item eine Induktivität $L$
+        \end{itemize}
+        \vspace{0.5em}
+        jeweils in Reihe mit einem Widerstand $R$.
+        \pause
+
+        \vspace{1em}
+        RC- oder RL-Glied $\Longrightarrow$ \textbf{DGL} 1. Ordnung
+
+        \begin{equation*}
+            a_1 \cdot \dt\, y(t) + a_0 \cdot y(t) = b
+        \end{equation*}
+    \end{minipage}%
+    \begin{minipage}{0.48\textwidth}\centering
+        \pause
+        \resizebox{0.8\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rc_cycle_seperate_u.pdf}}
+        Schaltvorgänge bei RC-Glied (DC)
+    \end{minipage}
+}%
+\end{frame}
+
+%-------------------------------------------------------------------------------------------------%
+
+\subsubsection{bei Kapazitäten}
+\label{sec:schaltvorgaengezeitbereich:dc:c}
+\begin{frame}[t]\ftx{Schaltvorgänge \subsubsecname, Zeitkonstante}
+\s{% skript only, tau
+    Beispiel \ref{bsp:rc:chargedc} zeigt den Rechenweg zur Bestimmung des Spannungsverlaufs $u_C(t)$
+    einer zu Beginn entladenen Kapazität $C$ beim Laden mit Gleichspannung für $t \geq 0$ über einen Widerstand $R$
+    und den Zeitverlauf des Ladestroms $i(t)$.
+    Die angewandte Berechnungsmethode entspricht dem Verfahren für DGL im Zeitbereich nach Merksatz \ref{merk:berechnungsverfahren:zeitbereich}.
+
+    Aus den Ergebnissen ablesen lässt sich die exponentielle Annäherung von $u_C(t)$ an die Anregung $U_q$:
+    \begin{align}
+        u_C(t) &= U_q \cdot \left( 1 - \mathrm{e}^{-\sfrac{t}{\tau}} \right)
+    \intertext{und der exponentielle Abfall von $i(t)$ respektive $u_R(t)$ ab deren Maximalwerten $U_q/R$ und $U_q$:}
+        i(t) &= \frac{U_q}{R} \cdot \mathrm{e}^{-\sfrac{t}{\tau}}\\[4pt]
+        u_R(t) &= U_q \cdot \mathrm{e}^{-\sfrac{t}{\tau}}
+    \end{align}
+    bis die Kapazität geladen ist. Die \textbf{Zeitkonstante}\index{Größe>Zeitkonstante} $\tau$ bestimmt die Steilheit
+    der exponentiellen Verläufe.
+    Für das RC-Glied ergibt sich $\tau = RC$. Die Einheit für $\tau$ ist gleich jener der Zeit.
+
+    \begin{minipage}{0.95\textwidth}\centering
+    \begin{minipage}[b]{0.48\textwidth}\centering
+        \fu{\includegraphics{Tikz/pdf/plot_rc_charge_uc_tau.pdf}}{Exp. Annäherung und $\tau$\label{fig:plot:rc:tau}}%
+    \end{minipage}%
+    \begin{minipage}[b]{0.48\textwidth}\centering
+        \begin{table}[H]\centering
+            \caption{Typ. Werte Zeitkonstante $\tau$}
+            \label{tab:tau:typischewerte}
+            \begin{tabular}{cccc}
+                \toprule
+                $t$ & $\tau$ & $3\,\tau$ & $5\,\tau$ \\
+                \midrule
+                &&&\\[-1em]
+                $1 - \mathrm{e}^{-t/\tau}$ & $63,2\%$ & $95,0\%$ & $99,3\%$ $\vphantom{\big|}$\\[6pt]
+                $ \mathrm{e}^{-t/\tau}$ & $36,8\%$ & $5,0\%$ & $0,7\%$ $\vphantom{\big|}$\\
+                \bottomrule
+            \end{tabular}\par\bigskip
+            Faustregel: \glqq Eingeschwungen\grqq\ nach $5\,\tau$
+            \vspace{2pt}
+        \end{table}
+    \end{minipage}
+    \end{minipage}
+
+    Wie in Abbildung \ref{fig:plot:rc:tau} dargestellt, schneidet die Tangente von $u_C$ im Punkt $u_C(t=0)$
+    den Endwert $U_q$ zum Zeitpunkt $t=\tau$. Allgemein gilt in jedem Punkt exponentieller Annäherungen/Abfälle, dass die Tangete den Endwert nach $\tau$ erreicht.
+
+    Tabelle \ref{tab:tau:typischewerte} zeigt typische Werte für exponentielle Annäherungen/Abfälle nach Vielfachen von $\tau$.
+    Die Werte sind relativ zum Maximalwert (Start- oder angestrebter Grenzwert).
+    Als \glqq eingeschwungen\grqq\ gilt ein solcher Verlauf nach $5\,\tau$.
+
+    % Rechenwege
+    Beispiel \ref{bsp:rc:discharge} zeigt den Rechenweg zur Bestimmung des Spannungsverlaufs $u_C(t)$
+    einer Kapazität $C$ beim Entladen über einen Widerstand $R$ und zugehörige Zeitverläufe.
+    Hierbei ergeben sich analog zum Ladevorgang exponentielle Verläufe mit gleicher Zeitkonstante, jedoch mit unterschiedlichen Start- und Endwerten.
+
+    Der Rechenweg in den Beispielen \ref{bsp:rc:chargedc} und \ref{bsp:rc:discharge} ist prinzipiell identisch.
+    Beim Lade- und Entladevorgang unterscheiden sich lediglich die Anfangsbedingung $u_C(0)$ (bei Schaltzeitpuntk $t=0$) und die Randbedingung $u_{C,\mathrm{e}}$ (für $t \to \infty$).
+    Dadurch ergeben sich unterschiedliche partikuläre Lösungen und andere Konstanten $K$ in der allgemeinen Lösung.
+
+    Verallgemeinert lässt sich der Spannungsverlauf $u_C$ einer Kapazität $C$ beim Laden/Entladen mit Gleichspannung über einen Widerstand $R$
+    ab einem Schaltzeitpunkt $t_0$ beschreiben durch:
+    \begin{equation}\label{eq:rc:charge:dc:allg:parthom}
+        u_C(t-t_0) = \underbrace{ u_{C,\mathrm{e}} \vphantom{\Big|}}_{u_{C,\mathrm{p}}} + \underbrace{ \big(u_C(t_0)-u_{C,\mathrm e}\big) \cdot  \mathrm{e}^{-\frac{t-t_0}{\tau}} \vphantom{\Big|}}_{u_{C,\mathrm{h}}}
+    \end{equation}
+    Etwas umgeschrieben lässt sich der Spannungsverlauf auch recht anschaulich wie folgt formulieren:
+    \begin{equation}\label{eq:rc:charge:dc:allg:startend}
+        u_C(t-t_0) = \underbrace{u_C(t_0) \vphantom{\Big|}}_{\text{Startwert}} + \big(\underbrace{u_{C,\mathrm e} - u_C(t_0) \vphantom{\Big|}}_{\text{Differenz}}\big) \cdot \bigg( \underbrace{ 1- \mathrm{e}^{-\frac{t-t_0}{\tau}} \vphantom{\Big|}}_{\text{\clap{Exp. Annäherung}}} \bigg)
+    \end{equation}
+    Die allgemeine Lösung in Gleichung \ref{eq:rc:charge:dc:allg:parthom} beziehungsweise \ref{eq:rc:charge:dc:allg:startend} gilt nur für Anregungen mit Gleichgröße.
+    Die Lösung ist typisch für verlustbehaftete, lineare Systeme erster Ordnung (mit einem Energiespeicher), weshalb sie in ähnlicher Form auch bei RL-Gliedern auftritt.
+
+    \textbf{Exkurs: DGL 1. Ordnung und Zeitkonstante $\tau$}
+
+    % Hinweis DGL 1. Ord., tau ablesen
+    Die Exponentialform ist typisch für lineare Systeme erster Ordnung mit Energiespeicher
+    und ergibt sich aus der Lösung der linearen, gewöhnlichen DGL 1. Ordnung mit konstanten Koeffizienten.
+    Durch Umformung ($a_0=1$) lässt sich die Zeitkonstante $\tau$ direkt aus der DGL ablesen ($a_1=\tau$).:
+    \begin{equation}\label{eq:dgl:tau}
+        \tau \cdot \dt\,y(t) + y(t) = b(t)
+    \end{equation}
+    Dadurch lässt sich die homogene Lösung direkt angeben mit.:
+    \begin{equation}
+        y_{\mathrm{h}}(t) = K\cdot\mathrm{e}^{-\frac{t}{\tau}}
+    \end{equation}
+    Die Zeitkonstante ist ein Maß für die Schnelligkeit, mit der ein System auf eine Änderung reagiert.
+    }% end skript only
+\b{% beamer only, $\tau$
+\begin{minipage}{\textwidth}\centering%
+% Obere Hälfte
+% links
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment%
+    \includegraphics{Tikz/pdf/circ_switchable_rc_charge_dc.pdf}\\[4pt]
+    \textbf{DGL 1. Ordnung} $\Rightarrow$ Exponentialverlauf.
+\end{minipage}%
+\pause%
+% rechts
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment%
+    \includegraphics{Tikz/pdf/plot_rc_charge_uc_tau.pdf}\\
+    $\ecv{u_C}(t) = \ecv{U_q} \left( 1 - \mathrm{e}^{-\sfrac{t}{\tau}} \right)$
+\end{minipage}%
+\pause%
+\vspace{1cm}% Leerzeile
+
+% Untere Hälfte
+% links
+\begin{minipage}[t][][t]{0.48\textwidth}\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment%
+    Die \textbf{Zeitkonstante}\index{Größe>Zeitkonstante} $\tau,\quad [\tau]=1\,\mathrm{s}$:
+    \vspace{0.35cm}
+    \begin{itemize}
+        \item bestimmt die Steilheit bei exponentiellen Verläufen.% Eigentlich "Schnelligkeit", weil Vorfaktor nicht berücksichtigt.
+        \item ist die Zeit nach der die Tangente den Endwert erreicht.
+        \item ist beim RC-Glied $\tau = RC$.
+    \end{itemize}
+    \vspace{1.9cm}
+\end{minipage}%
+\pause%
+% rechts
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment%
+    Typ. Werte Zeitkonstante $\tau$
+    \begin{tabular}{cccc}
+        \toprule
+        $t$ & $\tau$ & $3\,\tau$ & $5\,\tau$ \\
+        \midrule
+        &&&\\[-1em]
+        $1 - \mathrm{e}^{-t/\tau}$ & $63,2\%$ & $95,0\%$ & $99,3\%$ $\vphantom{\big|}$\\[6pt]
+        $ \mathrm{e}^{-t/\tau}$ & $36,8\%$ & $5,0\%$ & $0,7\%$ $\vphantom{\big|}$\\
+        \bottomrule
+    \end{tabular}\par\bigskip
+    Faustregel: \glqq Eingeschwungen\grqq\ nach $5\,\tau$
+\end{minipage}
+\end{minipage}
+}%
+\end{frame}
+
+
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -%
+
+% Ohne Frames
+\s{% RC-Laden, skript only without frames
+    \newpage
+    \begin{bsp}{RC-Glied DC-Ladevorgang}{rc:chargedc}
+        Bestimmung von Spannung $\ecv{u_C}$ und Ladestrom $\eci{i}$ der Kapazität $C$ beim Laden über Widerstand $R$
+        mit Gleichspannung $\ecv{U_q}$ für $t \geq 0$. Die Kapazität ist zu Beginn entladen.\\[-6pt]
+
+        \begin{minipage}{\textwidth}\centering
+        \begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
+            \includegraphics{Tikz/pdf/circ_switchable_rc_charge_dc.pdf}%
+            \begin{equation*}\begin{aligned}
+            \text{gegeben:}&&       &\eci{i}(0),\ \ecv{U_q},\ R,\ C \\
+            \text{gesucht:}&&       &\eci{i}(t), \ecv{u_L}(t)
+            \end{aligned}\end{equation*}
+        \end{minipage}
+        \begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
+            \includegraphics{Tikz/pdf/plot_rc_charge_uc_i_seperate.pdf}
+        \end{minipage}
+        \end{minipage}
+
+        \textbf{1.) DGL aufstellen:} von $\ecv{u_C}(t)$ für $t>0$\vspace{5pt}
+
+        Ausgehend von der Maschengleichung wird $\ecv{u_R}$ in Abhängigkeit von $\ecv{u_C}$ ausgedrückt:%
+        \begingroup% Änderungen lokal vornehmen
+            \addtolength{\jot}{2pt}% Zeilenabstand in align-Umgebung erhöhen
+        \begin{align*}
+            &\text{Masche}:&&&
+                \ecv{u_R} + \ecv{u_C}  &= \ecv{U_q}&&&
+                &\text{mit}\quad \ecv{u_R} = R \cdot \eci{i} \\
+            &&&&
+                R \cdot {\color{red} i} + \ecv{u_C}    &= \ecv{U_q}&&&
+                &\text{mit}\quad \eci{i} = C \cdot \dt \ecv{u_C} \\
+            &\text{DGL}:&&&
+                R \cdot C \cdot \dt \ecv{u_C}  + \ecv{u_C}   &= \ecv{U_q}
+                \\[-15pt]&\hphantom{R1ooooooo}&&&\hphantom{L3oooooooooooooooooooo}&\hphantom{R3ooo}&&&&\hphantom{R5oooooooooooooooooooooo}\nonumber% Dummy-Zeile A für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+            \end{align*}%
+        \textbf{2.) Homogene Lösung, allg.:} (flüchtig) (ohne Störterm)%
+        \begin{align*}%
+            &\text{DGL}_{h}:&&&
+                RC \cdot \dt \ecv{u_{C,\mathrm{h}}} + \ecv{u_{C,\mathrm{h}}} &= 0 &&&
+                    &\text{Ansatz:}\quad
+                    \ecv{u_{C,\mathrm{h}}} = K \cdot \mathrm{e}^{\lambda t}\\
+            &&&&
+                K \cdot(RC \cdot \quad\lambda \mathrm{e}^{\lambda t}\ +\ \mathrm{e}^{\lambda t}) &= 0 \\
+            &\text{char. Pol.:}&&&
+                RC \cdot \lambda + 1 &= 0 &&&
+                    &\Rightarrow\quad \lambda = -\frac{1}{\tau} = -\frac{1}{RC}\\
+            &\text{hom. Lsg.}:&&&
+                \ecv{u_{C,\mathrm{h}}} = K \cdot \mathrm{e}^{-\sfrac{t}{\tau}}&&&&
+                    &\text{mit}\quad \tau = RC
+        \\[-15pt]&\hphantom{R1ooooooo}&&&\hphantom{L3oooooooooooooooooooo}&\hphantom{R3ooo}&&&&\hphantom{R5oooooooooooooooooooooo}\nonumber% Dummy-Zeile A für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+        \end{align*}%
+        \textbf{3.) Partikulare Lösung:} (eingeschwungen) (für $t \to \infty$)%
+        \begin{align*}%
+            &\text{DGL}_{p}:&&&
+                \redcancel{RC \cdot \dt \ecv{u_{C,p}}} + \ecv{u_{C,p}} &= \ecv{U_q} &&&
+                    &\text{mit}\quad \ecv{u_{C,p}} = konst.  \\
+            &\text{part. Lsg.}:&&&
+                \ecv{u_{C,p}} &= \ecv{U_q}
+                \\[-15pt]&\hphantom{R1ooooooo}&&&\hphantom{L3oooooooooooooooooooo}&\hphantom{R3ooo}&&&&\hphantom{R5oooooooooooooooooooooo}\nonumber% Dummy-Zeile A für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+            \end{align*}%
+        \textbf{4.) Inhomogene Lösung, allg.:} (Überlagerung)%
+        \begin{align*}%
+            &&&&
+                \ecv{u_C}(t) &= \ecv{u_{C,\mathrm{h}}}(t) + \ecv{u_{C,p}}(t) &&&
+                &\ecv{u_C}(t)= \ecv{u_{C,f}}(t) + \ecv{u_{C,e}}(t)  \\
+            &\text{allg. Lsg.:}&&&
+                \ecv{u_C}(t) &= K \cdot \mathrm{e}^{-\sfrac{t}{\tau}} + \ecv{U_q}
+            \\[-15pt]&\hphantom{R1oooooooooooo}&&&\hphantom{L3ooo}&\hphantom{R3oooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooooooo}\nonumber% Dummy-Zeile B für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+        \end{align*}%
+        \textbf{5.) Konstanten bestimmen:} (Anfangsbedingungen einsetzen)%
+        \begin{align*}%
+            &\text{Anfangsbed.}&&&
+                \ecv{u_C}(0) &= K + \ecv{U_q} \overset{!}{=} \frac{0}{1} &&&
+                &\Rightarrow\quad K = -\ecv{U_q} \\
+            &&&&
+                \ecv{u_C}(t) &= -\ecv{U_q} \cdot \mathrm{e}^{-\sfrac{t}{\tau}} + \ecv{U_q} \\
+            &\text{spez. allg. Lsg.:}&&&
+                \ecv{u_C}(t) &= \ecv{U_q} \left( 1 - \mathrm{e}^{-\sfrac{t}{\tau}} \right)
+            \\[-15pt]&\hphantom{R1oooooooooooo}&&&\hphantom{L3ooo}&\hphantom{R3oooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooooooo}\nonumber% Dummy-Zeile B für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+            \end{align*}%
+        Strom $\eci{i}$ aus Spannung $\ecv{u_C}$ bestimmen:%
+        \begin{align*}%
+            &\text{Strom:}&&&
+                \eci{i} &= \frac{\ecv{U_q}}{R} \cdot \mathrm{e}^{-\sfrac{t}{\tau}} &&&
+                &\text{mit}\quad \eci{i} = C \cdot \dt \ecv{u_C}
+            \\[-15pt]&\hphantom{R1oooooooooooo}&&&\hphantom{L3ooo}&\hphantom{R3oooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooooooo}\nonumber% Dummy-Zeile B für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+        \end{align*}
+        \endgroup
+    \end{bsp}
+}% end skript only
+
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -%
+
+\s{% RC-Entladen, skript only without frames
+    \begin{bsp}{RC-Glied Entladevorgang}{rc:discharge}
+        Bestimmung von Spannung $\ecv{u_C}$ und Strom $\eci{i_C}$ einer Kapazität $C$ beim Entladen über einen Widerstand $R$
+        für $t \geq 0$. Die Kapazität ist zu Beginn geladen auf $\ecv{U_q}$.\\[-6pt]
+
+        \begin{minipage}{\textwidth}\centering
+            \begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
+                \includegraphics{Tikz/pdf/circ_switchable_rc_discharge.pdf}%
+                \begin{equation*}\begin{aligned}
+                    &\text{gegeben:}&       &\ecv{u_C}(0),\ \ecv{U_q},\ R,\ C \\
+                    &\text{gesucht:}&       &\ecv{u_C}(t)
+                \end{aligned}\end{equation*}
+            \end{minipage}
+            \begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
+                \includegraphics{Tikz/pdf/plot_rc_discharge_uc_i_seperate.pdf}
+            \end{minipage}
+        \end{minipage}\vspace{5pt}
+
+        \begingroup % keep changes local
+            \addtolength{\jot}{2pt} % increase line spacing in align environment
+        \textbf{1.) DGL aufstellen:} von $\ecv{u_C}(t)$ für $t>0$, analog zu Beispiel \ref{bsp:rc:chargedc}
+            \begin{align*}
+            &\text{Masche}:&&&
+                \ecv{u_R} + \ecv{u_C}  &= 0&&&
+                &\text{mit}\quad \ecv{u_R} = R \cdot \eci{i} \\
+            &\text{DGL}:&&&
+                RC \cdot \dt \ecv{u_C}  + \ecv{u_C}   &= 0 &&&
+                &\text{mit}\quad \eci{i} = C \cdot \dt \ecv{u_C}
+            \\[-15pt]&\hphantom{R1ooooooo}&&&\hphantom{L3oooooooooooooooooooo}&\hphantom{R3ooo}&&&&\hphantom{R5oooooooooooooooooooooo}\nonumber% Dummy-Zeile A für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+        \end{align*}%
+        \textbf{2.) Homogene Lösung, allg.:} (flüchtig) Identisch zu Beispiel \ref{bsp:rc:chargedc}%
+        \begin{align*}%
+            &\text{hom. Lsg.}:&&&
+                \ecv{u_{C,\mathrm{h}}} = K \cdot \mathrm{e}^{-\sfrac{t}{\tau}}&&&&
+                &\text{mit}\quad \tau = RC
+            \\[-15pt]&\hphantom{R1ooooooo}&&&\hphantom{L3oooooooooooooooooooo}&\hphantom{R3ooo}&&&&\hphantom{R5oooooooooooooooooooooo}\nonumber% Dummy-Zeile A für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+        \end{align*}%
+        Die partiklare Lösung $\ecv{u_{C,p}}$ entfällt, da $\ecv{u_C}$ eingeschwungen ($t \to \infty$) null wird.\\[6pt]%
+        \textbf{3. Part. Lsg.:} (eingeschwungen) und \textbf{4. Überlagerung:}%
+        \begin{align*}%
+            &\text{allg. Lsg.:}&&&
+                \ecv{u_C} &= \ecv{u_{C,\mathrm{h}}} + \redcancel{\ecv{u_{C,p}}}&&&
+                &\text{mit}\quad \ecv{u_{C,p}}=0
+            \\[-15pt]&\hphantom{R1oooooooooooo}&&&\hphantom{L3ooo}&\hphantom{R3oooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooooooo}\nonumber% Dummy-Zeile B für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+        \end{align*}%
+        \textbf{5.) Konstanten bestimmen:} (Anfangsbedingungen einsetzen)%
+        \begin{align*}%
+            &\text{Anfangsbed.}&&&
+                \ecv{u_C}(0) &= K \cdot \mathrm{e}^{0} \overset{!}{=} U_q &&&&
+                    \Rightarrow\quad K = \ecv{U_q}\\
+            &\text{spez. allg. Lsg.:}&&&
+                \ecv{u_C}(t) &= \ecv{U_q} \cdot  \mathrm{e}^{-\sfrac{t}{\tau}}
+            \\[-15pt]&\hphantom{R1oooooooooooo}&&&\hphantom{L3ooo}&\hphantom{R3oooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooooooo}\nonumber% Dummy-Zeile B für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+            \end{align*}
+        Strom $\eci{i}$ aus Spannung $\ecv{u_C}$ bestimmen:%
+        \begin{align*}%
+            &\text{Strom:}&&&
+                \eci{i} &= - \frac{\ecv{U_q}}{R} \cdot \mathrm{e}^{-\sfrac{t}{\tau}} &&&
+                &\text{mit}\quad \eci{i} = C \cdot \dt \ecv{u_C}
+            \\[-15pt]&\hphantom{R1oooooooooooo}&&&\hphantom{L3ooo}&\hphantom{R3oooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooooooo}\nonumber% Dummy-Zeile B für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+        \end{align*}
+        \endgroup
+    \end{bsp}
+}% end skript only
+
+
+%-------------------------------------------------------------------------------------------------%
+
+\b{% Anfang Folien only Multi Frame
+\begin{frame}[t]\ftx{Ladevorgang \subsubsecname}
+% Obere Hälfte
+\begin{minipage}{\textwidth}\centering
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
+    \includegraphics{Tikz/pdf/circ_switchable_rc_charge_dc.pdf}%
+    \begin{equation*}\begin{aligned}
+        &\text{gegeben:}&       &\ecv{u_C}(0),\ \ecv{U_q},\ R,\ C \\
+        &\text{gesucht:}&       &\ecv{u_C}(t)
+    \end{aligned}\end{equation*}
+\end{minipage}
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
+    \resizebox{!}{4.25cm}{\includegraphics{Tikz/pdf/plot_rc_charge_uc_i_seperate.pdf}}
+\end{minipage}
+\end{minipage}
+% Untere Hälfte
+\resizebox{0.9\textwidth}{!}{% to fit on slide
+\begin{minipage}{\textwidth}%
+\begin{align*}
+&\textbf{1. DGL}&\hspace{15pt}\ecv{U_q} &= RC \cdot \dt \ecv{u_C} + \ecv{u_C} \vphantom{\Big|}\\
+&\textbf{2. Homogene Lösung}&\hspace{15pt}\ecv{u_{C,h}} &= K \cdot \mathrm{e}^{-\sfrac{t}{\tau}} \hspace{15pt}\text{mit } \tau = RC \vphantom{\Big|}\\
+&\textbf{3. Partikulare Lösung}&\hspace{15pt}\ecv{u_{C,p}} &= \ecv{U_q} \vphantom{\Big|}\\
+&\textbf{4. Inhomogene Lösung}&\hspace{15pt}\ecv{u_C} &= K \cdot \mathrm{e}^{-\sfrac{t}{\tau}} + \ecv{U_q} \vphantom{\Big|}\\
+&\textbf{5. Konstanten bestimmen}&\hspace{15pt}\ecv{u_C} &= \ecv{U_q} \left( 1 - \mathrm{e}^{-\sfrac{t}{\tau}} \right) \vphantom{\Big|}
+\end{align*}
+\end{minipage}
+}%
+\end{frame}
+
+\begin{frame}[t]\ftx{Ladevorgang \subsubsecname}
+\begin{minipage}{\textwidth}\centering
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}
+\includegraphics{Tikz/pdf/circ_switchable_rc_charge_dc.pdf}
+\end{minipage}
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}
+    \vspace{0.8cm}
+    \textbf{DGL 1. Ordnung:}\\[0.85em]
+    $a_1 \cdot \dt y(t) + a_0 \cdot y(t)=b$\\
+\end{minipage}
+\end{minipage}
+\vspace{0.75cm}
+% Hier Leerzeile für Abstand lassen
+
+\textbf{1.) DGL aufstellen:} für $\ecv{u_C}(t)$ ($t\geq 0$)\\[2pt]
+Ausgehend von der Maschengleichung wird $\ecv{u_R}$ in Abhängigkeit von $\ecv{u_C}$ ausgedrückt:\\[-1em]
+\begin{align*}
+\onslide<2->{% <--- Overlay
+&\text{Kirchhoff}:&
+    \text{Masche:}\quad\ecv{u_R} + \ecv{u_C}  &= \ecv{U_q}&
+        &\text{Knoten:}\quad{\color{red} i_R} = {\color{red} i_C} = {\color{red} i}%
+}\\[2pt]%
+\onslide<3->{% <--- Overlay
+&&
+    R \cdot {\color{red} i} + \ecv{u_C}    &= \ecv{U_q}&
+        &\text{mit}\quad \ecv{u_R} = R \cdot \eci{i} \vphantom{\dt}
+}\\[2pt]%
+\onslide<4->{% <--- Overlay
+&\text{DGL}:&
+    R \cdot C \cdot \dt\, \ecv{u_C}  + \ecv{u_C}   &= \ecv{U_q}&
+        &\text{mit}\quad \eci{i} = C \cdot \dt\, \ecv{u_C}
+}%
+\end{align*}
+\end{frame}
+
+
+\begin{frame}\ftx{Ladevorgang \subsubsecname}
+\textbf{2.) Homogene Lösung, allg.:} (flüchtig) (ohne Störterm)\\[-1em]
+\begin{align*}
+&\text{DGL}_{h}:&
+    RC \cdot \dt \ecv{u_{C,h}} + \ecv{u_{C,h}} &= 0 &
+        &\text{Ansatz: }
+        \ecv{u_{C,h}} = K \cdot \mathrm{e}^{\lambda t}\\
+&& K \cdot(
+    RC \cdot \quad\lambda \mathrm{e}^{\lambda t}\ +\ \mathrm{e}^{\lambda t}) &= 0 \\
+&\text{char. Polynom:}&\Rightarrow\quad
+    RC \cdot \lambda + 1 &= 0
+        &&\Rightarrow\quad \lambda = -\frac{1}{RC} \\
+&\text{hom. Lsg.}:&
+    \ecv{u_{C,h}} = K \cdot \mathrm{e}^{-\sfrac{t}{\tau}}&
+        &&\text{mit}\quad \tau = RC
+\\[-15pt]&\hphantom{R1oooooooooo}&\hphantom{L2oooooooooooooooooooooo}&\hphantom{R2oooo}&&\hphantom{R3oooooooooooooooooo}% Dummy-Zeile RL-DC für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+\end{align*}
+\pause% <--- Overlay
+\textbf{3. Partikulare Lösung:} (eingeschwungen) (für $t \to \infty$)\\[-1em]
+\begin{align*}
+&\text{DGL}_{p}:&
+    \redcancel{RC \cdot \dt \ecv{u_{C,p}}} + \ecv{u_{C,p}} &= \ecv{U_q}
+        &&\text{mit}\quad \left.\dt\right|_{t \to \infty} = 0  \\
+&\text{part. Lsg.}:&
+    \ecv{u_{C,p}} &= \ecv{U_q} %
+\\[-15pt]&\hphantom{R1oooooooooo}&\hphantom{L2oooooooooooooooooooooo}&\hphantom{R2oooo}&&\hphantom{R3oooooooooooooooooo}% Dummy-Zeile RL-DC für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+\end{align*}% new alignments
+\end{frame}
+
+
+\begin{frame}\ftx{Ladevorgang \subsubsecname}
+\textbf{4.) Inhomogene Lösung, allg.:} (Überlagerung)\\[-1em]
+\begin{align*}
+&&
+    \ecv{u_C}(t) &= \ecv{u_{C,h}}(t) + \ecv{u_{C,p}}(t) &
+    &= \ecv{u_{C,f}}(t) + \ecv{u_{C,e}}(t)  \\
+&\text{allg. Lsg.:}&
+    \ecv{u_C}(t) &= K \cdot \mathrm{e}^{-\sfrac{t}{\tau}} + \ecv{U_q}%
+\\[-15pt]&\hphantom{R1oooooooooo}&\hphantom{L2oooooooo}&\hphantom{R2oooooooooooooooooo}&&\hphantom{R3oooooooooooooooooo}% Dummy-Zeile RL-DC für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+\end{align*}
+\pause% <--- Overlay
+\textbf{5. Konstanten bestimmen:} (Anfangsbedingung einsetzen)\\[-1em]
+\begin{align*}
+&\text{Anfangsbed.}&
+    \ecv{u_C}(0) &= K + \ecv{U_q} \overset{!}{=} 0 &
+        &\Rightarrow\quad K = -\ecv{U_q} && \\[2pt]
+&&
+    \ecv{u_C}(t) &= -\ecv{U_q} \cdot \mathrm{e}^{-\sfrac{t}{\tau}} + \ecv{U_q} \\[2pt]
+&\text{spez. allg. Lsg.:}&
+    \ecv{u_C}(t) &= \ecv{U_q} \left( 1 - \mathrm{e}^{-\sfrac{t}{\tau}} \right) \\[2pt]
+&\text{Strom: }&
+    \eci{i_C} &= \frac{\ecv{U_q}}{R} \cdot \mathrm{e}^{-\sfrac{t}{\tau}} &
+    &\text{mit}\quad \eci{i_C} = C \cdot \dt \ecv{u_C}
+\\[-15pt]&\hphantom{R1oooooooooo}&\hphantom{L2oooooooo}&\hphantom{R2oooooooooooooooooo}&&\hphantom{R3oooooooooooooooooo}% Dummy-Zeile RL-DC für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+\end{align*}
+\end{frame}
+}% Ende Folien only Multi Frame
+
+
+\b{% Anfang Folien Multi Frame
+\begin{frame}[t]\ftx{Entladevorgang \subsubsecname}
+% Obere Hälfte
+\begin{minipage}{\textwidth}\centering
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
+    \includegraphics{Tikz/pdf/circ_switchable_rc_discharge.pdf}%
+    \begin{equation*}\begin{aligned}
+        &\text{gegeben:}&       &\ecv{u_C}(0),\ \ecv{U_q},\ R,\ C \\
+        &\text{gesucht:}&       &\ecv{u_C}(t)
+    \end{aligned}\end{equation*}
+\end{minipage}
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
+    \resizebox{!}{4.25cm}{\includegraphics{Tikz/pdf/plot_rc_discharge_uc_i_seperate.pdf}}
+\end{minipage}
+\end{minipage}
+% Untere Hälfte
+\resizebox{0.9\textwidth}{!}{% to fit on slide
+\begin{minipage}{\textwidth}%
+\begin{align*}
+&\textbf{1. DGL}&\hspace{15pt} 0 &= RC \cdot \dt \ecv{u_C} + \ecv{u_C}\\
+&\textbf{2. Homogene Lösung}&\hspace{15pt}\ecv{u_{C,h}} &= K \cdot \mathrm{e}^{-\sfrac{t}{\tau}} \hspace{15pt}\text{mit } \tau = RC\\[0.5em]
+&\textbf{3. Partikulare Lösung}&\hspace{15pt}\ecv{u_{C,p}} &= 0\\[0.35em]
+&\textbf{4. Inhomogene Lösung}&\hspace{15pt}\ecv{u_C} &= K \cdot \mathrm{e}^{-\sfrac{t}{\tau}}\\[0.3em]
+&\textbf{5. Konstanten bestimmen}&\hspace{15pt}\ecv{u_C} &= \ecv{U_q} \cdot\mathrm{e}^{-\sfrac{t}{\tau}}
+\end{align*}
+\end{minipage}
+}% Berechnung analog zu Beispiel \ref{bsp:rc:chargedc}.
+\end{frame}
+
+
+\begin{frame}[t]\ftx{Entladevorgang \subsubsecname}
+\begin{minipage}{\textwidth}\centering
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}
+    \includegraphics{Tikz/pdf/circ_switchable_rc_discharge.pdf}%
+\end{minipage}
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}
+    \vspace{0.8cm}
+    \textbf{DGL 1. Ordnung:}\\[0.85em]
+    $a_1 \cdot \dt y(t) + a_0 \cdot y(t)=b$\\
+\end{minipage}
+\end{minipage}%
+\vspace{0.75cm}
+% Hier Leerzeile für Abstand lassen
+
+\textbf{1.) DGL aufstellen:} für $\ecv{u_C}(t)$ ($t\geq 0$)\\[-1em]
+\begin{align*}
+% Comment out \intertext rows to enable math-preview in VSCode (or set \textbf to \text)
+\intertext{Ausgehend von der Maschengleichung wird $\ecv{u_R}$ in Abhängigkeit von $\ecv{u_C}$ ausgedrückt:}\\[-1em]
+&\text{Kirchhoff}:
+&\text{Masche:}\quad\ecv{u_R} + \ecv{u_C}  &= 0
+&&\text{Knoten:}\quad{\color{red} i_R} = {\color{red} i_C} = {\color{red} i}\\
+&&
+    R \cdot {\color{red} i} + \ecv{u_C}    &= 0
+        &&\text{mit}\quad
+        \ecv{u_R} = R \cdot \eci{i_R} = R \cdot \eci{i}\\
+&\text{DGL}:&
+    RC \cdot \dt \ecv{u_C}  + \ecv{u_C}   &= 0
+        &&\text{mit}\quad
+        \eci{i} = \eci{i_C} = C \cdot \dt \ecv{u_C}
+\end{align*}
+\end{frame}
+
+
+\begin{frame}\ftx{Entladevorgang \subsubsecname}
+\textbf{2.) Homogene Lösung, allg.:} (flüchtig)\\[-1.5em]
+\begin{align*}
+&\text{DGL}_{h}:&
+    RC \cdot \dt \ecv{u_{C,h}} + \ecv{u_{C,h}} &= 0 &
+        &\text{Ansatz: }\ecv{u_{C,h}} = K \cdot \mathrm{e}^{\lambda t}\\
+&\text{char. Polynom:}&\Rightarrow\quad
+    RC \cdot \lambda + 1 &= 0 &
+        &\Rightarrow\quad \lambda = -\frac{1}{RC}\\
+&\text{hom. Lsg.}:&
+    \ecv{u_{C,h}} &= K \cdot \mathrm{e}^{-\sfrac{t}{\tau}}&
+        &\text{mit}\quad \tau = RC
+\intertext{\textbf{3.) Part. Lsg., 4.) Überlagerung:} (eingeschwungen Null)}\\[-1.5em]
+&\text{allg. Lsg.:}&
+    \ecv{u_C} &= \ecv{u_{C,h}} + \redcancel{\ecv{u_{C,p}}}&
+        &\text{mit}\quad \ecv{u_{C,p}=0}
+\intertext{\textbf{5.) Konstanten bestimmen:} (AB einsetzen)}\\[-1.5em]
+&\text{Anfangsbed.}&
+    \ecv{u_C}(0) &= K \cdot \mathrm{e}^0 \overset{!}{=} \ecv{U_q}
+        &&\Rightarrow\quad K = \ecv{U_q} &&\\
+&\text{spez. allg. Lsg.:}&
+    \ecv{u_C}(t) &= \ecv{U_q} \cdot  \mathrm{e}^{-\sfrac{t}{\tau}}\\
+&\text{Strom: }&
+    \eci{i_C} &= - \frac{\ecv{U_q}}{R} \cdot \mathrm{e}^{-\sfrac{t}{\tau}}&
+    &\text{mit}\quad \eci{i_C} = C \cdot \dt \ecv{u_C}
+\end{align*}% new alignments
+\end{frame}
+
+
+\begin{frame}[t]\ftx{Vergleich Lade- und Entladevorgang \subsubsecname}
+\begin{minipage}{\textwidth}\centering%
+% Obere Hälfte
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment%
+    \includegraphics{Tikz/pdf/circ_switchable_rc_charge_dc.pdf}\\[1em]% Leerzeile
+    {\flushleft% left alignment
+    Rechenwege prinzipiell gleich für (DC) \\ Ladevorgang und Entladevorgang.%
+    }%
+\end{minipage}
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
+    \resizebox{0.6\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rc_cycle_seperate_u.pdf}}%
+\end{minipage}
+\end{minipage}\hfill%
+% Untere Hälfte
+\begin{minipage}{\textwidth}\centering%
+Spannung $\ecv{u_C}$ nach Schaltzeitpunkt $t_0$ [Vgl. Skript]:
+\begin{align*}
+    %\ecv{u_C}(t-t_0) &= \underbrace{\ecv{u_{C,\mathrm{e}}} \vphantom{\Big|}}_{\ecv{u_{C,\mathrm{p}}}} + \underbrace{ \big(\ecv{u_C}(t_0)-\ecv{u_{C,\mathrm e}}\big) \cdot  \mathrm{e}^{-\frac{t-t_0}{\tau}} \vphantom{\Big|}}_{\ecv{u_{C,\mathrm{h}}}}\\
+    \ecv{u_C}(t-t_0) &= \underbrace{\ecv{u_C}(t_0) \vphantom{\Big|}}_{\text{Startwert}} + \big(\underbrace{\ecv{u_{C,\mathrm{e}}} - \ecv{u_C}(t_0) \vphantom{\Big|}}_{\text{Differenz}}\big) \cdot \bigg( \underbrace{ 1- \mathrm{e}^{-\frac{t-t_0}{\tau}} \vphantom{\Big|}}_{\text{\clap{Exp. Annäherung}}} \bigg)
+\end{align*}
+Unterschiede nur bei Störglied der DGL, Anfangsbedingung und Endwert.
+\end{minipage}
+\end{frame}
+}% Ende Multi Frame Folien only
+
+
+%-------------------------------------------------------------------------------------------------%
+
+\subsubsection{bei Induktivitäten}
+\label{sec:schaltvorgaengezeitbereich:dc:l}
+\begin{frame}[t]\ftx{Vergleich Lade- und Entladevorgang \subsubsecname}
+
+\s{% RL-Laden, skript only without frames
+    Der Rechenweg zur Bestimmung des Strom- oder Spannungsverlaufs bei Induktivitäten
+    bei Anregung mit Gleichspannung ist identisch zu der Berechnung bei Kapazitäten in Kapitel \ref{sec:schaltvorgaengezeitbereich:dc:c}.
+    Das sich einstellende Zeitverhalten mit Exponentialverläufen und Zeitkonstanten ist analog zu dem dort beschriebenen.
+
+    Exemplarisch ist in Beispiel \ref{bsp:rl:chargedc:dgli} und \ref{bsp:rl:chargedc:dglu}
+    der Ladestrom $i(t)$ und die Induktivitätsspannung $u_L(t)$ einer Induktivität $L$ beim Laden
+    über einen Widerstand $R$ mit Gleichspannung $U_q$ für $t \geq 0$ berechnet und dargestellt.
+
+    Die Beispiele unterscheiden sich lediglich im Rechenweg. In Beispiel \ref{bsp:rl:chargedc:dgli}
+    wird die DGL für $i(t)$ und in Beispiel \ref{bsp:rl:chargedc:dglu} für $u_L(t)$ aufgestellt und gelöst.
+
+\newpage
+\begin{bsp}{RL-Glied DC-Ladevorgang - Über DGL von $i$}{rl:chargedc:dgli}
+    Bestimmung von Ladestrom $\eci{i}$ und Spannung $\ecv{u_L}$ der Induktivität $L$ beim Laden über Widerstand $R$
+    mit Gleichspannung $\ecv{U_q}$ ab Schalzeitpunkt $t=0$. Zuvor fließt kein Strom.\\[-6pt]
+
+    \begin{minipage}{\textwidth}\centering
+        \begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
+            \includegraphics{Tikz/pdf/circ_switchable_rl_charge_dc.pdf}%
+            \begin{equation*}\begin{aligned}
+            \text{gegeben:}&&       &\eci{i}(0),\ \ecv{U_q},\ R,\ L \\
+            \text{gesucht:}&&       &\ecv{u_L}(t),\ \eci{i}(t)
+            \end{aligned}\end{equation*}
+        \end{minipage}
+        \begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
+            \includegraphics{Tikz/pdf/plot_rl_charge_ul_i_seperate.pdf}
+        \end{minipage}
+    \end{minipage}
+
+    \textbf{1.) DGL aufstellen:} von $\eci{i}(t)$ für $t \geq 0$\vspace{5pt}
+
+    Ausgehend von der Maschengleichung wird $\ecv{u_R}$ und $\ecv{u_L}$ nach $\eci{i}$ umgeschrieben:%
+    \begingroup% Änderungen lokal vornehmen
+        \addtolength{\jot}{2pt}% Zeilenabstand in align-Umgebung erhöhen
+    \begin{align*}
+        &\text{Masche}:&&&
+            \ecv{u_R} + \ecv{u_L}  &= \ecv{U_q}&&&
+            &\text{mit}\quad \ecv{u_R} = R \cdot \eci{i} \\
+        &&&&
+            R \cdot \eci{i} + L \cdot \dt \eci{i} &= \ecv{U_q} &&&
+            &\text{mit}\quad \ecv{u_L} = L \cdot \dt \eci{i} \\
+        &\text{DGL}:&&&
+        \frac{L}{R} \cdot \dt \eci{i}  + \eci{i}  &= \frac{\ecv{U_q}}{R}
+        \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3ooooooooooo}&\hphantom{R3ooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooo}\nonumber% Dummy-Zeile RL-DC für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+    \end{align*}%
+    \textbf{2.) Homogene Lösung, allg.:} (flüchtig) (ohne Störterm)%
+    \begin{align*}%
+        &\text{DGL}_{h}:&&&
+            \frac{L}{R} \cdot \dt \eci{i_{\mathrm h}} + \eci{i_{\mathrm h}} &= 0 &&&
+                &\text{Ansatz:}\quad
+                \eci{i_{\mathrm h}} = K \cdot \mathrm{e}^{\lambda t}\\
+        &\text{char. Pol.:}&&&
+            \frac{L}{R} \cdot \lambda + 1 &= 0 &&&
+                &\Rightarrow\quad \lambda = -\frac{1}{\tau} = -\frac{R}{L}\\
+        &\text{hom. Lsg.}:&&&
+            \eci{i_{\mathrm h}} &= K \cdot \mathrm{e}^{-\sfrac{t}{\tau}}&&&
+                &\text{mit}\quad \tau = \frac{L}{R}
+        \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3ooooooooooo}&\hphantom{R3ooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooo}\nonumber% Dummy-Zeile RL-DC für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+    \end{align*}%
+    \textbf{3.) Partikulare Lösung:} (eingeschwungen) mit $t \to \infty$%
+    \begin{align*}%
+        &\text{DGL}_{p}:&&&
+            \redcancel{\frac{L}{R} \cdot \dt \eci{i_{\mathrm p}}} + \eci{i_{\mathrm p}} &= \frac{\ecv{U_q}}{R} &&&
+                &\text{mit}\quad \eci{i_{\mathrm p}} = konst.  \\
+        &\text{part. Lsg.}:&&&
+            \eci{i_{\mathrm p}} &= \frac{\ecv{U_q}}{R}
+        \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3ooooooooooo}&\hphantom{R3ooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooo}\nonumber% Dummy-Zeile RL-DC für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+    \end{align*}%
+    \textbf{4.) Inhomogene Lösung, allg.:} (Überlagerung)%
+    \begin{align*}%
+        &\text{allg. Lsg.:}&&&
+            \eci{i}(t) &=
+            \underbrace{%
+                K \cdot \mathrm{e}^{-\sfrac{t}{\tau}} \vphantom{\frac{\ecv{U_q}}{R}}%
+            }_{\eci{i_{\mathrm h}}}
+            +
+            \underbrace{
+                \frac{\ecv{U_q}}{R}
+            }_{\eci{i_{\mathrm p}}} &&&
+            &\text{mit}\quad \eci{i_{\mathrm h}}=\eci{i_f},\quad \eci{i_{\mathrm p}}=\eci{i_e}
+        \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3ooooooooooo}&\hphantom{R3ooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooo}\nonumber% Dummy-Zeile RL-DC für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+        \end{align*}%
+    \textbf{5.) Konstanten bestimmen:} (Anfangsbedingungen einsetzen)%
+    \begin{align*}%
+        &\text{Anfangsbed.}&&&
+            \eci{i}(0) &= K \cdot \redcancel{\mathrm{e}^0} + \frac{\ecv{U_q}}{R} \overset{!}{=} 0 &&&
+            &\Rightarrow\quad K = -\frac{\ecv{U_q}}{R}\\
+        &\text{eindeut. Lsg.:}&&&
+            \eci{i}(t) &= \frac{\ecv{U_q}}{R} \cdot \left( 1 - \mathrm{e}^{-\sfrac{t}{\tau}} \right)
+        \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3ooooooooooo}&\hphantom{R3ooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooo}\nonumber% Dummy-Zeile RL-DC für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+    \end{align*}%
+    Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
+    \begin{align*}%
+        %&&&&
+        %    \ecv{u_L} &= \frac{\ecv{U_q}}{R} \cdot L \cdot \frac{R}{L} \cdot \mathrm{e}^{-\sfrac{t}{\tau}} &&&
+        %    &\text{mit}\quad \ecv{u_L} = L \cdot \dt \eci{i} \\
+        &\text{Spannung:}&&&
+            \ecv{u_L} &= \ecv{U_q} \cdot \mathrm{e}^{-\sfrac{t}{\tau}} &&&
+            &\text{mit}\quad \ecv{u_L} = L \cdot \dt \eci{i}
+        \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3ooooooooooo}&\hphantom{R3ooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooo}\nonumber% Dummy-Zeile RL-DC für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+    \end{align*}
+    \endgroup
+\end{bsp}
+}% end skript only
+
+\b{% Anfang Folien only (bei Induktivitäten)
+% Obere Hälfte
+\begin{minipage}{\textwidth}\centering%
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment%
+    \includegraphics{Tikz/pdf/circ_switchable_rl_charge_dc.pdf}\\[1em]% Leerzeile
+    {\flushleft% left alignment
+    Rechenweg bei RL-Glied prinzipiell gleich wie bei RC-Glied. (DGL 1. Ordnung) \\
+    Achtung: $\eci{i}$ stetig, $\ecv{u_L}$ sprunghaft.%
+    }%
+\end{minipage}
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
+    \resizebox{0.6\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rl_cycle_seperate_i.pdf}}%
+\end{minipage}
+\end{minipage}\hfill%
+% Untere Hälfte
+\begin{minipage}{\textwidth}%
+\textbf{Vermutung:} Strom u. Spannung \glqq vertauscht\grqq gegenüber RC-Glied.
+\begin{align*}
+    \eci{i}(t-t_0) &= \underbrace{\eci{i}(t_0) \vphantom{\Big|}}_{\text{Startwert}} + \big(\underbrace{\eci{i_{\mathrm{e}}} - \eci{i}(t_0) \vphantom{\Big|}}_{\text{Differenz}}\big) \cdot \bigg( \underbrace{ 1- \mathrm{e}^{-\frac{t-t_0}{\tau}} \vphantom{\Big|}}_{\text{\clap{Exp. Annäherung}}} \bigg)
+\end{align*}
+\textbf{Laden:} $\eci{i}$ zunehmend, $\ecv{u_L}$ abnehmend. \quad \textbf{Entladen:} vice versa.
+\end{minipage}
+}% Ende Folien only
+\end{frame}
+
+%-------------------------------------------------------------------------------------------------%
+
+\b{% Anfang Folien only Multi Frame -- bei Induktivitäten, DGL über i
+\begin{frame}[t]\ftx{Ladevorgang \subsubsecname}
+% Obere Hälfte
+\begin{minipage}{\textwidth}\centering%
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
+    \includegraphics{Tikz/pdf/circ_switchable_rl_charge_dc.pdf}%
+    \begin{equation*}\begin{aligned}
+        &\text{gegeben:}&       &\eci{i}(0),\ \ecv{U_q},\ R,\ L \\
+        &\text{gesucht:}&       &\eci{i}(t)
+    \end{aligned}\end{equation*}
+\end{minipage}
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
+    \resizebox{!}{4.00cm}{\includegraphics{Tikz/pdf/plot_rl_charge_ul_i_seperate.pdf}}
+\end{minipage}
+\end{minipage}
+% Untere Hälfte
+\resizebox{0.9\textwidth}{!}{% to fit on slide
+\begin{minipage}{\textwidth}%
+\begin{align*}
+&\textbf{1. DGL}&\hspace{15pt}\frac{\ecv{U_q}}{R} &= \frac{L}{R} \cdot \dt\, \eci{i} + \eci{i}\\[-2pt]
+&\textbf{2. Homogene Lösung}&\hspace{15pt}\eci{i_{\mathrm{h}}} &= K \cdot \mathrm{e}^{-\sfrac{t}{\tau}} \quad\text{mit}\quad \tau = \frac{L}{R}\\[-2pt]
+&\textbf{3. Partikulare Lösung}&\hspace{15pt}\eci{i_{\mathrm{p}}} &= \frac{\ecv{U_q}}{R}\\[-2pt]
+&\textbf{4. Inhomogene Lösung}&\hspace{15pt}\eci{i} &= K \cdot \mathrm{e}^{-\sfrac{t}{\tau}} + \frac{\ecv{U_q}}{R}\\[-2pt]
+&\textbf{5. Konstanten bestimmen}&\hspace{15pt}\eci{i} &= \frac{\ecv{U_q}}{R} \left( 1 - \mathrm{e}^{-\sfrac{t}{\tau}} \right)
+\end{align*}
+\end{minipage}
+}%
+\end{frame}
+
+\begin{frame}[t]\ftx{Ladevorgang \subsubsecname}
+\begin{minipage}{\textwidth}\centering
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}
+\includegraphics{Tikz/pdf/circ_switchable_rl_charge_dc.pdf}
+\end{minipage}
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}
+    \vspace{0.8cm}
+    \textbf{DGL 1. Ordnung:}\\[0.85em]
+    $a_1 \cdot \dt y(t) + a_0 \cdot y(t)=b$\\
+\end{minipage}
+\end{minipage}
+\vspace{0.75cm}
+% Hier Leerzeile für Abstand lassen
+
+\textbf{1. DGL aufstellen:} für $\eci{i}(t)$ ($t\geq 0$)\\[-1em]
+\begin{align*}
+% Comment out \intertext rows to enable math-preview in VSCode (or set \textbf to \text)
+%\intertext{Ausgehend von der Maschengleichung wird $\ecv{u_R}$ und $\ecv{u_L}$ nach $\eci{i}$ umgeschrieben.}\\[-1em]
+&\text{Masche}:&
+    \ecv{u_R} + \ecv{u_L}  &= \ecv{U_q}&
+        &\text{mit}\quad \ecv{u_R} = R \cdot \eci{i} \\
+&&
+    R \cdot \eci{i} + L \cdot \dt \eci{i} &= \ecv{U_q} &
+        &\text{mit}\quad \ecv{u_L} = L \cdot \dt \eci{i} \\
+&&
+    L \cdot \dt \eci{i} + R \cdot \eci{i} &= \ecv{U_q} &
+        &\text{mit}\quad \ecv{u_L} = L \cdot \dt \eci{i} \\
+&\text{DGL}:&
+    \frac{L}{R} \cdot \dt \eci{i}  + \eci{i}  &= \frac{\ecv{U_q}}{R}
+\end{align*}
+\end{frame}
+
+\begin{frame}\ftx{Ladevorgang \subsubsecname}
+\textbf{2.) Homogene Lösung, allg.:} (flüchtig) (ohne Störterm)%
+\begin{align*}%
+    &\text{DGL}_{h}:&&&
+        \frac{L}{R} \cdot \dt \eci{i_{\mathrm h}} + \eci{i_{\mathrm h}} &= 0 &&&
+            &\text{Ansatz:}\quad
+            \eci{i_{\mathrm h}} = K \cdot \mathrm{e}^{\lambda t}\\
+    &\text{char. Pol.}:&&&
+        \frac{L}{R} \cdot \lambda + 1 &= 0 &&&
+            &\Rightarrow\quad \lambda = -\frac{1}{\tau} = -\frac{R}{L}\\
+    &\text{hom. Lsg.}:&&&
+        \eci{i_{\mathrm h}} &= K \cdot \mathrm{e}^{-\sfrac{t}{\tau}}&&&
+            &\text{mit}\quad \tau = \frac{L}{R}
+    \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3ooooooooooo}&\hphantom{R3ooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooo}\nonumber% Dummy-Zeile RL-DC für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+\end{align*}%
+\pause%
+\textbf{3.) Partikulare Lösung:} (eingeschwungen) mit $t \to \infty$%
+\begin{align*}%
+    &\text{DGL}_{p}:&&&
+        \redcancel{\frac{L}{R} \cdot \dt \eci{i_{\mathrm p}}} + \eci{i_{\mathrm p}} &= \frac{\ecv{U_q}}{R} &&&
+            &\text{mit}\quad \eci{i_{\mathrm p}} = konst.  \\
+    &\text{part. Lsg.}:&&&
+        \eci{i_{\mathrm p}} &= \frac{\ecv{U_q}}{R}
+    \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3ooooooooooo}&\hphantom{R3ooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooo}\nonumber% Dummy-Zeile RL-DC für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+\end{align*}%
+\end{frame}
+
+\begin{frame}\ftx{Ladevorgang \subsubsecname}
+\textbf{4.) Inhomogene Lösung, allg.:} (Überlagerung)%
+\begin{align*}%
+    &\text{allg. Lsg.:}&&&
+        \eci{i}(t) &=
+        \underbrace{%
+            K \cdot \mathrm{e}^{-\sfrac{t}{\tau}} \vphantom{\frac{\ecv{U_q}}{R}}%
+        }_{\eci{i_{\mathrm h}}}
+        +
+        \underbrace{
+            \frac{\ecv{U_q}}{R}
+        }_{\eci{i_{\mathrm p}}} &&&
+        &\text{mit}\quad \eci{i_{\mathrm h}}=\eci{i_f},\quad \eci{i_{\mathrm p}}=\eci{i_e}
+    \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3ooooooooooo}&\hphantom{R3ooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooo}\nonumber% Dummy-Zeile RL-DC für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+\end{align*}%
+\pause%
+\textbf{5.) Konstanten bestimmen:} (Anfangsbedingungen einsetzen)%
+\begin{align*}%
+    &\text{Anfangsbed.}&&&
+        \eci{i}(0) &= K \cdot \redcancel{\mathrm{e}^0} + \frac{\ecv{U_q}}{R} \overset{!}{=} 0 &&&
+        &\Rightarrow\quad K = -\frac{\ecv{U_q}}{R}\\
+    &\text{eindeut. Lsg.:}&&&
+        \eci{i}(t) &= \frac{\ecv{U_q}}{R} \cdot \left( 1 - \mathrm{e}^{-\sfrac{t}{\tau}} \right)
+    \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3ooooooooooo}&\hphantom{R3ooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooo}\nonumber% Dummy-Zeile RL-DC für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+\end{align*}%
+Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
+\begin{align*}%
+    &\text{Spannung:}&&&
+        \ecv{u_L} &= \ecv{U_q} \cdot \mathrm{e}^{-\sfrac{t}{\tau}} &&&
+        &\text{mit}\quad \ecv{u_L} = L \cdot \dt \eci{i}
+    \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3ooooooooooo}&\hphantom{R3ooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooo}\nonumber% Dummy-Zeile RL-DC für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+\end{align*}
+\end{frame}
+}% Ende Folien only Multi Frame
+
+%-------------------------------------------------------------------------------------------------%
+
+\s{% RL-Laden, Skript only
+\newpage
+\begin{bsp}{RL-Glied DC-Ladevorgang - Über DGL von $u_L$}{rl:chargedc:dglu}
+    Bestimmung von Spannung $\ecv{u_L}$ und Ladestrom $\eci{i}$ der Induktivität $L$ beim Laden über Widerstand $R$
+    mit Gleichspannung $\ecv{U_q}$ für $t \geq 0$. Der Stromkreis ist vor $t=0$ unterbrochen.\\[-6pt]
+
+    \begin{minipage}{\textwidth}\centering
+        \begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
+            \includegraphics{Tikz/pdf/circ_switchable_rl_charge_dc.pdf}%
+            \begin{equation*}\begin{aligned}
+            \text{gegeben:}&&       &\eci{i}(0),\ \ecv{U_q},\ R,\ L \\
+            \text{gesucht:}&&       &\ecv{u_L}(t),\ \eci{i}(t)
+            \end{aligned}\end{equation*}
+        \end{minipage}
+        \begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
+            \includegraphics{Tikz/pdf/plot_rl_charge_ul_i_seperate.pdf}
+        \end{minipage}
+    \end{minipage}
+
+    \textbf{1.) DGL aufstellen:} von $\ecv{u_L}(t)$ für $t \geq 0$\vspace{5pt}
+
+    Ausgehend von der Maschengleichung wird $\ecv{u_R}$ in Abhängigkeit von $\ecv{u_L}$ ausgedrückt:%
+    \begingroup% Änderungen lokal vornehmen
+        \addtolength{\jot}{2pt}% Zeilenabstand in align-Umgebung erhöhen
+    \begin{align*}
+        &\text{Masche}:&&&
+            \ecv{u_R} + \ecv{u_L}  &= \ecv{U_q}&&&
+            &\text{mit}\quad \ecv{u_R} = R \cdot \eci{i} \\
+        &&&&
+            R \cdot \eci{i} + \ecv{u_L} &= \ecv{U_q} &&&
+            &\left| \cdot \dt \right. \\
+        &&&&
+        R \cdot \frac{\ecv{u_L}}{L}  + \dt \ecv{u_L}  &= \dt \ecv{U_q} &&&
+            &\text{mit}\quad \ecv{u_L} = L \cdot \dt \eci{i} \\
+        &\text{DGL}:&&&
+            \frac{L}{R} \cdot \dt \ecv{u_L} + \ecv{u_L}  &= 0
+            \\[-15pt]&\hphantom{R1ooooooo}&&&\hphantom{L3oooooooooooooooooooo}&\hphantom{R3ooo}&&&&\hphantom{R5oooooooooooooooooooooo}\nonumber% Dummy-Zeile A für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+        \end{align*}%
+    \textbf{2.) Homogene Lösung, allg.:} (flüchtig) (ohne Störterm)%
+    \begin{align*}%
+        &\text{DGL}_{h}:&&&
+            \frac{L}{R} \cdot \dt \ecv{u_{L,h}} + \ecv{u_{L,h}} &= 0 &&&
+                &\text{Ansatz:}\quad
+                \ecv{u_{L,h}} = K \cdot \mathrm{e}^{\lambda t}\\
+        %&&&&
+        %    K \cdot(\frac{L}{R} \cdot \quad\lambda \mathrm{e}^{\lambda t}\ +\ \mathrm{e}^{\lambda t}) &= 0 \\
+        &\text{char. Pol.:}&&&
+            \frac{L}{R} \cdot \lambda + 1 &= 0 &&&
+                &\Rightarrow\quad \lambda = -\frac{1}{\tau} = -\frac{R}{L}\\
+        &\text{hom. Lsg.}:&&&
+            \ecv{u_{L,h}} = K \cdot \mathrm{e}^{-\sfrac{t}{\tau}}&&&&
+                &\text{mit}\quad \tau = \frac{L}{R}
+    \\[-15pt]&\hphantom{R1ooooooo}&&&\hphantom{L3oooooooooooooooooooo}&\hphantom{R3ooo}&&&&\hphantom{R5oooooooooooooooooooooo}\nonumber% Dummy-Zeile A für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+    \end{align*}%
+    \textbf{3.) Partikulare Lösung:} (eingeschwungen) mit $t \to \infty$%
+    \begin{align*}%
+        &\text{DGL}_{p}:&&&
+            \redcancel{\frac{L}{R} \cdot \dt \ecv{u_{L,p}}} + \ecv{u_{L,p}} &= 0 &&&
+                &\text{mit}\quad \ecv{u_{L,p}} = konst.  \\
+        &\text{part. Lsg.}:&&&
+            \ecv{u_{L,p}} &= 0
+            \\[-15pt]&\hphantom{R1ooooooo}&&&\hphantom{L3oooooooooooooooooooo}&\hphantom{R3ooo}&&&&\hphantom{R5oooooooooooooooooooooo}\nonumber% Dummy-Zeile A für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+        \end{align*}%
+    \textbf{4.) Inhomogene Lösung, allg.:} (Überlagerung)%
+    \begin{align*}%
+        &&&&
+            \ecv{u_L}(t) &= \ecv{u_{L,h}}(t) + \redcancel{\ecv{u_{L,p}}(t)} &&&
+            &\ecv{u_L}(t)= \ecv{u_{L,f}}(t) + \redcancel{\ecv{u_{L,e}}(t)}  \\
+        &\text{allg. Lsg.:}&&&
+            \ecv{u_L}(t) &= K \cdot \mathrm{e}^{-\sfrac{t}{\tau}}
+        \\[-15pt]&\hphantom{R1oooooooooooo}&&&\hphantom{L3ooo}&\hphantom{R3oooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooooooo}\nonumber% Dummy-Zeile B für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+    \end{align*}%
+    \textbf{5.) Konstanten bestimmen:} (Anfangsbedingungen einsetzen)%
+    \begin{align*}%
+        &\text{Anfangsbed.}&&&
+            \eci{i}(0) &= \frac{\ecv{u_R}(0)}{R} \overset{!}{=} 0 &&&
+            &\Rightarrow\quad \ecv{u_L}(0) = \ecv{U_q} - \redcancel{\ecv{u_R}(0)}\\
+        &&&&
+            \ecv{u_L}(0) &= K \cdot \mathrm{e}^{-0} \overset{!}{=} \ecv{U_q} &&&
+            &\Rightarrow\quad K = \ecv{U_q}\\
+        &\text{eindeut. Lsg.:}&&&
+            \ecv{u_L}(t) &= \ecv{U_q} \cdot \mathrm{e}^{-\sfrac{t}{\tau}}
+        \\[-15pt]&\hphantom{R1oooooooooooo}&&&\hphantom{L3ooo}&\hphantom{R3oooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooooooo}\nonumber% Dummy-Zeile B für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+        \end{align*}%
+    Strom $\eci{i}$ aus Spannung $\ecv{u_L}$ bestimmen:%
+    \begin{align*}%
+        &\text{Strom:}&&&
+            \eci{i} &= \frac{\ecv{U_q}}{R} \cdot \left( 1 - \mathrm{e}^{-\sfrac{t}{\tau}} \right) &&&
+            &\text{mit}\quad \eci{i} = \frac{\ecv{u_R}}{R} = \frac{\ecv{U_q} - \ecv{u_L}}{R}
+        \\[-15pt]&\hphantom{R1oooooooooooo}&&&\hphantom{L3ooo}&\hphantom{R3oooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooooooo}\nonumber% Dummy-Zeile B für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+    \end{align*}
+    \endgroup
+\end{bsp}
+}% end skript only
+
+%-------------------------------------------------------------------------------------------------%
+
+\begin{frame}[t]\ftx{Entladevorgang \subsubsecname}%
+\s{%
+    Der Entladevorgang einer Induktivität $L$ über einen Widerstand $R$ ist ähnlich zum Ladevorgang über einen Widerstand $R$ mit Gleichspannung $U_q$.
+    Der Kurzschluss über $R$ entspricht einer Spannungsquelle mit $U_q=0\ \mathrm{V}$.
+    Entladevorgang und Ladevorgang unterscheiden sich lediglich in den Anfangsbedingungen und dem Störterm der jeweiligen DGL.
+    Die Zeitkonstante $\tau$ ist identisch für den Lade- und Entladevorgang.
+    Auf eine detaillierte Berechnung wird daher an dieser Stelle verzichtet.
+
+    \begin{figure}[H]\centering
+        \begin{subfigure}{0.48\textwidth}\centering
+            \includegraphics{Tikz/pdf/circ_switchable_rl_discharge.pdf}
+            \caption{Schaltbild}
+            \label{fig:circ:rl:discharge}
+        \end{subfigure}
+        \begin{subfigure}{0.48\textwidth}\centering
+            \includegraphics{Tikz/pdf/plot_rl_discharge_ul_i_seperate.pdf}
+            \caption{Spannungs- und Stromverlauf}
+            \label{fig:plot:rl:discharge}
+        \end{subfigure}
+        \caption{RL-Glied, Entladevorgang}
+        \label{fig:rl:discharge}
+    \end{figure}
+
+    Abbildung \ref{fig:rl:discharge} zeigt das Schaltbild (a) und den Spannungs- und Stromverlauf (b)
+    der Induktivität $L$ beim Entladen über einen Widerstand $R$ ab Schaltzeitpunkt $t=0$.
+    Die Induktivität ist vor dem Schalten in Reihe mit dem Widerstand $R$ an eine Gleichspannungsquelle $U_q$ angeschlossen.
+    Zum Schaltzeitpunkt ist die Induktivität vollständig geladen(stationärer Zustand)
+    und führt vor dem Schalten den Konstantstrom $U_q/R$.
+
+    Reale Induktivitäten lassen sich durch eine Reihenschaltung aus einer idealen Induktivität $L$
+    und einem ohmschen Widerstand $R_{\text{Cu}}$ modellieren, der den Kupferverlusten entspricht.
+    Durch Parallelschaltung eines ohmschen Widerstandes $R_{\text{Fe}}$ unmittelbar zur Induktivität $L$
+    lassen sich zudem Eisenverluste modellieren.
+
+    \begin{figure}[H]\centering
+        \begin{subfigure}{0.48\textwidth}\centering
+            \includegraphics{Tikz/pdf/circ_switchable_rrl_charge_detail.pdf}
+            \caption{Schaltbild}
+            \label{fig:circ:rl:charge}
+        \end{subfigure}
+        \begin{subfigure}{0.48\textwidth}\centering
+            \includegraphics{Tikz/pdf/plot_rrl_charge_dc.pdf}
+            \caption{Spannungs- und Stromverlauf}
+            \label{fig:plot:rl:charge}
+        \end{subfigure}
+        \caption{RL-Glied, realer Induktivität, Ladevorgang an idealer Spannungsquelle}
+        \label{fig:rrl:charge}
+    \end{figure}
+
+    Abbildung \ref{fig:rrl:charge} zeigt das Schaltbild (a) einer realen Spule mit Induktivität $L$ in Serie zu einem Widerstand $R_{\text{Cu}}$ (hier $R_1$).
+    Unmittelbar parallel zur Induktivität befindet sich der ohmsche Widerstand $R_{\text{Fe}}$ (entspricht $R_2$).
+    Die Induktivität wird ab $t=0$ über eine ideale Konstantspannungsquelle $U_q$ geladen und ist vorher vollständig entladen.
+    Daneben abgebildet sind die zugehörigen den Spannungs- und Stromverläufe (b).
+
+    Im Vergleich zum Ladevorgang eines reine RL-Serienschaltung in Beispiel \ref{bsp:rl:chargedc:dglu} springt die Spannung
+    über der Induktivität nicht auf die ganze Quellenspannung sondern auf einen geringeren Wert begrenzt durch den Spannungsteiler $\frac{R_2}{R_1+R_2}$.
+    Der Eingangsstrom macht bedingt durch die Eisenverluste einen Sprung zum Schaltzeitpunkt und nähert sich dann exponentiell dem Strom $\frac{U_q}{R_1}$.
+    Der Strom durch $R_2$ springt beim Schalten auf den Wert $\frac{U_q}{R_1+R_2}$ und fällt dann exponentiell ab.
+    Der Strom durch die Induktivität nähert sich exponentiell dem Strom $\frac{U_q}{R_1}$ an. Die Zeitkonstante beträgt $\tau=\frac{L}{R_1||R_2}$.
+}% End Skript only
+\b{% Anfang Folien only
+\begin{minipage}{\textwidth}\centering
+% Obere Hälfte
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
+    \includegraphics{Tikz/pdf/circ_switchable_rl_discharge.pdf}%
+    \begin{equation*}\begin{aligned}
+        &\text{gegeben:}&       &\eci{i}(0),\ \ecv{U_q},\ R,\ L \\
+        &\text{gesucht:}&       &\eci{i}(t)
+    \end{aligned}\end{equation*}
+\end{minipage}
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
+    \resizebox{!}{4.25cm}{\includegraphics{Tikz/pdf/plot_rl_discharge_ul_i_seperate.pdf}}
+\end{minipage}
+\end{minipage}
+% Untere Hälfte
+\resizebox{0.9\textwidth}{!}{% to fit on slide
+\begin{minipage}{\textwidth}%
+\begin{align*}
+&\textbf{1. DGL}&\hspace{15pt} 0 &= \frac{L}{R} \cdot \dt\, \eci{i} + \eci{i} \vphantom{\frac{L}{R}}\\[-2pt]
+&\textbf{2. Homogene Lösung}&\hspace{15pt}\eci{i_{\mathrm{h}}} &= K \cdot \mathrm{e}^{-\sfrac{t}{\tau}} \quad\text{mit}\quad \tau = \frac{L}{R} \vphantom{\frac{L}{R}}\\[-2pt]
+&\textbf{3. Partikulare Lösung}&\hspace{15pt}\eci{i_{\mathrm{p}}} &= 0 \vphantom{\frac{L}{R}}\\[-2pt]
+&\textbf{4. Inhomogene Lösung}&\hspace{15pt}\eci{i} &= K \cdot \mathrm{e}^{-\sfrac{t}{\tau}} \vphantom{\frac{U_q}{R}} \vphantom{\frac{L}{R}}\\[-2pt]
+&\textbf{5. Konstanten bestimmen}&\hspace{15pt}\eci{i} &= \frac{\ecv{U_q}}{R} \cdot \mathrm{e}^{-\sfrac{t}{\tau}}
+\end{align*}
+\end{minipage}
+}%
+}% Ende Folien only
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{bei sinusförmiger Anregung}
+\label{sec:schaltvorgaengezeitbereich:ac}
+\begin{frame}\ftx{Schaltvorgänge \subsecname}
+\s{%
+    Die Vorgehensweise zur Berechnung von Schaltvorgängen bei sinusförmiger Anregung ist prinzipiell gleich zur Vorgehensweise bei gleichförmiger Anregung.
+    Deshalb wird in diesem Kapitel nur auf die Besonderheiten bei sinusförmiger Anregung eingegangen und die Berechnung anhand eines Beispiels erläutert.
+
+    Die Differentialgleichungen bei Schaltungen mit Wechselspannungs- oder stromquellen unterscheiden sich gegenüber den Gleichspannungs- oder -stromfällen lediglich durch die rechte Seite der DGL, dem Störterm.
+    Der Störterm ergibt sich aus der Anregung und ist bei sinusförmiger Anregung linearer, zeitinvarianter Systeme ebenfalls sinusförmig.
+
+    Aufgrund der Zeitabhängigkeit sinusförmiger Anregungen, ist der exakte Schaltzeitpunkt entscheiden für das Verhalten des Systems.
+    Präziser formuliert ist die Phasenlage der Anregung zum Schaltzeitpunkt entscheidend.
+
+    Am Beispiel eines RC-Gliedes wird in Kapitel \ref{sec:schaltvorgaengezeitbereich:ac:c} die Berechnung des Schaltvorgangs bei sinusförmiger Anregung gezeigt.
+    Dabei wird die Abhängigkeit des Schaltvorgangs vom Schaltzeitpunkt und die Möglichkeit transienter Spitzenströme und -spannungen näher erläutert.
+
+    Exemplarisch ist in Beispiel \ref{bsp:rl:chargeac} die Berechnung eines Schaltvorganges für ein RL-Glied bei Anregung mit Wechselspannung zusammenfassend präsentiert.
+}%
+\b{%
+\centering
+\begin{minipage}{0.48\textwidth}%\centering % linksbündig
+    Schaltvorgänge bei AC-Anregung sind:
+    \vspace{0.5em}
+    \begin{itemize}
+        \item frequenzabhängig ($f,\ \omega$)
+        \item schaltzeitpunktabhängig ($t_0$)
+    \end{itemize}
+    \vspace{0.5em}
+    \pause
+    Berechnung analog zu DC zunächst für:
+    \vspace{0.5em}
+    \begin{itemize}
+        \item eine Kapazität $C$
+        \item eine Induktivität $L$
+    \end{itemize}
+    \vspace{0.5em}
+    jeweils in Reihe mit einem Widerstand $R$.
+    \pause
+
+    \vspace{1em}
+    RC- oder RL-Glied $\Longrightarrow$ \textbf{DGL} 1. Ordnung
+
+    \begin{equation*}
+        a_1 \cdot \dt\, y(t) + a_0 \cdot y(t) = b
+    \end{equation*}
+\end{minipage}%
+\begin{minipage}{0.48\textwidth}\centering
+    \pause
+    \resizebox{0.8\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rc_charge_uc_ac_different_t0.pdf}}
+    Vergleich: Schaltzeitpunkte $t_0$ und $t_1$
+\end{minipage}
+}%
+\end{frame}
+
+\subsubsection{bei Kapazitäten}
+\label{sec:schaltvorgaengezeitbereich:ac:c}
+\begin{frame}[t]\ftx{Schaltvorgänge \subsecname\ \subsubsecname}
+\s{%
+    Zur Erläuterung der Besonderheiten von Schaltvorgängen bei sinusförmiger Anregung wird das Beispiel eines RC-Gliedes betrachtet.
+    Die Berechnung erfolgt wie in Beispiel \ref{bsp:rc:chargedc} nach Merksatz \ref{merk:berechnungsverfahren:zeitbereich}.
+
+    Eine Kapazität $C$ wird über einen Widerstand $R$ ab dem Schaltzeitpunkt $t=t_0$ an eine ideale Wechselspannungsquelle mit Spannung $u_q(t) = \hat{U}_q \cdot \cos(\omega t + \varphi_q)$ angeschlossen.
+    Die Kapazität $C$ ist zu Beginn vollständig entladen. Abbildung \ref{fig:circ:rc:charge:ac} zeigt das Schaltbild dieser Anordnung.
+
+    \begin{figure}[H]\centering
+        \includegraphics{Tikz/pdf/circ_switchable_rc_charge_ac.pdf}%
+        \caption{Schaltbild, RC-Glied (Reihe) nach Schalten an idealer Wechselspannungsquelle%\newline $R$ und $C$ in Reihe, für $t \geq t_0$ an idealer Wechselspannungsquelle $u_q$, vor $t=t_0$ kurzgeschlossen
+        }
+        \label{fig:circ:rc:charge:ac}
+    \end{figure}
+
+    \textbf{1.) Differentialgleichung aufstellen}:
+
+    Die inhomogene DGL von $u_C$ für $t \geq t_0$ ergibt sich analog zu Beispiel \ref{bsp:rc:chargedc} zu:
+    \begin{align}
+        RC \cdot \dt \ecv{u_C}(t) + \ecv{u_C}(t) ={}& \ecv{u_q}(t) \\
+        \text{mit} \quad &\ecv{u_q}(t) = \ecv{\hat{U}_q} \cdot \cos(\omega t + \varphi_q)
+    \end{align}
+    Gegenüber Beispiel \ref{bsp:rc:chargedc} ist lediglich der Störterm verändert. Der Gleichspannungsterm $U_q$ ist hier durch den Wechselspannungsterm $u_q$ ersetzt.
+
+    \textbf{2.) Homogene Lösung, allgemein} (flüchtiger Zustand):
+
+    Die homogene Lösung $u_{C,h}$ ist unabhängig vom Störterm und damit von der Anregung.
+    Die Lösung ist aus Beispiel \ref{bsp:rc:chargedc} übernommen mit Berücksichtigung des variablen Schaltzeitpunktes $t_0$:
+    \begin{align}
+        \ecv{u_{C,\mathrm{h}}} &= K \cdot \mathrm{e}^{-\frac{t'}{\tau}} \qquad \text{mit} \quad t' = t-t_0 \nonumber\\
+        &= K \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} \qquad \text{mit} \quad \tau = RC  \label{eq:rc:charge:ac:homogeneloesung}
+    \end{align}
+    Da der Exponentialansatz erst ab Schaltzeitpunkt $t_0$ gilt, wird dieser von der Zeit $t$ subtrahiert.
+
+    \textbf{3.) Partikuläre Lösung} (eingeschwungener Zustand):
+
+    Die partikuläre Lösung $u_{C,p}$ entspricht bei sinusförmiger Anregung ebenfalls einer sinusförmigen Größe
+    mit gleicher Frequenz wie die Anregung wie in in Kapitel \ref{sec:grundlagen:zeitbereich:partikulaereloesung} beschrieben ist.
+    Der eingeschwungene Zustand lässt sich mittels komplexem Amplitudenzeiger $\hat{\underline{U}}_{C,p}$ wie folgt beschreiben:
+    \begin{align}
+        \ecv{u_{C,p}}
+            &= \ecv{\hat{U}_{C,p}} \cdot \cos(\omega t + \varphi_{C,\mathrm{p}})  \label{eq:rc:charge:ac:partikulaereloesung}\\
+            &= \Re{\left\{ \ecv{\hat{\underline{U}}_{C,p}} \cdot \mathrm{e}^{\mathrm{j} \omega t} \right\}} \qquad \text{mit}\quad \ecv{\hat{\underline{U}}_{C,p}} = \ecv{\hat{U}_{C,p}} \cdot \mathrm{e}^{\mathrm{j} \varphi_{C,\mathrm{p}}}
+    \end{align}
+    Die Amplitude $\hat{U}_{C,p}$ und der (Last-)Phasenwinkel $\varphi_{C,\mathrm{p}}$ lassen sich gemäß komplexen Spannungsteiler bestimmen.
+    \begin{align}
+        \ecv{\hat{\underline{U}}_{C,p}}
+            &= \ecv{\hat{\underline{U}}_q} \cdot \frac{\underline{Z}_C}{R + \underline{Z}_C} %\nonumber\\
+            = \ecv{\hat{\underline{U}}_q} \cdot \frac{\frac{1}{\mathrm{j}\omega C}}{R + \frac{1}{\mathrm{j} \omega C}} \nonumber\\
+            &= \frac{\ecv{\hat{\underline{U}}_q}}{1 + \mathrm{j} \omega R C}
+            \qquad \text{mit}\quad \ecv{\hat{\underline{U}}_q} = \ecv{\hat{U}_q} \cdot \mathrm{e}^{\mathrm{j} \varphi_q}
+            \label{eq:rc:charge:ac:komplex}
+    \end{align}
+    Für die Amplitude $\hat{U}_{C,p}$ und die Phase $\varphi_{C,\mathrm{p}}$ folgt aus Gl. \ref{eq:rc:charge:ac:komplex}:
+    \begin{align}
+        \ecv{\hat{U}_{C,p}} = \frac{\ecv{\hat{U}_q}}{\sqrt{1 + \left(\omega RC\right)^2}} \qquad\text{und}\qquad%\label{rc:charge:ac:ampli}\\
+        \varphi_{C,\mathrm{p}} = \varphi_q - \arctan\left(\omega RC\right) \label{rc:charge:ac:amplitudephase}
+    \end{align}
+    \textbf{4.) Inhomogene Lösung, allgemein} (Überlagerung):
+
+    Aus der Überlagerung von Gl. \ref{eq:rc:charge:ac:homogeneloesung} und \ref{eq:rc:charge:ac:partikulaereloesung}
+    folgt die allgemeine Lösung der inhomogenen DGL:
+    \begin{align}
+        \ecv{u_C} &= \ecv{u_{C,\mathrm{h}}} + \ecv{u_{C,p}} \nonumber\\
+            &= K \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} + \ecv{\hat{U}_{C,p}} \cdot \cos(\omega t + \varphi_{C,\mathrm{p}}) \label{eq:rc:charge:ac:allg}
+    \end{align}
+    \textbf{5.) Konstanten bestimmen} (Anfangsbedingung):
+
+    Aus der Anfangsbedingung, dass die Kapazität zu Beginn entladen ist, folgt für die Konstante $K$:
+    \begin{align}
+        \ecv{u_C}(t_0) &\overset{!}{=} 0 \nonumber\\
+        K \cdot \redcancel{\mathrm{e}^{0}} + \ecv{\hat{U}_{C,p}} \cdot \cos(\omega t_0 + \varphi_{C,\mathrm{p}}) &= 0 \nonumber\\
+        K &= -\ecv{\hat{U}_{C,p}} \cdot \cos(\omega t_0 + \varphi_{C,\mathrm{p}}) \label{eq:rc:charge:ac:k}
+    \end{align}
+    Mit Gl. \ref{eq:rc:charge:ac:k} eingesetzt in \ref{eq:rc:charge:ac:allg} ergibt sich die eindeutige Lösung für $u_C(t)$:
+    \begin{align}
+        \ecv{u_C}(t) &= \underbrace{-\ecv{\hat{U}_{C,p}} \cdot \cos(\omega t_0 + \varphi_{C,\mathrm{p}}) \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}}}_{\ecv{u_{C,\mathrm{h}}}} + \underbrace{\ecv{\hat{U}_{C,p}} \cdot \cos\left(\omega t + \varphi_{C,\mathrm{p}}\right)}_{\ecv{u_{C,p}}} \label{eq:rc:charge:ac:uc}
+    \end{align}
+    An Gleichung \ref{eq:rc:charge:ac:uc} ist erkennbar, dass der flüchtige Zustand $u_{C,f}=u_{C,h}$ ab $t_0$ exponentiell gegen null strebt.
+    Im Gegensatz zum DC-Fall (Beispiel \ref{bsp:rc:chargedc}) ist der Startwert der Exponentialkurve $K$ aus Gleichung \ref{eq:rc:charge:ac:k} abhängig von $t_0$, da der eingeschwungene Zustand $u_{C,e}=u_{C,p}$ zeitabhängig ist.
+
+    \textbf{Verhalten bei Variation des Schaltzeitpunktes/der Zeitkonstante}:
+
+    Abbildung \ref{fig:plot:rc:charge:ac:uc:vergleicht0} zeigt den Spannungsverlauf der Anregung $u_q$ bei einem Nullphasenwinkel $\varphi_q$ von Null
+    und den Spannungsverlauf der Kapazität $u_C$.
+    Zum Vergleich ist $u_C$ für zwei verschiedenen Schaltzeitpunkten $t_0$ gezeigt.
+    Das ist einmal beim negativen Scheitelwert und einmal beim Nulldurchgang von $u_{C,p}$.
+    $u_C$ ist als Überlagerung des flüchtigen Zustandes $u_{C,h}$ (schwarz, gestrichelt) und des eingeschwungenen Zustandes $u_{C,p}$ (schwarz) dargestellt.
+
+    %\textbf{Zeitverläufe und Variation des Schaltzeitpunktes und der Zeitkonstante}
+
+    \begin{figure}[H]\centering
+        \begin{subfigure}{0.48\textwidth}\centering
+            \includegraphics{Tikz/pdf/plot_rc_charge_uc_ac_different_t0.pdf} % u_C bei verschiedenen Schaltzeitpunkten
+            \caption{Verschiedene Schaltzeitpunkte $t_0$}
+            \label{fig:plot:rc:charge:ac:uc:vergleicht0}
+        \end{subfigure}%
+        \begin{subfigure}{0.48\textwidth}\centering
+            \includegraphics{Tikz/pdf/plot_rc_charge_uc_ac_different_tau.pdf} % u_C bei verschiedenen Zeitkonstanten
+            \caption{Verschiedene Zeitkonstanten $\tau$}
+            \label{fig:plot:rc:charge:ac:uc:vergleichtau}
+        \end{subfigure}
+        \caption{Spannungsverlauf $u_C$ bei RC-Glied nach Schalten an Wechselspannungsquelle $u_q$}
+    \end{figure}
+
+    Wie zu erkennen ist, ist der Ausgleichsvorgang maximal ($|K|=max.$), wenn die Differenz $|u_{C,p}(t_0)- u_C(t_0)|$ maximal ist.
+    Erfüllt die $u_{C,p}$ bereits die Anfangsbedingung mit $u_{C,p}(t_0)\overset{!}{=}u_C(t_0)$, entfällt der flüchtige Zustand vollständig $K=0 \Rightarrow u_{C,h}=0$ und es kommt zu keinem Ausgleichsvorgang.
+
+    In Abbildung \ref{fig:plot:rc:charge:ac:uc:vergleichtau} wird der Spannungsverlauf $u_C$ für verschiedenen Zeitkonstanten $\tau$ gezeigt.
+    Einmal beträgt $\tau=\frac{2\pi}{\omega}$, einmal $\tau=\frac{20\pi}{\omega}$.
+    In beiden Fällen ist $t_0$ so gewählt, dass der Ausgleichsvorgang maximal wird.
+
+    Bei hohen Zeitkonstanten klingt der flüchtige Zustand langsamer ab, dadurch kann es bei ungünstigen Schaltzeitpunkten zu Überspannungen/-strömen kommen.
+    Ist $u_C$ wie im Beispiel nach Anfangsbedingung zu Beginn entladen ($u_C(t_0)=0$), kann $u_C$ bis zum doppelten Scheitelwert von $u_{C,p}$ ansteigen.
+    Ist $u_C$ hingegen zu Beginnn bereits bis zum negativen/positiven Scheitelwert von $u_{C,p}$ geladen, kann $u_C$ sogar bis zum dreifachen Scheitelwert von $u_{C,p}$ ansteigen.
+
+    \begin{Merksatz}{Ausgleichsvorgänge bei AC-Anregung}
+        Durch geschicktes Schalten können Ausgleichsvorgänge bei AC-Anregung vermieden werden.\vspace{5pt}
+
+        Bei großen Zeitkonstanten sind Überwerte bis zum doppelten/dreifachen Scheitelwert möglich.
+    \end{Merksatz}
+}% end skript only
+\b{% Anfang Folien only
+% Obere Hälfte
+\begin{minipage}{\textwidth}\centering%
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment%
+    \includegraphics{Tikz/pdf/circ_switchable_rc_charge_ac.pdf}
+    \begin{equation*}\begin{aligned}
+        &\text{gegeben:}&       &\ecv{u_C}(0),\ \ecv{u_q}(t),\ R,\ C,\ \omega \\
+        &\text{gesucht:}&       &\ecv{u_C}(t)
+    \end{aligned}\end{equation*}
+\end{minipage}\pause%
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment%
+    \resizebox{0.75\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rc_charge_uc_ac_different_t0_short.pdf}}
+\end{minipage}%
+\end{minipage}\pause\hfill%
+% Untere Hälfte
+\resizebox{0.95\textwidth}{!}{% to fit on slide
+\begin{minipage}{\textwidth}\vspace{-0.75cm}%
+\begin{align*}
+&\textbf{1. DGL}&                   \ecv{u_q} &= RC \cdot \dt \ecv{u_C}(t) + \ecv{u_C}(t) = \ecv{\hat{U}_q} \cdot \cos(\omega t + \varphi_q)\\
+&\textbf{2. Homogene Lösung}&       \ecv{u_{C,\mathrm{h}}} &= K \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} \quad\text{mit}\quad \tau = RC \vphantom{\mathrm{e}^{-\frac{t-t_0}{\tau}}}\\
+&\textbf{3. Partikulare Lösung}&    \ecv{u_{C,\mathrm{p}}} &= \ecv{\hat{U}_{C,\mathrm{p}}} \cdot \cos(\omega t + \varphi_{C,\mathrm{p}}) \vphantom{\mathrm{e}^{-\frac{t-t_0}{\tau}}}\\
+&\textbf{4. Inhomogene Lösung}&     \ecv{u_C} &= K \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} + \ecv{\hat{U}_{C,\mathrm{p}}} \cdot \cos(\omega t + \varphi_{C,\mathrm{p}}) \vphantom{\mathrm{e}^{-\frac{t-t_0}{\tau}}}\\
+&\textbf{5. Konstanten bestimmen}&  \ecv{u_C} &= \ecv{\hat{U}_{C,\mathrm{p}}} \cdot \left( - \cos(\omega t_0 + \varphi_{C,\mathrm{p}}) \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} + \cos(\omega t + \varphi_{C,\mathrm{p}}) \right) \vphantom{\mathrm{e}^{-\frac{t-t_0}{\tau}}}
+\end{align*}
+\end{minipage}
+}
+}% end Folien only
+\end{frame}
+
+\b{% Anfang Folien only Multi Frame -- RC AC - charge
+% Schritte 1-5 detaillierter, nur Folien
+\begin{frame}[t]\ftx{Schaltvorgänge \subsecname\ \subsubsecname}%Schritt 1&2
+    \begin{minipage}{\textwidth}\centering%
+        \begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment%
+            \includegraphics{Tikz/pdf/circ_switchable_rc_charge_ac.pdf}
+            %\begin{equation*}\begin{aligned}
+            %    &\text{gegeben:}&       &\ecv{u_C}(0),\ \ecv{u_q}(t),\ R,\ C,\ \omega \\
+            %    &\text{gesucht:}&       &\ecv{u_C}(t)
+            %\end{aligned}\end{equation*}
+        \end{minipage}%
+        \begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment%
+            \vspace{0.8cm}
+            \textbf{DGL 1. Ordnung:}\\[0.85em]
+            $a_1 \cdot \dt y(t) + a_0 \cdot y(t)=b$\\
+        \end{minipage}%
+        \end{minipage}%
+
+    \textbf{1.) DGL aufstellen:} für $\ecv{u_c}$ ($t \geq t_0$)\\[-1em]
+    \begin{align*}
+        RC \cdot \dt \ecv{u_C}(t) + \ecv{u_C}(t) ={}& \ecv{u_q}(t) \\
+        \text{mit} \quad &\ecv{u_q}(t) = \ecv{\hat{U}_q} \cdot \cos(\omega t + \varphi_q)\quad\text{(Störterm)}
+    \end{align*}
+
+    \textbf{2.) Homogene Lösung, allgemein} (flüchtig) (ohne Störterm):
+    \begin{align*}
+        \ecv{u_{C,\mathrm{h}}} &= K \cdot \mathrm{e}^{-\frac{t'}{\tau}} \qquad &\text{mit} \quad t' = t-t_0 \nonumber\\
+        &= K \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} \qquad &\text{mit} \quad \tau = RC
+    \end{align*}
+\end{frame}
+
+\begin{frame}[t]\ftx{Schaltvorgänge \subsecname\ \subsubsecname}%Schritt 3
+    \textbf{3.) Partikuläre Lösung} (eingeschwungen) ($t \to \infty$): sinusförmig!\\[2pt]
+    Anwendung komplexer Wechselstromrechnung:
+    \begin{align*}
+        \ecv{u_{C,p}}
+            &= \ecv{\hat{U}_{C,p}} \cdot \cos(\omega t + \varphi_{C,\mathrm{p}})\\
+            &= \Re{\left\{ \ecv{\hat{\underline{U}}_{C,p}} \cdot \mathrm{e}^{\mathrm{j} \omega t} \right\}} \qquad \text{mit}\quad \ecv{\hat{\underline{U}}_{C,p}} = \ecv{\hat{U}_{C,p}} \cdot \mathrm{e}^{\mathrm{j} \varphi_{C,\mathrm{p}}}
+    \end{align*}
+    Komplexer Amplitudenzeiger $\ecv{\hat{\underline{U}}_{C,p}}$ durch komplexen Spannungsteiler:
+    \begin{equation*}
+        \ecv{\hat{\underline{U}}_{C,p}}
+            = \ecv{\hat{\underline{U}}_q} \cdot \frac{\underline{Z}_C}{R + \underline{Z}_C} %\nonumber\\
+            = \ecv{\hat{\underline{U}}_q} \cdot \frac{\frac{1}{\mathrm{j}\omega C}}{R + \frac{1}{\mathrm{j} \omega C}} %\nonumber\\
+            = \frac{\ecv{\hat{\underline{U}}_q}}{1 + \mathrm{j} \omega R C}
+            \qquad \text{mit}\quad \ecv{\hat{\underline{U}}_q} = \ecv{\hat{U}_q} \cdot \mathrm{e}^{\mathrm{j} \varphi_q}
+    \end{equation*}
+    Für die Amplitude $\ecv{\hat{U}_{C,p}}$ und den (Last-)Phasenwinkel $\varphi_{C,\mathrm{p}}$ folgt:
+    \begin{align*}
+        \ecv{\hat{U}_{C,p}} = \frac{\ecv{\hat{U}_q}}{\sqrt{1 + \left(\omega RC\right)^2}} \qquad\text{und}\qquad%\label{rc:charge:ac:ampli}\\
+        \varphi_{C,\mathrm{p}} = \varphi_q - \arctan\left(\omega RC\right)
+    \end{align*}
+\end{frame}
+
+\begin{frame}[t]\ftx{Schaltvorgänge \subsecname\ \subsubsecname}%Schritt 4&5
+    \textbf{4.) Inhomogene Lösung, allgemein} (Überlagerung):
+    \begin{align*}
+        \ecv{u_C} &= \ecv{u_{C,\mathrm{h}}} + \ecv{u_{C,p}} \nonumber\\
+            &= K \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} + \ecv{\hat{U}_{C,p}} \cdot \cos(\omega t + \varphi_{C,\mathrm{p}}) \label{eq:rc:charge:ac:allg2}
+    \end{align*}
+
+    \textbf{5.) Konstanten bestimmen} (Anfangsbedingung):
+    \begin{align*}
+        \ecv{u_C}(t_0) &\overset{!}{=} 0 \nonumber\\
+        K \cdot \redcancel{\mathrm{e}^{0}} + \ecv{\hat{U}_{C,p}} \cdot \cos(\omega t_0 + \varphi_{C,\mathrm{p}}) &= 0 \nonumber\\
+        K &= -\ecv{\hat{U}_{C,p}} \cdot \cos(\omega t_0 + \varphi_{C,\mathrm{p}})
+    \end{align*}
+    Die eindeutige Lösung ergibt sich durch Einsetzen von $K$ in die allgemeine Lösung:
+    \begin{align*}
+        \ecv{u_C}(t) &= \underbrace{-\ecv{\hat{U}_{C,p}} \cdot \cos(\omega t_0 + \varphi_{C,\mathrm{p}}) \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}}}_{\ecv{u_{C,\mathrm{h}}}} + \underbrace{\ecv{\hat{U}_{C,p}} \cdot \cos\left(\omega t + \varphi_{C,\mathrm{p}}\right)}_{\ecv{u_{C,p}}} \label{eq:rc:charge:ac:uc}
+    \end{align*}
+\end{frame}
+
+\begin{frame}\ftx{Schaltvorgänge \subsecname\ \subsubsecname}% Vergleich verschiedene tau und maximale Auslenkung (Überschwinger)
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \underline{Bei sinusförmiger Anregung:}\\[1em]
+        Bei hohen Zeitkonstanten sind\\ \textbf{Überspannungen/-ströme möglich}.\\[1em]\pause
+        Erreichbar sind Überwerte bis zum\\ doppelten/dreifachen Scheitelwert.\\[1em]\pause
+        Durch geschicktes Schalten sind\\ \textbf{Ausgleichsvorgänge vermeidbar}.\\[1em]\pause
+        \underline{Beispiel:} Trennschalter im Netz
+    \end{minipage}%
+    \begin{minipage}{0.48\textwidth}\centering
+        \resizebox{0.8\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rc_charge_uc_ac_different_tau.pdf}}
+        Vergleich: kleines und großes $\tau$
+    \end{minipage}
+\end{frame}
+
+}% Ende Folien only
+
+
+
+\subsubsection{bei Induktivitäten}
+\label{sec:schaltvorgaengezeitbereich:ac:l}
+%\begin{frame}\ftx{\subsubsecname}
+\s{%
+    Beispiel \ref{bsp:rl:chargeac} zeigt exemplarisch die Berechnung eines Schaltvorgangs für ein RL-Glied bei Anregung mit Wechselspannung nach Merksatz \ref{merk:berechnungsverfahren:zeitbereich}.
+
+    Die Berechnung von Schaltvorgängen bei sinusförmiger Anregung für Induktivitäten erfolgt analog zu der Berechnung für Kapazitäten in Kapitel \ref{sec:schaltvorgaengezeitbereich:ac:c}.
+    Es gelten die gleichen Besonderheiten bezüglich Schaltzeitpunkten und möglicher transienter Spitzenströme und -spannungen wie bei Kapazitäten.
+
+    Im Beispiel ist die DGL der partikulären Lösung nach Gleichung \ref{eq:grundlagen:dgl:komplex} transformiert:
+    \begin{align*}
+        &\text{DGL$_{\mathrm p}$:}&
+            \frac{L}{R} \cdot \dt \eci{i_{\mathrm p}} + \eci{i_{\mathrm p}} &= \frac{\ecv{u_q}}{R} &
+            &\text{mit}\quad \ecv{u_q} = \Re\left\{\ecv{\underline{\hat{U}}_q}\cdot\mathrm{e}^{\mathrm{j}\omega t}\right\} \vphantom{\Bigg|}\\
+        &\text{transformiert:}&
+            \Leftrightarrow\quad
+            \frac{L}{R} \cdot \mathrm{j}\omega\, \eci{\underline{\hat{I}}_{\mathrm p}} + \eci{\underline{\hat{I}}_{\mathrm p}} &= \frac{\ecv{\underline{\hat{U}}_q}}{R} &
+            &\text{mit}\quad \ecv{\underline{\hat{U}}_q} = \ecv{\hat{U}_q}\cdot\mathrm{e}^{\mathrm{j}\varphi_q} \vphantom{\Bigg|}
+    \end{align*}
+    Der Ansatz bietet eine einfache Umstellung nach dem komplexen Amplitudenzeiger der partikulären Lösung und ist
+    prinzipiell gleichwertig mit der Herleitung über komplexe Spannungsteiler wie sie in Gleichung \ref{eq:rc:charge:ac:komplex} am Beispiel des RC-Gliedes gezeigt ist.
+
+    \newpage
+    \begin{bsp}{RL-Glied, Schaltvorgang mit Wechselspannungsquelle}{rl:chargeac}
+        Bestimmung des Strom $\eci{i}$ durch die Induktivität $L$ in Reihe mit dem ohmschen Widerstand $R$ bei Zuschalten der idealen Wechselspannungsquelle
+        $\ecv{u_q} = \ecv{\hat{U}_q} \cdot \cos(\omega t + \varphi_q)$ ab Schaltzeitpunkt $t=t_0$. Zuvor fließt kein Strom. \\[-6pt]
+        \begin{minipage}{\textwidth}\centering
+            \begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
+                \includegraphics{Tikz/pdf/circ_switchable_rl_charge_ac.pdf}%
+                \begin{equation*}\begin{aligned}
+                \text{gegeben:}&&       &\eci{i}(t_0),\ \ecv{u_q},\ R,\ L \\
+                \text{gesucht:}&&       &\eci{i}(t),\ \ecv{u_L}(t)
+                \end{aligned}\end{equation*}
+            \end{minipage}
+            \begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
+                \includegraphics{Tikz/pdf/plot_rl_charge_il_ac_different_t0_short.pdf}
+            \end{minipage}
+        \end{minipage}
+
+        \textbf{1.) DGL aufstellen:} von $\eci{i}$ für $t \geq t_0$, Lösung aus Bsp. \ref{bsp:rl:chargedc:dgli}
+        \begin{align*}
+            &\text{DGL}:&&&
+                \frac{L}{R} \cdot \dt \eci{i}  + \eci{i}   &= \frac{\ecv{u_q}}{R}&&&
+                &\text{mit}\quad \ecv{u_q} = \ecv{\hat{U}_q} \cdot \cos(\omega t + \varphi_q)
+            \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3ooooooooooo}&\hphantom{R3ooooooooooooooo}&&&&\hphantom{R5ooooooooooooooooooooooo}\nonumber% D Dummy-Zeile RL-AC Step 1-3 für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+        \end{align*}%
+        \textbf{2.) Homogene Lösung, allg.:} (flüchtig), Lösung aus Bsp. \ref{bsp:rl:chargeac} für Schaltzeitpunkt $t_0$
+        \begin{align*}
+            &\text{hom. Lsg.:} &&&
+                \eci{i_{\mathrm{h}}}&= K \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} &&&
+                &\text{mit}\quad \tau = \frac{L}{R}
+            \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3ooooooooooo}&\hphantom{R3ooooooooooooooo}&&&&\hphantom{R5ooooooooooooooooooooooo}\nonumber% D Dummy-Zeile RL-AC Step 1-3 für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+        \end{align*}%
+        \textbf{3.) Partikulare Lösung:} (eingeschwungen) mit $t \to \infty$, kompl. Wechselstromrechnung%
+        \begin{align*}%
+                &\text{transf.}:&&&
+                \frac{L}{R} \cdot \mathrm{j}\omega\, \eci{\underline{\hat{I}}_{\mathrm p}} + \eci{\underline{\hat{I}}_{\mathrm p}} &= \frac{\ecv{\underline{\hat{U}}_q}}{R} &&&
+                    &\text{mit}\quad \ecv{\underline{\hat{U}}_q}=\ecv{\hat{U}_q} \cdot \mathrm{e}^{\mathrm{j}\varphi_q}\\
+                &\text{Zeiger:}&&&
+                    \eci{\underline{\hat{I}}_{\mathrm p}} &= \frac{\ecv{\underline{\hat{U}}_q}}{R} \cdot \frac{1}{1 + \mathrm{j} \omega \frac{L}{R}} &&&
+                    &\text{mit}\quad \eci{\underline{\hat{I}}_{\mathrm p}} = \eci{\hat{I}_{\mathrm p}}\cdot\mathrm{e}^{\mathrm{j}\varphi_I}\\
+                &&&&
+                    \eci{\hat{I}_{\mathrm p}} &=  \frac{\ecv{\hat{U}_q}/R}{\sqrt{1 + \left(\omega \frac{L}{R}\right)^2}} &&&
+                    &\quad \varphi_I = \varphi_q - \arctan\left(\omega \frac{L}{R}\right) \\
+                &\text{part. Lsg.}:&&&
+                    \eci{i_{\mathrm p}} &= \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t + \varphi_I) &&&
+                    &\text{mit}\quad \eci{i_{\mathrm p}} = \Re\left\{\eci{\underline{\hat{I}}_{\mathrm p}} \cdot \mathrm{e}^{\mathrm{j}\omega t}\right\} \vphantom{\Bigg|}
+            \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3ooooooooooo}&\hphantom{R3ooooooooooooooo}&&&&\hphantom{R5ooooooooooooooooooooooo}\nonumber% D Dummy-Zeile RL-AC Step 1-3 für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+        \end{align*}%
+        \textbf{4.) Inhomogene Lösung, allg.:} (Überlagerung)%
+        \begin{align*}
+                &\text{allg. Lsg.:}&&&
+                    \eci{i} &=
+                    \underbrace{ \vphantom{\big|}
+                        K \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}}
+                    }_{\eci{i_{\mathrm h}}}
+                    +
+                    \underbrace{ \vphantom{\big|}
+                        \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t + \varphi_I)
+                    }_{\eci{i_{\mathrm p}}}&&&
+            \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3oooooo}&\hphantom{R3ooooooooooooooooooooooooooooooooooooooooooo}&&&&\hphantom{R5}\nonumber% Dummy-Zeile RL-AC Step 4-5 für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+        \end{align*}
+        \textbf{5.) Konstanten bestimmen:} (AB einsetzen)%
+        \begin{align*}
+            &\text{Anfangsbed.:}&&&
+                \eci{i}(t_0) &= K \cdot \redcancel{\mathrm{e}^0} + \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t_0 + \varphi_I) \overset{!}{=} 0 \\
+            &&&&
+                \Rightarrow\quad K &= -\eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t_0 + \varphi_I) \\
+            &\text{eindeut. Lsg.:}&&&
+                \eci{i}(t) &= -\eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t_0 + \varphi_I) \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} + \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t + \varphi_I)
+            \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3oooooo}&\hphantom{R3ooooooooooooooooooooooooooooooooooooooooooo}&&&&\hphantom{R5}\nonumber% Dummy-Zeile RL-AC Step 4-5 für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+        \end{align*}
+        Spannung $\ecv{u_L}$ über der Induktivität $L$ über $\ecv{u_L} = L \cdot \dt \eci{i}$ berechnen.
+        \begin{align*}
+            &\text{Spannung:}&&&
+                \ecv{u_L}(t) &= R \cdot \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t_0 + \varphi_I) \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} - \omega L \cdot \eci{\hat{I}_{\mathrm p}} \cdot \sin(\omega t + \varphi_I)
+        \end{align*}
+    \end{bsp}
+}% end skript only
+%\end{frame}
+
+\b{% Anfang Folien only Multi Frame -- RL AC - charge
+\begin{frame}[t]\ftx{Schaltvorgänge \subsecname \, \subsubsecname}
+% Obere Hälfte
+\begin{minipage}{\textwidth}\centering%
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment%
+    \includegraphics{Tikz/pdf/circ_switchable_rl_charge_ac.pdf}
+    \begin{equation*}\begin{aligned}
+        &\text{gegeben:}&       &\ecv{u_C}(0),\ \ecv{u_q}(t),\ R,\ C,\ \omega \\
+        &\text{gesucht:}&       &\eci{i}(t)
+    \end{aligned}\end{equation*}
+\end{minipage}\pause%
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment%
+    \resizebox{0.75\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rl_charge_il_ac_different_t0_short.pdf}}%
+\end{minipage}%
+\end{minipage}\pause\hfill%
+% Untere Hälfte
+\resizebox{0.95\textwidth}{!}{% to fit on slide
+\begin{minipage}{\textwidth}\vspace{-0.75cm}%
+\begin{align*}
+&\textbf{1. DGL}&                   \frac{\ecv{u_q}}{R} &= \frac{L}{R} \cdot \dt\, \eci{i} + \eci{i} =\frac{\ecv{\hat{U}_q}}{R} \cdot \cos(\omega t + \varphi_q)\\
+&\textbf{2. Homogene Lösung}&       \eci{i_{\mathrm{h}}}&= K \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}}\quad\text{mit}\quad \tau = \frac{L}{R}\\
+&\textbf{3. Partikulare Lösung}&    \eci{i_{\mathrm p}} &= \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t + \varphi_I)\\
+&\textbf{4. Inhomogene Lösung}&     \eci{i} &= K \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} + \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t + \varphi_I)\\
+&\textbf{5. Konstanten bestimmen}&  \eci{i} &= \eci{\hat{I}_{\mathrm{p}}} \cdot \left( - \cos(\omega t_0 + \varphi_I) \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} + \cos(\omega t + \varphi_I) \right)%Schritt 5 pass
+\end{align*}
+\end{minipage}
+}%
+\end{frame}
+
+\begin{frame}[t]\ftx{Schaltvorgänge \subsecname \, \subsubsecname}
+    \begin{minipage}{\textwidth}\centering%
+        \begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment%
+            \includegraphics{Tikz/pdf/circ_switchable_rl_charge_ac.pdf}
+        \end{minipage}%
+        \begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment%
+            \vspace{0.8cm}
+            \textbf{DGL 1. Ordnung:}\\[0.85em]
+            $a_1 \cdot \dt y(t) + a_0 \cdot y(t)=b$\\
+        \end{minipage}%
+        \end{minipage}%
+    \vspace{0.85cm}
+    \textbf{1.) DGL aufstellen:} für $\eci{i}$ mit $t\geq t_0$
+    \begin{align*}
+        &\text{DGL}:&&&
+            \frac{L}{R} \cdot \dt \eci{i}  + \eci{i}   &= \frac{\ecv{u_q}}{R}&&&
+            &\text{mit}\quad \ecv{u_q} = \ecv{\hat{U}_q} \cdot \cos(\omega t + \varphi_q)
+    \end{align*}%
+    \pause% <-- overlay
+
+    \textbf{2.) Homogene Lösung, allg.:} (flüchtig, für Schaltzeitpunkt $t_0$)
+        \begin{align*}
+            &\text{hom. Lsg.:} &&&
+                \eci{i_{\mathrm{h}}}&= K \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} &&&
+                &\text{mit}\quad \tau = \frac{L}{R}
+        \end{align*}%
+
+    \end{frame}
+
+    \begin{frame}\ftx{Schaltvorgänge \subsecname \, \subsubsecname}
+        \textbf{3.) Partikulare Lösung:} (eingeschwungen, mit $t \to \infty$)%
+        \begin{align*}%
+                &\text{DGL transf.}:&&&
+                \frac{L}{R} \cdot \mathrm{j}\omega\, \eci{\underline{\hat{I}}_{\mathrm p}} + \eci{\underline{\hat{I}}_{\mathrm p}} &= \frac{\ecv{\underline{\hat{U}}_q}}{R} &&&
+                    &\text{mit}\quad \ecv{\underline{\hat{U}}_q}=\ecv{\hat{U}_q} \cdot \mathrm{e}^{\mathrm{j}\varphi_q}\\
+                &\text{Zeiger:}&&&
+                    \eci{\underline{\hat{I}}_{\mathrm p}} &= \frac{\ecv{\underline{\hat{U}}_q}}{R} \cdot \frac{1}{1 + \mathrm{j} \omega \cdot\frac{L}{R}} &&&
+                    &\text{mit}\quad \eci{\underline{\hat{I}}_{\mathrm p}} = \eci{\hat{I}_{\mathrm p}}\cdot\mathrm{e}^{\mathrm{j}\varphi_I}\\
+                &&&&
+                    \eci{\hat{I}_{\mathrm p}} &=  \frac{\ecv{\hat{U}_q}}{R}\cdot\frac{1}{\sqrt{1 + \left(\omega \cdot\frac{L}{R}\right)^2}}\\
+                &&&&
+                    \varphi_I &= \varphi_q - \arctan\left(\omega \cdot\frac{L}{R}\right) \\
+                &\text{part. Lsg.}:&&&
+                    \eci{i_{\mathrm p}} &= \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t + \varphi_I) &&&
+                    &\text{mit}\quad \eci{i_{\mathrm p}} = \Re\left\{\eci{\underline{\hat{I}}_{\mathrm p}} \cdot \mathrm{e}^{\mathrm{j}\omega t}\right\} \vphantom{\Bigg|}
+        \end{align*}%
+    \end{frame}
+
+    \begin{frame}\ftx{Schaltvorgänge \subsecname \, \subsubsecname}
+        \textbf{4.) Inhomogene Lösung, allg.:} (Überlagerung)%
+        \begin{align*}
+            &\text{allg. Lsg.:}&&&
+                \eci{i} &=
+                \underbrace{ \vphantom{\big|}
+                    K \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}}
+                }_{\eci{i_{\mathrm h}}}
+                +
+                \underbrace{ \vphantom{\big|}
+                    \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t + \varphi_I)
+                }_{\eci{i_{\mathrm p}}}&&&
+            \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3oooooo}&\hphantom{R3oooooooooooooooooooooooooooooooooooooooooooooo}\nonumber% Dummy-Zeile RL-AC Step 4-5 Folien für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+        \end{align*}%
+        \pause% <-- overlay
+
+        \textbf{5.) Konstanten bestimmen:} (AB einsetzen)%
+        \begin{align*}
+            &\text{Anf.bed.:}&&&
+                \eci{i}(t_0) &= K \cdot \redcancel{\mathrm{e}^0} + \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t_0 + \varphi_I) \overset{!}{=} 0 \\
+            &&&&
+                \Rightarrow\quad K &= -\eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t_0 + \varphi_I) \\
+            &\text{eind. Lsg.:}&&&
+                \eci{i}(t) &= -\eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t_0 + \varphi_I) \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} + \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t + \varphi_I)
+            \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3oooooo}&\hphantom{R3oooooooooooooooooooooooooooooooooooooooooooooo}\nonumber% Dummy-Zeile RL-AC Step 4-5 Folien für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+        \end{align*}
+        Spannung $\ecv{u_L}$ mit $\ecv{u_L} = L \cdot \dt \eci{i}$ berechnen:
+        \begin{align*}
+            &\text{Spannung:}&&&
+                \ecv{u_L}(t) &= R \cdot \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t_0 + \varphi_I) \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} - \omega L \cdot \eci{\hat{I}_{\mathrm p}} \cdot \sin(\omega t + \varphi_I)
+        \end{align*}
+    \end{frame}
+
+}% end Folien only
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{bei RLC-Serienschwingkreisen}
+\label{sec:schaltvorgaengezeitbereich:rlc}
+\begin{frame}\ftx{\subsecname}
+\s{%
+    Systeme mit zwei unterschiedlichen Energiespeichern (Induktivität $L$ und Kapazität $C$) sind
+    prinzipiell schwingungsfähig. Daher werden RLC-Glieder auch als Schwingkreise oder Resonanzkreise bezeichnet.
+    Die Schwingungsfähigkeit lässt sich anhand der Eigenwerte bestimmen und beschreiben.
+    Ein anderer Ansatz ist die Betrachtung der (Schwingkreis-)Güte $Q$. [Vgl. Modul 8]%\todo{link}
+
+    Abbildung \ref{fig:rlc:charge} zeigt das Schaltbild eines RLC-Gliedes beim Laden mit konstanter Gleichspannung $U_q$.
+    Daneben sind die Zeitverläufe der Kondensatorspannung für die drei möglichen Fälle dargestellt.  Das sind
+    der \textbf{aperiodischen Fall}\index{Fall>aperiodischer Fall},
+    der \textbf{aperiodischen Grenzfall}\index{Fall>aperiodischer Grenzfall} und
+    der \textbf{periodischen Fall}\index{Fall>periodischer Fall}
+    die in Kapitel \ref{sec:schaltvorgaengezeitbereich:rlc:fallunterscheidung} näher beschrieben sind.
+
+    \begin{figure}[H]\centering
+        \begin{subfigure}{0.48\textwidth}\centering
+            \includegraphics{Tikz/pdf/circ_switchable_rlc_charge_detail.pdf}
+            \caption{Schaltbild}
+            \label{fig:circ:rlc:charge}
+        \end{subfigure}
+        \begin{subfigure}{0.48\textwidth}\centering
+            \includegraphics{Tikz/pdf/plot_rlcs_charge_dc_uc.pdf}
+            \caption{Spannungsverlauf, Fallunterscheidung}
+            \label{fig:plot:rlc:charge}
+        \end{subfigure}
+        \caption{RLC-Glied, Ladevorgang mit konstanter Gleichspannung}
+        \label{fig:rlc:charge}
+    \end{figure}
+    Die Berechnung von Schaltvorgängen bei RLC-Gliedern erfolgt analog zu den Beispielen für RC- und RL-Glieder aus den vorigen Kapiteln.
+
+    \textbf{1.) DGL aufstellen:} für $\ecv{u_C}$ für $t \geq 0$
+    \begin{align}
+        \ecv{u_L} + \ecv{u_R} +\ecv{u_C} &= \ecv{u} \nonumber\\
+        L \cdot \dt \eci{i} + R \cdot \eci{i} + \ecv{u_C}&= \ecv{U_q} \nonumber\\
+        LC \cdot \dt[2] \ecv{u_C} + RC \cdot \dt \ecv{u_C} + \ecv{u_C} &= \ecv{U_q} \label{eq:dgl:rlc:dc}
+    \end{align}
+    Aufgrund der zwei verschiedenen Energiespeichern ergibt sich eine DGL 2. Ordnung.
+
+    \textbf{2.) Homogene Lösung, allg.:} (flüchtig) (ohne Störterm)
+
+    Die Form der homogenen Lösung ist abhängig von der Art der Eigenwerte.
+    \begin{align}
+        &\text{hom. DGL:}&
+            LC \cdot \dt[2] \ecv{u_{C,\mathrm{h}}} + RC \cdot \dt \ecv{u_{C,\mathrm{h}}} + \ecv{u_{C,\mathrm{h}}} &= 0
+                &&\text{mit}\quad \ecv{u_{C,\mathrm{h}}} = K \cdot \mathrm{e}^{\lambda t} \label{eq:dgl:rlc:homo}\\[6pt]
+        &\text{char. Polynom:}&
+            \lambda^2 + \frac{R}{L} \cdot \lambda + \frac{1}{LC} &= 0 \nonumber\\[6pt]
+        &\text{Eigenwerte:}&
+            \lambda_{1/2} = -\frac{R}{2L} \pm \sqrt{\left(\frac{R}{2L}\right)^2 - \frac{1}{LC}}&
+                &&\text{mit}\quad D = \left(\frac{R}{2L}\right)^2 - \frac{1}{LC}
+            %\lambda_{1/2} = -\frac{R}{2L} \pm \sqrt{\smash{%
+            %    \underbrace{%
+            %        \left(\frac{R}{2L}\right)^2 - \frac{1}{LC}%
+            %    }_{\mathclap{\text{Diskriminante }D}}%
+            %}\vphantom{\left(\frac{R}{L}\right)^2}}
+        \label{eq:dgl:rlc:lambda}
+        %\\[-10pt]\nonumber % Platzhalterzeile wegen underbrace Text
+    \end{align}
+    Durch Anwenden der $p$-$q$-Formel (Mitternachtsformel) ergeben sich für die \textbf{Eigenwerte} (EW) $\lambda_{1/2}$
+    je nach Wurzelterm entweder zwei unterschiedliche oder zwei identische Werte.
+    Die homogenen Lösung nimmt daher, wie in Kapitel \ref{sec:grundlagen:dgl:homogeneloesung} beschrieben ist, eine der folgenden zwei Formen an:
+    \begin{equation}
+        \text{hom. Lsg.:}\qquad\qquad\qquad
+        \ecv{u_{C,\mathrm{h}}} =
+        \begin{cases}
+            K_1 \cdot \mathrm{e}^{\lambda_1 t} + K_2 \cdot \mathrm{e}^{\lambda_2 t}  & \text{für}\quad\lambda_1 \neq \lambda_2  \\
+            (K_1 + K_2 \cdot t) \cdot \mathrm{e}^{\lambda t} & \text{für}\quad\lambda_1 = \lambda_2 = \lambda
+        \end{cases}
+        \qquad\qquad\qquad \label{eq:dgl:rlc:homolsg:cases}
+    \end{equation}
+    Die Fallunterscheidung kann anhand der sogenannten \textbf{Diskriminante} $D$ \index{Größe>Diskriminante} vorgenommen werden.
+}% Ende Skript only
+\b{%
+\begin{minipage}{\textwidth}\centering
+    \begin{minipage}[t][3.5cm][]{0.48\textwidth}\centering
+        \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_switchable_rlc_charge_detail.pdf}}%
+        \vspace{5pt}
+
+        Wegen $L$ und $C$ $\Rightarrow$ Schwingkreis
+    \end{minipage}%
+    \begin{minipage}[t][3.5cm][]{0.48\textwidth}\centering
+        \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcs_charge_dc_uc.pdf}}%
+    \end{minipage}
+\end{minipage}\vspace{2pt}
+
+    %\textbf{DGL}: inhomogen, linear, gewöhnlich, 2. Ordnung, mit konst. Koeffizienten
+    \begin{align*}
+    &\text{\textbf{DGL} (für $\ecv{u_C}$ für $t \geq 0$):}&    LC \cdot \dt[2] \ecv{u_C} + RC \cdot \dt \ecv{u_C} + \ecv{u_C} &= \ecv{U_q}\\[-20pt]
+    &\hphantom{R1oooooooooooooooooooo}&\hphantom{L2oooooooooooooooooooooooooooooo}&\hphantom{R2ooo} % Dummy-Zeile für horizontales Alignment zwischen Frames
+    \end{align*}
+
+    \begin{table}[H]\centering
+        \begin{tabular}{lccc} \toprule
+            \textbf{Fallunterscheidung} & \textbf{Dämpfung} & \textbf{Diskrimi.} & \textbf{Güte} \\ \midrule
+            aperiodischer Fall          & stark             & $D > 0$               & $Q < 0,5$ \\
+            aperiodischer Grenzfall     & kritisch          & $D = 0$               & $Q = 0,5$ \\
+            periodischer Fall           & schwach           & $D < 0$               & $Q > 0,5$ \\ \bottomrule
+        \end{tabular}
+    \end{table}
+}% Ende Folien only
+\end{frame}%
+
+\begin{frame}\ftx{\subsecname}% Fortsetzung für Folien
+\b{%
+\begin{minipage}{\textwidth}\centering
+    \begin{minipage}[t][3.5cm][]{0.48\textwidth}\centering
+        \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_switchable_rlc_charge_detail.pdf}}%
+        \vspace{5pt}
+
+        Ansatz:\quad  $\ecv{u_{C,\mathrm{h}}} = K \cdot \mathrm{e}^{\lambda t}$
+    \end{minipage}%
+    \begin{minipage}[t][3.5cm][]{0.48\textwidth}\centering
+        %        \includegraphics{Tikz/pdf/plot_rlcs_charge_dc_uc.pdf}%
+    \begin{align}
+        \textbf{1.) DGL:}\qquad
+         \ecv{u_L} + \ecv{u_R} +\ecv{u_C} &= \ecv{u} \nonumber\\
+        L \cdot \dt \eci{i} + R \cdot \eci{i} + \ecv{u_C}&= \ecv{U_q} \nonumber\\
+        LC \cdot \dt[2] \ecv{u_C} + RC \cdot \dt \ecv{u_C} + \ecv{u_C} &= \ecv{U_q} \label{eq:dgl:rlc:dc}
+    \end{align}
+    \end{minipage}
+\end{minipage}\vspace{2pt}
+
+\begin{align}
+    &\textbf{homogene DGL:}&
+        LC \cdot \dt[2] \ecv{u_{C,\mathrm{h}}} + RC \cdot \dt \ecv{u_{C,\mathrm{h}}} + \ecv{u_{C,\mathrm{h}}} &= 0  \label{eq:dgl:rlc:homo}\\[-20pt]
+        &\hphantom{R1oooooooooooooooooooo}&\hphantom{L2oooooooooooooooooooooooooooooo}&\hphantom{R2ooo} % Dummy-Zeile für horizontales Alignment zwischen Frames
+        \\[6pt]
+    &\text{char. Polynom:}&
+        \lambda^2 + \frac{R}{L} \cdot \lambda + \frac{1}{LC} &= 0 \nonumber\\[6pt]
+    &\textbf{Eigenwerte:}&
+        \lambda_{1/2} = -\frac{R}{2L} \pm \sqrt{
+            \smash{\underbrace{% smash damit Größe der Wurzel nicht angepasst wird
+            \left(\frac{R}{2L}\right)^2 - \frac{1}{LC}
+            }_{\mathclap{\text{Diskriminante}\ D}}}
+            \vphantom{\left(\frac{R}{2L}\right)^2 - \frac{1}{LC}}% vphantom um Größe der Wurzel manuell an Term unter der Wurzel anzupassen
+        }&
+\end{align}
+}% Ende Folien only
+\end{frame}
+
+%-------------------------------------------------------------------------------------------------%
+
+\subsubsection[Fallunterscheidung]{Fallunterscheidung bei RLC-Serienschwingkreis}
+\label{sec:schaltvorgaengezeitbereich:rlc:fallunterscheidung}
+\begin{frame}[t]\ftx{\subsubsecname}%
+\s{%
+Die Diskriminante $D$ ist der Term unter der Wurzel in Gleichung \ref{eq:dgl:rlc:lambda} zur Bestimmung von $\lambda_{1/2}$.
+\vphantom{$\bigg|$}
+\begin{align}
+    &&%
+        \lambda_{1/2} &= -\frac{R}{2L} \pm \sqrt{\smash{%
+            \underbrace{%
+                \left(\frac{R}{2L}\right)^2 - \frac{1}{LC}%
+            }_{\mathclap{\text{Diskriminante }D}}%
+        }\vphantom{\left(\frac{R}{L}\right)^2}
+        }\label{eq:dgl:rlc:lambda:allg}%
+        \\[-10pt]\nonumber % Platzhalterzeile wegen underbrace Text
+        % Dummyline: manual fixed spacing for inter-environment-alignment: zero height after regular row with regular height (15pt), uncomment \nonumber to check height
+        \\[-15pt] &\hphantom{1rrrrrrrrrrrrrrrr} &   \hphantom{2llllll}&\hphantom{\mathrel{\phantom{=}}2rrrrrrrrrrrrrrrrrrrrrrrrrrr}     &&\hphantom{3rrrrrrrrrrrrrrrrrrrrrrrr} \nonumber
+    \end{align}
+
+%Im periodischen Fall (auch Schwingfall genannt) ist $D$ negativ, es gibt zwei paarweise konjugierte, komplexe EW.
+%Im aperiodischen Grenzfall ist $D$ null, es zwei identische negativen, reelle EW.
+%Im aperiodischen Fall (auch Kriechfall genannt) ist $D$ positiv, es gibt zwei unterschiedliche, negative, relle EW.
+
+Tabelle \ref{tab:rlc:fallunterscheidung} listet alle drei Fälle mit Art der Eigenwerte und relative Aussagen bezüglich der Dämpfung des Schwingkreises.
+Als Unterscheidungsmerkmal sind die korrespondierenden Werte der Diskriminante $D$ und als alternatives Unterscheidungsmerkmal die Schwingkreisgüte $Q_S$ mit angegeben.
+
+\begin{table}[H]\centering
+    \caption{Fallunterscheidung beim RLC-Schwingkreis}
+    \label{tab:rlc:fallunterscheidung}
+    \begin{tabular}{lcccc} \toprule
+        \textbf{Fallunterscheidung}  & \textbf{Dämpfung} & \textbf{Diskrimi.} & \textbf{Güte} & \textbf{Eigenwerte} $\lambda_{1/2}$ \\ \midrule
+        aperiodischer Fall           & stark             & $D > 0$            & $Q_S < 0,5$     & Zwei verschiedene, reelle EW  \\
+        aperiodischer Grenzfall      & kritisch          & $D = 0$            & $Q_S = 0,5$     & Eine doppelte, reelle EW \\
+        periodischer Fall            & schwach           & $D < 0$            & $Q_S > 0,5$     & konjugierte, komplexe EW \\ \bottomrule
+    \end{tabular}
+\end{table}
+
+Ein Ortskurvendiagramm der Eigenwerte wird im optionalen Exkurs in Kapitel \ref{sec:schaltvorgaengezeitbereich:rlc:nst} gezeigt.
+Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapitel \ref{sec:schaltvorgaengezeitbereich:rlc:eigenfrequenz} näher erläutert.
+
+}% Ende Skript only
+\b{% Beginn Folien only
+\begin{minipage}{\textwidth}\centering
+    \begin{minipage}[t][3cm][]{0.48\textwidth}\centering
+        \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_switchable_rlc_charge_detail.pdf}}%
+    \end{minipage}%
+    \begin{minipage}[t][3cm][]{0.48\textwidth}\centering
+        \begin{align}
+            \lambda_{1/2} = -\frac{R}{2L} \pm \sqrt{
+                \smash{\underbrace{% smash damit Größe der Wurzel nicht angepasst wird
+                \left(\frac{R}{2L}\right)^2 - \frac{1}{LC}
+                }_{\mathclap{\text{Diskriminante}\ D}}}
+                \vphantom{\left(\frac{R}{2L}\right)^2 - \frac{1}{LC}}% vphantom um Größe der Wurzel manuell an Term unter der Wurzel anzupassen
+            }%&
+        \end{align}
+    \end{minipage}
+\end{minipage}\vspace{2pt}
+
+\only<beamer:1-3| handout:1>{% Beginn overlay only
+\textbf{Achtung!} Je nach Diskriminante $D$ andere Eigenwerte $\lambda_{1/2}$.
+\onslide<2->{% Beginn overlay onslide
+\begin{equation}
+    \textbf{2.) Homogene Lösung:}\qquad\quad
+    \ecv{u_{C,\mathrm{h}}} =
+    \begin{cases}
+        K_1 \cdot \mathrm{e}^{\lambda_1 t} + K_2 \cdot \mathrm{e}^{\lambda_2 t}  & \text{für}\quad\lambda_1 \neq \lambda_2  \\
+        (K_1 + K_2 \cdot t) \cdot \mathrm{e}^{\lambda t} & \text{für}\quad\lambda_1 = \lambda_2 = \lambda
+    \end{cases}
+    \qquad\qquad\qquad \label{eq:dgl:rlc:homolsg:cases}
+\end{equation}
+}% Ende overlay onslide
+\onslide<3->{%
+\begin{table}[H]\centering
+    \begin{tabular}{lcc} \toprule
+        \textbf{Fallunterscheidung}  & \textbf{Diskrimi.} & \textbf{Eigenwerte} $\lambda_{1/2}$ \\ \midrule
+        aperiodischer Fall           & $D > 0$               & Zwei verschiedene, reale NST  \\
+        aperiodischer Grenzfall      & $D = 0$               & Eine doppelte, reale NST \\
+        periodischer Fall            & $D < 0$               & Zwei konjugierte, komplexe NST \\ \bottomrule
+    \end{tabular}
+\end{table}
+}% Ende overlay onslide
+}% Ende overlay only
+}% Ende Folien only
+\end{frame}
+
+%-------------------------------------------------------------------------------------------------%
+
+\subsubsection[Aperiodischer Fall]{Aperiodischer Fall beim RLC-Serienschwingkreis}
+\label{sec:schaltvorgaengezeitbereich:rlc:aperiodisch}\index{Fall>aperiodischer Fall}
+
+\begin{frame}[t]\ftx{\subsubsecname}
+\s{% Anfang Skript only
+    Ist die Diskriminante $D$ positiv, ist der Wurzelterm reellwertig und immer kleiner als der Betrag des Terms $\frac{R}{2L}$ vor der Wurzel.
+    Dadurch sind beide Eigenwerte verschieden, reell und negativ.%
+}% Ende Skript only
+\b{% Anfang Folien only
+\begin{minipage}{\textwidth}\centering
+    \begin{minipage}[t][3cm][]{0.48\textwidth}\centering
+        \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_switchable_rlc_charge_detail.pdf}}%
+    \end{minipage}%
+    \begin{minipage}[t][3cm][]{0.48\textwidth}\centering
+        \begin{align}
+            \lambda_{1/2} = -\frac{R}{2L} \pm \sqrt{
+                \smash{\underbrace{% smash damit Größe der Wurzel nicht angepasst wird
+                \left(\frac{R}{2L}\right)^2 - \frac{1}{LC}
+                }_{\mathclap{\text{Diskriminante}\ D}}}
+                \vphantom{\left(\frac{R}{2L}\right)^2 - \frac{1}{LC}}% vphantom um Größe der Wurzel manuell an Term unter der Wurzel anzupassen
+            }%&
+        \end{align}
+    \end{minipage}
+\end{minipage}\vspace{2pt}
+
+\textbf{Aperiodischer Fall:} (Kriechfall)%
+}% Ende Folien only
+% Following line needed, because end of \b{} before \begin{align} inserts an extra empty line
+\ifvmode\vspace*{-\baselineskip}\setlength{\parskip}{4pt}\fi% Ref: https://tex.stackexchange.com/questions/543846/how-can-i-ignore-empty-lines-before-after-and-inside-an-equation-environment
+\begin{align*}%
+    &\text{für}\quad D > 0 \quad\text{gilt}&
+        &\phantom{\mathrel{\phantom{=}}-}\frac{R}{2L} \overset{!}{>} \sqrt{\left(\frac{R}{2L}\right)^2 - \frac{1}{LC}}
+            &&\Rightarrow\quad \text{2 reelle EW}
+    % Dummyline: manual fixed spacing for inter-environment-alignment: zero height after regular row with regular height (15pt), uncomment \nonumber to check height
+    \\[-10pt] &\hphantom{1rrrrrrrrrrrrrrrr} &   \hphantom{2llllll}&\hphantom{\mathrel{\phantom{=}}2rrrrrrrrrrrrrrrrrrrrrrrrrrr}     &&\hphantom{3rrrrrrrrrrrrrrrrrrrrrrrr} \nonumber
+\end{align*}%
+\pause%
+\textbf{2.) Homogene Lösung:} (flüchtig)
+\begin{align}%
+    &&
+        \ecv{u_{C,\mathrm{h}}} &= K_1 \cdot \mathrm{e}^{\lambda_1 t} + K_2 \cdot \mathrm{e}^{\lambda_2 t}
+            &&\text{mit}\quad \lambda_1 \neq \lambda_2,\ \lambda <  0  \label{eq:dgl:rlc:homolsg:aperiodisch}
+    % Dummyline: manual fixed spacing for inter-environment-alignment: zero height after regular row with regular height (15pt), uncomment \nonumber to check height
+    \\[-15pt] &\hphantom{1rrrrrrrrrrrrrrrr} &   \hphantom{2llllll}&\hphantom{\mathrel{\phantom{=}}2rrrrrrrrrrrrrrrrrrrrrrrrrrr}     &&\hphantom{3rrrrrrrrrrrrrrrrrrrrrrrr} \nonumber
+\end{align}%
+\s{%
+    Die Konstanten $K_1$ und $K_2$ müssen beide reell sein, damit die Lösung reellwertig bleibt.
+    Der flüchtige Zustand entspricht damit der Addition zweier Exponentialfunktionen.
+    Wie im Exkurs in Kapitel \ref{sec:schaltvorgaengezeitbereich:rlc:nst} gezeigt wird,
+    dominiert die langsamere Exponentialfunktion, das heißt die mit größerer Zeitkonstante.
+}%
+%\pause%
+\textbf{3.) Partikuläre Lösung:} (eingeschwungen, identisch für alle drei Fälle)%
+\begin{align*}
+    &&
+        \ecv{u_{C,\mathrm{p}}} &= \ecv{U_q}
+        \\[-15pt] &\hphantom{1rrrrrrrrrrrrrrrr} &   \hphantom{2llllll}&\hphantom{\mathrel{\phantom{=}}2rrrrrrrrrrrrrrrrrrrrrrrrrrr}     &&\hphantom{3rrrrrrrrrrrrrrrrrrrrrrrr} \nonumber
+    \end{align*}%
+%\s{%
+%    Die partikuläre Lösung $\ecv{u_{C,\mathrm{p}}}$ entspricht der Gleichspannung $\ecv{U_q}$, da sich die Kapazität für $t \to \infty$ vollständig aufgeladen hat.
+%    Im Gegensatz zur homogenen Lösung ist $\ecv{u_{C,\mathrm{p}}}$ für alle drei Fälle identisch.
+%}%
+\end{frame}%
+%
+\begin{frame}\ftx{\subsubsecname}% Aperiodischer Fall: Zweiter Frame
+    \textbf{4.) Allgemeine Lösung:} (Überlagerung)%
+    \begin{align}
+        &&
+            \ecv{u_C}(t) &= K_1 \cdot \mathrm{e}^{\lambda_1 t} + K_2 \cdot \mathrm{e}^{\lambda_2 t} + \ecv{U_q} \nonumber\\[-14pt]
+        &\hphantom{1Rooooooo}&\hphantom{2Loooooo}&\hphantom{2Roooooooooooooooooooooooooooooooooo}&\hphantom{3Loooooo}&\hphantom{3Roooooooooo} \nonumber % Dummyzeile alignment zwischen align-Umgebungen[ca. 16pt hoch], RLCs part. Lösung je Fall
+    \end{align}
+    \pause%
+    \textbf{5.) Konstanten bestimmen:} (wie bekannt)
+
+    \s{Sei $\ecv{u_C}(0)=0$ und $\eci{i}(0)=0 \Rightarrow \dt\, \ecv{u_C}(0) = 0 $ als Anfangsbedingungen (AB) gegeben, so folgt:}%
+    \b{\vspace{4pt}Anfangsbedingungen (AB): $\ecv{u_C}(0)=0$ und $\eci{i}(0)=0 \Rightarrow \dt\, \ecv{u_C}(0) = 0 $}
+
+    \begin{align}
+        &\hphantom{1Rooooooo}&\hphantom{2Loooooo}&\hphantom{2Roooooooooooooooooooooooooooooooooo}&\hphantom{3Loooooo}&\hphantom{3Roooooooooo} \nonumber\\[-15pt] % Dummyzeile alignment zwischen align-Umgebungen[ca. 16pt hoch], RLCs part. Lösung je Fall
+        &\text{1. AB:}&
+            \ecv{u_C}(0) &= K_1 \cdot \redcancel{\mathrm{e}^{\lambda_1 0}} + K_2 \cdot \redcancel{\mathrm{e}^{\lambda_2 0}} + \ecv{U_q} \overset{!}{=} 0 & \Rightarrow\quad K_1 &= -K_2 -\ecv{U_q} \nonumber\\
+        &\text{2. AB:}&
+            \dt \ecv{u_C}(0) &= K_1 \cdot \lambda_1 \cdot \redcancel{\mathrm{e}^{\lambda_1 0}} + K_2 \cdot \lambda_2 \cdot \redcancel{\mathrm{e}^{\lambda_2 0}} + \redcancel{0} \overset{!}{=} 0 &  \Rightarrow\quad K_1 &= - K_2 \frac{\lambda_2}{\lambda_1} \nonumber\\
+        &\Longrightarrow&
+            K_1 &=  \frac{\ecv{U_q}}{\frac{\lambda_1}{\lambda_2}-1} \quad\text{und}\quad
+                K_2 = \frac{\ecv{U_q}}{\frac{\lambda_2}{\lambda_1}-1}
+            \label{eq:dgl:rlc:dc:konstanten:aperiodisch}
+    \end{align}
+
+\end{frame}
+
+%-------------------------------------------------------------------------------------------------%
+
+\subsubsection[Aperiodischer Grenzfall]{Aperiodischer Grenzfall beim RLC-Serienschwingkreis}
+\label{sec:schaltvorgaengezeitbereich:rlc:grenzfall}\index{Fall>aperiodischer Grenzfall}
+
+\begin{frame}[t]\ftx{\subsubsecname}
+\s{% Anfang Skript only
+    Ist die Diskriminante $D$ exakt null, sind beide Eigenwerte identisch, reell und negativ.
+    Durch die doppelte Nullstelle ergibt sich eine spezielle Form der homogenen Lösung
+    durch Überlagerung der zwei Ansätze %Die homogene Lösung setzt sich aus zwei Ansätzen zusammen:
+    ($K_1 \cdot \mathrm{e}^{\lambda_1 t}$ und $K_2 \cdot t \cdot \mathrm{e}^{\lambda_2 t}$).%
+}% Ende Skript only
+\b{% Anfang Folien only
+\begin{minipage}{\textwidth}\centering
+    \begin{minipage}[t][3cm][]{0.48\textwidth}\centering
+        \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_switchable_rlc_charge_detail.pdf}}%
+    \end{minipage}%
+    \begin{minipage}[t][3cm][]{0.48\textwidth}\centering
+        \begin{align}
+            \lambda_{1/2} = -\frac{R}{2L} \pm \sqrt{
+                \smash{\underbrace{% smash damit Größe der Wurzel nicht angepasst wird
+                \left(\frac{R}{2L}\right)^2 - \frac{1}{LC}
+                }_{\mathclap{\text{Diskriminante}\ D}}}
+                \vphantom{\left(\frac{R}{2L}\right)^2 - \frac{1}{LC}}% vphantom um Größe der Wurzel manuell an Term unter der Wurzel anzupassen
+            }%&
+        \end{align}
+    \end{minipage}
+\end{minipage}\vspace{2pt}
+    \textbf{Aperiodischer Grenzfall:}
+}% Ende Folien only
+% Following line needed, because end of \b{} before \begin{align} inserts an extra empty line
+\ifvmode\vspace*{-\baselineskip}\setlength{\parskip}{4pt}\fi% Ref: https://tex.stackexchange.com/questions/543846/how-can-i-ignore-empty-lines-before-after-and-inside-an-equation-environment
+\begin{align*}
+    \vphantom{\sqrt{\left(\frac{R}{2L}\right)^2}}
+    &\text{für}\quad D = 0 \quad\text{gilt}&
+        \lambda_{1/2} &= -\frac{R}{2L} \redcancel{ {} \pm {} \sqrt{0}} = \lambda
+            &&\Rightarrow\quad \text{1 reeller EW}
+    % Dummyline: manual fixed spacing for inter-environment-alignment: zero height after regular row with regular height (15pt), uncomment \nonumber to check height
+    \\[-15pt] &\hphantom{1rrrrrrrrrrrrrrrr} &   \hphantom{2llllll}&\hphantom{\mathrel{\phantom{=}}2rrrrrrrrrrrrrrrrrrrrrrrrrrr}     &&\hphantom{3rrrrrrrrrrrrrrrrrrrrrrrr} \nonumber
+\end{align*}%
+\pause%
+\textbf{2.) Homogene Lösung:} (flüchtig)
+\begin{align}
+    &&
+        \ecv{u_{C,\mathrm{h}}} &= \left( K_1 + K_2 \cdot t \right) \cdot \mathrm{e}^{\lambda t}
+    &&\text{mit}\quad \lambda_1 = \lambda_2 < 0  \label{eq:dgl:rlc:homolsg:grenzfall}
+    % Dummyline: manual fixed spacing for inter-environment-alignment: zero height after regular row with regular height (15pt), uncomment \nonumber to check height
+    \\[-15pt] &\hphantom{1rrrrrrrrrrrrrrrr} &   \hphantom{2llllll}&\hphantom{\mathrel{\phantom{=}}2rrrrrrrrrrrrrrrrrrrrrrrrrrr}     &&\hphantom{3rrrrrrrrrrrrrrrrrrrrrrrr} \nonumber
+\end{align}%
+%\pause%
+\textbf{3.) Partikuläre Lösung:} (eingeschwungen)%
+\begin{align*}
+    &&
+        \ecv{u_{C,\mathrm{p}}} &= \ecv{U_q}
+    \\[-15pt] &\hphantom{1rrrrrrrrrrrrrrrr} &   \hphantom{2llllll}&\hphantom{\mathrel{\phantom{=}}2rrrrrrrrrrrrrrrrrrrrrrrrrrr}     &&\hphantom{3rrrrrrrrrrrrrrrrrrrrrrrr} \nonumber
+    \end{align*}
+\end{frame}
+
+
+\begin{frame}\ftx{\subsubsecname}% Aperiodischer Grenzfall: Zweiter Frame
+    \textbf{4.) Allgemeine Lösung:} (Überlagerung)%
+    \begin{align}
+        &&
+            \ecv{u_C}(t) &= \left( K_1 + K_2 \cdot t \right) \cdot \mathrm{e}^{\lambda t} + \ecv{U_q} \nonumber\\[-14pt]
+        &\hphantom{1Rooooooo}&\hphantom{2Loooooo}&\hphantom{2Roooooooooooooooooooooooooooooooooo}&\hphantom{3Loooooo}&\hphantom{3Roooooooooo} \nonumber % Dummyzeile alignment zwischen align-Umgebungen[ca. 16pt hoch], RLCs part. Lösung je Fall
+    \end{align}
+    %\pause%
+    \textbf{5.) Konstanten bestimmen:} (wie bekannt)
+
+    \s{Sei $\ecv{u_C}(0)=0$ und $\eci{i}(0)=0 \Rightarrow \dt\, \ecv{u_C}(0) = 0 $ als Anfangsbedingungen (AB) gegeben, so folgt:}%
+    \b{\vspace{4pt}Anfangsbedingungen (AB): $\ecv{u_C}(0)=0$ und $\eci{i}(0)=0 \Rightarrow \dt\, \ecv{u_C}(0) = 0 $}
+
+    \begin{align}
+        &\hphantom{1Rooooooo}&\hphantom{2Loooooo}&\hphantom{2Roooooooooooooooooooooooooooooooooo}&\hphantom{3Loooooo}&\hphantom{3Roooooooooo} \nonumber\\[-15pt] % Dummyzeile alignment zwischen align-Umgebungen[ca. 16pt hoch], RLCs part. Lösung je Fall
+        &\text{1. AB:}&
+            \ecv{u_C}(0) &= \left( K_1 + \redcancel{K_2 \cdot 0 }\right) \redcancel{\cdot \mathrm{e}^{\lambda 0}} + \ecv{U_q} \overset{!}{=} 0 & \Rightarrow\quad K_1 &= -\ecv{U_q} \nonumber\\
+        &\text{2. AB:}&
+            \dt \ecv{u_C}(0) &= \left( K_1 + \redcancel{K_2 \cdot 0} \right) \cdot \lambda \cdot \redcancel{\mathrm{e}^{\lambda 0}} + K_2 \cdot \redcancel{\mathrm{e}^{\lambda 0}} \overset{!}{=} 0 & \Rightarrow\quad K_2 &= -K_1 \cdot \lambda \nonumber\\
+            &\Longrightarrow&
+        K_1 &= -\ecv{U_q} \quad\text{und}\quad
+                K_2 = +\ecv{U_q} \cdot \lambda
+            \label{eq:dgl:rlc:dc:konstanten:grenzfall}
+    \end{align}%
+\end{frame}
+
+%-------------------------------------------------------------------------------------------------%
+
+\subsubsection[Periodischer Fall]{Periodischer Fall beim RLC-Serienschwingkreis}
+\label{sec:schaltvorgaengezeitbereich:rlc:periodisch}\index{Fall>periodischer Fall}
+
+\begin{frame}\ftx{\subsubsecname}%
+\s{% Anfang Skript only
+    Ist die Diskriminante negativ, gibt es zwei komplex konjugierte Eigenwerte mit negativem Realteil.
+    Umformung mit $\sqrt{-1}=\mathrm{j}\cdot\sqrt{1}$ und Herleitung für $u_{C,h}$ in Kapitel
+    \ref{sec:schaltvorgaengezeitbereich:rlc:herleitung}:%
+}% Ende Skript only
+\b{% Anfang Folien only
+    \begin{minipage}{\textwidth}\centering
+        \begin{minipage}[t][3cm][]{0.48\textwidth}\centering
+            \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_switchable_rlc_charge_detail.pdf}}%
+        \end{minipage}%
+        \begin{minipage}[t][3cm][]{0.48\textwidth}\centering
+            \begin{align}
+                \lambda_{1/2} = -\frac{R}{2L} \pm \sqrt{
+                    \smash{\underbrace{% smash damit Größe der Wurzel nicht angepasst wird
+                    \left(\frac{R}{2L}\right)^2 - \frac{1}{LC}
+                    }_{\mathclap{\text{Diskriminante}\ D}}}
+                    \vphantom{\left(\frac{R}{2L}\right)^2 - \frac{1}{LC}}% vphantom um Größe der Wurzel manuell an Term unter der Wurzel anzupassen
+                }%&
+            \end{align}
+        \end{minipage}
+    \end{minipage}\vspace{2pt}
+    \textbf{Periodischer Fall:} (Schwingfall)%
+}% Ende Folien only
+% Following line needed, because end of \b{} before \begin{align} inserts an extra empty line
+\ifvmode\vspace*{-\baselineskip}\setlength{\parskip}{4pt}\fi% Ref: https://tex.stackexchange.com/questions/543846/how-can-i-ignore-empty-lines-before-after-and-inside-an-equation-environment
+\begin{align}
+    &\text{für}\quad D < 0 \quad\text{gilt}&
+        \lambda_{1/2} &= -\underbrace{
+            \vphantom{\sqrt{\left(\frac{R}{2L}\right)^2}}
+            \frac{R}{2L}
+        }_{\delta} \pm \, \mathrm{j} \cdot \underbrace{
+            \sqrt{\frac{1}{LC} - \left(\frac{R}{2L}\right)^2}
+        }_{\omega_d}
+        &&\Rightarrow\quad \text{2 kompl. EW} \label{eq:dgl:rlc:lambda:periodisch}
+        \\[-15pt] &\hphantom{1rrrrrrrrrrrrrrrr} &   \hphantom{2llllll}&\hphantom{\mathrel{\phantom{=}}2rrrrrrrrrrrrrrrrrrrrrrrrrrr}     &&\hphantom{3rrrrrrrrrrrrrrrrrrrrrrrr} \nonumber
+\end{align}%
+\pause%
+\textbf{2.) Homogene Lösung:} (flüchtig)
+\begin{align}
+    &&
+        \ecv{u_{C,\mathrm{h}}} &= \mathrm{e}^{-\delta t} \cdot C_0 \cdot \sin(\omega_d t + \varphi_0)
+        &&\text{mit}\quad \lambda_{1/2} = -\delta \pm \mathrm{j}\,\omega_d \label{eq:dgl:rlc:homolsg:periodisch}
+    % Dummyline: manual fixed spacing for inter-environment-alignment: zero height after regular row with regular height (15pt), uncomment \nonumber to check height
+    \\[-15pt] &\hphantom{1rrrrrrrrrrrrrrrr} &   \hphantom{2llllll}&\hphantom{\mathrel{\phantom{=}}2rrrrrrrrrrrrrrrrrrrrrrrrrrr}     &&\hphantom{3rrrrrrrrrrrrrrrrrrrrrrrr} \nonumber
+\end{align}%
+\b{Herleitung für $u_{C,\mathrm{h}}$ in Exkurs. Bestimmung der Konstanten $C_0$ und $\varphi_0$ wie bekannt.}%
+\s{% Anfang Skript only
+    Die homogene Lösung entspricht einer abklingenden Schwingung mit der
+    \textbf{Abklingkonstante} $\delta$\index{Größe>Abklingkonstante} (neg. Realteil der EW)
+    und der \textbf{gedämpften Eigenkreisfrequenz} $\omega_d$\index{Größe>Eigenkreisfrequenz, gedämpft} (pos. Imaginärteil der EW).
+    Eine Herleitung für Gl. \ref{eq:dgl:rlc:homolsg:periodisch} aus Gl. \ref{eq:dgl:rlc:homolsg:periodisch:herleitung} erfolgt in Kapitel \ref{sec:schaltvorgaengezeitbereich:rlc:herleitung}.
+}% Ende Skript only
+\end{frame}
+
+
+\begin{frame}\ftx{\subsubsecname}% Periodischer Fall: Zweiter Frame
+    \b{% Anfang Folien only
+    \begin{minipage}{\textwidth}\centering
+        \begin{minipage}[t][3cm][]{0.5\textwidth}%\centering
+            \textbf{3.) Partikuläre Lösung:} (eingeschw.)%
+            \begin{align*}
+                &&
+                    \ecv{u_{C,\mathrm{p}}} &= \ecv{U_q}
+                \end{align*}
+            \textbf{4.) Allgemeine Lösung:} (Überlagerung)%
+            \begin{align}
+                &&
+                    \ecv{u_C}(t) &= \mathrm{e}^{-\delta t} \cdot C_0 \cdot \sin(\omega_d t + \varphi_0) + \ecv{U_q} \nonumber\\[-14pt]
+            \end{align}
+        \end{minipage}%
+        \begin{minipage}[t][3cm][]{0.5\textwidth}\centering
+            \vspace{10pt}
+            \includegraphics{Tikz/pdf/plot_rlcs_charge_dc_uc_periodisch.pdf}
+        \end{minipage}
+    \end{minipage}\vspace{15pt}
+    \textbf{5.) Konstanten bestimmen:} (wie bekannt)
+    \begin{align}
+        &\hphantom{1Rooooooo}&\hphantom{2Loooooo}&\hphantom{2Roooooooooooooooooooooooooooooooooo}&\hphantom{3Loooooo}&\hphantom{3Roooooooooo} \nonumber\\[-15pt] % Dummyzeile alignment zwischen align-Umgebungen[ca. 16pt hoch], RLCs part. Lösung je Fall
+        &\text{1. AB:}&
+            \ecv{u_C}(0) &= \redcancel{\mathrm{e}^{-\delta 0}} \cdot C_0 \cdot \sin(\redcancel{\omega_d t } + \varphi_0) + \ecv{U_q} \overset{!}{=} 0 \nonumber\\
+        &\text{2. AB:}&
+            \dt \ecv{u_C}(0) &= -\delta \cdot \redcancel{\mathrm{e}^{-\delta 0}} \cdot C_0 \cdot \sin(\varphi_0) + \mathrlap{\redcancel{\mathrm{e}^{-\delta 0}} \cdot C_0 \cdot \omega_d \cdot \cos(\varphi_0) \overset{!}{=} 0 }\nonumber\\
+        &\Longrightarrow&
+        C_0 &=  -\frac{\ecv{U_q}}{\sin(\varphi_0)} \quad\text{und}\quad
+            \varphi_0 = \arctan\left(\frac{\omega_d}{\delta}\right)
+        \label{eq:dgl:rlc:dc:konstanten:periodisch}
+    \end{align}
+    }% Ende Folien only
+    \s{% Anfang Skript only
+    \textbf{3.) Partikuläre Lösung:} (eingeschwungen)%
+    \begin{align*}
+        &&
+            \ecv{u_{C,\mathrm{p}}} &= \ecv{U_q}
+        \\[-15pt] &\hphantom{1rrrrrrrrrrrrrrrr} &   \hphantom{2llllll}&\hphantom{\mathrel{\phantom{=}}2rrrrrrrrrrrrrrrrrrrrrrrrrrr}     &&\hphantom{3rrrrrrrrrrrrrrrrrrrrrrrr} \nonumber
+        \end{align*}
+    %\pause%
+    \textbf{4.) Allgemeine Lösung:} (Überlagerung)%
+    \begin{align}
+        &&
+            \ecv{u_C}(t) &= \mathrm{e}^{-\delta t} \cdot C_0 \cdot \sin(\omega_d t + \varphi_0) + \ecv{U_q} \nonumber\\[-14pt]
+        &\hphantom{1Rooooooo}&\hphantom{2Loooooo}&\hphantom{2Roooooooooooooooooooooooooooooooooo}&\hphantom{3Loooooo}&\hphantom{3Roooooooooo} \nonumber % Dummyzeile alignment zwischen align-Umgebungen[ca. 16pt hoch], RLCs part. Lösung je Fall
+    \end{align}
+    %\pause%
+    \textbf{5.) Konstanten bestimmen:} (wie bekannt)
+    \begin{align}
+        &\hphantom{1Rooooooo}&\hphantom{2Loooooo}&\hphantom{2Roooooooooooooooooooooooooooooooooo}&\hphantom{3Loooooo}&\hphantom{3Roooooooooo} \nonumber\\[-15pt] % Dummyzeile alignment zwischen align-Umgebungen[ca. 16pt hoch], RLCs part. Lösung je Fall
+        &\text{1. AB:}&
+            \ecv{u_C}(0) &= \redcancel{\mathrm{e}^{-\delta 0}} \cdot C_0 \cdot \sin(\redcancel{\omega_d t } + \varphi_0) + \ecv{U_q} \overset{!}{=} 0 \nonumber\\
+        &\text{2. AB:}&
+            \dt \ecv{u_C}(0) &= -\delta \cdot \redcancel{\mathrm{e}^{-\delta 0}} \cdot C_0 \cdot \sin(\varphi_0) + \mathrlap{\redcancel{\mathrm{e}^{-\delta 0}} \cdot C_0 \cdot \omega_d \cdot \cos(\varphi_0) \overset{!}{=} 0 }\nonumber\\
+        &\Longrightarrow&
+        C_0 &=  -\frac{\ecv{U_q}}{\sin(\varphi_0)} \quad\text{und}\quad
+            \varphi_0 = \arctan\left(\frac{\omega_d}{\delta}\right)
+        \label{eq:dgl:rlc:dc:konstanten:periodisch}
+    \end{align}
+    In Abbildung \ref{fig:rlc:dc:uc:periodisch} ist der zeitlichen Verlauf der Spannung $u_C(t)$ für $t=0$ bis $t=5\cdot\frac{1}{\delta}$ gezeigt.
+    In der gewählten Skalierung beträgt $\omega_0$ das vierfache der Abklingkonstante $\delta$ (Güte $Q_S = 2$).
+
+    \begin{figure}[H]\centering%
+        \resizebox{0.7\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcs_charge_dc_uc_periodisch.pdf}}%
+        \caption{Spannung $u_C(t)$ im periodischen Fall mit zugehörige Konstanten: $C_0$, $\varphi_0$, $\delta$, $\omega_d$}%
+        \label{fig:rlc:dc:uc:periodisch}%
+    \end{figure}%
+    }% Ende Skript only
+\end{frame}
+
+%-------------------------------------------------------------------------------------------------%
+
+\newpage% Achtung: Layout für eine A4-Seite im Skript vorgesehen!
+\subsubsection{Exkurs: Herleitung der homogenen Lösung im periodischen Fall}
+\label{sec:schaltvorgaengezeitbereich:rlc:herleitung}
+%
+\begin{frame}[t]\ftx{\subsubsecname}
+\s{% Anfang Skript only
+Aus der allgemeinen homogenen Lösung in Gl. \ref{eq:dgl:rlc:homolsg:cases} folgt mit $\lambda_{1/2}$ aus Gl. \ref{eq:dgl:rlc:lambda:periodisch} im periodischen Fall:
+}% Ende Skript only
+\ifvmode\vspace*{-\baselineskip}\setlength{\parskip}{0ex}\fi% Ref: https://tex.stackexchange.com/questions/543846/how-can-i-ignore-empty-lines-before-after-and-inside-an-equation-environment
+\begin{align}
+    &&
+        \ecv{u_{C,\mathrm{h}}} &= \mathrm{e}^{-\delta t} \cdot \left( K_1 \cdot \mathrm{e}^{+\mathrm{j}\omega_d t} + K_2 \cdot \mathrm{e}^{-\mathrm{j}\omega_d t} \right) \nonumber\\
+% uncomment intertext for math preview in VSCode
+\intertext{$K_1$ und $K_2$ müssen komplex konjugiert sein, damit $\ecv{u_{C,\mathrm{h}}}$ reell ist!}
+&\text{mit}&
+        K_1 &= a + \mathrm{j} b \mathrlap{\quad\text{und}\quad K_2 = a - \mathrm{j} b\quad\text{mit}\quad a,b \in \mathbb{R}} \nonumber\\[6pt]
+    &&
+        \ecv{u_{C,\mathrm{h}}} &= \mathrm{e}^{-\delta t} \cdot \left[ (a + \mathrm{j} b) \cdot \mathrm{e}^{+\mathrm{j}\omega_d t} + (a - \mathrm{j} b) \cdot \mathrm{e}^{-\mathrm{j}\omega_d t} \right] \nonumber\\[2pt]
+    &&
+        \ecv{u_{C,\mathrm{h}}} &= \mathrm{e}^{-\delta t} \cdot
+            \left[\vphantom{\Big|}
+            \smash{ a \cdot
+            \underbrace{\left(
+                \mathrm{e}^{+\mathrm{j}\omega_d t} + \mathrm{e}^{-\mathrm{j}\omega_d t}
+            \right)}_{2\cos(\omega_d t)}
+            + \mathrm{j} b \cdot
+            \underbrace{\left(
+                \mathrm{e}^{+\mathrm{j}\omega_d t} - \mathrm{e}^{-\mathrm{j}\omega_d t}
+            \right)}_{2\mathrm{j}\sin(\omega_d t)}
+            }\right] \nonumber\\[20pt]
+    &\text{mit}&
+        \mathrm{e}^{+\mathrm{j}x} + \mathrm{e}^{-\mathrm{j}x} &= \cos(x) + \redcancel{\mathrm{j}\sin(x)} + \cos(x) - \redcancel{\mathrm{j}\sin(x)} = 2\cos(x) \nonumber\\
+    &&
+        \mathrm{e}^{+\mathrm{j}x} - \mathrm{e}^{-\mathrm{j}x} &= \redcancel{\cos(x)} + \mathrm{j}\sin(x) - \redcancel{\cos(x)} + \mathrm{j}\sin(x) = 2\mathrm{j}\sin(x) \nonumber\\[6pt]
+    &&
+        \ecv{u_{C,\mathrm{h}}} &= \mathrm{e}^{-\delta t} \cdot
+            \left[\vphantom{\Big|}\smash{
+            \underbrace{2a}_{C_1} \cdot \cos(\omega_d t) - \underbrace{2b}_{C_2} \cdot \sin(\omega_d t)
+            }\right]
+    \label{eq:dgl:rlc:homolsg:periodisch:herleitung}
+\end{align}%
+\end{frame}%
+\begin{frame}[t]\ftx{\subsubsecname}% Exkurs Herleitung: Zweiter Frame
+\s{% Anfang Skript only
+Die homogene Lösung entspricht im periodischen Fall einer abklingenden ($\mathrm{e}^{-\delta t}$)
+Überlagerung der Schwingungen $z_1$ und $-z_2$ mit gleicher Kreisfrequenz $\omega_d$
+und Phasenverschiebung von $\sfrac{\pi}{2}$ zueinander. %
+\begin{figure}[H]\centering
+    \includegraphics{Tikz/pdf/plot_zeigerdiagramm_schwingungen_addieren.pdf}\hfill% C1*cos(wt) - C2*sin(wt) = C0*sin(wt + phi0)
+    \begin{subfigure}{0.58\textwidth}\centering
+        \caption{Zeitverläufe}%
+    \end{subfigure}%
+    \begin{subfigure}{0.38\textwidth}\centering
+        \caption{Zeigerdiagramm}%
+    \end{subfigure}%
+    \caption{Überlagerung von Schwingungen gleicher Frequenz im Zeitverlauf u. Zeigerdiagramm}%
+    \label{fig:plot:zeiger:ueberlagerung}%
+\end{figure}%
+}% Ende Skript only
+\b{% Anfang Folien only
+    Überlagerung zweier Schwingungen gleicher Kreisfrequenz $\omega_d$:
+    \begin{align}
+        \ecv{u_{C,\mathrm{h}}} &= \mathrm{e}^{-\delta t} \cdot
+        \left[\vphantom{\Big|}\smash{
+        \underbrace{\ec[blue]{2a}}_{C_1} \ec[blue]{\cdot \cos(\omega_d t)} \ec[red]{\,-} \underbrace{\ec[red]{2b}}_{C_2} {}\ec[red]{\cdot \sin(\omega_d t)}
+        }\right]
+    \end{align}%
+    \includegraphics{Tikz/pdf/plot_zeigerdiagramm_schwingungen_addieren.pdf}% C1*cos(wt) - C2*sin(wt) = C0*sin(wt + phi0)%
+    \vfill%
+    \begin{align}
+        &&
+            \ecv{u_{C,\mathrm{h}}} &= \mathrm{e}^{-\delta t} \cdot \ec[GETgreen]{C_0 \cdot \sin(\omega_d t + \varphi_0) }
+                &&\text{mit}\quad \lambda_{1/2} = -\delta \pm \mathrm{j} \cdot \omega_d
+    \end{align}%
+}% Ende Folien only
+\end{frame}%
+%
+% <- no linebreak (Skript)
+%
+\begin{frame}[t]\ftx{\subsubsecname}% Exkurs Herleitung: Dritter Frame
+\s{% Anfang Skript only
+In Abbildung \ref{fig:plot:zeiger:ueberlagerung} ist die Überlagerung in Form addierter Zeitverläufe (a) und
+in Form addierter komplexer Amplitudenzeiger im Zeigerdiagramm (b) dargestellt. Mathematisch ausgedrückt:%%
+}% Ende Skript only
+\b{% Anfang Folien only
+\begin{align}
+    \ecv{u_{C,\mathrm{h}}} &= \mathrm{e}^{-\delta t} \cdot
+    \left[\vphantom{\Big|}\smash{
+    \underbrace{2a}_{C_1} \cdot \cos(\omega_d t) - \underbrace{2b}_{C_2} \cdot \sin(\omega_d t)
+    }\right]
+\end{align}%
+}% Ende Folien only
+\ifvmode\vspace*{-\baselineskip}\setlength{\parskip}{4pt}\fi% Ref: https://tex.stackexchange.com/questions/543846/how-can-i-ignore-empty-lines-before-after-and-inside-an-equation-environment
+\begin{align}
+    &&&\mathrlap{\textit{Zeitbereich}}&&&&\mathrlap{\textit{Polar.}}&&\mathrlap{\textit{Kart.}} &&\nonumber\\
+    &&
+        z_1(t) &= +C_1 \cdot \cos(\omega_d t)&
+        &\Leftrightarrow&
+        \underline{z}_1 &= C_1 \cdot \mathrm{e}^{\mathrm{j}0} &
+        \underline{z}_1 &= C_1 \nonumber\\
+    &&
+        z_2(t) &= -C_2 \cdot \sin(\omega_d t)&
+        &\Leftrightarrow&
+        \underline{z}_2 &= C_2 \cdot \mathrm{e}^{-\mathrm{j}\frac{\pi}{2}} &
+        \underline{z}_2 &= \hphantom{C_1} - \mathrm{j} \cdot C_2 \nonumber\\
+    &&
+        z_0(t) &= z_1(t) + z_2(t)&
+        &\Leftrightarrow&
+        \underline{z}_0 &= \underline{z}_1 + \underline{z}_2 &
+        \underline{z}_0 &= C_1 - \mathrm{j} \cdot C_2 \nonumber\\
+    &&
+        &= C_0 \cdot \cos(\omega_d t + \psi)&
+        &\Leftrightarrow&
+        \hphantom{z_0} &= C_0 \cdot \mathrm{e}^{\mathrm{j}\psi} \nonumber\\[4pt]
+    %
+    &\text{mit}&
+        C_0 &= \sqrt{C_1^2 + C_2^2}&
+        &\text{und}&
+        \psi  &= \arctan\left(-\frac{C_2}{C_1}\right),
+        &\varphi_0 &= \psi + \frac{\pi}{2} \nonumber\\[4pt]
+    &&
+        z_0(t) &= C_0 \cdot \sin(\omega_d t + \varphi_0) \label{eq:dgl:rlc:homolsg:periodisch:zeigeraddition}
+\end{align}%
+\b{% Anfang Folien only
+\vfill%
+\begin{align}
+    &&
+        \ecv{u_{C,\mathrm{h}}} &= \mathrm{e}^{-\delta t} \cdot C_0 \cdot \sin(\omega_d t + \varphi_0)
+            &&\text{mit}\quad \lambda_{1/2} = -\delta \pm \mathrm{j} \cdot \omega_d
+\end{align}%
+}%
+\s{% Anfang Skript only
+Die homogene Lösung im periodischen Fall aus Gl. \ref{eq:dgl:rlc:homolsg:periodisch:herleitung} lässt sich somit
+gemäß Herleitung für Gl. \ref{eq:dgl:rlc:homolsg:periodisch:zeigeraddition} in Form einer abklingenden, phasenverschobenen Sinuskurve wie in Lösung in Gl. \ref{eq:dgl:rlc:homolsg:periodisch} beschreiben:
+\begin{align*}
+    \ecv{u_{C,\mathrm{h}}} &= \mathrm{e}^{-\delta t} \cdot C_0 \cdot \sin(\omega_d t + \varphi_0)
+        &&\text{mit}\quad \lambda_{1/2} = -\delta \pm \mathrm{j} \cdot \omega_d
+\end{align*}
+}% Ende Skript only
+\end{frame}
+
+%-------------------------------------------------------------------------------------------------%
+
+\newpage% Achtung: Layout für eine A4-Seite im Skript vorgesehen!
+\subsubsection[Exkurs: Ortskurvendiagramm, Nullstellen]{Exkurs: Fallunterscheidung bei RLC-Serienschwingkreis, Nullstellen}
+\label{sec:schaltvorgaengezeitbereich:rlc:nst}
+\begin{frame}[t]\ftx{\subsubsecname}
+\s{% Anfang Skript only
+    Die Nullstellen (NST) des charakteristiscen Polynoms, das heißt die Eigenwerte $\lambda_{1/2}$,
+    des RLC-Serienschwingkreises hängen von der Diskriminante $D$ ab.
+
+    \begin{figure}[H]\centering
+        \begin{subfigure}{0.48\textwidth}\centering
+            \includegraphics{Tikz/pdf/plot_rlcs_ortskurve_nst.pdf}
+            \caption{Ortskurve der Nullstellen $\lambda$}
+            \label{fig:rlc:nst}
+        \end{subfigure}%
+        \begin{subfigure}{0.48\textwidth}\centering
+            \includegraphics{Tikz/pdf/plot_rlcs_charge_dc_uc.pdf}
+            \caption{Spannungsverlauf, Fallunterscheidung}
+            \label{fig:rlc:nst:dgl}
+        \end{subfigure}
+        \caption{Ortskurve der Eigenwerte und Spannungsverläufe im RLC-Serienschwingkreis}
+    \end{figure}
+
+    Abbildung \ref{fig:rlc:nst} zeigt die Lage der Nullstellen im komplexen Zahlenraum als Ortskurve in Abhängigkeit von $D$
+    bei gleichbleibenden Werten für $R$ und $L$.
+    Der Verlauf der NST entspricht einem Anstieg der ungedämpften Eigenkreisfrequenz $\omega_0$ bei gleich bleibender Abklingkonstante $\delta$.
+    [Vgl. Gl. \ref{eq:dgl:rlc:eigenkreisfrequenz}]
+
+    Im aperiodischen Fall ($D>0$) bewegen sich die beiden negativen reellen NST für $\delta=konst.$ und steigendem $\omega_0$ auf einander zu.
+    Im aperiodischen Grenzfall ($D=0$) verschmelzen die NST zu einer doppelten Nullstelle bei $\lambda_{1/2}=-\delta$.
+    Im periodischen Grenzfall ($D<0$) bewegen sich die konjugiert komplexen NST für $\delta=konst.$ und steigendem $\omega_0$ parallel zur Imaginärachse
+    und entfernen sich von der Realachse.
+
+    \textbf{Vergleich: Polstellen der Übertragungsfunktion (Systemtheorie)}
+
+    Aus der Lage der Eigenwerte im Ortskurvendiagramm lassen sich Rückschlüsse auf das Einschwingverhalten des RLC-Serienschwingkreises ziehen.
+    Das Vorgehen ist üblich bei der Stabilitätsanalyse von Systemen im Rahmen der Regelungstechnik und stammt als Methode aus der Systemtheorie.
+
+    Für verschwindende Anfangsbedingungen ($\dt[i]\,u_C(0)=0\ \forall i$) lässt sich die DGL aus Gl. \ref{eq:dgl:rlc:dc}
+    mithilfe der Laplace-Transformation direkt im Bildbereich beschreiben. Durch umstellen der transformierten Ausgangsgröße $U_C(s)$
+    nach der Eingangsgröße $U(s)$ ergibt sich die Übertragungsfunktion $G(s)$ des RLC-Serienschwingkreises:
+
+    \begin{align}
+        u(t) &= LC \cdot \dt[2]\,u_{C}(t) + RC \cdot \dt\,u_{C}(t) + u_{C}(t)& &\bigg|\,\mathscr{L}\\
+        U(s) &= LC \cdot s^2 \cdot U_C(s) + RC \cdot s \cdot U_C(s) + U_C(s) \vphantom{\bigg|}\\
+        G(s) &= \frac{U_C(s)}{U(s)} = \frac{\text{Ausgangsgröße}(s)}{\text{Eingangsgröße}(s)} \vphantom{\bigg|}\\
+        %\quad\widehat{=} \underline{F}(\mathrm{j}(\omega)) = \frac{\underline{U}_C}{\underline{U}}
+        &= \frac{1}{LC \cdot s^2 + RC \cdot s + 1}
+    \end{align}
+
+    Die Polstellen der Übertragungsfunktion $G(s)$ entsprechen den Eigenwerten $\lambda_{1/2}$.
+
+}% Ende Skript only
+\b{% Anfang Folien only
+\begin{minipage}{\textwidth}\centering
+    \begin{minipage}[t][3cm][]{0.48\textwidth}\centering
+        \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_switchable_rlc_charge_detail.pdf}}%
+    \end{minipage}%
+    \begin{minipage}[t][3cm][]{0.48\textwidth}\centering
+        %\includegraphics{Tikz/pdf/plot_rlcs_charge_dc_uc.pdf}%
+    \begin{align}
+        %&\textbf{Eigenwerte:}&
+        \lambda_{1/2} = -\frac{R}{2L} \pm \sqrt{
+            \smash{\underbrace{% smash damit Größe der Wurzel nicht angepasst wird
+            \left(\frac{R}{2L}\right)^2 - \frac{1}{LC}
+            }_{\mathclap{\text{Diskriminante}\ D}}}
+            \vphantom{\left(\frac{R}{2L}\right)^2 - \frac{1}{LC}}% vphantom um Größe der Wurzel manuell an Term unter der Wurzel anzupassen
+        }%&
+    \end{align}
+    \end{minipage}
+\end{minipage}\vspace{2pt}
+
+\textbf{Nullstellen im Ortskurvendiagramm:} $\lambda(D)$ für $\delta=konst.$ \vspace{2pt}
+
+\begin{minipage}{\textwidth}\centering
+    \begin{minipage}{0.4\textwidth}\centering
+        \includegraphics{Tikz/pdf/plot_rlcs_ortskurve_nst.pdf}%
+    \end{minipage}%
+    \begin{minipage}{0.56\textwidth}\centering
+        \begin{itemize}
+            \item[] \makebox[2cm][l]{$\Re\{\lambda\} < 0$:} $\Rightarrow$ stabil
+            \item[] $D>0$: NST näher an $\Im$-Achse
+            \item[] \hspace{2cm} $\Rightarrow$ langsamer, dominant
+            \item[] $D=0$: NST weiter weg von $\Im$-Achse
+            \item[] \hspace{2cm} $\Rightarrow$ schnellster aperiod. Fall
+            \item[] $D<0$: NST konjugiert, komplex
+            \item[] \hspace{2cm} $\Rightarrow$ schwinungsfähig
+        \end{itemize}
+    \end{minipage}
+\end{minipage}
+}% Ende Folien only
+\end{frame}
+
+%-------------------------------------------------------------------------------------------------%
+\newpage% Achtung: Layout für eine A4-Seite im Skript vorgesehen!
+\subsubsection{Exkurs: Abklingkonstante, Eigen- und Resonanzkreisfrequenz, Güte}
+\label{sec:schaltvorgaengezeitbereich:rlc:eigenfrequenz}
+\begin{frame}[t]\ftx{\subsubsecname}
+\s{%
+    Im periodischen Fall ergibt sich die (gedämpfte) Eigenkreisfrequenz $\omega_d$ und die Abklingkonstante $\delta$ aus den Eigenwerten $\lambda_{1/2}$.
+    Die Größen hängen eng zusammen mit der \textbf{Güte} $Q_{\mathrm{S}}$ und der \textbf{Resonanzkreisfrequenz} $\omega_0$ eines Schwingkreises (Resonanzkreises).
+    Beide Größen werden als Kenngrößen für Schwingkreise verwendet und ausführlicher in Modul 8 (Frequenzvariable Schaltungen) behandelt.
+
+    Der Zusammenhang zwischen $\omega_d$, $\delta$, $\omega_0$ und $Q_{\mathrm{S}}$ soll anhand des RLC-Serienschwingkreises aus Abbildung \ref{fig:circ:rlc:charge}
+    erläutert werden. Die Eigenwerte $\lambda_{1/2}$ sind nach Gleichung \ref{eq:dgl:rlc:lambda:periodisch} gegeben durch:
+    \begin{align}
+        %\lambda_{1/2} &= -\frac{R}{2L} \pm \, \mathrm{j} \cdot \sqrt{\frac{1}{LC} - \left(\frac{R}{2L}\right)^2}% without underbrace
+        \lambda_{1/2} &= -\underbrace{
+            \vphantom{\sqrt{\left(\frac{R}{2L}\right)^2}}
+            \frac{R}{2L}
+        }_{\delta} \pm \, \mathrm{j} \cdot \underbrace{
+            \sqrt{\frac{1}{LC} - \left(\frac{R}{2L}\right)^2}
+        }_{\omega_d}
+        \label{eq:dgl:rlc:lambda:periodisch:exkurs}
+    \end{align}
+    Der negative Realteil $-\delta$ bestimmt die Abklingrate und der Imaginärteil $\omega_d$ die Kreisfrequenz der linear gedämpften, harmonischen Schwingung.
+    Die Eigenkreisfrequenz $\omega_d$ lässt sich mit Gl. \ref{eq:dgl:rlc:resonanzkreisfrequenz} auch in Abhängigkeit von $\omega_0$ und $\delta$ ausdrücken.%
+    \begin{align}
+        \omega_d &= \sqrt{\frac{1}{LC} - \left(\frac{R}{2L}\right)^2} = \sqrt{\omega_0^2 - \delta^2} \label{eq:dgl:rlc:eigenkreisfrequenz}
+    \end{align}
+    Das hat den Vorteil, dass die ungedämpfte Eigenkreisfrequenz $\omega_0$ und die Abklingkonstante $\delta$
+    direkt aus den Koeffizienten der DGL abgelesen werden können. Hierfür bietet sich die Form:
+    \begin{equation}
+        \ddot y + 2\delta \cdot \dot y + \omega_0^2 \cdot y = b
+    \end{equation}
+
+    für gewöhnliche, homogene, lineare DGLen 2. Ordnung an.
+    Die DGL beschreibt das Verhalten linearer gedämpfter Systeme zweiter Ordnung (mit zwei Energiespeichern).%
+
+    Die ungedämpfte Eigenkreisfrequenz entspricht dabei der Resonanzkreisfrequenz $\omega_0$.
+    Bei Anregung eines Schwingkreises mit dessen \textbf{Resonanzfrequenz} $f_0$\index{Resonanzfrequenz} tritt eine Resonanz auf.
+    Im Resonanzfall verschwindet der Blindanteil der Gesamtimpedanz $\underline{Z}(\omega)$ (Resonanzbedingung). [Vgl. Modul 8]
+
+    Mit der Gesamtimpedanz:
+    \begin{align}
+            \underline{Z}(\omega) &= R + \mathrm{j} \left( \omega L - \frac{1}{\omega C} \right) \nonumber\\
+        \intertext{und der Resonanzbedingung:}
+            \Im\{\underline{Z}(\omega_0)\} &= \omega_0 L - \frac{1}{\omega_0 C} \overset{!}{=} 0 \nonumber\\
+        \intertext{folgt für die Resonanzkreisfrequenz:}
+            \omega_0 &= \sqrt{\frac{1}{LC}} \label{eq:dgl:rlc:resonanzkreisfrequenz}
+    \end{align}
+
+    Die Güte $Q_{\mathrm{S}}$ als Maß für die Schwingungsfähigkeit eines Schwingkreises lässt sich ebenfalls aus $\omega_0$ und $\delta$ ableiten.
+    Sie ist definiert als Verhältnis der schaltungsintern schwingenden Blindleistung
+    zur schaltungsinternen Verlustleistung im Resonanzfall. Dies entspricht beim RLC-Serienschwingkreis dem Verhältnis von
+    Blindwiderstand der Induktivität $X_{L,0}$ bei Resonanzfrequenz zur Serienresistenz $R$ (ohne Herleitung).
+    Dadurch ergibt sich folgender Zusammenhang:
+
+    \begin{align}
+        Q_{\mathrm{S}} &= \frac{X_{L,0}}{R} = \frac{\omega_0 L}{R} = \frac{\omega_0}{2\delta} \label{eq:dgl:rlc:guete}
+    \end{align}
+
+    Die Güte ist proportional zum Verhältnis der ungedämpften Eigenkreisfrequenz zur Dämpfungskonstante. %
+
+}%
+\b{%
+\begin{minipage}{\textwidth}\centering
+    \begin{minipage}[t][3cm][]{0.48\textwidth}\centering
+        \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_switchable_rlc_charge_detail.pdf}}%
+    \end{minipage}%
+    \begin{minipage}[t][3cm][]{0.48\textwidth}\centering
+        %\includegraphics{Tikz/pdf/plot_rlcs_charge_dc_uc.pdf}%
+    \begin{align}
+        %\lambda_{1/2} &= -\frac{R}{2L} \pm \, \mathrm{j} \cdot \sqrt{\frac{1}{LC} - \left(\frac{R}{2L}\right)^2}% without underbrace
+        \lambda_{1/2} &= -\underbrace{
+            \vphantom{\sqrt{\left(\frac{R}{2L}\right)^2}}
+            \frac{R}{2L}
+        }_{\delta} \pm \, \mathrm{j} \cdot \underbrace{
+            \sqrt{\frac{1}{LC} - \left(\frac{R}{2L}\right)^2}
+        }_{\omega_d}
+    \end{align}
+    \end{minipage}
+\end{minipage}\vspace{2pt}
+
+\textbf{Periodischer Fall:} Zusammenhang von $\delta$, $\omega_d$, $\omega_0$ und $Q_{\mathrm{S}}$:
+\begin{align*}
+&\text{Resonanzkreisfreq.:}&
+    \omega_0 &= \sqrt{\frac{1}{LC}}&
+    &\text{mit}\quad \Im\{\underline{Z}(\omega_0)\} \overset{!}{=} 0 \vphantom{\bigg|}\\
+&\text{ged. Eigenkreisfreq.:}&
+    \omega_d &= \sqrt{\omega_0^2 - \delta^2}&
+    &\text{ungedämpft gleich $\omega_0$}\vphantom{\bigg|}\\
+&\text{Güte:}&
+    Q_{\mathrm{S}} &= \frac{X_{L,0}}{R} = \frac{\omega_0 L}{R} = \frac{\omega_0}{2\delta}&
+    &\text{Maß für Schwingungsfähigkeit} \vphantom{\bigg|}\\
+&\text{Vgl. homo. DGL:}&
+    %0 &= \dt[2]\,y + 2\delta \cdot \dt\,y + \omega_0^2 \cdot y&
+    0 &= \ddot y + 2\delta \cdot \dot y + \omega_0^2 \cdot y&
+    &\text{linear gedämpfte Schwingung} \vphantom{\bigg|}
+\end{align*}
+%Die Güte $Q_{\mathrm{S}}$ ist Maß für die Schwingungsfähigkeit.
+
+%Die Resonanzfrequenz ist gleich der ungedämpften Eigenfrequenz.
+}% Ende Folien only
+\end{frame}

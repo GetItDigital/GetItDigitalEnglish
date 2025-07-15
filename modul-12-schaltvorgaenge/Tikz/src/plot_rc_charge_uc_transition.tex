@@ -1,0 +1,28 @@
+% Aufladevorgang RC Strom und Spannung
+% AxisEnv 1: Spannung am Kondensator
+% AxisEnv 2: Strom am Kondensator
+\begin{tikzpicture}[x=1cm,y=1cm]
+	\begin{axis}[
+		name=AxisSpannung,
+		%%%%%%% START SAME OPTIONS %%%%%%%
+		xmin=-1, xmax=5.5,
+		ymin=-0.125, ymax=1.35,
+		xlabel={$t$},
+		ylabel={$u(t)$},
+		axis x line=center,
+		axis y line=center,
+		ylabel style={anchor=east, at={(ticklabel cs:0.95)}},
+		ticks=none,
+		mark=none,
+		grid=none,
+		width=7cm,
+		height=3.5cm,
+		%%%%%%% END OF SAME OPTIONS %%%%%%%
+	]
+		\addplot[color=black,dashed,	domain=-1:5.4] {1};          			% u_max Grenze
+		\addplot[color=voltage,very thick,	domain=-1:0] {0};           		% t<0
+		\addplot[color=voltage,very thick,	domain=0:5.4,samples=61] {1-e^(-x)};% t>0 
+		\node at (1,0.5)[voltage,anchor=west]{$u_C$};							% u_C label
+		%\addplot[color=black,dashed, domain=0:1]{x}; % Gradient in t=0, schneidet Asymptote bei t=tau
+	\end{axis}
+\end{tikzpicture}

@@ -1,0 +1,31 @@
+%Spannungsverlauf eines idealen Schalters
+\begin{tikzpicture}[x=1cm,y=1cm]
+	\begin{axis}[
+		name=AxisSpannung,
+		%%%%%%% START SAME OPTIONS %%%%%%%
+		xmin=-1, xmax=5.5,
+		ymin=-0.125, ymax=1.75,
+		xlabel={$t$},
+		ylabel={$u(t)$},
+		axis x line=center,
+		axis y line=center,
+		ylabel style={anchor=east, at={(ticklabel cs:0.95)}},
+		ticks=none,
+		mark=none,
+		grid=none,
+		width=7cm,
+		height=3.5cm,
+		%%%%%%% END OF SAME OPTIONS %%%%%%%
+	]
+        %Spannungen
+		\addplot[color= voltage, very thick, domain= -1:2.022]{0};
+        \addplot[color= voltage, very thick] coordinates {(2,0)(2,1.016)};
+        \addplot[color= voltage, very thick, domain= 2:4]{1};
+        \addplot[color= voltage, very thick] coordinates {(4,1.016)(4,0)};
+        \addplot[color= voltage, very thick, domain= 3.978:5.4]{0};
+        %Asymptoten
+        \node at (0,1.016)[black,anchor=east,yshift=-1pt]{$U_q$};
+        \addplot[color= black, dashed, domain= 0:5.4]{1.018};
+        
+    \end{axis}
+\end{tikzpicture}

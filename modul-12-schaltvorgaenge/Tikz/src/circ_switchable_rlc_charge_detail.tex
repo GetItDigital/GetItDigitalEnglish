@@ -1,0 +1,30 @@
+% RLC Ladeschaltung mit Wechselschalter erweitertes Labeling
+\begin{tikzpicture}
+    \ctikzset{bipoles/cuteswitch/thickness=0.3} %Liniendicke für bessere Lesbarkeit reduzieren
+    
+    %Switch Circuit
+    \draw(2,1.69)
+        node[cute spdt up arrow, rotate = 180](s1){}% Cute Switch, Position des Schalters mit up/down veränderbar
+        (s1.center) node[left, xshift= -5]{t=0};%Label 
+    \draw(s1.out 2) -- (0.5,2.11);% nach Uq+
+    \draw([yshift=-0.5mm] s1.cout 1) to[short,-*] (1.70,0);%nach Uq-
+    %RLC Circuit
+    \draw(0.5,2.11) 
+    to[V, name=Uq, v_>, !v](0.5,0)
+    to[short](6.25,0) 
+    to[C, l=$C$, name=C, v<, !v](6.25,1.685) -- ++(-0.25,0)
+    to[L, l=$L$, name=L, v<, !v]++(-1.75,0)
+    to[R, l=$R$, name=R, v<, i^<, !vi]++(-1.75,0) -- (s1.in);
+
+    \draw(s1.in) 
+    to[open, -o] ++(0,-1.685);
+
+    % Strom- und Spannungspfeile mit Label
+    \iarrmore{R}{$i$};
+    \varrmore{Uq}{$U_q$};
+    \varrmore{R}{$u_R$};
+    \varrmore{L}{$u_L$};
+    \varrmore{C}{$u_C$};
+    \draw(s1.in) to[open, name=U, v^=$u$, !v] ++(0,-1.685); \varronly{U}; % Note: \varrmore label spacing too large for [open] node
+
+\end{tikzpicture} 

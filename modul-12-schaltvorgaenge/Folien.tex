@@ -1,0 +1,21 @@
+\immediate\write18{cd TeXAux;gnuplot *.gnuplot;cd ..;}
+
+\documentclass[aspectratio=1610]{beamer}
+\input{Modulsettings.tex}					% Modulspezifische Settings einbinden
+\input{../Templates/Settings.tex}	 		% Allgemeine Settings einbinden
+\input{../Templates/FolienSettings.tex}	 	% Allgemeine Foliensettings einbinden
+\usepackage[disabled]{../Video/beamervideo}  % Videoerstellung deaktiviert
+
+\newcommand{\sectiontitle}{}
+\newcommand{\newsection}[1]{\section{#1}}
+
+\title{Modul \GetItDigitalModulnumber : \GetItDigitalModulname}
+\author{GET it digital}
+\date{Stand: \today}
+
+\begin{document}
+
+\input{../Templates/FolienTitle.tex}
+\input{Inhalt.tex}
+
+\end{document}

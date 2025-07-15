@@ -50,7 +50,7 @@ EXPORTPDF2PNG=true 		# if set true, export .pdf to .png files
 REMOVECOMPILABLES=true	# if set true, remove temporary compilable files after creating .pdf files
 MAXSUBDIRDEPTH=5 		# depth of subdirectories to be included in src/ (default: 5)
 TIMEOUT=45 				# timeout in seconds for waiting for each individual .pdf file to be created
-WAITTIME=1				# wait time in seconds for each individual .pdf before moving and converting to .svg
+MAXTHREADNUMBER=10		# maximum number of parallel threads for compilation
 TIKZBORDER="1pt"		# border around tikzpicture in .pdf, recommended: "1pt"
 
 # LaTeX Template
@@ -58,7 +58,7 @@ TIKZBORDER="1pt"		# border around tikzpicture in .pdf, recommended: "1pt"
 
 PREFIX="""% compilable standalone document for Tikz pictures created by ${0}
 \documentclass[border = ${TIKZBORDER}, multi={tikzpicture}]{standalone}
-\input{Settings.tex} % Attention! Symlink pointing to MAINDIR/Templates/Setting.tex 
+\input{Settings.link} % Attention! Symlink pointing to MAINDIR/Templates/Setting.tex 
 \begin{document}
 """
 
@@ -69,23 +69,20 @@ POSTFIX="""
 # WORKING DIRECTORY
 # ----------------
 origdir=$( pwd ) # save original directory
-cd "$(dirname "$0")" # ref: https://stackoverflow.com/questions/3349105/how-can-i-set-the-current-working-directory-to-the-directory-of-the-script-in-ba
-cd ../src # $tikzdir
+cd "$(dirname "$0")" || exit # ref: https://stackoverflow.com/questions/3349105/how-can-i-set-the-current-working-directory-to-the-directory-of-the-script-in-ba
+cd ../src || exit # $tikzdir
 
 # PATHS: relative Tikz/src/ (no trailing "/" allowed)
-settingsdir=../../../Templates # source directory with templates
-tikzdir=.. 		# source directory with tikz_standalone.tex
-shdir=../sh 	# source directory with .sh scripts
-srcdir=. 		# source directory with tikzpictures as *.tex files
-pdfdir=../pdf 	# output directory for generated tikzpicture, PDF-format
-pngdir=../png	# output directory for generated tikzpicture, PNG-format
-svgdir=../svg 	# output directory for generated tikzpicture, SVG-format
-auxdir=../TeXAux # output directory for auxillary files for LaTeX Compilation; might have to match $auxdir in other .sh scripts
-errorlog=$auxdir/errorlog.txt # errorlog file
+settingsdir=../../../Templates 				# source directory with templates
+srcdir=. 									# source directory with tikzpictures as *.tex files
+pdfdir=../pdf 								# output directory for rendered tikzpicture, PDF-format
+pngdir=../png								# output directory for rendered tikzpicture, PNG-format
+svgdir=../svg 								# output directory for rendered tikzpicture, SVG-format
+auxdir=../TeXAux 							# output directory for auxillary files for LaTeX Compilation
+errorlog=$auxdir/errorlog.txt 				# errorlog file
 
-settingsdirabs=$( realpath $settingsdir ) # absolute path to $settingsdir
-srcdirabs=$( realpath $srcdir ) # absolute path to $srcdir
-tikzdirabs=$( realpath $tikzdir ) # absolute path to $tikzdir
+settingsdirabs=$( realpath $settingsdir ) 	# absolute path to $settingsdir
+srcdirabs=$( realpath $srcdir ) 			# absolute path to $srcdir
 
 # functions
 stats(){
@@ -96,21 +93,6 @@ stats(){
 	if [[ $EXPORTPDF2SVG == true ]] ; then echo -e "\t$( find $svgdir -maxdepth $MAXSUBDIRDEPTH -type f -name "*.svg" | wc -l )\t.svg files in\t$( realpath $svgdir )" ; fi
 }
 
-pressed_ctrl_c=
-trap "pressed_ctrl_c=1" SIGINT # used to break loops in subshells
-
-# check file dependencies
-if [ ! -f $settingsdir/Settings.tex ] ; then 
-	echo "Error: $settingsdir/Settings.tex not found, please create file or check path. Nothing to do."
-	exit 1
-fi
-
-# check direcotry structure
-if [[ ! -d  $srcdir ]] ; then
-	echo "Error: $srcdir not found, please create directory with tikzpictures or check path. Nothing to do."
-	exit 1
-fi
-
 # cleanup
 if [[ $FROMSCRATCH == true ]] ; then
 	rm -r $auxdir/*
@@ -119,133 +101,123 @@ if [[ $FROMSCRATCH == true ]] ; then
 	rm -r $svgdir/*
 fi
 
-mkdir -p $auxdir
-
-
-# PRECOMPILE TIKZPICTURES: .tex -> .pdf -> .svg, .png
-# ---------------------------------------------------
-
 echo "/--------------------t-i-k-z---e-x-t-e-r-n-a-l-i-z-e-.-s-h---------------------\\"
-for directory in $( find $srcdir -maxdepth 5 -type d ) ; do # for ./src and all subdirectories
-	directoryname=$( echo "$directory" | sed -e "s/\.\///" ) # remove leading "./" from directory
-	echo $directory
 
-	mkdir -p ${pdfdir}/${directoryname} # create similar directory structure in pdfdir
-	mkdir -p ${pngdir}/${directoryname} # create similar directory structure in pngdir
-	mkdir -p ${svgdir}/${directoryname} # create similar directory structure in svgdir
-	mkdir -p ${auxdir}/${directoryname} # create similar directory structure in auxdir
-	mkdir -p ${auxdir}/md5/${directoryname} # create similar directory structure in auxdir for md5sums
+mkdir -p $auxdir
+for directory in $( find $srcdir -maxdepth 5 -type d ) ; do # for all source subdirectories
+	directoryname=$( echo "$directory" | sed -e "s/\.\///" ) # remove leading "./" 
 
-	srcdirlink=$srcdirabs/$directoryname
-	settingslink=$settingsdirabs/Settings.tex
-	rm ${auxdir}/${directoryname}/srcdirlink 2>/dev/null
-	ln -s $srcdirlink ${auxdir}/${directoryname}/srcdirlink # create symlink from $auxdir/$directoryname to corresponding $directory (in Tikz/src/) to easily \input{} src files
-	ln -s $settingslink ${auxdir}/${directoryname}/Settings.tex # create symlink from $auxdir/$dictoryname/Settings.tex to Settings.tex
+	# create output subdirectories
+	mkdir -p ${pdfdir}/${directoryname}
+	mkdir -p ${pngdir}/${directoryname}
+	mkdir -p ${svgdir}/${directoryname}
+	mkdir -p ${auxdir}/${directoryname}
+	mkdir -p ${auxdir}/md5/${directoryname}
+
+	# create symlinks in auxillary subdirectories
+	ln -s "${srcdirabs}/${directoryname}" "${auxdir}/${directoryname}/srcdir.link" # e.g.Tikz/TeXAux/subdir1/srcdir.link -> Tikz/src/subdir1
+	ln -s "${settingsdirabs}/Settings.tex" "${auxdir}/${directoryname}/Settings.link" # e.g. Tikz/TeXAux/subdir1/Settings.tex -> ../Templates/Settings.tex
 done
 
 stats
-echo -e "Start Compiling TiKz pictures... in parallel execution, no threadlimit! \n\tWARNING: CPU load high! --> STOP with Ctrl+C <--)\n"
+echo -e "\nStart Compiling TiKz pictures... (parallel compilation, thread limit = ${MAXTHREADNUMBER}) \nWarning! CPU load might be high! --> To STOP press Ctrl+C <--"
 
+rm $errorlog 2>/dev/null
 touch $errorlog # create errorlog file
 
-# MAIN
+mkdir -p "${auxdir}/pid"
+
+# PRECOMPILE TIKZPICTURES: .tex -> .pdf -> .svg, .png
+# ---------------------------------------------------
 time $( # measure execution time
 for directory in $( find $srcdir -maxdepth $MAXSUBDIRDEPTH -type d ) ; do # loop through src/ and it's subdirectories
 	if [[ "$directory" == "unused" ]] ; then continue ; fi # skip unused directory
 ( # parallel execution for each directory ref: https://unix.stackexchange.com/questions/103920/parallelize-a-bash-for-loop
-	directoryname=$( echo "$directory" | sed -e "s/\.\///" ) # remove leading "./" from current directory
+	directoryname=$( echo "$directory" | sed -e "s/\.\///" ) # remove leading "./"
     for filepath in $( find $directory -maxdepth 1 -name "*.tex" -type f ) ; do # loop through all texfiles in current directory
-		if [ "$pressed_ctrl_c" ] ; then break ; fi
 	( 	# parallel execution for each file ref: https://unix.stackexchange.com/questions/103920/parallelize-a-bash-for-loop
-		filename=$(basename -- "$filepath")
-		stem="${filename%.*}"
-		pathstem="${filepath%.*}"
-		pathstem=$( echo "$pathstem" | sed -e "s/\.\///" ) # remove leading "./" from pathstem
-		extension="${filename##*.}"
+		trap 'exit' SIGINT SIGTERM # exit subshell if pressed Ctrl+C
+		stem=$( basename "${filepath}" .tex )
+		pathstem=$( echo "${filepath%.*}" | sed -e "s/\.\///" ) # remove leading "./"
 
 		# check md5sum
-		if [[ -f $auxdir/md5/$pathstem.md5 ]] ; then
-			md5_old=$(cat $auxdir/md5/$pathstem.md5)
+		if [[ -f "${auxdir}/md5/${pathstem}.md5" ]] ; then
+			md5_old=$( cat "${auxdir}/md5/${pathstem}.md5" )
 		else
 			md5_old="0"
 		fi
-		md5_new=$(md5sum $filepath | cut -d ' ' -f 1)
+		md5_new=$( md5sum $filepath | cut -d ' ' -f 1 )
 
 		# Note: subshell workaround - execute if requirements are met (instead of exiting if they are not met)
 		# Ref: https://stackoverflow.com/questions/13726764/while-loop-subshell-dilemma-in-bash
 
 		# execute if md5sum changed or output files do not exist
 		if [[ "$md5_new" != "$md5_old" ]] \
-			|| [[ ! -f "$pdfdir/$pathstem.pdf" ]] \
-			|| [[ ! -f "$pngdir/$pathstem.png" && $EXPORTPDF2PNG == true ]] \
-			|| [[ ! -f "$svgdir/$pathstem.svg" && $EXPORTPDF2SVG == true ]] ; then
+			|| [[ ! -f "${pdfdir}/${pathstem}.pdf" ]] \
+			|| [[ ! -f "${pngdir}/${pathstem}.png" && $EXPORTPDF2PNG == true ]] \
+			|| [[ ! -f "${svgdir}/${pathstem}.svg" && $EXPORTPDF2SVG == true ]] ; then
 
 			# create compilable .tex in $auxdir
-			echo "$PREFIX" > ${auxdir}/${directoryname}/compilable_${filename} # overwrite/create >
-			echo "\input{srcdirlink/${filename}} % Attention! Symlink pointing to Tikz sourcefile." >> ${auxdir}/${directoryname}/compilable_${filename} # append >>
-			echo "$POSTFIX" >> ${auxdir}/${directoryname}/compilable_${filename} # append >>
+			echo "$PREFIX" > ${auxdir}/${directoryname}/compilable_${stem}.tex # overwrite/create >
+			echo "\input{srcdir.link/${stem}.tex} % Attention! Symlink pointing to Tikz sourcefile." >> ${auxdir}/${directoryname}/compilable_${stem}.tex # append >>
+			echo "$POSTFIX" >> ${auxdir}/${directoryname}/compilable_${stem}.tex # append >>
 
-			# compile .pdf and move to $pdfdir
-			printf "\tCompiling $filename ...\n"
-			pdflatex -interaction=nonstopmode -output-directory ${auxdir}/${directoryname} ${auxdir}/${directoryname}/compilable_${filename} & pdflatexid=$! # compile, get pid
-			trap "kill $pdflatexid 2> /dev/null" SIGINT SIGTERM # kill pdflatex on ctrl+c
-
-			# DEBUG
-			echo "file: $filepath pdflatex pid: $pdflatexid" >> $errorlog # log file
-
-			# wait for file to be created
+			# wait until thread number is below maximum
 			timer=$TIMEOUT
-			trap 'timer=$TIMEOUT' SIGINT SIGTERM # set timeout on ctrl+c
+			while (($timer > 0)); do # https://stackoverflow.com/a/33891876
+				sleep 1 ; ((timer -= 1))
+				(( $( find "${auxdir}/pid" -maxdepth $MAXSUBDIRDEPTH -name "*.pid" -type f | wc -l ) >= $MAXTHREADNUMBER )) || break # counts pid tokens
+			done
+
+			# compile .pdf
+			pdflatex -interaction=nonstopmode -output-directory ${auxdir}/${directoryname} ${auxdir}/${directoryname}/compilable_${stem}.tex 2>> $errorlog & pdflatexid=$! # compile, get pid
+			echo $pdflatexid >> "${auxdir}/pid/${stem}.pid" # create pid token
+
+			# wait until compilation is finished
+			timer=$TIMEOUT
 			while (($timer > 0)) ; do # https://stackoverflow.com/questions/20165057/executing-bash-loop-while-command-is-running
 				sleep 1 ; ((timer -= 1))
 				kill -0 $pdflatexid 2>/dev/null || break
 			done
 
-			# move to $pdfdir, overwrite if exists (remove "compilable_" prefix in filename)
-			mv ${auxdir}/${directoryname}/compilable_${stem}.pdf ${pdfdir}/${directoryname}/${stem}.pdf &
-			wait
+			# move .pdf to $pdfdir, overwrite if exists (remove "compilable_" prefix in filename)
+			mv "${auxdir}/${directoryname}/compilable_${stem}.pdf" "${pdfdir}/${directoryname}/${stem}.pdf" 2>> $errorlog & wait
+			rm "${auxdir}/pid/${stem}.pid" # remove pid token
 
 			# export .pdf to .svg and move to $svgdir
-			if [[ "$md5_new" != "$md5_old" ]] || [[ $EXPORTPDF2SVG == true ]] && [[ ! -f "$svgdir/$pathstem.svg" ]] ; then
+			if [[ "${md5_new}" != "${md5_old}" ]] || [[ $EXPORTPDF2SVG == true ]] && [[ ! -f "$svgdir/$pathstem.svg" ]] ; then
 				pdf2svg ${pdfdir}/${pathstem}.pdf ${svgdir}/${pathstem}.svg all 2>> $errorlog || echo "pdf2svg: failed to open ${pdfdir}/${pathstem}.pdf" >> $errorlog
 			fi
 
 			# export .pdf to .png and move to $pngdir
-			if [[ "$md5_new" != "$md5_old" ]] || [[ $EXPORTPDF2PNG == true ]] && [[ ! -f "$pngdir/$pathstem.png" ]] ; then
-				#convert -density 300 ${pdfdir}/${pathstem}.pdf -quality 90 ${pngdir}/${pathstem}.png 2>> $errorlog || echo "convert: failed to open ${pdfdir}/${pathstem}.pdf" >> $errorlog
+			if [[ "${md5_new}" != "${md5_old}" ]] || [[ $EXPORTPDF2PNG == true ]] && [[ ! -f "$pngdir/$pathstem.png" ]] ; then
 				# default density is 72 dpi http://www.imagemagick.org/script/command-line-options.php#density use \includegraphics[scale=0.1]{file.png} for same size as pdf
 				convert -density 720 ${pdfdir}/${pathstem}.pdf -quality 100 ${pngdir}/${pathstem}.png 2>> $errorlog || echo "convert: failed to open ${pdfdir}/${pathstem}.pdf" >> $errorlog
 			fi
 			# update md5sum
-			echo $md5_new > $auxdir/md5/$pathstem.md5
+			echo "${md5_new}" > "${auxdir}/md5/${pathstem}.md5"
 		fi
 	) &
 	done ; wait
 ) &
 done ; wait
 ) 2>/dev/null # measure execution time
-kill "$bgid" ; wait # kill progressbar
+wait
 
 # remove temporary files
 if [[ $REMOVECOMPILABLES == true ]] ; then
-	rm -r $auxdir/*/compilable_* 2>/dev/null # remove compilable files
-	rm -r $auxdir/*/srcdirlink 2>/dev/null # remove srcdirlink
+	rm -r $auxdir/../**/compilable_* 2>/dev/null # remove compilable files
+	rm -r $auxdir/../**/srcdir.link 2>/dev/null # remove srcdir.link
+	rm -r $auxdir/../**/Settings.link 2>/dev/null # remove Settings.link
+	rm -r $auxdir/pid 2>/dev/null # remove pid directory
 fi
 
 echo ""
-stats ; echo "Done Compiling TiKz pictures."
-if [[ $( find $srcdir -type f -name "*.tex" | wc -l ) > $( find $pdfdir -type f -name "*.pdf" | wc -l ) ]] ; then
-	echo -e "\nWarning:\tnot all .tex files were compiled to .pdf files."
-	echo -e "\t\tTry to run the script again or check $errorlog for errors."
-fi
-if [[ $( find $pdfdir -type f -name "*.pdf" | wc -l ) > $( find $svgdir -type f -name "*.svg" | wc -l ) ]] ; then
-	echo -e "\nWarning:\tnot all .pdf files were exported to .svg files."
-	echo -e "\t\tTry to run the script again or check $errorlog for errors."
-fi
+stats ; echo -e "\nDone Compiling TiKz pictures."
 echo "\------------------------------------------------------------------------------/"
 
 cd $origdir # return to original directory
 
 # Disable traps on a normal exit
-#trap - EXIT SIGINT SIGTERM
+trap - EXIT SIGINT SIGTERM
 exit 0

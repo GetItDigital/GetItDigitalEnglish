@@ -17,6 +17,11 @@ jobs:
     - name: checkout
       uses: actions/checkout@v4
 
+    #run tikz_externalize
+    - name: Tikz Externalize
+      working-directory: ./modul-08-schaltungen-variabler-frequenz
+      run: Tikz/sh/tikz_externalize.sh
+
     - name: compile Skript
       id: skript
       working-directory: ./

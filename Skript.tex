@@ -2,6 +2,7 @@
 \immediate\write18{cat TeXAux/Skript.nlo | sort | uniq -w 55 | makeindex -i -s nomencl.ist -o TeXAux/Skript.nls}
 \immediate\write18{cd TeXAux;gnuplot *.gnuplot;cd ..;}
 \immediate\write18{modul-08-schaltungen-variabler-frequenz/Tikz/sh/tikz_externalize.sh}
+\immediate\write18{modul-12-schaltvorgaenge/Tikz/sh/tikz_externalize.sh}
 
 \documentclass[twoside, a4paper]{book}
 \usepackage{beamerarticle}

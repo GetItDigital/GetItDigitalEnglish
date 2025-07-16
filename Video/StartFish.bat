@@ -1,1 +1,1 @@
-docker run -it --name fish-speech --rm --gpus all --net get-network --ip 172.16.111.10 -p 7860:7860 fishaudio/fish-speech:latest-dev python tools/run_webui.py
+docker run -it --name fish-speech --rm --gpus all --net get-network --ip 172.16.111.10 -p 7860:7860 fishaudio/fish-speech:v1.5.1-dev python tools/run_webui.py

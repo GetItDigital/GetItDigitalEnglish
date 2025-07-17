@@ -1,0 +1,12 @@
+\begin{circuitikz}
+    
+\draw (0,0) to [R,i, name=r0, l=$R$] (4,0) to [D=$D$, v, name=D1] (4,-3);
+\draw (4,-3) to (0,-3);
+\draw (0,0) to [V, name=U1] (0,-3);
+
+
+\varrmore{U1}{$U_0$}; 
+\varrmore{D1}{$U_\mathrm{D}$};
+\iarrmore{r0}{$I$};
+
+\end{circuitikz}

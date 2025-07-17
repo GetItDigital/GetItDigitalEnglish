@@ -1,0 +1,53 @@
+\subsection{Analyse einer Spannungsverdoppler-Schaltung\label{Aufg33}}
+% Alt: Praktikumsaufgabe 5
+\Aufgabe{
+    \begin{figure}[H]
+    \centering
+    \input{Tikz/FigPraktikumSpannungsverdoppler}
+    \label{fig:FigPraktikumSpannungsverdoppler}
+    \end{figure}
+
+        Analysieren Sie die Funktion der Delon-Schaltung zur Spannungsverdopplung und berechnen Sie die Ausgangsspannung für verschiedene Eingangsspannungen.
+    
+    Gegeben:
+    \begin{itemize}
+        \item Eingangsspannung $U_\mathrm{E}$ mit Effektivwerten von $110\,\mathrm{V}$ und $230\,\mathrm{V}$
+        \item Zwei Dioden mit einer Durchlassspannung von $0,7\,\mathrm{V}$
+        \item Zwei Kondensatoren mit der Kapazität $C$
+    \end{itemize}
+    
+    \begin{itemize}
+        \item[a)] Erklären Sie das Funktionsprinzip der Delon-Schaltung und wie sie die Eingangsspannung verdoppelt.
+        \item[b)] Berechnen Sie die theoretische Leerlauf-Ausgangsspannung $U_\mathrm{A}$ für die gegebenen Eingangsspannungen.
+        \item[c)] Diskutieren Sie, wie sich die Ausgangsspannung $U_\mathrm{A}$ unter Lastbedingungen verhält und welche Faktoren die Spannungsstabilität beeinflussen.
+    \end{itemize}
+}
+
+
+\Loesung{
+    \begin{itemize}
+        \item[a)] Funktionsprinzip der Delon-Schaltung  \\
+        Die Schaltung arbeitet als Kaskaden-Gleichrichter. Während der positiven Halbwelle der Wechselspannung lädt sich $C_1$ über $D_1$ auf die Eingangsspitzen-Spannung $\hat{U}_\mathrm{E}$ auf. Während der negativen Halbwelle lädt sich $C_2$ über $D_2$ auf. Dadurch addieren sich die Spannungen von $C_1$ und $C_2$, wodurch am Ausgang eine theoretische Gleichspannung von ca. $2 \cdot \hat{U}_\mathrm{E}$ entsteht.
+    
+        \item[b)] Berechnung der Leerlauf-Ausgangsspannung $U_\mathrm{A}$  
+        Die Eingangsspannung ist als Effektivwert $U_\mathrm{E}$ gegeben. Die Spitzenwertspannung beträgt:
+        $$ \hat{U}_\mathrm{E} = \sqrt{2} \cdot U_\mathrm{E} $$  
+        Da die Schaltung eine Spannungsverdopplung erzeugt, ergibt sich die Leerlauf-Ausgangsspannung:
+        $$ U_\mathrm{A} = 2 \cdot (\hat{U}_\mathrm{E} - U_\mathrm{D}) = 2 \cdot (\sqrt{2} \cdot U_E - 0{,}7\,\mathrm{V}) $$  
+        Für $ U_\mathrm{E} = 110\, \mathrm{V} $:
+        $$ U_\mathrm{A} = 2 \cdot (\sqrt{2} \cdot 110\, \mathrm{V} - 0{,}7\, \mathrm{V}) \approx 308\, \mathrm{V} $$  
+        Für $ U_\mathrm{E} = 230\,V $:
+        $$ U_\mathrm{A} = 2 \cdot (\sqrt{2} \cdot 230\,\mathrm{V} - 0{,}7\, \mathrm{V}) \approx 644\, \mathrm{V} $$  
+    
+        \item[c)] Verhalten unter Lastbedingungen  
+        Im Leerlauf bleibt die Ausgangsspannung hoch. Unter Last fällt die Spannung ab, abhängig vom Innenwiderstand der Kondensatoren, der Belastung $R_\text{Last}$ und den Diodenverlusten. Der Spannungsabfall hängt von der Restwelligkeit ab, die durch die Lade- und Entladezeiten der Kondensatoren beeinflusst wird. Ein großer Laststrom reduziert die Spannung, da die Kondensatoren sich schneller entladen.
+    
+        Faktoren, die die Spannung beeinflussen:
+        \begin{itemize}
+            \item Innenwiderstand der Dioden
+            \item Kapazität der Kondensatoren $C$
+            \item Belastung durch $R_\text{Last}$
+            \item Netzfrequenz ($50\, \text{Hz}$ oder $60 \, \text{Hz}$)
+        \end{itemize}
+    \end{itemize}
+}

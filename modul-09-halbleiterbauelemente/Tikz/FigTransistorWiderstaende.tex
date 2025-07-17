@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+   \draw (4,2) node[npn, tr circle] (Q1) {};
+
+   \draw (Q1.C) -- (4,4) 
+   to [R,l=$R_\mathrm{L}$] (7,4)
+   to [V, name=Ul, v] (7,0);
+
+   \draw (Q1.E) to [short, -*, i, name=Ie] (4,0) 
+   -- (7,0);
+
+  \draw (Q1.B) to [R,l_=$R_\mathrm{V}$, i<, name=Ib] (0,2)
+  to [R,l=$R_\mathrm{2}$] (0,0)
+  to [short] (4,0);
+
+  \draw (0,2) to [R,l_=$R_\mathrm{1}$, *-, v^<, name=Ur1] (0,4)
+  -- (-2,4)
+  to [V, name=U0, v] (-2,0)
+  to [short, -*] (0,0) ;
+
+   \varrmore{U0}{$U_\mathrm{0}$};
+   \varrmore{Ur1}{$U_\mathrm{R1}$};
+   \varrmore{Ul}{$U_\mathrm{L}$};
+   \iarrmore{Ib}{$I_\mathrm{B}$};
+   \iarrmore{Ie}{$I_\mathrm{E}$};
+\end{tikzpicture}

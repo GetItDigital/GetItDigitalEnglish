@@ -1,0 +1,240 @@
+\subsection{Transistor-Verbundverstärker\label{Aufg27}}
+% Alt: Klausuraufgabe 2
+\Aufgabe{
+   Zwei npn-Bipolartransistoren bilden zusammen einen rauscharmen Verstärker. 
+  Die gesamte Spannungsverstärkung $A_\mathrm{V}$ hat hier den Betrag von etwa 1400. 
+  Praktische Anwendung ist die rauscharme Detektion kleiner Signale im Bereich um und unter $1\, \mathrm{\mu V}$.
+  Die Versorgungsspannung beträgt $10\,\mathrm{V}$. Am Kollektor $\mathrm{T_2}$ misst man hier $4\,\mathrm{V}$ gegenüber Masse (ist also nicht $U_\mathrm{CE}$!).
+  In den Arbeitspunkten von $\mathrm{T_1}$ und $\mathrm{T_2}$ kann für die Basis-Emitter-Spannungen $U_\mathrm{BE}$ jeweils $600\,\mathrm{mV}$ angenommen werden.
+  Die Kollektorströme $\mathrm{I_{C}}$ sind sehr groß gegenüber den Basisströmen $I_\mathrm{B}$ anzunehmen. Daher gilt hier ausreichend genau $I_\mathrm{C} = I_\mathrm{E}$.
+$
+R_1 = 10\, \mathrm{k\Omega} \\ 
+R_2 = 10\, \mathrm{k\Omega} \\
+R_3 = 2\, \mathrm{k\Omega} \\
+R_4 = 300\, \mathrm{k\Omega} \\
+R_5 = 10\, \mathrm{M\Omega} \\
+V_1 = 10\, \mathrm{V} \\
+V_2 = AC\, 0,1\, \mathrm{mV} \\
+C_1 = 1\, \mathrm{\mu F} \\
+C_2 = 1\, \mathrm{\mu F} \\
+$
+\begin {figure} [H]
+   \centering
+   \input{Tikz/FigKlausurVerbundverstaerker}
+   \label{fig:FigKlausurVerbundverstaerker}
+\end {figure}
+\begin{itemize}
+   \item[a)]
+   Welcher Arbeitspunkt-Gleichstrom fließt durch $R_2$ (hier gleich $I_\mathrm{C,T2}$)
+   \item[b)]
+  Für hier gilt: $R_4 >> R_3$, welcher Strom fließt also etwa durch $R_3$?
+   \item[c)]
+   Welche Spannung fällt über $R_3$ ab? 
+   \item[d)]
+   Wie groß ist die Gleichspannung ander Basis von $T_2$, hier identisch mit $U_\mathrm{CE,T1}$?
+   \item[e)]
+   Wie groß ist der Strom durch $R_1$ (hier gleich $I_\mathrm{C,T1}$)?
+   \item[f)]
+   Erläutern Sie in Stichworten die Arbeitspunktstabiliserung der gesamten Schaltung aufgrund der Gegenkopplung über $R_4$.
+   \item[g)]
+   $U_\mathrm{T} = 26\, \mathrm{mV}$. Wie groß ist die Steilheit $S$ von $T_\mathrm{1}$?
+   \item[h)]
+   Wie groß ist die Spannungsverstärkung $A_\mathrm{V} = \frac{\Delta U_\mathrm{CE}}{\Delta U_\mathrm{BE}}$, also die erste Transistorstufe?
+   \item[i)]
+   Für die zweite Transistorstufe nun anders zu rechnen, nämlich mit $R_3$ und $R_2$: 
+   Wie ist die Spannungsverstärkung $A_\mathrm{V}$ von $T_\mathrm{2}$, hier definiert als $\frac{\Delta U_\mathrm{C}}{\Delta U_\mathrm{B}}$?
+   \item[j)]
+   Wie ist dann die gesamte Spannungsverstärkung der beiden Stufen $T_\mathrm{1}$ und $T_\mathrm{2}$ zusammen?
+   \item[k)]
+   Zeichnen Sie ien Kleinsignal-Ersatzschaltbild der gesamten Schaltung. Ersetzen Sie darin die beiden Transistoren im Arbeitspunkt jeweils durch eine steuerbare Stromquelle S und einen Eingangswiderstand $r_\mathrm{BE}$.
+\end{itemize}
+% \speech{
+% **Aufgabe 27: Rauscharm verstärkende Transistorschaltung mit zwei npn-Transistoren**
+
+% Diese Aufgabe behandelt eine rauscharm verstärkende Schaltung mit zwei npn-Bipolartransistoren. Die gesamte Spannungsverstärkung \( A_V \) beträgt etwa 1400. Eine praktische Anwendung dieser Schaltung ist die rauscharme Detektion kleiner Signale im Mikrovolt-Bereich. Die Versorgungsspannung beträgt 10 Volt.
+
+% Am Kollektor des zweiten Transistors \( T_2 \) misst man 4 Volt gegen Masse. Der Wert von \( U_{CE} \) ist hier also nicht direkt relevant. In den Arbeitspunkten der beiden Transistoren \( T_1 \) und \( T_2 \) kann die Basis-Emitter-Spannung \( U_{BE} \) jeweils mit 600 Millivolt angenommen werden. Die Kollektorströme \( I_C \) sind sehr groß im Vergleich zu den Basisströmen \( I_B \), daher gilt näherungsweise \( I_C = I_E \).
+
+% Die gegebenen Widerstands- und Kapazitätswerte sind:
+% - \( R_1 = 10 \text{k}\Omega \),
+% - \( R_2 = 10 \text{k}\Omega \),
+% - \( R_3 = 2 \text{k}\Omega \),
+% - \( R_4 = 300 \text{k}\Omega \),
+% - \( R_5 = 10 \text{M}\Omega \),
+% - \( V_1 = 10V \),
+% - \( V_2 = AC 0.1mV \),
+% - \( C_1 = 1\mu F \),
+% - \( C_2 = 1\mu F \).
+
+%  **Beschreibung der Schaltung:**
+% Die Schaltung zeigt eine Verstärkerschaltung mit zwei npn-Transistoren \( T_1 \) und \( T_2 \). 
+
+% - **Erster Transistor \( T_1 \)**:
+%   - Sein Kollektor ist über einen Widerstand \( R_3 \) mit der Versorgungsspannung \( V_1 \) verbunden.
+%   - Die Basis ist über \( R_1 \) mit der Versorgungsspannung und über \( R_2 \) mit Masse verbunden.
+%   - Der Emitter ist direkt mit Masse verbunden.
+%   - Ein Wechselspannungssignal wird über \( V_2 \) an die Basis von \( T_1 \) angelegt.
+
+% - **Zweiter Transistor \( T_2 \)**:
+%   - Sein Kollektor ist über \( R_4 \) mit der Versorgungsspannung verbunden.
+%   - Sein Emitter ist mit dem Kollektor von \( T_1 \) verbunden, wodurch eine Stromkopplung entsteht.
+%   - Zusätzlich gibt es eine kapazitive Kopplung durch die Kondensatoren \( C_1 \) und \( C_2 \), welche das Wechselspannungssignal weitergeben.
+
+% Der verstärkte Ausgang \( u_A \) wird am Kollektor des zweiten Transistors abgegriffen.
+
+%  **Fragen zur Aufgabe:**
+% **(a)** Welcher Arbeitspunkt-Gleichstrom fließt durch \( R_2 \)? (Hier gilt \( I_C = I_{C,T2} \))
+
+% **(b)** Es gilt \( R_4 \gg R_3 \). Welcher Strom fließt also etwa durch \( R_3 \)?
+
+% **(c)** Welche Spannung fällt über \( R_3 \) ab?
+
+% **(d)** Wie groß ist die Gleichspannung an der Basis von \( T_2 \)? Diese ist identisch mit \( U_{CE,T1} \).
+
+% **(e)** Wie groß ist der Strom durch \( R_1 \)? (Hier gleich \( I_C,T1 \))
+
+% **(f)** Erklären Sie in Stichpunkten die Arbeitspunktstabilisierung der gesamten Schaltung aufgrund der Gegenkopplung über \( R_4 \).
+
+% **(g)** Der Temperaturkoeffizient \( U_T \) beträgt 26 mV. Wie groß ist die Steilheit \( S \) von \( T_1 \)?
+
+% **(h)** Wie groß ist die Spannungsverstärkung \( A_V = \frac{\Delta U_{C,E}}{\Delta U_{B,E}} \), also die erste Transistorstufe?
+
+% **(i)** Für die zweite Transistorstufe muss die Berechnung anders durchgeführt werden, nämlich mit \( R_3 \) und \( R_2 \). Wie ist die Spannungsverstärkung \( A_V \) von \( T_2 \) definiert als \( \frac{\Delta U_A}{\Delta U_C} \)?
+
+% **(j)** Wie ist dann die gesamte Spannungsverstärkung der beiden Stufen \( T_1 \) und \( T_2 \) zusammen?
+
+% **(k)** Zeichnen Sie ein Kleinsignal-Ersatzschaltbild der gesamten Schaltung. Ersetzen Sie darin die beiden Transistoren im Arbeitspunkt jeweils durch eine steuerbare Stromquelle \( S \) und einen Eingangswiderstand \( r_{BE} \).
+
+% }
+
+
+
+}
+
+
+
+\Loesung{
+   \begin{itemize}
+      \item[a)]
+    \end{itemize}
+    \begin{align*}
+      I_\mathrm{C} &= \frac{6\,\mathrm{V}}{10\,\mathrm{k\Omega}} = 0,6\,\mathrm{mA}
+    \end{align*}
+    \begin{itemize}
+      \item[b)]
+    \end{itemize}
+    \begin{align*}
+      I_\mathrm{C,T2} &= 0,6\,\mathrm{mA}
+    \end{align*}
+    \begin{itemize}
+      \item[c)]
+    \end{itemize}
+    \begin{align*}
+      U_{\mathrm{R3}} &= 0,6\,\mathrm{mA} \cdot 2\,\mathrm{k\Omega} = 1,2\, \mathrm{V}
+    \end{align*}
+    \begin{itemize}
+      \item[d)]
+    \end{itemize}
+    \begin{align*}
+      1,2\, \mathrm{V} + 0,6\,\mathrm{V} = 1,8\,\mathrm{V}
+    \end{align*}
+    \begin{itemize}
+      \item[e)]
+    \end{itemize}
+    \begin{align*}
+      I_\mathrm{C,T1} &= \frac{8,2\,\mathrm{V}}{10\,\mathrm{k\Omega}} = 0,82\,\mathrm{mA}
+    \end{align*}
+    \begin{itemize}
+      \item[f)]
+    \end{itemize}
+    \begin{itemize}
+      \item Erhöhung von $I_\mathrm{C}$ führt zu einem Spannungsanstieg über $R_4$
+      \item dadurch sinkt die Basisspannung von $T_\mathrm{1}$, was $I_\mathrm{C}$ wieder reduziert
+      \item negative Rückkopplung stabilisiert Arbeitspunkt
+    \end{itemize}
+    \begin{itemize}
+      \item[g)]
+    \end{itemize}
+    \begin{align*}
+      S &= \frac{I_\mathrm{C,T1}}{U_\mathrm{T}} = \frac{0,82\,\mathrm{mA}}{26\,\mathrm{mA}} = 31,54\, \frac{\mathrm{mA}}{\mathrm{V}}
+    \end{align*}
+    \begin{itemize}
+      \item[h)]
+    \end{itemize}
+    \begin{align*}
+      A_\mathrm{V} &= S \cdot (-R_\mathrm{C}) = -315
+    \end{align*}
+    \begin{itemize}
+      \item[i)]
+    \end{itemize}
+    \begin{align*}
+      A_\mathrm{V} &= -\frac{R_\mathrm{C}}{R_\mathrm{E}} = \frac{10\,\mathrm{k\Omega}}{2\,\mathrm{k\Omega}} = -5
+    \end{align*}
+    \begin{itemize}
+      \item[j)]
+    \end{itemize}
+    \begin{align*}
+      -5 \cdot -315 = 1575 \approx 1600
+    \end{align*}
+    \begin{itemize}
+      \item[k)]
+    \end{itemize}
+    \begin {figure} [H]
+        \centering
+        \input{Tikz/LsgKlausurVerbundverstaerker}
+        \label{fig:LsgKlausurVerbundverstaerker}
+    \end {figure}
+    Siehe: Abschnitt \ref{sec:DarlingtonTransistor}
+    
+    % \speech{ Lösung zu Aufgabe 27
+
+    % a) Der Arbeitspunkt-Gleichstrom durch den Widerstand R2 entspricht dem Kollektorstrom I_C von T2. Dieser ergibt sich aus der Spannung von 6 Volt, geteilt durch den Widerstandswert von 10 Kiloohm. Das ergibt I_C gleich 0,6 Milliampere.
+    
+    % b) Da der Widerstand R4 deutlich größer als R3 ist, fließt durch R3 annähernd der gleiche Strom wie durch R2, also ebenfalls 0,6 Milliampere.
+    
+    % c) Die Spannung über R3 berechnet sich als Produkt aus Strom und Widerstand. Das ergibt 0,6 Milliampere mal 2 Kiloohm gleich 1,2 Volt.
+    
+    % d) Die Gleichspannung an der Basis von T2 entspricht der Summe aus U_R3 und der Basis-Emitter-Spannung U_BE. Das ergibt 1,2 Volt plus 0,6 Volt gleich 1,8 Volt.
+    
+    % e) Der Strom durch R1 entspricht dem Kollektorstrom von T1. Dieser wird berechnet als 8,2 Volt geteilt durch 10 Kiloohm, was 0,82 Milliampere ergibt.
+    
+    % f) Die Arbeitspunktstabilisierung erfolgt durch die negative Rückkopplung über R4. Eine Erhöhung von I_C führt zu einem Spannungsanstieg über R4, wodurch die Basisspannung von T1 sinkt und I_C wieder reduziert wird. Dadurch wird der Arbeitspunkt stabilisiert.
+    
+    % g) Die Steilheit S von T1 berechnet sich als I_C von T1 geteilt durch U_T. Das ergibt 0,82 Milliampere geteilt durch 26 Milliampere, was ungefähr 31,54 Milliampere pro Volt ergibt.
+    
+    % h) Die Spannungsverstärkung A_V der ersten Transistorstufe berechnet sich als das Produkt von Steilheit S und dem negativen Widerstand R_C. Das ergibt minus 315.
+    
+    % i) Die Spannungsverstärkung A_V der zweiten Stufe ergibt sich aus dem Verhältnis von R_C zu R_E, also minus 10 Kiloohm geteilt durch 2 Kiloohm, was minus 5 ergibt.
+    
+    % j) Die gesamte Spannungsverstärkung der beiden Stufen berechnet sich als das Produkt aus den einzelnen Verstärkungen. Minus 5 mal minus 315 ergibt 1575, was auf 1600 gerundet wird.
+    
+    %  k) Das Ersatzschaltbild dieser Schaltung stellt die beiden Transistorstufen in ihrer Ersatzform dar, wobei die Transistoren durch steuerbare Stromquellen und Eingangswiderstände ersetzt werden.
+
+      % Struktur des Ersatzschaltbildes:
+      % Eingangsspannung U_E liegt links und wird über den Widerstand R4 an die Basis des ersten Transistors geführt.
+      % Erster Transistor (T1):
+      % Der Transistor wird im Arbeitspunkt durch eine steuerbare Stromquelle S1 ersetzt.
+      % Parallel zur Basis-Emitter-Strecke von T1 befindet sich der Widerstand r_BE1, der den Eingangswiderstand der Transistorstufe darstellt.
+      % Die Kollektorschaltung umfasst den Widerstand R1 und die Verbindung zur Basis des zweiten Transistors.
+      % Zweiter Transistor (T2):
+      % Auch dieser Transistor wird durch eine steuerbare Stromquelle S2 ersetzt.
+      % Parallel zur Basis-Emitter-Strecke von T2 befindet sich der Widerstand r_BE2 als Eingangswiderstand der zweiten Stufe.
+      % Die Kollektorschaltung enthält R2 und R3, die zur Verstärkung beitragen.
+      % Ausgangsspannung U_A:
+      % Der Ausgang wird am Kollektor von T2 abgegriffen.
+      % Der Widerstand R5 ist mit dem Ausgang verbunden und dient zur weiteren Signalverarbeitung.
+      % Funktionsweise:
+      % Die erste Transistorstufe verstärkt die Eingangsspannung U_E und gibt eine verstärkte Spannung an die Basis der zweiten Stufe weiter.
+      % Die zweite Transistorstufe sorgt für eine weitere Verstärkung des Signals, wobei das Verhältnis von R_C zu R_E entscheidend für die Verstärkung ist.
+      % Durch die Gegenkopplung über R4 wird der Arbeitspunkt stabilisiert und die Linearität verbessert.
+      % Die Ersatzschaltung mit steuerbaren Stromquellen zeigt, dass die Transistoren als spannungsgesteuerte Stromquellen arbeiten.
+      % Fazit:
+      % Dieses Kleinsignal-Ersatzschaltbild ermöglicht eine vereinfachte Analyse der Verstärkereigenschaften, indem die nichtlinearen Transistoreigenschaften durch lineare Ersatzbauelemente wie Widerstände und Stromquellen ersetzt werden. 
+      % Dadurch können Verstärkungsfaktoren, Eingangs- und Ausgangswiderstände sowie die Stabilität der Schaltung leichter berechnet werden.
+
+     % }
+    
+    
+
+    
+}

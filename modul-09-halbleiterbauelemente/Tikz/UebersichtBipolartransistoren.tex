@@ -1,0 +1,46 @@
+
+\begin{circuitikz}[scale=.5]
+
+\draw [ fill={rgb,255:red,0; green,38; blue,191}, opacity=0.27 ] (2.5,13.5) rectangle (5,9.75) node[pos=.5, opacity=1] {\textcolor{black}{$\mathrm{n}$}};
+\draw [ fill={rgb,255:red,161; green,0; blue,0}, opacity=0.40 ] (5,13.5) rectangle (7.5,9.75) node[pos=.5, opacity=1] {\textcolor{black}{$\mathrm{p}$}};
+\draw [ fill={rgb,255:red,0; green,38; blue,191}, opacity=0.27 ] (7.5,13.5) rectangle (10,9.75) node[pos=.5, opacity=1] {\textcolor{black}{$\mathrm{n}$}};
+\draw [ fill={rgb,255:red,161; green,0; blue,0}, opacity=0.40 ] (15,13.5) rectangle (17.5,9.75) node[pos=.5, opacity=1] {\textcolor{black}{$\mathrm{p}$}};
+\draw [ fill={rgb,255:red,0; green,38; blue,191}, opacity=0.27 ] (17.5,13.5) rectangle (20,9.75) node[pos=.5, opacity=1] {\textcolor{black}{$\mathrm{n}$}};
+\draw [fill={rgb,255:red,161; green,0; blue,0}, opacity=0.40] (20,13.5) rectangle (22.5,9.75) node[pos=.5, opacity=1] {\textcolor{black}{$\mathrm{p}$}};
+
+    \draw (6.25,13.5) to[short, -o] (6.25,14.75) node[above] {$\mathrm{B}$} ;
+    \draw (2.5,11.5) to[short, -o] (1.25,11.5)node[above] {$\mathrm{E}$} ;
+    \draw (10,11.5) to[short, -o] (11.25,11.5) node[above] {$\mathrm{C}$};
+    \draw (15,11.5) to[short, -o] (13.75,11.5) node[above] {$\mathrm{E}$};
+    \draw (18.75,13.5) to[short, -o] (18.75,14.75)node[above] {$\mathrm{B}$} ;
+    \draw (22.5,11.5) to[short, -o] (23.75,11.5) node[above] {$\mathrm{C}$};
+    \draw (6.25,6) to[short, *-o] (6.25,7.25)node[above] {$\mathrm{B}$} ;
+    \draw (18.75,6) to[short, *-o] (18.75,7.25) node[above] {$\mathrm{B}$};
+
+
+    \draw (6.25,6) to[D] (3.75,6);
+    \draw (6.25,6) to[D] (8.75,6);
+    \draw (16.25,6) to[D] (18.75,6);
+    \draw (21.25,6) to[D] (18.75,6);
+    \draw (3.75,6) to[short, -o] (1.25,6) node[above] {$\mathrm{E}$} ;
+    \draw (8.75,6) to[short, -o] (11.25,6) node[above] {$\mathrm{C}$} ;
+    \draw (16.25,6) to[short, -o] (13.75,6) node[above] {$\mathrm{C}$} ;
+    \draw (21.25,6) to[short, -o] (23.75,6) node[above] {$\mathrm{C}$} ;
+    
+    %\draw (6.25,0) to[Tnpn] (6.25,3.5)node[above] {$\mathrm{C}$}; 
+    %\draw (5.4,1.75) to[short] (5.25,1.75)node[left] {$\mathrm{B}$};
+    %\draw (18.75,0) to[Tpnp] (18.75,3.5)node[above] {$\mathrm{E}$}; 
+    %\draw (17.9,1.75) to[short] (17.75,1.75) node[left] {$\mathrm{B}$};
+    %\draw (6.25, 0) to[short] (6.25,-0.5)node[below] {$\mathrm{E}$};
+    %\draw (18.75,0) to[short] (18.75, -0.5) node[below] {$\textbf{C}$};
+
+    \draw (6.25, 0) node[npn] (Q1){}
+        (Q1.base) to[short, -o] ++ (-0.5, 0) node[left] {$\mathrm{B}$}
+        (Q1.collector) to[short, -o] ++ (0,1) node[above] {$\mathrm{C}$}
+        (Q1.emitter) to[short, -o] ++ (0, -1) node[below] {$\mathrm{E}$};
+    
+    \draw (18.75, 0) node[pnp, yscale=-1, ] (Q2){}
+        (Q2.base) to[short, -o] ++ (-0.5, 0) node[left] {$\mathrm{B}$}
+        (Q2.collector) to[short, -o] ++ (0,1) node[above] {$\mathrm{C}$}
+        (Q2.emitter) to[short, -o] ++ (0, -1) node[below] {$\mathrm{E}$};
+\end{circuitikz}

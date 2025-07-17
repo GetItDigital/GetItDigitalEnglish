@@ -1,0 +1,86 @@
+\begin{circuitikz}[scale=0.8, transform shape]
+    \ctikzset{
+        transistors/scale=1.3,
+        resistors/scale=0.4,
+        capacitors/scale=0.4,
+        diodes/scale=0.5,
+    }
+    \draw (1,0) node[npn] (T1) {T1}
+          (2,0) node[npn, xscale=-1] (T2) {}
+          (T2.B) node[anchor=east, xshift=-0.5cm] {T2}
+          (1.5,-4) node[npn, xscale=-1] (T3) {}
+          (6,-4) node[npn] (T4) {T4}
+          (4,4) node[npn] (T5) {T5}
+          (8,4) node[npn, xscale=-1] (T6) {}
+          (T6.B) node[anchor=east, xshift=-0.5cm] {T6}
+          (5.5,3) node[npn] (T7) {T7}
+          (6.5,3) node[npn, xscale=-1] (T8) {}
+          (T8.B) node[anchor=east, xshift=-0.5cm] {T8}
+          (1.5,6) node[npn, xscale=-1] (T9) {}
+          (T9.B) node[anchor=east, xshift=-0.5cm] {T9}
+          (11,6) node[npn] (T11) {T11}
+          (11,-1) node[pnp] (T12) {T12}
+          (5.1,0) node[npn] (T10) {T10}
+          (13,-2) node[npn] (T13) {T13}
+          (15,-1) node[pnp] (T15) {}
+          (T15.B) node[anchor=east, yshift=0.5cm, xshift= 0.5cm] {T15}
+          (15,4) node[npn] (T14) {T14}
+          ;
+    \draw 
+    (T1.E) to(T2.E)
+    (T3.C) -- ++(0,2)node[circ] {}
+    (T4.E) -- ++(0,-3) node[circ] {}
+    (T1.C) -- ++(0,3) to[R, l=$R_1$] ++(0,1) -- ++(0.5,0) to(T9.E)
+    (T2.C) -- ++(0,3) to[R, l=$R_2$] ++(0,1) -- ++(-0.5,0) node[circ] {}
+    (T3.B) to(T4.B)
+    (T8.E) to(T7.E)
+    (T5.E) to[R, l=$R_6$] ++(0,-2) -- (T10.B)
+    (T11.C) -- ++(0,1) node[circ]{}
+    (T14.E) to(T15.E)
+    (T15.C) -- ++(0,-6) node[circ]{}
+    (T14.C) -- ++(0,3) node[circ]{}
+    (T5.C) -- ++(1.5,0) node[circ]{}
+    (T6.C) -- ++(-1.5,0) node[circ]{}
+    (T6.E) node[circ]{} -- ++(-0.5,0)
+    (T5.E) node[circ]{}-- ++(0.5,0) 
+    (T6.E) to[R, l=$R_7$] ++(0,-2) node[circ]{} -- ++(-4,0) node[circ]{}
+    (T10.C) node[circ]{}
+    (T6.B) node[circ]{} --++(0,5) to[C,l=$C_{1}$] ++(-1,0) to[R, l=$R_{16}$] ++(-1,0) -- ++(0,-3) node[circ]{} -- ++(-0.6,0) node[circ]{}
+    (T11.B) -- ++(-3,0)
+    (T12.B) -- ++(-3.9,0) node[circ]{} -- ++(-0.9,0)
+    (T12.C) to[R, l=$R_{12}$] ++(0,-2) -- ++(2,0) node[circ]{}
+    (T13.B) node[circ]{} -- ++(-0.9,0) node[circ]{}
+    (T13.B) -- ++(0,-1) -- ++(4,0) to[C,l=$C_2$] ++(0,4) node[circ]{} -- ++(-0.9,0) node[circ]{} to[R, l=$R_{15}$] ++(-2,0) -- ++(-2,0) node[circ]{} -- ++(-2,0) -- ++(0,-3)  to[R, l=$R_{10}$] ++(-3,0) node[circ]{}
+    (T2.C) -- ++(0,0.5) node[circ]{} -- ++(7.09,0) -- ++(0,2.5)
+    (T9.B) -- ++(2.9,0) node[circ]{}
+    (T5.B) -- ++(-1.9,0) node[circ]{}
+    (17,-3)node[ground] {} to[R, l=$R_{L}$] ++(0,4) node[ocirc, label=above:A] {} -- ++(-1.1,0) 
+
+    
+    
+    (T2.B) -- ++(0,1) -- ++(-3.2,0) node[ocirc, label=left:$-$] {}
+    (T1.B) node[ocirc, label=left:$+$] {}
+    
+    (T14.B) -- ++(-0.9,0) node[circ]{}
+    (T15.B) -- ++(-0.9,0) node[circ]{}
+    (T13.C) -- ++(0,8) to[R, l=$R_{14}$] ++(0,1) node[circ]{}
+    (T13.E) -- ++(0,-3) to[R, l=$R_{13}$] ++(0,-2) node[circ]{}
+    (T11.E) to[R, l=$R_{11}$] (T12.E)
+    (T4.B) node[circ]{} -- ++(0,1) to(T4.C) node[circ]{} 
+    (T4.C) to[R, l=$R_{9}$] ++(0,1) to[R, l=$R_{8}$] ++(0,1) -- ++ (0,3) node[circ]{} 
+    (T9.C) -- ++(0,1) -| (18,8) node[ocirc, label=above:U$_b+15V$] {}
+    (T7.C) -- ++(0,2) to[R, l=$R_4$] ++(0,2)
+    (T8.C) -- ++(0,2) to[R, l=$R_5$] ++(0,2)
+    
+    
+    ;
+    \draw (T3.E) to[R, l=$R_3$] ++(0, -1) -- ++(0,-2) -| (18,-8) node[ocirc, label=below:U$_b-15V$] {};
+    \draw [->, blue, line width=0.3mm, >={Latex}] (17.2,1) -- (17.2,-3) node[midway, right] {$U_a$};
+    \draw (T2.B) -- ++(0,1) -- ++(-3.2,0) node[ocirc, label=left:$-$] {};
+    \draw (T1.B) node[ocirc, label=left:$+$] {};
+    \draw[->, blue, line width=0.3mm, >={Latex}] ($(T1.B)+(0,0)$) -- ($(T1.B)+(0,1)$)
+    node[midway, left] {$U_a$};
+
+    \node at (2.4, -3.8) {T3};
+    
+\end{circuitikz}

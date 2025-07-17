@@ -1,0 +1,32 @@
+\begin{tikzpicture}[scale= 0.45, font=\scriptsize, /tikz/circuitikz/bipoles/length=.8cm] 
+    \draw (0,0) 
+        to[sV, name=ue] (0,-4)
+        to[short, -*] (4,-4) node[below] {B}
+        to [short] (4,-3)
+        to[R,v> ,i>, name=R1, l=$r_\mathrm{BE}$] (4,-1)
+        to [short, i>, name =ib, -*] (4,0)
+        node[above] {E};
+    
+    \draw (0,0) to[short ,i, name=ie] (4,0);
+    
+    \draw (4,-4) to[short, -*] (6,-4)
+        to[short, -*] (8,-4)
+        to[short, -o] (10,-4);
+    
+    \draw (6,-4) node[ground] {};
+    
+    \draw (8,-4) to[R=$R_\mathrm{C}$, v>,  -*] (8,0) node[above] {C}
+        to[I, i>^, name=I1] (4,0);
+    
+    \draw (10,0) to[short, i>, name=ia, o-] (8,0);
+    
+    \draw (10, 0) to[open,v>, name=ua] (10,-4);
+    
+    \varrmore{ua}{$u_\mathrm{a}$};
+    \iarrmore{ie}{$i_\mathrm{e}$};
+    \iarrmore{ib}{$i_\mathrm{b}$};
+    \iarrmore{ia}{$i_\mathrm{a}$};
+    \iarrmore{I1}{$\beta \cdot i_\mathrm{B}$};
+    \varrmore{ue}{$u_\mathrm{e}$};
+    
+\end{tikzpicture} 

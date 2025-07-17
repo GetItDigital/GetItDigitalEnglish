@@ -1,0 +1,51 @@
+\documentclass{standalone}
+\usepackage{circuitikz}
+
+\begin{document}
+
+\begin{circuitikz}[font=\LARGE, european]
+
+\draw (43.75,13.5) to[european voltage source] (43.75,7.25);
+\draw [ color={rgb,255:red,173; green,41; blue,23}, ->, >=Stealth] (43.75,13.5) -- (46.25,13.5);
+\draw (46.25,13.5) to[short] (48.75,13.5);
+\draw (43.75,7.25) to[short] (48.75,7.25);
+\draw (48.75,8.5) to[R] (48.75,12.25);
+\draw [ color={rgb,255:red,173; green,41; blue,23}, ->, >=Stealth] (48.75,12.25) -- (48.75,13);
+\draw (48.75,13.5) to[short] (48.75,13);
+\draw (48.75,7.25) to[short] (48.75,8.5);
+\draw (48.75,13.5) to[short] (51.5,13.5);
+\draw (48.75,7.25) to[short] (52.5,7.25);
+\draw (51.5,13.5) to[short] (52.5,13.5);
+\draw (56.25,13.5) to[european current source] (53.75,13.5);
+\draw [ color={rgb,255:red,173; green,41; blue,23}, ->, >=Stealth] (53.75,13.5) -- (52.5,13.5);
+\draw (56.25,13.5) to[short] (57.5,13.5);
+\draw (57.5,13.5) to[R] (57.5,7.25);
+\draw [ color={rgb,255:red,173; green,41; blue,23}, ->, >=Stealth] (60,13.5) -- (58.75,13.5);
+\draw (60,13.5) to[short, -o] (61.25,13.5) ;
+\draw (52.5,7.25) to[short, -o] (61.25,7.25) ;
+\draw (58.75,13.5) to[short] (57.5,13.5);
+\node at (52.5,7.25) [circ] {};
+\node at (48.75,7.25) [circ] {};
+\node at (48.75,13.5) [circ] {};
+\node at (57.5,13.5) [circ] {};
+\node at (57.5,7.25) [circ] {};
+\draw (52.5,7.25) to (52.5,6.5) node[ground]{};
+\draw [ color={rgb,255:red,57; green,91; blue,140}, ->, >=Stealth] (61.25,12.25) -- (61.25,8.5);
+ \draw [ color={rgb,255:red,57; green,91; blue,140}, ->, >=Stealth] (43.15,11.5) -- (43.15,9.5);
+\node [font=\LARGE] at (42.75,10.5) {$u_\mathrm{e}$};
+\node [font=\LARGE] at (46,14.25) {$i_\mathrm{e}$};
+\node [font=\LARGE] at (48.75,14.25) {$E$};
+\node [font=\LARGE] at (49.5,12.25) {$i_\mathrm{b}$};
+\node [font=\LARGE] at (47.25,10.5) {$u_\mathrm{BE}$};
+\node [font=\LARGE] at (49.75,10.5) {$R_\mathrm{BE}$};
+\node [font=\LARGE] at (48.75,6.5) {$B$};
+\node [font=\LARGE] at (58.25,10.5) {$R_\mathrm{C}$};
+\node [font=\LARGE] at (61.75,10.5) {$u_\mathrm{a}$};
+\node [font=\LARGE] at (59.5,14.25) {$i_\mathrm{a}$};
+\node [font=\LARGE] at (57.5,14.25) {$C$};
+\node [font=\LARGE] at (53.75,13) {$\beta \cdot i_\mathrm{B}$};
+\draw [ color={rgb,255:red,57; green,91; blue,140}, ->, >=Stealth] (48,9.75) -- (48,11);
+
+\end{circuitikz}
+
+\end{document}

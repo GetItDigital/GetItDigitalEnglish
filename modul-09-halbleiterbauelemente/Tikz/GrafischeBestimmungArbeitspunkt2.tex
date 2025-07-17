@@ -1,0 +1,10 @@
+\begin{circuitikz}
+    \draw (0,0) to[R=$R$] (4,0)
+        to[D, v>, i>, name=D] (4,-3)
+        to[short] (0,-3)
+        to[V, v<, name=U0] (0,0);
+    
+    \varrmore {D}{$U_\mathrm{D}$};
+    \varrmore {U0}{$U_\mathrm{0}$};
+    \iarrmore {D}{$I_\mathrm{D}$};
+\end{circuitikz}

@@ -1,0 +1,34 @@
+\begin{tikzpicture}
+    \draw
+    (0,0) node[op amp, anchor=+] (opamp) {}
+    (opamp.+) 
+    (opamp.-) 
+    (opamp.out) ;
+    \draw
+        (opamp.up) -- ++(0,0.5) node[right] {$+$}; % Text leicht rechts
+        \draw
+        (opamp.down) -- ++(0,-0.5) node[right] {$-$}; % Text leicht rechts
+    
+    \draw (opamp.out) to[short, -*] (4,0.5)to[R,l=$R_\mathrm{Last}$] (4,-1.5) to[short,-*] (-1,-1.5)node[ground]{};
+    
+    \draw (-1,-1.5) -- (-3.5,-1.5);
+    
+\draw (opamp.-) to[short,-*] (0,3) -- (1,3) to[R,l=$R_\mathrm{R}$](4,3)--(4,0.5);
+    \draw (-2,2)node[ground]{} -- (-2,3) to[R,l=$R_\mathrm{E1}$] (0,3);
+    
+    \draw (-3.8,0) to[R,l=$R_\mathrm{3}$] (opamp.+);
+    
+    \draw (opamp.up) -- (1.1,4) to[short, -*] (-4,4) -- (-6,4) to[V,name=V1] (-6,2)node[ground]{};
+    
+    \draw (opamp.down) -- (1.1,-3) to[short,-*](-4,-3) -- (-6,-3) to[V,name=V2] (-6,-5)node[ground]{};
+    \draw (-4,-3) to[R,l=$R_\mathrm{2}$] (-4,-1) to[potentiometer, l=$P_\mathrm{1}$] (-4,1) to [R,l=$R_\mathrm{1}$](-4,4);
+    
+    \draw (-3.1,0) to[open,v,name=ue](-3.1,-1.5);
+    \draw (3,0.5) to[open,v,name=ua](3,-1.5);
+    
+    \varrmore{ua}{$U_\mathrm{A}$};
+    \varrmore{ue}{$U_\mathrm{E}$};
+    \varrmore{V1}{$V_\mathrm{1}$};
+    \varrmore{V2}{$V_\mathrm{2}$};
+\end{tikzpicture}
+   

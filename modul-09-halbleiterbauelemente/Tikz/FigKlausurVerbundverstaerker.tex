@@ -1,0 +1,34 @@
+\begin{tikzpicture}
+    \draw
+    (0,0) node[npn] (Q1) {}
+    (Q1.base) 
+    (Q1.collector)  
+    (Q1.emitter);
+
+\draw 
+(Q1.collector) to[short, -*] (0,1) to [R, l=$R_\mathrm{1}$,] (0,4);
+\draw
+(Q1.base) to[short, -*](-1,0)to[C, l=$C_\mathrm{1}$](-3,0) to[V,l=AC] (-3,-3)node[ground]{};
+
+
+
+\draw
+(Q1.emitter) -- (0,-1)node[ground]{};
+
+\draw (-1,0) -- (-1,-2) -- (1,-2) to[R,l=$R_\mathrm{4}$, -*] (5,-2);
+
+\draw
+    (5,0) node[npn] (Q2) {}
+    (Q2.base) 
+    (Q2.collector)  
+    (Q2.emitter);
+\draw (Q2.emitter) to[short](5,-2) to[R,l=$R_\mathrm{3}$] (5,-3.5)node[ground]{};
+
+\draw
+(0,1) -- (3,1) -- (3,0) to[short] (Q2.base);
+
+\draw (Q2.collector) to[short,-*](5,1) to[R,l=$R_\mathrm{2}$](5,4) -- (7,4) to[V,l=$V_\mathrm{1}$] (7,3)node[ground]{} ;
+\draw (0,4) to[short, -*] (5,4);
+
+\draw (5,1) to[C,l=$C_\mathrm{2}$](8,1) to[R,l=$R_\mathrm{5}$](8,-1)node[ground]{};
+\end{tikzpicture}

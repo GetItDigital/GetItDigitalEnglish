@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+
+    % Batterie links
+    \draw
+    (0,0) to[sV, v<,name=V1 ] (0,2);
+  
+    % Widerstand
+    \draw
+    (0,2) to[D=$D$, v, name=D1] (4,2);
+
+    \draw (0,0) -- (4,0);
+  
+    % LED rechts
+    \draw (4,2) to [R, l=$R_\mathrm{L}$] (4,0);
+   
+
+    \varrmore{V1}{$u_\mathrm{E}$};
+    \varrmore{D1}{$U_\mathrm{D}$};
+
+  \end{tikzpicture}

@@ -1,0 +1,25 @@
+\begin{circuitikz}[scale=0.6, transform shape]
+    \ctikzset{
+         resistors/scale=0.8,              
+         tripoles/en amp/height=1.4, % Höhe des OPV             
+         tripoles/en amp/width=1.4   % Breite des OPV
+    }
+    \draw 
+    % Erster OPV mit input height=-0.45
+    (2,-4.5) node[en amp, noinv input down] (opamp1) {}
+    (opamp1.+) --++ (-0.5,0) node[ocirc, label=left:$U_{E2}$] (eingang1) {};
+    
+   \draw (2,0) node[en amp, noinv input up] (opamp2) {}
+    (opamp2.+) --++ (-0.5,0) node[ocirc, label=left:$U_{E1}$] (eingang2) {}
+    (opamp1.-)  to[R=$R_g$] (opamp2.-);
+
+   % Dritter OPV mit angepasstem Eingangsabstand
+    \ctikzset{tripoles/en amp/input height=0.55} % Anpassung nur für diesen OPV
+    \draw (6,-2.25) node[en amp] (opamp3) {}
+    (opamp3.-) -- ++(-0.5,0) to[R=$R_1$] ++(-1.5,0) to[R=$R_2$] ++(-2,0) node[circ]{}
+    (opamp3.+) -- ++(-0.5,0) to[R=$R_3$] ++(-1.5,0) to[R=$R_4$] ++(-2,0) node[circ]{}
+    (opamp2.out) -- ++(0,-1.72) node[circ]{}
+    (opamp1.out) -- ++(0,1.72) node[circ]{}
+    (opamp3.out) node[circ, label=below:{$U_A$}]{} -- ++(0, 2) to[R=$R_5$] ++(-2,0) -- ++(0, -1.45)node[circ]{};
+
+\end{circuitikz}

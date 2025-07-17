@@ -1,0 +1,1358 @@
+%Lernziele
+\begin{frame}
+    \b{ \frametitle{Bauelemente}
+        \begin{Lernziele}{Halbleiterbauelemente}
+            \title{Lernziele: Halbleiter}
+            Die Studierenden können
+            \begin{itemize}
+                \item Bauteile für verschiedene Anwendungen auswählen.
+                \item den Aufbau verschiedener Halbleiterbauelemente beschreiben.
+                \item Arbeitspunkte bestimmen und fehlende Bauteilwerte berechnen. 
+                \item Anwendungen einzelner Bauelemente nennen.
+            \end{itemize}
+        \end{Lernziele}  
+    }
+\end{frame}
+
+
+\begin{frame}
+    \b{\frametitle{Diode}
+    \begin{figure}[H]
+        \begin{minipage}[c]{0.3\textwidth}
+            \centering
+            \begin{circuitikz}[]
+                \draw (0,0) to[D, v>, name=UD] (0,-2);
+                \varrmore{UD} {$U_\mathrm{D}$};
+            \end{circuitikz}
+        \end{minipage}
+        \begin{minipage}[c]{0.3\textwidth}
+            \centering
+            \includesvg[width= 0.15\textwidth]{Bilder/kap2/SiliziumDiode/SiliziumDiode2.svg}  
+        \end{minipage}
+        \begin{minipage}[c]{0.25\textwidth}
+            \centering
+            \includesvg[width= .8\textwidth]{Bilder/kap2/SiliziumDiode/SiliziumDiode3.svg}
+        \end{minipage}
+        %\label{fig:SiliziumDiode}
+        %\caption{\textbf{Silizium Diode.} V.l.n.r. Schaltzeichen, Bauform und Querschnitt einer Silizium Diode.} 
+    \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+\b{\frametitle{Diodenkennlinie}
+    \begin{columns}
+        \column[c]{0.3\textwidth}
+            \resizebox{1\totalheight}{!}{\includesvg[width=1.6\textwidth]{Bilder/kap2/FolienDiodenkennlinieUrsprungpA.svg}}
+                  
+            \column[c]{0.6\textwidth}
+            $I_\mathrm{D} = I_\mathrm{S} \cdot (e^{\frac{U}{U_\mathrm{T}}} - 1) = I_\mathrm{S}  e^{\frac{U_\mathrm{D}}{U_\mathrm{T}}} - I_\mathrm{S}$
+                \begin{itemize}
+                    \item $I_\mathrm{D}$: Diodennenstrom
+                    \item $I_\mathrm{S}$: Sperrstrom
+                    \item $U_\mathrm{D}$: Flussspannung
+                    \item $U_\mathrm{T}$: Temperaturspannung
+                    \item $U_\mathrm{T} = \frac{k \cdot T}{e}$, bei Raumtemperatur $U_\mathrm{T} \approx 25\,\mathrm{mV}$
+                \end{itemize}
+            \end{columns}}
+\end{frame}
+
+\begin{frame}
+\b{\frametitle{Temperaturverhalten von Dioden}
+    \begin{columns}
+        \column[c]{0.3\textwidth}
+            \resizebox{1\totalheight}{!}{\includesvg[width=1.6\textwidth]{Bilder/kap2/FolienTemperaturverhaltenDioden.svg}}
+                  
+            \column[c]{0.6\textwidth}
+            $I_\mathrm{D} = I_\mathrm{S} \cdot (e^{\frac{U}{U_\mathrm{T}}} - 1) = I_\mathrm{S}  e^{\frac{U_\mathrm{D}}{U_\mathrm{T}}} - I_\mathrm{S}$ mit $U_\mathrm{T} = \frac{k \cdot T}{e}$
+                \begin{itemize}
+                    \item Boltzmannkonstante $k = 1.380649 \cdot 10^{-23}\,\mathrm{J/K}$
+                    \item Jede 5 °C Temperaturerhöhung verdoppelt den Diodenstrom
+                    \item Die Flussspannung $U_\mathrm{D}$ sinkt um ca. 2 mV pro °C bei konstantem Diodenstrom
+                    \item $T_2 > T_1 > T_0 $
+                \end{itemize}
+            \end{columns}}
+        \end{frame}
+
+
+\begin{frame}
+\b{\frametitle{Belastungsgrenzen einer Diode}
+    \begin{columns}
+        \column[c]{0.3\textwidth}
+            \resizebox{1\totalheight}{!}{\includesvg[width=1.6\textwidth]{Bilder/kap2/DiodeBelastungsgrenzen.svg}}
+                  
+            \column[c]{0.6\textwidth}
+        
+                \begin{itemize}
+                    \item Eine Diode verträgt in Sperrrichtung mehr Spannung als in Flussrichtung.
+                    \item Bei hohen Spannungen in Sperrrichtung kann es zu einem Durchbruch kommen. 
+                    \item Die Diode in Sperrrichtung wird in dem violett markierten Bereich irreversibel zerstört.
+                \end{itemize}
+            \end{columns}}
+        \end{frame}
+
+\begin{frame}
+    \b{\frametitle{Diode -- Anwendung/ Grundschaltungen}
+        \begin{figure}[H]
+            \centering
+            \includesvg[width= 0.7\textwidth]{Bilder/kap2/Diodenkennlinie.svg}
+            %\caption{\textbf{Diodenkennlinie.} Relevante Bereiche v.l.n.r. Durchbruchbereich, Sperrbereich und Durchlassbereich}  
+            %\label{fig:Diodenkennlinie}
+        \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{\frametitle{Diode -- Elektrisches Verhalten}
+        \begin{figure}[H]
+            \begin{minipage}[c]{0.5\textwidth}
+            \centering
+            \includesvg[width= \textwidth]{Bilder/kap2/DiodenkennlinieUndErsatzschaltbild/DiodenkennlinieUndErsatzschaltbild1.svg}
+            \end{minipage}
+            \begin{minipage}[c]{0.3\textwidth}
+            \centering
+                \scalebox{0.9}{\input{Tikz/DiodenkennlinieUndErsatzschaltbild2}}
+            \end{minipage}
+            %\label{fig:DiodenkennlinieUndErsatzschaltbild}
+            %\caption{\textbf{Diodenkennlinie und Ersatzschaltbild.} Links: Diodenkennlinie mit Näherung für den differenziellen
+            %Widerstand. Rechts: Dioden-Ersatzschaltbild mit der idealen Diode, Spannungsquelle und differenzieller Widerstand.} 
+        \end{figure}
+
+    }
+\end{frame}
+
+\begin{frame}
+    \b{\frametitle{Diode -- Elektrisches Verhalten}
+        \begin{figure}[H]
+            \begin{minipage}[c]{0.5\textwidth}
+            \centering
+            \includesvg[width= \textwidth]{Bilder/kap2/GrafischeBestimmungArbeitspunkt/GrafischeBestimmungArbeitspunkt1.svg}
+            \end{minipage}
+            \begin{minipage}[c]{0.3\textwidth}
+            \centering
+                \input{Tikz/GrafischeBestimmungArbeitspunkt2.tex}
+            \end{minipage}
+            %\label{fig:GrafischeBestimmungArbeitspunkt}
+            %\caption{\textbf{ Grafische Bestimmung Arbeitspunkt.} Links: Diodenkennlinie (schwarz), Widerstandsgerade (blau) und
+            %Asymptote der maximalen Verlustleitung (rot) der Diode. Rechts: Schaltung der Diode mit Vorwiderstand.} 
+        \end{figure}
+    
+    }
+\end{frame}
+
+\begin{frame}
+    \b{\frametitle{Diode -- Elektrisches Verhalten}
+        \textbf{Merke:}
+        \begin{itemize}
+            \item Die Kennlinie der Diode ist stark nichtlinear.
+            \item Das Verhalten der Kennlinie kann in drei Bereichen, den Durchbruch-, Sperr- und Durchlassbereich, beschrieben werden.
+            \item Mittels idealer Diode, Spannungsquelle und Widerstand kann die reale Diode in verschiedenen Bereichen angenähert werden.
+        \end{itemize}
+        }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Diode -- Aufbau}
+        \begin{figure}[H]
+            \begin{minipage}[L]{0.3\textwidth}
+            \raggedright
+            \includesvg[scale=0.6]{Bilder/kap2/SchichtaufbauVonDioden/SchichtaufbauVonDioden1.svg}
+            \end{minipage}
+            \begin{minipage}[c]{0.3\textwidth}
+            \raggedleft
+            \includesvg[scale=0.6]{Bilder/kap2/SchichtaufbauVonDioden/SchichtaufbauVonDioden2.svg}  
+            \end{minipage}
+        
+            %\label{fig:SchichtaufbauVonDioden}
+            %\caption{\textbf{Schichtaufbau von Dioden.} Aufbau und Vergleich einer klassischen Si-Diode (links) 
+            %und Schottky-Diode(rechts). Siliziumdioxid ($\mathrm{SiO_2}$) ist ein natürliches Oxid von Silizium und dient zur Isolierung. Aluminium (Al) ist ein typisches Metall für elektrische Kontakte.} 
+        \end{figure}
+    }   
+\end{frame}
+
+\begin{frame}
+\b{\frametitle{Kennlinien einer Zener-Diode}
+    \begin{columns}
+        \column[c]{0.3\textwidth}
+            \resizebox{1\totalheight}{!}{\includesvg[width=1.8\textwidth]{Bilder/kap2/FolienZDiodeKennlinien.svg}}
+            \column[c]{0.6\textwidth}
+        
+                \begin{itemize}
+                    \item Zener-Effekt bei einer Durchbruchspannung von $<5\,V$ (Elektronen tunneln in Sperrrichtung)
+                    \item Avalanche-Effekt bei einer Durchbruchspannung von $>5\,V$ (Lawinendurchbrucheffekt)
+                    \item $U_\mathrm{BR}$ im Bereich von $1,8\,V$ bis $300\,V$ möglich.
+                \end{itemize}
+            \end{columns}
+            }
+\end{frame}
+
+\begin{frame}
+    \b{\frametitle{Diode -- Aufbau}
+        \textbf{Merke:}
+        \begin{itemize}
+            \item Schottky-Dioden weisen keinen pn-Übergang auf, sondern einen Schottky-Kontakt.
+            \item Bei geeigneter Materialkombination bilden sich zwischen Metall und Halbleiter eine RLZ aus. 
+        \end{itemize}
+        }
+\end{frame}
+
+\begin{frame}
+    \b{
+        \frametitle{Diode -- spezielle Dioden}
+        \begin{table}[H]
+            \centering 
+            \begin{tabular}{ |p{2.1cm}|p{1.4cm}|p{3.2cm}|p{2.8cm}|p{3cm}| }
+                \hline
+                \textbf{Bezeichnung} & \textbf{Symbol} & \textbf{Kennlinie} & \textbf{Eigenschaften} & \textbf{Anwendung} \\
+                \hline
+                Gleich\-richter\-diode  
+                &
+                \begin{minipage}[t][2.6cm][c]{1.4cm}
+                    \centering \input{Tikz/Diode.tex}
+                \end{minipage}
+                & 
+                \begin{minipage}[t][2.6cm][c]{3.3cm}
+                    \centering \includesvg[width= 0.9\textwidth]{kap2/spezielleDiodenÜbersichtVerschiedenerDioden/KennlinieGleichrichterdiode.svg}
+                \end{minipage}
+                & 
+                hoher Durchlassstrom &
+                 große Sperrspannung,\newline Gleichrichtung\\
+                \hline
+                Schalt\-diode 
+                &
+                \begin{minipage}[t][2.6cm][c]{1.4cm}
+                    \centering \input{Tikz/Diode.tex}
+                \end{minipage}
+                & 
+                \begin{minipage}[t][2.6cm][c]{3.3cm}
+                    \centering \includesvg[width= 0.9\textwidth]{kap2/spezielleDiodenÜbersichtVerschiedenerDioden/KennlinieSchaltdiode.svg}
+                \end{minipage}
+                & 
+                kleiner Durchbruchwiderstand &
+                hoher Sperrwiderstand,\newline kleine Umschaltzeiten\\
+                \hline
+            \end{tabular}
+        \end{table}
+    }
+
+    %Gesprochener Text:
+    %%
+\end{frame}
+
+\begin{frame}
+    \b{
+        \frametitle{Diode -- spezielle Dioden}
+        \begin{table}[H]
+            \centering 
+            \begin{tabular}{ |p{2.1cm}|p{1.4cm}|p{3.2cm}|p{2.8cm}|p{3cm}| }
+                \hline
+                \textbf{Bezeichnung} & \textbf{Symbol} & \textbf{Kennlinie} & \textbf{Eigenschaften} & \textbf{Anwendung} \\
+                \hline
+                Schottky\-diode
+                &
+                \begin{minipage}[t][2.6cm][c]{1.4cm}
+                    \centering \input{Tikz/Schottkydiode.tex}
+                \end{minipage}
+                & 
+                \begin{minipage}[t][2.6cm][c]{3.3cm}
+                    \centering \includesvg[width= 0.9\textwidth]{kap2/spezielleDiodenÜbersichtVerschiedenerDioden/KennlinieSchottkydiode.svg}
+                \end{minipage}
+                & 
+                 kleine Durchlassspannung &
+                 kleine Sperrspannung,\newline HF-Gleichrichter,\newline Freilaufdiode,\newline Schaltnetzteile\\
+                \hline
+                Z-Diode
+                &
+                \begin{minipage}[t][2.6cm][c]{1.4cm}
+                    \centering \input{Tikz/ZDiode.tex}
+                \end{minipage}
+                & 
+                \begin{minipage}[t][2.6cm][c]{3.3cm}
+                    \centering \includesvg[width= 0.9\textwidth]{kap2/spezielleDiodenÜbersichtVerschiedenerDioden/KennlinieZ-Diode.svg}
+                \end{minipage}
+                & 
+                definierte Durchbruchspannung &
+                Stabilisierung von Spannungen,\newline Begrenzung\\
+                \hline
+            \end{tabular}
+        \end{table}
+    }
+
+    %Gesprochener Text:
+    %%
+\end{frame}
+
+\begin{frame}
+    \b{
+        \frametitle{Diode -- spezielle Dioden}
+        \begin{table}[H]
+            \centering 
+            \begin{tabular}{ |p{2.1cm}|p{1.4cm}|p{3.2cm}|p{2.8cm}|p{3cm}| }
+                \hline
+                \textbf{Bezeichnung} & \textbf{Symbol} & \textbf{Kennlinie} & \textbf{Eigenschaften} & \textbf{Anwendung} \\
+                \hline
+                Tunnel\-diode
+                &
+                \begin{minipage}[t][2.6cm][c]{1.4cm}
+                    \centering \input{Tikz/Tunneldiode.tex}
+                \end{minipage}
+                & 
+                \begin{minipage}[t][2.6cm][c]{3.3cm}
+                    \centering \includesvg[width= 0.9\textwidth]{kap2/spezielleDiodenÜbersichtVerschiedenerDioden/KennlinieTunneldiode.svg}
+                \end{minipage}
+                & 
+                negativer differentieller Widerstand &
+                Entdämpfung von Schwingkreisen,\newline HF-Oszillator\\
+                \hline
+                Diac
+                &
+                \begin{minipage}[t][2.6cm][c]{1.4cm}
+                    \centering \input{Tikz/Diac.tex}
+                \end{minipage}
+                & 
+                \begin{minipage}[t][2.6cm][c]{3.3cm}
+                    \centering \includesvg[width= 0.9\textwidth]{kap2/spezielleDiodenÜbersichtVerschiedenerDioden/KennlinieDiac-Diode.svg}
+                \end{minipage}
+                & 
+                gesteuerter Durchbruch & 
+                Entdämpfung,\newline Triggerdiode\\
+                \hline
+        \end{tabular}
+    \end{table}
+    }
+
+    %Gesprochener Text:
+    %%
+\end{frame}
+
+\begin{frame}
+    \b{
+        \frametitle{Diode -- spezielle Dioden}
+        \begin{table}[H]
+            \centering 
+            \begin{tabular}{ |p{2.1cm}|p{1.4cm}|p{3.2cm}|p{2.8cm}|p{3cm}| }
+                \hline
+                \textbf{Bezeichnung} & \textbf{Symbol} & \textbf{Kennlinie} & \textbf{Eigenschaften} & \textbf{Anwendung} \\
+                \hline
+                Photo\-diode
+                &
+                \begin{minipage}[t][2.6cm][c]{1.4cm}
+                    \centering \input{Tikz/Photodiode.tex}
+                \end{minipage}
+                & 
+                \begin{minipage}[t][2.6cm][c]{3.3cm}
+                    \centering \includesvg[width= 0.9\textwidth]{kap2/spezielleDiodenÜbersichtVerschiedenerDioden/KennliniePhotodiode.svg}
+                \end{minipage}
+                & 
+                Strom ändert sich proportional zur Lichtleistung &
+                Photoempfänger,\newline Messtechnik,\newline Solarzellen\\
+                \hline
+                LED,\newline Laserdiode
+                &
+                \begin{minipage}[t][2.6cm][c]{1.4cm}
+                    \centering \input{Tikz/LED.tex}
+                \end{minipage}
+                & 
+                \begin{minipage}[t][2.6cm][c]{3.3cm}
+                    \centering \includesvg[width= 0.9\textwidth]{kap2/spezielleDiodenÜbersichtVerschiedenerDioden/KennlinieLED.svg}
+                \end{minipage}
+                & 
+                Durchlassstrom erzeugt optische Strahlung &
+                Beleuchtung,\newline Strahlungsquelle\\
+                \hline
+            \end{tabular}
+            \caption{\textbf{Übersicht typischer Dioden.}}
+        \end{table}
+    }
+
+    %Gesprochener Text:
+    %%
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Diode bei Wechselspannung}
+\begin{itemize}
+    \item In Sperrrichtung fällt die gesamte Spannung über die Diode ab. 
+    \item Positive Halbwelle der Wechselspannung wird durchgelassen. Die Flussspannung der Diode wird abgezogen.
+    \item Negative Halbwelle der Wechselspannung wird blockiert.
+    \item Die Diode wirkt als Gleichrichter.
+\end{itemize}
+        \begin{figure}[H]
+            \begin{minipage}[c]{0.3\textwidth}
+            \centering
+                \input{Tikz/EinweggleichrichterTeil1.tex}
+            \end{minipage}
+            \begin{minipage}[c]{0.6\textwidth}
+            \centering
+            \includesvg[width=\textwidth]{Bilder/kap2/Einweggleichrichter/EinweggleichrichterTeil2.svg}  
+             \end{minipage}
+            %\label{fig:Einweggleichrichter}
+            %\caption{\textbf{Einweggleichrichter.} Links: Schaltkreis des Einweggleichrichters. 
+            %Rechts: Spannungsverlauf der Eingangsspannung und Lastspannung des Einweggleichrichters.} 
+        \end{figure}
+    }   
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Einweggleichrichter}
+    \begin{itemize}
+        \item Eine Gleichspannung kann nicht mit einer Diode allein erzeugt werden. 
+        \item Signal muss durch einen Kondensator geglättet werden. 
+    \end{itemize}
+        \begin{figure}[H]
+            \input{Tikz/FolienGleichrichterschaltung.tex}
+            %\caption{\textbf{Schaltkreis eines Einweggleichrichters.} }  
+            %\label{fig:EinweggleichrichterSchaltung}
+        \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Spannungsverlauf eines Einweggleichrichters}
+        \begin{figure}[H]
+
+            \centering
+                 \includesvg[width=\textwidth]{Bilder/kap2/FolienSpannungsverlaufGleichrichter.svg}
+
+            %\label{fig:Einweggleichrichter}
+            %\caption{\textbf{Einweggleichrichter.} Spannungsverlauf eines Gleichrichters.  
+        \end{figure}
+    }   
+
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{ Stromverlauf eines Einweggleichrichters}
+    
+    \begin{figure}
+        \centering
+        \includesvg[width=\textwidth]{Bilder/kap2/FolienStromverlaufGleichrichter.svg}
+        %\caption{\textbf{Stromverlauf eines Einweggleichrichters.} }  
+        %\label{fig:EinweggleichrichterStromverlauf}
+    \end{figure}
+    }
+\end{frame}
+
+
+\begin{frame}
+    \b{ \frametitle{Diode -- Anwendungen/ Grundschaltungen}
+        \begin{figure}[H]
+            \centering
+            \input{Tikz/Brueckengleichrichter_1.tex}
+            %\label{fig:BrueckengleichrichterSchaltung}
+            %\caption{\textbf{Brückengleichrichter Schaltung.} Schaltkreis eines Brückengleichrichters mit angelegter Last $R$.} 
+        \end{figure}
+    }   
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Diode -- Anwendungen/ Grundschaltungen}
+        \begin{figure}[H]
+            \centering
+            \input{Tikz/FigBrueckengleichrichterGlaettungskondensator.tex}
+            %\label{fig:Brueckengleichrichter mit Glättungskondensator}
+            %\caption{\textbf{Brückengleichrichterschaltung mit Glättungskondensator}} 
+        \end{figure}
+    }   
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Diode -- Anwendungen/ Grundschaltungen}
+        \begin{figure}[H]
+            \begin{minipage}[c]{0.48\textwidth}
+                \raggedright
+                \input{Tikz/Brueckengleichrichter_2.tex}
+            \end{minipage}
+            \begin{minipage}[c]{0.48\textwidth}
+                \raggedleft
+                \input{Tikz/Brueckengleichrichter_3.tex}
+            \end{minipage}
+        
+            %\label{fig:BrueckengleichrichterBeschaltet}
+            %\caption{\textbf{Strompfade im Brückengleichrichter.} Links: Strompfad bei der positiven Halbwelle der 
+            %Eingangsspannung. Rechts: Strompfad bei der negativen Halbwelle der Eingangsspannung.} 
+        \end{figure}
+    }   
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Diode -- Anwendungen/ Grundschaltungen}
+        \begin{figure}[H]
+            \centering
+            \includesvg[width= 0.7\textwidth]{Bilder/kap2/BrueckengleichrichterSignalverlaeufe.svg}
+            %\caption{\textbf{Brückengleichrichter Signalverläufe.} Verlauf der Eingangsspannung und Lastspannung des 
+            %Brückengleichrichters }  
+            %\label{fig:BrueckengleichrichterSignalverlaeufe}
+        \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Delon-Schaltung}
+    \begin{itemize}
+        \item Beinhaltet eine Gleichrichterschaltung aus zwei Dioden und zwei Kondensatoren.
+        \item Positive Halbwelle lädt den Kondensator $C_1$ über die Diode $D_1$ auf.
+        \item Negative Halbwelle lädt den Kondensator $C_2$ über die Diode $D_2$ auf.
+        \item Dadurch, dass der Ausgang parallel zu den in Reihe geschalteten Kondensatoren liegt, wird die Spannung verdoppelt. 
+    \end{itemize}
+    \begin{figure}[H]
+        \centering
+        \scalebox{0.8}{\input{Tikz/FolieDelonschaltung.tex}}
+        %\caption{\textbf{Delon-Schaltung.}  
+        %\label{fig:Delonschaltung}
+    \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{\frametitle{Diode -- Anwendungen/ Grundschaltungen}
+        \textbf{Merke:}
+        \begin{itemize}
+            \item Dioden werden in Gleichrichter eingesetzt um Wechselspannungen in Gleichspannungen umzuformen.
+            \item In Einweggleichrichter wird nur eine Polarität der Halbwellen durchgelassen.
+            \item Brückengleichter nutzen beide Polaritäten der Eingangsspannung.
+        \end{itemize}
+        }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Bipolartransistor}
+    \begin{figure}[H]
+        \centering
+        \scalebox{0.8}{\input{Tikz/UebersichtBipolartransistoren.tex}}
+        %\caption{\textbf{Übersicht Bipolartransistoren.} Vereinfachte Darstellung des Querschnittes, Logik und Schaltzeichen von npn- und pnp-Transistoren.}  
+        %\label{fig:UebersichtBipolartransistoren}
+    \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Bipolartransistor -- Elektrisches Verhalten}
+        \begin{figure}[H]
+            \centering
+            \includesvg[width= 0.5 \textwidth]{Bilder/kap3/VerhaltenUnbeschalteterBipolartransistor.svg}
+            %\caption{\textbf{Verhalten unbeschalteter Bipolartransistor.} Querschnitt eines unbeschalteten npn-Transistors und zugehörige Bändermodell}  
+            %\label{fig:VerhalenUnbeschalteterBipolartransistor}
+        \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Bipolartransistor -- Elektrisches Verhalten}
+        \begin{figure}[H]
+            \centering
+            \includesvg[width= 0.7 \textwidth]{Bilder/kap3/BipolartransistorMitKollektor-Emitter-Spannung.svg}
+            %\caption{\textbf{Bipolartransistor mit Kollektor-Emitter-Spannung.} Querschnitt eines npn-Transistors und zugehörige Bändermodell bei einer positiven Spannung zwischen Kollektor und Emitter.}  
+            %\label{fig:BipolartransistorMitKollektor-Emitter-Spannung}
+        \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Bipolartransistor -- Elektrisches Verhalten}
+        \begin{figure}[H]
+            \centering
+            \includesvg[width= 0.7\textwidth]{Bilder/kap3/BeschalteterBipolartransistor.svg}
+            %\caption{\textbf{Beschalteter Bipolartransistor} Querschnitt eines npn-Transistors und zugehörige Bändermodell bei einer positiven Spannung zwischen Kollektor und Emitter sowie Basis und Emitter}  
+            %\label{fig:BeschalteterBipolartransistor}
+        \end{figure}
+        }
+\end{frame}
+
+\begin{frame}
+    \b{\frametitle{Bipolartransistor -- Elektrisches Verhalten}
+        \textbf{Merke:}
+        \begin{itemize}
+            \item Bipolartransistoren weisen zwei pn-Übergänge auf.
+            \item Es gibt drei Anschlüsse, den Kollektor (C), die Basis (B) und den Emitter (E).
+        \end{itemize}
+        }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Bipolartransistor -- Elektrisches Verhalten}    
+        \begin{figure}[H]
+            \begin{minipage}[c]{0.48\textwidth}
+                \raggedright
+                \scalebox{0.9}{\input{Tikz/StroemeUndSpannungenBeimBipolartransistor_1.tex}}
+            \end{minipage}
+            \begin{minipage}[c]{0.48\textwidth}
+                \raggedleft
+                \scalebox{0.9}{\input{Tikz/StroemeUndSpannungenBeimBipolartransistor_2.tex}}
+            \end{minipage}
+            %\caption{\textbf{Ströme und Spannungen beim Bipolartransistor.} Relevante Ströme und Spannungen bei npn und pnp 
+            %Transistor.}  
+            %\label{fig:StroemeUndSpannungenBeimBipolartransistor}
+        \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Transistorspannungen und -ströme}
+    \begin{columns}
+        \column[c]{0.3\textwidth}
+            \resizebox{0.8\textwidth}{!}{\input{Tikz/FigTransistorspannungen.tex}}     
+            \column[c]{0.6\textwidth}
+        
+                \begin{itemize}
+                    \item Werte im durchgeschalteten Zustand:
+                    \item $U_\mathrm{BE} \approx 0.6\,\mathrm{V}$ (Basis-Emitter-Spannung)
+                    \item $U_\mathrm{CB} \approx 2 ... 300\,\mathrm{V}$ (Kollektor-Basis-Spannung)
+                    \item $I_\mathrm{B} = 1 \, \%; I_\mathrm{C} = 99 \, \%; I_\mathrm{E} = 100 \, \%$
+                    \item Im Transistor gelten Knoten- und Maschenregel:
+                    \item $U_\mathrm{CE} = U_\mathrm{CB} + U_\mathrm{BE}$ = 0
+                    \item $I_\mathrm{B} + I_\mathrm{C} - I_\mathrm{E} = 0$
+                    \item Transistor verstärkt Strom und Spannung:
+                    \item $ B = \frac{I_\mathrm{C}}{I_\mathrm{B}}$ 
+                    \item $ D = \frac{\Delta U_\mathrm{BE}}{\Delta U_\mathrm{CE}}$
+                \end{itemize}
+            \end{columns}}
+        \end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Transistorschaltungen -- AC-Verstärker}
+        \begin{figure}[H]
+                \input{Tikz/EKBGrundschaltungen2.tex}
+                \caption{\textbf{}}
+        \end{figure}
+    }
+\end{frame}
+\begin{frame}
+    \b{ \frametitle{Transistorschaltungen -- AC-Verstärker}
+        \begin{figure}[H]
+            \input{Tikz/TransistorACVerstaerker.tex}
+        \end{figure}
+    }
+\end{frame}
+
+
+\begin{frame}
+    \b{ \frametitle{Bipolartransistor -- Elektrisches Verhalten}
+        \begin{figure}[H]
+            \centering
+            \includesvg[width= 0.7\textwidth]{Bilder/kap3/EingangskennlinieEinesNpnTransistors.svg}
+            %\caption{\textbf{Eingangskennlinie eines npn Transistors.} }  
+            %\label{fig:EingangskennlinieEinesNpnTransistors}
+        \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{\frametitle{Bipolartransistor -- Elektrisches Verhalten}
+        \textbf{Merke:}
+        \begin{itemize}
+            \item Die Eingangskennlinie $I_\mathrm{B}=f(U_\mathrm{BE})$ gleicht der einer Diode.
+            \item Eine Änderung von $U_\mathrm{CE}$ führt zu einer Verschiebung der Kennlinie.
+        \end{itemize}
+        }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Bipolartransistor -- Elektrisches Verhalten}
+        \begin{figure}[H]
+            \centering
+            \includesvg[width= \textwidth]{Bilder/kap3/AusgangskennlinienfeldEinesNpnTransistors.svg}
+            %\caption{\textbf{Ausgangskennlinienfeld eines npn Transistors.}Kennzeichnung von relevanten Bereichen und Größen sowie 
+            %grafische Ermittlung der Early-Spannung}  
+            %\label{fig:AusgangskennlinienfeldEinesNpnTransistors}
+        \end{figure}}
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Ausgangskennlinie}
+    \begin{itemize}
+    \item Zusammenhang zwischen Kollektor-Emitter-Spannung $U_\mathrm{CE}$ und Kollektorstrom $I_\mathrm{C}$ bei konstantem Basisstrom $I_\mathrm{B}$.
+    \item Differentieller Widerstand $r_\mathrm{CE} = \frac{\Delta U_\mathrm{CE}}{\Delta I_\mathrm{C}}$.
+\end{itemize}
+\begin{figure}[H]
+            \begin{minipage}[b]{0.48\textwidth}
+                \raggedleft
+                \scalebox{0.9}{\input{Tikz/SchaltungFolieAusgangskennlinie.tex}}
+            \end{minipage}
+            \begin{minipage}[b]{0.48\textwidth}
+                \raggedright
+                \scalebox{0.9}{\includesvg[width= \textwidth]{Bilder/kap2/FolienAusgangskennlinie.svg}}
+            \end{minipage}
+            %\caption{\textbf{Ersatzschaltbild eines Bipolartransistors.} Links: vollständiges Kleinsignalersatzschaltbild mit allen 
+            %relevanten Komponenten und Größen, rechts: Vereinfachung durch Vernachlässigung der differentiellen Stromverstärkung.}  
+            %\label{fig:ErsatzschaltbildEinesBipolartransistors}
+        \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{\frametitle{Bipolartransistor -- Elektrisches Verhalten}
+        \textbf{Merke:}
+        \begin{itemize}
+            \item Die Ausgangskennlinie stellt $I_\mathrm{C}=f(U_\mathrm{CE})$ dar.
+            \item Im aktiven Bereich flacht der Verlauf ab, der Einfluss von $U_\mathrm{CE}$ auf $I_\mathrm{C}$ sinkt.
+            \item $I_\mathrm{B}$ beeinflusst die Höhe der Kennlinie.
+        \end{itemize}
+        }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Stromsteuerungskennlinie}
+\begin{itemize}
+    \item Zusammenhang zwischen Basisstrom $I_\mathrm{B}$ und Kollektorstrom $I_\mathrm{C}$ bei konstanter Kollektor-Emitter-Spannung $U_\mathrm{CE}$.
+    \item Keine Gerade: Zuerst linearer Anstieg, dann nimmt die Steigung mit wachsendem Basisstrom zu.
+    \end{itemize}
+\begin{figure}
+    \centering
+\begin{minipage}[b]{0.48\textwidth}
+                \raggedleft
+                                 \scalebox{0.9}{\input{Tikz/SchaltungFolieAusgangskennlinie.tex}}
+            \end{minipage}
+            \begin{minipage}[b]{0.48\textwidth}
+                \raggedright
+
+                 \scalebox{1}{\includesvg[width= \textwidth]{Bilder/kap2/FolienStromsteuerungskennlinie.svg}}
+            \end{minipage}
+\end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{
+\frametitle{Stromsteuerungskennlinie}
+\begin{itemize}
+    \item Kurvenschar bei variabler Kollektor-Emitter-Spannung $U_\mathrm{CE}$.
+    \end{itemize}
+\begin{figure}
+    \centering
+    \scalebox{1}{\includesvg[width= \textwidth]{Bilder/kap2/FolienStromsteuerungskennlinieKurvenschar.svg}}
+\end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Rückwirkungskennlinie}
+\begin{figure}
+    \centering
+    \includesvg[width= \textwidth]{Bilder/kap2/FolienRueckwirkungskennlinie.svg}
+    %\caption{\textbf{Rückwirkungskennlinie}
+    %\label{fig:Rückwirkungskennlinie}
+\end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Bipolartransistor -- Elektrisches Verhalten}
+        \begin{figure}[H]
+            \centering
+            \includesvg[scale=.5, pretex=\small]{Bilder/kap3/Vierquadranten-KennlinienfeldEinesNpnTransistors.svg}
+            %\caption{\textbf{Vierquadranten-Kennlinienfeld eines npn Transistors }}  
+            %\label{fig:Vierquadranten-KennlinienfeldEinesNpnTransistors}
+        \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Bipolartransistor -- Elektrisches Verhalten}
+        \begin{figure}[H]
+            \begin{minipage}[b]{0.48\textwidth}
+                \raggedright
+                \scalebox{0.9}{\input{Bilder/kap2/ErsatzschaltbildEinesBipolartransistors/ErsatzschaltbildEinesBipolartransistors_1}}
+            \end{minipage}
+            \begin{minipage}[b]{0.48\textwidth}
+                \raggedleft
+                \scalebox{0.9}{\input{Bilder/kap2/ErsatzschaltbildEinesBipolartransistors/ErsatzschaltbildEinesBipolartransistors_2}}
+            \end{minipage}
+            %\caption{\textbf{Ersatzschaltbild eines Bipolartransistors.} Links: vollständiges Kleinsignalersatzschaltbild mit allen 
+            %relevanten Komponenten und Größen, rechts: Vereinfachung durch Vernachlässigung der differentiellen Stromverstärkung.}  
+            %\label{fig:ErsatzschaltbildEinesBipolartransistors}
+        \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{\frametitle{Bipolartransistor -- Elektrisches Verhalten}
+        \textbf{Merke:}
+        \begin{itemize}
+            \item Das Vierquadrantenkennlinienfeld zeigt die Strom-Spannungs-Kennlinien am Ein- und Ausgang sowie die Kopplungen dazwischen. 
+            \item Mittels der differentiellen Größen kann das Ersatzschaltbild aufgestellt werden. 
+        \end{itemize}
+        }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Bipolartransistor -- Beispiel 2.1}
+            Die Versorgungsspannung $U_\mathrm{V}$ beträgt $20\,\mathrm{V}$. Über den Widerstand $R_C$, 
+            der einen ohmschen Verbraucher repräsentiert, soll die halbe Versorgungsspannung anliegen und ein Strom von $10\,\mathrm{mA}$ fließen.
+            
+            %Abbildung 34
+            \begin{figure}[H]
+                \centering
+            \begin{minipage}[b]{0.48\textwidth}
+                \raggedright
+                \scalebox{0.5}{ \includesvg{Bilder/kap3/ArbeitenMitTransistorkennlinie.svg}}
+            \end{minipage}
+            \begin{minipage}[b]{0.48\textwidth}
+                \raggedleft
+                \scalebox{0.8}{\input{Tikz/BeispieleinerTransistorschaltungzurBestimmungvonrelevantenParametern.tex}}
+            \end{minipage}
+                            %\caption{\textbf{Beispiel einer Transistorschaltung zur Bestimmung von relevanten Parametern} }  
+                %\label{fig:BeispieleinerTransistorschaltungZurBestimmungvonRelevantenParametern}
+                
+            \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Bipolartransistor -- Beispiel 2.2}
+      \begin{figure}[H]
+            \centering
+            \includesvg[scale=.5, pretex=\small]{Bilder/kap3/Vierquadranten-KennlinienfeldMitArbeitspunkt.svg}
+            %\caption{\textbf{Vierquadranten-Kennlinienfeld mit Arbeitspunkt A.} }  
+            %\label{fig:Vierquadranten-KennlinienfeldMitArbeitspunkt}
+        \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Bipolartransistor -- Beispiel 2.2}
+        In den jeweiligen Quadranten ergeben sich die folgenden Arbeitspunkte und Kenngrößen.
+        \begin{flalign*}
+            &\text{Ausgang (bei: $I_\mathrm{B}={20}\,{\mathrm{\mu A}}$):}&&\\
+            &&U_\mathrm{CE} &= {10}\,\mathrm{V}\\
+            &&I_\mathrm{C} &= {10}\,\mathrm{mA}  \\
+            &&R_\mathrm{C} &= \frac{U_\mathrm{RC}}{I_\mathrm{RC}} = \frac{U_\mathrm{V}/2}{I_\mathrm{C}} = \frac{{10}\,\mathrm{V}}{{10}\,\mathrm{mA}} = {1000}\,{\Omega}\\
+            &\text{Stromsteuerung:}&&\\
+            &&I_\mathrm{C} &= {10}\,\mathrm{mA} \\
+            &&I_\mathrm{B} &= {25}\,\mathrm{\mu A} \\
+            &&B&=\frac{I_\mathrm{C}}{I_\mathrm{B}}=\frac{{10}\,\mathrm{mA}}{{25}\,\mathrm{\mu A}}=400 \\
+        \end{flalign*}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Bipolartransistor -- Beispiel 2.2}
+        In den jeweiligen Quadranten ergeben sich die folgenden Arbeitspunkte und Kenngrößen.
+        \begin{flalign*}
+            &\text{Eingang:}&&\\
+            &&I_\mathrm{B} &= {25}\,\mathrm{\mu A} \\
+            &&U_\mathrm{BE} &= {0,72}\,\mathrm{V} \\
+            &&R_\mathrm{V} &= \frac{U_\mathrm{RV}}{I_\mathrm{RV}} = \frac{U_\mathrm{V} - U_\mathrm{BE}}{I_\mathrm{B}} = \mathrm{\frac{{20}\,{V} - {0,72}\,{V}}{{25}\,{\mu A}}} ={771,2}\,\mathrm{k \Omega}\\
+            &\text{Rückwirkung:}&&\\
+            &&U_\mathrm{BE} &= {0,72}\,\mathrm{V} \\
+            &&U_\mathrm{CE} &= {10}\,\mathrm{V} \\
+            &&D &= \frac{U_\mathrm{BE}}{U_\mathrm{CE}} = \mathrm{\frac{0,72\,V}{10\,V}} = {0,072}
+        \end{flalign*}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{\frametitle{Bipolartransistor -- Elektrisches Verhalten}
+        \begin{figure}[H]
+            \centering
+            \includesvg[scale=.5, pretex=\small]{Bilder/kap3/Vierquadranten-KennlinienfeldBeiACEingangssignal.svg}
+            %\caption{\textbf{Vierquadranten-Kennlinienfeld bei AC Eingangssignal} }  
+            %\label{fig:Vierquadranten-KennlinienfeldBeiACEingangssignal}
+        \end{figure}
+    }
+\end{frame}
+
+
+\begin{frame}
+     \b{ \frametitle{Bipolartransistor -- Aufbau}
+         \begin{figure}[H]
+            \centering
+            \includesvg[width= 0.7\textwidth]{Bilder/kap3/Aufbaunpn-Bipolartransistor.svg}
+            %\caption{\textbf{Aufbau npn-Bipolartransistor.} Links: idealer schematischer Aufbau eines npn-Bipolartransistors, angelehnt an dessen Schaltbild. Rechts: realer Aufbau eines planaren npn-Transistors.}  
+            %\label{fig:AufbauNpn-Bipolartransistor}
+        \end{figure}
+        
+     }
+\end{frame}
+
+\begin{frame}
+     \b{ \frametitle{Bipolartransistor -- Anwendung/ Grundschaltungen} 
+         \begin{figure}[H]
+            \begin{minipage}[c]{0.3\textwidth}
+                \raggedright
+                    \scalebox{0.9}{\input{Tikz/Grundschaltungen1.tex}}
+                \end{minipage}
+                \begin{minipage}[c]{0.3\textwidth}
+                \centering
+                    \scalebox{0.9}{\input{Tikz/Grundschaltungen2.tex}}
+                \end{minipage}
+                \begin{minipage}[c]{0.3\textwidth}
+                \raggedleft
+                    \scalebox{0.9}{\input{Tikz/Grundschaltungen3.tex}}
+                \end{minipage}
+            %\caption{\textbf{Grundschaltungen npn-Bipolartransistor.} V.l.n.r Emitter-, Kollektor- und Basisschaltung.}  
+            %\label{fig:GrundschaltunenBipolartransistor}
+        \end{figure}}
+
+\end{frame}
+
+
+\begin{frame}
+    \b{ \frametitle{Bipolartransistor -- Anwendung/ Grundschaltungen}
+        \begin{figure}[H]
+            \begin{minipage}[b]{0.3\textwidth}
+                \raggedright
+                \scalebox{0.9}{\input{Tikz/EKBGrundschaltungen1.tex}}
+            \end{minipage}
+            \begin{minipage}[b]{0.3\textwidth}
+                \centering
+                \scalebox{0.9}{\input{Tikz/EKBGrundschaltungen2.tex}}
+            \end{minipage}
+            \begin{minipage}[b]{0.3\textwidth}
+                \raggedleft
+                \scalebox{0.9}{\input{Tikz/EKBGrundschaltungen3.tex}}
+                \end{minipage}
+            %\label{fig:ErsatzschaltbilderEmitter-Kollektor-UndBasisschaltung}
+            %\caption{\textbf{Ersatzschaltbilder der Grundschaltungen.} V.l.n.r Emitter-, Kollektor- und Basisschaltung von npn-Transistoren.} 
+        \end{figure}}
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Bipolartransistor -- Anwendung/ Grundschaltungen}
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{|c|c|c|c|}
+                \hline
+                $r_\mathrm{e}$ & mittel z.B. 1$\mathrm{k \Omega}$ & klein z.B. 50$\mathrm{\Omega}$ & groß z.B. 100$\mathrm{k \Omega}$ \\
+                \hline
+                $r_\mathrm{a}$ & mittel z.B. 10$\mathrm{k \Omega}$ & groß z.B. 100$\mathrm{k \Omega}$ & lein z.B. 50$\mathrm{\Omega}$ \\
+                \hline
+                $v_\mathrm{i}$ & groß z.B. 100 & $<$1 z.B. 0.9 &  groß z.B. 100 \\
+                \hline
+                $v_\mathrm{u}$ & groß z.B. 100 &  groß z.B. 100 & $<$1 z.B. 0.99 \\
+                \hline
+                $v_\mathrm{p}$ & sehr groß z.B. 1$\mathrm{k \Omega}$ &  groß z.B. 100 & groß z.B. 100 \\
+                \hline
+                $\varphi_\mathrm{u}$ & gegenphasig 180° & gleichphasig 0° & gleichphasig 0° \\
+                \hline
+            \end{tabular}
+            \caption{Elektrische Eigenschaften von Grundschaltungen}
+            %\label{tab:EigenschaftenGrundschaltungen}
+        \end{table}
+    }
+\end{frame}
+
+
+\begin{frame}
+     \b{ \frametitle{Bipolartransistor -- Anwendung/ Grundschaltungen}
+         \begin{figure}[H]
+            \begin{minipage}[h]{0.48\textwidth}
+            \centering
+                \input{Tikz/TransistorAlsSchalter1.tex}
+            \end{minipage}
+            \begin{minipage}[h]{0.48\textwidth}
+                \centering
+                \includesvg[width= \textwidth]{Bilder/kap3/TransistorAlsSchalter/TransistorAlsSchalter2.svg}  
+            \end{minipage}
+            %\label{fig:TransistorAlsSchalter}
+            %\caption{\textbf{Transistor als Schalter.} Links: Schaltbild mit Lampe als Verbraucher in der Kollektor-Emitter-Strecke. Rechts: 
+            %Spannungsverläufe mit $U_\mathrm{CE}$ als Folge von $U_\mathrm{BE}$.} 
+        \end{figure}
+     }
+\end{frame}
+
+\begin{frame}
+    \b{\frametitle{Bipolartransistor -- Anwendung/ Grundschaltungen}
+        \textbf{Merke:} \\
+        Im Vergleich zu einem elektromechanischen Schalter in Form eines Relais weisen Transistoren einen 
+        deutlich kleineren Bauraum und geringeren Preis auf. Durch den kontaktlosen Aufbau tritt zudem kein 
+        Kontaktprellen auf, was zu einer höheren Lebensdauer führt.
+        }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Bipolartransistor -- Anwendung/ Grundschaltungen}
+        \begin{figure}[H]
+            \centering
+            \includesvg[width= 0.7\textwidth]{Bilder/kap3/DarlingtonTransistor.svg}
+            %\caption{\textbf{Darlington Transistor.} Schaltung und Schaltsymbol eines npn-Darlington-Transistor}  
+            %\label{fig:DarlingtonTransistor}
+        \end{figure}}
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Feldeffekttransistor}
+    \begin{figure}[H]
+        \centering
+        \scalebox{0.9}{\input{Tikz/Transistortypen.tex}}
+        %\caption{\textbf{Transistortypen.} Übersicht der gängigsten Transistortypen, sowohl bipolar Transistoren als auch unipolare 
+        %(Feldeffekttransistoren). Bei FETs wird zwischen JFETs und MOSFETs (selbstsperrend und selbstleitend) unterschieden bzw. 
+        %bei jedem Typ wird zusätzlich zwischen n- und p"~Kanal unterschieden.}  
+        %\label{fig:Transistortypen}
+    \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Feldeffekttransistor -- Elektrisches Verhalten}
+        \begin{figure}[H]
+            \centering
+            \includesvg[width= 0.7\textwidth]{Bilder/kap4/Sperrbereichn-KanalMOSFET.svg}
+            %\caption{\textbf{Sperrbereich n-Kanal MOSFET.} Querschnitt eines n-Kanal MOSFETs (selbstsperrend) ohne angelegte 
+            %Spannungen}  
+            %\label{fig:SperrbereichN-KanalMOSFET}
+        \end{figure}
+
+    }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Feldeffekttransistor -- Elektrisches Verhalten}
+        \begin{figure}[H]
+            \centering
+            \includesvg[width= 0.7\textwidth]{Bilder/kap4/FolienMOSFETUDS.svg}
+            %\caption{\textbf{Schrittweise Beschaltung}  
+            %\label{fig:SchrittweiseBeschaltung1}
+        \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Feldeffekttransistor -- Elektrisches Verhalten}
+        \begin{figure}[H]
+            \centering
+            \includesvg[width= \textwidth]{Bilder/kap4/FolienMOSFETUGB.svg}
+            %\caption{\textbf{Schrittweise Beschaltung}  
+            %\label{fig:SchrittweiseBeschaltung1}
+        \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Feldeffekttransistor -- Elektrisches Verhalten}
+        \begin{figure}[H]
+            \centering
+            \includesvg[width= \textwidth]{Bilder/kap4/FolienMOSFETSteuerspannung.svg}
+            %\caption{\textbf{Schrittweise Beschaltung}  
+            %\label{fig:SchrittweiseBeschaltung1}
+        \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Feldeffekttransistor -- Elektrisches Verhalten}
+        \begin{figure}[H]
+            \centering
+            \includesvg[width= \textwidth]{Bilder/kap4/ohmscherBereichn-KanalMOSFET.svg}
+            %\caption{\textbf{ohmscher Bereich n-Kanal MOSFET.} Querschnitt eines n-Kanal MOSFETs (selbstsperrend) ohne angelegte 
+            %Spannungen}  
+            %\label{fig:ohmscherBereichn-KanalMOSFET}
+        \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Feldeffekttransistor -- Elektrisches Verhalten}
+        \begin{figure}[H]
+            \centering
+            \includesvg[width=\textwidth]{Bilder/kap4/Ausgangskennlinienfeldn-KanalMOSFET.svg}
+            %\caption{\textbf{Ausgangskennlinienfeld n-Kanal MOSFET.} Ausgangskennlinienfeld eines n-Kanal MOSFETs 
+            %(selbstsperrend) mit dem linearen- und Sättigungsbereich. Drainstrom als Folge der Drain-Source-Spannung bei 
+            %verschiedenen Gate-Source-Spannungen.}  
+            %\label{fig:Ausgangskennlinienfeldn-KanalMOSFET}
+        \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Feldeffekttransistor -- Elektrisches Verhalten}
+        \begin{figure}[H]
+            \centering
+            \includesvg[width= 0.7\textwidth]{Bilder/kap4/SaettigungsbereichN-KanalMOSFET.svg}
+            %\caption{\textbf{Sättigungsbereich n-Kanal MOSFET.} Querschnitt eines n-Kanal MOSFETs (selbstsperrend) mit angelegter 
+            %Spannung $U_{GS}$ und $U_{DS}$}  
+            %\label{fig:SaettigungsbereichN-KanalMOSFET}
+        \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{\frametitle{Feldeffekttransistor -- Elektrisches Verhalten}
+        \textbf{Merke:}
+        \begin{itemize}
+            \item MOSFETs besitzen drei Anschlüsse, Gate(G), Source(S) und Drain (D).
+            \item Das elektrische Verhalten wird leistungslos gesteuert.
+            \item Durch $U_\mathrm{GS}$ erfolgt eine Inversion der Ladungsträger unterhalb des Gates.
+        \end{itemize}
+        }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Feldeffekttransistor -- Elektrisches Verhalten}
+        \begin{table}[H]
+            \begin{figure}[H]
+                \begin{minipage}[c]{0.1\textwidth}
+                    \centering
+                    Type
+                \end{minipage}
+                \begin{minipage}[c]{0.2\textwidth}
+                    \centering
+                    Symbol
+                \end{minipage}
+                \begin{minipage}[c]{0.33\textwidth}
+                    \centering
+                    Eingangskennlinie
+                \end{minipage}
+                \begin{minipage}[c]{0.33\textwidth}
+                    \centering
+                    Ausgangskennlinienfeld
+                \end{minipage}
+            \end{figure}
+            \begin{figure}[H]
+                \begin{minipage}[c]{0.1\textwidth}
+                \centering
+                n-JFET
+                \end{minipage}
+                \begin{minipage}[c]{0.2\textwidth}
+                    \centering
+                    \input{Tikz/NJFET.tex}
+                    \end{minipage}
+                \begin{minipage}[c]{0.33\textwidth}
+                \centering
+                \includesvg[width=0.8\textwidth, pretex=\small]{Bilder/kap4/UebersichtFeldeffekttransistoren/EingangskennlinieN-Jfet.svg}  
+                \end{minipage}
+                \begin{minipage}[c]{0.33\textwidth}
+                \centering
+                \includesvg[width=0.8\textwidth, pretex=\small]{Bilder/kap4/UebersichtFeldeffekttransistoren/AusgangskennlinieN-Jfet.svg}
+                \end{minipage}
+            \end{figure}
+            \begin{figure}[H]
+                \begin{minipage}[c]{0.1\textwidth}
+                \centering
+                p-JFET
+                \end{minipage}
+                \begin{minipage}[c]{0.2\textwidth}
+                \centering
+                \input{Tikz/PJFET.tex}
+                \end{minipage}
+                \begin{minipage}[c]{0.33\textwidth}
+                \centering
+                \includesvg[width=0.8\textwidth, pretex=\small]{Bilder/kap4/UebersichtFeldeffekttransistoren/EingangskennlinieP-Jfet.svg}  
+                \end{minipage}
+                \begin{minipage}[c]{0.33\textwidth}
+                \centering
+                \includesvg[width=0.8\textwidth, pretex=\small]{Bilder/kap4/UebersichtFeldeffekttransistoren/AusgangskennlinieP-Jfet.svg}
+                \end{minipage} 
+            \end{figure}
+        \end{table}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Feldeffekttransistor -- Elektrisches Verhalten}
+        \begin{table}[H]
+            \begin{figure}[H]
+                \begin{minipage}[c]{0.1\textwidth}
+                \centering
+                n-Mosfet, 
+                selbstsperrend
+                \end{minipage}
+                \begin{minipage}[c]{0.2\textwidth}
+                \centering
+                \input{Tikz/NMOSFETsperrend.tex}
+                \end{minipage}
+                \begin{minipage}[c]{0.33\textwidth}
+                \centering
+                \includesvg[width=0.8\textwidth, pretex=\small]{Bilder/kap4/UebersichtFeldeffekttransistoren/EingangskennlinieN-MosfetSelbstsperrend.svg}  
+                \end{minipage}
+                \begin{minipage}[c]{0.33\textwidth}
+                \centering
+                \includesvg[width=0.8\textwidth, pretex=\small]{Bilder/kap4/UebersichtFeldeffekttransistoren/AusgangskennlinieN-MostfetSelbstsperrend.svg}
+                \end{minipage}
+            \end{figure}
+            \begin{figure}[H]
+                \begin{minipage}[c]{0.1\textwidth}
+                \centering
+                p-Mosfet, 
+                selbstsperrend
+                \end{minipage}
+                \begin{minipage}[c]{0.2\textwidth}
+                \centering
+                \input{Tikz/PMOSFETsperrend.tex}
+                \end{minipage}
+                \begin{minipage}[c]{0.33\textwidth}
+                \centering
+                \includesvg[width=0.8\textwidth, pretex=\small]{Bilder/kap4/UebersichtFeldeffekttransistoren/EingangskennlinieP-MosfetSelbstsperrend.svg}  
+                \end{minipage}
+                \begin{minipage}[c]{0.33\textwidth}
+                \centering
+                \includesvg[width=0.8\textwidth, pretex=\small]{Bilder/kap4/UebersichtFeldeffekttransistoren/AusgangskennlinieP-MosfetSelbstsperrend.svg}
+                \end{minipage}
+            \end{figure}
+    \end{table}
+    }
+\end{frame}
+
+
+\begin{frame}
+    \b{ \frametitle{Feldeffekttransistor -- Elektrisches Verhalten}
+        \begin{table}[H]
+            \begin{figure}[H]
+                \begin{minipage}[c]{0.1\textwidth}
+                \centering
+                n-Mosfet, \newline
+                selbstleitend
+                \end{minipage}
+                \begin{minipage}[c]{0.2\textwidth}
+                \centering
+                \input{Tikz/NMOSFETleitend.tex}
+                \end{minipage}
+                \begin{minipage}[c]{0.33\textwidth}
+                \centering
+                \includesvg[width=0.8\textwidth, pretex=\small]{Bilder/kap4/UebersichtFeldeffekttransistoren/EingangskennlinieN-MosfetSelbstleitend.svg}  
+                \end{minipage}
+                \begin{minipage}[c]{0.33\textwidth}
+                \centering
+                \includesvg[width=0.8\textwidth, pretex=\small]{Bilder/kap4/UebersichtFeldeffekttransistoren/AusgangskennlinieN-MosfetSelbstleitend.svg}
+                \end{minipage}
+            \end{figure}
+            \begin{figure}[H]
+                \begin{minipage}[c]{0.1\textwidth}
+                \centering
+                p-Mosfet, \newline
+                selbstleitend
+                \end{minipage}
+                \begin{minipage}[c]{0.2\textwidth}
+                \centering
+                \input{Tikz/PMOSFETleitend.tex}
+                \end{minipage}
+                \begin{minipage}[c]{0.33\textwidth}
+                \centering
+                \includesvg[width=0.8\textwidth, pretex=\small]{Bilder/kap4/UebersichtFeldeffekttransistoren/EingangskennlinieP-MosfetSelbstleitend.svg}  
+                \end{minipage}
+                \begin{minipage}[c]{0.33\textwidth}
+                \centering
+                \includesvg[width=0.8\textwidth, pretex=\small]{Bilder/kap4/UebersichtFeldeffekttransistoren/AusgangskennlinieP-MosfetSelbstleitend.svg}
+                \end{minipage}
+            \end{figure}
+    \end{table}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{\frametitle{Feldeffekttransistor -- Elektrisches Verhalten}
+        \textbf{Merke:}
+        \begin{itemize}
+            \item Die Dotierung des Kanals gibt die notwendigen Vorzeichen der Ströme und Spannungen am Transistor vor.
+            \item Die Eingangskennlinien können durch die Lage der Schwellenspannung $U_\mathrm{th}$ unterschieden werden.
+        \end{itemize}
+        }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Feldeffekttransistor -- Aufbau}
+        \begin{figure}[H]
+            \centering
+            \includesvg[width= \textwidth]{Bilder/kap4/QuerschnittCMOSStruktur.svg}
+            %\caption{\textbf{Querschnitt CMOS Struktur.} Integration eines PMOS und NMOS in gemeinsamen p-dotierten Silizium 
+            %Substrat.}  
+            %\label{fig:QuerschnittCMOSStruktur}
+        \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Feldeffekttransistor -- Aufbau}
+        \begin{figure}[H]
+            \centering
+            \includesvg[width= \textwidth]{Bilder/kap4/QuerschnittN-KanalJFET.svg}
+            %\caption{\textbf{Querschnitt n-Kanal JFET.} Allgemeiner Aufbau eines n-Kanal JFETs mit dotierten Gebieten und 
+            %notwendigen Elektroden.}  
+            %\label{fig:QuerschnittN-KanalJFET}
+        \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{\frametitle{Feldeffekttransistor -- Aufbau}
+        \textbf{Merke:}
+        \begin{itemize}
+            \item CMOS-Technik kombiniert komplementäre MOSFETs in einem Bauteil.
+            \item JFETs weisen den einfachsten Aufbau von FETs auf.
+        \end{itemize}
+        }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Feldeffekttransistor -- Anwendungen/ Grundschaltungen}
+        \begin{figure}[H]
+            \centering
+            \begin{minipage}[c]{.48\textwidth}
+                \centering
+                \input{Tikz/MosfetAlsSteuerbarerWiderstand_1.tex}
+            \end{minipage}
+            \begin{minipage}[c]{.48\textwidth}
+                \centering
+                \input{Tikz/MosfetAlsSteuerbarerWiderstand_2.tex}
+            \end{minipage}
+        
+            %\caption{\textbf{MOSFET als steuerbarer Widerstand.} Links: Spannungsteiler mit MOSFET als steuerbares Element. Rechts: 
+            %Spannungsteiler mit Repräsentation des MOSFETs als steuerbaren Widerstand. }  
+            %\label{fig:MOSFETAlsSteuerbarerWiderstand}
+        \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{\frametitle{Feldeffekttransistor -- Anwendungen/ Grundschaltungen}
+        \textbf{Merke:}
+        Der ohmsche Widerstand eines MOSFETs kann durch $U_\mathrm{GS}$ gesteuert werden, 
+        der Durchgangswiderstand ist allerdings gering und der Wertebereich sehr schmal.  
+        }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Feldeffekttransistor -- Anwendungen/ Grundschaltungen}
+        \begin{figure}[H]
+            \centering
+            \begin{minipage}[c]{.48\textwidth}
+                \centering
+                \input{Tikz/MosfetAlsSchalter_1.tex}
+            \end{minipage}
+            \begin{minipage}[c]{.48\textwidth}
+                \centering
+                \input{Tikz/MosfetAlsSchalter_2.tex}
+            \end{minipage}
+        
+            %\caption{\textbf{MOSFET als Schalter.} Links: Schaltung mit MOSFET als steuerbaren Schalter. 
+            %Rechts: Ersatzschaltbild mit der Repräsentation des MOSFETs als Schalter.}  
+            %\label{fig:MOSFETAlsSchalter}
+        \end{figure}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{\frametitle{Feldeffekttransistor -- Anwendungen/ Grundschaltungen}
+        \textbf{Merke:}
+        Der große Vorteil von MOSFETs in
+        diesem Szenario ist ihre hohe Schaltgeschwindigkeit, der niedrige Widerstand im leitenden Zustand
+        sowie der hohe Eingangswiderstand am Gate.
+        }
+\end{frame}
+
+\begin{frame}
+    \b{ \frametitle{Feldeffekttransistor -- Anwendungen/ Grundschaltungen}
+        \begin{figure}[H]
+            \begin{minipage}[h]{0.48\textwidth}
+                \centering
+                \input{Tikz/MosfetAlsInverter1.tex}
+            \end{minipage}
+            \begin{minipage}[c]{0.48\textwidth}
+                \centering
+                \includesvg[width=0.9\textwidth, pretex=\small]{Bilder/kap4/MosfetAlsInverter/MosfetAlsInverter3.svg}  
+            \end{minipage}
+            %\caption{\textbf{MOSFET als Inverter.} Links: Schaltkreis eines CMOS Inverter. Rechts: Spannungskennlinie mit 
+            %reales Ausgangssignal (blau) und ideales Ausgangssignal (grün).} 
+            %\label{fig:MOSFETAlsInverter}
+        \end{figure}
+    }
+\end{frame}
+
+
+
+
+
+
+
+
+

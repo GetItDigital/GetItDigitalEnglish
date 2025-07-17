@@ -1,0 +1,42 @@
+\documentclass{standalone}
+\usepackage{circuitikz}
+\begin{document}
+
+\begin{circuitikz}[font=\LARGE, european]
+
+\draw (2.5,13.5) to[european voltage source,l={ \LARGE $U_\mathrm{V}$}] (2.5,7.25);
+\draw (2.5,13.5) to[R,l={ \LARGE R}] (8.75,13.5);
+\draw (8.75,13.5) to[short, -o] (10,13.5) ;
+\node at (8.75,13.5) [circ] {};
+\draw (2.5,7.25) to[short, -o] (10,7.25) ;
+\draw (6.25,11) to[european voltage source,l={ \LARGE $U_\mathrm{GS}$}] (6.25,7.25);
+\draw (8.75,13.5) to[short] (8.75,12.75);
+\draw (8.75,7.25) to[short] (8.75,11.5);
+\draw (8.75,11) to[short] (7.75,11);
+\draw (7.75,11.25) to[short] (7.75,10.75);
+\draw [->, >=Stealth] (8.75,11.75) -- (7.75,11.75);
+\draw (7.75,12) to[short] (7.75,11.5);
+\draw (7.75,12.25) to[short] (7.75,12.75);
+\draw (8.75,12.5) to[short] (7.75,12.5);
+\draw (8.75,12.75) to[short] (8.75,12.5);
+\draw (8.75,11.5) to[short] (8.75,11.75);
+\draw (6.25,11) to[short] (7.5,11);
+\draw (7.5,11) to[short] (7.5,12.5);
+\draw (15,13.5) to[european voltage source,l={ \LARGE $U_\mathrm{V}$}] (15,7.25);
+\draw (15,13.5) to[R,l={ \LARGE R}] (21.25,13.5);
+\draw (21.25,13.5) to[short, -o] (22.5,13.5) ;
+\draw (15,7.25) to[short, -o] (22.5,7.25) ;
+\node at (21.25,7.25) [circ] {};
+\node at (21.25,13.5) [circ] {};
+\draw (21.25,13.5) to[R] (21.25,7.25);
+\draw [->, >=Stealth] (22.25,10) -- (20.25,10.75);
+\draw [color={rgb,255:red,57; green,91; blue,140}, ->, >=Stealth] (22.5,11.75) -- (22.5,9);
+\draw [color={rgb,255:red,57; green,91; blue,140}, ->, >=Stealth] (10,12.5) -- (10,11);
+\node at (8.75,7.25) [circ] {};
+\node at (6.25,7.25) [circ] {};
+\node [font=\LARGE] at (10.75,11.75) {$U_\mathrm{DS}$};
+\node [font=\LARGE] at (23.25,10.25) {$U_\mathrm{DS}$};
+
+\end{circuitikz}
+
+\end{document}

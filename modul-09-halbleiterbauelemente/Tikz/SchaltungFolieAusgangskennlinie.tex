@@ -1,0 +1,16 @@
+\begin{circuitikz}
+\draw (0,0) node[npn] (Q1) {};
+\draw (2,1.5) to[short, o-](0,1.5) to[short, i>, name=IC] (Q1.C);
+
+\draw (-2,0) to[short, i>, name= IB, o-] (Q1.B);
+\draw (Q1.E) to[short, -*] (0,-2)node[ground]{};
+\draw (-2,-2) to[short, o-o] (2,-2);
+
+\draw (-2,0) to[open,v>,name=UBE](-2,-2);
+\draw (2,1.5) to[open,v,name=UCE](2,-2);
+
+\varrmore{UBE}{$U_\mathrm{BE}$};
+\varrmore{UCE}{$U_\mathrm{CE}$};
+\iarrmore{IB}{$I_\mathrm{B} = konst$};
+\iarrmore{IC}{$I_\mathrm{C}$};
+\end{circuitikz}

@@ -1,0 +1,1224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="148mm"
+   viewBox="0 0 210 148"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="DiffusionsstromInnerhalbEinesHalbleiters.svg"
+   inkscape:export-filename="Diffusionsstrom innerhalb eines Halbleiters.pdf"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.0686842"
+     inkscape:cx="132.45134"
+     inkscape:cy="313.48429"
+     inkscape:window-width="1346"
+     inkscape:window-height="1040"
+     inkscape:window-x="926"
+     inkscape:window-y="319"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     showguides="true">
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="0.99999998"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Concave triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7" />
+    </marker>
+    <pattern
+       id="EMFhbasepattern"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle-1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Concave triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7-7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle-2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Concave triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7-74" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-5"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-3"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-12" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-15" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-52"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-8"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-0"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-89" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-38"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-83" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-6" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.455265;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;marker-end:url(#ConcaveTriangle)"
+       d="M 20.074915,129.81996 V 93.398767"
+       id="path1" />
+    <path
+       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.442674;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;marker-end:url(#ConcaveTriangle)"
+       d="M 20.074915,125.26731 H 67.422502"
+       id="path2" />
+    <path
+       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.455265;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;marker-end:url(#ConcaveTriangle-1)"
+       d="M 85.037462,129.81996 V 93.398772"
+       id="path2-5" />
+    <path
+       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.442763;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;marker-end:url(#ConcaveTriangle-1)"
+       d="M 85.037462,125.26731 H 132.40383"
+       id="path3" />
+    <path
+       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.455265;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;marker-end:url(#ConcaveTriangle-2)"
+       d="M 150.26508,129.59232 V 93.171132"
+       id="path2-7" />
+    <path
+       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.442763;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;marker-end:url(#ConcaveTriangle-2)"
+       d="m 150.26508,125.03967 h 47.36638"
+       id="path3-5" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.4243px;line-height:9.10529px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none"
+       x="15.167437"
+       y="88.8461"
+       id="text2"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         style="stroke-width:0;stroke-dasharray:none"
+         x="15.167437"
+         y="88.8461">$n$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.4243px;line-height:9.10529px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none"
+       x="17.958246"
+       y="134.37262"
+       id="text3"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         style="stroke-width:0;stroke-dasharray:none"
+         x="17.958246"
+         y="134.37262">$0$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.4243px;line-height:9.10529px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none"
+       x="70.154091"
+       y="129.81998"
+       id="text4"><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         style="stroke-width:0;stroke-dasharray:none"
+         x="70.154091"
+         y="129.81998">$x$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.4243px;line-height:9.10529px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none"
+       x="145.16745"
+       y="88.618462"
+       id="text2-3"><tspan
+         sodipodi:role="line"
+         id="tspan2-8"
+         style="stroke-width:0;stroke-dasharray:none"
+         x="145.16745"
+         y="88.618462">$n$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.4243px;line-height:9.10529px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none"
+       x="79.939804"
+       y="88.846092"
+       id="text2-5"><tspan
+         sodipodi:role="line"
+         id="tspan2-5"
+         style="stroke-width:0;stroke-dasharray:none"
+         x="79.939804"
+         y="88.846092">$n$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.4243px;line-height:9.10529px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none"
+       x="135.31448"
+       y="129.81996"
+       id="text4-6"><tspan
+         sodipodi:role="line"
+         id="tspan4-5"
+         style="stroke-width:0;stroke-dasharray:none"
+         x="135.31448"
+         y="129.81996">$x$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.4243px;line-height:9.10529px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none"
+       x="200.26439"
+       y="129.52322"
+       id="text4-9"><tspan
+         sodipodi:role="line"
+         id="tspan4-3"
+         style="stroke-width:0;stroke-dasharray:none"
+         x="200.26439"
+         y="129.52322">$x$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.4243px;line-height:9.10529px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none"
+       x="82.860939"
+       y="134.37262"
+       id="text3-2"><tspan
+         sodipodi:role="line"
+         id="tspan3-9"
+         style="stroke-width:0;stroke-dasharray:none"
+         x="82.860939"
+         y="134.37262">$0$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.4243px;line-height:9.10529px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none"
+       x="148.16827"
+       y="134.37262"
+       id="text3-24"><tspan
+         sodipodi:role="line"
+         id="tspan3-3"
+         style="stroke-width:0;stroke-dasharray:none"
+         x="148.16827"
+         y="134.37262">$0$</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.455265;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none"
+       d="m 20.074915,102.50406 h 22.763264 v 22.76325 l 22.448038,0 v 1.82106"
+       id="path4"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none"
+       d="M 130.56397,125.26731 Z"
+       id="path6" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.637371;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none"
+       d="m 130.56397,125.26731 v 1.82106"
+       id="path8" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.455265;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none"
+       d="M 150.26508,111.38171 H 195.7916"
+       id="path9" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.711132;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none"
+       d="m 195.7916,125.03968 v 1.82105"
+       id="path10" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.4243px;line-height:9.10529px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.455265;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none"
+       x="64.407135"
+       y="134.37262"
+       id="text10"><tspan
+         sodipodi:role="line"
+         id="tspan10"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.455265;stroke-dasharray:none"
+         x="64.407135"
+         y="134.37262">L</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.4243px;line-height:9.10529px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.455265;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none"
+       x="194.04234"
+       y="134.37262"
+       id="text10-6"><tspan
+         sodipodi:role="line"
+         id="tspan10-7"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.455265;stroke-dasharray:none"
+         x="194.04234"
+         y="134.37262">L</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.4243px;line-height:9.10529px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.455265;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none"
+       x="128.77782"
+       y="134.37262"
+       id="text10-0"><tspan
+         sodipodi:role="line"
+         id="tspan10-6"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.455265;stroke-dasharray:none"
+         x="128.77782"
+         y="134.37262">L</tspan></text>
+    <rect
+       style="fill:#002e9b;fill-opacity:0.30182928;fill-rule:evenodd;stroke:#000000;stroke-width:0.355;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+       id="rect10"
+       width="45.336349"
+       height="22.257532"
+       x="20"
+       y="47.742466" />
+    <rect
+       style="fill:#002e9b;fill-opacity:0.30182928;fill-rule:evenodd;stroke:#000000;stroke-width:0.355;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+       id="rect10-7"
+       width="45.336349"
+       height="22.257532"
+       x="85"
+       y="47.742466" />
+    <rect
+       style="fill:#002e9b;fill-opacity:0.30182928;fill-rule:evenodd;stroke:#000000;stroke-width:0.355;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+       id="rect10-4"
+       width="45.336349"
+       height="22.257532"
+       x="150.22763"
+       y="47.514832" />
+    <g
+       id="use28-4-7"
+       transform="matrix(0.48018598,0,0,0.48018598,4.5980477,-18.140576)">
+      <g
+         id="g11-9"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-3"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-7"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-6"
+       transform="matrix(0.48018598,0,0,0.48018598,15.837701,-17.417843)">
+      <g
+         id="g11-5"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-5"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-78"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-9"
+       transform="matrix(0.48018598,0,0,0.48018598,9.6954156,-12.932979)">
+      <g
+         id="g11-3"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-32"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-8"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-64"
+       transform="matrix(0.48018598,0,0,0.48018598,1.4811545,-3.4389055)">
+      <g
+         id="g11-2"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-35"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-1"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-91"
+       transform="matrix(0.48018598,0,0,0.48018598,14.503202,-7.3385572)">
+      <g
+         id="g11-51"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-7"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-0"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-98"
+       transform="matrix(0.48018598,0,0,0.48018598,19.944999,-11.372158)">
+      <g
+         id="g11-1"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-38"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-06"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-0"
+       transform="matrix(0.48018598,0,0,0.48018598,19.228893,-2.8681691)">
+      <g
+         id="g11-19"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-6"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-6"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-77"
+       transform="matrix(0.48018598,0,0,0.48018598,99.301306,-5.9079507)">
+      <g
+         id="g11-7"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-55"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-3"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-97"
+       transform="matrix(0.48018598,0,0,0.48018598,68.834357,-3.4449949)">
+      <g
+         id="g11-13"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-57"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-33"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-07"
+       transform="matrix(0.48018598,0,0,0.48018598,70.038913,-12.35871)">
+      <g
+         id="g11-76"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-61"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-4"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-68"
+       transform="matrix(0.48018598,0,0,0.48018598,82.084473,-16.936022)">
+      <g
+         id="g11-37"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-56"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-2"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-3"
+       transform="matrix(0.48018598,0,0,0.48018598,76.739195,-6.6719686)">
+      <g
+         id="g11-56"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-53"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-76"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-72"
+       transform="matrix(0.48018598,0,0,0.48018598,84.600508,-2.5794751)">
+      <g
+         id="g11-18"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-2"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-19"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-2"
+       transform="matrix(0.48018598,0,0,0.48018598,87.979353,-10.190509)">
+      <g
+         id="g11-4"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-385"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-9"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-4"
+       transform="matrix(0.48018598,0,0,0.48018598,168.04378,-14.640341)">
+      <g
+         id="g11-14"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-37"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-43"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-76"
+       transform="matrix(0.48018598,0,0,0.48018598,167.31549,-6.4685704)">
+      <g
+         id="g11-6"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-9"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-01"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-67"
+       transform="matrix(0.48018598,0,0,0.48018598,156.9321,-4.2591954)">
+      <g
+         id="g11-49"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-4"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-96"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-06"
+       transform="matrix(0.48018598,0,0,0.48018598,157.5716,-16.112459)">
+      <g
+         id="g11-73"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-374"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-785"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-36"
+       transform="matrix(0.48018598,0,0,0.48018598,133.85338,-14.778643)">
+      <g
+         id="g11-0"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-0"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-73"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-8"
+       transform="matrix(0.48018598,0,0,0.48018598,133.9656,-5.1751643)">
+      <g
+         id="g11-95"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-34"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-07"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-70"
+       transform="matrix(0.48018598,0,0,0.48018598,144.25991,-5.8408322)">
+      <g
+         id="g11-29"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-71"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-42"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-04"
+       transform="matrix(0.48018598,0,0,0.48018598,8.5728748,-3.289022)">
+      <g
+         id="g11-16"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-52"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-434"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-93"
+       transform="matrix(0.48018598,0,0,0.48018598,1.7071776,-10.85369)">
+      <g
+         id="g11-33"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-99"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-16"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-41"
+       transform="matrix(0.48018598,0,0,0.48018598,66.723359,-18.655377)">
+      <g
+         id="g11-370"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-78"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-15"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-047"
+       transform="matrix(0.48018598,0,0,0.48018598,75.338959,-17.733192)">
+      <g
+         id="g11-57"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-48"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-156"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-81"
+       transform="matrix(0.48018598,0,0,0.48018598,150.6252,-11.189864)">
+      <g
+         id="g11-8"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-25"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-5"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <g
+       id="use28-4-5"
+       transform="matrix(0.48018598,0,0,0.48018598,143.32643,-17.030016)">
+      <g
+         id="g11-15"
+         transform="matrix(0.4200411,0,0,0.4200411,-9.01868,114.37249)"
+         inkscape:export-filename="C:\Users\hbode\Desktop\TD Allgemein\get it digital\GitLab\modul-1-elektrische-grundgroessen\Bilder\felddef1.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300"
+         style="opacity:1;fill:#4e9dde;fill-opacity:1">
+        <circle
+           style="fill:#4e9dde;fill-opacity:1;stroke-width:0.365001;paint-order:stroke markers fill"
+           id="circle11-377"
+           cx="130.32796"
+           cy="72.036949"
+           r="11.162109" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1;stroke-opacity:1"
+         id="rect11-49"
+         width="4.630208"
+         height="0.79375005"
+         x="43.409313"
+         y="144.2341" />
+    </g>
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.182106;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+       d="m 40.045298,52.03192 h 4.613941"
+       id="path15" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.182106;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-5)"
+       d="m 44.152598,58.077605 h 4.613941"
+       id="path15-7" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.182106;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-3)"
+       d="m 43.436491,66.581595 h 4.613941"
+       id="path15-8" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.182106;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-1)"
+       d="m 123.50889,63.541812 h 4.61394"
+       id="path15-2" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.182106;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-52)"
+       d="m 108.80809,66.870288 h 4.61394"
+       id="path15-1" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.182106;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-8)"
+       d="m 100.94679,62.777795 h 4.61394"
+       id="path15-3" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.182106;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-0)"
+       d="m 112.18694,59.259254 h 4.61394"
+       id="path15-18" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.182106;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-38)"
+       d="m 106.29206,52.513741 h 4.61395"
+       id="path15-0" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.182106;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-2)"
+       d="m 94.246511,57.091054 h 4.613945"
+       id="path15-03" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.455265;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none"
+       d="m 85.037462,102.50406 c 0,0 14.961091,-1.37267 22.684338,11.51321 7.72325,12.88588 15.81137,11.25004 22.84217,11.25004"
+       id="path5"
+       sodipodi:nodetypes="czc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.455265;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:2.73159, 2.73159;stroke-dashoffset:0"
+       d="m 65.286217,70.177498 0,55.089812"
+       id="path9-8"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.455265;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:2.73159, 2.73159;stroke-dashoffset:0"
+       d="m 20.050132,70.177498 0,23.165036"
+       id="path9-8-5"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>

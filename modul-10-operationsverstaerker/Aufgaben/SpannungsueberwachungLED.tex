@@ -1,0 +1,103 @@
+\subsection{Überwachung einer Spannung mit LEDs\label{Aufg1}}
+% Alt: Aufgabe 1
+\Aufgabe{
+    Gegeben ist die abgebildete Schaltung, mit dieser soll die Spannung $U_\mathrm{a}$ überwacht werden. $U_\mathrm{a}$ darf dabei nur im folgenden Bereich liegen $\mathrm{4,75\,V} < U_\mathrm{a} < \mathrm{5,25\,V}$. Wenn die Spannung über oder unterschritten ist, soll jeweils 
+    eine der LEDs aufleuchten. Erzgängen Sie die Schaltung.
+    \begin{figure}[H]
+    \centering
+    \input{Tikz/FigSpannungsueberwachungLED.tex}
+    \label{fig:FigSpannungsueberwachungLED}
+    \end{figure}
+
+%    \speech{
+%Aufgabe 1: Spannungsüberwachung mit Komparatoren  
+%
+%Gegeben ist eine Schaltung zur Überwachung der Spannung U A.  
+%Diese Spannung darf nur im Bereich zwischen 4,75 und 5,25 Volt liegen.  
+%Wenn U A diesen Bereich überschreitet oder unterschreitet, soll eine entsprechende LED aufleuchten.  
+%
+%Die Schaltung enthält zwei Operationsverstärker, die als Komparatoren arbeiten, sowie zwei LEDs zur Spannungsanzeige.  
+%Die Operationsverstärker sind mit einer symmetrischen Versorgungsspannung von plus 15 Volt und minus 15 Volt betrieben.  
+%
+%Die Eingangsspannung U A wird an die Eingänge der Komparatoren angelegt.  
+%Komparator N1 überprüft, ob U A größer als 5,25 Volt ist.  
+%Komparator N2 überprüft, ob U A kleiner als 4,75 Volt ist.  
+%
+%Wenn die Spannung den erlaubten Bereich überschreitet, schaltet sich die LED V1 ein.  
+%Wenn die Spannung den erlaubten Bereich unterschreitet, schaltet sich die LED V2 ein.  
+%
+%Um die Schaltung funktionsfähig zu machen, müssen folgende Ergänzungen vorgenommen werden:  
+%Erstens, die Referenzspannungen 4,75 und 5,25 Volt müssen an die nichtinvertierenden Eingänge der Komparatoren angeschlossen werden.  
+%Zweitens, die LEDs benötigen einen Vorwiderstand, um den Strom zu begrenzen.  
+%Drittens, die Ausgangssignale der Komparatoren müssen so verschaltet werden, dass die LEDs bei Über- oder Unterschreitung leuchten.  
+%
+%Funktionsweise nach Ergänzung:  
+%Wenn die Spannung innerhalb des zulässigen Bereichs liegt, bleibt die Schaltung inaktiv und keine LED leuchtet.  
+%Wenn die Spannung über 5,25 Volt steigt, leuchtet LED V1.  
+%Wenn die Spannung unter 4,75 Volt fällt, leuchtet LED V2.  
+%
+%Diese Schaltung wird häufig zur Spannungsüberwachung in elektronischen Systemen eingesetzt.  
+%}
+
+}
+
+\Loesung{
+  
+             \begin{figure}[H]
+             \centering
+             \input{Tikz/LsgSpannungsueberwachungLED1.tex}
+             \label{fig:LsgSpannungsueberwachungLED1}
+             \end{figure}
+             \begin{equation*}
+                \begin{aligned}
+                     \frac{U_1}{U_0} &= \frac{R_1}{R_1 + R_2} \\
+                     \frac{U_1 \cdot (R_1 + R_2)}{U_0} &= R_1 \\
+                     U_1\cdot (R_1+R_2) &= R_1 \cdot U_0 \\
+                     U_1\cdot R_1 + U_1\cdot R_2 &= R_1 \cdot U_0 \\
+                     U_1\cdot R_1 &= R_1 \cdot U_0 - U_1\cdot R_2 \\
+                     U_1\cdot R_2 &= R_1 \cdot (U_0 - U_1) \\
+                     \frac{U_1 \cdot R_2}{U_0 - U_1} &= R_1
+                \end{aligned}
+                \end{equation*}
+                
+                \[
+                R_1 = 268.96 \, \Omega
+                \]
+
+        \begin{figure}[H]
+        \centering
+        \input{Tikz/LsgSpannungsueberwachungLED2.tex}
+        \label{fig:LsgSpannungsueberwachungLED2}
+        \end{figure}
+
+        \begin{figure}[H]
+        \centering
+        \input{Tikz/LsgSpannungsueberwachungLED3.tex}
+        \label{fig:LsgSpannungsueberwachungLED3}
+        \end{figure}
+        \begin{align*}
+            R_1 &= 3.75 \,\text{k}\Omega \\
+            R_2 &= 500 \,\Omega \\
+            R_3 &= 4.75 \,\text{k}\Omega \\
+            R_4 &= \frac{28 \, \mathrm{V}}{20 \, \mathrm{mA}} \approx 1,4 \,\text{k}\Omega
+        \end{align*}
+        Siehe: Abschnitt \ref{fig: Verschaltung Verstaerker} und Tabelle \ref{tab:Grundschaltungen}
+%        \speech{
+%            Lösung für Aufgabe 1.
+%            
+%            Die gegebene Schaltung dient zur Überwachung der Spannung U a. Die Spannung darf nur innerhalb eines bestimmten Bereichs liegen, genauer zwischen 4,75 Volt und 5,25 Volt. Wird dieser Bereich unter- oder überschritten, soll jeweils eine LED aufleuchten.
+%            
+%            Die Schaltung enthält zwei Operationsverstärker N1 und N2, die als Komparatoren arbeiten. Beide Operationsverstärker sind mit einer symmetrischen Spannungsversorgung von plus 15 Volt und minus 15 Volt verbunden. Die nicht-invertierenden Eingänge der Operationsverstärker erhalten eine Referenzspannung über einen Spannungsteiler aus zwei Widerständen R1 und R2.
+%            
+%            Die Referenzspannung für den oberen Komparator N1 liegt bei 5,25 Volt. Wenn die überwachte Spannung U a diesen Wert überschreitet, schaltet der Operationsverstärker N1 seinen Ausgang auf minus 15 Volt. Dadurch leuchtet die LED V1 auf, die mit dem Ausgang des Komparators verbunden ist.
+%            
+%            Für den unteren Komparator N2 liegt die Referenzspannung bei 4,75 Volt. Wenn die überwachte Spannung U a unter diesen Wert fällt, schaltet N2 seinen Ausgang auf minus 15 Volt, wodurch die LED V2 aufleuchtet.
+%            
+%            Die Berechnung des Widerstandes R1 erfolgt anhand der Spannungsteilergleichung. Da die Referenzspannung durch den Spannungsteiler aus R1 und R2 bestimmt wird, gilt die Gleichung U 1 geteilt durch U 0 ist gleich R1 geteilt durch die Summe aus R1 und R2. Diese Gleichung wird nach R1 umgestellt. Das Einsetzen der gegebenen Werte führt zu einem Widerstandswert von ungefähr 269 Ohm für R1.
+%            
+%            Die zweite Abbildung zeigt die gleiche Schaltung mit einer klaren Darstellung der Spannungen an den Eingängen. Die Werte von 5,25 Volt und 4,75 Volt sind markiert, um die Schwellenwerte der Komparatoren zu verdeutlichen.
+%            
+%            In der dritten Abbildung ist eine weiterentwickelte Version der Schaltung zu sehen. Hier wurde ein zusätzlicher Widerstand R3 eingefügt, um eine präzisere Referenzspannung zu erzeugen. Außerdem sind Vorwiderstände für die LEDs hinzugefügt, um die Ströme zu begrenzen. Der Widerstand R4 wurde so dimensioniert, dass die LED V1 einen Strom von circa 2 Milliampere erhält. Die endgültigen Widerstandswerte lauten: R1 ist 3,75 Kiloohm, R2 ist 500 Ohm, R3 ist 4,75 Kiloohm, R4 ist 1,4 Kiloohm.
+%            }
+            
+}

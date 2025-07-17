@@ -1,0 +1,90 @@
+\subsection{Untersuchung eines Aufwärtswandlers zur Spannungsanhebung\label{Aufg28}}
+% Alt: Praktikumsaufgabe 14
+\Aufgabe{
+    Mit einem Aufwärtswandler können kleine Gleichspannungen (z. B. aus einer Batterie) in eine höhere Gleichspannung umgesetzt werden.  
+    Untersuchen Sie die Funktionsweise eines Aufwärtswandlers, indem Sie die Schaltung analysieren.
+    
+    Gegeben:
+    \begin{itemize}
+        \item Eingangsspannung: $U_\mathrm{E} = 1\,\mathrm{V}$
+        \item Induktivität: $L = 900\,\mathrm{\mu H}$
+        \item Diode: Ideale Diode (keine Spannungsabfälle berücksichtigt)
+        \item Kondensator: $C = 470\,\mathrm{\mu F}$
+        \item Schalter: Wird periodisch geöffnet und geschlossen
+    \end{itemize}
+    
+    \begin{itemize}
+        \item[a)] Erklären Sie die Funktionsweise des Aufwärtswandlers in den zwei Phasen:  
+            \begin{itemize}
+                \item \textit{Phase 1: Schalter geschlossen}
+                \item \textit{Phase 2: Schalter geöffnet}
+            \end{itemize}
+        \item[b)] Leiten Sie die Formel für die Ausgangsspannung $U_\mathrm{A}$ in Abhängigkeit des Tastverhältnisses $D$ her:
+            \[
+            U_\mathrm{A} = \frac{U_\mathrm{E}}{1 - D}
+            \]
+        \item[c)] Berechnen Sie $U_\mathrm{A}$ für verschiedene Tastverhältnisse $D$:
+            \begin{itemize}
+                \item $D = 0{,}3$
+                \item $D = 0{,}5$
+                \item $D = 0{,}7$
+            \end{itemize}
+        \item[d)] Was passiert, wenn $D$ gegen $1$ geht? Welche praktischen Begrenzungen gibt es?
+    \end{itemize}
+    \begin{figure} [H]
+    \centering
+    \input{Tikz/FigPrakAufwaertswandler}
+    \label{fig:FigPrakAufwaertswandler}
+    \end{figure}
+}
+
+\Loesung{
+    \textbf{a) Erklärung der Funktionsweise des Aufwärtswandlers} \\[0.2cm]
+    Der Aufwärtswandler arbeitet in zwei Phasen:
+
+    \begin{itemize}
+        \item \textbf{Phase 1 (Schalter geschlossen):}  
+        Die Induktivität $L$ wird mit Strom geladen und speichert Energie in ihrem Magnetfeld.  
+        Die Diode sperrt, sodass kein Strom zum Ausgang fließt.
+        
+        \item \textbf{Phase 2 (Schalter geöffnet):}  
+        Der gespeicherte magnetische Fluss der Induktivität bricht zusammen, wodurch die Induktivität eine Spannung induziert.  
+        Diese Spannung addiert sich zur Eingangsspannung und lädt den Kondensator $C$ auf eine höhere Spannung auf.  
+        Der Ausgang erhält nun eine höhere Spannung als die Eingangsspannung.
+    \end{itemize}
+
+    \textbf{b) Herleitung der Ausgangsspannungsformel} \\[0.2cm]
+    Im stationären Zustand gilt das Verhältnis zwischen Ein- und Ausgangsspannung:
+    \[
+    U_\mathrm{A} = \frac{U_\mathrm{E}}{1 - D}
+    \]
+    wobei $D$ das Tastverhältnis ist (Verhältnis der Zeit, in der der Schalter geschlossen ist).
+
+    \textbf{c) Berechnung der Ausgangsspannung für verschiedene $D$} \\[0.2cm]
+    Gegeben ist $U_\mathrm{E} = 1\,\mathrm{V}$.
+
+    \begin{itemize}
+        \item Für $D = 0{,}3$:
+        \[
+        U_\mathrm{A} = \frac{1\,\mathrm{V}}{1 - 0{,}3} = \frac{1\,\mathrm{V}}{0{,}7} = 1{,}43\,\mathrm{V}
+        \]
+        \item Für $D = 0{,}5$:
+        \[
+        U_\mathrm{A} = \frac{1\,\mathrm{V}}{1 - 0{,}5} = \frac{1\,\mathrm{V}}{0{,}5} = 2\,\mathrm{V}
+        \]
+        \item Für $D = 0{,}7$:
+        \[
+        U_\mathrm{A} = \frac{1\,\mathrm{V}}{1 - 0{,}7} = \frac{1\,\mathrm{V}}{0{,}3} = 3{,}33\,\mathrm{V}
+        \]
+    \end{itemize}
+
+    \textbf{d) Grenzen für $D \to 1$} \\[0.2cm]
+    Theoretisch würde $U_\mathrm{A} \to \infty$, wenn $D$ gegen $1$ geht.  
+    In der Praxis gibt es jedoch Begrenzungen durch:
+    \begin{itemize}
+        \item Die Sättigung der Induktivität
+        \item Verluste durch Widerstände, Diode und Schalter
+        \item Begrenzte Schaltfrequenzen
+    \end{itemize}
+    Typische Werte für $D$ liegen in der Regel unter 0,8, um einen stabilen Betrieb zu gewährleisten.
+}

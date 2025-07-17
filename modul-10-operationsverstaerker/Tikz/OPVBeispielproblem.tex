@@ -1,0 +1,11 @@
+\begin{circuitikz}
+    \draw  (4,3) rectangle  node {\LARGE ?} (8,0);
+    \draw (8,1.5) to[R,l=$2\,\Omega$] (10,1.5);
+    \draw (10,1.5) to[L, l=\text{\textnormal{100\,mH}}] (10,0);
+    \draw (2,0.5) to[short] (4,0.5) (2,0.5);
+    \draw (2,2.5) to[short] (4,2.5) (2,2.5);
+    \draw (2,0.5) to[sV, l={$U_{\text{eff}}=1\textnormal{V}$}] (2,2.5);
+    \draw (10,0) to (10,0) node[ground]{};
+    \draw[dashed, thick] (8.2, 2.2) rectangle (11.6, -0.8);
+    \node[align=center] at (9.85, 2.7) {Lautsprecher\\Ersatzschaltbild};
+\end{circuitikz}

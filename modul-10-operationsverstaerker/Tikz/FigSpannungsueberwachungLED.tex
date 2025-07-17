@@ -1,0 +1,59 @@
+\begin{tikzpicture}
+ \draw (0,0) rectangle (2,-3); 
+    
+
+    \node[rotate=270] at (0.5,-0.5) {$\triangle$};
+    \draw (1.5,-0.5) node {$\infty$};   
+    
+   
+    \node[anchor=west] at (0.1,-1) {$-$};  % Invertierender Eingang
+    \node[anchor=west] at (0.1,-1.5) {$+$}; % Nicht-invertierender Eingang
+    \node[anchor=west] at (0.1,-2) {$\mathrm{U+}$}; % U+ Eingang
+    \node[anchor=west] at (0.1,-2.5) {$\mathrm{U-}$}; % U- Eingang
+
+    % Ausgang rechts für N1
+    \draw (2,-1.5) -- (2.5,-1.5) node[right] {};  % Ausgang
+
+    % Beschriftung oben links für N1
+    \draw (0,0) node[above right] {N1};
+
+    % Zeichne ein Rechteck für den OPV N2 (tiefer)
+    \draw (0,-6) rectangle (2,-9); % Rechteck für N2
+    
+    % Zeichne das Symbol für den Operationsverstärker N2 und das Unendlichkeitszeichen
+    \node[rotate=270] at (0.5,-6.5) {$\triangle$};
+    \draw (1.5,-6.5) node {$\infty$};   % Unendlichkeitszeichen
+    
+    % Platziere die Eingänge und Beschriftungen am linken Rand innerhalb des OPV N2
+    \node[anchor=west] at (0.1,-7) {$-$};  % Invertierender Eingang
+    \node[anchor=west] at (0.1,-7.5) {$+$}; % Nicht-invertierender Eingang
+    \node[anchor=west] at (0.1,-8) {$\mathrm{U+}$}; % U+ Eingang
+    \node[anchor=west] at (0.1,-8.5) {$\mathrm{U-}$}; % U- Eingang
+
+    % Ausgang rechts für N2
+    \draw (2,-7.5) -- (2.5,-7.5) node[right] {};  % Ausgang
+
+    % Beschriftung oben links für N2
+    \draw (0,-6) node[above right] {N2};
+
+
+    \draw (-1,1) node[above]{$\mathrm{15\,V}$} to[short, o-*] (-1,-2) to (-1,-8) to (0,-8);
+    \draw (-1,-2) to[*-] (0,-2);
+
+    \draw (-3,1) node[above]{$\mathrm{-15\,V}$} to[short, o-*] (-3, -2.5) to (-3,-8.5) to (0,-8.5);
+    \draw (-3,-2.5) to(0,-2.5);
+
+    \draw (-5, -7) to[short, o-*] (-2,-7) to (0,-7)
+    (-2,-7) to (-2,-1.5) to (0,-1.5);
+    \draw (0,-1) to (-0.3,-1);
+    \draw (0,-7.5) to (-0.3,-7.5);
+
+    \draw (-5,-9) to[short, o-] (-5,-9.1)node[ground]{};
+
+    \draw (2.5,-1.5) to (3,-1.5) to[led, -o] node[left] {V1} (3,-3.5) node[right] {$\mathrm{-15\,V}$};  % Photodiode
+    \draw (2.5,-7.5) to (3,-7.5) to[led, -o] node[left] {V2} (3,-9.5) node[right] {$\mathrm{-15\,V}$};
+
+    \draw (-5,-7) to[open,v>, name=ua] (-5,-9);
+
+\varrmore{ua}{$U_\mathrm{a}$};
+\end{tikzpicture}

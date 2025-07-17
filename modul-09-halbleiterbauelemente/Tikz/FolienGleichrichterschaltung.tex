@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+
+\draw (0,0) -- (3,0) to [D, -*] (3,-2) ; 
+\draw (3,-4) to[R, l= $R_\mathrm{Last}$,*-] (3,-2);
+\draw (3,-4) -- (4,-4) to [C] (4,-2) -- (3,-2);
+
+\draw (0,0) to [V,name=U0] (0,-4) -- (3,-4);
+
+\varrmore {U0}{$U_0$};
+
+\end{tikzpicture}

@@ -1,0 +1,20 @@
+\begin{tikzpicture}[]
+    \draw (-0.5,0)
+        to[sV, v<, name=UE] (-0.5,3)
+        to[short, -*] (3,3)
+        to[D, -*, l=$D_2$] (4.5,1.5)
+        to[short, i, -] (4.5,2.5)
+        to[short, -] (6,2.5)
+        to[R, v, name=R, l=$R$] (6,-0.5)
+        to[short, -] (1.5,-0.5)
+        to[short, -*] (1.5,1.5)
+        to[D, -*, l=$D_3$] (3,0)
+        to[short, -] (-0.5,0);
+    \draw (3,0)
+        to[D, -, l=$D_4$] (4.5,1.5);
+    \draw (1.5,1.5)
+        to[D, -, l=$D_1$] (3,3);
+
+    \varrmore{UE}{$u_\mathrm{E}$};
+    \varrmore{R}{$u_\mathrm{R}$};
+\end{tikzpicture}

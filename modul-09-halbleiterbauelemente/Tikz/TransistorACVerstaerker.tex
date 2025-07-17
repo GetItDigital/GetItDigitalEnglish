@@ -1,0 +1,41 @@
+\begin{circuitikz}
+
+\draw (2,0) node[npn](Q1){};
+
+\draw (2,0) node[npn, tr circle] (Q1) {}
+    (Q1.base) node[anchor=south east] {B}
+    (Q1.collector) node[anchor=east] {C}
+    (Q1.emitter) node[anchor=east] {E};
+
+\draw (-0.5,0) to[R,l=$R_\mathrm{1}$] (-0.5,4)to[short,-*](2,4)to[short,-o](4,4)node[right]{$U_\mathrm{S}$};
+\draw (-2,0) to[short,i>, name=ie, o-] (-1.5,0) to[C,-*] (-0.5,0) to[short, i>,name=ib] (Q1.B);
+
+\draw (-2,-2)node[ground]{} to[short,-o](-2,-2);
+\draw (-2,0) to[open,v,name=Ue](-2,-2);
+
+\draw (4,-2) node[ground]{} to[short,-o](4,-2);
+\draw (4,2) to[open,v,name=Ua](4,-2);
+
+
+\draw (2,4) to[R,l=$R_\mathrm{C}$,-*] (2,2);
+\draw (4,2) to[short,i>,name=ia, o-](3.5,2) to[C] (2.5,2) -- (2,2);
+\draw (2,2) to[short,i>,name=ic] (Q1.C);
+
+\draw (1,-0.75) to[open, v>, name=ube] (1.25,-1); % Dieser Pfeil sollte eigentlich nicht in der normalen Spannungsfarbe angezeigt werden, da im Bild daneben mit den Spannungsverläufen U_BE rot eingezeichnet ist... 
+
+\draw (3.25,1) to[open,v>, name=uce] (3.25,-1);
+
+\draw (Q1.E) to[short] (2,-2) node[ground]{};
+
+
+\varrmore{uce}{$U_\mathrm{CE}$};
+\varrmore{ube}{$U_\mathrm{BE}$};
+\varrmore{Ue}{$U_\mathrm{e}$};
+\varrmore{Ua}{$U_\mathrm{a}$};
+
+\iarrmore {ia}{$i_\mathrm{a}$};
+\iarrmore{ic}{$i_\mathrm{c}$};
+\iarrmore{ib}{$i_\mathrm{b}$};
+\iarrmore{ie}{$i_\mathrm{e}$};
+
+\end{circuitikz}

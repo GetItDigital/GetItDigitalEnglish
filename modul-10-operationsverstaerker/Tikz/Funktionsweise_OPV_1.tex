@@ -1,0 +1,41 @@
+\begin{circuitikz}
+    \ctikzset{
+        transistors/scale=1.3,
+        resistors/scale=0.4,
+        diodes/scale=0.5,
+    }
+    \fill[red, opacity=0.2] (4.3,-1.5) rectangle (-1.6,2.2);
+    \fill[yellow, opacity=0.2] (8,-4.2) rectangle (4.9,2.2);
+    \fill[violet, opacity=0.2] (4,-4.2) rectangle (1.5,-1.5);
+
+    \draw (1,0) node[npn] (T1) {}
+          (6,1) node[pnp, yscale=1] (T2) {}
+          (2,-2) node[npn, xscale=-1] (T3) {}
+          (3,0) node[npn, xscale=-1] (T4) {};
+    \draw (T1.B) -- (-1,0) node[ocirc, label=north:{$-$}] {}; 
+    \draw (T1.C) to[R] ++(0,1) -| (7,2) node[ocirc, label=right:{{$+U_{\textnormal{B}}$}}] {};
+    \draw (T1.E)  |- (T4.E);
+    \draw (T2.C) -- ++(0,-1) to[R, l= \textit{R}$_{\textnormal{L}}$] ++(0,-3) node[circ]{};
+    \draw (T2.B)  |- (T4.C);
+    \draw (T3.C) -- ++(0,0) node[circ] {};
+    \draw (T3.E) to[R] ++(0, -0.5) -- ++(0,-0.5) -| (7,-4) node[ocirc, label=right:{$-U_{\textnormal{B}}$}] {};
+    \draw (T3.B) -- ++(1.5,0) to[R] ++(0, 4) node[circ] {};
+    \draw (T3.B) node[circ] {} to[D, l=\textit{D}$_1$] ++(0,-1) to[D, l=\textit{D}$_2$] ++(0,-1) node[circ] {};
+    \draw (T2.E) -- ++(0,0) node[circ] {};
+    \draw (T4.C) node[circ]{} -- ++(0,0) to[R] ++(0,1) node[circ]{};
+    \draw (T4.B) -- ++(0,-1.3) -- (-1,-1.3) node[ocirc, label=north:{$+$}] {};
+    \draw (T2.C) -- ++(0,-1) node[circ]{} -- ++(0.5,0) node[ocirc, label=right:{$U_{\textnormal{A}}$}] {};
+    
+    \draw[red, thick] (4.3,-1.5) rectangle (-1.6,2.2);
+    \draw[yellow, thick] (8,-4.2) rectangle (4.9,2.2);
+    \draw[violet, thick] (4,-4.2) rectangle (1.5,-1.5);
+
+
+\draw[-{Triangle[width=3pt,length=4pt]}, color=spannung] (5.3,0.3) -- (5.3,0.9) node[midway, right] {};
+ \draw[-{Triangle[width=3pt,length=4pt]}, color=spannung] (7.3,0) -- (7.3,-2) node[midway, right] {};
+ \draw[-{Triangle[width=3pt,length=4pt]}, color=spannung] (2,-0.9) -- (2,-0.3) node[midway, right] {};
+ \draw[-{Triangle[width=3pt,length=4pt]}, color=spannung] (2.8,0.6) -- (2.8,1.2) node[midway, right] {};
+ \draw[-{Triangle[width=3pt,length=4pt]}, color=spannung] (1.2,1) -- (1.2,0.4) node[midway, left] {};
+ \draw[-{Triangle[width=3pt,length=4pt]}, color=spannung]  (-0.7, -0.2) -- (-0.7, -1.1) node[midway, right] {$U_{\text{Diff}}$};
+
+\end{circuitikz}

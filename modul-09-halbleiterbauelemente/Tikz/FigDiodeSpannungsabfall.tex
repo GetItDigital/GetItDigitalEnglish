@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+  % Batterie links
+  \draw (0,2) to[V, name=U1] (0,0);
+  \varrmore{U1}{$U_{0}$}; 
+
+  % Widerstand
+  \draw (0,2) to[R=$R$] (4,2);
+  \draw (0,0) -- (4,0);
+
+  % Diode rechts
+  \draw (4,2) to[D=$D$, v, name=D1] (4,0);
+  \varrmore{D1}{$U_\mathrm{D}$};
+
+\end{tikzpicture}

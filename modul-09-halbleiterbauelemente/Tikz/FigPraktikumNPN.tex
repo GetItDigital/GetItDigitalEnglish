@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+    \draw
+    (0,0) node[npn] (Q1) {}
+    (Q1.base) 
+    (Q1.collector)  
+    (Q1.emitter);
+
+\draw (-3,0) to[R,l=$R_\mathrm{3}$,*-](Q1.B);
+\draw (-3,2) to[R,l=$R_1$](-3,0);
+\draw (-3,2) -- (-5,2) to[V,name=V1,-*](-5,-2)node[ground]{} to[short,-*](-3,-2) -- (0,-2);
+\draw (-3,0) to[R,l=$R_\mathrm{2}$](-3,-2);
+
+\draw (Q1.C) to[R,l=$R_\mathrm{4}$] (0,2.5) -- (2,2.5) to[V,name=V2] (2,-2) -- (0,-2);
+
+\draw (Q1.E) to[short,-*] (0,-2);
+
+\varrmore{V1}{$V_\mathrm{1}$};
+\varrmore{V2}{$V_\mathrm{2}$};
+\end{tikzpicture}
+   

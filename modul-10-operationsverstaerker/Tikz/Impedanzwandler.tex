@@ -1,0 +1,18 @@
+\begin{circuitikz}
+    \ctikzset{tripoles/en amp/input height=0.45}
+\draw (0,0)node[en amp, en amp text A](E){}
+    (E.out)
+    (E.-)
+    (E.+);
+\draw (E.-) -- (-1.5,0.5) -- (-1.5,2) -- (2,2) to[short,-*] (2,0);
+\draw (E.out) to[short, -o] ( 3,0);
+\draw (3,-2) to[short, o-o] (-3,-2);
+\draw (0,-2)node[ground]{};
+\draw (E.+) to[short,-o] (-3,-0.5);
+
+
+\draw (-3,-0.5) to[open,v>, name=ue] (-3,-2);
+\draw (3,0) to[open,v>, name=ua] (3,-2);
+\varrmore{ua}{$U_\mathrm{A}$};
+\varrmore{ue}{$U_\mathrm{E}$};
+\end{circuitikz}

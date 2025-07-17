@@ -1,0 +1,28 @@
+\begin{tikzpicture}
+\ctikzset{tripoles/en amp/input height=0.45}
+\draw (0,0)node[en amp](E){}
+    (E.out)
+    (E.-)
+    (E.+);
+    \draw (E.out)  to[short, -o] (2.5,0);
+    
+    \draw (E.-)  to[short, -o] (-6,0.5);
+
+    \draw (E.+) to[short, -o] (-3,-0.5);
+    \draw (-3,-2)node[ground]{};
+
+    \draw (-6,-2) to[short, o-o] (-3,-2) to[short,-o] ( 2.5,-2);
+
+    \draw (2.5,0) to [open, v>,name=U0] (2.5,-2);
+    
+    \draw (-6,0.5) to [open, v>,name=UE] (-6,-2);
+    
+    \draw (-3,-0.5) to [open, v>,name=UREF] (-3,-2);
+
+    
+
+\varrmore {U0}{$U_\mathrm{A}$};
+\varrmore {UE}{$U_\mathrm{E}$};
+\varrmore {UREF}{$U_\mathrm{Ref}$};
+
+\end{tikzpicture}

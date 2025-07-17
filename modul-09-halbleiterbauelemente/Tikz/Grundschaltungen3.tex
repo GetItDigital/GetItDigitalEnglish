@@ -1,0 +1,38 @@
+\begin{tikzpicture}[scale= 0.65, font=\small, /tikz/circuitikz/bipoles/length=1cm] 
+    \draw (0,0) node [npn, tr circle, rotate=90, yscale=-1]  (Q1) {} 
+        (Q1.base) node[anchor=north east ] {B}    
+        (Q1.collector) node[anchor=south east ] {C} 
+        (Q1.emitter) node[anchor=south ] {E};  
+
+    \draw(-2,0)
+        to[short, o-] (-0.5,0);
+
+    \draw (Q1.C)
+        to (1,0)
+        to (1,0.75)
+        to [R] (1,4)
+        to (3,4)
+        to [short, -o](3,0);
+
+
+    \draw [short, o-] (3, -0.5) to (3,-1.5)
+        to [short, -*] (3, -2)
+        to [short, -*] (0, -2)
+        to [short, -o] (-2, -2)
+        to [short, -o] (4,-2);
+
+    \draw (0,-2) to (Q1.B);
+    
+    \draw (1,1) to[short, *-] (1,1)
+        to [short, -o] (4,1);
+
+    \draw (-2,0) to[open,v>, name=Ue] (-2,-2);
+    \varrmore{Ue}{$U_\mathrm{e}$};
+
+    \draw (4,-2) to[open,v<, name=Ua] (4,1);
+    \varrmore{Ua}{$U_\mathrm{a}$};
+
+    \draw (2.75,0.25) to[open,v>, name=Uv] (2.75,-0.75);
+    \varrmore{Uv}{$U_\mathrm{V}$};
+
+\end{tikzpicture}

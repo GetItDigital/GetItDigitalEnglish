@@ -1,0 +1,15 @@
+\begin{circuitikz}[scale=0.7, transform shape]
+    \ctikzset{
+         resistors/scale=0.8,              
+         tripoles/en amp/height=1.4, % Höhe des OPV             
+         tripoles/en amp/width=1.4,   % Breite des OPV
+         tripoles/en amp/input height=-0.45
+    }
+    \vspace{1ex}
+    \draw (2,-0.1) node[en amp] (opamp) {}
+    (opamp.+) --++ (-0.5,0) node[ocirc, label=left:$U_E$] (eingang) {} 
+    (opamp.out) --++ (0.5,0) node[ocirc, label=right:$U_A$] {}
+    (opamp.-) -- ++(0, -1.5) to[R, l=$R_1$] ++(0, -1) node[ground] {}
+    (opamp.out) node[circ] {} -- ++(0,-1.5) to[R, l=$R_2$] ++(-1.95,0) node[circ] (feedback) {};
+\end{circuitikz}
+

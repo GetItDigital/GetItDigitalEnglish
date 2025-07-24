@@ -611,20 +611,25 @@
 
 \begin{frame}
     \b{ \frametitle{Transistorschaltungen -- AC-Verstärker}
-        \begin{figure}[H]
-                \input{Tikz/EKBGrundschaltungen2.tex}
-                \caption{\textbf{}}
-        \end{figure}
-    }
-\end{frame}
-\begin{frame}
-    \b{ \frametitle{Transistorschaltungen -- AC-Verstärker}
-        \begin{figure}[H]
-            \input{Tikz/TransistorACVerstaerker.tex}
-        \end{figure}
-    }
-\end{frame}
 
+    \begin{itemize}
+        \item Eingangswiderstand $r_\mathrm{E} = \frac{u_\mathrm{e}}{i_\mathrm{e}} = \frac{R_\mathrm{1}r_\mathrm{BE}}{R_\mathrm{1}+r_\mathrm{BE}} = R_\mathrm{1} \parallel r_\mathrm{BE}$ 
+        \item Ausgangswiderstand $r_\mathrm{A} = \frac{u_\mathrm{e}}{i_\mathrm{e}} = \frac{R_\mathrm{C} r_\mathrm{CE}}{R_\mathrm{C} + r_\mathrm{CE}} = R_\mathrm{C} \parallel r_\mathrm{CE}$ 
+    \end{itemize}
+      \begin{figure}[H]
+            \begin{minipage}[c]{0.48\textwidth}
+                \raggedright
+                \scalebox{1.5}{\input{Tikz/EKBGrundschaltungen2.tex}}
+            \end{minipage}
+            \begin{minipage}[c]{0.48\textwidth}
+                \raggedleft
+                \scalebox{0.9}{\input{Tikz/TransistorACVerstaerker.tex}}
+            \end{minipage}
+            \caption{Abbildung: Grundschaltung und Ersatzschaltbild einer Kollektorschaltung.} 
+            %\label{fig:Kollektorschaltung}
+        \end{figure}    
+    }
+\end{frame} 
 
 \begin{frame}
     \b{ \frametitle{Bipolartransistor -- Elektrisches Verhalten}
@@ -665,12 +670,12 @@
     \item Differentieller Widerstand $r_\mathrm{CE} = \frac{\Delta U_\mathrm{CE}}{\Delta I_\mathrm{C}}$.
 \end{itemize}
 \begin{figure}[H]
-            \begin{minipage}[b]{0.48\textwidth}
-                \raggedleft
+            \begin{minipage}[b]{0.35\textwidth}
+                \raggedright
                 \scalebox{0.9}{\input{Tikz/SchaltungFolieAusgangskennlinie.tex}}
             \end{minipage}
-            \begin{minipage}[b]{0.48\textwidth}
-                \raggedright
+            \begin{minipage}[b]{0.6\textwidth}
+                \raggedleft
                 \scalebox{0.9}{\includesvg[width= \textwidth]{Bilder/kap2/FolienAusgangskennlinie.svg}}
             \end{minipage}
             %\caption{\textbf{Ersatzschaltbild eines Bipolartransistors.} Links: vollständiges Kleinsignalersatzschaltbild mit allen 
@@ -700,11 +705,11 @@
 \begin{figure}
     \centering
 \begin{minipage}[b]{0.48\textwidth}
-                \raggedleft
+                \raggedright
                                  \scalebox{0.9}{\input{Tikz/SchaltungFolieAusgangskennlinie.tex}}
             \end{minipage}
             \begin{minipage}[b]{0.48\textwidth}
-                \raggedright
+                \raggedleft
 
                  \scalebox{1}{\includesvg[width= \textwidth]{Bilder/kap2/FolienStromsteuerungskennlinie.svg}}
             \end{minipage}
@@ -720,7 +725,7 @@
     \end{itemize}
 \begin{figure}
     \centering
-    \scalebox{1}{\includesvg[width= \textwidth]{Bilder/kap2/FolienStromsteuerungskennlinieKurvenschar.svg}}
+    \scalebox{0.9}{\includesvg[width= \textwidth]{Bilder/kap2/FolienStromsteuerungskennlinieKurvenschar.svg}}
 \end{figure}
     }
 \end{frame}

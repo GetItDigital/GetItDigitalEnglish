@@ -27,12 +27,12 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1"
-     inkscape:cx="792"
-     inkscape:cy="369.5"
+     inkscape:zoom="2.0000001"
+     inkscape:cx="819.99998"
+     inkscape:cy="236.74999"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
-     inkscape:window-x="1912"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"><inkscape:grid
@@ -278,26 +278,26 @@
          y="143.53789">10</tspan></text><text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:7.00002px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.3;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
-       x="214.98657"
-       y="59.223694"
+       x="236.75667"
+       y="56.158287"
        id="text7-1-9"><tspan
          sodipodi:role="line"
          id="tspan7-9-0"
          style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.3;stroke-opacity:1"
-         x="214.98657"
-         y="59.223694">$I_\mathrm{B} = 120\,\mu A$</tspan></text><text
+         x="236.75667"
+         y="56.158287">$I_\mathrm{B} = 120\,\mu A$</tspan></text><text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:7.00002px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.3;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
-       x="214.98657"
+       x="235.69833"
        y="64.223694"
        id="text7-1-9-4"><tspan
          sodipodi:role="line"
          id="tspan7-9-0-8"
          style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.3;stroke-opacity:1"
-         x="214.98657"
+         x="235.69833"
          y="64.223694">$I_\mathrm{B} = 100\,\mu A$</tspan></text><g
        id="g1"
-       transform="translate(-19.999996,20.000003)"><text
+       transform="translate(0.71176677,20.000003)"><text
          xml:space="preserve"
          style="font-size:4.23333px;line-height:7.00002px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.3;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
          x="234.98657"
@@ -309,7 +309,7 @@
            x="234.98657"
            y="51.223694">$I_\mathrm{B} = 80\,\mu A$</tspan></text></g><g
        id="g1-5"
-       transform="translate(-19.999996,27.000004)"><text
+       transform="translate(0.71176677,27.000004)"><text
          xml:space="preserve"
          style="font-size:4.23333px;line-height:7.00002px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.3;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
          x="234.98657"
@@ -321,7 +321,7 @@
            x="234.98657"
            y="51.223694">$I_\mathrm{B} = 60\,\mu A$</tspan></text></g><g
        id="g1-8"
-       transform="translate(-19.999996,34.000005)"><text
+       transform="translate(0.71176677,34.000005)"><text
          xml:space="preserve"
          style="font-size:4.23333px;line-height:7.00002px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.3;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
          x="234.98657"
@@ -333,7 +333,7 @@
            x="234.98657"
            y="51.223694">$I_\mathrm{B} = 40\,\mu A$</tspan></text></g><g
        id="g1-52"
-       transform="translate(-19.999996,40.000006)"><text
+       transform="translate(0.71176677,41.058339)"><text
          xml:space="preserve"
          style="font-size:4.23333px;line-height:7.00002px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.3;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
          x="234.98657"
@@ -345,7 +345,7 @@
            x="234.98657"
            y="51.223694">$I_\mathrm{B} = 20\,\mu A$</tspan></text></g><g
        id="g1-4"
-       transform="translate(-19.999995,60.000009)"><text
+       transform="translate(0.71176777,60.000009)"><text
          xml:space="preserve"
          style="font-size:4.23333px;line-height:7.00002px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.3;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
          x="234.98657"

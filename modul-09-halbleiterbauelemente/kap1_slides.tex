@@ -40,39 +40,42 @@
 
 %Zusammenhang Bohrsche Atommodell und Bändermodell.
 \begin{frame}
-\b{%\begin{columns}
+\b{\begin{columns}
     \frametitle{Das Bändermodell}
-    %\column[c]{0.3\textwidth}
+    \column[c]{0.3\textwidth}
     \begin{figure}[H]
+        \onslide<1->{
         \begin{minipage}[t]{0.48\textwidth}
             \begin{figure}[H]
                 \centering
-                \includesvg[width=0.4\textwidth]{Bilder/kap1/ZusammenhangBohrscheAtommodellundBaendermodell/ZusammenhangBohrscheAtommodellundBaendermodell_1.svg}
+                \includesvg[width=1\textwidth]{Bilder/kap1/ZusammenhangBohrscheAtommodellundBaendermodell/ZusammenhangBohrscheAtommodellundBaendermodell_1.svg}
             \end{figure}
         \end{minipage}
-        \begin{minipage}[t]{0.48\textwidth}
+} \onslide<2->{
+        \begin{minipage}[b]{0.48\textwidth}
                 \begin{figure}[H]
                 \centering
-                \includesvg[width=0.4\textwidth]{Bilder/kap1/ZusammenhangBohrscheAtommodellundBaendermodell/ZusammenhangBohrscheAtommodellundBaendermodell_2.svg}
+                \includesvg[width=1.1\textwidth]{Bilder/kap1/ZusammenhangBohrscheAtommodellundBaendermodell/ZusammenhangBohrscheAtommodellundBaendermodell_2.svg}
             \end{figure}
         \end{minipage}
+}
         %\caption{\textbf{Zusammenhang zwischen dem Bohrschen Atommodell und Bändermodell.} Darstellung des Zusammenhangs 
                 %zwischen dem Abstand von Elektronen zum Kern und Höhe des zugehörigen diskreten Energieniveau. Links: Bohrsche 
                 %Atommodell eines Si-Atoms. Rechts: Bändermodell eines Si-Atoms mit den möglichen Energieniveaus.}  
         %\label{fig:ZusammenhangBohrschesAtommodellUndBaendermodell}
     \end{figure}
-    %\column[c]{0.6\textwidth}
-        %\begin{itemize}
-            %\onslide<1->{
-            %\item Das Bändermodell beschreibt die elektronischen Eigenschaften von Festkörpern und ordnet die Energiezustände von Elektronen in Energiebänder.}
-            %\onslide<2->{
-            %\item Es hilft, elektrische, optische und magnetische Eigenschaften von Materialien zu verstehen und zu erklären.}
-            %\onslide<3->{
-            %\item Das Modell ermöglicht die Erklärung von Leitung, Isolation, Halbleiterverhalten sowie Oberflächen- und Grenzflächenzuständen.}
-            %\onslide<4->{
-            %\item In der Abbildung auf der linken Seite ist der Zusammenhang zwischen bohrschem Atommodell und Bändermodell illustriert.}  
-        %\end{itemize}
-    %\end{columns}
+    \column[c]{0.6\textwidth}
+        \begin{itemize}
+            \onslide<1->{
+            \item Das Bändermodell beschreibt die elektronischen Eigenschaften von Festkörpern und ordnet die Energiezustände von Elektronen in Energiebänder.}
+            \onslide<2->{
+            \item Es hilft, elektrische, optische und magnetische Eigenschaften von Materialien zu verstehen und zu erklären.}
+            \onslide<3->{
+            \item Das Modell ermöglicht die Erklärung von Leitung, Isolation, Halbleiterverhalten sowie Oberflächen- und Grenzflächenzuständen.}
+            \onslide<4->{
+            \item In der Abbildung auf der linken Seite ist der Zusammenhang zwischen bohrschem Atommodell und Bändermodell illustriert.}  
+        \end{itemize}
+    \end{columns}
 }
 %Gesprochener Text:
 %speech{Einführung Halbleiterbauelemente}{1}{Das Bändermodell ist ein grundlegendes Konzept in der Festkörperphysik, das die elektronischen Eigenschaften von Festkörpern beschreibt. Es bietet die theoretische Grundlage, um die elektrischen, optischen und magnetischen Eigenschaften von Materialien zu verstehen. Das Modell ordnet die Energiezustände von Elektronen in sogenannte Energiebänder, die das elektronische Verhalten des Materials maßgeblich beeinflussen. Mit dem Bändermodell lassen sich komplexe Phänomene wie Leitung, Isolation, Halbleiterverhalten sowie die Bildung von Oberflächen- und Grenzflächenzuständen erklären. Im nächsten Abschnitt werden die Grundprinzipien des Modells und der Ladungsträgertransport detailliert erläutert.
@@ -134,9 +137,15 @@
     \frametitle{Einteilung von Materialien}
     \textbf{Merke:}
     \begin{itemize}
+        \onslide<1->{
         \item Ladungsträger können nur definierte Energieniveaus im Festkörper besetzen.
+        }
+        \onslide<2->{
         \item Bei $T=\mathrm{0\,K}$ ist das Valenzband das höchste besetzte Energieniveau, das darüberliegende Leistungsband beinhaltet keine freien Ladungsträger.
+        }
+        \onslide<3->{
         \item Materialien können über die Bandlücke Kategorisiert werden. 
+        }
     \end{itemize}}
 % %Gesprochener Text:
 % %speech{Einführung Halbleiterbauelemente}{1}{Halbleiterbauelemente sind das Rückgrat der modernen Elektronik und entscheidend für die Funktion vieler elektronischer Geräte, von Computern und Mobiltelefonen bis hin zu Solarzellen. Diese Bauelemente nutzen die besonderen Eigenschaften von Materialien, die weder gute Leiter noch gute Isolatoren sind, sondern dazwischen liegen, die sogenannten Halbleiter. Der Text beschreibt zunächst ihre Funktionsweise mit dem Bändermodell, das die elektronischen Zustände in Festkörpern erklärt, und untersucht dann verschiedene Halbleitermaterialien, ihre Eigenschaften und Anwendungen. Ein Schlüsselkonzept ist der pn-Übergang, der die Basis für viele Bauelemente bildet. Im zweiten Teil werden verschiedene Halbleiterbauelemente wie Dioden und Transistoren und deren Funktionen erläutert.}}
@@ -190,9 +199,15 @@
     \frametitle{Halbleitermaterialien}
     \textbf{Merke:}
     \begin{itemize}
+        \onslide<1->{
         \item Silizium ist das am weitesten verbreitete Halbleitermaterial.
+        }
+        \onslide<2->{
         \item Verbindungshalbleiter bestehen aus zwei Materialen die in bestimmter Kombination Halbleiterverhalten aufweisen.
+        }
+        \onslide<3->{
         \item Silizium ist aus der IV. Hauptguppe des Periodensystem, Verbindungshalbleiter typischerweise aus der III. und V. Hauptguppe.
+        }
     \end{itemize}}
 % %Gesprochener Text:
 % %speech{Einführung Halbleiterbauelemente}{1}{Halbleiterbauelemente sind das Rückgrat der modernen Elektronik und entscheidend für die Funktion vieler elektronischer Geräte, von Computern und Mobiltelefonen bis hin zu Solarzellen. Diese Bauelemente nutzen die besonderen Eigenschaften von Materialien, die weder gute Leiter noch gute Isolatoren sind, sondern dazwischen liegen, die sogenannten Halbleiter. Der Text beschreibt zunächst ihre Funktionsweise mit dem Bändermodell, das die elektronischen Zustände in Festkörpern erklärt, und untersucht dann verschiedene Halbleitermaterialien, ihre Eigenschaften und Anwendungen. Ein Schlüsselkonzept ist der pn-Übergang, der die Basis für viele Bauelemente bildet. Im zweiten Teil werden verschiedene Halbleiterbauelemente wie Dioden und Transistoren und deren Funktionen erläutert.}}
@@ -254,6 +269,7 @@
 \begin{frame}
     \b{
     \frametitle{Ladungsträgertransport}
+    \onslide<1->{
     \begin{minipage}[t]{0.48\textwidth}
         \begin{figure}[H]
             \centering
@@ -262,6 +278,8 @@
             \label{fig:GitterstrukturUndBaendermodellVonSi-1}
         \end{figure}
     \end{minipage}
+    }
+    \onslide<2->{
     \begin{minipage}[t]{0.48\textwidth}
         \begin{figure}[H]
             \centering
@@ -271,6 +289,7 @@
         \end{figure}
     \end{minipage}
     }
+    }
 
     %Gesprochener Text:
     %%
@@ -279,6 +298,7 @@
 %Gitterstruktur und Bändermodell von n-dotiertem Si - Abbildung 9
 \begin{frame}
     \b{\frametitle{Ladungsträgertransport}
+    \onslide<1->{
         \begin{minipage}[t]{0.48\textwidth}
             \begin{figure}[H]
                 \centering
@@ -287,6 +307,8 @@
                 \label{fig:GitterstrukturUndBaendermodellVonN-DotiertesSi-1}
             \end{figure}
         \end{minipage}
+    }
+    \onslide<2->{
         \begin{minipage}[t]{0.48\textwidth}
             \begin{figure}[H]
                 \centering
@@ -296,6 +318,7 @@
             \end{figure}
         \end{minipage}
     }
+    }
 
     %Gesprochener Text:
     %%
@@ -304,6 +327,7 @@
 %Gitterstruktur und Bändermodell von p-dotiertem Si
 \begin{frame}
     \b{\frametitle{Ladungsträgertransport}
+    \onslide<1->{
     \begin{minipage}[t]{0.48\textwidth}
         \begin{figure}[H]
             \centering
@@ -312,6 +336,8 @@
             \label{fig:GitterstrukturUndBaendermodellVonP-DotiertesSi-1}
         \end{figure}
     \end{minipage}
+    }
+    \onslide<2->{
     \begin{minipage}[t]{0.48\textwidth}
         \begin{figure}[H]
             \centering
@@ -320,6 +346,7 @@
             \label{fig:GitterstrukturUndBaendermodellVonP-DotiertesSi-2}
         \end{figure}
     \end{minipage}
+    }
     }
 
     %Gesprochener Text:
@@ -332,9 +359,13 @@
     \frametitle{Ladungsträgertransport}
     \textbf{Merke:}
     \begin{itemize}
+        \onslide<1->{
         \item Durch thermische Anregung können freie Elektronen entstehen, die zum Ladungsträgertransport beitragen. 
+        } \onslide<2->{
         \item Dotierung ist das gezielte Einbringen von Fremdatomen mit oder weniger Valenzelektronen als das Ausgangsmaterial.
+        } \onslide<3->{
         \item Für n-Dotierung kann Phosphor und für p-Dotierung Bor genutzt werden.
+        }
     \end{itemize}}
 % %Gesprochener Text:
 % %speech{Einführung Halbleiterbauelemente}{1}{Halbleiterbauelemente sind das Rückgrat der modernen Elektronik und entscheidend für die Funktion vieler elektronischer Geräte, von Computern und Mobiltelefonen bis hin zu Solarzellen. Diese Bauelemente nutzen die besonderen Eigenschaften von Materialien, die weder gute Leiter noch gute Isolatoren sind, sondern dazwischen liegen, die sogenannten Halbleiter. Der Text beschreibt zunächst ihre Funktionsweise mit dem Bändermodell, das die elektronischen Zustände in Festkörpern erklärt, und untersucht dann verschiedene Halbleitermaterialien, ihre Eigenschaften und Anwendungen. Ein Schlüsselkonzept ist der pn-Übergang, der die Basis für viele Bauelemente bildet. Im zweiten Teil werden verschiedene Halbleiterbauelemente wie Dioden und Transistoren und deren Funktionen erläutert.}}
@@ -394,10 +425,15 @@
     \frametitle{Ladungsträgertransport}
     \textbf{Merke:}
     \begin{itemize}
+        \onslide<1->{
         \item Driftstrom ist der Ladungsträgertransport auf Grund eines elektrischen Feldes.
+        } \onslide<2->{
         \item Diffusionsstrom ist die Bewegung von Ladungsträgern auf Grund eines Konzentrationsunterschiedes.
+        } \onslide<3->{
         \item Drift- und Diffusionsstrom ergeben zusammen den Gesamtstrom.
+        } \onslide<4->{
         \item Eine externe Spannung führt zu einer Verschiebung des Bändermodells. 
+        }
     \end{itemize}}
 % %Gesprochener Text:
 % %speech{Einführung Halbleiterbauelemente}{1}{Halbleiterbauelemente sind das Rückgrat der modernen Elektronik und entscheidend für die Funktion vieler elektronischer Geräte, von Computern und Mobiltelefonen bis hin zu Solarzellen. Diese Bauelemente nutzen die besonderen Eigenschaften von Materialien, die weder gute Leiter noch gute Isolatoren sind, sondern dazwischen liegen, die sogenannten Halbleiter. Der Text beschreibt zunächst ihre Funktionsweise mit dem Bändermodell, das die elektronischen Zustände in Festkörpern erklärt, und untersucht dann verschiedene Halbleitermaterialien, ihre Eigenschaften und Anwendungen. Ein Schlüsselkonzept ist der pn-Übergang, der die Basis für viele Bauelemente bildet. Im zweiten Teil werden verschiedene Halbleiterbauelemente wie Dioden und Transistoren und deren Funktionen erläutert.}}
@@ -425,9 +461,13 @@
         \caption{\textbf{Vorgänge innerhalb eines pn-Übergangs.} }  
     \end{figure}
           \begin{itemize}
+            \onslide<1->{
         \item Durch die Bindung der Löcher und Elektronen an deren Atome begrenzt den Diffusionsstrom.
+            } \onslide<2->{
         \item Der Bereich in der Mitte nennt sich Raumladungszone (RLZ). Dort sind keine freien Ladungsträger, da die Elektronen und Löcher sich gegenseitig neutralisieren.
+            } \onslide<3->{
         \item Es entsteht ein elektrisches Feld zwischen den p- und n-dotierten Bereichen.
+            }
     \end{itemize}
     }
 
@@ -471,9 +511,13 @@
     \frametitle{pn-Übergang}
     \textbf{Merke:}
     \begin{itemize}
+        \onslide<1->{
         \item Der pn-Übergang kombiniert eine p- und n-dotierte Halbleiterschicht.
+        } \onslide<2->{
         \item Im Übergangsbereich sind keine freien Ladungsträger, der Bereich wird Raumladungszone genannt.
+        } \onslide<3->{
         \item In Durchlassrichtung wird die RLZ verkleinert, in Sperrrichtung wird diese vergrößert.  
+        }
     \end{itemize}}
 % %Gesprochener Text:
 % %speech{Einführung Halbleiterbauelemente}{1}{Halbleiterbauelemente sind das Rückgrat der modernen Elektronik und entscheidend für die Funktion vieler elektronischer Geräte, von Computern und Mobiltelefonen bis hin zu Solarzellen. Diese Bauelemente nutzen die besonderen Eigenschaften von Materialien, die weder gute Leiter noch gute Isolatoren sind, sondern dazwischen liegen, die sogenannten Halbleiter. Der Text beschreibt zunächst ihre Funktionsweise mit dem Bändermodell, das die elektronischen Zustände in Festkörpern erklärt, und untersucht dann verschiedene Halbleitermaterialien, ihre Eigenschaften und Anwendungen. Ein Schlüsselkonzept ist der pn-Übergang, der die Basis für viele Bauelemente bildet. Im zweiten Teil werden verschiedene Halbleiterbauelemente wie Dioden und Transistoren und deren Funktionen erläutert.}}

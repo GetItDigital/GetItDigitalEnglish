@@ -373,7 +373,7 @@
         näher erläutert. Hierfür wird das dargestellte elektrische Netzwerk genutzt. Wie schon im Exkurs zur Graphentheorie ausgeführt, 
         sind Kanten oder Äste Verbindungswege zwischen zwei Punkten. Diese Kanten werden in der Elektrotechnik als Zweige bezeichnet. 
         Dieses elektrische Netzwerk setzt sich aus insgesamt drei Zweigen zusammen .} 
-    \speech{Knoten,Zweige,Maschen}{2}{ Die Knoten K 1 und K 2 sind die Punkte, welche in dem gezeigten Netzwerk verbunden werden .} 
+    \speech{Knoten,Zweige,Maschen}{2}{ Die Punkte, welche in dem gezeigten Netzwerk verbunden werden, sind die Knoten Ka 1 und Ka 2 .} 
     \speech{Knoten,Zweige,Maschen}{3}{ Eine Masche beschreibt einen geschlossenen Weg, der aus mindestens zwei Zweigen besteht. In dem 
         Netzwerk können so beispielsweise die Masche M 1 über die Komponenten R 1, R 4, R 5 und U Q 1 sowie die Masche M 2 über die 
         Komponenten R 2, R 3, U Q 2 und R 4 bestimmt werden. Außerdem können Maschen auch über zweige hinaus andere Zweige kreuzen. So 
@@ -540,7 +540,7 @@
     }
 
     \begin{eq}
-        \sum_{k = 1}^{N}{I_k = 0} \label{Knotenregel}
+        \sum_{k = 1}^{N}{I_\mathrm{k} = 0} \label{Knotenregel}
     \end{eq}
     
     \s{
@@ -578,7 +578,7 @@
     }
     
     \begin{eq}
-        \sum_{k = 1}^{N}{I_k} =0=I_1+I_2-I_3-I_4-I_5    \label{KnotenregelBeispielknoten}
+        \sum_{k = 1}^{N}{I_\mathrm{k}} =0=I_1+I_2-I_3-I_4-I_5    \label{KnotenregelBeispielknoten}
     \end{eq}
 
     \speech{Knotenregel}{1}{Die Knotenregel beschreibt die Verhältnisse von elektrischen Strömen an einem Knoten und besagt, 
@@ -595,7 +595,7 @@
         Die Summe der zufließenden Ströme ist gleich der Summe der abfließenden Ströme oder die Summe aller Ströme an einem Knoten
         ist Null:
         \begin{eq}
-            \sum_{k = 1}^{N}{I_k = 0} 
+            \sum_{k = 1}^{N}{I_\mathrm{k} = 0} 
         \end{eq}
     \end{Merksatz}
 
@@ -637,17 +637,25 @@
         verdeutlicht. 
     }
 
-    \b{
+    \b{\onslide<2->{
         Maschenregel:
         \begin{itemize}
             \item Bei einem vollständigen Umlauf in einem elektrischen Netzwerk ist die Summe aller Spannungen gleich null. 
-        \end{itemize}
+        \end{itemize}}
     }
 
+    \onslide<2->{
     \begin{eq}
-        \sum_{k = 1}^{N}{U_k} =0    \label{Maschenregel}
-    \end{eq}
+        \sum_{k = 1}^{N}{U_\mathrm{k}} =0    \label{Maschenregel}
+    \end{eq}}
 
+    \speech{Maschenregel}{1}{Tritt keine zeitliche Änderung bei elektrischen und magnetischen Feldgrößen auf, können keine 
+    elektrischen Wirbelströme induziert werden. Bewegt sich unter dieser Bedingung ein Teilchen zwischen zwei Punkten im 
+    elektrischen Feld, wird Arbeit verrichtet. Ist der Startpunkt identisch mit dem Endpunkt, muss ebenso viel Arbeit 
+    abgegeben wie aufgenommen werden. Die Summe der Arbeit ist in diesem Fall gleich Null. Ähnlich zum Umlauf im freien Raum,
+    wie dem elektrischen Feld, verhält sich ein Umlauf im strukturierten Raum, also in einem elektrischen Netzwerk.}
+    \speech{Maschenregel}{2}{Hierzu wird die Maschenregel definiert. Die Maschenregel besagt, dass die Summe aller Teilspannungen 
+    bei einem vollständigen Umlauf gleich null sein muss.}
 \end{frame}
 
 \begin{frame}
@@ -677,10 +685,22 @@
         In Summe müssen diese beiden Spannungen null ergeben. 
     }
 
+    \onslide<2->{
     \begin{eq}
-        \sum_\mathrm{k = 1}^{N}{U_\mathrm{k}} = U_\mathrm{R2} - U_\mathrm{R1} =0  \label{Maschengleichung}
-    \end{eq}
+        \sum_\mathrm{k = 1}^{N}{U_\mathrm{k}} \onslide<3->{= + U_\mathrm{R2}} \onslide<4->{- U_\mathrm{R1}} \onslide<5->{=0}  \label{Maschengleichung}
+    \end{eq}}
 
+    \speech{MaschenregelErkl}{1}{Zur Veranschaulichung der Maschenregel wird die Masche M 1 im gezeigten Netzwerk erklärt.}
+    \speech{MaschenregelErkl}{2}{Der Maschenumlauf der Masche M 1 verläuft im Uhrzeigersinn. Nach der Maschenregel muss die 
+    Summe der Teilspannungen Null ergeben.}
+    \speech{MaschenregelErkl}{3}{Hierbei wird die Richtung der Masche und der Teilspannungen ausschlaggebend. Die Richtung 
+    der Teilspannung U R 2 über den Widerstand R 2 verläuft in derselben Richtung wie die Umlaufrichtung der Masche M Eins. Diese 
+    Teilspannung wird deshalb mit einem positiven Vorzeichen versehen.}
+    \speech{MaschenregelErkl}{4}{Die Richtung der Teilspannung U R 1 über dem Widerstand R 1 ist der Umlaufrichtung der 
+    Masche M 1 entgegengesetzt und erhält somit ein negatives vorzeichen.}
+    \speech{MaschenregelErkl}{5}{Unter der Annahme, dass die beide parallel zueinander geschalteten Widerstände R 1 und 
+    R 2 betragsmäßig über eine identische Teilspannung verfügen, ergibt sich so bei einem Maschenumlauf eine Gesamtspannung 
+    von Null.}
 \end{frame}
 
 
@@ -694,6 +714,7 @@
         \end{eq}
     \end{Merksatz}
 
+    \speech{MaschenregelMrk}{1}{In einer Masche ist die Summe aller Teilspannungen gleich Null}
 \end{frame}
 
 
@@ -704,13 +725,24 @@
 	Arbeitsschritte:}
 	
 	\begin{enumerate}
-		\item Vereinfachen des Netzwerkes.
-		\item Einzeichnen aller Strompfeile und Erstellen des Graphen.
-		\item Aufstellen von $k-1$ Knotengleichungen. \s{Eine beliebige Knotengleichung  kann weggelassen werden, da in einem Netzwerk mit $k$ Knoten nur $k-1$ Knotengleichungen linear unabhängig voneinander sind. Prinzipiell ist es egal, welche Knotengleichung unberücksichtigt bleibt. Am geschicktesten wird die komplizierteste Gleichung gestrichen.}
-		\item Aufstellen der $m=z-k+1$ linear unabhängigen Maschengleichungen. \s{Dabei werden die Gleichungen mit Hilfe des vollständigen Baumes erstellt.}
-		\item Lösen des Gleichungssystems mit der Dimension $z$.
-		\item Ggfs. rückgängig machen von Schritt 1.
+		\item<2-> Vereinfachen des Netzwerkes.
+		\item<3-> Einzeichnen aller Strompfeile und Erstellen des Graphen.
+		\item<4-> Aufstellen von $k-1$ Knotengleichungen. \s{Eine beliebige Knotengleichung  kann weggelassen werden, da in einem Netzwerk mit $k$ Knoten nur $k-1$ Knotengleichungen linear unabhängig voneinander sind. Prinzipiell ist es egal, welche Knotengleichung unberücksichtigt bleibt. Am geschicktesten wird die komplizierteste Gleichung gestrichen.}
+		\item<5-> Aufstellen der $m=z-k+1$ linear unabhängigen Maschengleichungen. \s{Dabei werden die Gleichungen mit Hilfe des vollständigen Baumes erstellt.}
+		\item<6-> Lösen des Gleichungssystems mit der Dimension $z$.
+		\item<7-> Ggfs. rückgängig machen von Schritt 1.
 	\end{enumerate}
+    
+    \speech{KnotenMaschenanalyse}{1}{Um ein elektrisches Netzwerk vollständig zu berechnen, werden mehrere Arbeitsschritte empfohlen.}
+    \speech{KnotenMaschenanalyse}{2}{Zuerst sollte das elektrische NEtzwerk so weit wie möglich vereinfacht werden. 
+    Dass betrifft Beispielsweise in Reihe oder Parallel geschaltete Widerstände, welche zusammengefasst werden können.}
+    \speech{KnotenMaschenanalyse}{3}{Folgend wird empfohlen, für eine bessere übersicht die Strompfeile und Spannungspfeile 
+    in das elektrische Netzwerk zu zeichnen und einen zugehörigen Grafen zu erstellen.}
+    \speech{KnotenMaschenanalyse}{4}{Hieraus können die K minus Eins Knotengleichungen}
+    \speech{KnotenMaschenanalyse}{5}{sowie die Z minus K plus Eins linear unabhängigen Maschengleichungen aufgestellt werden.}
+    \speech{KnotenMaschenanalyse}{6}{Das so entstandene Gleichungssystem mit der Dimension Z muss nun gelöst werden.}
+    \speech{KnotenMaschenanalyse}{7}{Gegebenenfalls sollte je nach Bedarf die Vereinfachung des elektrischen Netzwerkes wieder Rückgängig 
+    gemacht werden um eventuelle Teilspannungen oder Teilströme berechnen zu können.}
 \end{frame}
 
 \begin{frame} 
@@ -723,6 +755,9 @@
 	\fu{
 		\input{Tikz/beispielanalyse.tex}
 	}{\bf Beispielnetzwerk zur Knoten- und Maschenanalyse. \label{BildBeispielAnalyse}}
+
+    \speech{KnotMaschNetzwerk}{1}{Folgend wird gezeigt, wie die Gleichungen zu einem elektrischen Netzwerk erstellt werden. 
+    In diesem Netzwerk sind die Strompfeile bereits verzeichnet.}
 \end{frame}
 
 \begin{frame} 
@@ -737,6 +772,10 @@
 	\fu{
 		\input{Tikz/knotenmaschen.tex}
 		}{{\bf Graph mit Maschen zum Beispiel.} Die Baumzweige werden rot und die Maschen blau gefärbt. \label{BildKnotenMaschen}}
+    
+    \speech{KnotMaschGraph}{1}{Für das Netzwerk wurde im zugehörigen Grafen die vorgestellte Baumstruktur gewählt. 
+    Bei den Maschen wird außer bei der Masche M 2 kein Zweig gekreuzt. 
+    Die Wahl der Maschen und der Baumstruktur kann auch anders erfolgen.}
 \end{frame}
 
 \begin{frame} 
@@ -749,15 +788,31 @@
 	}
 	
 		\begin{align*}
-			K_1:\qquad& I_1+I_4-I_5=0\\
+			\only<1>{K_1:\qquad& I_1+I_4-I_5=0\\
 			K_2:\qquad& I_2-I_4-I_8=0\\
 			K_3:\qquad& -I_1-I_3+I_6=0\\
-			K_4:\qquad& I_3-I_7+I_8=0\\
-			M_1:\qquad& R_2I_2 + R_4I_4 + R_5I_5 - U_{2} = 0\\
+			K_4:\qquad& I_3-I_7+I_8=0\\}
+			\only<2>{M_1:\qquad& R_2I_2 + R_4I_4 + R_5I_5 - U_{2} = 0\\
 			M_2:\qquad& R_4I_4 + R_5I_5 - R_7I_7 - R_8I_8 = 0\\
 			M_3:\qquad& -R_1I_1 - R_5I_5 - R_6I_6 + U_{1} = 0\\
-			M_4:\qquad& R_3I_3 + R_6I_6 + R_7I_7 - U_{3} = 0
+			M_4:\qquad& R_3I_3 + R_6I_6 + R_7I_7 - U_{3} = 0}
 		\end{align*}
+
+    \speech{KnotMaschGleichung}{1}{Es müssen K minus 1 Knotengleichungen aufgestellt werden. 
+    In dem Netzwerk sind K gleich 5 Knoten. Somit werden vier Knotengleichungen aufgestellt.
+    Hier werden die Gleichungen für die Knoten K 1, K 2, K 3 und K 4 aufgestellt. 
+    In den Knoten K 1 fließen die Ströme I 1 und I 4 hinein und der Strom I 5 hinaus.
+    %In den Knoten K 2 fließen der Strom I 2 hinein und die Ströme I 4 und I 8 hinaus.
+    %In den Knoten K 3 fließen die Ströme I 1 und I 3 hinaus und der Strom I 6 hinein.
+    %In den Knoten K 4 fließen die Ströme I 3 und I 8 hinein und der Strom I 7 hinaus.
+    Zur Erinnerung: Die in einen Knoten fließenden Ströme werden mit einem positiven Vorzeichen
+    und die herausfließenden Ströme mit einem negativen Vorzeichen versehen.}
+    \speech{KnotMaschGleichung}{2}{Die eingezeichneten Maschen verlaufen allesamt rechtsdrehend im Uhrzeigersinn.
+    Die Spannungspfeile über den elektrischen Widerständen ergeben sich aus den zugehörigen Strompfeilen.
+    Damit sind für die Masche M 1 die Spannungspfeile der Widerstände alle übereinstimmend mit dem Maschenumlauf.
+    Nur die Spannung der Spannungsquelle U 2 ist dem Maschenumlauf entgegengesetzt und wird deswegen negativ notiert. 
+    Zur Erinnerung: Verlaufen der Spannungspfeil und die Maschenrichtung in die selbe Richtung wird ein positives Vorzeichen benutzt.
+    Für den Fall, dass die Richtungen entgegengesetzt sind, wird ein negatives Vorzeichen verwendet.}
 \end{frame}
 
 \begin{frame} 
@@ -796,7 +851,7 @@
 		zu berechnen sind.
 	}
 		
-
+    \speech{KnotMaschMatrix}{1}{Die Knotengleichungen und Maschengleichungen lassen sich in einer Matrix zusammenfassen.}
 \end{frame}
 
 
@@ -863,7 +918,7 @@
 				}
 			}
             \only<5>{
-				\item[c)] Aufstellen der Maschengleichung $M_2$ ohne den Ausdruck $U_1$ 
+				\item[d)] Aufstellen der Maschengleichung $M_2$ ohne den Ausdruck $U_1$ 
 				\onslide<5>{
 					\begin{eqa}
 						M_1: U_1&=U_\mathrm{R1}-U_\mathrm{R2} \nonumber\\
@@ -875,9 +930,27 @@
 			}
 		\end{enumerate}
 	
-
+    \speech{KnotMaschBsp}{1}{Als Beispiel wird nun das dargestellte elektrische Netzwerk analysiert.
+    Das Netzwerk enthält die folgenden Komponenten: Die Stromquelle I 0. Die Sannungsquellen U 1 und U 2.
+    Sowie die Widertstände R 1, R 2 und R 3.
+    Hierfür sollen die Ströme und Spannungen der Widerstände eingezeichnet werden.
+    Danach sollen die Knotengleichungen und die Maschengleichungen aufgestellt werden.
+    Hierbei soll für die Masche M 2 der Ausdruck der Spannungsquelle U 1 vermieden werden.}
+    \speech{KnotMaschBsp}{2}{Hier werden sämtliche Strompfeile und Spannungspfeile dargestellt. 
+    Außerdem wurden die Knoten K 1 und K 2 definiert.}
+    \speech{KnotMaschBsp}{3}{Als nächstes werden die Knotengleichungen aufgestellt.
+    In den Knoten K 1 fließt der Strom I Null. Die übrigen Ströme fließen aus dem Knoten heraus.
+    Beim Knoten K 2 fließt der Strom I Null aus dem Knoten heraus und die übrigen Ströme fließen in den Knoten hinein.}
+    \speech{KnotMaschBsp}{4}{Folgend werden die Maschengleichungen aufgestellt.
+    Bei der Masche M 1 verlaufen die Spannungen U 1 und U R 2 in der Richtung des Maschenverlaufes. 
+    Die Spannung U R 1 ist dem Maschenumlauf entgegengesetzt.
+    Bei der Masche M 2 sind die Spannungen U 2 und U R 3 im Verlauf der Masche, die Spannungen U R 2 und U 1 verlaufen entgegen des Verlaufes der Masche.}
+    \speech{KnotMaschBsp}{5}{Nun soll bei der Masche der Ausdruck U 1 vermieden werden. 
+    Durch eine Umformulierung der Maschengleichung M 1 bekommen wir einen Ausdruck für U 1, welchen wir in die Maschengleichung von M 2 einsetzen können.
+    Durch das Ausklammern und Aufsummieren erhalten wir so eine MAschengleichung für die MAsche M 2 in welcher der Ausdruck von U 1 vermieden wird.}
     \end{bsp}
 
+    
 \end{frame}
 
 

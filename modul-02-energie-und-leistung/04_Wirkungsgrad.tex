@@ -16,12 +16,8 @@ mit der ein System Energie umwandelt. Am Beispiel eines Elektromotors zeigt Abbi
    \ftx{Der Wirkungsgrad}
 \s{\begin{figure}[H]
 
-	\begin{tikzpicture}
-			 \node at (0,0) {\includesvg[width=1\textwidth]{Wirkungsgrad_Copy}};
-			 \node at (-3.5,0.6) {\shortstack[l]{zugeführte\\Leistung $P_\mathrm{{zu}}$}};
-			 \node at (-0.35,1.5) {Verluste $P_\mathrm{v}$};  
-			 \node at (3.65,0.6) {\shortstack[l]{abgegebene\\Leistung $P_\mathrm{{ab}}$}};
-	\end{tikzpicture}
+		\input{Tikz/src/Kapitel 5/Wirkungsgrad eines Elektromotors.tex}
+		
 	\caption{\textbf{Wirkungsgrad eines Elektromotors.} Zeigt das Verhältnis der abgegebenen
 	 Leistung zur zugeführten Leistung. Der Wirkungsgrad beschreibt die Effizienz des Motors bei der Umwandlung von Energie.}
 	\label{fig:Wirkungsgrad}
@@ -29,12 +25,9 @@ mit der ein System Energie umwandelt. Am Beispiel eines Elektromotors zeigt Abbi
 \b{
 	Der Wirkungsgrad beschreibt das Verhältnis von abgegebener zu zugeführter Leistung
     \begin{figure}[H]
-	\begin{tikzpicture}
-			 \node at (0,0) {\includesvg[width=1\textwidth]{Wirkungsgrad_Copy}};
-			 \node at (-3.5,0.6) {\shortstack[l]{zugeführte\\Leistung $P_\mathrm{{zu}}$}};
-			 \node at (-0.35,1.5) {Verluste $P_\mathrm{v}$};  
-			 \node at (3.65,0.6) {\shortstack[l]{abgegebene\\Leistung $P_\mathrm{{ab}}$}};
-	\end{tikzpicture}
+	
+		\input{Tikz/src/Kapitel 5/Wirkungsgrad eines Elektromotors.tex}
+
 	\end{figure}
 
 }
@@ -86,14 +79,9 @@ Abbildung \ref{fig:Energieumwandlung Glühlampe und Energiesparlampe} zeigt link
 
 \begin{figure}[H]
 	\hspace{-0.8cm}
-	\begin{tikzpicture}
-		\node at (0,0) {\includesvg[width=1\textwidth]{Wirkungsgrad_Birne}};
-				 \node at (-3.2,1.3) {Licht};
-				 \node at (0.8,1.3) {Licht};
-				 \node at (0.35,1.8) {Wärme};  
-				 \node at (3.4,1.4) {Wärme};
 
-	\end{tikzpicture}
+	\input{Tikz/src/Kapitel 5/Energieumwandlung in Glühlampe und Energiesparlampe.tex}
+
 	\caption{\textbf{Energieumwandlung in Glühlampe und Energiesparlampe.} Zeigt das eine Glühlampe den Großteil der aufgenommenen
 	 elektrischen Energie in Wärme und nur einen kleinen Teil in Licht umwandelt, wandelt die Energiesparlampe einen deutlich höheren Anteil der elektrischen Energie in Licht um.}
 	\label{fig:Energieumwandlung Glühlampe und Energiesparlampe}
@@ -102,14 +90,9 @@ Abbildung \ref{fig:Energieumwandlung Glühlampe und Energiesparlampe} zeigt link
 
 	\b{\begin{figure}[H]
 		\hspace{-0.8cm}
-		\begin{tikzpicture}
-			\node at (0,0) {\includesvg[width=1\textwidth]{Wirkungsgrad_Birne}};
-					 \node at (-3.2,1.3) {\small Licht};
-					 \node at (0.8,1.3) {\small Licht};
-					 \node at (0.35,1.8) {\small Wärme};  
-					 \node at (3.4,1.4) {\small Wärme};
-	
-		\end{tikzpicture}
+		
+		\input{Tikz/src/Kapitel 5/Energieumwandlung in Glühlampe und Energiesparlampe.tex}
+
 	\end{figure}
 }
 \end{frame}
@@ -162,21 +145,9 @@ können dazu beitragen, den Energiebedarf zu reduzieren und Treibhausgasemission
 \begin{figure}[H]
 	\centering
 \hspace{1cm} % Um es in der Mitte zu haben
-	\begin{tikzpicture}
-  \draw (0,3) to[V, i, name=I] (0,0)
-		(0,3) -- (1.5,3)
-		(1.5,3) to[switch, l={Schalter}] (2.5,3)
-		(2.5,3) -- (4,3)
-        (4,3) to[lamp, l={Glühlampe}] (4,0) 
-        (4,0) -- (0,0); 
+	
+	\input{Tikz/src/Kapitel 5/Beispiel Schaltung Wirkungsgrad.tex}
 
-		% Draw current arrow
-		\iarrmore{I}{$I$};
-
-		% Draw voltage arrows
-		\draw[-latex, thick, draw=voltage] (-0.6,2)  to node[midway,left,  color=voltage] {$U_\mathrm{q}$} (-0.6,1);
-		
-	\end{tikzpicture}
 	\s{\caption{Beispiel Schaltung Wirkungsgrad}}
 	\label{fig:Nennleistung}
 \end{figure}
@@ -187,14 +158,8 @@ können dazu beitragen, den Energiebedarf zu reduzieren und Treibhausgasemission
 \begin{frame}
 	\ftx{Der Wirkungsgrad}
 \begin{figure}[H]
-	\begin{tikzpicture}
-		\centering
-		         \node at (0,0) {\includesvg[width=1\textwidth]{Schaltkreis}};
-				 \node at (-5.3,-0.2) {\shortstack[l]{Chemischer\\Energiespeicher ($E_\mathrm{el}$)}};
-				 \node at (0.1,2.4) {Schalter};  
-				 \node at (5.1,-0.1) {Verbraucher ($W_\mathrm{el}$)};
-
-	\end{tikzpicture}
+	
+	\input{Tikz/src/Kapitel 5/Einfache Schaltung.tex}
 
     \s{\caption{\textbf{Einfache Schaltung.} zeigt eine einfache elektrische Schaltung, die aus einer Batterie, einem Schalter und einer Glühlampe besteht. Durch das Schließen
 	 des Schalters wird der Stromkreis geschlossen, wodurch die Glühlampe leuchtet, indem elektrische Energie in Licht und Wärme umgewandelt wird.}} 

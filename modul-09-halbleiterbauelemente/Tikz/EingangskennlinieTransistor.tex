@@ -1,0 +1,35 @@
+\begin{circuitikz}
+    \draw (0,0) node[npn, tr circle] (Q1) {};
+
+
+\draw (Q1.C) 
+    to [short,-o] (0,1)
+    to[R=$R_\mathrm{C}$, -*] (0,3)
+    to [short,-o] (2,3);
+
+\draw (0,1) to[short, *-o] (2,1);
+
+\draw (0,3) 
+    to[short, -o] (-3,3);
+
+
+
+\draw (-2,0) to[short,i,name=ib, o-] (Q1.B);
+
+\draw (Q1.E) 
+    to [short, -*] (0,-2) node[ground]{};
+
+\draw (-3.5,-2) to[short, o-o] (2,-2);
+
+\draw (2,1) to[open,v>, name=uce] (2,-2);
+
+\draw (-3.5,3) to[open,v>, name=uver] (-3.5,-2);
+\draw (-2,0) to[open,v>,name=ube] (-2,-2);
+
+
+
+\varrmore{uce}{$U_\mathrm{CE}$};
+\varrmore{ube}{$U_\mathrm{BE}$};
+\varrmore{uver}{$U_\mathrm{VER}$};
+\iarrmore{ib}{$I_\mathrm{B}$};
+\end{circuitikz}

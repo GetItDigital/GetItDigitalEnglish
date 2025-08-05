@@ -1,0 +1,15 @@
+\begin{circuitikz}    
+    \draw (0,0) 
+        to[short, o-] (1,0)
+        to[D = $D$] (2.5,0) 
+        to[V, v>, name=U1] (4,0)
+        to[R=$r_\mathrm{D}$] (5.5,0)
+        to[short ,i, name=out, -o] (6.5 ,0);
+    
+    \iarrmore {out} {$i_\mathrm{D}$};
+    
+    \draw (0,-1) to[open,v>, name=Uv] (6.5,-1);
+    \varrmore{Uv}{$U_\mathrm{D}$};
+    \varrmore{U1}{$U_\mathrm{S}$};
+    
+\end{circuitikz}

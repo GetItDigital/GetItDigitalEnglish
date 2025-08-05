@@ -1,0 +1,34 @@
+\begin{tikzpicture}
+\ctikzset{tripoles/en amp/input height=0.45}
+\draw (0,0)node[en amp](E){N1}
+    (E.out)
+    (E.-)
+    (E.+);
+    \draw (E.out) to[short, -*] (2,0) to[R,l=$R_3$] (4,0) to[short, -*] (4,0.5);
+    \draw (E.-) to[short, -*] (-2,0.5) --(-3,0.5);
+    \draw (-2,0.5) to[short] (-2,2.5) to[R, name=R, l=$R_2$] (2,2.5) -- (2,0);
+
+    \draw (-6,0.5) to[R, l=$R_1$, o-] (-3,0.5);
+    \draw (-5, -0.5) to[R, l=$R_1$, o-] (-2,-0.5);
+
+    \draw (-6,-2) to[short, o-o](-5,-2);
+    \draw (E.+) to[short, -*] (-2,-0.5) to[R, l=$R_2$, -*] (-2,-2)node[below, ground]{};
+    \draw (2.5,-2) to[short, -o] (-5,-2);
+    \draw (2.5,-2) to[short, -*] (4,-2)node[below, ground]{} to[short, -o](8.5,-2);
+
+        \draw (6,0)node[en amp](E){N2}
+    (E.out)
+    (E.-)
+    (E.+);
+    \draw (E.-) -- (4,0.5) -- (4,2.5) to[R,l=$R_4$] (8,2.5) to[short, -*] (8,0);
+    \draw (E.out) to[short, -o] (8.5,0);
+    \draw (E.+) -- (4,-0.5) -- (4,-2);
+    
+    \draw (8.5,0) to[open, v, name=ua] (8.5,-2);
+    \draw (-6,0.5) to[open, v, name=ue1] (-6,-2);
+    \draw (-5,-0.5) to[open, v, name=ue2] (-5,-2);
+    
+    \varrmore{ue1}{$U_\mathrm{E1}$};
+    \varrmore{ue2}{$U_\mathrm{E2}$};
+    \varrmore{ua}{$U_\mathrm{a}$};
+\end{tikzpicture}

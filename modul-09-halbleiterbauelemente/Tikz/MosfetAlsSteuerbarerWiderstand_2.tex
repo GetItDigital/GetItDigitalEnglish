@@ -1,0 +1,15 @@
+\begin{circuitikz}
+    \draw (2.5,0) to[short, o-*] (1.5,0)
+        to[R=$R$] (-1,0)
+        to [V, v>, name=uv] (-1,-3.25)
+        to [short, -*] (1.5,-3.25)
+        to[short, -o] (2.5,-3.25);
+
+    \draw (1.5,0) to[R] (1.5,-3.25);  
+    \draw [->, >=Stealth] (2,-1.75) -- (1,-1.25); %Hab diese Zeichnung nicht anders hinbekommen
+
+    \draw (2.5,-3.25) to[open,v<, name=uds] (2.5,0);
+
+    \varrmore{uds}{$U_\mathrm{DS}$};
+    \varrmore{uv}{$U_\mathrm{V}$};
+\end{circuitikz}

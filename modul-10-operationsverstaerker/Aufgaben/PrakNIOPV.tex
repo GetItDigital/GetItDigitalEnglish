@@ -1,0 +1,60 @@
+\subsection{Untersuchung der Verstärkung eines OPs mit variablen Widerständen\label{Aufg24}}
+% Alt: Praktikumsaufgabe 10
+\Aufgabe{
+    Untersuchen Sie die Verstärkung eines nicht-invertierenden Operationsverstärkers mit variablen Widerständen und berechnen Sie die Ausgangsspannung $U_\mathrm{A}$.
+    Gegeben:
+    \begin{itemize}
+        \item Versorgungsspannung: $\pm 15\,\mathrm{V}$
+        \item Eingangsspannung: $U_\mathrm{E} = 1\,\mathrm{V}$
+        \item Rückkopplungswiderstand: $R_\mathrm{R} = 100\,\Omega$
+        \item Eingangswiderstand: $R_\mathrm{E} = 680\,\Omega$
+        \item Weitere mögliche Widerstandswerte: $R_\mathrm{R} = 220\,\Omega$, $R_\mathrm{E} = 680\,\Omega$
+        \item Lastwiderstand: $R_\mathrm{Last} = 10\,\mathrm{k\Omega}$
+    \end{itemize}
+    
+    \begin{itemize}
+        \item[a)] Berechnen Sie die Verstärkung $V$ und die Ausgangsspannung $U_\mathrm{A}$ für die gegebenen Widerstandswerte.
+        \item[b)] Wie ändert sich die Verstärkung, wenn $R_\mathrm{R}$ von $100\,\Omega$ auf $220\,\Omega$ erhöht wird?
+        \item[c)] Welche Auswirkungen hat eine Änderung von $R_\mathrm{E}$ auf die Verstärkung und die Ausgangsspannung?
+        \item[d)] Welche Begrenzungen für $U_\mathrm{A}$ ergeben sich durch die Versorgungsspannung?
+    \end{itemize}
+    \begin {figure} [H]
+    \centering
+    \input{Tikz/FigPrakNIOPV.tex}
+    \label{fig:FigPrakNIOPV}
+    \end {figure}
+}
+
+\Loesung{
+        \textbf{a) Berechnung der Ausgangsspannung $U_\mathrm{A}$ für gegebene Werte} \\
+        Gegeben sind:
+        \[
+        U_\mathrm{E} = 1\,\mathrm{V}, \quad R_\mathrm{R} = 100\,\Omega, \quad R_\mathrm{E} = 680\,\Omega
+        \]
+        Einsetzen in die Verstärkungsformel:
+        \[
+        V = 1 + \frac{100\,\Omega}{680\,\Omega} = 1 + 0{,}147 = 1{,}147
+        \]
+        Die Ausgangsspannung berechnet sich zu:
+        \[
+        U_\mathrm{A} = V \cdot U_\mathrm{E} = 1{,}147 \cdot 1\,\mathrm{V} = 1{,}147\,\mathrm{V}
+        \]
+    
+        \textbf{b) Änderung von $R_\mathrm{R}$ auf $220\,\Omega$} \\[0.2cm]
+        Wenn $R_\mathrm{R} = 220\,\Omega$ gewählt wird:
+        \[
+        V = 1 + \frac{220\,\Omega}{680\,\Omega} = 1 + 0{,}323 = 1{,}323
+        \]
+        \[
+        U_\mathrm{A} = 1{,}323 \cdot 1\,\mathrm{V} = 1{,}323\,\mathrm{V}
+        \]
+    
+        \textbf{c) Einfluss von $R_\mathrm{E}$ auf die Verstärkung} \\[0.2cm]
+        Eine Vergrößerung von $R_\mathrm{E}$ führt zu einer kleineren Verstärkung $V$, während eine Verkleinerung von $R_\mathrm{E}$ die Verstärkung erhöht.  
+        In der Praxis sollte $R_\mathrm{E}$ so gewählt werden, dass das Ausgangssignal nicht zu stark schwankt.
+    
+        \textbf{d) Begrenzung von $U_\mathrm{A}$ durch die Versorgungsspannung} \\[0.2cm]
+        Die Ausgangsspannung $U_\mathrm{A}$ kann niemals über die Versorgungsspannung $\pm 15\,\mathrm{V}$ hinausgehen.  
+        Falls $U_\mathrm{A}$ rechnerisch diesen Bereich überschreiten würde, wird die Ausgangsspannung auf maximal $15\,\mathrm{V}$ begrenzt.
+        Siehe: Abschnitt \ref{fig: Verschaltung Verstaerker} und Tabelle \ref{tab:Grundschaltungen}
+}

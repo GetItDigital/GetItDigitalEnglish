@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+  \draw (0,2) to[V, name=U0] (0,0);
+  \draw (0,2) to[R=$R_\mathrm{V}$, i, name=Id] (4,2);
+  \draw (4,2) to[leDo, l=LED, v, name=Ud] (4,0) -- (0,0);
+
+  \varrmore{U0}{$U_\mathrm{0}$};
+  \varrmore{Ud}{$U_\mathrm{D}$};
+  \iarrmore{Id}{$I_\mathrm{D}$};
+\end{tikzpicture}

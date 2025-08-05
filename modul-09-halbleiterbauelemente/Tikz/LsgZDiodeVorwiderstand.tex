@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+% Batterie links
+    \draw
+    (0,2) to[V, name=U0] (0,0);
+  
+    % Widerstand
+    \draw
+    (0,2) -- (1,2)
+    to[R=$\mathrm{R}$, i, name=i] (4,2);
+
+    \draw (0,0) -- (4,0);
+  
+    % LED rechts
+    \draw
+    (4,0) to[zDo,v<,name=v] (4,2) ;
+
+    \varrmore{U0}{$12\,\mathrm{V}$}; 
+    \iarrmore{i}{$\mathrm{i}$};
+    \varrmore{v}{$6\,\mathrm{V}$};
+
+\end{tikzpicture}

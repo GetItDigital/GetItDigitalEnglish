@@ -1,0 +1,149 @@
+\subsection{Berechnungen in einer Transistorschaltungen\label{Aufg17}}
+% Alt: Aufgabe 17
+\Aufgabe{
+  Gegeben ist die folgende Schaltung mit dem Ausgangskennlinienfeld eines Transistors.
+
+  \begin{itemize}
+    \item[a)] Wie groß ist der maximale Kollektorstrom des idealen Transistors (bei $R_\mathrm{CE} = 0\,\Omega$), wenn der Kollektorwiderstand $R_\mathrm{C} = 7,5\,\Omega$ beträgt und die Versorgungsspannung $U_\mathrm{CC} = 3\,\mathrm{V}$ ist?
+    
+    \item[b)] Bestimmen Sie  $U_\mathrm{CE}$, $U_\mathrm{RC}$ und $I_\mathrm{C}$ des realen Transistors bei einem Basisstrom von \( I_\mathrm{B} = \mathrm{2\,mA} \). Tragen Sie dazu die Widerstandsgerade in das Kennlinienfeld ein.
+    
+    \item[c)] Für einen neuen Arbeitspunkt fallen nur noch $1,7\,\mathrm{V}$ über dem Kollektorwiderstand $R_\mathrm{C}$ ab, der Basisstrom beträgt weiterhin $2\,\mathrm{mA}$. Bestimmen Sie den neuen Widerstand $R_\mathrm{C}$.
+  \end{itemize}
+  \begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \input{Tikz/FigTransistorKennlinien}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includesvg[width=0.9\textwidth]{Bilder/Aufgaben/FigTransistorKennlinien.svg}
+    \end{subfigure}
+    \label{fig:FigTransistorKennlinien}
+    \end{figure}
+
+    % \speech{
+    % Aufgabe 17
+      
+    %   Diese Aufgabe behandelt eine Transistorschaltung und ihr zugehöriges Ausgangskennlinienfeld.
+      
+    %   ### Aufgabenstellung:
+      
+    %   Es ist eine Schaltung mit einem Bipolartransistor gegeben. Dabei sind ein Kollektorwiderstand $R_C$ sowie eine Versorgungsspannung $U_{CC}$ vorhanden. Zusätzlich ist ein Diagramm mit dem Ausgangskennlinienfeld des Transistors gegeben. Es sind folgende Fragen zu beantworten:
+      
+    %   1. **Maximaler Kollektorstrom des idealen Transistors:**  
+    %      Bestimmen Sie den maximalen Kollektorstrom eines idealen Transistors unter der Annahme, dass der interne Widerstand $R_{CE} = 0 \Omega$ ist. Gegeben sind der Kollektorwiderstand $R_C = 7,5 \Omega$ und die Versorgungsspannung $U_{CC} = 3V$.
+      
+    %   2. **Berechnung von $U_{CE}$, $U_{RC}$ und $I_C$ eines realen Transistors:**  
+    %      Gegeben ist ein Basisstrom $I_B = 2mA$. Berechnen Sie die Kollektor-Emitter-Spannung $U_{CE}$, den Spannungsabfall über den Kollektorwiderstand $U_{RC}$ und den Kollektorstrom $I_C$.  
+    %      Außerdem soll die Widerstandsgerade in das gegebene Diagramm eingetragen werden.
+      
+    %   3. **Neuer Arbeitspunkt bei geänderter Spannung:**  
+    %      Angenommen, es fällt nur noch $1,7V$ über den Widerstand $R_C$ ab, während der Basisstrom weiterhin $2mA$ beträgt. Bestimmen Sie den neuen Wert für den Widerstand $R_C$.
+      
+      
+      
+    %    Beschreibung der Abbildung:
+      
+    %   Die Abbildung besteht aus zwei Teilen: Links ist die zugehörige Schaltung, rechts das Ausgangskennlinienfeld des Transistors.
+      
+    %    **Linke Abbildung: Transistorschaltung**
+    %   - Die Schaltung enthält einen NPN-Transistor.
+    %   - Der **Kollektor** des Transistors ist über einen **Widerstand $R_C$** mit der **Versorgungsspannung $U_{CC}$** verbunden.
+    %   - Der **Emitter** ist mit Masse verbunden.
+    %   - Die **Basis** wird über eine separate Eingangsspannung $U_E$ angesteuert.
+      
+    %    **Rechte Abbildung: Ausgangskennlinienfeld des Transistors**
+    %   - Das Diagramm stellt auf der **x-Achse die Kollektor-Emitter-Spannung $U_{CE}$ in Volt** dar.
+    %   - Die **y-Achse zeigt den Kollektorstrom $I_C$ in mA**.
+    %   - Es sind **mehrere rote Kennlinien** eingezeichnet, die den Zusammenhang zwischen $I_C$ und $U_{CE}$ für verschiedene Basisströme $I_B$ darstellen.
+    %   - Die oberste Kennlinie entspricht einem Basisstrom von **$I_B = 3,5mA$**, die unterste Kennlinie einem Basisstrom von **$I_B = 0,5mA$**.
+    %   - Die Linien verlaufen annähernd horizontal, sobald die Sättigungsregion des Transistors überschritten ist.
+      
+    %    **Zusätzliche Hinweise für eine blinde Person**
+    %   - Das Schaltbild beschreibt eine typische **Kollektorschaltung**, in der der Kollektor über den Widerstand $R_C$ mit der Versorgungsspannung $U_{CC}$ verbunden ist.
+    %   - Der Emitter liegt auf Masse.
+    %   - Die Spannung $U_{CE}$ stellt die Differenz zwischen Kollektor- und Emitterpotenzial dar.
+    %   - Im Diagramm lässt sich anhand der gegebenen Kollektorstromkennlinien ablesen, wie der Transistor in Abhängigkeit vom Basisstrom arbeitet.
+    %   - Die Widerstandsgerade, die in die Kennlinien eingetragen werden soll, ist eine **Gerade mit negativer Steigung**, die den Zusammenhang zwischen der Versorgungsspannung $U_{CC}$, dem Widerstand $R_C$ und dem Kollektorstrom beschreibt.
+      
+    %   Die Aufgabe erfordert somit eine Berechnung von Strömen und Spannungen in der Schaltung sowie die grafische Interpretation der Widerstandsgerade innerhalb des Kennlinienfelds.
+    %   }
+      
+
+}
+
+
+\Loesung{
+\begin{itemize}
+    \item[a)]
+\end{itemize}
+Berechnung des maximalen Kollektorstroms bei idealem Transistor (\( R_\mathrm{CE} = 0 \)):
+\begin{align*}
+    I_\mathrm{C} &= \frac{U_\mathrm{CC}}{R_\mathrm{C}} = \frac{3\,\mathrm{V}}{7,5\,\Omega} = 400\,\mathrm{mA}
+\end{align*}
+
+\begin{itemize}
+    \item[b)]
+\end{itemize}
+Bestimmung der Spannungen und des Kollektorstroms laut Kennlinienfeld:
+
+\begin{figure}[H]
+    \centering
+    \includesvg[width=0.9\textwidth]{Bilder/Aufgaben/LsgTransistorKennlinien.svg}
+    \caption{Kennlinienfeld mit eingezeichneter Widerstandsgerade}
+    \label{fig:LsgTransistorKennlinien}
+\end{figure}
+
+\begin{align*}
+    U_\mathrm{CE} &= 1,2\,\mathrm{V} \\
+    U_\mathrm{RC} &= 1,8\,\mathrm{V} \\
+    I_\mathrm{C} &= \frac{U_\mathrm{RC}}{R_\mathrm{C}} = \frac{1,8\,\mathrm{V}}{7,5\,\Omega} = 240\,\mathrm{mA}
+\end{align*}
+
+\begin{itemize}
+    \item[c)]
+\end{itemize}
+Berechnung des neuen Widerstandswerts bei gleichem $I_\mathrm{C}$ und neuer Spannung $U_\mathrm{RC} = 1,7\,\mathrm{V}$:
+\begin{align*}
+    R_\mathrm{C} &= \frac{U_\mathrm{RC}}{I_\mathrm{C}} = \frac{1,7\,\mathrm{V}}{240\,\mathrm{mA}} = 7,08\,\Omega
+\end{align*}
+  Siehe: Abschnitt \ref{sec:ElektrischesVerhaltenBipolartransistor}
+%   \speech{
+% Die Lösung zu Aufgabe 17 besteht aus mehreren Teilen.
+
+% **Teil a)**  
+% Im ersten Schritt wird der maximale Kollektorstrom für den idealen Transistor berechnet.  
+% Die Formel lautet:  
+% \( I_C = \frac{U_{CC}}{R_C} \)  
+% Es werden die Werte \( U_{CC} = 3V \) und \( R_C = 7,5 \Omega \) eingesetzt.  
+% Das ergibt einen maximalen Kollektorstrom von \( I_C = 400mA \).
+
+% **Teil b)**  
+% Die Abbildung zeigt das Ausgangskennlinienfeld des Transistors mit mehreren Kollektorstromkurven für verschiedene Basisströme.  
+% Die x-Achse stellt die Kollektor-Emitter-Spannung \( U_{CE} \) dar, während die y-Achse den Kollektorstrom \( I_C \) angibt.  
+% Mehrere rote Kurven zeigen die Kollektorstromwerte für verschiedene Basisströme \( I_B \).  
+% Die schwarze gestrichelte Linie stellt die Widerstandsgerade dar.  
+% Der Schnittpunkt dieser Gerade mit der roten Kollektorstromkurve für \( I_B = 0,5mA \) gibt den Arbeitspunkt an.
+
+% Die Berechnungen sind wie folgt:  
+% - Die Kollektor-Emitter-Spannung beträgt \( U_{CE} = 1,2V \).  
+% - Die Spannung über dem Widerstand \( R_C \) beträgt \( U_{RC} = 1,8V \).  
+% - Der Kollektorstrom wird mit der Formel \( I_C = \frac{U_{RC}}{R_C} \) berechnet.  
+%   Es ergibt sich \( I_C = \frac{1,8V}{7,5 \Omega} = 240mA \).
+
+% **Teil c)**  
+% Hier wird der neue Widerstand \( R_C \) bestimmt, wenn die Spannung über dem Widerstand auf \( 1,7V \) fällt.  
+% Die Formel lautet:  
+% \( R_C = \frac{U_{RC}}{I_C} \)  
+% Durch Einsetzen der Werte \( U_{RC} = 1,7V \) und \( I_C = 240mA \) ergibt sich:  
+% \( R_C = 7,08 \Omega \).
+
+% Damit ist die Lösung zu Aufgabe 17 abgeschlossen.
+% }
+
+}
+
+
+

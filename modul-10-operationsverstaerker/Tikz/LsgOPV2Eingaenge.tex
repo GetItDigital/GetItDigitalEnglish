@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+\ctikzset{tripoles/en amp/input height=0.45}
+\draw (0,0)node[en amp](E){}
+    (E.out)
+    (E.-)
+    (E.+);
+    \draw (E.out) to[short, -*] (2,0) to[short, -o] (2.5,0);
+    \draw (E.-) to[short, -*] (-2,0.5) to[R,name=R2, l_=$R_\mathrm{2}$, -o] (-4,0.5);
+    \draw (-2,0.5) to[short] (-2,2) to[R, name=R, l=$R_\mathrm{1}$] (2,2) -- (2,0);
+
+    
+    \draw (-4,-2) to[short, o-] (-4,-2.1)node[ground]{};
+    \draw (E.+) -- (-2,-0.5)--(-2,-1.5) to[short] (-2,-2.1)node[ground]{};
+    \draw (2.5,-2) to[short, o-] (2.5,-2.1)node[ground]{};
+    
+    \draw (2.5,0) to[open, v, name=ua] (2.5,-2);
+    \draw (-4,0.5) to[open, v, name=ue] (-4,-2);
+
+    \varrmore{ua}{$U_\mathrm{A}$};
+    \varrmore{ue}{$U_\mathrm{E}$};
+\end{tikzpicture}

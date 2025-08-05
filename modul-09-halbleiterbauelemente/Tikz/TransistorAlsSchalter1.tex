@@ -1,0 +1,22 @@
+\begin{tikzpicture} [scale=0.9, /tikz/circuitikz/bipoles/length=1.1cm]
+    \draw (2,0) node[npn](Q1){};
+    
+    \draw (2,0) node[npn, tr circle] (Q1) {}
+        (Q1.base) node[anchor=south east] {B}
+        (Q1.collector) node[anchor=east] {C}
+        (Q1.emitter) node[anchor=east] {E};
+    
+    \draw (Q1.B) to[R=$R_1$, -o] (-1.5,0);
+    
+    \draw (Q1.C) to [lamp] (2,2.5)
+        node[vcc](VCC){$U_\mathrm{V}$};
+    
+    \draw (0.5,-0.25) to[open, v>, name=ube] (1.5,-1.25);
+
+    \draw (2.5,-1) to[open,v<, name=uce] (2.5,1);
+    
+    \draw (Q1.E) to[short] (2,-1) node[ground]{};
+    
+    \varrmore[blue]{uce}{$U_\mathrm{CE}$};
+    \varrmore[red]{ube}{$U_\mathrm{BE}$};    
+\end{tikzpicture}

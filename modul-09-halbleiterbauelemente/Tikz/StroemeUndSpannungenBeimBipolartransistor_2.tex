@@ -1,0 +1,27 @@
+\begin{tikzpicture} [scale=.9, font=\small]
+    \draw (2,0) node[pnp] (Q1) {};
+    
+    \draw(0,0)
+        to[short, i>, name=ib] (Q1.B);
+    
+    \draw (Q1.E)
+        to [short, i<, name=ie] (2,1)
+        to [short] (2,2)
+        to [short] (4,2)
+        to [short] (4,0)
+        to [V,v>, name=uce](4,-2)
+        to [short, -*] (2,-2)
+        to [short] (0,-2)
+        to [V, v<, name=ube] (0,0);
+    
+    \draw (2,-2) 
+        to[short] (2,-1)
+        to[short, i>, name=ic] (Q1.C);
+    
+    \varrmore {uce}{$U_\mathrm{CE} < 0$};
+    \varrmore {ube}{$U_\mathrm{BE} < 0$};
+    \iarrmore {ib}{$I_\mathrm{B} < 0$};
+    \iarrmore {ic}{$I_\mathrm{C} > 0$};
+    \iarrmore {ie}{$I_\mathrm{E} < 0$};
+    
+\end{tikzpicture}

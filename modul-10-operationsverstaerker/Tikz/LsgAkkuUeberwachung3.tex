@@ -1,0 +1,8 @@
+\begin{tikzpicture}
+\draw (0,-4) to[short, o-, led,v>,name=led] (0,-2) to[short, v>, name=r,R, -o,l=$R_\mathrm{V}$] (0,0);
+\varrmore{led}{$2,2\,\mathrm{V}$};
+\varrmore{r}{$13,5\,\mathrm{V}$};
+
+\draw (-1.5,-4) to[open, v>, name=open] (-1.5,0);
+\varrmore{open}{$15\,\mathrm{V}$};
+\end{tikzpicture}

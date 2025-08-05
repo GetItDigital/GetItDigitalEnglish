@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+\ctikzset{tripoles/en amp/input height=-0.45}
+            \draw (0,0)node[en amp](E){};
+ (E.+)
+ (E.-)
+ (E.out);
+    \draw (E.out) -- (2,0) -- (2,2);
+    \draw (E.+) to[short, -*] (-2,0.5) -- (-2,2) to[R, l=$\mathrm{R_{F1}}$] (0,2) to[R, l=$\mathrm{R_{F2}}$] (2,2);
+    \draw (-4,0.5) to[R,l=$\mathrm{R_1}$] (-2,0.5);
+    \draw (E.-) -- (-2,-0.5) -- (-2,-2)node[ground]{};
+\end{tikzpicture}

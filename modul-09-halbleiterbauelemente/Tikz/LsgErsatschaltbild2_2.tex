@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+\draw (0,0) to[short, o-*] (1,0)node[above]{B} to[short, -*] (2,0) to[R,l=$r_\mathrm{BE}$, -*] (4,0) to[short, -*] (6,0)node[above]{E} to[short,-*] (7,0) to[short, -o] (9,0);
+\draw (0,-2) to[short, o-*] (1,-2) -- (1.5,-2)node[ground]{};
+\draw (1.5,-2) to[short, -*] (2,-2) to[short, -*] (4,-2) to[short, -*] (6,-2) to[short,-*] (7,-2) to[short, -o] (9,-2);
+
+
+\draw (9,0) to[open,v>, name=ua] (9,-2);
+
+\draw (1,0) to[R,l=$R_\mathrm{1}$](1,-2);
+\draw (2,0) to[R,l=$R_\mathrm{2}$](2,-2);
+\draw (4,0) to[R,l=$R_\mathrm{3}$](4,-2)node[below]{C};
+\draw (6,0) to[I] (6,-2);
+\draw (7,0) to[R,l=$r_\mathrm{CE}$](7,-2);
+
+\draw (0,0) to[open, v>, name=ue] (0,-2);
+
+\varrmore{ua}{$U_\mathrm{a}$};
+\varrmore{ue}{$U_\mathrm{e}$};
+
+\end{tikzpicture}

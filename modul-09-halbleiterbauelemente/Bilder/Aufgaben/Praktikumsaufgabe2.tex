@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+    \draw (0,0) to[short, -*] (1,0)node[ground]{} to[short, -*] (2.5,0) -- (5,0);
+    \draw (5,5) to[C,name=C1, l=$\mathrm{C_1}$](5,3) to[V,name=V2] (5,1) -- (5,0);
+
+    \draw (0,5) to[V, name=V1] (0,0); 
+    \draw (0,5) to[R, name=R2, l=$\mathrm{R_2}$, -*] (2.5,5) to[R,name=R3, l=$\mathrm{R_3}$] (5,5);
+    
+    \draw (2.5,0) to[R,name=R1, l=$\mathrm{R_1}$] (2.5,5);
+    
+    \varrmore{V1}{$\mathrm{V_1}$};
+    \varrmore{V2}{$\mathrm{V_2}$};
+\end{tikzpicture}
+   

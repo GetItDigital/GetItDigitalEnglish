@@ -1,0 +1,25 @@
+\begin{tikzpicture}[/tikz/circuitikz/bipoles/length=1cm, scale=.8]
+    \small
+    \draw (-0.5,0)[red]
+        to[short, i^, -*, name=I4] (3,0)
+        to[D, -*, l=$D_4$, fill=red] (4.5,1.5)
+        to[short, i, -] (4.5,2.5)
+        to[short, i, -, name=I2] (6,2.5)
+        to[R, v, name=R, l=$R$] (6,-0.5)
+        to[short, i, -, name=I3] (1.5,-0.5)
+        to[short, -*] (1.5,1.5)
+        to[D, -*, l=$D_1$, fill=red] (3,3)
+        to[short, i, -, name=I1] (-0.5,3)
+        to[sV, v<, name=UE] (-0.5,0);
+    \draw (3,3)
+        to[D, -, l=$D_2$] (4.5,1.5);
+    \draw (1.5,1.5)
+        to[D, -, l=$D_3$] (3,0);
+
+    \varrmore[black]{UE}{$u_\mathrm{E}$};
+    \varrmore[red]{R}{$u_\mathrm{R}$};
+    \iarrmore[red]{I1}{};
+    \iarrmore[red]{I2}{};
+    \iarrmore[red]{I3}{};
+    \iarrmore[red]{I4}{};
+\end{tikzpicture} 

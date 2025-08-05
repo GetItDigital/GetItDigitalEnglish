@@ -1,0 +1,84 @@
+\begin{tabular}{|m{0.25\textwidth}|m{0.45\textwidth}|m{0.3\textwidth}|}
+    \hline
+    \begin{circuitikz}[scale=0.8, transform shape]
+        \ctikzset{tripoles/en amp/input height=-0.45}
+        \draw (0,0) node[en amp](E){};
+        \node at ($(E) + (-1.2, 1.5)$) {\textbf{\LARGE A}}; % Label für den ersten OPV
+        \draw (E.out) node[circ]{} node[right]{$U_A$};
+        \draw (E.-) node[circ]{} node[left]{0V};
+        \draw (E.+) node[circ]{} node[left]{1V};
+        \draw (E.up) -- ++(0,0.5) node[anchor=south]{$+U_B$} node[circ] {};
+        \draw (E.down) -- ++(0,-0.5) node[anchor=north]{$-U_B$} node[circ] {};
+
+    \end{circuitikz} &
+    \begin{circuitikz}[scale=0.8, transform shape]
+        \ctikzset{tripoles/en amp/input height=-0.45}
+        \draw (0,0) node[en amp](E){};
+        \node at ($(E) + (-1.2, 1.5)$) {\textbf{\LARGE B}}; % Label für den ersten OPV im mittleren Bild
+        \draw (E.out) node[circ]{} node[right]{$U_A$};
+        \draw (E.-) node[circ]{} node[left]{0V} -- ++(0, -1) to[normal open switch] ++(2.38,0) -- ++(0,1.5);
+        \draw (E.+) node[circ]{} node[left]{1V};
+    
+        \draw (4,0) node[en amp](E2){};
+        \node at ($(E2) + (-1.2, 1.5)$) {\textbf{\LARGE C}}; % Label für den zweiten OPV im mittleren Bild
+        \draw (E2.out) node[circ]{} node[right]{$U_A$};
+        \draw (E2.-) node[circ]{} node[left]{0V} -- ++(0, -1) -- ++(2.38,0) -- ++(0,1.5);
+        \draw (E2.+) node[circ]{} node[left]{1V};
+    \end{circuitikz} &
+    \begin{circuitikz}[scale=0.8, transform shape]
+        \ctikzset{tripoles/en amp/input height=-0.45,
+        }
+        \draw (0,0) node[en amp](E){};
+        \node at ($(E) + (-1.2, 1.5)$) {\textbf{\LARGE D}}; % Label für den OPV im dritten Bild
+        \draw (E.out) node[circ]{} -- ++(0.2,0) node[ocirc, right]{};
+        \draw (E.-) -- ++(0, -1.3) node[circ] {} to[R, l=$R_2$] ++(2.38,0) -- ++(0,1.8);
+        \draw (E.-) -- ++(0, -1.6) to[R, l_=$R_1$] ++(0, -1.2) -- ++(0,-0.2) -- ++(-0.2, 0) -- ++(0.4,0);
+        \draw (E.+) node[circ]{} node[left]{};     
+       
+        % Spannungspfeil
+        \draw[-{Triangle[width=3pt,length=4pt]}, color=spannung] ($(E.+) + (0, -0.1)$) -- ($(E.-) + (0, 0.1)$) node[midway, xshift=-30] {$U_{\text{Diff}}=0\,\text{V}$};
+        \draw[-{Triangle[width=3pt,length=4pt]}, color=spannung] ($(E.out) + (0.26, -0.1)$) -- ($(E.out) + (0.26, -3.45)$) node[midway, xshift=10] {$U_A$};
+        \draw[black] ($(E.out) + (0.26, -3.5)$) -- ++(-0.2, 0) -- ++(0.4,0);
+        \draw[-{Triangle[width=3pt,length=4pt]}, color=spannung] (0.7,-2.1)-- ++(-1.5,0) node[midway, yshift=-10] {$U_{R2}$};
+        \draw[-{Triangle[width=3pt,length=4pt]}, color=spannung] (-0.9,-2)-- ++(0,-1.5) node[midway, xshift=10] {$U_{R1}$};
+
+
+        
+        \node[red] at (0.9,-1.8) {\tikz \draw[red, -{Triangle[width=3pt,length=4pt]}] (0,0) -- (-0.01,0);};
+        \node[above, color=red] at (0.9,-1.8)  {$I_{R2}$};
+
+        \node[red] at ($(E.-)+(0,-1.5)$) {\tikz \draw[red, -{Triangle[width=3pt,length=4pt]}] (0,0) -- (0,-0.01);};
+        \node[left, color=red] at ($(E.-)+(0,-1.4)$)  {$I_{R1}$};
+    \end{circuitikz}
+    \\
+    \hline
+    \multicolumn{1}{|c|}{
+    \begin{tikzpicture}
+        \draw[thick,->] (-0.015,0) -- (2,0) node[anchor=north west] {$t$};
+        \draw[thick,->] (0,0) -- (0,2) node[anchor=south east] {$U_{A}$};
+        \draw (0,0) -- (1.6,1.6) -- (2,1.6);
+        \draw[thick] (-0.1,1.6) -- (0.1,1.6);
+        \draw (0,1.6) node[anchor=east] {$+U_B$};
+        
+        \draw[densely dashed] (0.5,0.5) -- (1.2,0.5) -- ++(0,0.7);  % Steigungsdreieck Linien
+            \node at (1.6,0.85) {$\Delta U_A$};
+            \node at (0.85,0.25) {$\Delta t$}; 
+    \end{tikzpicture}} &
+    \multicolumn{1}{c|}{
+    \begin{tikzpicture}
+        \draw[thick,->] (1.985,0) -- (4,0) node[anchor=north west] {$t$};
+        \draw[thick,->] (2,0) -- (2,2) node[anchor=south east] {$U_{A}$};
+        \draw (2,0) -- (3,0.5) -- (4,0.5);
+        \draw[thick] (1.9,0.5) -- (2.1,0.5) node[anchor=east] {$1V$};
+        \node at (0,1) {Slew rate: $\frac{\Delta U_A}{\Delta t}$};
+    \end{tikzpicture}} &
+    \multicolumn{1}{c|}{
+    \begin{tikzpicture}
+        \draw[thick,->] (-0.015,0) -- (2,0) node[anchor=north west] {$t$};
+        \draw[thick,->] (0,0) -- (0,2) node[anchor=south east] {$U_{A}$};
+        \draw (0,0) -- (1,1) -- (2,1);
+        \draw[thick] (-0.1,1) -- (0.1,1) node[anchor=east] {$5V$};
+        \draw[thick] (-0.1,0.5) -- (0.1,0.5) node[anchor=east] {$1V$};
+    \end{tikzpicture}} \\
+    \hline
+    \end{tabular}

@@ -67,6 +67,7 @@
     \immediate\write\speechRenderVideoScript{rm VideoTitle.tex}
     \immediate\write\speechRenderVideoScript{cd TeXAuX}
     \immediate\write\speechRenderVideoScript{convert -limit memory 2GB -limit map 2GB -density 350 -colorspace sRGB VideoTitle.pdf video/VideoTitle_\printvideoname.png}
+    \immediate\write\speechRenderVideoScript{cp video/VideoTitle_\printvideoname.png ../Videos/\GetItDigitalModulnumber_\thevideocounter_\printvideoname.png}
     \immediate\write\speechRenderVideoScript{rm VideoTitle.*}
     \immediate\write\speechRenderVideoScript{ffmpeg -y -loop 1 -i video/VideoTitle_\printvideoname.png -i ../../Video/Videovorlagen/Stille4.wav -c:v libx264 -r 25 -vf "scale=-1:1080,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:white" -pix_fmt yuv420p -t 4 -color_trc bt709 -colorspace bt709 -color_primaries bt709 video/video-titel.mp4}
     \immediate\write\speechRenderVideoScript{ffmpeg -y -loop 1 -i video/Folien-1.png -i ../../Video/Videovorlagen/Stille4.wav -c:v libx264 -r 25 -vf "scale=-1:1080,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:white" -pix_fmt yuv420p -t 4 -color_trc bt709 -colorspace bt709 -color_primaries bt709 video/video-License.mp4}

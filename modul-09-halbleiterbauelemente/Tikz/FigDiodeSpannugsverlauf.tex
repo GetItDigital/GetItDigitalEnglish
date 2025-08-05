@@ -1,0 +1,31 @@
+\begin{tikzpicture}[]
+
+    \draw (6,1.5) to[open,v>, name=u1] (6,-0.5);
+    \draw (-0.5,3)
+        to[open,v>, name=u0] (-0.5,0);
+
+        \draw (-0.5,3)
+        to[short, o-*] (3,3)
+        to[D, -*, l=$D_2$] (4.5,1.5)
+        to[short, i, -] (4.5,1.5)
+        to[short, -o] (6,1.5);
+        
+    % Verbindungslinie zum unteren Punkt
+    \draw (6,-0.5) to[short, o-] (1.5,-0.5) ;
+    
+
+    \draw (1.5,-0.5)
+        to[short, -*] (1.5,1.5)
+        to[D, -*, l=$D_3$] (3,0)
+        to[short, -o] (-0.5,0);
+
+    \draw (3,0)
+        to[D, -, l=$D_4$] (4.5,1.5);
+
+    \draw (1.5,1.5)
+        to[D, -, l=$D_1$] (3,3);
+
+
+    \varrmore{u0}{$u_\mathrm{E}$};
+    \varrmore{u1}{$U_{1}$};
+\end{tikzpicture}

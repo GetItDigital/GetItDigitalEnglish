@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+     \draw (4,2) node[npn, tr circle] (Q1) {};
+ 
+     \draw (Q1.C) -- (4,4) 
+     to [R,l=$R_\mathrm{L}$] (7,4)
+     to [V, name=Ul, v] (7,0);
+
+     \draw (Q1.E) to [short, -*] (4,0) 
+     -- (7,0);
+
+     \draw (Q1.B) to [R,l_=$R_\mathrm{V}$, i<, name=Ib] (0,2)
+     to [V, name=U0, v] (0,0)
+     to [short] (4,0);
+
+     \draw (Q1.B) ++ (-0.25,0) coordinate(Tb);
+     \draw (Q1.E) ++ (0,-0.25) coordinate(Te);
+     \draw (Tb) to [open, name=ube, v, voltage=european] (Te);
+
+     \varrmore{ube}{$U_\mathrm{BE}$};
+     \varrmore{U0}{$U_\mathrm{0}$};
+     \varrmore{Ul}{$U_\mathrm{L}$};
+     \iarrmore{Ib}{$I_\mathrm{B}$};
+ \end{tikzpicture}

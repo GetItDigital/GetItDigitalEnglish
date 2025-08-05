@@ -14,16 +14,24 @@
 \begin{frame}
 	\ftx{Lernziele: Leitfähigkeit und Widerstand}
 \b{
-	\begin{Lernziele}{Leitfähigkeit und Widerstand}
+	\begin{Lernziele}{Leitfähigkeit und Widerstand} % ToDo: Temperaturabhängigkeit ersetzen durch nur Temperatur (in den Items bereits passiert, weiter noch nicht geprüft)
 		Die Studierenden
 		\begin{itemize}
 		\item kennen das elektrische Bauelement Widerstand.
 		\item können die unterschiedlichen Bauteilausführungen von Widerständen erklären.
 		\item können anhand des spezifischen Widerstand $\rho$ oder des spezifischen Leitwertes $\kappa$ Berechnungen durchführen.
-		\item können die Unterschiede in der Leitfähigkeit verschiedener Materialien basierend auf deren atomarer Struktur und Temperaturabhängigkeit analysieren.
+		\item können die Unterschiede in der Leitfähigkeit verschiedener Materialien basierend auf deren atomarer Struktur und Temperatur analysieren.
 	\end{itemize}
 	\end{Lernziele}
 }
+\speech{text}{1}{
+In dem nun folgenden Abschnitt des Moduls werden wir uns mit der Leitfähigkeit und dem Widerstand beschäftigen. 
+Sie sollten am Ende dieses Abschnittes den elektrischen Widerstand als Bauelement kennen und auch seine Eigenschaften. 
+Sie kennen unterschiedliche Bauteilausführungen von Widerstand und können diese auch erläutern. 
+Ferner ist es Ihnen möglich, anhand des spezifischen Widerstandes oder des spezifischen Leitwertes Berechnungen durchführen zu können, z.B. den Widerstand einer Anordnung berechnen. 
+Und Sie können die Unterschiede der Leitfähigkeit in verschiedenen Materialien basierend auf der atomaren Struktur und der Temperatur analysieren.
+}
+
 \end{frame}
 \begin{frame}
 	\ftx{Leitfähigkeit und Widerstand}
@@ -63,6 +71,29 @@ Der Leitwert $G$ hat die Einheit Siemens (S), der ohmsche Widerstand die Einheit
 		\label{fig:Widerstands Arten}}
 	\end{figure}
 
+	\speech{text}{1}{ % ToDo: für diesen speechtext muss diese Folie in ein begin(frame) eingebaut werden.
+	Auf dem hier dargestellten Foto, das ist eigentlich noch ein Ausschnitt aus dem anfänglichen Foto, sehen Sie unterschiedliche Bauteilausführungen von Widerständen. 
+Fangen wir erstmal mit dem Widerständen in der rechten Hälfte des Bildes an. Dort sehen Sie unterschiedliche Ausführungen eines sogenannten Feed-Through-Elements. 
+Diese Bauelemente, da werden die Beinchen, die Drähte, die Anschlüsse geknickt und dann durch Bohrungen in der Platine durchgesteckt. 
+Deshalb Feed-Through-Bauelement und dann an der Unterseite der Platine verlötet. 
+Das heißt, der elektrische Kontakt dieses Bauelementes ist eigentlich genau auf der anderen Platinenseite wie das Bauelement selber. 
+Das ist zum einen relativ aufwendig in der automatischen Bestickung und zum anderen hat das auch viele Nachteile, 
+was parasitäre Effekte angeht für das Bauelement. Denn wir werden im späteren Verlauf sehen, dass die Zuleitung durch die Eigenschaften des Bauelementes deutlich beeinflusst. 
+Deshalb werden heute sehr häufig die SMD-Widerstände eingesetzt. Das sind die ganz kleinen Chips, die Sie im linken unteren Teil sehen. 
+Die gibt es in sehr unterschiedlichen Ausführungen, unterschiedlich groß, je nachdem für welches Raster Sie sich in Ihrer Platine entwickeln. 
+SMD steht für Surface Mounted Device. Das heißt, diese Teile werden auf der Seite der Platine montiert und kontaktiert, wo auch die Leiterbahn ist. 
+Das heißt, sie werden direkt auf die Leiterbahn gelötet und haben dadurch den Vorteil, dass sie weniger parasitäre Effekte zeigen. 
+Nachteilig ist, dass sie meistens nicht die großen Leistungen aufnehmen können. 
+Wenn man sich überlegt, das werden wir im späteren Verlauf sehen, dass die Leistung, die ein Widerstand aufnimmt, in Wärme gewandelt wird, 
+ist irgendwie ersichtlich, dass zum Beispiel der zweite Widerstand von links, der rote, deutlich mehr Leistung aufnehmen kann als der kleine Chip ganz unten, 
+schon alleine vom Volumen und der Masse. Oben links, das Bauteil, wo auch Mechanik-Elemente drin sind, das nennt man Potentiometer. 
+Und das ist im Prinzip ein Widerstand mit einem festen Wert, aber sie haben einen sogenannten Mittelabgriff. 
+Wenn wir an der rechten Seite des Baunelementes sehen oder schauen, dann sehen Sie dort drei Abgriffe. 
+Und den vollen Widerstandswert, zum Beispiel 10 Kiloohm, den würden Sie erhalten, wenn Sie am oberen Kontakt und am unteren Kontakt kontaktieren. 
+Und abhängig davon, wie Sie den Drehregler regeln, können Sie dann am Mittelabgriff den geteilten Widerstand abgreifen. 
+Also zum Beispiel zwischen der mittleren Klemme und der oberen Klemme 7 Kiloohm und der mittleren Klemme und der unteren Klemme dann 3 Kiloohm, 
+sodass in Summe wieder 10 Kiloohm vorhanden sind.
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Abbildung Widerstände %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -75,22 +106,24 @@ Der Leitwert $G$ hat die Einheit Siemens (S), der ohmsche Widerstand die Einheit
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Lernziele %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{Lernziele}{Leitfähigkeit und Widerstand}
+\begin{Lernziele}{Leitfähigkeit und Widerstand} 
 	Die Studierenden
 	\begin{itemize}
 	\item kennen das elektrische Bauelement Widerstand.
 	\item können die unterschiedlichen Bauteilausführungen von Widerständen erklären.
 	\item können anhand des spezifischen Widerstand $\rho$ oder des spezifischen Leitwertes $\kappa$ Berechnungen durchführen.
-	\item können die Unterschiede in der Leitfähigkeit verschiedener Materialien basierend auf deren atomarer Struktur und Temperaturabhängigkeit analysieren.
+	\item können die Unterschiede in der Leitfähigkeit verschiedener Materialien basierend auf deren atomarer Struktur und Temperatur analysieren.
 \end{itemize}
 \end{Lernziele}
 }
+
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Lernziele %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Leitfähigkeit %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Die elektrische Leitfähigkeit}
+\subsection{Die elektrische Leitfähigkeit} % ToDo: Rho ist nicht Delta X durch Delta V, sondern Delta Q durch Delta V.
 \begin{frame}[t]
 	\ftx{Die elektrische Leitfähigkeit}
 	
@@ -114,6 +147,27 @@ Der Leitwert $G$ hat die Einheit Siemens (S), der ohmsche Widerstand die Einheit
 	\end{equation}}
 
 			 \vspace{0.1cm}
+
+\speech{text}{1}{ % ToDo: only 1
+	Wir blicken noch einmal zurück auf das Modul 1. Dort haben wir die Stromwichte J definiert und auch den Strom I. Wir hatten den Strom I ja beschrieben als die zeitliche Varianz der Ladungsgänge Q und die Stromwichte J ergibt sich dann eigentlich aus der Fläche, die durchströmt wird.
+}
+
+\speech{text}{1}{ % ToDo: only 2 bzw. da wo es passt
+	Wenn wir das jetzt formelmäßig zusammenfassen, dann kommen wir auf J ist gleich Delta I durch Delta A. Das geht so in der Form immer nur für konstante Querschnitte und für konstante Ströme.
+}
+
+\speech{text}{1}{ % ToDo: only 3 bzw. da wo es passt
+	Wir kennen aus dem Modul noch, I ist gleich Delta Q durch Delta T, also die zeitliche Varianz der Ladungsmenge.
+}
+
+\speech{text}{1}{ % ToDo: only 4 bzw. da wo es passt
+	Wir können auch ausrechnen, dass eine Veränderung im Volumen Delta V nichts anderes ist als die Veränderung der Fläche Delta A mal der Veränderung der Länge Delta X. Das kann umgestellt werden zu Delta A ist gleich Delta V durch Delta X.
+}
+
+\speech{text}{1}{ % ToDo: only 5 bzw. da wo es passt
+	Daraus ergibt sich dann die Stromdichte J als Delta Q mal Delta X durch Delta T mal Delta V. Das klingt jetzt erstmal relativ kompliziert. Wir haben eine einfache Formel viel komplizierter gemacht. Wir werden aber auf der nächsten Folie sehen, dass das durchaus Sinn macht.
+}
+
 
 
 \end{frame}
@@ -141,7 +195,25 @@ Der Leitwert $G$ hat die Einheit Siemens (S), der ohmsche Widerstand die Einheit
 	}
 			 \vspace{0.1cm}
 
+\speech{text}{1}{ % ToDo: only 6 bzw. da wo es passt
+	Denn wir hatten ja im Modul 1 ebenfalls die Driftgeschwindigkeit der Elektronen VEL und die Raumladungsdichte Rho kennengelernt. Und das setzen wir jetzt in die gerade hergeleitete Folie J ist gleich Delta Q mal Delta X geteilt durch Delta T mal Delta V ein.
+}
 
+\speech{text}{1}{ % ToDo: only 7 bzw. da wo es passt
+	Also wir können VEL ersetzen durch Delta X durch Delta T. Nichts anderes ist ja letztlich die Geschwindigkeit. Das ist ja nichts anderes als die zeitliche Veränderung der Orientierung in Bewegungsrichtung.
+}
+
+\speech{text}{1}{ % ToDo: only 8 bzw. da wo es passt
+	Für das Rho, das ist die Raumladungsdichte, ergibt sich das Delta Q durch Delta V.
+}
+
+\speech{text}{1}{ % ToDo: only 9 bzw. da wo es passt
+	Sodass wir alles zusammen eingesetzt in die vorherige Formel J ist gleich Delta Q mal Delta X durch Delta T mal Delta V auch schreiben können. J ist gleich Rho mal VEL. Jetzt sind hier noch Vektoren hinzugekommen. Das hat auch einen Grund. Denn die Geschwindigkeit VEL, mit der sich die Elektronen bewegen, hat ja nicht nur einen Betrag, sondern auch eine Richtung. Und demzufolge ist die Stromdichte eigentlich auch ein Vektor. Denn wir müssen ja nicht nur beschreiben, wie der Strom sich in der Fläche verteilt, sondern auch in welche Richtung der Strom fließt.
+}
+
+\speech{text}{1}{ % ToDo: only 10 bzw. da wo es passt
+	Das ist hier nochmal in dem Satz zusammengefasst. Da die Geschwindigkeit immer einen Betrag und eine Richtung hat, ist die Stromdichte ebenfalls ein Vektor.
+}
 \end{frame}
 
 
@@ -174,6 +246,31 @@ Das Einsetzen von $\vec{v_{el}}$ und $\rho$ in die Formel 7 ergibt den folgenden
 	}
 			 \vspace{0.1cm}
 
+\speech{text}{1}{ % ToDo: only 1
+	Wenn wir nun noch mal auf die Driftgeschwindigkeit schauen, dann haben wir ja vorher kennengelernt in Methode 1, dass die Driftgeschwindigkeit VEL als Vektor sich proportional zum elektrischen Feld verhält, jedoch in entgegengesetzter Richtung. Diese entgegengesetzte Richtung kommt daher, dass unsere Ladungsträger in der Regel negativ beladen sind, weil es Elektronen sind, und wir eben genau das negative Vorzeichen dieser Ladung mit berücksichtigen müssen. Und daher bewegt sich das Elektron immer entgegengesetzt dem elektrischen Feld. Der Proportionalitätsfaktor zu dieser Beweglichkeit oder zu diesem Verhältnis wird Elektronenbeweglichkeit µe genannt.
+}
+\speech{text}{1}{ % ToDo: only 2
+	Das heißt, wir erhalten VEL ist gleich minus µe mal E.
+}
+\speech{text}{1}{ % ToDo: only 3
+	Die Raumladungsdichte Rho, dort drin steckt ja letztlich die Elementarladung e eines Elektrons und die Ladungsträgerdichte NE, also wie viele Ladungsträger sich frei beweglich im Leiter befinden. Die wird mit NE bezeichnet. Auch hier wieder, wir haben negative Ladung von Elektronen, daraus ergibt sich ein negatives Vorzeichen.
+}
+
+\speech{text}{1}{ % ToDo: only 4
+	Wir erhalten Rho ist gleich minus NE mal e. Das heißt, die Anzahl an freien Ladungsträgern mal die Elementarladung e.
+}
+
+\speech{text}{1}{ % ToDo: only 5
+	Wenn wir jetzt die hier hergeleiteten Formeln für die Driftgeschwindigkeit VEL und die Raumladungsdichte Rho in die Formel einsetzen, die wir gerade hergeleitet haben, also J ist gleich Rho mal VEL, dann erhalten wir:
+}
+
+\speech{text}{1}{ % ToDo: only 6
+	J als Vektor ist gleich minus NE mal e multipliziert mit minus µe mal E. Wir erhalten also letztlich einen Zusammenhang zwischen der Stromdichte J und dem elektrischen Feld E. Diesen gilt es jetzt näher zu betrachten.
+}
+
+
+
+
 \end{frame}
 
 
@@ -200,6 +297,26 @@ Das Einsetzen von $\vec{v_{el}}$ und $\rho$ in die Formel 7 ergibt den folgenden
 	}
 			 \vspace{0.1cm}
 
+\speech{text}{1}{ % ToDo: only 7
+	Wenn wir auf die vorhergehende Folie schauen, sehen wir, dass wir zwei Minuszeichen in multiplikativer Folge haben, sodass sich die Minuszeichen aufheben.
+}
+
+\speech{text}{1}{ % ToDo: only 8
+	Wir erhalten für die Stromdichte J: J ist gleich NE mal µe mal e mal E. Das heißt, wir haben einen Zusammenhang zwischen der Stromdichte J und der elektrischen Feldstärke E. Beides sind Vektoren, und dazwischen steht ein Proportionalitätsfaktor, der im Wesentlichen vom Material abhängig ist. Denn darin ist bezeichnet, wie viele freie Ladungsträger wir pro Volumen haben (NE), die Beweglichkeit dieser freien Ladungsträger im Material (µe) und die Naturkonstante, die Elementarladung e.
+}
+
+\speech{text}{1}{ % ToDo: only 9
+	Genau das können wir jetzt zusammenfassen, also NE, µe und e, und nennen diese spezifische Leitfähigkeit Kappa.
+}
+
+\speech{text}{1}{ % ToDo: only 10
+	Es ergibt sich also für Kappa: Kappa ist gleich NE mal µe mal e.
+}
+
+\speech{text}{1}{ % ToDo: only 11
+	Dabei ist noch mal klarzustellen, dass NE und µe vom Material abhängig sind und e eine Naturkonstante ist. Wenn wir das jetzt zusammenfassen, dann können wir für J schreiben: J ist gleich Kappa mal E, beziehungsweise E ist gleich J durch Kappa. Wir haben also einen formelmäßigen Zusammenhang zwischen Stromdichte J und elektrischer Feldstärke E. Und genau dieser Zusammenhang wird Ohmsches Gesetz genannt. Das Ohmsche Gesetz kennen Sie aber eigentlich immer in Skalaren Größen. Hier steht es jetzt in Feldgrößen in der viel allgemeineren Form. Generell neigen wir dazu, sehr gerne auf die Skalarengrößen für Strom und Spannung zurückzugreifen und wollen eher ungerne in diesen vektoriellen Größen rechnen. Das ist total verständlich, sorgt aber in ganz wenigen Anwendungsfällen tatsächlich für Probleme, weil wir die Feldeigenschaften für gewisse Erläuterungen von Phänomenen tatsächlich benötigen. Insofern hier die etwas komplexere Herleitung für das Ohmsche Gesetz in Feldgrößen. Wir werden das jetzt im Folgenden aber unterbrechen auf die Ihnen vielleicht schon bekannten Formeln für das Ohmsche Gesetz mit Strom und Spannung.
+}
+
 \end{frame}
 
 \begin{frame}[t]
@@ -222,6 +339,26 @@ Durch Einsetzen der umgestellten Formel 13 nach $\vec{E}$, folgt:
 	\end{equation}
 }
 			 \vspace{0.1cm}
+
+\speech{text}{1}{ % ToDo: only 7
+	Um jetzt, wie gesagt, auf die bekannte Form des Ohm’schen Gesetzes in Strom und Spannung, also skalaren Größen zu kommen, schauen wir uns als erstes nochmal die Definition der Spannung an. Die Spannung U12 war definiert als das Linienintegral von P1 nach P2 E·ds. Das können wir weiter umformulieren.
+}
+
+\speech{text}{1}{ % ToDo: only 8
+	Da nämlich das elektrische Feld parallel zur Leitungslänge verläuft, in unserer Anordnung, kann das Skalarprodukt vereinfacht werden.
+}
+
+\speech{text}{1}{ % ToDo: only 9
+	Zu U12 ist gleich ∫ von x = 0 bis x = L E dx. Also wir haben die Wegstrecke aufgelöst, haben gesagt, nur auf der x-Achse und wir wandern da entlang. Das ist die erste Vereinfachung.
+}
+
+\speech{text}{1}{ % ToDo: only 10
+	Und das können wir jetzt in die zuvor hergeleitete Folie J = Kappa · E einsetzen, beziehungsweise in E = J / Kappa.
+}
+
+\speech{text}{1}{ % ToDo: only 11
+Und es ergibt sich: U12 = ∫ von 0 bis L J / Kappa dx.
+	}
 
 \end{frame}
 
@@ -249,6 +386,30 @@ Durch Einsetzen der umgestellten Formel 13 nach $\vec{E}$, folgt:
 	}
 	\vspace{0.1cm}
 
+\speech{text}{1}{ % ToDo: only 1 Formeln und Sonderzeichen anpassen!
+	Da wir davon ausgegangen sind, ein homogenes Material zu haben, ist Kappa konstant.
+}
+
+\speech{text}{1}{ % ToDo: only 2
+	Sodass sich das Integral vereinfachen lässt zu U12 = (1 / Kappa) · ∫ von 0 bis L J dx.
+}
+
+\speech{text}{1}{ % ToDo: only 3
+	Die folgende Formel für die Stromdichte J ist in Modul 1 hergeleitet worden.
+}
+
+\speech{text}{1}{ % ToDo: only 4
+	J, hatten wir dort gesagt, ist gleich I / A, also Strom geteilt durch Querschnittsfläche.
+}
+
+\speech{text}{1}{ % ToDo: only 5
+Das können wir jetzt in die oben stehende Formel einsetzen.
+}
+
+\speech{text}{1}{ % ToDo: only 6 
+Sodass wir erhalten: U12 = (1 / Kappa) · ∫ von 0 bis L (I / A) dx.
+}
+
 \end{frame}
 
 \b{
@@ -272,6 +433,33 @@ Durch Einsetzen der umgestellten Formel 13 nach $\vec{E}$, folgt:
 \begin{equation}
 	U=R \cdot I
 \end{equation}}
+
+\speech{text}{1}{ % ToDo: only 1 Formeln und Sonderzeichen anpassen!
+Wir nehmen jetzt einfach mal an, dass die Querschnittsfläche A ebenfalls konstant ist, und wir können somit das Integral auflösen.
+}
+
+\speech{text}{1}{ % ToDo: only 2
+Zu: U12 = (1 / Kappa) · (I / A) · L.
+}
+
+\speech{text}{1}{ % ToDo: only 3
+Wir stellen also weiter um:
+}
+
+\speech{text}{1}{ % ToDo: only 4
+	Sodass wir erhalten: U12 = (L / A · Kappa) · I.
+	Wir erhalten also einen linearen Zusammenhang zwischen der Spannung und dem Strom, und der Proportionalitätsfaktor ist hier gegeben durch L geteilt durch A mal Kappa. Das heißt, die Spannung wird umso größer, je länger das Element ist oder je kleiner seine Querschnittsfläche ist oder je geringer die Leitfähigkeit ist.
+}
+
+\speech{text}{1}{ % ToDo: only 5
+Wir fassen diesen Proportionalitätsfaktor zusammen zum elektrischen Widerstand R.
+}
+% ToDo: Hillgärtner: Das würde ich tatsächlich unformulieren, nicht "da der elektrische Widerstand ist". Das macht keinen Sinn, sondern so wie ich es gerade gesprochen habe, würde ich es auch auf die Folie mehr oder weniger schreiben. Und wir müssen eben auch den elektrischen Widerstand in seinem Formelzeichen R einführen. Hinweis Ende.
+
+\speech{text}{1}{ % ToDo: only 6 
+Mit diesem zusammengefassten Proportionalitätsfaktor R für den ohmschen Widerstand erhalten wir: U = R · I – das Ohm’sche Gesetz in skalaren Größen.
+}
+
 
 \end{frame}
 }

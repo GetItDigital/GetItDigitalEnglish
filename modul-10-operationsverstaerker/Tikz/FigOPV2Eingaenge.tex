@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+    %OPV
+\ctikzset{tripoles/en amp/input height=0.45}
+\draw (0,0)node[en amp](E){}
+    (E.out)
+    (E.-)
+    (E.+);
+    \draw (E.out) to[short, -*] (2,0) to[short, -o] (2.5,0);
+    \draw (E.-) to[short, -*] (-2,0.5) to[short, -o] (-3,0.5);
+    \draw (-2,0.5) to[short, -*] (-2,2) to[R, name=R, l=$R_\mathrm{1}$] (2,2) -- (2,0);
+    \draw (-5,2) to[R,l=$R_\mathrm{2}$, o-] (-2,2);
+
+    
+    \draw (-5,-2) to[short, o-] (-5,-2.1)node[ground]{};
+    \draw (-3,-2) to[short, o-] (-3,-2.1)node[ground]{};
+    \draw (E.+) -- (-2,-0.5)--(-2,-1.5) to[battery2, name=Ub] (-2,-2.1)node[ground]{};
+    \draw (2.5,-2) to[short, o-] (2.5,-2.1)node[ground]{};
+    
+    \draw (2.5,0) to[open, v, name=ue] (2.5,-2);
+    \draw (-3,0.5)to[open, v, name=ux] (-3,-2);
+    \draw (-5,2) to[open, v, name=ua] (-5,-2);
+
+    \varrmore{ue}{$U_\mathrm{A}$};
+    \varrmore{ux}{$U_\mathrm{X}$};
+    \varrmore{ua}{$U_\mathrm{E}$};
+    \varrmore{Ub}{$U_\mathrm{bat}$};
+\end{tikzpicture}

@@ -1,5 +1,3 @@
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% elektrische Ladungen üben Kräfte aufeinander aus (bspl. Luftballon & Haare)
 %%% Division dieser Kraft F(vektor) mit ihrer Ursache Q ergibt E(vektor)
@@ -182,7 +180,7 @@
 % Einführung D-Feld
 % Linearität 
 % 
-% 
+% änderung
 
 
 
@@ -194,7 +192,7 @@
 	Energie und Arbeit zu treffen, da diese beiden Größen eng miteinander verbunden sind und sich 
 	sogar die selbe Einheit teilen, jedoch unterschiedliche Dinge beschreiben.}
 \begin{frame}
-	\ftx{Lernziele: Unterschied von Energie, Arbeit, Leistung}
+	\ftx{Lernziele: Unterschied von Energie, Arbeit, Leistung} % ToDo: In manchen Lernzielen verrutscht der letzte Buchstabe des Titels in den Text der Infobox
 	\begin{Lernziele}{Energie und Leistung} % Infokasten mit Lernzielen
 	Die Studierenden
 	\begin{itemize}
@@ -206,6 +204,15 @@
 
 	\end{itemize}
    	\end {Lernziele} % Infokasten Ende
+
+\speech{Lernziele: Unterschied von Energie, Arbeit, Leistung}{1}{
+Die Lernziele dieses Moduls oder besser gesagt. der folgenden Folien sind die folgenden.
+Sie können Energie, elektrische Arbeit, Leistung und den Wirkungsgrad benennen.
+Sie verstehen, wie Energie in elektrischen Systemen umgewandelt und genutzt wird.
+Sie können die elektrische Arbeit, Leistung und den Wirkungsgrad berechnen.
+Und sie können die Effizienz von Energieumwandlungssystemen analysieren.
+}
+
 \end{frame}
 
 \s{
@@ -227,18 +234,75 @@
 	Die Energie innerhalb eines geschlossenen Systems muss nämlich gleich bleiben. In der Physik wird diese grundlegende Eigenschaft als Energieerhaltung bezeichnet.
 	}
 
+	
 	\begin{frame}
-		
-		\ftx{Pumpspeicherkraftwerk}	
-		\begin{figure}[H]
-			\centering
-			\b{\includesvg[width=0.7\textwidth]{Wasserkraftwerk_V5}} %%% Text ist zu groß
+	\ftx{Pumpspeicherkraftwerk}	
+	\begin{figure}[H]
+		\centering
+		\b{\includesvg[width=0.7\textwidth]{Wasserkraftwerk_V5}} %%% Text ist zu groß
 			\s{\includesvg[width=0.8\textwidth]{Wasserkraftwerk_V5}
 			\caption{\textbf{Pumpspeicherkraftwerk.} Der Aufbau bestehend aus einem Oberbecken,
-			 einem Unterbecken, sowie Turbinen und einer elektrischen Maschine. Es dient der Speicherung von Energie durch das Hochpumpen von Wasser und der Rückgewinnung
-			 durch die Abgabe von Wasserkraft zur Stromerzeugung.}}
+			einem Unterbecken, sowie Turbinen und einer elektrischen Maschine. Es dient der Speicherung von Energie durch das Hochpumpen von Wasser und der Rückgewinnung
+			durch die Abgabe von Wasserkraft zur Stromerzeugung.}}
 			\label{fig:Pumpspeicherkraftwerk}
-		\end{figure}	
+		\end{figure}
+		
+		\speech{titel hier einfügen}{1}{ % hier titel einfügen
+			Um uns klarzumachen, was Arbeit, Energie und Leistung eigentlich bedeuten, habe ich ein Beispiel mitgebracht.
+			Ein Pumpspeicherkraftwerk.
+			Diese Kraftwerke werden heutzutage ziemlich häufig eingesetzt.
+			Sie dienen letztlich dazu, Energie in Form von potenzieller Energie zu speichern, indem Wasser vom Unterbecken ins Oberbecken gepumpt wird.
+			Und das passiert zu Zeiten, wo mehr elektrische Energie im Netz verfügbar ist, als gerade gebraucht wird.
+			Das wäre sonst ein instabiler Zustand. Denn ein elektrisches Energienetz muss immer ausbalanciert sein.
+			Es muss genauso viel Energie bereitgestellt werden, wie entnommen wird.
+			Wenn das nicht der Fall ist, dann entstehen Probleme:
+			Die Frequenz schwankt.
+			Es kommt zu Über- oder Unterspannung.
+			je nachdem, in welche Richtung das System kippt.
+			Gerade jetzt, wo wir uns von großen thermischen Kraftwerken entfernen, die wir wenigstens in bestimmten Bereichen
+			gut regeln konnten, hin zu regenerativen Energien, ist das eine echte Herausforderung.
+			In Deutschland, bedingt durch die geografische Lage, setzen wir dabei hauptsächlich auf Wind- und Solarenergie.
+			Diese Formen sind aber sehr volatil.
+			Das heißt:
+			An sonnigen, leicht windigen Tagen im Sommer haben wir einen riesigen Energieüberschuss.
+			Nachts hingegen, wenn die Sonne weg ist und auch der Wind meistens nachlässt, fehlt uns Energie.
+			Eine mögliche Lösung ist: der Einsatz von Gaskraftwerken.
+			Diese Gasturbinen sind zwar schnell regelbar, aber sie sind nicht CO2neutral, wenn Erdgas verbrannt wird.
+			Damit kommen wir unserem Ziel, CO2freie Stromerzeugung, nur bedingt näher.
+			Eine echte Alternative ist da das Pumpspeicherkraftwerk.
+			Wie gesagt:
+			Darin wird Energie quasi gespeichert.
+			Wenn tagsüber zu viel Strom im Netz ist, zum Beispiel durch Sonne und Wind, wird Wasser aus dem Unterbecken ins Oberbecken gepumpt.
+			Die Höhe zwischen den beiden Becken liegt meist zwischen 30 und 100 Metern, je nach geologischer Lage.
+			Das Pumpen kostet Energie, die wird aus dem Netz entnommen.Denn das Wasser muss ja irgendwie nach oben.
+			Abends, wenn die Photovoltaik abnimmt, kann das Wasser dann durch eine Turbine zurück ins Unterbecken fließen.
+			Oder besser gesagt: Es fällt einfach runter.
+			Dabei nutzt es die potenzielle Energie aus der Höhe, nimmt Fahrt auf und treibt die Turbine an.
+			Die Turbine ist mit einer elektrischen Maschine gekoppelt, auf derselben Welle.
+			Und diese Maschine wandelt die potenzielle Energie des Wassers in elektrische Energie um.
+			Dabei wird Arbeit verrichtet.
+			Denn immer wenn Sie Energie wandeln, verrichten Sie Arbeit.
+			Das ist der Unterschied:
+			Energie kann gespeichert werden, Arbeit wird verrichtet, wenn Energie gewandelt wird.
+			Beispiel:
+			Wenn wir Wasser nach oben pumpen, verrichten wir Arbeit. Diese Energie steckt danach im Oberbecken.
+			Lassen wir das Wasser runter, wird Energie entnommen und Arbeit in der Turbine verrichtet.
+			Die Energie, die dabei entsteht, können wir dann wieder elektrisch nutzen.
+			Denn: Energie kann nicht verloren gehen. Sie kann weder erzeugt noch vernichtet werden.
+			Sie wird nur gewandelt. Das ist der Grundsatz der Energieerhaltung.
+			Wenn wir also potenzielle Energie aus dem Wasser entnehmen, wandeln wir sie in elektrische Energie um.
+			Allerdings entstehen dabei Verluste. 
+			Aber: Diese Energie ist nicht verschwunden, sie wurde nur in Wärme, Schall oder andere Energieformen umgewandelt.
+			Für uns Elektrotechniker sind das natürlich Verluste, weil wir weniger nutzbare Energie erhalten.
+			Zum Beispiel:
+			Im Oberbecken waren 5 Gigawattstunden gespeichert, elektrisch können wir aber nur 4,5 Gigawattstunden entnehmen.
+			Die fehlende halbe Gigawattstunde ist nicht weg, sie wurde in Wärme oder Schall gewandelt.
+			Fazit:
+			Energie kann gespeichert werden.
+			Arbeit wird immer dann verrichtet, wenn Energie gewandelt wird.
+			Und um Arbeit zu verrichten, brauchen wir Energie, die wir aber nicht erzeugen, sondern wandeln.
+		}
+
 	\end{frame}
 
 \s{
@@ -273,5 +337,15 @@
 		Energie kann gespeichert werden, Arbeit wird verrichtet.
 		
 	\end{Merksatz} 
+
+\speech{titel2}{1}{
+	Auch hier nochmal der ganz wichtige Merksatz:
+	Energie kann gespeichert werden, Arbeit wird verrichtet.
+	Was das bedeutet, haben wir gerade am Beispiel des Pumpspeicherkraftwerks gesehen.
+	Wenn Wasser hochgepumpt wird, dann ist die Energie in Form von potenzieller Energie gespeichert.
+	Wenn es dann wieder herunterläuft, gibt es diese Energie an das System ab.
+	In der Turbine wird Arbeit verrichtet, und dabei wird Energie gewandelt.
+}
+
 \end{frame}
 

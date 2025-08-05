@@ -1,0 +1,25 @@
+\begin{tikzpicture}[block/.style={draw, rectangle, minimum height=3em, minimum width=6em}]
+    % Nodes
+    \node [block] (ad) {$A_D(j\omega)$};
+    \node [block, below=1cm of ad] (k) {$K(j\omega)$};
+    \node [circle, draw, left=1cm of ad] (sum) {};
+    \node [left=1cm of sum] (input) {};
+    % Neuer Punkt links vom Eingang
+    \node [circle, draw, inner sep=0pt, minimum size=0.15cm, left=1cm of sum] (inputLeft) {};
+    \node [right=1cm of ad] (output) {};
+    \node [circle, draw, fill=black, inner sep=0pt, minimum size=0.15cm, right=1cm of ad] (o) {};
+    \node [circle, draw, inner sep=0pt, minimum size=0.15cm, right=1cm of o] (o2) {};
+
+    % Arrows
+    \draw [->] (input) -- (sum) node[midway, above] {};
+    \draw [->] (sum) -- (ad);
+    \draw [-] (ad) -- (output);
+    \draw [-] (o) |- (k);
+    \draw [->] (k) -| (sum) node[midway, left] {$K \cdot U_A$};
+    \draw [-] (o) -- (o2) node[midway, above] {};
+
+    % Labels for nodes
+    \node[left=0.1cm of input] {$U_E$};
+    \node[right=0.1cm of o2] {$U_A$};
+    
+\end{tikzpicture}

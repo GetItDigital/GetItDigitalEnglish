@@ -1,0 +1,15 @@
+\begin{circuitikz}[scale=0.7, transform shape]
+    \ctikzset{
+          resistors/scale=0.8,              
+          tripoles/en amp/height=1.4, % Höhe des OPV            
+          tripoles/en amp/width=1.4,   % Breite des OPV
+         diodes/scale=0.8,
+         tripoles/en amp/input height=0.45
+     }
+     \draw
+     (0,0) node[en amp] (opamp) {}
+     (opamp.-) to[D, l_=$D_1$, invert, *-] ++(-1.2,0) to[short, o-] ++(0,0) node[left] {$U_E$}
+     (opamp.+) -- ++(0,0) node[ground] {}
+     (opamp.-) |- ++(0,1.5) to[R, l^=$R_1$] ++(2,0) -| (opamp.out)
+     (opamp.out) to[short, *-o] ++(0.2,0) node[right] {$U_{A}$};
+ \end{circuitikz}

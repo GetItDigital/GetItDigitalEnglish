@@ -1,0 +1,51 @@
+\documentclass{standalone}
+\usepackage{circuitikz}
+
+\begin{document}
+
+\begin{circuitikz}[font=\LARGE, european]
+
+\draw (-1.25,15.75) to[Tnpn] (-1.25,18.75); 
+\draw (-2.1,17.25) to[short] (-2.25,17.25);
+\draw (-2.25,17.25) to[short] (-2.5,17.25);
+\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (-1.25,20) -- (-1.25,18.75);
+\draw [->, >=Stealth] (-3.25,17.25) -- (-2.5,17.25);
+\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (-1.25,14.75) -- (-1.25,15.75);
+\draw (-1.25,20) to[short] (-1.25,21);
+\draw (-1.25,21) to[short] (2.5,21);
+\draw (2.5,21) to[short] (2.5,17.25);
+\draw (2.5,17.25) to[european voltage source,l={ \LARGE $U_\mathrm{CE}>0$}] (2.5,14.75);
+\draw (-5,17.25) to[european voltage source,l={ \LARGE $U_\mathrm{BE}>0$}] (-5,14.75);
+\draw (2.5,14.75) to[short] (-5,14.75);
+\draw (-5,17.25) to[short] (-3.25,17.25);
+\node [font=\LARGE] at (-3,17.75) {$I_\mathrm{B}>0$};
+\node [font=\LARGE] at (-0.25,15.75) {$I_\mathrm{E}<0$};
+\node [font=\LARGE] at (-0.25,19.5) {$I_\mathrm{C}>0$};
+\draw [ color={rgb,255:red,0; green,0; blue,255}, ->, >=Stealth] (-4.5,16.5) -- (-4.5,15.5);
+\draw [ color={rgb,255:red,0; green,0; blue,255}, ->, >=Stealth] (3,16.5) -- (3,15.5);
+\draw (10.25,17.25) to[short] (10,17.25);
+\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (11.25,20) -- (11.25,18.75);
+\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (9.25,17.25) -- (10,17.25);
+\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (11.25,14.75) -- (11.25,15.75);
+\draw (11.25,20) to[short] (11.25,21);
+\draw (11.25,21) to[short] (15,21);
+\draw (15,21) to[short] (15,17.25);
+\draw (15,17.25) to[european voltage source,l={ \LARGE $U_\mathrm{CE}<0$}] (15,14.75);
+\draw (7.5,17.25) to[european voltage source,l={ \LARGE $U_\mathrm{BE}<0$}] (7.5,14.75);
+\draw (15,14.75) to[short] (7.5,14.75);
+\draw (7.5,17.25) to[short] (9.25,17.25);
+\node [font=\LARGE] at (9.5,17.75) {$I_\mathrm{B}<0$};
+\node [font=\LARGE] at (12.25,15.75) {$I_\mathrm{C}>0$};
+\node [font=\LARGE] at (12.25,19.5) {$I_\mathrm{E}<0$};
+\draw [ color={rgb,255:red,0; green,0; blue,255}, ->, >=Stealth] (8,16.5) -- (8,15.5);
+\draw [ color={rgb,255:red,0; green,0; blue,255}, ->, >=Stealth] (15.5,16.5) -- (15.5,15.5);
+\draw (11.25,15.75) to[Tpnp] (11.25,18.75); 
+\draw (10.4,17.25) to[short] (10.25,17.25);
+
+
+    
+
+
+\end{circuitikz}
+
+\end{document}

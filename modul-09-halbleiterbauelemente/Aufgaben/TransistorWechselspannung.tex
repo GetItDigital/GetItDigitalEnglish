@@ -1,0 +1,83 @@
+\subsection{Verhalten eines Transistors bei Wechselspannung\label{Aufg19}}
+% Alt: Aufgabe 19
+\Aufgabe{
+    Was passiert wenn an einen Transistor eine reine Wechselspannung 
+    angelegt wird?
+    \begin {figure} [H]
+       \centering
+       \input{Tikz/FigTransistorWechselspannung.tex}
+       \label{fig:FigTransistorWechselspannung}
+    \end {figure}
+%     \speech{
+% **Aufgabe 19**
+
+%  **Aufgabenstellung:**
+% Die Aufgabe untersucht das Verhalten eines Transistors, wenn eine **reine Wechselspannung** an seine Basis angelegt wird.
+
+% **Fragestellung:**  
+% Was passiert, wenn an einen Transistor eine reine Wechselspannung angelegt wird?
+
+%  **Beschreibung der Abbildung:**
+
+% Die gezeigte Schaltung stellt einen **NPN-Transistor in Emitterschaltung** dar.
+
+% - **Eingangssignal $u_E$**:  
+%   - Es handelt sich um eine **Wechselspannungsquelle**, die mit einem **100 k\(\Omega\) Widerstand** in Reihe zur **Basis des Transistors** geschaltet ist.
+%   - Der Basisstrom $I_B$ ist durch einen roten Pfeil gekennzeichnet und zeigt in Richtung der Basis.
+
+% - **Kollektorkreis:**
+%   - Der **Kollektor ist über einen 500 \(\Omega\) Widerstand** mit einer **15V Gleichspannungsquelle** verbunden.
+%   - Ein blauer Pfeil zeigt die **Spannung am Punkt A**, die den Kollektor-Emitter-Spannungsabfall symbolisiert.
+%   - Der **Emitter ist direkt mit Masse verbunden**.
+
+%  **Zusätzliche Hinweise für eine blinde Person:**
+% - Die **Basis erhält eine Wechselspannung**, sodass sich der Basisstrom \(I_B\) periodisch ändert.
+% - Durch die Stromverstärkung des Transistors beeinflusst dies **den Kollektorstrom und damit die Ausgangsspannung an Punkt A**.
+% - Die **Wechselspannung an der Basis führt zu einer verstärkten Wechselstromkomponente am Kollektor**.
+% - Diese Schaltung könnte zur **Wechselspannungsverstärkung** genutzt werden, wobei die Kollektorspannung eine invertierte Version der Eingangsspannung darstellt.
+% }
+
+}
+
+
+
+\Loesung{
+Wenn an einen Transistor eine reine Wechselspannung angelegt wird, tritt kein kontinuierlicher Verstärkungsbetrieb auf.  
+
+Das führt zu folgenden Effekten:
+\begin{itemize}
+    \item Verzerrungen im Ausgangssignal, da nur die positiven Halbwellen verstärkt werden.
+    \item Die negative Halbwelle wird abgeschnitten, was einer Gleichrichtung des Signals ähnelt.
+    \item Es erfolgt keine lineare Verstärkung, da der Transistor zwischen Sperr- und Sättigungszustand wechselt.
+\end{itemize}
+Siehe: Abschnitt \ref{merk:MerksatzWechselspannung}
+% \speech{
+% **Lösung zu Aufgabe 19**  
+
+% Wenn an einen Transistor eine reine Wechselspannung angelegt wird, tritt kein kontinuierlicher Verstärkungsbetrieb auf.  
+% Das bedeutet, dass die Signalverstärkung nicht gleichmäßig erfolgt und es zu unerwünschten Effekten kommt.  
+
+% **Folgende Effekte treten auf:**  
+
+% - **Verzerrungen im Ausgangssignal:**  
+%   Da nur die positiven Halbwellen verstärkt werden, während die negativen nicht beeinflusst oder unterdrückt werden,  
+%   entsteht eine ungleichmäßige Signalform.  
+
+% - **Die negative Halbwelle wird abgeschnitten:**  
+%   Dies ähnelt einer Gleichrichtung des Signals, da der Transistor während der negativen Halbwelle nicht leitet  
+%   und kein Verstärkungseffekt auftritt.  
+
+% - **Keine lineare Verstärkung:**  
+%   Da der Transistor zwischen Sperr- und Sättigungszustand wechselt, erfolgt keine gleichmäßige Verstärkung über  
+%   den gesamten Signalverlauf.  
+%   Der Verstärkungsprozess ist also nicht linear, was bedeutet, dass das Ausgangssignal nicht proportional  
+%   zum Eingangssignal verstärkt wird.  
+
+% Daraus lässt sich schließen, dass für einen kontinuierlichen Verstärkungsbetrieb eine Gleichspannungskomponente  
+% als Arbeitspunkt erforderlich ist, sodass der Transistor nicht in den Sperrbereich wechselt.
+% }
+
+}
+
+
+

@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+    
+\draw (0,0) to[short,-*] (2,0) to [D,l=$D_1$, -*] (4,0) -- (7,0) to[R,v>,l=$R_\mathrm{Last}$,name=Ulast] (7,-4) -- (4,-4);
+
+
+\draw (0,0) to [vsourcesin,name=U0] (0,-2) to[short, -*](4,-2) to[C,l=$C_1$] (4,0);
+\draw (4,-4) to[C,l=$C_2$,*-](4,-2);
+\draw (4,-4) to[D,l=$D_2$] (2,-4) -- (2,0);
+
+\varrmore {U0}{$U_0$};
+\varrmore{Ulast}{$U_\mathrm{Last}$};
+
+\end{tikzpicture}

@@ -1,0 +1,42 @@
+\documentclass{standalone}
+\usepackage{circuitikz}
+
+\begin{document}
+
+\begin{circuitikz}[font=\LARGE, european]
+
+    \draw (25,13.5) to[european voltage source] (25,7.25);
+    \draw [ color={rgb,255:red,173; green,41; blue,23}, ->, >=Stealth] (25,13.5) -- (27.5,13.5);
+    \draw (27.5,13.5) to[R] (30,13.5);
+    \draw (31.25,13.5) to[R] (31.25,7.25);
+    \draw (30,13.5) to[short] (36,13.5);
+    \draw (25,7.25) to[short] (36.25,7.25);
+    \draw (35,13.5) to[european current source] (35,16);
+    \draw [ color={rgb,255:red,173; green,41; blue,23}, ->, >=Stealth] (35,17.25) -- (35,16);
+    \draw (35,17.25) to[short] (37.5,17.25);
+    \draw (37.5,17.25) to (37.5,16.5) node[ground]{};
+    \draw (35,7.25) to (35,6.5) node[ground]{};
+    \draw [ color={rgb,255:red,173; green,41; blue,23}, ->, >=Stealth] (38.75,13.5) -- (37.5,13.5);
+    \draw (36,13.5) to[short] (37.5,13.5);
+    \draw (38.75,13.5) to[short, -o] (40,13.5) ;
+    \draw (36.25,7.25) to[short, -o] (40,7.25) ;
+    \node at (35,13.5) [circ] {};
+    \node at (35,7.25) [circ] {};
+    \draw [ color={rgb,255:red,57; green,91; blue,140}, ->, >=Stealth] (40,12.25) -- (40,8.5);
+     \draw [ color={rgb,255:red,57; green,91; blue,140}, ->, >=Stealth] (24.25,11.5) -- (24.25,9.5);
+    \node at (31.25,13.5) [circ] {};
+    \node at (31.25,7.25) [circ] {};
+    \node [font=\LARGE] at (23.75,10.5) {$u_\mathrm{e}$};
+    \node [font=\LARGE] at (25.5,14.25) {$B$};
+    \node [font=\LARGE] at (27,14.25) {$i_\mathrm{e}$};
+    \node [font=\LARGE] at (28.5,12.75) {$R_\mathrm{BE}$};
+    \node [font=\LARGE] at (32,10.25) {$R_\mathrm{E}$};
+    \node [font=\LARGE] at (32.75,6.5) {$E$};
+    \node [font=\LARGE] at (40.5,10.5) {$u_\mathrm{a}$};
+    \node [font=\LARGE] at (38,14.25) {$i_\mathrm{a}$};
+    \node [font=\LARGE] at (36,15.75) {$\beta \cdot i_\mathrm{b}$};
+    \node [font=\LARGE] at (34,16.75) {$C$};
+
+\end{circuitikz}
+
+\end{document}

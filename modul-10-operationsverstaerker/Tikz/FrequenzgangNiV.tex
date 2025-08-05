@@ -1,0 +1,44 @@
+\begin{tikzpicture}[scale=1, transform shape]
+    \begin{axis}[
+    width=4.5cm, % Breite des Graphen
+    height=3.5cm, % Höhe des Graphen
+    xmin=0, xmax=10,
+    ymin=0, ymax=120,
+    axis lines=left,
+    axis on top=true,
+    domain=0:10,
+    xtick=\empty,
+    ytick=\empty,
+    ylabel style={rotate=270, anchor=east, yshift=1cm}, % Position der Beschriftung oben links, horizontal
+     ylabel={\it V}, % Hier die gewünschte Beschriftung einfügen
+    xlabel={f[Hz]},
+    clip mode=individual % Verhindert das Abschneiden von Elementen
+    ]
+    \path[draw=none] (axis cs:-4, 0) rectangle (axis cs:16.6,120);
+    
+    
+    \coordinate (xaxis) at (axis description cs:15.5,0); % Verwendet die relative Positionierung für x-Achse
+    
+    \addplot+[mark=none, thick, blue] coordinates {(0,80) (10,80)};
+    % Adding the left-side label
+    \node[anchor=east] at (axis cs:0,80) {$1 + \frac{R_2}{R_1}$};
+    \end{axis}
+    \begin{axis}[
+    width=4.5cm, % Breite des Graphen
+    height=3.5cm, % Höhe des Graphen
+    xmin=0, xmax=10,
+    ymin=-180, ymax=180,
+    axis y line*=right,
+    axis x line=none,
+    ytick=\empty,
+    ylabel={$\varphi$},
+    ylabel style={rotate=270, anchor=west, yshift=0.8cm},
+    clip mode=individual, % Verhindert das Abschneiden von Elementen
+    after end axis/.code={
+        \draw[->] (axis cs:10,180) -- (axis cs:10,190);
+    }
+    ]
+    \addplot+[mark=none, thick, red] coordinates {(0,0) (10,0)};
+    \node[anchor=west] at (axis cs:10,0) {$0^\circ$};
+    \end{axis}
+    \end{tikzpicture}

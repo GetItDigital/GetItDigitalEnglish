@@ -1,0 +1,71 @@
+\immediate\write18{makeindex -g -s ../Templates/Arbeit.ist TeXAux/Skript.idx}
+\immediate\write18{cat TeXAux/Skript.nlo | sort | uniq -w 55 | makeindex -i -s nomencl.ist -o TeXAux/Skript.nls}
+\immediate\write18{cd TeXAux;gnuplot *.gnuplot;cd ..;}
+
+\documentclass[twoside, a4paper]{article}
+\usepackage{beamerarticle}
+\pdfminorversion=6
+
+\input{Modulsettings.tex}					% Modulspezifische Settings einbinden
+\input{../Templates/Settings.tex}	 		% Allgemeine Settings einbinden
+\input{../Templates/SkriptSettings.tex}	 	% Allgemeine Foliensettings einbinden
+\usepackage[disabled]{../Video/beamervideo}  % Videoerstellung deaktiviert
+
+%PDF Eigenschaften
+\hypersetup{
+	pdftitle={GET it digital},
+	pdfsubject={Modul \GetItDigitalModulnumber: \GetItDigitalModulname},
+	pdfauthor={\GetItDigitalAutorenListe}
+}
+
+\title{Modul \GetItDigitalModulnumber: \GetItDigitalModulname}
+\author{}
+\institute{GET it digital}
+\date{\today}
+
+\begin{document}
+
+\input{../Templates/SkriptTitle.tex}	% Titelseite
+
+{\setlength{\parskip}{0.05ex}    %Verringerter Zeilenabstand für Verzeichnisse
+	\tableofcontents
+	\newpage
+}
+
+\printnomenclature
+\cleardoublepage
+
+\pagestyle{fancyplain}
+\pagenumbering{arabic}
+\setheadkapitel
+
+\cleardoublepage
+
+\input{Inhalt}
+
+
+\cleardoublepage
+\appendix
+\setheadanhang
+
+\section{Übungsaufgaben}
+\renewcommand{\Aufgabe}[1]{#1}
+\renewcommand{\Loesung}[1]{}
+\input{Aufgaben}
+
+\section{Lösungen zu den Übungsaufgaben}
+\renewcommand{\Aufgabe}[1]{}
+\renewcommand{\Loesung}[1]{#1}
+\input{Aufgaben}
+
+% Literaturverzeichnis
+\clearpage
+\fancyhead[OL]{\textsc{Literaturverzeichnis}}
+\printbibliography
+
+% Index erstellen
+\clearpage
+\fancyhead[OL]{\textsc{Index}}
+\printindex
+
+\end{document}

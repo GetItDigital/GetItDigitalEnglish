@@ -1,0 +1,43 @@
+\subsection{Grundverhalten eines NPN-Bipolartransistors\label{Aufg35}}
+% Alt: Praktikumsaufgabe 8
+\Aufgabe{
+    \begin{figure}[H]
+    \centering
+    \input{Tikz/FigPraktikumNPN}
+    \label{fig:FigPraktikumNPN}
+    \end{figure}
+    
+    Analysieren Sie das Grundverhalten eines Bipolartransistors in einer Basisschaltung.
+    
+    Gegeben:
+    \begin{itemize}
+        \item NPN-Transistor mit Stromverstärkungsfaktor $\beta = 100$
+        \item Basisstrom $I_\mathrm{B} = 20\,\mathrm{\mu A}$
+    \end{itemize}
+    
+    \begin{itemize}
+        \item[a)] Berechnen Sie den Kollektorstrom $I_\mathrm{C}$.
+        \item[b)] Bestimmen Sie die Kollektor-Emitter-Spannung $U_\mathrm{CE}$, wenn der Kollektorwiderstand $R_\mathrm{C} = 1\,\mathrm{k\Omega}$ und die Versorgungsspannung $U_\mathrm{CC} = 12\,\mathrm{V}$ beträgt.
+    \end{itemize}
+}
+
+
+\Loesung{
+    \begin{itemize}
+        \item[a)] Berechnung des Kollektorstroms $I_\mathrm{C}$  
+        Der Kollektorstrom eines Bipolartransistors ergibt sich aus der Beziehung:
+        $$ I_\mathrm{C} = \beta \cdot I_\mathrm{B} $$
+        mit den gegebenen Werten:
+        $$ I_\mathrm{C} = 100 \cdot 20\,\mathrm{\mu A} $$
+        $$ I_\mathrm{C} = 2\,\mathrm{mA} $$
+    
+        \item[b)] Bestimmung der Kollektor-Emitter-Spannung $U_\mathrm{CE}$  
+        Die Kollektor-Emitter-Spannung ergibt sich aus der Gleichung:
+        $$ U_\mathrm{CE} = U_\mathrm{CC} - I_\mathrm{C} \cdot R_\mathrm{C} $$
+        Einsetzen der Werte:
+        $$ U_\mathrm{CE} = 12\,\mathrm{V} - (2\,\mathrm{mA} \cdot 1\,\mathrm{k\Omega}) $$
+        $$ U_\mathrm{CE} = 12\,\mathrm{V} - 2\,\mathrm{V} $$
+        $$ U_\mathrm{CE} = 10\,\mathrm{V} $$
+    \end{itemize}
+    Siehe: Abschnitt \ref{fig:UebersichtBipolartransistoren}
+}

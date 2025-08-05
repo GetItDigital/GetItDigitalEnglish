@@ -1,0 +1,20 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \\begin\{circuitikz\}\
+    \\draw (3.5,1.5) to[D*, l=D2] (5,0);\
+    \\draw (2,0) to[D*, -*, l=D3] (3.5,-1.5); \
+    \\draw[red] (3.5,-1.5) to[D, -*, l=D4, fill=red] (5,0);\
+    \\draw[red] (0,1.5) to[sV, l=$U_\{E\}$] (0,-1.5) -- ++(3.5,0) node[circ, draw=red, fill=red] \{\};\
+    \\draw[red] (0,1.5) -- ++(3.5,0) node[circ, draw=red, fill=red] \{\};\
+    \\draw[red] (2,0) -- ++(0,-2) -- ++(6,0) to[R, l=$R$] ++(0,4) -- ++(-3,0) -- ++(0,-2) node[circ, draw=red, fill=red] \{\};\
+    \\node[red] at (1,-1.5) \{\\tikz \\draw[red, -\{Triangle[width=5pt,length=7pt]\}] (0,0) -- (0.01,0);\};\
+    \\node[red] at (1,1.5) \{\\tikz \\draw[red, -\{Triangle[width=5pt,length=7pt]\}] (0,0) -- (-0.01,0);\};\
+    \\node[red] at (8,1.5) \{\\tikz \\draw[red, -\{Triangle[width=5pt,length=7pt]\}] (0,0) -- (0,-0.01);\};\
+        \\draw[red] (2,0) to[D, l=D1, fill=red] (3.5,1.5);\
+    \\draw[red] (2,0) node[circ, draw=red, fill=red] \{\};\
+\\end\{circuitikz\}}

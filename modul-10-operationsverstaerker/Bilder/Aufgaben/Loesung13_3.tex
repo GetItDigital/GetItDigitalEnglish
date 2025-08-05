@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+\draw (0,0)node[en amp, en amp text A](E){}
+    (E.out)
+    (E.-)
+    (E.+);
+    \draw (E.out) -- (2,0) -- (2,2);
+    \draw (E.-) to[short, -*] (-2,0.5) -- (-2,2) to[R, l=$\mathrm{R_F}$] (2,2);
+    \draw (-6,0.5) to[R,l=$\mathrm{R_1}$] (-4,0.5) to[R,l=$\mathrm{R_2}$] (-2,0.5);
+    \draw (E.+) -- (-2,-0.5) -- (-2,-2)node[ground]{};
+ 
+\end{tikzpicture}

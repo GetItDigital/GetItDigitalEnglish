@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="148mm"
+   viewBox="0 0 210 148"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="Ausgangskennlinienfeldn-KanalMOSFET.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.0343421"
+     inkscape:cx="349.01412"
+     inkscape:cy="194.32642"
+     inkscape:window-width="2560"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="0.99999998"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="TriangleStart"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Concave triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path2" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Concave triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#faff93;fill-opacity:0.7286585;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect9"
+       width="145"
+       height="105"
+       x="20"
+       y="19.999998" />
+    <path
+       style="fill:#b0ffd2;fill-opacity:0.72865897;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 20.005047,124.75005 c 0,0 49.994955,0.24994 49.994955,-104.750051 H 20"
+       id="path3-1"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linejoin:round;stroke-miterlimit:0;fill-opacity:1;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#ConcaveTriangle);marker-start:url(#marker2)"
+       d="M 20,19.999999 V 124.99999 h 145"
+       id="path1" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:1.99999595, 1.99999595;stroke-opacity:1;stroke-dashoffset:0"
+       d="m 20,124.99999 c 0,0 50.422762,0 50.000002,-104.999991"
+       id="path3"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+       d="m 20,124.99999 c 0,0 5.000001,-76.824992 50.000002,-86.824991 0,0 27.011761,-6.084189 89.999998,-5"
+       id="path4"
+       sodipodi:nodetypes="csc" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+       d="m 20,124.99999 c 0,0 6.970696,-10.10941 140,-10.2558"
+       id="path5"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+       d="M 20,124.99999 C 31.472468,112.08751 36.409304,100.36696 160,99.999996"
+       id="path6"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+       d="m 20,124.99999 c 0.179706,0.0599 7.432825,-22.35528 41.587501,-34.999994 17.359188,-6.426701 61.468109,-4.979817 98.412499,-5"
+       id="path8"
+       sodipodi:nodetypes="csc" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+       d="m 20,124.99999 c 0,0 0,-29.999994 45.000001,-54.999993 C 84.200596,59.333001 119.88896,60.042456 160,59.999996"
+       id="path9"
+       sodipodi:nodetypes="csc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.3;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:end;text-anchor:end;fill:#000000;fill-opacity:0.997506;stroke-width:0.600001;stroke-linecap:square;stroke-miterlimit:0;stroke-dasharray:2.4, 2.4;paint-order:markers stroke fill"
+       x="17.266411"
+       y="20.463894"
+       id="text40156"><tspan
+         sodipodi:role="line"
+         id="tspan40154"
+         style="stroke-width:0.6"
+         x="17.266413"
+         y="20.463894">$I_\text{DS}$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.3;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:0.997506;stroke-width:0.600001;stroke-linecap:square;stroke-miterlimit:0;stroke-dasharray:2.4, 2.4;paint-order:markers stroke fill"
+       x="163.44383"
+       y="132.62827"
+       id="text40160"><tspan
+         sodipodi:role="line"
+         id="tspan40158"
+         style="stroke-width:0.6"
+         x="163.44383"
+         y="132.62827">$U_\text{DS}$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.600001;stroke-linecap:square;stroke-miterlimit:0;stroke-dasharray:2.4, 2.4;paint-order:markers stroke fill"
+       x="44.764874"
+       y="25.75185"
+       id="text40673"><tspan
+         sodipodi:role="line"
+         id="tspan40671"
+         style="fill:#000000;fill-opacity:1;stroke-width:0.6"
+         x="44.764874"
+         y="25.75185">linearer</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:1;stroke-width:0.6"
+         x="44.764874"
+         y="30.69075"
+         id="tspan40675">Bereich</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.3;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.600001;stroke-linecap:square;stroke-miterlimit:0;stroke-dasharray:2.4, 2.4;paint-order:markers stroke fill"
+       x="117.55185"
+       y="27.742603"
+       id="text40679"><tspan
+         sodipodi:role="line"
+         id="tspan40677"
+         style="fill:#000000;fill-opacity:1;stroke-width:0.6"
+         x="117.55185"
+         y="27.742603">Sättigungsbereich</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.3;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:0.997506;stroke-width:0.600001;stroke-linecap:square;stroke-miterlimit:0;stroke-dasharray:2.4, 2.4;paint-order:markers stroke fill"
+       x="79.208443"
+       y="15.904663"
+       id="text40160-7"><tspan
+         sodipodi:role="line"
+         id="tspan40158-0"
+         style="stroke-width:0.6"
+         x="79.208443"
+         y="15.904663">$U_\text{DS,sat}=U_\text{GS}-U_\text{th}$</tspan></text>
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleStart)"
+       d="M 165,39.849523 V 107.75865"
+       id="path1-1"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.3;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.600001;stroke-linecap:square;stroke-miterlimit:0;stroke-dasharray:2.4, 2.4;paint-order:markers stroke fill"
+       x="166.44705"
+       y="74.343971"
+       id="text40935"><tspan
+         sodipodi:role="line"
+         id="tspan40933"
+         style="stroke-width:0.6"
+         x="166.44705"
+         y="74.343971">$U_\text{GS}$</tspan></text>
+  </g>
+</svg>

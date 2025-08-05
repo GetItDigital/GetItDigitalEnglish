@@ -1,0 +1,91 @@
+\subsection{Schaltungsentwurf eines Operationsverstärkers mit zwei Eingangssignalen\label{Aufg11}}
+% Alt: Aufgabe 11
+\Aufgabe{
+    Zwischen der Ausgangsspannung $U_\mathrm{a}$ und den Eingangsspannungen $U_\mathrm{1}$ und $U_\mathrm{2}$ besteht der folgende 
+    funktionale Zusammenhang:
+    $U_\mathrm{a} = -5 \ U_\mathrm{1} - 0,8 \ U_\mathrm{2}$
+    Geben Sie eine mit Operationsverstärker(n) und Widerständen aufgebaute Schaltung zur Realisierung 
+    dieses funktionalen Zusammenhangs an. Die Operationsverstärker dürfen als ideale Operationsverstärker 
+    angenommen werden. Geben Sie Werte der verwendeten Widerstände an!
+
+   % \speech{ Lösung für Aufgabe 11.
+   % Die Aufgabe gibt eine Funktionsgleichung für die Ausgangsspannung in Abhängigkeit von zwei Eingangsspannungen vor. Ziel ist es, eine Schaltung mit Operationsverstärker und Widerständen zu entwerfen, die diese Funktionsgleichung realisiert.
+   % 
+   % Schaltungsbeschreibung:
+   % Die gegebene Funktionsgleichung lautet: Die Ausgangsspannung ist gleich minus fünf mal die erste Eingangsspannung minus null Komma acht mal die zweite Eingangsspannung.
+   % Zur Umsetzung wird eine Summierschaltung mit einem invertierenden Operationsverstärker verwendet. Die Ausgangsspannung dieser Schaltung ergibt sich als negative gewichtete Summe der Eingangsspannungen, wobei die Gewichtung durch das Verhältnis der Rückkopplungswiderstände bestimmt wird.
+   % Durch Vergleich der allgemeinen Summiergleichung mit der gegebenen Funktionsgleichung ergibt sich das Verhältnis der Widerstände.
+   % 
+   % Wahl der Widerstandswerte:
+   % Der Rückkopplungswiderstand wird mit zehn Kiloohm angenommen.
+   % Für den ersten Eingang muss das Verhältnis des Rückkopplungswiderstandes zum Eingangs-widerstand fünf betragen, woraus sich für den ersten Widerstand zwei Kiloohm ergibt.
+   % Für den zweiten Eingang muss das Verhältnis des Rückkopplungswiderstandes zum Eingangs-widerstand null Komma acht betragen, woraus sich für den zweiten Widerstand zwölf Komma fünf Kiloohm ergibt.
+   % 
+   % Realisierung der Schaltung:
+   % Die Schaltung verwendet einen Operationsverstärker mit einem invertierenden Eingang, der mit den berechneten Widerständen verbunden ist. Die Eingangsspannungen werden an diesen Widerständen angelegt, während der nicht-invertierende Eingang auf Masse liegt.
+   % 
+    %Zusammenfassung:
+    %Die gewünschte Funktionsgleichung wird mit dieser Schaltung und den gewählten Widerstandswerten umgesetzt.
+    %}
+        
+}
+
+\Loesung{
+
+Der gegebene funktionale Zusammenhang zwischen der Ausgangsspannung $U_\mathrm{a}$ und den Eingangsspannungen $U_1$ und $U_2$ lautet:
+$
+U_\mathrm{a} = -5 U_1 - 0,8 U_2
+$
+
+\textbf{1. Schaltungsbeschreibung}
+
+Zur Realisierung dieses Zusammenhangs nutzen wir eine Summierschaltung mit einem invertierenden Operationsverstärker. Die Ausgangsspannung des invertierenden Summierers lautet:
+$
+U_\mathrm{a} = -\left( \frac{R_\mathrm{F}}{R_1} U_1 + \frac{R_\mathrm{F}}{R_2} U_2 \right)
+$
+Vergleich mit der Vorgabe:
+$
+- \left( \frac{R_\mathrm{F}}{R_1} \right) = -5 \quad \Rightarrow \quad \frac{R_\mathrm{F}}{R_1} = 5
+$
+$
+- \left( \frac{R_\mathrm{F}}{R_2} \right) = -0,8 \quad \Rightarrow \quad \frac{R_\mathrm{F}}{R_2} = 0,8
+$
+
+\begin{figure}[H]
+\centering
+\input{Tikz/LsgOPV2Signale.tex}
+\label{fig:LsgOPV2Signale}
+\end{figure}
+
+\textbf{2. Wahl der Widerstandswerte}
+
+Wir setzen $R_\mathrm{F} = 10\,\mathrm{k}\Omega$ (typischer Wert im Bereich 1–100 k$\Omega$):
+\begin{itemize}
+    \item \textbf{Berechnung von $R_1$}:
+    $
+    \frac{R_\mathrm{F}}{R_1} = 5 \quad \Rightarrow \quad R_1 = \frac{R_\mathrm{F}}{5} = \frac{10\,\mathrm{k}\Omega}{5} = 2\,\mathrm{k}\Omega
+    $
+    \item \textbf{Berechnung von $R_2$}:
+    $
+    \frac{R_\mathrm{F}}{R_2} = 0,8 \quad \Rightarrow \quad R_2 = \frac{R_\mathrm{F}}{0,8} = \frac{10\,\mathrm{k}\Omega}{0,8} = 12,5\,\mathrm{k}\Omega
+    $
+\end{itemize}
+
+\textbf{3. Realisierung der Schaltung}
+
+Die verwendeten Widerstände:
+\begin{align*}
+    R_\mathrm{F} &= 10\,\mathrm{k}\Omega \\
+    R_1 &= 2\,\mathrm{k}\Omega \\
+    R_2 &= 12,5\,\mathrm{k}\Omega
+\end{align*}
+
+\textbf{4. Schaltbild der realisierten Schaltung}
+
+Die Schaltung besteht aus einem Operationsverstärker, dessen invertierender Eingang mit den Widerständen $R_1$ und $R_2$ verbunden ist, die Eingangsspannungen $U_1$ und $U_2$ einspeisen. Der nicht-invertierende Eingang liegt auf Masse.
+
+\textbf{Zusammenfassung:}
+
+Die gewünschte Funktionsgleichung $U_\mathrm{a} = -5 U_1 - 0,8 U_2$ wird mit der beschriebenen Schaltung und den berechneten Widerstandswerten realisiert.
+Siehe: Abschnitt \ref{fig: Verschaltung Verstaerker} und Tabelle \ref{tab:Grundschaltungen}
+}

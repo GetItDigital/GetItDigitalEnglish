@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+    \draw (2,4) to[R,l=$R_1$, -*] (2,2) to[R,l=$\mathrm{R_2}$,-*] (2,0);
+    \draw (2,2) -- (4,2) to[R,l=$\mathrm{R_L}$] (4,0) -- (2,0);
+    \draw (2,0) to[short,-*] (0,0)node[ground]{};
+    \draw (2,4) -- (0,4) to[sinusoidal voltage source,name=V] (0,0);
+    
+    \varrmore{V}{$\mathrm{V}$};
+\end{tikzpicture}
+   

@@ -14,16 +14,24 @@
 \begin{frame}
 	\ftx{Lernziele: Leitfähigkeit und Widerstand}
 \b{
-	\begin{Lernziele}{Leitfähigkeit und Widerstand}
+	\begin{Lernziele}{Leitfähigkeit und Widerstand} % ToDo: Temperaturabhängigkeit ersetzen durch nur Temperatur (in den Items bereits passiert, weiter noch nicht geprüft)
 		Die Studierenden
 		\begin{itemize}
 		\item kennen das elektrische Bauelement Widerstand.
 		\item können die unterschiedlichen Bauteilausführungen von Widerständen erklären.
 		\item können anhand des spezifischen Widerstand $\rho$ oder des spezifischen Leitwertes $\kappa$ Berechnungen durchführen.
-		\item können die Unterschiede in der Leitfähigkeit verschiedener Materialien basierend auf deren atomarer Struktur und Temperaturabhängigkeit analysieren.
+		\item können die Unterschiede in der Leitfähigkeit verschiedener Materialien basierend auf deren atomarer Struktur und Temperatur analysieren.
 	\end{itemize}
 	\end{Lernziele}
 }
+\speech{text}{1}{
+In dem nun folgenden Abschnitt des Moduls werden wir uns mit der Leitfähigkeit und dem Widerstand beschäftigen. 
+Sie sollten am Ende dieses Abschnittes den elektrischen Widerstand als Bauelement kennen und auch seine Eigenschaften. 
+Sie kennen unterschiedliche Bauteilausführungen von Widerstand und können diese auch erläutern. 
+Ferner ist es Ihnen möglich, anhand des spezifischen Widerstandes oder des spezifischen Leitwertes Berechnungen durchführen zu können, z.B. den Widerstand einer Anordnung berechnen. 
+Und Sie können die Unterschiede der Leitfähigkeit in verschiedenen Materialien basierend auf der atomaren Struktur und der Temperatur analysieren.
+}
+
 \end{frame}
 \begin{frame}
 	\ftx{Leitfähigkeit und Widerstand}
@@ -63,6 +71,29 @@ Der Leitwert $G$ hat die Einheit Siemens (S), der ohmsche Widerstand die Einheit
 		\label{fig:Widerstands Arten}}
 	\end{figure}
 
+	\speech{text}{1}{ % ToDo: für diesen speechtext muss diese Folie in ein begin(frame) eingebaut werden.
+	Auf dem hier dargestellten Foto, das ist eigentlich noch ein Ausschnitt aus dem anfänglichen Foto, sehen Sie unterschiedliche Bauteilausführungen von Widerständen. 
+Fangen wir erstmal mit dem Widerständen in der rechten Hälfte des Bildes an. Dort sehen Sie unterschiedliche Ausführungen eines sogenannten Feed-Through-Elements. 
+Diese Bauelemente, da werden die Beinchen, die Drähte, die Anschlüsse geknickt und dann durch Bohrungen in der Platine durchgesteckt. 
+Deshalb Feed-Through-Bauelement und dann an der Unterseite der Platine verlötet. 
+Das heißt, der elektrische Kontakt dieses Bauelementes ist eigentlich genau auf der anderen Platinenseite wie das Bauelement selber. 
+Das ist zum einen relativ aufwendig in der automatischen Bestickung und zum anderen hat das auch viele Nachteile, 
+was parasitäre Effekte angeht für das Bauelement. Denn wir werden im späteren Verlauf sehen, dass die Zuleitung durch die Eigenschaften des Bauelementes deutlich beeinflusst. 
+Deshalb werden heute sehr häufig die SMD-Widerstände eingesetzt. Das sind die ganz kleinen Chips, die Sie im linken unteren Teil sehen. 
+Die gibt es in sehr unterschiedlichen Ausführungen, unterschiedlich groß, je nachdem für welches Raster Sie sich in Ihrer Platine entwickeln. 
+SMD steht für Surface Mounted Device. Das heißt, diese Teile werden auf der Seite der Platine montiert und kontaktiert, wo auch die Leiterbahn ist. 
+Das heißt, sie werden direkt auf die Leiterbahn gelötet und haben dadurch den Vorteil, dass sie weniger parasitäre Effekte zeigen. 
+Nachteilig ist, dass sie meistens nicht die großen Leistungen aufnehmen können. 
+Wenn man sich überlegt, das werden wir im späteren Verlauf sehen, dass die Leistung, die ein Widerstand aufnimmt, in Wärme gewandelt wird, 
+ist irgendwie ersichtlich, dass zum Beispiel der zweite Widerstand von links, der rote, deutlich mehr Leistung aufnehmen kann als der kleine Chip ganz unten, 
+schon alleine vom Volumen und der Masse. Oben links, das Bauteil, wo auch Mechanik-Elemente drin sind, das nennt man Potentiometer. 
+Und das ist im Prinzip ein Widerstand mit einem festen Wert, aber sie haben einen sogenannten Mittelabgriff. 
+Wenn wir an der rechten Seite des Baunelementes sehen oder schauen, dann sehen Sie dort drei Abgriffe. 
+Und den vollen Widerstandswert, zum Beispiel 10 Kiloohm, den würden Sie erhalten, wenn Sie am oberen Kontakt und am unteren Kontakt kontaktieren. 
+Und abhängig davon, wie Sie den Drehregler regeln, können Sie dann am Mittelabgriff den geteilten Widerstand abgreifen. 
+Also zum Beispiel zwischen der mittleren Klemme und der oberen Klemme 7 Kiloohm und der mittleren Klemme und der unteren Klemme dann 3 Kiloohm, 
+sodass in Summe wieder 10 Kiloohm vorhanden sind.
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Abbildung Widerstände %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -75,16 +106,18 @@ Der Leitwert $G$ hat die Einheit Siemens (S), der ohmsche Widerstand die Einheit
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Lernziele %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{Lernziele}{Leitfähigkeit und Widerstand}
+\begin{Lernziele}{Leitfähigkeit und Widerstand} 
 	Die Studierenden
 	\begin{itemize}
 	\item kennen das elektrische Bauelement Widerstand.
 	\item können die unterschiedlichen Bauteilausführungen von Widerständen erklären.
 	\item können anhand des spezifischen Widerstand $\rho$ oder des spezifischen Leitwertes $\kappa$ Berechnungen durchführen.
-	\item können die Unterschiede in der Leitfähigkeit verschiedener Materialien basierend auf deren atomarer Struktur und Temperaturabhängigkeit analysieren.
+	\item können die Unterschiede in der Leitfähigkeit verschiedener Materialien basierend auf deren atomarer Struktur und Temperatur analysieren.
 \end{itemize}
 \end{Lernziele}
 }
+
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Lernziele %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

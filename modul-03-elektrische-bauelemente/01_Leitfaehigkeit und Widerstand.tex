@@ -460,6 +460,18 @@ Wir fassen diesen Proportionalitätsfaktor zusammen zum elektrischen Widerstand 
 Mit diesem zusammengefassten Proportionalitätsfaktor R für den ohmschen Widerstand erhalten wir: U = R · I – das Ohm’sche Gesetz in skalaren Größen.
 }
 
+% ToDo: Hillgärtner: Hinweis Anfang: Es müssen ein paar Folien umstrukturiert werden.
+% Und zwar:
+% - Die Folie 49 soll vor Folie 6 gestellt werden.
+%- Die Folien 48 bis 56 sollen vorgezogen werden.
+%- Die Folien 44 bis 47 sollen hinter Folie 56 einsortiert werden.
+%- Die Folien 57 bis 60 sollen hinter Folie 47 einsortiert werden.
+
+%Zusammenfassung:
+%- Nach Folie 43: Folien 48 bis 56
+%- Danach: Folien 44 bis 47
+%- Danach: Folien 57 bis 60
+%Hinweis Ende.
 
 \end{frame}
 }
@@ -509,7 +521,7 @@ Mit diesem zusammengefassten Proportionalitätsfaktor R für den ohmschen Widers
 % % Die bisherige Definition des Begriffs Widerstand beschreibt den (Rho) materialspezifischen Widerstandswert eines Bauteils. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Grafik Elektronenbewegung ungerichtet %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\b{
+\b{ 
 		\begin{itemize}
 		\item Ungerichte Bewegung freier Elektronen (blau) zwischen positiv geladenen Atomrümpfen (rot)
 	    \end{itemize}
@@ -523,6 +535,10 @@ Mit diesem zusammengefassten Proportionalitätsfaktor R für den ohmschen Widers
 	 wo die Elektronen sich zufällig bewegen, ohne eine bevorzugte Richtung, solange kein äußeres elektrisches Feld anliegt.}}
 	\label{fig:Elektronenbewegung}
 \end{figure}
+
+\speech{test}{1}{ % ToDo: Prüfen ob hier ein eigenes begin(frame) sein muss.
+	Wir schauen jetzt einmal in die Struktureien eines Leiters. Atome bestehen im Wesentlichen aus Neutronen, Protonen und Elektronen. Neutronen und Protonen bestimmen vor allem die Masse eines Atoms, Elektronen sind für die Bindung der Atome verantwortlich. In Leitern gibt es Materialien mit frei beweglichen Ladungsträgern – meist Elektronen. Diese bewegen sich, da sie sich von den Atomrümpfen gelöst haben. Die Bewegung dieser Elektronen ist zufällig, sodass in Summe kein Stromfluss stattfindet – da sich alle Richtungen gegenseitig aufheben. Die Atomrümpfe bleiben ortsfest. Es kann zu Stößen kommen. Dies beschreibt den Zustand ohne angelegte Spannung.
+}
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Grafik Elektronenbewegung ungerichtet %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -552,6 +568,12 @@ Da sich die Atomrümpfe mit steigender Temperatur stärker bewegen, nimmt die St
 			\includesvg[width=0.8\textwidth]{Elektronenbewegung_gerichtet}
 		\end{figure}
 	}
+
+\speech{test}{1}{ % ToDo: Prüfen ob hier ein eigenes begin(frame) sein muss.
+	Wird ein elektrisches Feld (eine Spannung) angelegt, ändert sich das Bewegungsverhalten der Elektronen: Sie bewegen sich entgegengesetzt der Feldlinien – also entlang des E-Feldes. Dabei kommt es verstärkt zu Stößen mit Atomrümpfen. Auch diese schwingen, besonders bei höheren Temperaturen. Die Folge: Je höher die Temperatur, desto mehr Stöße, desto geringer ist die Beweglichkeit der Elektronen. Das bedeutet, die Leitfähigkeit Kappa wird temperaturabhängig.
+
+}
+
 \end{frame}
 \s{
 \begin{figure}[H]
@@ -628,6 +650,11 @@ Für $\vartheta$ (Theta) wird die Temperatur des Leiters eingetragen. Daraus erg
 Werden $20\mathrm{^\circ C}$ für $\vartheta$ (Theta) eingesetzt, fällt auch das $\alpha$ weg und es bleibt der Referenzwert $\rho_\mathrm{20\mathrm{^\circ C}}$ übrig. 
 In der folgenden Tabelle sind beispielhaft einige Materialien mit deren spezifischen Eigenschaften dargestellt:
 }
+
+\speech{test}{1}{
+	Kappa ist definiert als 1 Siemens pro Meter (S/m). Der spezifische Widerstand ρR ist der Kehrwert davon: Kappa = 1 / ρR. Für den spezifischen Widerstand gilt im linearen Temperaturbereich: ρR(θ) = ρR(20°C) × [1 + α × (θ – 20°C)], wobei θ die aktuelle Temperatur ist und α der Temperaturkoeffizient. Der Widerstand steigt mit steigender Temperatur linear an.
+}
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Tabelle Eigenschaften %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
@@ -660,6 +687,11 @@ In der folgenden Tabelle sind beispielhaft einige Materialien mit deren spezifis
 		während isolierende Materialien wie Luft eine sehr geringe Leitfähigkeit besitzen.}}
 		\label{tab:specific_resistance}
 		\end{table}
+
+\speech{test}{1}{
+	In der Tabelle sind spezifische Leitfähigkeiten und Temperaturkoeffizienten für unterschiedliche Materialien gelistet. Auffällig: Grafit und Silizium zeigen negative Temperaturkoeffizienten. Grund: Beide sind Halbleiter. Dort sind bei 20 °C nicht alle Ladungsträger frei. Mit steigender Temperatur werden zusätzliche Elektronen freigesetzt – die Leitfähigkeit steigt, obwohl die Stoßwahrscheinlichkeit zunimmt. Der Effekt der zusätzlich beweglichen Elektronen überkompensiert die Stoßeffekte. Bei klassischen Leitern wie Kupfer, Silber, Gold oder Aluminium steigt der Widerstand mit Temperatur, da die gerichtet Bewegung der Ladungsträger durch vermehrte Stöße reduziert wird.
+}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Tabelle Eigenschaften %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

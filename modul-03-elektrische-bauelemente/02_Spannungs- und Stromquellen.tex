@@ -28,6 +28,16 @@ Im Folgenden werden die Strom- und Spannungsquellen beschrieben und die jeweilig
 	\item Beispiele für verschiedene Quellen benennen.
 \end{itemize}
 \end{Lernziele}
+
+\speech{test}{1}{
+In dem nun folgenden Abschnitt des Moduls werden wir uns mit Spannungs- und Stromquellen beschäftigen. Diese sind wichtig.
+Bisher haben wir uns zum Beispiel den Stromfluss vorgestellt durch einen Ladungsträgerausgleich zwischen zwei geladenen Körpern
+und haben dann auch gesehen, das ist ein transienter Strom, der dabei fließt. Und dieser transiente Strom wird mit der Zeit kleiner,
+weil ja irgendwann die Ladungsträger ausgeglichen sind. Wir müssen also Quellen haben. Und diese Quellen modellieren wir eben mit Strom- und Spannungsquellen.
+Am Ende dieses Abschnittes sollten Sie den Unterschied zwischen Strom- und Spannungsquellen kennen und die dazugehörigen Schaltungssymbole.
+Sie wissen danach auch, wie reale Spannungs- und Stromquellen modelliert werden und können verschiedene Beispiele für diese Quellen benennen.
+}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Lernziele  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -70,7 +80,38 @@ Abbildung \ref{fig:spannungsquelle} zeigt das Schaltsymbol einer idealen Spannun
         \s{\caption{\textbf{Ideale allgemeine Spannungsquelle.} Liefert stets eine konstante Spannung $U_\mathrm{q}$, unabhängig von der Last und passt den Strom automatisch an, um die konstante Spannung aufrechzuerhalten.}}
         \label{fig:spannungsquelle}
     \end{figure}
+\speech{test}{1}{
+Betrachten wir als erstes mal die Spannungsquellen – und das ist auch das, was man meistens im Kopf hat,
+wenn man von Quellen elektrischer Energie spricht. Denn das ist das, was uns im Alltag immer wieder begegnet.
+Sowohl die Steckdose als auch Batterien kann man relativ gut mit dem Verhalten einer Spannungsquelle beschreiben.
 
+Was macht so eine Spannungsquelle?
+Eine Spannungsquelle liefert eine konstante Quellspannung UQ – und zwar völlig egal, wie groß der Strom ist, der fließen muss,
+um die angeschlossene Last zu versorgen. Abhängig davon, was wir jetzt hier an diesen Klemmen anhängen – welcher Widerstand – 
+stellt sich entsprechend ein Strom I ein, wobei die Ausgangsspannung UQ in jedem Fall immer gleich bleiben wird.
+Das ist eben genau die ideale Spannungsquelle.
+
+Was würde jetzt passieren, wenn wir an die Ausgangsklemmen einen Kurzschluss anschließen würden?
+Ein Kurzschluss ist definitionsgemäß eine Verbindung mit einem Widerstand von 0 Ohm.
+Wenn wir jetzt auf das Ohmsche Gesetz schauen – U = R · I bzw. I = U / R – und wir teilen die Spannung UQ durch 0 Ohm,
+dann erhalten wir einen unendlichen Strom. Und genau das tut diese sogenannte ideale Spannungsquelle: 
+Sie treibt einen unendlich hohen Strom.
+
+Was heißt das im Umkehrschluss? Diese Spannungsquelle gibt letztlich eine unendlich hohe Leistung ab.
+Und das kann natürlich nicht sein – spätestens dann, wenn man sieht, dass diese Leistung die Quelle zerstören würde.
+Ein Kurzschluss ist also kein zulässiger Zustand.
+
+Apropos abgegebene Leistung:
+Wenn wir uns anschauen, wie hier Strom und Spannung gefeilt sind, dann stellen wir fest,
+dass sie entgegengesetzt gezeigt werden – also: Strom I und Spannung UQ zeigen in entgegengesetzte Richtung.
+Das ist gewollt – anders als beim ohmschen Widerstand, bei dem U und I in dieselbe Richtung zeigen.
+Wir verwenden bei Quellen immer das sogenannte Generator- oder Erzeuger-Zählpfeilsystem.
+Warum machen wir das? Weil dann eine Leistung positiv gezählt wird, wenn die Quelle Leistung abgibt.
+
+Zusammengefasst:
+Die Quellspannung UQ ist bei der idealen Spannungsquelle immer konstant – egal, welche Last angeschlossen ist.
+Dies bedeutet aber auch: Bei einem Kurzschluss würde die abgegebene Leistung unendlich – was verhindert werden muss.
+}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Schaltbild ideale Spannungsquelle %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -106,7 +147,7 @@ In Abbildung \ref{fig:re spannungsquelle} ist eine modellierte reale Spannungsqu
     %%%%%%  Kurzschlussstrom I_K erwähnen
     %%%%%%  I_K = U_0 / R_i
 
-\begin{frame}
+\begin{frame} % ToDo: Hillgärtner: Hinweis: Vielleicht sollte URI als Spannungsabfall an RI noch in die Darstellung aufgenommen werden.
         \ftx{Spannungsquelle}
         \b{
             \begin{itemize}
@@ -130,6 +171,32 @@ In Abbildung \ref{fig:re spannungsquelle} ist eine modellierte reale Spannungsqu
             \s{\caption{\textbf{Reale Spannungsquelle mit Innenwiderstand.} Die Spannung $U_\mathrm{q}$ wird durch den Innenwiderstand \(R_\mathrm{i}\) beeinflusst und ist an den Ausgangsklemmen dadurch geringer.}}
             \label{fig:re spannungsquelle}
             \end{figure}
+\speech{test}{1}{
+Die gerade vorgestellte ideale Spannungsquelle kann es in der Realität niemals geben.
+Warum? Weil wir innerhalb der Spannungsquelle Leiter benötigen – und die haben einen Widerstand, wie wir gelernt haben.
+An diesen internen Leitern fällt eine Spannung URI ab – abhängig vom fließenden Strom.
+
+Wie kann man nun reale Spannungsquellen mit Hilfe der idealen Spannungsquelle modellieren?
+Genau – indem man zusätzlich einen Innenwiderstand RI einfügt.
+
+Abhängig vom Strom fällt ein Teil der Quellspannung UQ am Innenwiderstand RI ab.
+Das bedeutet: Die tatsächlich nutzbare Ausgangsspannung U ist kleiner als UQ – um genau den Betrag URI.
+
+Wenn wir die Spannungsbilanz aufstellen, ergibt sich:
+UQ = URI + U
+
+Und was passiert bei einem Kurzschluss?
+Dann würde der gesamte Strom nur durch den Innenwiderstand RI fließen – was diesen extrem aufheizen würde.
+Die Quelle würde sehr heiß und im schlimmsten Fall zerstört.
+
+Wie sollte der Innenwiderstand RI also idealerweise sein?
+Möglichst klein – im Idealfall 0 Ohm – dann verhält sich die reale Quelle wie eine ideale.
+In der Praxis erreichen wir durchaus sehr kleine Werte, z.B. 1 mOhm bei guten Autobatterien.
+Aber auch dann ist ein Kurzschluss keine gute Idee – denn bei 12 V und 1 mOhm Innenwiderstand würden theoretisch 12.000 A fließen.
+
+Das zeigt: Auch reale Spannungsquellen müssen geschützt werden – insbesondere gegen Kurzschluss.
+}
+
  \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Schaltbild reale Spannungsquelle %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -177,6 +244,18 @@ Auch eine Haushaltssteckdose kann als Spannungsquelle mit 230 V Quellspannung un
     \item Bei Spannungsquellen stellt sich immer der Strom ein.
 \end{itemize}
 \end {Merksatz}
+
+\speech{test}{1}{
+    Wir können also für die Spannungsquelle folgende beiden Merksätze zusammenfassen:
+
+1. Eine Spannungsquelle, egal ob real oder ideal, darf nie kurzgeschlossen werden, 
+   weil ansonsten unendlich hohe bzw. immer noch sehr hohe Ströme fließen werden.
+
+2. Ferner stellt sich bei der Spannungsquelle immer der Strom ein.
+   Die Spannung bleibt im Fall der idealen Spannungsquelle immer gleich, 
+   wobei sie bei der realen Spannungsquelle sich reduziert um den Spannungsabfall am Innenwiderstand.
+}
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Stromquellen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Einführung in Stromquellen und das Schaltsymbol %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -211,6 +290,14 @@ Abbildung \ref{fig:id stromquelle} zeigt das Schaltsymbol einer idealen Stromque
 	\s{\caption{\textbf{Ideale allgemeine Stromquelle.} Liefert stets einen konstanten Strom $I_\mathrm{q}$, unabhängig von der Last und passt die Spannung automatisch an, um den konstanten Strom aufrechtzuerhalten.}}
 	\label{fig:id stromquelle}
 	\end{figure}
+
+\speech{test}{1}{
+Wir haben die Spannungsquelle kennengelernt. Das ist auch das, was wir aus unserem bisherigen Alltag am besten kennen, weil die meisten Quellen, die wir verwenden, sich wie Spannungsquellen verhalten. Dennoch gibt es auch in der Realität Stromquellen. Hier dargestellt als ideale Stromquelle. Und bei der idealen Stromquelle ist der Strom, der fließt, immer gleich. Das heißt, der Quellstrom I_Q fließt tatsächlich völlig unabhängig davon, welche Lasten wir einstellen. Die Spannung, die Ausgangsspannung, die sich ergibt, stellt sich eben entsprechend der Last ein.
+Ähnlich wie beim Kurzschluss und der Spannungsquelle dürfen wir die Stromquelle niemals leer laufen lassen. Warum? Wenn wir jetzt hier einen Leerlauf anschließen, der ja definitionsgemäß gleich einem unendlich großen Widerstand ist, müsste sich eine unendlich große Spannung einstellen, damit dieser Strom fließen kann. Das ist ein Zustand wiederum der unendlichen Leistungsabgabe, den wir verhindern müssen. Das heißt, eine Stromquelle darf niemals leer laufen.
+Das ist etwas, das wir aus unserem alltäglichen Leben eigentlich kaum kennen. Warum? Weil wir eigentlich immer mit Spannungsquellen zu tun haben, die wir eben nicht kurzschließen dürfen, aber durchaus leer laufen lassen dürfen. Bei einer Stromquelle ist es genau umgekehrt. Die benutzen wir vor allem zum Modellieren von verschiedenen Sachen. Und ein Beispiel für eine Quelle, die wir sehr gut als Stromquelle modellieren können, ist zum Beispiel der Blitz. Bei einem Blitz haben wir einen eingeprägten Strom, der eben durch die Entladung zwischen Wolke und Erde entsteht. Der Strom sind 50 kA. Die Spannung des Blitzes stellt sich dann entsprechend der Last ein, die wir haben. Und das ist der Grund, warum zum Beispiel Blitzschutzeinrichtungen an Gebäuden möglichst niederohmig sein sollten – also sehr kleine Widerstände haben sollten –, damit die Spannung, die sich daran aufbaut, möglichst klein ist.
+Bei der idealen Stromquelle ist also der Ausgangsstrom immer gleich. Die Ausgangsspannung stellt sich entsprechend der Last ein.
+}
+
 \end{frame}
 \s{
 Der hier dargestellte Fall einer leerlaufenden Stromquelle führt, vergleichbar mit der kurzgeschlossenen Spannungsquelle, zu einer unendlich hohen Leistungsabgabe der Quelle und muss daher vermieden werden.
@@ -274,6 +361,13 @@ Diese besagt, dass die Summe aller Ströme in einem Knoten (Verzweigungspunkt) g
     I = I_{\mathrm{q}} - I_{\mathrm{R_{\mathrm{i}}}} = I_{\mathrm{q}} - \frac{U}{R_{\mathrm{i}}}
 \end{equation}
 }
+
+\speech{test}{1}{
+Bei der realen Stromquelle haben wir wieder einen Innenwiderstand. Dieser Innenwiderstand darf aber in keinem Fall in Reihe liegen, denn dann würde er den Ausgangsstrom ja überhaupt nicht beeinflussen. Bei einer Reihenschaltung ist der Strom durch alle Elemente gleich. Wir müssen dem Strom einen sogenannten Verzweigungspunkt liefern, indem wir den Innenwiderstand parallel zur Quelle schalten. Dann fließt ein Teil des Quellstroms durch den Innenwiderstand, und ein anderer Teil fließt als Ausgangsstrom I durch die angeschlossene Last.
+Wenn jetzt die angeschlossene Last einen sehr viel kleineren Widerstand hat als der Innenwiderstand R_I, dann fließt ein Großteil des Quellstroms durch die Last, und ein sehr viel kleinerer Teil des Stroms durch den Innenwiderstand. Sie werden in den folgenden Modulen auch noch die Knotenregel kennenlernen und sehen, dass der Quellstrom I_Q genau gleich ist der Summe aus I und I_RI.
+Wie muss also der Innenwiderstand sein, damit eine Stromquelle möglichst ideales Verhalten zeigt? Der Innenwiderstand einer Stromquelle sollte möglichst groß sein. Auch das widerspricht dem natürlichen Gefühl. Da sagt man normalerweise: Innenwiderstände sollten klein sein, damit die Verluste klein sind. Hier ist es genau umgekehrt. Der Innenwiderstand sollte möglichst groß sein. Achtung: Bei der realen Stromquelle ist ein möglichst großer Innenwiderstand absolut wünschenswert. Auch hier: Wenn der Innenwiderstand klein wäre und wir dann die Quelle leerlaufen lassen, flösse der gesamte Strom I_Q durch den Innenwiderstand. Wir hätten einen ähnlichen Effekt wie beim Kurzschluss der realen Spannungsquelle – im R_I würde eine extrem hohe Leistung umgesetzt, was zur Zerstörung der Quelle führen würde.
+}
+
 \end{frame}
 \s{
     

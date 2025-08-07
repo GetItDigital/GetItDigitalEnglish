@@ -809,11 +809,13 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
         \raggedleft
         \begin{itemize}
             \item Gleichung:
-           \[
-     U_A = - \frac{R_2}{R_1} U_{\textnormal{E}}(t) \\
-        - \int_0^t \frac{1}{R_1 C_1} U_{\textnormal{E}}(t) \, dt 
-        - R_2 C_2\frac{dU_{\textnormal{E}}(t)}{dt}
-     \]
+          \[
+U_{\textnormal{A}}(t) = 
+- \frac{R_2}{R_1} \, U_{\textnormal{E}}(t)
+- \int_0^t \frac{1}{R_1 C_1} \, U_{\textnormal{E}}(\tau) \, d\tau
+- R_2 C_2 \, \frac{dU_{\textnormal{E}}}{dt}(t)
+\]
+
         \item Nimmt eine Integration des Eingangssignals vor
         \item Wird als aktives Hochpassfilter verwendet (zeigt in der Realität meist Bandpassverhalten, wie hier dargestellt)  
     \end{itemize}
@@ -931,7 +933,7 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
         \centering
         \begin{figure}
         \centering
-        \resizebox{0.6\linewidth}{!}{\input{Tikz/Potenzierer.tex}}
+        {\input{Tikz/Potenzierer.tex}}
         \caption{Schaltung eines Potenzierers}
 
 \end{figure}
@@ -1093,13 +1095,13 @@ Verstärkung $V = \frac{U_\mathrm{A}}{U_\mathrm{E}} = 1$
         \centering
         \begin{figure}
         \centering
-        \resizebox{0.6\linewidth}{!}{\input{Tikz/Impedanzwandler.tex}}
+        \input{Tikz/Impedanzwandler.tex}
         \caption{Schaltung eines Impedanzwandlers}
 
 \end{figure}
 
         \column{0.48\textwidth}
-        \raggedleft
+        \centering
         \begin{itemize}
             \item Gleichung:
            \[

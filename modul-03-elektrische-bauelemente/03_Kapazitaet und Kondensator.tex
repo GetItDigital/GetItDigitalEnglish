@@ -23,6 +23,14 @@ Der darauffolgende Abschnitt behandelt die Induktivität sowie das zugehörige B
 	\item können die Kapazität eines Kondensators berechnen.
 \end{itemize}
 \end{Lernziele}
+
+\speech{03_Kapazitaet und Kondensator}{1}{
+Im nun folgenden Abschnitt beschäftigen wir uns mit dem Begriff der Kapazität und dem damit verbundenen Bauteil – dem Kondensator. 
+Am Ende dieses Abschnittes sollten Sie zwischen Kapazität und Kondensator differenzieren können. 
+Sie kennen die wichtigsten Parameter rund um den Kondensator und die Kapazität und 
+Sie können die Kapazität eines einfachen Plattenkondensators berechnen.    
+}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Lernziele Kapazität	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -62,6 +70,17 @@ Im idealen Fall wird angenommen, dass sich außerhalb der Kondensatorplatten kei
 In der Realität sammeln sich an den seitlichen Rändern der Platten ebenfalls Ladungsträger, welche zu komplizierteren Feldverteilungen führen.
 In Abbildung \ref{fig:realer Kondensator} ist die Grafik eines solchen realen Plattenkondensators dargestellt.
 }% nur im Skript
+
+\speech{03_Kapazitaet und Kondensator}{2}{
+Die einfachste Form eines Kondensators ist der sogenannte Plattenkondensator. 
+Bei dem hier dargestellten idealen Plattenkondensator stehen sich zwei leitfähige Platten parallel gegenüber. 
+Zwischen diesen leitfähigen Platten ist ein Isolator – ein sogenanntes Dielektrikum. 
+Das heißt, es kann kein Strom zwischen diesen beiden Platten fließen. 
+Wenn es uns nun z. B. durch das Anlegen einer Spannung an die beiden Platten gelingt, eine Ladungsträgertrennung zu erzeugen – 
+hier dargestellt durch positive Ladungen auf der linken Seite und negative Ladungen auf der rechten Seite – 
+dann baut sich ein elektrisches Feld E auf, das in der Darstellung in rot eingezeichnet ist.    
+}
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Grafik realer Kondensator	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
@@ -79,6 +98,16 @@ In Abbildung \ref{fig:realer Kondensator} ist die Grafik eines solchen realen Pl
 
 			\label{fig:realer Kondensator}
 		\end{figure}
+
+\speech{03_Kapazitaet und Kondensator}{3}{
+In der Realität ist das elektrische Feld jedoch nicht nur exakt zwischen den Platten vorhanden und senkrecht. 
+Es gibt darüber hinaus sogenannte Streufelder, die an den Rändern der Platten auftreten. 
+Da die Platten aus leitfähigem Material bestehen, müssen sämtliche Feldlinien, die austreten bzw. eintreten, senkrecht auf den entsprechenden Oberflächen stehen. 
+Deshalb entstehen gebogene Feldlinienverläufe am Rand. 
+Auch die oben und unten angedeuteten Feldlinien sind geschlossen – 
+sie sind hier zur besseren Lesbarkeit nicht vollständig dargestellt, weil das sonst die Übersichtlichkeit zerstören würde.    
+}
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Grafik realer Kondensator	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[t]
@@ -99,6 +128,27 @@ In Abbildung \ref{fig:realer Kondensator} ist die Grafik eines solchen realen Pl
 		Q = C \cdot U \quad \Rightarrow \quad C = \frac{Q}{U} = \frac{\varepsilon \cdot \iint \vec{E} \cdot \mathrm{d}\vec{A}}{\int \vec{E}\mathrm{d}\vec{s}}
 	\end{equation*}}
 }
+ % ToDo: Hillgärtner: 	Die Folie enthält die Formel C = Q / U sowohl oben als auch unten, was redundant wirkt. 
+% 						Eventuell sollte die Darstellung überarbeitet werden. 
+% 						Außerdem ist fraglich, ob wir die Feldstärke E wirklich auf dieser Folie mit aufführen müssen – 
+% 						das ist womöglich an dieser Stelle verwirrend oder nicht nötig. 
+
+\speech{03_Kapazitaet und Kondensator}{4}{ %ToDo: only 1
+Ein solcher Plattenkondensator baut ein elektrisches Feld auf. 
+In diesem Feld kann elektrische Energie gespeichert werden. 
+Das Maß für die Fähigkeit, elektrische Energie im Feld eines Kondensators zu speichern, ist die Kapazität. 
+Die Kapazität wird mit dem Buchstaben C abgekürzt. 
+Die Einheit der Kapazität ist das Farad (F). 
+1 Farad bedeutet, dass 1 Coulomb an Ladung gespeichert wird, wenn 1 Volt Spannung anliegt. 
+Formelmäßig also: C = Q / U. 
+Alternativ in SI-Einheiten: Farad = As / V (Ampere-Sekunde pro Volt).    
+}
+
+\speech{03_Kapazitaet und Kondensator}{5}{ %ToDo: only 2
+Wir können die Formel C = Q / U auch umstellen zu Q = C × U.     
+}
+
+
 \end{frame}
 \s{
 	In vielen Fällen kann das reale Verhalten jedoch vernachlässigt werden, was die Berechnungen deutlich vereinfacht.
@@ -150,6 +200,15 @@ In Abbildung \ref{fig:realer Kondensator} ist die Grafik eines solchen realen Pl
 
 		\label{fig:Verschiedene Kondensatoren}
 	\end{figure}
+
+\speech{03_Kapazitaet und Kondensator}{6}{
+Auf dem hier dargestellten Foto sehen Sie verschiedene Ausführungen von Bauteilen. Bis auf den ganz rechten Rand sind das alles Durchsteckelemente, also P2-Bauteile, was gerade bei Kondensatoren relativ häufig vorkommt, da diese räumlich groß sein müssen, um hinreichende Kapazitäten zu haben. Wir werden später sehen, dass je größer die Fläche ist, die wir haben, und je kleiner der Abstand, desto größer wird die Kapazität, weil letztlich das elektrische Bild natürlich größer wird und die Ladungsmenge, die gespeichert werden kann, größer wird. 
+Weswegen Sie auch hier sehr schön sehen, dass wir gewisse Zusammenhänge haben. Der rote Kondensator oben links ist ein 400 Volt, 68 µF Kondensator. Der ist räumlich sehr viel größer als der 63 Volt, 330 µF Kondensator rechts daneben, der schwarze. Der schwarze Kondensator hat eine Kapazität, die rund 4,5 bis 5 Mal größer ist als die des roten Kondensators und ist räumlich trotzdem kleiner. Wie kann das erreicht werden? Indem der Abstand zwischen den Platten deutlich kleiner ist, weswegen er auch nur eine kleine Spannung aushalten kann. 
+Denn die Platten müssen ja voneinander isoliert sein. Das heißt, man wickelt dort ein Material ein, zwischen die Platten ein in Elektrolyt getränktes Material. Das sind sogenannte Elektrolytkondensatoren. Das hat nur eine gewisse Dicke und hinzufolge auch nur eine gewisse Spannungsfestigkeit. 
+Das heißt, wenn Sie Kondensatoren haben möchten, die hohe Spannung aushalten und gleichzeitig aber hohe Kapazitätswerte haben, dann werden das räumlich extrem große Bauteile. Unten ist eine andere Technologie. Das sind Keramik- und Tantalkondensatoren, die meistens deutlich kleinere Kapazitätswerte haben, dafür aber elektrisch häufig sehr viel bessere Eigenschaften haben, sodass die abhängig von der Anwendung gewählt werden. Ganz oben rechts die kleinen Chips. Das sind klassische SMD-Bauteile. Wieder ohne Beinchen, das heißt deutlich weniger parasitäre Effekte, aber auch kleinere Kapazitätswerte. Und unten rechts sehen Sie Elektrolytkondensatoren als SMD-Kondensatoren, die eben auch direkt auf der Platine montiert werden.
+    
+}
+
 	\end{frame}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Bild versch. Kondensatoren	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \s{
@@ -207,6 +266,18 @@ In Abbildung \ref{fig:realer Kondensator} ist die Grafik eines solchen realen Pl
 	\end{figure}
 }
 }
+
+\speech{03_Kapazitaet und Kondensator}{7}{ % ToDo: only 1
+In einer idealen Welt hat ein Kondensator tatsächlich nur die gewünschte Kapazität. An dieser gewünschten Kapazität liegt eine Spannung an, die jetzt hier als zeitlich variable Spannung anliegt. Und dann fließt auch tatsächlich ein zeitlich variabler Strom durch eben genau diese Kapazität. Ein Strom IC von T. 
+}
+
+\speech{03_Kapazitaet und Kondensator}{8}{ % ToDo: only 2
+Leider Gottes schlagen aber die parasitären Elemente bei einem realen Kondensator sehr stark ins Gewicht. Das einfachste Ersatzschadbild eines realen Kondensators ist die gewünschte Kapazität in Reihe zu einem Serienwiderstand und einer Serieninduktivität. Der Serienwiderstand, den können wir uns relativ leicht erklären, denn irgendwo haben wir ja gerade schon auf dem Bild gesehen, dass wir immer Anschlussleitungen haben. Diese Anschlussleitungen haben immer einen ohmschen Widerstand. Dieser ohmsche Widerstand, R, verändert natürlich das Verhalten des Kondensators. Das wäre meistens noch sehr gut zu verschmerzen. 
+Viel problematischer ist aber die in Serie liegende Induktivität. Im späteren Verlauf, in anderen Modulen, werden Sie das Frequenzverhalten von Kapazität und Induktivität mehr kennenlernen. Vereinfacht besprochen leitet ein Kondensator den Strom immer besser, je höher die Frequenz ist. Wohingegen die Induktivität den Strom immer schlechter leitet mit höher werdender Frequenz. 
+Sodass wir hier im Prinzip gegensätzliche Bauteileigenschaften haben. In der Realität ist es tatsächlich so, dass ein Kondensator abhängig von seinem Aufbau irgendwann nicht mehr die gewünschte Kapazität schaltungstechnisch darstellt, sondern sich eher wie eine Induktivität verhält. Da die parasitäre Induktivität, die ihr da alles stellt, als LS dominant wird. Und je größer das Bauelement geometrisch, desto schlechter ist dieses Verhältnis zueinander. 
+D.h. die gerade dargestellten Elektrolytkondensatoren, die räumlich sehr groß sind, die können Sie tatsächlich nur bei relativ niedrigen Frequenzen verwenden. Da ist dann der kapazitive Anteil noch dominant. D.h. diese Kondensatoren werden z.B. benutzt, um Eingangsspannung zu stabilisieren. Wohingegen für hochfrequentere Anwendungen, Filterschaltung und so, kommen eher die ganz kleinen SMD-Bauteile zum Tragen, weil dann das kapazitive Verhalten des Kondensators bis hin zu höheren Frequenzen garantiert werden kann.
+}
+
 \end{frame}
 \s{
 	\begin{figure}[h]
@@ -270,6 +341,11 @@ In Abbildung \ref{fig:realer Kondensator} ist die Grafik eines solchen realen Pl
 	\begin {Merksatz}{}
 		 Der Kondensator ist der verzweifelte Versuch eine Kapazität nachzubilden.
 	\end {Merksatz}
+
+	\speech{03_Kapazitaet und Kondensator}{9}{
+Wir können uns also merken, dass der Kondensator immer nur der verzweifelte Versuch ist, eine Kapazität nachzubilden. Wir hatten das ja schon beim Widerstand, dass das Bauteil Widerstand eben noch andere Eigenschaften hat, als nur die gewünschte Eigenschaft des ungewünschten Widerstandes. So ist das letztlich beim Kondensator auch. Und diese ungewünschten Eigenschaften fallen insbesondere dann ins Gewicht, wenn sie hingehen zu höheren Frequenzen.    
+}
+
 	\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende Merksatz - Kondensator %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Dielektrikum	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -293,6 +369,11 @@ auf welche in Abschnitt 1.3.4 noch eingegangen wird.
 		 ist ein nicht leitendes Material, das die elektrische Feldstärke reduziert und die Kapazität des Kondensators erhöht, indem es die Relative Dielektrizitätskonstante erhört.}}
 		\label{fig:idealer Kondensator mit Dielektrikum}
 	\end{figure}
+
+\speech{03_Kapazitaet und Kondensator}{10}{
+Ich hatte ja bereits gesagt, dass die beiden Platten voneinander isoliert werden müssen. Und dies kann im einfachsten Fall mit Luft als Dielektrikon passieren. Es kann aber auch ein dielektrischer Stoff eingeführt werden, das sogenannte Dielektrikon, hier in dunkelgrau dargestellt. Wir haben dann durchgehend gleich, sowohl im Dielektrikon als auch in der Luft, die elektrische Flussdichte d. Daraus ergibt sich als nicht-kontinuierlichen Teil die elektrische Feldstärke e, die im Dielektrikon deutlich größer werden wird als außerhalb. Was erreichen wir damit? Wir erreichen damit letztlich, dass die Kapazität unseres Kondensators sich erhöht, nämlich durch Volatilisationseffekte und ähnliches.    
+}
+
 \end{frame}
 % Vielleicht an dieser Stelle Einschub zu Dielektrikum,
 % Permeativität, was das ist, Zusammenhang zum Wellenwiderstand und zur Lichtgeschwindigkeit.
@@ -335,6 +416,11 @@ wie stark das elektrische Feld in einem Material im Vergleich zum Vakuum beeinfl
 Materialien mit einer höheren Dielektrizitätszahl erhöhen die Kapazität eines Kondensators, da sie die elektrische Feldstärke im Inneren verringern.}}
 \label{tab:dielektrizität}
 \end{table}
+
+\speech{03_Kapazitaet und Kondensator}{11}{
+Wir geben diese Möglichkeit der Erhöhung des elektrischen Feldes in einer elektrischen Flussdichte an über die Dielektrizitätszahlen. Wir müssen irgendwann die Dielektrizität, die Permeabilität, streiche das. Die relative Dielektrizitätszahl geht quasi an, wie viel das elektrische Feld erstärkt wird. Vakuum hat eine Dielektrizitätszahl von 1, Luft ziemlich genau von 1, wobei der häufig verwendete Kunststoff PE irgendwo so bei 2,3 liegt. Aber wir können auch Keramiken finden, die bis zu 300 als Dielektrizitätszahl haben oder Tantaloxid von 25 bis 30. Wasser ist ebenfalls ein sehr gutes Dielektrikum. Das Problem bei Wasser ist nur, dass es bei kleinsten Verunreinigungen bereits elektrisch leitfähig werden wird und damit diese die elektrischen Eigenschaften verliert.    
+}
+
 \end{frame}
 
 %%%%% Kästchen Tabelle
@@ -389,6 +475,11 @@ Materialien mit einer höheren Dielektrizitätszahl erhöhen die Kapazität eine
 			\boldsymbol\varepsilon_\mathrm{r} &: \text{Relative Dielektrizitätszahl}\\
 		\end{align*}
 	}
+
+\speech{03_Kapazitaet und Kondensator}{12}{
+Wofür brauchen wir jetzt die relative Dielektrizitätszahl? Die brauchen wir zum Berechnen von Epsilon, der Dielektrizitätskonstante. Diese hat die Einheit Farad pro Meter, denn sie gibt letztlich an, wie stark das Dielektrikum das elektrische Feld verstärkt. Und sie setzt sich zusammen aus Epsilon null und Epsilon r. Epsilon null ist die elektrische Feldkonstante – 8,85 mal 10 hoch minus 12 Farad pro Meter oder Ampere-Sekunden pro Volt-Meter – und Epsilon r ist die elektrische Dielektrizitätszahl.    
+}
+
 \end{frame}
 \s{
 
@@ -414,7 +505,7 @@ Materialien mit einer höheren Dielektrizitätszahl erhöhen die Kapazität eine
 	kann die Kapazität des Kondensators wie folgt berechnet werden:
 }
 \begin{frame}
-\ftx{ Der Kondensator als Bauelement}
+\ftx{Der Kondensator als Bauelement}
 \b{
 	\begin{equation*}
 		[C] = 1\,\text{F}
@@ -444,6 +535,10 @@ Materialien mit einer höheren Dielektrizitätszahl erhöhen die Kapazität eine
 \end{align*}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende Formel C (epsilon) und Legende %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - el. Flussdichte	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\speech{03_Kapazitaet und Kondensator}{13}{
+Wie kann man jetzt die Kapazität eines Kondensators, die ja in Farad angegeben wird, berechnen? Wir haben ja schon gesehen, dass je größer die Fläche A ist und je kleiner der Plattenabstand d, sich die Kapazität verändert. Genau das ist auch der Zusammenhang: C ist gleich Epsilon mal A durch d. Durch das Einbringen eines Dielektrikums mit hoher Dielektrizitätszahl kann die Kapazität also bei gleichen geometrischen Abmessungen erhöht werden. Und das ist oft erstrebenswert.    
+}
+
 \end{frame}
 
 
@@ -471,6 +566,19 @@ Materialien mit einer höheren Dielektrizitätszahl erhöhen die Kapazität eine
 		\vec{D} = \boldsymbol\varepsilon \cdot \vec{E}
 		\end{equation*}}
 }
+
+\speech{03_Kapazitaet und Kondensator}{14}{ % ToDo: only 1
+Wie kann jetzt die elektrische Flussdichte bestimmt werden? Die elektrische Flussdichte D ist gleich Epsilon mal E plus P. P steht für die Polarisationseffekte, Epsilon ist die Dielektrizitätskonstante, E ist die elektrische Feldstärke.    
+}
+
+\speech{03_Kapazitaet und Kondensator}{15}{ % ToDo: only 2
+Im statischen Fall, das heißt, wir betrachten erstmal nur Gleichspannung und Gleichstrom, kann die Polarisation P eigentlich vernachlässigt werden.
+}
+
+\speech{03_Kapazitaet und Kondensator}{16}{ % ToDo: only 3
+Die elektrische Flussdichte D hat dann die Einheit Coulomb pro Quadratmeter. Denn wir haben die elektrische Feldstärke in Volt pro Meter und Epsilon, also die Dielektrizitätskonstante, in Farad pro Meter – also Ampere-Sekunden pro Volt-Meter. Multipliziert man das, ergibt sich für D die Einheit Ampere-Sekunden pro Quadratmeter, also Coulomb pro Quadratmeter. Der Zusammenhang lautet also D ist gleich Epsilon mal E.    
+}
+
 \end{frame}
 \s{
 Die elektrische Flussdichte $\vec{D}$, auch Verschiebungsdichte genannt, steht proportional zum elektrischen Feld $\vec{E}$.
@@ -581,6 +689,40 @@ da dafür ein unendlich hoher Strom erforderlich wäre.
 
 \end{itemize}
 }
+
+\speech{03_Kapazitaet und Kondensator}{17}{ % ToDo: only 1
+Wir gehen jetzt einmal kurz in die Zeithabhängung Vorgänge, um das Verhalten einer Kapazität im Stromkreis besser erklären zu können. 
+Als erstes fangen wir mit der Basisformel an, die wir bei der Einführung der Kapazität bereits gesehen haben. Q ist gleich C mal U.    
+}
+
+\speech{03_Kapazitaet und Kondensator}{18}{ % ToDo: only 2
+Wenn wir jetzt beide Seiten nach der Zeit T ableiten, also die Q nach die T ist gleich C mal die U nach die T.    
+}
+
+\speech{03_Kapazitaet und Kondensator}{19}{ % ToDo: only 3
+So erhalten wir: dQ nach dT ist ja nichts anderes als I von T.    
+}
+
+\speech{03_Kapazitaet und Kondensator}{20}{ % ToDo: only 4
+So dass wir schreiben können, der Strom IC von T, der durch die Kapazität fließt, ist gleich C mal die UC von T nach dT.
+Was können wir aus dieser Formel sehen bzw. herleiten?
+Zum einen: Nur eine zeitveränderliche Spannung an einer Kapazität führt zu einem Stromfluss durch eine Kapazität. 
+Denn wenn wir jetzt eine Gleichspannung hätten, dann wäre die UC nach dT ja gleich 0. Und demzufolge ist der Strom IC von T gleich 0.
+Ferner können wir hier an der Formel direkt schon sehen, dass die Spannung sich an der Kapazität nicht sprunghaft ändern kann.
+Das heißt, wenn wir eine sprunghafte Änderung des Stromes durch eine Kapazität hätten, dann müsste der Strom dafür unendlich groß werden. 
+Und das kann er ja nicht. Insofern merken wir uns:
+Die Spannung an einer Kapazität kann sich nicht sprunghaft ändern.    
+}
+
+% ToDo: Hillgärtner: 	Das fehlt als Merksatz, wie auch auf dieser Folie als Satz.
+%						Vielleicht könnten wir das darunter unter alle Herleitungen als Merksatz wirklich noch einschreiben, 
+%						weil ich das für elementar wichtig halte.
+
+\speech{03_Kapazitaet und Kondensator}{21}{ % ToDo: only 5
+Und logischerweise kann man dann die Spannung UC von T ausrechnen als 1 über C Integral IC von T dt.
+Das ist nichts anderes als das Umstellen der oberen Formel nach UC von T.    
+}
+
 \end{frame}
 
 %%%% ggf weg
@@ -712,6 +854,31 @@ da dafür ein unendlich hoher Strom erforderlich wäre.
 		\end{subfigure}}
 		\end{figure}
 }
+
+\speech{03_Kapazitaet und Kondensator}{22}{ % ToDo: only 1
+Ja, wenn wir jetzt betrachten, was passiert denn, wenn wir einen Kondensator, einen Widerstand in Reihe schalten und wir öffnen oder schließen einen Schalter, sodass die Spannungsquelle UQ dieses System entweder mit Spannung versorgt oder nicht. Dann fällt als erstes mal auf, wir hätten ja eigentlich eine plötzliche Veränderung der Spannung – eben durch das Aufschalten des Schalters.
+Der Schalter hier ist am Anfang geschlossen und wird nach einer gewissen Zeit, die hier mit 5 Tau bezeichnet ist, geöffnet, sodass normalerweise wir dann ja irgendwann einen abrupten Spannungsabfall hätten. Wir wissen aber, dass die Spannung in der Kapazität sich nicht plötzlich ändern kann, weil ansonsten der Strom unendlich groß werden müsste. Hier ist der Strom aber begrenzt auf einen maximalen Strom von UQ durch R, weil maximal ja die Spannung an R anliegen kann, und demzufolge haben wir einen maxima...
+Was passiert jetzt, wenn wir uns das Aufladen einmal anschauen?    
+}
+
+% ToDo: Hillgärtner: Wenn wir aufladen, dann sollten wir das auch beim Schalter berücksichtigen. Also ich würde es so machen: Der Schalter ist geöffnet und wird zum Zeitpunkt T = 0 geschlossen. Und dass er danach nochmal geöffnet wird, würde ich hier völlig rauslassen – auch unten in den Bildern. Es geht ja um das Aufladen. Und das andere ist für die nächste Folie. 
+
+\speech{03_Kapazitaet und Kondensator}{23}{ % ToDo: only 2
+Was passiert jetzt also, wenn wir den Schalter zum Zeitpunkt T = 0 Sekunden schließen? Die Kapazität war vorher nicht geladen, demzufolge ist die Spannung in der Kapazität 0. Das heißt, die gesamte Spannung UQ fällt an R ab, was einen Stromfluss bedeutet, der gleich dem maximalen Strom ist. Dadurch lädt sich aber die Kapazität auf. Es verschieben sich dort Ladungen, sodass sich eine Spannung UC aufbaut.
+Diese Spannung UC plus die Spannung UR müssen immer UQ ergeben. Das sagt uns dieses geschlossene Ringintegral EDS. Sodass letztlich die Spannung UR in dem Maße kleiner wird, wie die Spannung UC größer wird. Was heißt das aber im Umkehrschluss? Der Strom I, der durch beide Elemente fließt, wird kleiner. Demzufolge verlangsamt sich die Aufladung.    
+}
+
+% ToDo: Hillgärtner: Das würde ich so gar nicht schreiben. UQ wird ja nicht geschaltet. UQ bleibt ja immer gleich, sondern der Schalter bleibt gleich. Also UQ würde ich hier gar nicht reinzeichnen. Ich würde nur UC, eventuell noch UR und I von T reinmachen. Wie gesagt, mit dem Hinweis: Der Schalter sei zum Zeitpunkt T = 0 noch geöffnet und wird zum Zeitpunkt T = 0 geschlossen. Allerdings fehlt noch die Voraussetzung, dass UC(0) = 0 V ist. 
+
+\speech{03_Kapazitaet und Kondensator}{24}{ % ToDo: only 3
+Wir sehen also, dass sich die Aufladung des Kondensators verlangsamt. Warum?    
+}
+
+\speech{03_Kapazitaet und Kondensator}{25}{ % ToDo: only 4
+Weil eben der Strom kleiner wird. Und der Strom wird eben deshalb kleiner, weil der Strom durch die Spannung UR(t) bedingt ist. Und sobald sich UC(t) aufbaut, wird UR(t) kleiner – also wird I(t) kleiner.
+Sowohl der Strom als auch die Spannung an der Kapazität folgen jetzt hier einer E-Funktion. Und es gibt eben diese Zeitkonstante Tau, die abhängig ist von R und C. Und diese Zeitkonstante Tau gibt uns eben genau an, dass der Kondensator – wenn er vollständig entladen war – auf 63 Prozent aufgeladen ist, und gleichzeitig der aufladende Strom nur noch 37 Prozent seines Maximalwertes hat. 
+}
+
 \end{frame}
 %%%%% Laden eines Kondensators
 \s{
@@ -839,6 +1006,11 @@ da dafür ein unendlich hoher Strom erforderlich wäre.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Schaltbild mit Rechteck	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[t]
 	\ftx{Schaltverhalten eines Kondensators: Entladen}
+
+% ToDo: Hillgärtner: 	Da habe ich so mein Problem mit, weil diese Rechteckspannung in dieser Spannungsquelle würde ja heißen, dass die Spannung, wenn sie auf 0 Volt in der Spannungsquelle fällt, quasi ein Kurzschluss ist. Es führt immer zu Diskussionen. Ich würde es anders machen. Ich würde die Spannungsquelle durch einen Kurzschluss ersetzen, einen Schalter einbauen, der zum Zeitpunkt T gleich 0 geschlossen wird. Und sagen, dass die Anfangsbedingung ist, dass die Kapazität C auf eine Spannung UQ aufgeladen ist. Und dann kann man die Entladekurve aufzeichnen und den Stromfluss aufzeichnen. Das fände ich sinnvoll. Alles andere finde ich immer sehr schwierig zu erklären mit diesen Rechteckspannungsquellen, weil in der Realität ist es nicht unbedingt immer so.
+%						Demzufolge müssten die Folien 98, 99, 100, 101, 102, 103 angepasst werden. Ich weiß nicht, ob das mit der Rechteckspannung irgendwann nochmal in weiteren Modulen kommt, aber wir sollen ja nur die Kapazität prinzipiell erläutern. Und ich finde, da reichen die Kurven völlig aus.
+
+
 	\b{
 %%%%% Laden- entladen eines Kondensators
 \begin{figure}[H]
@@ -1071,6 +1243,9 @@ da dafür ein unendlich hoher Strom erforderlich wäre.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Beispiel Rechnung Kondensator %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\ftx{Beispielrechnung Kapazität}
+
+% ToDo: Hillgärtner: Da steht noch, glaube ich, drin, was wir alles noch machen wollten. Dazu finde ich aber nichts. Insofern kann ich auch nichts zu einsprechen.
+
 \begin{bsp}{Berechnungs der Kapazität}{}
 \begin{itemize}
 

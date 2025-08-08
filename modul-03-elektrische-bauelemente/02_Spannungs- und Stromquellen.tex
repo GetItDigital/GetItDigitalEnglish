@@ -388,6 +388,13 @@ Beispiele für reale Stromquellen sind Solarzellen im entsprechenden Betriebszus
     \item Bei Stromquellen stellt sich immer die Spannung ein.
 \end{itemize}
 \end {Merksatz}
+
+\speech{02_Spannungs- und Stromquellen}{7}{ 
+Somit können wir die folgenden Merksätze zusammenfassen:
+Eine Stromquelle darf nie im Leerlauf betrieben werden – egal ob ideal oder real. Denn bei der idealen Stromquelle würde eine unendliche Leistung umgesetzt. Bei der realen Stromquelle würde in der Quelle selbst, am Innenwiderstand, eine extrem große Leistung umgesetzt werden.
+Bei der Stromquelle ist der Strom immer derselbe – völlig egal, welche Last wir anschließen bei der idealen Stromquelle bzw. abhängig vom Verhältnis der Widerstände bei der realen Stromquelle. Die Spannung, die wir an der Klemme abgreifen können, stellt sich entsprechend ein.
+}
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Modelierung realier Stromquelle %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende Stromquelle %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -463,6 +470,32 @@ Weiterführende Inhalte zur Umrechnung und Leistungsanpassung folgen in Modul 4.
         
         \end{figure}
 }
+
+\speech{02_Spannungs- und Stromquellen}{8}{ % ToDo: only 1 , bzw. ich bin nicht sicher ob der Text zur Umwandlung von Strom in Spannungsquelle geeignet ist
+Wir haben jetzt gesehen, dass es Strom- und Spannungsquellen gibt. Und letztlich haben beide an ihren Klemmen einen Ausgangsstrom I und eine Ausgangsspannung U. Bei realen Quellen wird das tatsächliche Verhalten maßgeblich vom Innenwiderstand RI mitbestimmt.
+Es ergibt sich für eine Spannungsquelle das folgende Bild: Wir haben eine Ausgangsspannung U0. Wir haben einen Strom I, der sowohl durch den Innenwiderstand als auch durch den angeschlossenen Widerstand fließt, und demzufolge eine Spannung U, die an dem Widerstand R abfällt.   
+}
+
+\speech{02_Spannungs- und Stromquellen}{9}{ % ToDo: only 2 
+Letztlich kommt es also darauf an, welcher Strom I durch den Lastwiderstand R fließt und dann einen Spannungsabfall U hervorruft. Das können wir so wie hier dargestellt mit einer Spannungsquelle natürlich erreichen.
+}
+
+\speech{02_Spannungs- und Stromquellen}{10}{ % ToDo: only 3
+Wir können aber genau denselben Spannungsabfall U und genau denselben Strom I durch eine Stromquelle I0 mit einem Widerstand RI erreichen. Maßgeblich für die Umrechnung dieser beiden Quellen ist, dass sie dasselbe Verhalten an der Last zeigen. Das heißt, der Strom I und die Spannung U an dem Lastwiderstand R gleich bleiben.
+Wie kann man das jetzt erreichen? Man rechnet einfach und stellt dann bei den Rechnungen fest, dass I0 gleich sein muss U0 durch RI, wobei RI in beiden Fällen gleich sein muss. Wenn das gegeben ist, sind diese beiden Quellen komplett äquivalent.
+}
+
+% ToDo: Hillgärtner: Hier steht jetzt 0 ist gleich RI mal I0. I0 taucht nirgendwo auf. Das kann also schon mal nicht sein. Das müsste dann I sein. Oder aber es bezieht sich auf die Stromquelle. Das ist dann aber auf der Folie 68 sehr verwirrend, muss man dazu sagen. Ferner liegt die Spannung U an dem Widerstand R an. Ich würde die dann, wenn, UR nennen. Das ist eindeutiger vielleicht. Oder UA für Ausgangsspannung. Und vielleicht auch den Widerstand nicht zwischen den beiden offenen Kreisen legen, sondern nochmal eine Drahtbrücke nach rechts legen, dass man deutlich sieht, dass das die Ausgangsspannung U an den Punkten belassen. Weil so könnte man meinen, dass die Formel U0 ist gleich RI mal I0 mal U. Das gibt ja überhaupt keinen Sinn. Also das Bild muss bitte nochmal angepasst werden. 
+% ToDo: Hillgärtner: Die Berechnung dazu oder die Berechnungen dazu sind jetzt hier nicht aufgeführt. Das fände ich aber durchaus sehr sinnvoll. Das macht vieles klarer. Das kann ich nicht alles über die Tonspur bringen, glaube ich. 
+
+\speech{02_Spannungs- und Stromquellen}{11}{ % ToDo: only 4
+Das ermöglicht uns aber auch, reale Quellen zu bewerten, ob sie denn eher eine Spannungsquelle oder eher eine Stromquelle sind. Wir nehmen mal als Beispiel einen Lastwiderstand von 100 Ohm und einen Innenwiderstand von 1 Ohm. Das heißt, der Lastwiderstand ist sehr, sehr viel größer als der Innenwiderstand. Damit haben wir tatsächlich eher ein Spannungsquellenverhalten.
+Denn wenn jetzt der Innenwiderstand 1 Ohm ist, der Lastwiderstand 100 Ohm, dann fließt bei 10 Volt U0 ziemlich genau ein Strom von 100 mA – genau genommen 99,9 mA. Wenn wir jetzt den Lastwiderstand erhöhen auf 1 kOhm, dann ändert sich der Strom, aber die Spannung, die an dem Lastwiderstand abfällt, bleibt nahezu gleich bei nahezu 10 Volt.
+Das heißt immer dann, wenn der Lastwiderstand groß ist im Vergleich zum Innenwiderstand, haben wir eher Spannungsquellenverhalten – völlig egal, ob wir die linke oder die rechte Schaltung haben.
+Umgekehrt, wenn der Lastwiderstand klein ist gegenüber dem Innenwiderstand, dann haben wir eher Stromquellenverhalten. Das heißt, der Strom stellt sich entsprechend der Last ein und die Ausgangsspannung bleibt nahezu konstant, weil sie überwiegend am Innenwiderstand abfällt – auch da wieder völlig unabhängig davon, ob wir die linke oder die rechte Schaltung haben.
+Wir sehen also: Wir können eine Stromquelle in eine Spannungsquelle wandeln und umgekehrt. Und wir haben zusätzlich gelernt, wie können wir bei einer realen Quelle bewerten, ob das Verhalten eher dem einer Spannungsquelle oder einer Stromquelle entspricht – nämlich indem wir das Verhältnis zwischen Lastwiderstand und Innenwiderstand betrachten.
+}
+
 \end{frame}
 
 \s{
@@ -678,6 +711,55 @@ In Abbildung \ref{fig:quellen} sind die Schaltzeichen der verschiedenen Quellen 
         
         \end{figure}
     }% nur Folie
+
+\speech{02_Spannungs- und Stromquellen}{12}{ % ToDo: only 1
+Wir haben bisher das Symbol kennengelernt für eine allgemeine Spannungsquelle. 
+Das heißt, bei diesem Symbol, was Sie hier sehen – ein Kreis, durch den senkrecht ein Strich geht – 
+das bezeichnet eine allgemeine Spannungsquelle. 
+Mit diesem Symbol wird nicht gesagt, welche Form die Spannung hat. 
+Ob es sich um eine Gleichspannung, eine Wechselspannung oder eine zeitlich veränderliche Spannung handelt – 
+das kann alles sein.    
+}
+
+\speech{02_Spannungs- und Stromquellen}{13}{ % ToDo: only 2 - 4
+Da wir aber sehr häufig Gleich- und Wechselspannungskreise haben, gibt es auch hierfür gesonderte Symbole. 
+Die Gleichspannungsquelle ist ein Kreis mit zwei sich seitlich überstehenden Platten. 
+Das soll zum Beispiel einen Kondensator, eine Anode oder eine Batterie symbolisieren. 
+Bei der Wechselspannung schreiben wir die Spannungsform direkt ins Symbol: 
+Wir haben dort eine zeitlich variable Spannung, die einem Sinus oder Kosinus folgt – 
+Näheres dazu in den entsprechenden Modulen. 
+Und dann gibt es noch die zeitlich beliebig veränderliche Spannungsquelle, 
+dargestellt durch einen Kreis mit einem Pfeil.    
+}
+
+\speech{02_Spannungs- und Stromquellen}{14}{ % ToDo: only 5 - 7
+Für die Stromquelle gilt das Gleiche. 
+Wir haben bisher – unten links dargestellt – die allgemeine Stromquelle verwendet. 
+Das ist ein Kreis mit einem waagrechten Strich darin. 
+Und genauso gibt es eine Wechselstromquelle und eine zeitlich veränderliche Stromquelle.
+Ein eigenes Symbol für die Gleichstromquelle gibt es in dieser Darstellung nicht.
+
+Wenn wir uns die allgemeinen Darstellungen der Spannungs- und Stromquelle noch einmal anschauen, 
+fällt auf, dass sie sich sehr ähnlich sind: 
+Beide haben den Kreis, und in einem Fall einen senkrechten, im anderen einen waagrechten Strich.
+
+Diese Symbolik hilft uns tatsächlich auch dabei zu erkennen, 
+wie man eine zu Null gesetzte Quelle in einer Schaltung ersetzen kann. 
+Wenn wir also z. B. eine Spannungsquelle auf Null setzen wollen – was wir in manchen Berechnungen tun – 
+dann müssen wir sicherstellen, dass dort garantiert eine Spannung von Null Volt anliegt. 
+Und bei welcher Verschaltung ist das gegeben? 
+Bei einem Kurzschluss. An einem Kurzschluss fällt eine Spannung von 0 V ab. 
+Und wenn wir aus dem Symbol der allgemeinen Spannungsquelle den Kreis weglassen, 
+bleibt ein einfacher Strich übrig – wie ein Kurzschluss.
+
+Für die Stromquelle ist das analog: 
+Wenn wir sie auf Null setzen wollen, darf kein Strom mehr fließen. 
+Das erreichen wir durch einen Leerlauf. Auch hier, wenn man den Kreis weglässt, 
+sieht das Symbol wie ein Leerlauf aus: zwei nicht verbundene Anschlüsse, zwischen denen kein Strom fließen kann.
+
+Das ist eine hilfreiche Merkhilfe für spätere Berechnungen in diesem und in folgenden Modulen.
+}
+
 \end{frame}
 
 \s{

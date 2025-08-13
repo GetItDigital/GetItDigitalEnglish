@@ -1,0 +1,12 @@
+\begin{circuitikz}[scale=0.9]
+    % Reale Stromquelle 
+    \draw (0,6) to[I, i, name=Iq] (0,9)
+    to[short] (2,9)
+    to[short, i, name=I, -o] (2.5,9)
+    (1.5,9) to[R, i, name=Ri, l=$R_\mathrm{i}$] (1.5,6)
+    (0,6) to[short,-o] (2.5,6);
+    \iarrmore {Iq}{$I_\mathrm{q}$};
+    \iarrmore {I}{$I$};
+    \iarrmore {Ri}{$I_\mathrm{{Ri}}$};
+    \draw[-latex, thick, draw=voltage] (2.5,8.5)  to node[right, color=voltage] {$U$} (2.5,6.5);
+\end{circuitikz}

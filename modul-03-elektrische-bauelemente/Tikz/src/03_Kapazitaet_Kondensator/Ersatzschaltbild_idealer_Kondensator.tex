@@ -1,0 +1,8 @@
+\begin{circuitikz}
+    \draw (-1,0) to[short,o-] (0,0);
+    \draw (0,0)   to [C,i,v, name=C, l={$C$}] (0,-2)
+    to [short,-o] (-1,-2);
+    \iarrmore{C}{$i_\mathrm{C}(t)$};
+    \varrmore{C}{$u_\mathrm{C}(t)$};
+
+\end{circuitikz}

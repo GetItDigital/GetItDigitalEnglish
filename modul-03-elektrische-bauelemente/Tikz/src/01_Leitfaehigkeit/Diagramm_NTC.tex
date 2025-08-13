@@ -1,0 +1,59 @@
+\begin{tikzpicture}
+    \begin{axis}[
+            xlabel={Spannung / V},
+            ylabel={Stromstärke / A},
+            xmin=0, xmax=3,
+            ymin=0, ymax=3,
+            xtick={0,1,2,3},
+            ytick={0,1,2,3},
+            minor x tick num=1,
+            minor y tick num=1,
+            grid=both,
+            major grid style={line width=.2pt,draw=gray!50},
+            minor grid style={line width=.1pt,draw=gray!20},
+            legend style={font=\footnotesize, at={(0,1)}, anchor=north west},
+            width=0.7\textwidth, % Adjust the width of the plot
+            height=0.5\textwidth % Adjust the height of the plot
+        ]
+
+        % Temperaturunabhängiger Widerstand (Steigung 1)
+        \addplot[
+            color=black,
+            mark=none,
+            thick,
+        ] coordinates {
+                (0,0)(3,3)
+            };
+        \addlegendentry{NTC Widerstand bei 20°C}
+
+        % Temperaturabhängiger Widerstand (Steigung 1/1.4)
+        \addplot[
+            color=blue,
+            mark=none,
+            thick,
+        ] coordinates {
+                (0,0)(3,3/0.6)
+            };
+        \addlegendentry{NTC Widerstand bei 80°C}
+        % Punkt bei 1.5 A für idealen Widerstand
+        \addplot[
+            color=black,
+            only marks,
+            mark=*,
+            mark size=2pt
+        ] coordinates {
+                (1.5,1.5)
+            };
+        \node[anchor=south east, font=\footnotesize] at (axis cs:1.5,1.5) {$R = 1\,\Omega$};
+        % Punkt bei 1.5 A für NTC Widerstand
+        \addplot[
+            color=blue,
+            only marks,
+            mark=*,
+            mark size=2pt
+        ] coordinates {
+                (1.5*0.6,1.5)
+            };
+        \node[anchor=south east, font=\footnotesize] at (axis cs:0.9,1.5) {$R = 0.6\,\Omega$};
+    \end{axis}
+\end{tikzpicture}

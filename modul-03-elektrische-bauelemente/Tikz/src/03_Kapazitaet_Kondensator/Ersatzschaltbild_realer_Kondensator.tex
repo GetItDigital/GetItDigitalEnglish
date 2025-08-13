@@ -1,0 +1,11 @@
+\begin{circuitikz}[european resistors]
+    \draw (0,0)   to [C,i,v, name=C,o-, l={$C$}] (2.4,0)
+    (2,0)   to [R,v, name=R, l={$R_\mathrm{s}$}] (4,0)
+    (4,0)   to [L,v, name=L, l={$L_\mathrm{s}$}] (6,0)
+    (6,0)   to [short,-o] (6.25,0);
+    \iarrmore{C}{$i_\mathrm{C}(t)$};
+    \varrmore{C}{$u_\mathrm{C}(t)$};
+    \varrmore{R}{$u_\mathrm{R}(t)$};
+    \varrmore{L}{$u_\mathrm{L}(t)$};
+
+\end{circuitikz}

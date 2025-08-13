@@ -831,23 +831,7 @@ Abbildung \ref{fig:erstes_schaltbild} zeigt beispielhaft ein solches Schaltbild.
 \begin{figure}[H]
 	\centering
 \hspace{1cm} % Um es in der Mitte zu haben
-	\begin{circuitikz}
-  \draw (0,3) to[V, i, name=I] (0,0)
-		(0,3) -- (1.5,3)
-		(1.5,3) to[switch, l={Schalter}] (2.5,3)
-		(2.5,3) -- (4,3)
-		(4,3) to[lamp, l={Glühlampe}] (4,0);
-      	\draw (3,0) to [R, l={Widerstand}] (1,0);
-		\draw (0,0) -- (1,0);
-		\draw (3,0) -- (4,0);		            
-		
-		% Draw current arrow
-		\iarrmore{I}{$I$};
-
-		% Draw voltage arrows
-		\draw[-latex, thick, draw=voltage] (-0.6,2)  to node[midway,left,  color=voltage] {$U_\mathrm{q}$} (-0.6,1);
-		
-	\end{circuitikz}
+	\input{Tikz/src/01_Leitfaehigkeit/Schaltplan_Reihenschaltung}
 	\s{\caption{\textbf{Schaltplan einer Reihenschaltung.} Die aus einer Gleichspannungsquelle einem Schalter, einem Verbraucher und einem Widerstand besteht.}}
 	\label{fig:erstes_schaltbild}
 \end{figure}
@@ -881,32 +865,14 @@ Abbildung \ref{fig:resistor-symbols_} zeigt zwei gängige Schaltzeichen für den
 	    \end{itemize}
 \begin{figure}[H]
     \centering
-    \begin{circuitikz}
-        % Europäisches Symbol
-		\draw (0,0) to [R,i,v, name=R, o-, l=$R$] (2.5,0)
-		to [short,-o] (2.5,0);
-        
-        % Amerikanisches Symbol
-		\draw (6,0) to [R,i,v, name=R, o-, l=$R$, american] (8.5,0)
-		to [short,-o] (8.5,0);
-
-    \end{circuitikz}
+    \input{Tikz/src/01_Leitfaehigkeit/Schaltungselement_Widerstand}
 \end{figure}
 
 }% nur Folie
 \s{
 \begin{figure}[H]
     \centering
-    \begin{circuitikz}
-        % Europäisches Symbol
-		\draw (0,0) to [R,i,v, name=R, o-, l=$R$] (2.5,0)
-		to [short,-o] (2.5,0);
-        
-        % Amerikanisches Symbol
-		\draw (6,0) to [R,i,v, name=R, o-, l=$R$, american] (8.5,0)
-		to [short,-o] (8.5,0);
-
-    \end{circuitikz}
+    \input{Tikz/src/01_Leitfaehigkeit/Schaltungselement_Widerstand}
     \caption{\textbf{Schaltungselement für Widerstand.} Europäisches (links) und amerikanisches (rechts).}
     \label{fig:resistor-symbols_}
 \end{figure}
@@ -929,14 +895,7 @@ Abbildung \ref{fig:resistor-symbols_} zeigt zwei gängige Schaltzeichen für den
 % Idealer Widerstand
 \begin{figure}[H]
 	\centering
-	\begin{circuitikz}
-		% Idealer Widerstand
-		\draw (0,0) to [R,i,v, name=R, o-, l=$R$] (2.5,0)
-					to [short,-o] (2.5,0);
-		\iarrmore{R}{$I_\mathrm{R}$};
-		\varrmore{R}{$U_\mathrm{R}$};
-
-	\end{circuitikz}
+	\input{Tikz/src/01_Leitfaehigkeit/Idealer_Widerstand}
 \end{figure}
 }
 \end{frame}
@@ -944,14 +903,7 @@ Abbildung \ref{fig:resistor-symbols_} zeigt zwei gängige Schaltzeichen für den
 	% Idealer Widerstand
 	\begin{figure}[H]
 		\centering
-		\begin{circuitikz}
-			% Idealer Widerstand
-			\draw (0,0) to [R,i,v, name=R, o-, l=$R$] (2.5,0)
-						to [short,-o] (2.5,0);
-			\iarrmore{R}{$I_\mathrm{R}$};
-			\varrmore{R}{$U_\mathrm{R}$};
-	
-		\end{circuitikz}
+		\input{Tikz/src/01_Leitfaehigkeit/Idealer_Widerstand}
 		\caption{\textbf{Idealer Widerstand.} Zeigt den Spannungsabfall über den Widerstand und den Stromfluss durch ihn.}
 		\label{fig:idealer Widerstand}
 	\end{figure}
@@ -973,27 +925,10 @@ Abbildung \ref{fig:resistor-symbols_} zeigt zwei gängige Schaltzeichen für den
 		\item Ersatzschaltbild eines realen Widerstands mit $C_\mathrm{p}$ und $L_\mathrm{s}$
 	    \end{itemize}
 }
-	% Realler Widerstand
+	% Realer Widerstand
 \begin{figure}[H]
     \centering
-    \begin{circuitikz}
-        \draw (-0.5,0.75) to [short, o-] (0,0.75);
-        \draw (1.6,0) to [C,i,v, name=C, l={$C_\mathrm{p}$}] (4,0)
-        (3.8,0)--(5.6,0)
-		(0,0)--(2,0);
-        \draw (0,0) to [short] (0,1.5);
-		\draw (5.6,0) to [short] (5.6,1.5);
-        \draw (0,1.5)
-              to [L,i,v, name=L, l={$L_\mathrm{s}$}] (2.8,1.5)
-              to [R,i,v, name=R, l={$R$}] (5.6,1.5)
-              to [short] (5.6,1.5);
-        \draw (5.6,0.75) to [short, -o] (6.1,0.75);
-        \iarrmore{R}{$i_\mathrm{R}(t)$};
-        \varrmore{R}{$u_\mathrm{R}(t)$};
-        \varrmore{L}{$u_\mathrm{L}(t)$};
-        \varrmore{C}{$u_\mathrm{C}(t)$};
-		\iarrmore{C}{$i_\mathrm{C}(t)$};
-    \end{circuitikz}
+    \input{Tikz/src/01_Leitfaehigkeit/Realer_Widerstand}
 	\s{\caption{\textbf{Ersatzschaltbild eines realen Widerstands.} Der ideale Widerstand \( R \) wird durch eine Serien-Induktivität $L_\mathrm{s}$
 	 und einen parallelen Kondensator $C_\mathrm{p}$ ergänzt, um parasitäre Effekte zu berücksichtigen.}}
 	\label{fig:ESB realen Widerstand}
@@ -1183,16 +1118,7 @@ Was bedeutet jetzt Toleranz? Wenn wir solche Bauteile fertigen, wir haben ja ges
 	    \end{itemize}
 	}
 	\begin{figure}[H]
-		\begin{tikzpicture}
-			\node at (0,0) {\includesvg[width=1\textwidth]{Widerstaende}};
-					 \node at (-2.45,1.6) {\footnotesize Widerstandsschicht};
-					 \node at (-2.2,-0.3) {\footnotesize Gewendelte Ausführung};
-					 \node at (1.6,-0.3) {\footnotesize Bifiliare Wicklung};  
-					 \node at (2.3,1.6) {\footnotesize Induktivitätsarme Wicklung};
-					 \node at (-2.25,-2) {\footnotesize (a) Schichtwiderstände};
-					 \node at (1.85,-2) {\footnotesize (b) Drahtwiderstände};
-	
-		\end{tikzpicture}
+		\input{Tikz/src/01_Leitfaehigkeit/Bedrahtete_Widerstaende}
 		\s{\caption{\textbf{Verschiedene Ausführungen von bedrahteten (THT) Widerständen.}}}
 		\label{fig:Bauarten von Widerständen}
 	\end{figure}
@@ -1243,70 +1169,7 @@ Also wir haben gesehen, dass der Widerstand einer Anordnung oder eines Materials
 % NTC und PTC Diagramm
 \begin{figure}[H]
     \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            xlabel={Temperatur / $^\circ$C},
-            ylabel={Widerstand / $\Omega$},
-            xmin=0, xmax=120,
-            ymin=0, ymax=11000,
-            xtick={0,20,...,120},
-            ytick={1000,2000,...,11000},
-            yticklabels={1k,2k,3k,4k,5k,6k,7k,8k,9k,10k,11k},
-            grid=both,
-            major grid style={line width=.2pt,draw=gray!50},
-            minor grid style={line width=.1pt,draw=gray!20},
-            width=0.7\textwidth,
-            height=0.5\textwidth,
-            scaled y ticks=false
-        ]
-        
-        % NTC Widerstand
-        \addplot[
-            color=blue,
-            mark=none,
-            thick,
-        ] coordinates {
-            (20,10000)(100,1000)
-        };
-        \addlegendentry{NTC Widerstand}
-
-        % PTC Widerstand
-        \addplot[
-     	color=red,
-		mark=none,
-		thick,
-	   ] coordinates {
-		  (20,1000)(100,10000)
-	   };
-	   \addlegendentry{PTC Widerstand}
-
-	% Punkte auf der Linie markieren
-	\addplot[
-		color=red,
-		only marks,
-		mark=*,
-		mark size=2pt
-    ]coordinates {
-	(80,7750)
-	};
-
-    % Punkte auf der Linie markieren
-		 \addplot[
-          color=blue,
-          only marks,
-          mark=*,
-          mark size=2pt
-      ] coordinates {
-        (80,3250)
-	};
-
-	% Beschriftungen der Punkte PTC
-	\node[anchor=south east, font=\footnotesize] at (axis cs:100,6900) {($R_{\mathrm{80^\circ C}}$)};
-	% Beschriftungen der Punkte NTC
-    \node[anchor=south east, font=\footnotesize] at (axis cs:100,3000) {($R_{\mathrm{80^\circ C}}$)};
-        
-		\end{axis}
-    \end{tikzpicture}
+    \input{Tikz/src/01_Leitfaehigkeit/Diagramm_linearer_NTC_PTC}
     \s{\caption{\textbf{Diagramm eines linearen NTC- und eines PTC-Widerstands über die Temperatur.} Bei einem NTC sinkt der Widerstand mit steigender Temperatur,
 	 während bei einem PTC  der Widerstandswert mit steigender Temperatur ansteigt.}}
     \label{fig:ntc_ptc_widerstandsdiagramm}
@@ -1330,49 +1193,10 @@ Wofür kann man das aber auch noch verwenden? Z.B. als Anlaufbegrenzung, Anlaufs
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Diagramm PTC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\ftx{Temperaturabhängige Widerstände}
-	%%% Spannung/ Strom verhältnis über PTC
+	%%% Spannung/ Strom Verhältnis über PTC
 	\begin{figure}[H]
 		\centering
-		\begin{tikzpicture}
-			\begin{axis}[
-				xlabel={Spannung / V},
-				ylabel={Stromstärke / A},
-				xmin=0, xmax=3,
-				ymin=0, ymax=3,
-				xtick={0,1,2,3},
-				ytick={0,1,2,3},
-				minor x tick num=1,
-				minor y tick num=1,
-				grid=both,
-				major grid style={line width=.2pt,draw=gray!50},
-				minor grid style={line width=.1pt,draw=gray!20},
-				legend style={font=\footnotesize, at={(0,1)}, anchor=north west},
-				width=0.7\textwidth, % Adjust the width of the plot
-				height=0.5\textwidth % Adjust the height of the plot
-			]
-			
-			% Temperaturunabhängiger Widerstand (Steigung 1)
-			\addplot[
-				color=black,
-				mark=none,
-				thick,
-			] coordinates {
-				(0,0)(3,3)
-			};
-			\addlegendentry{PTC Widerstand bei 20°C}
-	
-			% Temperaturabhängiger Widerstand (Steigung 1/1.4)
-			\addplot[
-				color=red,
-				mark=none,
-				thick,
-			] coordinates {
-				(0,0)(3,3/1.4)
-			};
-			\addlegendentry{PTC Widerstand bei 80°C}
-	
-			\end{axis}
-		\end{tikzpicture}
+		\input{Tikz/src/01_Leitfaehigkeit/Diagramm_PTC}
 		\s{\caption{Diagramm eines PTC Widerstandes bei 20°C und bei 80°C}
 		\label{fig:widerstandsdiagramm_ptc}}
 	\end{figure}
@@ -1393,49 +1217,7 @@ Wofür kann man das aber auch noch verwenden? Z.B. als Anlaufbegrenzung, Anlaufs
 %%%%% Strom Temperatur verhältnis
 \begin{figure}[H]
     \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            xlabel={Stromstärke / A},
-            ylabel={Temperatur / $^\circ$C},
-            xmin=0, xmax=10,
-            ymin=20, ymax=200,
-            xtick={0,2,...,10},
-            ytick={20,40,...,200},
-            grid=both,
-            major grid style={line width=.2pt,draw=gray!50},
-            minor grid style={line width=.1pt,draw=gray!20},
-            width=0.7\textwidth,
-            height=0.5\textwidth
-        ]
-        
-        % Plot für Strom-Temperatur-Kurve (nichtlinearer Zusammenhang)
-        \addplot[
-            color=red,
-            domain=0:10,
-            samples=100,
-            thick,
-        ] {20 + x^2 * 3};
-        \addlegendentry{Strom-Temperatur-Kurve}
-        
-        % Markieren von Punkten auf der Linie
-        \addplot[
-            color=red,
-            only marks,
-            mark=*,
-            mark size=2pt
-        ] coordinates {
-            (2,32)
-            (4,68)
-            (6,128)
-        };
-        
-        % Beschriftungen der Punkte
-        \node[anchor=south east, font=\footnotesize] at (axis cs:2,27) {($2$A, $32^\circ$C)};
-        \node[anchor=south east, font=\footnotesize] at (axis cs:4,66) {($4$A, $68^\circ$C)};
-        \node[anchor=south east, font=\footnotesize] at (axis cs:6,127) {($6$A, $128^\circ$C)};
-        
-        \end{axis}
-    \end{tikzpicture}
+    \input{Tikz/src/01_Leitfaehigkeit/Diagramm_Temp_Strom_Widerstand}
     \s{\caption{\textbf{Diagramm der Temperatur eines Widerstands in Abhängigkeit von der Stromstärke.} Zeigt wie die Temperatur eines Widerstands
 	 mit zunehmender Stromstärke ansteigt. Der Widerstandswert kann sich dabei ebenfalls ändern, abhängig von der Temperaturabhängigkeit des Widerstands.}}
     \label{fig:strom-temperatur}
@@ -1461,65 +1243,7 @@ Häufig ist das Ganze aber durchaus auch nicht linear oder anders. Dadurch ergeb
 %%% Spannung/ Strom verhältnis über NTC
 \begin{figure}[H]
 	\centering
-	\begin{tikzpicture}
-		\begin{axis}[
-			xlabel={Spannung / V},
-			ylabel={Stromstärke / A},
-			xmin=0, xmax=3,
-			ymin=0, ymax=3,
-			xtick={0,1,2,3},
-			ytick={0,1,2,3},
-			minor x tick num=1,
-			minor y tick num=1,
-			grid=both,
-			major grid style={line width=.2pt,draw=gray!50},
-			minor grid style={line width=.1pt,draw=gray!20},
-			legend style={font=\footnotesize, at={(0,1)}, anchor=north west},
-			width=0.7\textwidth, % Adjust the width of the plot
-			height=0.5\textwidth % Adjust the height of the plot
-		]
-		
-		% Temperaturunabhängiger Widerstand (Steigung 1)
-		\addplot[
-			color=black,
-			mark=none,
-			thick,
-		] coordinates {
-			(0,0)(3,3)
-		};
-		\addlegendentry{NTC Widerstand bei 20°C}
-
-		% Temperaturabhängiger Widerstand (Steigung 1/1.4)
-		\addplot[
-			color=blue,
-			mark=none,
-			thick,
-		] coordinates {
-			(0,0)(3,3/0.6)
-		};
-		\addlegendentry{NTC Widerstand bei 80°C}
- % Punkt bei 1.5 A für idealen Widerstand
-		\addplot[
-			color=black,
-			only marks,
-			mark=*,
-			mark size=2pt
-		] coordinates {
-			(1.5,1.5)
-		};
-		\node[anchor=south east, font=\footnotesize] at (axis cs:1.5,1.5) {$R = 1\,\Omega$};
-		% Punkt bei 1.5 A für NTC Widerstand
-		\addplot[
-			color=blue,
-			only marks,
-			mark=*,
-			mark size=2pt
-		] coordinates {
-			(1.5*0.6,1.5)
-		};
-		\node[anchor=south east, font=\footnotesize] at (axis cs:0.9,1.5) {$R = 0.6\,\Omega$};
-		\end{axis}
-	\end{tikzpicture}
+	\input{Tikz/src/01_Leitfaehigkeit/Diagramm_NTC}
 	\s{\caption{Diagramm eines NTC Widerstandes bei 20 °C und bei 80 °C}
 	\label{fig:widerstandsdiagramm_ntc}}
 \end{figure}

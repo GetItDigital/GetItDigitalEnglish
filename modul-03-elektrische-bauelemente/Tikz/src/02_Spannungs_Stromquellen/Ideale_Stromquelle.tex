@@ -1,0 +1,10 @@
+\begin{circuitikz}[scale=0.9]
+    % Ideale Stromquelle 
+    \draw (0,6) to[I, i, name=I] (0,9)
+    to[short,-o] (2,9)
+    (0,6) to[short,-o] (2,6);
+    \iarrmore {I}{$I_\mathrm{q}$};
+
+    \draw[-latex, thick, draw=voltage] (2,8.5)  to node[right,  color=voltage] {$U$} (2,6.5);
+
+\end{circuitikz}

@@ -1,0 +1,16 @@
+\begin{circuitikz}[scale=0.7]
+    \centering
+    \draw (0,-1.2) to[V] (0,4.2)
+    -- (1,4.2) to[normal closed switch, l={Schalter wird bei $t_\mathrm{0} = 5\tau$ geöffnet}] (3,4.2)
+    -- (4,4.2);
+    \draw (4,4.2)   to [L,i,v, name=L, l={$L$}] (4,1.4);
+    \draw (4,-1.2) -- (0,-1.2);
+    \draw (4,1.7)   to [R,v, name=R, l={$R$}] (4,-1);
+    \draw (4,-1) -- (4,-1.2);
+    \draw[-latex, thick, color=cyan] (-0.8,2.15)  to node[midway,left, color=cyan] {$U_\mathrm{q}$}
+    (-0.8,0.8);
+    \iarrmore{L}{$i(t)$};
+    \varrmore{L}{$u_\mathrm{L}(t)$};
+    \varrmore{R}{$u_\mathrm{R}(t)$};
+
+\end{circuitikz}

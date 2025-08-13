@@ -1,34 +1,15 @@
 \subsection{Transistorschaltung mit LED\label{Aufg15}}
 % Alt: Aufgabe 15
 \Aufgabe{
-  Mithilfe eines Transistors soll eine LED betrieben werden. Dabei muss durch die LED ein Strom von $30\,\mathrm{mA}$ fließen, damit sie ihre optimale Leuchtkraft erreicht. \\
-  Der verwendete Siliziumtransistor besitzt einen Stromverstärkungsfaktor von $\beta = 50$ und im durchgeschalteten Zustand eine Kollektor-Emitter-Spannung von $U_\mathrm{CE} = 0,3\,\mathrm{V}$. \\
+  Mithilfe eines Bipolartransistor soll eine LED betrieben werden. Dabei muss durch die LED ein Strom von $I_\mathrm{D}=30\,\mathrm{mA}$ fließen, damit sie ihre optimale Leuchtkraft erreicht. \\
+  Der verwendete Transistor besitzt einen Stromverstärkungsfaktor von $\beta = 50$ und im durchgeschalteten Zustand eine Kollektor-Emitter-Spannung von $U_\mathrm{CE} = 0,3\,\mathrm{V}$. 
+  Zusätzlich sind die folgenden Parameter gegeben: $R_1=3,3\,\mathrm{k\Omega}$,  $R_2=270\,\mathrm{\Omega}$ und $U_\mathrm{L}=9\,\mathrm{V}$. \\
   Welche Spannung $U$ muss an der Basis anliegen, damit der Transistor durchschaltet? 
   \begin {figure} [H]
      \centering
      \input{Tikz/FigTransistorLED}
      \label{fig:FigTransistorLED}
   \end {figure}
-
-%   \speech{Aufgabe 15  
-
-% Mithilfe eines Transistors soll eine LED betrieben werden. Dabei muss durch die LED ein Strom von **30mA** fließen, damit sie ihre optimale Leuchtkraft hat. Der Siliziumtransistor hat einen Verstärkungsfaktor \( \beta = 50 \) und im durchgeschalteten Zustand ist die Kollektor-Emitter-Spannung \( U_{CE} = 0.3V \).  
-
-% Was für eine Spannung \( U \) muss an der Basis anliegen, damit der Transistor durchschaltet?  
-
-% Beschreibung der Abbildung  
-
-% Die Abbildung zeigt eine **Transistorschaltung zur Ansteuerung einer LED**.  
-
-% - Rechts oben ist eine **LED** mit einem **Vorwiderstand von 270Ω** an einer **9V-Spannungsquelle** angeschlossen.  
-% - Die LED ist in Reihe mit dem **Kollektor des npn-Transistors** geschaltet.  
-% - Der **Emitter des Transistors** ist direkt mit Masse (0V) verbunden.  
-% - Der **Basisstrom \( I_B \)** fließt durch einen **3.3kΩ-Widerstand** und wird über die Spannung \( U \) an die Basis des Transistors angelegt.  
-% - Die Basis-Emitter-Spannung \( U_{BE} \) ist in der Abbildung mit einem blauen Pfeil gekennzeichnet.  
-
-% Die Aufgabe besteht darin, die **Spannung \( U \)** an der Basis zu berechnen, sodass der Transistor sicher durchschaltet und der gewünschte LED-Strom von **30mA** fließen kann.  
-% }  
-
 }
 
 
@@ -63,99 +44,4 @@ Gesamte Basisspannung (inkl. \( U_\mathrm{BE} \)):
 Die Basisspannung muss \( \boxed{2{,}72\,\mathrm{V}} \) betragen, damit der Transistor durchschaltet.
 
     Siehe: Abschnitt \ref{sec:Bipolartransistor} und \ref{fig:StroemeUndSpannungenBeimBipolartransistor}
-
-%     \speech{
-% **Aufgabe 15 – Berechnung des Basisstroms, der Verstärkung und der Eingangsspannung eines npn-Transistors**
-
-% Gegeben ist eine Schaltung mit einem **npn-Transistor**, der eine **LED mit 270 Ω Vorwiderstand** ansteuert. Die Aufgabe besteht darin, den **Kollektorstrom \( I_C \)**, den **Basisstrom \( I_B \)**, die **Verstärkung \( \beta \)** sowie die benötigte Eingangsspannung \( U \) zu berechnen.
-
-% ---
-
-% ### Berechnung des Kollektorstroms \( I_C \)
-% Die Formel für den Strom lautet:
-
-% \[
-% I_C = \frac{U}{R}
-% \]
-
-% Gegeben sind:
-% - Versorgungsspannung \( U = 9V \)
-% - Sättigungsspannung des Transistors \( U_{CE,sat} = 0,3V \)
-% - Widerstand \( R = 270Ω \)
-
-% Einsetzen der Werte:
-
-% \[
-% I_C = \frac{9V - 0,3V}{270Ω}
-% \]
-
-% \[
-% I_C = \frac{8,7V}{270Ω} = 32,2 mA
-% \]
-
-% **Ergebnis**: Der Kollektorstrom \( I_C \) beträgt **32,2 mA**.
-
-% ---
-
-% ### Berechnung des Basisstroms \( I_B \)
-% Die Formel für den Basisstrom lautet:
-
-% \[
-% I_B = \frac{I_C}{\beta}
-% \]
-
-% Gegeben ist der **Verstärkungsfaktor**:
-
-% - \( \beta = 50 \)
-
-% Berechnung:
-
-% \[
-% I_B = \frac{32,2 mA}{50}
-% \]
-
-% \[
-% I_B = 0,644 mA
-% \]
-
-% **Ergebnis**: Der Basisstrom \( I_B \) beträgt **0,644 mA**.
-
-% ---
-
-% ### Berechnung der Basiswiderstandsspannung \( U_V \)
-% Der Basiswiderstand \( R_V = 3,3 kΩ \) wird mit \( I_B \) multipliziert:
-
-% \[
-% U_V = I_B \cdot R_V
-% \]
-
-% \[
-% U_V = 0,644 mA \cdot 3,3 kΩ = 2,12V
-% \]
-
-% ---
-
-% ### Berechnung der Eingangsspannung \( U \)
-% Die Eingangsspannung \( U \) setzt sich zusammen aus:
-
-% \[
-% U = U_V + U_{BE}
-% \]
-
-% Die Basis-Emitter-Spannung eines **leitenden npn-Transistors** beträgt etwa:
-
-% \[
-% U_{BE} = 0,6V
-% \]
-
-% \[
-% U = 2,12V + 0,6V = 2,72V
-% \]
-
-% **Ergebnis**: Die Eingangsspannung \( U \) beträgt **2,72V**.
-% }
-
 }
-
-
-

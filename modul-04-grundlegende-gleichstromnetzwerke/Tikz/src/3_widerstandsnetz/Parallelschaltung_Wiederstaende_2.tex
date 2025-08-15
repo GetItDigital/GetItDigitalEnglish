@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+    \draw(0,3) to[short] (2.5,3)
+    to[R=$R_\mathrm{ges}$, i>^, v, name=Rges] (2.5,0)
+    to[short] (0,0);
+    \draw(0,3) to[V, v, i, name=U0] (0,0);
+
+    %to[short](0,0)
+    % to[V, v, i>, name=U0] (0,2)
+    %to[short](3,2);
+
+    \iarrmore{Rges}{$I_{0}$};
+    \varrmore{Rges}{$U_0$};
+
+    \iarrmore{U0}{$I_0$};
+    \varrmore{U0}{$U_0$};
+\end{tikzpicture}

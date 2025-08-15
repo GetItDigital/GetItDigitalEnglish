@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+    \draw(0,3) to[short] (3,3)
+    to[short, -*] (3,2.5)
+    to[short] (2,2.5)
+    to[R=$R_1$, i>^,v, name=R1] (2,0.5)
+    to[short, -*](3,0.5)
+    to[short] (3,0)
+    to[short] (0,0);
+    \draw(0,3) to[V, v, i, name=U0] (0,0);
+    \draw(2.5,2.5) to [short] (4,2.5)
+    to[R=$R_2$,i>^,v, name=R2] (4,0.5)
+    to[short] (3,0.5);
+
+
+    %to[short](0,0)
+    % to[V, v, i>, name=U0] (0,2)
+    %to[short](3,2);
+
+    \iarrmore{R1}{$I_{1}$};
+    \iarrmore{R2}{$I_{2}$};
+    \iarrmore{U0}{$I_0$};
+    \varrmore{U0}{$U_0$};
+    \varrmore{R1}{$U_1$};
+    \varrmore{R2}{$U_2$};
+\end{tikzpicture}

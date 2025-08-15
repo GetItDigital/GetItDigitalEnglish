@@ -1,0 +1,29 @@
+\begin{tikzpicture}
+    \draw[white] (3.75, 4) to[short,v>, name=volti] (3.75, -1.0) node[right] {};
+    \varrmore{volti}{};
+    \node[voltage] at (3.2,1.4) {$U$};
+    %	\node[current] at (2,-0.3) {$I_\mathrm{Ri} = U/R_\mathrm{i}$};
+
+
+
+    \draw(0,0)
+    to[short, -o](3.5,0)
+    to[short](4.5,0)
+    to[short](4.5,0.5)
+    to[R ,i ,v< , name =Ra  , l =$R_\mathrm{a}$] (4.5,2.5)
+    to[short, i<_ , name = i0](4.5,3)
+    to[short, -o](3.5,3)
+    to[short](2,3)
+
+    to[short](0,3)
+    to[short, i<_ , name = i_0](0,2.5)
+    to[I, v, i<, name=I1] (0,0.5)
+    to[short](0,0);
+    \draw(1.5,3) to[R ,i>^ ,v< , name =R1  ,*-*, l =$R_\mathrm{i}$]  (1.5,0);
+
+    \iarrmore{R1}{$I_\mathrm{Ri} > 0$};
+
+    \iarrmore{I1}{$I_0$};
+    \iarrmore{i0}{$I$};
+
+\end{tikzpicture}

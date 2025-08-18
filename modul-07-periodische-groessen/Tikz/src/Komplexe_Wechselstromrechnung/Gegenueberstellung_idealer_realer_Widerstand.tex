@@ -1,0 +1,19 @@
+\begin{circuitikz}
+    \draw (0,2) to [short, o-] (2,2)
+    to [R=$R_\mathrm{ideal}$] (2,0)
+    to [short,-o] (0,0);
+    \pause
+
+    \draw [->](4,1) -- (5,1);
+    \draw (6,2) to [L=$L_\mathrm{paras.}$, o-*] (8,2)
+    to [R=$R_\mathrm{real}$] (8,0)
+    to [short,*-o] (6,0);
+    \draw (8,2) to [short] (10,2)
+    to [C=$C_\mathrm{paras.}$] (10,0)
+    to [short] (8,0);
+
+    %[R=$R_2$, i<, name=R2] (6,3);
+    %\draw(0,0) to[V, V<, name=Uq1] (0,3);	
+    %\varrmore{Uq1}{$U_{q1}$};
+    %\iarrmore{R2}{$I_2$};}
+\end{circuitikz}

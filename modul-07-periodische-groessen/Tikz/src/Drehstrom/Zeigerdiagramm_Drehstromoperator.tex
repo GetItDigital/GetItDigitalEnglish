@@ -1,0 +1,31 @@
+\begin{tikzpicture}
+    \draw [->] (0, 0) coordinate (A)-- (4,0) coordinate (B);
+    \draw [->] (0, 0) -- (-2, 3.464) coordinate (C);
+    \draw [->] (0, 0) -- (-2, -3.464) coordinate (D);
+    \draw [->] (0, 0) -- (-2, 0);
+    \draw [->] (-2, 0) -- (-2, 3.464);
+    \draw [->] (-2, 0) -- (-2, -3.464);
+    \draw (2.5, 0.3) node[anchor=center] {$\underline{a}^3=1$};
+    \draw (-0.6, -1.7) node[anchor=center] {$\underline{a}^2$};
+    \draw (-0.6, 1.7) node[anchor=center] {$\underline{a}$};
+    \draw (0.4, 0.6) node[anchor=west] {$\alpha=\frac{2\pi}{3}$};
+    \draw (-1, -0.6) node[anchor=west] {$\alpha$};
+    \draw (0.4, -0.6) node[anchor=west] {$\alpha$};
+    \draw (-2.2, 1.7) node[anchor=east] {$+j\frac{\sqrt{3}}{2}$};
+    \draw (-2.2, -1.7) node[anchor=east] {$-j\frac{\sqrt{3}}{2}$};
+    \draw (-1, 0.3) node[anchor=east] {$-\frac{1}{2}$};
+    \draw pic[draw, angle radius = 20, ->] {angle = B--A--C};
+    \draw pic[draw, angle radius = 20, ->] {angle = C--A--D};
+    \draw pic[draw, angle radius = 20, ->] {angle = D--A--B};
+
+    \draw [->] (6, 2) coordinate (E)  -- (10,2) coordinate(F); %node[above, xshift=2cm]{1}
+    \draw [->] (10, 2) -- (8, -1.464) coordinate (G);
+    \draw [->] (8, -1.464) -- (6, 2);
+    \draw (8, 2.6) node[anchor=north] {$\underline{a}^3=1$};
+    \draw (9.2, 0) node[anchor=center] {$\underline{a}^2$};
+    \draw (6.8, 0) node[anchor=center] {$\underline{a}$};
+    \draw pic[draw, angle radius = 20, <-] {angle = E--F--G};
+    \draw pic[draw, angle radius = 20, <-] {angle = F--G--E};
+    \draw pic[draw, angle radius = 20, <-] {angle = G--E--F};
+    \draw [arrows = {-Latex[width=10pt, length=10pt]}] (4.5,0) -- (6,0);
+\end{tikzpicture}%

@@ -19,29 +19,7 @@
 		\begin{center}			
 		\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
 
-		\begin{tikzpicture}
-			\draw(2.2,0) to[short] (0,0)
-			to[V,v<, name=U0] (0,2)
-			to[R=$R_\mathrm{i}$,-o] (2.2,2)
-			to[short,-*](3,2)
-			to[R,v^,i_,name=R, l_=$R_{\mathrm{a}}$] (3,0)
-			to[short,](2.2,0);		
-			\draw(3,2)[blue] to[short, *-] (5.7,2)
-			to[short](5.7,1)
-			node[component]{V} to[short](5.7,0)
-		%	to[rmeterwa,t=V](5.7,0)
-			to[short,-*](3,0);
-			\draw(3,0)to[short,-o](2.2,0);
-			\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
-			to[short] (1.8,2.8)
-			to[short] (1.8,-0.5)
-			to[short] (-1.2,-0.5);
-
-			\varrmore{U0}{$U_0$};
-			\iarrmore{R}{$I$};
-			\varrmore{R}{$U_\mathrm{mess}$};
-			\node[blue] at (4.2,2.3) {Ideales Voltmeter};
-		\end{tikzpicture}
+		\input{Tikz/src/5_messen/Spannung_messen_ideal}
 		\end{center}
 		\label{fig:voltmeterideal}
 		\caption{Eine reale Spannungsquelle (Kasten links) speist einen Lastwiderstand $R_\mathrm{a}$.
@@ -69,31 +47,7 @@
 \tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
 
 
-\begin{tikzpicture}
-	\draw(2.2,0) to[short] (0,0)
-	to[V,v<,name=U0] (0,2)
-	to[R=$R_{\mathrm{i}}$,-o] (2.2,2)
-	to[short,-*](2.85,2)
-	to[R=$R_{\mathrm{a}}$,v,i,name=R] (2.85,0)
-	to[short,-o](2.2,0);		
-	\draw(2.85,2)[blue] to[short,-*] (4.35,2)
-	to[short] (5.7,2)
-	to[short](5.7,1)
-	node[component]{V} to[short](5.7,0)
-	%to[rmeterwa,t=V](5.7,0)
-	to[short,-*](2.85,0);
-	\draw(4.35,2)[blue] to[R=$R_{\mathrm{iV}}$,i,name=R_iV,-*] (4.35,0);
-	\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
-	to[short] (1.8,2.8)
-	to[short] (1.8,-0.5)
-	to[short] (-1.2,-0.5);
-
-	\varrmore{U0}{$U_0$};
-	\iarrmore{R}{$I_\mathrm{R}$};
-	\varrmore{R}{$U$};
-	\iarrmore{R_iV}{$I_\mathrm{R_\mathrm{iV}}$};
-	\node[blue] at (4.2,2.3) {Reales Voltmeter};
-\end{tikzpicture}
+\input{Tikz/src/5_messen/Spannung _messen_real}
 
 		\end{center}
 		\label{fig:voltmeterreal}
@@ -277,25 +231,7 @@ Sind sowohl der Innenwiderstand als auch der zu vermessende Widerstand bekannt, 
 		\begin{center}			
 		\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
 
-		\begin{tikzpicture}
-            \draw(2,0) to[short] (0,0)
-			to[V,v<,name=U0] (0,2)
-            to[R=$R_{\mathrm{i}}$,-*] (2,2);
-			
-            \draw(5.5,2)to[R,i_,name=R,l_=$R_{\mathrm{a}}$] (5.5,0)
-            to[short,-*](2,0);
-			\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
-			to[short] (1.8,2.8)
-			to[short] (1.8,-0.5)
-			to[short] (-1.2,-0.5);
-			\draw(2,2)[red]
-			to[short](3.75,2)
-			node[component]{A} to[short](5.5,2);
-            %to[rmeterwa,t=A, -o](5.5,2);
-			\varrmore{U0}{$U_0$};
-			\iarrmore{R}{$I$};
-			\node[red] at (4.2,2.9) {Ideales Amperemeter};
-        \end{tikzpicture}
+		\input{Tikz/src/5_messen/Strom_messen_ideal}
 		\end{center}
 		\label{fig:amperemeterideal}
 		\caption{Eine reale Spannungsquelle (Kasten links) speist einen Lastwiderstand $R_\mathrm{a}$.
@@ -311,27 +247,7 @@ Sind sowohl der Innenwiderstand als auch der zu vermessende Widerstand bekannt, 
 		\begin{center}			
 		\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
 
-		\begin{tikzpicture}
-            \draw(2,0) to[short] (0,0)
-			to[V,v<,name=U0] (0,2)
-            to[R=$R_{\mathrm{i}}$] (2,2);
-			
-			\draw(5.5,2)
-            to[R,i_,name=R,l_=$R_{\mathrm{a}}$] (5.5,0)
-            to[short,-*](2,0);
-			\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
-			to[short] (1.8,2.8)
-			to[short] (1.8,-0.5)
-			to[short] (-1.2,-0.5);
-			\draw(2,2)[red]
-			to[R=$R_{\mathrm{iA}}$, o-] (4,2)
-			to[short](4.75,2)
-			node[component]{A} to[short](5.5,2);
-         %   to[rmeterwa,t=A, -o](5.5,2);
-			\varrmore{U0}{$U_0$};
-			\iarrmore{R}{$I$};
-			\node[red] at (4.2,2.9) {Reales Amperemeter};
-        \end{tikzpicture}
+		\input{Tikz/src/5_messen/Strom_messen_real}
 		\end{center}
 		
 		\caption{Messung der Stromstärke $I$ durch einen Lastwiderstand $R_\mathrm{a}$ durch ein 
@@ -502,32 +418,7 @@ Unter Kenntnis des Innenwiderstandes und des zu messenden Widerstandes lässt si
 		\begin{center}			
 		\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
 
-		\begin{tikzpicture}
-            \draw(2,0) to[short] (0,0)
-			to[V,v<,name=U0] (0,2)
-            to[R=$R_{\mathrm{i}}$,-o] (2,2)
-            to[short,-*](3,2)
-			to[short](3,1)
-			node[component]{V} to[short](3,0)
-            %to[rmeterwa=$R_{\mathrm{iV}}$,t=V] (3,0)
-            to[short,-o](2,0);	
-			
-			\draw(3,2) 
-			to[short](4,2)
-			node[component]{A} to[short](5,2)
-		
-			%to[rmeterwa=$R_{\mathrm{iA}}$,t=A] (5,2)
-			to[R=$R_{\mathrm{a}}$, v, i, name = Rlast](5,0)
-			to[short,-*](3,0);
-			\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
-			to[short] (1.8,2.8)
-			to[short] (1.8,-0.5)
-			to[short] (-1.2,-0.5);
-
-			\varrmore{U0}{$U_0$};
-			\varrmore{Rlast}{$U$};
-			\iarrmore{Rlast}{$I$};
-        \end{tikzpicture}
+		\input{Tikz/src/5_messen/Stromrichtiges_Mesen}
 		\end{center}
 		
 		
@@ -540,13 +431,6 @@ Unter Kenntnis des Innenwiderstandes und des zu messenden Widerstandes lässt si
 	\begin{equation*}
 		R_{\mathrm{iA}} \ll R_{\mathrm{a}}
 	\end{equation*}
-
-
-
-
-	
-
-
 
 	}
 	\ftx{Strom- und spannungsrichtiges Messen I}
@@ -657,41 +541,13 @@ Als Faustregel gilt häufig, dass diese Schaltung verwendet wird, wenn der zu me
 			\begin{center}			
 			\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
 	
-			\begin{tikzpicture}
-				\draw(2,0) to[short] (0,0)
-				to[V,v<,name=U0] (0,2)
-				to[R=$R_{\mathrm{i}}$,-*] (2,2)
-				to[short](2.75,2)
-				node[component]{A} to[short](3.5,2)
-			   % to[rmeterwa=$R_{\mathrm{iA}}$,t=A,-*](3.5,2)
-				to[R=$R_{\mathrm{a}}$, v, i, name = Rlast] (3.5,0)
-				to[short,-*](2,0);		
-				\draw(3.5,2) to[short] (5.2,2)
-				to[short](5.2,1)
-				node[component]{V} to[short](5.2,0)
-				%to[rmeterwa=$R_{\mathrm{iV}}$, t=V](5.2,0)
-				to[short,-*](3.5,0);
-				\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
-				to[short] (1.8,2.8)
-				to[short] (1.8,-0.5)
-				to[short] (-1.2,-0.5);
-	
-				\varrmore{U0}{$U_0$};
-				\varrmore{Rlast}{$U$};
-				\iarrmore{Rlast}{$I$};
-			\end{tikzpicture}
+			\input{Tikz/src/5_messen/Spannungsrichtiges_Messen}
 	
 			\end{center}
 			\label{fig:spannungsrichtig}
 			\caption{Stromrichtige Messchaltung zur Bestimmung der Stromstärke $I$ sowie der Spannung $U$ an einem Lastwiderstand $R_\mathrm{a}$}	
 
 		\end{figure}
-	
-
-
-
-
-
 
 		Bei unklaren Verhältnissen, ob die stromrichtige oder die spannungsrichtige Messung verwendet werden sollte,
 		kann folgende Faustregel verwendet werden:

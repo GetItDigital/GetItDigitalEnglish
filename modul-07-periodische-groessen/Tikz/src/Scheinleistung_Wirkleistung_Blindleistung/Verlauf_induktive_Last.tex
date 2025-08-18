@@ -1,0 +1,19 @@
+\begin{circuitikz}[domain=0:8,samples=100]
+    %Gitter
+    \draw[very thin,color=gray] (-0.1,-2.1) grid (8.2,2.1);
+    \draw[->] (-0.2,0) -- (8.5,0) node[right] {$t$};
+    \draw[->] (0,-2.1) -- (0,2.2) node[above] {};
+    \draw (0,-2.1) node[below] {$0$};
+    \draw (2,-2.1) node[below] {$\pi$};
+    \draw (4,-2.1) node[below] {$2\pi$};
+    \draw (6,-2.1) node[below] {$3\pi$};
+    \draw (8,-2.1) node[below] {$4\pi$};
+    \draw[color=voltage] (-0.5,1.5) node[] {$u(t)$};
+    \draw[color=red] (-0.5,-1) node[] {$i(t)$};
+    \draw[color=voltage, smooth, thick] plot[id=Sinus11] function{1.5 * sin(pi/2 * x)} node[right] {};
+    \draw[color=red, smooth, thick] plot[id=Sinus12] function{1 * sin((pi/2) * x - (pi/2))} node[right] {};
+    \pause
+
+    \draw[color=green] (-0.5,-0.5) node[] {$p(t)$};
+    \draw[color=green, smooth, thick] plot[id=Sinus13] function{(1.5 * sin(pi/2 * x)) * (1 * sin((pi/2) * x - (pi/2)))} node[right] {};
+\end{circuitikz}

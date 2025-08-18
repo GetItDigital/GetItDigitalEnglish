@@ -1,0 +1,28 @@
+\begin{circuitikz}
+    \draw (0, 0) to[short,] (0, 4)
+    to[sV, v<=230 V, anchor=west] (2, 4)
+    to[short, i=?] (4, 4)
+    to[short] (10, 4)
+    to[R=10\ohm] (12, 4)
+    to[short,] (12, 0);
+
+    \draw (0, 2) to[sV, v<=$230 V\cdot \underline{a}^2$, anchor=west, *-] (2, 2)
+    to[short, i=?] (4, 2)
+    to[short] (10, 2)
+    to[R=10\ohm, -*] (12, 2);
+
+    \draw (0, 0) to[sV, v<=$230 V\cdot\underline{a}$, anchor=west] (2, 0)
+    to[short, i=?] (4, 0)
+    to[short] (10, 0)
+    to[R=10\ohm] (12, 0);
+
+    \draw (-0.5, 2) node {$N_{\mathrm{Q}}$}
+    (12.5, 2) node {$N_{\mathrm{V}}$};
+
+    \draw [->](5.5, 3.8) -- (5.5, 2.2);
+    \draw (5.8, 3) node {?};
+    \draw [->](5.5, 1.8) -- (5.5, 0.2);
+    \draw (5.8, 1) node {?};
+    \draw [<-](7.5, 3.8) -- (7.5, 0.2);
+    \draw (7.8, 1) node {?};
+\end{circuitikz}%

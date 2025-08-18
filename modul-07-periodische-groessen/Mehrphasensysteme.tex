@@ -208,66 +208,7 @@
 }
 
     \fu{\resizebox{0.6\textwidth}{!}{%
-        \begin{tikzpicture}
-            \draw [->] (0, 0) -- (2, 0);
-            \draw [->] (0, 0) -- (-4, 0);
-            \draw [->] (0, 0) -- (0, -3);
-            \draw [->] [dashed] (0, 0) -- (-0.666, -1);
-            \draw [->] [dashed] (-0.666, -1) -- (1.527, 0.654);
-            \draw [->] [dashed] (1.527, 0.654) -- (2, 0);
-
-            \draw (1.8, -0.5) node {$\underline{I}_{\mathrm{L1}}{=}I_\mathrm{L1}$};
-            \draw (-3, -0.5) node {$\underline{I}_{\mathrm{L3}}{=}2\cdot I_\mathrm{L1}\cdot e^{j180^{\circ}}$};
-            \draw (2, -2.5) node {$\underline{I}_{\mathrm{L2}}{=}1,5\cdot I_\mathrm{L1}\cdot e^{-j90^{\circ}}$};
-            \draw (0.8, 0.5) node {$\underline{I}_{\mathrm{1}}$};
-            \draw (2, 0.5) node {$\underline{I}_{\mathrm{2}}$};
-            \draw (-0.8, -0.5) node {$\underline{I}_{\mathrm{0}}$};
-
-            \draw [->] [dashed] (0, -6) -- (2.193, -4.346);
-            \draw [->] [dashed] (0, -6) -- (-2.529, -4.927);
-            \draw [->] [dashed] (0, -6) -- (0.336, -8.726);
-            \draw [->] (0, -6) -- (0.66, -6);
-            \draw [->] (0.66, -6) -- (1.526, -5.5);
-            \draw [->] (1.526, -5.5) -- (2.193, -4.346);
-
-            \draw (0.9, -5) node [scale=0.8] {$\underline{I}_{\mathrm{1}}$};
-            \draw (-1, -5.9) node [scale=0.8] {$\underline{a}\cdot\underline{I}_{\mathrm{1}}$};
-            \draw (0.8, -7.8) node [scale=0.8] {$\underline{a}^2\cdot\underline{I}_{\mathrm{1}}$};
-            \draw (0.4, -6.2) node [scale=0.8] {$\frac{1}{3}\underline{I}_{\mathrm{L1}}$};
-            \draw (2.6, -4.7) node [scale=0.8] {$\frac{1}{3}\underline{a}^2\cdot\underline{I}_{\mathrm{L3}}$};
-            \draw (1.5, -6) node [scale=0.8] {$\frac{1}{3}\underline{a}\cdot\underline{I}_{\mathrm{L2}}$};
-
-            \draw [->] [dashed] (4, -6) -- (4.333, -5.268);
-            \draw [->] [dashed] (4, -6) -- (4.467, -6.654);
-            \draw [->] [dashed] (4, -6) -- (3.2, -6.077);
-            \draw [->] (4, -6) -- (4.666, -6);
-            \draw [->] (4.666, -6) -- (3.8, -5.5);
-            \draw [->] (3.8, -5.5) -- (4.467, -6.654);
-
-            \draw (4, -6.3) node [scale=0.8] {$\underline{I}_{\mathrm{2}}$};
-            \draw (4.8, -5.3) node [scale=0.8] {$\underline{a}\cdot\underline{I}_{\mathrm{2}}$};
-            \draw (3.2, -5.8) node [scale=0.8] {$\underline{a}^2\cdot\underline{I}_{\mathrm{2}}$};
-            \draw (5.2, -5.9) node [scale=0.8] {$\frac{1}{3}\underline{I}_{\mathrm{L1}}$};
-            \draw (3.6, -5.3) node [scale=0.8] {$\frac{1}{3}\underline{a}^2\cdot\underline{I}_{\mathrm{L2}}$};
-            \draw (5, -6.6) node [scale=0.8] {$\frac{1}{3}\underline{a}\cdot\underline{I}_{\mathrm{L3}}$};
-
-            \draw [->] [dashed] (-4, -6) -- (-4.666, -7);
-            \draw [->] (-4, -6) -- (-3.334, -6);
-            \draw [->] (-3.334, -6) -- (-3.334, -7);
-            \draw [->] (-3.334, -7) -- (-4.666, -7);
-
-            \draw (-4.6, -6.5) node [scale=0.8] {$\underline{I}_{\mathrm{0}}$};
-            \draw (-3.6, -5.7) node [scale=0.8] {$\frac{1}{3}\underline{I}_{\mathrm{L1}}$};
-            \draw (-2.9, -6.5) node [scale=0.8] {$\frac{1}{3}\underline{I}_{\mathrm{L2}}$};
-            \draw (-3.7, -7.3) node [scale=0.8] {$\frac{1}{3}\underline{I}_{\mathrm{L3}}$};
-            
-
-            \draw (0, 1) node {Originalsystem};
-            \draw (-4, -4) node {Nullsystem};
-            \draw (0, -4) node {Mitsystem};
-            \draw (4, -4) node {Gegensystem};
-
-        \end{tikzpicture}%
+        \input{Tikz/src/Mehrphasensysteme/Zeigerdiagramme_unsymmetrisches System}
     }
     }{{\bf Zeigerdiagramme eines unsymmetrischen Systems.} Transformationen aus einem Originalsystem in Mit-, Gegen- und 
     Nullsystem. \label{ZeigerUnsym}}
@@ -769,32 +710,7 @@
     \end{itemize}
   }
     \fu{
-        \begin{circuitikz}
-            \draw (4, 0) to[short, o-] (0, 0)
-            to [short] (0, 1.2)
-            to[short, -o] (4, 1.2);
-
-            \draw (4, 1.4) to[short, o-] (0, 1.4)
-            to [short] (0, 2.6)
-            to[short, -o] (4, 2.6);
-
-            \draw (4, 2.8) to[short, o-] (0, 2.8)
-            to [sV, v<=$U_{\Stern}$] (0, 4)
-            to[short, -o] (4, 4);
-
-            \draw (2, 0.6) node {Nullsystem};
-            \draw [->](4, 1) -- (4, 0.2);
-            \draw (4.4, 0.6) node {$\underline{U}_0$};
-
-            \draw (2, 2) node {Gegensystem};
-            \draw [->](4, 2.4) -- (4, 1.6);
-            \draw (4.4, 2) node {$\underline{U}_2$};
-
-            \draw (2, 3.4) node {Mitsystem};
-            \draw [->](4, 3.8) -- (4, 3);
-            \draw (4.4, 3.4) node {$\underline{U}_1$};
-
-        \end{circuitikz}
+        \input{Tikz/src/Mehrphasensysteme/Transformierte_Spannungsquelle_ESB}
     }{{\bf Ersatzschaltbilder der transformierten Spannungsquelle.} Bei der symmetrischen Spannungsquelle verfügt nur das ESB 
     des Mitsystems über die Spannungsquelle. \label{ESBSymQuellen}}
 
@@ -1035,29 +951,7 @@
         \end{itemize}
     }
     \fu{
-        \begin{circuitikz}
-            \draw (0, 0) to[R, l_=$3\cdot\underline{Z}_{\mathrm{E}}$, o-] (4, 0)
-            to [short] (4, 1.2)
-            to[R=$\underline{Z}$, -o] (0, 1.2);
-
-            \draw (0, 1.6) to[short, o-] (4, 1.6)
-            to [short] (4, 2.8)
-            to[R=$\underline{Z}$, -o] (0, 2.8);
-
-            \draw (0, 3.2) to[short, o-] (4, 3.2)
-            to [short] (4, 4.4)
-            to[R=$\underline{Z}$, -o] (0, 4.4);
-            
-            \draw [->](0, 1) -- (0, 0.2);
-            \draw (-0.4, 0.6) node {$\underline{U}_0$};
-
-            \draw [->](0, 2.6) -- (0, 1.8);
-            \draw (-0.4, 2.2) node {$\underline{U}_2$};
-
-            \draw [->](0, 4.2) -- (0, 3.4);
-            \draw (-0.4, 3.8) node {$\underline{U}_1$};
-
-        \end{circuitikz}
+       \input{Tikz/src/Mehrphasensysteme/Transformierte_Last_ESB}
     }{{\bf Ersatzschaltbilder der transformierten Last.} Bei der symmetrischen Last weisen die drei Systeme alle eine 
     symmetrische Impedanz auf, jedoch verfügt das Nullsystem zusätzlich noch über die dreifache Impedanz für einen 
     Rückleiter. \label{ESBSymLasten}}
@@ -1171,70 +1065,7 @@
     
 
     \fu{
-        \begin{circuitikz}
-            \draw (0, 0) to[short, o-o] (7.5, 0) [dashed];
-
-            \draw (0, 1.5) to[short, f=$\underline{I}_{\mathrm{L3}}$, o-] (1.5, 1.5)
-            to[R=$\underline{Z}_{\mathrm{S}}$] (3, 1.5)
-            to[short] (4.5, 1.5)
-            to[R] (6, 1.5)
-            to[R, -o] (7.5, 1.5);
-
-            \draw (0, 3) to[short, f=$\underline{I}_{\mathrm{L2}}$, o-] (1.5, 3)
-            to[R=$\underline{Z}_{\mathrm{S}}$] (3, 3)
-            to[R] (4.5, 3)
-            to[R] (6, 3)
-            to[short, -o] (7.5, 3);
-            
-
-            \draw (0, 4.5) to[short, f=$\underline{I}_{\mathrm{L1}}$, o-] (1.5, 4.5)
-            to[R=$\underline{Z}_{\mathrm{S}}$] (3, 4.5)
-            to[R] (4.5, 4.5)
-            to[short] (6, 4.5)
-            to[R, -o] (7.5, 4.5);
-            
-
-            \draw [->](-1.8, 4.5) -- (-1.8, 0);
-            \draw (-1.3, 3.7) node {$\underline{U}_{\mathrm{L1A}}$};
-            \draw [->](-1.5, 3) -- (-1.5, 0);
-            \draw (-1, 2.2) node {$\underline{U}_{\mathrm{L2A}}$};
-            \draw [->](-1.2, 1.5) -- (-1.2, 0);
-            \draw (-0.7, 0.7) node {$\underline{U}_{\mathrm{L3A}}$};
-
-            \draw [->](9.3, 4.5) -- (9.3, 0);
-            \draw (8.8, 3.7) node {$\underline{U}_{\mathrm{L1B}}$};
-            \draw [->](9, 3) -- (9, 0);
-            \draw (8.5, 2.2) node {$\underline{U}_{\mathrm{L2B}}$};
-            \draw [->](8.7, 1.5) -- (8.7, 0);
-            \draw (8.2, 0.7) node {$\underline{U}_{\mathrm{L3B}}$};
-           
-
-            \draw (-0.4, 0) node {$N_{\mathrm{Q}}$};
-            \draw (7.9, 0) node {$N_{\mathrm{V}}$};
-
-            \draw (-0.4, 1.5) node {$L_3$};
-            \draw (-0.4, 3) node {$L_2$};
-            \draw (-0.4, 4.5) node {$L_1$};
-            \draw (7.9, 1.5) node {$L_3$};
-            \draw (7.9, 3) node {$L_2$};
-            \draw (7.9, 4.5) node {$L_1$};
-
-            \draw [-] [dashed] (3.75, 4.5) -- (3.75, 3);
-            \draw (3.75, 4.5) node[circ] {};
-            \draw (3.75, 3) node[circ] {};
-            \draw (4.1, 3.75) node {$\underline{Z}_{\mathrm{K}}$};
-
-            \draw [-] [dashed] (5.24, 3) -- (5.25, 1.5);
-            \draw (5.25, 3) node[circ] {};
-            \draw (5.25, 1.5) node[circ] {};
-            \draw (5.6, 2.25) node {$\underline{Z}_{\mathrm{K}}$};
-
-            \draw [-] [dashed] (6.75, 4.5) -- (6.75, 1.5);
-            \draw (6.75, 4.5) node[circ] {};
-            \draw (6.75, 1.5) node[circ] {};
-            \draw (7.1, 3.75) node {$\underline{Z}_{\mathrm{K}}$};
-                     
-        \end{circuitikz}
+        \input{Tikz/src/Mehrphasensysteme/Transformierte_Leitung_ESB}
     }{{\bf Ersatzschaltbilder der transformierten Leitung.} ESB einer symmetrischen Leitung mit den drei Phasen $L_\mathrm{1}$,
     $L_\mathrm{2}$ und $L_\mathrm{3}$ sowie gestrichelt die angedeutete Leitung der Sternpunktbehandlung. \label{ESBSymLeitung}}
 

@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+	\draw(2,0) to[short] (0,0)
+	to[V,v<,name=U0] (0,2)
+	to[R=$R_{\mathrm{i}}$,-o] (2,2)
+	to[short,-*](3,2)
+	to[short](3,1)
+	node[component]{V} to[short](3,0)
+	%to[rmeterwa=$R_{\mathrm{iV}}$,t=V] (3,0)
+	to[short,-o](2,0);
+
+	\draw(3,2)
+	to[short](4,2)
+	node[component]{A} to[short](5,2)
+
+	%to[rmeterwa=$R_{\mathrm{iA}}$,t=A] (5,2)
+	to[R=$R_{\mathrm{a}}$, v, i, name = Rlast](5,0)
+	to[short,-*](3,0);
+	\draw[dashed](-1.2,-0.5) to[short] (-1.2,2.8)
+	to[short] (1.8,2.8)
+	to[short] (1.8,-0.5)
+	to[short] (-1.2,-0.5);
+
+	\varrmore{U0}{$U_0$};
+	\varrmore{Rlast}{$U$};
+	\iarrmore{Rlast}{$I$};
+\end{tikzpicture}

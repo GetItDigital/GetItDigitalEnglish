@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+    \draw(0,0)to[short,i,name=zu,o-*](0,3)
+    to [R,i^,name=R1,-*](2,5)
+    to [R,-*](4,3)
+    to [R,-*](2,1)
+    to [R,i<^,name=R2](0,3);
+    \draw(4,3) to[short,-o](4,0);
+    \draw(2,5)to[rmeterwa,t=V](2,1);
+
+    \iarrmore{zu}{$I$};
+    \iarrmore{R1}{$I_{13}$};
+    \iarrmore{R2}{$I_{24}$};
+
+    \node at (0,-0.4) {+};
+    \node at (4,-0.4) {-};
+    \node at (2,5.4) {A};
+    \node at (2,0.6) {B};
+    \node at (0.6,4.4) {$R_1$}; % für waagerechte Beschriftung des Widerstandes
+    \node at (0.6,1.6) {$R_2$}; % für waagerechte Beschriftung des Widerstandes
+    \node at (3.4,4.4) {$R_3$}; % für waagerechte Beschriftung des Widerstandes
+    \node at (3.4,1.6) {$R_4$}; % für waagerechte Beschriftung des Widerstandes
+    \draw[->] (0.5,0) -- (3.5,0) node[midway,below] {24 V};
+\end{tikzpicture}

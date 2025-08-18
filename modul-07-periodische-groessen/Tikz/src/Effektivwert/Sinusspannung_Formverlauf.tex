@@ -1,0 +1,21 @@
+\begin{circuitikz}[domain=0:8,samples=100]
+    \draw[very thin,color=gray] (-0.1,-2.1) grid (8.1,2.1);
+    \draw[->] (-0.2,0) -- (8.2,0) node[right] {$t$};
+    \draw[->] (0,-2.1) -- (0,2.2) node [above,color=voltage] {$u(t)$};
+    \draw (0,-2.1) node[below] {$0$};
+    \draw (2,-2.1) node[below] {$5$};
+    \draw (4,-2.1) node[below] {$10$};
+    \draw (6,-2.1) node[below] {$15$};
+    \draw (8,-2.1) node[below] {$20$};
+    \draw (-0.1,0) node[left] {$0V$};
+    \draw (-0.1,2) node[left] {$4V$};
+    \draw (-0.1,-2) node[left] {$-4V$};
+    \draw (2,2.25) node[color=voltage] {$U_3$};
+    \draw[color=voltage,smooth] plot[id=Sinus3] function{2 * sin((pi/4) * x)};
+    \pause
+
+    % Effektivwert
+    \draw[dashed, red] (0,1.414) -- (8,1.414);
+    \node[right] at (8,1.414) {$U_\mathrm{Eff}(U_3)$};
+
+\end{circuitikz}

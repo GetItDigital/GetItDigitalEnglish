@@ -94,38 +94,7 @@
 
     \fu{
         \resizebox{0.7\textwidth}{!}{
-            \begin{tikzpicture}
-                \draw[->] (0, 0) -- (0, 5);
-                \draw[->] (0, 0) -- (10, 0);
-                \node at (-0.5, 5.2) {$u(t)$};
-                \node at (10.125, -0.25) {$t$};
-                \foreach \x in {0, 2, 4, 6, 8}
-                {
-                \draw (\x,0) -- (\x,-0.2);
-                }
-                \foreach \x in {0, 1, 2, 3, 4}
-                {
-                \draw (0, \x) -- (-0.2, \x);
-                }
-
-                \draw [line width=1.5pt] (0, 0) -- (4, 4);
-                \draw [line width=1.5pt] (4, 4) -- (4, 0); 
-                \draw (4, 0) -- (8, 4);
-                \draw (8, 4) -- (8, 0); 
-                \draw (8, 0) -- (10, 2); 
-
-                \node at (4, -0.5) {$T$};
-                \node at (8, -0.5) {$2T$};
-                \node at (-0.5, 2) {$5V$};
-                \node at (-0.5, 4) {$10V$};            
-                \pause
-            
-                % Mittelwert
-                \draw[dashed, red] (0,2) -- (10,2);
-                \draw[pattern=north east lines, pattern color=red!20, dashed] (0,0)--(0,2)--(2,2);
-                \draw[pattern=north east lines, pattern color=red!20, dashed] (2,2)--(4,4)--(4,2);
-                \node[red] at (5, 2.5) {$\overline{u(t)}$};
-            \end{tikzpicture}
+            \input{Tikz/src/Scheinleistung_Wirkleistung_Blindleistung/Saegezahnspannung_Verlauf}
         }
     }{{\bf Verlauf einer Sägezahnspannung.} Über die Sägezahnspannung wird die Ermittlung des rot gekennzeichneten 
     Mittelwertes erläutert. \label{BildLei1}}    
@@ -366,25 +335,7 @@
 
     \fu{
         \resizebox{0.8\textwidth}{!}{
-            \begin{circuitikz}[domain=0:8,samples=100]
-                %Gitter
-                \draw[very thin,color=gray] (-0.1,-2.1) grid (8.2,2.1);
-                \draw[->] (-0.2,0) -- (8.5,0) node[right] {$t$};
-                \draw[->] (0,-2.1) -- (0,2.2) node[above] {};
-                \draw (0,-2.1) node[below] {$0$};
-                \draw (2,-2.1) node[below] {$\pi$};
-                \draw (4,-2.1) node[below] {$2\pi$};		
-                \draw (6,-2.1) node[below] {$3\pi$};
-                \draw (8,-2.1) node[below] {$4\pi$};								
-                \draw[color=voltage] (-0.5,1.5) node[] {$u(t)$};					
-                \draw[color=red] (-0.5,-1) node[] {$i(t)$};			
-                \draw[color=voltage, smooth, thick] plot[id=Sinus11] function{1.5 * sin(pi/2 * x)} node[right] {};
-                \draw[color=red, smooth, thick] plot[id=Sinus12] function{1 * sin((pi/2) * x - (pi/2))} node[right] {};
-                \pause
-                            
-                \draw[color=green] (-0.5,-0.5) node[] {$p(t)$};	
-                \draw[color=green, smooth, thick] plot[id=Sinus13] function{(1.5 * sin(pi/2 * x)) * (1 * sin((pi/2) * x - (pi/2)))} node[right] {};
-            \end{circuitikz}	
+            \input{Tikz/src/Scheinleistung_Wirkleistung_Blindleistung/Verlauf_induktive_Last}
         }
     }{{\bf Verlauf des Stromes, der Spannung und der zeitabhängigen Leistung an einer induktive Last.} Die Augenblicksleistung weist die 
     doppelte Frequenz gegenüber der Spannung bzw. des Stromes auf. Die positiven und negativen Halbwellen heben sich gegenseitig
@@ -415,25 +366,7 @@
 
     \fu{
         \resizebox{0.8\textwidth}{!}{
-            \begin{circuitikz}[domain=0:8,samples=100]
-                %Gitter
-                \draw[very thin,color=gray] (-0.1,-2.1) grid (8.2,2.1);
-                \draw[->] (-0.2,0) -- (8.5,0) node[right] {$t$};
-                \draw[->] (0,-2.1) -- (0,2.2) node[above] {};
-                \draw (0,-2.1) node[below] {$0$};
-                \draw (2,-2.1) node[below] {$\pi$};
-                \draw (4,-2.1) node[below] {$2\pi$};		
-                \draw (6,-2.1) node[below] {$3\pi$};
-                \draw (8,-2.1) node[below] {$4\pi$};								
-                \draw[color=voltage] (-0.5,1.5) node[] {$u(t)$};					
-                \draw[color=red] (-0.5,-1) node[] {$i(t)$};	
-                \draw[color=voltage, smooth, thick] plot[id=Sinus14] function{1.5 * sin(pi/2 * x)} node[right] {};
-                \draw[color=red, smooth, thick] plot[id=Sinus15] function{1 * sin((pi/2) * x + (pi/2))} node[right] {};
-                \pause
-                            
-                \draw[color=green] (-0.5,-0.5) node[] {$p(t)$};	
-                \draw[color=green, smooth, thick] plot[id=Sinus16] function{(1.5 * sin(pi/2 * x)) * (1 * sin((pi/2) * x + (pi/2)))} node[right] {};
-            \end{circuitikz}	
+            \input{Tikz/src/Scheinleistung_Wirkleistung_Blindleistung/Verlauf_kapazitive_Last}	
         }
     }{{\bf Verlauf des Stromes, der Spannung und der zeitabhängigen Leistung an einer kapazitiven Last.} Die Augenblicksleistung weist die 
     doppelte Frequenz gegenüber der Spannung bzw. des Stromes auf. Die positiven und negativen Halbwellen heben sich gegenseitig
@@ -705,42 +638,7 @@
 
     \fu{
         \resizebox{0.3\textwidth}{!}{
-        \begin{tikzpicture}
-            \draw[->] (0, -4) -- (0, 4);
-            \draw[->] (-4, 0) -- (4, 0);
-            \node at (0, 4.2) {$\Im(\underline{S})$};
-            \node at (4.125, -0.25) {$\Re(\underline{S})$};
-            \draw (0, 0) coordinate (a);
-            \draw (2.12, 0) coordinate (b);
-            \draw (2.12, 2.12) coordinate (c);
-            \pause
-
-            \draw[->, line width=2pt] [blue] (0, 0) -- (2.12, 0);
-            \node at (1.2, -0.25) {$P$};
-            \node at (2, -4) {$Lastbetrieb$};
-            \pause
-
-            \draw[->, line width=2pt] [yellow] (2.12, 0) -- (2.12, 2.12);
-            \node at (2.3, 1.1) {$Q$};
-            \node at (4, 2) {Induktiv};
-            \pause
-
-            \draw (0,0) circle (3);
-            \draw[->, line width=2pt] [red] (0, 0) -- (2.12, 2.12);
-            \draw pic[draw, angle radius = 40, ->] {angle = b--a--c};
-            \node at (1, 1.5) {$S$};
-            \node at (0.9, 0.5) {$\varphi$};
-            \node at (3,3) {$I.$};
-            \pause
-            
-            \node at (-2, -4) {$Generatorbetrieb$};
-            \node at (4, -2) {Kapazitiv};
-            \node at (-4, -2) {{\"U}bererregt};
-            \node at (-4, 2) {Untererregt};
-            \node at (-3,3) {$II.$};
-            \node at (-3,-3) {$III.$};
-            \node at (3,-3) {$IV.$};
-        \end{tikzpicture}
+        \input{Tikz/src/Scheinleistung_Wirkleistung_Blindleistung/Zeigerdiagramm_Leistung}
         }
     }{{\bf Zeigerdiagramm der Leistung.} Zusammensetzung von Blind-, Wirk- und Scheinleistung in Abhängigkeit der Phasenverschiebung 
     zwischen Strom und Spannung. Hier eine induktive Last im positiven Imaginärteil. \label{BildBetriebsdiagramm}}

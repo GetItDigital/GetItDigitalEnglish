@@ -1,124 +1,114 @@
 \subsection{Komplexe Wechselstromrechnung 2}
 \Aufgabe{
-    
-    Eine Impedanz weist bei der Frequenz $f = 1\ kHz$ den Wert $\underline{Z} = (300+\mathrm{j}400)\ \Omega$ auf. 
 
+    Eine Impedanz weist bei der Frequenz $f = 1\ kHz$ den Wert $\underline{Z} = (300+\mathrm{j}400)\ \Omega$ auf. 
+    
     \begin{itemize}
         \item[\bf a)] Bestimmen Sie den Scheinwiderstand (Betrag) der Impedanz.
-        \item[\bf b)] Ermitteln Sie die Admittanz $\underline{Y} = \frac{1}{\underline{Z}}$ sowie den Scheinleitwert. 
-        \item[\bf c)] Geben Sie zur Realisierung der Impedanz $\underline{Z}$ eine Schaltung aus zwei in Reihe geschalteten 
-            Bauelementen an und dimensionieren Sie diese Schaltung.
-        \item[\bf d)] Geben Sie zur Realisierung der Impedanz $\underline{Z}$ eine Schaltung aus zwei parallel geschalteten 
-            Bauelementen an und dimensionieren Sie diese Schaltung.  
+        \item[\bf b)] Ermitteln Sie die Admittanz $\underline{Y} = \frac{1}{\underline{Z}}$ sowie den Scheinleitwert.
+        \item[\bf c)] Geben Sie zur Realisierung der Impedanz $\underline{Z}$ eine Schaltung aus zwei in Reihe geschalteten
+              Bauelementen an und dimensionieren Sie diese Schaltung.
+        \item[\bf d)] Geben Sie zur Realisierung der Impedanz $\underline{Z}$ eine Schaltung aus zwei parallel geschalteten
+              Bauelementen an und dimensionieren Sie diese Schaltung.  
     \end{itemize}
-
+    
     Außerdem wird an die Impedanz $\underline{Z} = (300+\mathrm{j}400)\ \Omega$ eine Spannung 
     $u(t)=\hat{U} \cdot \cos(2\pi f t + \varphi_U)$ mit $\hat{U}=5\ V$, $\varphi_U=\pi/4$ und $f=1\ kHz$ gelegt. 
-
+    
     \begin{itemize}
         \item[\bf e)] Ermitteln Sie die komplexe Amplitude $\underline{\hat{U}}$ der anliegenden Spannung.
-        \item[\bf f)] Berechnen Sie die komplexe Amplitude $\underline{\hat{I}}$ des Stromes durch die Impedanz. 
+        \item[\bf f)] Berechnen Sie die komplexe Amplitude $\underline{\hat{I}}$ des Stromes durch die Impedanz.
         \item[\bf g)] Geben Sie den zeitlichen Verlauf des Stromes $i(t)$ an.
         \item[\bf h)] Stellen Sie die Impedanz in Polarform dar und geben Sie den Winkel $\varphi = arg\{\underline{Z}\}$
-            an. Vergleichen Sie den Winkel der Impedanz mit der Phasenverschiebung zwischen Spannung und Strom. Was stellen
-            Sie fest? 
+              an. Vergleichen Sie den Winkel der Impedanz mit der Phasenverschiebung zwischen Spannung und Strom. Was stellen
+              Sie fest? 
     \end{itemize}
 }
 
 
 \Loesung{
-	\begin{itemize}
+    \begin{itemize}
 
-	\item[\bf a)]
-        \begin{eqa}
-            |\underline{Z}| &= \sqrt{Re^2+Im^2} \nonumber \\  
-             &= \sqrt{300^2+400^2}\ \Omega \nonumber \\ 
-             &= 500\ \Omega     \nonumber
-        \end{eqa}
-	
-	\item[\bf b)]
-    \begin{eqa}
-        \underline{Y} &= \frac{1}{\underline{Z}} = \frac{1}{(300+\mathrm{j}400)\ \Omega} \nonumber \\  
-         &= \frac{1}{(300+\mathrm{j}400)\ \Omega} \cdot \frac{(300-\mathrm{j}400)\ \cancel{\Omega}}{(300-\mathrm{j}400)\ \cancel{\Omega}} \nonumber \\ 
-         &= \frac{1}{300^2+400^2} \cdot (300-\mathrm{j}400)\ S     \nonumber   \\
-         &= (0.0012-\mathrm{j}0.0016)\ S     \nonumber     \\
-        |\underline{Y}| &= \frac{1}{|\underline{Z}|} \nonumber      \\
-         &= \frac{1}{500}\ S     \nonumber
-    \end{eqa}
-	
-    \item[\bf c)] 
-        Reihenschaltung: \\
-        Realteil $\rightarrow$ Ohmscher Wiederstand \\
-        Imaginärteil $\rightarrow$ Spule oder Kondensator? \\
-        Reaktanz Spule: $X_L=2\pi f \cdot L > 0$       \\
-        Reaktanz Kondensator: $X_C=-\frac{1}{2\pi f\cdot C}  < 0$   \\
-
-        \begin{figure}[H]
-            \centering
-            \resizebox{0.35\textwidth}{!}{
-            \begin{circuitikz}
-                \draw(0,0) to [R=${R}$, o-] (2,0);
-                \draw(2,0) to [L=${L}$, -o] (4,0);
-            \end{circuitikz}
-            } 
-        \end{figure} 
-
-        \begin{eqa}
-            R &= 300\ \Omega     \nonumber   \\
-            L &= \frac{X_L}{2\pi \cdot f} \nonumber  \\
-             &= \frac{400\ \Omega}{2\pi \cdot 1\ kHz}  \nonumber   \\
-             &= 63.66\ mH  \nonumber   \\
-            \underline{Z} &= R+\mathrm{j}X_L = R+\mathrm{j}\ 2\pi \cdot f \cdot L        \nonumber
-        \end{eqa}
+        \item[\bf a)]
+              \begin{eqa}
+                  |\underline{Z}| &= \sqrt{Re^2+Im^2} \nonumber \\  
+                  &= \sqrt{300^2+400^2}\ \Omega \nonumber \\ 
+                  &= 500\ \Omega     \nonumber
+              \end{eqa}
+              
+        \item[\bf b)]
+              \begin{eqa}
+                  \underline{Y} &= \frac{1}{\underline{Z}} = \frac{1}{(300+\mathrm{j}400)\ \Omega} \nonumber \\  
+                  &= \frac{1}{(300+\mathrm{j}400)\ \Omega} \cdot \frac{(300-\mathrm{j}400)\ \cancel{\Omega}}{(300-\mathrm{j}400)\ \cancel{\Omega}} \nonumber \\ 
+                  &= \frac{1}{300^2+400^2} \cdot (300-\mathrm{j}400)\ S     \nonumber   \\
+                  &= (0.0012-\mathrm{j}0.0016)\ S     \nonumber     \\
+                  |\underline{Y}| &= \frac{1}{|\underline{Z}|} \nonumber      \\
+                  &= \frac{1}{500}\ S     \nonumber
+              \end{eqa}
+              
+        \item[\bf c)] 
+              Reihenschaltung: \\
+              Realteil $\rightarrow$ Ohmscher Wiederstand \\
+              Imaginärteil $\rightarrow$ Spule oder Kondensator? \\
+              Reaktanz Spule: $X_L=2\pi f \cdot L > 0$       \\
+              Reaktanz Kondensator: $X_C=-\frac{1}{2\pi f\cdot C}  < 0$   \\
+              
+              \begin{figure}[H]
+                  \centering
+                  \resizebox{0.35\textwidth}{!}{
+                      \input{Tikz/src/Aufgaben/Loesung_Komplexe_Wechselstromrechnung_2c}
+                  }
+              \end{figure}
+              
+              \begin{eqa}
+                  R &= 300\ \Omega     \nonumber   \\
+                  L &= \frac{X_L}{2\pi \cdot f} \nonumber  \\
+                  &= \frac{400\ \Omega}{2\pi \cdot 1\ kHz}  \nonumber   \\
+                  &= 63.66\ mH  \nonumber   \\
+                  \underline{Z} &= R+\mathrm{j}X_L = R+\mathrm{j}\ 2\pi \cdot f \cdot L        \nonumber
+              \end{eqa}
+              
+        \item[\bf d)]
+              Parallelschaltung: \\
+              $\rightarrow$ Addition von Leitwerten:\\
+              
+              \begin{eq}
+                  \underline{Y} = G + \mathrm{j}B = (0.0012-\mathrm{j}0.0016)\ S    \qquad  (\text{aus b)})      \nonumber
+              \end{eq}
+              
+              $B<0 \rightarrow$   Spule, induktiver Blindleitwert \\
+              $B>0 \rightarrow$   Kondensator, kapazitiver Blindleitwert  \\
+              
+              \begin{figure}[H]
+                  \centering
+                  \resizebox{0.5\textwidth}{!}{
+                      \input{Tikz/src/Aufgaben/Loesung_Komplexe_Wechselstromrechnung_2d}
+                  }
+              \end{figure}
+              
+              \begin{eqa}
+                  R &= \frac{1}{G}    \nonumber   \\
+                  &= \frac{1}{0.0012\ S}    \nonumber   \\
+                  &= 833\ \Omega     \nonumber   \\
+                  B &= -\frac{1}{2\pi \cdot f \cdot L} \nonumber  \\
+                  L &= \frac{1}{2\pi \cdot f \cdot B}  \nonumber   \\
+                  &= 99.47\ mH  \nonumber   
+              \end{eqa}
+              
+        \item[\bf e)] 
+              \begin{eqa}
+                  \underline{U} &= \hat{U} \cdot \mathrm{e}^{\mathrm{j} \varphi_\mathrm{U}}  = 5\ V \cdot \mathrm{e}^{\mathrm{j} \pi/4} = 5\ V \cdot \mathrm{e}^{\mathrm{j} 45^\circ}    \nonumber   \\
+                  &= 5\ V \cdot (\cos(45^\circ)+\mathrm{j}\sin(45^\circ))    \nonumber   \\
+                  &= 5\ V \cdot \frac{\sqrt{2}}{2} (1+\mathrm{j}) \nonumber   \\
+                  &\approx (3,53 + \mathrm{j} 3,53) \ V    \nonumber
+              \end{eqa}
+              
+        \item[\bf f)]
+        
+        \item[\bf g)] 
+        
+        \item[\bf h)] 
+        
+    \end{itemize}
     
-	\item[\bf d)]
-        Parallelschaltung: \\
-        $\rightarrow$ Addition von Leitwerten:\\
-
-        \begin{eq}
-            \underline{Y} = G + \mathrm{j}B = (0.0012-\mathrm{j}0.0016)\ S    \qquad  (\text{aus b)})      \nonumber
-        \end{eq}
-
-        $B<0 \rightarrow$   Spule, induktiver Blindleitwert \\
-        $B>0 \rightarrow$   Kondensator, kapazitiver Blindleitwert  \\
-
-        \begin{figure}[H]
-            \centering
-            \resizebox{0.5\textwidth}{!}{
-            \begin{circuitikz}
-                \draw(0,0) to [short,o-*] (2,0);
-                \draw(2,-1) to [short] (2,1);
-                \draw(2,1) to [R=${R}$] (4,1);
-                \draw(2,-1) to [L=${L}$] (4,-1);
-                \draw(4,-1) to [short] (4,1);
-                \draw(4,0) to [short,*-o] (6,0);
-            \end{circuitikz}
-            } 
-        \end{figure} 
-
-        \begin{eqa}
-            R &= \frac{1}{G}    \nonumber   \\
-             &= \frac{1}{0.0012\ S}    \nonumber   \\
-             &= 833\ \Omega     \nonumber   \\
-            B &= -\frac{1}{2\pi \cdot f \cdot L} \nonumber  \\
-            L &= \frac{1}{2\pi \cdot f \cdot B}  \nonumber   \\
-             &= 99.47\ mH  \nonumber   
-        \end{eqa}
-	
-    \item[\bf e)] 
-        \begin{eqa}
-            \underline{U} &= \hat{U} \cdot \mathrm{e}^{\mathrm{j} \varphi_\mathrm{U}}  = 5\ V \cdot \mathrm{e}^{\mathrm{j} \pi/4} = 5\ V \cdot \mathrm{e}^{\mathrm{j} 45^\circ}    \nonumber   \\
-            &= 5\ V \cdot (\cos(45^\circ)+\mathrm{j}\sin(45^\circ))    \nonumber   \\
-            &= 5\ V \cdot \frac{\sqrt{2}}{2} (1+\mathrm{j}) \nonumber   \\
-            &\approx (3,53 + \mathrm{j} 3,53) \ V    \nonumber
-        \end{eqa}
-    
-	\item[\bf f)]
-	
-    \item[\bf g)] 
-    
-    \item[\bf h)] 
-
-\end{itemize}
-
 }

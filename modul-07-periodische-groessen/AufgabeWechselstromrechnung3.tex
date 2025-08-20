@@ -1,63 +1,42 @@
 \subsection{Komplexe Wechselstromrechnung 3}
 \Aufgabe{
-    
+
     Das nachfolgende elektrische Netzwerk soll als Beispiel eines Ersatzschaltbildes einer Lithium-Ionen Zelle auf seine
     komplexen Größen analysiert werden. Das Ersatzschaltbild besteht aus einer Serienschaltung aus einer Spule $L$, dem 
     Serienwiderstand $R_\mathrm{S}$ und der Paralellschaltung der Paralellwiderstandes $R_\mathrm{P}$ und dem paralell
     verschalteten Kondensator $C_\mathrm{P}$. Die Berechnung der komplex Ströme und Spannungen aller Komponenten soll in 
     der folgenden Reihenfolge stattfinden:
-
+    
     \begin{itemize}
         \item[\bf a)] Größe der komplexen Impedanzen aller Komponenten und der gesamten komplexen Impedanz
         \item[\bf b)] Komplexe Ströme durch die Komponenten
         \item[\bf c)] Komplexe Spannungen an den Komponenten
     \end{itemize}
-
+    
     \begin{figure}[H]
         \centering
         \resizebox{0.7\textwidth}{!}{
-        \begin{circuitikz}
-            
-            \draw(0,0) to [L=${L=900\ nH}$, v, i, name=L, o-] (3,0);
-            \varrmore{L}{$U_\mathrm{L}$};
-            \iarrmore{L}{$I_\mathrm{L}$};
-
-            \draw(3,0) to [R=${R_\mathrm{S}=20\ m\Omega}$, v, i, name=Rs, -*] (6,0);
-            \varrmore{Rs}{$U_\mathrm{R_\mathrm{S}}$};
-            \iarrmore{Rs}{$I_\mathrm{R_\mathrm{S}}$};
-
-            \draw(6,-1) to [short] (6,1);
-            \draw(9,-1) to [short] (9,1);
-            \draw(9,0) to [short, *-o] (10,0);
-
-            \draw(6,1) to [R=${R_\mathrm{P}=15\ m\Omega}$, v, i, name=Rp] (9,1);
-            \varrmore{Rp}{$U_\mathrm{R_\mathrm{P}}$};
-            \iarrmore{Rp}{$I_\mathrm{R_\mathrm{P}}$};
-
-            \draw(6,-1) to [C=${C_\mathrm{P}=200\ mF}$, v, i, name=C] (9,-1);
-            \varrmore{C}{$U_\mathrm{C_\mathrm{P}}$};
-            \iarrmore{C}{$I_\mathrm{C_\mathrm{P}}$};
-        \end{circuitikz}
-        } 
-    \end{figure}  
+            \input{Tikz/src/Aufgaben/Komplexe_Wechselstromrechnung3}
+        }
+    \end{figure}
 }
 
 
 \Loesung{
-	\begin{itemize}
+    \begin{itemize}
 
-	\item[\bf a)]
-        \begin{eq}
-            X_\mathrm{L} = j \omega \cdot L = j \cdot 2\pi \cdot 800\ Hz \cdot 900\ nH  \nonumber
-        \end{eq}
-        \begin{eq}
-            X_\mathrm{Rs} = R_\mathrm{S} = 20\ m\Omega
-        \end{eq}
-	
-	\item[\bf b)]
-	
-    \item[\bf c)]  
-
-\end{itemize}
-
+        \item[\bf a)]
+              \begin{eq}
+                  X_\mathrm{L} = j \omega \cdot L = j \cdot 2\pi \cdot 800\ Hz \cdot 900\ nH  \nonumber
+              \end{eq}
+              \begin{eq}
+                  X_\mathrm{Rs} = R_\mathrm{S} = 20\ m\Omega
+              \end{eq}
+              
+        \item[\bf b)]
+        
+        \item[\bf c)]  
+        
+    \end{itemize}
+    
 }

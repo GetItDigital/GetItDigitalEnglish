@@ -3,7 +3,7 @@
 %Hier den Inhalt mit \input einfügen und die folgenden Zeilen entfernen
 
 \section{Die Energie} % Definition der Energie
-
+\newvideofile{energie}{Energie}
 \s{
 Die gespeicherte Arbeitsleistung wird nach aufgewendeter Arbeit als Energie bezeichnet. 
 Wenn beispielsweise ein Objekt erwärmt wird, liegt diese gespeicherte Wärme als thermische Energie vor. 
@@ -18,8 +18,8 @@ Das bedeutet, dass Energie weder erschaffen noch zerstört werden kann, sondern 
 }
 
 \begin{frame}
-	\ftx{Der Energieerhaltungssatz}
-\begin{figure}[H]
+	\ftx{Der Energieerhaltungssatz} % ToDo: Das Bild verrutscht!
+\begin{figure}[H] %  ToDo: Das Bild verrutscht!! 
 	\centering
 	    \b{\includesvg[width=0.5\textwidth]{Ball}}
 		\s{\includesvg[width=0.5\textwidth]{Ball}  
@@ -41,20 +41,81 @@ aber die Summe all dieser Energieformen bleibt gleich der ursprünglichen potenz
 		
 \end{Merksatz}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% erste Makros für TTS %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% erste Makros für TTS %%%%%%%%%%%%%%%%%%%%%%%% test
+% ToDo: Video: Das Intro vom Video wird erstellt, aber danach kommt nichts. auch kein Outro.
+
+\speech{01_Energie}{1}{ % ToDo: dieser Teil soll bei only 1 kommen
+Auch hier sehen wir nochmal ein einfaches Bild mit dem zentralen Hinweis:
+Der Energieerhaltungssatz gilt immer. Ich hatte es bereits erwähnt:
+Energie kann immer nur gewandelt werden.
+In einem geschlossenen System bleibt die Gesamtenergie immer gleich.
+Wie bei diesem Ball im Bild.
+Am linken Rand, wo der Ball ursprünglich gestartet ist, sehen wir den Anfang seiner Bewegung.
+Er fällt in einer Wurfparabel nach unten.
+Dabei wird potenzielle Energie, also seine Lageenergie, in kinetische Energie gewandelt.
+Der Ball wird immer schneller.
+Jede und jeder, der mal einen Ball aus dem Fenster geworfen hat, kennt das:
+Je höher er gestartet ist, desto schneller wird er beim Fallen.
+Das ist genau die Wirkung der potenziellen Energie.
+Wenn der Ball auf dem Boden auftrifft, kommt es zu einem elastischen Stoß.
+Das hat mit dem Impulserhaltungssatz zu tun, den lernen Sie später im Physikunterricht.
+Die kinetische Energie beim Aufprall wandelt sich beim Hochfliegen wieder in potenzielle Energie um.
+Deshalb springt der Ball fast wieder auf dieselbe Höhe.
+Fast, aber eben nicht ganz.
+Warum?
+Weil Verluste entstehen.
+Zum Beispiel:
+Wenn der Ball auf den Boden auftrifft, wird er leicht verformt.
+Der Gummi knickt ein. Das nennt man Verformungsarbeit.
+Ein Teil der Energie geht also in eine andere Form über, nicht mehr potenziell oder kinetisch.
+Zusätzlich haben wir Reibung.
+Denn:
+Wir sind nicht im Vakuum. Die Luft wirkt auf den Ball, und auch das erzeugt Verluste in Form von Wärme.
+Das zeigt nochmal anschaulich, was der Energieerhaltungssatz bedeutet:
+Die Energie bleibt erhalten, aber sie wechselt die Form.
+}
+\speech{01_Energie}{2}{ % ToDo: Dieser Teil soll bei only 2 kommen
+	Zusammenfassung:
+	Energie ist eine Erhaltungsgröße.
+	Die Gesamtenergie in einem geschlossenen System bleibt immer gleich.
+	Energie kann weder erzeugt noch vernichtet werden.
+	Es wandeln sich lediglich die Energieformen.
+	Wie definieren wir Energie nun genau?
+	Wie sehr häufig in der Physik oder auch in der Elektrotechnik versuchen wir das mit einer Formel zu beschreiben.
+	In der unteren Hälfte der Folie sehen wir eine Formel.
+	Und diese Formel sagt uns im Grunde Folgendes:
+	Wir können Energie mathematisch beschreiben, und das erlaubt uns, damit zu rechnen und Systeme zu analysieren.
+	Wenn wir diese Formel in Worte fassen, dann ergibt sich daraus eine allgemeine Definition von Energie.
+	Und diese Definition hilft uns, Energieformen zu vergleichen, Umwandlungen zu bewerten und letztlich auch technische Systeme zu planen.
+	
+}
+\end{frame} % diese zeile habe ich aus zeile 118 hochkopiert, da es dort falsch schien
+\begin{frame}
+	\ftx{Lernziele: Die Elektrische Ladung}
+
+	\begin{Lernziele}{Die Elektrische Ladung}
+        Die Studierenden können
+        \begin{itemize}
+			\item die Eigenschaften elektrischer Ladungen sowie im Zusammenhang stehende physikalische Phänomene beschreiben
+			\item elektrische Felder beschreiben und für einfache Ladungsanordnungen berechnen
+			\item mit dem Coulomb´schen Gesetz Kräfte auf Ladungen berechnen
+	%		\item die elektrische Spannung aus anderen Feldgrößen errechnen 
+	%		\item Bestimmung des Zusammenhanges zwischen Ladung, elektrischer Flussdichte, Feldstärke und Permittivität im 
+	%		Homogenfeld
+        \end{itemize}
+    \end{Lernziele}
+
+	\speech{01_Energie}{3}{In diesem Video wird die elektrische Ladung eingeführt. Ziel ist es, dass ihr im Anschluss an dieses Video die Eigenschaften 
+	elektrischer Ladungen sowie die von ihr ausgehenden Phänomene beschreiben könnt. Dazu gehören unter anderem die elektrischen Felder sowie Kräfte, welche mit Hilfe des Coulombschen Gesetzes berechnet werden können.} 
 
 
-\speech{Der Energieerhaltungssatz}{1}{
-	In diesem Kapitel lernen die Studierenden die wesentlichen Konzepte des Energieerhaltungssatzes.
-	Inhalte sind die Erhaltungsgrößen, die Energieformen und die Tatsache, dass Energie weder vernichtet noch erschaffen werden kann.
-	}
-
+\end{frame}
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\end{frame}
+
 
 \subsection{Die verschiedenen Energieformen}
 \label{sec:energieformen}
@@ -78,9 +139,44 @@ In der Physik beschreibt Energie die Fähigkeit, Arbeit zu verrichten, und tritt
 	Thermische Energie (Wärmeenergie) \\
 	Elektrische Energie \\
 	Chemische Energie \\
-	Kernenergie
+	Kernenergie \\
+	Strahlungsenergie % ToDo: Strahlunsenergie muss auch bei den anderen Aufzählungen mit aufgenommen wreden.
 	
 \end{Merksatz}
+
+\speech{01_Energie}{4}{
+Welche Energieformen haben wir denn eigentlich?
+Hier sehen wir einige, die wir in der Elektrotechnik und in der Physik sehr häufig antreffen.
+Zum einen die kinetische Energie, das ist die Bewegungsenergie.
+Wenn ein Körper mit einer bestimmten Masse sich mit einer bestimmten Geschwindigkeit bewegt, dann war dafür Energie nötig, um ihn auf diese Geschwindigkeit zu bringen.
+Ein gutes Beispiel:
+Der Motorsport.
+Ein Formel-1-Wagen fährt mit 300 Kilometern pro Stunde auf eine Kurve zu und bremst dann stark ab.
+Was passiert?
+Die kinetische Energie des Fahrzeugs wird in thermische Energie umgewandelt, die Bremsscheiben glühen.
+Thermische Energie ist also die Wärmeenergie, die nötig ist, um einen Körper zu erwärmen.
+Und das Abbremsen eines Autos ist nichts anderes als das Wandeln von Bewegungsenergie in Wärme.
+Dann gibt es die potenzielle Energie, die hatten wir gerade schon beim Pumpspeicherkraftwerk.
+Immer wenn ein Körper in einem Gravitationsfeld auf einer gewissen Höhe ist, oder auf eine Höhe gebracht wird, stecken wir Energie in das System.
+Jeder, der schon einmal mit dem Fahrrad einen Berg hochgefahren ist, weiß: Das ist deutlich anstrengender als auf einer flachen Strecke.
+Warum?
+Weil wir potenzielle Energie in das System Fahrrad, und uns selbst, hineinstecken.
+Das erfordert Arbeit. Wenn wir zusätzlich noch Gepäck dabeihaben, wird es sogar noch anstrengender.
+Denn: Potenzielle Energie ist abhängig von der Masse.
+Außerdem gibt es elektrische Energie.
+Auf die gehen wir in den nächsten Folien noch genauer ein.
+Dann haben wir die chemische Energie.
+Bei chemischen Prozessen wird entweder Energie freigesetzt oder es muss Energie zugeführt werden.
+Ein Beispiel: Das Verbrennen von Methan, also Erdgas.
+Dabei entstehen CO2 und Wasser, und gleichzeitig wird Energie frei, meistens in Form von Wärme.
+Chemische Energie nutzen wir auch in der Elektrotechnik, zum Beispiel in Batterien.
+Dort wird Energie gespeichert und über einen chemischen Prozess wieder abgegeben.
+Und zuletzt: Die Kernenergie.
+Wenn wir Atomkerne spalten, wird sehr viel Energie frei.
+Diese liegt oft in Form von thermischer Energie vor, aber auch in Form elektromagnetischer Wellen, also radioaktiver Strahlung.
+Auch das ist eine Energieform: Strahlungsenergie.
+}
+
 \end{frame}
 
 \subsection{Die elektrische Energie}
@@ -135,6 +231,7 @@ Eingesetzt ergibt dies die folgende vereinfachte Darstellung.
 \end{equation}
 
 }% nur Skript
+
 \b{
 \begin{frame}
 		\ftx{Die Energie}
@@ -146,6 +243,11 @@ Eingesetzt ergibt dies die folgende vereinfachte Darstellung.
 			E = \int_{P_\mathrm{1}}^{P_\mathrm{2}} \vec{F} \cdot \mathrm{d}\vec{s} \quad \quad [E] = \text{1 Joule = 1 J = 1 Nm} 
 		\end{equation*}
 		
+\speech{01_Energie}{5}{ %ToDo: Die Klammern sind hier lila und oben gelb. Muss irgendwo ein Fehler sein. (Vielleicht auch nicht. Farbe Ändert sich, sobald {{}})
+	Wir haben jetzt viel über Energie geredet, haben gesehen, was Energie ist. Was wir dann aber in der Regel in der Physik immer brauchen, ist auch eine formenmäßige Beschreibung der Energie. Und ganz allgemein, unabhängig davon, welche Energieform wir betrachten, ist die Energie definiert über das Skalarprodukt der Kraft F, die wir aufwenden, multipliziert mit dem Streckenelement ds. Wenn wir also unsere Kraft entlang der Wegstrecke verrichten, dann sind Kraftvektor und Wegstreckenvektor genau gleichgerichtet parallel zueinander und aus dem Skalarprodukt zweier Vektoren wird einfach das Produkt der Beträge dieser beiden Vektoren. Wenn die Wegstrecke, die wir verbringen, senkrecht zu dem Kraftvektor steht, verrichten wir demzufolge keine Arbeit. Die Energie ist null. Warum? Weil dann, dass die beiden Vektoren senkrecht zueinander stehen und das Skalarprodukt aus zwei senkrecht aufeinander stehenden Vektoren ist nun mal null. Das heißt, wir müssen hier die geometrischen Gegebenheiten, wie ist unsere Strecke, wie ist die Kraft, die wir dafür aufbringen müssen, mit berücksichtigen und das ist der Grund, warum wir das Ganze als sogenanntes Linienintegral beschreiben. Ein Linienintegral ist also eine dreidimensionale Schreibung mit Vektoren, wo wir die beiden Richtungen der Vektoren mit berücksichtigen.
+}
+
+
 \end{frame}
 \begin{frame}
 	\ftx{Die elektrische Energie}
@@ -169,6 +271,12 @@ Eingesetzt ergibt dies die folgende vereinfachte Darstellung.
 		\begin{equation*}
 			E_\mathrm{el} = Q \cdot U   \quad\quad  [E] = \text{1 Joule = 1 J = 1 Ws}
 		\end{equation*}
+
+\speech{01_Energie}{6}{ % ToDo: auch hier muss ein Fehler vorliegen, da die Klammern lila sind.
+Wenn wir jetzt die elektrische Energie betrachten möchten, dann gehen wir genauso vor wie vorher auch. Wir betrachten als erstes mal die elektrische Kraft FEL, die wir ja im ersten Modul kennengelernt haben, die Q-Ladungskraft, und die war definiert als die Ladungsmenge Q, die wir im elektrischen Feld zum Beispiel bewegen möchten, mal dem elektrischen Feld selber.
+Die elektrische Energie ergibt sich dann einfach daraus, dass wir die Formel für FEL, ist gleich Q mal E, einsetzen in die Formel der allgemeinen Energiebeschreibung, nämlich dass die Energie E gleich das Linienintegral von P1 nach P2 FDS ist. Wir setzen also F ist gleich Q mal E in dieses Linienintegral ein und da die Ladungsmenge Q nicht davon abhängig ist, von dem was wir aufintegrieren, sondern eine Konstante ist, können wir diese direkt vor das Integralzeichen ziehen, wie immer bei Konstanten, die unabhängig von den Integranten und Integralen sind. Wir erhalten also für die elektrische Energie, dass diese gleich der Ladung Q mal den Linienintegral von P1 nach P2 EDS ist. Wenn wir uns also senkrecht zu den elektrischen Feldlinien bewegen, dann wird keine Energie aufgewandelt. Was heißt das denn? Wir haben ja vorher gesehen, dass die elektrischen Feldlinien senkrecht zu den Äquipotentiallinien sind. Genau das sehen wir auch hier an dieser Formel. Denn wenn wir uns auf einer Äquipotentiallinie bewegen, also die Wegrichtung senkrecht zu den elektrischen Feldlinien ist, dann bringen wir keine elektrische Energie auf. Das war auch genau das, was wir bei der Einführung des elektrischen Feldes und der Äquipotentiallinie gesehen haben. Das sehen wir wieder hier am Beispiel dieses Linienintegrals.
+}
+
 
 \end{frame}
 }% nur Folien
@@ -210,6 +318,12 @@ Eingesetzt ergibt dies die folgende vereinfachte Darstellung.
 	
 \end{figure}}
 
+\speech{01_Energie}{7}{
+	Welche Arten der elektrischen Energiespeicher gibt es jetzt? Wir können prinzipiell unsere Energie relativ gut im Feld speichern. Wir haben ja gesehen, dass Felder generell irgendwie was mit Energie zu tun haben, egal ob das das Gravitationsfeld der Erde ist oder aber auch das elektrische und das magnetische Feld, was sich eben ergibt, wenn wir Ströme und Spannungen haben. Und wenn wir Energie vor allem im elektrischen Feld speichern, dann sind wir hier auf der linken Seite. Das ist ein Modell eines Plattenkondensators. Das heißt, wir haben zwei leitfähige Platten, die stehen sich gegenüber. Und auf der einen Platte sind positive Ladungen, auf der anderen Platte negative Ladungen. Dadurch baut sich das in Rot gezeichnete elektrische Feld auf. Und in diesem elektrischen Feld können wir Energie speichern. Also ein Kondensator oder eine Kapazität, genauer gesagt. Und das Bauteil, was damit verwandt ist, ist ein Kondensator. Das ist aber nicht unbedingt gleichzusetzen. Das werden wir später nochmal sehen. Elektro kann in seinem elektrischen Feld elektrische Energie speichern.
+	Auf der rechten Seite sehen wir eine Spule. Und diese Spule besitzt eine Induktivität. Und die Induktivität ist letztlich ein Maß dafür, wie viel Energie wir in dem magnetischen Feld dieses Bauteiles speichern können. Und auch das Magnetfeld überträgt Kräfte und ähnliches. Also ist es auch dafür verantwortlich, dass wir dort Energie speichern können. Das beschreiben wir mit dem Induktivitätsbegriff. Auch hier müssen wir später nochmal genauer unterscheiden, was ist eine Spule, was ist eine Induktivität. Dazu kommen wir dann aber später, wenn wir die Bauteile im nächsten Modul genauer beschreiben. Letztlich sind das aber die beiden Energiespeicher, die wir in der Elektrotechnik erstmal simpel zur Verfügung stehen haben. Einmal die Speicherung im elektrischen Feld, einmal die Speicherung im Magnetfeld. Das eine wäre die Kapazität auf der linken Seite, das andere die Induktivität auf der rechten Seite.
+
+}
+
 \end{frame}
 \s{
 		In Abbildung \ref{fig:Elektrische Energiespeicher} sind die beiden grundlegenden elektrischen Energiespeicher dargestellt. Dabei wird links die Energie in einem elektrischen Feld gespeichert. 
@@ -236,6 +350,11 @@ Eingesetzt ergibt dies die folgende vereinfachte Darstellung.
 					\caption{\textbf{Chemischer Energiespeicher.} Einfacher aufbau einer Batterie.}}
 				\label{fig:Chemischer Energiespeicher}
 			\end{figure}
+\speech{01_Energie}{8}{
+Ein Energiespeicher, den wir in der Elektrotechnik auch benutzen, der aber jetzt nicht klassisch im elektrischen oder magnetischen Feld Energie speichert, sondern tatsächlich eine Energiewandlung vornimmt, wäre ein sogenannter Akkumulator oder auch eine Batterie. Die hat eine negativ beladene Anode, eine positiv beladene Kathode. Wir haben in der Mitte einen Separator, die Anode trägt Material, die Kathode trägt Material. Diese Materialien können über einen sogenannten Ionstrom miteinander reagieren. Dafür braucht es ein Trägermaterial, das ist das Elektrolyt, und der Separator ist dafür da, das Elektrolyt durchzulassen, aber ansonsten zu isolieren, weil wir ansonsten intern innerhalb der Batterie bereits einen Kurzschluss hätten. Es finden also an Anoden und Kathoden elektrochemische Reaktionen statt, die durch Ladungsträger frei werden und an einen Strom fließen können. Und dieser Strom gibt Energie in das System. Woher kommt die Energie? Durch die Wandlung der Materialien. Das heißt, dort wird chemische Energie in elektrische Energie gewandelt.
+Ein weiteres Beispiel, sehr ähnlich dazu, chemische Energie in elektrische Energie zu wandeln, wäre zum Beispiel eine Brennstoffzelle, in der wir Wasserstoff und Sauerstoff miteinander reagieren lassen. Dabei werden ebenfalls Elektronen freigesetzt, die zum Stromfluss beitragen können. Und dabei entsteht letztlich Wasser als einziges neues chemisches Produkt. Das kann dann aus dem System entweichen. Innerhalb einer Batterie hingegen bleibt die Masse, die Gesamtmasse im System gleich. Aber beim Laden und Entladen werden sich die Gewichte von Anode und Kathode jeweils verändern, weil wirklich Material von der Anode zur Kathode beziehungsweise der Kathode zur Anode wandert.
+}
+
 \end{frame}
 \s{
 Batterien sind zwar vielseitig, haben aber auch einige Nachteile: Sie sind oft teuer in Anschaffung und Wartung, besitzen eine begrenzte Lebensdauer, 

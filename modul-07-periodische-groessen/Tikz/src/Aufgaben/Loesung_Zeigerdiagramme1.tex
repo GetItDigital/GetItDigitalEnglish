@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    % Achsen zeichnen
+    \draw[->] (-0.5,0) -- (3,0) node[right] {$\Re$};
+    \draw[->] (0,-0.5) -- (0,1.5) node[above] {$\Im$};
+
+    % Zeiger zeichnen
+    \draw[->, thick, color=voltage] (0,0) -- ({2 * cos(30)},{2 * sin(30)}) node[above right] {$\hat{U}$};
+
+    % Winkel markieren
+    \draw[->] (0,0) -- (0.5,0) node[below] {$0^\circ$};
+
+    % Beschriftung
+    \node at (2,0.8) {$30^\circ$};
+\end{tikzpicture}

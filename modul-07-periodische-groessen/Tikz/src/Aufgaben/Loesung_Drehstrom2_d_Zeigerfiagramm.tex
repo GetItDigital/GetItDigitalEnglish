@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+    \draw [->, gray] (0, 0) coordinate (A)-- (4,0) coordinate (B);
+    \draw [->, gray] (4, 0) -- (6.002, 3.465);
+    \draw [->, gray] (0, 0) -- (-2, 3.464) coordinate (C);
+    \draw [->, gray] (-2, 3.464) -- (-6.002, 3.465);
+    \draw [->, gray] (0, 0) -- (-2, -3.464) coordinate (D);
+    \draw [->, gray] (-2, -3.464) -- (0, -6.93);
+
+
+    \draw (2.5, 0.3) node[anchor=center] {$\underline{U}_\mathrm{L1}$};
+    \draw (-1.5, -1.7) node[anchor=center] {$\underline{U}_\mathrm{L2}$};
+    \draw (-0.4, 1.7) node[anchor=center] {$\underline{U}_\mathrm{L3}$};
+    \draw (-4, 3.8) node[anchor=center] {-$\underline{U}_\mathrm{L1}$};
+    \draw (5.8, 1.5) node[anchor=center] {-$\underline{U}_\mathrm{L2}$};
+    \draw (-1.8, -4.6) node[anchor=center] {-$\underline{U}_\mathrm{L3}$};
+    \draw (2.7, 2.2) node[anchor=center] {$\underline{U}_\mathrm{L1L2}$};
+    \draw (0.7, -2.8) node[anchor=center] {$\underline{U}_\mathrm{L2L3}$};
+    \draw (-3.2, 1.5) node[anchor=center] {$\underline{U}_\mathrm{L3L1}$};
+
+
+    %\draw pic[draw, angle radius = 13, ->] {angle = B--A--C};
+
+
+    \draw [->] (0, 0) -- (6.002, 3.465);
+    \draw [->] (0, 0) -- (0, -6.93);
+    \draw [->] (0, 0) -- (-6.002, 3.465);
+\end{tikzpicture}%

@@ -1,0 +1,32 @@
+\begin{tikzpicture}
+    \draw[->] (0, 0) -- (0, 5);
+    \draw[->] (0, 0) -- (10, 0);
+    \node at (-0.5, 5.2) {$u(t)$};
+    \node at (10.125, -0.25) {$t$};
+    \foreach \x in {0, 2, 4, 6, 8}
+        {
+            \draw (\x,0) -- (\x,-0.2);
+        }
+    \foreach \x in {0, 1, 2, 3, 4}
+        {
+            \draw (0, \x) -- (-0.2, \x);
+        }
+
+    \draw [line width=1.5pt] (0, 0) -- (4, 4);
+    \draw [line width=1.5pt] (4, 4) -- (4, 0);
+    \draw (4, 0) -- (8, 4);
+    \draw (8, 4) -- (8, 0);
+    \draw (8, 0) -- (10, 2);
+
+    \node at (4, -0.5) {$T$};
+    \node at (8, -0.5) {$2T$};
+    \node at (-0.5, 2) {$5V$};
+    \node at (-0.5, 4) {$10V$};
+    \pause
+
+    % Mittelwert
+    \draw[dashed, red] (0,2) -- (10,2);
+    \draw[pattern=north east lines, pattern color=red!20, dashed] (0,0)--(0,2)--(2,2);
+    \draw[pattern=north east lines, pattern color=red!20, dashed] (2,2)--(4,4)--(4,2);
+    \node[red] at (5, 2.5) {$\overline{u(t)}$};
+\end{tikzpicture}

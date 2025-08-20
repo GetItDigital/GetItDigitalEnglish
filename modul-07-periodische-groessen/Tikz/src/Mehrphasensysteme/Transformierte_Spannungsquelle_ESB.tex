@@ -1,0 +1,26 @@
+\begin{circuitikz}
+    \draw (4, 0) to[short, o-] (0, 0)
+    to [short] (0, 1.2)
+    to[short, -o] (4, 1.2);
+
+    \draw (4, 1.4) to[short, o-] (0, 1.4)
+    to [short] (0, 2.6)
+    to[short, -o] (4, 2.6);
+
+    \draw (4, 2.8) to[short, o-] (0, 2.8)
+    to [sV, v<=$U_{\Stern}$] (0, 4)
+    to[short, -o] (4, 4);
+
+    \draw (2, 0.6) node {Nullsystem};
+    \draw [->](4, 1) -- (4, 0.2);
+    \draw (4.4, 0.6) node {$\underline{U}_0$};
+
+    \draw (2, 2) node {Gegensystem};
+    \draw [->](4, 2.4) -- (4, 1.6);
+    \draw (4.4, 2) node {$\underline{U}_2$};
+
+    \draw (2, 3.4) node {Mitsystem};
+    \draw [->](4, 3.8) -- (4, 3);
+    \draw (4.4, 3.4) node {$\underline{U}_1$};
+
+\end{circuitikz}

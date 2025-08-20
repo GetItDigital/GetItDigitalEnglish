@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \draw (0,0) coordinate (U);
+    \draw[very thin,color=gray] (-0.1,-0.1) grid (3.2,3.1);
+    \draw[->] (-0.2,0) -- (3.4,0) node[right] {$\Re(\underline{Z})$};
+    \draw[->] (0,-0.1) -- (0,3.2) node[above] {$\Im(\underline{Z})$};
+    \draw (3,0) coordinate (R);
+    \draw (3,3) coordinate (Z);
+    \draw[->] (0,0) -- (2.5,2.5);
+    \draw(1.25,1.75) node {$\hat{Z}$};
+    \draw pic[draw, angle radius = 1cm, ->] {angle = R--U--Z};
+    \draw(1.2,0.5) node {$\varphi_Z$};
+    \draw(3,2.5) node [right] {$\underline{Z}=\hat{Z} \cdot e^{j \varphi_\mathrm{Z}}$};
+    \pause
+
+    \draw[dashed](2.5,2.5) -- (2.5,-0.2) node[below] {$R$};
+    \pause
+
+    \draw[dashed](2.5,2.5) -- (-0.2,2.5) node[left] {$j \cdot X$};
+\end{tikzpicture}

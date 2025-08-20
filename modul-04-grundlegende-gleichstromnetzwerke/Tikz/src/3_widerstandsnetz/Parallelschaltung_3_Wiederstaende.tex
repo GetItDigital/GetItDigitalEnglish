@@ -1,0 +1,30 @@
+\begin{tikzpicture}
+    \draw[white] (0.2, 2.5) to[short,v>, name=volti] (0.2, -0.5) node[right] {};
+    \draw(0,2)
+    to [short,i,name=in,o-]  (1,2)
+    to [R ,i>^ ,v , name =R1 ,*-* , l =$R_1$] (1 ,0)
+    to[short,i, name=out,-o](0,0);
+    \draw(1,2)
+    to [short,i]  (2,2)
+    to [R ,i>_ ,v , name =R2 ,*-* , l =$R_2$] (2 ,0)
+    to[short,i](1,0);
+    \draw(2,2)
+    to [short,i]  (3,2)
+    to [R ,i>_ ,v , name =R3  , l =$R_3$] (3 ,0)
+    to[short,i](2,0);
+
+
+
+    \varrmore{volti}{$U$};
+
+
+
+
+    \iarrmore{in}{$I_0$};
+    \iarrmore{R1}{$I_1$};
+    \iarrmore{R2}{$I_2$};
+    \iarrmore{R3}{$I_3$};
+
+    %	\varrmore{R1}{$U_1$};
+    %	\varrmore{R2}{$U_2$};
+\end{tikzpicture}

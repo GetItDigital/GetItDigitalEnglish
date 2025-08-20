@@ -1,37 +1,30 @@
 \begin{tikzpicture}
-    % Spannungspfeile in blau
-    \draw(8,3) to[open, v>, name=9V] (8,0);
-    % Batterie links
-    \draw
-    (0,1.5) to[V, name=U] (0,0);
-    % Widerstand RV
-    \draw
-    (0,1.5) -- (2,1.5)
-    to[R=$3.3\,k\Omega$] (3.5,1.5) to[short,i,name=IB] (4.5,1.5)
-    -- (5,1.5) ; % Verbindung mit Basis
-    \draw(4.7,1.2) to[open, v>, name=ube] (5.2,0.7);
-    % Transistor
-    \draw
-   (5.5,1.5) node[npn, tr circle] (Q1) {}
-   (Q1.base) 
-   (Q1.collector)  
-   (Q1.emitter)  ;
-   
-   \draw
-   (Q1.C) -- (5.5,3)
-   to[R=$270\,\Omega$] (7,3);
+    \draw (4,2) node[npn, tr circle] (Q1) {};
 
+    \draw (8,4) to [leDo, l_=$D$, o-, i>^, name=Id] (6,4)
+    to [R,l_=$R_\mathrm{2}$] (4,4) 
+    -- (Q1.C);
 
+    \draw (Q1.E) to [short, -*] (4,0) 
+    to[short, -o] (8,0)
+    to[open, name=Ul, v_<] (8,4);
 
-   \draw (Q1.E) -- (5.5,0) to[short, -o] (8,0);
+    \draw (Q1.B) to [R,l_=$R_\mathrm{1}$, i<, name=Ib] (0,2)
+    to [V, name=U0, v] (0,0)
+    to [short] (4,0);
 
+    \draw (Q1.B) ++ (-0.25,0) coordinate(Tb);
+    \draw (Q1.E) ++ (0,-0.25) coordinate(Te);
+    \draw (Tb) to [open, name=ube, v, voltage=european] (Te);
 
-   \draw (0,0) -- (5.5,0); 
+    \draw (Q1.C) ++ (+0.25,0) coordinate(Tc);
+    \draw (Q1.E) ++ (+0.25,0) coordinate(Te);
+    \draw (Tc) to [open, name=uce, v^>, voltage=european] (Te);
 
-   \draw (8,3) to[leDo, o-] (7,3);
-
-  \varrmore{U}{$U$};
-   \varrmore{9V}{$\mathrm{9\,V}$};
-   \iarrmore{IB}{$I_\mathrm{B}$};
-   \varrmore{ube}{$U_\mathrm{BE}$};
-  \end{tikzpicture}
+    \varrmore{U0}{$U$};
+    \varrmore{Ul}{$U_\mathrm{L}$};
+    \varrmore{ube}{$U_\mathrm{BE}$};
+    \varrmore{uce}{$U_\mathrm{CE}$};
+    \iarrmore{Ib}{$I_\mathrm{B}$};
+    \iarrmore{Id}{$I_\mathrm{D}$};
+\end{tikzpicture}

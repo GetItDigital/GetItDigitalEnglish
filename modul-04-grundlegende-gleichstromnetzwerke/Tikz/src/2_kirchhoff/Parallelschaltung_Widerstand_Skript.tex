@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+	\draw(0,2)
+	to [short,i,name=in,o-]  (2,2)
+	to [R ,i>^ ,v , name =R1 ,*-* , l =$R_1$] (2 ,0)
+	to[short,i, name=out,-o](0,0);
+	\draw(2,2)
+	to [short,i]  (4,2)
+	to [R ,i>_ ,v , name =R2 ,*-* , l =$R_2$] (4 ,0)
+	to[short,i](2,0);
+
+	\iarrmore{in}{$I_0$};
+	\iarrmore{R1}{$I_1$};
+	\iarrmore{R2}{$I_2$};
+	\iarrmore{out}{$I_3$};
+	\varrmore{R1}{$U_1$};
+	\varrmore{R2}{$U_2$};
+\end{tikzpicture}

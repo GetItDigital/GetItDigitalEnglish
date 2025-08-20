@@ -1,0 +1,17 @@
+\begin{circuitikz}
+  \draw (0,3) to[V, i, name=I] (0,0)
+		(0,3) -- (1.5,3)
+		(1.5,3) to[switch, l={Schalter}] (2.5,3)
+		(2.5,3) -- (4,3)
+		(4,3) to[lamp, l={Glühlampe}] (4,0);
+      	\draw (3,0) to [R, l={Widerstand}] (1,0);
+		\draw (0,0) -- (1,0);
+		\draw (3,0) -- (4,0);		            
+		
+		% Draw current arrow
+		\iarrmore{I}{$I$};
+
+		% Draw voltage arrows
+		\draw[-latex, thick, draw=voltage] (-0.6,2)  to node[midway,left,  color=voltage] {$U_\mathrm{q}$} (-0.6,1);
+		
+	\end{circuitikz}

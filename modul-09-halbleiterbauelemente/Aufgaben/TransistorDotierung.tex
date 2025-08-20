@@ -3,60 +3,26 @@
 \Aufgabe{
    Ohne das Anlegen einer Spannung ergeben sich die folgenden Verteilungen von 
    p- und n-Gebieten. Um was für einen Typ von Transistor handelt es sich?
+   
+   \hspace{4ex}
+   
    \begin{itemize}
-      \item [a)]
+      \begin{minipage}{.45\textwidth}
+         \item [a)]
+         %{\small \includesvg[width=0.9\textwidth]{Bilder/Aufgaben/FigTransistorDotierung1.svg}}
+         \includesvg[width=0.9\textwidth]{Bilder/Aufgaben/FigTransistorDotierung1.svg}
+         \vspace{4ex}
+         \item [c)]
+         \includesvg[width=0.9\textwidth]{Bilder/Aufgaben/FigTransistorDotierung3.svg}
+      \end{minipage}
+      \begin{minipage}{.45\textwidth}
+         \item [b)]
+         \includesvg[width=0.9\textwidth]{Bilder/Aufgaben/FigTransistorDotierung2.svg}
+         \vspace{4ex}
+         \item [b)]
+         \includesvg[width=0.9\textwidth]{Bilder/Aufgaben/FigTransistorDotierung4.svg}
+      \end{minipage}
    \end{itemize}
-   \begin{figure}[H]
-      \centering
-      \includesvg[width=\textwidth]{Bilder/Aufgaben/FigTransistorDotierung1.svg}
-      \label{fig:FigTransistorDotierung1}
-   \end{figure}
-   \begin{itemize}
-      \item [b)]
-   \end{itemize}
-   \begin{figure}[H]
-      \centering
-      \includesvg[width=\textwidth]{Bilder/Aufgaben/FigTransistorDotierung2.svg}
-      \label{fig:FigTransistorDotierung2}
-   \end{figure}
-   \begin{itemize}
-      \item [c)]
-   \end{itemize}
-   \begin{figure}[H]
-      \centering
-      \includesvg[width=\textwidth]{Bilder/Aufgaben/FigTransistorDotierung3.svg}
-      \label{fig:FigTransistorDotierung3}
-   \end{figure}
-   \begin{itemize}
-      \item [d)]
-   \end{itemize}
-   \begin{figure}[H]
-      \centering
-      \includesvg[width=\textwidth]{Bilder/Aufgaben/FigTransistorDotierung4.svg}
-      \label{fig:FigTransistorDotierung4}
-   \end{figure}
-
-   % \speech{
-   %    Aufgabe 25
-      
-   %    Ohne das Anlegen einer Spannung ergeben sich die folgenden Verteilungen von p- und n-Gebieten. Um was für einen Typ von Transistor handelt es sich?
-      
-   %   Beschreibung der Abbildungen:
-      
-   %   Bild a):
-   %    Die Querschnittsdarstellung eines Transistors zeigt ein p-dotiertes Substrat (Bulk), in das zwei n-dotierte Bereiche für Source (S) und Drain (D) eingebettet sind. Diese n-Gebiete enthalten negativ geladene Elektronen (blaue Kreise). Die p-dotierte Region (Bulk) enthält dagegen positiv geladene Löcher (rote Kreise). Über den Source- und Drain-Gebieten befindet sich eine dünne Oxidschicht, auf der sich das Gate (G) befindet. Es ist keine Spannung angelegt, sodass keine Inversionsschicht gebildet wird.
-      
-   %  Bild b):
-   %    Die gleiche Struktur wie in Bild a), jedoch zeigt sich eine Veränderung in der Ladungsverteilung. Das Substrat ist hier n-dotiert (blaue Region mit negativen Ladungsträgern), während Source und Drain p-dotierte Bereiche (rote Kreise) sind. Das Gate ist weiterhin über einer Oxidschicht angebracht. Dies deutet darauf hin, dass es sich um einen p-Kanal-MOSFET handelt.
-      
-   %  Bild c):
-   %    Nachdem eine Spannung zwischen Gate und Source angelegt wurde, bildet sich unter dem Gate eine Inversionsschicht mit negativ geladenen Elektronen. Diese Inversionsschicht stellt einen leitfähigen Kanal zwischen Source und Drain her. Es handelt sich um einen n-Kanal-MOSFET im leitenden Zustand.
-      
-   %   Bild d):
-   %    In dieser Darstellung wird eine andere Ladungsverteilung gezeigt: Das Substrat ist n-dotiert (blaue Region mit negativen Ladungsträgern), während sich unter dem Gate nun eine positive Ladungsschicht bildet. Das deutet darauf hin, dass eine negative Spannung am Gate anliegt, wodurch der leitfähige Kanal entfernt wird. Es handelt sich um einen p-Kanal-MOSFET im ausgeschalteten Zustand.
-%    }
-      
-
 }
 
 \Loesung{
@@ -66,14 +32,4 @@
       \item[\bf c)] n-kanal selbstleitend (Anreicherungstyp)   Siehe: Abschnitt \ref{fig:OhmscherBereichN-KanalMOSFET}
       \item[\bf d)] p-kanal selbstleitend (Anreicherungstyp)   Siehe: Abschnitt \ref{fig:OhmscherBereichN-KanalMOSFET}
    \end{itemize}
-   % \speech{
-   %    Lösung zu Aufgabe 25:
-   % bei Bild a handelt es sich um einen n-Kanal-MOSFET im Verarmungstyp.
-   % bei Bild b handelt es sich um einen p-Kanal-MOSFET im Verarmungstyp.
-   % bei Bild c handelt es sich um einen n-Kanal-MOSFET im Anreicherungstyp.
-   % bei Bild d handelt es sich um einen p-Kanal-MOSFET im Anreicherungstyp.
-%    }
 }
-
-
-

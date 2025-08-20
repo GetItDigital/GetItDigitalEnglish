@@ -1,0 +1,22 @@
+\begin{circuitikz}[domain=0:8,samples=100]
+    \draw[very thin,color=gray] (-0.1,-2.1) grid (8.1,2.1);
+    \draw[->] (-0.2,0) -- (8.2,0) node[right] {$t$};
+    \draw[->] (0,-2.1) -- (0,2.2) node [above,color=blue] {$u(t)$};
+    \draw (0,-2.1) node[below] {$0$};
+    \draw (2,-2.1) node[below] {$5$};
+    \draw (4,-2.1) node[below] {$10$};
+    \draw (6,-2.1) node[below] {$15$};
+    \draw (8,-2.1) node[below] {$20$};
+    \draw (-0.1,0) node[left] {$0V$};
+    \draw (-0.1,2) node[left] {$4V$};
+    \draw (-0.1,-2) node[left] {$-4V$};
+    \draw (2,0.75) node[color=cyan] {$u_1$};
+    \draw (2,1.25) node[color=blue] {$u_2$};
+    \draw (2,2.25) node[color=teal] {$u_3$};
+    \draw[color=cyan,smooth] plot[id=Sinus1] function{0.5 * sin((pi/4) * x)};
+    \draw[color=blue,smooth] plot[id=Sinus2] function{1 * sin((pi/4) * x)};
+    \draw[color=teal,smooth] plot[id=Sinus3] function{2 * sin((pi/4) * x)};
+
+    %ohne diesen Befehl macht das \pause in der Tikz Umgebung die Footline kaputt
+    \onslide<1->
+\end{circuitikz}

@@ -1,0 +1,9 @@
+\begin{circuitikz}
+    \draw (0,0) to[vsourcesin, v^<, name=U] (0,2)
+    to[L=$L$] (2,2)
+    to[R=$R$, i^>, name=R, -o] (4,2)
+    (0,0) to[short,-o] (4,0);
+    \draw[-latex, thick, draw=voltage] (4,1.8) to node[right, color=voltage] {$\underline{U}$} (4,0.2);
+    \varrmore{U}{$\underline{U}_\mathrm{0}$};
+    \iarrmore{R}{$\underline{I}$};
+\end{circuitikz}

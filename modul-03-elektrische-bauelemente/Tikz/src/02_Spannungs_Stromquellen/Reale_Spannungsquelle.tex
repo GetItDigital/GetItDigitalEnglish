@@ -1,0 +1,11 @@
+\begin{circuitikz}[scale=0.9]
+    % Reale Spannungsquelle
+    \draw (5,9) to[V] (5,6)
+    to[short,-o] (7.5,6)
+    (5,9) to[R, l=$R_\mathrm{i}$] (7,9)
+    to[short, i, name=I, -o] (7.5,9);
+    \iarrmore {I}{$I$};
+    \draw[-latex, thick, draw=voltage] (5.6,8)  to node[right, color=voltage] {$U_\mathrm{q}$} (5.6,7);
+    \draw[-latex, thick, draw=voltage] (7.5,8.5)  to node[right, color=voltage] {$U$} (7.5,6.5);
+
+\end{circuitikz}

@@ -312,6 +312,47 @@
 %Folie Nichtinvertierender Verstärker
 \begin{frame}
     \b{
+    \frametitle{Nichtinvertierender Verstärker neu}
+    \begin{columns}
+        \column{0.48\textwidth}
+        \centering
+        \begin{figure}
+    \centering
+
+    \begin{subfigure}{\linewidth}
+        \centering
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/NichtinvertierenderVerstaerker.tex}}
+        \caption{Schaltung eines nichtinvertierenden Verstärkers}
+    \end{subfigure}
+
+    \vspace{0.5cm} 
+
+    \begin{subfigure}{\linewidth}
+        \centering
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/FrequenzgangNiV.tex}}
+        \caption{Frequenzgang eines nichtinvertierenden Verstärkers}
+    \end{subfigure}
+
+\end{figure}
+
+        \column{0.48\textwidth}
+        \begin{itemize}
+            \item Gleichung:
+            \[
+            U_{\textnormal{A}} = \left(1+\frac{R_2}{R_1}\right) U_{\textnormal{E}}
+            \]
+            \item Phasengleiches Ausgangssignal
+            \item Sehr hochohmiger Eingangswiderstand
+            \item Niederohmiger Ausgangswiderstand
+            \item Anwendungen: z.B. Impedanzwandler
+        \end{itemize}
+    \end{columns}
+    }
+\end{frame}
+
+
+\begin{frame}
+    \b{
     \frametitle{Nichtinvertierender Verstärker}
     \centering
     \begin{table}[ht]
@@ -376,6 +417,46 @@ U_{\textnormal{A}} = \left(1+\frac{R_2}{R_1}\right) U_{\textnormal{E}}
     }
 \end{frame}
 
+\begin{frame}
+    \b{
+    \frametitle{Invertierender Verstärker neu}
+    \begin{columns}
+        \column{0.48\textwidth}
+        \centering
+        \begin{figure}
+    \centering
+
+    \begin{subfigure}{\linewidth}
+        \centering
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/InvertierenderVerstaerker.tex}}
+        \caption{Schaltung eines invertierenden Verstärkers}
+    \end{subfigure}
+
+    \vspace{0.5cm} 
+
+    \begin{subfigure}{\linewidth}
+        \centering
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/FrequenzgangInvertierenderVerstaerker.tex}}
+        \caption{Frequenzgang eines invertierenden Verstärkers}
+    \end{subfigure}
+
+\end{figure}
+
+        \column{0.48\textwidth}
+        \begin{itemize}
+            \item Gleichung:
+           \[
+    U_{\textnormal{A}} = \frac{R_2}{R_1} U_{\textnormal{E}}
+            \]
+    \item -180$^\circ$ Phasenverschiebung zwischen Ein- zu Ausgang
+    \item $R_1$ bestimmt den Eingangswiderstand
+    \item Niederohmiger Ausgangswiderstand
+    \item Anwendungen: z.B. Aktiver Spannungsteiler zum Messen hoher Spannungen, wenn $R_1 > R_2$
+        \end{itemize}
+    \end{columns}
+    }
+\end{frame}
+
 %Folie Komparator
 \begin{frame}
     \b{
@@ -405,6 +486,46 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
     \hline
     \end{tabular}
     \end{table}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{
+    \frametitle{Komparator neu}
+    \begin{columns}
+        \column{0.48\textwidth}
+        \centering
+        \begin{figure}
+    \centering
+
+    \begin{subfigure}{\linewidth}
+        \centering
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/Komparator.tex}}
+        \caption{Schaltung eines Komparators}
+    \end{subfigure}
+
+    \vspace{0.5cm} 
+
+    \begin{subfigure}{\linewidth}
+        \centering
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/FrequenzgangKomparator.tex}}
+        \caption{Frequenzgang eines Komparators}
+    \end{subfigure}
+
+\end{figure}
+
+        \column{0.48\textwidth}
+        \begin{itemize}
+            \item Gleichung:
+          \[
+V_1: U_{\textnormal{E+}} > U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \approx +U_{\textnormal{B}}
+\]
+\[
+V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \approx -U_{\textnormal{B}}
+\]
+    \item Einsatz in Zweipunktreglern und Analog-Digital-Wandlern
+        \end{itemize}
+    \end{columns}
     }
 \end{frame}
 
@@ -442,6 +563,43 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
     }
 \end{frame}
 
+\begin{frame}
+    \b{
+    \frametitle{Summierer neu}
+    \begin{columns}
+        \column{0.48\textwidth}
+        \centering
+        \begin{figure}
+    \centering
+
+    \begin{subfigure}{\linewidth}
+        \centering
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/Summierer.tex}}
+        \caption{Schaltung eines Summierers}
+    \end{subfigure}
+
+    \vspace{0.5cm} 
+
+    \begin{subfigure}{\linewidth}
+        \centering
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/FrequenzgangSummierer.tex}}
+        \caption{Frequenzgang eines Summierers}
+    \end{subfigure}
+
+\end{figure}
+
+        \column{0.48\textwidth}
+        \begin{itemize}
+            \item Gleichung:
+          \[
+U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1}} + \underbrace{\frac{R_3} {R_2}}_{V_2} \cdot U_{\textnormal{E2}}
+\]
+    \item Der Summierer basiert auf dem invertierenden Verstärker und findet Verwendung in Analogrechnern und beim Mischen von Spannungssignalen
+        \end{itemize}
+    \end{columns}
+    }
+\end{frame}
+
 %Folie Subtrahierer
 
 \begin{frame}
@@ -475,6 +633,45 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
     }
 \end{frame}
 
+\begin{frame}
+    \b{
+    \frametitle{Subtrahierer neu}
+    \begin{columns}
+        \column{0.48\textwidth}
+        \centering
+        \begin{figure}
+    \centering
+
+    \begin{subfigure}{\linewidth}
+        \centering
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/Subtrahierer.tex}}
+        \caption{Schaltung eines Subtrahierers}
+    \end{subfigure}
+
+    \vspace{0.5cm} 
+
+    \begin{subfigure}{\linewidth}
+        \centering
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/FrequenzgangSubtrahierer.tex}}
+        \caption{Frequenzgang eines Subtrahierers}
+    \end{subfigure}
+
+\end{figure}
+
+        \column{0.48\textwidth}
+        \raggedleft
+        \begin{itemize}
+            \item Gleichung:
+          \[
+ {U_A} = {U_{{\textnormal{E2}}}} \cdot \underbrace{ \frac{R_1 + R_2}{R_1} \cdot \frac{R_4}{R_3 + R_4}}_{V_2} - U_{\textnormal{E1}} \cdot \underbrace{\frac{R_2}{R_1}}_{V_1}
+          \]
+    \item Wenn alle Widerstände gleich groß sind, wird die Differenz der Signale $U_{E1}$ und $U_{E2}$ gebildet, weswegen diese Schaltung als Differenzverstärker bezeichnet wird
+        \end{itemize}
+    \end{columns}
+    }
+\end{frame}
+
+
 %Folie Integrierer
 
 \begin{frame}
@@ -505,6 +702,45 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
     \hline
     \end{tabular}
     \end{table}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{
+    \frametitle{Integrierer neu}
+    \begin{columns}
+        \column{0.48\textwidth}
+        \centering
+        \begin{figure}
+    \centering
+
+    \begin{subfigure}{\linewidth}
+        \centering
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/Integrierer.tex}}
+        \caption{Schaltung eines Integrierers}
+    \end{subfigure}
+
+    \vspace{0.5cm} 
+
+    \begin{subfigure}{\linewidth}
+        \centering
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/FrequenzgangIntegrierer.tex}}
+        \caption{Frequenzgang eines Integrierers}
+    \end{subfigure}
+
+\end{figure}
+
+        \column{0.48\textwidth}
+        \raggedleft
+        \begin{itemize}
+            \item Gleichung:
+           \[
+     U_A(t) = - \frac{R_2}{R_1} U_{\textnormal{E}}(t) - \int_0^t \frac{U_{\textnormal{E}}(t)}{R_1 C_1} \, dt
+     \]
+        \item Nimmt eine Integration des Eingangssignals vor
+        \item Wird als aktives Tiefpassfilter verwendet     
+    \end{itemize}
+    \end{columns}
     }
 \end{frame}
 
@@ -541,6 +777,49 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
     \hline
     \end{tabular}
     \end{table}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{
+    \frametitle{Differenzierer neu}
+    \begin{columns}
+        \column{0.48\textwidth}
+        \centering
+        \begin{figure}
+    \centering
+
+    \begin{subfigure}{\linewidth}
+        \centering
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/Differenzierer.tex}}
+        \caption{Schaltung eines Differenzierers}
+    \end{subfigure}
+
+    \vspace{0.5cm} 
+
+    \begin{subfigure}{\linewidth}
+        \centering
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/FrequenzgangDifferenzierer.tex}}
+        \caption{Frequenzgang eines Differenzierers}
+    \end{subfigure}
+
+\end{figure}
+
+        \column{0.48\textwidth}
+        \raggedleft
+        \begin{itemize}
+            \item Gleichung:
+          \[
+U_{\textnormal{A}}(t) = 
+- \frac{R_2}{R_1} \, U_{\textnormal{E}}(t)
+- \int_0^t \frac{1}{R_1 C_1} \, U_{\textnormal{E}}(\tau) \, d\tau
+- R_2 C_2 \, \frac{dU_{\textnormal{E}}}{dt}(t)
+\]
+
+        \item Nimmt eine Integration des Eingangssignals vor
+        \item Wird als aktives Hochpassfilter verwendet (zeigt in der Realität meist Bandpassverhalten, wie hier dargestellt)  
+    \end{itemize}
+    \end{columns}
     }
 \end{frame}
 
@@ -582,6 +861,41 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
     }
 \end{frame}
 
+\begin{frame}
+    \b{
+    \frametitle{Logarithmierer neu}
+    \begin{columns}
+        \column{0.48\textwidth}
+        \centering
+        \begin{figure}
+    \centering
+        \input{Tikz/Logarithmierer.tex}
+        \caption{Schaltung eines Logarithmierers}
+
+\end{figure}
+
+        \column{0.48\textwidth}
+        \raggedleft
+        \begin{itemize}
+            \item Gleichung:
+           \[
+    U_{\textnormal{A}} =-U_{\textnormal{T}}\cdot \ln{\left(\frac{U_{\textnormal{E}}}{R_1\cdot I_S}\right)}
+    \]
+        \[
+            U_{\textnormal{T}} = \frac{k_{\textnormal{B}} \cdot T}{e}
+            \]
+            
+            \(e = \text{Elementarladung}\)
+            
+            \(k_{\textnormal{B}} = \text{Boltzmannkonstante}\)
+            
+            \(I_{\textnormal{s}} = \text{Sperrstrom der Diode}\)
+        \item Bildet den natürlichen Logarithmus des Eingangssignals
+    \end{itemize}
+    \end{columns}
+    }
+\end{frame}
+
 %Folie Potenzierer
 
 \begin{frame}
@@ -608,6 +922,32 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
     \hline
     \end{tabular}
     \end{table}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{
+    \frametitle{Potenzierer neu}
+    \begin{columns}
+        \column{0.48\textwidth}
+        \centering
+        \begin{figure}
+        \centering
+        {\input{Tikz/Potenzierer.tex}}
+        \caption{Schaltung eines Potenzierers}
+
+\end{figure}
+
+        \column{0.48\textwidth}
+        \raggedleft
+        \begin{itemize}
+            \item Gleichung:
+           \[
+    U_{\textnormal{A}} =-R_1\cdot I_{\textnormal{S}} \cdot e^{\frac{U_{\textnormal{E}}}{U_{\textnormal{T}}}}
+    \]
+        \item Besitzt einen e-funktionalen Zusammenhang zwischen Ein- und Ausgangsspannung
+    \end{itemize}
+    \end{columns}
     }
 \end{frame}
 
@@ -659,6 +999,59 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
     }
 \end{frame}
 
+\begin{frame}
+    \b{
+    \frametitle{Instrumentenverstärker neu}
+    \begin{columns}
+        \column{0.48\textwidth}
+        \centering
+        \begin{figure}
+    \centering
+
+    \begin{subfigure}{\linewidth}
+        \centering
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/Instrumentenverstaerker.tex}}
+        \caption{Schaltung eines Instrumentenverstärkers}
+    \end{subfigure}
+
+    \vspace{0.5cm} 
+
+    \begin{subfigure}{\linewidth}
+        \centering
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/FrequenzgangInstrumenten.tex}}
+        \caption{Frequenzgang eines Instrumentenverstärkers}
+    \end{subfigure}
+
+\end{figure}
+
+        \column{0.48\textwidth}
+        \raggedleft
+        \begin{itemize}
+            \item Gleichung:
+         \[
+\mathit{a_i} : \text{Amplitude Eingangsspannung i}
+\]
+\[
+\mathit{\varphi_i} : \text{Phase Eingangsspannung i}
+\]
+\[
+\mathit{A}_{A} = \sqrt{a_1^2 + a_2^2 + 2a_1a_2 \cos(\varphi_1 - \varphi_2)}
+\]
+\[
+\mathit{\tan}(\varphi_A) = \frac{a_1 \mathit{\sin}(\varphi_1) + a_2 \mathit{\sin}(\varphi_2)}{a_1 \mathit{\cos}(\varphi_1) + a_2 \mathit{\cos}(\varphi_2)}
+\]
+\[
+    \text{Wenn} : R_2 = R_4 = R
+\]
+\[
+    U_{\textnormal{A}} = (1+ \frac{2R} {R_{\textnormal{g}}}) \cdot \frac{R_3} {R_2} (U_{\textnormal{E2}}-U_{\textnormal{E1}})
+\]
+        \item Differenzverstärker mit hoher Eingangsimpedanz und hoher Gleichtaktunterdrückung    
+    \end{itemize}
+    \end{columns}
+    }
+\end{frame}
+
 
 %Folie Insutrmentenverstärker 
 
@@ -691,5 +1084,31 @@ Verstärkung $V = \frac{U_\mathrm{A}}{U_\mathrm{E}} = 1$
     \hline
     \end{tabular}
     \end{table}
+    }
+\end{frame}
+
+\begin{frame}
+    \b{
+    \frametitle{Impedanzwandler neu}
+    \begin{columns}
+        \column{0.48\textwidth}
+        \centering
+        \begin{figure}
+        \centering
+        \input{Tikz/Impedanzwandler.tex}
+        \caption{Schaltung eines Impedanzwandlers}
+
+\end{figure}
+
+        \column{0.48\textwidth}
+        \centering
+        \begin{itemize}
+        \item Ausgangsspannung $U_\mathrm{A}$ folgt der Eingangsspannung $U_\mathrm{E}$ 
+        \item Verstärkung $V = \frac{U_\mathrm{A}}{U_\mathrm{E}} = 1$ 
+        \item Auch Spannungsfolger genannt
+        \item Hoher Eingangswiderstand durch Operationsverstärker
+        \item Typische Anwendung: Sensoren
+    \end{itemize}
+    \end{columns}
     }
 \end{frame}

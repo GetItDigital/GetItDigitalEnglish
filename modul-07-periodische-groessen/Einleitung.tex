@@ -24,26 +24,7 @@
 
         \fu{
         \resizebox{0.7\textwidth}{!}{
-        \begin{tikzpicture}
-            \draw[very thin,color=gray] (-0.1,-0.1) grid (6.2,2.1);
-            \draw[->] (-0.2,0) -- (6.4,0) node[right] {$\Re$};
-			\draw[->] (0,-0.1) -- (0,2.2) node[above] {$\Im$};
-            \draw[->, color=voltage] (0,0) coordinate (U) -- (6,0) coordinate (B) node[below] {$\underline{U}_\mathrm{1}$};
-            \draw[->, color=red] (0,0.02) -- (3,0.02) node[below]	 {$\underline{I}_\mathrm{1}$};
-            \draw[->, color=red] (3,0.02) -- (3,2.02) coordinate (D);
-            \draw[color = red] (3,1)node[right]	 {$\underline{I}_\mathrm{c}$};
-            \draw[->, color=red] (0,0.02) -- (3,2.02);
-            \draw[color=red](2.3,1.9) node	 {$\underline{I}_\mathrm{2}$};
-            \draw[->, color=voltage](6,0) -- (6,2) coordinate (C);
-            \draw[color=voltage](6.2,1.3) node	 {$\underline{U}_\mathrm{2}$};
-            \draw[->, color=voltage](0,0) -- (6,2);
-            \draw[color=voltage](4.8,1.2) node	 {$\underline{U}_\mathrm{E}$};
-            %Winkel
-            \draw pic[draw, voltage, angle radius = 2cm, ->] {angle = B--U--C};
-            \draw pic[draw, red, angle radius = 1.2cm, ->] {angle = B--U--D};
-            \draw[red] (0.7,0.8) node{$\varphi_\mathrm{2}$};
-            \draw[voltage] (2.32,0.2) node{$\varphi_\mathrm{1}$};
-        \end{tikzpicture}
+        \input{Tikz/src/Einleitung/Zeigerdiagramm_Spannung_Strom}
         }
     }{{\bf Zeigerdiagramm.} Die Größen Spannung und Strom in der Darstellung als Zeiger. \label{ZeigerBeispiel}}
     }

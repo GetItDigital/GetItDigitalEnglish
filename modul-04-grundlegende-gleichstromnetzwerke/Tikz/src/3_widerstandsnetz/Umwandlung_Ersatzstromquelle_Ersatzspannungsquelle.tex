@@ -1,0 +1,58 @@
+\begin{tikzpicture}
+
+    \draw[white] (3.75, 2.5) to[short,v>, name=volti] (3.75, -0.5) node[right] {};
+    \varrmore{volti}{};
+    \node[voltage] at (3.2,0.9) {$U$};
+
+
+
+    \draw(0,0)
+    to[short, -o](3.5,0)
+    to[short](4.2,0);
+    \draw(4.2,2) to [R ,i>^ ,v< , name =Ra  , l =$R_\mathrm{a}$] (4.2,0);
+    \draw(4.2,2) to[short, -o](3.5,2)
+    to[short](2,2)
+    to[short](0,2)
+
+    to[I, v, i<, name=I1] (0,0);
+    %to[short](0,0); 
+    \draw(1.5,2) to[R ,i>^ ,v< , name =R1  , *-*,l =$R_\mathrm{i}$]  (1.5,0);
+
+    \iarrmore{R1}{$I_\mathrm{Ri}$};
+
+    \iarrmore{I1}{$I_0$};
+    \iarrmore{Ra}{$I$};
+
+
+    \draw[dashed] (-0.8,-0.3) -- (2.5,-0.3);
+    \draw[dashed] (2.5,-0.3) -- (2.5,2.3);
+    \draw[dashed] (2.5,2.3) -- (-0.8,2.3);
+    \draw[dashed] (-0.8,2.3) -- (-0.8,-0.3);
+
+
+    \draw[thick] (5.6,1.0) -- (5.475,1.125) -- (5.475,1.05) -- (5.225,1.05) -- (5.225,1.125) -- (5.1,1.0) -- (5.225,0.875) -- (5.225,0.95) -- (5.475,0.95) -- (5.475,0.875) -- cycle;
+
+    \draw(6.6,-0.5)
+    to[short, -o](10.1,-0.5)
+    to[short](10.6,-0.5)
+    to[short](10.6,0)
+    to[R ,i ,v< , name =Ra  , l =$R_\mathrm{a}$] (10.6,2.0)
+    to[short, i<_ , name = i0](10.6,2.5)
+    to[short, -o](10.1,2.5)
+    to[short](8.6,2.5)
+    to[R ,i ,v< , name =R1  , l =$R_\mathrm{i}$]  (6.6,2.5)
+    to[short](6.6,2.5)
+    to[short, i<_ , name = i_0](6.6,2.0)
+    to[V, v, i, name=V1] (6.6,0)
+    to[short](6.6,-0.5);
+
+    \varrmore{R1}{$U_\mathrm{Ri}$};
+
+    \varrmore{V1}{$U_0$};
+    \iarrmore{i0}{$I$};
+    \draw[dashed] (5.8,-0.8) -- (9.6,-0.8);
+    \draw[dashed] (9.6,-0.8) -- (9.6,3.3);
+    \draw[dashed] (9.6,3.3) -- (5.8,3.3);
+    \draw[dashed] (5.8,3.3) -- (5.8,-0.8);
+
+\end{tikzpicture}

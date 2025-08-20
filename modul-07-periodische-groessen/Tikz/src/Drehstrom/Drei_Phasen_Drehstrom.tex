@@ -1,0 +1,39 @@
+\begin{circuitikz}[domain=0:8,samples=100]
+    %Gitter
+    \draw[very thin,color=gray] (-0.1,-2.1) grid (8.2,2.1);
+    \draw[->] (-0.2,0) -- (8.5,0) node[above] {$t$};
+    \draw[->] (0,-2.1) -- (0,2.2) node[above] {};
+    \draw (0,-2.1) node[below] {$0$};
+    \draw (2,-2.1) node[below] {$\pi$};
+    \draw (4,-2.1) node[below] {$2\pi$};
+    \draw (6,-2.1) node[below] {$3\pi$};
+    \draw (8,-2.1) node[below] {$4\pi$};
+    \draw[color=blue] (0,2.2) node[above] {$u_1(t)$};
+    \draw[color=red] (0,2.5) node[above] {$u_2(t)$};
+    \draw[color=green] (0,2.8) node[above] {$u_3(t)$};
+    \draw[color=blue,smooth] plot[id=Sinus21] function{1.5 * sin(pi/2 * x)} node[right] {};
+    \draw[color=red,smooth] plot[id=Sinus22] function{1.5 * sin(pi/2 * x - (2*pi)/3)} node[right] {};
+    \draw[color=green,smooth] plot[id=Sinus23] function{1.5 * sin(pi/2 * x + (2*pi)/3)} node[right] {};
+
+    \draw[->,blue] (11.5,0) -- (10,0);
+    \draw[->,red] (11.5,0) -- (12.25,-1.3);
+    \draw[->,green] (11.5,0) -- (12.25,1.3);
+
+    \draw[dashed](8,0) -- (10,0);
+    \draw[dashed](8,-1.3) -- (12.25,-1.3);
+    \draw[dashed](8,1.3) -- (12.25,1.3);
+
+    \draw (11.5,0) coordinate (1);
+    \draw (10,0) coordinate (2);
+    \draw (12.25,-1.3) coordinate (3);
+    \draw (12.25,1.3) coordinate (4);
+    \draw pic[draw, very thick, angle radius = 0.75cm, <->] {angle = 2--1--3};
+    \draw pic[draw, very thick, angle radius = 0.75cm, <->] {angle = 3--1--4};
+    \draw pic[draw, very thick, angle radius = 0.75cm, <->] {angle = 4--1--2};
+    \draw (12.5,0.5) node[thick]{$\alpha$};
+    \def\StartAngle{0}
+    \def\EndAngle{359}
+    \def\Radius{1.5}
+    \draw([shift=(\StartAngle : \Radius)]11.5,0)  arc[start angle=\StartAngle, end angle=\EndAngle, radius=\Radius];
+
+\end{circuitikz}

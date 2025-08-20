@@ -1,0 +1,17 @@
+\begin{circuitikz}
+    \draw (0,0) to[vsourcesin] (0,2)
+    to[short,-o] (2,2)
+    (0,0) to[short,-o] (2,0);
+    \draw[-latex, thick, draw=voltage] (2,1.8) to node[right, color=voltage] {$\underline{U}$} (2,0.2);
+    \pause
+
+    \draw [->](3,1) -- (4,1);
+
+    \draw (6,0) to[vsourcesin, v^<, name=U] (6,2)
+    to[R=$\underline{Z}_\mathrm{i}$, i^>, v, name=R, -o] (8,2)
+    (6,0) to[short,-o] (8,0);
+    \draw[-latex, thick, draw=voltage] (8,1.8) to node[right, color=voltage] {$\underline{U}$} (8,0.2);
+    \varrmore{U}{$\underline{U}_\mathrm{0}$};
+    \varrmore{R}{$\underline{U}_\mathrm{i}$};
+    \iarrmore{R}{$\underline{I}$};
+\end{circuitikz}

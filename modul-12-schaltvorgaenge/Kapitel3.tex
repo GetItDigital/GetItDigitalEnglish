@@ -1171,7 +1171,7 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
     Die Amplitude $\hat{U}_{C,p}$ und der (Last-)Phasenwinkel $\varphi_{C,\mathrm{p}}$ lassen sich gemäß komplexen Spannungsteiler bestimmen.
     \begin{align}
         \ecv{\hat{\underline{U}}_{C,p}}
-            &= \ecv{\hat{\underline{U}}_q} \cdot \frac{\underline{Z}_C}{R + \underline{Z}_C} %\nonumber\\
+            &= \ecv{\hat{\underline{U}}_q} \cdot \frac{\underline{Z}_C}{R + \underline{Z}_C}
             = \ecv{\hat{\underline{U}}_q} \cdot \frac{\frac{1}{\mathrm{j}\omega C}}{R + \frac{1}{\mathrm{j} \omega C}} \nonumber\\
             &= \frac{\ecv{\hat{\underline{U}}_q}}{1 + \mathrm{j} \omega R C}
             \qquad \text{mit}\quad \ecv{\hat{\underline{U}}_q} = \ecv{\hat{U}_q} \cdot \mathrm{e}^{\mathrm{j} \varphi_q}
@@ -1179,7 +1179,7 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
     \end{align}
     Für die Amplitude $\hat{U}_{C,p}$ und die Phase $\varphi_{C,\mathrm{p}}$ folgt aus Gl. \ref{eq:rc:charge:ac:komplex}:
     \begin{align}
-        \ecv{\hat{U}_{C,p}} = \frac{\ecv{\hat{U}_q}}{\sqrt{1 + \left(\omega RC\right)^2}} \qquad\text{und}\qquad%\label{rc:charge:ac:ampli}\\
+        \ecv{\hat{U}_{C,p}} = \frac{\ecv{\hat{U}_q}}{\sqrt{1 + \left(\omega RC\right)^2}} \qquad\text{und}\qquad
         \varphi_{C,\mathrm{p}} = \varphi_q - \arctan\left(\omega RC\right) \label{rc:charge:ac:amplitudephase}
     \end{align}
     \textbf{4.) Inhomogene Lösung, allgemein} (Überlagerung):
@@ -1212,8 +1212,6 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
     Zum Vergleich ist $u_C$ für zwei verschiedenen Schaltzeitpunkten $t_0$ gezeigt.
     Das ist einmal beim negativen Scheitelwert und einmal beim Nulldurchgang von $u_{C,p}$.
     $u_C$ ist als Überlagerung des flüchtigen Zustandes $u_{C,h}$ (schwarz, gestrichelt) und des eingeschwungenen Zustandes $u_{C,p}$ (schwarz) dargestellt.
-
-    %\textbf{Zeitverläufe und Variation des Schaltzeitpunktes und der Zeitkonstante}
 
     \begin{figure}[H]\centering
         \begin{subfigure}{0.48\textwidth}\centering
@@ -1281,10 +1279,6 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
     \begin{minipage}{\textwidth}\centering%
         \begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment%
             \includegraphics{Tikz/pdf/circ_switchable_rc_charge_ac.pdf}
-            %\begin{equation*}\begin{aligned}
-            %    &\text{gegeben:}&       &\ecv{u_C}(0),\ \ecv{u_q}(t),\ R,\ C,\ \omega \\
-            %    &\text{gesucht:}&       &\ecv{u_C}(t)
-            %\end{aligned}\end{equation*}
         \end{minipage}%
         \begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment%
             \vspace{0.8cm}
@@ -1301,7 +1295,7 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
 
     \textbf{2.) Homogene Lösung, allgemein} (flüchtig) (ohne Störterm):
     \begin{align*}
-        \ecv{u_{C,\mathrm{h}}} &= K \cdot \mathrm{e}^{-\frac{t'}{\tau}} \qquad &\text{mit} \quad t' = t-t_0 \nonumber\\
+        \ecv{u_{C,\mathrm{h}}} &= K \cdot \mathrm{e}^{-\frac{t'}{\tau}} \qquad &\text{mit} \quad t' = t-t_0 \\
         &= K \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} \qquad &\text{mit} \quad \tau = RC
     \end{align*}
 \end{frame}
@@ -1317,34 +1311,34 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
     Komplexer Amplitudenzeiger $\ecv{\hat{\underline{U}}_{C,p}}$ durch komplexen Spannungsteiler:
     \begin{equation*}
         \ecv{\hat{\underline{U}}_{C,p}}
-            = \ecv{\hat{\underline{U}}_q} \cdot \frac{\underline{Z}_C}{R + \underline{Z}_C} %\nonumber\\
+            = \ecv{\hat{\underline{U}}_q} \cdot \frac{\underline{Z}_C}{R + \underline{Z}_C}
             = \ecv{\hat{\underline{U}}_q} \cdot \frac{\frac{1}{\mathrm{j}\omega C}}{R + \frac{1}{\mathrm{j} \omega C}} %\nonumber\\
             = \frac{\ecv{\hat{\underline{U}}_q}}{1 + \mathrm{j} \omega R C}
             \qquad \text{mit}\quad \ecv{\hat{\underline{U}}_q} = \ecv{\hat{U}_q} \cdot \mathrm{e}^{\mathrm{j} \varphi_q}
     \end{equation*}
     Für die Amplitude $\ecv{\hat{U}_{C,p}}$ und den (Last-)Phasenwinkel $\varphi_{C,\mathrm{p}}$ folgt:
     \begin{align*}
-        \ecv{\hat{U}_{C,p}} = \frac{\ecv{\hat{U}_q}}{\sqrt{1 + \left(\omega RC\right)^2}} \qquad\text{und}\qquad%\label{rc:charge:ac:ampli}\\
-        \varphi_{C,\mathrm{p}} = \varphi_q - \arctan\left(\omega RC\right)
+        \ecv{\hat{U}_{C,p}} = \frac{\ecv{\hat{U}_q}}{\sqrt{1 + \left(\omega RC\right)^2}} \qquad\text{und}\qquad
+        \varphi_{C,\mathrm{p}} = \varphi_q - \arctan\left(\omega RC\right) %\label{rc:charge:ac:amplitudephase}
     \end{align*}
 \end{frame}
 
 \begin{frame}[t]\ftx{Schaltvorgänge \subsecname\ \subsubsecname}%Schritt 4&5
     \textbf{4.) Inhomogene Lösung, allgemein} (Überlagerung):
     \begin{align*}
-        \ecv{u_C} &= \ecv{u_{C,\mathrm{h}}} + \ecv{u_{C,p}} \nonumber\\
-            &= K \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} + \ecv{\hat{U}_{C,p}} \cdot \cos(\omega t + \varphi_{C,\mathrm{p}}) \label{eq:rc:charge:ac:allg2}
+        \ecv{u_C} &= \ecv{u_{C,\mathrm{h}}} + \ecv{u_{C,p}} \\
+            &= K \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} + \ecv{\hat{U}_{C,p}} \cdot \cos(\omega t + \varphi_{C,\mathrm{p}}) %\label{eq:rc:charge:ac:allg}
     \end{align*}
 
     \textbf{5.) Konstanten bestimmen} (Anfangsbedingung):
     \begin{align*}
-        \ecv{u_C}(t_0) &\overset{!}{=} 0 \nonumber\\
-        K \cdot \redcancel{\mathrm{e}^{0}} + \ecv{\hat{U}_{C,p}} \cdot \cos(\omega t_0 + \varphi_{C,\mathrm{p}}) &= 0 \nonumber\\
+        \ecv{u_C}(t_0) &\overset{!}{=} 0 \\
+        K \cdot \redcancel{\mathrm{e}^{0}} + \ecv{\hat{U}_{C,p}} \cdot \cos(\omega t_0 + \varphi_{C,\mathrm{p}}) &= 0 \\
         K &= -\ecv{\hat{U}_{C,p}} \cdot \cos(\omega t_0 + \varphi_{C,\mathrm{p}})
     \end{align*}
     Die eindeutige Lösung ergibt sich durch Einsetzen von $K$ in die allgemeine Lösung:
     \begin{align*}
-        \ecv{u_C}(t) &= \underbrace{-\ecv{\hat{U}_{C,p}} \cdot \cos(\omega t_0 + \varphi_{C,\mathrm{p}}) \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}}}_{\ecv{u_{C,\mathrm{h}}}} + \underbrace{\ecv{\hat{U}_{C,p}} \cdot \cos\left(\omega t + \varphi_{C,\mathrm{p}}\right)}_{\ecv{u_{C,p}}} \label{eq:rc:charge:ac:uc}
+        \ecv{u_C}(t) &= \underbrace{-\ecv{\hat{U}_{C,p}} \cdot \cos(\omega t_0 + \varphi_{C,\mathrm{p}}) \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}}}_{\ecv{u_{C,\mathrm{h}}}} + \underbrace{\ecv{\hat{U}_{C,p}} \cdot \cos\left(\omega t + \varphi_{C,\mathrm{p}}\right)}_{\ecv{u_{C,p}}} %\label{eq:rc:charge:ac:uc}
     \end{align*}
 \end{frame}
 
@@ -1700,14 +1694,15 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
         \textbf{1.) DGL:}\qquad
          \ecv{u_L} + \ecv{u_R} +\ecv{u_C} &= \ecv{u} \nonumber\\
         L \cdot \dt \eci{i} + R \cdot \eci{i} + \ecv{u_C}&= \ecv{U_q} \nonumber\\
-        LC \cdot \dt[2] \ecv{u_C} + RC \cdot \dt \ecv{u_C} + \ecv{u_C} &= \ecv{U_q} \label{eq:dgl:rlc:dc}
+        LC \cdot \dt[2] \ecv{u_C} + RC \cdot \dt \ecv{u_C} + \ecv{u_C} &= \ecv{U_q} %\label{eq:dgl:rlc:dc}
     \end{align}
     \end{minipage}
 \end{minipage}\vspace{2pt}
 
 \begin{align}
     &\textbf{homogene DGL:}&
-        LC \cdot \dt[2] \ecv{u_{C,\mathrm{h}}} + RC \cdot \dt \ecv{u_{C,\mathrm{h}}} + \ecv{u_{C,\mathrm{h}}} &= 0  \label{eq:dgl:rlc:homo}\\[-20pt]
+        LC \cdot \dt[2] \ecv{u_{C,\mathrm{h}}} + RC \cdot \dt \ecv{u_{C,\mathrm{h}}} + \ecv{u_{C,\mathrm{h}}} &= 0  %\label{eq:dgl:rlc:homo}
+        \\[-20pt]
         &\hphantom{R1oooooooooooooooooooo}&\hphantom{L2oooooooooooooooooooooooooooooo}&\hphantom{R2ooo} % Dummy-Zeile für horizontales Alignment zwischen Frames
         \\[6pt]
     &\text{char. Polynom:}&
@@ -1793,7 +1788,7 @@ Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapit
         K_1 \cdot \mathrm{e}^{\lambda_1 t} + K_2 \cdot \mathrm{e}^{\lambda_2 t}  & \text{für}\quad\lambda_1 \neq \lambda_2  \\
         (K_1 + K_2 \cdot t) \cdot \mathrm{e}^{\lambda t} & \text{für}\quad\lambda_1 = \lambda_2 = \lambda
     \end{cases}
-    \qquad\qquad\qquad \label{eq:dgl:rlc:homolsg:cases}
+    \qquad\qquad\qquad %\label{eq:dgl:rlc:homolsg:cases}
 \end{equation}
 }% Ende overlay onslide
 \onslide<3->{%
@@ -2079,7 +2074,7 @@ Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapit
         &\Longrightarrow&
         C_0 &=  -\frac{\ecv{U_q}}{\sin(\varphi_0)} \quad\text{und}\quad
             \varphi_0 = \arctan\left(\frac{\omega_d}{\delta}\right)
-        \label{eq:dgl:rlc:dc:konstanten:periodisch}
+        %\label{eq:dgl:rlc:dc:konstanten:periodisch}
     \end{align}
     }% Ende Folien only
     \s{% Anfang Skript only

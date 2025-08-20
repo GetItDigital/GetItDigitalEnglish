@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+
+    \draw[white] (2.83, 4) to[short,v>, name=volti] (2.83, -1.0) node[right] {};
+    \varrmore{volti}{};
+    \node[voltage] at (2.3,1.45) {$U$};
+    \draw(0,0)
+    to[short, -o](2.6,0);
+
+    \draw(2.6,3)
+    to [short, i<, name = i1, o-](2,3)
+    to[R ,i< ,v< , name =R1  , l =$R_\mathrm{i}$]  (0,3)
+    to[short](0,3)
+    to[short, i<_ , name = i_0](0,2.5)
+    to[V, v, i, name=V1] (0,0.5)
+    to[short](0,0);
+
+    \varrmore{R1}{$U_\mathrm{Ri}$};
+    %\iarrmore{R1}{$I$};
+
+    \varrmore{V1}{$U_0$};
+    \iarrmore{i1}{$I$};
+
+
+\end{tikzpicture}

@@ -7,7 +7,7 @@ cd TeXAux
 rm -f -r video
 mkdir video
 echo "Creating PNG files from PDF..."
-convert -limit memory 2GB -limit map 2GB -density 350 -colorspace sRGB Video.pdf video/Folien.png
+convert -limit memory 4GB -limit map 4GB -density 320 -colorspace sRGB Video.pdf video/Folien.png
 echo "PNGs done."
 
 # Alle erzeugten WAVs auf ihre Dauer untersuchen und die Dauer in Folien-RenderVideo.sh in der passenden Zeile hinter "-t " einfügen

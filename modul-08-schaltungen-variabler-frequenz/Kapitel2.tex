@@ -147,18 +147,27 @@
     Definiert ist das Bel als Kennzeichnung des dekadisch-logarithmischen Verhältnisses (Symbol $Q$) zweier einheitengleicher Leistungsgrößen (Index $P$)
     wie in Gleichung \ref{eq:def:dezibel:leistung} gezeigt ist. %QUELLE
     In Zusammenhang mit Spannung oder Strom als sogenannte Leistungswurzelgrößen (ehemals Feldgrößen, Index $F$) 
-    kann das (Dezi-)Bel in linearen Systemen ebenfalls verwendet werden wie in Gleichung \ref{eq:def:dezibel:feld} gezeigt ist.
+    kann das (Dezi-)Bel in linearen Systemen ebenfalls verwendet werden wie in Gleichung \ref{eq:def:dezibel:wurzel} gezeigt ist.
     Die Umrechnung basiert auf der Proportionalität von $P\sim U^2$ beziehungsweise $P\sim I^2$, woraus sich der Faktor $2$ ergibt.%
-}%
-	\b{\textbf{Dezibel} Hilfsmaßeinheit zur Kennzeichnung logarithmischer Verhältnisse zweier Größen.}%
+
 	\begin{align}% script only - with numbering
         &\textrm{Leistungsgrößen }(\textrm{z.B. }P,\ W)&
             Q_{\mathrm{(P)}} &= \mathrm{log}\frac{P_2}{P_1}\ \operatorname{B} = 10\cdot \mathrm{log}\frac{P_1}{P_2}\ \dB &&
             \label{eq:def:dezibel:leistung}\\
         &\textrm{Leistungswurzelgr.}(\textrm{z.B. }U,\ I)&
-            Q_{\mathrm{(F)}} &= \mathrm{log}\frac{U_2^2}{U_1^2}\ \operatorname{B} = 20\cdot \mathrm{log}\frac{U_1}{U_2}\ \dB &&
-            \label{eq:def:dezibel:feld}
+            Q_{\mathrm{(R)}} &= \mathrm{log}\frac{U_2^2}{U_1^2}\ \operatorname{B} = 20\cdot \mathrm{log}\frac{U_1}{U_2}\ \dB &&
+            \label{eq:def:dezibel:wurzel}
     \end{align}%
+}%
+\b{
+    \textbf{Dezibel} Hilfsmaßeinheit zur Kennzeichnung logarithmischer Verhältnisse zweier Größen.
+	\begin{align*}% beamer only - without numbering
+        &\textrm{Leistungsgrößen }(\textrm{z.B. }P,\ W)&
+            Q_{\mathrm{(P)}} &= \mathrm{log}\frac{P_2}{P_1}\ \operatorname{B} = 10\cdot \mathrm{log}\frac{P_1}{P_2}\ \dB &&\\
+        &\textrm{Leistungswurzelgr.}(\textrm{z.B. }U,\ I)&
+            Q_{\mathrm{(R)}} &= \mathrm{log}\frac{U_2^2}{U_1^2}\ \operatorname{B} = 20\cdot \mathrm{log}\frac{U_1}{U_2}\ \dB &&
+    \end{align*}%
+}%
 \s{%
     Die Angabe $Q$ in $\dB$ beschreibt hier die Verstärkung\index{Verstärkung} eines Systems von Eingangs- (Index $1$) zu Ausgangssignal (Index $2$).
     Tabelle \ref{tab:dezibel} zeigt für typische Dezibelwerte zugehörige Spannungsverhältnisse $\frac{U_2}{U_1}$ und Leistungsverhältnisse $\frac{P_2}{P_1}$.
@@ -179,21 +188,6 @@
 % 20        | 300   | 26
 % 10^2      | 10^4  | 40
 
-% Tabellen Vorlage (U2/U1 in dB), auskommentierte Kurzversion, blanko. (Etwas andere Werte, keine Colorierung, default Zeilenhöhe)
-\s{\b{
-    \begin{table}[H]\centering
-        \caption{Tyische Dezibelwerte (Verstärkung in $\dB$) bei Spannungsverhältnissen}
-        \begin{tabular}{ |c|c|c|c|c|c|c|c|c| } 
-        \hline
-        $\frac{U_2}{U_1}$ & 
-            $0,1$       & $\frac{1}{\sqrt{2}}$ 	& $1$ 		& $\sqrt{2}$ 	& $2$ 		& $10$ 		& $20$ 		& $100$ \\
-            \hline
-        $Q_{\dB}$ &
-            $-20\ \dB$  & $-3\ \dB$ 			& $0\ \dB$ 	& $+3\ \dB$ 	& $+6\ \dB$ & $20\ \dB$ & $26\ \dB$	& $40\ \dB$ \\
-        \hline
-        \end{tabular}
-    \end{table}
-}}
 % Tabelle Beamer Version (U2/U1 in dB)
 \b{
     \definecolor{Gray}{gray}{0.95}
@@ -202,11 +196,9 @@
     \begin{table}[H]\centering
         \begin{tabular}{ |c|g|c|g|c|g|c|g|c| }
             \hline &&&&&&&&\\[-11pt]
-                $\frac{U_2}{U_1}$ &
-                $\frac{1}{\sqrt{2}}$    & $1$ 		& $\sqrt{2}$ 	& $2$           & $\sqrt{10}$   & $10$	        & $20$ 		& $100$ \\[+2pt]
+                $\frac{U_2}{U_1}$   & $\frac{1}{\sqrt{2}}$    & $1$ 		& $\sqrt{2}$ 	& $2$           & $\sqrt{10}$   & $10$	        & $20$ 		& $100$ \\[+2pt]
             \hline &&&&&&&&\\[-11pt]
-                $Q_{\dB}$ &
-                $-3\ \dB$ \CMT{\footm}    & $0\ \dB$ 	& $+3\ \dB$\CMT{\footmc}   & $+6\ \dB$\CMT{\footmc}   & $10\ \dB$     & $20\ \dB$     & $26\ \dB$\CMT{\footmc}& $40\ \dB$ \\[+2pt]
+                $Q_{\dB}$           & $-3\ \dB$               & $0\ \dB$ 	& $+3\ \dB$     & $+6\ \dB$     & $10\ \dB$     & $20\ \dB$     & $26\ \dB$ & $40\ \dB$ \\[+2pt]
             \hline
         \end{tabular}
     \end{table}
@@ -228,7 +220,7 @@
                 $\frac{1}{2}$ 	        & $1$ 		    & $2$ 	        & $4$ 	        & $10$          & $100$         & $400$ 	    & $10.000$ \\[+3pt]
             \hline &&&&&&&&&\\[-10pt]
                 \textbf{Verstärkung}       & $Q_{\dB}$     &
-                $-3\ \dB$\CMT{\footm} 			    & $0\ \dB$ 	    & $+3\ \dB$\CMT{\footmc} 	& $+6\ \dB$\CMT{\footmc}     & $10\ \dB$     & $20\ \dB$     & $26\ \dB$\CMT{\footmc}	    & $40\ \dB$ \\[+3pt]
+                $-3\ \dB$ 			    & $0\ \dB$ 	    & $+3\ \dB$ 	& $+6\ \dB$     & $10\ \dB$     & $20\ \dB$     & $26\ \dB$	    & $40\ \dB$ \\[+3pt]
             \hline
         \end{tabular}
     \end{table}%
@@ -363,29 +355,28 @@
         \begin{minipage}{\dimexpr0.5\textwidth-\Colsep\relax}% linke Hälfte
 
             \textbf{Grenzfrequenz:} $f_g$ (, $\omega_g$)
-            \begin{align}
+            \begin{align*}
                 \left.\frac{U_2}{U_1}\right\rvert_{\omega=\omega_g} := \frac{1}{\sqrt{2}} %\\
                 \quad \leftrightarrow\quad
                 A(\omega_g) := \frac{1}{\sqrt{2}}
-            \end{align}
+            \end{align*}
 
             \onslide<2->{
                 \textbf{Bereiche:}
-                \begin{align}
+                \begin{align*}
                     &\text{Durchlassbereich:} & A(\omega) &> \nicefrac{1}{\sqrt{2}}\\
                     &\text{Grenzfrequenz:} & A(\omega_g) &= \nicefrac{1}{\sqrt{2}}\\
                     &\text{Sperrbereich:}    & A(\omega) &< \nicefrac{1}{\sqrt{2}}
-                \end{align}
+                \end{align*}
             }
         \end{minipage}\hfill%
         \begin{minipage}{\dimexpr0.5\textwidth-\Colsep\relax}% rechte Hälfte
             \centering%
             \onslide<3->{
                 \textbf{Beispiel:} Tiefpass erster Ordnung
-                \begin{equation}\begin{aligned}
-                    %A(\omega_{\mathrm{g}}) &= \frac{1}{\sqrt{1 + (\omega_{\mathrm{g}} CR)^2}} \overset{!}{=} \frac{1}{\sqrt{2}}\\
+                \begin{equation*}\begin{aligned}
                     A(\omega/\omega_{\mathrm{g}}) &= \frac{1}{\sqrt{1 + (\omega/\omega_{\mathrm{g}})^2}} \quad \text{mit}\ \omega_{\mathrm{g}} = \frac{1}{CR}
-                \end{aligned}\end{equation}
+                \end{aligned}\end{equation*}
                 \includegraphics{Tikz/pdf/plot_tiefpass_mini_ampli_lin_bereiche.pdf}
             }
         \end{minipage}\hfill
@@ -473,25 +464,7 @@
             \end{cases}
     \end{equation}
 
-    %Im Durchlassbereich entspricht die Näherung der Geraden $\varphi(\omega) = 0\ \degree$ bis zum Übergangsbereich eine Dekade unterhalb der Grenzfrequenz.
-    %Im Übergangsbereich $\pm 1 \mathrm{Dek}$ um $\omega_{\mathrm{g}}$ fällt die Gerade mit einer Steigung von $-45\ \degree / \mathrm{Dek}$ von $0\ \degree$ auf $-90\ \degree$.
-    %Im Sperrbereich außerhalb des Übergangsbereiches entspricht die Gerade $\varphi(\omega) = -90\ \degree$. 
     Die maximale Abweichung der Approximation beträgt  $\pm\ 5.71\degree$ an den Knickstellen bei $\omega_g\pm 1\ \mathrm{Dek}$.
-
-    % TODO: omega_n statt omega/omega_g in beiden Plots und Definition davon früher
-    \s{\b{%START AUSKOMMENTIERT
-    \begin{equation} % Frühere Version, zweispaltig ohne aligned
-        \varphi(\omega) =
-            \begin{cases}% Works
-                0\ \degree &
-                    &\omega < 0.1 \omega_g \\
-                -45\ \degree + \frac{-45\ \degree}{\mathrm{Dek}}\frac{\omega}{\omega_g} &
-                    & 0.1 \omega_g \leq \omega \leq 10 \omega_g \\
-                -90\ \degree &
-                        &\omega > 10 \omega_g
-            \end{cases}
-    \end{equation}
-    }}%ENDE AUSKOMMENTIERT
 }%
 \b{%
     \noindent\begin{minipage}[t]{\textwidth}
@@ -501,7 +474,7 @@
 
             \textbf{RC-Tiefpass 1. Ordnung}%
             \only<beamer>{%
-            \begin{align}% Animation: F(jwRC), A(wRC), phi(wRC) -> A(wg)=1/sqrt(2), wg=1/RC -> F(jw/wg), A(w/wg), phi(w/wg) -> phi(wg)=-45°
+            \begin{align*}% Animation: F(jwRC), A(wRC), phi(wRC) -> A(wg)=1/sqrt(2), wg=1/RC -> F(jw/wg), A(w/wg), phi(w/wg) -> phi(wg)=-45°
                 &&\onslide<1->{\underline{F}(\mathrm{j}\omega) &=
                     \only<1-4>{\frac{1}{1+\mathrm{j}\omega RC}}% mit RC
                     \only<5->{\frac{1}{1+\mathrm{j}\omega/\omega_{\mathrm{g}}}}% mit omega_g
@@ -514,14 +487,14 @@
                     \only<1-4>{-\mathrm{arctan}(\omega RC)}% mit RC
                     \only<5->{-\mathrm{arctan}(\omega/\omega_{\mathrm{g}})}% mit omega_g
                         &\onslide<4->{\varphi(\omega_{\mathrm{g}})&=-45\degree}}\vphantom{\frac{1}{\omega_g}}
-            \end{align}%
+            \end{align*}%
             }% end only beamer
             \only<handout>{%
-            \begin{align}% mit omega/omega_0 und omega_0 = 1/RC
+            \begin{align*}% mit omega/omega_0 und omega_0 = 1/RC
                 &&\underline{F}(\mathrm{j}\omega) &= \frac{1}{1+\mathrm{j}\sfrac{\omega}{\omega_\mathrm{g}}} &\omega_{\mathrm{g}}&=\frac{1}{RC}             \vphantom{\frac{1}{\omega_g}}\\
                 &&A(\omega) &= \frac{1}{\sqrt{1+(\sfrac{\omega}{\omega_\mathrm{g}})^2}}                      &A(\omega_{\mathrm{g}})&=\frac{1}{\sqrt{2}}    \vphantom{\frac{1}{\omega_g}}\\
                 &&\varphi(\omega) &= -\mathrm{arctan}(\sfrac{\omega}{\omega_\mathrm{g}})                     &\varphi(\omega_{\mathrm{g}})&=-45\degree      \vphantom{\frac{1}{\omega_g}}
-            \end{align}%
+            \end{align*}%
             }% end only handout
             %Grenzfrequenz: $\omega_{\mathrm{g}} = \frac{1}{RC}$\hfill%
         \end{minipage}\hfill%
@@ -773,11 +746,11 @@
         \column{0.4\textwidth}\centering% rechte Spalte
             \resizebox{\linewidth}{!}{\includegraphics{Tikz/pdf/circ_bandpass_no_amp.pdf}}\flushleft
             Grenzfrequenz: (obere, untere)
-                \begin{equation}f_{\mathrm{go}},\ f_{\mathrm{gu}} \end{equation}
+                \begin{equation*}f_{\mathrm{go}},\ f_{\mathrm{gu}} \end{equation*}
             Bandbreite:
-                \begin{equation}B = \Delta f = f_{\mathrm{go}} - f_{\mathrm{gu}}\end{equation}
+                \begin{equation*}B = \Delta f = f_{\mathrm{go}} - f_{\mathrm{gu}}\end{equation*}
             Mittenfrequenz:
-                \begin{equation}f_{\mathrm{m}} = \sqrt{f_{\mathrm{go}} \cdot f_{\mathrm{gu}}}\end{equation}
+                \begin{equation*}f_{\mathrm{m}} = \sqrt{f_{\mathrm{go}} \cdot f_{\mathrm{gu}}}\end{equation*}
     \end{columns}
     Frequenzgang\footnote{Bei rückwirkungsfreier Serienschaltung aus Multiplikation der Einzelnfrequenzgänge}:%
     $\underline{F}_{BP}(\mathrm{j}\omega)=\underline{F}_{TP}(\mathrm{j}\omega)\cdot\underline{F}_{TP}(\mathrm{j}\omega)$%

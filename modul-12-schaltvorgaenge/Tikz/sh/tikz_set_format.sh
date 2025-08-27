@@ -51,12 +51,12 @@ if [[ ! $NONINTERACTIVE == true ]] ; then
     # PROMPT USER if not set
     if [ -z ${FORMAT+x} ] ;     then read -p "Enter FORMAT   [pdf] or png or tex: " FORMAT ; fi
     if [ -z ${EXEPATH+x} ] ;    then read -p "Enter EXEPATH  [$(dirname "$0")/../..] to parse for .tex files: " EXEPATH ; fi
-    if [ -z ${MAXDEPTH+x} ] ;   then read -p "Enter MAXDEPTH [0] (no subdirs) or 1, 2, 3 ... to parse for .tex files: " MAXDEPTH ; fi
+    if [ -z ${MAXDEPTH+x} ] ;   then read -p "Enter MAXDEPTH [1] (no subdirs) or 1, 2, 3 ... to parse for .tex files: " MAXDEPTH ; fi
 fi
 
 # SETTINGS
 FORMAT=${FORMAT:-pdf} # default value
-MAXDEPTH=${MAXDEPTH:-0} # default value
+MAXDEPTH=${MAXDEPTH:-1} # default value
 EXEPATH=${EXEPATH:-"$(dirname "$0")/../.."} # default value ref: https://stackoverflow.com/questions/3349105/how-can-i-set-the-current-working-directory-to-the-directory-of-the-script-in-ba
 
 # WORKING DIRECTORY
@@ -82,14 +82,14 @@ fi
 
 # MAIN
 echo "start modifying .tex files in $PWD/ and subdirectories (MAXDEPTH=$MAXDEPTH) to use tikzpicture in FORMAT=$FORMAT ..." 
-for texfile in $( find . -maxdepth 1 -type f -name "*.tex" ) ; do
+for texfile in $( find . -maxdepth $MAXDEPTH -type f -name "*.tex" ) ; do
     tikzpdfs=$( grep -c "{Tikz\/pdf\/.*\.pdf" $texfile ) # count
     tikzpngs=$( grep -c "{Tikz\/png\/.*\.png" $texfile ) # count
     tikztexs=$( grep -c "{Tikz\/src\/.*\.tex" $texfile ) # count
     case $FORMAT in
         # nothing to do (no tikzpictures in different format used)
-        pdf) if (( $tikzexts+$tikzpngs == 0 )) ; then continue ; fi ;;
-        png) if (( $tikzexts+$tikzpdfs == 0 )) ; then continue ; fi ;;
+        pdf) if (( $tikztexs+$tikzpngs == 0 )) ; then continue ; fi ;;
+        png) if (( $tikztexs+$tikzpdfs == 0 )) ; then continue ; fi ;;
         tex) if (( $tikzpdfs+$tikzpngs == 0 )) ; then continue ; fi ;;
         *) echo -e "Error: FORMAT=$FORMAT not supported. Run script with -h or --help for help." ; exit 1 ;;
     esac

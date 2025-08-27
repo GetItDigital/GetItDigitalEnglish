@@ -1,0 +1,14 @@
+% Schaltbild: Gleichspannungsquelle Uq an Schalter, Schalterspannung u(t) über offenen Klemmen
+\begin{tikzpicture}%
+    % Schaltung
+    \draw (0,0) to [vsource] (0,-2); % Uq
+    \draw (0,0) to [short, o-o] (3,0); % Uq+ zu u+
+    \draw (0,-2) to [short, o-o] (3,-2); % Uq- zu u-
+    \draw (1.5,0) to [switch, *-*] (1.5,-2); % Schalter
+    % Spannungen
+    \draw (-0.75,0) to [open, v, name=Uq, !v] (-0.75,-2); % Uq
+    \draw (3,0) to [open, v^, name=U2, !v] (3,-2); % u
+    % Spannungspfeile
+    \varrmore[voltage]{Uq}{$U_q$};
+    \varrmore[voltage]{U2}{$u(t)$};
+\end{tikzpicture}%

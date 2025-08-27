@@ -246,21 +246,8 @@ Ein-/Ausschalten, AD-/DA-Converter, Fahrradlicht mit Kondensator, ...
 	welcher real betrachtet stets mit Latenzen und Verlusten einhergeht.
 }
 \begin{figure}[H]\centering
-	\begin{tikzpicture}
-		% Gleichspannungsquelle Uq an Schalter, Schalterspannung u
-		% Schaltung
-		\draw (0,0) to [vsource] (0,-2); % Uq
-		\draw (0,0) to [short, o-o] (3,0); % Uq+ zu u+
-		\draw (0,-2) to [short, o-o] (3,-2); % Uq- zu u-
-		\draw (1.5,0) to [switch, *-*] (1.5,-2); % Schalter
-		% Spannungen
-		\draw (-0.75,0) to [open, v, name=Uq, !v] (-0.75,-2); % Uq
-		\draw (3,0) to [open, v^, name=U2, !v] (3,-2); % u
-		% Spannungspfeile
-		\varrmore[voltage]{Uq}{$U_q$};
-		\varrmore[voltage]{U2}{$u(t)$};
-	\end{tikzpicture}
-	\s{\caption{Schaltbild, Schalterspannung}}\b{Schalterspannung $\ecv{u(t)}$}
+	\input{Tikz/src/circ_switch_ideal.tex}
+	\s{\caption{Schaltbild, Schalterspannung}}\b{\par Schalterspannung $\ecv{u(t)}$}
 	\label{fig:circ:switch}
 \end{figure}
 \s{
@@ -273,12 +260,12 @@ Ein-/Ausschalten, AD-/DA-Converter, Fahrradlicht mit Kondensator, ...
 \begin{figure}[H]\centering
 	\begin{subfigure}{0.48\textwidth}\centering
 		\includegraphics{Tikz/pdf/plot_switch_ideal.pdf}
-		\s{\caption{Spannung bei idealem Schalter}}\b{Ideal: verlustlos, instantan}
+		\s{\caption{Spannung bei idealem Schalter}}\b{\par Ideal: verlustlos, instantan}
 		\label{fig:plot:schalter:ideal}
 	\end{subfigure}\pause
 	\begin{subfigure}{0.48\textwidth}\centering
 		\includegraphics{Tikz/pdf/plot_switch_real.pdf}
-		\s{\caption{Spannung bei realem Schalter}}\b{Real: Verluste, Latenzen}
+		\s{\caption{Spannung bei realem Schalter}}\b{\par Real: Verluste, Latenzen}
 		\label{fig:plot:schalter:real}
 	\end{subfigure}
 	\s{\caption{Vergleich: Schaltverläufe bei idealem und realem Schalter}}

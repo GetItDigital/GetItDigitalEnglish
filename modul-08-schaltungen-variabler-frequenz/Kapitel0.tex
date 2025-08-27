@@ -38,20 +38,20 @@
             \includegraphics{Tikz/pdf/plot_bauteile_phasenverschiebung_r.pdf}
         \end{subfigure}%
         \begin{subfigure}{0.28\textwidth}\centering
-            \begin{tikzpicture}[x=1mm,y=1mm]\draw[draw=none] (-14,-14) rectangle (+14,+14);  \draw (-10,0) to [R,name=R,l=$R$,v=$u_R$,i=$i_R$,!vi,o-o] (10,0); \varronly{R}; \iarronly{R}; \end{tikzpicture}% R
+            \input{Tikz/src/circ_bauteil_R_u_i.tex}% R
         \end{subfigure}\hfill% newline
         \begin{subfigure}{0.68\textwidth}\centering
             \includegraphics{Tikz/pdf/plot_bauteile_phasenverschiebung_l.pdf}
         \end{subfigure}%
         \begin{subfigure}{0.28\textwidth}\centering
-            \begin{tikzpicture}[x=1mm,y=1mm]\draw[draw=none] (-14,-14) rectangle (+14,+14);  \draw (-10,0) to [L,name=L,l=$L$,v=$u_L$,i=$i_L$,!vi,o-o] (10,0); \varronly{L}; \iarronly{L}; \end{tikzpicture}% L
+            \input{Tikz/src/circ_bauteil_L_u_i.tex}% L
         \end{subfigure}\hfill% newline
         \begin{subfigure}{0.68\textwidth}\centering
             \includegraphics{Tikz/pdf/plot_bauteile_phasenverschiebung_c.pdf}
             \caption{Strom- und Spannungsverläufe}
         \end{subfigure}%
         \begin{subfigure}{0.28\textwidth}\centering
-            \begin{tikzpicture}[x=1mm,y=1mm]\draw[draw=none] (-14,-14) rectangle (+14,+14);  \draw (-10,0) to [C,name=C,l=$C$,v=$u_C$,i=$i_C$,!vi,o-o] (10,0); \varronly{C}; \iarronly{C}; \end{tikzpicture}% C
+            \input{Tikz/src/circ_bauteil_C_u_i.tex}% C
             \caption{Schaltsymbole}
         \end{subfigure}
         \caption{Phasenverschiebung bei $R$, $L$ und $C$}\label{fig:bauteile:phasenverschiebung}
@@ -71,7 +71,7 @@
         \end{minipage}%
         }%
         \begin{minipage}{0.28\textwidth}\centering
-            \begin{tikzpicture}[x=1mm,y=1mm]\draw[draw=none] (-14,-14) rectangle (+14,+14);  \draw (-10,0) to [R,name=R,l=$R$,v=$u_R$,i=$i_R$,!vi,o-o] (10,0); \varronly{R}; \iarronly{R}; \end{tikzpicture}% R
+            \input{Tikz/src/circ_bauteil_R_u_i.tex}% R
         \end{minipage}\hfill% newline
         \onslide<2->{%
         \begin{minipage}{0.68\textwidth}\centering
@@ -79,7 +79,7 @@
         \end{minipage}%
         }%
         \begin{minipage}{0.28\textwidth}\centering
-            \begin{tikzpicture}[x=1mm,y=1mm]\draw[draw=none] (-14,-14) rectangle (+14,+14);  \draw (-10,0) to [L,name=L,l=$L$,v=$u_L$,i=$i_L$,!vi,o-o] (10,0); \varronly{L}; \iarronly{L}; \end{tikzpicture}% L
+            \input{Tikz/src/circ_bauteil_L_u_i.tex}% L
         \end{minipage}\hfill% newline
         \onslide<3->{%
         \begin{minipage}{0.68\textwidth}\centering
@@ -87,9 +87,10 @@
         \end{minipage}%
         }%
         \begin{minipage}{0.28\textwidth}\centering
-            \begin{tikzpicture}[x=1mm,y=1mm]\draw[draw=none] (-14,-14) rectangle (+14,+14);  \draw (-10,0) to [C,name=C,l=$C$,v=$u_C$,i=$i_C$,!vi,o-o] (10,0); \varronly{C}; \iarronly{C}; \end{tikzpicture}% C
+            \input{Tikz/src/circ_bauteil_C_u_i.tex}% C
         \end{minipage}
     \end{minipage}
+    \speech{folie1}{1}{Dies ist ein Beispiel Text. A + i mal B gleich C komplex. Hundert Volt Spannung.}
 }% end Folien-only
 \end{frame}
 
@@ -142,18 +143,16 @@
 }
 \b{% Folien-only
 \begin{columns}
-\column{0.5\textwidth}
-    
-    \textbf{Induktivität} \begin{tikzpicture}\draw (0,0) to [L,l=$L$] (2,0); \end{tikzpicture}
+\column{0.35\textwidth}
+    \textbf{Induktivität}%
     \begin{itemize}
-%           \item $L = \frac{\Phi}{i}$, mit $\Phi$ als magnetischer Fluss
         \item Impedanz: $\underline{Z}_{\mathrm L} = \mathrm{j}\omega L$
         \item DGL: $\ecv{u_{\mathrm L}} = L \cdot \frac{\d}{\d t}\, \eci{i_{\mathrm L}}$
         \item Energie im Magnetfeld
         \item Ströme stetig (keine Sprünge)
     \end{itemize}
 
-    \textbf{Kapazität} \begin{tikzpicture}\draw (0,0) to [C,l=$C$] (2,0); \end{tikzpicture}
+    \textbf{Kapazität}%
     \begin{itemize}
         \item Impedanz: $\underline{Z}_{\mathrm C} = -\mathrm{j}\frac{1}{\omega C}$
         \item DGL: $\eci{i_{\mathrm C}} = C \cdot \frac{\d}{\d t}\, \ecv{u_{\mathrm C}}$
@@ -161,8 +160,10 @@
         \item Spannungen stetig (keine Sprünge)
     \end{itemize}
 
-% video: 
-% nicht überall Sprünge vorgeben können
+\column{0.15\textwidth}\centering
+    \input{Tikz/src/circ_bauteil_L_u_i_mini.tex}% Schaltsymbol
+    \vspace{2cm}
+    \input{Tikz/src/circ_bauteil_C_u_i_mini.tex}% Schaltsymbol
 
 \column{0.5\textwidth}
     \begin{figure}[H]\centering
@@ -185,10 +186,6 @@
 
     \s{\ref{tab:vgl:bauteile:rlc} zeigt eine Gegenüberstellung der Größen $R$, $L$ und $C$ und fasst deren wichtigsten Eigenschaften zusammen. }
 
-    % TODO: resizebox für beamer
-    % TODO: "Symbol" vertical centering
-    % ref: https://tex.stackexchange.com/questions/113022/vertical-alignment-in-tabular-cells-with-variable-height
-    % TODO: try \usepackage{tabularx} % column width similar
     \begin{table}[h]\centering%
     \s{\caption{Vergleich lineare Bauteile $R$, $L$, $C$}\label{tab:vgl:bauteile:rlc}}%
     \resizebox{\textwidth}{!}{% for beamer page fit
@@ -200,26 +197,15 @@
                 & \textbf{Induktivität}         % Col 4
                 & \textbf{Kapazität} \\[+4pt]   % Col 5
         \hline%
-        %\textbf{Symbol}% outcommented, due to no vertical centering
-        \begin{tikzpicture}[x=1mm,y=1mm]\draw[draw=none] (-14,-7) rectangle (+14,+7); \node[draw=none,align=center] {\textbf{Symbol}};\end{tikzpicture}
-        %\begin{tikzpicture}[x=1mm,y=1mm]\draw[draw=black] (0,0) rectangle (5,5); \draw (2,2) node{S}; % DEBUG WIP 
-                % tikzpicture           scaling   \draw     boundbox for same sized pictures    \draw   Bauteil
-                & \begin{tikzpicture}[x=1mm,y=1mm]\draw[draw=none] (-14,-7) rectangle (+14,+7); \node[draw=none,align=center] {Zweipol\\Eintor};
-                        \draw(0,0) node[dipchip, hide numbers, num pins=4, no topmark, external pins width=0](A){}; % Mittelpunkt des Zweipols
-                        \draw(0,0) node[dipchip, hide numbers, num pins=2, no topmark, external pins width=0, opacity=0](B){}; % Ref. Pins mittig
-                        \draw(B.bpin 1) to[short,-o] ++(-5,0);
-                        \draw(B.bpin 2) to[short,-o] ++(5,0);
-                  \end{tikzpicture}
-                %& \begin{tikzpicture}[x=1mm,y=1mm]\draw[draw=none] (-4,-5) rectangle (+24,+7);  \draw (5,-5) rectangle (15,5); \draw (10,0) node{Bipol}; 
-                %                                                                                \draw (0,0) to [short,o-] (5,0); 
-                %                                                                                \draw (15,0) to [short,-o] (20,0); \end{tikzpicture}
-                & \begin{tikzpicture}[x=1mm,y=1mm]\draw[draw=none] (-14,-7) rectangle (+14,+7);  \draw (-10,0) to [R,l=$R$,o-o] (10,0); \end{tikzpicture}
-                & \begin{tikzpicture}[x=1mm,y=1mm]\draw[draw=none] (-14,-7) rectangle (+14,+7);  \draw (-10,0) to [L,l=$L$,o-o] (10,0); \end{tikzpicture}
-                & \begin{tikzpicture}[x=1mm,y=1mm]\draw[draw=none] (-14,-7) rectangle (+14,+7);  \draw (-10,0) to [C,l=$ $,o-o] (10,0); 
-                                                                                                \draw (5,3) node{$C$}; \end{tikzpicture} \\[+4pt]
+        %\textbf{Symbol}
+        \input{Tikz/src/circ_bauteil_tabelle_text_symbol.tex}% Symbol (vertikal zentriert)
+                & \input{Tikz/src/circ_bauteil_tabelle_zweipol.tex}
+                & \input{Tikz/src/circ_bauteil_tabelle_R.tex}
+                & \input{Tikz/src/circ_bauteil_tabelle_L.tex}
+                & \input{Tikz/src/circ_bauteil_tabelle_C.tex} \\[+4pt]
         \hline &&&&\\[-6pt]
         %\textbf{Bauteil}
-        %        & Dipol
+        %        & Zweipol
         %        & Widerstand
         %        & Spule
         %        & Kondensator \\[+4pt]

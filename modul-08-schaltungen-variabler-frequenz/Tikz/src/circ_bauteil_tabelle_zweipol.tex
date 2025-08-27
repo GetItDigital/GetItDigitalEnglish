@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1mm,y=1mm]\draw[draw=none] (-14,-7) rectangle (+14,+7); \node[draw=none,align=center] {Zweipol\\Eintor};
+	\draw(0,0) node[dipchip, hide numbers, num pins=4, no topmark, external pins width=0](A){}; % Mittelpunkt des Zweipols
+	\draw(0,0) node[dipchip, hide numbers, num pins=2, no topmark, external pins width=0, opacity=0](B){}; % Ref. Pins mittig
+	\draw(B.bpin 1) to[short,-o] ++(-5,0);
+	\draw(B.bpin 2) to[short,-o] ++(5,0);
+\end{tikzpicture}

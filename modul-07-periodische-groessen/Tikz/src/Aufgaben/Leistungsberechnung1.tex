@@ -1,0 +1,15 @@
+\begin{circuitikz}[domain=0:8,samples=100]
+    %Gitter
+    \draw[very thin,color=gray] (-0.1,-2.1) grid (8.2,2.1);
+    \draw[->] (-0.2,0) -- (8.5,0) node[right] {t in ms};
+    \draw[->] (0,-2.1) -- (0,2.2) node[above] {};
+    \draw (0,-2.1) node[below] {$0$};
+    \draw (2,-2.1) node[below] {$25$};
+    \draw (4,-2.1) node[below] {$50$};
+    \draw (6,-2.1) node[below] {$75$};
+    \draw (8,-2.1) node[below] {$100$};
+    \draw[color=blue] (-0.5,1.5) node[] {$u(t)$};
+    \draw[color=red] (-0.5,-1) node[] {$i(t)$};
+    \draw[color=blue,smooth] plot[id=Sinus14] function{1.5 * sin(pi/2 * x)} node[right] {};
+    \draw[color=red,smooth] plot[id=Sinus15] function{2 * sin((pi/2) * x - (pi/3))} node[right] {};
+\end{circuitikz}

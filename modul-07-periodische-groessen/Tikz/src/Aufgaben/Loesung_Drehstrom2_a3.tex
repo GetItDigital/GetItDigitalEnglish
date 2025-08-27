@@ -1,0 +1,26 @@
+\begin{circuitikz}
+    \draw (0, 0) to[short] (0, 4)
+    to[sV, v<=230 V] (2, 4)
+    to[short, i=?] (5, 4)
+    to[short] (13, 4)
+    to[R=10\ohm, i<=?] (13, 0);
+
+    \draw (0, 2) to[sV, v<=$230\cdot \underline{a}^2 V$, *-] (2, 2)
+    to[short, i=?] (5, 2)
+    to[short] (9, 2)
+    to[R=10\ohm, label distance = 2.5, i<=?, *-*] (13, 4);
+
+    \draw (0, 0) to[sV, v<=$230 V\cdot \underline{a}$] (2, 0)
+    to[short, i=?] (5, 0)
+    to[short] (13, 0)
+    to[R=10\ohm, i_<=?, *-*] (9, 2);
+
+    \draw (-0.5, 2) node {$N_Q$};
+
+    \draw [->](5, 3.8) -- (5, 2.2);
+    \draw (5.3, 3) node {?};
+    \draw [->](5, 1.8) -- (5, 0.2);
+    \draw (5.3, 1) node {?};
+    \draw [<-](7, 3.8) -- (7, 0.2);
+    \draw (7.3, 1) node {?};
+\end{circuitikz}%

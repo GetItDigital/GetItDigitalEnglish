@@ -1,0 +1,10 @@
+\begin{circuitikz}[scale=0.9]
+
+    % Ideale Spannungsquelle
+    \draw (0,9) to[V] (0,6)
+    to[short,-o] (2,6)
+    (0,9) to[short, i, name=I, -o] (2,9);
+    \iarrmore {I}{$I$};
+    \draw[-latex, thick, draw=voltage] (2,8.5)  to node[right, color=voltage] {$U_\mathrm{q}$} (2,6.5);
+
+\end{circuitikz}

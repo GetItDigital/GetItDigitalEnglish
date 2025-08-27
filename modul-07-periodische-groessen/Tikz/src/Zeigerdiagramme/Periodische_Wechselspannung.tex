@@ -1,0 +1,58 @@
+\begin{circuitikz}[domain=-1:8.5,samples=100]
+    %Gitter
+    \draw[very thin,color=gray] (-1.1,-2.1) grid (8.7,2.1);
+    \draw[->] (-1.2,0) -- (8.9,0) node[right] {$t$};
+    \draw[->] (0,-2.1) -- (0,2.2) node[above] {};
+    \draw (0,-2.1) node[below] {$0\ ms$};
+    \draw (2,-2.1) node[below] {$10\ ms$};
+    \draw (4,-2.1) node[below] {$20\ ms$};
+    \draw (6,-2.1) node[below] {$30\ ms$};
+    \draw (8,-2.1) node[below] {$40\ ms$};
+    \draw[color=voltage] (0,2.2) node[above] {$u(t)$};
+    \draw[color=voltage, very thick] plot[id=Sinus6] function{1.5 * sin((pi/2) * x + (pi/4))} node[right] {};
+    \draw(0,-2.1) -- (0,2.2) node[above] {};
+    \draw[dashed](0,1.5) -- (1.5,1.5) node[above] {$\hat{U}$};
+    \draw[dashed](0.2,1) -- (-0.2,1) node[above left] {$u(t=0)$};
+    \draw (-0.5,0.2) -- (-0.5,-0.2) node[below] {$t_\mathrm{0}$};
+    \pause
+
+    %Periodendauer
+    \draw (3.5,0.2) -- (3.5,-0.2) node[below right] {$t_\mathrm{0+T}$};
+    \draw (7.5,0.2) -- (7.5,-0.2) node[below right] {$t_\mathrm{0+2T}$};
+    \draw[dashed](3.5,0) -- (3.5,2);
+    \draw[dashed](7.5,0) -- (7.5,2);
+    \draw[<->] (3.5,2) -- (7.5,2);
+    \draw (5.5,2) node[above] {T};
+    \pause
+
+    %Kreisdiagramm
+    \draw (11.5,-2) -- (11.5,2);
+    \draw (9.5,0) -- (13.5,0);
+    \draw (11.5,0) circle (1.5);
+    \draw[dashed](8.5,1.5) -- (11.5,1.5);
+    \draw (9.5,1.5) node[above] {$\hat{U}$};
+    \draw[dashed](7.8,1) -- (12.5,1);
+    \draw (9,0.6) node {$u(t=0)$};
+    \pause
+
+    %Zeiger und Winkel
+    \draw[->] (11.5,0) -- (12.55,1.05);
+    \draw (13,0) coordinate (3);
+    \draw (11.5,0) coordinate (4);
+    \draw (13,1.5) coordinate (5);
+    \draw pic[draw, very thick, angle radius = 0.75cm, ->] {angle = 3--4--5};
+    \draw (12.5,0.5) node[very thick]{$\varphi_\mathrm{u}$};
+    \draw (13.5,1) coordinate (6);
+    \draw (11.5,0) coordinate (7);
+    \draw (12.5,2) coordinate (8);
+    \draw pic[draw, thick, angle radius = 1.7cm, ->] {angle = 6--7--8};
+    \draw (12.8,1.7) node[very thick]{$\omega=\frac{2 \pi}{T}$};
+    \def\StartAngle{0}
+    \def\EndAngle{359}
+    \def\Radius{1.5}
+    \draw([shift=(\StartAngle : \Radius)]11.5,0)  arc[start angle=\StartAngle, end angle=\EndAngle, radius=\Radius];
+    %\draw (9.3,0.9) node[right] {$\varphi_i=\frac{\pi}{2}$};									
+
+    %ohne diesen Befehl macht das \pause in der Tikz Umgebung die Footline kaputt
+    \onslide<1->
+\end{circuitikz}

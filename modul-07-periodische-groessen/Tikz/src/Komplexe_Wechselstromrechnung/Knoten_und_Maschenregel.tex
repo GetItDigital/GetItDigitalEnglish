@@ -1,0 +1,24 @@
+\begin{circuitikz}
+    \pause
+
+    \draw (0,3) to [short, i=\red{$\underline{I}_\mathrm{1}$},-*] (2,2)
+    (0,1) to [short, i=\red{$\underline{I}_\mathrm{2}$}] (2,2)
+    (2,2) to [short, i=\red{$\underline{I}_\mathrm{3}$}] (3.5,3.5)
+    (2,2) to [short, i=\red{$\underline{I}_\mathrm{4}$}] (4,2)
+    (2,2) to [short, i=\red{$\underline{I}_\mathrm{5}$}] (3.5,0.5);
+    \pause
+
+    \draw (6,0) to [vsourcesin, v^<, name=U0] (6,4)
+    to [short, i=\red{$\underline{I}_\mathrm{0}$}, -*] (10,4)
+    to [short] (14,4)
+    (10,4) to [R=$\underline{Z}_\mathrm{1}$, v, i, name=Z1] (10,0)
+    (14,4) to [R=$\underline{Z}_\mathrm{2}$, v, i, name=Z2] (14,0)
+    to[short,-*] (10,0)
+    to[short] (6,0);
+    \draw[->,shift={(12,2)},voltage] (150:0.8) arc (150:-150:0.8) node at(0,0){$M_\mathrm{1}$};
+    \varrmore{Z1}{$\underline{U}_\mathrm{{\underline{Z}1}}$};
+    \iarrmore{Z1}{$\underline{I}_\mathrm{{\underline{Z}1}}$};
+    \varrmore{Z2}{$\underline{U}_\mathrm{{\underline{Z}2}}$};
+    \iarrmore{Z2}{$\underline{I}_\mathrm{{\underline{Z}2}}$};
+    \varrmore{U0}{$\underline{U}_\mathrm{0}$};
+\end{circuitikz}

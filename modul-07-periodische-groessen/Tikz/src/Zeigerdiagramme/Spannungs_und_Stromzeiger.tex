@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+    \draw (0,0) coordinate (U);
+    %\draw[very thin,color=gray] (-0.1,-0.1) grid (3.2,2.1);
+    \draw[->] (-0.2,0) -- (3.4,0) node[right] {$\Re$};
+    \draw[->] (0,-0.1) -- (0,2.2) node[above] {$\Im$};
+    \draw (3,0.02) coordinate (R);
+    \draw (3,2.02) coordinate (Z);
+    \draw[->, very thick, voltage] (0,0.02) -- (3,2.02);
+    \draw pic[draw, very thick, angle radius = 2cm, ->, voltage] {angle = R--U--Z};
+    \draw(1.4,0.5) node [voltage] {$\varphi_\mathrm{U}$};
+    \draw(1,1)node [voltage] {$\hat{U}$};
+
+    \draw (6,0) coordinate (U);
+    %\draw[very thin,color=gray] (5.9,-0.1) grid (9.2,2.1);
+    \draw[->] (5.8,0) -- (9.4,0) node[right] {$\Re$};
+    \draw[->] (6,-0.1) -- (6,2.2) node[above] {$\Im$};
+    \draw (9,0.02) coordinate (R);
+    \draw (9,2.02) coordinate (Z);
+    \draw[->, very thick, red] (6,0.02) -- (9,2.02);
+    \draw pic[draw, very thick, angle radius = 2cm, ->, red] {angle = R--U--Z};
+    \draw(7.4,0.5) node [red] {$\varphi_\mathrm{I}$};
+    \draw(7,1)node [red] {$\hat{I}$};
+\end{tikzpicture}

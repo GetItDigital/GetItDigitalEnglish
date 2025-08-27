@@ -1,0 +1,29 @@
+\begin{tikzpicture}
+
+    \draw[white] (3.33, 4) to[short,v>, name=volti] (3.33, -1.0) node[right] {};
+    \varrmore{volti}{};
+    \node[voltage] at (2.8,1.45) {$U$};
+    \draw(0,0)
+    to[short, -o](3.1,0)
+    to[short](4,0)
+    to[short](4,0.5)
+    to[R ,i ,v< , name =Ra  , l =$R_\mathrm{a}$] (4,2.5)
+    to[short, i<_ , name = i0](4,3)
+    to[short, -o](3.1,3)
+    to[short](2,3)
+    to[R ,i ,v< , name =R1  , l =$R_\mathrm{i}$]  (0,3)
+    to[short](0,3)
+    to[short, i<_ , name = i_0](0,2.5)
+    to[V, v, i, name=V1] (0,0.5)
+    to[short](0,0);
+
+    \varrmore{R1}{$U_\mathrm{Ri} = R \cdot I$};
+
+    \varrmore{V1}{$U_0$};
+    \iarrmore{i0}{$I$};
+    \draw[dashed] (-0.8,-0.5) -- (2.4,-0.5);
+    \draw[dashed] (2.4,-0.5) -- (2.4,4);
+    \draw[dashed] (2.4,4) -- (-0.8,4);
+    \draw[dashed] (-0.8,4) -- (-0.8,-0.5);
+
+\end{tikzpicture}

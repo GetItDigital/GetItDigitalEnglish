@@ -1,0 +1,32 @@
+\begin{tikzpicture}
+    \draw(0,0) to[short] (2,0)
+    to[C, i, v<, name=C1, l =$C_1$] (2,2)
+    to[short](4.5,2)
+    %to[C, i, v>, name=C2] (5,0)
+    to[short](0,2)
+    to[short](0,0)
+    to[V, v<, i, name=V1] (0,2)
+    to[short](2,2);
+    \draw(4.5,0)to[C, i, v<, name=C2, l =$C_2$] (4.5,2);
+    \draw(4.5,0)to[short] (2,0);
+
+
+    \varrmore{V1}{$U_0$};
+    \varrmore{C1}{$U_1$};
+    \varrmore{C2}{$U_2$};
+
+    \draw[thick] (6.2,1.0) -- (6.075,1.125) -- (6.075,1.05) -- (5.825,1.05) -- (5.825,1.125) -- (5.7,1.0) -- (5.825,0.875) -- (5.825,0.95) -- (6.075,0.95) -- (6.075,0.875) -- cycle;
+
+    \draw(7.5,0) to[short] (9.5,0)
+    to[C, i, v<, name=C12, l =$C_\mathrm{ges}$] (9.5,2)
+    to[short](9.5,2)
+    %to[C, i, v>, name=C2] (12.5,0)
+    to[short](7.5,2)
+    to[short](7.5,0)
+    to[V, v<, i, name=V12] (7.5,2)
+    to[short](9.5,2);
+
+
+    \varrmore{V12}{$U_0$};
+    \varrmore{C12}{$U_0$};
+\end{tikzpicture}

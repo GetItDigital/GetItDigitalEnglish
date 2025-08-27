@@ -1,16 +1,18 @@
 %Superposition
 \newpage
+
 %Einleitung
+\newvideofile{Superpos}{Superpositionsprinzip}
 \begin{frame}
 	\fta{Superpositionsprinzip}
 
 	\s{ 
-        Nach der grundsätzlichen Analyse von Maschen und Knoten in elektrischen Netzwerken
-        werden folgend zunehmend kompliziertere elektrische Netzwerke
+        Nach der grundsätzlichen Analyse von Maschen und Knoten in elektrischen 
+        Netzwerken werden folgend zunehmend kompliziertere elektrische Netzwerke
         betrachtet. Hierzu wird das Überlagerungsverfahren nach Helmholtz verwendet. 
-        Das Überlagerungsverfahren wird auch als Superpositionsprinzip bezeichnet. Beim Superpositionsprinzip
-        werden nacheinander alle Quellen einzeln ausgewertet und die Ergebnisse der einzelnen 
-        Berechnungen überlagert. 
+        Das Überlagerungsverfahren wird auch als Superpositionsprinzip bezeichnet. 
+        Beim Superpositionsprinzip werden nacheinander alle Quellen einzeln 
+        ausgewertet und die Ergebnisse der einzelnen Berechnungen überlagert. 
     }
 
 
@@ -22,8 +24,14 @@
         \end{itemize}                   
     \end{Lernziele}
 
+    \speech{SuperposLernz}{1}{Das Superpositionsprinzip: ,,,,
+    Verfügt ein elektrisches Netzwerk über mehr als eine Quelle, werden die Komponenten 
+    durch die Quellen gegenseitig überlagert. Diese Überlagerung wird durch das 
+    Superpositionsprinzip für jede Quelle aufgelöst analysiert. Hierfür werden zuvor 
+    ein paar Grundlagen für das Superpositionsprinzip aus der Systemtheorie erläutert, 
+    um anschließend den Überlagerungssatz zu erklären.} 
 \end{frame}
- 
+
 %Exkurs Systemtheorie
 \begin{frame}
     \ftb{Exkurs Systemtheorie}
@@ -37,6 +45,7 @@
         Das Bildnis insgesamt wird als System bezeichnet. 
     }
 
+    \onslide<1->{
     \b{
     \begin{itemize}    
 		\item Betrachtung einer Blackbox als System mit Eingangsgrößen und Ausgangsgrößen.
@@ -46,8 +55,9 @@
     \fu{
         \input{Tikz/blackbox.tex}
         }{{\bf Blackbox in der Systemtheorie.} Eine Blackbox mit linksseitiger Eingangsgröße und rechtsseitiger Ausgangsgrößen.
-        \label{BildBlackBox}}
+        \label{BildBlackBox}}}
 
+    \onslide<2->{
     \b{
     \begin{itemize}    
 		\item Transformation des Eingangssignals $F_\mathrm{E}$ in ein Ausgangssignal $F_\mathrm{A}$.
@@ -62,7 +72,13 @@
 
     \begin{eq}
         F_\mathrm{A}=T(F_\mathrm{E})      \label{GleichungFunktionSystem}
-    \end{eq}
+    \end{eq}}
+
+    \speech{SuperposExkurs}{1}{Es wird ein System mit einer Eingangsgröße F E und einer Ausgangsgröße F A dargestellt.
+    Die Ausgangsgröße ergibt sich dabei aus der Transformation T der Eingangsgröße. In der Systemtheorie werden Systeme, 
+    bei denen keine Informationen über die Transformation selber angegeben werden auch Black Box gegannt.}
+    \speech{SuperposExkurs}{2}{Hierbei kann die Transformation T der Eingangsgröße zur Ausgangsgröße beispielsweise durch die 
+    Funktion einer Spannungsquelle oder Stromquelle erfolgen.}
 \end{frame}
 
 \begin{frame}
@@ -76,18 +92,20 @@
         zusammen.  
     }
 
+    \onslide<1->{
     \b{
         \begin{itemize}    
             \item Beschreibung einer Black Box als elektrischen Netzwerk mit einer Eingangsspannung
             und einer Ausgangsspannung.
         \end{itemize}
-    }
+    }}
 
+    \onslide<2->{
     \fu{
         \input{Tikz/spannungsteilerblackbox.tex}
         
         }{{\bf Spannungsteiler als Blackbox.} Betrachtung eines elektrischen Netzwerkes als Blackbox mit Eingangsspannung und Ausgangsspannung.
-        \label{BildElektrischesSystem}}
+        \label{BildElektrischesSystem}}}
 
     \s{
         Der Zusammenhang der Abhänigkeit des Ausgangssignals eines Systems vom Eingangssignal aus Gleichung \ref{GleichungFunktionSystem} gilt weiterhin. Das Ausgangssignal 
@@ -96,7 +114,8 @@
         Diese Spannung lässt sich aus dem Produkt der Eingangsspannung und dem Widerstandsverhältnis berechnen. 
         Dieser Zusammenhang wurde auch bereits beim Spannungsteiler im Kapitel 4 behandelt.    
     }
-    
+
+    \onslide<3->{
     \b{
         \begin{itemize}    
             \item Transformation der Eingangsspannung $U_\mathrm{E}$ in eine Ausgangsspannung $U_\mathrm{A}$.
@@ -105,11 +124,20 @@
 
     \begin{eq}
         U_\mathrm{A}=T(U_\mathrm{E})=U_\mathrm{E}\cdot\frac{R_2}{R_1+R_2}  \label{GleichungNetzwerk}
-    \end{eq}
+    \end{eq}}
+
+    \speech{SuperposBlackBox}{1}{Wird die Black Box näher betrachtet, offenbart sie das zu transformierende System. Angenommen:
+    das zu Transformierende System sei ein elektrisches Netzwerk, so könnte dieses wie folgt dargestellt werden.}
+    \speech{SuperposBlackBox}{2}{Das zu Transformierende System ist hier ein einfacher Spannungsteiler aus den beiden Widerständen
+    R 1 und R 2. Die Eingangsspannung U E des Spannungsteilers liegt über der Serienschaltung an. Die Ausgangsspannung U A liegt über 
+    den Widerstand R 2 an.}
+    \speech{SuperposBlackBox}{3}{Die Ausgangsspannung kann so als transformiertes System in Abhängigkeit von der Eingangsspannung 
+    definiert werden. So wird in diesem Beispiel die Eingangsspannung mit dem Spannungsteilerverhältnis multipliziert, um die Ausgangsspannung
+    ermitteln zu können.}
 \end{frame}
 
 \begin{frame}
-    \ftx{LTI Systeme}
+    \ftx{LTI-Systeme}
 
     \s{
         \textbf{Kausalität}\\
@@ -127,13 +155,14 @@
 
     \b{
         \begin{itemize}    
-            \item Kausale Systeme zeigen keine Sytemantwort vor der Anregung
-            \item Zeitinvariante Systeme reagieren immer gleich auf ein Eingangssignal, unabhängig vom Zeitpunkt
-            \item Lineares System $\rightarrow$ endliche Ausgangsamplitude bei endlicher Eingangsamplitude
-            \item Zeitinvariante und lineare System werden als LTI-Systeme kategorisiert
+            \item<1-> Kausale Systeme zeigen keine Sytemantwort vor der Anregung
+            \item<2-> Zeitinvariante Systeme reagieren immer gleich auf ein Eingangssignal, unabhängig vom Zeitpunkt
+            \item<2-> Lineares System $\rightarrow$ endliche Ausgangsamplitude bei endlicher Eingangsamplitude
+            \item<3-> Zeitinvariante und lineare System werden als LTI-Systeme kategorisiert
         \end{itemize}
     }
 
+    \onslide<2->{
     \fu{
         \resizebox{.9\textwidth}{!}{%
         \begin{minipage}{0.2\textwidth}
@@ -148,7 +177,7 @@
             \input{Tikz/transformation3.tex}	
 		\end{minipage}
         }
-	}{{\bf Transformation eines kausalen Systems.} Aus $x(t)$ transformiertes System zu $y(t)$ für ein kausales System. \label{BildKausalesSystem}}
+	}{{\bf Transformation eines kausalen Systems.} Aus $x(t)$ transformiertes System zu $y(t)$ für ein kausales System. \label{BildKausalesSystem}}}
 
     \s{
         \textbf{Zeitinvarianz}\\
@@ -184,6 +213,12 @@
         welche Nichtlinearitäten aufweisen, werden beispielsweise im Kapitel über periodische Größen behandelt. 
     }   
 
+    \speech{SuperposLTI}{1}{Ein System lässt sich durch verschiedene Kriterien beschreiben. So zeigen kausale Systeme vor der Anregung keine Systemantwort.}
+    \speech{SuperposLTI}{2}{Zeitinvariante Systeme reagieren immer gleich auf ein Eingangssignal, dabei ist es unabhängig ob der Zeitpunkt T null gewählt wird
+    oder ein früher beziehungsweise späterer Zeitpunkt. Lineare Systeme weisen eine endliche Ausgangsamplitude bei einer endlichen Eingangsamplitude auf. So 
+    muss die Ausgangsamplitude mit dem Abfall des Systemeinganges ebenfalls enden.}
+    \speech{SuperposLTI}{3}{Systeme die sowohl linear als auch zeitlich invariant sind, werden als eL Te Ii -Systeme bezeichnet, was die Grundlage dafür bildet,
+    dass der Überlagerungssatz auf Gleichstromnetzwerke angewendet werden kann.}
 \end{frame}
 
 \begin{frame}
@@ -194,6 +229,8 @@
         der Überlagerungssatz auf sie angewendet werden kann. 
     \end{Merksatz}
 
+    \speech{SuperposLTIMrk}{1}{LTI-Systeme stellen lineare und zeitinvariante Systeme dar. Die Gleich-stromnetzwerke müssen als LTI-Systeme betrachtet werden, 
+    damit der Überlagerungssatz auf sie angewendet werden kann.}
 \end{frame}
 
 
@@ -214,13 +251,14 @@
     \b{
         Bedinungen und Ausführung des Überlagerungssatzes: 
         \begin{itemize}
-            \item Vorausgesetzte Linearität
-            \item Ausschalten der Quellen
-            \item Ideale Spannungsquelle wird durch einen Kurzschluss ersetzt
-            \item Ideale Stromquelle wird durch offene Klemmen, einen Leerlauf, ersetzt
+            \item<1-> Vorausgesetzte Linearität
+            \item<2-> Ausschalten der Quellen
+            \item<3-> Ideale Spannungsquelle wird durch einen Kurzschluss ersetzt
+            \item<4-> Ideale Stromquelle wird durch offene Klemmen, einen Leerlauf, ersetzt
         \end{itemize}
     }
 
+    \onslide<3->{
     \fu{
         \resizebox{.6\textwidth}{!}{%
         \hspace{0.1cm}
@@ -238,13 +276,14 @@
         \hspace{0.1cm}
         }
 	}{{\bf Umwandlung einer Spannungsquelle.} Wird eine Spannungsquelle deaktiviert, verbleibt ein Kurzschluss. Mit diesem Kurzschluss erfolgt die weitere 
-    Netzwerkberechnung.  \label{BildSpannungErsetzen}}
+    Netzwerkberechnung.  \label{BildSpannungErsetzen}}}
 
     \s{
         Eine Stromquelle hinterlässt beim Ausschalten lediglich offene Klemmen (Abbildung \ref{BildStromErsetzen}). 
         Dieser Leerlauf verhindert die weitere Betrachtung dieses Pfades im Netzwerk. 
     }
 
+    \onslide<4->{
     \fu{
         \resizebox{.6\textwidth}{!}{%
         \hspace{0.1cm}
@@ -261,8 +300,13 @@
 		\end{minipage}
         \hspace{0.1cm}
         }
-	}{{\bf Umwandlung einer Stromquelle.} Die Deaktivierung einer Stromquelle hinterlässt offene Klemmen.   \label{BildStromErsetzen}}
+	}{{\bf Umwandlung einer Stromquelle.} Die Deaktivierung einer Stromquelle hinterlässt offene Klemmen.   \label{BildStromErsetzen}}}
 
+    
+    \speech{SuperposQuell}{1}{Beim Überlagerungssatz wird ein elektrisches Netzwerk für jede Quelle berechnet. Hierfür wird die Linearität des Systems vorausgesetzt.}
+    \speech{SuperposQuell}{2}{Um ein elektrisches Netzwerk für eine Quelle berechnen zu können, müssen die übrigen Quellen deaktiviert werden. Dabei gilt folgendes zu beachten:}
+    \speech{SuperposQuell}{3}{Eine ideale Spannungsquelle erzeugt beim deaktivieren einen Kurzschluss.}
+    \speech{SuperposQuell}{4}{Eine ideale Stromquelle hinterlässt nach der Deaktivierung offene Klemmen, welche keinen Stromfluss ermöglichen.}
 \end{frame}
 
 \begin{frame}
@@ -273,6 +317,8 @@
         deaktivierte Stromquellen einen Leerlauf.
     \end{Merksatz}
 
+    \speech{SuperposQuellMrk}{1}{Beim Ausschalten von Spannungsquellen und Stromquellen hinterlassen deaktivierte Spannungsquellen einen Kurzschluss und 
+        deaktivierte Stromquellen einen Leerlauf.}
 \end{frame}
 
 \begin{frame}
@@ -300,7 +346,9 @@
         I_\mathrm{R}=f(Q_1,Q_2)    \label{GleichungZweiQuellen}
     \end{eq}
 
-
+    \speech{SuperposZsm}{1}{Angenommen ein Widerstand R wird durch die beiden Quellen Q 1 und Q 2 versorgt und der resultierende Strom durch den Widerstand 
+    soll berechnet werden. Dann wird für jede Quelle der Strom durch den Widerstand bestimmt und hinterher der Gesamtstrom aus den beiden Teilströmen der 
+    beiden Quellen errechnet.}
 \end{frame}
 
 \begin{frame}
@@ -334,6 +382,8 @@
         die Parallelschaltung $R_{12}$ und den Widerstand $R_3$. 
     }
 
+    \speech{SuperposAnw}{1}{Die zuvor erklärte Überlagerung wird nun anhand eines elektrischen Netzwerkes mit drei Widerständen und 
+    zwei Spannungsquellen Berechnet. Es soll die Spannung über den Widerstand R 2 bestimmt werden.}
 \end{frame}  
 
 
@@ -355,17 +405,23 @@
     }
     
     
-
+    \onslide<1->{
     \begin{eq}
         U_\mathrm{R3}(U_1) = U_1 \cdot \frac{R_\mathrm{23}}{R_1+R_\mathrm{23}} \label{GleichungU1} 
-    \end{eq}
+    \end{eq}}
+    \onslide<2->{
     \begin{eq}
         U_\mathrm{R3}(U_2) = U_2 \cdot \frac{R_\mathrm{12}}{R_3+R_\mathrm{12}} \label{GleichungU2} 
-    \end{eq}
+    \end{eq}}
+    \onslide<3->{
     \begin{eq}
         U_\mathrm{R3} = U_\mathrm{R3}(U_1) + U_\mathrm{R3}(U_2) \label{GleichungUR3}
-    \end{eq}
+    \end{eq}}
 
+    \speech{SuperposAnwLsg}{1}{Zuerst wird das Netzwerk für die Berechnung mit der Spannungsquelle U eins vorbereitet und die Spannungsquelle U 2 deaktiviert.
+    Die Widerstände R 2 und R 3 können zusammengefasst werden. Es ergibt sich die angezeigte Spannung über R 3 in der Abhängigkeit von U eins.}
+    \speech{SuperposAnwLsg}{2}{Dasselbe wird für die Spannungsquelle U 2 durchgeführt.}
+    \speech{SuperposAnwLsg}{3}{Am Ende werden beide Gleichungen zusammengerechnet.}
 \end{frame}
 
 
@@ -377,6 +433,8 @@
         einzelnen Quelle bestimmt werden. 
     \end{Merksatz}
 
+    \speech{SuperposUberMrk}{1}{Lineare und zeitlich invariante elektrische Netzwerke mit mehr als einer Quelle können als Summe der Teilanalysen von jeder 
+        einzelnen Quelle bestimmt werden. }
 \end{frame}
 
 \newpage
@@ -459,4 +517,18 @@
 
     \end{bsp}
 
+    \speech{SuperposBsp}{1}{Anhand des folgenden Beispieles sollen die Eklärungen zum Superpositionsprinzip noch einmal verfestigt werden.
+    Hierzu sollen zu dem angezeigten elektrischen Netzwerk die Ströme und Spannungen eingezeichnet werden. 
+    Der Strom I 3 durch den Widerstand R 3 soll getrennt in Abhängigkeit von der Spannungsquelle U Ge und der Stromquelle I Ge bestimmt werden.
+    Der Gesamtstrom I 3 wird anschließend in Abhängigkeit beider Quellen zusammengefasst.}
+    \speech{SuperposBsp}{2}{Hierzu werden die Spannungen und Ströme aller komponenten angegeben.}
+    \speech{SuperposBsp}{3}{Für die Netzberechnung der Spannungsquelle U G wird die Stromquelle deaktiviert und hinterlässt die offenen Klemmen.
+    Der Stromfluss über diesen Pfad ist somit unterbrochen. Der Gesamtstrom I ges teilt sich am Knoten K 1 auf die Ströme I 1 und I 3 auf. Der Strom 
+    I 3 ist dabei gleich dem Strom I 2. Das Verhältnis von U G und dem Gesamtwiderstand R ges bestimmt I ges. Der Strom durch R 3 lässt sich hier über 
+    das Verhältnis von I 3 zu I ges sowie R1 zu der Summe aus R 1, R 2 und R 3 ermitteln.}
+    \speech{SuperposBsp}{4}{Bei der Netzbetrachtung für die Stromquelle I G wird die Spannungsquelle nun deaktiviert und hinterlässt einen Kurzschluss. 
+    Der Gesamtstrom resultiert aus I G und teilt sich am Knoten Ka zwei auf die Ströme I zwei und minus I drei auf. 
+    Nun lässt sich das Verhältnis zur Berechnung von I drei aufstellen. I drei verhält sich zu I gesamt wie R zwei zu der Summe aus der Parallelschaltung 
+    von R i und R zwei und R zwei und R drei.}
+    \speech{SuperposBsp}{5}{Zum Schluss werden die Teilergebnisse aufaddiert.}
 \end{frame}

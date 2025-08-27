@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \draw (0,0) coordinate (K);
+    \draw[very thin,color=gray] (-0.1,-0.1) grid (4.2,3.1);
+    \draw[->] (-0.2,0) -- (4.4,0) node[right] {$\Re$};
+    \draw[->] (0,-0.1) -- (0,3.2) node[above] {$\Im$};
+    \pause
+    \draw[->, color=blue] (0,0.02) -- (3,0.02) coordinate (R);
+    \draw[color = blue] (3,0)node[below]	 {$\Re(\underline{Z})$};
+    \draw[->, color=red] (3,0.02) -- (3,2.02) coordinate (Z);
+    \draw[color = red] (3,1)node[right]	 {$\Im(\underline{Z})$};
+    \draw[->] (0,0.02) -- (3,2.02);
+    \draw(2.3,1.9) node	 {$\underline{Z}$};
+    \pause
+
+    %Winkel
+    \draw pic[draw, angle radius = 1.2cm, <-] {angle = R--U--Z};
+    \draw(1.4,0.5) node{$\varphi_\mathrm{Z}$};
+    \draw(1,1)node {$|\underline{Z}|$};
+\end{tikzpicture}

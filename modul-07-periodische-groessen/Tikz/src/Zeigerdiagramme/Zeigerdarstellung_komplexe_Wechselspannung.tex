@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+    \draw (0,0) coordinate (U);
+    %\draw[very thin,color=gray] (-0.1,-0.1) grid (3.2,3.1);
+    \draw[->] (-0.2,0) -- (3.4,0) node[right] {$\Re(U)$};
+    \draw[->] (0,-0.1) -- (0,3.2) node[above] {$\Im(U)$};
+    \draw (3,0) coordinate (R);
+    \draw (3,3) coordinate (Z);
+    \draw[->, voltage] (0,0) -- (2.5,2.5);
+    \draw(1,2) node [voltage] {$\hat{U}$};
+    \pause
+
+    \draw pic[draw, angle radius = 1cm, ->, voltage] {angle = R--U--Z};
+    \draw(1.7,0.5) node [voltage] {$\varphi_\mathrm{U}$};
+    \pause
+
+    \draw(3,2.5) node [right,voltage] {$\underline{U}=\hat{U} \cdot e^{j \varphi_\mathrm{U}}$};
+    \pause
+
+    \draw[dashed](2.5,2.5) -- (2.5,-0.2) node[below] {$\hat{U} \cdot \cos(\omega t + \varphi_\mathrm{u})$};
+    \pause
+
+    \draw[dashed](2.5,2.5) -- (-0.2,2.5) node[left] {$\hat{U} \cdot \sin(\omega t + \varphi_\mathrm{u})$};
+\end{tikzpicture}

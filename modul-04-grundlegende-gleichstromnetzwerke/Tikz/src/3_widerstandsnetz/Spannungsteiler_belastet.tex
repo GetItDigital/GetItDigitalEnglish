@@ -1,0 +1,32 @@
+\begin{tikzpicture}
+    \draw(0,0)
+    to[short](2.5,0)
+    to[short](2.5,0.5)
+
+    to[R ,i ,v< , name =R2  , l =$R_2$] (2.5,2.5)
+    to[short](2.5,3)
+    to[short](2.25,3)
+    to[R ,i ,v< , name =R1  , l =$R_1$]  (0.25,3)
+    to[short](0,3)
+    to[short, i<_ , name = i_0](0,2.5)
+    to[V, v, i, name=V1] (0,0.5)
+    to[short](0,0);
+
+    \varrmore{R1}{$U_1$};
+    % \onslide<1>{\varrmore{R2}{$U_2$};}
+    \varrmore{V1}{$U_0$};
+    \iarrmore{V1}{$I$};
+    \draw(2.5,3) to[short, -o] (3.5,3);
+    \draw(3.5,0) to[short, o-] (2.5,0);
+    %	 \pause
+
+
+    \draw[dashed] (3.6,3) -- (4.5,3);
+    \draw[dashed] (4.5,3) -- (4.5,2.5);
+    \draw(4.5,2.5) to[R ,i ,v< , name =RL  , l =$R_\mathrm{L}$] (4.5,0.5);
+    \draw[dashed] (4.5,0.5) -- (4.5,0);
+    \draw[dashed] (4.5,0) -- (3.6,0);
+
+    \draw[->, thick, voltage] (3.5,2.8) -- (3.5,0.2) node[midway,left] {$U_2$};
+
+\end{tikzpicture}

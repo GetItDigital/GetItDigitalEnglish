@@ -1,0 +1,63 @@
+\begin{tikzpicture}
+    \draw (0,0) coordinate (U);
+    %\draw[very thin,color=gray] (-0.1,-0.1) grid (3.2,2.1);
+    \draw[->] (-0.2,0) -- (3.4,0) node[right] {$\Re$};
+    \draw[->] (0,-2.2) -- (0,2.2) node[above] {$\Im$};
+    \draw (3,0.02) coordinate (R);
+    \draw (3,2.02) coordinate (Z);
+    \draw[->, voltage] (0,0) -- (3,2);
+    \draw pic[draw, angle radius = 2.5cm, ->, voltage] {angle = R--U--Z};
+    \draw(2.7,1.3) node [voltage] {$\varphi_\mathrm{UR}$};
+    \draw(3,2)node [voltage,above] {$\hat{U}_\mathrm{R}$};
+    \draw[->, red] (0,0.1) -- (1.5,1.1);
+    \draw pic[draw, angle radius = 1.5cm, ->, red] {angle = R--U--Z};
+    \draw(2,0.7) node [red] {$\varphi_\mathrm{IR}$};
+    \draw(1.5,1.5)node [red] {$\hat{I}_\mathrm{R}$};
+    \draw(0.5,4) to [R=$R$, v, i, name=R] (3.5,4);
+    \varrmore{R}{$\underline{U}_\mathrm{R}$};
+    \iarrmore{R}{$\underline{I}_\mathrm{R}$};
+    \pause
+
+    \draw (6,0) coordinate (U);
+    %\draw[very thin,color=gray] (5.9,-0.1) grid (9.2,2.1);
+    \draw[->] (5.8,0) -- (9.4,0) node[right] {$\Re$};
+    \draw[->] (6,-2.2) -- (6,2.2) node[above] {$\Im$};
+    \draw (9,0.02) coordinate (R);
+    \draw (9,2.02) coordinate (Z);
+    \draw[->, voltage] (6,0.02) -- (9,2.02);
+    \draw pic[draw, angle radius = 2.5cm, ->, voltage] {angle = R--U--Z};
+    \draw(8.7,1.3) node [voltage] {$\varphi_\mathrm{UC}$};
+    \draw(9,2)node [voltage,above] {$\hat{U}_\mathrm{C}$};
+    \draw[->, red] (6,0) -- (5,1.5) coordinate (C);
+    \draw pic[draw, angle radius = 1.5cm, ->, red] {angle = R--U--C};
+    \draw(6.5,1.7) node [red] {$\varphi_\mathrm{IC}$};
+    \draw(5,1.5)node [red,above] {$\hat{I}_\mathrm{C}$};
+    \draw(6.5,4) to [C=$C$, v, i, name=C] (9.5,4);
+    \varrmore{C}{$\underline{U}_\mathrm{C}$};
+    \iarrmore{C}{$\underline{I}_\mathrm{C}$};
+    \draw (5,1.5) coordinate (K);
+    \draw pic[draw, angle radius = 1cm] {angle = Z--U--K};
+    \draw (6.1,0.5)[very thick] node {$\cdot$};
+    \pause
+
+    \draw (12,0) coordinate (U);
+    %\draw[very thin,color=gray] (11.9,-0.1) grid (15.2,2.1);
+    \draw[->] (11.8,0) -- (15.4,0) node[right] {$\Re$};
+    \draw[->] (12,-2.2) -- (12,2.2) node[above] {$\Im$};
+    \draw (15,0.02) coordinate (R);
+    \draw (15,2.02) coordinate (Z);
+    \draw[->, voltage] (12,0.02) -- (15,2.02);
+    \draw pic[draw, angle radius = 2.5cm, ->, voltage] {angle = R--U--Z};
+    \draw(14.7,1.3) node [voltage] {$\varphi_\mathrm{UL}$};
+    \draw(15,2)node [voltage,above] {$\hat{U}_\mathrm{L}$};
+    \draw[->, red] (12,0) -- (13,-1.5) coordinate (L);
+    \draw pic[draw, angle radius = 1.5cm, <-, red] {angle = L--U--R};
+    \draw(12.3,-1) node [red] {$\varphi_\mathrm{IL}$};
+    \draw(13.5,-1.5)node [red,above] {$\hat{I}_\mathrm{L}$};
+    \draw(12.5,4) to [L=$L$, v, i, name=L] (15.5,4);
+    \varrmore{L}{$\underline{U}_\mathrm{L}$};
+    \iarrmore{L}{$\underline{I}_\mathrm{L}$};
+    \draw (13,-1.5) coordinate (M);
+    \draw pic[draw, angle radius = 1cm] {angle = M--U--Z};
+    \draw (12.5,-0.1)[very thick] node {$\cdot$};
+\end{tikzpicture}

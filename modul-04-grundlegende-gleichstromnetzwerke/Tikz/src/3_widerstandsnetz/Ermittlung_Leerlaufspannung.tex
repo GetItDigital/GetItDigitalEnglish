@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+
+    \draw (0,0) rectangle (1.5,1.5);
+    \node at (0.6,1.2) {Leer-};
+    \node at (0.6,0.8) {lauf-};
+    \node at (0.75,0.4) {versuch};
+
+    \draw (1.5, 1.25) to[short, -*] (2, 1.25) node[right] {};
+    \draw (1.5, 0.25) to[short,i, name=in, -*] (2, 0.25) node[right] {};
+    \draw (2, 1.25) to[short,i, name=out, -o] (2.5, 1.25) node[right] {};
+    \draw (2, 0.25) to[short, -o] (2.5, 0.25) node[right] {};
+
+    \draw[white] (2.8, 1.5) to[short,v>, name=volti] (2.8, 0.0) node[right] {};
+    \varrmore{volti}{};
+    \iarrmore{out}{$I = 0$};
+    \node[voltage] at (3.5,0.8) {$U = U_\mathrm{L}$};
+
+\end{tikzpicture}

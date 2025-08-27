@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+    \draw (0,0) coordinate (U);
+    \draw (4,0) coordinate (0);
+    \draw[very thin,gray] (-3.1,-0.1) grid (5.2,4.1);
+    \draw[->, very thick] (-3.2,0) -- (5.4,0) node[right] {$\Re$};
+    \draw[->, very thick] (0,-0.2) -- (0,4.2) node[above] {$\Im$};
+    \draw[->, thick, red] (0,0) -- (4,1) coordinate (1);
+    \draw(4,1) node [right,red] {$\underline{Z}_\mathrm{1}$};
+    \draw[->, thick, blue] (0,0) -- (1,3) coordinate (2);
+    \draw(1,3) node [above,blue] {$\underline{Z}_\mathrm{2}$};
+    \draw pic[draw,red, very thick, angle radius = 3cm, ->] {angle = 0--U--1} (3.5,0.5) node[very thick, red]{$\varphi_\mathrm{1}$};
+    \draw pic[draw,blue, very thick, angle radius = 2cm, ->] {angle = 0--U--2} (1.5,1.7) node[very thick, blue]{$\varphi_\mathrm{2}$};
+    \pause
+
+    \draw (-2,4) coordinate (3);
+    \draw pic[draw, teal, very thick, angle radius = 1cm, ->] {angle = 0--U--3} (-1.2,0.5) node[very thick, teal]{$\varphi_\mathrm{1}+\varphi_\mathrm{2}$};
+    \pause
+
+    \draw[->, thick, teal] (0,0) -- (-2,4);
+    \pause
+
+    \draw[dashed, thick, teal] (-2,0) -- (-2,4) node[above] {$\underline{Z}_\mathrm{2} \cdot \underline{Z}_\mathrm{1}$};
+    \draw[dashed, thick, teal] (0,4) -- (-2,4);
+\end{tikzpicture}

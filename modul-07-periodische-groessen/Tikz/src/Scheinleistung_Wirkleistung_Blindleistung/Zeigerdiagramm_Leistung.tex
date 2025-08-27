@@ -1,0 +1,36 @@
+\begin{tikzpicture}
+    \draw[->] (0, -4) -- (0, 4);
+    \draw[->] (-4, 0) -- (4, 0);
+    \node at (0, 4.2) {$\Im(\underline{S})$};
+    \node at (4.125, -0.25) {$\Re(\underline{S})$};
+    \draw (0, 0) coordinate (a);
+    \draw (2.12, 0) coordinate (b);
+    \draw (2.12, 2.12) coordinate (c);
+    \pause
+
+    \draw[->, line width=2pt] [blue] (0, 0) -- (2.12, 0);
+    \node at (1.2, -0.25) {$P$};
+    \node at (2, -4) {$Lastbetrieb$};
+    \pause
+
+    \draw[->, line width=2pt] [yellow] (2.12, 0) -- (2.12, 2.12);
+    \node at (2.3, 1.1) {$Q$};
+    \node at (4, 2) {Induktiv};
+    \pause
+
+    \draw (0,0) circle (3);
+    \draw[->, line width=2pt] [red] (0, 0) -- (2.12, 2.12);
+    \draw pic[draw, angle radius = 40, ->] {angle = b--a--c};
+    \node at (1, 1.5) {$S$};
+    \node at (0.9, 0.5) {$\varphi$};
+    \node at (3,3) {$I.$};
+    \pause
+
+    \node at (-2, -4) {$Generatorbetrieb$};
+    \node at (4, -2) {Kapazitiv};
+    \node at (-4, -2) {{\"U}bererregt};
+    \node at (-4, 2) {Untererregt};
+    \node at (-3,3) {$II.$};
+    \node at (-3,-3) {$III.$};
+    \node at (3,-3) {$IV.$};
+\end{tikzpicture}

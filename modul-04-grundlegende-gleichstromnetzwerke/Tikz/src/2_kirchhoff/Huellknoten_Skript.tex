@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+    \draw(0,0)
+    to[short](3,0)
+    to[R] (3,2)
+    to[R]  (3,4)
+    to[short](0,4)
+    to[R] (0,2)
+    to[R] (0,0);
+
+    \draw(0,5.5) to [short,i,name=i1,o-*]  (0,4);
+    \draw(3,5.5) to [short,i,name=i2,o-*]  (3,4);
+    \draw(0,-1.5) to [short,i<,name=i3,o-*]  (0,0);
+    \draw(3,-1.5) to [short,i<,name=i4,o-*]  (3,0);
+
+
+
+    \draw[teal] (1.5, 2) circle (2.8);
+    \node[teal] at (5.2,2) {Hüllknoten};
+    %   node[midway, right] {Masche};		
+
+    \iarrmore{i1}{$I_1$};
+    \iarrmore{i2}{$I_2$};
+    \iarrmore{i3}{$I_3$};
+    \iarrmore{i4}{$I_4$};
+\end{tikzpicture}

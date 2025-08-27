@@ -1,0 +1,17 @@
+\begin{circuitikz}[scale=0.8]
+    \centering
+    \draw (0,2.53) -- (0,4.2);
+    \draw [thick](0,2) circle (0.54);
+    \draw [thick](-0.3,1.8) -- (-0.15,1.8) -- (-0.15,2.2) -- (0.15, 2.2) -- (0.15, 1.8) -- (0.3, 1.8);
+    \draw (0,1.45) -- (0,-0.3);
+    \draw (4,4.2)   to [C,i,v, name=C, l={$C$}] (4,2.2);
+    \draw (0,4.2) -- (4,4.2);
+    \draw (4,-0.3) -- (0,-0.3);
+    \draw (4,2.2)   to [R,v, name=R, l={$R$}] (4,-0.3);
+    \draw[-latex, thick, color=cyan] (-0.7,2.6)  to node[midway,left, color=cyan] {$u(t)$}
+    (-0.7,1.4);
+    \iarrmore{C}{$i(t)$};
+    \varrmore{C}{$u_\mathrm{C}(t)$};
+    \varrmore{R}{$u_\mathrm{R}(t)$};
+
+\end{circuitikz}

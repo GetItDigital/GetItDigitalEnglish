@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \draw(0,0)
+    to[short](3,0)
+    to[short](3,0.5)
+
+    to[R ,i ,v< , name =R1  , l =$R_1$] (3,2.5)
+    to[short](3,3)
+    to[short](2.5,3)
+    to[R ,i ,v< , name =R2  , l =$R_2$]  (0.5,3)
+    to[short](0,3)
+    to[short, i<_ , name = i_0](0,2.5)
+    to[V, v, i, name=V1] (0,0.5)
+    to[short](0,0);
+
+    \varrmore{R1}{$U_1$};
+    \varrmore{R2}{$U_2$};
+    \varrmore{V1}{$U_0$};
+    \iarrmore{V1}{$I$};
+\end{tikzpicture}

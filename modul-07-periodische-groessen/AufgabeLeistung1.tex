@@ -2,87 +2,73 @@
 \Aufgabe{
 
     Text
-
+    
     \begin{figure}[H]
         \centering
         \resizebox{0.7\textwidth}{!}{
-            \begin{circuitikz}[domain=0:8,samples=100]
-                %Gitter
-                \draw[very thin,color=gray] (-0.1,-2.1) grid (8.2,2.1);
-                \draw[->] (-0.2,0) -- (8.5,0) node[right] {t in ms};
-                \draw[->] (0,-2.1) -- (0,2.2) node[above] {};
-                \draw (0,-2.1) node[below] {$0$};
-                \draw (2,-2.1) node[below] {$25$};
-                \draw (4,-2.1) node[below] {$50$};		
-                \draw (6,-2.1) node[below] {$75$};
-                \draw (8,-2.1) node[below] {$100$};								
-                \draw[color=blue] (-0.5,1.5) node[] {$u(t)$};					
-                \draw[color=red] (-0.5,-1) node[] {$i(t)$};			
-                \draw[color=blue,smooth] plot[id=Sinus14] function{1.5 * sin(pi/2 * x)} node[right] {};
-                \draw[color=red,smooth] plot[id=Sinus15] function{2 * sin((pi/2) * x - (pi/3))} node[right] {};
-            \end{circuitikz}
-        } 
-    \end{figure} 
-
+            \input{Tikz/src/Aufgaben/Leistungsberechnung1}
+        }
+    \end{figure}
+    
     \begin{itemize}
         \item[\bf a)] Ablesen des Betrages der Phasenwinkel von Spannung und Strom. Bennenung des Verhaltens.
         \item[\bf b)] Angabe von Periodendauer, Frequenz und Kreisfrequenz.
         \item[\bf c)] Berechnung der Augenblicksleistung zum Zeitpunkt t = 12,5\ ms.
         \item[\bf d)] Berechnung von Wirkleistung und Blindleistung.
-        \item[\bf e)] Berechnung der Scheinleistung mit dem konjugierten komplexen Strom.  
+        \item[\bf e)] Berechnung der Scheinleistung mit dem konjugierten komplexen Strom.
     \end{itemize}
-
+    
 }
 
 \Loesung{
-	\begin{itemize}
+    \begin{itemize}
 
         \item[\bf a)]
-            Die Spannung weist einen Phasenwinkel von $\varphi_\mathrm{u}=0$ und der Strom weist einen Phasenwinkel von $\varphi_\mathrm{i}=\pi/3$ auf. \\
-            Das Nacheilen des Stromes deutet auf ein {\bf induktives Verhalten} hin. 
-        
+              Die Spannung weist einen Phasenwinkel von $\varphi_\mathrm{u}=0$ und der Strom weist einen Phasenwinkel von $\varphi_\mathrm{i}=\pi/3$ auf. \\
+              Das Nacheilen des Stromes deutet auf ein {\bf induktives Verhalten} hin. 
+              
         \item[\bf b)]
-            Die Periodendauer T beträgt $50\ ms$. \\
-            Die Frequenz beträgt:
-            \begin{eq}
-                f=\frac{1}{T}=\frac{1}{50\ ms}= 20\ Hz   \nonumber
-            \end{eq}
-            Die Kreisfrequenz beträgt:
-            \begin{eq}
-                \omega = 2\pi \cdot f = 2\pi \cdot 20\ Hz = 125,66\ Hz  \nonumber
-            \end{eq}
-
+              Die Periodendauer T beträgt $50\ ms$. \\
+              Die Frequenz beträgt:
+              \begin{eq}
+                  f=\frac{1}{T}=\frac{1}{50\ ms}= 20\ Hz   \nonumber
+              \end{eq}
+              Die Kreisfrequenz beträgt:
+              \begin{eq}
+                  \omega = 2\pi \cdot f = 2\pi \cdot 20\ Hz = 125,66\ Hz  \nonumber
+              \end{eq}
+              
         \item[\bf c)]
-            Die Augenblicksleistung zum Zeitpunkt t = 12,5\ ms beträgt:
-            \begin{eqa}
-                p(t) &= u(t) \cdot i(t) = 12\ V \cdot \sin(2\pi\cdot20\ Hz\cdot 0,0125\ s) \cdot 2\ A \cdot \sin(2\pi\cdot20\ Hz\cdot 0,0125\ s+\frac{\pi}{3}) \nonumber \\
-                p(t) &= 12\ W \nonumber
-            \end{eqa}
-
+              Die Augenblicksleistung zum Zeitpunkt t = 12,5\ ms beträgt:
+              \begin{eqa}
+                  p(t) &= u(t) \cdot i(t) = 12\ V \cdot \sin(2\pi\cdot20\ Hz\cdot 0,0125\ s) \cdot 2\ A \cdot \sin(2\pi\cdot20\ Hz\cdot 0,0125\ s+\frac{\pi}{3}) \nonumber \\
+                  p(t) &= 12\ W \nonumber
+              \end{eqa}
+              
         \item[\bf d)]
-            Die Wirkleistung beträgt:
-            \begin{eqa}
-                P &= U \cdot I \cdot \cos(\varphi) = \frac{\hat{U}}{\sqrt{2}} \cdot \frac{\hat{I}}{\sqrt{2}} \cdot \cos(\varphi)
-                = \frac{12\ V}{\sqrt{2}} \cdot \frac{2\ A}{\sqrt{2}} \cdot \cos(60^o) \nonumber \\
-                P &= 6\ W    \nonumber
-            \end{eqa}
-            Die Blindleistung beträgt:
-            \begin{eqa}
-                Q &= U \cdot I \cdot \sin(\varphi) = \frac{\hat{U}}{\sqrt{2}} \cdot \frac{\hat{I}}{\sqrt{2}} \cdot \sin(\varphi)
-                = \frac{12\ V}{\sqrt{2}} \cdot \frac{2\ A}{\sqrt{2}} \cdot \sin(60^o) \nonumber \\
-                Q &= 10,392\ var    \nonumber
-            \end{eqa}
-
+              Die Wirkleistung beträgt:
+              \begin{eqa}
+                  P &= U \cdot I \cdot \cos(\varphi) = \frac{\hat{U}}{\sqrt{2}} \cdot \frac{\hat{I}}{\sqrt{2}} \cdot \cos(\varphi)
+                  = \frac{12\ V}{\sqrt{2}} \cdot \frac{2\ A}{\sqrt{2}} \cdot \cos(60^o) \nonumber \\
+                  P &= 6\ W    \nonumber
+              \end{eqa}
+              Die Blindleistung beträgt:
+              \begin{eqa}
+                  Q &= U \cdot I \cdot \sin(\varphi) = \frac{\hat{U}}{\sqrt{2}} \cdot \frac{\hat{I}}{\sqrt{2}} \cdot \sin(\varphi)
+                  = \frac{12\ V}{\sqrt{2}} \cdot \frac{2\ A}{\sqrt{2}} \cdot \sin(60^o) \nonumber \\
+                  Q &= 10,392\ var    \nonumber
+              \end{eqa}
+              
         \item[\bf e)]
-            Die Scheinleistung beträgt:
-            \begin{eqa}
-                \underline{S} &= \underline{U} \cdot \underline{I}^* = 
-                \frac{\underline{\hat{U}}}{\sqrt{2}} \cdot \frac{\underline{\hat{I}}^*}{\sqrt{2}} =
-                \frac{12\ V}{\sqrt{2}} \cdot e^{j(2\pi\cdot20\ Hz)} \cdot \frac{2\ A}{\sqrt{2}} \cdot e^{j(2\pi\cdot20\ Hz+\frac{\pi}{3})} \nonumber \\
-                \underline{S} &= 12\ VA \cdot e^{j\frac{\pi}{3}} = 6\ W + j10,392\ var    \nonumber
-            \end{eqa}
-                
-	
-\end{itemize}
-
+              Die Scheinleistung beträgt:
+              \begin{eqa}
+                  \underline{S} &= \underline{U} \cdot \underline{I}^* = 
+                  \frac{\underline{\hat{U}}}{\sqrt{2}} \cdot \frac{\underline{\hat{I}}^*}{\sqrt{2}} =
+                  \frac{12\ V}{\sqrt{2}} \cdot e^{j(2\pi\cdot20\ Hz)} \cdot \frac{2\ A}{\sqrt{2}} \cdot e^{j(2\pi\cdot20\ Hz+\frac{\pi}{3})} \nonumber \\
+                  \underline{S} &= 12\ VA \cdot e^{j\frac{\pi}{3}} = 6\ W + j10,392\ var    \nonumber
+              \end{eqa}
+              
+              
+    \end{itemize}
+    
 }

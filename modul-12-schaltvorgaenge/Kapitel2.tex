@@ -536,20 +536,19 @@
     \\[-10pt]\noindent\rule{\textwidth}{0.4pt} % horizontale Linie \rule[height above baseline]{width}{thickness}
     
     Mit:
-    \begin{align}
+    \begin{align*}
         \textbf{Kapazität:}     && E_{el}  &= \frac{1}{2} C \cdot \ecv{u}^2  &&\Longrightarrow\qquad \ecv{u} = stetig && \text{(Speicher el. Energie)} \\[+4pt]
         \textbf{Induktivität:}  && E_{mag} &= \frac{1}{2} L \cdot \eci{i}^2  &&\Longrightarrow\qquad \eci{i} = stetig && \text{(Speicher mag. Energie)}
-    \end{align}%
+    \end{align*}%
     \pause%
     gilt unmittelbar vor und nach einem Schaltzeitpunkt:
-    \begin{align}
+    \begin{align*}
         \ecv{u_{C,t-}} &= \ecv{u_{C,t+}} & 
         \eci{i_{L,t-}} &= \eci{i_{L,t+}} \\
         \text{mit}\quad 
         \lim_{\pm\infty \rightarrow t} \ecv{u_C(t)} &= \ecv{u_{C,t\pm}} & 
         \lim_{\pm\infty \rightarrow t} \eci{i_L(t)} &= \eci{i_{L,t\pm}}
-    \end{align}
-    
+    \end{align*}
 }
 \end{frame}
 %------------------------------------------------------------------------------------------------%
@@ -670,7 +669,7 @@
 \label{sec:grundlagen:dgl:homogeneloesung}
 \begin{frame}\ftx{\subsubsecname}
 \b{%
-    \begin{align}
+    \begin{align*}
         &\textbf{Homogene DGL:}& 
             \sum_{i=0}^{n} a_i \cdot \dt[i]\, y_{\mathrm{h}} &= 0 &
             &\text{(gew., lin., konst. Koeff.)}\vphantom{\bigg|}\\[4pt]
@@ -689,7 +688,7 @@
         &\textbf{allg. hom. Lösung:}&
             y_{\mathrm{h}}(t)&= \ ... \ = y_{\mathrm{f}} &
             &\text{(Linearkombination)}
-    \end{align}
+    \end{align*}
 }%
 \s{%
     % Ausgangsposition
@@ -907,10 +906,10 @@
     \vspace{2mm}
 
     In LZI-Systemen gilt eingeschwungen:
-    \begin{align}
+    \begin{align*}
         \text{DC-Anregung:} && y_{\mathrm{p}}(t) &= \text{konst.} &&\text{(Gleichgröße)}\\
         \text{AC-Anregung:} && y_{\mathrm{p}}(t) &= \hat{Y} \cdot \sin(\omega t + \varphi) &&\text{(Wechselgröße)}
-    \end{align}
+    \end{align*}
 
     Dadurch sind die bekannten \textbf{Methoden der Netzwerkberechnung anwendbar}.
     \vspace{2mm}

@@ -11,6 +11,10 @@
             \end{itemize}
             \end{Lernziele}   
     }
+    \speech{Einführung}{1}{Bevor wir starten, ein kurzer Blick auf die Lernziele dieses Kapitels.
+    Wir wollen verstehen, wie Festkörper aufgebaut sind - und wie das sogenannte Bändermodell dabei hilft.
+    Dann geht es um die Vorgänge in Halbleitern selbst - was genau passiert da eigentlich?
+    Und schließlich: Welche Materialien zählen zu den Halbleitern - und was macht sie technisch so interessant?}
 \end{frame}
 
 %Einführung
@@ -23,8 +27,9 @@
         %\label{fig:BeispielfotosVerbreiteterHalbleiterbauelemente}
     \end{figure}
      }
-% %Gesprochener Text:
-% %speech{Einführung Halbleiterbauelemente}{1}{Halbleiterbauelemente sind das Rückgrat der modernen Elektronik und entscheidend für die Funktion vieler elektronischer Geräte, von Computern und Mobiltelefonen bis hin zu Solarzellen. Diese Bauelemente nutzen die besonderen Eigenschaften von Materialien, die weder gute Leiter noch gute Isolatoren sind, sondern dazwischen liegen, die sogenannten Halbleiter. Der Text beschreibt zunächst ihre Funktionsweise mit dem Bändermodell, das die elektronischen Zustände in Festkörpern erklärt, und untersucht dann verschiedene Halbleitermaterialien, ihre Eigenschaften und Anwendungen. Ein Schlüsselkonzept ist der pn-Übergang, der die Basis für viele Bauelemente bildet. Im zweiten Teil werden verschiedene Halbleiterbauelemente wie Dioden und Transistoren und deren Funktionen erläutert.}}
+    \speech{Einführung}{2}{Zum Einstieg sehen wir hier eine Auswahl typischer Halbleiterbauelemente.
+    Von links nach rechts: ein Feldeffekttransistor, ein Bipolartransistor, eine Leuchtdiode und eine klassische Diode.
+    Diese Bauelemente stecken in nahezu jedem elektronischen Gerät - und basieren alle auf denselben physikalischen Prinzipien, die wir uns jetzt nach und nach anschauen.}
 \end{frame}
 
 \begin{frame}
@@ -34,8 +39,10 @@
     \item Sie basieren auf Materialien, die weder gute Leiter noch gute Isolatoren sind. Ihre Funktionsweise kann mithilfe des Bändermodells erklärt werden.
     \item In diesem Kapitel werden die Grundlagen der Halbleitertechnik erläutert.
 \end{itemize}}
-% %Gesprochener Text:
-% %speech{Einführung Halbleiterbauelemente}{1}{Halbleiterbauelemente sind das Rückgrat der modernen Elektronik und entscheidend für die Funktion vieler elektronischer Geräte, von Computern und Mobiltelefonen bis hin zu Solarzellen. Diese Bauelemente nutzen die besonderen Eigenschaften von Materialien, die weder gute Leiter noch gute Isolatoren sind, sondern dazwischen liegen, die sogenannten Halbleiter. Der Text beschreibt zunächst ihre Funktionsweise mit dem Bändermodell, das die elektronischen Zustände in Festkörpern erklärt, und untersucht dann verschiedene Halbleitermaterialien, ihre Eigenschaften und Anwendungen. Ein Schlüsselkonzept ist der pn-Übergang, der die Basis für viele Bauelemente bildet. Im zweiten Teil werden verschiedene Halbleiterbauelemente wie Dioden und Transistoren und deren Funktionen erläutert.}}
+\speech{Einführung}{3}{Halbleiter sind die Grundlage moderner Elektronik - vom Smartphone bis zur Solaranlage.
+Sie haben eine besondere Eigenschaft: Sie liegen in ihrer Leitfähigkeit genau zwischen Leitern und Isolatoren.
+Und wie lässt sich dieses Verhalten erklären?
+Mit dem Bändermodell, das uns zeigt, welche Energiezustände Elektronen in einem Material einnehmen dürfen - und welche nicht.}
 \end{frame}
 
 %Zusammenhang Bohrsche Atommodell und Bändermodell.
@@ -77,9 +84,11 @@
         \end{itemize}
     \end{columns}
 }
-%Gesprochener Text:
-%speech{Einführung Halbleiterbauelemente}{1}{Das Bändermodell ist ein grundlegendes Konzept in der Festkörperphysik, das die elektronischen Eigenschaften von Festkörpern beschreibt. Es bietet die theoretische Grundlage, um die elektrischen, optischen und magnetischen Eigenschaften von Materialien zu verstehen. Das Modell ordnet die Energiezustände von Elektronen in sogenannte Energiebänder, die das elektronische Verhalten des Materials maßgeblich beeinflussen. Mit dem Bändermodell lassen sich komplexe Phänomene wie Leitung, Isolation, Halbleiterverhalten sowie die Bildung von Oberflächen- und Grenzflächenzuständen erklären. Im nächsten Abschnitt werden die Grundprinzipien des Modells und der Ladungsträgertransport detailliert erläutert.
-%Das Bohrsche Atommodell hingegen nimmt an, dass die Energieniveaus von Elektronen in einem Atom diskret sind. Laut diesem Modell bewegen sich Elektronen auf definierten Bahnen um den Atomkern, die als Schalen bezeichnet werden. Jede Schale hat ein charakteristisches Energieniveau, das in Bezug auf den Abstand vom Atomkern quantisiert ist. Elektronen in den inneren Schalen haben niedrigere Energieniveaus als die in den äußeren Schalen. Der Zusammenhang zwischen dem Bohrschen Atommodell und dem Bändermodell wird in Abbildung 2 gezeigt.}}
+\speech{Das Bändermodell}{1}{Links sehen wir das Bohrsche Atommodell, das du vielleicht noch aus der Schule kennst:
+Elektronen kreisen in definierten Bahnen - oder Schalen - um den Atomkern.
+Jede dieser Schalen hat ein festes Energieniveau.
+Rechts daneben sehen wir die Entsprechung im Bändermodell:
+Auch hier geht es um mögliche Energieniveaus - aber jetzt denken wir nicht mehr an einzelne Bahnen, sondern an Energiezonen im Material, die später zu Bändern zusammengefasst werden.}
 
 \end{frame}
 
@@ -95,8 +104,13 @@
     \end{figure}
 
     }
-    %Gesprochener Text:
-    %%
+    \speech{Das Bändermodell}{2}{Jetzt gehen wir einen Schritt weiter.
+    Ein einzelnes Atom hat klar definierte Energieniveaus - das sehen wir links.
+    Kommen zwei Atome zusammen, wirken sie elektrisch aufeinander.
+    Nach dem Pauli-Prinzip dürfen zwei Elektronen nicht denselben Zustand einnehmen - ihre Energieniveaus verschieben sich also leicht voneinander.
+    Je mehr Atome beteiligt sind, desto mehr dieser leicht verschobenen Niveaus entstehen.
+    Im Festkörper - ganz rechts - gibt es dann so viele solcher Zustände, dass sie praktisch ein Kontinuum bilden.
+    Und dieses Kontinuum nennen wir ein Energieband.}
 \end{frame}
 
 %Bändermodell Eines Materials bei 0K
@@ -110,9 +124,11 @@
         %\label{fig:BandermodellEinesMaterialsBei0K}
     \end{figure}
     }
-
-    %Gesprochener Text:
-    %%
+\speech{Einteilung von Materialien}{1}{Was bedeuten jetzt die Begriffe Valenzband, Leitungsband und Bandlücke?
+Das Valenzband ist der Bereich, in dem Elektronen noch fest an die Atome gebunden sind - sie tragen also nicht zur elektrischen Leitung bei.
+Das Leitungsband dagegen ist der Bereich, in dem sich Elektronen frei durch das Material bewegen können - das ist entscheidend für den Stromfluss.
+Und dazwischen liegt oft eine sogenannte Bandlücke - also ein Energiebereich, in dem sich keine Elektronen aufhalten können.
+Die Größe dieser Lücke entscheidet darüber, ob ein Material ein Leiter, ein Halbleiter oder ein Isolator ist.}
 \end{frame}
 
 %Bändermodell verschiedener Halbleitermaterialien
@@ -126,9 +142,13 @@
         %\label{fig:BaendermodellVerschiedenerMaterialien}
     \end{figure}
     }
-
-    %Gesprochener Text:
-    %%
+\speech{Einteilung von Materialien}{2}{In der nächsten Abbildung sehen wir, wie sich Materialien anhand ihrer Bandstruktur unterscheiden.
+Links: Leiter - hier liegen Valenz- und Leitungsband direkt aneinander oder überlappen sogar.
+Elektronen können also ohne großen Energieaufwand ins Leitungsband gelangen - der Strom fließt leicht.
+In der Mitte: der Halbleiter - hier gibt es eine kleine Bandlücke, etwa ein Elektronenvolt.
+Elektronen brauchen etwas Energie, zum Beispiel durch Erwärmung, um den Sprung ins Leitungsband zu schaffen.
+Und ganz rechts: der Isolator - hier ist die Bandlücke sehr groß, typischerweise über 3 Elektronenvolt.
+Der Energieaufwand, um ein Elektron ins Leitungsband zu bringen, ist hier so hoch, dass praktisch kein Strom fließt.}
 \end{frame}
 
 %Merke
@@ -147,8 +167,12 @@
         \item Materialien können über die Bandlücke Kategorisiert werden. 
         }
     \end{itemize}}
-% %Gesprochener Text:
-% %speech{Einführung Halbleiterbauelemente}{1}{Halbleiterbauelemente sind das Rückgrat der modernen Elektronik und entscheidend für die Funktion vieler elektronischer Geräte, von Computern und Mobiltelefonen bis hin zu Solarzellen. Diese Bauelemente nutzen die besonderen Eigenschaften von Materialien, die weder gute Leiter noch gute Isolatoren sind, sondern dazwischen liegen, die sogenannten Halbleiter. Der Text beschreibt zunächst ihre Funktionsweise mit dem Bändermodell, das die elektronischen Zustände in Festkörpern erklärt, und untersucht dann verschiedene Halbleitermaterialien, ihre Eigenschaften und Anwendungen. Ein Schlüsselkonzept ist der pn-Übergang, der die Basis für viele Bauelemente bildet. Im zweiten Teil werden verschiedene Halbleiterbauelemente wie Dioden und Transistoren und deren Funktionen erläutert.}}
+    \speech{Einteilung von Materialien}{3}{Merken wir uns:
+    Nur Elektronen im Leitungsband können sich frei durch das Material bewegen - und damit Strom leiten.
+    Ob ein Stoff ein Leiter, Halbleiter oder Isolator ist, hängt also direkt von der Größe der Bandlücke ab.
+    Ladungsträger können nur definierte Energieniveaus im Festkörper besetzen.
+    Bei T = 0 Kelvin ist das Valenzband das höchste besetzte Energieniveau, das darüberliegende Leistungsband beinhaltet keine freien Ladungsträger.
+    Materialien können über die Bandlücke Kategorisiert werden}
 \end{frame}
 
 
@@ -164,9 +188,12 @@
         %\label{fig:Diamant-GitterstrukturVonSilizium}
     \end{figure}
     }
-
-    %Gesprochener Text:
-    %%
+    \speech{Halbleitermaterialien}{1}{In diesem Abschnitt schauen wir uns an, wie Halbleitermaterialien aufgebaut sind - und wie man ihre Leitfähigkeit gezielt beeinflussen kann.
+    Den Anfang macht das Siliziumgitter.
+    Silizium kristallisiert in einer sogenannten Diamantgitterstruktur.
+    Das heißt: Jedes Siliziumatom ist tetraedrisch von vier weiteren Atomen umgeben.
+    Diese Anordnung sorgt für eine hohe mechanische Stabilität - und gleichzeitig dafür, dass sich Elektronen in alle Richtungen gut bewegen können.
+    Ein weiterer Vorteil: Die Struktur ist dreidimensional sehr regelmäßig, was die Halbleitereigenschaften überhaupt erst möglich macht.}
 \end{frame}
 
 %Zinkblende-Gitterstruktur von GaAs
@@ -188,9 +215,11 @@
         %\label{fig:Zinkblende-GitterstrukturVonGaAs}
     \end{figure}
     }
-
-    %Gesprochener Text:
-    %%
+    \speech{Halbleitermaterialien}{2}{Ein anderes Beispiel ist Galliumarsenid - ein sogenannter Verbindungshalbleiter.
+    Er besteht aus zwei verschiedenen Elementen: Gallium aus der dritten Hauptgruppe und Arsen aus der fünften Hauptgruppe.
+    Diese beiden bilden gemeinsam eine Zinkblende-Gitterstruktur - die zwar ähnlich aussieht wie beim Silizium, aber regelmäßig zwischen zwei Atomarten wechselt.
+    Diese Kombination sorgt für besondere elektronische Eigenschaften - etwa eine kleinere Bandlücke und gute optische Eigenschaften.
+    Deshalb wird Galliumarsenid oft in L E Ds, Laserdioden oder Hochfrequenz-Schaltungen eingesetzt.}
 \end{frame}
 
 %Merke

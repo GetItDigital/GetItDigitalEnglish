@@ -12,6 +12,12 @@
             \end{itemize}
         \end{Lernziele}  
     }
+    \speech{Halbleiterbauelemente}{1}{In diesem Kapitel wird es um Halbleiterbauelemente gehen.
+    Die Lernziele sehen dazu wie folgt aus: 
+    Wir wollen Bauteile für verschiedene Anwendungen auswählen,
+    den Aufbau verschiedener Halbleiterbauelemente beschreiben,
+    Arbeitspunkte bestimmen und fehlende Bauteilwerte berechnen,
+    und Anwendungen einzelner Bauelemente nennen,}
 \end{frame}
 
 
@@ -43,6 +49,10 @@
         \caption{\textbf{Silizium Diode.} V.l.n.r. Schaltzeichen, Bauform und Querschnitt einer Silizium Diode.} 
     \end{figure}
     }
+    \speech{Diode}{1}{Die Diode ist im Grunde nichts anderes als ein einzelner pn-Übergang.
+    Links sehen wir das Schaltzeichen: Die Anode liegt auf der p-Seite, die Kathode auf der n-Seite.
+    Im Inneren verbindet sich also ein p-dotierter Bereich mit einem n-dotierten – genauso wie wir es vom pn-Übergang kennen.
+    Und genau deshalb fließt Strom auch nur in einer Richtung.}
 \end{frame}
 
 \begin{frame}
@@ -60,6 +70,7 @@
                     \item $U_\mathrm{T} = \frac{k \cdot T}{e}$, bei Raumtemperatur $U_\mathrm{T} \approx 25\,\mathrm{mV}$
                 \end{itemize}
             \end{columns}}
+    
 \end{frame}
 
 \begin{frame}
@@ -84,7 +95,11 @@
                     }
                 \end{itemize}
             \end{columns}}
-        \end{frame}
+    \speech{Diode}{2}{Auch die Temperatur spielt eine Rolle:
+    Steigt sie, dann verschiebt sich die Kennlinie - die Diode leitet schon bei geringerer Spannung.
+    Das heißt: Auch bei gleichbleibender Spannung kann der Strom zunehmen.
+    Deshalb muss man bei der Auslegung einer Schaltung auch immer den Temperaturbereich mit einplanen.}
+\end{frame}
 
 
 \begin{frame}
@@ -118,6 +133,11 @@
             %\label{fig:Diodenkennlinie}
         \end{figure}
     }
+    \speech{Diode}{3}{Hier sehen wir die typische Kennlinie einer Diode - also wie sich Strom und Spannung verhalten.
+    Im Durchlassbereich - also bei positiver Spannung - fließt oberhalb von etwa 0,7 Volt ein deutlich messbarer Strom.
+    Im Sperrbereich hingegen fließt nahezu kein Strom.
+    Im Durchbruchbereich fließt ein negativer Strom. Dioden die nicht speziell hierfür konzipiert wurden, können dabei zerstört werden.
+    Das Verhalten ist also stark nichtlinear - und genau das macht die Diode so besonders.}
 \end{frame}
 
 \begin{frame}
@@ -141,6 +161,14 @@
         \end{figure}
 
     }
+    \speech{Diode}{4}{Um dieses Verhalten in Schaltungen besser berechnen zu können, verwenden wir ein Ersatzschaltbild.
+Darin stecken drei Komponenten:
+
+Eine ideale Diode,eine Spannungsquelle, die die sogenannte Schleusenspannung darstellt,
+und ein differenzieller Widerstand, der den realen Übergang in den Stromfluss modelliert.
+So lassen sich reale Dioden näherungsweise sehr gut abbilden. Jetzt stellt sich die Frage: Wie finde ich heraus, wo genau die Diode in einer Schaltung arbeitet?
+Dafür bestimmen wir den Arbeitspunkt - den Punkt, an dem sich die Diodenkennlinie mit der Widerstandsgeraden schneidet.
+Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleistung liegen - sonst wird die Diode zu heiß und kann beschädigt werden.}
 \end{frame}
 
 \begin{frame}
@@ -164,6 +192,8 @@
             }
     
     }
+    \speech{Diode}{5}{Hier sehen wir noch einmal, wie sich Arbeitspunkt, Widerstandslinie und Kennlinie grafisch schneiden.
+    Wichtig ist dabei: Die Diode ist das aktive Bauelement - der Arbeitspunkt ergibt sich aus dem Zusammenspiel mit dem äußeren Vorwiderstand und der Versorgungsspannung.}
 \end{frame}
 
 \begin{frame}
@@ -181,6 +211,10 @@
             }
         \end{itemize}
         }
+        \speech{Diode}{6}{Zusammengefasst:
+    Die Diodenkennlinie ist nichtlinear,
+    es gibt drei zentrale Bereiche: Durchlass, Sperre und Durchbruch,
+    und das Verhalten lässt sich gut mit einem Ersatzschaltbild erklären.}
 \end{frame}
 
 \begin{frame}
@@ -203,7 +237,10 @@
             %Siliziumdioxid ($\mathrm{SiO_2}$) ist ein natürliches Oxid von Silizium und dient zur Isolierung. Aluminium (Al) ist ein typisches Metall für elektrische Kontakte.
             } 
         \end{figure}
-    }   
+    }
+    \speech{Diode}{7}{Links sehen wir den Schichtaufbau einer klassischen Siliziumdiode - mit p- und n-Schicht sowie Kontakten.
+    Rechts die Schottky-Diode - hier ersetzt ein Metall-Halbleiter-Übergang den klassischen pn-Übergang.
+    Das Ergebnis: weniger Spannung im Durchlassbereich und deutlich schnellere Schaltzeiten.}   
 \end{frame}
 
 \begin{frame}
@@ -240,6 +277,9 @@
             }
         \end{itemize}
         }
+        \speech{Diode}{8}{Wichtig zur Schottky-Diode:
+        Sie hat keinen pn-Übergang, sondern einen direkten Metall-Halbleiter-Kontakt.
+        Trotzdem entsteht dort eine Raumladungszone, die als Sperre wirkt - je nach Materialkombination.}
 \end{frame}
 
 \begin{frame}
@@ -413,9 +453,17 @@
             \caption{\textbf{Übersicht typischer Dioden.}}
         \end{table}
     }
+    \speech{Diode}{9}{Es gibt viele spezielle Dioden - jede mit ihren Eigenheiten:
 
-    %Gesprochener Text:
-    %%
+    Zener-Dioden: Für kontrollierten Durchbruch - ideal zur Spannungsbegrenzung.
+
+    Schottky-Dioden: Besonders schnell und mit kleiner Durchlassspannung.
+
+    Tunneldioden: Zeigen einen negativen Widerstand - nützlich in Oszillatoren.
+
+    Photodioden: Wandeln Licht in Strom - etwa in Sensoren.
+
+     L E Ds und Laserdioden: Erzeugen bei Stromfluss sichtbares oder infrarotes Licht - für Anzeigen, Beleuchtung, Kommunikation.}
 \end{frame}
 
 \begin{frame}
@@ -448,6 +496,10 @@
     }
 \end{itemize}
     }
+\speech{Einweggleichrichter}{1}{Dioden können auch ganze Spannungen gleichrichten - wie hier im Einweggleichrichter.
+    Nur die positive Halbwelle wird durchgelassen, die negative gesperrt.
+    So entsteht an der Diode eine pulsierende Gleichspannung.
+    Die Differenz - etwa 0,7 Volt - ist der typische Spannungsabfall bei Siliziumdioden.}
 \end{frame}
 
 \begin{frame}
@@ -467,6 +519,7 @@
     }
     \end{itemize}
     }
+    \speech{Einweggleichrichter}{2}{Mit einem Kondensator lässt sich die Spannung nachträglich glätten, also weniger wellig machen.}
 \end{frame}
 
 \begin{frame}
@@ -480,6 +533,7 @@
             \caption{\textbf{Einweggleichrichter.} Spannungsverlauf eines Gleichrichters. }
         \end{figure}
     }   
+    \speech{Einweggleichrichter}{3}{Hier sehen wir den entsprechenden Spannungsverlauf - nach der Gleichrichtung mit einer Diode und der Glättung mit einem Kondensator.}
 
 \end{frame}
 
@@ -493,6 +547,7 @@
         %\label{fig:EinweggleichrichterStromverlauf}
     \end{figure}
     }
+    \speech{Einweggleichrichter}{4}{Und hier sehen wir den Stromverlauf - ebenfalls nur bei der positiven Halbwelle.}
 \end{frame}
 
 
@@ -504,7 +559,10 @@
             \label{fig:BrueckengleichrichterSchaltungFolie}
             \caption{\textbf{Brückengleichrichter-Schaltung} Schaltkreis eines Brückengleichrichters mit angelegter Last $R$.} 
         \end{figure}
-    }   
+    }
+    \speech{Brückengleichrichter}{1}{Ein Brückengleichrichter nutzt vier Dioden - und damit beide Halbwellen des Wechselstroms.
+    So fließt der Strom bei jeder Halbwelle durch die Last in derselben Richtung.
+    Das Ergebnis: eine deutlich glattere Gleichspannung.}  
 \end{frame}
 
 \begin{frame}
@@ -517,6 +575,7 @@
             \label{fig:BrueckengleichrichterSignalverlaeufeFolie}
         \end{figure}
     }
+    \speech{Brückengleichrichter}{2}{Da der Strom durch zwei Dioden gleichzeitig fließt, entsteht ein höherer Spannungsabfall - typisch sind etwa 1 Komma 4 Volt.}
 \end{frame}
 
 \begin{frame}
@@ -527,7 +586,8 @@
             %\label{fig:Brueckengleichrichter mit Glättungskondensator}
             \caption{\textbf{Brückengleichrichterschaltung mit Glättungskondensator}} 
         \end{figure}
-    }   
+    }
+    \speech{Brückengleichrichter}{3}{Auch hier kann man die Spannung mit einem Kondensator weiter glätten, um eine noch stabilere Ausgangsspannung zu erhalten.}   
 \end{frame}
 
 \begin{frame}
@@ -546,7 +606,9 @@
             \caption{\textbf{Strompfade im Brückengleichrichter.} Links: Strompfad bei der positiven Halbwelle der 
             Eingangsspannung. Rechts: Strompfad bei der negativen Halbwelle der Eingangsspannung.} 
         \end{figure}
-    }   
+    }
+    \speech{Brückengleichrichter}{4}{Die Abbildung zeigt dir die Stromrichtungen bei beiden Halbwellen.
+    Je nach Richtung der Eingangsspannung leiten immer zwei der vier Dioden - der Strom fließt aber immer gleich durch die Last.}   
 \end{frame}
 
 \begin{frame}
@@ -589,6 +651,11 @@
             }
         \end{itemize}
         }
+    \speech{Brückengleichrichter}{5}{Zusammengefasst:
+
+    Einweggleichrichter lassen nur eine Halbwelle durch,
+    Brückengleichrichter nutzen beide - für bessere Effizienz.
+    Dioden sind also vielseitige Helfer, wenn es um Stromfluss in nur eine Richtung geht.}
 \end{frame}
 
 \begin{frame}
@@ -600,6 +667,22 @@
         %\label{fig:UebersichtBipolartransistoren}
     \end{figure}
     }
+    \speech{Bipolartransistor}{1}{Ein Bipolartransistor - kurz BJT - besteht aus drei Halbleiterzonen mit unterschiedlicher Dotierung:
+    dem Emitter, der Basis und dem Kollektor.
+    Die genaue Abfolge dieser Zonen entscheidet darüber, ob es sich um einen npn- oder einen pnp-Transistor handelt.
+
+    Auf der linken Seite der Folie siehst du den npn-Typ - mit
+    dem vereinfachten Querschnitt ganz oben,
+    darunter ein Modell aus zwei Dioden,
+    und unten das zugehörige Schaltsymbol.
+
+    Rechts ist das Gleiche für den pnp-Typ dargestellt.
+    Das Zwei-Dioden-Modell hilft, die interne Struktur des Transistors grob zu verstehen:
+    Es zeigt, dass ein Transistor im Prinzip aus zwei hintereinandergeschalteten pn-Übergängen besteht.
+    Die Basis liegt dabei zwischen Kollektor und Emitter - sie ist also das zentrale Verbindungselement.
+    Weil diese beiden Übergänge in entgegengesetzter Richtung geschaltet sind, spricht man auch von einer antiseriellen Anordnung.
+
+    Dadurch entstehen zwei Sperrschichten, die im Ruhezustand den Stromfluss blockieren - das schauen wir uns gleich genauer im Bändermodell an.}
 \end{frame}
 
 \begin{frame}
@@ -611,6 +694,18 @@
             %\label{fig:VerhalenUnbeschalteterBipolartransistor}
         \end{figure}
     }
+    \speech{Bipolartransistor}{2}{Was passiert im npn-Transistor, wenn keine äußeren Spannungen anliegen?
+
+    In der Mitte liegt die Basis - sie ist nur schwach dotiert, im Vergleich zu Emitter und Kollektor.
+    Links der n-dotierte Emitter, rechts der n-dotierte Kollektor - in beiden Fällen sind dort viele freie Elektronen vorhanden.
+    Im Gegensatz dazu enthält die p-dotierte Basis viele Löcher.
+
+    Im unbeschalteten Zustand gibt es an beiden pn-Übergängen Raumladungszonen, die eine elektrische Sperrschicht bilden.
+    Das sieht man auch im Bändermodell:
+    Die Energiebänder sind gestuft, weil das Fermi-Niveau über die Zonen hinweg nicht konstant ist.
+
+    Die Elektronen in den äußeren n-Zonen können diese Barrieren nicht überwinden, solange keine äußeren Spannungen anliegen.
+    Das bedeutet: Der Transistor ist in diesem Zustand nicht leitend - es fließt kein Strom.}
 \end{frame}
 
 \begin{frame}
@@ -622,6 +717,8 @@
             %\label{fig:BipolartransistorMitKollektor-Emitter-Spannung}
         \end{figure}
     }
+    \speech{Bipolartransistor}{3}{Jetzt legen wir eine positive Spannung zwischen Kollektor und Emitter an. Dardurch ist der pn-Übergang zwischen Basis und Emitter in Durchlassrichtung und die Raumladungszone wird abgebaut. Der pn-Übergang zwischen Kollektor und Basis ist aber so in in Sperrrichtung gepolt. Vom Kollektor fließen Elektronen ab und erhöhen damit die Raumladungszone. 
+    Das Ergebnis: Es fließt immer noch kein Strom - aber wir haben begonnen, den Transistor vorspannungstechnisch zu beeinflussen.}
 \end{frame}
 
 \begin{frame}
@@ -633,6 +730,11 @@
             %\label{fig:BeschalteterBipolartransistor}
         \end{figure}
         }
+    \speech{Bipolartransistor}{4}{Jetzt legen wir zusätzlich eine positive Spannung zwischen Basis und Emitter an. Durch diese Spannung zwischen Basis und Emitter wird die Raumladungszone
+    in Richtung Emitter vollständig abgebaut. Die angelegte Spannung entspricht der sogenannten Schleusenspannung des pn-Übergangs. Nun können Elektronen vom Emitter an die Basis fließen.
+    Aber: Die Basis ist sehr dünn und nur schwach dotiert - das heißt, die meisten Elektronen diffundieren direkt weiter bis zum Kollektor.
+    Denn dort liegt ja eine positive Spannung an - also ein elektrisches Feld, das die Elektronen beschleunigt. 
+    Das sieht man auch im Bändermodell: Es entsteht ein durchgehender Energiegradient, der den Stromfluss von Emitter über Basis zum Kollektor möglich macht.}
 \end{frame}
 
 \begin{frame}
@@ -647,6 +749,16 @@
             }
         \end{itemize}
         }
+    \speech{Bipolartransistor}{5}{Fassen wir kurz zusammen, was wir bis jetzt gelernt haben:
+
+    Ein Bipolartransistor enthält zwei pn-Übergänge - einer wird in Durchlassrichtung, der andere in Sperrrichtung betrieben.
+
+    Erst wenn die Basis-Emitter-Strecke leitend ist, können Elektronen vom Emitter in Richtung Kollektor fließen.
+
+    Das elektrische Feld zwischen Basis und Kollektor zieht diese Elektronen an - dadurch entsteht der Kollektorstrom.
+
+    Das Entscheidende ist also: Der Transistor funktioniert, weil wir durch einen kleinen Strom an der Basis einen größeren Stromfluss vom Kollektor zum Emitter steuern können.
+    Und genau das macht ihn so wertvoll als Verstärker.}
 \end{frame}
 
 \begin{frame}
@@ -668,6 +780,19 @@
             %\label{fig:StroemeUndSpannungenBeimBipolartransistor}
         \end{figure}
     }
+    \speech{Bipolartransistor}{6}{Schauen wir uns nun die Stromrichtungen und Spannungen beim n p n- und p n p-Transistor genauer an.
+    Beim n p n-Transistor gilt:
+    Der Kollektorstrom fließt in das Bauteil hinein,
+    der Basisstrom fließt ebenfalls in das Bauteil hinein,
+    und der Emitterstrom fließt nach außen ab.
+    Die zugehörigen Spannungen sind in der Regel positiv.
+
+    Beim p n p-Transistor ist es genau umgekehrt:
+    Ströme und Spannungen kehren ihre Richtung.
+    Der Emitterstrom fließt in das Bauteil hinein, der Kollektorstrom und der Basisstrom heraus.
+    Auch die Basis-Emitter-Spannung und die Kollektor-Emitterspannung sind hier negativ, damit der Transistor leitend wird.
+
+    Wichtig ist: In beiden Fällen gilt das gleiche Funktionsprinzip - nur mit vertauschten Polaritäten.}
 \end{frame}
 
 \begin{frame}
@@ -768,6 +893,15 @@
             }
         \end{itemize}
     }
+    \speech{Bipolartransistor}{7}{Die Eingangskennlinie beschreibt den Zusammenhang zwischen der Basis-Emitter-Spannung und dem Basisstrom - also: Wie viel Strom fließt in die Basis, wenn wir die Spannung verändern?
+    Und du siehst: Die Kurve sieht fast identisch aus wie bei einer Diode.
+    Kein Wunder - die Basis-Emitter-Strecke ist ja auch ein pn-Übergang, der in Durchlassrichtung betrieben wird.
+    Für kleine Spannungen bleibt der Basisstrom sehr gering.
+    Erst ab etwa 0,  Komma 6 bis 0 Komma 7 Volt steigt der Strom exponentiell an - typisch für einen Silizium-Transistor.
+
+    Was hat es mit der Tangente auf sich, die hier eingezeichnet ist?
+    Die zeigt den differenziellen Widerstand an - also wie stark der Strom bei einer kleinen Spannungsänderung zunimmt.
+    Je steiler die Tangente, desto empfindlicher reagiert der Transistor auf Spannungsschwankungen - das ist später zum Beispiel für die Kleinsignalverstärkung wichtig.}
 \end{frame}
 
 \begin{frame}
@@ -782,6 +916,11 @@
             }
         \end{itemize}
         }
+    \speech{Bipolartransistor}{8}{Und hier die wichtigsten Merksätze zur Eingangskennlinie:
+    Die Kennlinie ist nichtlinear - wie bei einer Diode.
+    Damit ein Basisstrom fließt, muss die Basis-Emitter-Spannung positiv sein - typischerweise größer als 0 Komma 6 Volt.
+    Und: Der Verlauf kann sich verschieben - je nachdem, wie groß die Kollektor-Emitter-Spannung ist.
+    Das liegt daran, dass auch die Kollektorspannung einen gewissen Einfluss auf die Raumladungszone an der Basis hat.}
 \end{frame}
 
 \begin{frame}
@@ -793,6 +932,14 @@
             %grafische Ermittlung der Early-Spannung}  
             %\label{fig:AusgangskennlinienfeldEinesNpnTransistors}
         \end{figure}}
+    \speech{Bipolartransistor}{9}{Jetzt betrachten wir die Ausgangskennlinie eines Transistors - also den Zusammenhang zwischen der Kollektor-Emitter-Spannung und dem Kollektorstrom.
+    Jede der Kurven hier gehört zu einem bestimmten Basisstrom. Der wird über das Kennlinienfeld bestimmt das wir uns gerade eben angeschaut haben. Du siehst: Je höher der Basisstrom, desto höher ist der dazugehörige Kollektorstrom.
+    Die Kurven verlaufen fast horizontal - das bedeutet: In einem großen Bereich bleibt der Kollektorstrom nahezu konstant, obwohl sich die Kollektor-Emitter-Spannung verändert. Dieser Bereich wird als aktiver Bereich bezeichnet – hier funktioniert der Transistor als Verstärker.
+    Die Kollektor-Emitter-Spannung hat nur sehr wenig Einfluss auf den Kollektorstrom - gesteuert wird der Kollektorstrom hauptsächlich über den kleinen Basisstrom.
+    Wenn man genau hinschaut, sind die Linien im Kennlinienfeld aber nicht ganz waagerecht.
+    Bei höheren Spannungen steigt der Kollektorstrom leicht an - das liegt am sogenannten Early-Effekt.
+    Der Grund: Mit zunehmender Kollektor-Emitter-Spannung wird die Raumladungszone an der Kollektor-Basis-Stelle breiter, und dadurch verkleinert sich die effektive Basisdicke. Das hat zur Folge, dass mehr Elektronen vom Emitter direkt zum Kollektor gelangen, ohne in der Basis rekombiniert zu werden.
+    Deshalb nimmt der Kollektorstrom mit der Kollektor-Emitter-Spannung leicht zu, auch wenn der Basisstrom konstant bleibt.}
 \end{frame}
 
 \begin{frame}
@@ -837,6 +984,11 @@
             }
         \end{itemize}
         }
+    \speech{Bipolartransistor}{10}{Hier nochmal die wichtigsten Punkte:
+
+    Der Kollektorstrom ist im aktiven Bereich nahezu unabhängig von der Kollektor-Emitter-Spannung, wird aber durch den Basisstrom gesteuert.
+    Der Early-Effekt führt bei größeren Spannungen zu einem leichten Anstieg von dem Kollektorstrom.
+    Das ist zwar eine kleine Abweichung, aber in präzisen Anwendungen - etwa bei Analogverstärkern - spielt sie durchaus eine Rolle.}
 \end{frame}
 
 \begin{frame}
@@ -862,6 +1014,15 @@
     }
     \end{itemize}
     }
+    \speech{Bipolartransistor}{11}{Diese Kennlinie zeigt einen der wichtigsten Effekte beim Bipolartransistor: Stromsteuerung.
+    Hier sehen wir den Kollektorstrom in Abhängigkeit vom Basisstrom - bei konstanter Kollektor-Emitter-Spannung.
+
+    Und was fällt auf?
+    Der Zusammenhang ist nahezu linear: Verdoppelt man den Basisstrom, verdoppelt sich auch der Kollektorstrom.
+    Die Steigung dieser Geraden ist der sogenannte Stromverstärkungsfaktor - meist mit beta oder B bezeichnet.
+    Typische Werte liegen zwischen hundert und zweihundert, je nach Transistortyp.
+    Das bedeutet: Schon ein kleiner Steuerstrom an der Basis reicht aus, um einen deutlich größeren Strom durch den Kollektorkreis zu kontrollieren.
+    Genau das macht den Transistor so wertvoll als Verstärker.}
 \end{frame}
 
 \begin{frame}
@@ -875,6 +1036,10 @@
     \scalebox{0.9}{\includesvg[width= \textwidth]{Bilder/kap2/FolienStromsteuerungskennlinieKurvenschar}}
 \end{figure}
     }
+    \speech{Bipolartransistor}{12}{Auch wenn wir die Kollektor-Emitter-Spannung verändern, bleibt dieser Zusammenhang zwischen Basisstrom und Kollektorstrom im aktiven Bereich erhalten.
+
+    Das heißt: Die Stromverstärkung ist weitgehend unabhängig von der Kollektor-Emitter-Spannungen, solange wir uns im normalen Arbeitsbereich befinden.
+    Das ist wichtig zu wissen, wenn man den Transistor nicht als Schalter, sondern als Verstärker verwendet.}
 \end{frame}
 
 \begin{frame}
@@ -886,6 +1051,12 @@
     %\label{fig:Rückwirkungskennlinie}
 \end{figure}
     }
+    \speech{Bipolartransistor}{13}{Hier siehst du die sogenannte Rückwirkungskennlinie: Sie zeigt die Basis-Emitter-Spannung in Abhängigkeit von der Kollektor-Emitter-Spannung.
+
+    Man erkennt: Die Basis-Emitter-Spannung verändert sich nur sehr geringfügig, wenn sich die Kollektor-Emitter-Spannung ändert.
+    Es gibt also eine geringe Rückwirkung, aber im praktischen Betrieb ist sie meist vernachlässigbar.
+
+    Diese Kurve ist eher für Spezialfälle oder sehr präzise Anwendungen relevant - in den meisten Standardanwendungen kann man die Basis-Emitter-Spannung als konstant annehmen.}
 \end{frame}
 
 \begin{frame}

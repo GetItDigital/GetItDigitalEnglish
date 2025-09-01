@@ -199,19 +199,15 @@
 			Beispiele für Zweipole:
 			
 			
-			
-			
-			
-			
 			\begin{center}
 				\begin{tabular}{|c|c|}
 					\hline
-					Zweipol & Schaltzeichen                                     \\
-					\hline
-					%Spannungsquelle &  \includegraphics{Uebersicht_Ersatzschaltbilder.png} \\
-					%ideale Spannungsquelle
-					\input{Tikz/src/1_zweipole/Beispiele_Schaltzeichen_Zweipol} \\
-					\hline
+					Zweipol                 & Schaltzeichen                                               \\ \hline
+					ideale Spannungsquelle  & \input{Tikz/src/1_zweipole/Beispiel_ideale_Spannungsquelle} \\ \hline
+					ideale Stromquelle      & \input{Tikz/src/1_zweipole/Beispiel_ideale_Stromquelle}     \\ \hline
+					Kondensator (Kapazität) & \input{Tikz/src/1_zweipole/Beispiel_Kondensator}            \\ \hline
+					ohmscher Widerstand     & \input{Tikz/src/1_zweipole/Beispiel_ohmscher_Widerstand}    \\ \hline
+					Spule (Induktivität)    & \input{Tikz/src/1_zweipole/Beispiel_Spule}                  \\ \hline
 				\end{tabular}
 			\end{center}
 		\end{columns}
@@ -297,12 +293,12 @@
 				\centering
 				\begin{tabular}{|c|c|}
 					\hline
-					Zweipol & Schaltzeichen                                     \\
-					\hline
-					%Spannungsquelle &  \includegraphics{Uebersicht_Ersatzschaltbilder.png} \\
-					%ideale Spannungsquelle
-					\input{Tikz/src/1_zweipole/Beispiele_Schaltzeichen_Zweipol} \\
-					\hline
+					Zweipol                 & Schaltzeichen                                               \\ \hline
+					ideale Spannungsquelle  & \input{Tikz/src/1_zweipole/Beispiel_ideale_Spannungsquelle} \\ \hline
+					ideale Stromquelle      & \input{Tikz/src/1_zweipole/Beispiel_ideale_Stromquelle}     \\ \hline
+					Kondensator (Kapazität) & \input{Tikz/src/1_zweipole/Beispiel_Kondensator}            \\ \hline
+					ohmscher Widerstand     & \input{Tikz/src/1_zweipole/Beispiel_ohmscher_Widerstand}    \\ \hline
+					Spule (Induktivität)    & \input{Tikz/src/1_zweipole/Beispiel_Spule}                  \\ \hline
 				\end{tabular}
 				\caption{Beispiele verschiedener Zweipole sowie ihrer Schaltzeichen}
 				\label{tab:schaltzeichen}
@@ -401,9 +397,10 @@
 			\centering
 			\begin{tabular}{|c|c|c|c|}
 				\hline
-				Zählpfeilsystem & Erzeugte Leistung & Verbrauchte Leistung & Zählpfeile am Verbraucher \\ \hline
-				\input{Tikz/src/1_zweipole/Vergleich_VPS_EPS}
-				
+				Zählpfeilsystem & Erzeugte Leistung & Verbrauchte Leistung & Zählpfeile am Verbraucher                                                      \\ \hline
+				VPS             & P = -UI           & P = UI > 0           & \input{Tikz/src/1_zweipole/Vergleich_VPS} \\ \hline
+				EPS             & P = UI > 0        & P = -UI              & \input{Tikz/src/1_zweipole/Vergleich_EPS} \\ \hline
+				%\input{Tikz/src/1_zweipole/Vergleich_VPS_EPS}                                                                                                \\
 			\end{tabular}
 			\caption{Vergleich zwischen Verbraucherzählpfeilsystem (VPS) und Erzeugerzählpfeilsystem (EPS).}
 			\label{tab:zps}
@@ -433,8 +430,10 @@
 			\centering
 			\begin{tabular}{|c|c|c|c|}
 				\hline
-				Zählpfeilsystem & Erzeugte Leistung & Verbrauchte Leistung & Zählpfeile am Verbraucher \\ \hline
-				\input{Tikz/src/1_zweipole/Vergleich_VPS_EPS}                                          \\
+				Zählpfeilsystem & Erzeugte Leistung & Verbrauchte Leistung & Zählpfeile am Verbraucher                                                      \\ \hline
+				VPS             & P = -UI           & P = UI > 0           & \input{Tikz/src/1_zweipole/Vergleich_VPS} \\ \hline
+				EPS             & P = UI > 0        & P = -UI              & \input{Tikz/src/1_zweipole/Vergleich_EPS} \\ \hline
+				%\input{Tikz/src/1_zweipole/Vergleich_VPS_EPS}                                                                                                \\
 			\end{tabular}
 			
 		\end{table}

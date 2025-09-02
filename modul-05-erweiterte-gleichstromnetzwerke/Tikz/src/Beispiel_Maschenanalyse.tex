@@ -1,0 +1,34 @@
+\begin{circuitikz}
+    \draw (-1,2) to [R=$R_0$, v_<, name=R0] (-1,-2)
+    to [V_>, i, name=U0] (-1,-6)
+    to (3,-6)
+    to [R=$R_4$, i^<, v_<, name=R4, -*] (3,-2)
+    to [R=$R_3$, i^<, v_<, name=R3, -*] (3,2)
+    to [V^<, i_>, name=U1] (7,2)
+    to [R=$R_1$ , v, name=R1] (11,2);
+    \draw (-1,2) to (3,2);
+    \draw (3,-2) to [R=$R_5$ ,i, v_>, name=R5, -*] (11,-2);
+    \draw (11,2) to (11,-6)
+    to  (9,-6);
+    \draw (9,-6) to  [I, name=Iq,*-*] (5,-6)
+    to (3,-6);
+    \draw (5,-6) to (5,-8)
+    to [R=$R_2$, i, v_>, name=R2] (9,-8)
+    to (9,-6);
+
+    \varrmore{U0}{$U_0$};
+    \iarrmore{U0}{$I_0$};
+    \varrmore{U1}{$U_1$};
+    \iarrmore{U1}{$I_1$};
+    \iarrmore{Iq}{$I_\mathrm{q}$};
+    \varrmore{R0}{$U_\mathrm{R0}$};
+    \varrmore{R1}{$U_\mathrm{R1}$};
+    \varrmore{R2}{$U_\mathrm{R2}$};
+    \iarrmore{R2}{$I_2$};
+    \varrmore{R3}{$U_\mathrm{R3}$};
+    \iarrmore{R3}{$I_3$};
+    \varrmore{R4}{$U_\mathrm{R4}$};
+    \iarrmore{R4}{$I_4$};
+    \varrmore{R5}{$U_\mathrm{R5}$};
+    \iarrmore{R5}{$I_5$};
+\end{circuitikz}

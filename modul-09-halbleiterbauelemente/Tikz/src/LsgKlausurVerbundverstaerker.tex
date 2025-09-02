@@ -1,25 +1,47 @@
 \begin{tikzpicture}
-    \draw (0,0) to[short, o-*] (1,0) to[short, -o] (3,0)node[above]{B};
-    \draw (5,0)node[above]{C} to[short, o-*] (7,0) to[short,-o] (8,0)node[above]{B};
-    \draw (10,0)node[above]{C} to[short, o-*] (12,0) to[short, -*] (13,0) to[short, -o] (15,0);
-    \draw (0,-2) to[short, o-*] (1,-2) -- (1.5,-2)node[ground]{};
-    \draw (1.5,-2) to[short, -] (3,-2) to[short, -*] (4,-2)node[below]{E} to[short, -*] (7,-2) to[short, -*] (9,-2)node[below]{E} to[short, -] (10.5,-2) to[R=$R_3$, -*] (12,-2) to[short, -*] (13,-2) to[short, -o] (15,-2);
-
-
-    \draw (15,0) to[open,v>, name=ua] (15,-2);
-    \draw (0,0) to[open,v>, name=ue] (0,-2);
-
-    \draw (1,0) to[R=$R_4$] (1,-2);
-    \draw (3,0) to[R=$r_\mathrm{BE 1}$] (3,-2);
-    \draw (5,0) to[I, l=$S_1$] (5,-2);
-    \draw (7,0) to[R=$R_1$] (7,-2);
-    \draw (8,0) to[R=$r_\mathrm{BE2}$] (8,-2);
-    \draw (10,0) to[I, l=$S_2$] (10,-2);
-    \draw (12,0) to[R=$R_2$] (12,-2);
-    \draw (13,0) to[R=$R_5$] (13,-2);
-
-
-    \varrmore{ue}{$u_\mathrm{E}$};
-    \varrmore{ua}{$u_\mathrm{A}$};
-
+    \draw (-0.25,0)
+    to[short, o-o] (1,0) node[above]{B}
+    to[R,l=$r_\mathrm{BE1}$] (1,-2)
+    -- (2.5,-2) 
+    to[I] (2.5,0) 
+    to[short, i<, name=ib1] (3.5,0)
+    to[short, -o] (4.125,0) node[above]{C}
+    to[short, -o] (6,0) node[above]{B}
+    --(6, 0)
+    to[R,l=$r_\mathrm{BE2}$] (6,-2)
+    to[short](7.75, -2)
+    to[I] (7.75,0) 
+    to[short, i<, name=ib2] (8.75,0)
+    to[short, -o] (9.375,0) node[above]{C}
+    to[short, -o] (12.75,0) ;
+    
+    \draw (3.5,0) to[R,l=$r_\mathrm{CE1}$, *-](3.5,-2)
+    to[short, -o] (3,-2) node[below]{E}
+    to[short, -*] (2.5,-2) node[ground]{};
+    
+    \draw (4.75,0) to[R,l=$R_\mathrm{1}$, *-](4.75,-2)
+    to[short, -*] (3.5,-2);
+    
+    \draw (8.75,0) to[R,l=$r_\mathrm{CE2}$, *-](8.75,-2)
+    to[short, -o] (8.25,-2) node[below]{E}
+    to[short, -*] (7.75,-2);
+    
+    \draw (10.5,0) to[R,l=$R_\mathrm{2}$, *-*](10.5,-2);
+    \draw (11.75,0) to[R,l=$R_\mathrm{5}$, *-*](11.75,-2);
+    \draw (12.75,-2) to[short, o-](10.5,-2)node[ground]{}
+    to[R,l=$R_\mathrm{3}$, -*](8.75,-2) ;
+    
+    \draw (0.5,0) to[short, *-] (0.5,1)
+    to[R,l=$R_\mathrm{4}$, -](7.125,1)
+    to[short, -*] (7.125,-2);
+    
+    \draw (-0.25,0) to[open, v^, name=ue] (-0.25,-2)
+    to[short,o-*] (1,-2);
+    
+    \draw (12.75,0) to[open, v^, name=ua] (12.75,-2);
+    
+    \varrmore{ue}{$u_\mathrm{e}$};
+    \varrmore{ua}{$u_\mathrm{a}$};
+    \iarrmore{ib1}{$\mathrm{B}\cdot i_\mathrm{B1}$};
+    \iarrmore{ib2}{$\mathrm{B}\cdot i_\mathrm{B2}$};
 \end{tikzpicture}

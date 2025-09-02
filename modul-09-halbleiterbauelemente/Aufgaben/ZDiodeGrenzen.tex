@@ -1,9 +1,12 @@
 \subsection{Ermittlung der Betriebsgrenzen einer Zenerdiode\label{Aufg7}}
 % Alt: Aufgabe 7
 \Aufgabe{
+  Gegeben ist die folgende Schaltung mit einer Zenerdiode und zwei Widerständen. 
   Die eingesetzte Zenerdiode besitzt eine Zenerspannung von \( U_\mathrm{Z} = \mathrm{8\,V} \). 
   Die maximale Verlustleistung der Diode beträgt \( P_\mathrm{tot}=\mathrm{8\,W} \). 
-  Die Diode arbeitet im stabilisierenden Bereich, wenn der Strom durch sie mindestens \( \mathrm{5\,mA} \) beträgt. \\
+  Die Diode arbeitet im stabilisierenden Bereich, wenn der Strom durch sie mindestens \( \mathrm{5\,mA} \) beträgt. 
+  Zusätzlich sind die folgenden Werte gegeben:
+  $U_\mathrm{E}=20\,\mathrm{V}\pm 10\%$ und $R_\mathrm{V} = 10\,\Omega$.\\
   Welchen minimalen und maximalen Widerstandswert darf der Lastwiderstand \( R_\mathrm{L} \) nicht unter- bzw. überschreiten, damit die Diode einerseits im stabilisierenden Bereich arbeitet und andererseits nicht überlastet wird?
   
   \begin {figure} [H]
@@ -11,46 +14,6 @@
      \input{Tikz/src/FigZDiodeGrenzen.tex}
      \label{fig:FigZDiodeGrenzen}
   \end {figure}
-
-%   \speech{ **Aufgabe 7**  
-% Die eingesetzte **Zenerdiode** besitzt eine **Zenerspannung von \( U_Z = 8V \)**.  
-% - Die **maximale Verlustleistung** der Diode beträgt **8 W**.  
-% - Die Diode arbeitet **im stabilisierenden Bereich**, wenn der **Strom durch die Diode größer als 5 mA** ist.  
-
-% **Fragestellung:**  
-% - **Welchen minimalen und maximalen Widerstandswert darf der Lastwiderstand \( R_L \) nicht unter- oder überschreiten**, damit die **Diode im stabilisierenden Bereich arbeitet** und nicht überlastet wird?  
-%  **Beschreibung der Abbildung**  
-% Die gezeigte Schaltung stellt eine **Zener-Spannungsstabilisierungsschaltung** dar und besteht aus folgenden Komponenten:
-
-% 1. **Eingangsspannungsquelle**  
-%    - **Nennwert: 20V** mit einer **Toleranz von ±10%**, also zwischen **18V und 22V**.  
-%    - Symbolisiert durch einen **Kreis mit Richtungspfeil**.  
-
-% 2. **Serienwiderstand (10Ω)**  
-%    - Platziert im **oberen Zweig der Schaltung**.  
-%    - Begrenzung des **Gesamtstroms** in der Schaltung.  
-
-% 3. **Zenerdiode \( D_Z \)**  
-%    - In **Sperrrichtung** betrieben.  
-%    - Hält die **Spannung über \( R_L \) stabil bei 8V**.  
-%    - Beginnt **zu leiten**, wenn die Spannung über **8V steigt** und sorgt für eine **Überspannungsbegrenzung**.  
-
-% 4. **Lastwiderstand \( R_L \)**  
-%    - Parallel zur **Zenerdiode** geschaltet.  
-%    - Soll mit einer **stabilen Spannung von 8V** betrieben werden.  
-%    - Der zulässige **Widerstandsbereich für \( R_L \)** ist zu bestimmen, damit die **Diode weder zu wenig noch zu viel Strom führt**.  
-
-%  **Funktionsweise der Schaltung**  
-% - Die **Zenerdiode regelt die Ausgangsspannung auf 8V** unabhängig von **Schwankungen der Eingangsspannung**.  
-% - Die **minimale Last \( R_L \) darf nicht zu klein** sein, damit die **Diode noch genug Strom aufnimmt**.  
-% - Die **maximale Last \( R_L \) darf nicht zu groß** sein, da sonst die **Zenerdiode zu viel Strom aufnehmen müsste**, was zu einer **Überlastung (8W-Grenze) führen könnte**.  
-% - Das **Problem wird durch eine Berechnung der Stromverhältnisse** gelöst.  
-
-% **Zusammenfassung der Aufgabe**  
-% - Die Aufgabe erfordert die **Bestimmung des minimalen und maximalen Widerstands \( R_L \)**, damit die **Zenerdiode richtig arbeitet**.  
-% - Die **Spannungsschwankungen der Quelle** müssen berücksichtigt werden.  
-% - Die Berechnung erfolgt unter der **Bedingung, dass der Strom durch die Zenerdiode größer als 5mA bleibt** und die **maximale Leistung von 8W nicht überschritten wird**.  
-% }
 
 }
 

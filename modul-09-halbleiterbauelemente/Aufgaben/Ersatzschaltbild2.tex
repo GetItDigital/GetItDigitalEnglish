@@ -7,51 +7,7 @@
        \input{Tikz/src/FigErsatzschaltbild2}
        \label{fig:FigErsatzschaltbild2}
     \end {figure}
-
-%     \speech{
-% **A.21 Aufgabe 21**
-
-%  **Aufgabenstellung:**
-% Die Aufgabe besteht darin, das **Kleinsignal-Ersatzschaltbild** der gezeigten Transistorschaltung zu zeichnen.
-
-
-
-%  **Beschreibung der Abbildung:**
-% Die Abbildung zeigt eine **Transistorverstärkerschaltung in Emitterschaltung mit Basisspannungsteiler**.
-
-%  **1. Spannungsversorgung:**
-% - Die Schaltung wird mit einer **Versorgungsspannung \( U_V \)** betrieben, die sich am oberen Rand der Schaltung befindet.
-% - Diese Spannung versorgt den **Kollektor** des Transistors über einen **Widerstand \( R_1 \)**.
-
-%  **2. Basisbeschaltung mit Spannungsteiler:**
-% - Die Basis des Transistors erhält ihre Vorspannung über **zwei Widerstände \( R_1 \) und \( R_2 \)**.  
-% - Diese beiden Widerstände bilden einen **Spannungsteiler**, der die **Basisspannung einstellt**.
-% - \( R_1 \) ist zwischen \( U_V \) und der Basis geschaltet, während \( R_2 \) zwischen Basis und Masse liegt.
-
-%  **3. Kollektorkreis:**
-% - Der **Kollektor ist über den Widerstand \( R_1 \)** mit der **Versorgungsspannung \( U_V \)** verbunden.
-% - Die **Ausgangsspannung \( u_A \)** wird am **Kollektor des Transistors** abgegriffen.
-
-%  **4. Emitterschaltung mit Widerstand \( R_3 \):**
-% - Der **Emitter des Transistors** ist mit einem **Widerstand \( R_3 \)** gegen Masse verbunden.
-% - Dieser Widerstand beeinflusst die **Verstärkung der Schaltung**.
-
-%  **5. Eingangssignal:**
-% - Das **Eingangssignal \( u_E \)** wird über eine separate Leitung an die **Basis des Transistors** eingespeist.
-
-%  **Zusätzliche Hinweise für eine blinde Person:**
-% - Die gezeigte Schaltung ist eine **Emitterschaltung mit Basisspannungsteiler**.  
-% - Das **Kleinsignal-Ersatzschaltbild** wird durch Ersetzen des Transistors durch sein **äquivalentes Modell** erstellt.  
-%   - Dabei werden Parameter wie **differentieller Widerstand \( r_e \)** und **Stromverstärkung \( \beta \)** berücksichtigt.
-% - Die Spannungsteiler \( R_1 \) und \( R_2 \) bestimmen die **Gleichspannungsvorspannung der Basis**, während \( R_3 \) die **Gegenkopplung am Emitter** definiert.
-% - Das **Eingangssignal \( u_E \)** wird an der **Basis eingespeist**, und die verstärkte Version erscheint als **invertiertes Signal am Kollektor**.
-% - Der **Widerstand \( R_3 \)** beeinflusst die **Gesamtverstärkung der Schaltung**, indem er die Emitterspannung anhebt.
-
-% Diese Schaltung wird häufig in **Verstärkerschaltungen** verwendet, um ein **stabiles Arbeitspunktverhalten** zu ermöglichen.
-% }
-
 }
-
 
 
 \Loesung{
@@ -62,7 +18,7 @@
             \input{Tikz/src/LsgErsatschaltbild2_1}
             \label{fig:LsgErsatschaltbild2_1}
         \end{subfigure}
-        \vspace{0.5cm} 
+        \vspace{0.5cm}
         \begin{subfigure}[b]{0.8\textwidth}
             \centering
             \input{Tikz/src/LsgErsatschaltbild2_2}
@@ -71,35 +27,5 @@
         \label{fig:Loesung21}
     \end{figure}
     Siehe: Abschnitt \ref{fig:ErsatzschaltbildEinesBipolartransistors} und \ref{fig:ErsatzschaltbilderEmitter-Kollektor-UndBasisschaltung}.
-%     \speech{
-% Die Abbildung zeigt zwei verschiedene Darstellungen einer Transistorschaltung. Die obere Abbildung stellt die vollständige Schaltung eines bipolaren Transistors in Emitterschaltung dar, während die untere Abbildung die Klein-Ersatzschaltung dieses Systems zeigt.
-
-% **Beschreibung der oberen Abbildung (vollständige Transistorschaltung):**  
-% - Links befindet sich die Eingangsspannung \( U_e \), die in die Schaltung eingespeist wird.  
-% - Zwei Widerstände, \( R_1 \) und \( R_2 \), sind parallel zwischen der Eingangsspannung \( U_e \) und Masse geschaltet.  
-% - Diese Widerstände \( R_1 \) und \( R_2 \) legen das Basispotenzial des Transistors fest.  
-% - Der Transistor befindet sich mittig in der Schaltung und ist mit seinen drei Anschlüssen wie folgt beschaltet:  
-%   - **Basis (B):** Die Basis ist über die beiden Widerstände \( R_1 \) und \( R_2 \) an die Eingangsspannung \( U_e \) gekoppelt. Zudem gibt es eine gekennzeichnete Impedanz \( r_{BE} \), die den Basis-Emitter-Widerstand modelliert.  
-%   - **Emitter (E):** Der Emitter ist mit einem Widerstand \( R_3 \) verbunden, der nach unten zur Masse führt.  
-%   - **Kollektor (C):** Der Kollektor ist mit einem weiteren Widerstand \( r_{CE} \) verbunden, der zum Ausgang \( U_a \) führt.  
-% - Die Ausgangsspannung \( U_a \) befindet sich rechts in der Schaltung und ist mit dem Kollektor verbunden.  
-
-% Die Pfeile in der Schaltung zeigen die Richtung der Spannungen:  
-% - **\( U_e \) (Eingangsspannung):** Von oben links nach unten gerichtet.  
-% - **\( U_a \) (Ausgangsspannung):** Vom Kollektor des Transistors nach unten.
-
-% **Beschreibung der unteren Abbildung (Klein-Ersatzschaltbild):**  
-% - Diese Darstellung zeigt eine vereinfachte Version der oberen Schaltung, in der der Transistor durch seine klein-signaltechnischen Ersatzwerte ersetzt wurde.  
-% - Die Basis ist weiterhin mit den Widerständen \( R_1 \) und \( R_2 \) verbunden.  
-% - Der Basis-Emitter-Übergang wird durch einen Widerstand \( r_{BE} \) modelliert.  
-% - Der Kollektor-Emitter-Widerstand \( r_{CE} \) stellt den Durchgangswiderstand des Transistors dar.  
-% - Der Emitter ist über \( R_3 \) mit Masse verbunden.  
-% - Die Spannungen \( U_e \) und \( U_a \) sind weiterhin links bzw. rechts gekennzeichnet.  
-
-% Zusammengefasst zeigen diese beiden Abbildungen die Entwicklung von einer vollständigen Transistorschaltung hin zu ihrem Klein-Ersatzschaltbild, das für weitergehende Berechnungen und Analysen verwendet wird.
-% }
-
+    
 }
-
-
-

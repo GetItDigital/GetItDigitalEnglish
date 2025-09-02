@@ -1,45 +1,29 @@
 \begin{tikzpicture}
-    \draw(0,1.3) to[open,v,name=ue] (0,-1.3);
-    \draw(7,0.3) to[open,v,name=ua] (7,-1.3);
+    \draw (0,0) node[npn, tr circle] (Q1) {};
 
-    \varrmore{ue}{$u_\mathrm{E}$};
-    \varrmore{ua}{$u_\mathrm{A}$};
-    % Widerstände R_1 und R_2
-    \draw
-    (2,3) 
-    to[R=R$_1$] (2,1.5)
-    to[R=R$_2$] (2,-2) node[ground]{};
+    \draw (Q1.C) to[short, -o, name=ic] (0,2.5)
+    node[right, color=voltage]{$U_\mathrm{V}$};
 
-    \draw (2,1.5) to[short, -o] (0,1.5);
-    \draw (0,-1.5) to[short, o-] (0,-2) node[ground]{};
+    \draw (0,2)
+    to[short, *-] (-3, 2) 
+    to[R=$R_1$, -*]  (-3, 0) 
+    to[R=$R_2$]  (-3, -3) 
+    node[ground]{};
 
+    \draw (Q1.B) 
+    to[short, -o] (-5, 0)
+    to[open, v, name=ue] (-5,-2.75)    
+    to[short, o-] (-5, -3)
+    node[ground]{};
 
-    % Verbindung des Widerstands R_1 zum Kollektor
-    \draw
-    (2,3) -- (3,3)
-    -- (5.5,3)
-    -- (5.5,2);  % Verbindung zum Kollektor
+    \draw (Q1.E) to[short, -*] ++(0, -0.25)
+    to[R=$R_3$] (0, -3) node[ground]{};
 
-    % Verbindung zur Basis
-    \draw
-    (2,1.5) -- (3,1.5)
-    -- (5,1.5);
-     
-
-    % Transistor mit Kollektor, Basis und Emitter
-    \draw
-    (5.5,1.5) node[npn, tr circle] (Q1) {}
-    (Q1.base) 
-    (Q1.collector)  
-    (Q1.emitter)  ;
-
-    % Widerstand R_3 zwischen Emitter und Masse (nach unten)
-    \draw (Q1.E) -- (5.5,0)
-    to[R=R$_3$] (5.5,-2) node[ground]{};
-
-    \draw (5.5,0.5) to[short, -o] (7,0.5);
-    \draw (7,-1.5) to[short, o-] (7,-2) node[ground]{};
-
-    \draw (5.5,3) to[short, -o] (5.5,3.5);
-    \draw(5.5,3.5) node[right] {U$_V$};
+    \draw (Q1.E)++(0, -0.25) to[short, -o] ++(2, 0)
+    to[open, v^, name=ua] (2,-2.75)    
+    to[short, o-] (2,-3)
+    node[ground]{};
+    
+    \varrmore{ue}{$U_\mathrm{E}$};
+    \varrmore{ua}{$U_\mathrm{A}$};
 \end{tikzpicture}

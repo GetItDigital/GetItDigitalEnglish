@@ -1,4 +1,15 @@
 \begin{tikzpicture}
-    \draw (5,0) to[short, -*] (0,0) node[ground]{} to[V,name=V1,l=$V_\mathrm{1}$] (0,5) to[D,l=$D_\mathrm{1}$] (5,5) to[R,l=$R_\mathrm{Last}$] (5,0);
+    \draw (4,0)
+    to[short, -*] (0,0) node[ground]{}
+    to[sV,name=UE, v<] (0,2)
+    to[D, l=$D_\mathrm{1}$] (4,2) 
+    to[R, l=$R_\mathrm{L}$] (4,0);
+
+    \draw (4,2)
+    to[short, *-o] (5.5,2)
+    to[open,v^,name=UA] (5.5,0)
+    to[short, o-*] (4,0);
+
+    \varrmore{UE}{$u_\mathrm{E}(t)$};
+    \varrmore{UA}{$U_\mathrm{A}$};
 \end{tikzpicture}
-   

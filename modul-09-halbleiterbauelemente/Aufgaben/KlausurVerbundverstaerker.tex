@@ -1,35 +1,35 @@
 \subsection{Transistor-Verbundverstärker\label{Aufg27}}
 % Alt: Klausuraufgabe 2
 \Aufgabe{
-  Zwei npn-Bipolartransistoren bilden zusammen einen rauscharmen Verstärker für Signale im Bereich unter $1\, \mathrm{\mu V}$. 
+  Zwei npn-Bipolartransistoren bilden zusammen einen rauscharmen Verstärker für Signale im Bereich unter $1\, \mathrm{\mu V}$.
   Die Versorgungsspannung beträgt $U_1=10\,\mathrm{V}$. Am Kollektor des Transistors $\mathrm{T_2}$ liegt eine Spannung von $4\,\mathrm{V}$ gegenüber Masse an.
   Im Arbeitspunkt von $T_1$ und $T_2$ kann für die Basis-Emitter-Spannungen jeweils $U_\mathrm{BE}=600\,\mathrm{mV}$ angenommen werden.
   Die Kollektorströme $\mathrm{I_{C}}$ sind sehr groß gegenüber den Basisströmen $I_\mathrm{B}$ anzunehmen, daher gilt näherungsweise $I_\mathrm{C} = I_\mathrm{E}$.
   Zusätzlich sind die folgenden Parameter gegeben:
-  
-  $R_1 = 10\, \mathrm{k\Omega}$, 
-  $R_2 = 10\, \mathrm{k\Omega}$, 
+
+  $R_1 = 10\, \mathrm{k\Omega}$,
+  $R_2 = 10\, \mathrm{k\Omega}$,
   $R_3 = 2\, \mathrm{k\Omega}$,
-  $R_4 = 300\, \mathrm{k\Omega}$,  
+  $R_4 = 300\, \mathrm{k\Omega}$,
   $R_5 = 10\, \mathrm{M\Omega}$ \\
-  $C_1 = 1\, \mathrm{\mu F}$,  
+  $C_1 = 1\, \mathrm{\mu F}$,
   $C_2 = 1\, \mathrm{\mu F}$ \\
-  $U_1 = 10\, \mathrm{V}$,  
-  $\hat{u}_\mathrm{AC} = 0,1\, \mathrm{mV}$ \\
-  
+  $U_1 = 10\, \mathrm{V}$,
+  $\hat{u}_\mathrm{E} = 0,1\, \mathrm{mV}$ \\
+
   \begin {figure} [H]
   \centering
   \input{Tikz/src/FigKlausurVerbundverstaerker}
   \label{fig:FigKlausurVerbundverstaerker}
   \end {figure}
-  
+
   \begin{itemize}
     \item[a)]
           Wie groß ist der maximale Strom durch $R_2$ im Arbeitspunkt ($I_\mathrm{R2}=I_\mathrm{C,\,T2}$)?
     \item[b)]
           Wie groß ist der Strom durch $R_3$ näherungsweise, wenn $R_4 >> R_3$?
     \item[c)]
-          Wie groß ist die Spannung, die über $R_3$ abfällt? 
+          Wie groß ist die Spannung, die über $R_3$ abfällt?
     \item[d)]
           Wie groß ist die Gleichspannung an der Basis von $T_2$ ($U_\mathrm{B,\,T2}=U_\mathrm{CE,\,T1}$)?
     \item[e)]
@@ -55,73 +55,60 @@
 \Loesung{
   \begin{itemize}
     \item[a)]
-  \end{itemize}
-  \begin{align*}
-    I_\mathrm{C} & = \frac{6\,\mathrm{V}}{10\,\mathrm{k\Omega}} = 0,6\,\mathrm{mA}
-  \end{align*}
-  \begin{itemize}
+          \begin{align*}
+            I_\mathrm{C} & = \frac{6\,\mathrm{V}}{10\,\mathrm{k\Omega}} = 0,6\,\mathrm{mA}
+          \end{align*}
+
     \item[b)]
-  \end{itemize}
-  \begin{align*}
-    I_\mathrm{C,T2} & = 0,6\,\mathrm{mA}
-  \end{align*}
-  \begin{itemize}
+          \begin{align*}
+            I_\mathrm{C,T2} & = 0,6\,\mathrm{mA}
+          \end{align*}
+
     \item[c)]
-  \end{itemize}
-  \begin{align*}
-    U_{\mathrm{R3}} & = 0,6\,\mathrm{mA} \cdot 2\,\mathrm{k\Omega} = 1,2\, \mathrm{V}
-  \end{align*}
-  \begin{itemize}
+          \begin{align*}
+            U_{\mathrm{R3}} & = 0,6\,\mathrm{mA} \cdot 2\,\mathrm{k\Omega} = 1,2\, \mathrm{V}
+          \end{align*}
+
     \item[d)]
-  \end{itemize}
-  \begin{align*}
-    1,2\, \mathrm{V} + 0,6\,\mathrm{V} = 1,8\,\mathrm{V}
-  \end{align*}
-  \begin{itemize}
+          \begin{align*}
+            1,2\, \mathrm{V} + 0,6\,\mathrm{V} = 1,8\,\mathrm{V}
+          \end{align*}
+
     \item[e)]
-  \end{itemize}
-  \begin{align*}
-    I_\mathrm{C,T1} & = \frac{8,2\,\mathrm{V}}{10\,\mathrm{k\Omega}} = 0,82\,\mathrm{mA}
-  \end{align*}
-  \begin{itemize}
+          \begin{align*}
+            I_\mathrm{C,T1} & = \frac{8,2\,\mathrm{V}}{10\,\mathrm{k\Omega}} = 0,82\,\mathrm{mA}
+          \end{align*}
+
     \item[f)]
-  \end{itemize}
-  \begin{itemize}
     \item Erhöhung von $I_\mathrm{C}$ führt zu einem Spannungsanstieg über $R_4$
     \item dadurch sinkt die Basisspannung von $T_\mathrm{1}$, was $I_\mathrm{C}$ wieder reduziert
     \item negative Rückkopplung stabilisiert Arbeitspunkt
-  \end{itemize}
-  \begin{itemize}
+
     \item[g)]
-  \end{itemize}
-  \begin{align*}
-    S & = \frac{I_\mathrm{C,T1}}{U_\mathrm{T}} = \frac{0,82\,\mathrm{mA}}{26\,\mathrm{mA}} = 31,54\, \frac{\mathrm{mA}}{\mathrm{V}}
-  \end{align*}
-  \begin{itemize}
+          \begin{align*}
+            S & = \frac{I_\mathrm{C,T1}}{U_\mathrm{T}} = \frac{0,82\,\mathrm{mA}}{26\,\mathrm{mA}} = 31,54\, \frac{\mathrm{mA}}{\mathrm{V}}
+          \end{align*}
+
     \item[h)]
-  \end{itemize}
-  \begin{align*}
-    A_\mathrm{V} & = S \cdot (-R_\mathrm{C}) = -315
-  \end{align*}
-  \begin{itemize}
+          \begin{align*}
+            A_\mathrm{V} & = S \cdot (-R_\mathrm{C}) = -315
+          \end{align*}
+
     \item[i)]
-  \end{itemize}
-  \begin{align*}
-    A_\mathrm{V} & = -\frac{R_\mathrm{C}}{R_\mathrm{E}} = \frac{10\,\mathrm{k\Omega}}{2\,\mathrm{k\Omega}} = -5
-  \end{align*}
-  \begin{itemize}
+          \begin{align*}
+            A_\mathrm{V} & = -\frac{R_\mathrm{C}}{R_\mathrm{E}} = \frac{10\,\mathrm{k\Omega}}{2\,\mathrm{k\Omega}} = -5
+          \end{align*}
+
     \item[j)]
+          \begin{align*}
+            -5 \cdot -315 = 1575 \approx 1600
+          \end{align*}
+
+    \item[k)] Ersatzschaltbild
+          \begin{figure}[H]
+            \centering
+            \input{Tikz/src/LsgKlausurVerbundverstaerker}
+          \end{figure}
+          Siehe: Abschnitt \ref{sec:DarlingtonTransistor}
   \end{itemize}
-  \begin{align*}
-    -5 \cdot -315 = 1575 \approx 1600
-  \end{align*}
-  \begin{itemize}
-    \item[k)]
-  \end{itemize}
-  \begin {figure} [H]
-  \centering
-  \input{Tikz/src/LsgKlausurVerbundverstaerker}
-  \label{fig:LsgKlausurVerbundverstaerker}
-  \end {figure}
-  Siehe: Abschnitt \ref{sec:DarlingtonTransistor}
 }

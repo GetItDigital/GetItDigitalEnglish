@@ -1,38 +1,25 @@
-\begin{tikzpicture}
-    % Spannungspfeile in blau
-    \draw(6.3,2.3) to[open,v,name=ua] (6.3,0);
-  
-    % Batterie links
-    \draw
-    (0,0) to[sV, v<, name=UE ] (0,1.5);
-  
-    % Widerstand RV
-    \draw
-    (0,1.5) -- (2,1.5)
-    to[R=$100 \, k \Omega$] (3.5,1.5) to[short,i,name=ib] (4.5,1.5)
-    -- (5,1.5) ; % Verbindung mit Basis
-    
-    % Transistor
-    \draw
-   (5.5,1.5) node[npn, tr circle] (Q1) {}
-   (Q1.base) 
-   (Q1.collector)  
-   (Q1.emitter)  ;
-   
-   \draw
-   (Q1.C) -- (5.5,3)
-   to[R=$500 \,\Omega$] (7,3);
+  \begin{tikzpicture}
+    \draw (4,2) node[npn, tr circle] (Q1) {};
 
-   \draw (7,3) to [V,name=15V] (7,0);
-   \draw (Q1.E) -- (5.5,0) -- (7,0);
+    \draw (Q1.E) 
+    to [short, -*] (4,0) 
+    to[short, -] (8,0)
+    to[V, name=Ul, v_<] (8,4)
+    to[R,l_=$R_\mathrm{2}$] (4,4) 
+    -- (Q1.C);
 
-   \draw (5.5,0) to[short, -o] (6.3,0) -- (7,0);
+    \draw (Q1.B) 
+    to [R,l_=$R_\mathrm{1}$, i<, name=Ib] (0,2)
+    to [sV, name=U0, v_] (0,0)
+    to [short] (4,0);
 
-   \draw (0,0) -- (5.5,0); 
-   
-   \draw (5.5,2.3) to[short, *-o] (6.3,2.3);
-   \varrmore{UE}{$u_\mathrm{E}$};
-   \varrmore{15V}{$15\,\mathrm{V}$};
-   \iarrmore{ib}{$I_\mathrm{B}$};
-   \varrmore{ua}{$u_\mathrm{A}$};
-  \end{tikzpicture}
+     \draw (Q1.C)++(0, 0.25) 
+    to[short, *-o] ++ (1, 0)
+    to[open, v^, name=ua, -o] (5,0)
+    ;
+
+    \varrmore{U0}{$u_\mathrm{E}$};
+    \varrmore{Ul}{$U_\mathrm{L}$};
+    \varrmore{ua}{$u_\mathrm{A}$};
+    \iarrmore{Ib}{$I_\mathrm{B}$};
+\end{tikzpicture}

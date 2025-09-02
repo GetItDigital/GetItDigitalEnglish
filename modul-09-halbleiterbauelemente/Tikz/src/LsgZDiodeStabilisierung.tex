@@ -1,30 +1,24 @@
 \begin{tikzpicture}
-\draw
-  (0,2) to[V, name=V1] (0,0);
+  \draw(0,2) 
+    to[V, name=V1, v] (0,0)
+    to[short, -o](5,0) -- (8.5,0)
+    to[R, l_=$R_\mathrm{L}$, v^<, name=RL] (8.5,2)
+    to[short, -o](5,2)
+    to[short] (4,2)
+    to[R, l_=$R_\mathrm{V}$, i<_, name=RV] (0,2);
 
-  % Widerstand
-  \draw
-  (0,2)  to[R=$R_\mathrm{V}$, i, name=i, -*] (4,2);
+  \draw(4,0) 
+  to[zDo=$D_\mathrm{D}$, *-*, i_<, name=D] (4,2) ;
 
-  \draw (4,2) to[short, i,name=ii] (4,1.6);
-
-  \draw (0,0) to[short](5,0) -- (7,0);
-
-  % LED rechts
-  \draw
-  (4,0) to[zDo,v<,name=v2, *-] (4,2) ;
-
-  \draw(4,2) to[short](5,2)  --(7,2);
-  \draw(7,2) to[R=$\mathrm{160\,\Omega}$,v,name=8v] (7,0);
-
-  \varrmore{V1}{$10\,\mathrm{V}$};
-  \iarrmore{i}{${I}$};
-  \varrmore{v2}{$8\,\mathrm{V}$};
-  \varrmore{8v}{$8\,\mathrm{V}$};
-  \iarrmore{ii}{$I_\mathrm{Z}$};
-
-\draw[->,shift={(2.3,1)}] (150:0.5) arc (150:-150:0.5) node at(0,0){$M_\mathrm{1}$};
-
-\draw[->,shift={(5.5,1)}] (150:0.5) arc (150:-150:0.5) node at(0,0){$M_\mathrm{2}$};
-
+  \draw (5,2) 
+  to[open, name=ua, v^] (5,0);
+  
+  \varrmore{ua}{$U_\mathrm{A}$};
+  \varrmore{V1}{$U_\mathrm{E}$};
+  \varrmore{RL}{$U_\mathrm{RL}$};
+  \iarrmore{RV}{${I}$};
+  \iarrmore{D}{$I_\mathrm{Z}$};
+  
+  \draw[->,shift={(2,1)}] (150:0.5) arc (150:-150:0.5) node at(0,0){$M_\mathrm{1}$};  
+  \draw[->,shift={(6.5,1)}] (150:0.5) arc (150:-150:0.5) node at(0,0){$M_\mathrm{2}$};
 \end{tikzpicture}

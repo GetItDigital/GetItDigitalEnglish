@@ -1,23 +1,18 @@
 \begin{tikzpicture}
+  \draw(0,2) 
+    to[V, name=V1, v] (0,0)
+    to[short, -o](5,0) -- (7,0)
+    to[R, l_=$R_\mathrm{L}$] (7,2)
+    to[short, -o](5,2)
+    to[short] (4,2)
+    to[R, l_=$R_\mathrm{V}$] (0,2);
 
-   % Batterie links
-    \draw
-    (0,2) to[V, name=V1] (0,0);
+  \draw(4,0) 
+  to[zDo=$D_\mathrm{Z}$, *-*] (4,2) ;
+
+  \draw (5,2) 
+  to[open, name=ua, v^] (5,0);
   
-    % Widerstand
-    \draw
-    (0,2) to[R=$10\,\mathrm{\Omega}$, -*] (4,2);
-
-    \draw (0,0) to[short, -o](5,0) -- (7,0);
-  
-    % LED rechts
-    \draw
-    (4,0) to[zDo=$D_\mathrm{Z}$, *-] (4,2) ;
-
-    \draw(4,2) to[short, -o](5,2)  --(7,2);
-    \draw(7,2) to[R=$R_\mathrm{L}$] (7,0);
-
-    \draw (5,2) to[open,v>, name=ua] (5,0);
-    \varrmore{V1}{$20\mathrm{V} \pm 10 \ \%$};
-  
-  \end{tikzpicture}
+  \varrmore{ua}{$U_\mathrm{A}$};
+  \varrmore{V1}{$U_\mathrm{E}$};
+\end{tikzpicture}

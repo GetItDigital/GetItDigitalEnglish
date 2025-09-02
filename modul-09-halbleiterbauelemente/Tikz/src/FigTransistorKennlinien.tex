@@ -1,24 +1,26 @@
-\begin{tikzpicture}
-\draw
-    (0,0) node[npn, tr circle] (Q1) {}
-    (Q1.base) 
-    (Q1.collector)  
-    (Q1.emitter);
-
-\draw (Q1.base) to[short, -o] (-3,0);
-
-\draw (Q1.emitter) to[short, -*] (0,-3)node[ground]{};
-
-\draw (Q1.collector) to[short, -*] (0,1) to[short, R, l=$R_\mathrm{C}$, -*] (0,3);
-
-\draw (-3,3) -- (3,3) node[above]{$U_\mathrm{CC}$};
-
-\draw (0,1) to[short, -o] (3,1);
-\draw (-3,-3) to[short, o-o] (3,-3);
-
-\draw (-3,0) to[open,v>, name=ue] (-3,-3);
-\draw (3,1) to[open, v>, name=uce] (3,-3);
-
-\varrmore{ue}{$U_\mathrm{E}$};
-\varrmore{uce}{$U_\mathrm{CE}$};
+\begin{tikzpicture} 
+    \draw (0,0) node[npn] (Q1) {};
+    
+    \draw (Q1.C)
+    to [short] (0,1)
+    to[R, l_= $R_\mathrm{C}$] (0,3)
+    to [short, -o] (0,3.5) node[right, color=voltage] {$U_\mathrm{V}$};
+    
+    \draw (0,1)
+    to[short, *-o] (2,1);
+    
+    \draw (Q1.E)
+    to [short, -*] (0,-2) node[ground]{};
+    
+    \draw (-2,-2)
+    to[short, o-o] (2,-2);
+    
+    \draw (2,1)
+    to[open,v^, name=ua] (2,-2);
+    
+    \draw (Q1.B) to[short, -o] (-2,0)
+    to[open,v>, name=ue] (-2,-2);
+    
+    \varrmore{ua}{$U_\mathrm{CE}$};
+    \varrmore{ue}{$U_\mathrm{BE}$};
 \end{tikzpicture}

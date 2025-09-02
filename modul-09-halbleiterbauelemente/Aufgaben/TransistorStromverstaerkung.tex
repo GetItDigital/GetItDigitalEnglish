@@ -1,84 +1,37 @@
 \subsection{Berechnung der Stromverstärkung einer Transistorschaltung\label{Aufg18}}
 % Alt: Aufgabe 18
 \Aufgabe{
-    Gegeben ist die folgende Schaltung mit dem Kennlinienfeld des Transistors. Die Versorgungsspannung beträgt \( U_\mathrm{CC} = \mathrm{6\,V} \). \\
+    Gegeben ist die folgende Schaltung mit dem Kennlinienfeld des Transistors. Die Versorgungsspannung beträgt \( U_\mathrm{V} = \mathrm{6\,V} \). \\
     Der Arbeitspunkt liegt bei der halben Betriebsspannung.\\
     Bestimmen Sie die folgenden Werte aus dem Kennlinienfeld:
     
     \begin{itemize}
-      \item Die Paare \( I_\mathrm{B} / U_\mathrm{BE} \) und \( I_\mathrm{C} / U_\mathrm{CE} \) im Arbeitspunkt,
-      \item sowie die Stromverstärkung \( \beta \).
+        \item Die Paare \( I_\mathrm{B} / U_\mathrm{BE} \) und \( I_\mathrm{C} / U_\mathrm{CE} \) im Arbeitspunkt,
+        \item sowie die Stromverstärkung \( \beta \).
     \end{itemize}
     
-  \begin{figure}[H]
-    % oben
-    \begin{minipage}[c]{\textwidth} 
-        \centering
-        \input{Tikz/src/FigTransistorStromverstaerkung}
-    \end{minipage}
-    \vspace{0.5cm} % Vertikaler Abstand zur zweiten Reihe
-
-    % unten
-    \begin{minipage}[c]{0.48\textwidth} 
-        \centering
-        \includesvg[width=\textwidth]{Bilder/Aufgaben/FigTransistorStromverstaerkung2}
-    \end{minipage}
-    \hfill 
-    \begin{minipage}[c]{0.48\textwidth} 
-        \centering
-        \includesvg[width=\textwidth]{Bilder/Aufgaben/FigTransistorStromverstaerkung3}
-    \end{minipage}
-    \label{fig:FigTransistorStromverstaerkung}
-\end{figure}
-
-% \speech{
-% Aufgabe 18
-
-% Diese Aufgabe behandelt die Bestimmung der Stromverstärkung $\beta$ eines Transistors anhand der gegebenen Kennlinien und einer bestimmten Schaltung.
-
-%  **Aufgabenstellung:**
-% Es ist eine Transistorschaltung gegeben, bei der die **Versorgungsspannung $U_{CC} = 6V$** beträgt. Der **Arbeitspunkt** des Transistors soll sich auf **die halbe Betriebsspannung** einstellen.
-
-% Gefragt sind die folgenden Bestimmungen:
-% 1. Die **Wertepaare** für den Basisstrom $I_B$ und die Basis-Emitter-Spannung $U_{BE}$.
-% 2. Die **Wertepaare** für den Kollektorstrom $I_C$ und die Kollektor-Emitter-Spannung $U_{CE}$.
-% 3. Die Berechnung der **Stromverstärkung $\beta$** des Transistors.
-
-
-%  **Beschreibung der Abbildungen:**
-%  **Obere Abbildung: Transistorschaltung**
-% - Es handelt sich um eine **Spannungsteiler-Basisbeschaltung eines NPN-Transistors**.
-% - Die **Versorgungsspannung $U_{CC}$** befindet sich oben an der Schaltung.
-% - Der **Kollektorwiderstand $R_C$** ist zwischen den Kollektor des Transistors und $U_{CC}$ geschaltet.
-% - Zwei Widerstände **$R_1$ und $R_2$ bilden einen Spannungsteiler**, um die Basisspannung des Transistors festzulegen.
-% - Der **Emitter des Transistors ist auf Masse geschaltet**.
-% - Die **Ausgangsspannung $U_A$ wird zwischen Kollektor und Masse gemessen**.
-
-%  **Linke untere Abbildung: Ausgangskennlinienfeld des Transistors**
-% - Die **x-Achse stellt die Kollektor-Emitter-Spannung $U_{CE}$ in Volt dar**.
-% - Die **y-Achse stellt den Kollektorstrom $I_C$ in mA dar**.
-% - Es sind **mehrere rote Kennlinien** eingezeichnet, die den Zusammenhang zwischen $I_C$ und $U_{CE}$ für verschiedene Basisströme $I_B$ darstellen.
-% - Die Basisströme $I_B$ sind in Stufen von **5 μA bis 30 μA** gegeben.
-% - Die Linien verlaufen steil ansteigend bei niedrigen $U_{CE}$-Werten und flachen im Sättigungsbereich ab.
-
-%  **Rechte untere Abbildung: Eingangskennlinie des Transistors**
-% - Die **x-Achse stellt die Basis-Emitter-Spannung $U_{BE}$ in Volt dar**.
-% - Die **y-Achse stellt den Basisstrom $I_B$ in μA dar**.
-% - Die Kennlinie verläuft exponentiell steigend ab etwa **0,6V**.
-% - Dies zeigt das **typische Verhalten einer pn-Übergangsdiode**, bei der der Basisstrom ab einer bestimmten Schwellenspannung rapide ansteigt.
-
-
-
-%  **Zusätzliche Hinweise für eine blinde Person**
-% - Die Schaltung verwendet eine **Spannungsteilerschaltung** zur Basisspannungseinstellung.
-% - Die Werte für **$I_B$ und $U_{BE}$** können aus der Eingangskennlinie abgelesen werden.
-% - Die Werte für **$I_C$ und $U_{CE}$** können aus der Ausgangskennlinie bestimmt werden.
-% - Die **Stromverstärkung $\beta$** ergibt sich aus dem Verhältnis **$I_C / I_B$**.
-% }
-
-
+    \begin{figure}[H]
+        % oben
+        \begin{minipage}[c]{\textwidth}
+            \centering
+            \input{Tikz/src/FigTransistorStromverstaerkung}
+        \end{minipage}
+        \vspace{0.5cm} % Vertikaler Abstand zur zweiten Reihe
+        
+        % unten
+        \begin{minipage}[c]{0.48\textwidth}
+            \centering
+            \includesvg[width=\textwidth]{Bilder/Aufgaben/FigTransistorStromverstaerkung2}
+        \end{minipage}
+        \hfill 
+        \begin{minipage}[c]{0.48\textwidth}
+            \centering
+            \includesvg[width=\textwidth]{Bilder/Aufgaben/FigTransistorStromverstaerkung3}
+        \end{minipage}
+        \label{fig:FigTransistorStromverstaerkung}
+    \end{figure}
+    
 }
-
 
 
 \Loesung{
@@ -95,52 +48,19 @@
             \label{fig:LsgTransistorStromverstaerkung2}
         \end{subfigure}
     \end{figure}
-        Gegeben sind folgende Werte im Arbeitspunkt:
-        \begin{align*}
-            U_\mathrm{CC} &= \mathrm{6\,V} \\
-            U_\mathrm{CE} &= \mathrm{3\,V} \\
-            I_\mathrm{C} &= \mathrm{6\,mA} \\
-            U_\mathrm{BE} &= \mathrm{0{,}62\,V} \\
-            I_\mathrm{B} &= \mathrm{20\,\mu A}
-        \end{align*}
-        
-        Berechnung der Stromverstärkung \( \beta \):
-        \begin{align*}
-            \beta &= \frac{I_\mathrm{C}}{I_\mathrm{B}} = \frac{\mathrm{6\,mA}}{\mathrm{20\,\mu A}} = \mathrm{300}
-        \end{align*}
-        
+    Gegeben sind folgende Werte im Arbeitspunkt:
+    \begin{align*}
+        U_\mathrm{CC} & = \mathrm{6\,V}      \\
+        U_\mathrm{CE} & = \mathrm{3\,V}      \\
+        I_\mathrm{C}  & = \mathrm{6\,mA}     \\
+        U_\mathrm{BE} & = \mathrm{0{,}62\,V} \\
+        I_\mathrm{B}  & = \mathrm{20\,\mu A}
+    \end{align*}
+    
+    Berechnung der Stromverstärkung \( \beta \):
+    \begin{align*}
+        \beta & = \frac{I_\mathrm{C}}{I_\mathrm{B}} = \frac{\mathrm{6\,mA}}{\mathrm{20\,\mu A}} = \mathrm{300}
+    \end{align*}
+    
     Siehe: Abschnitt \ref{sec:ElektrischesVerhaltenBipolartransistor}
-%     \speech{
-% Die Lösung zu Aufgabe 18 besteht aus mehreren Teilen.
-
-% **Teil a)**  
-% Im ersten Schritt wird der Arbeitspunkt (AP) anhand der gegebenen Werte bestimmt.  
-% Dazu werden zwei Diagramme betrachtet:
-
-% **Linkes Diagramm:**  
-% - Es zeigt die Ausgangskennlinien des Transistors.  
-% - Die x-Achse stellt die Kollektor-Emitter-Spannung \( U_{CE} \) dar, während die y-Achse den Kollektorstrom \( I_C \) anzeigt.  
-% - Mehrere rote Kurven repräsentieren verschiedene Basisströme \( I_B \) in Mikroampere (µA).  
-% - Die gestrichelte schwarze Linie stellt die Widerstandsgerade dar, die vom Ursprung aus zum Arbeitspunkt (AP) verläuft.  
-% - Der Arbeitspunkt AP ist durch einen schwarzen Kreis markiert und liegt bei einer Kollektor-Emitter-Spannung von \( U_{CE} = 3V \) und einem Kollektorstrom \( I_C = 6mA \).
-
-% **Rechtes Diagramm:**  
-% - Es zeigt die Kennlinie der Basis-Emitter-Spannung \( U_{BE} \).  
-% - Die x-Achse stellt die Spannung \( U \) in Volt dar, während die y-Achse den Basisstrom \( I_B \) in Mikroampere (µA) angibt.  
-% - Die blaue Kurve beschreibt den exponentiellen Anstieg des Basisstroms mit zunehmender Spannung.  
-% - Der relevante Punkt liegt bei einer Basis-Emitter-Spannung \( U_{BE} = 0,62V \) und einem Basisstrom \( I_B = 20\mu A \).
-
-% **Berechnungen:**  
-% - Die Versorgungsspannung beträgt \( U_{CC} = 6V \).  
-% - Die Kollektor-Emitter-Spannung beträgt \( U_{CE} = 3V \).  
-% - Der Kollektorstrom ist \( I_C = 6mA \).  
-% - Die Basis-Emitter-Spannung beträgt \( U_{BE} = 0,62V \).  
-% - Der Basisstrom beträgt \( I_B = 20\mu A \).  
-% - Der Verstärkungsfaktor \( \beta \) wird mit der Formel \( \beta = \frac{I_C}{I_B} \) berechnet.  
-%   Durch Einsetzen der Werte \( I_C = 6mA \) und \( I_B = 20\mu A \) ergibt sich:  
-%   \( \beta = \frac{6mA}{20\mu A} = 300 \).
-
-% Damit ist die Lösung zu Aufgabe 18 abgeschlossen.
-% }
-
 }

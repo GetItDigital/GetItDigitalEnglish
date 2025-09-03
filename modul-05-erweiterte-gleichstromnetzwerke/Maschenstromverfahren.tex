@@ -1,4 +1,21 @@
 \newpage
+
+\newvideofile{Mastrom}{Maschenstromverfahren}
+\begin{frame}
+	\ftx{Lernziele Maschenstromverfahren}
+	\begin{Lernziele}{Maschenstromverfahren}
+        Die Studierenden 
+        \begin{itemize}
+			\item kennen die Schritte des Maschenstromverfahrens.
+            \item können mit Hilfe des Maschenstromverfahrens elektrische Netzwerke analysieren. 
+        \end{itemize}                   
+    \end{Lernziele}
+
+	\speech{MastromLernz}{1}{Neben dem Knotenpotentialverfahren bietet das Maschenstromverfahren eine weitere Möglichkeit, 
+    um elektrische Netzwerke zu analysieren. 
+    Die für die Durchführung des Maschenstromverfahrens erforderlichen Schritte werden folgend vorgestellt.} 
+\end{frame}
+
 \begin{frame}
     \fta{Maschenstromverfahren}
 
@@ -25,22 +42,15 @@
         \input{Tikz/src/Netzwerk_Maschenstrom}
         }                                                  
     }{{\bf Netzwerk für das Maschenstromverfahren.} Elektrisches Netzwerk mit einer Spannungsquelle, einer Stromquelle und drei Widerständen. Anhand des Netzwerkes wird 
-    das Maschenstromverfahren erläutert. \label{BildMaschenstromverfahren}}     
+    das Maschenstromverfahren erläutert. \label{BildMaschenstromverfahren}}   
+    
+    \speech{MastromSchritte}{1}{Zu beginn sollte wie auch beim Knotenpotentialverfahren das elektrische Netzwerk vorbereitet werden.
+    Das beinhaltet unter anderem das Zusammenfassen von Reihen und Parallelschaltungen wie auch das eventuelle Umwandeln der Quellen. 
+    Folgend werden die Maschen und die zugehörigen Maschenströme festgelegt, die Widerstandsmatrix erstellt, die Quellspannungen zugeordnet 
+    und daraus ein Gleichungssystem aufgestellt.} 
 \end{frame}
 
 
-\begin{frame}
-    \ftx{Lernziele Maschenstromverfahren}
-
-	\begin{Lernziele}{Maschenstromverfahren}
-        Die Studierenden 
-        \begin{itemize}
-            \item kennen die Schritte des Maschenstromverfahrens.
-            \item können das Maschenstromverfahren auf elektrische Netzwerke anwenden. 
-        \end{itemize}                   
-    \end{Lernziele}
-
-\end{frame}
 
 
 \begin{frame}
@@ -53,9 +63,14 @@
         Innenwiderstand eine Spannungsquelle mit einem in reihe liegenden Innenwiderstand. 
     }
 
+	\b{
+		\begin{itemize}
+			\item Umwandlung der Stromquellen in Spannungsquellen:
+		\end{itemize}
+	}    
 
     \fu{                                     
-        \input{Tikz/src/Umwandlung_Stromquelle}                      
+        \input{Tikz/src/Umwandlung_Stromquelle}                                                   
     }{{\bf Umwandlung einer Stromquelle.} Umwandlung einer Stromquelle mit Parallelwiderstand zur Spannungsquelle mit Serienwiderstand. \label{BildMasch1}}   
 
     \s{
@@ -63,19 +78,38 @@
         aus dem angegebenen Stromwert der Stromquelle und dem Widerstandswert des Innenwiderstands. 
     }
 
+    \onslide<2->{
+	\b{
+		\begin{itemize}
+			\item Umrechnung der Stromwerte zu Spannungswerten:
+		\end{itemize}
+	}
+
     \begin{eq}
          U_\mathrm{q} = R_\mathrm{i} \cdot I_\mathrm{q} \label{GleichungUmrechnungStromquelle}
-    \end{eq}
+    \end{eq}}
 
     \s{
         Außerdem müssen mögliche Leitwerte von elektrischen Widerständen in Widerstandswerte geändert werden. In der Gleichung 
         \ref{GleichungUmrechnungLeitwert} wird gezeigt, wie der Widerstandswert aus dem Kehrwert des Leitwerts ermittelt wird. 
     }
 
+    \onslide<3->{
+	\b{
+		\begin{itemize}
+			\item Berechnung der Leitwerte:
+		\end{itemize}
+	}
+
     \begin{eq}               
          R_\mathrm{i} = \frac{1}{G_\mathrm{i}} \label{GleichungUmrechnungLeitwert}
-    \end{eq}
+    \end{eq}}
 
+    \speech{MastromVorb}{1}{Eventuelle Stromquellen müssen für das Maschenstromverfahren in Spannungsquellen umgewandelt werden.
+    Wie hier dargestellt werden die Stromquellen mit Parallelwiderstand in Spannungsquellen mit Reihenwiderstand umgewandelt.} 
+    \speech{MastromVorb}{2}{Die Stromwerte der Stromquellen werden über das ohmsche Gesetz in Spannungswerte überführt.} 
+    \speech{MastromVorb}{3}{Falls Leitwerte anstatt von Widerstandswerten angegeben werden, können diese über den Kehrwert ermittelt werden,
+    da beim Maschenstromverfahren mit den Widerstandswerten gearbeitet wird.} 
 \end{frame}
 
 \begin{frame}
@@ -97,11 +131,14 @@
 
     \fu{                                     % Beginn Bild Netzwerk 1 mit rotem Kreis
 		\resizebox{\textwidth}{!}{%
-        \input{Tikz/src/Umwandlung_Stromquelle_Netzwerk}  
+        \input{Tikz/src/Umwandlung_Stromquelle_Netzwerk}
         }                                           
     }{{\bf Umwandlung einer Stromquelle in einem elektrischen Netzwerk.} Umwandlung der Stromquelle mit Parallelwiderstand 
     des zu berechnenden Netzwerkes in eine Spannungsquelle mit Reihenwiderstand. Die Transformation der Quelle findet im roten 
-    Kreis statt. \label{BildMasch2}}   
+    Kreis statt. \label{BildMasch2}}  
+    
+    \speech{MastromUmw}{1}{Die Umwandlung der Stromquelle in eine Spannungsquelle wird für das angegebene Netzwerk dargestellt.
+    Aus dem Parallelwiderstand der Stromquelle wird der Reihenwiderstand für die Spannungsquelle.} 
 \end{frame}
 
 \begin{frame}
@@ -112,6 +149,8 @@
         benötigt.
     \end{Merksatz}
 
+    \speech{MastromMrk}{1}{Für das Maschenstromverfahren werden zur Analyse eines elektrischen Netzwerkes 
+    Spannungsquellen und Widerstandswerte benötigt.} 
 \end{frame}
 
 
@@ -132,7 +171,7 @@
 
     \fu{    
         \resizebox{0.7\textwidth}{!}{%                                                 
-        \input{Tikz/src/Maschen_im_Netzwerk}  
+        \input{Tikz/src/Maschen_im_Netzwerk}
         }                                                            
     }{{\bf Maschen im elektrischen Netzwerk.} Festlegung der Maschen $M_1$ und $M_2$ sowie der zugehörigen Maschenströme. 
     \label{BildMasch3}}                                                
@@ -153,6 +192,8 @@
         \end{bmatrix} \label{GleichungMaschenströme}
     \end{eq}      
 
+    \speech{MastromMasch}{1}{Die Maschen M 1 und M 2 werden entsprechend definiert. 
+    Ihnen zugehörig werden die Maschenströme I M eins und I M zwei der beiden Maschen im Vektor der Maschenströme I M festgehalten.}     
 \end{frame}
 
 
@@ -185,7 +226,7 @@
 
     \fu{    
         \resizebox{0.7\textwidth}{!}{%                                                 
-       \input{Tikz/src/Festlegung_der_Zweige}  
+        \input{Tikz/src/Festlegung_der_Zweige}
         }                                                            
     }{{\bf Festlegung der Zweige.} Elektrisches Netzwerk mit hervorgehobenen Zweigen zur Erstellung der Widerstandsmatrix für das Maschenstromverfahren
     \label{BildWiderstandsmatrix}}
@@ -233,6 +274,15 @@
         \end{bmatrix} \label{GleichungWiderstandsmatrix}
     \end{eq}
     }
+
+    \speech{MastromWiderstands}{1}{Als nächstes wird die Widerstandsmatrix für das angegebene elektrische Netzwerk bestimmt.}
+    \speech{MastromWiderstands}{2}{Die an den Maschen beteiligten Widerstände werden auf der Hauptdiagonalen der Matrix eingetragen.
+    Für die Masche M 1 sind das die in blau gekennzeichneten Wirderstände R 0 und R 1.
+    An der Masche M 2 sind die Widerstände R 1 und R 2 beteiligt. } 
+    \speech{MastromWiderstands}{3}{Die Widerstände welche an zwei oder mehr Maschen beteiligt sind, 
+    werden zwischen den Maschen eingetragen. 
+    In diesem Fall handelt es sich hier um den Widerstand R eins. 
+    Die Widerstände zwischen den Maschen werden mit einem negativen Vorzeichen versehen.}  
 \end{frame}
 
 
@@ -246,6 +296,14 @@
         dem Maschenumlauf entgegengesetzt wird das Vorzeichen der Quellspannung positiv. Für den Fall, dass in einer Masche keine Quelle 
         vohanden ist, wird eine $0$ eingetragen.
     }
+
+    \b{
+        \fu{    
+        \resizebox{0.7\textwidth}{!}{%                                                 
+        \input{Tikz/src/Maschen_im_Netzwerk}
+        }                                                            
+    }    
+    }
    
     \begin{eq}
         U_\mathrm{M} = 
@@ -256,6 +314,12 @@
         \end{bmatrix} \label{GleichungQuellspannungen}
     \end{eq}
 
+    \speech{MastromQuell}{1}{In dem Vektor U M werden die Quellströme festgehalten. 
+    An der Masche M 1 befindet sich die Spannungsquelle U 0. 
+    An der Masche M 2 befindet sich die Spannungsquelle U 1.
+    Verläuft der Spannungspfeil der Spanungsquelle mit dem Maschenumlauf,
+    wird ein negatives Vorzeichen gewählt, 
+    bei einem entgegengesetzten Spannungspfeil wird ein positives Vorzeichen gewählt.}  
 \end{frame}
 
 
@@ -295,6 +359,14 @@
     Strom durch den Widerstand $R_1$ lässt sich beispielsweise über die Knotengleichung berechnen: $I_1 = I_0 + I_2$.
 }
 
+\speech{MastromGleich}{1}{Nun kann aus der Widerstandsmatrix, 
+dem Vektor der Maschenströme und dem Vektor der Quellspannungen das notwendige Gleichungssystem aufgestellt und gelöst werden.
+Aus den so zu bestimmenden Maschenströmen können anschließend die gesuchten Ströme bestimmt werden.
+Hier ist beispielsweise der Strom I 0 gleich dem Maschenstrom I M 1.
+Der Maschenstrom I M 2 ist gleich dem negativen Wert von I 2, 
+da die Verläufe der beiden Ströme entgegengesetzt sind.
+Zum Schluss kann der Strom I 1 über die Knotenregel aus den Strömen I 0 und I 2 berechnet werden.
+Somit sind dann alle Größen des Netzwerkes identifiziert worden.}
 \end{frame}
 \newpage
 
@@ -327,7 +399,7 @@
 
     \fu{  
         \resizebox{0.4\textwidth}{!}{%                                     
-        \input{Tikz/src/Beispiel_Maschenanalyse} 
+        \input{Tikz/src/Beispiel_Maschenanalyse}
         }                  
     }{{\bf Beispiel.} Maschenstromanalyse an einem elektrischen Netzwerk. \label{BildMasch4}}                                            
     
@@ -338,7 +410,7 @@
             \item[a)] Vorbereitung des Netzwerkes:
 			\begin{figure}[H]
                 \resizebox{0.7\textwidth}{!}{%
-                    \input{Tikz/src/Vorbereitung_Netzwerk} 
+                    \input{Tikz/src/Vorbereitung_Netzwerk}	
                     }\centering                                                           
                 \end{figure}
             }
@@ -347,7 +419,7 @@
             \onslide<3>{
                 \begin{figure}[H]
                 \resizebox{0.4\textwidth}{!}{%                                                        
-                    \input{Tikz/src/Maschen_definieren} 
+                    \input{Tikz/src/Maschen_definieren}
                     }\centering                                                           
                 \end{figure}
             \pause
@@ -435,4 +507,11 @@
         }
     \end{enumerate}
 \end{bsp}{}{}
+
+%\speech{MastromBsp}{1}{}
+%\speech{MastromBsp}{2}{}
+%\speech{MastromBsp}{3}{}
+%\speech{MastromBsp}{4}{}
+%\speech{MastromBsp}{5}{}
+%\speech{MastromBsp}{6}{}
 \end{frame}

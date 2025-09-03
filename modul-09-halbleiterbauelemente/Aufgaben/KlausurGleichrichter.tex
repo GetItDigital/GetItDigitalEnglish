@@ -1,114 +1,54 @@
 \subsection{Gleichrichterschaltung\label{Aufg28}}
-% Alt: Klausuraufgabe 1
 \Aufgabe{
-    Hier eine Gleichrichterschaltung mit pn-Silizium-Dioden. 
-    Die Spannungsquelle $V_1$ liefert sinusförmige $50 \, \mathrm{Hz}$ Wechselspannung mit einer Amplitude von $5\, \mathrm{V}$.
-    \begin {figure} [H]
-    \centering
-    \input{Tikz/FigKlausurGleichrichter}
-    \label{fig:FigKlausurGleichrichter}
- \end {figure}
- \begin{itemize}
- \item[a)]
-Welche Gleichspannungen treten über $R_1$,$R_2$ und $R_3$ auf?
- \item[b)]
-Welche Funktionen haben die Kondensatoren $C_1$ und $C_2$? 
- \item[c)]
-Was ist der besondere Vorteil dieser Gleichrichterschaltung, z.B. für Anwendungen mit Operationsverstärkern?
- \item[d)]
- Skizzieren Sie eine andere Spannungs-Verdopplungs-Schaltung, bei der die maximale positive Gleichsspannung (Ausgangsspannung) gegenüber Massepotential der speisenden Wechselspannung $V_1$ zur Verfügung steht. 
- \end{itemize}
-%  \speech{
-%   **Aufgabe 28: Gleichrichterschaltung mit pn-Silizium-Dioden**
-  
-%   Diese Aufgabe behandelt eine Gleichrichterschaltung mit zwei pn-Silizium-Dioden. Die Spannungsquelle \( V_1 \) liefert eine sinusförmige Wechselspannung mit einer Frequenz von 50 Hz und einer Amplitude von 5 V.
+  Hier eine Gleichrichterschaltung mit pn-Silizium-Dioden. 
+  Die Spannungsquelle $V_1$ liefert sinusförmige $50 \, \mathrm{Hz}$ Wechselspannung mit einer Amplitude von $5\, \mathrm{V}$.
+  \begin {figure} [H]
+  \centering
+  \input{Tikz/src/FigKlausurGleichrichter}
+  \label{fig:FigKlausurGleichrichter}
+  \end {figure}
+  \begin{itemize}
+    \item[a)]
+          Welche Gleichspannungen treten über $R_1$,$R_2$ und $R_3$ auf?
+    \item[b)]
+          Welche Funktionen haben die Kondensatoren $C_1$ und $C_2$? 
+    \item[c)]
+          Was ist der besondere Vorteil dieser Gleichrichterschaltung, z.B. für Anwendungen mit Operationsverstärkern?
+    \item[d)]
+          Skizzieren Sie eine andere Spannungs-Verdopplungs-Schaltung, bei der die maximale positive Gleichsspannung (Ausgangsspannung) gegenüber Massepotential der speisenden Wechselspannung $V_1$ zur Verfügung steht. 
+  \end{itemize}
   
   
-%    **Beschreibung der Schaltung:**
-%   Die gegebene Schaltung ist eine **Spannungsverdopplungsschaltung**, die eine Wechselspannung von \( V_1 \) gleichrichtet und eine höhere Gleichspannung erzeugt.
-  
-%   - **Spannungsquelle \( V_1 \)**:  
-%     - Diese Wechselspannungsquelle liefert eine sinusförmige Wechselspannung mit einer Amplitude von 5 V.
-%     - Der negative Pol ist mit Masse verbunden.
-  
-%   - **Dioden \( D_1 \) und \( D_2 \)**:  
-%     - Diese Dioden sind in einer Anordnung geschaltet, die eine Gleichrichtung der Spannung bewirkt.
-%     - Sie ermöglichen die Umwandlung der Wechselspannung in eine Gleichspannung.
-  
-%   - **Kondensatoren \( C_1 \) und \( C_2 \)**:  
-%     - Diese Kondensatoren speichern Ladung und tragen zur Stabilisierung der Ausgangsspannung bei.
-  
-%   - **Widerstände \( R_1 \), \( R_2 \) und \( R_3 \)**:  
-%     - Diese Widerstände sind Teil des Lastkreises und beeinflussen die Ausgangsspannung.
-  
-  
-%    **Fragen zur Aufgabe:**
-%   **(a)** Welche Gleichspannungen treten über den Widerständen \( R_1 \), \( R_2 \) und \( R_3 \) auf?
-  
-%   **(b)** Welche Funktionen haben die Kondensatoren \( C_1 \) und \( C_2 \)?
-  
-%   **(c)** Was ist der besondere Vorteil dieser Gleichrichterschaltung, z. B. für Anwendungen mit Operationsverstärkern?
-  
-%   **(d)** Skizzieren Sie eine andere Spannungs-Verdopplungs-Schaltung, bei der die maximale positive Gleichspannung (Ausgangsspannung) gegenüber dem Massepotential der speisenden Wechselspannung \( V_1 \) zur Verfügung steht.
-  
-%   }
-  
-
 }
 
 \Loesung{
-    \begin{itemize}
-        \item[a)]
-      \end{itemize}
-      \begin{itemize}
-        \item $U_\mathrm{R1} = 4,3 \, \mathrm{V} \Rightarrow$ da $0,7 \,\mathrm{V}$ über $D_1$ abfallen \\
-        \item $U_\mathrm{R2} = -4,3 \, \mathrm{V} \Rightarrow$ da gleiches für die negative Halbwelle \\
-        \item $U_\mathrm{R3} = 8,6 \,\mathrm{V} \Rightarrow$ da $R_3$ beide Spannungswerte aufnimmt \\
-      \end{itemize}
-      \begin{itemize}
-        \item[b)]
-      \end{itemize}
-      \begin{center}
-        Die Kondensatoren $C_1$ und $C_2$ haben einerseits die Funktionen die Signale zu glätten, sowohl von der negativen als auch der positiven Halbwelle. 
-      \end{center}
-      \begin{itemize}
-        \item[c)]
-      \end{itemize}
-      \begin{center}
-        Der Vorteil dieser Gleichrichtung ist, das sowohl positive als auch negative Spannungen abgegriffen werden können.
-      \end{center}
-      \begin{itemize}
-        \item[d)]
-      \end{itemize}
-    \begin {figure} [H]
-        \centering
-        \input{Tikz/LsgKlausurGleichrichter}
-        \label{fig:LsgKlausurGleichrichter}
-    \end {figure}
-    Siehe: Abschnitt \ref{fig:BrueckengleichrichterSchaltung}
-%    \speech{
-% **Lösung zu Aufgabe 28**  
-
-% **Teilaufgabe a)**  
-% - Die Spannung über R1 beträgt 4,3 Volt, da 0,7 Volt über die Diode D1 abfallen.  
-% - Die Spannung über R2 beträgt -4,3 Volt, da der gleiche Effekt für die negative Halbwelle gilt.  
-% - Die Spannung über R3 beträgt 8,6 Volt, da dieser Widerstand beide Spannungswerte aufnimmt.  
-
-% **Teilaufgabe b)**  
-% Die Kondensatoren **C1** und **C2** haben die Funktion, die Signale zu glätten, sowohl für die negativen als auch für die positiven Halbwellen.  
-
-% **Teilaufgabe c)**  
-% Der besondere Vorteil dieser Gleichrichterschaltung ist, dass sowohl **positive als auch negative Spannungen** abgegriffen werden können.  
-
-% **Teilaufgabe d)**  
-% Die abgebildete Schaltung zeigt eine Spannungs-Verdopplungs-Schaltung mit zwei Dioden und zwei Kondensatoren:  
-% - Die Wechselspannung **U_E** wird an den Kondensator **C1** angelegt.  
-% - Die Diode **D1** ist in Durchlassrichtung geschaltet und lädt den Kondensator **C2** auf.  
-% - Die zweite Diode **D2** leitet den Strom weiter, sodass die Spannung **U_A** am Ausgang auf das **Doppelte der Eingangsspannung** ansteigen kann.  
-% - Durch die Anordnung von **C1, C2, D1 und D2** kann die maximale positive Gleichspannung gegenüber dem Massepotenzial der speisenden Wechselspannung erhöht werden.  
-
-% Diese Schaltung wird oft in **Hochspannungsversorgungen** eingesetzt, um eine höhere Ausgangsspannung aus einer geringen Eingangsspannung zu erzeugen.
-% }
-
-      
+  \begin{itemize}
+    \item[a)]
+  \end{itemize}
+  \begin{itemize}
+    \item $U_\mathrm{R1} = 4,3 \, \mathrm{V} \Rightarrow$ da $0,7 \,\mathrm{V}$ über $D_1$ abfallen \\
+    \item $U_\mathrm{R2} = -4,3 \, \mathrm{V} \Rightarrow$ da gleiches für die negative Halbwelle \\
+    \item $U_\mathrm{R3} = 8,6 \,\mathrm{V} \Rightarrow$ da $R_3$ beide Spannungswerte aufnimmt \\
+  \end{itemize}
+  \begin{itemize}
+    \item[b)]
+  \end{itemize}
+  \begin{center}
+    Die Kondensatoren $C_1$ und $C_2$ haben einerseits die Funktionen die Signale zu glätten, sowohl von der negativen als auch der positiven Halbwelle. 
+  \end{center}
+  \begin{itemize}
+    \item[c)]
+  \end{itemize}
+  \begin{center}
+    Der Vorteil dieser Gleichrichtung ist, das sowohl positive als auch negative Spannungen abgegriffen werden können.
+  \end{center}
+  \begin{itemize}
+    \item[d)]
+  \end{itemize}
+  \begin {figure} [H]
+  \centering
+  \input{Tikz/src/LsgKlausurGleichrichter}
+  \label{fig:LsgKlausurGleichrichter}
+  \end {figure}
+  Siehe: Abschnitt \ref{fig:BrueckengleichrichterSchaltung}
 }

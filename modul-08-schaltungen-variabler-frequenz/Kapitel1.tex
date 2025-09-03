@@ -77,10 +77,10 @@
             \fu{\includegraphics{Tikz/pdf/circ_zweitor.pdf}}{}% im Skript im vorigen Kapitel (Wiederholung)
             \pause%
             \textbf{Linear, zeitinvariant (LZI)}: 
-            \begin{equation}\begin{aligned}
+            \begin{equation*}\begin{aligned}
                 u_1(t)& = \hat{U}_1 \cdot \sin(\omega t)\\
                 \xrightarrow{LZI}\  u_2(t)& = \hat{U}_2 \cdot \sin(\omega t + \varphi)
-            \end{aligned}\end{equation}%  
+            \end{aligned}\end{equation*}%  
             \begin{itemize}
                 \item[] Sinusform bleibt erhalten
                 \item[] Frequenz gleich $\omega_2 = \omega_1$
@@ -90,7 +90,7 @@
         \b{%
         \pause%
             \textbf{Frequenzgang:}%
-            \begin{align}
+            \begin{align*}
                 \underline{F}(\mathrm{j}\omega) &= \frac{\underline{U}_2}{\underline{U}_1} = A(\omega)\cdot\mathrm e^{\mathrm j\varphi(\omega)}\\[-12pt]% onslide breaks line spacing, manual adjustment
                 \onslide<4->{\intertext{\textbf{Amplitudengang:}}%
                 A(\omega) &= |\underline{F}(\mathrm{j}\omega)| = \frac{|\underline{U}_2|}{|\underline{U}_1|}\\
@@ -100,7 +100,7 @@
                 \varphi(\omega) &= \angle \underline{F}(\mathrm{j}\omega) = \angle \underline{U}_2 - \angle \underline{U}_1\\
                 &= \arctan\left(\frac{\Im\{\underline{F}(\mathrm{j}\omega)\}}{\Re\{\underline{F}(\mathrm{j}\omega)\}}\right)%
                 }% end onslide
-            \end{align}
+            \end{align*}
         }%
         \s{%
             % Definition Frequenzgang
@@ -179,16 +179,19 @@
     \onslide<1->{\includegraphics{Tikz/pdf/circ_tiefpass_rc_annotated.pdf}}%
     }\vspace{3mm}%
         
-    \textbf{RC-Tiefpass 1. Ordnung}}
-    \begin{equation}
-        \begin{aligned}
+    \textbf{RC-Tiefpass 1. Ordnung}
+    \begin{equation*}\begin{aligned}
             u_1(t)& = \hat{U}_1 \cdot \sin(\omega t)\\\xrightarrow{LZI}\ 
             u_2(t)& = \hat{U}_2 \cdot \sin(\omega t + \varphi)
-        \end{aligned}
-    \end{equation}%
+        \end{aligned}\end{equation*}%
     \pause%
+    }
 \column{0.55\textwidth}% right col
     \s{%
+        \begin{equation}\begin{aligned}
+            u_1(t)& = \hat{U}_1 \cdot \sin(\omega t)\\\xrightarrow{LZI}\ 
+            u_2(t)& = \hat{U}_2 \cdot \sin(\omega t + \varphi)
+        \end{aligned}\end{equation}%
         Die LZI-Eigenschaft ist Voraussetzung zur Bestimmung des Frequenzganges und die Anwendung der komplexen Wechselstromrechnung.
         Zusätzliche Voraussetzung ist die Annahme einer sinusförmigen Anregung im eingeschwungenen Zustand, von der wir zwecks Analyse ausgehen.
         Statt der Ein- und Ausgangsspannung $u_1(t)$ und $u_2(t)$ im Zeitbereich betrachten wir die entsprechende
@@ -205,13 +208,13 @@
     }%
     \b{%
         \textbf{Frequenzgang:}%
-        \begin{align}% lesser space above than \begin{equation}\begin{align} ... as in skript version below
+        \begin{align*}% lesser space above than \begin{equation}\begin{align} ... as in skript version below
             \underline{F}(\mathrm{j}\omega)   & = \frac{\underline{U}_2}{\underline{U}_1} 
                                     = \frac{\frac{1}{\mathrm{j}\omega C}}{R + \frac{1}{\mathrm{j}\omega C}}
                                     = \frac{1}{\mathrm{j}\omega CR + 1} \\
                                     & = \frac{1}{1 + \mathrm{j}\omega CR}
                                     = \frac{1 - \mathrm{j}\omega CR}{1 + (\omega CR)^2}
-        \end{align}%
+        \end{align*}%
         \pause%
     }%
     \s{%
@@ -246,12 +249,12 @@
     }%
     
     \b{\textbf{Amplituden- und Phasengang:}
-        \begin{align}
+        \begin{align*}
             A(\omega)       &= |\underline{F}(\mathrm{j}\omega)| = \frac{|\underline{U}_2|}{|\underline{U}_1|}
                             &= \frac{1}{\sqrt{1 + (\omega CR)^2}} \\%
             \varphi(\omega) &= \arctan\left(\frac{\Im\{\underline{F}\}}{\Re\{\underline{F}\}}\right)
                             &= \arctan\left(-\omega CR\right)        
-        \end{align}
+        \end{align*}
     }
     \s{% Ohne Überschrift, Rechnung etwas ausführlicher
         \begin{align}
@@ -350,27 +353,27 @@
             \onslide<1->{\includegraphics{Tikz/pdf/circ_tiefpass_rc_annotated.pdf}}%
             \vspace{2mm}%
 
-            \onslide<5->{\resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_tiefpass_mini_ampli_lin_samesize.pdf}}}
+            \onslide<6->{\resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_tiefpass_mini_ampli_lin_samesize.pdf}}}
 
-            \onslide<5->{\resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_tiefpass_mini_phase_lin_samesize.pdf}}}
+            \onslide<6->{\resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_tiefpass_mini_phase_lin_samesize.pdf}}}
             }%
         \column{0.55\textwidth}% column rechts 2/2
             \b{\textbf{Grenzverhalten:} für $f \rightarrow 0$ und $f \rightarrow \infty$\\[-12pt]%
             }%
             % Rechnung
-            \begin{align}
+            \begin{align*}
                 \onslide<1->{\underline{F}(\mathrm{j}\omega)&=A(\omega)\cdot\mathrm e^{\mathrm j\varphi(\omega)} = \frac{1}{1 + \mathrm{j}\omega CR} &&}\\[+8pt] % extra space
                 \onslide<2->{A(\omega)      &=\frac{1}{\sqrt{1 + (\omega CR)^2}}                                    &&\\}%
                 \onslide<3->{%
                                             &\lim_{\omega \rightarrow 0}A(\omega) = \frac{1}{1}                     &&=1\\
                                             &\lim_{\omega \rightarrow \infty}A(\omega) = \frac{1}{\sqrt{\infty}}    &&=0\\[+8pt] % extra space
                 }%
-                \onslide<2->{\varphi(\omega)&=\arctan\left(-\omega CR\right)                                        &&\\}%
-                \onslide<4->{%
+                \onslide<4->{\varphi(\omega)&=\arctan\left(-\omega CR\right)                                        &&\\}%
+                \onslide<5->{%
                                             &\lim_{\omega \rightarrow 0}         \varphi(\omega) = \arctan(0)       &&=0\degree\\
                                             &\lim_{\omega \rightarrow \infty}    \varphi(\omega) = \arctan(-\infty) &&=-90\degree
                 }%   
-            \end{align}
+            \end{align*}
     \end{columns}
 }
 \s{
@@ -524,10 +527,10 @@
 
                 \textbf{RC-Hochpass 1. Ordnung}
 
-                \begin{align}% less space above than \begin{equation}\begin{align} ... as in skript version above
+                \begin{align*}% less space above than \begin{equation}\begin{align} ... as in skript version above
                                         u_1(t)& = \hat{U}_1 \cdot \sin(\omega t)\\
                     \xrightarrow{LZI}\  u_2(t)& = \hat{U}_2 \cdot \sin(\omega t + \varphi)
-                \end{align}%
+                \end{align*}%
             }%
 
         \column[t]{0.55\textwidth}% right col
@@ -551,13 +554,13 @@
             }%
             \b{%
                 \textbf{Frequenzgang:}%
-                \begin{align}% lesser space above than \begin{equation}\begin{align} ... as in skript version below
+                \begin{align*}% lesser space above than \begin{equation}\begin{align} ... as in skript version below
                     \underline{F}(\mathrm{j}\omega)   & = \frac{\underline{U}_2}{\underline{U}_1} 
                                             = \frac{R}{R + \frac{1}{\mathrm{j}\omega C}} 
                                             = \frac{1}{1 + \frac{1}{\mathrm{j}\omega CR}} \\
                                             & = \frac{1}{1 - \mathrm{j}\ \frac{1}{\omega CR}} 
                                             = \frac{1 + \mathrm{j}\ \frac{1}{\omega CR}}{1 + \frac{1}{(\omega CR)^2}}
-                \end{align}
+                \end{align*}
             }%
             \s{%
                 Für den Amplitudengang $A(\omega)$ und den Phasengang $\varphi(\omega)$ ergeben sich die folgenden Gleichungen:
@@ -571,12 +574,12 @@
             }%
             \b{%
                 \textbf{Amplituden- und Phasengang:}
-                \begin{align} % Leicht gekürzt gegenüber Skriptversion
+                \begin{align*} % Leicht gekürzt gegenüber Skriptversion
                     A(\omega)       &= |\underline{F}(\mathrm{j}\omega)| = \frac{|\underline{U}_2|}{|\underline{U}_1|}
                                     &= \frac{1}{\sqrt{1 + \frac{1}{(\omega CR)^2}}} \\
                     \varphi(\omega) &= \arctan\left(\frac{\Im\{\underline{F}\}}{\Re\{\underline{F}\}}\right)
                                     &= \arctan\left(\frac{1}{\omega CR}\right)\\
-                \end{align}
+                \end{align*}
             }%
     \end{columns}
 \end{frame}
@@ -602,7 +605,7 @@
         \column{0.55\textwidth}% column rechts 2/2
             \textbf{Grenzverhalten:} für $f \rightarrow 0$ und $f \rightarrow \infty$
             % Rechnung
-            \begin{align}
+            \begin{align*}
                 \underline{F}(\mathrm{j}\omega)&=A(\omega)\cdot\mathrm e^{\mathrm j\varphi(\omega)} = \frac{1}{1 - \mathrm{j}\frac{1}{\omega CR}} &&\\
                 &&&\\[-12pt]% little empty line for extra space
                     A(\omega)                   &=\frac{1}{\sqrt{1 + \left(\frac{1}{\omega CR}\right)^2}}               &&\\
@@ -612,7 +615,7 @@
                     \varphi(\omega)&=\arctan\left(\frac{1}{\omega CR}\right)                                            &&\\
                                                 &\lim_{\omega \rightarrow 0}         \varphi(\omega) = \arctan(+\infty) &&=+90\degree\\
                                                 &\lim_{\omega \rightarrow \infty}    \varphi(\omega) = \arctan(0)       &&=0\degree
-            \end{align}
+            \end{align*}
     \end{columns}
 }%
 \s{%
@@ -922,42 +925,3 @@ RC % Zeile 2
 	% https://tex.stackexchange.com/questions/17550/plus-minus-symbol-with-parenthesis-around-the-minus-sign
 \end{bsp}% splitted bsp-box with evil framebreaks to stretch content over multiple frames
 \end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%% ADDITIONAL STUFF AND CODE DUMP --- OUT-COMMENTED / OR SKRIPT & BEAMERONLY -> NOT COMPILED   %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\s{\b{ % Ansatz eins, Zweipol mit Rechteck manuell gezeichnet
-\section{testframe}
-\begin{frame}\ftx{\secname}
-    \fu{ % Schaltsymbole: Zweipol und Vierpol
-        \begin{subfigure}{0.48\textwidth}\centering
-            \begin{tikzpicture}
-                \draw[draw=black](-2,-1.25) rectangle (+2,+1.25); %invisible boundbox
-                % Zweipol
-                \node[draw=none,align=center] {Zweipol\\Eintor}; % linebreak only with align=...
-                \draw[thick](-0.75,-0.5) rectangle (0.75,0.5);
-                \draw(-0.75,0) to [short, -o, i>=$I$] ++(-0.5,0);
-                \draw(+0.75,0) to [short, -o, i>=$I$] ++(0.5,0);
-                \draw(-1.25,0.75) to [open, v^=$U$] (1.25,0.75);
-            \end{tikzpicture}
-        \end{subfigure}\hfill
-        \begin{subfigure}{0.48\textwidth}\centering
-            \begin{tikzpicture}
-                \draw[draw=black](-2,-1.25) rectangle (+2,+1.25); %invisible boundbox
-                % Vierpol
-                %\draw (0,0) node{Vierpol\\Zweitor}; % might work also with node's "text width=3cm" option
-                %\draw (0,0) node[text width=3cm]{Vierpol Zweipol}; % also doesnt work maybe smaller ... crap
-                \node[draw=none,align=left] {Vierpol\\Zweitor};
-                \draw(0,0) node[dipchip, hide numbers, num pins=6, no topmark, external pins width=0](C){}; % Mittelpunkt des Vierpols
-                \draw(C.bpin 1) to[short,-o, i_<=$I_1$] ++(-0.5,0) coordinate(In1);
-                \draw(C.bpin 3) to[short,-o, i_>=$I_1$] ++(-0.5,0) coordinate(In2);
-                \draw(C.bpin 6) to[short,-o, i>=$I_2$] ++(0.5,0) coordinate(Out1);
-                \draw(C.bpin 4) to[short,-o, i<=$I_2$] ++(0.5,0) coordinate(Out2);
-                \draw(In1) to[open, v=$U_1$] (In2);
-                \draw(Out1) to[open, v^=$U_2$] (Out2);
-            \end{tikzpicture}
-        \end{subfigure}
-    }{Vergleich: Schaltsymbole eines allgemeinen Zwei- und Vierpols\label{fig:vgl:zweipolvierpol:DEBUG}}	
-\end{frame}
-}}% end outcommented

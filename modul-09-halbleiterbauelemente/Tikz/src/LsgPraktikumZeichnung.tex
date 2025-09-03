@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \draw
+    (0,0) node[npn] (Q1) {}
+    (Q1.base) 
+    (Q1.collector)  
+    (Q1.emitter);
+
+\draw (Q1.C) -- (0,2);
+\draw (Q1.E) to[R,l=$R_\mathrm{E}$] (0,-2.5) -- (-2,-2.5) to[zDo,*-*] (-2,0) to[R,l=$R_\mathrm{B}$] (-2,2);
+\draw (Q1.B) -- (-2,0);
+
+\draw (-2,-2.5) -- (-4,-2.5);
+\draw (-4,2) to[V,name=V0] (-4,-2.5);
+\draw (-4,2)to[short,-*](-2,2)--(0,2);
+
+\varrmore{V0}{$U_\mathrm{0}$};
+\end{tikzpicture}
+   

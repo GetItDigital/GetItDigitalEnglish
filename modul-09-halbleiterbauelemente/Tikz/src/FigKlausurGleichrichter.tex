@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+    \draw (-1,0) 
+    to[D,l=$D_\mathrm{2}$] (-1,2) -- (-1,4)
+    to[D,l=$D_\mathrm{1}$] (-1,6) -- (1,6)
+    to[C,l=$C_\mathrm{1}$] (1,4) -- (1,2)
+    to[C,l=$C_\mathrm{2}$] (1,0) -- (-1,0);
+
+    \draw (1,0)
+    to[short, *-] (3,0)
+    to[R, l_=$R_2$] (3,2) -- (3,4)
+    to[R, l_=$R_1$] (3,6);  
+
+    \draw (3,0)
+    to[short, *-] (5.5,0)
+    to[R, l_=$R_3$] (5.5,6)
+    to[short, -*] (3,6)
+    to[short, -*] (1,6);
+
+    \draw (3,2)
+    to[short, *-] (1,2)
+    to[short, *-*] (-3,2)    
+    node[ground]{}
+    to[sV, name=UE, v<] (-3,4)
+    to[short, -*] (-1,4); 
+
+    \varrmore{UE}{$u_\mathrm{E}(t)$};
+\end{tikzpicture}

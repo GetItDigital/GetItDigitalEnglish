@@ -4,7 +4,7 @@
         Das Eingangsspannungsniveau ist 1~V und es soll ein 4~$\mathrm{\Omega}$ Lautsprecher betrieben werden. 
         Wie groß muss die Spannung am Ausgang des Verstärkers sein, damit der Lautsprecher bei 1 kHz 25~W aufnimmt. 
         Wie kann hier vorgegangen werden, wenn eine Operationsverstärkerschaltung für die Lösung genutzt werden soll? \par
-        \fu{\resizebox{\textwidth}{!}{\input{Tikz/OPVBeispielproblem.tex}}}{Schaltung des Beispielproblems mit einer Signalquelle auf der Eingangsseite und einer komplexen Last auf der Ausgangsseite \label{fig:Beispielproblem 1 Folien}}.
+        \fu{\resizebox{\textwidth}{!}{\input{Tikz/src/OPVBeispielproblem.tex}}}{Schaltung des Beispielproblems mit einer Signalquelle auf der Eingangsseite und einer komplexen Last auf der Ausgangsseite \label{fig:Beispielproblem 1 Folien}}.
 \end{frame}}
 
 %\speech {1}{
@@ -51,7 +51,7 @@
             U_{\textnormal{A}} = \sqrt{P \cdot R} = \sqrt{25~\mathrm{W} \cdot 4~\mathrm{\Omega}} = 10~\textnormal{V}
         \end{equation}
         Wie kann nun mithilfe eines Operationsverstärkers der mit einem \glqq ?\grqq{} gekennzeichneten Teil der Schaltung ersetzt werden, um eine notwendige Verstärkung von 10 zu erreichen (siehe Abbildung \ref{fig:Beispielproblem 1}). 
-        \fu{\resizebox{0.6\textwidth}{!}{\input{Tikz/OPVBeispielproblem.tex}}}{Schaltung des Beispielproblems mit einer Signalquelle auf der Eingangsseite und einer komplexen Last auf der Ausgangsseite. Es wird für den mit einem Fragezeichen gekennzeichneten Teil der Schaltung zunächst der Verstärkungsfaktor $V=\frac{U_{\textnormal{A}}}{U_{\textnormal{E}}}$ gesucht. \label{fig:Beispielproblem 1}}
+        \fu{\resizebox{0.6\textwidth}{!}{\input{Tikz/src/OPVBeispielproblem.tex}}}{Schaltung des Beispielproblems mit einer Signalquelle auf der Eingangsseite und einer komplexen Last auf der Ausgangsseite. Es wird für den mit einem Fragezeichen gekennzeichneten Teil der Schaltung zunächst der Verstärkungsfaktor $V=\frac{U_{\textnormal{A}}}{U_{\textnormal{E}}}$ gesucht. \label{fig:Beispielproblem 1}}
     \end{bsp}}
 
     \b{
@@ -62,20 +62,20 @@
             U_{\textnormal{A}} = \sqrt{P \cdot R} = \sqrt{25~\mathrm{W} \cdot 4~\mathrm{\Omega}} = 10~\textnormal{V}
         \end{equation}
         Wie kann nun mithilfe eines Operationsverstärkers der mit einem \glqq ?\grqq{} gekennzeichneten Teil der Schaltung ersetzt werden, um eine notwendige Verstärkung von 5 zu erreichen. 
-        \fu{\resizebox{\textwidth}{!}{\input{Tikz/OPVBeispielproblem.tex}}}{Schaltung des Beispielproblems mit einer Signalquelle auf der Eingangsseite und einer komplexen Last auf der Ausgangsseite \label{fig:Beispielproblem 1 Folien 2}} 
+        \fu{\resizebox{\textwidth}{!}{\input{Tikz/src/OPVBeispielproblem.tex}}}{Schaltung des Beispielproblems mit einer Signalquelle auf der Eingangsseite und einer komplexen Last auf der Ausgangsseite \label{fig:Beispielproblem 1 Folien 2}} 
     }
 \end{frame}
 
 \begin{frame}
     \b{
             \frametitle{Prinzip der Gegenkopplung - Lösung des Beispielproblems (2)}
-             \fu{\resizebox{0.28\textwidth}{!}{\input{Tikz/Verschaltungdesverstaerkers_ersterTeil.tex}}}{Schaltung des Beispielproblems mit einer Signalquelle auf der Eingangsseite und einer komplexen Last auf der Ausgangsseite \label{fig:Beispielproblem 1 Folien 2 Abbildung 1}} 
+             \fu{\resizebox{0.28\textwidth}{!}{\input{Tikz/src/Verschaltungdesverstaerkers_ersterTeil.tex}}}{Schaltung des Beispielproblems mit einer Signalquelle auf der Eingangsseite und einer komplexen Last auf der Ausgangsseite \label{fig:Beispielproblem 1 Folien 2 Abbildung 1}} 
         }
     \end{frame}
     \begin{frame}
         \b{
             \frametitle{Prinzip der Gegenkopplung - Lösung des Beispielproblems (2)}
-             \fu{\resizebox{0.8\textwidth}{!}{\input{Tikz/Verschaltungdesverstaerkers_zweiterTeil.tex}}}{Schaltung des Beispielproblems mit einer Signalquelle auf der Eingangsseite und einer komplexen Last auf der Ausgangsseite \label{fig:Beispielproblem 1 Folien 2 Abbildung 2}} 
+             \fu{\resizebox{0.8\textwidth}{!}{\input{Tikz/src/Verschaltungdesverstaerkers_zweiterTeil.tex}}}{Schaltung des Beispielproblems mit einer Signalquelle auf der Eingangsseite und einer komplexen Last auf der Ausgangsseite \label{fig:Beispielproblem 1 Folien 2 Abbildung 2}} 
         }
     \end{frame}
 
@@ -125,7 +125,7 @@
     }
     \b{\frametitle{Prinzip der Gegenkopplung - Lösung des Beispielproblems (2)}}
     \fu{
-        \resizebox{\textwidth}{!}{\input{Tikz/Verschaltungdesverstaerkers.tex}}
+        \resizebox{\textwidth}{!}{\input{Tikz/src/Verschaltungdesverstaerkers.tex}}
         }{Verschaltung eines Verstärkers als Komperator (A), Impedanzwandler (C) und nicht-invertierender Verstärker (D)
         \label{fig: Verschaltung Verstaerker}}       
 \end{frame}
@@ -284,7 +284,7 @@
     \begin{columns}
         \column[c]{0.3\textwidth}
             \begin{center}
-                \input{Tikz/Verschaltungdesverstaerkers_letzterTeil.tex}
+                \input{Tikz/src/Verschaltungdesverstaerkers_letzterTeil.tex}
                 Finale Verstärkerschaltung mit Rückführung
                 \label{fig:Verschaltung des Verstärkers2}             
             \end{center}        
@@ -321,7 +321,7 @@
 
     \begin{subfigure}{\linewidth}
         \centering
-        \resizebox{0.6\linewidth}{!}{\input{Tikz/NichtinvertierenderVerstaerker.tex}}
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/src/NichtinvertierenderVerstaerker.tex}}
         \caption{Schaltung eines nichtinvertierenden Verstärkers}
     \end{subfigure}
 
@@ -329,7 +329,7 @@
 
     \begin{subfigure}{\linewidth}
         \centering
-        \resizebox{0.6\linewidth}{!}{\input{Tikz/FrequenzgangNiV.tex}}
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/src/FrequenzgangNiV.tex}}
         \caption{Frequenzgang eines nichtinvertierenden Verstärkers}
     \end{subfigure}
 
@@ -363,7 +363,7 @@
     \hline
     \vspace{0.5cm}
     \centering
-    \input{Tikz/NichtinvertierenderVerstaerker.tex} & \input{Tikz/FrequenzgangNiV.tex}
+    \input{Tikz/src/NichtinvertierenderVerstaerker.tex} & \input{Tikz/src/FrequenzgangNiV.tex}
 \vspace{1ex}
 \[
 U_{\textnormal{A}} = \left(1+\frac{R_2}{R_1}\right) U_{\textnormal{E}}
@@ -395,10 +395,10 @@ U_{\textnormal{A}} = \left(1+\frac{R_2}{R_1}\right) U_{\textnormal{E}}
     \hline
     \vspace{0.5cm}
     \centering
-    \input{Tikz/InvertierenderVerstaerker.tex}
+    \input{Tikz/src/InvertierenderVerstaerker.tex}
      & 
     \begin{center}
-        \input{Tikz/FrequenzgangInvertierenderVerstaerker.tex}
+        \input{Tikz/src/FrequenzgangInvertierenderVerstaerker.tex}
 \end{center}
 \vspace{1ex}
 \[
@@ -428,7 +428,7 @@ U_{\textnormal{A}} = \left(1+\frac{R_2}{R_1}\right) U_{\textnormal{E}}
 
     \begin{subfigure}{\linewidth}
         \centering
-        \resizebox{0.6\linewidth}{!}{\input{Tikz/InvertierenderVerstaerker.tex}}
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/src/InvertierenderVerstaerker.tex}}
         \caption{Schaltung eines invertierenden Verstärkers}
     \end{subfigure}
 
@@ -436,7 +436,7 @@ U_{\textnormal{A}} = \left(1+\frac{R_2}{R_1}\right) U_{\textnormal{E}}
 
     \begin{subfigure}{\linewidth}
         \centering
-        \resizebox{0.6\linewidth}{!}{\input{Tikz/FrequenzgangInvertierenderVerstaerker.tex}}
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/src/FrequenzgangInvertierenderVerstaerker.tex}}
         \caption{Frequenzgang eines invertierenden Verstärkers}
     \end{subfigure}
 
@@ -470,10 +470,10 @@ U_{\textnormal{A}} = \left(1+\frac{R_2}{R_1}\right) U_{\textnormal{E}}
     \hline
     \vspace{0.5cm}
     \centering
-    \input{Tikz/Komparator.tex}
+    \input{Tikz/src/Komparator.tex}
     & 
     \begin{center}
-               \input{Tikz/FrequenzgangKomparator.tex}
+               \input{Tikz/src/FrequenzgangKomparator.tex}
 \[
 V_1: U_{\textnormal{E+}} > U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \approx +U_{\textnormal{B}}
 \]
@@ -500,7 +500,7 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
 
     \begin{subfigure}{\linewidth}
         \centering
-        \resizebox{0.6\linewidth}{!}{\input{Tikz/Komparator.tex}}
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/src/Komparator.tex}}
         \caption{Schaltung eines Komparators}
     \end{subfigure}
 
@@ -508,7 +508,7 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
 
     \begin{subfigure}{\linewidth}
         \centering
-        \resizebox{0.6\linewidth}{!}{\input{Tikz/FrequenzgangKomparator.tex}}
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/src/FrequenzgangKomparator.tex}}
         \caption{Frequenzgang eines Komparators}
     \end{subfigure}
 
@@ -543,11 +543,11 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
     \hline
     \vspace{0.5cm}
     \centering
-    \input{Tikz/Summierer.tex}
+    \input{Tikz/src/Summierer.tex}
 
     &
     \begin{center}
-    \input{Tikz/FrequenzgangSummierer.tex}
+    \input{Tikz/src/FrequenzgangSummierer.tex}
 \end{center}
 \vspace{1ex}
 \[
@@ -574,7 +574,7 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
 
     \begin{subfigure}{\linewidth}
         \centering
-        \resizebox{0.6\linewidth}{!}{\input{Tikz/Summierer.tex}}
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/src/Summierer.tex}}
         \caption{Schaltung eines Summierers}
     \end{subfigure}
 
@@ -582,7 +582,7 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
 
     \begin{subfigure}{\linewidth}
         \centering
-        \resizebox{0.6\linewidth}{!}{\input{Tikz/FrequenzgangSummierer.tex}}
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/src/FrequenzgangSummierer.tex}}
         \caption{Frequenzgang eines Summierers}
     \end{subfigure}
 
@@ -614,10 +614,10 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
     \hline
     \vspace{0.5cm}
     \centering
-    \input{Tikz/Subtrahierer.tex}
+    \input{Tikz/src/Subtrahierer.tex}
       &
       \begin{center}
-      \input{Tikz/FrequenzgangSubtrahierer.tex}
+      \input{Tikz/src/FrequenzgangSubtrahierer.tex}
  \end{center}
  \vspace{1ex}
  \[
@@ -644,7 +644,7 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
 
     \begin{subfigure}{\linewidth}
         \centering
-        \resizebox{0.6\linewidth}{!}{\input{Tikz/Subtrahierer.tex}}
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/src/Subtrahierer.tex}}
         \caption{Schaltung eines Subtrahierers}
     \end{subfigure}
 
@@ -652,7 +652,7 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
 
     \begin{subfigure}{\linewidth}
         \centering
-        \resizebox{0.6\linewidth}{!}{\input{Tikz/FrequenzgangSubtrahierer.tex}}
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/src/FrequenzgangSubtrahierer.tex}}
         \caption{Frequenzgang eines Subtrahierers}
     \end{subfigure}
 
@@ -686,10 +686,10 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
     \hline
     \vspace{0.5cm}
     \centering
-    \input{Tikz/Integrierer.tex}
+    \input{Tikz/src/Integrierer.tex}
      & 
      \begin{center}
-    \input{Tikz/FrequenzgangIntegrierer.tex}
+    \input{Tikz/src/FrequenzgangIntegrierer.tex}
      \[
      U_A(t) = - \frac{R_2}{R_1} U_{\textnormal{E}}(t) - \int_0^t \frac{U_{\textnormal{E}}(t)}{R_1 C_1} \, dt
      \]
@@ -716,7 +716,7 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
 
     \begin{subfigure}{\linewidth}
         \centering
-        \resizebox{0.6\linewidth}{!}{\input{Tikz/Integrierer.tex}}
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/src/Integrierer.tex}}
         \caption{Schaltung eines Integrierers}
     \end{subfigure}
 
@@ -724,7 +724,7 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
 
     \begin{subfigure}{\linewidth}
         \centering
-        \resizebox{0.6\linewidth}{!}{\input{Tikz/FrequenzgangIntegrierer.tex}}
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/src/FrequenzgangIntegrierer.tex}}
         \caption{Frequenzgang eines Integrierers}
     \end{subfigure}
 
@@ -758,10 +758,10 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
     \hline
     \vspace{0.5cm}
     \centering
-    \input{Tikz/Differenzierer.tex}
+    \input{Tikz/src/Differenzierer.tex}
     &
     \begin{center}
-    \input{Tikz/FrequenzgangDifferenzierer.tex}
+    \input{Tikz/src/FrequenzgangDifferenzierer.tex}
     \begin{multline*}
         U_A = - \frac{R_2}{R_1} U_{\textnormal{E}}(t) \\
         - \int_0^t \frac{1}{R_1 C_1} U_{\textnormal{E}}(t) \, dt 
@@ -791,7 +791,7 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
 
     \begin{subfigure}{\linewidth}
         \centering
-        \resizebox{0.6\linewidth}{!}{\input{Tikz/Differenzierer.tex}}
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/src/Differenzierer.tex}}
         \caption{Schaltung eines Differenzierers}
     \end{subfigure}
 
@@ -799,7 +799,7 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
 
     \begin{subfigure}{\linewidth}
         \centering
-        \resizebox{0.6\linewidth}{!}{\input{Tikz/FrequenzgangDifferenzierer.tex}}
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/src/FrequenzgangDifferenzierer.tex}}
         \caption{Frequenzgang eines Differenzierers}
     \end{subfigure}
 
@@ -837,7 +837,7 @@ U_{\textnormal{A}}(t) =
     \hline
     \vspace{0.5cm}
     \centering
-    \input{Tikz/Logarithmierer.tex}
+    \input{Tikz/src/Logarithmierer.tex}
     &
     \begin{center}
     \[
@@ -869,7 +869,7 @@ U_{\textnormal{A}}(t) =
         \centering
         \begin{figure}
     \centering
-        \input{Tikz/Logarithmierer.tex}
+        \input{Tikz/src/Logarithmierer.tex}
         \caption{Schaltung eines Logarithmierers}
 
 \end{figure}
@@ -910,7 +910,7 @@ U_{\textnormal{A}}(t) =
     \hline
     \vspace{0.5cm}
     \centering
-    \input{Tikz/Potenzierer.tex}
+    \input{Tikz/src/Potenzierer.tex}
     &
     \begin{center}
     \[
@@ -933,7 +933,7 @@ U_{\textnormal{A}}(t) =
         \centering
         \begin{figure}
         \centering
-        {\input{Tikz/Potenzierer.tex}}
+        {\input{Tikz/src/Potenzierer.tex}}
         \caption{Schaltung eines Potenzierers}
 
 \end{figure}
@@ -965,10 +965,10 @@ U_{\textnormal{A}}(t) =
     \hline
     \vspace{0.5cm}
     \centering
-    \input{Tikz/Instrumentenverstaerker.tex}
+    \input{Tikz/src/Instrumentenverstaerker.tex}
      &
          \begin{center}
-   \input{Tikz/FrequenzgangInstrumenten.tex}
+   \input{Tikz/src/FrequenzgangInstrumenten.tex}
 \end{center}
 
 \vspace{1ex}
@@ -1010,7 +1010,7 @@ U_{\textnormal{A}}(t) =
 
     \begin{subfigure}{\linewidth}
         \centering
-        \resizebox{0.6\linewidth}{!}{\input{Tikz/Instrumentenverstaerker.tex}}
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/src/Instrumentenverstaerker.tex}}
         \caption{Schaltung eines Instrumentenverstärkers}
     \end{subfigure}
 
@@ -1018,7 +1018,7 @@ U_{\textnormal{A}}(t) =
 
     \begin{subfigure}{\linewidth}
         \centering
-        \resizebox{0.6\linewidth}{!}{\input{Tikz/FrequenzgangInstrumenten.tex}}
+        \resizebox{0.6\linewidth}{!}{\input{Tikz/src/FrequenzgangInstrumenten.tex}}
         \caption{Frequenzgang eines Instrumentenverstärkers}
     \end{subfigure}
 
@@ -1067,7 +1067,7 @@ U_{\textnormal{A}}(t) =
     \hline
     \vspace{0.5cm}
     \centering
-    \scalebox{0.45}{\input{Tikz/Impedanzwandler.tex}}
+    \scalebox{0.45}{\input{Tikz/src/Impedanzwandler.tex}}
      &
 
 \vspace{1ex}
@@ -1095,7 +1095,7 @@ Verstärkung $V = \frac{U_\mathrm{A}}{U_\mathrm{E}} = 1$
         \centering
         \begin{figure}
         \centering
-        \input{Tikz/Impedanzwandler.tex}
+        \input{Tikz/src/Impedanzwandler.tex}
         \caption{Schaltung eines Impedanzwandlers}
 
 \end{figure}

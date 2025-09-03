@@ -1,0 +1,25 @@
+\begin{circuitikz}
+    \draw (0,0) [V^<, i, name=U0] to (0,3);
+    \draw (0,3) [R, l_=$R_0$, v^>, name=R0] to (0,6) ;
+    \draw (0,6) to [short, -*] (5,6)
+    to [R, l=$R_1$, v, i, name=R1, -*] (5,0)
+    to (0,0);
+
+    \draw (5,0) to (10,0)
+    to (10,1.5);
+    \draw (10,4.5) to [I, i, name=Iq,*-*] (10,1.5);
+    \draw (10,4.5) to (10,6)
+    to (5,6);
+    \draw (10,1.5) to (12,1.5);
+    \draw (10,4.5) to (12,4.5);
+    \draw (12,1.5) [R, l=$R_2$, v, i, name=R2] to (12,4.5);
+
+    \varrmore{R0}{$U_\mathrm{R0}$};
+    \iarrmore{R1}{$I_1$};
+    \varrmore{R1}{$U_\mathrm{R1}$};
+    \iarrmore{R2}{$I_2$};
+    \varrmore{R2}{$U_\mathrm{R2}$};
+    \iarrmore{U0}{$I_0$};
+    \varrmore{U0}{$U_0$};
+    \iarrmore{Iq}{$I_\mathrm{q}$};
+\end{circuitikz}

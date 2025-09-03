@@ -144,10 +144,10 @@
     \end{minipage}\hfill%
     \begin{minipage}[c][4cm][c]{0.35\textwidth}% right
         Randbedingung:
-        \begin{equation}\begin{aligned}
+        \begin{equation*}\begin{aligned}
             u(t=0) &= U_0\\
             i(t=0) &= 0%\ \mathrm{A}
-        \end{aligned}\end{equation}
+        \end{aligned}\end{equation*}
         \quad mit Eigenkreisfrequenz $\omega_d$,
 
         \quad abklingend (gedämpft)
@@ -164,7 +164,7 @@
     \end{minipage}\hfill%
     \begin{minipage}[c][4cm][c]{0.35\textwidth}% right
         Erregerspannung:
-        \begin{equation}u_e(t) = \hat{U}\sin(\omega_e t)\end{equation}
+        \begin{equation*}u_e(t) = \hat{U}\sin(\omega_e t)\end{equation*}
         \quad mit Erregerkreisfrequenz $\omega_e$
     \end{minipage}
 \end{minipage}
@@ -418,16 +418,16 @@ mit $R$, $L$ und $C$ alle in Reihe oder alle parallel.
     Phasenverschiebung zwischen\newline
     $\underline{U}$ und $\underline{I}$ entspricht $\varphi = 0$.\newline
     Oder:
-    \begin{equation}
+    \begin{equation*}
         \Im\left\{\frac{\underline{U}}{\underline{I}}\right\} =
         \Im\left\{\underline{Z}\right\} \overset{!}{=} 0
-    \end{equation}
+    \end{equation*}
 \end{tcolorbox}
 \end{minipage}\hfill%
 \begin{minipage}{0.55\textwidth}
-    \begin{equation}
+    \begin{equation*}
         \underline{Z} = R + \mathrm{j}\Big(\underbrace{\omega L - \frac{1}{\omega C}}_{=\mathrlap{\ 0\quad\text{für}\ \omega=\omega_0}}\Big)
-    \end{equation}
+    \end{equation*}
     \begin{tcolorbox}[colback=white,colframe=GETgreen!25!black,
         toprule=0.5pt,bottomrule=0.5pt,rightrule=0.5pt,leftrule=0.5pt,
         top=2pt,bottom=2pt,left=2pt,right=2pt,middle=2pt]
@@ -565,12 +565,12 @@ mit $R$, $L$ und $C$ alle in Reihe oder alle parallel.
 \resizebox{0.825\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2_const_i.pdf}}
 \end{minipage}\hfill%
 \begin{minipage}{0.6\textwidth}
-\begin{align}\underline{U}
+\begin{align*}\underline{U}
     &= \underline{U}_R\ +\ \underline{U}_L\ +\ \underline{U}_C&
         \underline{I} &= konst.\\
     &= \underline{I} \cdot \big[R + \mathrm{j}\big(\underbrace{\omega L - \frac{1}{\omega C}}_{=\mathrlap{\ \Im\{\underline{Z}\}}}\big)\big]&
         \omega_0 &= \frac{1}{\sqrt{LC}}
-\end{align}
+\end{align*}
 \end{minipage}\vfill
 \begin{minipage}{\textwidth}\centering
     \begin{minipage}{0.3\textwidth}\centering \rotatebox{90}{Fall 1 \quad ohmsch-kapazitiv}
@@ -669,23 +669,23 @@ dem induktiven Verlauf annähert mit $\lim_{\omega\rightarrow \infty}|Z|=|X_L|$.
 \b{%
 \begin{minipage}{0.3\textwidth}%
 \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2.pdf}}
-\begin{align}
+\begin{align*}
     \intertext{\small Resonanzbedingung}
     \onslide<1->{\Im\{\underline{Z}\} &\overset{!}= 0}\\
     \intertext{\small Resonanzfrequenz}
     \onslide<1->{\omega_0 &= \frac{1}{\sqrt{LC}}}\\
     \intertext{\small Resonanzimpedanz}
     \onslide<1->{\underline{Z}_0 &= R}
-\end{align}
+\end{align*}
 \end{minipage}\hfill%
 \begin{minipage}{0.65\textwidth}\centering
-    \begin{equation}
+    \begin{equation*}
         \smash{\underline{Z} = R + \mathrm{j}\left(\omega L - \frac{1}{\omega C}\right)}
-    \end{equation}
+    \end{equation*}
     \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcs_impedanzkurve.pdf}}
-    \begin{equation}
+    \begin{equation*}
         \smash{X_k = |X_{L,0}| = |X_{C,0}| = \sqrt{\frac{L}{C}}}
-    \end{equation}
+    \end{equation*}
 \end{minipage}
 }
 \end{frame}
@@ -776,15 +776,13 @@ Je höher die Güte (Resonanzschärfe), desto steiler ist der Übergang im Berei
 \b{%
 \begin{minipage}{0.3\textwidth}%
 \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2.pdf}}
-\begin{align}
+\begin{align*}
     \underline{Z} &= R + \mathrm{j}\left(\omega L - \frac{1}{\omega C}\right)\\
-    %    \intertext{\small Frequenz normiert}
-    %\underline{Z} &= R + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)X_k\\
         \intertext{normiert}
     \frac{\underline{Z}}{X_k} &= \frac{1}{Q} + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)\\
         \intertext{Güte und Kennwiderstand}
     Q &= \frac{X_k}{R} \qquad X_k = \sqrt{\frac{L}{C}}
-\end{align}
+\end{align*}
 \end{minipage}\hfill%
 \begin{minipage}{0.65\textwidth}\centering
     \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcs_impedanzkurve_guete_noxaxis.pdf}}
@@ -912,14 +910,12 @@ Je höher die Güte (Resonanzschärfe), desto steiler ist der Übergang im Berei
 \b{%
 \begin{minipage}{0.3\textwidth}%
 \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2_const_u.pdf}}
-\begin{align}
-    %\underline{U} &= \underline{U}_R + \underline{U}_L + \underline{U}_C = \underline{U}_q\\
-    %\underline{I} &= \underline{I}_R = \underline{I}_L = \underline{I}_C \\
+\begin{align*}
         \intertext{Spannungsteiler (Bsp.)}
     \frac{\underline{U}_L}{\underline{U}} &= \frac{\mathrm{j}\left(\frac{\omega}{\omega_0}\right)}{\frac{1}{Q}+\mathrm{j}\left(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\right)}\\
         \intertext{Güte und Überspannung}
     Q &= \frac{X_k}{R} = \frac{U_{L,0}}{U} = \frac{U_{C,0}}{U}
-\end{align}
+\end{align*}
 \end{minipage}\hfill%
 \begin{minipage}{0.65\textwidth}\centering
     \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcs_spannung_resonanz.pdf}}\newline% TODO RENAME
@@ -932,14 +928,14 @@ Je höher die Güte (Resonanzschärfe), desto steiler ist der Übergang im Berei
 \begin{frame}{Nebenrechnung}
 \begin{minipage}{0.3\textwidth}%
     \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2_const_u.pdf}}
-    \begin{align}
+    \begin{align*}
         \underline{U} &= \underline{U}_R + \underline{U}_L + \underline{U}_C = \underline{U}_q\\
         \underline{I} &= \underline{I}_R = \underline{I}_L = \underline{I}_C \\
         \underline{Z} &= R + \mathrm{j}(\omega L - \frac{1}{\omega C}) \\
         \mathllap{\Im\{\underline{Z}\}} &\overset{!}{=} 0 \Rightarrow \omega_0 =\frac{1}{\sqrt{LC}}\\
         X_k &= |X_{L,0}| = |X_{C,0}| =  \mathrlap{\sqrt{\frac{L}{C}}}\\
         Q &= \frac{U_{L,0}I}{U_{R,0} I} = \frac{U_{L,0}}{U_q} = \frac{X_k}{R}
-    \end{align}
+    \end{align*}
 \end{minipage}\hfill%
 \begin{minipage}{0.65\textwidth}\centering
     \begin{align*}
@@ -1012,18 +1008,17 @@ Je höher die Güte (Resonanzschärfe), desto steiler ist der Übergang im Berei
 \b{%
     \begin{minipage}{0.3\textwidth}%
     \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2_const_u.pdf}}
-    \begin{align}
+    \begin{align*}
         \intertext{Strom}
-        %\underline{I} &= \frac{\underline{U}_q}{\underline{Z}}\\
         \underline{I} &= \frac{I_0}{1 + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)Q}\\
         \intertext{Maximalstrom, Güte}
         \underline{I}_0 &= \frac{\underline{U}_q}{R}
         \qquad Q = \frac{X_k}{R}        
-    \end{align}
+    \end{align*}
     \end{minipage}\hfill%
     \begin{minipage}{0.65\textwidth}\centering
-        \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcs_stromkurve_uq_guete.pdf}}\newline
-        Strom maximal bei $\omega_0$
+        \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcs_stromkurve_uq_guete.pdf}}
+        \par Strom maximal bei $\omega_0$
 
         Begrenzung durch $R$
     \end{minipage}
@@ -1034,24 +1029,22 @@ Je höher die Güte (Resonanzschärfe), desto steiler ist der Übergang im Berei
 \begin{frame}\ftx{Nebenrechnung}%
 \begin{minipage}{0.3\textwidth}%
     \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2_const_u.pdf}}
-    \begin{align}
+    \begin{align*}
         \underline{Z} &= R + \mathrm{j}(X_L + X_C) \\
         X_L &= +X_k \frac{\omega}{\omega_0} = \omega L \\
         X_C &= -X_k \frac{\omega_0}{\omega} = -\frac{1}{\omega C}\\
         X_k &= |X_{L,0}| = |X_{C,0}| = \sqrt{\frac{L}{C}}\\
         Q &= \frac{X_k}{R} \quad \omega_0 = \frac{1}{\sqrt{LC}}
-    \end{align}
+    \end{align*}
 \end{minipage}\hfill%
 \begin{minipage}{0.65\textwidth}\centering
-    \begin{equation}
-        \begin{aligned}
-    \underline{I} &= \frac{\underline{U}_q}{\underline{Z}} \\
-    &= \frac{\underline{U}_q}{R + \mathrm{j}\left(\omega L - \frac{1}{\omega C}\right)} \\
-    &= \frac{\underline{U}_q}{R + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)X_k} \\
-    &= \frac{\underline{U}_q}{R} \cdot \frac{1}{1 + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)\frac{X_k}{R}} \\
-    &= \underline{I}_0 \cdot \frac{1}{1 + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)Q}
-        \end{aligned}
-    \end{equation}
+    \begin{align*}
+        \underline{I} &= \frac{\underline{U}_q}{\underline{Z}} \\
+        &= \frac{\underline{U}_q}{R + \mathrm{j}\left(\omega L - \frac{1}{\omega C}\right)} \\
+        &= \frac{\underline{U}_q}{R + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)X_k} \\
+        &= \frac{\underline{U}_q}{R} \cdot \frac{1}{1 + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)\frac{X_k}{R}} \\
+        &= \underline{I}_0 \cdot \frac{1}{1 + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)Q}
+    \end{align*}
 \end{minipage}
 \end{frame}
 }
@@ -1063,14 +1056,14 @@ Je höher die Güte (Resonanzschärfe), desto steiler ist der Übergang im Berei
 \b{%
     \begin{minipage}{0.3\textwidth}%
     \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2_const_i.pdf}}
-    \begin{align}
+    \begin{align*}
         \intertext{Stromquelle}
         \underline{I} &= I_q\\
         \intertext{Spannung}
         \underline{U} &= I_q \cdot \underline{Z}\\
         \intertext{Impedanz}
         \underline{Z} &= R + \mathrm{j}X
-    \end{align}
+    \end{align*}
     \end{minipage}\hfill%
     \begin{minipage}{0.65\textwidth}\centering
         \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcs_impedanzkurve_guete.pdf}}\newline
@@ -1111,16 +1104,16 @@ Je höher die Güte (Resonanzschärfe), desto steiler ist der Übergang im Berei
             Phasenverschiebung zwischen\newline
             $\underline{U}$ und $\underline{I}$ entspricht $\varphi = 0$.\newline
             Oder:
-            \begin{equation}
+            \begin{equation*}
                 \Im\left\{\frac{\underline{I}}{\underline{U}}\right\} =
                 \Im\left\{\underline{Y}\right\} \overset{!}{=} 0
-            \end{equation}
+            \end{equation*}
         \end{tcolorbox}
         \end{minipage}\hfill%
         \begin{minipage}{0.55\textwidth}
-            \begin{equation}
+            \begin{equation*}
                 \underline{Y} = G + \mathrm{j}\Big(\underbrace{\omega C - \frac{1}{\omega L}}_{=\mathrlap{\ 0\quad\text{für}\ \omega=\omega_0}}\Big)
-            \end{equation}
+            \end{equation*}
             \begin{tcolorbox}[colback=white,colframe=GETgreen!25!black,
                 toprule=0.5pt,bottomrule=0.5pt,rightrule=0.5pt,leftrule=0.5pt,
                 top=2pt,bottom=2pt,left=2pt,right=2pt,middle=2pt]
@@ -1210,12 +1203,12 @@ Je höher die Güte (Resonanzschärfe), desto steiler ist der Übergang im Berei
     \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2_const_u.pdf}}
     \end{minipage}\hfill%
     \begin{minipage}{0.6\textwidth}%
-    \begin{align}\underline{I}
+    \begin{align*}\underline{I}
         &= \underline{I}_R\ +\ \underline{I}_L\ +\ \underline{I}_C&
             \underline{U} &= konst.\\
         &= \underline{U} \cdot \big[G + \mathrm{j}\big(\underbrace{\omega C - \frac{1}{\omega L}}_{=\mathrlap{\ \Im\{\underline{Y}\}}}\big)\big]&
             \omega_0 &= \frac{1}{\sqrt{LC}}
-    \end{align}
+    \end{align*}
     \end{minipage}\vfill
     \begin{minipage}{\textwidth}\centering
         \begin{minipage}{0.3\textwidth}\centering \rotatebox{90}{Fall 1 \quad ohmsch-induktiv}
@@ -1311,28 +1304,28 @@ Je höher die Güte (Resonanzschärfe), desto steiler ist der Übergang im Berei
     Zu erkennen ist noch, dass der Betrag der Admittanz sich für sehr niedrige Frequenzen $\omega << \omega_0$ 
     dem induktiven Verlauf annähert mit $\lim_{\omega\rightarrow 0}|Y|=|B_L|$ und für sehr hohe Frequenzen $\omega >> \omega_0$
     dem kapazitiven Verlauf annähert mit $\lim_{\omega\rightarrow \infty}|Y|=|B_C|$.
-    }
-    \b{%
+}
+\b{%
     \begin{minipage}{0.3\textwidth}%
     \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2.pdf}}
-    \begin{align}
+    \begin{align*}
         \intertext{\small Resonanzbedingung}
         \onslide<1->{\Im\{\underline{Y}\} &\overset{!}= 0}\\
         \intertext{\small Resonanzfrequenz}
         \onslide<1->{\omega_0 &= \frac{1}{\sqrt{LC}}}\\
         \intertext{\small Resonanzadmittanz}
         \onslide<1->{\underline{Y}_0 &= G}
-    \end{align}
+    \end{align*}
     
     \end{minipage}\hfill%
     \begin{minipage}{0.65\textwidth}\centering
-        \begin{equation}
+        \begin{equation*}
             \smash{\underline{Y} = G + \mathrm{j}\left(\omega C - \frac{1}{\omega L}\right)}
-        \end{equation}
+        \end{equation*}
         \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcp_admittanzkurve.pdf}}
-        \begin{equation}
+        \begin{equation*}
             \smash{B_k = |B_{C,0}| = |B_{L,0}| = \sqrt{\frac{C}{L}}}
-        \end{equation}
+        \end{equation*}
     \end{minipage}
 }
 \end{frame}
@@ -1419,13 +1412,13 @@ Je höher die Güte (Resonanzschärfe), desto steiler ist der Übergang im Berei
     \b{%
     \begin{minipage}{0.3\textwidth}%
     \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2.pdf}}
-    \begin{align}
+    \begin{align*}
         \underline{Y} &= G + \mathrm{j}\left(\omega C - \frac{1}{\omega L}\right)\\
             \intertext{normiert}
         \frac{\underline{Y}}{B_k} &= \frac{1}{Q} + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)\\
             \intertext{Güte und Kennleitwert}
         Q &= \frac{B_k}{G} \qquad B_k = \sqrt{\frac{C}{L}}
-    \end{align}
+    \end{align*}
     \end{minipage}\hfill%
     \begin{minipage}{0.65\textwidth}\centering
         \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcp_admittanzkurve_guete_noxaxis.pdf}}
@@ -1523,18 +1516,18 @@ Je höher die Güte (Resonanzschärfe), desto steiler ist der Übergang im Berei
     \b{%
     \begin{minipage}{0.3\textwidth}%
     \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2_const_i.pdf}}
-    \begin{align}    % I_C = Iq * (Bk * w/w0)/(sqrt(G^2 + Bk^2 * (w/w0 - w0/w)^2)) 
+    \begin{align*}    % I_C = Iq * (Bk * w/w0)/(sqrt(G^2 + Bk^2 * (w/w0 - w0/w)^2)) 
         \underline{U} &= \underline{U}_R = \underline{U}_L = \underline{U}_C \\
         \underline{I} &= \underline{I}_R + \underline{I}_L + \underline{I}_C = \underline{I}_q\\
             \intertext{Stromteiler (Bsp.)}
         \frac{\underline{I}_C}{\underline{I}} &= \frac{\mathrm{j}\left(\frac{\omega}{\omega_0}\right)}{\frac{1}{Q}+\mathrm{j}\left(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\right)}\\
             \intertext{Güte und Überstrom}
         Q &= \frac{B_k}{G} = \frac{I_{C,0}}{I} = \frac{I_{L,0}}{I}
-    \end{align}
+    \end{align*}
     \end{minipage}\hfill%
     \begin{minipage}{0.65\textwidth}\centering
         \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcp_strom_resonanz.pdf}}% 
-        Stromqelle $I_q(\omega_0) \Rightarrow$ Überstrom!
+        \par Stromqelle $I_q(\omega_0) \Rightarrow$ Überstrom!
     \end{minipage}
     }
     \end{frame}
@@ -1597,20 +1590,19 @@ Je höher die Güte (Resonanzschärfe), desto steiler ist der Übergang im Berei
 \b{%
     \begin{minipage}{0.3\textwidth}%
     \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2_const_i.pdf}}
-    \begin{align}
+    \begin{align*}
         \intertext{Spannung}
         %\underline{I} &= \frac{\underline{U}_q}{\underline{Z}}\\
         \underline{U} &= \frac{U_0}{1 + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)Q}\\
         \intertext{Maximalspannung, Güte}
         \underline{U}_0 &= \frac{\underline{I}_q}{G}
         \qquad Q = \frac{B_k}{G}        
-    \end{align}
+    \end{align*}
     \end{minipage}\hfill%
     \begin{minipage}{0.65\textwidth}\centering
-        \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcp_spannungskurve_iq_guete.pdf}}\newline
-        Spannung maximal bei $\omega_0$
-
-        Begrenzung durch $G$
+        \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcp_spannungskurve_iq_guete.pdf}}
+        \par Spannung maximal bei $\omega_0$
+        \par Begrenzung durch $G$
     \end{minipage}
 }
 \end{frame}
@@ -1619,24 +1611,22 @@ Je höher die Güte (Resonanzschärfe), desto steiler ist der Übergang im Berei
 \begin{frame}{Nebenrechnung}
 \begin{minipage}{0.3\textwidth}
     \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2_const_i.pdf}}
-    \begin{align}
+    \begin{align*}
         \underline{Y} &= G + \mathrm{j}(B_L + B_C) \\
         B_L &= -B_k \frac{\omega_0}{\omega} = -\frac{1}{\omega L}\\
         B_C &= +B_k \frac{\omega}{\omega_0} = \omega C \\
         B_k &= |B_{L,0}| = |X_{C,0}| = \sqrt{\frac{C}{L}}\\
         Q &= \frac{B_k}{G} \quad \omega_0 = \frac{1}{\sqrt{LC}}
-    \end{align}
+    \end{align*}
 \end{minipage}\hfill%
 \begin{minipage}{0.65\textwidth}\centering
-    \begin{equation}
-        \begin{aligned}
-    \underline{U} &= \frac{\underline{I}_q}{\underline{Y}} \\
-    &= \frac{\underline{I}_q}{G + \mathrm{j}\left(\omega C - \frac{1}{\omega L}\right)} \\
-    &= \frac{\underline{I}_q}{G + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)B_k} \\
-    &= \frac{\underline{I}_q}{G} \cdot \frac{1}{1 + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)\frac{B_k}{G}} \\
-    &= \underline{U}_0 \cdot \frac{1}{1 + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)Q}
-        \end{aligned}
-    \end{equation}
+    \begin{align*}
+        \underline{U} &= \frac{\underline{I}_q}{\underline{Y}} \\
+        &= \frac{\underline{I}_q}{G + \mathrm{j}\left(\omega C - \frac{1}{\omega L}\right)} \\
+        &= \frac{\underline{I}_q}{G + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)B_k} \\
+        &= \frac{\underline{I}_q}{G} \cdot \frac{1}{1 + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)\frac{B_k}{G}} \\
+        &= \underline{U}_0 \cdot \frac{1}{1 + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)Q}
+    \end{align*}
 \end{minipage}
 \end{frame}
 }
@@ -1649,14 +1639,14 @@ Je höher die Güte (Resonanzschärfe), desto steiler ist der Übergang im Berei
 \b{
     \begin{minipage}{0.3\textwidth}
     \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2_const_u.pdf}}
-    \begin{align}
+    \begin{align*}
         \intertext{Spannungsquelle}
-        \underline{U} &= U_q
+        \underline{U} &= U_q\\
         \intertext{Strom}
         \underline{I} &= U_q \cdot \underline{Y}\\
         \intertext{Admittanz}
         \underline{Y} &= G + \mathrm{j}B
-    \end{align}
+    \end{align*}
     \end{minipage}\hfill%
     \begin{minipage}{0.65\textwidth}\centering
         \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcp_admittanzkurve_guete.pdf}}\newline

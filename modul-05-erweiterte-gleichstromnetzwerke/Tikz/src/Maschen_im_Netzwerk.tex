@@ -1,0 +1,24 @@
+\begin{circuitikz}
+    \draw[blue,->,shift={(2.5,3)}] (120:1 cm) arc (120:-90:1 cm) node at(0,0){$M_1$};
+    \draw[blue,->,shift={(7.5,3)}] (120:1 cm) arc (120:-90:1 cm) node at(0,0){$M_2$};
+
+    \draw (0,0) [V^<, i, name=U0] to (0,3);
+    \draw (0,3) [R, l_=$R_0$, v^>, name=R0] to (0,6) ;
+    \draw (0,6) to [short, -*] (5,6)
+    to [R, l=$R_1$, v, i, name=R1, -*] (5,0)
+    to (0,0);
+    \draw (5,0) to (10,0)
+    to [V^<, i, name=U1] (10,3)
+    to [R, l=$R_2$, v, name=R2] (10,6)
+    to (5,6);
+
+    \varrmore{R0}{$U_\mathrm{R0}$};
+    \iarrmore{R1}{$I_1$};
+    \varrmore{R1}{$U_\mathrm{R1}$};
+    \varrmore{R2}{$U_\mathrm{R2}$};
+    \iarrmore{U0}{$I_0$};
+    \varrmore{U0}{$U_0$};
+    \iarrmore{U1}{$I_2$};
+    \varrmore{U1}{$U_1$};
+
+\end{circuitikz}

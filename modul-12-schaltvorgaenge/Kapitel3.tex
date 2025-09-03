@@ -1690,16 +1690,16 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
     \end{minipage}%
     \begin{minipage}[t][3.5cm][]{0.48\textwidth}\centering
         %        \includegraphics{Tikz/pdf/plot_rlcs_charge_dc_uc.pdf}%
-    \begin{align}
+    \begin{align*}
         \textbf{1.) DGL:}\qquad
          \ecv{u_L} + \ecv{u_R} +\ecv{u_C} &= \ecv{u} \nonumber\\
         L \cdot \dt \eci{i} + R \cdot \eci{i} + \ecv{u_C}&= \ecv{U_q} \nonumber\\
         LC \cdot \dt[2] \ecv{u_C} + RC \cdot \dt \ecv{u_C} + \ecv{u_C} &= \ecv{U_q} %\label{eq:dgl:rlc:dc}
-    \end{align}
+    \end{align*}
     \end{minipage}
 \end{minipage}\vspace{2pt}
 
-\begin{align}
+\begin{align*}
     &\textbf{homogene DGL:}&
         LC \cdot \dt[2] \ecv{u_{C,\mathrm{h}}} + RC \cdot \dt \ecv{u_{C,\mathrm{h}}} + \ecv{u_{C,\mathrm{h}}} &= 0  %\label{eq:dgl:rlc:homo}
         \\[-20pt]
@@ -1714,7 +1714,7 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
             }_{\mathclap{\text{Diskriminante}\ D}}}
             \vphantom{\left(\frac{R}{2L}\right)^2 - \frac{1}{LC}}% vphantom um Größe der Wurzel manuell an Term unter der Wurzel anzupassen
         }&
-\end{align}
+\end{align*}
 }% Ende Folien only
 \end{frame}
 
@@ -1767,21 +1767,21 @@ Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapit
         \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_switchable_rlc_charge_detail.pdf}}%
     \end{minipage}%
     \begin{minipage}[t][3cm][]{0.48\textwidth}\centering
-        \begin{align}
+        \begin{align*}
             \lambda_{1/2} = -\frac{R}{2L} \pm \sqrt{
                 \smash{\underbrace{% smash damit Größe der Wurzel nicht angepasst wird
                 \left(\frac{R}{2L}\right)^2 - \frac{1}{LC}
                 }_{\mathclap{\text{Diskriminante}\ D}}}
                 \vphantom{\left(\frac{R}{2L}\right)^2 - \frac{1}{LC}}% vphantom um Größe der Wurzel manuell an Term unter der Wurzel anzupassen
             }%&
-        \end{align}
+        \end{align*}
     \end{minipage}
 \end{minipage}\vspace{2pt}
 
 \only<beamer:1-3| handout:1>{% Beginn overlay only
 \textbf{Achtung!} Je nach Diskriminante $D$ andere Eigenwerte $\lambda_{1/2}$.
 \onslide<2->{% Beginn overlay onslide
-\begin{equation}
+\begin{equation*}
     \textbf{2.) Homogene Lösung:}\qquad\quad
     \ecv{u_{C,\mathrm{h}}} =
     \begin{cases}
@@ -1789,7 +1789,7 @@ Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapit
         (K_1 + K_2 \cdot t) \cdot \mathrm{e}^{\lambda t} & \text{für}\quad\lambda_1 = \lambda_2 = \lambda
     \end{cases}
     \qquad\qquad\qquad %\label{eq:dgl:rlc:homolsg:cases}
-\end{equation}
+\end{equation*}
 }% Ende overlay onslide
 \onslide<3->{%
 \begin{table}[H]\centering
@@ -1821,14 +1821,14 @@ Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapit
         \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_switchable_rlc_charge_detail.pdf}}%
     \end{minipage}%
     \begin{minipage}[t][3cm][]{0.48\textwidth}\centering
-        \begin{align}
+        \begin{align*}
             \lambda_{1/2} = -\frac{R}{2L} \pm \sqrt{
                 \smash{\underbrace{% smash damit Größe der Wurzel nicht angepasst wird
                 \left(\frac{R}{2L}\right)^2 - \frac{1}{LC}
                 }_{\mathclap{\text{Diskriminante}\ D}}}
                 \vphantom{\left(\frac{R}{2L}\right)^2 - \frac{1}{LC}}% vphantom um Größe der Wurzel manuell an Term unter der Wurzel anzupassen
             }%&
-        \end{align}
+        \end{align*}
     \end{minipage}
 \end{minipage}\vspace{2pt}
 
@@ -1916,14 +1916,14 @@ Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapit
         \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_switchable_rlc_charge_detail.pdf}}%
     \end{minipage}%
     \begin{minipage}[t][3cm][]{0.48\textwidth}\centering
-        \begin{align}
+        \begin{align*}
             \lambda_{1/2} = -\frac{R}{2L} \pm \sqrt{
                 \smash{\underbrace{% smash damit Größe der Wurzel nicht angepasst wird
                 \left(\frac{R}{2L}\right)^2 - \frac{1}{LC}
                 }_{\mathclap{\text{Diskriminante}\ D}}}
                 \vphantom{\left(\frac{R}{2L}\right)^2 - \frac{1}{LC}}% vphantom um Größe der Wurzel manuell an Term unter der Wurzel anzupassen
             }%&
-        \end{align}
+        \end{align*}
     \end{minipage}
 \end{minipage}\vspace{2pt}
     \textbf{Aperiodischer Grenzfall:}
@@ -2000,14 +2000,14 @@ Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapit
             \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_switchable_rlc_charge_detail.pdf}}%
         \end{minipage}%
         \begin{minipage}[t][3cm][]{0.48\textwidth}\centering
-            \begin{align}
+            \begin{align*}
                 \lambda_{1/2} = -\frac{R}{2L} \pm \sqrt{
                     \smash{\underbrace{% smash damit Größe der Wurzel nicht angepasst wird
                     \left(\frac{R}{2L}\right)^2 - \frac{1}{LC}
                     }_{\mathclap{\text{Diskriminante}\ D}}}
                     \vphantom{\left(\frac{R}{2L}\right)^2 - \frac{1}{LC}}% vphantom um Größe der Wurzel manuell an Term unter der Wurzel anzupassen
                 }%&
-            \end{align}
+            \end{align*}
         \end{minipage}
     \end{minipage}\vspace{2pt}
     \textbf{Periodischer Fall:} (Schwingfall)%
@@ -2054,10 +2054,10 @@ Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapit
                     \ecv{u_{C,\mathrm{p}}} &= \ecv{U_q}
                 \end{align*}
             \textbf{4.) Allgemeine Lösung:} (Überlagerung)%
-            \begin{align}
+            \begin{align*}
                 &&
                     \ecv{u_C}(t) &= \mathrm{e}^{-\delta t} \cdot C_0 \cdot \sin(\omega_d t + \varphi_0) + \ecv{U_q} \nonumber\\[-14pt]
-            \end{align}
+            \end{align*}
         \end{minipage}%
         \begin{minipage}[t][3cm][]{0.5\textwidth}\centering
             \vspace{10pt}
@@ -2065,7 +2065,7 @@ Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapit
         \end{minipage}
     \end{minipage}\vspace{15pt}
     \textbf{5.) Konstanten bestimmen:} (wie bekannt)
-    \begin{align}
+    \begin{align*}
         &\hphantom{1Rooooooo}&\hphantom{2Loooooo}&\hphantom{2Roooooooooooooooooooooooooooooooooo}&\hphantom{3Loooooo}&\hphantom{3Roooooooooo} \nonumber\\[-15pt] % Dummyzeile alignment zwischen align-Umgebungen[ca. 16pt hoch], RLCs part. Lösung je Fall
         &\text{1. AB:}&
             \ecv{u_C}(0) &= \redcancel{\mathrm{e}^{-\delta 0}} \cdot C_0 \cdot \sin(\redcancel{\omega_d t } + \varphi_0) + \ecv{U_q} \overset{!}{=} 0 \nonumber\\
@@ -2075,7 +2075,7 @@ Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapit
         C_0 &=  -\frac{\ecv{U_q}}{\sin(\varphi_0)} \quad\text{und}\quad
             \varphi_0 = \arctan\left(\frac{\omega_d}{\delta}\right)
         %\label{eq:dgl:rlc:dc:konstanten:periodisch}
-    \end{align}
+    \end{align*}
     }% Ende Folien only
     \s{% Anfang Skript only
     \textbf{3.) Partikuläre Lösung:} (eingeschwungen)%
@@ -2178,19 +2178,19 @@ und Phasenverschiebung von $\sfrac{\pi}{2}$ zueinander. %
 }% Ende Skript only
 \b{% Anfang Folien only
     Überlagerung zweier Schwingungen gleicher Kreisfrequenz $\omega_d$:
-    \begin{align}
+    \begin{align*}
         \ecv{u_{C,\mathrm{h}}} &= \mathrm{e}^{-\delta t} \cdot
         \left[\vphantom{\Big|}\smash{
         \underbrace{\ec[blue]{2a}}_{C_1} \ec[blue]{\cdot \cos(\omega_d t)} \ec[red]{\,-} \underbrace{\ec[red]{2b}}_{C_2} {}\ec[red]{\cdot \sin(\omega_d t)}
         }\right]
-    \end{align}%
+    \end{align*}%
     \includegraphics{Tikz/pdf/plot_zeigerdiagramm_schwingungen_addieren.pdf}% C1*cos(wt) - C2*sin(wt) = C0*sin(wt + phi0)%
     \vfill%
-    \begin{align}
+    \begin{align*}
         &&
             \ecv{u_{C,\mathrm{h}}} &= \mathrm{e}^{-\delta t} \cdot \ec[GETgreen]{C_0 \cdot \sin(\omega_d t + \varphi_0) }
                 &&\text{mit}\quad \lambda_{1/2} = -\delta \pm \mathrm{j} \cdot \omega_d
-    \end{align}%
+    \end{align*}%
 }% Ende Folien only
 \end{frame}%
 %
@@ -2202,12 +2202,12 @@ In Abbildung \ref{fig:plot:zeiger:ueberlagerung} ist die Überlagerung in Form a
 in Form addierter komplexer Amplitudenzeiger im Zeigerdiagramm (b) dargestellt. Mathematisch ausgedrückt:%%
 }% Ende Skript only
 \b{% Anfang Folien only
-\begin{align}
+\begin{align*}
     \ecv{u_{C,\mathrm{h}}} &= \mathrm{e}^{-\delta t} \cdot
     \left[\vphantom{\Big|}\smash{
     \underbrace{2a}_{C_1} \cdot \cos(\omega_d t) - \underbrace{2b}_{C_2} \cdot \sin(\omega_d t)
     }\right]
-\end{align}%
+\end{align*}%
 }% Ende Folien only
 \ifvmode\vspace*{-\baselineskip}\setlength{\parskip}{4pt}\fi% Ref: https://tex.stackexchange.com/questions/543846/how-can-i-ignore-empty-lines-before-after-and-inside-an-equation-environment
 \begin{align}
@@ -2242,11 +2242,11 @@ in Form addierter komplexer Amplitudenzeiger im Zeigerdiagramm (b) dargestellt. 
 \end{align}%
 \b{% Anfang Folien only
 \vfill%
-\begin{align}
+\begin{align*}
     &&
         \ecv{u_{C,\mathrm{h}}} &= \mathrm{e}^{-\delta t} \cdot C_0 \cdot \sin(\omega_d t + \varphi_0)
             &&\text{mit}\quad \lambda_{1/2} = -\delta \pm \mathrm{j} \cdot \omega_d
-\end{align}%
+\end{align*}%
 }%
 \s{% Anfang Skript only
 Die homogene Lösung im periodischen Fall aus Gl. \ref{eq:dgl:rlc:homolsg:periodisch:herleitung} lässt sich somit
@@ -2319,7 +2319,7 @@ gemäß Herleitung für Gl. \ref{eq:dgl:rlc:homolsg:periodisch:zeigeraddition} i
     \end{minipage}%
     \begin{minipage}[t][3cm][]{0.48\textwidth}\centering
         %\includegraphics{Tikz/pdf/plot_rlcs_charge_dc_uc.pdf}%
-    \begin{align}
+    \begin{align*}
         %&\textbf{Eigenwerte:}&
         \lambda_{1/2} = -\frac{R}{2L} \pm \sqrt{
             \smash{\underbrace{% smash damit Größe der Wurzel nicht angepasst wird
@@ -2327,7 +2327,7 @@ gemäß Herleitung für Gl. \ref{eq:dgl:rlc:homolsg:periodisch:zeigeraddition} i
             }_{\mathclap{\text{Diskriminante}\ D}}}
             \vphantom{\left(\frac{R}{2L}\right)^2 - \frac{1}{LC}}% vphantom um Größe der Wurzel manuell an Term unter der Wurzel anzupassen
         }%&
-    \end{align}
+    \end{align*}
     \end{minipage}
 \end{minipage}\vspace{2pt}
 
@@ -2421,7 +2421,7 @@ gemäß Herleitung für Gl. \ref{eq:dgl:rlc:homolsg:periodisch:zeigeraddition} i
     \end{minipage}%
     \begin{minipage}[t][3cm][]{0.48\textwidth}\centering
         %\includegraphics{Tikz/pdf/plot_rlcs_charge_dc_uc.pdf}%
-    \begin{align}
+    \begin{align*}
         %\lambda_{1/2} &= -\frac{R}{2L} \pm \, \mathrm{j} \cdot \sqrt{\frac{1}{LC} - \left(\frac{R}{2L}\right)^2}% without underbrace
         \lambda_{1/2} &= -\underbrace{
             \vphantom{\sqrt{\left(\frac{R}{2L}\right)^2}}
@@ -2429,7 +2429,7 @@ gemäß Herleitung für Gl. \ref{eq:dgl:rlc:homolsg:periodisch:zeigeraddition} i
         }_{\delta} \pm \, \mathrm{j} \cdot \underbrace{
             \sqrt{\frac{1}{LC} - \left(\frac{R}{2L}\right)^2}
         }_{\omega_d}
-    \end{align}
+    \end{align*}
     \end{minipage}
 \end{minipage}\vspace{2pt}
 

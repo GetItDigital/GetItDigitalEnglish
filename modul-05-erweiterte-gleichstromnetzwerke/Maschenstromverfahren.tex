@@ -193,7 +193,7 @@
     \end{eq}      
 
     \speech{MastromMasch}{1}{Die Maschen M 1 und M 2 werden entsprechend definiert. 
-    Ihnen zugehörig werden die Maschenströme I M eins und I M zwei der beiden Maschen im Vektor der Maschenströme I M festgehalten.}     
+    Ihnen zugehörig werden die Maschenströme IM eins und IM zwei der beiden Maschen im Vektor der Maschenströme IM festgehalten.}     
 \end{frame}
 
 
@@ -277,8 +277,8 @@
 
     \speech{MastromWiderstands}{1}{Als nächstes wird die Widerstandsmatrix für das angegebene elektrische Netzwerk bestimmt.}
     \speech{MastromWiderstands}{2}{Die an den Maschen beteiligten Widerstände werden auf der Hauptdiagonalen der Matrix eingetragen.
-    Für die Masche M 1 sind das die in blau gekennzeichneten Wirderstände R 0 und R 1.
-    An der Masche M 2 sind die Widerstände R 1 und R 2 beteiligt. } 
+    Für die Masche M 1 sind das die in blau gekennzeichneten Widerstände R null und R eins.
+    An der Masche M 2 sind die Widerstände R eins und R 2 beteiligt. } 
     \speech{MastromWiderstands}{3}{Die Widerstände welche an zwei oder mehr Maschen beteiligt sind, 
     werden zwischen den Maschen eingetragen. 
     In diesem Fall handelt es sich hier um den Widerstand R eins. 
@@ -315,11 +315,11 @@
     \end{eq}
 
     \speech{MastromQuell}{1}{In dem Vektor U M werden die Quellströme festgehalten. 
-    An der Masche M 1 befindet sich die Spannungsquelle U 0. 
-    An der Masche M 2 befindet sich die Spannungsquelle U 1.
+    An der Masche M 1 befindet sich die Spannungsquelle U null. 
+    An der Masche M 2 befindet sich die Spannungsquelle U eins.
     Verläuft der Spannungspfeil der Spanungsquelle mit dem Maschenumlauf,
-    wird ein negatives Vorzeichen gewählt, 
-    bei einem entgegengesetzten Spannungspfeil wird ein positives Vorzeichen gewählt.}  
+    wird ein negatives Vorzeichen, 
+    bei einem entgegengesetzten Spannungspfeil ein positives Vorzeichen gewählt.}  
 \end{frame}
 
 
@@ -360,12 +360,14 @@
 }
 
 \speech{MastromGleich}{1}{Nun kann aus der Widerstandsmatrix, 
-dem Vektor der Maschenströme und dem Vektor der Quellspannungen das notwendige Gleichungssystem aufgestellt und gelöst werden.
+dem Vektor der Maschenströme 
+und dem Vektor der Quellspannungen 
+das notwendige Gleichungssystem aufgestellt und gelöst werden.
 Aus den so zu bestimmenden Maschenströmen können anschließend die gesuchten Ströme bestimmt werden.
-Hier ist beispielsweise der Strom I 0 gleich dem Maschenstrom I M 1.
-Der Maschenstrom I M 2 ist gleich dem negativen Wert von I 2, 
+Hier ist beispielsweise der Strom I 0 gleich dem Maschenstrom I emm eins.
+Der Maschenstrom I emm 2 ist gleich dem negativen Wert von I zwei, 
 da die Verläufe der beiden Ströme entgegengesetzt sind.
-Zum Schluss kann der Strom I 1 über die Knotenregel aus den Strömen I 0 und I 2 berechnet werden.
+Zum Schluss kann der Strom I eins über die Knotenregel aus den Strömen I 0 und I 2 berechnet werden.
 Somit sind dann alle Größen des Netzwerkes identifiziert worden.}
 \end{frame}
 \newpage
@@ -508,10 +510,26 @@ Somit sind dann alle Größen des Netzwerkes identifiziert worden.}
     \end{enumerate}
 \end{bsp}{}{}
 
-%\speech{MastromBsp}{1}{}
-%\speech{MastromBsp}{2}{}
-%\speech{MastromBsp}{3}{}
-%\speech{MastromBsp}{4}{}
-%\speech{MastromBsp}{5}{}
-%\speech{MastromBsp}{6}{}
+\speech{MastromBsp}{1}{Die Schritte zur Anwendung des Maschenstromverfahrens wurden nun erläutert. 
+Folgend wird anhand des abgebildeten Beispielnetzwerkes noch einmal die grundsätzliche Arbeitsweise wiederholt.
+Hierzu wird das Netzwerk enstprechend für das Maschenstromverfahren vorbereitet, die Maschen und Maschenströme definiert,
+die Widerstandsmatrix bestimmt, die Quellspannungen zugeordnet und anschließend das Gleichungssystem aufgestellt.}
+\speech{MastromBsp}{2}{Bei dem Beispielnetzwerk müssen keine Widerstände zusammengefasst werden.
+Jedoch wird die Stromquelle mit Parallelwiderstand in eine Spannungsquelle mit Serienwiderstand umgewandelt.}
+\speech{MastromBsp}{3}{Für das Beispielnetzwerk werden drei Maschen M 1, M 2 und M 3 mit ihren zugehörigen 
+Maschenströmen I emm eins, I emm zwei und I emm drei definiert.}
+\speech{MastromBsp}{4}{An der Masche M 1 sind die Widerstände R null, R drei und R 4 beteiligt. Die Widerstände R eins, R drei und R fünf liegen an der Masche M 2. Die Masche M 3 verfügt über die Widerstände R zwei, R vier und R fünf. 
+Zwischen den Maschen M eins und M zwei liegt der Widerstand R drei. Zwischen den Maschen M eins und M 3 liegt der Widerstand R vier und zwischen den Maschen M 2 und M 3 liegt der Widerstand R fünf. Die Widerstände werden in die Widerstandsmatrix R emm eingetragen.}
+\speech{MastromBsp}{5}{Der Vektor der Quellspannungen ergibt sich nach U emm.
+Für die Masche M 1 wird die Spannungsquelle U null aufgeschrieben.
+Die Spannungsquelle U eins ist an der Masche M 2 beteiligt 
+und für die Masche M 3 wird die Spannungsquelle minus U zwei notiert.}
+\speech{MastromBsp}{6}{Mit der Widerstandsmatrix, dem Vektor der Maschenströme 
+und dem Vektor der Quellspannungen kann das Gleichungssystem aufgestellt werden.
+Nach dem Lösen der Gleichung sind die Maschenströme bekannt und können den Strömen zugeordnet werden.
+Hier entspricht der Maschenstrom I emm 1 dem Strom I null.
+Der Maschenstrom I emm 2 entspricht dem Strom I eins
+und der Maschenstrom I emm 3 entspricht dem Strom minus I zwei.
+Die übrigen Ströme des Netzwerkes können anschließend über die Knotenregel bestimmt werden,
+bis letztendlich alle Größen des Netzwerkes bekannt sein sollten.}
 \end{frame}

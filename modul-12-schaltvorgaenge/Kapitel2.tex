@@ -223,42 +223,41 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Berechnungsmethoden}
+\subsection{Berechnungsmethoden für Schaltvorgänge}
 \label{sec:grundlagen:berechnungsmethoden}
-\begin{frame}\ftx{\subsecname für Schaltvorgänge}
+\begin{frame}\ftx{\subsecname\ für Schaltvorgänge}
 \s{%
     % Methoden
-    Um die Zeitverläufe von Spannungen und Strömen in Schaltungen zu berechnen,
-    kann prinzipiell im Zeitbereich oder im Bildbereich vorgegangen werden. 
-
+    Zur Berechnung von Schaltvorgängen stehen prinzipiell zwei Methoden zur Verfügung. 
+    Beide Methoden basieren auf der Lösung der Differentialgleichung (DGL) einer Schaltung.
+    
+    Die Lösung der DGL erfolgt:
     \begin{itemize}
-        \item Lösung der Differentialgleichung im Zeitbereich
-        \item Lösung der Differentialgleichung im Bildbereich (mit Hilfe der Laplace-Transformation)
+        \item \underline{im Zeitbereich} (durch Zerlegung in flüchtigen und eingeschwungenen Zustand) \textbf{oder}
+        \item \underline{im Bildbereich} (mit Laplace-Transformation).
     \end{itemize}
 
     % Flussdiagramm
-    Die Berechnung im Bildbereich basiert auf der Umformung mittels der Laplace-Transformation.
-    Abbildung \ref{fig:plot:flussdiagrammbildbereich} zeigt den prinzipiellen Ablauf zur Berechnung
-    von Schaltvorgängen im Bildbereich im Vergleich zur Berechnung im Zeitbereich. 
+    Abbildung \ref{fig:plot:flussdiagrammbildbereich} stellt den Ablauf zur Berechnung im Zeit- und im Bildbereich zum Vergleich als Flussdiagramm gegenüber.
 
     \fu{\includegraphics{Tikz/pdf/plot_flussdiagramm_dgl_berechnungsmethoden.pdf}}{Flussdiagramm, Berechnungsmethoden für Schaltvorgänge\label{fig:plot:flussdiagrammbildbereich}}
 
     Die Benennung und Darstellung beider Methoden sind angelehnt an \cite[S. 51]{weissgerber3}, 
     finden sich jedoch in ähnlicher Form auch in anderen Lehrbüchern zur Elektrotechnik, Regelungstechnik und Systemtheorie. 
-    Beiden Methoden ist gemein, dass sie auf der Lösung einer aufgestellten DGL basieren.
 
     % Kurze Erklärung
-    Die Lösung der DGL im Zeitbereich ist die allgemeinste Methode,
-    wobei der Rechenaufwand je nach Komplexität der DGL stark variieren kann.
-    Diese Methode ist in diesem Modul am ausführlichsten behandelt und 
-    basiert auf der Zerlegung in flüchtigen und eingeschwungenen Zustand.
-    
+    Die Lösung der DGL im Zeitbereich ist die allgemein anwendbare Methode und wird in diesem Modul ausführlich behandelt.
+    Der Rechenaufwand kann je nach Komplexität der DGL stark variieren.
+    Die Methode basiert auf der Zerlegung in einen flüchtigen und einen eingeschwungenen Zustand.
+
     Die Lösung der DGL im Bildbereich mithilfe der Laplace-Transformation ist eine spezielle Methode, 
-    die bei linearen, zeitinvarianten Systemen mit Energiespeichern angewendet werden kann.
-    Gegenüber der Lösung im Zeitbereich bietet sie den Vorteil, dass die Differentialgleichung in eine algebraische Gleichung überführt wird.
-    Dadurch kann in vielen Fällen die Lösung einfacher und schneller erfolgen. 
-    Das Verfahren bietet sich bei verschwindenden Anfangsbedingungen an, da die Laplace-Transformation 
-    sonst umständlich wird.
+    die bei linearen, zeitinvarianten Systemen mit Energiespeichern angewendet werden kann. 
+    Sie bietet sich bei verschwindenden Anfangsbedingungen (Vgl. Kapitel \ref{sec:grundlagen:zeitbereich}) an.
+    In einigen Fällen kann die Methoden den Rechenaufwand reduzieren, da die transformierte DGL algebraisch gelöst werden kann.
+    Die Methode wird in diesem Modul nicht weiter behandelt.
+    
+    Die Idee in den Bildbereich zu wechseln findet sich wieder in Abschnitt \ref{sec:grundlagen:dgl} bei der Aufstellung einer DGL 
+    und in Abschnitt \ref{sec:grundlagen:zeitbereich:partikulaereloesung} bei der Anwendung komplexer Wechselstromrechnung (Vgl. Modul 7) zur Bestimmung eingeschwungener Zustände.
 }%
 \b{% Folie: Berechnungsmethoden für Schaltvorgänge
     % Bild: Flussdiagramm, Berechnungsmethoden für Schaltvorgänge
@@ -357,7 +356,7 @@
                 &\text{Masche:}& \ecv{u_R} + \ecv{u_C} &= \ecv{u} &&&& \ecv{u_R} = R \cdot \eci{i_R}\\[+5pt]
             \hline\\[-10pt]%
             \onslide<2->{% start overlay
-                && R \cdot \eci{i_R} + \ecv{u_C} &= \ecv{U_q} \\
+                && R \cdot \eci{i} + \ecv{u_C} &= \ecv{U_q} \\
                 &\textbf{DGL: }& RC \cdot \dt \ecv{u_C} + \ecv{u_C} &= \ecv{U_q} &&&&\quad\text{1. Ord.}
             }% end overlay
         \end{split}\end{aligned}
@@ -406,8 +405,8 @@
     Aus den Eigenschaften der Schaltungen lassen sich folgende für Eigenschaften der DGLs ableiten:%
     \begin{itemize}
         \item \makebox[4cm][l]{\textbf{gewöhnlich}}           \makebox[2cm][l]{}                (nur abhängig von einer Variable, hier der Zeit)
-        \item \makebox[4cm][l]{\textbf{linear}}               \makebox[2cm][l]{}                (Linearität)
-        \item \makebox[4cm][l]{\textbf{konst. Koeffizienten}} \makebox[2cm][l]{$a_i=konst.$}    (Zeitinvarianz)
+        \item \makebox[4cm][l]{\textbf{linear}}               \makebox[2cm][l]{}                (Linearität der Schaltungselemente)
+        \item \makebox[4cm][l]{\textbf{konst. Koeffizienten}} \makebox[2cm][l]{$a_i=konst.$}    (Zeitinvarianz der Schaltungselemente)
         \item \makebox[4cm][l]{\textbf{inhomogen}}            \makebox[2cm][l]{$b(t)\neq 0$}    (bei Anregung durch Spannungs- oder Stromquellen)
         \item \makebox[4cm][l]{\textbf{homogen}}              \makebox[2cm][l]{$b(t)= 0$}       (ohne Anregung durch Spannungs- oder Stromquellen)
     \end{itemize} 
@@ -417,8 +416,8 @@
 
     % DGL allgemein
     \begin{align}\label{eq:grundlagen:dgl:inhomogen}
-        \sum_{i=0}^{n} a_i \cdot \frac{\d^i y(t)}{\d t^i} &= b(t)\\\nonumber
-        \mathclap{\text{mit} \quad a_i, b(t) \in \mathbb{R}; \quad i, n \in \mathbb{N}}
+        \sum_{i=0}^{n} a_i \cdot \frac{\d^i y(t)}{\d t^i} = b(t)\\[2pt]\nonumber
+        \text{mit} \quad a_i, b(t) \in \mathbb{R}; \quad i, n \in \mathbb{N}
     \end{align}
 
     Mit der \textbf{Ordnung}\index{Differentialgleichung>Ordnung} $n$, 
@@ -719,8 +718,8 @@
     %\end{align*}
 
     % Eigenwerte lambda
-    Dabei ist $K$ eine Konstante und $\lambda$ die Lösung des charakteristischen Polynoms und wird
-    auch als \textbf{Eigenwert}\index{Differentialgleichung>Eigenwert} bezeichnet. 
+    Dabei ist $K$ eine Konstante und $\lambda$ die Lösung des charakteristischen Polynoms \index{Differentialgleichung>Charakteristische Polynom}
+    und wird auch als \textbf{Eigenwert}\index{Differentialgleichung>Eigenwert} bezeichnet. 
     Durch Einsetzen des Exponential-Ansatzes in \ref{eq:grundlagen:dgl:homogen}, Differenzieren und Ausklammern:
     % Charakteristische Polynom
     \begin{align}
@@ -752,7 +751,7 @@
     \begin{equation}\label{eq:grundlagen:homogeneloesung:lambdaungleich}
         y_{\mathrm{h}}(t) = \sum_{i=1}^{n} K_i \cdot \mathrm{e}^{\lambda_i t} \qquad \text{für} \quad \lambda_i \neq \lambda_j \ \forall \ i,j
     \end{equation}
-    Bei paarweise komplex konjugierten Eigenwerten kann diese Lösung umformuliert werden. [Herleitung in Abschnitt \ref{sec:schaltvorgaengezeitbereich:rlc:herleitung}.]
+    Bei paarweise komplex konjugierten Eigenwerten kann diese Lösung umformuliert werden. [Herleitung in Abschnitt \ref{sec:schaltvorgaengezeitbereich:exkurse:herleitung}.]
     Für $\lambda_1 = \lambda_2^* = a + \mathrm{j} b \in \mathbb{C}$ ergibt sich für die homogene Lösung:
     \begin{equation}\label{eq:grundlagen:homogeneloesung:lambdakomplex}
         \begin{aligned}

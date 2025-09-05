@@ -102,10 +102,9 @@
 			Elektrische Netzwerke gibt es in allen Größenordnungen:
 			Winzige Schaltungen in Mikrocontrollern, kaum größer als ein Staubkorn,
 			bis hin zu riesigen Energieverteilungsnetzen, die sich über tausende Kilometer erstrecken und unseren Strom liefern.}
-		
-		
-		
+			\silence{4}
 	}
+	\silence{2}
 \end{frame}
 
 
@@ -223,9 +222,11 @@
 			In diesem Kapitel verwenden wir ausschließlich lineare Bauteile, wie Widerstände und ideale Gleichspannungsquellen.
 			Das hat einen großen Vorteil:
 			Die Schaltungen lassen sich analytisch, also mathematisch exakt, berechnen.}
+			\silence{4}
 		
 		
 	}
+	\silence{4}
 \end{frame}
 
 \newpage
@@ -251,6 +252,7 @@
 		den Begriff des Zweipols erklären, typische Zweipole benennen und ihre Schaltsymbole sicher verwenden,
 		das Erzeuger- und Verbraucherzählpfeilsystem erläutern und korrekt nach den Konventionen anwenden,
 		und ihr könnt die zentralen Elemente eines Grundstromkreises beschreiben und die Zusammenhänge zwischen ihnen verstehen.}
+		\silence{4}
 	
 	
 	
@@ -343,20 +345,22 @@
 		\end{columns}
 		
 		\speech{folie6}{1}{Schauen wir uns jetzt genauer an, was ein Zweipol eigentlich ist.
-			Ein Zweipol, wie rechts dargestellt, ist ein Bauelement mit genau zwei äußeren Anschlussklemmen.
+			Ein Zweipol ist, wie rechts dargestellt, ein Bauelement mit genau zwei äußeren Anschlussklemmen.
 			Wie komplex der innere Aufbau dieses Bauteils ist, spielt dabei erstmal keine Rolle.
 			Ein einfacher Widerstand kann ein Zweipol sein, genau wie eine Spannungsquelle, etwa eine Autobatterie, oder sogar ein Haartrockner, solange er nur zwei Anschlussleitungen hat.
 			Wichtig ist:
 			Unabhängig von der inneren Komplexität reicht es in der Netzwerkanalyse aus, das sogenannte Klemmenverhalten zu betrachten, also die Beziehung zwischen Strom und Spannung an den Anschlussklemmen.
 			Ein Punkt, den ihr euch unbedingt merken solltet:
-			Der Strom, der in einen Zweipol hingeht, ist immer genauso groß wie der Strom, der auf der anderen Seite wieder herauskommt. Als Analogie könnt ihr euch hier einen Gartenschlauch vorstellen, das gesamte Wasser, das auf der einen Seite in den Schlauch geht, verlässt diesen auch wieder auf der anderen Seite.
+			Der Strom, der in einen Zweipol hineingeht, ist immer genauso groß wie der Strom, der auf der anderen Seite wieder herauskommt. Als Analogie könnt ihr euch hier einen Gartenschlauch vorstellen, das gesamte Wasser, das auf der einen Seite in den Schlauch geht, verlässt diesen auch wieder auf der anderen Seite.
+		}
+		\speech{folie6}{1}{
 			Zusätzlich unterscheiden wir zwischen aktiven und passiven Zweipolen:
 			Ein aktiver Zweipol enthält mindestens eine Strom- oder Spannungsquelle, eventuell auch Widerstände, Kondensatoren oder Spulen.
 			Ein passiver Zweipol dagegen enthält keine Quellen, sondern ausschließlich passive Bauelemente wie Widerstände, Kondensatoren oder Spulen.
 			Und noch etwas:
 			In unseren Berechnungen vernachlässigen wir praktische Details wie die genauen Baumaße, Materialeigenschaften oder parasitäre Effekte innerhalb des Bauteils.
 			Das macht die Analyse deutlich einfacher, und trotzdem ausreichend genau für unsere Zwecke.}
-		
+		\silence{4}
 	}
 \end{frame}
 
@@ -391,15 +395,15 @@
 			\textbf{Erzeuger-Zählpfeilsystem (EPS)}: Strom und Spannung werden am Zweipol entgegengesetzt gezählt. Anzuwendn bei aktiven Zweipolen (z.B. Spannungsquellen)
 			
 		\end{Merksatz}
-		
+		 
 		
 		\begin{table}[h!]
 			\centering
 			\begin{tabular}{|c|c|c|c|}
 				\hline
 				Zählpfeilsystem & Erzeugte Leistung & Verbrauchte Leistung & Zählpfeile am Verbraucher                                                      \\ \hline
-				VPS             & P = -UI           & P = UI > 0           & \input{Tikz/src/1_zweipole/Vergleich_VPS} \\ \hline
-				EPS             & P = UI > 0        & P = -UI              & \input{Tikz/src/1_zweipole/Vergleich_EPS} \\ \hline
+				VPS             & $P = -UI$           & $P = UI > 0 $           & \input{Tikz/src/1_zweipole/Vergleich_VPS} \\ \hline
+				EPS             & $P = UI > 0$        & $P = -UI$              & \input{Tikz/src/1_zweipole/Vergleich_EPS} \\ \hline
 				%\input{Tikz/src/1_zweipole/Vergleich_VPS_EPS}                                                                                                \\
 			\end{tabular}
 			\caption{Vergleich zwischen Verbraucherzählpfeilsystem (VPS) und Erzeugerzählpfeilsystem (EPS).}
@@ -431,30 +435,28 @@
 			\begin{tabular}{|c|c|c|c|}
 				\hline
 				Zählpfeilsystem & Erzeugte Leistung & Verbrauchte Leistung & Zählpfeile am Verbraucher                                                      \\ \hline
-				VPS             & P = -UI           & P = UI > 0           & \input{Tikz/src/1_zweipole/Vergleich_VPS} \\ \hline
-				EPS             & P = UI > 0        & P = -UI              & \input{Tikz/src/1_zweipole/Vergleich_EPS} \\ \hline
+				VPS             & $P = -UI$           & $P = UI > 0$           & \input{Tikz/src/1_zweipole/Vergleich_VPS} \\ \hline
+				EPS             & $P = UI > 0$        & $P = -UI$              & \input{Tikz/src/1_zweipole/Vergleich_EPS} \\ \hline
 				%\input{Tikz/src/1_zweipole/Vergleich_VPS_EPS}                                                                                                \\
 			\end{tabular}
 			
 		\end{table}
 		
-		\speech{folie7}{1}{ Mit diesen Grundlagen können wir jetzt die Wahl der Zählrichtungen für Strom und Spannung betrachten. Als Zählpfeil werden die in Pfeile bezeichnet, die dem Strom beziehungsweise der Spannung zugeordnet werden. Wir brauchen Zählpfeile, damit unsere Berechnungen eindeutig sind.
-			
+		\speech{folie7}{1}{Mit diesen Grundlagen können wir jetzt die Wahl der Zählrichtungen für Strom und Spannung betrachten. Als Zählpfeil werden die in Pfeile bezeichnet, die dem Strom beziehungsweise der Spannung zugeordnet werden. Wir brauchen Zählpfeile, damit unsere Berechnungen eindeutig sind.
 			Grundsätzlich ist es erstmal beliebig, in welche Richtung wir Ströme und Spannungen ansetzen.
 			In der Praxis wählen wir die Zählrichtungen aber oft so, dass die Ergebnisse möglichst positive Werte liefern – wenn wir die Richtung schon kennen.
 			Kennen wir sie noch nicht, müssen wir die Richtung willkürlich festlegen.
 			Ob unsere Annahme stimmt, zeigt sich später:,
 			Ein positives Ergebnis bestätigt die Richtung,
-			ein negatives Ergebnis bedeutet, dass der Strom oder die Spannung entgegen unserer Vorgabe fließt.
-			Bei Zweipolen gibt es dafür zwei wichtige Zählpfeilsystem (formal in der untenstehenden Tabelle zu sehen):
-			Das Verbraucher-Zählpfeilsystem, oft VPS abgekürzt: Strom und Spannung zeigen in dieselbe Richtung, dies wird typischerweise für Widerstände und andere passive Bauteile.
-			Beim Erzeuger-Zählpfeilsystem oder auch EPS zeigen Strom und Spannung in dei entgegengesetzte Richtung, dieses wird oft typi bei Spannungsquellen und andere aktive Bauteile verwendet.
+			ein negatives Ergebnis bedeutet, dass der Strom oder die Spannung entgegen unserer Vorgabe fließt.}
+			\speech{folie7}{1}{
+			Bei Zweipolen gibt es dafür zwei wichtige Zählpfeilsysteme.
+			Das Verbraucher-Zählpfeilsystem, oft VPS abgekürzt: hier zeigen Strom und Spannung in dieselbe Richtung, dies wird typischerweise für Widerstände und andere passive Bauteile genutzt.
+			Beim Erzeuger-Zählpfeilsystem oder auch EPS zeigen Strom und Spannung in die entgegengesetzte Richtung. Dieses wird oft bei Spannungsquellen und anderen aktiven Bauelementen verwendet.
 			Anzumerken ist jedoch folgendes:
-			Zählpfeile sind keine Vektoren! Sie legen nur die Zählrichtung fest, nicht eine physikalische Richtung im Raum.
-		}
-		
-		
+			Zählpfeile sind keine Vektoren! Sie legen nur die Zählrichtung fest, nicht eine physikalische Richtung im Raum.}	
 	}
+	\silence{4}
 	
 \end{frame}
 
@@ -563,17 +565,24 @@
 			\column[c]{0.5\textwidth}
 			\input{Tikz/src/1_zweipole/Elektrischer_Grundstromkreis_Folien}
 		\end{columns}
-		\speech{folie8}{1}{ Mit den nun eingeführten Zweipolen können wir jetzt ein elektrisches Netzwerk aufbauen. Beispielhaft ist hier ein Netzwerk aus vier Widerständen und einer Spannungsquelle zu sehen.}
-		\speech{folie8}{2}{ In so einem Netzwerk bilden die idealisierten Zweipole sogenannte Zweige. Ein Zweig kann auch aus mehreren hintereinandergeschalteten Zweipolen bestehen, wie hier zum Beispiel durch R3 und R4 dargestellt.
-			Wichtig: Durch alle Elemente eines Zweiges fließt derselbe Strom.
-		}
+		\speech{folie8}{1}{ Mit den nun eingeführten Zweipolen können wir jetzt ein elektrisches Netzwerk aufbauen. 
+		Beispielhaft ist hier ein Netzwerk bestehend aus vier Widerständen und einer Spannungsquelle dargestellt.}
+		\silence{2}
+		\speech{folie8}{2}{In so einem Netzwerk bilden die idealisierten Zweipole sogenannte Zweige. Ein Zweig kann auch aus mehreren hintereinandergeschalteten Zweipolen bestehen, wie hier zum Beispiel durch R3 und R4 dargestellt.
+		Wichtig: Durch alle Elemente eines Zweiges fließt derselbe Strom.}
+		\silence{2}
 		\speech{folie8}{3}{ Treffen mindestens drei Zweige zusammen, entsteht ein Knoten.
 			Hier kann sich der Strom aufteilen, aber das elektrische Potential ist überall gleich.
 			Im Schaltplan werden Knoten mit ausgefüllten Kreisen markiert.}
-		\speech{folie8}{4}{ Verbindet man mehrere Zweige zu einem geschlossenen Pfad, spricht man von einer Masche. Eine Masche wird mit einem Pfeil versehen, der die Umlaufrichtung zeigt. Hier zu sehen in blau, die Masche M1, deren Umlauf gegen den Uhrzeigersinn ist. }
+		\silence{2}	
+		\speech{folie8}{4}{ Verbindet man mehrere Zweige zu einem geschlossenen Pfad, spricht man von einer Masche. Eine Masche wird mit einem Pfeil versehen, der die Umlaufrichtung zeigt. Hier zu sehen in blau, ist die Masche M1, deren Umlauf gegen den Uhrzeigersinn ist. }
+		\silence{2}
 		\speech{folie8}{5}{Weiter kann für den unteren geschlossenen Pfad die Masche M2 gebildet werden, bestehend aus den Widerständen R3 und R4 sowie dem Kurzschluss. Ebenfalls mit der Umlaufrichtung gegen den Uhrzeigersinn}
+		\silence{2}
 		\speech{folie8}{6}{Auch kann eine größere äußere Masche M3 betrachtet werden, die alle Elemente umfasst, außer den Kurzschluss. Somit ergeben sich für dieses einfache Netzwerk drei Maschen}
-		\speech{folie8}{7}{ Diese Maschen können wir nun dazu verwenden, um die Frage zu beantworten, wie sich der Strom und sie Spannung in dem Netzwerk aufteilt. Dies werden wir im Folgenden mit den Kirchhoffschen Regeln machen.}
-		
+		\silence{2}
+		\speech{folie8}{7}{ Diese Maschen können wir nun dazu verwenden, um die Frage zu beantworten, wie sich der Strom und die Spannung in dem Netzwerk aufteilt.
+		 Dies werden wir im Folgenden Video mit Hilfe der Kirchhoffschen Regeln machen. }
+		\silence{6}
 	}
 \end{frame}

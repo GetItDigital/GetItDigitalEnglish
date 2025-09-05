@@ -1,12 +1,12 @@
 \begin{circuitikz}
-    \draw[blue,->,shift={(1,-2)}] (120:1 cm) arc (120:-90:1 cm) node at(0,0){$M_1$};
-    \draw[blue,->,shift={(7,0)}] (120:1 cm) arc (120:-90:1 cm) node at(0,0){$M_2$};
-    \draw[blue,->,shift={(7,-4)}] (120:1 cm) arc (120:-90:1 cm) node at(0,0){$M_3$};
+    \draw[voltage,->,shift={(1,-2)}] (120:1 cm) arc (120:-90:1 cm) node at(0,0){$M_1$};
+    \draw[voltage,->,shift={(7,0)}] (120:1 cm) arc (120:-90:1 cm) node at(0,0){$M_2$};
+    \draw[voltage,->,shift={(7,-4)}] (120:1 cm) arc (120:-90:1 cm) node at(0,0){$M_3$};
 
     \draw (-1,2) to [R=$R_0$, v_<, name=R0] (-1,-2)
     to [V_>, i, name=U0] (-1,-6)
     to (3,-6)
-    to [R=$R_4$, i^<, v_<, name=R4, -*] (3,-2)
+    to [R=$R_4$, i^<, v_<, name=R4, *-*] (3,-2)
     to [R=$R_3$, i^<, v_<, name=R3, -*] (3,2)
     to [V^<, i_>, name=U1] (7,2)
     to [R=$R_1$ , v, name=R1] (11,2);

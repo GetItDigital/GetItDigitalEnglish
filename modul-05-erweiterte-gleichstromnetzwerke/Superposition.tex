@@ -53,7 +53,7 @@
     }
 
     \fu{
-        \input{Tikz/blackbox.tex}
+        \input{Tikz/src/blackbox.tex}
         }{{\bf Blackbox in der Systemtheorie.} Eine Blackbox mit linksseitiger Eingangsgröße und rechtsseitiger Ausgangsgrößen.
         \label{BildBlackBox}}}
 
@@ -102,7 +102,7 @@
 
     \onslide<2->{
     \fu{
-        \input{Tikz/spannungsteilerblackbox.tex}
+        \input{Tikz/src/spannungsteilerblackbox.tex}
         
         }{{\bf Spannungsteiler als Blackbox.} Betrachtung eines elektrischen Netzwerkes als Blackbox mit Eingangsspannung und Ausgangsspannung.
         \label{BildElektrischesSystem}}}
@@ -166,15 +166,15 @@
     \fu{
         \resizebox{.9\textwidth}{!}{%
         \begin{minipage}{0.2\textwidth}
-            \input{Tikz/transformation1.tex}	
+            \input{Tikz/src/transformation1.tex}	
 		\end{minipage}
         \hspace{0.1cm}
         \begin{minipage}{0.5\textwidth}
-            \input{Tikz/transformation2.tex}	
+            \input{Tikz/src/transformation2.tex}	
 		\end{minipage}
         \hspace{0.1cm}
         \begin{minipage}{0.2\textwidth}
-            \input{Tikz/transformation3.tex}	
+            \input{Tikz/src/transformation3.tex}	
 		\end{minipage}
         }
 	}{{\bf Transformation eines kausalen Systems.} Aus $x(t)$ transformiertes System zu $y(t)$ für ein kausales System. \label{BildKausalesSystem}}}
@@ -263,15 +263,15 @@
         \resizebox{.6\textwidth}{!}{%
         \hspace{0.1cm}
         \begin{minipage}{0.3\textwidth}
-            \input{Tikz/umwandlungspannungsquelle1.tex}	
+            \input{Tikz/src/umwandlungspannungsquelle1.tex}	
 		\end{minipage}
         \hspace{0.1cm}
         \begin{minipage}{0.2\textwidth}
-            \input{Tikz/umwandlungspannungsquelle2.tex}	
+            \input{Tikz/src/umwandlungspannungsquelle2.tex}	
 		\end{minipage}
         \hspace{0.1cm}
         \begin{minipage}{0.3\textwidth}
-            \input{Tikz/umwandlungspannungsquelle3.tex}		
+            \input{Tikz/src/umwandlungspannungsquelle3.tex}		
 		\end{minipage}
         \hspace{0.1cm}
         }
@@ -288,15 +288,15 @@
         \resizebox{.6\textwidth}{!}{%
         \hspace{0.1cm}
         \begin{minipage}{0.3\textwidth}
-            \input{Tikz/umwandlungstromquelle1.tex}	
+            \input{Tikz/src/umwandlungstromquelle1.tex}	
 		\end{minipage}
         \hspace{0.1cm}
         \begin{minipage}{0.2\textwidth}
-            \input{Tikz/umwandlungstromquelle2.tex}	
+            \input{Tikz/src/umwandlungstromquelle2.tex}	
 		\end{minipage}
         \hspace{0.1cm}
         \begin{minipage}{0.3\textwidth}
-            \input{Tikz/umwandlungstromquelle3.tex}		
+            \input{Tikz/src/umwandlungstromquelle3.tex}		
 		\end{minipage}
         \hspace{0.1cm}
         }
@@ -367,7 +367,7 @@
 
     \fu{
         \resizebox{.6\textwidth}{!}{%
-		\input{Tikz/ueberlagerungssatz.tex}
+		\input{Tikz/src/ueberlagerungssatz.tex}
 		}%
     }{{\bf Elektrisches Netzwerk mit zwei Spannungsquellen zur Erklärung des Überlagerungssatzes.} Die Spannungsquellen sollen
     nacheinander für das elektrische Netzwerk analysiert werden. \label{BildÜberlagerungssatz}}
@@ -393,7 +393,7 @@
 
     \fu{
         \resizebox{0.8\textwidth}{!}{%
-		\input{Tikz/ueberlagerungssatzquellen.tex}
+		\input{Tikz/src/ueberlagerungssatzquellen.tex}
 		}%
     }{{\bf Elektrisches Netzwerk mit zwei Spannungsquellen zur Erklärung des Überlagerungssatzes.} Links wird das Netzwerk für die Analyse
     der Spannungsquelle $U_1$ und rechts für die Spannungsquelle $U_2$ gezeigt.  \label{BildÜberlagerungssatzQuellen}}
@@ -460,14 +460,14 @@
 
                 
                 \fu{
-                    \input{Tikz/superposition1.tex}
+                    \input{Tikz/src/superposition1.tex}
                 }{{\bf Beispiel.} Netzwerkanalyse mit Kirchhoffschen Regeln. \label{BildBeispielaufgabeSuperposition}}
                     }
 			\only<2>{			
 				\item[a)] Angabe der Ströme und Spannungen:
                 \begin{figure}[H]
                     \resizebox{0.65\textwidth}{!}{%   
-                        \input{Tikz/superposition2.tex}
+                        \input{Tikz/src/superposition2.tex}
                     }\centering                                                           
                 \end{figure}
                     }    
@@ -476,7 +476,7 @@
 				\onslide<3>{
                     \begin{figure}[H]
                         \resizebox{0.65\textwidth}{!}{%  
-                        \input{Tikz/superposition3.tex}
+                        \input{Tikz/src/superposition3.tex}
                         }\centering                                                           
                     \end{figure}
 					\begin{eqa}
@@ -492,7 +492,7 @@
 				\onslide<4>{
                     \begin{figure}[H]
                         \resizebox{0.65\textwidth}{!}{%  
-                        \input{Tikz/superposition4.tex}
+                        \input{Tikz/src/superposition4.tex}
                         }\centering                                                           
                     \end{figure}
 					\begin{eqa}
@@ -526,9 +526,9 @@
     Der Stromfluss über diesen Pfad ist somit unterbrochen. Der Gesamtstrom I ges teilt sich am Knoten K 1 auf die Ströme I 1 und I 3 auf. Der Strom 
     I 3 ist dabei gleich dem Strom I 2. Das Verhältnis von U G und dem Gesamtwiderstand R ges bestimmt I ges. Der Strom durch R 3 lässt sich hier über 
     das Verhältnis von I 3 zu I ges sowie R1 zu der Summe aus R 1, R 2 und R 3 ermitteln.}
-    \speech{SuperposBsp}{4}{Bei der Netzbetrachtung für die Stromquelle I G wird die Spannungsquelle nun deaktiviert und hinterlässt einen Kurzschluss. 
-    Der Gesamtstrom resultiert aus I G und teilt sich am Knoten Ka zwei auf die Ströme I zwei und minus I drei auf. 
+    \speech{SuperposBsp}{4}{Bei der Netzbetrachtung für die Stromquelle I Ge wird die Spannungsquelle nun deaktiviert und hinterlässt einen Kurzschluss. 
+    Der Gesamtstrom resultiert aus I Ge und teilt sich am Knoten Ka zwei auf die Ströme I zwei und minus I drei auf. 
     Nun lässt sich das Verhältnis zur Berechnung von I drei aufstellen. I drei verhält sich zu I gesamt wie R zwei zu der Summe aus der Parallelschaltung 
-    von R i und R zwei und R zwei und R drei.}
+    von R eins und R i und R zwei und R drei.}
     \speech{SuperposBsp}{5}{Zum Schluss werden die Teilergebnisse aufaddiert.}
 \end{frame}

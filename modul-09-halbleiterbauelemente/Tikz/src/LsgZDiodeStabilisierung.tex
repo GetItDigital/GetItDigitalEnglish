@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+  \draw(0,2) 
+    to[V, name=V1, v] (0,0)
+    to[short, -o](5,0) -- (8.5,0)
+    to[R, l_=$R_\mathrm{L}$, v^<, name=RL] (8.5,2)
+    to[short, -o](5,2)
+    to[short] (4,2)
+    to[R, l_=$R_\mathrm{V}$, i<_, name=RV] (0,2);
+
+  \draw(4,0) 
+  to[zDo=$D_\mathrm{D}$, *-*, i_<, name=D] (4,2) ;
+
+  \draw (5,2) 
+  to[open, name=ua, v^] (5,0);
+  
+  \varrmore{ua}{$U_\mathrm{A}$};
+  \varrmore{V1}{$U_\mathrm{E}$};
+  \varrmore{RL}{$U_\mathrm{RL}$};
+  \iarrmore{RV}{${I}$};
+  \iarrmore{D}{$I_\mathrm{Z}$};
+  
+  \draw[->,shift={(2,1)}] (150:0.5) arc (150:-150:0.5) node at(0,0){$M_\mathrm{1}$};  
+  \draw[->,shift={(6.5,1)}] (150:0.5) arc (150:-150:0.5) node at(0,0){$M_\mathrm{2}$};
+\end{tikzpicture}

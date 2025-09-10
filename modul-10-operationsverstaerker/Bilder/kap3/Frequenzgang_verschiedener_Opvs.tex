@@ -7,7 +7,7 @@
     \hline
     \vspace{0.5cm}
     \centering
-    \input{Tikz/NichtinvertierenderVerstaerker.tex} & \input{Tikz/FrequenzgangNiV.tex}
+    \input{Tikz/src/NichtinvertierenderVerstaerker.tex} & \input{Tikz/src/FrequenzgangNiV.tex}
 \vspace{1ex}
 \[
 U_{\textnormal{A}} = \left(1+\frac{R_2}{R_1}\right) U_{\textnormal{E}}
@@ -22,10 +22,10 @@ U_{\textnormal{A}} = \left(1+\frac{R_2}{R_1}\right) U_{\textnormal{E}}
 \end{itemize} \\
     \hline
     \centering
-    \input{Tikz/InvertierenderVerstaerker.tex}
+    \input{Tikz/src/InvertierenderVerstaerker.tex}
      & 
     \begin{center}
-        \input{Tikz/FrequenzgangInvertierenderVerstaerker.tex}
+        \input{Tikz/src/FrequenzgangInvertierenderVerstaerker.tex}
 \end{center}
 \vspace{1ex}
 \[
@@ -42,10 +42,10 @@ U_{\textnormal{A}} = \left(1+\frac{R_2}{R_1}\right) U_{\textnormal{E}}
 \\ % Zweite Zeile
     \hline
     \centering
-    \input{Tikz/Komparator.tex}
+    \input{Tikz/src/Komparator.tex}
     & 
     \begin{center}
-               \input{Tikz/FrequenzgangKomparator.tex}
+               \input{Tikz/src/FrequenzgangKomparator.tex}
 \[
 V_1: U_{\textnormal{E+}} > U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \approx +U_{\textnormal{B}}
 \]
@@ -61,11 +61,11 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
     
 
 \centering
-\input{Tikz/Summierer.tex}
+\input{Tikz/src/Summierer.tex}
 
     &
     \begin{center}
-    \input{Tikz/FrequenzgangSummierer.tex}
+    \input{Tikz/src/FrequenzgangSummierer.tex}
 \end{center}
 \vspace{1ex}
 \[
@@ -101,10 +101,10 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
      \hline 
     Schaltung & Frequenzgang und Gleichung & Erläuterung und Eigenschaften \\ % Neue Zeile mit Text
     \hline
-    \input{Tikz/Subtrahierer.tex}
+    \input{Tikz/src/Subtrahierer.tex}
       &
       \begin{center}
-      \input{Tikz/FrequenzgangSubtrahierer.tex}
+      \input{Tikz/src/FrequenzgangSubtrahierer.tex}
  \end{center}
  \vspace{1ex}
  \[
@@ -118,10 +118,10 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
  \\ % Fünfte Zeile
      \hline
 
-    \input{Tikz/Integrierer.tex}
+    \input{Tikz/src/Integrierer.tex}
      & 
      \begin{center}
-    \input{Tikz/FrequenzgangIntegrierer.tex}
+    \input{Tikz/src/FrequenzgangIntegrierer.tex}
      \[
      U_A(t) = - \frac{R_2}{R_1} U_{\textnormal{E}}(t) - \int_0^t \frac{U_{\textnormal{E}}(t)}{R_1 C_1} \, dt
      \]
@@ -134,10 +134,10 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
     \end{itemize}
       \\ 
       \hline
-    \input{Tikz/Differenzierer.tex}
+    \input{Tikz/src/Differenzierer.tex}
     &
     \begin{center}
-    \input{Tikz/FrequenzgangDifferenzierer.tex}
+    \input{Tikz/src/FrequenzgangDifferenzierer.tex}
     \begin{multline*}
         U_A = - \frac{R_2}{R_1} U_{\textnormal{E}}(t) \\
         - \int_0^t \frac{1}{R_1 C_1} U_{\textnormal{E}}(t) \, dt 
@@ -166,7 +166,7 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
             \hline 
     Schaltung & Frequenzgang und Gleichung & Erläuterung und Eigenschaften \\ % Neue Zeile mit Text
     \hline
-    \input{Tikz/Logarithmierer.tex}
+    \input{Tikz/src/Logarithmierer.tex}
     &
     \begin{center}
     \[
@@ -187,7 +187,7 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
     Bildet den natürlichen Logarithmus des Eingangssignals
     \\
     \hline
-    \input{Tikz/Potenzierer.tex}
+    \input{Tikz/src/Potenzierer.tex}
     &
     \begin{center}
     \[
@@ -199,10 +199,10 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
     Besitzt einen e-funktionalen Zusammenhang zwischen Ein- und Ausgangsspannung
     \\
     \hline
-    \input{Tikz/Instrumentenverstaerker.tex}
+    \input{Tikz/src/Instrumentenverstaerker.tex}
      &
          \begin{center}
-   \input{Tikz/FrequenzgangInstrumenten.tex}
+   \input{Tikz/src/FrequenzgangInstrumenten.tex}
 \end{center}
 
 \vspace{1ex}

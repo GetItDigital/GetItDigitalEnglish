@@ -1,0 +1,29 @@
+\begin{tikzpicture}
+    \draw (0,0) node[npn, tr circle] (Q1) {};
+
+    \draw (Q1.C) to[short, -o, name=ic] (0,2.5)
+    node[right, color=voltage]{$U_\mathrm{V}$};
+
+    \draw (0,2)
+    to[short, *-] (-3, 2) 
+    to[R=$R_1$, -*]  (-3, 0) 
+    to[R=$R_2$]  (-3, -3) 
+    node[ground]{};
+
+    \draw (Q1.B) 
+    to[short, -o] (-5, 0)
+    to[open, v, name=ue] (-5,-2.75)    
+    to[short, o-] (-5, -3)
+    node[ground]{};
+
+    \draw (Q1.E) to[short, -*] ++(0, -0.25)
+    to[R=$R_3$] (0, -3) node[ground]{};
+
+    \draw (Q1.E)++(0, -0.25) to[short, -o] ++(2, 0)
+    to[open, v^, name=ua] (2,-2.75)    
+    to[short, o-] (2,-3)
+    node[ground]{};
+    
+    \varrmore{ue}{$U_\mathrm{E}$};
+    \varrmore{ua}{$U_\mathrm{A}$};
+\end{tikzpicture}

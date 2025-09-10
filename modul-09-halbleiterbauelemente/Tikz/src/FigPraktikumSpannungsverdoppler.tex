@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    \draw (0,4)
+    to[D,l=$D_\mathrm{1}$, *-*] (2,4)
+    to[C,l=$C_\mathrm{1}$, -*] (2,2) 
+    to[C,l=$C_\mathrm{2}$, -*] (2,0) 
+    to[D,l=$D_\mathrm{2}$] (0,0) -- (0,4); 
+
+    \draw (0,4) -- (-2,4)
+    to[sV,name=UE, v_] (-2,2) -- (2,2);
+
+    \draw (2,4) -- (4,4)
+     to[R,l=$R_\mathrm{L}$] (4,0) -- (2,0); 
+     
+    \draw (4,4)
+    to[short, *-o] (5.5,4)
+    to[open,v^,name=UA] (5.5,0)
+    to[short, o-*] (4,0);
+
+    \varrmore{UE}{$u_{\mathrm{E}_i}(t)$};
+    \varrmore{UA}{$U_\mathrm{A}$};
+\end{tikzpicture}

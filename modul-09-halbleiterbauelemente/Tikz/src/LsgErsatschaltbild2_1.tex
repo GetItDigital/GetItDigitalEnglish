@@ -1,0 +1,30 @@
+\begin{tikzpicture}
+
+    \draw (0,0)
+    to[short, o-o] (3,0) node[above]{B}
+    --(4,0) 
+    to[R,l=$r_\mathrm{BE}$] (4,-2)
+    to[short,-*] (6,-2) 
+    to[I, i_<, name=ib] (6,0) 
+    to[short, -*] (8,0) 
+    to[R,l=$r_\mathrm{CE}$] (8,-2) 
+    to[short, -o] (7,-2) node[above]{E}
+    -- (6,-2);
+    
+    \draw (8,0)
+    to[short,-o] (9,0)node[above]{C}
+    -- (10,0) 
+    -- (10,-4) 
+    to[short, -*] (6,-4) node[ground]{}
+    to[short, -o] (0,-4);
+    
+    \draw (7,-2) to[open,v^, name=ua] (7,-4);
+    \draw (1,0) to[R,l=$R_\mathrm{1}$, *-*](1,-4);
+    \draw (2,0) to[R,l=$R_\mathrm{2}$, *-*](2,-4);
+    \draw (6,-2) to[R,l=$R_\mathrm{3}$](6,-4);
+    \draw (0,0) to[open, v>, name=ue] (0,-4);
+    
+    \varrmore{ua}{$u_\mathrm{a}$};
+    \varrmore{ue}{$u_\mathrm{e}$};
+    \iarrmore{ib}{$\mathrm{B}\cdot i_\mathrm{B}$};
+\end{tikzpicture}

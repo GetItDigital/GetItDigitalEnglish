@@ -3,45 +3,15 @@ Gegeben ist die abgebildete Transistorschaltung mit den folgenden Parametern: $U
 $U_L=\mathrm{15\,V}$, $R_\mathrm{V}=\mathrm{100\,k\Omega}$ und $R_\mathrm{V}=\mathrm{500\,\Omega}$.
 % Alt: Aufgabe 12
 \Aufgabe{
-\begin{itemize}
-  \item[a)] Wie groß ist die Spannung $U_\mathrm{BE}$ näherungsweise, wenn es sich um einen Siliziumtransistor handelt?
-  \item[b)] Wie groß ist der Strom $I_\mathrm{B}$?
-\end{itemize} 
-\begin{figure}[H]
-   \centering
-   \input{Tikz/FigTransistorBasisstrom.tex}
-   \label{fig:FigTransistorBasisstrom}
-\end{figure}
-% \speech{ **Aufgabe 12**  
-% **Fragestellung:**  
-% a) Wie groß ist die Spannung \( U_{BE} \)?  
-% b) Wie groß ist der Strom \( I_B \), wenn es sich um einen Siliziumtransistor handelt?  
-
-%  **Beschreibung der Abbildung**  
-% Die gezeigte Schaltung stellt einen **npn-Transistor in einer Basisschaltung** dar, der von zwei Spannungsquellen gespeist wird.
-
-% 1. **Spannungsquellen und Widerstände:**  
-%    - **Eine 5V-Spannungsquelle** speist die Basis über einen **100 kΩ-Widerstand**.  
-%    - **Eine 15V-Spannungsquelle** versorgt den Kollektor über einen **500Ω-Widerstand**.
-
-% 2. **Transistorkennzeichnung:**  
-%    - Der Transistor hat drei Anschlüsse:  
-%      - **Basis (B)** – wird über den 100 kΩ-Widerstand gespeist.  
-%      - **Kollektor (C)** – verbunden mit dem 500Ω-Widerstand zur 15V-Quelle.  
-%      - **Emitter (E)** – mit Masse verbunden.  
-%    - Der Transistor wird als **Siliziumtransistor** betrachtet, was bedeutet, dass die typische **Basis-Emitter-Spannung \( U_{BE} \)** etwa **0,7V** beträgt.  
-
-% 3. **Kennzeichnungen in der Schaltung:**  
-%    - **Der Basisstrom \( I_B \)** ist als roter Pfeil eingezeichnet, der in die Basis fließt.  
-%    - **Die Spannung \( U_{BE} \)** ist als blaue Beschriftung eingezeichnet und befindet sich zwischen Basis und Emitter.  
-
-
-
-%  **Zusammenfassung der Aufgabe**  
-% - Die Schaltung dient dazu, die **Basis-Emitter-Spannung \( U_{BE} \)** eines Siliziumtransistors zu bestimmen.  
-% - Zusätzlich soll der **Basisstrom \( I_B \)** unter Berücksichtigung des Basisvorwiderstands berechnet werden.  
-% }
-
+  \begin{itemize}
+    \item[a)] Wie groß ist die Spannung $U_\mathrm{BE}$ näherungsweise, wenn es sich um einen Siliziumtransistor handelt?
+    \item[b)] Wie groß ist der Strom $I_\mathrm{B}$?
+  \end{itemize}
+  \begin{figure}[H]
+    \centering
+    \input{Tikz/src/FigTransistorBasisstrom.tex}
+    \label{fig:FigTransistorBasisstrom}
+  \end{figure}  
 }
 
 \Loesung{
@@ -50,7 +20,7 @@ $U_L=\mathrm{15\,V}$, $R_\mathrm{V}=\mathrm{100\,k\Omega}$ und $R_\mathrm{V}=\ma
   \end{itemize}
   \begin{equation}
     U_\text{BE} = U_\text{B} - U_\text{E}
-  \end{equation} 
+  \end{equation}
   Ein npn-Transistor hat im leitenden Zustand eine typische Basis-Emitter-Spannung von:
   \begin{equation}
     U_\text{BE} \approx 0,6\,\text{V} \text{ bis } 0,7\,\text{V}
@@ -65,48 +35,4 @@ $U_L=\mathrm{15\,V}$, $R_\mathrm{V}=\mathrm{100\,k\Omega}$ und $R_\mathrm{V}=\ma
     \item[b)] $I_\text{B} = \frac{5\,\text{V} - 0,6\,\text{V}}{100\,\text{k}\Omega} = 44\,\mu\text{A}$
   \end{itemize}
   Siehe: Abschnitt \ref{sec:Bipolartransistor} und \ref{fig:StroemeUndSpannungenBeimBipolartransistor}
-%   \speech{
-% **Aufgabe 12 – Analyse eines npn-Transistors**
-
-% Gegeben ist ein npn-Transistor. Die Aufgabe besteht darin, die Basis-Emitter-Spannung \( U_{BE} \) sowie den Basisstrom \( I_B \) zu berechnen.
-
-% ### Teil a) Bestimmung der Basis-Emitter-Spannung \( U_{BE} \)
-% Die Basis-Emitter-Spannung \( U_{BE} \) eines Silizium-Transistors beträgt im leitenden Zustand typischerweise zwischen **0,6 und 0,7 Volt**.
-
-% Diese Spannung ist eine materialbedingte Eigenschaft von Silizium-Transistoren und bleibt nahezu konstant, unabhängig von der Basisspannung \( U_B \). Das bedeutet:
-% - Auch wenn die Basisspannung \( U_B \) **5 Volt** beträgt, begrenzt der Transistor die Spannung \( U_{BE} \) auf ungefähr **0,6 Volt**, sobald er leitend ist.
-% - Der überschüssige Spannungsabfall, also **die Differenz zwischen \( U_B \) und \( U_{BE} \)**, wird durch andere Ströme und Bauteile in der Schaltung ausgeglichen.
-
-% Ergebnis:
-% - Die Basis-Emitter-Spannung beträgt **ungefähr 0,6 Volt**.
-
-% ### Teil b) Berechnung des Basisstroms \( I_B \)
-% Der Basisstrom \( I_B \) ergibt sich aus dem Widerstand in der Basisleitung. Die Formel zur Berechnung lautet:
-
-% \[
-% I_B = \frac{U_B - U_{BE}}{R_B}
-% \]
-
-% Eingesetzte Werte:
-% - Basisspannung \( U_B = 5V \)
-% - Basis-Emitter-Spannung \( U_{BE} = 0,6V \)
-% - Basiswiderstand \( R_B = 100 k\Omega \)
-
-% Berechnung:
-% \[
-% I_B = \frac{5V - 0,6V}{100 k\Omega}
-% \]
-
-% \[
-% I_B = \frac{4,4V}{100 k\Omega} = 44 \mu A
-% \]
-
-% Ergebnis:
-% - Der Basisstrom beträgt **44 Mikroampere**.
-
-% Fazit:
-% - Der npn-Transistor begrenzt die Basis-Emitter-Spannung unabhängig von der angelegten Basisspannung.
-% - Der Basisstrom hängt vom Basiswiderstand ab und beträgt hier **44 Mikroampere**.
-% }
-
 }

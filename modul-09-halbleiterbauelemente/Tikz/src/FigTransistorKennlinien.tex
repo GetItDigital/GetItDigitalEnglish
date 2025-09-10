@@ -1,0 +1,26 @@
+\begin{tikzpicture} 
+    \draw (0,0) node[npn] (Q1) {};
+    
+    \draw (Q1.C)
+    to [short] (0,1)
+    to[R, l_= $R_\mathrm{C}$] (0,3)
+    to [short, -o] (0,3.5) node[right, color=voltage] {$U_\mathrm{V}$};
+    
+    \draw (0,1)
+    to[short, *-o] (2,1);
+    
+    \draw (Q1.E)
+    to [short, -*] (0,-2) node[ground]{};
+    
+    \draw (-2,-2)
+    to[short, o-o] (2,-2);
+    
+    \draw (2,1)
+    to[open,v^, name=ua] (2,-2);
+    
+    \draw (Q1.B) to[short, -o] (-2,0)
+    to[open,v>, name=ue] (-2,-2);
+    
+    \varrmore{ua}{$U_\mathrm{CE}$};
+    \varrmore{ue}{$U_\mathrm{BE}$};
+\end{tikzpicture}

@@ -47,7 +47,7 @@
 \tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
 
 
-\input{Tikz/src/5_messen/Spannung _messen_real}
+\input{Tikz/src/5_messen/Spannung_messen_real}
 
 		\end{center}
 		\label{fig:voltmeterreal}
@@ -193,13 +193,16 @@
 	 \speech{folie32}{1}{Die elektrische Spannung, die über einem Bauelement bei einer Zusammenschaltung mehrerer Bauelemente abfällt, kann mit Hilfe eines Spannungsmessgerätes 
 	 ermittelt werden. Dieses Messgerät wird auch als Voltmeter bezeichnet. Für die Messung der Spannung muss das Voltmeter parallel zu dem zu vermessenden Bauelement angebracht werden. 
 	 Eine Unterbrechung des Stromkreises ist dazu in der Regel nicht notwendig.}
+	 \silence{2}
 \speech{folie32}{2}{Ein ideales Voltmeter besitzt einen unendlich hohen Innenwiderstand. Folglich fließt kein Strom am Lastwiderstand vorbei durch das Messgerät. 
-Die Spannungsmessung erfolgt vollständig rückwirkungsfrei. Ein reales Voltmeter besitzt einen endlichen Innenwiderstand, welcher parallel zur eigentlich Spannungsmessung geschaltet ist. 
+Die Spannungsmessung erfolgt vollständig rückwirkungsfrei.} 
+\speech{folie32}{2}{
+Ein reales Voltmeter hingegen besitzt einen endlichen Innenwiderstand, welcher parallel zur eigentlichen Spannungsmessung geschaltet ist. 
 Der blau markierte Teil stellt das Voltmeter bis zu den Anschlussklemmen dar. Der durch diesen Innenwiderstand fließende Strom verfälscht das Messergebnis, da dieser nicht mehr
 durch das eigentlich zu messende Bauteil fließt, der Spannungsabfall darüber also geringer wird. Folglich sollte der Innenwiderstand so groß wie möglich sein.
-In modernen, elektronischen Spannungsmessgeräten ist er üblicherweise in der Größenordnung von zwischen einem Megaohm bis zu einem Gigaohm.
+In modernen elektronischen Spannungsmessgeräten ist er üblicherweise in der Größenordnung von zwischen einem Megaohm bis zu einem Gigaohm.
 Sind sowohl der Innenwiderstand als auch der zu vermessende Widerstand bekannt, so kann mittels eines Korrekturterms die Spannung errechnet werden, die ohne den Einfluss des Messgerätes hier abfallen würde.}
-
+\silence{4}
 }
 
 \end{frame}
@@ -380,11 +383,13 @@ Sind sowohl der Innenwiderstand als auch der zu vermessende Widerstand bekannt, 
 \speech{folie33}{1}{ Die Stromstärke, welche durch ein Bauelement fließt, lässt sich mit Hilfe eines Strommessgerätes, auch Amperemeter genannt, bestimmen. 
 Im Gegensatz zur Spannungsmessung muss das Amperemeter in Reihe zum Bauelement geschaltet werden, damit der Strom, der durch das Bauelement fließt, auch durch das Amperemeter fließt. 
 Eine Unterbrechung des Stromkreises ist dazu in aller Regel erforderlich.}
-\speech{folie33}{2}{Ein ideales Ampereter hat keinen Innenwiderstand, so dass der Strom rückwirkungsfrei durch es hindurchfließen kann.
+\silence{2}
+\speech{folie33}{2}{Ein ideales Ampereter hat keinen Innenwiderstand, so dass der Strom rückwirkungsfrei durch dieses hindurchfließen kann.
 Ein reales Amperemeter hat jedoch einen in Reihe geschalteten Innenwiderstand.
 Auch hier wird das Messergebnis durch diesen Innenwiderstand beeinflusst. Je nach Messbereich liegt dieser bei elektronischen Amperemetern typischerweise im Bereich einige milli ohm
  bis mikro ohm.
 Unter Kenntnis des Innenwiderstandes und des zu messenden Widerstandes lässt sich auch beim Amperemeter der Messfehler herausrechnen.}
+\silence{4}
 
 }
 \end{frame}
@@ -418,7 +423,7 @@ Unter Kenntnis des Innenwiderstandes und des zu messenden Widerstandes lässt si
 		\begin{center}			
 		\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
 
-		\input{Tikz/src/5_messen/Stromrichtiges_Mesen}
+		\input{Tikz/src/5_messen/Stromrichtiges_Messen}
 		\end{center}
 		
 		
@@ -633,13 +638,14 @@ Als Faustregel gilt häufig, dass diese Schaltung verwendet wird, wenn der zu me
 	 \end{columns}
 	
 	 \speech{folie35}{1}{Im Gegensatz zur stromrichtigen Messchaltung misst das Voltmeter in der spannungsrichtigen Messschaltung die korrekte am Widerstand abfallende Spannung. 
-	 Aus diesem Grund befindet ist das Voltmeter ausschließlich zum Lastwiderstand parallelgeschaltet. Das Amperemeter ist in Reihe zu den beiden Elementen. 
-	 Also misst das Amperemeter den Strom, der durch die Parallelschaltung aus Spannungsmesser und Lastwiderstand fließt. 
+	 Hier ist das Voltmeter ausschließlich zum Lastwiderstand parallelgeschaltet. Das Amperemeter ist in Reihe zu den beiden Elementen. 
+	 Also misst das Amperemeter den Strom, der durch die Parallelschaltung aus Spannungsmessgerät und Lastwiderstand fließt. 
 	 Diese Messanordnung ist zu empfehlen, wenn ein höherer Fokus auf die korrekte Messung der Spannung gelegt werden soll oder für die Widerstände gilt, dass der Innenwiderstand des Voltmeters viel größer als
 	 der zu vermessende Widerstand ist.
 Bei unklaren Verhältnissen, ob die stromrichtige oder die spannungsrichtige Messung verwendet werden sollte, kann man sich an folgender Empfehlung orientieren: 
-Ist die Wurzel aus RiA mal RiV größer als der zu vermessende Widerstand, so sollte man die stromrichtige Messung anwenden. Ist dieser kleiner, so verwendet man die spannungsrichtige Messung.}
+Ist die Wurzel aus dem Produkt der beiden Innenwiderstände größer als der zu vermessende lastwiderstand, so sollte man die stromrichtige Messung anwenden. Ist diese Wurzel kleiner, so verwendet man die spannungsrichtige Messung.}
 }
+\silence{4}
 
 \end{frame}
 

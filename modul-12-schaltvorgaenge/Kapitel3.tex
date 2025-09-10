@@ -490,7 +490,7 @@ Ausgehend von der Maschengleichung wird $\ecv{u_R}$ in Abhängigkeit von $\ecv{u
 &\text{spez. allg. Lsg.:}&
     \ecv{u_C}(t) &= \ecv{U_q} \left( 1 - \mathrm{e}^{-\sfrac{t}{\tau}} \right) \\[2pt]
 &\text{Strom: }&
-    \eci{i_C} &= \frac{\ecv{U_q}}{R} \cdot \mathrm{e}^{-\sfrac{t}{\tau}} &
+    \eci{i_C}(t) &= \frac{\ecv{U_q}}{R} \cdot \mathrm{e}^{-\sfrac{t}{\tau}} &
     &\text{mit}\quad \eci{i_C} = C \cdot \dt \ecv{u_C}
 \\[-15pt]&\hphantom{R1oooooooooo}&\hphantom{L2oooooooo}&\hphantom{R2oooooooooooooooooo}&&\hphantom{R3oooooooooooooooooo}% Dummy-Zeile RL-DC für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
 \end{align*}
@@ -584,7 +584,7 @@ Ausgehend von der Maschengleichung wird $\ecv{u_R}$ in Abhängigkeit von $\ecv{u
 &\text{spez. allg. Lsg.:}&
     \ecv{u_C}(t) &= \ecv{U_q} \cdot  \mathrm{e}^{-\sfrac{t}{\tau}}\\
 &\text{Strom: }&
-    \eci{i_C} &= - \frac{\ecv{U_q}}{R} \cdot \mathrm{e}^{-\sfrac{t}{\tau}}&
+    \eci{i_C}(t) &= - \frac{\ecv{U_q}}{R} \cdot \mathrm{e}^{-\sfrac{t}{\tau}}&
     &\text{mit}\quad \eci{i_C} = C \cdot \dt \ecv{u_C}
 \end{align*}% new alignments
 \end{frame}
@@ -2138,7 +2138,7 @@ Aus der allgemeinen homog. Lösung im periodischen Fall (Gl. \ref{eq:dgl:rlc:hom
     &&
         \ecv{u_{C,\mathrm{h}}} &= \mathrm{e}^{-\delta t} \cdot \left( K_1 \cdot \mathrm{e}^{+\mathrm{j}\omega_d t} + K_2 \cdot \mathrm{e}^{-\mathrm{j}\omega_d t} \right) \nonumber\\
 % uncomment intertext for math preview in VSCode
-\intertext{$K_1$ und $K_2$ müssen komplex konjugiert sein, damit $\ecv{u_{C,\mathrm{h}}}$ reell ist!}
+\intertext{$K_1$ und $K_2$ müssen komplex konjugiert sein, damit $\ecv{u_{C,\mathrm{h}}}$ reell ist! \s{\cite[Vgl. S. 379]{hagmann}}}
 &\text{mit}&
         K_1 &= a + \mathrm{j} b \mathrlap{\quad\text{und}\quad K_2 = a - \mathrm{j} b\quad\text{mit}\quad a,b \in \mathbb{R}} \nonumber\\[6pt]
     &&

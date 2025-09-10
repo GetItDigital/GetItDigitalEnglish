@@ -225,7 +225,7 @@
 
 \subsection{Berechnungsmethoden für Schaltvorgänge}
 \label{sec:grundlagen:berechnungsmethoden}
-\begin{frame}\ftx{\subsecname\ für Schaltvorgänge}
+\begin{frame}\ftx{\subsecname}
 \s{%
     % Methoden
     Zur Berechnung von Schaltvorgängen stehen prinzipiell zwei Methoden zur Verfügung. 
@@ -672,21 +672,27 @@
         &\textbf{Homogene DGL:}& 
             \sum_{i=0}^{n} a_i \cdot \dt[i]\, y_{\mathrm{h}} &= 0 &
             &\text{(gew., lin., konst. Koeff.)}\vphantom{\bigg|}\\[4pt]
+        \onslide<2-|handout:1>{
         &\text{Ansatz:}&
             y_{\mathrm{h}}(t) &= K \cdot \mathrm{e}^{\lambda t} &
             &\text{(Exponentialfkt.)}\vphantom{\bigg|}\\
         &\text{Char. Polynom:}&
             \sum_{i=0}^{n} a_i \cdot \lambda^i &= 0 \quad\Rightarrow\quad \lambda_i = ... &
             &\text{(Eigenwerte: $\lambda$)} \\[4pt]
+        }%
+        \onslide<3-|handout:1>{
         &\text{1. Lösungsansatz:}&
             y_{\mathrm{h}}(t) &= \sum_{i=1}^{n} K_i \cdot \mathrm{e}^{\lambda_i t} &
             &\text{ für $\lambda_i \neq \lambda_{i-1} \ \forall \ i$} \\
         &\text{2. Lösungsansatz:}&
             y_{\mathrm{h}}(t)&= \sum_{j=1}^{m} K_j \cdot t^{j-1}  \cdot \mathrm{e}^{\lambda t} &
             &\text{ für $\lambda_j = \lambda \ \forall \ j$}\\[6pt]
+        }%
+        \onslide<4-|handout:1>{
         &\textbf{allg. hom. Lösung:}&
             y_{\mathrm{h}}(t)&= \ ... \ = y_{\mathrm{f}} &
             &\text{(Linearkombination)}
+        }%
     \end{align*}
 }%
 \s{%
@@ -726,9 +732,9 @@
         %\sum_{i=0}^{n} a_i \cdot \dt[i]\, y_{\mathrm{h}}(t) &= 0 \nonumber\\
         \sum_{i=0}^{n} a_i \cdot \dt[i]\, K \cdot \mathrm{e}^{\lambda t} &= 0 \nonumber\\[2pt]
         \left(\sum_{i=0}^{n} a_i \cdot \lambda^i \right) K \cdot \mathrm{e}^{\lambda t} &= 0 \nonumber\\[4pt]
-    \intertext{kann das \textbf{charakteristische Polynom}\index{Differentialgleichung>Charakteristische Polynom} aufgestellt werden:}
+    \intertext{kann das \textbf{charakteristische Polynom} aufgestellt werden:}
         \sum_{i=0}^{n} a_i \cdot \lambda^i &= 0
-    \end{align}
+    \end{align}\index{Differentialgleichung>Charakteristische Polynom}
 
     % Höhere Ordnung, Anzahl Eigenwerte, komplexe Werte
     Die maximale Anzahl an Eigenwerten ist gegeben durch die Ordnung einer DGL. 
@@ -823,20 +829,34 @@
     besitzt eine einfache und zwei doppelte, konjugierte, komplexe Nullstellen:
     \begin{equation*}
         %\lambda_1 = -3, \quad \lambda_2 = \lambda_3 = -1+\mathrm{2j}, \quad \lambda_4 = \lambda_5 = -1-\mathrm{2j}
-        \only<4| handout:0>{%
+        \only<4| handout:1>{%
             \lambda_1 = -3, \quad \lambda_2 = \lambda_3 = -1+\mathrm{2j}, \quad \lambda_4 = \lambda_5 = -1-\mathrm{2j}
         }%
-        \only<5-| handout:1>{%
-            \lambda_1 = \ec[teal]{-3}, \quad \lambda_2 = \lambda_3 = \ec[purple]{-1}\ec[violet]{{}+{}2}\mathrm{j}, \quad \lambda_4 = \lambda_5 = \ec[purple]{-1}\ec[violet]{{}-{}2}\mathrm{j}
+        \only<5| handout:0>{%
+            \lambda_{\ec[teal]{1}} = -3, \quad \lambda_{\ec[purple]{2}} = \lambda_{\ec[purple]{3}} = -1+\mathrm{2j}, \quad \lambda_{\ec[violet]{4}} = \lambda_{\ec[violet]{5}} = -1-\mathrm{2j}
+        }%
+        %\only<6| handout:0>{%
+        %    \lambda_1 = \ec[cyan]{-3}, \quad \lambda_2 = \lambda_3 = \ec[orange]{-1}\ec[magenta]{{}+{}2}\mathrm{j}, \quad \lambda_4 = \lambda_5 = \ec[orange]{-1}\ec[magenta]{{}-{}2}\mathrm{j}
+        %}%
+        \only<6-| handout:1>{%
+            \lambda_{\ec[teal]{1}} = \ec[cyan]{-3}, \quad \lambda_{\ec[purple]{2}} = \lambda_{\ec[purple]{3}} = \ec[orange]{-1}\ec[magenta]{{}+{}2}\mathrm{j}, \quad \lambda_{\ec[violet]{4}} = \lambda_{\ec[violet]{5}} = \ec[orange]{-1}\ec[magenta]{{}-{}2}\mathrm{j}
         }%
     \end{equation*}
-    
-    \pause\pause%
+
+    \pause%
 
     Die allgemeine Lösung lautet:
     \begin{equation*}
         %y_{\mathrm{h}}(t) = K_1 \cdot \mathrm{e}^{-3 t} + (K_2 + K_3 \cdot t) \cdot \mathrm{e}^{-t} \sin(2t) + (K_4 + K_5 \cdot t) \cdot \mathrm{e}^{-t} \cos(2t)
-        y_{\mathrm{h}}(t) = K_1 \cdot \mathrm{e}^{\ec[teal]{-3} t} + (K_2 + K_3 \cdot t) \cdot \mathrm{e}^{\ec[purple]{-}t} \sin(\ec[violet]{2}t) + (K_4 + K_5 \cdot t) \cdot \mathrm{e}^{\ec[purple]{-}t} \cos(\ec[violet]{2}t)
+        \only<5|handout:0>{
+            y_{\mathrm{h}}(t) = \ec[teal]{K_1} \cdot \mathrm{e}^{-3 t} + \ec[purple]{(K_2 + K_3 \cdot t)} \cdot \mathrm{e}^{-t} \sin(2t) + \ec[violet]{(K_4 + K_5 \cdot t)} \cdot \mathrm{e}^{-t} \cos(2t)
+        }%
+        %\only<6| handout:0>{
+        %    y_{\mathrm{h}}(t) = K_1 \cdot \mathrm{e}^{\ec[cyan]{-3} t} + (K_2 + K_3 \cdot t) \cdot \mathrm{e}^{\ec[orange]{-}t} \sin(\ec[magenta]{2}t) + (K_4 + K_5 \cdot t) \cdot \mathrm{e}^{\ec[orange]{-}t} \cos(\ec[magenta]{2}t)
+        %}%
+        \only<6-| handout:1>{
+            y_{\mathrm{h}}(t) = \ec[teal]{K_1} \cdot \mathrm{e}^{\ec[cyan]{-3} t} + \ec[purple]{(K_2 + K_3 \cdot t)} \cdot \mathrm{e}^{\ec[orange]{-}t} \sin(\ec[magenta]{2}t) + \ec[violet]{(K_4 + K_5 \cdot t)} \cdot \mathrm{e}^{\ec[orange]{-}t} \cos(\ec[magenta]{2}t)
+        }%
     \end{equation*}
     \footnotetext{leicht verändert aus: Manfred Albach, {\em Elektrotechnik 2}, Pearson Deutschland GmbH 3. Auflage, 2020.}
 }%

@@ -425,7 +425,7 @@
     % Hinweis zur Visualisierung der Funktionen
     Um eine Vorstellung des Verhaltens von Amplituden- und Phasengang zu bekommen, können wir die Funktionen graphisch darstellen. 
 
-    Der Amplitudengang $A(\omega)$ und der Phasengang $varphi(\omega)$ sind in 
+    Der Amplitudengang $A(\omega)$ und der Phasengang $\varphi(\omega)$ sind in 
     Abbildung \ref{plot:tiefpass:ampli:mini:lin} und \ref{plot:tiefpass:phase:mini:lin} dargestellt.
     Beide Graphen sind mit linearen Skalen dargestellt, wobei die Skalierungen beider x-Achsen für $\omega \left[\mathrm{Hz}\right]$ identisch sind. 
     Eine Veränderung des Faktors $CR$ führt in linearer Darstellung lediglich zu einer Stauchung oder Streckung der Graphen in x-Richtung, 
@@ -743,10 +743,10 @@ RC % Zeile 2
                 &   \parbox[c][2cm][c]{0.5cm}{$\dfrac{R}{L}$}
             \\\hline\parbox[c][2cm][c]{0.3cm}{\rotatebox[origin=c]{90}{\textbf{RC}}}
                 &   \parbox[c][2cm][c]{3.0cm}{\resizebox{\linewidth}{!}{\includegraphics{Tikz/pdf/circ_tiefpass_rc_annotated.pdf}}}
-                &   \parbox[c][2cm][c]{1.7cm}{$\dfrac{1}{1+\mathrm{j}\omega RC}$}
+                &   \parbox[c][2cm][c]{1.7cm}{$\dfrac{1}{1+\mathrm{j}\omega CR}$}
                 &   \parbox[c][2cm][c]{3.0cm}{\resizebox{\linewidth}{!}{\includegraphics{Tikz/pdf/circ_hochpass_rc_annotated.pdf}}}
-                &   \parbox[c][2cm][c]{1.7cm}{$\dfrac{1}{1-\mathrm{j}\frac{1}{\omega RC}}$}
-                &   \parbox[c][2cm][c]{0.5cm}{\centering $\dfrac{1}{RC}$}
+                &   \parbox[c][2cm][c]{1.7cm}{$\dfrac{1}{1-\mathrm{j}\frac{1}{\omega CR}}$}
+                &   \parbox[c][2cm][c]{0.5cm}{\centering $\dfrac{1}{CR}$}
             \\\hline
         \end{tabular}
     }%
@@ -755,7 +755,7 @@ RC % Zeile 2
 \s{%
     Im Vergleich der Schaltbilder ist zu erkennen, dass die RL- und RC-Varianten sich lediglich in der Anordnung von $L$ und $R$
     beziehungsweise $R$ und $C$ unterscheiden. 
-    Die Frequenzgänge der RL- und RC-Varianten unterscheiden sich nur im Faktor $\dfrac{L}{R}$ und $RC$ vor $\omega$ voneinander.
+    Die Frequenzgänge der RL- und RC-Varianten unterscheiden sich nur im Faktor $\dfrac{L}{R}$ und $CR$ vor $\omega$ voneinander.
     Wie in Kapitel \ref{sec:frequenzganglog:grenzfrequenz} noch näher erläutert wird, entspricht dieser Faktor dem Kehrwert der Grenzkreisfrequenz 
     $\omega_g$, welche vollständigkeitshalber mit in der Tabelle aufgeführt ist.
 }%

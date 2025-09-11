@@ -6,6 +6,9 @@
 #
 #You should have received a copy of the license along with this
 #work. If not, see <http://creativecommons.org/licenses/by-sa/4.0/>.
+#
+# Plottet ein Zeigerdiagramm und eine Impedanzkurve für einen RLC-Serienschwingkreis.
+# Erstellt eine Animation beider Darstellung für variable Kreisfrequenzen als GIF-Datei.
 
 using Plots
 using LaTeXStrings
@@ -14,7 +17,7 @@ using LaTeXStrings
 # FUNCTIONS 
 ################################################################################
 
-function plot_RLCs_ortskurve_I_konst(R,L,C,omegarange)
+function plot_RLCs_impedanzkurve_I_konst(R,L,C,omegarange)
 
     # Impedanz und Reaktanzen auf R normiert
     f_XL(omega) = omega*L / R 
@@ -35,7 +38,7 @@ function plot_RLCs_ortskurve_I_konst(R,L,C,omegarange)
 end
 
 
-function plot_RLCs_ortskurve_I_konst_with_point(R,L,C,omegarange,omega)
+function plot_RLCs_impedanzkurve_I_konst_with_point(R,L,C,omegarange,omega)
 
     # Impedanz und Reaktanzen auf R normiert
     f_XL(omega) = omega*L / R 
@@ -58,7 +61,7 @@ function plot_RLCs_ortskurve_I_konst_with_point(R,L,C,omegarange,omega)
 end
 
 
-function plot_vectordiagram_RLCs_Z_omega_I_konst(R,L,C,omega)
+function plot_zeigerdiagramm_RLCs_Z_omega_I_konst(R,L,C,omega)
     # Eingeprägter Ström normiert auf I mit I rein reell
     I = 1 # I / I
 
@@ -89,7 +92,7 @@ function plot_vectordiagram_RLCs_Z_omega_I_konst(R,L,C,omega)
     return plotobj
 end
 
-function plot_vectordiagram_RLCs_Z_omega_I_konst_with_point(R,L,C,omega)
+function plot_zeigerdiagramm_RLCs_Z_omega_I_konst_with_point(R,L,C,omega)
     # Eingeprägter Ström normiert auf I mit I rein reell
     I = 1 # I / I
 
@@ -139,28 +142,28 @@ omegarange = 1000 * 10 .^ range(log10(1/5),log10(5), length=85) # 200 ... 1000 .
 # SINGLE PLOTS 
 ################################################################################
 
-plot_RLCs_ortskurve_I_konst(R,L,C,omegarange) # works
-plot_vectordiagram_RLCs_Z_omega_I_konst(R,L,C,omega) # works
+plot_RLCs_impedanzkurve_I_konst(R,L,C,omegarange) # works
+plot_zeigerdiagramm_RLCs_Z_omega_I_konst(R,L,C,omega) # works
 
 ################################################################################
 # ANIMATING 
 ################################################################################
 
 
-anim_ortskurve = @animate for omega in omegarange
-    plot_RLCs_ortskurve_I_konst_with_point(R,L,C,omegarange,omega)
+anim_impedanzkurve = @animate for omega in omegarange
+    plot_RLCs_impedanzkurve_I_konst_with_point(R,L,C,omegarange,omega)
 end
-gif(anim_ortskurve, "RLCs_Schwingkreis_Ortskurve_animiert_fps15.gif", fps=15)
+gif(anim_impedanzkurve, "RLC_Serienschwingkreis_Impedanzkurve_fps15.gif", fps=15)
 
 anim_zeigerdiagramm = @animate for omega in omegarange
-    plot_vectordiagram_RLCs_Z_omega_I_konst(R,L,C,omega) # landet in /tmp
+    plot_zeigerdiagramm_RLCs_Z_omega_I_konst(R,L,C,omega) # landet in /tmp
 end
-gif(anim_zeigerdiagramm, "RLCs_Schwingkreis_Zeigerdiagramm_animiert_fps15.gif", fps=15)
+gif(anim_zeigerdiagramm, "RLC_Serienschwingkreis_Zeigerdiagramm_fps15.gif", fps=15)
 
-plotZeiger(omega) = plot_vectordiagram_RLCs_Z_omega_I_konst_with_point(R,L,C,omega)
-plotOrt(omega) = plot_RLCs_ortskurve_I_konst_with_point(R,L,C,omegarange,omega)
+plotZeiger(omega) = plot_zeigerdiagramm_RLCs_Z_omega_I_konst_with_point(R,L,C,omega)
+plotOrt(omega) = plot_RLCs_impedanzkurve_I_konst_with_point(R,L,C,omegarange,omega)
 
 anim_parallel_zeiger_ort = @animate for omega in omegarange
     plot( plotZeiger(omega), plotOrt(omega) , layout=(1,2)) # side by side
 end
-gif(anim_parallel_zeiger_ort, "RLCs_Schwingkreis_parallel_Zeiger_Ort_animiert_fps15.gif", fps=15)
+gif(anim_parallel_zeiger_ort, "RLC_Serienschwingkreis_Zeigerdiagramm_und_Impedanzkurve_fps15.gif", fps=15)

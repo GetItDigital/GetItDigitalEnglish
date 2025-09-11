@@ -5,19 +5,22 @@
   $U_\mathrm{R1}=\mathrm{0,6\,V}$, $U_\mathrm{L}=\mathrm{15\,V}$, $R_\mathrm{1}=\mathrm{300\,\Omega}$, $R_\mathrm{2}=\mathrm{2\,k\Omega}$ und $R_\mathrm{V}=\mathrm{500\,\Omega}$.
   Damit der gezeichnete Siliziumtransistor schaltet, braucht er einen Basisstrom von $50 \, \mathrm{\mu A}$ um 
   durchzuschalten. 
+  
+  \begin{figure}[H]
+    \centering
+    \input{Tikz/src/FigTransistorWiderstaende.tex}
+    \label{fig:FigTransistorWiderstaende}
+  \end{figure}
+  
   \begin{itemize}
-  \item[a)] Wie groß muss der Widerstand $R_\mathrm{V}$ gewählt werden, damit der Transistor durchschaltet?
-  \item[b)] Angenommen der Spannungsabfall des Transistors $U_\mathrm{CE}$ beträgt $7,5 \, \mathrm{V}$, wie groß ist der Strom 
-  durch $I_\mathrm{E}$?
+    \item[a)] Wie groß muss der Widerstand $R_\mathrm{V}$ gewählt werden, damit der Transistor durchschaltet?
+    \item[b)] Angenommen der Spannungsabfall des Transistors $U_\mathrm{CE}$ beträgt $7,5 \, \mathrm{V}$, wie groß ist der Strom
+          durch $I_\mathrm{E}$?
   \end{itemize}
-  \begin {figure} [H]
-     \centering
-     \input{Tikz/src/FigTransistorWiderstaende.tex}
-     \label{fig:FigTransistorWiderstaende}
-  \end {figure}
+  
   
   % \speech{Aufgabe 13  
-
+  
   % Damit der gezeichnete Siliziumtransistor schaltet, braucht er einen Basisstrom von \( 50 \mu A \) um durchzuschalten.  
   
   % a) Wie groß muss der Widerstand \( R_V \) gewählt werden, damit der Transistor durchschaltet?  
@@ -41,123 +44,31 @@
 \Loesung{
   \begin{itemize}
     \item[a)]
-  \end{itemize}
-  \[
-  \frac{5\,\text{V}}{2\,\text{k}\Omega + 0,3\,\text{k}\Omega} = \frac{U_1}{300\,\Omega}
-  \Rightarrow U_\text{1} = 300\,\Omega \cdot \frac{5\,\text{V}}{2\,\text{k}\Omega + 0,3\,\text{k}\Omega} = 0,65\,\text{V}
-  \]
-  \[
-  5\,\text{V} = 0,65\, \text{V} + U_\text{RV} + 0,6\,\text{V}
-  \]
-  \[
-  U_\text{RV} = 5\,\text{V} - 0,65\,\text{V} - 0,6\,\text{V} = 3,75\,\text{V}
-  \]
-  \[
-  R_\text{V} = \frac{3,75\,\text{V}}{50\,\mu \text{A}} = 75\,\text{k}\Omega
-  \]
-
-  \begin{itemize}
+          \[
+            \frac{5\,\text{V}}{2\,\text{k}\Omega + 0,3\,\text{k}\Omega} = \frac{U_1}{300\,\Omega}
+            \Rightarrow U_\text{1} = 300\,\Omega \cdot \frac{5\,\text{V}}{2\,\text{k}\Omega + 0,3\,\text{k}\Omega} = 0,65\,\text{V}
+          \]
+          \[
+            5\,\text{V} = 0,65\, \text{V} + U_\text{RV} + 0,6\,\text{V}
+          \]
+          \[
+            U_\text{RV} = 5\,\text{V} - 0,65\,\text{V} - 0,6\,\text{V} = 3,75\,\text{V}
+          \]
+          \[
+            R_\text{V} = \frac{3,75\,\text{V}}{50\,\mu \text{A}} = 75\,\text{k}\Omega
+          \]
+          
+          
     \item[b)]
+          \[
+            I_\text{C} = \frac{15\,\text{V} - 7,5\,\text{V}}{500\,\Omega} = 15\,\text{mA}
+          \]
+          \[
+            I_\text{E} = I_\text{C} + I_\text{B} = 15\,\text{mA} + 50\,\mu \text{A} = 15,05\,\text{mA}
+          \]
+          \[
+            \frac{I_\text{C}}{I_\text{B}} = \beta = 300
+          \]
   \end{itemize}
-  \[
-  I_\text{C} = \frac{15\,\text{V} - 7,5\,\text{V}}{500\,\Omega} = 15\,\text{mA}
-  \]
-  \[
-  I_\text{E} = I_\text{C} + I_\text{B} = 15\,\text{mA} + 50\,\mu \text{A} = 15,05\,\text{mA}
-  \]
-  \[
-  \frac{I_\text{C}}{I_\text{B}} = \beta = 300
-  \]
   Siehe: Abschnitt \ref{sec:Bipolartransistor} und \ref{fig:StroemeUndSpannungenBeimBipolartransistor}
-
-%   \speech{
-% **Aufgabe 13 – Berechnung des Basis- und Kollektorstroms eines npn-Transistors**
-
-% Gegeben ist ein **npn-Transistor**, der durch einen **Basiswiderstand** gesteuert wird. Die Aufgabe besteht darin, den benötigten Widerstand \( R_V \) sowie die Ströme \( I_C \), \( I_B \) und \( I_E \) zu berechnen.
-
-% ### Teil a) Berechnung des Basis-Vorwiderstands \( R_V \)
-% Zunächst wird die Spannung \( U_1 \) bestimmt, die durch den Spannungsteiler mit **2 kΩ und 0,3 kΩ** erzeugt wird. Die allgemeine Formel für einen Spannungsteiler lautet:
-
-% \[
-% U_1 = U_0 \cdot \frac{R_2}{R_1 + R_2}
-% \]
-
-% Eingesetzte Werte:
-% - \( U_0 = 5V \) (Eingangsspannung)
-% - \( R_1 = 2 kΩ \)
-% - \( R_2 = 0,3 kΩ \)
-
-% \[
-% U_1 = 5V \cdot \frac{0,3 kΩ}{2 kΩ + 0,3 kΩ}
-% \]
-
-% \[
-% U_1 = 5V \cdot \frac{0,3 kΩ}{2,3 kΩ} = 0,65V
-% \]
-
-% Nun wird die Spannung am Widerstand \( R_V \) berechnet:
-
-% \[
-% U_{RV} = U_0 - U_1 - U_{BE}
-% \]
-
-% Gegeben:
-% - \( U_0 = 5V \)
-% - \( U_1 = 0,65V \)
-% - \( U_{BE} = 0,6V \) (Basis-Emitter-Spannung eines npn-Transistors)
-
-% \[
-% U_{RV} = 5V - 0,65V - 0,6V = 3,75V
-% \]
-
-% Der Basisstrom \( I_B \) ist gegeben mit **50 Mikroampere**:
-
-% \[
-% R_V = \frac{U_{RV}}{I_B}
-% \]
-
-% \[
-% R_V = \frac{3,75V}{50 \mu A} = 75 kΩ
-% \]
-
-% **Ergebnis**: Der Basis-Vorwiderstand \( R_V \) muss **75 kΩ** betragen.
-
-% ---
-
-% ### Teil b) Berechnung des Kollektorstroms \( I_C \) und des Emitterstroms \( I_E \)
-% Die Spannung über den **Kollektorwiderstand** \( R_C \) beträgt:
-
-% \[
-% U_C = 15V - 7,5V
-% \]
-
-% \[
-% I_C = \frac{U_C}{R_C} = \frac{15V - 7,5V}{500Ω}
-% \]
-
-% \[
-% I_C = \frac{7,5V}{500Ω} = 15 mA
-% \]
-
-% Der Emitterstrom ergibt sich aus der Summe von \( I_C \) und \( I_B \):
-
-% \[
-% I_E = I_C + I_B = 15 mA + 50 \mu A = 15,05 mA
-% \]
-
-% Die **Stromverstärkung** \( \beta \) wird berechnet als:
-
-% \[
-% \beta = \frac{I_C}{I_B} = \frac{15 mA}{50 \mu A} = 300
-% \]
-
-% **Ergebnisse**:
-% - Der Kollektorstrom beträgt **15 mA**.
-% - Der Emitterstrom beträgt **15,05 mA**.
-% - Die Stromverstärkung \( \beta \) beträgt **300**.
-% }
-
 }
-
-
-

@@ -18,6 +18,7 @@
         \end{subfigure}
         \label{fig:FigDiodeAP}
     \end{figure}
+    
 
     \begin{itemize}
         \item[a)]
@@ -69,21 +70,23 @@
         Im ersten Schritt wird die Wirkung der Spannungsquelle auf den Widerstand $R$ betrachtet. 
         Bei $U_0=1\,\mathrm{V}$ fließen durch den Widerstand $R$ ein Strom von $I_\mathrm{R}=\frac{U_0}{R}=\frac{1\,\mathrm{V}}{200\,\Omega}=5\,\mathrm{mA}$. 
         Es kann die Widerstandgerade vom Ursprung aus zu dem Punkt ($1\,\mathrm{V}$, $5\,\mathrm{mA}$) eingezeichnet werden (linke Abbildung).\\
-
         Gemäß des Aufbaus der Schaltung muss die Widerstandsgerade im nächsten Schritt gespiegelt werden, es entsteht die rechte Darstellung.
-        Der Schnittpunkt beider Linien entspricht dem Arbeitspunkt ($U_\text{AP}$, $I_\text{AP}$), dieser lautet: ($0,75\,\mathrm{V}$, $1,2\mathrm{mA}$)  
-
-        \begin{figure}[H]
-            \begin{subfigure}[h]{0.45\linewidth}
+        Der Schnittpunkt beider Linien entspricht dem Arbeitspunkt ($U_\text{AP}$, $I_\text{AP}$), dieser lautet: ($0,75\,\mathrm{V}$, $1,2\,\mathrm{mA}$). 
+                
+        \begin{minipage}{\linewidth}
+            \begin{figure}[H]
                 \centering
-                \includesvg[width=\textwidth]{Bilder/Aufgaben/LsgDiodeAP1}
-            \end{subfigure}
-            \begin{subfigure}[h]{0.45\linewidth}
-                \centering
-                \includesvg[width=\textwidth]{Bilder/Aufgaben/LsgDiodeAP2}
-            \end{subfigure}
-        \end{figure}
-
+                \begin{subfigure}[b]{0.49\linewidth}
+                    \centering
+                    \includesvg[width=0.9\textwidth]{Bilder/Aufgaben/LsgDiodeAP1}
+                \end{subfigure}
+                \begin{subfigure}[b]{0.49\linewidth}
+                    \centering
+                    \includesvg[width=0.9\textwidth]{Bilder/Aufgaben/LsgDiodeAP2}
+                \end{subfigure}
+            \end{figure}
+        \end{minipage}
+                    
         \item[b)]
         Die Leistung ergibt sich aus dem zuvor ermittelten Arbeitspunkt.
         \begin{equation*}
@@ -92,34 +95,22 @@
         
         \item[c)]
         Ausgehend vom Punkt ($1\,\mathrm{V}, 0\,\mathrm{mA}$) zum Schnittpunkt mit der Diodenkennlinie bei $I=3\,\mathrm{mA}$ ergibt sich die gesuchte Widerstandsgerade.
-        \begin{figure}[H]
-            \centering
-            \includesvg[width=0.45\linewidth]{Bilder/Aufgaben/LsgDiodeAP3}
-        \end{figure}
+        
+        \begin{minipage}{\linewidth}
+            \begin{figure}[H]
+                \centering
+                \includesvg[width=0.45\linewidth]{Bilder/Aufgaben/LsgDiodeAP3}
+            \end{figure}
+        \end{minipage}
+        
         Es kann der Schnittpunkt ($0,86\,\mathrm{V}, 3\,\mathrm{mA}$) abegelesen werden.
     
-
-        \begin{equation*}
-            U_\mathrm{ges} = U - U_\mathrm{D} = 1 \, \mathrm{V} - 0,86 \, \mathrm{V} = 0,14 \, \mathrm{V}
-        \end{equation*}
-
-
+        \begin{gather*}
+            U_\mathrm{R} = U_0 - U_\mathrm{D} = 1 \, \mathrm{V} - 0,86 \, \mathrm{V} = 0,14 \, \mathrm{V} \\
+            I = 3 \, \mathrm{mA} \\
+            R = \frac{U_{\text{R}}}{I} = \frac{0,14 \, \text{V}}{3 \, \text{mA}} = 46,67 \, \Omega
+        \end{gather*}
     \end{itemize}
-
-
-
-\begin{itemize}
-    \item[\bf c)] 
-    \[
-    U_{\text{ges}} = U - U_\text{D} = 1 \, \text{V} - 0,86 \, \text{V} = 0,14 \, \text{V}
-    \]
-    \[
-    I = 3 \, \text{mA}
-    \]
-    \[
-    R = \frac{U_{\text{ges}}}{I} = \frac{0,14 \, \text{V}}{3 \, \text{mA}} = 46,67 \, \Omega
-    \]
-\end{itemize}
 Siehe: Abschnitt \ref{fig:Diodenkennlinie}
 
 

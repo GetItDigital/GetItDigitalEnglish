@@ -1068,6 +1068,18 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             %\label{fig:Vierquadranten-KennlinienfeldEinesNpnTransistors}
         \end{figure}
     }
+    \speech{Bipolartransistor}{14}{Hier sehen wir nochmal alle vier Kennlinienfelder auf einen Blick:
+
+    Die Eingangskennlinie: I B über U B E
+
+    Die Ausgangskennlinie: I C über U C E
+
+    Die Stromsteuerungskennlinie: I C über I B
+
+    Und die Rückwirkungskennlinie: U B E über U C E
+
+    Diese vier Felder beschreiben zusammen das elektrische Verhalten des Transistors vollständig.
+    Je nach Anwendung legt man den Fokus auf ein bestimmtes Feld - bei der Verstärkeranalyse zum Beispiel oft auf die Ausgangskennlinie und die Stromsteuerung.}
 \end{frame}
 
 \begin{frame}
@@ -1090,6 +1102,16 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             %\label{fig:ErsatzschaltbildEinesBipolartransistors}
         \end{figure}
     }
+    \speech{Bipolartransistor KSEB}{2}{Diese Folie zeigt das Kleinsignal-Ersatzschaltbild eines Bipolartransistors – in zwei Varianten:
+    Links die vollständige Version, rechts eine vereinfachte.
+
+    Links sehen wir:
+    den differenziellen Basiswiderstand r B E, den Innenwiderstand r C E zwischen Kollektor und Emitter,
+
+    die gesteuerte Stromquelle beta mal i B, und zusätzlich eine weitere Spannungsquelle: D mal U C E.
+    Diese modelliert den Einfluss der Rückwirkung von der Kollektor-Emitter-Spannung auf die Basis-Emitter-Spannung. 
+    In der vereinfachten Darstellung rechts fällt genau diese D mal U C E.
+    Man geht also davon aus, dass der Effekt in den meisten Fällen vernachlässigbar ist.}
 \end{frame}
 
 \begin{frame}
@@ -1104,6 +1126,12 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             }
         \end{itemize}
         }
+    \speech{Bipolartransistor KSEB}{4}{Die Merksätze dazu fassen nochmal das Wichtigste zusammen:
+
+    Das Vierquadrantenkennlinienfeld zeigt die Strom-Spannungs-Kennlinien am Ein- und Ausgang sowie die Kopplungen dazwischen.
+
+    Der Transistor wird im Kleinsignalbetrieb durch ein Ersatzschaltbild beschrieben, wobei die Verluste durch differentielle Widerstände beschrieben werden.
+    Eine Stromquelle zwischen Kollektor und Emitter modelliert die Stromverstärkung.}
 \end{frame}
 
 \begin{frame}
@@ -1127,6 +1155,10 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
                 
             \end{figure}
     }
+    \speech{Beispiel}{1}{Schauen wir uns jetzt ein konkretes Beispiel an - hier geht es um die Arbeitspunktbestimmung eines Bipolartransistors.
+
+    Die Versorgungsspannung U V beträgt 20 Volt. Über den Widerstand R C soll die halbe Versorgungsspannung, also 10 Volt anliegen und
+    ein Strom von 10 milli Ampere fließen.}
 \end{frame}
 
 \begin{frame}
@@ -1138,6 +1170,7 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             %\label{fig:Vierquadranten-KennlinienfeldMitArbeitspunkt}
         \end{figure}
     }
+    \speech{Beispiel}{2}{Als erstes zeichnen wir die Widerstandsgerade in das Ausgangskennlinienfeld - also der Quadrant rechts oben - ein. Darauf können wir dann den Arbeitspunkt - also U C E = 10 Volt einzeichnen. Von da aus kann der Punkt in alle anderen Quadranten übertragen werden.}
 \end{frame}
 
 \begin{frame}
@@ -1205,6 +1238,9 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
         \end{figure}
         
      }
+     \speech{Aufbau Transistor}{1}{Schauen wir uns einmal den physikalischen Aufbau eines npn-Transistors an. 
+    Ganz links sehen wir das gewohnte Schaltzeichen und rechts daneben den schematischen Aufbau bei dem die Schichten bündig übereinander liegen.
+    In der Realität lässt sich das nicht so einfach umsetzen, weshalb reale Transistoren eher wie in der Abbildung ganz rechts aufgebaut sind. In einem n-dotierten Halbleiter wird eine p-dotierte Schicht als Basis eingebracht. In diese Wanne aus p-dotiertem Material wird dann wieder eine kleinere n-dotierte Schicht eingebracht. Auf den drei Zonen werden dann leitfähige Verbindungen zur elektrischen Kontaktierung angebracht.}
 \end{frame}
 
 \begin{frame}
@@ -1231,6 +1267,7 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             \label{fig:GrundschaltungenBipolartransistorFolie}
             }
         \end{figure}}
+    \speech{Grundschaltungen}{3}{Transistoren werden häufig in sogenannten Grundschaltungen betrieben. Die drei Varianten Emitter-, Kollektor- und Basis-Schaltung sehen wir hier von links nach rechts aufgereiht. Die Bezeichnung beschreibt an welchem der Kontakte das Bezugspotential der Schaltung anliegt.}
 
 \end{frame}
 
@@ -1259,6 +1296,7 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             \label{fig:ErsatzschaltbilderEmitter-Kollektor-UndBasisschaltungFolien}
             \caption{\textbf{Ersatzschaltbilder der Grundschaltungen.} V.l.n.r Emitter-, Kollektor- und Basisschaltung von npn-Transistoren.} 
         \end{figure}}
+    \speech{Grundschaltungen}{6}{Abhängig von der Schaltung kann auch das Ersatzschaltbild entsprechend umgeformt werden.}
 \end{frame}
 
 \begin{frame}
@@ -1284,6 +1322,8 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             %\label{tab:EigenschaftenGrundschaltungen}
         \end{table}
     }
+    \speech{Grundschaltungen}{7}{Hier sehen wir einen Vergleich der Eigenschaften der Grundschaltungen.
+    Benötigt man beispielsweise eine hohe Stromverstärkung eignen sich die Emitter- und die Kollektorschaltung besser also die Basisschaltung.}
 \end{frame}
 
 
@@ -1307,6 +1347,16 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             Spannungsverläufe mit $U_\mathrm{CE}$ als Folge von $U_\mathrm{BE}$.} 
         \end{figure}
      }
+     \speech{Transistor als Schalter}{2}{Neben seiner Rolle als Verstärker kann der Bipolartransistor auch ganz als elektronischer Schalter eingesetzt werden.
+    Dabei nutzt man die beiden Zustände:
+
+    Ist Basis-Emitter-Spannung zu klein, sperrt der Transistor.
+    Ist die Basis-Emitter-Spannung ausreichend groß, zum Beispiel größer als 0 Komma 7 Volt, wird die Basis-Emitter-Strecke leitend - der Transistor sättigt, und es fließt ein großer Kollektorstrom.
+
+    In der Sättigung ist die Kollektor-Emitter-Spannung nur noch etwa 0 Komma 2 Volt - der Transistor verhält sich dann fast wie ein geschlossener Schalter.
+    Sperrt der Transistor, liegt die Kollektorspannung fast auf dem Versorgungspotenzial - der Strom ist nahezu null, wie bei einem offenen Schalter.
+
+    Das Schöne daran: Der Steuerstrom ist sehr klein und die Steuerzeit sehr kurz. Ideal für einen Schalter.}
 \end{frame}
 
 \begin{frame}
@@ -1316,6 +1366,7 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
         deutlich kleineren Bauraum und geringeren Preis auf. Durch den kontaktlosen Aufbau tritt zudem kein 
         Kontaktprellen auf, was zu einer höheren Lebensdauer führt.
         }
+    \speech{Transistor als Schalter}{3}{Im Vergleich zu mechanischen Schaltern sind Transistoren deutlich kleiner und potenziell günstiger. Ein weiterer wichtiger Vorteil ist, dass bei mechanischen Schaltern ein sogenanntes Kontaktprellen auftreten kann, was den Schalter verschleißt und die Signalqualität verschlechtert. Bei Transistoren gibt es dieses Prellen nicht.}
 \end{frame}
 
 \begin{frame}
@@ -1326,6 +1377,17 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             %\caption{\textbf{Darlington Transistor.} Schaltung und Schaltsymbol eines npn-Darlington-Transistor}  
             %\label{fig:DarlingtonTransistor}
         \end{figure}}
+    \speech{Darlington-Transistor}{1}{Zum Schluss noch ein Spezialfall: der Darlington-Transistor.
+
+    Hier sind zwei Bipolartransistoren hintereinandergeschaltet - der Emitter des ersten geht direkt an die Basis des zweiten.
+    Was bringt das?
+
+    Die Stromverstärkung der beiden multipliziert sich:
+    Wenn der erste Transistor z.B. eine Verstärkung von einhundert hat, und der zweite auch, ergibt sich eine Gesamtverstärkung von hundert mal hundert = zehntausend.
+
+    Das bedeutet: Schon ein sehr kleiner Basisstrom am Eingang reicht aus, um einen sehr großen Kollektorstrom am Ausgang zu erzeugen.
+
+    Darlington-Transistoren werden eingesetzt, wenn man besonders hohe Stromverstärkungen braucht - zum Beispiel bei Leistungstreibern, Motoransteuerungen oder Relais-Schaltungen.}
 \end{frame}
 
 \begin{frame}

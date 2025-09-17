@@ -170,14 +170,14 @@
 			
 			\phantom{.}\\
 			
-			
+			\visible<2->{
 			Der Strom $I$ fließt durch alle Bauelemente:
 			
 			$U_0 - R_1 \cdot I - R_2 \cdot I = 0$\\
 			
 			$U_0 - (R_1+R_2) \cdot I = 0$\\
 			
-			
+			}
 			
 			
 			\column[t]{0.3\textwidth}
@@ -232,16 +232,16 @@
 		
 		\begin{columns}
 			\column[c]{0.5\textwidth}
-			
+			\visible<2->{
 			Gesamtwiderstand einer Reihenschaltung von Widerständen:
 			\vspace{-15pt}
 			\begin{Merksatz}{}
 				$R_\mathrm{ges} = \sum_{k=1}^{n} R_k$
 			\end{Merksatz}
-			
+			}
 			\column[c]{0.5\textwidth}
 			
-			\visible<2->{
+			\visible<3->{
 			
 				Gesamtleitwert einer Reihenschaltung von Widerständen:
 				\vspace{-15pt}
@@ -259,13 +259,13 @@
 			Unter Anwendung des Ohmschen Gesetzes können wir die Teilspannungen U eins und U zwei als Produkt aus Stromstärke und Widerstand darstellen. Das bedeutet, 
 			U null minus R eins mal I minus R zwei mal I gleich 0.}
 			\silence{2}
-			\speech{folie16}{1}{Klammern wir nun den Strom aus, so ergibt sich:
-			U null minus R eins plus R zweo mal I = 0. 
+			\speech{folie16}{2}{Klammern wir nun den Strom aus, so ergibt sich:
+			U null minus R eins plus R zwei mal I ist gleich 0. 
 			Durch Addition können wir die Widerstände R1 und R2 zu einem gesamten widerstand zusammenfassen. 
 			Auf diese Weise haben wir das linke in das rechte Netzwerk überführt, da der Widerstand R gesamt äquivalent zu der Reihenschaltung aus R eins und R zwei ist.
 			Verallgemeinert gilt somit, dass der Gesamtwiderstand einer Reihenschaltung durch die Summe der Einzelwiderstände abgebildet werden kann.}
-		
-		\speech{folie16}{2}{
+		\silence{2}
+		\speech{folie16}{3}{
 			Der Leitwert einer Schaltung wird mit G bezeichnet und ist der Kehrwert des Widerstands. Das bedeutet für eine Reihenschaltung kann der Leitwert auch über die Summe
 			der Kehrwerte der Einzelleitwerte bestimmt werden.}
 			\silence{4}
@@ -579,10 +579,11 @@
 		\speech{folie17}{1}{Nachdem wir gerade die Reihenschaltung betrachtet haben, betrachten wir nun die Parallelschaltung. Eine Parallelschaltung zeichnet sich dadurch aus,
 			dass sich der Strom zwischen den Zweigen des Netzwerks aufteilen kann. Mit der Knotenregel lässt sich diese Aufteilung bestimmen.
 			Ein Knoten stellt dabei eine Äquipotenzialfläche dar. Das bedeutet an jedem Bauelement liegt dieselbe Spannung an. 
-			Für das nebenstehende Beispiel bedeutet dies, dass U0 sowohl an R1 als auch an R2 anliegt.
-			Durch das Anwenden der Knotenregel können wir also zeigen, dass sich der Gesamtstrom I null vor den Widerständen in die Teilströme I eins und I zwei aufteilt.
-			Das bedeutet, I null minus I eins minus I zwei ist gleich null.
+			Für das hier gezeigte Beispiel bedeutet dies, dass U0 sowohl an R1 als auch an R2 anliegt.
+			Durch das Anwenden der Knotenregel können wir also zeigen, dass sich der Gesamtstrom I null vor den Widerständen in die Teilströme Ih eins und Ih zwei aufteilt.
+			Das bedeutet, I null minus Ih eins minus Ih zwei ist gleich null.
 			Wie bei der Reihenschaltung, ist es auch bei Parallelschaltungen häufig sinnvoll, diese zu einem Gesamtwiderstand R zusammenzufassen. }
+			\silence{2}
 
 			\speech{folie17}{1}{Auch hier verwenden wir das Ohmsche Gesetz. Das bedeutet, 
 			I eins gleich U null geteilt durch R eins und I zwei gleich U null durch R zwei.
@@ -893,8 +894,7 @@
 			U null durch R eins plus R zwei. 
 			Aus dieser Beziehung kann nun die Spannungsteilerregel hergeleitet werden. Durch Gleichsetzen der beiden Spannungsterme ergibt sich, 
 			U zwei durch R zwei gleich U null durch R eins plus R zwei. Isolieren wir die Ausgangsspannung auf der linken Seite des Gleichheitszeichens, führt dies zur allgemeinen Gleichung für den
-			unbelasteten Spannungsteiler
-			U2 gleich U0 mal R2 durch R1 plus R2. Analog funktioniert dies für U1, wobei dann R1 oberhalb des Bruchstriches steht. }
+			unbelasteten Spannungsteiler U 2 gleich U 0 mal R 2 durch R 1 plus R 2. Analog funktioniert dies für U1, wobei dann R1 oberhalb des Bruchstriches steht. }
 		
 		\speech{folie18}{2}{
 			Wird die Ausgangsseite des Spannungsteilers belastet, also beispielsweise ein Lastwiderstand R Ell hinzugefugt, so spricht man vom belasteten Spannungsteiler.
@@ -1066,16 +1066,16 @@
 			U null gleich I eins mal R eins und eben auch gleich I zwei mal R zwei ist
 			Außerdem gilt nach einer Zusammenfassung der Parallelschaltung,
 			U null gleich I null mal R gesamt.
-			Eine andere, ausmultiplizierte Schreibweise für den Gesamtwiderstand einer Parallelschaltung ist R eins mal R zwei geteilt durch R eins plus R zwei, welche wir hier verwenden. }
+			Eine andere, ausmultiplizierte Schreibweise für den Gesamtwiderstand einer Parallelschaltung ist R eins mal R zwei geteilt durch R eins plus R zwei. }
+			\silence{3}
 			\speech{folie19}{1}{
-			Eingesetzt in unseren Ausdruck für das Ohmsche Gesetz ergibt sich durch überall identische, anliegende Spannung I zwei mal R zwei ist gleich
-			I null mal R eins R zwei geteilt durch R eins plus R zwei. 
-			
+			Eingesetzt in unseren Ausdruck für das Ohmsche Gesetz ergibt sich durch überall identische, anliegende Spannung folgender Sachverhalt:
+			I zwei mal R zwei ist gleich I null mal R eins R zwei geteilt durch R eins plus R zwei. 
 			Das Kürzen von R zwei resultiert in der Stromteilerregel,  I zwei ist gleich I null mal R eins durch R eins plus R zwei. 
-			
 			Hier sehen wir den entscheidenden Unterschied zum Spannungsteiler. Während dort der Widerstand, dessen Spannung wir ausrechnen wollen, im Nenner steht, steht dort beim Stromteiler der
 			Gegenwiderstand.
 		}
+		\silence{4}
 		
 	}
 	
@@ -1203,13 +1203,16 @@
 			
 			
 		\end{columns}
-		\speech{folie20}{1}{Eine reale Spannungsquelle besteht aus einer idealen Spannungsquelle U0 sowie einem Innenwiderstand RI.
+		\speech{folie20}{1}{Eine reale Spannungsquelle besteht aus einer idealen Spannungsquelle U0 sowie einem Innenwiderstand R I.
 			Ist die reale Spannungsquelle unbelastet, also kein Bauteil an den Ausgangsklemmen angeschlossen, fließt kein Strom I.
-			Weil U RI gleich RI mal I ist folgt, dass U RI gleich 0 und damit die Klemmspannung U
+			Weil U R I gleich R I mal I
+			 ist folgt, dass U RI gleich 0 und damit die Klemmspannung U
 			gleich U Null ist.}
-		\speech{folie20}{2}{Wird die reale Spannungsquelle wie abgebildet mit einem Widerstand R A belastet, dann fließt ein Strom I größer als null durch die Leitung. Folglich fällt an dem Innenwiderstand Ri eine Spannung URi gleich Ri mal I ab.
+			\silence{2}
+		\speech{folie20}{2}{Wird die reale Spannungsquelle wie abgebildet mit einem Widerstand R A belastet, dann fließt ein Strom größer als null durch die Leitung.
+		 Folglich fällt an dem Innenwiderstand R I eine Spannung U R I gleich R I mal I ab.
 			Daraus folgt das die Klemmspannung U gleich U null minus U RI beträgt.
-			Um den Spannungsabfall innerhalb der Spannungsquelle zu reduzieren, sollte der Innenwiderstand RI möglichst klein gehalten werden.}
+			Um den Spannungsabfall innerhalb der Spannungsquelle zu reduzieren, sollte der Innenwiderstand R I möglichst klein gehalten werden.}
 		
 		
 		
@@ -1540,8 +1543,8 @@
 			Wie bei einer belasteten realen Spannungsquelle ist die resultierende Ausgangsspannung U sowohl vom Innenwiderstand R Ih als auch vom Belastungsstrom I abhängig, 
 			da ein Teil der Spannung am Innenwiderstand abfällt.}
 		\speech{folie21}{2}{
-			So sinkt wie im rechts dargestellten Diagramm die Ausgangsspannung mit zunehmendem Strom, bis, wie es bei einem Kurzschluss der Fall wäre, der Strom maximal, 
-			die Spannung am Ausgang aber gleich null wäre , ,
+			So sinkt wie im rechts dargestellten Diagramm die Ausgangsspannung mit zunehmendem Strom ab.  Bei einem Kurzschluss wäre der Strom maximal groß, 
+			die Spannung am Ausgang hingegen gleich null.
 		}
 		\silence{4}
 		
@@ -1709,12 +1712,13 @@
 		}
 		\speech{folie22}{2}{ Beim Leerlaufversuch werden die beiden Klemmen der Ersatzspannungsquelle offengelassen, und kein Strom kann fließen.
 			Da in diesem Fall also auch kein Strom durch den Innenwiderstand fließt, fällt keine Spannung über ihn ab. 
-			Die an den offenen Klemmen messbare Leerlaufspannung U Ell ist also mit U null identisch.
-			Dieses Ergebnis können wir jetzt auch nutzen, um unseren Innenwiderstand der Ersatzspannungsquelle zu Berechnen.
-			Dieser beträgt U Ell durch den im Kurzschlussversuch gemessenen Strom I K.
+			Die an den offenen Klemmen messbare Leerlaufspannung U Ell ist also mit U null identisch.}
+
+			\speech{folie22}{2}{Dieses Ergebnis können wir jetzt auch nutzen, um unseren Innenwiderstand der Ersatzspannungsquelle zu Berechnen.
+			Dieser beträgt U Ell durch den im Kurzschlussversuch gemessenen Strom Ih K.
 			Was wir hierbei unbedingt beachten müssen, ist, dass die Formel nach dem Ohmschen Gesetz am Widerstand R I aussieht. Der Kurzschlusstrom und die Leerlaufspannung werden jedoch in zwei 
 			vollkommen unabhängigen Versuchen bestimmt, und treten niemals gleichzeitig auf.}
-			\silence{4}
+			\silence{8}
 	}
 	
 	
@@ -1875,12 +1879,12 @@
 		In der nebenstehenden Abbildung können wir sehen, dass dieser im Gegensatz zur realen Spannungsquelle jedoch parallel anstatt in Reihe zur Quelle geschaltet ist. 
 		Bei einer idealen Stromquelle wäre der Innenwiderstand unendlich groß, sodass der Strom durch diesen gleich 0 ist. Hierdurch folgt, dass der Ausgangsstrom gleich dem Quellenstrom wäre.}
 	\silence{2}
-	\speech{folie23}{2}{Bei der realen Stromquelle ist der Innenwiderstand nicht unendlich, folglich fließt durch diesen ein Strom.
+	\speech{folie23}{2}{Bei der realen Stromquelle ist der Innenwiderstand nicht unendlich groß, folglich fließt durch diesen ein Strom.
 		Dieser ist abhängig von der sich einstellenden Ausgangsspannung U. Diese liegt durch die Parallelschaltung auch am Innenwiderstand an.
-		Der Strom durch den Innenwiderstand beträgt also U durch R Ih,
-		der Ausgangsstrom I ergibt sich dann zu I gleich I0 minus I RI.
+		Der Strom durch den Innenwiderstand beträgt also die Spannung durch eben diesen Innenwiderstand.
+		der Ausgangsstrom I ergibt sich dann zu I gleich I null  minus dem Strom durch den Innenwiderstand.
 		Ein möglichst großer Innenwiderstand hilft bei der realen Stromquelle also, den Verlust des Ausgangsstromes durch den Innenwiderstand zu reduzieren.}
-	\silence{4}
+	\silence{8}
 	
 \end{frame}
 
@@ -2088,7 +2092,7 @@
 		\end{columns}
 		
 		\speech{folie24}{1}{Alternativ zur Ersatzspannungsquelle können wir einen aktiven Zweipol auch als Ersatzstromquelle darstellen.
-			Auch sie kann durch eine ideale Stromquelle I null sowie einen zusammengefassten Innenwiderstand R Ih vollständig charakterisiert werden. 
+			Auch sie kann durch eine ideale Stromquelle I null sowie einen zusammengefassten Innenwiderstand vollständig charakterisiert werden. 
 			Es gilt nach der Knotenregel  I null ist gleich dem Strom durch dem Innenwiderstand plus dem Ausgangsstrom I.
 			Der Strom durch den Innenwiderstand kann dabei wieder mit U durch R Ih ersetzt werden.
 			Der von der Ersatzstromquelle lieferbare Ausgangsstrom verringert sich also mit zunehmender Ausgangsspannung, bis er, wie es bei offenen Klemmen beim Leerlaufversuch zu erwarten ist, auf 0 absinkt.
@@ -2250,13 +2254,13 @@
 		\end{columns}
 		
 		\speech{folie25}{1}{ Analog zur Ersatzspannungsquelle können auch hier die Parameter I null sowie R Ih mit Hilfe des Leerlauf und Kurzschlussversuchs bestimmt werden.
-			Beim Kurzschlussversuch werden die beiden Klemmen der Ersatzstromquelle kurzgeschlossen. Die Spannung beträgt somit über den Kurzschluss und damit auch über dem dazu parallelgeschalteten 
+			Beim Kurzschlussversuch werden die beiden Klemmen der Ersatzstromquelle kurzgeschlossen. Die Spannung beträgt somit über dem Kurzschluss und damit auch über dem dazu parallelgeschalteten 
 			Innenwiderstand null Volt. Aus diesem Grund fließt durch R Ih kein Strom, und der gesamte Strom I null fließt durch den Kurzschluss. Es ergibt sich I null gleich I K.}
 			\silence{2}
 		\speech{folie25}{2}{ Beim Leerlaufversuch wird wieder angenommen, dass die Ausgangsklemmen offen sind, der Ausgangswiderstand also unendlich groß ist.
-			Somit fließt der gesamte Strom I0 durch den Innenwiderstand. An den dazu parallel anliegenden Klemmen stellt sich die Leerlaufspannung U Ell gleich R Ih mal I null ein.
+			Somit fließt der gesamte Strom Ih null durch den Innenwiderstand. An den dazu parallel anliegenden Klemmen stellt sich die Leerlaufspannung U Ell gleich R Ih mal I null ein.
 			Mit Hilfe der Leerlaufspannung und des Kurzschlussstroms kann auch hier wieder der Innenwiderstand berechnet werden. 
-			Wichtig ist also, dass wir uns merken, dass an Ersatzstromquellen I0 gleich dem Kurzschlussstrom ist, während bei Ersatzspannungsquellen U null gleich der Leerlaufspannung ist.}
+			Wichtig ist also, dass wir uns merken, dass an Ersatzstromquellen I null gleich dem Kurzschlussstrom ist, während bei Ersatzspannungsquellen U null gleich der Leerlaufspannung ist.}
 			\silence{4}
 		
 		
@@ -2446,7 +2450,7 @@
 			Als letzter Schritt bei der Quellenumwandlung müssen die Zählpfeile der Quelle noch umgedreht werden. Während der Zählpfeil von I null bei der Stromquelle nach oben zeigt, zeigt der Zählpfeil
 			der äquivalenten Spannungsquelle in diesem Beispiel nach unten. 
 		}
-		\silence{4}
+		\silence{8}
 		
 		
 	}

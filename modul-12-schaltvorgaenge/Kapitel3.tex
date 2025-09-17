@@ -490,7 +490,7 @@ Ausgehend von der Maschengleichung wird $\ecv{u_R}$ in Abhängigkeit von $\ecv{u
 &\text{spez. allg. Lsg.:}&
     \ecv{u_C}(t) &= \ecv{U_q} \left( 1 - \mathrm{e}^{-\sfrac{t}{\tau}} \right) \\[2pt]
 &\text{Strom: }&
-    \eci{i_C} &= \frac{\ecv{U_q}}{R} \cdot \mathrm{e}^{-\sfrac{t}{\tau}} &
+    \eci{i_C}(t) &= \frac{\ecv{U_q}}{R} \cdot \mathrm{e}^{-\sfrac{t}{\tau}} &
     &\text{mit}\quad \eci{i_C} = C \cdot \dt \ecv{u_C}
 \\[-15pt]&\hphantom{R1oooooooooo}&\hphantom{L2oooooooo}&\hphantom{R2oooooooooooooooooo}&&\hphantom{R3oooooooooooooooooo}% Dummy-Zeile RL-DC für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
 \end{align*}
@@ -584,7 +584,7 @@ Ausgehend von der Maschengleichung wird $\ecv{u_R}$ in Abhängigkeit von $\ecv{u
 &\text{spez. allg. Lsg.:}&
     \ecv{u_C}(t) &= \ecv{U_q} \cdot  \mathrm{e}^{-\sfrac{t}{\tau}}\\
 &\text{Strom: }&
-    \eci{i_C} &= - \frac{\ecv{U_q}}{R} \cdot \mathrm{e}^{-\sfrac{t}{\tau}}&
+    \eci{i_C}(t) &= - \frac{\ecv{U_q}}{R} \cdot \mathrm{e}^{-\sfrac{t}{\tau}}&
     &\text{mit}\quad \eci{i_C} = C \cdot \dt \ecv{u_C}
 \end{align*}% new alignments
 \end{frame}
@@ -1744,7 +1744,7 @@ Die Diskriminante $D$ ist der Term unter der Wurzel in Gleichung \ref{eq:dgl:rlc
 %Im aperiodischen Fall (auch Kriechfall genannt) ist $D$ positiv, es gibt zwei unterschiedliche, negative, relle EW.
 
 Tabelle \ref{tab:rlc:fallunterscheidung} listet alle drei Fälle mit Art der Eigenwerte und relative Aussagen bezüglich der Dämpfung des Schwingkreises.
-Als Unterscheidungsmerkmal sind die korrespondierenden Werte der Diskriminante $D$ und als alternatives Unterscheidungsmerkmal die Schwingkreisgüte $Q_S$ mit angegeben.
+Als Unterscheidungsmerkmal sind die Wertebereiche der Diskriminante $D$ respektive der Schwingkreisgüte $Q_S$ (Vgl. Modul 8) mit angegeben.
 
 \begin{table}[H]\centering
     \caption{Fallunterscheidung beim RLC-Schwingkreis}
@@ -1757,8 +1757,8 @@ Als Unterscheidungsmerkmal sind die korrespondierenden Werte der Diskriminante $
     \end{tabular}
 \end{table}
 
-Ein Ortskurvendiagramm der Eigenwerte wird im optionalen Exkurs in Kapitel \ref{sec:schaltvorgaengezeitbereich:rlc:nst} gezeigt.
-Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapitel \ref{sec:schaltvorgaengezeitbereich:rlc:eigenfrequenz} näher erläutert.
+Ein Ortskurvendiagramm der Eigenwerte wird im optionalen Exkurs in Kapitel \ref{sec:schaltvorgaengezeitbereich:exkurse:nst} gezeigt.
+Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapitel \ref{sec:schaltvorgaengezeitbereich:exkurse:eigenfrequenz} näher erläutert.
 
 }% Ende Skript only
 \b{% Beginn Folien only
@@ -1788,7 +1788,7 @@ Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapit
         K_1 \cdot \mathrm{e}^{\lambda_1 t} + K_2 \cdot \mathrm{e}^{\lambda_2 t}  & \text{für}\quad\lambda_1 \neq \lambda_2  \\
         (K_1 + K_2 \cdot t) \cdot \mathrm{e}^{\lambda t} & \text{für}\quad\lambda_1 = \lambda_2 = \lambda
     \end{cases}
-    \qquad\qquad\qquad %\label{eq:dgl:rlc:homolsg:cases}
+    \qquad\qquad\qquad
 \end{equation*}
 }% Ende overlay onslide
 \onslide<3->{%
@@ -1854,9 +1854,10 @@ Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapit
 \end{align}%
 \s{%
     Die Konstanten $K_1$ und $K_2$ müssen beide reell sein, damit die Lösung reellwertig bleibt.
-    Der flüchtige Zustand entspricht damit der Addition zweier Exponentialfunktionen.
-    Wie im Exkurs in Kapitel \ref{sec:schaltvorgaengezeitbereich:rlc:nst} gezeigt wird,
-    dominiert die langsamere Exponentialfunktion, das heißt die mit größerer Zeitkonstante.
+    Der flüchtige Zustand entspricht damit der Addition zweier Exponentialfunktionen. 
+    Dabei dominiert die langsamer Exponentialfunktion, das heißt die mit der größeren Zeitkonstante
+    (Vgl. Exkurs in Kapitel \ref{sec:schaltvorgaengezeitbereich:exkurse:nst}).
+
 }%
 %\pause%
 \textbf{3.) Partikuläre Lösung:} (eingeschwungen, identisch für alle drei Fälle)%
@@ -1884,17 +1885,16 @@ Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapit
     \s{Sei $\ecv{u_C}(0)=0$ und $\eci{i}(0)=0 \Rightarrow \dt\, \ecv{u_C}(0) = 0 $ als Anfangsbedingungen (AB) gegeben, so folgt:}%
     \b{\vspace{4pt}Anfangsbedingungen (AB): $\ecv{u_C}(0)=0$ und $\eci{i}(0)=0 \Rightarrow \dt\, \ecv{u_C}(0) = 0 $}
 
-    \begin{align}
-        &\hphantom{1Rooooooo}&\hphantom{2Loooooo}&\hphantom{2Roooooooooooooooooooooooooooooooooo}&\hphantom{3Loooooo}&\hphantom{3Roooooooooo} \nonumber\\[-15pt] % Dummyzeile alignment zwischen align-Umgebungen[ca. 16pt hoch], RLCs part. Lösung je Fall
+    \begin{align*}
+        &\hphantom{1Rooooooo}&\hphantom{2Loooooo}&\hphantom{2Roooooooooooooooooooooooooooooooooo}&\hphantom{3Loooooo}&\hphantom{3Roooooooooo}\\[-15pt] % Dummyzeile alignment zwischen align-Umgebungen[ca. 16pt hoch], RLCs part. Lösung je Fall
         &\text{1. AB:}&
-            \ecv{u_C}(0) &= K_1 \cdot \redcancel{\mathrm{e}^{\lambda_1 0}} + K_2 \cdot \redcancel{\mathrm{e}^{\lambda_2 0}} + \ecv{U_q} \overset{!}{=} 0 & \Rightarrow\quad K_1 &= -K_2 -\ecv{U_q} \nonumber\\
+            \ecv{u_C}(0) &= K_1 \cdot \redcancel{\mathrm{e}^{\lambda_1 0}} + K_2 \cdot \redcancel{\mathrm{e}^{\lambda_2 0}} + \ecv{U_q} \overset{!}{=} 0 & \Rightarrow\quad K_1 &= -K_2 -\ecv{U_q}\\
         &\text{2. AB:}&
             \dt \ecv{u_C}(0) &= K_1 \cdot \lambda_1 \cdot \redcancel{\mathrm{e}^{\lambda_1 0}} + K_2 \cdot \lambda_2 \cdot \redcancel{\mathrm{e}^{\lambda_2 0}} + \redcancel{0} \overset{!}{=} 0 &  \Rightarrow\quad K_1 &= - K_2 \frac{\lambda_2}{\lambda_1} \nonumber\\
         &\Longrightarrow&
             K_1 &=  \frac{\ecv{U_q}}{\frac{\lambda_1}{\lambda_2}-1} \quad\text{und}\quad
                 K_2 = \frac{\ecv{U_q}}{\frac{\lambda_2}{\lambda_1}-1}
-            \label{eq:dgl:rlc:dc:konstanten:aperiodisch}
-    \end{align}
+    \end{align*}
 
 \end{frame}
 
@@ -1970,17 +1970,16 @@ Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapit
     \s{Sei $\ecv{u_C}(0)=0$ und $\eci{i}(0)=0 \Rightarrow \dt\, \ecv{u_C}(0) = 0 $ als Anfangsbedingungen (AB) gegeben, so folgt:}%
     \b{\vspace{4pt}Anfangsbedingungen (AB): $\ecv{u_C}(0)=0$ und $\eci{i}(0)=0 \Rightarrow \dt\, \ecv{u_C}(0) = 0 $}
 
-    \begin{align}
-        &\hphantom{1Rooooooo}&\hphantom{2Loooooo}&\hphantom{2Roooooooooooooooooooooooooooooooooo}&\hphantom{3Loooooo}&\hphantom{3Roooooooooo} \nonumber\\[-15pt] % Dummyzeile alignment zwischen align-Umgebungen[ca. 16pt hoch], RLCs part. Lösung je Fall
+    \begin{align*}
+        &\hphantom{1Rooooooo}&\hphantom{2Loooooo}&\hphantom{2Roooooooooooooooooooooooooooooooooo}&\hphantom{3Loooooo}&\hphantom{3Roooooooooo}\\[-15pt] % Dummyzeile alignment zwischen align-Umgebungen[ca. 16pt hoch], RLCs part. Lösung je Fall
         &\text{1. AB:}&
-            \ecv{u_C}(0) &= \left( K_1 + \redcancel{K_2 \cdot 0 }\right) \redcancel{\cdot \mathrm{e}^{\lambda 0}} + \ecv{U_q} \overset{!}{=} 0 & \Rightarrow\quad K_1 &= -\ecv{U_q} \nonumber\\
+            \ecv{u_C}(0) &= \left( K_1 + \redcancel{K_2 \cdot 0 }\right) \redcancel{\cdot \mathrm{e}^{\lambda 0}} + \ecv{U_q} \overset{!}{=} 0 & \Rightarrow\quad K_1 &= -\ecv{U_q}\\
         &\text{2. AB:}&
             \dt \ecv{u_C}(0) &= \left( K_1 + \redcancel{K_2 \cdot 0} \right) \cdot \lambda \cdot \redcancel{\mathrm{e}^{\lambda 0}} + K_2 \cdot \redcancel{\mathrm{e}^{\lambda 0}} \overset{!}{=} 0 & \Rightarrow\quad K_2 &= -K_1 \cdot \lambda \nonumber\\
             &\Longrightarrow&
         K_1 &= -\ecv{U_q} \quad\text{und}\quad
                 K_2 = +\ecv{U_q} \cdot \lambda
-            \label{eq:dgl:rlc:dc:konstanten:grenzfall}
-    \end{align}%
+    \end{align*}%
 \end{frame}
 
 %-------------------------------------------------------------------------------------------------%
@@ -1992,7 +1991,7 @@ Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapit
 \s{% Anfang Skript only
     Ist die Diskriminante negativ, gibt es zwei komplex konjugierte Eigenwerte mit negativem Realteil.
     Umformung mit $\sqrt{-1}=\mathrm{j}\cdot\sqrt{1}$ und Herleitung für $u_{C,h}$ in Kapitel
-    \ref{sec:schaltvorgaengezeitbereich:rlc:herleitung}:%
+    \ref{sec:schaltvorgaengezeitbereich:exkurse:herleitung}:%
 }% Ende Skript only
 \b{% Anfang Folien only
     \begin{minipage}{\textwidth}\centering
@@ -2039,7 +2038,7 @@ Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapit
     Die homogene Lösung entspricht einer abklingenden Schwingung mit der
     \textbf{Abklingkonstante} $\delta$\index{Größe>Abklingkonstante} (neg. Realteil der EW)
     und der \textbf{gedämpften Eigenkreisfrequenz} $\omega_d$\index{Größe>Eigenkreisfrequenz, gedämpft} (pos. Imaginärteil der EW).
-    Eine Herleitung für Gl. \ref{eq:dgl:rlc:homolsg:periodisch} aus Gl. \ref{eq:dgl:rlc:homolsg:periodisch:herleitung} erfolgt in Kapitel \ref{sec:schaltvorgaengezeitbereich:rlc:herleitung}.
+    Eine Herleitung für Gl. \ref{eq:dgl:rlc:homolsg:periodisch} aus Gl. \ref{eq:dgl:rlc:homolsg:periodisch:herleitung} erfolgt in Kapitel \ref{sec:schaltvorgaengezeitbereich:exkurse:herleitung}.
 }% Ende Skript only
 \end{frame}
 
@@ -2066,15 +2065,14 @@ Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapit
     \end{minipage}\vspace{15pt}
     \textbf{5.) Konstanten bestimmen:} (wie bekannt)
     \begin{align*}
-        &\hphantom{1Rooooooo}&\hphantom{2Loooooo}&\hphantom{2Roooooooooooooooooooooooooooooooooo}&\hphantom{3Loooooo}&\hphantom{3Roooooooooo} \nonumber\\[-15pt] % Dummyzeile alignment zwischen align-Umgebungen[ca. 16pt hoch], RLCs part. Lösung je Fall
+        &\hphantom{1Rooooooo}&\hphantom{2Loooooo}&\hphantom{2Roooooooooooooooooooooooooooooooooo}&\hphantom{3Loooooo}&\hphantom{3Roooooooooo}\\[-15pt] % Dummyzeile alignment zwischen align-Umgebungen[ca. 16pt hoch], RLCs part. Lösung je Fall
         &\text{1. AB:}&
-            \ecv{u_C}(0) &= \redcancel{\mathrm{e}^{-\delta 0}} \cdot C_0 \cdot \sin(\redcancel{\omega_d t } + \varphi_0) + \ecv{U_q} \overset{!}{=} 0 \nonumber\\
+            \ecv{u_C}(0) &= \redcancel{\mathrm{e}^{-\delta 0}} \cdot C_0 \cdot \sin(\redcancel{\omega_d t } + \varphi_0) + \ecv{U_q} \overset{!}{=} 0\\
         &\text{2. AB:}&
             \dt \ecv{u_C}(0) &= -\delta \cdot \redcancel{\mathrm{e}^{-\delta 0}} \cdot C_0 \cdot \sin(\varphi_0) + \mathrlap{\redcancel{\mathrm{e}^{-\delta 0}} \cdot C_0 \cdot \omega_d \cdot \cos(\varphi_0) \overset{!}{=} 0 }\nonumber\\
         &\Longrightarrow&
         C_0 &=  -\frac{\ecv{U_q}}{\sin(\varphi_0)} \quad\text{und}\quad
             \varphi_0 = \arctan\left(\frac{\omega_d}{\delta}\right)
-        %\label{eq:dgl:rlc:dc:konstanten:periodisch}
     \end{align*}
     }% Ende Folien only
     \s{% Anfang Skript only
@@ -2093,17 +2091,16 @@ Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapit
     \end{align}
     %\pause%
     \textbf{5.) Konstanten bestimmen:} (wie bekannt)
-    \begin{align}
-        &\hphantom{1Rooooooo}&\hphantom{2Loooooo}&\hphantom{2Roooooooooooooooooooooooooooooooooo}&\hphantom{3Loooooo}&\hphantom{3Roooooooooo} \nonumber\\[-15pt] % Dummyzeile alignment zwischen align-Umgebungen[ca. 16pt hoch], RLCs part. Lösung je Fall
+    \begin{align*}
+        &\hphantom{1Rooooooo}&\hphantom{2Loooooo}&\hphantom{2Roooooooooooooooooooooooooooooooooo}&\hphantom{3Loooooo}&\hphantom{3Roooooooooo}\\[-15pt] % Dummyzeile alignment zwischen align-Umgebungen[ca. 16pt hoch], RLCs part. Lösung je Fall
         &\text{1. AB:}&
-            \ecv{u_C}(0) &= \redcancel{\mathrm{e}^{-\delta 0}} \cdot C_0 \cdot \sin(\redcancel{\omega_d t } + \varphi_0) + \ecv{U_q} \overset{!}{=} 0 \nonumber\\
+            \ecv{u_C}(0) &= \redcancel{\mathrm{e}^{-\delta 0}} \cdot C_0 \cdot \sin(\redcancel{\omega_d t } + \varphi_0) + \ecv{U_q} \overset{!}{=} 0\\
         &\text{2. AB:}&
             \dt \ecv{u_C}(0) &= -\delta \cdot \redcancel{\mathrm{e}^{-\delta 0}} \cdot C_0 \cdot \sin(\varphi_0) + \mathrlap{\redcancel{\mathrm{e}^{-\delta 0}} \cdot C_0 \cdot \omega_d \cdot \cos(\varphi_0) \overset{!}{=} 0 }\nonumber\\
         &\Longrightarrow&
         C_0 &=  -\frac{\ecv{U_q}}{\sin(\varphi_0)} \quad\text{und}\quad
             \varphi_0 = \arctan\left(\frac{\omega_d}{\delta}\right)
-        \label{eq:dgl:rlc:dc:konstanten:periodisch}
-    \end{align}
+    \end{align*}
     In Abbildung \ref{fig:rlc:dc:uc:periodisch} ist der zeitlichen Verlauf der Spannung $u_C(t)$ für $t=0$ bis $t=5\cdot\frac{1}{\delta}$ gezeigt.
     In der gewählten Skalierung beträgt $\omega_0$ das vierfache der Abklingkonstante $\delta$ (Güte $Q_S = 2$).
 
@@ -2115,22 +2112,33 @@ Der Zusammenhang zwischen $\lambda$ und $Q_S$ wird im optionalen Exkurs in Kapit
     }% Ende Skript only
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Exkurse zu Serienschwingkreisen}
+\label{sec:schaltvorgaengezeitbereich:exkurse}
+\s{% Anfang Skript only
+\begin{frame}\ftx{\subsecname: Optionale Inhalte zum Vertiefen}
+    In diesem Kapitel sind ergänzende Exkurse zum Verhalten von Schwingkreisen enthalten, die zur Vertiefung des Themas dienen und Brücken zu weiteren Themengebieten schlagen.
+    Die Inhalte der Exkurse sind für das Verständnis der restlichen Modulinhalte nicht zwingend erforderlich und können bei Bedarf übersprungen werden.
+\end{frame}
+}% Ende Skript only
 %-------------------------------------------------------------------------------------------------%
 
 \newpage% Achtung: Layout für eine A4-Seite im Skript vorgesehen!
-\subsubsection{Exkurs: Herleitung der homogenen Lösung im periodischen Fall}
-\label{sec:schaltvorgaengezeitbereich:rlc:herleitung}
+\subsubsection{Herleitung der homogenen Lösung im periodischen Fall}
+\label{sec:schaltvorgaengezeitbereich:exkurse:herleitung}
 %
-\begin{frame}[t]\ftx{\subsubsecname}
+\begin{frame}[t]\ftx{Exkurs: \subsubsecname}
 \s{% Anfang Skript only
-Aus der allgemeinen homogenen Lösung in Gl. \ref{eq:dgl:rlc:homolsg:cases} folgt mit $\lambda_{1/2}$ aus Gl. \ref{eq:dgl:rlc:lambda:periodisch} im periodischen Fall:
+Aus der allgemeinen homog. Lösung im periodischen Fall (Gl. \ref{eq:dgl:rlc:homolsg:cases}) folgt mit $\lambda_{1/2}$ (Gl. \ref{eq:dgl:rlc:lambda:periodisch}):
 }% Ende Skript only
 \ifvmode\vspace*{-\baselineskip}\setlength{\parskip}{0ex}\fi% Ref: https://tex.stackexchange.com/questions/543846/how-can-i-ignore-empty-lines-before-after-and-inside-an-equation-environment
 \begin{align}
     &&
         \ecv{u_{C,\mathrm{h}}} &= \mathrm{e}^{-\delta t} \cdot \left( K_1 \cdot \mathrm{e}^{+\mathrm{j}\omega_d t} + K_2 \cdot \mathrm{e}^{-\mathrm{j}\omega_d t} \right) \nonumber\\
 % uncomment intertext for math preview in VSCode
-\intertext{$K_1$ und $K_2$ müssen komplex konjugiert sein, damit $\ecv{u_{C,\mathrm{h}}}$ reell ist!}
+\intertext{$K_1$ und $K_2$ müssen komplex konjugiert sein, damit $\ecv{u_{C,\mathrm{h}}}$ reell ist! \s{\cite[Vgl. S. 379]{hagmann}}}
 &\text{mit}&
         K_1 &= a + \mathrm{j} b \mathrlap{\quad\text{und}\quad K_2 = a - \mathrm{j} b\quad\text{mit}\quad a,b \in \mathbb{R}} \nonumber\\[6pt]
     &&
@@ -2159,7 +2167,7 @@ Aus der allgemeinen homogenen Lösung in Gl. \ref{eq:dgl:rlc:homolsg:cases} folg
     \label{eq:dgl:rlc:homolsg:periodisch:herleitung}
 \end{align}%
 \end{frame}%
-\begin{frame}[t]\ftx{\subsubsecname}% Exkurs Herleitung: Zweiter Frame
+\begin{frame}[t]\ftx{Exkurs: \subsubsecname}% Exkurs Herleitung: Zweiter Frame
 \s{% Anfang Skript only
 Die homogene Lösung entspricht im periodischen Fall einer abklingenden ($\mathrm{e}^{-\delta t}$)
 Überlagerung der Schwingungen $z_1$ und $-z_2$ mit gleicher Kreisfrequenz $\omega_d$
@@ -2172,7 +2180,7 @@ und Phasenverschiebung von $\sfrac{\pi}{2}$ zueinander. %
     \begin{subfigure}{0.38\textwidth}\centering
         \caption{Zeigerdiagramm}%
     \end{subfigure}%
-    \caption{Überlagerung von Schwingungen gleicher Frequenz im Zeitverlauf u. Zeigerdiagramm}%
+    \caption{Überlagerung von Schwingungen gleicher Frequenz, Zeitverlauf u. Zeigerdiagramm}%
     \label{fig:plot:zeiger:ueberlagerung}%
 \end{figure}%
 }% Ende Skript only
@@ -2196,7 +2204,7 @@ und Phasenverschiebung von $\sfrac{\pi}{2}$ zueinander. %
 %
 % <- no linebreak (Skript)
 %
-\begin{frame}[t]\ftx{\subsubsecname}% Exkurs Herleitung: Dritter Frame
+\begin{frame}[t]\ftx{Exkurs: \subsubsecname}% Exkurs Herleitung: Dritter Frame
 \s{% Anfang Skript only
 In Abbildung \ref{fig:plot:zeiger:ueberlagerung} ist die Überlagerung in Form addierter Zeitverläufe (a) und
 in Form addierter komplexer Amplitudenzeiger im Zeigerdiagramm (b) dargestellt. Mathematisch ausgedrückt:%%
@@ -2249,8 +2257,8 @@ in Form addierter komplexer Amplitudenzeiger im Zeigerdiagramm (b) dargestellt. 
 \end{align*}%
 }%
 \s{% Anfang Skript only
-Die homogene Lösung im periodischen Fall aus Gl. \ref{eq:dgl:rlc:homolsg:periodisch:herleitung} lässt sich somit
-gemäß Herleitung für Gl. \ref{eq:dgl:rlc:homolsg:periodisch:zeigeraddition} in Form einer abklingenden, phasenverschobenen Sinuskurve wie in Lösung in Gl. \ref{eq:dgl:rlc:homolsg:periodisch} beschreiben:
+Die homogene Lösung im periodischen Fall aus Gl. \ref{eq:dgl:rlc:homolsg:periodisch:herleitung} lässt sich
+nach Gl. \ref{eq:dgl:rlc:homolsg:periodisch:zeigeraddition} wie im Folgenden als abklingende, phasenverschobene Sinuskurve beschreiben (Vgl. Gl. \ref{eq:dgl:rlc:homolsg:periodisch}):
 \begin{align*}
     \ecv{u_{C,\mathrm{h}}} &= \mathrm{e}^{-\delta t} \cdot C_0 \cdot \sin(\omega_d t + \varphi_0)
         &&\text{mit}\quad \lambda_{1/2} = -\delta \pm \mathrm{j} \cdot \omega_d
@@ -2261,10 +2269,12 @@ gemäß Herleitung für Gl. \ref{eq:dgl:rlc:homolsg:periodisch:zeigeraddition} i
 %-------------------------------------------------------------------------------------------------%
 
 \newpage% Achtung: Layout für eine A4-Seite im Skript vorgesehen!
-\subsubsection[Exkurs: Ortskurvendiagramm, Nullstellen]{Exkurs: Fallunterscheidung bei RLC-Serienschwingkreis, Nullstellen}
-\label{sec:schaltvorgaengezeitbereich:rlc:nst}
-\begin{frame}[t]\ftx{\subsubsecname}
+\subsubsection[Ortskurvendiagramm, Nullstellen]{Exkurs: Fallunterscheidung bei RLC-Serienschwingkreis, Nullstellen}
+\label{sec:schaltvorgaengezeitbereich:exkurse:nst}
+\begin{frame}[t]\ftx{Exkurs: \subsubsecname}
 \s{% Anfang Skript only
+    \index{Ortskurve}%
+    \index{Eigenwert}%\index{Eigenkreisfrequenz, ungedämpft}%
     Die Nullstellen (NST) des charakteristiscen Polynoms, das heißt die Eigenwerte $\lambda_{1/2}$,
     des RLC-Serienschwingkreises hängen von der Diskriminante $D$ ab.
 
@@ -2272,7 +2282,7 @@ gemäß Herleitung für Gl. \ref{eq:dgl:rlc:homolsg:periodisch:zeigeraddition} i
         \begin{subfigure}{0.48\textwidth}\centering
             \includegraphics{Tikz/pdf/plot_rlcs_ortskurve_nst.pdf}
             \caption{Ortskurve der Nullstellen $\lambda$}
-            \label{fig:rlc:nst}
+            \label{fig:exkurse:nst}
         \end{subfigure}%
         \begin{subfigure}{0.48\textwidth}\centering
             \includegraphics{Tikz/pdf/plot_rlcs_charge_dc_uc.pdf}
@@ -2282,12 +2292,13 @@ gemäß Herleitung für Gl. \ref{eq:dgl:rlc:homolsg:periodisch:zeigeraddition} i
         \caption{Ortskurve der Eigenwerte und Spannungsverläufe im RLC-Serienschwingkreis}
     \end{figure}
 
-    Abbildung \ref{fig:rlc:nst} zeigt die Lage der Nullstellen im komplexen Zahlenraum als Ortskurve in Abhängigkeit von $D$
-    bei gleichbleibenden Werten für $R$ und $L$.
-    Der Verlauf der NST entspricht einem Anstieg der ungedämpften Eigenkreisfrequenz $\omega_0$ bei gleich bleibender Abklingkonstante $\delta$.
+    Abbildung \ref{fig:exkurse:nst} zeigt die Lage der Nullstellen im komplexen Zahlenraum als Ortskurve in Abhängigkeit von $D$
+    für $\delta = \frac{R}{2L} = konst.$.
+    Der Verlauf der NST entspricht einem Anstieg der ungedämpften Eigenkreisfrequenz $\omega_0 = \frac{1}{\sqrt{LC}}$.
     [Vgl. Gl. \ref{eq:dgl:rlc:eigenkreisfrequenz}]
 
     Im aperiodischen Fall ($D>0$) bewegen sich die beiden negativen reellen NST für $\delta=konst.$ und steigendem $\omega_0$ auf einander zu.
+    Die NST näher an der Imaginärachse dominiert das Einschwingverhalten des Systems (langsamerer Abklingvorgang).
     Im aperiodischen Grenzfall ($D=0$) verschmelzen die NST zu einer doppelten Nullstelle bei $\lambda_{1/2}=-\delta$.
     Im periodischen Grenzfall ($D<0$) bewegen sich die konjugiert komplexen NST für $\delta=konst.$ und steigendem $\omega_0$ parallel zur Imaginärachse
     und entfernen sich von der Realachse.
@@ -2331,7 +2342,7 @@ gemäß Herleitung für Gl. \ref{eq:dgl:rlc:homolsg:periodisch:zeigeraddition} i
     \end{minipage}
 \end{minipage}\vspace{2pt}
 
-\textbf{Nullstellen im Ortskurvendiagramm:} $\lambda(D)$ für $\delta=konst.$ \vspace{2pt}
+\textbf{Nullstellen im Ortskurvendiagramm:} $\lambda(D)$ für $\delta=\frac{R}{2L}=konst.$ \vspace{2pt}
 
 \begin{minipage}{\textwidth}\centering
     \begin{minipage}{0.4\textwidth}\centering
@@ -2354,10 +2365,14 @@ gemäß Herleitung für Gl. \ref{eq:dgl:rlc:homolsg:periodisch:zeigeraddition} i
 
 %-------------------------------------------------------------------------------------------------%
 \newpage% Achtung: Layout für eine A4-Seite im Skript vorgesehen!
-\subsubsection{Exkurs: Abklingkonstante, Eigen- und Resonanzkreisfrequenz, Güte}
-\label{sec:schaltvorgaengezeitbereich:rlc:eigenfrequenz}
-\begin{frame}[t]\ftx{\subsubsecname}
+\subsubsection{Abklingkonstante, Eigen- und Resonanzkreisfrequenz, Güte}
+\label{sec:schaltvorgaengezeitbereich:exkurse:eigenfrequenz}
+\begin{frame}[t]\ftx{Exkurs: \subsubsecname}
 \s{%
+    \index{Größe>Abklingkonstante}%
+    \index{Größe>Eigenkreisfrequenz, gedämpft}%
+    \index{Größe>Resonanzkreisfrequenz}%
+    \index{Größe>Güte}%
     Im periodischen Fall ergibt sich die (gedämpfte) Eigenkreisfrequenz $\omega_d$ und die Abklingkonstante $\delta$ aus den Eigenwerten $\lambda_{1/2}$.
     Die Größen hängen eng zusammen mit der \textbf{Güte} $Q_{\mathrm{S}}$ und der \textbf{Resonanzkreisfrequenz} $\omega_0$ eines Schwingkreises (Resonanzkreises).
     Beide Größen werden als Kenngrößen für Schwingkreise verwendet und ausführlicher in Modul 8 (Frequenzvariable Schaltungen) behandelt.

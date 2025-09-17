@@ -3,14 +3,9 @@
 \Aufgabe{
     \begin{itemize}
         \item[a)] Zeichnen Sie die folgende Schaltung:
-              Beschalten Sie einen npn-Transistor mit einem Basisvorwiderstand von  
-              $$ R_\mathrm{B} = 4,7\,\mathrm{k\Omega}. $$
-              Der Emitterwiderstand beträgt 
-              $$ R_\mathrm{E} = 1\,\mathrm{k\Omega}. $$
-              Die Spannungsversorgung beträgt 
-              $$ U_\mathrm{0} = 15\,\mathrm{V}. $$
-              Schalten Sie eine $10 \,\mathrm{V}$-Z-Diode in Sperrrichtung von der Basis auf Masse.  
-              
+              Beschalten Sie einen npn-Transistor mit einem Basisvorwiderstand von $R_\mathrm{B} = 4,7\,\mathrm{k\Omega}$, einem 
+              Emitterwiderstand von  $R_\mathrm{E} = 1\,\mathrm{k\Omega}$ und einer Spannungsversorgung von $U_\mathrm{0} = 15\,\mathrm{V}$.
+              Schalten Sie eine $10 \,\mathrm{V}$-Z-Diode in Sperrrichtung von der Basis auf Masse. \newline
               Verwenden Sie nur eine Spannungsversorgung, welche sowohl die Basis als auch den Kollektor versorgt.
         \item[b)] Berechnen Sie die Emitterspannung $U_\mathrm{E}$, und den Emitterstrom $I_\mathrm{E}$.
         \item[c)] Berechnen Sie die Leistung am Emitterwiderstand $P_\mathrm{RE}$.
@@ -28,11 +23,14 @@
               \end{figure}
               
               
-        \item[b)] Berechnung der Emitterspannung $V_\mathrm{E}$ \\
-              Die Zenerdiode fixiert die Basisspannung des Transistors auf $V_\mathrm{Z} = 10\,\mathrm{V}$. 
-              Die Basis-Emitter-Spannung beträgt $V_{BE} = 0,7\,\mathrm{V}$.
-              $$ V_\mathrm{E} = V_\mathrm{Z} - V_\mathrm{BE} = 10\,\mathrm{V} - 0,7\,\mathrm{V} = 9,3\,\mathrm{V} $$
-              $$ I_\mathrm{E} = \frac{V_\mathrm{E}}{R_\mathrm{E}} = \frac{9,3\,\mathrm{V}}{1\,\mathrm{k\Omega}} = 9,3\,\mathrm{mA} $$
+        \item[b)] Berechnung der Emitterspannung $U_\mathrm{E}$ \\
+              Die Zenerdiode fixiert die Basisspannung des Transistors auf $U_\mathrm{Z} = 10\,\mathrm{V}$. 
+              Die Basis-Emitter-Spannung beträgt $U_{BE} = 0,7\,\mathrm{V}$.
+              \begin{gather*}
+                  U_\mathrm{E} = U_\mathrm{Z} - U_\mathrm{BE} = 10\,\mathrm{V} - 0,7\,\mathrm{V} = 9,3\,\mathrm{V}                  \\
+                  I_\mathrm{E} = \frac{U_\mathrm{E}}{R_\mathrm{E}} = \frac{9,3\,\mathrm{V}}{1\,\mathrm{k\Omega}} = 9,3\,\mathrm{mA}
+              \end{gather*}
+
               
         \item[c)] Berechnung der Leistung am Emitterwiderstand $P_{RE}$ \\
               $$ P_\mathrm{RE} = I_\mathrm{E}^2 \cdot R_\mathrm{E} = (9,3\,\mathrm{mA})^2 \cdot 1\,\mathrm{k\Omega} = 86,49\,\mathrm{mW} $$

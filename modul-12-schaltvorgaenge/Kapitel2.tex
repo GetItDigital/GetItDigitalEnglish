@@ -223,42 +223,41 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Berechnungsmethoden}
+\subsection{Berechnungsmethoden für Schaltvorgänge}
 \label{sec:grundlagen:berechnungsmethoden}
-\begin{frame}\ftx{\subsecname für Schaltvorgänge}
+\begin{frame}\ftx{\subsecname}
 \s{%
     % Methoden
-    Um die Zeitverläufe von Spannungen und Strömen in Schaltungen zu berechnen,
-    kann prinzipiell im Zeitbereich oder im Bildbereich vorgegangen werden. 
-
+    Zur Berechnung von Schaltvorgängen stehen prinzipiell zwei Methoden zur Verfügung. 
+    Beide Methoden basieren auf der Lösung der Differentialgleichung (DGL) einer Schaltung.
+    
+    Die Lösung der DGL erfolgt:
     \begin{itemize}
-        \item Lösung der Differentialgleichung im Zeitbereich
-        \item Lösung der Differentialgleichung im Bildbereich (mit Hilfe der Laplace-Transformation)
+        \item \underline{im Zeitbereich} (durch Zerlegung in flüchtigen und eingeschwungenen Zustand) \textbf{oder}
+        \item \underline{im Bildbereich} (mit Laplace-Transformation).
     \end{itemize}
 
     % Flussdiagramm
-    Die Berechnung im Bildbereich basiert auf der Umformung mittels der Laplace-Transformation.
-    Abbildung \ref{fig:plot:flussdiagrammbildbereich} zeigt den prinzipiellen Ablauf zur Berechnung
-    von Schaltvorgängen im Bildbereich im Vergleich zur Berechnung im Zeitbereich. 
+    Abbildung \ref{fig:plot:flussdiagrammbildbereich} stellt den Ablauf zur Berechnung im Zeit- und im Bildbereich zum Vergleich als Flussdiagramm gegenüber.
 
     \fu{\includegraphics{Tikz/pdf/plot_flussdiagramm_dgl_berechnungsmethoden.pdf}}{Flussdiagramm, Berechnungsmethoden für Schaltvorgänge\label{fig:plot:flussdiagrammbildbereich}}
 
     Die Benennung und Darstellung beider Methoden sind angelehnt an \cite[S. 51]{weissgerber3}, 
     finden sich jedoch in ähnlicher Form auch in anderen Lehrbüchern zur Elektrotechnik, Regelungstechnik und Systemtheorie. 
-    Beiden Methoden ist gemein, dass sie auf der Lösung einer aufgestellten DGL basieren.
 
     % Kurze Erklärung
-    Die Lösung der DGL im Zeitbereich ist die allgemeinste Methode,
-    wobei der Rechenaufwand je nach Komplexität der DGL stark variieren kann.
-    Diese Methode ist in diesem Modul am ausführlichsten behandelt und 
-    basiert auf der Zerlegung in flüchtigen und eingeschwungenen Zustand.
-    
+    Die Lösung der DGL im Zeitbereich ist die allgemein anwendbare Methode und wird in diesem Modul ausführlich behandelt.
+    Der Rechenaufwand kann je nach Komplexität der DGL stark variieren.
+    Die Methode basiert auf der Zerlegung in einen flüchtigen und einen eingeschwungenen Zustand.
+
     Die Lösung der DGL im Bildbereich mithilfe der Laplace-Transformation ist eine spezielle Methode, 
-    die bei linearen, zeitinvarianten Systemen mit Energiespeichern angewendet werden kann.
-    Gegenüber der Lösung im Zeitbereich bietet sie den Vorteil, dass die Differentialgleichung in eine algebraische Gleichung überführt wird.
-    Dadurch kann in vielen Fällen die Lösung einfacher und schneller erfolgen. 
-    Das Verfahren bietet sich bei verschwindenden Anfangsbedingungen an, da die Laplace-Transformation 
-    sonst umständlich wird.
+    die bei linearen, zeitinvarianten Systemen mit Energiespeichern angewendet werden kann. 
+    Sie bietet sich bei verschwindenden Anfangsbedingungen (Vgl. Kapitel \ref{sec:grundlagen:zeitbereich}) an.
+    In einigen Fällen kann die Methoden den Rechenaufwand reduzieren, da die transformierte DGL algebraisch gelöst werden kann.
+    Die Methode wird in diesem Modul nicht weiter behandelt.
+    
+    Die Idee in den Bildbereich zu wechseln findet sich wieder in Abschnitt \ref{sec:grundlagen:dgl} bei der Aufstellung einer DGL 
+    und in Abschnitt \ref{sec:grundlagen:zeitbereich:partikulaereloesung} bei der Anwendung komplexer Wechselstromrechnung (Vgl. Modul 7) zur Bestimmung eingeschwungener Zustände.
 }%
 \b{% Folie: Berechnungsmethoden für Schaltvorgänge
     % Bild: Flussdiagramm, Berechnungsmethoden für Schaltvorgänge
@@ -357,7 +356,7 @@
                 &\text{Masche:}& \ecv{u_R} + \ecv{u_C} &= \ecv{u} &&&& \ecv{u_R} = R \cdot \eci{i_R}\\[+5pt]
             \hline\\[-10pt]%
             \onslide<2->{% start overlay
-                && R \cdot \eci{i_R} + \ecv{u_C} &= \ecv{U_q} \\
+                && R \cdot \eci{i} + \ecv{u_C} &= \ecv{U_q} \\
                 &\textbf{DGL: }& RC \cdot \dt \ecv{u_C} + \ecv{u_C} &= \ecv{U_q} &&&&\quad\text{1. Ord.}
             }% end overlay
         \end{split}\end{aligned}
@@ -406,8 +405,8 @@
     Aus den Eigenschaften der Schaltungen lassen sich folgende für Eigenschaften der DGLs ableiten:%
     \begin{itemize}
         \item \makebox[4cm][l]{\textbf{gewöhnlich}}           \makebox[2cm][l]{}                (nur abhängig von einer Variable, hier der Zeit)
-        \item \makebox[4cm][l]{\textbf{linear}}               \makebox[2cm][l]{}                (Linearität)
-        \item \makebox[4cm][l]{\textbf{konst. Koeffizienten}} \makebox[2cm][l]{$a_i=konst.$}    (Zeitinvarianz)
+        \item \makebox[4cm][l]{\textbf{linear}}               \makebox[2cm][l]{}                (Linearität der Schaltungselemente)
+        \item \makebox[4cm][l]{\textbf{konst. Koeffizienten}} \makebox[2cm][l]{$a_i=konst.$}    (Zeitinvarianz der Schaltungselemente)
         \item \makebox[4cm][l]{\textbf{inhomogen}}            \makebox[2cm][l]{$b(t)\neq 0$}    (bei Anregung durch Spannungs- oder Stromquellen)
         \item \makebox[4cm][l]{\textbf{homogen}}              \makebox[2cm][l]{$b(t)= 0$}       (ohne Anregung durch Spannungs- oder Stromquellen)
     \end{itemize} 
@@ -417,8 +416,8 @@
 
     % DGL allgemein
     \begin{align}\label{eq:grundlagen:dgl:inhomogen}
-        \sum_{i=0}^{n} a_i \cdot \frac{\d^i y(t)}{\d t^i} &= b(t)\\\nonumber
-        \mathclap{\text{mit} \quad a_i, b(t) \in \mathbb{R}; \quad i, n \in \mathbb{N}}
+        \sum_{i=0}^{n} a_i \cdot \frac{\d^i y(t)}{\d t^i} = b(t)\\[2pt]\nonumber
+        \text{mit} \quad a_i, b(t) \in \mathbb{R}; \quad i, n \in \mathbb{N}
     \end{align}
 
     Mit der \textbf{Ordnung}\index{Differentialgleichung>Ordnung} $n$, 
@@ -673,21 +672,27 @@
         &\textbf{Homogene DGL:}& 
             \sum_{i=0}^{n} a_i \cdot \dt[i]\, y_{\mathrm{h}} &= 0 &
             &\text{(gew., lin., konst. Koeff.)}\vphantom{\bigg|}\\[4pt]
+        \onslide<2-|handout:1>{
         &\text{Ansatz:}&
             y_{\mathrm{h}}(t) &= K \cdot \mathrm{e}^{\lambda t} &
             &\text{(Exponentialfkt.)}\vphantom{\bigg|}\\
         &\text{Char. Polynom:}&
             \sum_{i=0}^{n} a_i \cdot \lambda^i &= 0 \quad\Rightarrow\quad \lambda_i = ... &
             &\text{(Eigenwerte: $\lambda$)} \\[4pt]
+        }%
+        \onslide<3-|handout:1>{
         &\text{1. Lösungsansatz:}&
             y_{\mathrm{h}}(t) &= \sum_{i=1}^{n} K_i \cdot \mathrm{e}^{\lambda_i t} &
             &\text{ für $\lambda_i \neq \lambda_{i-1} \ \forall \ i$} \\
         &\text{2. Lösungsansatz:}&
             y_{\mathrm{h}}(t)&= \sum_{j=1}^{m} K_j \cdot t^{j-1}  \cdot \mathrm{e}^{\lambda t} &
             &\text{ für $\lambda_j = \lambda \ \forall \ j$}\\[6pt]
+        }%
+        \onslide<4-|handout:1>{
         &\textbf{allg. hom. Lösung:}&
             y_{\mathrm{h}}(t)&= \ ... \ = y_{\mathrm{f}} &
             &\text{(Linearkombination)}
+        }%
     \end{align*}
 }%
 \s{%
@@ -719,17 +724,17 @@
     %\end{align*}
 
     % Eigenwerte lambda
-    Dabei ist $K$ eine Konstante und $\lambda$ die Lösung des charakteristischen Polynoms und wird
-    auch als \textbf{Eigenwert}\index{Differentialgleichung>Eigenwert} bezeichnet. 
+    Dabei ist $K$ eine Konstante und $\lambda$ die Lösung des charakteristischen Polynoms \index{Differentialgleichung>Charakteristische Polynom}
+    und wird auch als \textbf{Eigenwert}\index{Differentialgleichung>Eigenwert} bezeichnet. 
     Durch Einsetzen des Exponential-Ansatzes in \ref{eq:grundlagen:dgl:homogen}, Differenzieren und Ausklammern:
     % Charakteristische Polynom
     \begin{align}
         %\sum_{i=0}^{n} a_i \cdot \dt[i]\, y_{\mathrm{h}}(t) &= 0 \nonumber\\
         \sum_{i=0}^{n} a_i \cdot \dt[i]\, K \cdot \mathrm{e}^{\lambda t} &= 0 \nonumber\\[2pt]
         \left(\sum_{i=0}^{n} a_i \cdot \lambda^i \right) K \cdot \mathrm{e}^{\lambda t} &= 0 \nonumber\\[4pt]
-    \intertext{kann das \textbf{charakteristische Polynom}\index{Differentialgleichung>Charakteristische Polynom} aufgestellt werden:}
+    \intertext{kann das \textbf{charakteristische Polynom} aufgestellt werden:}
         \sum_{i=0}^{n} a_i \cdot \lambda^i &= 0
-    \end{align}
+    \end{align}\index{Differentialgleichung>Charakteristische Polynom}
 
     % Höhere Ordnung, Anzahl Eigenwerte, komplexe Werte
     Die maximale Anzahl an Eigenwerten ist gegeben durch die Ordnung einer DGL. 
@@ -752,7 +757,7 @@
     \begin{equation}\label{eq:grundlagen:homogeneloesung:lambdaungleich}
         y_{\mathrm{h}}(t) = \sum_{i=1}^{n} K_i \cdot \mathrm{e}^{\lambda_i t} \qquad \text{für} \quad \lambda_i \neq \lambda_j \ \forall \ i,j
     \end{equation}
-    Bei paarweise komplex konjugierten Eigenwerten kann diese Lösung umformuliert werden. [Herleitung in Abschnitt \ref{sec:schaltvorgaengezeitbereich:rlc:herleitung}.]
+    Bei paarweise komplex konjugierten Eigenwerten kann diese Lösung umformuliert werden. [Herleitung in Abschnitt \ref{sec:schaltvorgaengezeitbereich:exkurse:herleitung}.]
     Für $\lambda_1 = \lambda_2^* = a + \mathrm{j} b \in \mathbb{C}$ ergibt sich für die homogene Lösung:
     \begin{equation}\label{eq:grundlagen:homogeneloesung:lambdakomplex}
         \begin{aligned}
@@ -824,20 +829,34 @@
     besitzt eine einfache und zwei doppelte, konjugierte, komplexe Nullstellen:
     \begin{equation*}
         %\lambda_1 = -3, \quad \lambda_2 = \lambda_3 = -1+\mathrm{2j}, \quad \lambda_4 = \lambda_5 = -1-\mathrm{2j}
-        \only<4| handout:0>{%
+        \only<4| handout:1>{%
             \lambda_1 = -3, \quad \lambda_2 = \lambda_3 = -1+\mathrm{2j}, \quad \lambda_4 = \lambda_5 = -1-\mathrm{2j}
         }%
-        \only<5-| handout:1>{%
-            \lambda_1 = \ec[teal]{-3}, \quad \lambda_2 = \lambda_3 = \ec[purple]{-1}\ec[violet]{{}+{}2}\mathrm{j}, \quad \lambda_4 = \lambda_5 = \ec[purple]{-1}\ec[violet]{{}-{}2}\mathrm{j}
+        \only<5| handout:0>{%
+            \lambda_{\ec[teal]{1}} = -3, \quad \lambda_{\ec[purple]{2}} = \lambda_{\ec[purple]{3}} = -1+\mathrm{2j}, \quad \lambda_{\ec[violet]{4}} = \lambda_{\ec[violet]{5}} = -1-\mathrm{2j}
+        }%
+        %\only<6| handout:0>{%
+        %    \lambda_1 = \ec[cyan]{-3}, \quad \lambda_2 = \lambda_3 = \ec[orange]{-1}\ec[magenta]{{}+{}2}\mathrm{j}, \quad \lambda_4 = \lambda_5 = \ec[orange]{-1}\ec[magenta]{{}-{}2}\mathrm{j}
+        %}%
+        \only<6-| handout:1>{%
+            \lambda_{\ec[teal]{1}} = \ec[cyan]{-3}, \quad \lambda_{\ec[purple]{2}} = \lambda_{\ec[purple]{3}} = \ec[orange]{-1}\ec[magenta]{{}+{}2}\mathrm{j}, \quad \lambda_{\ec[violet]{4}} = \lambda_{\ec[violet]{5}} = \ec[orange]{-1}\ec[magenta]{{}-{}2}\mathrm{j}
         }%
     \end{equation*}
-    
-    \pause\pause%
+
+    \pause%
 
     Die allgemeine Lösung lautet:
     \begin{equation*}
         %y_{\mathrm{h}}(t) = K_1 \cdot \mathrm{e}^{-3 t} + (K_2 + K_3 \cdot t) \cdot \mathrm{e}^{-t} \sin(2t) + (K_4 + K_5 \cdot t) \cdot \mathrm{e}^{-t} \cos(2t)
-        y_{\mathrm{h}}(t) = K_1 \cdot \mathrm{e}^{\ec[teal]{-3} t} + (K_2 + K_3 \cdot t) \cdot \mathrm{e}^{\ec[purple]{-}t} \sin(\ec[violet]{2}t) + (K_4 + K_5 \cdot t) \cdot \mathrm{e}^{\ec[purple]{-}t} \cos(\ec[violet]{2}t)
+        \only<5|handout:0>{
+            y_{\mathrm{h}}(t) = \ec[teal]{K_1} \cdot \mathrm{e}^{-3 t} + \ec[purple]{(K_2 + K_3 \cdot t)} \cdot \mathrm{e}^{-t} \sin(2t) + \ec[violet]{(K_4 + K_5 \cdot t)} \cdot \mathrm{e}^{-t} \cos(2t)
+        }%
+        %\only<6| handout:0>{
+        %    y_{\mathrm{h}}(t) = K_1 \cdot \mathrm{e}^{\ec[cyan]{-3} t} + (K_2 + K_3 \cdot t) \cdot \mathrm{e}^{\ec[orange]{-}t} \sin(\ec[magenta]{2}t) + (K_4 + K_5 \cdot t) \cdot \mathrm{e}^{\ec[orange]{-}t} \cos(\ec[magenta]{2}t)
+        %}%
+        \only<6-| handout:1>{
+            y_{\mathrm{h}}(t) = \ec[teal]{K_1} \cdot \mathrm{e}^{\ec[cyan]{-3} t} + \ec[purple]{(K_2 + K_3 \cdot t)} \cdot \mathrm{e}^{\ec[orange]{-}t} \sin(\ec[magenta]{2}t) + \ec[violet]{(K_4 + K_5 \cdot t)} \cdot \mathrm{e}^{\ec[orange]{-}t} \cos(\ec[magenta]{2}t)
+        }%
     \end{equation*}
     \footnotetext{leicht verändert aus: Manfred Albach, {\em Elektrotechnik 2}, Pearson Deutschland GmbH 3. Auflage, 2020.}
 }%

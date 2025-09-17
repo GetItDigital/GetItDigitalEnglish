@@ -35,7 +35,7 @@
     \item[e)]
           Wie groß ist der Strom durch $R_1$ ($I_\mathrm{R1}=I_\mathrm{C,\,T1}$)?
     \item[f)]
-          Erläutern Sie in Stichworten die Arbeitspunktstabiliserung der gesamten Schaltung auf Grund der Gegenkopplung über $R_4$.
+          Erläutern Sie die Arbeitspunktstabiliserung der gesamten Schaltung auf Grund der Gegenkopplung über $R_4$.
     \item[g)]
           Wie groß ist die Steilheit $S$ von $T_\mathrm{1}$, wenn zusätzlich $U_\mathrm{T} = 26\, \mathrm{mV}$ gegeben ist?
     \item[h)]
@@ -53,62 +53,64 @@
 
 
 \Loesung{
-  \begin{itemize}
-    \item[a)]
-          \begin{align*}
-            I_\mathrm{C} & = \frac{6\,\mathrm{V}}{10\,\mathrm{k\Omega}} = 0,6\,\mathrm{mA}
-          \end{align*}
-
-    \item[b)]
-          \begin{align*}
-            I_\mathrm{C,T2} & = 0,6\,\mathrm{mA}
-          \end{align*}
-
-    \item[c)]
-          \begin{align*}
-            U_{\mathrm{R3}} & = 0,6\,\mathrm{mA} \cdot 2\,\mathrm{k\Omega} = 1,2\, \mathrm{V}
-          \end{align*}
-
-    \item[d)]
-          \begin{align*}
-            1,2\, \mathrm{V} + 0,6\,\mathrm{V} = 1,8\,\mathrm{V}
-          \end{align*}
-
-    \item[e)]
-          \begin{align*}
-            I_\mathrm{C,T1} & = \frac{8,2\,\mathrm{V}}{10\,\mathrm{k\Omega}} = 0,82\,\mathrm{mA}
-          \end{align*}
-
-    \item[f)]
-    \item Erhöhung von $I_\mathrm{C}$ führt zu einem Spannungsanstieg über $R_4$
-    \item dadurch sinkt die Basisspannung von $T_\mathrm{1}$, was $I_\mathrm{C}$ wieder reduziert
-    \item negative Rückkopplung stabilisiert Arbeitspunkt
-
-    \item[g)]
-          \begin{align*}
-            S & = \frac{I_\mathrm{C,T1}}{U_\mathrm{T}} = \frac{0,82\,\mathrm{mA}}{26\,\mathrm{mA}} = 31,54\, \frac{\mathrm{mA}}{\mathrm{V}}
-          \end{align*}
-
-    \item[h)]
-          \begin{align*}
-            A_\mathrm{V} & = S \cdot (-R_\mathrm{C}) = -315
-          \end{align*}
-
-    \item[i)]
-          \begin{align*}
-            A_\mathrm{V} & = -\frac{R_\mathrm{C}}{R_\mathrm{E}} = \frac{10\,\mathrm{k\Omega}}{2\,\mathrm{k\Omega}} = -5
-          \end{align*}
-
-    \item[j)]
-          \begin{align*}
-            -5 \cdot -315 = 1575 \approx 1600
-          \end{align*}
-
-    \item[k)] Ersatzschaltbild
-          \begin{figure}[H]
-            \centering
-            \input{Tikz/src/LsgKlausurVerbundverstaerker}
-          \end{figure}
-          Siehe: Abschnitt \ref{sec:DarlingtonTransistor}
-  \end{itemize}
+      \begin{itemize}
+            \item[a)]
+                  \begin{align*}
+                        I_\mathrm{C} & = \frac{6\,\mathrm{V}}{10\,\mathrm{k\Omega}} = 0,6\,\mathrm{mA}
+                  \end{align*}
+                  
+            \item[b)]
+                  \begin{align*}
+                        I_\mathrm{C,T2} & = 0,6\,\mathrm{mA}
+                  \end{align*}
+                  
+            \item[c)]
+                  \begin{align*}
+                        U_{\mathrm{R3}} & = 0,6\,\mathrm{mA} \cdot 2\,\mathrm{k\Omega} = 1,2\, \mathrm{V}
+                  \end{align*}
+                  
+            \item[d)]
+                  \begin{align*}
+                        1,2\, \mathrm{V} + 0,6\,\mathrm{V} = 1,8\,\mathrm{V}
+                  \end{align*}
+                  
+            \item[e)]
+                  \begin{align*}
+                        I_\mathrm{C,T1} & = \frac{8,2\,\mathrm{V}}{10\,\mathrm{k\Omega}} = 0,82\,\mathrm{mA}
+                  \end{align*}
+                  
+            \item[f)]
+                  Eine Erhöhung von $I_\mathrm{C}$ führt zu einem Spannungsanstieg über $R_4$, dadurch sinkt die Basisspannung von $T_\mathrm{1}$, was $I_\mathrm{C}$ wieder reduziert.
+                  Die negative Rückkopplung stabilisiert den Arbeitspunkt.
+                        
+            \item[g)]
+                  \begin{align*}
+                        S & = \frac{I_\mathrm{C,T1}}{U_\mathrm{T}} = \frac{0,82\,\mathrm{mA}}{26\,\mathrm{mA}} = 31,54\, \frac{\mathrm{mA}}{\mathrm{V}}
+                  \end{align*}
+                  
+            \item[h)]
+                  \begin{align*}
+                        A_\mathrm{V} & = S \cdot (-R_\mathrm{C}) = -315
+                  \end{align*}
+                  
+            \item[i)]
+                  \begin{align*}
+                        A_\mathrm{V} & = -\frac{R_\mathrm{C}}{R_\mathrm{E}} = \frac{10\,\mathrm{k\Omega}}{2\,\mathrm{k\Omega}} = -5
+                  \end{align*}
+                  
+            \item[j)]
+                  \begin{align*}
+                        -5 \cdot -315 = 1575 \approx 1600
+                  \end{align*}
+                  
+            \item[k)] Ersatzschaltbild\\
+                  \begin{minipage}{\linewidth}
+                        \begin{figure}[H]
+                              \centering
+                              \input{Tikz/src/LsgKlausurVerbundverstaerker}
+                        \end{figure}
+                  \end{minipage}
+      \end{itemize}
+      
+      Siehe: Abschnitt \ref{sec:DarlingtonTransistor}
 }

@@ -237,13 +237,15 @@ Ein-/Ausschalten, AD-/DA-Converter, Fahrradlicht mit Kondensator, ...
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Idealer Schalter vs. Realer Schalter}
+\subsection{Vergleich idealer und realer Schalter}
 \label{sec:einfuehrung:schalteridealvsreal}
 \begin{frame}\ftx{\subsecname}
 \s{
 	% Intro: Reales Schalten
-	Das Öffnen oder Schließen (Schalten) eines Schalter selbst ist ein Vorgang, 
-	welcher real betrachtet stets mit Latenzen und Verlusten einhergeht.
+	Zur Vereinfachung wird in diesem Modul stets von idealen Schaltern ausgegangen.
+	Um die Grenzen dieser Annahme zu verstehen, wird im Folgenden der Unterschied zwischen idealen und realen Schaltern erläutert.
+	Hierfür wird wie im Schaltbild in Abbildung \ref{fig:circ:switch} gezeigt ist, die Schalterspannung über einem Schalter betrachtet.
+	Der Schalter ist hierfür an eine lineare Gleichspannungsquelle mit Spannung $U_q$ angeschlossen.
 }
 \begin{figure}[H]\centering
 	\includegraphics{Tikz/pdf/circ_switch_ideal.pdf}
@@ -252,10 +254,8 @@ Ein-/Ausschalten, AD-/DA-Converter, Fahrradlicht mit Kondensator, ...
 \end{figure}
 \s{
 	% Abbildung: Ideal vs. Real
-	Abbildung \ref{fig:plot:schalter} zeigt zum Vergleich das Zeitverhalten 
-	eines idealen und eines realen Schalter während dem Ein- und Ausschalten (Schließen und Öffnen).
-	Dargestellt sind die Zeitverläufe der Spannung $u(t)$ über einen Schalter.
-	Dabei sei eine Gleichspannung $U_q$ über dem Schalter angelegt.
+	Abbildung \ref{fig:plot:schalter} zeigt die Schalterspannung im Durchlass- und im Sperrbetrieb und in den Übergangsphasen beim Öffnen oder Schließen des Schalters.
+	Links ist der Spannungsverlauf für einen idealen Schalter dargestellt, rechts für einen realen Schalter.
 }
 \begin{figure}[H]\centering
 	\begin{subfigure}{0.48\textwidth}\centering
@@ -293,8 +293,10 @@ Ein-/Ausschalten, AD-/DA-Converter, Fahrradlicht mit Kondensator, ...
 	wie in Abbildung \ref{fig:plot:schalter:ideal} dargestellt ist.
 	Ein realer Schalter hingegen leitet oder sperrt nicht instantan
 	wie in Abb. \ref{fig:plot:schalter:real} vereinfacht dargestellt ist. 
-	Das heißt, dass während des Schaltens bereits (oder noch) 
-	eine Spannung anliegen kann, wodurch es zu Schaltverlusten kommen kann.
+	Stattdessen treten Latenzen und Verluste auf.
+	Im Durchlassbetrieb liegt immernoch eine kleine Spannung an (Durchlasswiderstand $R>0$)
+	und im Sperrbetrieb fließt immernoch ein kleiner Strom (Sperrleitwert $G>0$).
+	Dadurch kommt es zu Verlusten im Schalter, insbesondere während der Übergangsphasen, wenn sowohl Spannung als auch Strom anliegen.
 	
 	% Erklärung
 	Die Latenzen und Verluste realer Schalter resultieren aus deren resistiven, induktiven und kapazitiven Eigenschaften.
@@ -328,16 +330,12 @@ Ein-/Ausschalten, AD-/DA-Converter, Fahrradlicht mit Kondensator, ...
 	%Die Eingangsspannung $\underline{U}_1$ liegt zwischen Gate und Source an,
 	%die Ausgangsspannung $\underline{U}_2$ zwischen Drain und Source.
 
-	% Erklärung Latenzen
+	% Erklärung Latenzen, Abgrenzung
 	Die kapazitiven Effekte zwischen den Anschlüssen des MOSFETs führen zu einer Verzögerung beim Schalten,
 	da die jeweiligen Kapazitäten während des Schaltens erst geladen beziehungsweise entladen werden müssen.
-	
-	% Abgrenzung
-	Für die Berechnung von Schaltvorgängen wird in diesem Modul stets von idealen Schaltern ausgegangen.
 	Das MOSFET-Beispiel dient lediglich zur Veranschaulichung der Unterschiede zwischen idealen und realen Schaltern.
-	Ausgleichsvorgänge während des Schaltens werden in diesem Modul nicht weiter betrachtet. 
-	Die vorgestellten Berechnungsmethoden für Schaltvorgänge lassen sich jedoch prinzipiell 
-	auch auf diese anwenden.
+	Ausgleichsvorgänge während Schaltaktionen werden in diesem Modul nicht weiter betrachtet.
+	Mit Schaltvorgängen sind immer die Ausgleichsvorgänge \underline{nach} dem Schalten gemeint.
 }%
 \b{%
 	\makebox[2cm][l]{\textbf{Hier:}} Ausgleichsvorgänge \makebox[1.5cm][c]{\underline{nach}} Schalten (Schaltvorgänge) im Fokus

@@ -588,10 +588,12 @@
 			\speech{folie17}{1}{Auch hier verwenden wir das Ohmsche Gesetz. Das bedeutet, 
 			I eins gleich U null geteilt durch R eins und I zwei gleich U null durch R zwei.
 			Eingesetzt in die Knotenregel ergibt sich:
-			I null minus  U null durch R eins minus  U null durch R zwei gleich null.
-			Analog kann hier die Spannung ausgeklammert werden.
-			Daraus folgt, I null gleich U null mal die Summe der Kehrwerte der Widerstände. Also hier eins durch R eins plus 1 durch R zwei.
-			Das bedeutet der Gesamtwiderstand einer Parallelschaltung berechnet sich wie folgt,
+			I null minus U null durch R eins minus U null durch R zwei gleich null.
+			Analog kann hier die Spannung ausgeklammert werden.}
+			\silence{2}
+			\speech{folie17}{1}{
+			Daraus folgt, I null gleich U null mal die Summe der Kehrwerte der Widerstände. Also hier eins durch R eins plus eins durch R zwei.
+			Das bedeutet der Gesamtwiderstand einer Parallelschaltung berechnet sich folgendermaßen,
 			1 geteilt durch R gesamt ist gleich der Summe von 1 geteilt durch die Einzelwiderstände der Schaltung.}
 		
 		\speech{folie17}{2}{
@@ -1710,14 +1712,17 @@
 			Über dem so erzeugten Kurzschluss kann keine Ausgangsspannung anliegen, weshalb U in diesem Fall gleich 0 ist. Folglich fällt die gesamte von U null generierte Spannung am
 			Innenwiderstand R Ih ab. Dem Ohmschen Gesetz folgend bestimmt dieser damit den Kurzschlussstrom I K. 
 		}
-		\speech{folie22}{2}{ Beim Leerlaufversuch werden die beiden Klemmen der Ersatzspannungsquelle offengelassen, und kein Strom kann fließen.
+		\silence{2}
+
+		\speech{folie22}{2}{Beim Leerlaufversuch werden die beiden Klemmen der Ersatzspannungsquelle offengelassen, und kein Strom kann fließen.
 			Da in diesem Fall also auch kein Strom durch den Innenwiderstand fließt, fällt keine Spannung über ihn ab. 
-			Die an den offenen Klemmen messbare Leerlaufspannung U Ell ist also mit U null identisch.}
+			Die an den offenen Klemmen messbare Leerlaufspannung U L ist also mit U null identisch.}
+			\silence{2}
 
 			\speech{folie22}{2}{Dieses Ergebnis können wir jetzt auch nutzen, um unseren Innenwiderstand der Ersatzspannungsquelle zu Berechnen.
 			Dieser beträgt U Ell durch den im Kurzschlussversuch gemessenen Strom Ih K.
-			Was wir hierbei unbedingt beachten müssen, ist, dass die Formel nach dem Ohmschen Gesetz am Widerstand R I aussieht. Der Kurzschlusstrom und die Leerlaufspannung werden jedoch in zwei 
-			vollkommen unabhängigen Versuchen bestimmt, und treten niemals gleichzeitig auf.}
+			Was wir hierbei unbedingt beachten müssen, ist, dass die Formel nach einer Anwendung des Ohmschen Gesetzes am Widerstand aussieht. Der Kurzschlusstrom und die Leerlaufspannung werden jedoch in zwei 
+			Versuchen bestimmt, die vollkommen unabhängig voneinander sind, und treten niemals gleichzeitig auf.}
 			\silence{8}
 	}
 	
@@ -1881,7 +1886,7 @@
 	\silence{2}
 	\speech{folie23}{2}{Bei der realen Stromquelle ist der Innenwiderstand nicht unendlich groß, folglich fließt durch diesen ein Strom.
 		Dieser ist abhängig von der sich einstellenden Ausgangsspannung U. Diese liegt durch die Parallelschaltung auch am Innenwiderstand an.
-		Der Strom durch den Innenwiderstand beträgt also die Spannung durch eben diesen Innenwiderstand.
+		Der Strom durch den Innenwiderstand beträgt also die anliegende Spannung geteilt durch R I.
 		der Ausgangsstrom I ergibt sich dann zu I gleich I null  minus dem Strom durch den Innenwiderstand.
 		Ein möglichst großer Innenwiderstand hilft bei der realen Stromquelle also, den Verlust des Ausgangsstromes durch den Innenwiderstand zu reduzieren.}
 	\silence{8}
@@ -2253,12 +2258,12 @@
 			
 		\end{columns}
 		
-		\speech{folie25}{1}{ Analog zur Ersatzspannungsquelle können auch hier die Parameter I null sowie R Ih mit Hilfe des Leerlauf und Kurzschlussversuchs bestimmt werden.
+		\speech{folie25}{1}{ Analog zur Ersatzspannungsquelle können auch hier die Parameter I null sowie R I mit Hilfe des Leerlauf und Kurzschlussversuchs bestimmt werden.
 			Beim Kurzschlussversuch werden die beiden Klemmen der Ersatzstromquelle kurzgeschlossen. Die Spannung beträgt somit über dem Kurzschluss und damit auch über dem dazu parallelgeschalteten 
 			Innenwiderstand null Volt. Aus diesem Grund fließt durch R Ih kein Strom, und der gesamte Strom I null fließt durch den Kurzschluss. Es ergibt sich I null gleich I K.}
 			\silence{2}
 		\speech{folie25}{2}{ Beim Leerlaufversuch wird wieder angenommen, dass die Ausgangsklemmen offen sind, der Ausgangswiderstand also unendlich groß ist.
-			Somit fließt der gesamte Strom Ih null durch den Innenwiderstand. An den dazu parallel anliegenden Klemmen stellt sich die Leerlaufspannung U Ell gleich R Ih mal I null ein.
+			Somit fließt der gesamte Strom Ih null durch den Innenwiderstand. An den dazu parallel anliegenden Klemmen stellt sich die Leerlaufspannung als R I mal I null ein.
 			Mit Hilfe der Leerlaufspannung und des Kurzschlussstroms kann auch hier wieder der Innenwiderstand berechnet werden. 
 			Wichtig ist also, dass wir uns merken, dass an Ersatzstromquellen I null gleich dem Kurzschlussstrom ist, während bei Ersatzspannungsquellen U null gleich der Leerlaufspannung ist.}
 			\silence{4}

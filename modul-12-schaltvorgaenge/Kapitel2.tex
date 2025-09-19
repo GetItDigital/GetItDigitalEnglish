@@ -553,13 +553,13 @@ Wenn alle Komponenten einer Schaltung linear sind, ist auch die zugehörige D G 
 Bei allen Komponenten gehen wir von Zeitinvariant aus, das heißt zum Beispiel, dass der elektrische Widerstand R sich nicht über die Zeit verändert.
 Daraus lässt sich ableiten, dass die Konstanten a i unserer Differentialgleichung konstant sind, da diese nur von den Werten für R, L und oder C abhängen. 
 
-Unten sehen wir die allgemeine Form einer **gewöhnlichen**, **linearen**, **inhomogenen** Differentialgleichung der **Ordnung** n mit **konstanten Koeffizienten**.
-Die D G L ist **gewöhnlich**, weil sie nur von einer Variable, hier der Zeit t, abhängt. 
-Die D G L ist **linear**, weil nur lineare Terme enthalten sind. 
-Die D G L ist **inhomogen**, da sie eine Störgröße b von t auf der rechten Seite der Gleichung enthält. 
+Unten sehen wir die allgemeine Form einer gewöhnlichen, linearen, inhomogenen Differentialgleichung der Ordnung n mit konstanten Koeffizienten.
+Die D G L ist gewöhnlich, weil sie nur von einer Variable, hier der Zeit t, abhängt. 
+Die D G L ist linear, weil nur lineare Terme enthalten sind. 
+Die D G L ist inhomogen, da sie eine Störgröße b von t auf der rechten Seite der Gleichung enthält. 
 Die Störgröße stellt unsere Anregung dar, das heißt in ihr finden wir Strom oder Spannung von angeschlossenen Strom- oder Spannungsquellen. 
-Ohne Anregung, zum Beispiel beim Entladen einer Kapazität über einen Widerstand, entfällt die Störgröße auf der rechten Seite und wir erhalten eine **homogene** D G L.
-Die D G L hat die **Ordnung** n, da die n te Ableitung die höchst auftretende Ableitung der Schaltungsgröße y ist.
+Ohne Anregung, zum Beispiel beim Entladen einer Kapazität über einen Widerstand, entfällt die Störgröße auf der rechten Seite und wir erhalten eine homogene D G L.
+Die D G L hat die Ordnung n, da die n te Ableitung die höchst auftretende Ableitung der Schaltungsgröße y ist.
 }% Speech Ende
 \end{frame}
 
@@ -614,7 +614,7 @@ Die Ordnung einer Differentialgleichung entspricht exakt der Menge an nicht zusa
 Auf dieser Folie sehen sie einige Beispielschaltungen und die Anzahl der Energiespeicher und resultierenden Ordnung der D G L.
 Sind beispielsweise zwei Induktivitäten unmittelbar in Serie oder zwei Kapazitäten unmittelbar parallel zu einander, 
 lassen sich diese in einem Ersatzschaltbild zu einer Induktivität beziehungsweise Kapazität zusammenfassen und 
-werden daher nur als **einzelne** Energiespeicher gezählt. 
+werden daher nur als einzelne Energiespeicher gezählt. 
 Bei den hier gezeigten Beispielen haben die rechten drei Beispiele alle zwei Energiespeicher und somit eine D G L zweiter Ordnung.
 Schwingungsfähig sind allerdings nur Schaltungen mit mindestens zwei unterschiedlichen Energiespeichern, 
 das heißt mit mindestens einer Kapazität und einer Induktivität. 
@@ -722,7 +722,7 @@ Differentialgleichungen haben prinzipiell unendlich viele Lösungen.
 }% Speech Ende
 \speech{Grundlagen2Anfangsbedingungen}{2}{%
 Um das Zeitverhalten einer gesuchten Schaltungsgröße zu bestimmen, müssen wir die allgemeine Lösung einer D G L auf eine konkrete, distinktive Lösung eingrenzen. 
-Zur Eingrenzung auf diese eindeutige Lösung bedarf es für eine D G L n ter Ordnung exakt n **Anfangsbedingungen**.
+Zur Eingrenzung auf diese eindeutige Lösung bedarf es für eine D G L n ter Ordnung exakt n Anfangsbedingungen.
 }% Speech Ende
 \speech{Grundlagen2Anfangsbedingungen}{3}{%
 Eine Anfangsbedingung ist der Wert einer beliebigen Schaltungsgröße y von t
@@ -733,13 +733,13 @@ Erinnern wir uns hierfür an die Ursache für Schaltvorgänge.
 }% Speech Ende
 \speech{Grundlagen2Anfangsbedingungen}{4}{%
 Da Kapazitäten Energie in Form elektrischer Energie speichern, ist die Spannung 
-u C an einer Kapazität **stetig** und kann sich nicht schlagartig ändern.
+u C an einer Kapazität stetig und kann sich nicht schlagartig ändern.
 Da Induktivitäten Energie in Form magnetischer Energie speichern, ist der Strom 
-i L durch eine Induktivität **stetig** und kann sich ebenfalls nicht schlagartig ändern. 
+i L durch eine Induktivität stetig und kann sich ebenfalls nicht schlagartig ändern. 
 Kennen wir also den Zustand der Schaltungsgrößen u C und i L unmittelbar vor dem Schaltzeitpunkt ...
 }% Speech Ende
 \speech{Grundlagen2Anfangsbedingungen}{5}{%
-... so kennen wir aufgrund dieser **Stetigkeitsbedingungen** auch die Werte für u C und i L 
+... so kennen wir aufgrund dieser Stetigkeitsbedingungen auch die Werte für u C und i L 
 unmittelbar nach dem Schaltzeitpunkt, das heißt während des Schaltvorganges. 
 Diese Werte können wir als Anfangsbedingungen für die Berechnung des Schaltvorganges verwenden.
 }% Speech Ende
@@ -857,7 +857,7 @@ Diese Werte können wir als Anfangsbedingungen für die Berechnung des Schaltvor
 \end{columns}
 \speech{Grundlagen2Zerlegung}{1}{%
 Um die Differentialgleichung zu lösen hilft es, die gesuchte Systemgröße während des Schaltvorganges 
-in einen **eingeschwungenen Zustand** und einen **flüchtigen Zustand** zu zerlegen.
+in einen eingeschwungenen Zustand und einen flüchtigen Zustand zu zerlegen.
 Der eingeschwungene Zustand y e ist der stationäre Zustand, den unsere Systemgröße y während des Schaltvorganges anstrebt. 
 Subtrahieren wir y e von y, bleibt der zeitlich abklingende flüchtige Zustand y f übrig.
 }% Speech Ende
@@ -870,14 +870,14 @@ sodass wir y durch die Überlagerung beider Zustände bestimmen können.
 }% Speech Ende
 \speech{Grundlagen2Zerlegung}{3}{%
 Mathematisch entspricht diese Zerlegung genau der Zerlegung von y 
-in eine **partikuläre Lösung** y p der D G L und die allgemeine **Lösung der homogenen D G L** y h, 
-im Folgenden kurz **homogene Lösung** genannt.
-Da y für große t gleich y e ist, muss auch y e die D G L erfüllen und zwar für **alle** t.
+in eine partikuläre Lösung y p der D G L und die allgemeine Lösung der homogenen D G L y h, 
+im Folgenden kurz homogene Lösung genannt.
+Da y für große t gleich y e ist, muss auch y e die D G L erfüllen und zwar für alle t.
 Der eingeschwungene Zustand ist deshalb eine partikuläre Lösung der D G L. 
 }% Speech Ende
 \speech{Grundlagen2Zerlegung}{4}{%
 Nehmen wir nun die allgemeine D G L und subtrahieren von dieser die D G L mit eingesetzter Lösung y e,
-so erhalten wir die **homogene** D G L für y f ohne Störterm.
+so erhalten wir die homogene D G L für y f ohne Störterm.
 Deshalb ist unser y e die partikuläre Lösung unserer D G L und y f die homogene Lösung unserer D G L.
 }% Speech Ende
 \end{frame}
@@ -1021,28 +1021,28 @@ Kommen wir zur Berechnung der homogenen Lösung.
 Die homogene D G L erhalten wir, indem wir in unserer D G L den Störterm gleich Null setzen. 
 }% Speech Ende
 \speech{Grundlagen2HomogeneLoesung}{2}{%
-Als erster Schritt bestimmen wir die **Eigenwerte** lambda i unserer D G L.
-Dafür benötigen wir das **charakteristische Polynom**.
+Als erster Schritt bestimmen wir die Eigenwerte lambda i unserer D G L.
+Dafür benötigen wir das charakteristische Polynom.
 Dieses erhalten wir, indem wir den Exponentialansatz K mal e hoch lambda t für y h einsetzen. 
 Durch i faches Differenzieren ergeben sich die i fachen Potenzen von lambda als Koeffizienten vor dem Exponentialansatz. 
 Der Exponentialterm wird ausgeklammert und eliminiert.  
 Als Abkürzung kann das charakteristische Polynom auch direkt aus der D G L abgelesen werden, 
 hierfür wird jede i te Ableitung von y h durch den Term lambda hoch i ersetzt.
-Die **Nullstellen** des charakteristischen Polynoms sind die Eigenwerte lambda i.  
+Die Nullstellen des charakteristischen Polynoms sind die Eigenwerte lambda i.  
 }% Speech Ende
 \speech{Grundlagen2HomogeneLoesung}{3}{%
 Die homogene Lösung ist eine Linearkombination von exakt n linear unabhängigen Lösungen der homogenen D G L.
 Die Form der Lösung hängt von der Art der Eigenwerte ab,
-die lambdas können **einfache Nullstellen** oder **mehrfache Nullstellen** sein.
-Bei **einfachen Nullstellen** wählen wir den **ersten Lösungsansatz** K mal e hoch lambda t
+die lambdas können einfache Nullstellen oder mehrfache Nullstellen sein.
+Bei einfachen Nullstellen wählen wir den ersten Lösungsansatz K mal e hoch lambda t
 mit dem jeweiligen Index i für K und lambda.
-Bei **mehrfachen Nullstellen** wählen wir den **zweiten Lösungsansatz**. Dieser basiert auf der **Variation der Konstanten** des ersten Lösungsansatzes,
+Bei mehrfachen Nullstellen wählen wir den zweiten Lösungsansatz. Dieser basiert auf der Variation der Konstanten des ersten Lösungsansatzes,
 um auch bei gleichen Nullstellen linear unabhängige Lösungen zu erhalten.
 Hierfür wird der Exponentialansatz jeder weiteren gleichen Nullstelle mit dem Faktor t hoch j-1 multipliziert. 
 Also t hoch null für die erste Nullstelle, t hoch eins für die zweite Nullstelle usw.
-**Achtung** Komplexe Eigenwerte sind möglich, treten aber immer nur **paarweise komplex, konjugiert** auf. 
+Achtung Komplexe Eigenwerte sind möglich, treten aber immer nur paarweise komplex, konjugiert auf. 
 Solche Systeme sind prinzipiell schwingungsfähig. Mehr dazu im Kapitel Schaltvorgänge bei Schwingkreisen.
-**Wichtig** Die Realteile der Eigenwerte eines stabilen Systems sind **immer** negativ.
+Wichtig Die Realteile der Eigenwerte eines stabilen Systems sind immer negativ.
 Nur dann konvergiert die allgemeine Lösung für t gegen unendlich und strebt einen stationären Zustand an.
 }% Speech Ende
 \speech{Grundlagen2HomogeneLoesung}{4}{%
@@ -1125,13 +1125,13 @@ Hier sind zum Verdeutlichen die Koeffizienten in blau und die Potenzen von Lambd
 Die Eigenwerte lambda 1 bis lambda 5 erhalten wir nun durch Bestimmung der Nullstellen des charakteristischen Polynoms.
 }% Speech Ende
 \speech{Grundlagen2HomogeneLoesungBeispiel}{4}{%
-In diesem Fall erhalten wir eine gemischte Konstellation mit **einer einfachen Nullstelle** und **zwei doppelte konjugierte, komplexe Nullstellen**. 
+In diesem Fall erhalten wir eine gemischte Konstellation mit einer einfachen Nullstelle und zwei doppelte konjugierte, komplexe Nullstellen. 
 Für die einfache Nullstelle lambda 1 wählen wir den ersten Lösungsansatz mit dem einfachen Exponentialterm K1 mal e hoch lambda 1 mal t. 
 Für die zwei doppelten Nullstellen lambda zwei und drei, sowie lambda vier und fünf wählen wir den Exponentialansatz mit Variation der Konstanten.
 }% Speech Ende
 \speech{Grundlagen2HomogeneLoesungBeispiel}{5}{%
 Hier sehen wir die resultierende allgemeine Lösung mit eingefärbten Koeffizienten K eins bis K fünf. 
-Für die doppelten Nullstellen erhalten wir K zwei **plus** K drei mal t, beziehungsweise K vier **plus** K fünf mal t als Koeffizienten für Exponentialtermen.
+Für die doppelten Nullstellen erhalten wir K zwei plus K drei mal t, beziehungsweise K vier plus K fünf mal t als Koeffizienten für Exponentialtermen.
 }% Speech Ende
 \speech{Grundlagen2HomogeneLoesungBeispiel}{6}{%
 Wie hier farblich hervorgehoben zu erkennen ist, ergeben sich aus den beiden komplex konjugierten Nullstellen je ein exponentiell abklingender Sinus- und ein Kosinusterm.

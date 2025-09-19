@@ -37,8 +37,8 @@
 
 \speech{SchaltvorgaengeDC1Lernziele}{1}{%
 Willkommen zum vierten Video der Videoreihe für das Modul Schaltvorgänge. 
-In diesem Video steigen wir ein in das Kapitel 3 **Schaltvorgänge im Zeitbereich berechnen**
-und befassen uns mit den Themen aus Kapitel 3 punkt 1 **Schaltvorgänge bei Gleichspannung**.
+In diesem Video steigen wir ein in das Kapitel 3 Schaltvorgänge im Zeitbereich berechnen
+und befassen uns mit den Themen aus Kapitel 3 punkt 1 Schaltvorgänge bei Gleichspannung.
 Wir lernen die Zeitkonstante Tau kennen und verstehen und berechnen Lade- und Entladevorgänge bei RC-Gliedern.
 }% Speech Ende
 \end{frame}
@@ -90,7 +90,7 @@ Wir lernen die Zeitkonstante Tau kennen und verstehen und berechnen Lade- und En
 }%
 
 \speech{SchaltvorgaengeDC1}{1}{%
-Bei Schaltvorgängen bei Gleichspannung kann es sich prinzipiell um **Ladevorgänge** oder um **Entladevorgänge** handeln.
+Bei Schaltvorgängen bei Gleichspannung kann es sich prinzipiell um Ladevorgänge oder um Entladevorgänge handeln.
 }% Speech Ende
 \speech{SchaltvorgaengeDC1}{2}{%
 Diese werden wir exemplarisch jeweils einmal für eine Kapazität C und jeweils einmal für eine Induktivität L, 
@@ -99,12 +99,12 @@ Können wir bereits abschätzen, wie die Lade- und Entladevorgänge bei Gleichsp
 }% Speech Ende
 \speech{SchaltvorgaengeDC1}{3}{%
 Wie aus den Grundlagen bekannt ist, ergibt sich für ein einfaches R C oder ein einfaches R L Glied 
-jeweils eine **D G L erster Ordnung**, da in beiden Fällen nur ein Energiespeicher vorhanden ist (C oder L).
-Die D G L wird daher die hier gezeigte Form: A eins mal erste Ableitung von y von t **plus** A null mal y von t ist gleich b annehmen.
+jeweils eine D G L erster Ordnung, da in beiden Fällen nur ein Energiespeicher vorhanden ist (C oder L).
+Die D G L wird daher die hier gezeigte Form: A eins mal erste Ableitung von y von t plus A null mal y von t ist gleich b annehmen.
 Und wie sehen die Zeitverläufe prinzipiell aus?
 }% Speech Ende
 \speech{SchaltvorgaengeDC1}{4}{%
-Bei einer D G L **erster Ordnung** erhalten wir einen **einzelnen** Eigenwert lambda. 
+Bei einer D G L erster Ordnung erhalten wir einen einzelnen Eigenwert lambda. 
 Dadurch entstehen wie rechts im Diagramm dargestellt ist, charakteristischen Exponentialverläufe beim Laden und Entladen bei Gleichspannung. 
 Die Exponentialform resultiert aus dem flüchtigen Zustand, das heißt der homogenen Lösung K mal e hoch lambda t für einfache Nullstellen. 
 }% Speech Ende
@@ -260,7 +260,7 @@ Die dazughörige Gleichung ist: u C von t ist gleich U q (der Endwert) mal Klamm
 Der Term: Eins minus e hoch minus t durch tau, entspricht einer exponentiellen Annäherung von null an eins. 
 }% Speech Ende
 \speech{SchaltvorgaengeDC1Zeitkonstante}{3}{%
-Dieses **Tau** wird als **Zeitkonstante** bezeichnet und hat die gleiche Einheit wie die Zeit. 
+Dieses Tau wird als Zeitkonstante bezeichnet und hat die gleiche Einheit wie die Zeit. 
 Mithilfe von Tau lässt sich die Steilheit exponentieller Verläufe darstellen. 
 Wie im Zeitverlauf oben rechts zu sehen ist, schneidet die Tangente von exponentiellen Verläufen nach einem Tau den Endwert. Das gilt zu jedem Zeitpunkt. 
 In dem hier gezeigten Schaltbild entspricht die Zeitkonstante Tau dem Produkt aus R und C.
@@ -270,7 +270,7 @@ Die hier gezeigte Tabelle zeigt welche Wert nach einem, nach drei oder nach fün
 in der mittleren Zeile bei einer exponentiellen Annäherung erreicht werden und
 in der unteren Zeile bei einem exponentiellen Abfall erreicht werden.
 Beide Verläufe näheren sich einem Endwert (eins oder null), erreichen diesen aber nie.
-Deshalb gilt als **Faustregel**, dass ein Exponentialverlauf **nach fünf Tau eingeschwungen** ist.
+Deshalb gilt als Faustregel, dass ein Exponentialverlauf nach fünf Tau eingeschwungen ist.
 Dann hat der Wert ca. neunundneunzig Prozent der Differenz zum Endwert überbrückt.
 Nach einem Tau sind es ca. dreiundsechzig Prozent, nach drei Tau ca. fünfundneunzig Prozent.
 Die Orientierungswerte sind zum Beispiel hilfreich bei der Dimensionierung von Bauteilen oder beim Abschätzen von Latenzen.
@@ -474,7 +474,7 @@ Kommen wir zur eigentlichen Berechnung des Ladevorganges beim gerade gezeigten R
 Oben links sehen wir die gegebenen Größen, das ist u C unmittelbar vor dem Schalten, die Quellenspannug u Q und die Komponenten R und C. 
 Gesucht ist u C während des Schaltvorganges für t größer gleich null. 
 Oben rechts sehen wir die Zeitverläufe für u C und darunter für den Strom i. 
-**Wichtig**: Die Spannung u C ist stetig, der Strom i kann jedoch springen, was er in diesem Fall auch tut!
+Wichtig: Die Spannung u C ist stetig, der Strom i kann jedoch springen, was er in diesem Fall auch tut!
 Unten sehen wir die 5 Schritte des Berechnungsverfahrens in Kurzform und die dazugehörigen Teillösungen die wir im folgenden Einzeln durch gehen.
 }% Speech Ende
 \end{frame}
@@ -798,8 +798,8 @@ Und den eingeschwungenen Zustand mit allgemein als u c e bezeichnen,
 können wir die Lösung für den Lade und den Entladevorgang der gezeigten Schaltung allgemein für einen Schaltzeitpunkt t null bestimmen.
 Durch etwas Umformung können wir die Lösung in die folgende Form bringen:
 In Worten: Die Spannung an der Kapazität ab Schaltzeitpunkt t null ist gleich der Startspannung plus einer exponentiellen Annäherung der Differenz von Endwert und Startwert.
-Mathematisch ausgedrückt: u c von t minus t0 **ist gleich** u c von t null, der Startwert, **plus** Klammer auf, die Differenz u c e **minus** u c von t null, Klammer zu, **mal** klammer auf Eins minus Exponent minus t minus t null durch Tau Exponent Ende, die exponentielle Annäherung, Klammer zu. 
-Die Rechenwege zur Berechnung von Lade- und Entladevorgängen bei D C Fällen sind prinzipiell **identisch**
+Mathematisch ausgedrückt: u c von t minus t0 ist gleich u c von t null, der Startwert, plus Klammer auf, die Differenz u c e minus u c von t null, Klammer zu, mal klammer auf Eins minus Exponent minus t minus t null durch Tau Exponent Ende, die exponentielle Annäherung, Klammer zu. 
+Die Rechenwege zur Berechnung von Lade- und Entladevorgängen bei D C Fällen sind prinzipiell identisch
 und unterscheiden sich in diesem Beispiel nur beim Störterm (der Anregung), den Anfangsbedingungen und den eingeschwungenen Zuständen (den Endwerten).
 }% Speech Ende
 \end{frame}
@@ -1324,7 +1324,7 @@ Beide Ergebnisse sind plausibel.
 Der Entladevorgang der Induktivität über L lässt sich analog zum Ladevorgang berechnen und ist hier nur kurz als Zusammenfassung dargestellt.
 Oben links sehen sie wieder das Schaltbild und rechts die Zeitverläufe für u L und für i beim Entladen.
 Die fünf Schritte mit Teillösungen sind unten wieder zusammen gefasst.
-**Wichtig**: Die Zeitkonstante Tau ist hier gleich für den Lade- und für den Entladevorgang mit Tau gleich L durch R.
+Wichtig: Die Zeitkonstante Tau ist hier gleich für den Lade- und für den Entladevorgang mit Tau gleich L durch R.
 Als Übung können Sie:
 * erstens Zeitverlauf für i und für u L bestimmen,
 * zweitens die Zeitkonstante Tau allgemein bestimmen.
@@ -1719,9 +1719,9 @@ Im fünften Schritt bestimmen wir die Konstanten durch Einsetzen unserer Anfangs
 Die Kapazität sei zum Schaltzeitpunkt vollständig entladen. 
 Der Exponentialterm reduziert sich zu e hoch null gleich eins und kann somit gekürzt werden. 
 Durch Umstellen erhalten wir unsere Konstante K. Wie wir sehen können, entspricht unser K mit
-K ist gleich **Minus** U C P Dach mal Kosinus von omega mal t **null** plus Phi C p, 
+K ist gleich Minus U C P Dach mal Kosinus von omega mal t null plus Phi C p, 
 genau dem negativen Wert des eingeschwungenen Zustandes zum Schaltzeitpunkt.
-Unser K kann damit je nach Schaltzeitpunkt jeden Wert zwischen dem **negativen** und **positiven** Scheitelwert von U C p annehmen.
+Unser K kann damit je nach Schaltzeitpunkt jeden Wert zwischen dem negativen und positiven Scheitelwert von U C p annehmen.
 }% Speech Ende
 \speech{SchaltvorgaengeACbeiRC4}{2}{%
 Die eindeutige Lösung unten ergibt sich durch Einsetzen von K in die allgemeine Lösung oben.  
@@ -2026,7 +2026,7 @@ dem negativen und dem positiven Scheitelwert I p Dach annehmen.
 }% Speech Ende
 \speech{SchaltvorgaengeACbeiRL4}{3}{%
 Die Spannung u L an der Induktivität erhalten wir mit u L ist gleich L mal d nach d t von i. 
-**Achtung:** Anders als der Strom, kann die Spannung u L springen! 
+Achtung: Anders als der Strom, kann die Spannung u L springen! 
 Wir sehen das an der Gleichung, dass sich der Exponentialterm und der sinusförmige Term zum Schaltzeitpunkt nicht direkt aufheben. 
 Zur Übung können Sie:
 * 1. den Zeitverlauf für die Spannung u L in diesem Beispiel skizzieren,

@@ -1,25 +1,25 @@
 \begin{tikzpicture}
     \draw (0,0) node[npn, tr circle] (Q1) {};
-
-    \draw (Q1.C) to[short, -, i<, name=ic] (0,2) 
+    
+    \draw (Q1.C) to[short, -, i<, name=ic] (0,2)
     to[short, -] ++ (-3, 0) 
     to[R=$R_1$]  (-3, 0) 
-    to[R=$R_2$]  (-3, -4) 
+    to[R=$R_2$]  (-3, -3) 
     node[ground]{};
-
+    
     \draw (-3,2) to[short, *-o] ++(-1,0)
-    to [open, v, name=uv] (-4,-4.5); 
+    to [open, v, name=uv] (-4,-3.5); 
     
     \draw (Q1.B) to[short, -*] (-3, 0);
-
+    
     \draw (Q1.E) to[short, -*] ++(0, -0.5) coordinate(E)
-    to[R=$R_3$] (0, -4) node[ground]{};
-
-    \draw (E) to[short, -] ++(2, 0) 
-    to[R=$R_\mathrm{L}$] (2, -4) node[ground]{};
-
+    to[R=$R_3$] (0, -3) node[ground]{};
+    
+    \draw (E) to[short, -] ++(2, 0)
+    to[R=$R_\mathrm{L}$] (2, -3) node[ground]{};
+    
     \draw (E)++(2, 0) to[short, *-o] ++(1, 0)
-    to[open, v^, name=ua] (3,-4.5)    ;
+    to[open, v^, name=ua] (3,-3.5)    ;
     
     \varrmore{ua}{$U_\mathrm{A}$};
     \varrmore{uv}{$U_\mathrm{B}$};

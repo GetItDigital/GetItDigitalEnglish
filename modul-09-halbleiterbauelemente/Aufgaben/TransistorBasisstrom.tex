@@ -1,38 +1,37 @@
 \subsection{Ermittlung von Basis-Emitter-Spannung und Basisstrom\label{Aufg12}}
-Gegeben ist die abgebildete Transistorschaltung mit den folgenden Parametern: $U_0=\mathrm{5\,V}$ ,
-$U_L=\mathrm{15\,V}$, $R_\mathrm{V}=\mathrm{100\,k\Omega}$ und $R_\mathrm{V}=\mathrm{500\,\Omega}$.
 % Alt: Aufgabe 12
 \Aufgabe{
-  \begin{itemize}
-    \item[a)] Wie groß ist die Spannung $U_\mathrm{BE}$ näherungsweise, wenn es sich um einen Siliziumtransistor handelt?
-    \item[b)] Wie groß ist der Strom $I_\mathrm{B}$?
-  \end{itemize}
+  Gegeben ist die abgebildete Transistorschaltung mit den folgenden Parametern: $U_0=\mathrm{5\,V}$ ,
+  $U_L=\mathrm{15\,V}$, $R_\mathrm{V}=\mathrm{100\,k\Omega}$ und $R_\mathrm{V}=\mathrm{500\,\Omega}$.
+  
   \begin{figure}[H]
     \centering
     \input{Tikz/src/FigTransistorBasisstrom.tex}
     \label{fig:FigTransistorBasisstrom}
-  \end{figure}  
+  \end{figure}
+
+  \begin{itemize}
+    \item[a)] Wie groß ist die Spannung $U_\mathrm{BE}$ näherungsweise, wenn es sich um einen Siliziumtransistor handelt?
+    \item[b)] Wie groß ist der Strom $I_\mathrm{B}$?
+  \end{itemize}
 }
 
 \Loesung{
   \begin{itemize}
     \item[a)]
-  \end{itemize}
-  \begin{equation}
-    U_\text{BE} = U_\text{B} - U_\text{E}
-  \end{equation}
-  Ein npn-Transistor hat im leitenden Zustand eine typische Basis-Emitter-Spannung von:
-  \begin{equation}
-    U_\text{BE} \approx 0,6\,\text{V} \text{ bis } 0,7\,\text{V}
-  \end{equation}
-  Diese Spannung ist eine materialbedingte Eigenschaft des Silizium-Transistors und bleibt nahezu konstant, unabhängig von der Basisspannung \( U_\text{B} \).
-  - Obwohl \( U_\text{B} = 5\,\text{V} \) ist, begrenzt der Transistor die Spannung \( U_{BE} \) auf ca. \( 0,6\,\text{V} \), sobald der Transistor leitend ist.  
-  - Der überschüssige Spannungsabfall (\( U_B - U_{BE} \)) wird durch andere Ströme und Bauteile der Schaltung ausgeglichen.
-  \begin{align*}
-    {U_{BE} \approx 0,6\,\text{V}}
-  \end{align*}
-  \begin{itemize}
-    \item[b)] $I_\text{B} = \frac{5\,\text{V} - 0,6\,\text{V}}{100\,\text{k}\Omega} = 44\,\mu\text{A}$
+          Diese Spannung ist eine materialbedingte Eigenschaft des Silizium-Transistors und bleibt nahezu konstant, unabhängig von der Basisspannung \( U_\text{B} \).
+          Ein npn-Transistor hat im leitenden Zustand eine typische Basis-Emitter-Spannung von:
+          \begin{equation*}
+            U_\text{BE} \approx 0,6\,\text{V} \text{ bis } 0,7\,\text{V}
+          \end{equation*}
+          
+          Obwohl \( U_\text{0} = 5\,\text{V} \) ist, begrenzt der Transistor die Spannung \( U_{BE} \) auf ca. \( 0,6\,\text{V} \), sobald der Transistor leitend ist.  
+          Der überschüssige Spannungsabfall wird durch andere Ströme und Bauteile der Schaltung ausgeglichen.
+          
+    \item[b)]
+          \begin{align*}
+            I_\text{B} = \frac{5\,\text{V} - 0,6\,\text{V}}{100\,\text{k}\Omega} = 44\,\mu\text{A}
+          \end{align*}
   \end{itemize}
   Siehe: Abschnitt \ref{sec:Bipolartransistor} und \ref{fig:StroemeUndSpannungenBeimBipolartransistor}
 }

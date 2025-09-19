@@ -1,20 +1,20 @@
 \subsection{Berechnung des Vorwiderstands einer LED\label{Aufg10}}
 % Alt: Aufgabe 10
 \Aufgabe{
-  Wie bei allen Dioden muss auch bei Leuchtdioden (LEDs) der Strom begrenzt werden. Dazu wird ein Vorwiderstand in Reihe geschaltet, wie in der unten gezeigten Schaltung. \\
-  Die eingesetzte LED besitzt eine Durchlassspannung von $U_\mathrm{D} = 2,2\,\mathrm{V}$. Die ideale Helligkeit wird bei einem Strom von $I_\mathrm{D} = 30\,\mathrm{mA}$ erreicht. \\
-  Die Eingangsspannung beträgt $U_\mathrm{0} = 5\,\mathrm{V}$.
+  Wie bei allen Dioden muss auch bei Leuchtdioden (LEDs) der Strom begrenzt werden. Dazu wird ein Vorwiderstand in Reihe geschaltet, wie in der unten gezeigten Schaltung. \newline
+  Die eingesetzte LED besitzt eine Durchlassspannung von $U_\mathrm{D} = 2,2\,\mathrm{V}$. Die ideale Helligkeit wird bei einem Strom von $I_\mathrm{D} = 30\,\mathrm{mA}$ erreicht. Die Eingangsspannung beträgt $U_\mathrm{0} = 5\,\mathrm{V}$.
   
-  \begin{itemize}
-    \item Welchen der folgenden Widerstandswerte würden Sie für $R$ verwenden, um die LED möglichst nahe an ihrem optimalen Betriebspunkt (d.\,h. mit optimaler Helligkeit) zu betreiben?
-    \item $15\,\Omega$, $33\,\Omega$, $68\,\Omega$, $150\,\Omega$, $180\,\Omega$
-  \end{itemize}
-  
-  \begin {figure} [H]
+  \begin{figure}[H]
      \centering
      \input{Tikz/src/FigLEDVorwiderstand.tex}
      \label{fig:FigLEDVorwiderstand}
-  \end {figure}
+  \end{figure}
+
+    Welchen der folgenden Widerstandswerte würden Sie für $R$ verwenden, um die LED möglichst nahe an ihrem optimalen Betriebspunkt (d.h. mit optimaler Helligkeit) zu betreiben?\\
+    $15\,\Omega$, $33\,\Omega$, $68\,\Omega$, $150\,\Omega$, $180\,\Omega$
+
+  
+
 %   \speech{ **Aufgabe 10**  
 % Wie bei allen **Dioden** ist es wichtig, den **Strom durch das Bauelement zu begrenzen**.  
 % Dazu werden **Vorwiderstände** eingesetzt, wie in der unten gezeigten Schaltung.  
@@ -63,39 +63,30 @@
 
 \Loesung{
 Berechnung der Spannung am Vorwiderstand:
-\begin{equation}
-    U_\mathrm{V} = U_\mathrm{0} - U_\mathrm{D}
-\end{equation}
-\begin{align*}
-    U_\mathrm{V} = 5\,\mathrm{V} - 2,2\,\mathrm{V} = 2,8\,\mathrm{V}
-\end{align*}
+\begin{equation*}
+    U_\mathrm{V} = U_\mathrm{0} - U_\mathrm{D} = 5\,\mathrm{V} - 2,2\,\mathrm{V} = 2,8\,\mathrm{V}
+\end{equation*}
 
 Berechnung des optimalen Vorwiderstands für \( I_\mathrm{D} = \mathrm{30\,mA} \):
-\begin{equation}
-    R_\mathrm{V} = \frac{U_\mathrm{V}}{I_\mathrm{D}}
-\end{equation}
-\begin{align*}
-    R_\mathrm{V} = \frac{2,8\,\mathrm{V}}{30\,\mathrm{mA}} = 93,3\,\Omega
-\end{align*}
+\begin{equation*}
+    R_\mathrm{V} = \frac{U_\mathrm{V}}{I_\mathrm{D}} = \frac{2,8\,\mathrm{V}}{30\,\mathrm{mA}} = 93,3\,\Omega
+\end{equation*}
 
 Berechnung des Stroms bei Auswahl eines konkreten Widerstandswertes:
-\begin{equation}
-    I_\mathrm{D} = \frac{U_\mathrm{V}}{R}
-\end{equation}
-\begin{align*}
-    I_\mathrm{D} &= \frac{2,8\,\mathrm{V}}{150\,\Omega} = 18,7\,\mathrm{mA}
-\end{align*}
+\begin{equation*}
+    I_\mathrm{D} = \frac{U_\mathrm{V}}{R} = \frac{2,8\,\mathrm{V}}{150\,\Omega} = 18,7\,\mathrm{mA}
+\end{equation*}
 
 Berechnung bei zwei Widerständen in Parallelschaltung mit zusätzlichem Serienwiderstand:
-\begin{align*}
-    R_\mathrm{ges} &= \frac{150\,\Omega \cdot 180\,\Omega}{150\,\Omega + 180\,\Omega} + 15\,\Omega = 96,8\,\Omega \\
-    I_\mathrm{D} &= \frac{2,8\,\mathrm{V}}{96,8\,\Omega} =28,9\,\mathrm{mA}
-\end{align*}
+\begin{gather*}
+    R_\mathrm{ges} = \frac{150\,\Omega \cdot 180\,\Omega}{150\,\Omega + 180\,\Omega} + 15\,\Omega = 96,8\,\Omega \\
+    I_\mathrm{D} = \frac{2,8\,\mathrm{V}}{96,8\,\Omega} =28,9\,\mathrm{mA}
+\end{gather*}
 
 Alternative Reihenschaltung:
-\begin{align*}
-    R_\mathrm{ges} &= 4 \cdot 15\,\Omega + 33\,\Omega = 93\,\Omega
-\end{align*}
+\begin{equation*}
+    R_\mathrm{ges} = 4 \cdot 15\,\Omega + 33\,\Omega = 93\,\Omega
+\end{equation*}
 
 \textbf{Fazit:}  
 Ein kombinierter Widerstand aus $4 \times 15\,\Omega + 33\,\Omega = 93\,\Omega$ oder eine Parallelschaltung mit $150\,\Omega \,\|\, 180\,\Omega + 15\,\Omega = 96,8\,\Omega$ führt zu einem Strom nahe dem optimalen Wert von  $30\,\mathrm{mA}$. \\

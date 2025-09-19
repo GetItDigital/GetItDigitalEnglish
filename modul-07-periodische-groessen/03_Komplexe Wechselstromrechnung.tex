@@ -1,5 +1,7 @@
 %Komplexe Wechselstromrechnung
 
+\newvideofile{Wechsel}{Wechselstromrechnung}
+
 \begin{frame}
     \fta{Komplexe Wechselstromrechnung}
     
@@ -10,24 +12,20 @@
         Die komplexen Spannungen \underline{U} und Ströme \underline{I} erzeugen zeitabhängige Spannungswerte u(t) und Stromwerte 
         i(t). Die Gleichung \ref{GleichungURIKomplex} beschreibt den angegebenen Zusammenhang zwischen komplexen und zeitabhängigen
         Strom- und Spannungswerten für einen ohmschen Widerstand.
-    }
     
-    \b{
         Komplexe und zeitabhängige Strom- und Spannungsangaben der Wechselstromrechnung:
-    }
+    
     
     \begin{eq}
         \underline{U} = \underline{Z}_\mathrm{R} \cdot \underline{I} \quad \rightarrow \quad u(t) = R \cdot i(t)  \label{GleichungURIKomplex}
     \end{eq}
     
-    \s{
+    
         Abgesehen von der komplexität der Wechselstromrechnungen, gelten weiterhin die Regeln zur Berechnung elektrischer Netzwerke,
         wie Maschen- und Knotenregeln, das Verhalten von Reihen- und Paralellschaltungen und die Knotenpotentialanalyse sowie die 
         Maschenstromanalyse. Bei all diesen Beispielen ist darauf zu achten, mit den komplexen Wechselgrößen zu rechnen. Für die 
         Erläuterung von elektrische Netzwerken mit komplexen Wechselgrößen werden im Folgenden diese Tehmengebiete näher betrachtet:
-    }
     
-    \b{
         Für die Berechnung von elektrische Netzwerken mit Wechselgrößen werden im Folgenden diese Tehmengebiete näher betrachtet:
     }
     
@@ -41,6 +39,11 @@
         \end{itemize}
     \end{Lernziele}
     
+    \speech{WechselLrnz}{1}{Wie auch bei Gleichstromnetzwerken wird bei der Wechselstromrechnung mit einem elektrichen Widerstand gearbeitet.
+    Jedoch ist der elektrische Widerstand wie schon die Größen von Strom und Spannung bei der Wechselstrombetrachtung eine komplexe Größe.
+    Hier soll nun folgend erläutert werden, was die komplexe Impedanz und die kompolexe Attmitanz ist.
+    Das Verständnis über das Verhalten von Bauelementen an einer Wechselspannung vermittelt werden 
+    und gezeigt werden, wie Wechselquellen ineinander umgewandeln werden können}
 \end{frame}
 
 \begin{frame}
@@ -108,7 +111,14 @@
             [\underline{Z}] = 1\ Ohm = 1\ \Omega \nonumber
         \end{eq}
     }
-    
+
+    \speech{WechselImp}{1}{Hier wird der komplexe Zeiger der Impedanz Zett gezeigt.
+    Die Impedanz lässt sich ebenso wie die anderen komplexen Größen in einen Realteil und einen Imaginärteil unterteilen.}
+    \speech{WechselImp}{2}{Bei der Impedanz wird der Realteil auch als Wirkanteil R bezeichnet.}
+    \speech{WechselImp}{3}{Der Imaginärteil der Impedanz als Blindanteil X.}
+    \speech{WechselImp}{4}{Die komplexe Impedanz setzt sich so aus dem Wirkanteil, der Resistanz, 
+    und dem Blindanteil, der Reaktanz, zusammen.
+    Die Einheit der komplexen Impedanz Zett ist das Ohm.}
 \end{frame}
 
 
@@ -136,6 +146,7 @@
         Der Wirkleitwert G der Admittanz wird als Konduktanz und der Blindleitwert B der Admittanz wird als Suszeptanz bezeichnet (vgl. Gleichung \ref{GleichungAdmittanz} ). 
     }
     
+    \onslide<2->{
     \b{
         Wirkleitwert und Blindleitwert der Admittanz:
     }
@@ -146,8 +157,15 @@
     
     \begin{eq}
         [\underline{Y}] = 1\ Siemens = 1\ S \nonumber
-    \end{eq}
+    \end{eq}}
     
+    \speech{WechselAtt}{1}{Bei der Betrachtung von Gleichstromnetzwerken,
+    ergibt sich der Leitwert aus dem Kehrwert des Widerstandes.
+    Der komplexe Leitwert, die Attmitanz Y, 
+    ergibt sich aus dem Kehrwert der komplexen Impedanz.}
+    \speech{WechselAtt}{2}{Auch hier wird die Unterteilung in Wirkleitwert und Blindleitwert vorgenommen.
+    Die Attmitanz setzt sich so aus der Konduktanz G und der Suseptanz B zusammen.
+    Die Einheit der komplexen Admittanz Y ist das Siemens.}
 \end{frame}
 
 
@@ -158,6 +176,12 @@
         Der Gleichstromwiderstand wird bei einer {\bf Wechselspannung} zur {\bf komplexen Impedanz} \underline{Z}. Der 
         Kehrwert des Widerstandes, der Leitwert, wird bei einer Wechselspannung zur {\bf komplexen Admittanz} \underline{Y}.
     \end{Merksatz}
+
+    
+    \speech{WechselMrk1}{1}{Der Gleichstromwiderstand wird bei einer Wechselspannun zur komplexen Impedanz Z. 
+    Der Kehrwert des Widerstandes, der Leitwert, wird bei einer Wechselspannung zur komplexen Admittanz Y.
+    Zur Erinnerung.
+    Komplexe Größen werden durch einen Unterstrich gekennzeichnet.}
 \end{frame}
 
 
@@ -176,14 +200,14 @@
     
     \b{
         \begin{itemize}
-            \item Komplexer Widerstand an einem ohmschen Verbraucher
-            \item Kein Blindanteil bei einem idealen ohmschen Widerstand
-            \item Idealer komplexer Widerstand als reiner Wirkanteil
+            \item<1-> Komplexer Widerstand an einem ohmschen Verbraucher
+            \item<2-> Kein Blindanteil bei einem idealen ohmschen Widerstand
+            \item<3-> Idealer komplexer Widerstand als reiner Wirkanteil
         \end{itemize}
     }
     
     \begin{eq}
-        \underline{Z}_\mathrm{R} = R + j \cdot X_\mathrm{R} \quad \rightarrow \quad X_\mathrm{R-ideal} = j \cdot 0\ \Omega \quad \rightarrow \quad \underline{Z}_\mathrm{R} = R       \label{GleichungWid1}
+        \underline{Z}_\mathrm{R} = R + j \cdot X_\mathrm{R} \onslide<2->{\quad \rightarrow \quad X_\mathrm{R-ideal} = j \cdot 0\ \Omega} \onslide<3->{\quad \rightarrow \quad \underline{Z}_\mathrm{R} = R}       \label{GleichungWid1}
     \end{eq}
     
     \s{
@@ -191,10 +215,16 @@
         nach Gleichung \ref{GleichungWid2}. 
     }
     
+    \onslide<4->{
     \begin{eq}
         \underline{U} = \underline{Z}_\mathrm{R} \cdot \underline{I} \quad \rightarrow \quad u(t) = R \cdot i(t)        \label{GleichungWid2}
-    \end{eq}
+    \end{eq}}
     
+    \speech{WechselWiderErkl}{1}{Die Impedanz an einem rein ohmschen Verbraucher wird durch Zett R beschrieben.}
+    \speech{WechselWiderErkl}{2}{Ist ein Verbraucher rein Ohmsch, bewirkt er keinen Blindanteil. 
+    X R wird somit zu Null und das Produkt der Reaktanz entfällt.}
+    \speech{WechselWiderErkl}{3}{Der ideale Widerstand erfolgt auf diese Weise als reiner Wirkwiderstand}
+    \speech{WechselWiderErkl}{4}{Das ohmsche Gesetz }
 \end{frame}
 
 \begin{frame}
@@ -223,7 +253,12 @@
         \input{Tikz/src/Komplexe_Wechselstromrechnung/Gegenueberstellung_idealer_realer_Widerstand}
     }{{\bf Gegenüberstellung eines idealen und eines realen elektrischen Widerstandes.} Der reale Widerstand weist im
         Gegensatz zum idealen Widerstand seriell induktive und parallel kapazitive Effekte auf. \label{BildRealerWiderstand}}
-    
+
+    \speech{WechselWiderBauteil}{1}{In der Realität lässt sich diese vereinfachte Darstellung eines ohmschen Widerstandes leider nicht in gänze Nutzen.}
+    \speech{WechselWiderBauteil}{2}{Beispielsweise sorgen die Zu und Ableitungen an den Bauteilen in der Pärepherie zu parasitären Effekten, 
+    welche durch das Schaltbild eines Realen Widerstandes abgebildet werden.
+    Die parasitären Effekte lassen sich durch die Induktivitäten von Spulen und Kapazitäten von Kondensatoren erklären.}
+    \speech{WechselWiderBauteil}{3}{Wird der ohmsche Widerstand aber als rein ideales Bauteil angesehen, erfolgt keine Phasenverschiebung zwischen Strom und Spannung.}
 \end{frame}
 
 
@@ -249,7 +284,13 @@
         \input{Tikz/src/Komplexe_Wechselstromrechnung/Sinunsschwingung_Widerstand}
     }{{\bf Sinuschwingungen an einem Widerstand.} Wechselspannung (blau) und Wechselstrom (rot) an einem idealen Widerstand. Es resultiert an dem
         Widerstand keine Phasenverschiebung zwischen der Wechselspannung und dem Wechselstrom. \label{BildPhasenWiderstand}}
-    
+
+    \speech{WechselWiderPhase}{1}{Die Phasenverschiebung soll trotzdem noch einmal näher betrachtet werden, da sie bei den anderen Bauteilen noch wichtig wird.
+    Dargestellt wird die zeitabhängige Spannung U von T.}
+    \speech{WechselWiderPhase}{2}{Eben auf der Spannung liegt der zeitliche Verlauf des Stromes I von T.
+    Die Spannung und der Strom unterscheiden sich hier in ihrer Amplitude, jedoch nicht in ihrer Phase.}
+    \speech{WechselWiderPhase}{3}{Die Grafische Darstellung zeigt so, 
+    dass die Differenz zwischen den Phasenwinkeln von Spannung und Strom null ergibt.}
 \end{frame}
 
 
@@ -260,6 +301,9 @@
         Der {\bf elektrische Widerstand} weist zwischen der Wechselspannung und dem zugehörigen Wechselstrom {\bf keine
                 Phasenverschiebung} auf.     
     \end{Merksatz}
+
+    \speech{WechselMrk2Wid}{1}{Der elektrische Widerstand weist zwischen der Wechselspannung 
+    und dem Wechselstrom keine Phasenverschiebung auf.}
 \end{frame}
 
 
@@ -292,13 +336,14 @@
         Blindanteil des Kondensators $X_C$ mit zeitabhängiger Spannung und Strom. 
     }
     
+    \onslide<2->{
     \b{
         Idealer Kondensator an Wechselspannung und Wechselstrom:  
     }
     
     \begin{eq}
         \underline{U} = \underline{Z}_\mathrm{C} \cdot \underline{I} \qquad \qquad u(t) = \underline{X}_\mathrm{C} \cdot i(t)     \label{GleichungKap2}
-    \end{eq}
+    \end{eq}}
     
     \s{
         Es Wird davon ausgegangen, dass die Wechselspannung an einem Kondensator mit der Phasenverschiebung von 0° anliegt. 
@@ -308,14 +353,22 @@
         Phasenverschiebung $\Delta\varphi$ von $\pi/2$ ins Argument mit aufgenommen. 
     }
     
+    \onslide<3->{
     \b{
         Pasenverschiebung des Stromes am idealen Kondensator: 
     }
     
     \begin{eq}
         u(t) = \hat{U} \cdot \sin(\omega t)      \qquad      i(t) = \hat{I} \cdot \cos(\omega t) = \hat{I} \cdot \sin(\omega t + \pi/2)        \label{GleichungKap3}
-    \end{eq}
+    \end{eq}}
     
+    \speech{WechselKapaErkl}{1}{Die Impedanz einer Kapazität wird aus dem Ausdruck von Zett C gebildet.
+    Hierbei steht der Ausdruck jot Omega C im Nenner.
+    Zur Berechnung der kapazitiven Attmitanz wird der Kehrwert aus der kapazitiven Impedanz berechnet.
+    Ein kapazitiver Blindwiderstand wird im negativen Imaginärbereich dargestellt.}
+    \speech{WechselKapaErkl}{2}{Ein idealer kondensator besteht rein aus den kapazitiven Blindanteil der Impedanz.}
+    \speech{WechselKapaErkl}{3}{An einer Kapazität kommt es zu einer Phasenverschiebung zwischen dem Strom und der Spannung.
+    }
 \end{frame}
 
 \begin{frame}
@@ -344,6 +397,12 @@
     }{{\bf Phasenverschiebung zwischen Strom und Spannung an einem Kondensator.} Der Strom eilt der Spannung am Kondensator um 90° vor.
         \label{BildPhasenKondensator}}
     
+    \speech{WechselKapaPhase}{1}{Hier wird nun der Verlauf der Wechselspannung U C an einer Kapazität dargestellt. 
+    Die Wechselspannung startet im Ursprung des Grafen und hat eine Halbwelle nach Pi absolviert.}
+    \speech{WechselKapaPhase}{2}{Neben der Wechselspannung wird nun in Rot der Wechselstrom an der Kapazität dargstellt. 
+    Er startet nicht im Ursprung. Die positive Halbwelle startet um Pi halbe Phsenverschoben im Vergleich zur Wechselspannun.}
+    \speech{WechselKapaPhase}{3}{Der Verlauf des Wechselstromes erreicht den Maximalpunkt bei zwei Pi früher als der Verlauf der Wechselspannung.}
+    \speech{WechselKapaPhase}{4}{Diese Phasendifferenz zwischen den beiden Phasenlagen beträgt bei einer Kapazität Pi halbe oder im Gradmaß 90 Grad.}
 \end{frame}
 
 
@@ -353,6 +412,8 @@
     \begin{Merksatz}{Sinusschwingung an einem Kondensator}
         An der idealen Kapazität eilt der Wechselstrom der Wechselspannung um 90° vor. 
     \end{Merksatz}
+
+    \speech{WechselMrk3Kapa}{1}{An der idealen Kapazität eilt der Wechselstrom der Wechselspannung um 90 Grad vor.}
 \end{frame}
 
 
@@ -380,6 +441,8 @@
     }{{\bf Gegenüberstellung eines idealen und eines realen Kondensators.} Der reale Kondensator weist im
         Gegensatz zum idealen Widerstand seriell induktive und parallel kapazitive Effekte auf. \label{BildRealerKondensator}}
     
+    \speech{WechselKapaBauteil}{1}{}
+    \speech{WechselKapaBauteil}{2}{}
 \end{frame}
 
 

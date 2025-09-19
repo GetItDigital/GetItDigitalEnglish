@@ -14,8 +14,8 @@
 }%
     \begin{Lernziele}{Schaltvorgänge}
         Studierende lernen:
-        \begin{itemize}
-            \item Schaltvorgänge bei im Zeitbereich zu berechnen % Anwendung, Verstehen
+        \begin{itemize}\b{\setlength\itemsep{0.7em}}
+            \item Schaltvorgänge im Zeitbereich zu berechnen % Anwendung, Verstehen
             \item das Schaltverhalten von RC-, RL- und RLC-Gliedern kennen und verstehen % Verstehen
             \item die Möglichkeit kennen Schaltvorgänge bei AC-Anregung zu minimieren% Wissen, Anwendung
             \item das Schwingverhalten von Schwingkreisen zu verstehen und zu analysieren % Analyse
@@ -23,6 +23,25 @@
     \end{Lernziele}
 \end{frame}
 
+\v{% Video only Frame
+\begin{frame}\ftx{\secname}
+    \begin{Lernziele}{Video - Schaltvorgänge bei Gleichspannung [1/2]}
+        In diesen Video lernen Sie:
+        \begin{itemize}\b{\setlength\itemsep{0.7em}}
+        \item Schaltvorgänge bei DC Anregung im Zeitbereich zu berechnen,
+        \item die Zeitkonstante $\tau$ kennen und zu berechnen und
+        \item den Verlauf von DC Ladevorgängen bei RC-Gliedern zu verstehen.
+        \end{itemize}
+    \end{Lernziele}%
+
+\speech{SchaltvorgaengeDC1Lernziele}{1}{%
+Willkommen zum vierten Video der Videoreihe für das Modul Schaltvorgänge. 
+In diesem Video steigen wir ein in das Kapitel 3 **Schaltvorgänge im Zeitbereich berechnen**
+und befassen uns mit den Themen aus Kapitel 3 punkt 1 **Schaltvorgänge bei Gleichspannung**.
+Wir lernen die Zeitkonstante Tau kennen und verstehen und berechnen Lade- und Entladevorgänge bei RC-Gliedern.
+}% Speech Ende
+\end{frame}
+}% Video only Frame Ende
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{bei Gleichspannung}
@@ -32,9 +51,6 @@
     In diesem Kapitel werden Lade- und Entladevorgänge von Kapazitäten und Induktivitäten
     jeweils in Reihe mit einem Widerstand bei Gleichspannung berechnet und dargestellt.
 
-    %Die resultierenden DGL der RC- als auch der RL-Glieder sind linear und erster Ordnung.
-    %Aus dem Lösungsansatz der homogenen DGL ergibt sich ein exponentieller Verlauf der Spannung.
-    %Anhand dessen wird die Zeitkonstante $\tau$\index{Größe>Zeitkonstante} eingeführt und erläutert.
     Schaltvorgänge bei sinusförmiger Anregung folgen in Kapitel \ref{sec:schaltvorgaengezeitbereich:ac}.
 }%
 \b{%
@@ -71,6 +87,26 @@
         Schaltvorgänge bei RC-Glied (DC)
     \end{minipage}
 }%
+
+\speech{SchaltvorgaengeDC1}{1}{%
+Bei Schaltvorgängen bei Gleichspannung kann es sich prinzipiell um **Ladevorgänge** oder um **Entladevorgänge** handeln.
+}% Speech Ende
+\speech{SchaltvorgaengeDC1}{2}{%
+Diese werden wir exemplarisch jeweils einmal für eine Kapazität C und jeweils einmal für eine Induktivität L, 
+in allen Fällen in Reihe mit einem Widerstand R berechnen.
+Können wir bereits abschätzen, wie die Lade- und Entladevorgänge bei Gleichspannung aussehen werden?
+}% Speech Ende
+\speech{SchaltvorgaengeDC1}{3}{%
+Wie aus den Grundlagen bekannt ist, ergibt sich für ein einfaches R C oder ein einfaches R L Glied 
+jeweils eine **D G L erster Ordnung**, da in beiden Fällen nur ein Energiespeicher vorhanden ist (C oder L).
+Die D G L wird daher die hier gezeigte Form: A eins mal erste Ableitung von y von t **plus** A null mal y von t ist gleich b annehmen.
+Und wie sehen die Zeitverläufe prinzipiell aus?
+}% Speech Ende
+\speech{SchaltvorgaengeDC1}{4}{%
+Bei einer D G L **erster Ordnung** erhalten wir einen **einzelnen** Eigenwert lambda. 
+Dadurch entstehen wie rechts im Diagramm dargestellt ist, charakteristischen Exponentialverläufe beim Laden und Entladen bei Gleichspannung. 
+Die Exponentialform resultiert aus dem flüchtigen Zustand, das heißt der homogenen Lösung K mal e hoch lambda t für einfache Nullstellen. 
+}% Speech Ende
 \end{frame}
 
 %-------------------------------------------------------------------------------------------------%
@@ -207,8 +243,38 @@
 \end{minipage}
 \end{minipage}
 }%
-\end{frame}
 
+\speech{SchaltvorgaengeDC1Zeitkonstante}{1}{%
+Beginnen wir links mit einem exemplarischen Schaltbild.
+Das gezeigte R C Serienglied ist über einen Schalter entweder kurzgeschlossen 
+oder an eine ideale Gleichspannungsquelle U q angeschlossen. 
+Bevor wir im Detail die Zeitverläufe rechnerisch bestimmen, 
+führen wir zunächst eine neue Größe ein, um konvergente Exponentialverläufe besser beschreiben zu können.
+Wegen des einen Energiespeichers C, hat die D G L erste Ordnung und die Zeitverläufe haben die Form von Exponentialverläufen.
+}% Speech Ende
+\speech{SchaltvorgaengeDC1Zeitkonstante}{2}{%
+Rechts sehen wir im Zeitverlaufsdiagramm die Spannung u C an der Kapazität. 
+Die Spannung u C ist zu Beginn null und steigt ab dem Schaltzeitpunkt t gleich null exponentiell bis zum Endwert U q.
+Die dazughörige Gleichung ist: u C von t ist gleich U q (der Endwert) mal Klammer auf eins minus e hoch minus t durch tau Klammer zu. 
+Der Term: Eins minus e hoch minus t durch tau, entspricht einer exponentiellen Annäherung von null an eins. 
+}% Speech Ende
+\speech{SchaltvorgaengeDC1Zeitkonstante}{3}{%
+Dieses **Tau** wird als **Zeitkonstante** bezeichnet und hat die gleiche Einheit wie die Zeit. 
+Mithilfe von Tau lässt sich die Steilheit exponentieller Verläufe darstellen. 
+Wie im Zeitverlauf oben rechts zu sehen ist, schneidet die Tangente von exponentiellen Verläufen nach einem Tau den Endwert. Das gilt zu jedem Zeitpunkt. 
+In dem hier gezeigten Schaltbild entspricht die Zeitkonstante Tau dem Produkt aus R und C.
+}% Speech Ende
+\speech{SchaltvorgaengeDC1Zeitkonstante}{4}{%
+Die hier gezeigte Tabelle zeigt welche Wert nach einem, nach drei oder nach fünf Tau 
+in der mittleren Zeile bei einer exponentiellen Annäherung erreicht werden und
+in der unteren Zeile bei einem exponentiellen Abfall erreicht werden.
+Beide Verläufe näheren sich einem Endwert (eins oder null), erreichen diesen aber nie.
+Deshalb gilt als **Faustregel**, dass ein Exponentialverlauf **nach fünf Tau eingeschwungen** ist.
+Dann hat der Wert ca. neunundneunzig Prozent der Differenz zum Endwert überbrückt.
+Nach einem Tau sind es ca. dreiundsechzig Prozent, nach drei Tau ca. fünfundneunzig Prozent.
+Die Orientierungswerte sind zum Beispiel hilfreich bei der Dimensionierung von Bauteilen oder beim Abschätzen von Latenzen.
+}% Speech Ende
+\end{frame}
 
 %- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -%
 
@@ -401,14 +467,23 @@
 \end{align*}
 \end{minipage}
 }%
+
+\speech{SchaltvorgaengeDC1RCLadevorgang1}{1}{%
+Kommen wir zur eigentlichen Berechnung des Ladevorganges beim gerade gezeigten R C Glied. 
+Oben links sehen wir die gegebenen Größen, das ist u C unmittelbar vor dem Schalten, die Quellenspannug u Q und die Komponenten R und C. 
+Gesucht ist u C während des Schaltvorganges für t größer gleich null. 
+Oben rechts sehen wir die Zeitverläufe für u C und darunter für den Strom i. 
+**Wichtig**: Die Spannung u C ist stetig, der Strom i kann jedoch springen, was er in diesem Fall auch tut!
+Unten sehen wir die 5 Schritte des Berechnungsverfahrens in Kurzform und die dazugehörigen Teillösungen die wir im folgenden Einzeln durch gehen.
+}% Speech Ende
 \end{frame}
 
 \begin{frame}[t]\ftx{Ladevorgang \subsubsecname}
 \begin{minipage}{\textwidth}\centering
-\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
 \includegraphics{Tikz/pdf/circ_switchable_rc_charge_dc.pdf}
 \end{minipage}
-\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
     \vspace{0.8cm}
     \textbf{DGL 1. Ordnung:}\\[0.85em]
     $a_1 \cdot \dt y(t) + a_0 \cdot y(t)=b$\\
@@ -435,7 +510,24 @@ Ausgehend von der Maschengleichung wird $\ecv{u_R}$ in Abhängigkeit von $\ecv{u
     R \cdot C \cdot \dt\, \ecv{u_C}  + \ecv{u_C}   &= \ecv{U_q}&
         &\text{mit}\quad \eci{i} = C \cdot \dt\, \ecv{u_C}
 }%
-\end{align*}
+\end{align*}%
+
+\speech{SchaltvorgaengeDC1RCLadevorgang2}{1}{%
+Schritt eins ist das Aufstellen der D G L für unsere gesuchte Größe u c von t für den Zeitraum t größer gleich null, 
+das heißt ab unmittelbar nach dem Schaltzeitpunkt t gleich null.
+Wie im Beispiel in den Grundlagen beginnen wir mit der Maschengleichung:
+}% Speech Ende
+\speech{SchaltvorgaengeDC1RCLadevorgang2}{2}{%
+u R plus u C ist gleich U q.
+Dann ersetzen wir u R durch R mal i.
+}% Speech Ende
+\speech{SchaltvorgaengeDC1RCLadevorgang2}{3}{%
+Und ersetzen i durch C mal d nach d t von u c. 
+Wenn wir unsere D G L mit der allgemeinen Form oben rechts vergleichen, erkennen wir:
+R C entspricht unserem konstanten Koeffizienten a eins. 
+u c von t entspricht unserer Systemgröße y von t. 
+Und die Quellenspannung U q entspricht der Störgröße b.
+}% Speech Ende
 \end{frame}
 
 
@@ -466,6 +558,25 @@ Ausgehend von der Maschengleichung wird $\ecv{u_R}$ in Abhängigkeit von $\ecv{u
     \ecv{u_{C,p}} &= \ecv{U_q} %
 \\[-15pt]&\hphantom{R1oooooooooo}&\hphantom{L2oooooooooooooooooooooo}&\hphantom{R2oooo}&&\hphantom{R3oooooooooooooooooo}% Dummy-Zeile RL-DC für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
 \end{align*}% new alignments
+
+\speech{SchaltvorgaengeDC1RCLadevorgang3}{1}{%
+Um die flüchtige Lösung zu bestimmen, bestimmen wir als nächsten Schritt die Lösung der homogenen D G L, das heißt für die D G L ohne Störterm. 
+Aus der D G L können wir direkt das charakteristische Polynom ableiten: R C mal lambda plus eins.
+Die Nullstelle erhalten wir durch Umformung. Lambda ist gleich minus eins durch R C. 
+Unsere homogene Lösung entspricht allgemein dem Exponentialansatz K mal e hoch lambda t.
+Für eine bessere Lesbarkeit der Eigenschaften schreiben wir den Exponentialansatz in Abhängigkeit der Zeitkonstante auf. 
+Unsere homogene Lösung ist K mal e hoch minus t durch Tau. 
+Mit lambda ist gleich Minus eins durch Tau erhalten wir durch Einsetzen unserer Nullstelle den Wert für Tau. 
+Hier folgt: Tau ist gleich R C. 
+}% Speech Ende
+\speech{SchaltvorgaengeDC1RCLadevorgang3}{2}{%
+Die partikuläre Lösung, das heißt den eingeschwungenen Zustand für t gegen unendlich, erhalten wir entweder durch Netzwerkberechnung oder leiten ihn aus der D G L ab.
+Für beide Herangehensweisen gilt, dass die eingeschwungenen Größen Gleichgrößen sind, weil die Anregung eine Gleichspannung ist. (D C Fall) 
+Aus der Gleichstrom Netzwerkberechnung wissen wir, dass die Kapazität wie eine offene Klemme wirkt. Es fließt kein Strom und die gesamte Spannung U q liegt über C an.
+Alternativ können wir wie hier gezeigt ist die D G L für die partikläre Lösung herannehmen.
+Da es sich um Gleichgrößen handelt, ist die zeitliche Ableitung von u c p gleich Null und der erste Teil der D G L verschwindet.
+Übrig bleibt, dass u C p gleich der Anregung U q ist. 
+}% Speech Ende
 \end{frame}
 
 
@@ -493,10 +604,44 @@ Ausgehend von der Maschengleichung wird $\ecv{u_R}$ in Abhängigkeit von $\ecv{u
     \eci{i_C}(t) &= \frac{\ecv{U_q}}{R} \cdot \mathrm{e}^{-\sfrac{t}{\tau}} &
     &\text{mit}\quad \eci{i_C} = C \cdot \dt \ecv{u_C}
 \\[-15pt]&\hphantom{R1oooooooooo}&\hphantom{L2oooooooo}&\hphantom{R2oooooooooooooooooo}&&\hphantom{R3oooooooooooooooooo}% Dummy-Zeile RL-DC für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
-\end{align*}
+\end{align*}%
+
+\speech{SchaltvorgaengeDC1RCLadevorgang4}{1}{%
+Die allgemeine Lösung der inhomogenen D G L erhalten wir durch Überlagerung unserer homogenen und unserer partiklären Lösung.
+U c ist gleich u c h plus u c p. Oder alternativ ist gleich u c f plus u c e. 
+Eingesetzt ergibt sich daraus die allgemein Lösung: u c von t ist gleich K mal e hoch minus t durch Tau plus U q. 
+}% Speech Ende
+\speech{SchaltvorgaengeDC1RCLadevorgang4}{2}{%
+Die Konstanten bestimmen wir durch einsetzen der Anfangsbedingung. Die Kapazität sei zum Zeitpunkt t gleich Null unmittelbar vor dem Schalten vollständig entladen. 
+Der Exponentialterm entfällt für t gleich null.
+Durch Umformung erhalten wir K ist gleich Minus U q.
+Durch Einsetzen von K und Ausklammern von U q erhalten wir die spezielle allgemeine Lösung:
+u c von t ist gleich U q mal Klammer auf eins minus e hoch minus t durch lambda Klammer zu. 
+Den Strom können wir aus der Beziehung i gleich C mal d nach d t von u C an der Kapazität herleiten. 
+Hier mit tau gleich R C eingesetzt.
+Durch kürzen erhalten wir den Stromverlauf i c von t ist gleich U q durch R mal e hoch minus t durch Tau. 
+Der maximale Anfangsstrom i C null ist also U q durch R. 
+}% Speech Ende
 \end{frame}
 }% Ende Folien only Multi Frame
 
+\v{% Video only Frame
+\begin{frame}\ftx{Entladevorgang \subsubsecname}
+    \begin{Lernziele}{Video - Schaltvorgänge bei Gleichspannung [2/2]}
+        Sie lernen in diesem Video:
+        \begin{itemize}\b{\setlength\itemsep{0.7em}}
+            \item den Entladevorgang eines RC-Gliedes zu berechnen,
+            \item den DC Lade- und Entladevorgang eines RC-Gliedes im Vergleich kennen,
+            \item den DC Lade- und Entladevorgang eines RL-Gliedes zu berechnen und im Vergleich zu RC-Gliedern kennen.
+        \end{itemize}
+    \end{Lernziele}
+\end{frame}%
+
+\speech{SchaltvorgaengeDC2RCEntladevorgangLernziele}{1}{%
+In diesem Video setzen wir das Beispiel aus dem letzten Video zu Schaltvorgängen bei Gleichspannung fort.
+Ausgehend von der selben Schaltung bestimmen wir nun den Entladevorgang des R C Seriengliedes über einen Kurzschluss.
+}% Speech Ende
+}% Video only Frame Ende
 
 \b{% Anfang Folien Multi Frame
 \begin{frame}[t]\ftx{Entladevorgang \subsubsecname}
@@ -525,15 +670,28 @@ Ausgehend von der Maschengleichung wird $\ecv{u_R}$ in Abhängigkeit von $\ecv{u
 \end{align*}
 \end{minipage}
 }% Berechnung analog zu Beispiel \ref{bsp:rc:chargedc}.
+
+\speech{SchaltvorgaengeDC2RCEntladevorgang1}{1}{%
+Das Vorgehen ist identisch zum Vorgehen beim Ladevorgang. 
+Wir betrachten die gleiche Schaltung, hier oben links zu sehen, mit dem Unterschied, 
+dass bei t gleich null von der Spannungsquelle zum Kurzschluss geschalten wird.
+Gesucht ist der Zeitverlauf für u C. Alle Konstanten und die Anfangsbedingung sind gegeben.
+Oben rechts sehen wir bereits die Zeitverläufe für u C und für i.
+U C ist zu Beginn vollständig geladen und fällt dann exponentiell auf null ab. 
+Der Strom beginnt bei null, macht dann einen Sprung auf Minus U q durch R und nähert sich von dann exponentiell der Null.
+Der Strom ist negativ im Verbraucherzählpfeilsystem, da die Kapazität beim Entladen als Quelle dient.
+Hier immer auf die korrekten Vorzeichen achten. 
+Unten sind die fünf Schritte des Berechnungsverfahrens mit den jeweiligen Teillösungen die wir nun einzeln durchgehen. 
+}% Speech Ende
 \end{frame}
 
 
 \begin{frame}[t]\ftx{Entladevorgang \subsubsecname}
 \begin{minipage}{\textwidth}\centering
-\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
     \includegraphics{Tikz/pdf/circ_switchable_rc_discharge.pdf}%
 \end{minipage}
-\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
     \vspace{0.8cm}
     \textbf{DGL 1. Ordnung:}\\[0.85em]
     $a_1 \cdot \dt y(t) + a_0 \cdot y(t)=b$\\
@@ -557,7 +715,13 @@ Ausgehend von der Maschengleichung wird $\ecv{u_R}$ in Abhängigkeit von $\ecv{u
     RC \cdot \dt \ecv{u_C}  + \ecv{u_C}   &= 0
         &&\text{mit}\quad
         \eci{i} = \eci{i_C} = C \cdot \dt \ecv{u_C}
-\end{align*}
+\end{align*}%
+
+\speech{SchaltvorgaengeDC2RCEntladevorgang2}{1}{%
+Die D G L wird im gleichen Verfahren aufgestellt wie beim Ladevorgang. 
+Da die Maschie nicht mehr durch die Spannungsquelle, sondern durch den Kurzschluss geschlossen wird, entfällt allerdings der Störterm. 
+Dadurch erhalten wir die homogene D G L aus dem Ladevorgang.
+}% Speech Ende
 \end{frame}
 
 
@@ -587,8 +751,19 @@ Ausgehend von der Maschengleichung wird $\ecv{u_R}$ in Abhängigkeit von $\ecv{u
     \eci{i_C}(t) &= - \frac{\ecv{U_q}}{R} \cdot \mathrm{e}^{-\sfrac{t}{\tau}}&
     &\text{mit}\quad \eci{i_C} = C \cdot \dt \ecv{u_C}
 \end{align*}% new alignments
-\end{frame}
 
+\speech{SchaltvorgaengeDC2RCEntladevorgang3}{1}{%
+In Schritt drei können wir die homogene Lösung daher exakt aus der Lösung für den Ladevorgang übernehmen. 
+Schritt vier entfällt, da die partikuläre Lösung gleich Null ist.
+Unsere allgemeine Lösung entspricht also der homogenen Lösung.
+In Schritt fünf bestimmen wir die Konstanten durch die Anfangsbedingung.
+Die Kapazität sei zu Beginn vollständig geladen, daher gilt u C von null gleich Uq.
+Daraus folgt K ist gleich U q.
+Die speziefische allgemeine Lösung lautet damit uc von t ist gleich U q mal e hoch minus t durch Tau. 
+Den Strom können wir über die Komponentengeich für C direkt aus u C bestimmen. 
+Daraus ergibt sich für den Strom i C von t ist gleich Minus U q durch R mal e hoch minus t durch Tau.
+}% Speech Ende
+\end{frame}
 
 \begin{frame}[t]\ftx{Vergleich Lade- und Entladevorgang \subsubsecname}
 \begin{minipage}{\textwidth}\centering%
@@ -612,6 +787,19 @@ Spannung $\ecv{u_C}$ nach Schaltzeitpunkt $t_0$ [Vgl. Skript]:
 \end{align*}
 Unterschiede nur bei Störglied der DGL, Anfangsbedingung und Endwert.
 \end{minipage}
+
+\speech{SchaltvorgaengeDC2RCVergleich}{1}{%
+Wenn wir den gerade betrachteten Lade- und Entladevorgang vergleichen, ergeben sich in beiden Fällen ähnliche Lösungen.
+In beiden Fällen sind die Verläufe exponentialförmig mit der gleichen Zeitkonstante Tau ist gleich R C. 
+Wenn wir die Anfangsbedingung allgemein als u c zum Schaltzeitpunkt t null formulieren. 
+Und den eingeschwungenen Zustand mit allgemein als u c e bezeichnen,
+können wir die Lösung für den Lade und den Entladevorgang der gezeigten Schaltung allgemein für einen Schaltzeitpunkt t null bestimmen.
+Durch etwas Umformung können wir die Lösung in die folgende Form bringen:
+In Worten: Die Spannung an der Kapazität ab Schaltzeitpunkt t null ist gleich der Startspannung plus einer exponentiellen Annäherung der Differenz von Endwert und Startwert.
+Mathematisch ausgedrückt: u c von t minus t0 **ist gleich** u c von t null, der Startwert, **plus** Klammer auf, die Differenz u c e **minus** u c von t null, Klammer zu, **mal** klammer auf Eins minus Exponent minus t minus t null durch Tau Exponent Ende, die exponentielle Annäherung, Klammer zu. 
+Die Rechenwege zur Berechnung von Lade- und Entladevorgängen bei D C Fällen sind prinzipiell **identisch**
+und unterscheiden sich in diesem Beispiel nur beim Störterm (der Anregung), den Anfangsbedingungen und den eingeschwungenen Zuständen (den Endwerten).
+}% Speech Ende
 \end{frame}
 }% Ende Multi Frame Folien only
 
@@ -751,6 +939,20 @@ Unterschiede nur bei Störglied der DGL, Anfangsbedingung und Endwert.
 \textbf{Laden:} $\eci{i}$ zunehmend, $\ecv{u_L}$ abnehmend. \quad \textbf{Entladen:} vice versa.
 \end{minipage}
 }% Ende Folien only
+
+\speech{SchaltvorgaengeDC2RLVergleich}{1}{%
+Kommen wir nun zum Lade- und Entladevorgang eines R L Seriengliedes bei Gleichspannung. 
+Die Schaltung ist identisch zu den Beispielen mit dem R C Glied aufgebaut, nur dass die Kapazität mit einer Induktivität ersetzt wurde.
+Da es sich zum eine Schaltung mit nur einem Energiespeicher handelt, erhalten wir wieder eine D G L erster Ordnung. 
+Im Gegensatz zur Kapazität ist hier allerdings i stetig und u L sprunghaft, da die Energie im Magnetfeld der Induktivität gespeicher ist. 
+Als Vermutung können wir aufstellen, dass die Zeitverläufe prinzipiell ähnlich aussehen wie bei den D C Schaltvorgängen beim R C Glied.
+Sie können das Video kurz pausieren und überlegen, 
+ob die hier aufgestellte Gleichung für den Strom plausibel ist und
+ob die Zeitverläufe oben rechts für den Strom i und die Spannung u L plausibel ist. 
+Überlegen Sie sich, welche eingeschwungenen Zustände jeweils angestrebt werden. 
+Wie könnt die Gleichung für die Zeitkonstante lauten? 
+Zur Überprüfung bestimmen wir im folgenden detailliert den Ladevorgang und danach kurz den Entladevorgang der gezeigten Induktivität.
+}% end speech
 \end{frame}
 
 %-------------------------------------------------------------------------------------------------%
@@ -782,14 +984,25 @@ Unterschiede nur bei Störglied der DGL, Anfangsbedingung und Endwert.
 \end{align*}
 \end{minipage}
 }%
+
+\speech{SchaltvorgaengeDC2RLLadevorgang1}{1}{%
+Beginnen wir beim Ladevorgang. Oben links sehen Sie das Schaltbild.
+Zu Beginn ist das R L Glied kurzgeschlossen und ab t gleich null ist das R L Glied an die Spannungsquelle U q geschlossen.
+Zu Beginn fließt kein Strom, U q, R und L sind bekannt, gesucht ist der Strom i für t größer gleich null.
+Oben rechts sehen Sie die Zeitverläufe für u L und i. U l springt bei t gleich null von null auf U q.
+Weil i stetig ist, fließt zu Beginn kein Strom und die volle Quellenspannung liegt über L an.
+U L fällt dann exponentiell auf Null ab.
+Der Strom nähert sich ab t gleich null exponentiell seinem Endwert U q durch R, da der Widerstand R den maximalen Strom begrenzt.
+Unten sind die fünf Rechenschritte mit Teillösungen zusammen gefasst, welche wir im Folgenden einzeln durch gehen.
+}% Speech Ende
 \end{frame}
 
 \begin{frame}[t]\ftx{Ladevorgang \subsubsecname}
 \begin{minipage}{\textwidth}\centering
-\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
 \includegraphics{Tikz/pdf/circ_switchable_rl_charge_dc.pdf}
 \end{minipage}
-\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}
+\begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment
     \vspace{0.8cm}
     \textbf{DGL 1. Ordnung:}\\[0.85em]
     $a_1 \cdot \dt y(t) + a_0 \cdot y(t)=b$\\
@@ -813,7 +1026,18 @@ Unterschiede nur bei Störglied der DGL, Anfangsbedingung und Endwert.
         &\text{mit}\quad \ecv{u_L} = L \cdot \dt \eci{i} \\
 &\text{DGL}:&
     \frac{L}{R} \cdot \dt \eci{i}  + \eci{i}  &= \frac{\ecv{U_q}}{R}
-\end{align*}
+\end{align*}%
+
+\speech{SchaltvorgaengeDC2RLLadevorgang2}{1}{%
+Die D G L stellen wir am Besten ausgehend von der Maschengleichung auf.
+u R und u L ist gleich U q. 
+Durch Einsetzen der Komponentengleichungen für R und für L erhalten wir die Gleichung in Abhängigkeit von unserer gesuchten Größe i:
+L mal d nach d t von i plus R mal i ist gleich U q.
+Theoretisch könnten wir nun bereits weiter rechnen, allerdings bietet es sich an, 
+die D G L weiter umzuformen, dass unsere gesuchte Größe i ohne Koeffizienten einzeln steht.
+Also teilen wir durch R und erhaltene unten gezeigte D G L, 
+bei der die Einzelterme die gleiche Einheit wie unsere gesuchte Größe haben.
+}% Speech Ende
 \end{frame}
 
 \begin{frame}\ftx{Ladevorgang \subsubsecname}
@@ -841,6 +1065,17 @@ Unterschiede nur bei Störglied der DGL, Anfangsbedingung und Endwert.
         \eci{i_{\mathrm p}} &= \frac{\ecv{U_q}}{R}
     \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3ooooooooooo}&\hphantom{R3ooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooo}\nonumber% Dummy-Zeile RL-DC für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
 \end{align*}%
+
+\speech{SchaltvorgaengeDC2RLLadevorgang3}{1}{%
+Durch Aufstellen des charakteristschen Polnoms können wir den Eigenwert Lambda bestimmen.
+Da die Lösung in Exponentialform auftritt, schreiben wir direkt Lambda ist gleich minus eins durch Tau ist gleich minus R durch L.
+Dadurch können wir die homogene Lösung direkt in die Form K mal e hoch minus t durch Tau bringen mit Tau ist gleich L durch R.
+}% Speech Ende
+\speech{SchaltvorgaengeDC2RLLadevorgang3}{2}{%
+Für die partikläre Lösung bestimmen wir den eingeschwungenen Zustand. 
+Wir können annehmen, dass i p konstant ist, wodurch der Differentialterm entfällt. 
+Daraus folgt i p ist gleich U q durch R.
+}% Speech Ende
 \end{frame}
 
 \begin{frame}\ftx{Ladevorgang \subsubsecname}
@@ -874,7 +1109,25 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
         \ecv{u_L} &= \ecv{U_q} \cdot \mathrm{e}^{-\sfrac{t}{\tau}} &&&
         &\text{mit}\quad \ecv{u_L} = L \cdot \dt \eci{i}
     \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3ooooooooooo}&\hphantom{R3ooooooooooooooo}&&&&\hphantom{R5oooooooooooooooooo}\nonumber% Dummy-Zeile RL-DC für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
-\end{align*}
+\end{align*}%
+
+\speech{SchaltvorgaengeDC2RLLadevorgang4}{1}{%
+Die Allgemeine Lösung ergibt sich durch Überlagerung beider Lösungen.
+}% Speech Ende
+\speech{SchaltvorgaengeDC2RLLadevorgang4}{2}{%
+und durch einsetzen unserer Anfangsbedingung bestimmen wir unsere Konstante.
+i von null ist gleich K mal e hoch null plus U q durch R ist gleich Null.
+Daraus folgt K ist gleich minus U q durch R.
+Die eindeutige Lösung ergibt: UU q durch R mal Klammer auf eins minus e hoch minus t durch tau Klammer zu.
+Die Spannung u L lässt sich über u L gleich L mal d nach d t von i bestimmen.
+Durch Einsetzen und Vereinfachung folgt: u L ist gleich U q mal e hoch minus lambda durch tau.
+Als Probe können wir überlegen, ob die Ergebnisse plausibel sind.
+Der Strom i von t entspricht einer exponentiellen Annäherung an den maximalen Strom U q durch R.
+Die Spannung fällt exponentiell ab vom Maximalwert U q.
+Da die Induktivität lädt, passt die positive Spannung gemäß Verbraucherzählpfeilsystem.
+Da der eingeschwungene Strom konstant ist, geht u L gegen null.
+Beide Ergebnisse sind plausibel.
+}% Speech Ende
 \end{frame}
 }% Ende Folien only Multi Frame
 
@@ -1064,13 +1317,50 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
 \end{minipage}
 }%
 }% Ende Folien only
+
+\speech{SchaltvorgaengeDC2RLEntladevorgang}{1}{%
+Der Entladevorgang der Induktivität über L lässt sich analog zum Ladevorgang berechnen und ist hier nur kurz als Zusammenfassung dargestellt.
+Oben links sehen sie wieder das Schaltbild und rechts die Zeitverläufe für u L und für i beim Entladen.
+Die fünf Schritte mit Teillösungen sind unten wieder zusammen gefasst.
+**Wichtig**: Die Zeitkonstante Tau ist hier gleich für den Lade- und für den Entladevorgang mit Tau gleich L durch R.
+Als Übung können Sie:
+* erstens Zeitverlauf für i und für u L bestimmen,
+* zweitens die Zeitkonstante Tau allgemein bestimmen.
+Im nächsten Video geht es weiter mit Schaltvorgängen bei sinusförmigen Anregungen. 
+}% Speech Ende
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{bei sinusförmiger Anregung}
-\label{sec:schaltvorgaengezeitbereich:ac}
+\label{sec:schaltvorgaengezeitbereich:ac}%
+\v{% Video Only Frame
 \begin{frame}\ftx{Schaltvorgänge \subsecname}
+    \begin{Lernziele}{Video - Schaltvorgänge bei Wechselspannung}
+        In diesem Video lernen Sie:
+        \begin{itemize}\b{\setlength\itemsep{0.7em}}
+            \item Schaltvorgänge bei AC Anregung zu berechnen,
+            \item die Abhängigkeit von Frequenz und Schaltzeitpunkt zu verstehen,
+            \item mögliche Überströme und -spannungen bei Schaltvorgängen abzuschätzen,
+            \item und wie Schaltvorgänge bei AC Anregung vermieden werden können.
+        \end{itemize}
+    \end{Lernziele}%
+
+\speech{SchaltvorgaengeACLernziele}{1}{%
+Willkommen zum Lehrvideo zum Thema Schaltvorgänge bei sinusförmiger Anregung.
+In diesem Video werden wir uns die Besonderheiten beim Schalten bei sinusförmiger Anregung herleiten.
+Hierfür wandeln wir leicht die Beispiele aus den vorigen Videos ab und betrachten 
+Schaltvorgänge bei einfachen R C und R L Serienschaltungen bei Anregung mit Wechselspannung.
+Sie lernen:
+* Schaltvorgänge bei A C Anregung zu berechnen, 
+* welche Rolle Frequenz und Schaltzeitpunkt spielen,
+* die Gefahr von Überströmen und -spannungen bei Schaltvorgängen abzuschätzen und
+* Möglichkeiten zur Vermeidung von Schaltvorgängen bei A C Anregung kennen.
+}% Speech Ende
+\end{frame}%
+}% Video Only Frame Ende
+
+\begin{frame}\ftx{Schaltvorgänge \subsecname}%
 \s{%
     Die Vorgehensweise zur Berechnung von Schaltvorgängen bei sinusförmiger Anregung ist prinzipiell gleich zur Vorgehensweise bei gleichförmiger Anregung.
     Deshalb wird in diesem Kapitel nur auf die Besonderheiten bei sinusförmiger Anregung eingegangen und die Berechnung anhand eines Beispiels erläutert.
@@ -1120,6 +1410,36 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
     Vergleich: Schaltzeitpunkte $t_0$ und $t_1$
 \end{minipage}
 }%
+
+\speech{SchaltvorgaengeAC}{1}{%
+Fangen wir mit den grötßten Unterschieden zu Schaltvorgängen bei D C Anregung an.
+Schaltvorgänge bei AC Anregung sind
+* frequenzabhängig und
+* schaltzeitpunktabhängig.
+}% Speech Ende
+\speech{SchaltvorgaengeAC}{2}{%
+Wir leiten uns beide Merkmale anhand zweier einfacher Beispiele her.
+Die Berechnung erfolgt analog zu den D C Beispielen mit dem bekannten Berechnungsverfahren. 
+Zunächst für eine Serienschaltung aus C und R und dann für eine Serienschaltung aus L und R. 
+}% Speech Ende
+\speech{SchaltvorgaengeAC}{3}{%
+In beiden Beispielen erhalten wir wieder eine D G L erster Ordnung.
+Im Vergleich zu den D C Beispielen unterscheiden sich die D G L en hier nur durch einen sinusförmigen Störterm b. 
+Warum hängt unser Schaltvorgang nun speziell von der Frequenz und vom Schaltzeitpunkt ab?
+Pausieren Sie am Besten kurz das Video und überlegen Sie selbst eine Lösung, bevor diese eingeblendet wird. 
+}% Speech Ende
+\speech{SchaltvorgaengeAC}{4}{%
+Rechts sehen wir drei Zeitverläufe dargestellt. Zum Vergleich sind zwei Schaltvorgänge für unterschiedliche Schaltzeitpunkte dargestellt.
+* Oben ist die Wechselspannung u q zu sehen, welche als AC Anregung dient. 
+* In der Mitte ist der Schaltvorgang für die Spannung u C abgebildet, wenn bei t null geschalten wird.
+* Unten ist der Schaltvorgang für die Spannung u C abgebildet, wenn bei t eins geschalten wird.
+Der erste Schaltvorgang im mittleren Plot ist als Überlagerung von u C in blau aus dem
+flüchtigen Zustand u C f in schwarz gestrichelt und dem eingeschwungenen Zustand u C e in schwarz dargestellt.
+Der eingeschwungene Zustand ist sinusförmig, der flüchtige Zustand exponentiell abklingend. 
+Beim zweiten Schaltvorgang im unteren Plot ist die Spannung u C ab dem Schaltzeitpunkt gleich dem eingeschwungenen Zustand.
+Zu erkennen ist, dass der Schaltzeitpunkt direkt im Nulldurchgang von u C e liegt und u C vor dem Schaltzeitpunkt Null beträgt. 
+Durch den ideal gewählten Schaltzeitpunkt entfällt der Einschwingvorgang vollständig.
+}% Speech Ende
 \end{frame}
 
 \subsubsection{bei Kapazitäten}
@@ -1234,7 +1554,7 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
     Einmal beträgt $\tau=\frac{2\pi}{\omega}$, einmal $\tau=\frac{20\pi}{\omega}$.
     In beiden Fällen ist $t_0$ so gewählt, dass der Ausgleichsvorgang maximal wird.
 
-    Bei hohen Zeitkonstanten klingt der flüchtige Zustand langsamer ab, dadurch kann es bei ungünstigen Schaltzeitpunkten zu Überspannungen/-strömen kommen.
+    Bei großen Zeitkonstanten klingt der flüchtige Zustand langsamer ab, dadurch kann es bei ungünstigen Schaltzeitpunkten zu Überspannungen/-strömen kommen.
     Ist $u_C$ wie im Beispiel nach Anfangsbedingung zu Beginn entladen ($u_C(t_0)=0$), kann $u_C$ bis zum doppelten Scheitelwert von $u_{C,p}$ ansteigen.
     Ist $u_C$ hingegen zu Beginnn bereits bis zum negativen/positiven Scheitelwert von $u_{C,p}$ geladen, kann $u_C$ sogar bis zum dreifachen Scheitelwert von $u_{C,p}$ ansteigen.
 
@@ -1250,8 +1570,8 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
 \begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment%
     \includegraphics{Tikz/pdf/circ_switchable_rc_charge_ac.pdf}
     \begin{equation*}\begin{aligned}
-        &\text{gegeben:}&       &\ecv{u_C}(0),\ \ecv{u_q}(t),\ R,\ C,\ \omega \\
-        &\text{gesucht:}&       &\ecv{u_C}(t)
+        &\text{gegeben:}&       &\ecv{u_C}(t_0),\ \ecv{u_q}(t),\ R,\ C,\ \omega \\
+        &\text{gesucht:}&       &\ecv{u_C}(t)\quad\text{für}\quad t \geq t_0
     \end{aligned}\end{equation*}
 \end{minipage}\pause%
 \begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment%
@@ -1271,6 +1591,20 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
 \end{minipage}
 }
 }% end Folien only
+
+\speech{SchaltvorgaengeACbeiRC1}{1}{%
+Gehen wir das Beispiel Schritt für Schritt durch. 
+Oben links ist unsere bekannte Schaltung aus den DC Beispielen. 
+Zum Schaltzeitpunkt t null wird ein zuvor kurzgeschlossenes R C Serienglied an eine ideale Wechselspannungsquelle u q geschlossen. 
+Gegeben ist die Spannung u C zum Schaltzeitpunkt t null, die Wechselspannung u q, die Komponenten R, C und die Kreisfrequenz omega. 
+Gesucht ist u c für t größer gleich t null.
+}% Speech Ende
+\speech{SchaltvorgaengeACbeiRC1}{2}{%
+Die Lösung bestimmen wir allgemein für einen variablen Schaltzeitpunkt. Je nach t null wird der Zeitverlauf für u C zum Beispiel die rechts gezeigte Form annehmen.
+}% Speech Ende
+\speech{SchaltvorgaengeACbeiRC1}{3}{%
+Hier sehen kurz zur Übersicht die fünf Schritte des Berechnungsverfahrens und die zugehörigen Teillösungen die wir im Folgenden ausführlich berechnen werden.
+}% Speech Ende
 \end{frame}
 
 \b{% Anfang Folien only Multi Frame -- RC AC - charge
@@ -1285,19 +1619,33 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
             \textbf{DGL 1. Ordnung:}\\[0.85em]
             $a_1 \cdot \dt y(t) + a_0 \cdot y(t)=b$\\
         \end{minipage}%
-        \end{minipage}%
-
+    \end{minipage}%
+    \vspace{0.85cm}
     \textbf{1.) DGL aufstellen:} für $\ecv{u_c}$ ($t \geq t_0$)\\[-1em]
     \begin{align*}
         RC \cdot \dt \ecv{u_C}(t) + \ecv{u_C}(t) ={}& \ecv{u_q}(t) \\
         \text{mit} \quad &\ecv{u_q}(t) = \ecv{\hat{U}_q} \cdot \cos(\omega t + \varphi_q)\quad\text{(Störterm)}
-    \end{align*}
+    \end{align*}\pause
 
     \textbf{2.) Homogene Lösung, allgemein} (flüchtig) (ohne Störterm):
     \begin{align*}
         \ecv{u_{C,\mathrm{h}}} &= K \cdot \mathrm{e}^{-\frac{t'}{\tau}} \qquad &\text{mit} \quad t' = t-t_0 \\
         &= K \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} \qquad &\text{mit} \quad \tau = RC
-    \end{align*}
+    \end{align*}%
+
+\speech{SchaltvorgaengeACbeiRC2}{1}{%
+Der erste Schritt, das Aufstellen der D G L ist im Prinzip identisch zu den D C Beispielen. 
+Der Unterschied ist nur, dass unser Störterm keine Gleichgröße ist, sondern eine Wechselspannung.
+Hier ist unser Störterm u q von t gleich dem Scheitelwert U q Dach mal Kosinus von omega t plus Phi q.
+Der Phasenwinkel Phi q kann hier Null gesetzt werden, hilft uns aber später zu erkennen, an welcher Stelle der Phasenwinkel der Quellenspannung eine Rolle spielt. 
+}% Speech Ende
+\speech{SchaltvorgaengeACbeiRC2}{2}{%
+Der zweite Schritt, die Erstellung der homogenen Lösung, kann aus der Lösung im DC Beispiel übernommen werden. 
+Da der Störmterm in der homogenen D G L Null ist, sind beide Lösungen identisch. 
+Die einzige Anpassung die vorgenommen wird, ist die zeitliche Verschiebung des Exponentialansatzes. 
+Die Exponentialkurve beginnt nicht bei t gleich null sondern beim Schaltzeitpunkt t Null.
+Die Zeitkonstante tau gleich R C entspricht hier wieder dem negativen Kehrwert des Eigenwertes, das heißt minus eins durch Lambda. 
+}% Speech Ende
 \end{frame}
 
 \begin{frame}[t]\ftx{Schaltvorgänge \subsecname\ \subsubsecname}%Schritt 3
@@ -1307,20 +1655,40 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
         \ecv{u_{C,p}}
             &= \ecv{\hat{U}_{C,p}} \cdot \cos(\omega t + \varphi_{C,\mathrm{p}})\\
             &= \Re{\left\{ \ecv{\hat{\underline{U}}_{C,p}} \cdot \mathrm{e}^{\mathrm{j} \omega t} \right\}} \qquad \text{mit}\quad \ecv{\hat{\underline{U}}_{C,p}} = \ecv{\hat{U}_{C,p}} \cdot \mathrm{e}^{\mathrm{j} \varphi_{C,\mathrm{p}}}
-    \end{align*}
+    \end{align*}\pause
     Komplexer Amplitudenzeiger $\ecv{\hat{\underline{U}}_{C,p}}$ durch komplexen Spannungsteiler:
     \begin{equation*}
         \ecv{\hat{\underline{U}}_{C,p}}
             = \ecv{\hat{\underline{U}}_q} \cdot \frac{\underline{Z}_C}{R + \underline{Z}_C}
             = \ecv{\hat{\underline{U}}_q} \cdot \frac{\frac{1}{\mathrm{j}\omega C}}{R + \frac{1}{\mathrm{j} \omega C}} %\nonumber\\
-            = \frac{\ecv{\hat{\underline{U}}_q}}{1 + \mathrm{j} \omega R C}
+            = \frac{\ecv{\hat{\underline{U}}_q}}{1 + \mathrm{j} \omega C R}
             \qquad \text{mit}\quad \ecv{\hat{\underline{U}}_q} = \ecv{\hat{U}_q} \cdot \mathrm{e}^{\mathrm{j} \varphi_q}
-    \end{equation*}
+    \end{equation*}\pause
     Für die Amplitude $\ecv{\hat{U}_{C,p}}$ und den (Last-)Phasenwinkel $\varphi_{C,\mathrm{p}}$ folgt:
     \begin{align*}
-        \ecv{\hat{U}_{C,p}} = \frac{\ecv{\hat{U}_q}}{\sqrt{1 + \left(\omega RC\right)^2}} \qquad\text{und}\qquad
-        \varphi_{C,\mathrm{p}} = \varphi_q - \arctan\left(\omega RC\right) %\label{rc:charge:ac:amplitudephase}
-    \end{align*}
+        \ecv{\hat{U}_{C,p}} = \frac{\ecv{\hat{U}_q}}{\sqrt{1 + \left(\omega CR\right)^2}} \qquad\text{und}\qquad
+        \varphi_{C,\mathrm{p}} = \varphi_q - \arctan\left(\omega CR\right) %\label{rc:charge:ac:amplitudephase}
+    \end{align*}%
+
+\speech{SchaltvorgaengeACbeiRC3}{1}{%
+Im dritten Schritt bestimmen wir die Partikuläre Lösung, das heißt den eingeschwungenen Zustand. 
+Aufgrund der sinusförmigen Eingangsspannung u q erhalten wir in unserer eingeschwungenen L Z I Schaltung 
+auch eine sinusförmige Ausgangsspannung u C P mit gleicher Kreisfrequenz omega wie bei der Anregung u q. 
+Im Zeitbereich dargestellt ist unsere partikuläre Lösung u C p gleich dem Scheitelwert U C p Dach mal Kosinus von omega t plus Phi C P.
+Die Amplitude U C p Dach und den Phasenwinkel Phi C p können wir nun mittels komplexer Wechselstromrechnung bestimmen.
+Zur Erinnerung, unser u C p von t im Zeitbereich ist der Realteil des komplexen Amplitudenzeigers U C p Dach komplex mal e hoch j omega t. 
+Der komplexe Amplitudenzeiger U C p Dach komplex ist gleich U C p Dach reell mal e hoch j Phi C p. 
+}% Speech Ende
+\speech{SchaltvorgaengeACbeiRC3}{2}{%
+Durch den Komplexen Spannungsteiler können wir U C p komplex in Abhängigkeit von U q komplex und den Impedanzen Z C und R bestimmen. 
+Durch etwas Umformung kommen wir auf die Form: 
+U c P Dach komplex ist gleich U q Dach komplex durch eins plus j omega C R. 
+}% Speech Ende
+\speech{SchaltvorgaengeACbeiRC3}{3}{%
+Durch Betragsbildung erhalten wir die Amplitude U C P dach mit der Lösungen unten links
+und durch Winkelbestimmung erhalten wir den Lastphasenwinkel Phi C P mit der Lösung unten rechts.
+Der Winkel Phi C P ist die Phasendifferenz der Quellenspannung u q und der eingeschwungenen Spannung u C P. 
+}% Speech Ende
 \end{frame}
 
 \begin{frame}[t]\ftx{Schaltvorgänge \subsecname\ \subsubsecname}%Schritt 4&5
@@ -1335,18 +1703,38 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
         \ecv{u_C}(t_0) &\overset{!}{=} 0 \\
         K \cdot \redcancel{\mathrm{e}^{0}} + \ecv{\hat{U}_{C,p}} \cdot \cos(\omega t_0 + \varphi_{C,\mathrm{p}}) &= 0 \\
         K &= -\ecv{\hat{U}_{C,p}} \cdot \cos(\omega t_0 + \varphi_{C,\mathrm{p}})
-    \end{align*}
+    \end{align*}\pause
     Die eindeutige Lösung ergibt sich durch Einsetzen von $K$ in die allgemeine Lösung:
     \begin{align*}
         \ecv{u_C}(t) &= \underbrace{-\ecv{\hat{U}_{C,p}} \cdot \cos(\omega t_0 + \varphi_{C,\mathrm{p}}) \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}}}_{\ecv{u_{C,\mathrm{h}}}} + \underbrace{\ecv{\hat{U}_{C,p}} \cdot \cos\left(\omega t + \varphi_{C,\mathrm{p}}\right)}_{\ecv{u_{C,p}}} %\label{eq:rc:charge:ac:uc}
-    \end{align*}
+    \end{align*}%
+
+\speech{SchaltvorgaengeACbeiRC4}{1}{%
+Im vierten Schritten erhalten wir die allgemeine Lösung der inhomogenen Lösung durch Überlagerung.
+Die Lösung besteht wie wir sehen aus einer abklingenden Exponentialkurve und einem sinusförmigen Schwingung.
+Im fünften Schritt bestimmen wir die Konstanten durch Einsetzen unserer Anfangsbedingung.
+Die Kapazität sei zum Schaltzeitpunkt vollständig entladen. 
+Der Exponentialterm reduziert sich zu e hoch null gleich eins und kann somit gekürzt werden. 
+Durch Umstellen erhalten wir unsere Konstante K. Wie wir sehen können, entspricht unser K mit
+K ist gleich **Minus** U C P Dach mal Kosinus von omega mal t **null** plus Phi C p, 
+genau dem negativen Wert des eingeschwungenen Zustandes zum Schaltzeitpunkt.
+Unser K kann damit je nach Schaltzeitpunkt jeden Wert zwischen dem **negativen** und **positiven** Scheitelwert von U C p annehmen.
+}% Speech Ende
+\speech{SchaltvorgaengeACbeiRC4}{2}{%
+Die eindeutige Lösung unten ergibt sich durch Einsetzen von K in die allgemeine Lösung oben.  
+Aus der Lösung können wir gut mehrere Eigenschaften des Zeitverhaltens von u C ablesen.
+Aufgrund der Anfangsbedingung heben sich u C h und u C p zum Schaltzeitpunkt gegenseitig auf.
+Liegt der Schaltzeitpunkt exakt im Nulldurchgang des eingeschwungenen Zustandes u C p, 
+ist unser K gleich Null und es kommt zu keinem Einschwingvorgang. 
+Umgekehrt wird der Einschwingvorgang maximal, wenn exakt während der Minima oder Maxima des eingeschwungenen Zustandes u C P geschalten wird!
+}% Speech Ende
 \end{frame}
 
 \begin{frame}\ftx{Schaltvorgänge \subsecname\ \subsubsecname}% Vergleich verschiedene tau und maximale Auslenkung (Überschwinger)
     \centering
     \begin{minipage}{0.48\textwidth}
         \underline{Bei sinusförmiger Anregung:}\\[1em]
-        Bei hohen Zeitkonstanten sind\\ \textbf{Überspannungen/-ströme möglich}.\\[1em]\pause
+        Bei großen Zeitkonstanten sind\\ \textbf{Überspannungen/-ströme möglich}.\\[1em]\pause
         Erreichbar sind Überwerte bis zum\\ doppelten/dreifachen Scheitelwert.\\[1em]\pause
         Durch geschicktes Schalten sind\\ \textbf{Ausgleichsvorgänge vermeidbar}.\\[1em]\pause
         \underline{Beispiel:} Trennschalter im Netz
@@ -1354,9 +1742,28 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
     \begin{minipage}{0.48\textwidth}\centering
         \resizebox{0.8\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rc_charge_uc_ac_different_tau.pdf}}
         Vergleich: kleines und großes $\tau$
-    \end{minipage}
-\end{frame}
+    \end{minipage}%
 
+\speech{SchaltvorgaengeACUeberspannungenundstroeme}{1}{%
+Insbesondere bei großen Zeitkonstanten sind Überspannungen und -Ströme möglich!
+}% Speech Ende
+\speech{SchaltvorgaengeACUeberspannungenundstroeme}{2}{%
+Durch ungünstige Schaltzeitpunkte während der Minima oder Maxima des eingeschwungenen Zustandes, 
+können so Werte bis zum doppelten oder dreifachen Scheitelwert erreicht werden. 
+Der dreifache Scheitelwert ist möglich, wenn die Anfangsbedingung wäre, dass z.B. u C von t null gleich der einfach Scheitelwert ist. 
+}% Speech Ende
+\speech{SchaltvorgaengeACUeberspannungenundstroeme}{3}{%
+Durch geschicktes Schalten lassen sich Ausgleichsvorgänge aber auch vollständig vermeiden. 
+}% Speech Ende
+\speech{SchaltvorgaengeACUeberspannungenundstroeme}{4}{%
+Ein praktisches Beispiel sind Trennschalter im Netz, die idealerweise ohne Last und deshalb während Nulldurchgängen schalten.
+Rechts sehen wir exemplarisch zwei Schaltvorgänge bei ungünstigsten Schaltzeitpunkten mit verschiedenen Zeitkonstanten zum Vergleich. 
+Oben ist die Anregung zu sehen, in der Mitte ist der Schaltvorgang mit kleinerem Tau dargestellt 
+und unten der bei Schaltvorgang mit Tau deutlich größer als die Periodendauer groß T. 
+Beim kleinen Tau kommt es bereits zu einer leichten Überspanung, die schnell abklingt.
+Beim großen Tau wird nahezu der doppelte negative Scheitelwert erreicht und über mehrere Periodendauern Überspannungen erzeugt.
+}% Speech Ende
+\end{frame}
 }% Ende Folien only
 
 
@@ -1469,8 +1876,8 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
 \begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment%
     \includegraphics{Tikz/pdf/circ_switchable_rl_charge_ac.pdf}
     \begin{equation*}\begin{aligned}
-        &\text{gegeben:}&       &\ecv{u_C}(0),\ \ecv{u_q}(t),\ R,\ C,\ \omega \\
-        &\text{gesucht:}&       &\eci{i}(t)
+        &\text{gegeben:}&       &\eci{i}(t_0),\ \ecv{u_q}(t),\ R,\ L,\ \omega \\
+        &\text{gesucht:}&       &\eci{i}(t)\quad\text{für}\quad t \geq t_0
     \end{aligned}\end{equation*}
 \end{minipage}\pause%
 \begin{minipage}[t][][t]{0.48\textwidth}\centering\vspace{0cm}% vspace: input empty space before tikzpicture for top alignment%
@@ -1489,6 +1896,21 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
 \end{align*}
 \end{minipage}
 }%
+
+\speech{SchaltvorgaengeACbeiRL1}{1}{%
+Sehen wir uns nun zum Vergleich das Schaltverhalten einer R L Serienschaltung bei Anregung mit sinusförmiger Wechselspannung an. 
+Analog zu den anderen Beispielen sehen Sie oben links die Schaltung. 
+Das R L Glied ist zunächst kurzgeschlossen und wird zum Schaltzeitpunkt t null an eine ideale Wechselspannungsquelle u q angeschlossen. 
+Gesucht ist i von t ab dem Schaltzeitpunkt t null. Zum Zeitpunkt t null fließt noch kein Strom, die Wechselspannung, R und L sind gegeben.
+Die Berechnung erfolgt analog zum vorigen Beispiel am R C Glied. 
+}% Speech Ende
+\speech{SchaltvorgaengeACbeiRL1}{2}{%
+Oben rechts sind die sich Zeitverläufe von der Anregung u q der gesuchten Größe i von t und für einen Beispiel Schaltzeitpunkt t Null dargestellt. 
+}% Speech Ende
+\speech{SchaltvorgaengeACbeiRL1}{3}{%
+Unten sehen Sie zur Übersicht und Zusammenfassung das Berechnungsverfahren mit Teillösungen.
+Diese werden wir nun im Einzelnen ausführlicher berechnen. 
+}% Speech Ende
 \end{frame}
 
 \begin{frame}[t]\ftx{Schaltvorgänge \subsecname \, \subsubsecname}
@@ -1501,7 +1923,7 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
             \textbf{DGL 1. Ordnung:}\\[0.85em]
             $a_1 \cdot \dt y(t) + a_0 \cdot y(t)=b$\\
         \end{minipage}%
-        \end{minipage}%
+    \end{minipage}%
     \vspace{0.85cm}
     \textbf{1.) DGL aufstellen:} für $\eci{i}$ mit $t\geq t_0$
     \begin{align*}
@@ -1512,65 +1934,103 @@ Spannung $\ecv{u_L}$ aus Strom $\eci{i}$ bestimmen:%
     \pause% <-- overlay
 
     \textbf{2.) Homogene Lösung, allg.:} (flüchtig, für Schaltzeitpunkt $t_0$)
-        \begin{align*}
-            &\text{hom. Lsg.:} &&&
-                \eci{i_{\mathrm{h}}}&= K \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} &&&
-                &\text{mit}\quad \tau = \frac{L}{R}
-        \end{align*}%
+    \begin{align*}
+        &\text{hom. Lsg.:} &&&
+            \eci{i_{\mathrm{h}}}&= K \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} &&&
+            &\text{mit}\quad \tau = \frac{L}{R}
+    \end{align*}%
 
-    \end{frame}
+\speech{SchaltvorgaengeACbeiRL2}{1}{%
+Das Aufstellen der D G L erfolgt wieder analog zum DC Beispiel. 
+Genau wie beim R C Beispiel ist unsere Störgröße sinusförmig. Hier ist unsere Störgröße der Strom u q durch R
+mit u q gleich U q Dach mal Kosinus von omega t plus Phi q.
+}% Speech Ende
+\speech{SchaltvorgaengeACbeiRL2}{2}{%
+Die homogene Lösung können wir wieder aus unserem D C Beispiel übernehmen, hier mit allgemeinem Schaltzeitpunkt t null.
+Die Zeitkonstante ergibt sich wieder durch Tau gleich L durch R. 
+}% Speech Ende
+\end{frame}
 
-    \begin{frame}\ftx{Schaltvorgänge \subsecname \, \subsubsecname}
-        \textbf{3.) Partikulare Lösung:} (eingeschwungen, mit $t \to \infty$)%
-        \begin{align*}%
-                &\text{DGL transf.}:&&&
-                \frac{L}{R} \cdot \mathrm{j}\omega\, \eci{\underline{\hat{I}}_{\mathrm p}} + \eci{\underline{\hat{I}}_{\mathrm p}} &= \frac{\ecv{\underline{\hat{U}}_q}}{R} &&&
-                    &\text{mit}\quad \ecv{\underline{\hat{U}}_q}=\ecv{\hat{U}_q} \cdot \mathrm{e}^{\mathrm{j}\varphi_q}\\
-                &\text{Zeiger:}&&&
-                    \eci{\underline{\hat{I}}_{\mathrm p}} &= \frac{\ecv{\underline{\hat{U}}_q}}{R} \cdot \frac{1}{1 + \mathrm{j} \omega \cdot\frac{L}{R}} &&&
-                    &\text{mit}\quad \eci{\underline{\hat{I}}_{\mathrm p}} = \eci{\hat{I}_{\mathrm p}}\cdot\mathrm{e}^{\mathrm{j}\varphi_I}\\
-                &&&&
-                    \eci{\hat{I}_{\mathrm p}} &=  \frac{\ecv{\hat{U}_q}}{R}\cdot\frac{1}{\sqrt{1 + \left(\omega \cdot\frac{L}{R}\right)^2}}\\
-                &&&&
-                    \varphi_I &= \varphi_q - \arctan\left(\omega \cdot\frac{L}{R}\right) \\
-                &\text{part. Lsg.}:&&&
-                    \eci{i_{\mathrm p}} &= \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t + \varphi_I) &&&
-                    &\text{mit}\quad \eci{i_{\mathrm p}} = \Re\left\{\eci{\underline{\hat{I}}_{\mathrm p}} \cdot \mathrm{e}^{\mathrm{j}\omega t}\right\} \vphantom{\Bigg|}
-        \end{align*}%
-    \end{frame}
+\begin{frame}\ftx{Schaltvorgänge \subsecname \, \subsubsecname}
+    \textbf{3.) Partikulare Lösung:} (eingeschwungen, mit $t \to \infty$)%
+    \begin{align*}%
+        &\text{DGL transf.}:&&&
+        \frac{L}{R} \cdot \mathrm{j}\omega\, \eci{\underline{\hat{I}}_{\mathrm p}} + \eci{\underline{\hat{I}}_{\mathrm p}} &= \frac{\ecv{\underline{\hat{U}}_q}}{R} &&&
+            &\text{mit}\quad \ecv{\underline{\hat{U}}_q}=\ecv{\hat{U}_q} \cdot \mathrm{e}^{\mathrm{j}\varphi_q}\\
+        &\text{Zeiger:}&&&
+            \eci{\underline{\hat{I}}_{\mathrm p}} &= \frac{\ecv{\underline{\hat{U}}_q}}{R} \cdot \frac{1}{1 + \mathrm{j} \omega \cdot\frac{L}{R}} &&&
+            &\text{mit}\quad \eci{\underline{\hat{I}}_{\mathrm p}} = \eci{\hat{I}_{\mathrm p}}\cdot\mathrm{e}^{\mathrm{j}\varphi_I}\\
+        &&&&
+            \eci{\hat{I}_{\mathrm p}} &=  \frac{\ecv{\hat{U}_q}}{R}\cdot\frac{1}{\sqrt{1 + \left(\omega \cdot\frac{L}{R}\right)^2}}\\
+        &&&&
+            \varphi_I &= \varphi_q - \arctan\left(\omega \cdot\frac{L}{R}\right) \\
+        &\text{part. Lsg.}:&&&
+            \eci{i_{\mathrm p}} &= \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t + \varphi_I) &&&
+            &\text{mit}\quad \eci{i_{\mathrm p}} = \Re\left\{\eci{\underline{\hat{I}}_{\mathrm p}} \cdot \mathrm{e}^{\mathrm{j}\omega t}\right\} \vphantom{\Bigg|}
+    \end{align*}%
 
-    \begin{frame}\ftx{Schaltvorgänge \subsecname \, \subsubsecname}
-        \textbf{4.) Inhomogene Lösung, allg.:} (Überlagerung)%
-        \begin{align*}
-            &\text{allg. Lsg.:}&&&
-                \eci{i} &=
-                \underbrace{ \vphantom{\big|}
-                    K \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}}
-                }_{\eci{i_{\mathrm h}}}
-                +
-                \underbrace{ \vphantom{\big|}
-                    \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t + \varphi_I)
-                }_{\eci{i_{\mathrm p}}}&&&
-            \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3oooooo}&\hphantom{R3oooooooooooooooooooooooooooooooooooooooooooooo}\nonumber% Dummy-Zeile RL-AC Step 4-5 Folien für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
-        \end{align*}%
-        \pause% <-- overlay
+\speech{SchaltvorgaengeACbeiRL3}{1}{%
+Für die partikuläre Lösung wenden wir wieder die komplexe Wechselstromrechnung an. 
+Statt eines komplexen Spannungsteilers, transformieren wir die D G L in den Bildbereich und ersetzen dabei die Differentialoperatoren d nach d t durch j omega. 
+Durch Ausklammern und Umstellen erhalten wir unseren komplexen Amplitudenzeiger 
+I p Dach komplex gleich U q Dach komplex durch R mal eins im Zähler geteilt durch eins plus jot omega mal L durch R im Nenner.
+Jetzt wieder den Betrag und die Phasenlage für I p bestimmen. 
+Achtung: Phi q ist beliebig wählbar, da t null variabel ist, dadurch kann phi q zur Vereinfachung auch null gesetzt werden.
+}% Speech Ende
+\end{frame}
 
-        \textbf{5.) Konstanten bestimmen:} (AB einsetzen)%
-        \begin{align*}
-            &\text{Anf.bed.:}&&&
-                \eci{i}(t_0) &= K \cdot \redcancel{\mathrm{e}^0} + \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t_0 + \varphi_I) \overset{!}{=} 0 \\
-            &&&&
-                \Rightarrow\quad K &= -\eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t_0 + \varphi_I) \\
-            &\text{eind. Lsg.:}&&&
-                \eci{i}(t) &= -\eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t_0 + \varphi_I) \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} + \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t + \varphi_I)
-            \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3oooooo}&\hphantom{R3oooooooooooooooooooooooooooooooooooooooooooooo}\nonumber% Dummy-Zeile RL-AC Step 4-5 Folien für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
-        \end{align*}
-        Spannung $\ecv{u_L}$ mit $\ecv{u_L} = L \cdot \dt \eci{i}$ berechnen:
-        \begin{align*}
-            &\text{Spannung:}&&&
-                \ecv{u_L}(t) &= R \cdot \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t_0 + \varphi_I) \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} - \omega L \cdot \eci{\hat{I}_{\mathrm p}} \cdot \sin(\omega t + \varphi_I)
-        \end{align*}
-    \end{frame}
+\begin{frame}\ftx{Schaltvorgänge \subsecname \, \subsubsecname}
+    \textbf{4.) Inhomogene Lösung, allg.:} (Überlagerung)%
+    \begin{align*}
+        &\text{allg. Lsg.:}&&&
+            \eci{i} &=
+            \underbrace{ \vphantom{\big|}
+                K \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}}
+            }_{\eci{i_{\mathrm h}}}
+            +
+            \underbrace{ \vphantom{\big|}
+                \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t + \varphi_I)
+            }_{\eci{i_{\mathrm p}}}&&&
+        \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3oooooo}&\hphantom{R3oooooooooooooooooooooooooooooooooooooooooooooo}\nonumber% Dummy-Zeile RL-AC Step 4-5 Folien für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+    \end{align*}\pause
+
+    \textbf{5.) Konstanten bestimmen:} (AB einsetzen)%
+    \begin{align*}
+        &\text{Anf.bed.:}&&&
+            \eci{i}(t_0) &= K \cdot \redcancel{\mathrm{e}^0} + \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t_0 + \varphi_I) \overset{!}{=} 0 \\
+        &&&&
+            \Rightarrow\quad K &= -\eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t_0 + \varphi_I) \\
+        &\text{eind. Lsg.:}&&&
+            \eci{i}(t) &= -\eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t_0 + \varphi_I) \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} + \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t + \varphi_I)
+        \\[-15pt]&\hphantom{R1oooooooooo}&&&\hphantom{L3oooooo}&\hphantom{R3oooooooooooooooooooooooooooooooooooooooooooooo}\nonumber% Dummy-Zeile RL-AC Step 4-5 Folien für horizontales Alignment zwischen align-Umgebungen [15pt hoch]
+    \end{align*}\pause
+
+    Spannung $\ecv{u_L}$ mit $\ecv{u_L} = L \cdot \dt \eci{i}$ berechnen:
+    \begin{align*}
+        &\text{Spannung:}&&&
+            \ecv{u_L}(t) &= R \cdot \eci{\hat{I}_{\mathrm p}} \cdot \cos(\omega t_0 + \varphi_I) \cdot \mathrm{e}^{-\frac{t-t_0}{\tau}} - \omega L \cdot \eci{\hat{I}_{\mathrm p}} \cdot \sin(\omega t + \varphi_I)
+    \end{align*}%
+
+\speech{SchaltvorgaengeACbeiRL4}{1}{%
+Die allgemeine Lösung erhalten wir wieder durch Überlagerung der homogenen und der partiklären Lösung. 
+}% Speech Ende
+\speech{SchaltvorgaengeACbeiRL4}{2}{%
+Als Anfangsbedingung sei angenommen, dass i von t Null gleich null ist, das heißt zum Einschaltzeitpunkt kein Strom fließt. 
+Aus dieser Anfangsbedingung können wir die Konstante K bestimmen.
+Durch Einsetzen in die allgemeine Lösung oben erhalten wir wieder unsere eindeutige Lösung.
+Wie auch beim R C Beispiel kann unser K je nach Schaltzeitpunkt alle Werte zwischen 
+dem negativen und dem positiven Scheitelwert I p Dach annehmen.
+}% Speech Ende
+\speech{SchaltvorgaengeACbeiRL4}{3}{%
+Die Spannung u L an der Induktivität erhalten wir mit u L ist gleich L mal d nach d t von i. 
+**Achtung:** Anders als der Strom, kann die Spannung u L springen! 
+Wir sehen das an der Gleichung, dass sich der Exponentialterm und der sinusförmige Term zum Schaltzeitpunkt nicht direkt aufheben. 
+Zur Übung können Sie:
+* 1. den Zeitverlauf für die Spannung u L in diesem Beispiel skizzieren,
+* 2. den Zeitverlauf für den Strom beim R C Beispiel skizzieren und
+* 3. Überlegen, welche Zeitverläufe sich beim Zurückschalten von Wechselspannungsquelle zu Kurzschluss ergeben.
+}% Speech Ende
+\end{frame}
 
 }% end Folien only
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,4 +1,6 @@
 %Lernziele
+\newvideofile{Bauelement}{Einführung Bauelemente}
+
 \begin{frame}
     \b{ \frametitle{Bauelemente}
         \begin{Lernziele}{Halbleiterbauelemente}
@@ -20,7 +22,7 @@
     und Anwendungen einzelner Bauelemente nennen,}
 \end{frame}
 
-
+\newvideofile{Diode}{Diode}
 \begin{frame}
     \b{\frametitle{Diode}
     \begin{figure}[H]
@@ -466,6 +468,7 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
      L E Ds und Laserdioden: Erzeugen bei Stromfluss sichtbares oder infrarotes Licht - für Anzeigen, Beleuchtung, Kommunikation.}
 \end{frame}
 
+\newvideofile{DiodeAnwendung}{Diode - Anwendungen}
 \begin{frame}
     \b{ \frametitle{Diode bei Wechselspannung}
      \begin{figure}[H]
@@ -560,7 +563,7 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             \caption{\textbf{Brückengleichrichter-Schaltung} Schaltkreis eines Brückengleichrichters mit angelegter Last $R$.} 
         \end{figure}
     }
-    \speech{Brückengleichrichter}{1}{Ein Brückengleichrichter nutzt vier Dioden - und damit beide Halbwellen des Wechselstroms.
+    \speech{Brueckengleichrichter}{1}{Ein Brückengleichrichter nutzt vier Dioden - und damit beide Halbwellen des Wechselstroms.
     So fließt der Strom bei jeder Halbwelle durch die Last in derselben Richtung.
     Das Ergebnis: eine deutlich glattere Gleichspannung.}  
 \end{frame}
@@ -575,7 +578,7 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             \label{fig:BrueckengleichrichterSignalverlaeufeFolie}
         \end{figure}
     }
-    \speech{Brückengleichrichter}{2}{Da der Strom durch zwei Dioden gleichzeitig fließt, entsteht ein höherer Spannungsabfall - typisch sind etwa 1 Komma 4 Volt.}
+    \speech{Brueckengleichrichter}{2}{Da der Strom durch zwei Dioden gleichzeitig fließt, entsteht ein höherer Spannungsabfall - typisch sind etwa 1 Komma 4 Volt.}
 \end{frame}
 
 \begin{frame}
@@ -587,7 +590,7 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             \caption{\textbf{Brückengleichrichterschaltung mit Glättungskondensator}} 
         \end{figure}
     }
-    \speech{Brückengleichrichter}{3}{Auch hier kann man die Spannung mit einem Kondensator weiter glätten, um eine noch stabilere Ausgangsspannung zu erhalten.}   
+    \speech{Brueckengleichrichter}{3}{Auch hier kann man die Spannung mit einem Kondensator weiter glätten, um eine noch stabilere Ausgangsspannung zu erhalten.}   
 \end{frame}
 
 \begin{frame}
@@ -607,7 +610,7 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             Eingangsspannung. Rechts: Strompfad bei der negativen Halbwelle der Eingangsspannung.} 
         \end{figure}
     }
-    \speech{Brückengleichrichter}{4}{Die Abbildung zeigt dir die Stromrichtungen bei beiden Halbwellen.
+    \speech{Brueckengleichrichter}{4}{Die Abbildung zeigt dir die Stromrichtungen bei beiden Halbwellen.
     Je nach Richtung der Eingangsspannung leiten immer zwei der vier Dioden - der Strom fließt aber immer gleich durch die Last.}   
 \end{frame}
 
@@ -651,12 +654,15 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             }
         \end{itemize}
         }
-    \speech{Brückengleichrichter}{5}{Zusammengefasst:
+    \speech{Brueckengleichrichter}{5}{Zusammengefasst:
 
     Einweggleichrichter lassen nur eine Halbwelle durch,
     Brückengleichrichter nutzen beide - für bessere Effizienz.
     Dioden sind also vielseitige Helfer, wenn es um Stromfluss in nur eine Richtung geht.}
 \end{frame}
+
+
+\newvideofile{Bipolartransistor1}{Bipolartransistor - Einführung}
 
 \begin{frame}
     \b{ \frametitle{Bipolartransistor}
@@ -923,6 +929,8 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
     Das liegt daran, dass auch die Kollektorspannung einen gewissen Einfluss auf die Raumladungszone an der Basis hat.}
 \end{frame}
 
+
+\newvideofile{Bipolartransistor2}{Bipolartransistor - Kennlinien}
 \begin{frame}
     \b{ \frametitle{Bipolartransistor -- Elektrisches Verhalten}
         \begin{figure}[H]
@@ -1068,6 +1076,18 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             %\label{fig:Vierquadranten-KennlinienfeldEinesNpnTransistors}
         \end{figure}
     }
+    \speech{Bipolartransistor}{14}{Hier sehen wir nochmal alle vier Kennlinienfelder auf einen Blick:
+
+    Die Eingangskennlinie: I B über U B E
+
+    Die Ausgangskennlinie: I C über U C E
+
+    Die Stromsteuerungskennlinie: I C über I B
+
+    Und die Rückwirkungskennlinie: U B E über U C E
+
+    Diese vier Felder beschreiben zusammen das elektrische Verhalten des Transistors vollständig.
+    Je nach Anwendung legt man den Fokus auf ein bestimmtes Feld - bei der Verstärkeranalyse zum Beispiel oft auf die Ausgangskennlinie und die Stromsteuerung.}
 \end{frame}
 
 \begin{frame}
@@ -1090,6 +1110,16 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             %\label{fig:ErsatzschaltbildEinesBipolartransistors}
         \end{figure}
     }
+    \speech{Bipolartransistor_KSEB}{2}{Diese Folie zeigt das Kleinsignal-Ersatzschaltbild eines Bipolartransistors – in zwei Varianten:
+    Links die vollständige Version, rechts eine vereinfachte.
+
+    Links sehen wir:
+    den differenziellen Basiswiderstand r B E, den Innenwiderstand r C E zwischen Kollektor und Emitter,
+
+    die gesteuerte Stromquelle beta mal i B, und zusätzlich eine weitere Spannungsquelle: D mal U C E.
+    Diese modelliert den Einfluss der Rückwirkung von der Kollektor-Emitter-Spannung auf die Basis-Emitter-Spannung. 
+    In der vereinfachten Darstellung rechts fällt genau diese D mal U C E.
+    Man geht also davon aus, dass der Effekt in den meisten Fällen vernachlässigbar ist.}
 \end{frame}
 
 \begin{frame}
@@ -1104,6 +1134,12 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             }
         \end{itemize}
         }
+    \speech{Bipolartransistor_KSEB}{4}{Die Merksätze dazu fassen nochmal das Wichtigste zusammen:
+
+    Das Vierquadrantenkennlinienfeld zeigt die Strom-Spannungs-Kennlinien am Ein- und Ausgang sowie die Kopplungen dazwischen.
+
+    Der Transistor wird im Kleinsignalbetrieb durch ein Ersatzschaltbild beschrieben, wobei die Verluste durch differentielle Widerstände beschrieben werden.
+    Eine Stromquelle zwischen Kollektor und Emitter modelliert die Stromverstärkung.}
 \end{frame}
 
 \begin{frame}
@@ -1127,6 +1163,10 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
                 
             \end{figure}
     }
+    \speech{Beispiel}{1}{Schauen wir uns jetzt ein konkretes Beispiel an - hier geht es um die Arbeitspunktbestimmung eines Bipolartransistors.
+
+    Die Versorgungsspannung U V beträgt 20 Volt. Über den Widerstand R C soll die halbe Versorgungsspannung, also 10 Volt anliegen und
+    ein Strom von 10 milli Ampere fließen.}
 \end{frame}
 
 \begin{frame}
@@ -1138,6 +1178,7 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             %\label{fig:Vierquadranten-KennlinienfeldMitArbeitspunkt}
         \end{figure}
     }
+    \speech{Beispiel}{2}{Als erstes zeichnen wir die Widerstandsgerade in das Ausgangskennlinienfeld - also der Quadrant rechts oben - ein. Darauf können wir dann den Arbeitspunkt - also U C E = 10 Volt einzeichnen. Von da aus kann der Punkt in alle anderen Quadranten übertragen werden.}
 \end{frame}
 
 \begin{frame}
@@ -1194,7 +1235,7 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
     }
 \end{frame}
 
-
+\newvideofile{Bipolartransistor3}{Bipolartransistor - Aufbau und Anwendung}
 \begin{frame}
      \b{ \frametitle{Bipolartransistor -- Aufbau}
          \begin{figure}[H]
@@ -1205,6 +1246,9 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
         \end{figure}
         
      }
+     \speech{Aufbau_Transistor}{1}{Schauen wir uns einmal den physikalischen Aufbau eines npn-Transistors an. 
+    Ganz links sehen wir das gewohnte Schaltzeichen und rechts daneben den schematischen Aufbau bei dem die Schichten bündig übereinander liegen.
+    In der Realität lässt sich das nicht so einfach umsetzen, weshalb reale Transistoren eher wie in der Abbildung ganz rechts aufgebaut sind. In einem n-dotierten Halbleiter wird eine p-dotierte Schicht als Basis eingebracht. In diese Wanne aus p-dotiertem Material wird dann wieder eine kleinere n-dotierte Schicht eingebracht. Auf den drei Zonen werden dann leitfähige Verbindungen zur elektrischen Kontaktierung angebracht.}
 \end{frame}
 
 \begin{frame}
@@ -1231,6 +1275,7 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             \label{fig:GrundschaltungenBipolartransistorFolie}
             }
         \end{figure}}
+    \speech{Grundschaltungen}{3}{Transistoren werden häufig in sogenannten Grundschaltungen betrieben. Die drei Varianten Emitter-, Kollektor- und Basis-Schaltung sehen wir hier von links nach rechts aufgereiht. Die Bezeichnung beschreibt an welchem der Kontakte das Bezugspotential der Schaltung anliegt.}
 
 \end{frame}
 
@@ -1259,6 +1304,7 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             \label{fig:ErsatzschaltbilderEmitter-Kollektor-UndBasisschaltungFolien}
             \caption{\textbf{Ersatzschaltbilder der Grundschaltungen.} V.l.n.r Emitter-, Kollektor- und Basisschaltung von npn-Transistoren.} 
         \end{figure}}
+    \speech{Grundschaltungen}{6}{Abhängig von der Schaltung kann auch das Ersatzschaltbild entsprechend umgeformt werden.}
 \end{frame}
 
 \begin{frame}
@@ -1284,6 +1330,8 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             %\label{tab:EigenschaftenGrundschaltungen}
         \end{table}
     }
+    \speech{Grundschaltungen}{7}{Hier sehen wir einen Vergleich der Eigenschaften der Grundschaltungen.
+    Benötigt man beispielsweise eine hohe Stromverstärkung eignen sich die Emitter- und die Kollektorschaltung besser also die Basisschaltung.}
 \end{frame}
 
 
@@ -1307,6 +1355,16 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             Spannungsverläufe mit $U_\mathrm{CE}$ als Folge von $U_\mathrm{BE}$.} 
         \end{figure}
      }
+     \speech{Transistor_als_Schalter}{2}{Neben seiner Rolle als Verstärker kann der Bipolartransistor auch ganz als elektronischer Schalter eingesetzt werden.
+    Dabei nutzt man die beiden Zustände:
+
+    Ist Basis-Emitter-Spannung zu klein, sperrt der Transistor.
+    Ist die Basis-Emitter-Spannung ausreichend groß, zum Beispiel größer als 0 Komma 7 Volt, wird die Basis-Emitter-Strecke leitend - der Transistor sättigt, und es fließt ein großer Kollektorstrom.
+
+    In der Sättigung ist die Kollektor-Emitter-Spannung nur noch etwa 0 Komma 2 Volt - der Transistor verhält sich dann fast wie ein geschlossener Schalter.
+    Sperrt der Transistor, liegt die Kollektorspannung fast auf dem Versorgungspotenzial - der Strom ist nahezu null, wie bei einem offenen Schalter.
+
+    Das Schöne daran: Der Steuerstrom ist sehr klein und die Steuerzeit sehr kurz. Ideal für einen Schalter.}
 \end{frame}
 
 \begin{frame}
@@ -1316,6 +1374,7 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
         deutlich kleineren Bauraum und geringeren Preis auf. Durch den kontaktlosen Aufbau tritt zudem kein 
         Kontaktprellen auf, was zu einer höheren Lebensdauer führt.
         }
+    \speech{Transistor_als_Schalter}{3}{Im Vergleich zu mechanischen Schaltern sind Transistoren deutlich kleiner und potenziell günstiger. Ein weiterer wichtiger Vorteil ist, dass bei mechanischen Schaltern ein sogenanntes Kontaktprellen auftreten kann, was den Schalter verschleißt und die Signalqualität verschlechtert. Bei Transistoren gibt es dieses Prellen nicht.}
 \end{frame}
 
 \begin{frame}
@@ -1326,7 +1385,20 @@ Dabei ist wichtig: Der Betriebspunkt sollte unterhalb der maximalen Verlustleist
             %\caption{\textbf{Darlington Transistor.} Schaltung und Schaltsymbol eines npn-Darlington-Transistor}  
             %\label{fig:DarlingtonTransistor}
         \end{figure}}
+    \speech{Darlington-Transistor}{1}{Zum Schluss noch ein Spezialfall: der Darlington-Transistor.
+
+    Hier sind zwei Bipolartransistoren hintereinandergeschaltet - der Emitter des ersten geht direkt an die Basis des zweiten.
+    Was bringt das?
+
+    Die Stromverstärkung der beiden multipliziert sich:
+    Wenn der erste Transistor z.B. eine Verstärkung von einhundert hat, und der zweite auch, ergibt sich eine Gesamtverstärkung von hundert mal hundert = zehntausend.
+
+    Das bedeutet: Schon ein sehr kleiner Basisstrom am Eingang reicht aus, um einen sehr großen Kollektorstrom am Ausgang zu erzeugen.
+
+    Darlington-Transistoren werden eingesetzt, wenn man besonders hohe Stromverstärkungen braucht - zum Beispiel bei Leistungstreibern, Motoransteuerungen oder Relais-Schaltungen.}
 \end{frame}
+
+\newvideofile{FET}{Feldeffekttransistoren - Aufbau}
 
 \begin{frame}
     \b{ \frametitle{Feldeffekttransistor}

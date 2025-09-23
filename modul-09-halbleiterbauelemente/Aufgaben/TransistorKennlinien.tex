@@ -3,13 +3,6 @@
 \Aufgabe{
     Gegeben ist die folgende Schaltung mit dem Ausgangskennlinienfeld eines Transistors.
     
-    \begin{itemize}
-        \item[a)] Wie groß ist der maximale Kollektorstrom des idealen Transistors (bei $R_\mathrm{CE} = 0\,\Omega$), wenn der Kollektorwiderstand $R_\mathrm{C} = 7,5\,\Omega$ beträgt und die Versorgungsspannung $U_\mathrm{V} = 3\,\mathrm{V}$ ist?
-              
-        \item[b)] Bestimmen Sie  $U_\mathrm{CE}$, $U_\mathrm{RC}$ und $I_\mathrm{C}$ des realen Transistors bei einem Basisstrom von \( I_\mathrm{B} = \mathrm{2\,mA} \). Tragen Sie dazu die Widerstandsgerade in das Kennlinienfeld ein.
-              
-        \item[c)] Für einen neuen Arbeitspunkt fallen nur noch $1,7\,\mathrm{V}$ über dem Kollektorwiderstand $R_\mathrm{C}$ ab, der Basisstrom beträgt weiterhin $2\,\mathrm{mA}$. Bestimmen Sie den neuen Widerstand $R_\mathrm{C}$.
-    \end{itemize}
     \begin{figure}[H]
         \centering
         \begin{subfigure}[b]{0.45\textwidth}
@@ -22,43 +15,40 @@
         \end{subfigure}
         \label{fig:FigTransistorKennlinien}
     \end{figure}
+    
+    \begin{itemize}
+        \item[a)] Wie groß ist der maximale Kollektorstrom des idealen Transistors (bei $R_\mathrm{CE} = 0\,\Omega$), wenn der Kollektorwiderstand $R_\mathrm{C} = 7,5\,\Omega$ beträgt und die Versorgungsspannung $U_\mathrm{V} = 3\,\mathrm{V}$ ist?
+        \item[b)] Bestimmen Sie  $U_\mathrm{CE}$, $U_\mathrm{RC}$ und $I_\mathrm{C}$ des realen Transistors bei einem Basisstrom von \( I_\mathrm{B} = \mathrm{2\,mA} \). Tragen Sie dazu die Widerstandsgerade in das Kennlinienfeld ein.
+        \item[c)] Für einen neuen Arbeitspunkt fallen nur noch $1,7\,\mathrm{V}$ über dem Kollektorwiderstand $R_\mathrm{C}$ ab, der Basisstrom beträgt weiterhin $2\,\mathrm{mA}$. Bestimmen Sie den neuen Widerstand $R_\mathrm{C}$.
+    \end{itemize}
 }
 
 
 \Loesung{
     \begin{itemize}
-        \item[a)]
+        \item[a)] Berechnung des maximalen Kollektorstroms bei idealem Transistor (\( R_\mathrm{CE} = 0 \)):
+              \begin{equation*}
+                  I_\mathrm{C}  = \frac{U_\mathrm{V}}{R_\mathrm{C}} = \frac{3\,\mathrm{V}}{7,5\,\Omega} = 400\,\mathrm{mA}
+              \end{equation*}
+              
+              
+        \item[b)] Bestimmung der Spannungen und des Kollektorstroms laut Kennlinienfeld:
+              \begin{figure}[H]
+                  \centering
+                  \includesvg[width=0.7\textwidth]{Bilder/Aufgaben/LsgTransistorKennlinien}
+                  \caption{Kennlinienfeld mit eingezeichneter Widerstandsgerade}
+              \end{figure}
+              \begin{gather*}
+                  U_\mathrm{CE} = 1,2\,\mathrm{V} \\
+                  U_\mathrm{RC} = 1,8\,\mathrm{V} \\
+                  I_\mathrm{C} = \frac{U_\mathrm{RC}}{R_\mathrm{C}} = \frac{1,8\,\mathrm{V}}{7,5\,\Omega} = 240\,\mathrm{mA}
+              \end{gather*}
+              
+        \item[c)] Berechnung des neuen Widerstandswerts bei gleichem $I_\mathrm{C}$ und neuer Spannung $U_\mathrm{RC} = 1,7\,\mathrm{V}$:
+              \begin{equation*}
+                  R_\mathrm{C} = \frac{U_\mathrm{RC}}{I_\mathrm{C}} = \frac{1,7\,\mathrm{V}}{240\,\mathrm{mA}} = 7,08\,\Omega
+              \end{equation*}
     \end{itemize}
-    Berechnung des maximalen Kollektorstroms bei idealem Transistor (\( R_\mathrm{CE} = 0 \)):
-    \begin{align*}
-        I_\mathrm{C} & = \frac{U_\mathrm{V}}{R_\mathrm{C}} = \frac{3\,\mathrm{V}}{7,5\,\Omega} = 400\,\mathrm{mA}
-    \end{align*}
     
-    \begin{itemize}
-        \item[b)]
-    \end{itemize}
-    Bestimmung der Spannungen und des Kollektorstroms laut Kennlinienfeld:
-    
-    \begin{figure}[H]
-        \centering
-        \includesvg[width=0.9\textwidth]{Bilder/Aufgaben/LsgTransistorKennlinien}
-        \caption{Kennlinienfeld mit eingezeichneter Widerstandsgerade}
-        \label{fig:LsgTransistorKennlinien}
-    \end{figure}
-    
-    \begin{align*}
-        U_\mathrm{CE} & = 1,2\,\mathrm{V}                                                                             \\
-        U_\mathrm{RC} & = 1,8\,\mathrm{V}                                                                             \\
-        I_\mathrm{C}  & = \frac{U_\mathrm{RC}}{R_\mathrm{C}} = \frac{1,8\,\mathrm{V}}{7,5\,\Omega} = 240\,\mathrm{mA}
-    \end{align*}
-    
-    \begin{itemize}
-        \item[c)]
-    \end{itemize}
-    Berechnung des neuen Widerstandswerts bei gleichem $I_\mathrm{C}$ und neuer Spannung $U_\mathrm{RC} = 1,7\,\mathrm{V}$:
-    \begin{align*}
-        R_\mathrm{C} & = \frac{U_\mathrm{RC}}{I_\mathrm{C}} = \frac{1,7\,\mathrm{V}}{240\,\mathrm{mA}} = 7,08\,\Omega
-    \end{align*}
     Siehe: Abschnitt \ref{sec:ElektrischesVerhaltenBipolartransistor}
-    
 }

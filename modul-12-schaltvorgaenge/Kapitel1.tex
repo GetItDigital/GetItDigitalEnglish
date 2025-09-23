@@ -6,6 +6,7 @@
 
 \section[Einführung]{Einführung in Schaltvorgänge}
 \label{sec:einfuehrung}
+\newvideofile{Einfuehrung}{Einführung in Schaltvorgänge}
 \begin{frame}\ftx{\secname}
 \s{%
 	% Einführung 
@@ -21,7 +22,7 @@
 	% Themen Eingrenzung
 	In diesem Modul liegt der Fokus auf der Untersuchung dieser Ausgleichsvorgänge.
 }
-\begin{Lernziele}{Einführung}
+\begin{Lernziele}{\v{Video - }Einführung}
 	Studierende lernen: 
 	\begin{itemize}
 		\item Schaltvorgänge als nicht-stationäre Zustände nach Schaltaktionen kennen % Wissen
@@ -30,9 +31,21 @@
 		\item das Schaltverhalten von idealen und realen Schaltern zu unterscheiden % Verstehen
 	\end{itemize}
 \end{Lernziele}
+\speech{EinfuehrungLernziele}{1}{%
+Sehr geehrte Studierende,
+herzlich willkommen zum Video Einführung in Schaltvorgänge.
+In diesem Video werden die Inhalte aus Kapitel 1 des Moduls Schaltvorgänge vorgestellt.
+Hier sehen Sie die Lernziele des Kapitels und dieses Videos.
+
+Anhand von Ausgleichsvorgängen im Allgemeinen mit einfachen Beispielen aus der Physik
+werden wir den Begriff Schaltvorgang näher erläutern und Analogien heraus arbeiten.
+Sie werden Ursachen, den typischen Ablauf und eine grobe Definition von Schaltvorgängen kennen lernen
+und diese im größeren Zusammenhang mit anderen Ausgleichsvorgängen verstehen lernen. Anhand von Beispielen,
+wo diese Auftreten und welche Auswirkungen möglich sind,
+werden sie mögliche Herausforderungen sowie Möglichkeiten, die sich aus Schaltvorgängen ergeben kennen lernen.
+Zudem lernen Sie Unterschiede im Verhalten von idealen und realen Schaltern kennen.
+}% Speech Ende
 \end{frame}
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -101,12 +114,56 @@
 		\end{minipage}
 	\end{minipage}
 	\footnotetext{Bild: Bartolomeo Pinelli, Ausschnitt aus \textit{A Peasant Family Cooking over a Campfire}, Lizenz CC0 1.0\newline\qquad\url{https://commons.wikimedia.org/w/index.php?curid=81414513}}
-}
+}%
+\speech{EinfuehrungAusgleichsvorgaenge}{1}{%
+Was sind nun Schaltvorgänge? Um diese Frage zu beantworten, fangen wir mit einem kleinem Beispiel an.
+In der Schaltung links sehen wir eine R C Reihenschaltung.
+Diese kann über einen Schalter entweder kurzgeschlossen werden oder an eine ideale Gleichspannungsquelle U q geschlossen werden.
+
+Was passiert nun, wenn die Schalterstellung wechselt und die Spannung U q an die R C Reihenschaltung angeschlossen wird?
+
+Ist die Kapazität zum Schaltzeitpunkt entladen (das heißt die Spannung u C an der Kapazität ist gleich null), so stellt sich der rechts zu sehende Zeitverlauf ein.
+Wie zu sehen ist, steigt die Spannung u c an der Kapazität zunächst schnell und dann immer langsamer an und konvergiert am Ende gegen eine konstante Spannung.
+Am Ende dieses Ladevorganges hat sich ein stationärer Zustand eingestellt.
+Vor dem Schalten hatten wir ebenfalls einen stationären Zustand als die Kapazität vollständig entladen war.
+Das was sich zwischen diesen beiden stationären Zuständen abspielt wird als Ausgleichsvorgang bezeichnet.
+Von der angeschlossenen Spannungsquelle fließt solange Energie in die Kapazität, bis sich die Spannungen sich angeglichen haben.
+Am Ende fließt kein Strom mehr und die Kapazität hat die Spannung U_q erreicht.
+}% Speech Ende
+\speech{EinfuehrungAusgleichsvorgaenge}{2}{%
+Im Prinzip basieren alle makroskopischen Prozesse auf Ausgleichsvorgängen, je nachdem wie weit die Systemgrenzen gewählt werden.
+Betrachten wir dieses Bild von einem Topf, der über einem Lagerfeuer erhitzt wird.
+Nehmen wir an, der Topf ist mit Wasser gefüllt, das zunächst Umgebuntstemperatur hat.
+Bei bei genügend Wärmezufuhr wird das Wasser anfangen zu kochen und schließlich unter Normaldruck eine konstante Temperatur von ungefähr hundert Grad Celsius erreichen.
+Die zugeführte Energie entspricht dann exakt der abgeführten Energie (z.B. durch Verdunstung).
+}%
+\speech{EinfuehrungAusgleichsvorgaenge}{3}{%
+Ursache für den Temperaturausgleich ist das Feuer machen unter dem Topf.
+Analog dazu resultierte der Spannungsausgleich an der Kapazität durch den Anschluss der Gleichspannungsquelle.
+Ursächlich für Ausgleichsvorgänge in Schaltungen sind plötzliche Änderungen in der Schaltung.
+Zum Beispiel durch Schalthandlungen, bei DC-Netzwerken durch Änderung von Spannung oder Strom oder bei AC-Netzwerken durch Änderung von Amplitude, Frequenz oder Phase.
+}% Speech Ende
 \end{frame}
 
 \b{% Beamer only, extra frame
 \begin{frame}\ftx{\subsecname\,- Beispiele}
 	\includegraphics[width=\textwidth]{Bilder/Ausgleichsvorgaenge_Beispiele_ET3_S_Exknowski_FH_SWF.png}% Provisorisch mit Genehmigung von Prof. Exknowski
+\speech{EinfuehrungAusgleichsvorgaengeBeispiele}{1}{%
+Hier sind weitere Beispiele für ähnliches Systemverhalten. Auch Einschwingvorgänge bei Regelungsprozessen können als Ausgleichsvorgänge betrachtet werden. 
+
+Im obigen Beispiel sehen wir einen Beispiel aus der Robotik.
+Links zu sehen ist eine Roboterhand, die eine Glühbirne hält. 
+Zum Halten, muss der Fingerdruck auf einen festen Wert regeln. 
+Kommt es zu einem Überschwingen wie bei der orangenen Sprungantwort im mittleren Diagramm, kann dies den Bruch der Birne bedeuten
+wie rechts im Bild angedeutet ist. Für eine feine Motorik muss das System schnell, aber auch präzise reagieren wie bei der blauen Sprungantwort ohne Überschwingen dargestellt ist. 
+
+Im unteren Beispiel sehen wir ein Beispiel aus der Automobilindustrie. 
+Links sehen wir den Querschnitt eines Verbrennungsmotors. Für ein angenehmes Fahrverhalten müssen Drehzahl- und Drehomentregelung stimmen.
+Auch ohne Überschwingen kann eine zu abrupte Beschleunigung oder Abbremsung gerade beim Personentransport zu unerwünschten Folgen führen.
+
+All diese Beispiele haben gemein, dass eine plötzliche Änderung, in diesem Fall durch den Sprung der Sollgröße im Regelkreis, einen Ausgleichsvorgang nach sich zieht.
+Während der Ausgleichsvorgänge strebt die betrachtete Systemgröße einen stationären Zustand an. 
+}% Ende Speech
 \end{frame}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -148,7 +205,23 @@
 	werden nicht als Schaltvorgänge bezeichnet und in diesem Modul nicht näher untersucht. 
 	Eine kurze Erläuterung findet sich jedoch vollständigkeitshalber in Abschnitt \ref{sec:einfuehrung:schalteridealvsreal} 
 	beim Vergleich idealer und realer Schalter.
-}
+}%
+\speech{EinfuehrungSchaltvorgaenge}{1}{%
+ Hier sehen wir zwei Beispiele von Schaltvorgängen. Diese sind nichts anderes als Ausgleichsvorgänge in elektrischen Schaltungen,
+ ausgelöst durch plötzliche Änderungen wie Schaltaktionen.
+ Im obigen Beispiel sehen wir einen Einschwingvorgang bei Anregung mit einer Gleichspannung.
+ Der Verlauf ähnelt dem Ladevorgang der Kapazität über den Widerstand. 
+ Im unteren Beispiel sehen wir einen Einschwingvorgang bei Anregung mit einer Wechselspannung.
+ In diesem Fall schwingt sich die Systemgröße s auf eine konstante Sinusform ein. 
+ Mit den gepunkteten Verläufen wird angedeutet, wie sich der Zeitverlauf von s während des Schaltvorganges aus der
+ Überlagerung einer Sinusschwingung wie im eingeschwungenen Zustand und einer Exponentialkurve wie im DC Fall ergibt. 
+ Der Schaltvorgang bezeichnet den Zustand des Überganges bei dem ein stationärer Zustand angestrebt wird aber. 
+ Stationär heißt im D C Fall ein konstanter Wert oder im A C Fall eine konstante Amplitude, Frequenz und Phase.
+ Ausgleichsvorgänge werden insbesondere im Hochspannungsbereich oft Transienten genannt,
+ abgeleitet vom lateinischen Wort *transire*, was zu Deutsch so viel wie *übergehen* bedeutet.
+ Das Adjektiv *transient* bedeutet so viel wie übergangsweise. Das Gegenteil dazu ist *persistent*,
+ vom lateinischen *persistere*, zu Deutsch *verharren*. 
+ }% Speech Ende
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -214,10 +287,9 @@ Ein-/Ausschalten, AD-/DA-Converter, Fahrradlicht mit Kondensator, ...
 
 	Andere Beispiele für Schaltvorgänge sind das Ein- und Ausschalten von Geräten,
 	Analog-Digital- und Digital-Analog-Wandlung, das Aufladen eines Kondensators durch ein Fahrradlicht.
-}
-
+}%
 	%Bei elektrischen Schaltvorgängen: Schalter (Ein/Aus), Relais, Transistoren, ...
-%
+	%
 	%Leistungselektronik überwiegend Schaltungselektronik im wortwörtlichen Sinne. 
 	%%( DC <---DC/AC ---> AC)
 	%%( î  .           .  î )
@@ -227,23 +299,35 @@ Ein-/Ausschalten, AD-/DA-Converter, Fahrradlicht mit Kondensator, ...
 	%%( |    .       .    | )
 	%%( v  .           .  v )
 	%%( DC <---DC/AC ---> AC)
-%
+	%
 	%DC/AC: Wechselrichter (U,f,phi)\\
 	%AC/AC: Frequenzumrichter (f) / Phasenregler (phi) / AC-Spannungsregler (U,(f),(phi))\\
 	%DC/DC: Hochsetz-/Tiefsetz-/Hochtiefsetz-steller / DC-Spannungsregler (U)\\
 	%AC/DC: Gleichrichter (U)\\
-
+\speech{EinfuehrungSchaltvorgaengeBeispiele}{1}{%
+Ein Bereich in dem es regelmäßig zu Schaltvorgängen kommt ist die Leistungselektronik.
+In sogenannten Stromrichtern wird durch getaktetes Schalten elektrische Energie in eine andere Form elektrischer Energie gewandelt.
+Im hier gezeigten Tiefsetzsteller wird beispielsweise die Gleichspannung U eins am Eingang in eine niedrigere Gleichspannung U zwei am Ausgang gewandelt. 
+Das Spannungsverhältnis wird dabei durch den Tastgrad bestimmt, das heißt durch das Verhältnis von der Zeit bei geschlossenem Schalter 
+während einer Periodendauer zur gesamten Periodendauer. 
+In der oberen Schalterstellung lädt die Induktivität, wobei der Strom i L näherungsweise linear ansteigt und 
+in der unteren Schalterstellung entlädt die Induktivität nährungsweise linear. 
+Andere Beispiele in denen Schaltvorgänge auftreten sind zum Beispiel das Ein- und Ausschalten von elektrischen Geräten, 
+die Änderung von Eingangssignalen bei A D und bei D A Convertern und Fahrradlampen mit Kondensator, wenn die Dynamospannung weg bricht. 
+}% Speech Ende}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Idealer Schalter vs. Realer Schalter}
+\subsection{Vergleich idealer und realer Schalter}
 \label{sec:einfuehrung:schalteridealvsreal}
 \begin{frame}\ftx{\subsecname}
 \s{
 	% Intro: Reales Schalten
-	Das Öffnen oder Schließen (Schalten) eines Schalter selbst ist ein Vorgang, 
-	welcher real betrachtet stets mit Latenzen und Verlusten einhergeht.
+	Zur Vereinfachung wird in diesem Modul stets von idealen Schaltern ausgegangen.
+	Um die Grenzen dieser Annahme zu verstehen, wird im Folgenden der Unterschied zwischen idealen und realen Schaltern erläutert.
+	Hierfür wird wie im Schaltbild in Abbildung \ref{fig:circ:switch} gezeigt ist, die Schalterspannung über einem Schalter betrachtet.
+	Der Schalter ist hierfür an eine lineare Gleichspannungsquelle mit Spannung $U_q$ angeschlossen.
 }
 \begin{figure}[H]\centering
 	\includegraphics{Tikz/pdf/circ_switch_ideal.pdf}
@@ -252,10 +336,8 @@ Ein-/Ausschalten, AD-/DA-Converter, Fahrradlicht mit Kondensator, ...
 \end{figure}
 \s{
 	% Abbildung: Ideal vs. Real
-	Abbildung \ref{fig:plot:schalter} zeigt zum Vergleich das Zeitverhalten 
-	eines idealen und eines realen Schalter während dem Ein- und Ausschalten (Schließen und Öffnen).
-	Dargestellt sind die Zeitverläufe der Spannung $u(t)$ über einen Schalter.
-	Dabei sei eine Gleichspannung $U_q$ über dem Schalter angelegt.
+	Abbildung \ref{fig:plot:schalter} zeigt die Schalterspannung im Durchlass- und im Sperrbetrieb und in den Übergangsphasen beim Öffnen oder Schließen des Schalters.
+	Links ist der Spannungsverlauf für einen idealen Schalter dargestellt, rechts für einen realen Schalter.
 }
 \begin{figure}[H]\centering
 	\begin{subfigure}{0.48\textwidth}\centering
@@ -284,7 +366,25 @@ Ein-/Ausschalten, AD-/DA-Converter, Fahrradlicht mit Kondensator, ...
 %		|  ./       \.      ./
 %	U1_	|__/ ....... \______/.......    ... = Strom
 %		|___________________________> t
-\end{frame}
+\speech{EinfuehrungSchalterIdealVsReal1}{1}{%
+Für die Betrachtung von Schaltvorgängen werden im Rahmen des Moduls immer ideale Schalter angenommen. 
+Ideale Schalter zeichnen sich dadurch aus, dass sie verlustlos und instantan schalten. 
+Das bedeutet, dass Schaltaktionen sofort ohne Zeitverzögerung ausgeführt werden.
+Im Durchlassbetrieb wird eine unendlich große Leitfähigkeit (wie ein Kurzschluss) angenommen und
+im Sperrbetrieb wird ein unendlich großer elektrischer Widerstand (wie offene Klemmen) angenommen.
+}% Speech Ende
+\speech{EinfuehrungSchalterIdealVsReal1}{2}{%
+In Realität kommt es bei realen Schaltern stets zu Verlusten und Latenzen. 
+Im Durchlassbetrieb liegt immernoch eine kleine Spannung über dem nicht vernachlässigten Innenwiderstand an. 
+Im Sperrbetrieb fließen immernoch kleine Ströme, wodurch ein Teil der Spannung über dem Innenwiderstand der Spannungsquelle abfällt. 
+Aufgrund der Latenzen ändert sich die Schalterspannung nicht instantan in den Übergansphasen. 
+Dadurch kommt es insbesondere während des Schaltens zu Verlusten, da bereits Ströme fließen während noch eine Spannung anliegt oder umgekehrt.
+Die Latenzen und Verluste resultieren auf ohmschen, kapazitiven und induktiven parasitären Effekten wie gleich am Beispiel eines MOSFETs gezeigt wird.
+}% Speech Ende
+\end{frame}%
+
+%-------------------------------------------------------------------------------------------------%
+
 \begin{frame}\ftx{\subsecname}
 \s{
 	% Beschreibung: Ideal vs. Real
@@ -293,8 +393,10 @@ Ein-/Ausschalten, AD-/DA-Converter, Fahrradlicht mit Kondensator, ...
 	wie in Abbildung \ref{fig:plot:schalter:ideal} dargestellt ist.
 	Ein realer Schalter hingegen leitet oder sperrt nicht instantan
 	wie in Abb. \ref{fig:plot:schalter:real} vereinfacht dargestellt ist. 
-	Das heißt, dass während des Schaltens bereits (oder noch) 
-	eine Spannung anliegen kann, wodurch es zu Schaltverlusten kommen kann.
+	Stattdessen treten Latenzen und Verluste auf.
+	Im Durchlassbetrieb liegt immernoch eine kleine Spannung an (Durchlasswiderstand $R>0$)
+	und im Sperrbetrieb fließt immernoch ein kleiner Strom (Sperrleitwert $G>0$).
+	Dadurch kommt es zu Verlusten im Schalter, insbesondere während der Übergangsphasen, wenn sowohl Spannung als auch Strom anliegen.
 	
 	% Erklärung
 	Die Latenzen und Verluste realer Schalter resultieren aus deren resistiven, induktiven und kapazitiven Eigenschaften.
@@ -322,22 +424,22 @@ Ein-/Ausschalten, AD-/DA-Converter, Fahrradlicht mit Kondensator, ...
 	\s{\caption{Vergleich: Schaltung mit MOSFET, ohne (ideal) und mit kapazitiver Effekte (real)}}
 	\label{fig:circ:mosfet}
 \end{figure}
+	%Alt. Bildbeschreibung:
+	%Zwei Schaltbilder eines MOSFET, links ideal, rechts realer.
+	%MOSFET Anschlüsse Gate G, Drain D und Source S jeweils wie folgt angeschlossen.
+	%D über Widerstand R mit konstant 5 V versorgt.
+	%S auf 0 V gelegt. 
+	%Eingangsspannung U_1 zwischen G und S,
+	%Ausgangsspannung U_2 zwischen D und S.
+	%Realer MOSFET zusätzlich mit Kapazitäten zwischen allen drei Anschlüssen G, S und D.
 \s{
-	%Der MOSFET wird am Drain-Anschluss über einen Widerstand $R$ mit einer konstanten Gleichspannung ($5\ \mathrm{V}$ Potential) versorgt.
-	%Das Potential am Source-Anschluss ist auf konstant $0\ \mathrm{V}$ gelegt. 
-	%Die Eingangsspannung $\underline{U}_1$ liegt zwischen Gate und Source an,
-	%die Ausgangsspannung $\underline{U}_2$ zwischen Drain und Source.
 
-	% Erklärung Latenzen
+	% Erklärung Latenzen, Abgrenzung
 	Die kapazitiven Effekte zwischen den Anschlüssen des MOSFETs führen zu einer Verzögerung beim Schalten,
 	da die jeweiligen Kapazitäten während des Schaltens erst geladen beziehungsweise entladen werden müssen.
-	
-	% Abgrenzung
-	Für die Berechnung von Schaltvorgängen wird in diesem Modul stets von idealen Schaltern ausgegangen.
 	Das MOSFET-Beispiel dient lediglich zur Veranschaulichung der Unterschiede zwischen idealen und realen Schaltern.
-	Ausgleichsvorgänge während des Schaltens werden in diesem Modul nicht weiter betrachtet. 
-	Die vorgestellten Berechnungsmethoden für Schaltvorgänge lassen sich jedoch prinzipiell 
-	auch auf diese anwenden.
+	Ausgleichsvorgänge während Schaltaktionen werden in diesem Modul nicht weiter betrachtet.
+	Mit Schaltvorgängen sind immer die Ausgleichsvorgänge \underline{nach} dem Schalten gemeint.
 }%
 \b{%
 	\makebox[2cm][l]{\textbf{Hier:}} Ausgleichsvorgänge \makebox[1.5cm][c]{\underline{nach}} Schalten (Schaltvorgänge) im Fokus
@@ -347,14 +449,18 @@ Ein-/Ausschalten, AD-/DA-Converter, Fahrradlicht mit Kondensator, ...
 	%\\\qquad$\rightarrow$ Schaltverluste und Latenzen
 	\\[+4pt]%
 	\makebox[2cm][l]{\textbf{Eingrenz.:}} Annahme idealer Schalter 
-}
+}%
+\speech{EinfuehrungSchalterIdealVsReal2}{1}{%
+Links sehen wir das Schaltbild eines MOSFET Schalters mit Gain, Drain und Source Anschlüssen.
+Ideal betrachtet treten keine paraisären Effekte auf.
+}% Speech Ende
+\speech{EinfuehrungSchalterIdealVsReal2}{2}{%
+Real betrachtet treten kapazitive Effektische zwischen allen drei Anschlüssen auf.
+Das führt dazu, dass die Gate-Source Spannung, um den Schalter zu Öffnen oder zu Schließen sich nicht instantan ändern kann.
+Bevor der MOSFET seinen Zustand zwischen Sperren und Durchlass wechselt, müssen die Kapazitäten erst entladen oder geladen werden,
+wodurch Latenzen beim Schalten entstehen.
+Im Rahmen des Moduls fokussieren wir uns ausschließlich auf Schaltvorgänge, das heißt auf die Ausgleichsvorgänge *nach* dem Schalten.
+Real betrachtet kommt es bereits während des Schaltens zu Ausgleichsvorgängen innerhalb der jeweiligen Schalter.
+Zur Vereinfachung werden in diesem Modul stets ideale Schalter angenommen.
+}% Speech Ende
 \end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\subsection{...}
-%\label{sec:...}
-%\begin{frame}\ftx{\subsecname}
-%\end{frame}
-
-%-------------------------------------------------------------------------------------------------%

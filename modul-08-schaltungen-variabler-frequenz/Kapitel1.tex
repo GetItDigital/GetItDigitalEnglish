@@ -389,12 +389,12 @@
         &&A(\omega) &=\frac{1}{\sqrt{1 + (\omega CR)^2}}    &                                           &                           &   &    &&\nonumber\\
         &&          &                                       &   \lim_{\omega \rightarrow 0}A(\omega)    &=\frac{1}{1}               &   &=1  &&\label{eq:tiefpass:ampli:lim}\\
         &&          &                                       &   \lim_{\omega \rightarrow \infty}A(\omega)&=\frac{1}{\sqrt{\infty}}  &   &=0  &&\nonumber
-    %\end{align}
-    \\\intertext{%
-        Für den Phasengang aus Gleichung \ref{eq:tiefpass:phase} ergeben sich analog dazu die Grenzwerte:%
-    }%
-    %Für den Phasengang aus Gleichung \ref{eq:tiefpass:phase} ergeben sich analog dazu die Grenzwerte:
-    %\begin{align}
+    \end{align}
+    %\\\intertext{%
+    %    Für den Phasengang aus Gleichung \ref{eq:tiefpass:phase} ergeben sich analog dazu die Grenzwerte:%
+    %}%
+    Für den Phasengang aus Gleichung \ref{eq:tiefpass:phase} ergeben sich analog dazu die Grenzwerte:
+    \begin{align}
         &&\varphi(\omega)   &=\arctan\left(-\omega CR\right)&                                                   &                   &   &           &&\nonumber\\
         &&                  &                               &   \lim_{\omega \rightarrow 0}\varphi(\omega)      &=\arctan(0)        &   &=0\degree  &&\label{eq:tiefpass:phase:lim}\\
         &&                  &                               &   \lim_{\omega \rightarrow \infty}\varphi(\omega) &=\arctan(-\infty)  &   &=-90\degree&&\nonumber
@@ -631,15 +631,15 @@
     
     \begin{align}
         &&A(\omega) &=\frac{1}{\sqrt{1 + \left(\frac{1}{\omega CR}\right)^2}}&  &                   &&          &&\nonumber\\
-        &&          &&  \lim_{\omega \rightarrow \infty}A(\omega)               &=\frac{1}{\infty}  &&=0        &&\label{eq:tiefpass:ampli:lim}\\
+        &&          &&  \lim_{\omega \rightarrow \infty}A(\omega)               &=\frac{1}{\infty}  &&=0        &&\\
         &&          &&  \lim_{\omega \rightarrow 0}A(\omega)                    &=\frac{1}{\sqrt{1}}&&=1        &&\nonumber
-    %\end{align}
-    \\\intertext{%
+    \end{align}
+    %\\\intertext{%
     Für den Phasengang aus Gleichung \ref{eq:hochpass:phase} folgt analog dazu:
-    }%
-    %\begin{align}
+    %}%
+    \begin{align}
         &&\varphi(\omega)   &=\arctan\left(\frac{1}{\omega CR}\right)&          &                   &&          &&\nonumber\\
-        &&          &&  \lim_{\omega \rightarrow 0}\varphi(\omega)              &=\arctan(\infty)   &&=+90\degree&&\label{eq:tiefpass:phase:lim}\\
+        &&          &&  \lim_{\omega \rightarrow 0}\varphi(\omega)              &=\arctan(\infty)   &&=+90\degree&&\\
         &&          &&  \lim_{\omega \rightarrow \infty}\varphi(\omega)          &=\arctan(0)        &&=0\degree &&\nonumber
     \end{align}
 

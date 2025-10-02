@@ -1,0 +1,35 @@
+\begin{tikzpicture} [
+    /tikz/circuitikz/bipoles/length=1cm,
+    scale=.7]
+    
+    \small
+    \draw(1,0)
+        to[short, o-*] (3,0)
+        to[R, name=RBE , l =$r_\mathrm{BE}$, -] (3,3)
+        to[short, i<, name=IB, -o] (1,3)
+        node[anchor=east] {B}
+        to[open,v>, name=UBE, white] (1, 0);
+        
+    \draw(8,3)   
+        node[anchor=west] {C}
+        to[short, i, name=IC, o-] (6,3)
+        to[short, -] (4.5,3)
+        to[I, name=I1, -*] (4.5,0)
+        node[anchor=north] {E}
+        to[short, -o] (8,0)
+        to[open,v<, name=UCE] (8, 3);
+
+    \draw(6,3)
+       to[R, name=RCE , l =$r_\mathrm{CE}$, *-*] (6,0);
+
+    \draw(4.5,0)
+        to[short] (3,0);
+       
+
+    \iarrmore {IB}{$i_\mathrm{B}$};
+    \iarrmore {IC}{$i_\mathrm{C}$};
+    \iarrmore {I1}{$\beta\cdot i_\mathrm{B}$};
+    \varrmore{UBE}{$u_\mathrm{BE}$};
+    \varrmore{UCE}{$u_\mathrm{CE}$};
+
+\end{tikzpicture}

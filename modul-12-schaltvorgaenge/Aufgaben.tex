@@ -394,16 +394,21 @@ Zeitkonstante $\tau$ sowie Anfangs- und Endwerte des Stromes $i_3$ für Skizze:\
     \end{align*}
     \item[c)] Schaltzeitpunkte für minimalen und maximalen flüchtigen Zustand ($t_{min},\ t_{max}$). \\ 
     Kein Einschwingen, wenn 
-    $\eci{i_{L,f}}=0 \Leftrightarrow \eci{i_L}=\eci{i_{L,e}} \Leftrightarrow \eci{i_L}(t_0)=\eci{i_{L,e}}(t_0)$ gilt.
+    $\eci{i_{L,f}}=0 \Leftrightarrow \eci{i_L}=\eci{i_{L,e}} \Leftrightarrow \eci{i_L}(t_0)=\eci{i_{L,e}}(t_0)$ gilt. \\
+    
+    D.h. für verschwindenden flüchtigen Zustand (kein Einschwingvorgang) folgt:
     \begin{align*}
-        \intertext{D.h. für verschwindenden flüchtigen Zustand (kein Einschwingvorgang) folgt:}
+        %\intertext{D.h. für verschwindenden flüchtigen Zustand (kein Einschwingvorgang) folgt:}
         &\text{AB:}&\eci{i_L}(t_0) = \eci{i_{L,e}}(t_0) &= \eci{\hat{I}_{L,e}} \cdot \sin(\omega t_0 + \varphi) \overset{!}= 0 &
             &\Rightarrow \eci{i_L}(t')=\eci{i_{L,e}}(t') \Leftrightarrow \eci{i_{L,f}}(t')=0\\
         &&\Leftrightarrow \omega t_0 + \varphi &\overset{!}{=} 0 + n\cdot \pi &
             &\text{mit} \quad n \in \mathbb{N} \\
         &&t_{min} &= \frac{n\cdot \pi - \varphi}{\omega} &
             &\text{entspricht Nulldurchgängen von $\eci{i_{L,e}}$}\\
-        \intertext{Und für maximalen flüchtigen Zustand (Schaltzeitpunkt $90\degree$ versetzt) folgt:}
+        \end{align*}
+        Und für maximalen flüchtigen Zustand (Schaltzeitpunkt $90\degree$ versetzt) folgt:
+        \begin{align*}
+        %\intertext{Und für maximalen flüchtigen Zustand (Schaltzeitpunkt $90\degree$ versetzt) folgt:}
         &&t_{max} &= \frac{n\cdot \pi - \varphi}{\omega} + \frac{T}{4} &
             &\text{entspricht Extremstellen von $\eci{i_{L,e}}$}
     \end{align*}
@@ -415,7 +420,10 @@ Zeitkonstante $\tau$ sowie Anfangs- und Endwerte des Stromes $i_3$ für Skizze:\
         &= K \cdot \mathrm{e}^{-\frac{t'}{\tau}} - \eci{\hat{I}_{L,e}} \cdot \cos(\omega t')\\
         \text{AB:}\quad \eci{i_L}(t'=0) &= K - \eci{\hat{I}_{L,e}}  \overset{!}{=}0 \quad \Rightarrow \quad K = \eci{\hat{I}_{L,e}}\\
         \eci{i_L}(t') &= \eci{\hat{I}_{L,e}} \cdot \left( \mathrm{e}^{-\frac{t'}{\tau}} - \cos(\omega t') \right) \\
-        \intertext{Maximum bei positivem Scheitelwert ($180\degree$ nach $t_0$):}
+        \end{align*}
+        Maximum bei positivem Scheitelwert ($180\degree$ nach $t_0$):
+        \begin{align*}
+        %\intertext{Maximum bei positivem Scheitelwert ($180\degree$ nach $t_0$):}
         \eci{i_{L,max}} &= \eci{i_L}(t' = \frac{\pi}{\omega}) \\
         &= \eci{\hat{I}_{L,e}} \cdot \left( \mathrm{e}^{-\frac{T/2}{T}} - \cos(\pi) \right) \\
         &= \eci{\hat{I}_{L,e}} \cdot \left( \mathrm{e}^{-\frac{1}{2}} + 1\right) = 1,606 \cdot \eci{\hat{I}_{L,e}}

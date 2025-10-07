@@ -574,35 +574,48 @@ Die D G L hat die Ordnung n, da die n te Ableitung die höchst auftretende Ablei
     
     % Beispiele
     Abbildung \ref{fig:plot:beispielordnungdgl} zeigt exemplarisch mehrere Schaltungen und die Ordnung der zugehörigen DGL.
-}%
-    \begin{figure}[H]\centering
+    \begin{figure}[H]\centering% Bilder vertikal angeordnet
         \begin{subfigure}{0.24\textwidth}\centering
-            \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_example_ordnung_01.pdf}}
+            \includegraphics{Tikz/pdf/circ_example_ordnung_01.pdf}
         \end{subfigure}
-        \s{\caption*{1 Energiespeicher\newline $\rightarrow$ DGL 1. Ord.}}%
-        \b{\caption*{1 En.sp. $\rightarrow$ 1. Ord.}}%
+        \caption*{1 Energiespeicher $\rightarrow$ DGL 1. Ord.}
         \begin{subfigure}{0.24\textwidth}\centering
-            \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_example_ordnung_02.pdf}}
+            \includegraphics{Tikz/pdf/circ_example_ordnung_02.pdf}
         \end{subfigure}
-        \s{\caption*{2 Energiespeicher\newline $\rightarrow$ DGL 2. Ord.}}%
-        \b{\caption*{2 En.sp. $\rightarrow$ 2. Ord.}}%
+        \caption*{2 Energiespeicher $\rightarrow$ DGL 2. Ord.}
         \begin{subfigure}{0.24\textwidth}\centering
-            \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_example_ordnung_03.pdf}}
+            \includegraphics{Tikz/pdf/circ_example_ordnung_03.pdf}
         \end{subfigure}
-        \s{\caption*{2 Energiespeicher\newline $\rightarrow$ DGL 2. Ord.}}%
-        \b{\caption*{2 En.sp. $\rightarrow$ 2. Ord.}}%
+        \caption*{2 Energiespeicher $\rightarrow$ DGL 2. Ord.}
         \begin{subfigure}{0.24\textwidth}\centering
-            \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_example_ordnung_04.pdf}}
+            \includegraphics{Tikz/pdf/circ_example_ordnung_04.pdf}
         \end{subfigure}
-        \s{\caption*{2 Energiespeicher\newline $\rightarrow$ DGL 2. Ord.}}%
-        \b{\caption*{2 En.sp. $\rightarrow$ 2. Ord.}}%
-        \s{\caption{Beispiel Schaltungen und Ordnung der Differentialgleichung}}
+        \caption*{2 Energiespeicher $\rightarrow$ DGL 2. Ord.}
+        \caption{Beispiel Schaltungen und Ordnung der Differentialgleichung}
         \label{fig:plot:beispielordnungdgl}
     \end{figure}
-\s{%
     Die Ordnung der DGL bestimmt die Anzahl der Konstanten in der allgemeinen Lösung der DGL.
 }%
 \b{%
+    \begin{figure}[H]\centering% Bilder horizontal angeordnet
+        \begin{subfigure}{0.24\textwidth}\centering
+            \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_example_ordnung_01.pdf}}
+            \caption*{1 En.sp. $\rightarrow$ 1. Ord.}
+        \end{subfigure}
+        \begin{subfigure}{0.24\textwidth}\centering
+            \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_example_ordnung_02.pdf}}
+            \caption*{2 En.sp. $\rightarrow$ 2. Ord.}
+        \end{subfigure}
+        \begin{subfigure}{0.24\textwidth}\centering
+            \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_example_ordnung_03.pdf}}
+            \caption*{2 En.sp. $\rightarrow$ 2. Ord.}
+        \end{subfigure}
+        \begin{subfigure}{0.24\textwidth}\centering
+            \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_example_ordnung_04.pdf}}
+            \caption*{2 En.sp. $\rightarrow$ 2. Ord.}
+        \end{subfigure}
+        \label{fig:plot:beispielordnungdgl}
+    \end{figure}
     \renewcommand{\thefootnote}{\fnsymbol{footnote}}% https://www.sascha-frank.com/footnote.html
     \centering
     Anzahl Energiespeicher\footnotemark \ $=$\  Ordnung der DGL
@@ -1086,7 +1099,7 @@ wie im folgenden Beispiel gezeigt wird.
     besitzt eine einfache und zwei doppelte, konjugierte, komplexe Nullstellen:
     \begin{equation*}
         %\lambda_1 = -3, \quad \lambda_2 = \lambda_3 = -1+\mathrm{2j}, \quad \lambda_4 = \lambda_5 = -1-\mathrm{2j}
-        \only<4| handout:1>{%
+        \only<4| handout:0>{%
             \lambda_1 = -3, \quad \lambda_2 = \lambda_3 = -1+\mathrm{2j}, \quad \lambda_4 = \lambda_5 = -1-\mathrm{2j}
         }%
         \only<5| handout:0>{%

@@ -99,7 +99,7 @@ jobs:
       with:
         name: Modul-08-Handout
         path: modul-08-schaltungen-variabler-frequenz/TeXAux/Handout.pdf
-    - name: upload to Folien server
+    - name: upload to Handout server
       if: steps.changed-files-specific.outputs.any_changed == 'true'
       shell: bash
       run: |

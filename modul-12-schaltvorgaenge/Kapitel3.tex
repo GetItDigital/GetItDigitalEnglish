@@ -124,7 +124,10 @@ Die Exponentialform resultiert aus dem flüchtigen Zustand, das heißt der homog
     Aus den Ergebnissen ablesen lässt sich die exponentielle Annäherung von $u_C(t)$ an die Anregung $U_q$:
     \begin{align}
         u_C(t) &= U_q \cdot \left( 1 - \mathrm{e}^{-\sfrac{t}{\tau}} \right)
-    \intertext{und der exponentielle Abfall von $i(t)$ respektive $u_R(t)$ ab deren Maximalwerten $U_q/R$ und $U_q$:}
+    \end{align}
+    und der exponentielle Abfall von $i(t)$ respektive $u_R(t)$ ab deren Maximalwerten $U_q/R$ und $U_q$:
+    \begin{align}
+    %\intertext{und der exponentielle Abfall von $i(t)$ respektive $u_R(t)$ ab deren Maximalwerten $U_q/R$ und $U_q$:}
         i(t) &= \frac{U_q}{R} \cdot \mathrm{e}^{-\sfrac{t}{\tau}}\\[4pt]
         u_R(t) &= U_q \cdot \mathrm{e}^{-\sfrac{t}{\tau}}
     \end{align}
@@ -703,9 +706,10 @@ Unten sind die fünf Schritte des Berechnungsverfahrens mit den jeweiligen Teill
 % Hier Leerzeile für Abstand lassen
 
 \textbf{1.) DGL aufstellen:} für $\ecv{u_C}(t)$ ($t\geq 0$)\\[-1em]
-\begin{align*}
+Ausgehend von der Maschengleichung wird $\ecv{u_R}$ in Abhängigkeit von $\ecv{u_C}$ ausgedrückt:
 % Comment out \intertext rows to enable math-preview in VSCode (or set \textbf to \text)
-\intertext{Ausgehend von der Maschengleichung wird $\ecv{u_R}$ in Abhängigkeit von $\ecv{u_C}$ ausgedrückt:}\\[-1em]
+%\intertext{Ausgehend von der Maschengleichung wird $\ecv{u_R}$ in Abhängigkeit von $\ecv{u_C}$ ausgedrückt:}\\[-1em]
+\begin{align*}
 &\text{Kirchhoff}:
 &\text{Masche:}\quad\ecv{u_R} + \ecv{u_C}  &= 0
 &&\text{Knoten:}\quad{\color{red} i_R} = {\color{red} i_C} = {\color{red} i}\\
@@ -739,11 +743,17 @@ Dadurch erhalten wir die homogene D G L aus dem Ladevorgang.
 &\text{hom. Lsg.}:&
     \ecv{u_{C,h}} &= K \cdot \mathrm{e}^{-\sfrac{t}{\tau}}&
         &\text{mit}\quad \tau = RC
-\intertext{\textbf{3.) Part. Lsg., 4.) Überlagerung:} (eingeschwungen Null)}\\[-1.5em]
+\end{align*}
+\textbf{3.) Part. Lsg., 4.) Überlagerung:} (eingeschwungen Null)
+\begin{align*}
+%\intertext{\textbf{3.) Part. Lsg., 4.) Überlagerung:} (eingeschwungen Null)}\\[-1.5em]
 &\text{allg. Lsg.:}&
     \ecv{u_C} &= \ecv{u_{C,h}} + \redcancel{\ecv{u_{C,p}}}&
         &\text{mit}\quad \ecv{u_{C,p}=0}
-\intertext{\textbf{5.) Konstanten bestimmen:} (AB einsetzen)}\\[-1.5em]
+\end{align*}
+\textbf{5.) Konstanten bestimmen:} (AB einsetzen)
+\begin{align*}
+%\intertext{\textbf{5.) Konstanten bestimmen:} (AB einsetzen)}\\[-1.5em]
 &\text{Anfangsbed.}&
     \ecv{u_C}(0) &= K \cdot \mathrm{e}^0 \overset{!}{=} \ecv{U_q}
         &&\Rightarrow\quad K = \ecv{U_q} &&\\
@@ -2600,8 +2610,11 @@ Aus der allgemeinen homog. Lösung im periodischen Fall (Gl. \ref{eq:dgl:rlc:hom
 \begin{align}
     &&
         \ecv{u_{C,\mathrm{h}}} &= \mathrm{e}^{-\delta t} \cdot \left( K_1 \cdot \mathrm{e}^{+\mathrm{j}\omega_d t} + K_2 \cdot \mathrm{e}^{-\mathrm{j}\omega_d t} \right) \nonumber\\
+\end{align}
+$K_1$ und $K_2$ müssen komplex konjugiert sein, damit $\ecv{u_{C,\mathrm{h}}}$ reell ist! \s{\cite[Vgl. S. 379]{hagmann}}
+\begin{align}
 % uncomment intertext for math preview in VSCode
-\intertext{$K_1$ und $K_2$ müssen komplex konjugiert sein, damit $\ecv{u_{C,\mathrm{h}}}$ reell ist! \s{\cite[Vgl. S. 379]{hagmann}}}
+%\intertext{$K_1$ und $K_2$ müssen komplex konjugiert sein, damit $\ecv{u_{C,\mathrm{h}}}$ reell ist! \s{\cite[Vgl. S. 379]{hagmann}}}
 &\text{mit}&
         K_1 &= a + \mathrm{j} b \mathrlap{\quad\text{und}\quad K_2 = a - \mathrm{j} b\quad\text{mit}\quad a,b \in \mathbb{R}} \nonumber\\[6pt]
     &&
@@ -2873,9 +2886,15 @@ nach Gl. \ref{eq:dgl:rlc:homolsg:periodisch:zeigeraddition} wie im Folgenden als
     Mit der Gesamtimpedanz:
     \begin{align}
             \underline{Z}(\omega) &= R + \mathrm{j} \left( \omega L - \frac{1}{\omega C} \right) \nonumber\\
-        \intertext{und der Resonanzbedingung:}
+    \end{align}
+    und der Resonanzbedingung:
+    \begin{align}
+        %\intertext{und der Resonanzbedingung:}
             \Im\{\underline{Z}(\omega_0)\} &= \omega_0 L - \frac{1}{\omega_0 C} \overset{!}{=} 0 \nonumber\\
-        \intertext{folgt für die Resonanzkreisfrequenz:}
+    \end{align}
+    folgt für die Resonanzkreisfrequenz:
+    \begin{align}
+        %\intertext{folgt für die Resonanzkreisfrequenz:}
             \omega_0 &= \sqrt{\frac{1}{LC}} \label{eq:dgl:rlc:resonanzkreisfrequenz}
     \end{align}
 

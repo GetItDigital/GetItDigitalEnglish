@@ -30,10 +30,31 @@ jobs:
           modul-08-schaltungen-variabler-frequenz/*
           Templates/*
 
-    # Run tikz_externalize
+    # Run tikz_externalize only if files in this module are changed
     - name: Tikz Externalize
+      id: tikz
+      if: steps.changed-files-specific.outputs.any_changed == 'true'
       working-directory: ./modul-08-schaltungen-variabler-frequenz
       run: Tikz/sh/tikz_externalize.sh
+    - name: Upload Tikz PNGs as artifact
+      if: steps.changed-files-specific.outputs.any_changed == 'true'
+      uses: actions/upload-artifact@v4
+      with:
+        name: Modul-08-TikzPNGs
+        path: modul-08-schaltungen-variabler-frequenz/Tikz/png/ # all png files
+    - name: upload to TikzPNGs server
+      if: steps.changed-files-specific.outputs.any_changed == 'true'
+      shell: bash
+      run: |
+        echo "Uploading Tikz PNGs to server"
+        which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
+        mkdir -p ~/.ssh
+        eval $(ssh-agent -s)
+        [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+        chmod 400 ~/.ssh/config
+        ssh-add <(echo "${{secrets.SFTP_KEY}}")
+        sftp -o StrictHostKeyChecking=no ${{secrets.SFTP_USERNAME}}@${{secrets.SFTP_SERVER}}:modul-8-schaltungen-variabler-frequenz <<< $'put -r modul-08-schaltungen-variabler-frequenz/Tikz/png/' # recursive upload
+
 
     # Compile Skript only if files in this module are changed
     - name: compile Skript

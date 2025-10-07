@@ -112,7 +112,7 @@ jobs:
       id: handout
       working-directory: ./modul-12-schaltvorgaenge
       run: |
-        perl -pe 's/\\documentclass\[((?:(?!\]).)*)]/\\documentclass\[$1\,handout]/' Folien.tex > Handout.tex" # add argument 'handout' to documentclass beamer
+        perl -pe 's/\\documentclass\[((?:(?!\]).)*)]/\\documentclass\[$1\,handout]/' Folien.tex > Handout.tex # add argument 'handout' to documentclass beamer
         latexmk -interaction=nonstopmode -file-line-error -pdf --shell-escape -outdir=TeXAux Handout.tex
     - name: Upload Handout as artifact
       if: steps.changed-files-specific.outputs.any_changed == 'true'

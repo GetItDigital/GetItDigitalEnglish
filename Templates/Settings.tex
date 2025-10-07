@@ -102,16 +102,18 @@
 \newcommand\CMT[1]\null% Intra-Line Comments à la \CMT{this is a comment} https://www.reddit.com/r/LaTeX/comments/1cmq3v/intraline_comments_comment_without_commenting_out/
 
 % Symbole für Stern- und Dreieckschaltung
-\newcommand{\Stern}{{\ifmmode%
-		\text{\tikz \draw[] (0,0) -- (90:.9ex) -- (0,0) -- (-45:1.1ex) -- (0,0) -- (225:1.1ex);}%
-		\else%
-		\tikz \draw[] (0,0) -- (90:.9ex) -- (0,0) -- (-45:1.1ex) -- (0,0) -- (225:1.1ex);%
-		\fi}}
-\newcommand{\Dreieck}{{\ifmmode%
-		\text{\tikz \draw[] (0,0) -- (65:1.5ex) --++ (-65:1.5ex) --cycle;}%
-		\else%
-		\tikz \draw[] (0,0) -- (65:1.5ex) --++ (-65:1.5ex) --cycle;%
-		\fi}}
+\newcommand{\Stern}{Y}
+\newcommand{\Dreieck}{\Delta}
+% \newcommand{\Stern}{{\ifmmode%
+% 		\text{\tikz \draw[] (0,0) -- (90:.9ex) -- (0,0) -- (-45:1.1ex) -- (0,0) -- (225:1.1ex);}%
+% 		\else%
+% 		\tikz \draw[] (0,0) -- (90:.9ex) -- (0,0) -- (-45:1.1ex) -- (0,0) -- (225:1.1ex);%
+% 		\fi}}
+% \newcommand{\Dreieck}{{\ifmmode%
+% 		\text{\tikz \draw[] (0,0) -- (65:1.5ex) --++ (-65:1.5ex) --cycle;}%
+% 		\else%
+% 		\tikz \draw[] (0,0) -- (65:1.5ex) --++ (-65:1.5ex) --cycle;%
+% 		\fi}}
 
 % Farbige Spannungs und Strompfeile
 % Ref: Circuitikz Manual, Kapitel Advanced voltages, currents and flows https://texdoc.org/serve/circuitikz/0#subsection.5.8 (v. 1.6.7)

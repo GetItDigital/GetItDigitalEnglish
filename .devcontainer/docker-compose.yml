@@ -5,7 +5,7 @@ services:
     image: "ghcr.io/getitdigital/texcontainer:main"
     command: /bin/sh -c "while sleep 1000; do :; done"
     volumes:
-      - ..:/workspace:cached
+      - ..:/workspace
     networks:
       get-network:
 

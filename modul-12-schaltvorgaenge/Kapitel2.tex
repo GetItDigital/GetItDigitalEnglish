@@ -578,24 +578,24 @@ Die D G L hat die Ordnung n, da die n te Ableitung die höchst auftretende Ablei
     \begin{figure}[H]\centering
         \begin{subfigure}{0.24\textwidth}\centering
             \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_example_ordnung_01.pdf}}
-            \s{\caption*{1 Energiespeicher\newline $\rightarrow$ DGL 1. Ord.}}%
-            \b{\caption*{1 En.sp. $\rightarrow$ 1. Ord.}}%
         \end{subfigure}
+        \s{\caption*{1 Energiespeicher\newline $\rightarrow$ DGL 1. Ord.}}%
+        \b{\caption*{1 En.sp. $\rightarrow$ 1. Ord.}}%
         \begin{subfigure}{0.24\textwidth}\centering
             \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_example_ordnung_02.pdf}}
-            \s{\caption*{2 Energiespeicher\newline $\rightarrow$ DGL 2. Ord.}}%
-            \b{\caption*{2 En.sp. $\rightarrow$ 2. Ord.}}%
         \end{subfigure}
+        \s{\caption*{2 Energiespeicher\newline $\rightarrow$ DGL 2. Ord.}}%
+        \b{\caption*{2 En.sp. $\rightarrow$ 2. Ord.}}%
         \begin{subfigure}{0.24\textwidth}\centering
             \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_example_ordnung_03.pdf}}
-            \s{\caption*{2 Energiespeicher\newline $\rightarrow$ DGL 2. Ord.}}%
-            \b{\caption*{2 En.sp. $\rightarrow$ 2. Ord.}}%
         \end{subfigure}
+        \s{\caption*{2 Energiespeicher\newline $\rightarrow$ DGL 2. Ord.}}%
+        \b{\caption*{2 En.sp. $\rightarrow$ 2. Ord.}}%
         \begin{subfigure}{0.24\textwidth}\centering
             \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_example_ordnung_04.pdf}}
-            \s{\caption*{2 Energiespeicher\newline $\rightarrow$ DGL 2. Ord.}}%
-            \b{\caption*{2 En.sp. $\rightarrow$ 2. Ord.}}%
         \end{subfigure}
+        \s{\caption*{2 Energiespeicher\newline $\rightarrow$ DGL 2. Ord.}}%
+        \b{\caption*{2 En.sp. $\rightarrow$ 2. Ord.}}%
         \s{\caption{Beispiel Schaltungen und Ordnung der Differentialgleichung}}
         \label{fig:plot:beispielordnungdgl}
     \end{figure}
@@ -952,7 +952,10 @@ Deshalb ist unser y e die partikuläre Lösung unserer D G L und y f die homogen
         %\sum_{i=0}^{n} a_i \cdot \dt[i]\, y_{\mathrm{h}}(t) &= 0 \nonumber\\
         \sum_{i=0}^{n} a_i \cdot \dt[i]\, K \cdot \mathrm{e}^{\lambda t} &= 0 \nonumber\\[2pt]
         \left(\sum_{i=0}^{n} a_i \cdot \lambda^i \right) K \cdot \mathrm{e}^{\lambda t} &= 0 \nonumber\\[4pt]
-    \intertext{kann das \textbf{charakteristische Polynom} aufgestellt werden:}
+    \end{align}
+    kann das \textbf{charakteristische Polynom} aufgestellt werden:
+    \begin{align}
+    %\intertext{kann das \textbf{charakteristische Polynom} aufgestellt werden:}
         \sum_{i=0}^{n} a_i \cdot \lambda^i &= 0
     \end{align}\index{Differentialgleichung>Charakteristische Polynom}
 
@@ -1181,8 +1184,11 @@ Eine Herleitung der Umformung kann am Ende des Moduls im Exkurs für die Herleit
             &\Longleftrightarrow& 
             \underline{\hat{Y}} &= \hat{Y} \cdot \mathrm{e}^{\mathrm{j} \varphi} 
             \vphantom{\bigg|}\\
+    \end{align*}
+    Ableitungen nach der Zeit $\dt$ werden im komplexen Zahlenraum durch $\mathrm{j} \omega$ ersetzt:
+    \begin{align*}
     % for preview comment out \intertext{}
-    \intertext{Ableitungen nach der Zeit $\dt$ werden im komplexen Zahlenraum durch $\mathrm{j} \omega$ ersetzt:}
+    %\intertext{Ableitungen nach der Zeit $\dt$ werden im komplexen Zahlenraum durch $\mathrm{j} \omega$ ersetzt:}
         \dt y(t) &= \hat{Y} \cdot \omega \cdot \cos(\omega t + \varphi + \frac{\pi}{2}) &
             &\Longleftrightarrow& 
             \mathrm{j} \omega \cdot  \underline{\hat{Y}} &= \hat{Y} \cdot \omega \cdot \mathrm{e}^{\mathrm{j} \left(\varphi + \frac{\pi}{2}\right)}

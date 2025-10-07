@@ -346,7 +346,7 @@
     % F(jw, w_g) HP
     \begin{align}
         F(\mathrm{j}\omega) &= \frac{1}{1-\mathrm{j}\left(\omega_{\mathrm{g}}/\omega\right)} \label{eq:hochpass:normiert:frequenzgang}\\
-        A(\omega) &= \frac{1}{\sqrt{1 + \left(\omega_{\mathrm{g}}/\omega\right)^2 }} \label{eq:hochpass:normiert:amplitudengang}\\
+        A(\omega) &= \frac{1}{\sqrt{1 + \left(\omega_{\mathrm{g}}/\omega\right)^2 }}\\
         \varphi(\omega) &= \arctan\left(\omega_{\mathrm{g}}/\omega\right) \label{eq:hochpass:normiert:amplitudengang}
     \end{align}
 }% End of script only
@@ -698,7 +698,7 @@
     \subsubsection{Bode-Diagramm}
     In Abbildung \ref{plot:bandpass:bode} ist das Bode-Diagramm des Bandpasses aus Abb. \ref{fig:circ:bandpass} dargestellt.
     Amplitudengang und Phasengang übereinander teilen sich eine gemeinsame X-Achse, zum besseren Vergleich der beiden Graphen.
-    Der Verstärkungsfaktor beträgt $1$ (passiv) und die Grenzkreisfrequenzen liegen bei $10^2\Hz$ und $10^4\Hz$.
+    Der Verstärkungsfaktor beträgt $1$ (passiv) und die Grenzkreisfrequenzen liegen bei $10^2\mathrm{Hz}$ und $10^4\mathrm{Hz}$.
 
     \begin{figure}[h]\centering
         \begin{subfigure}{\textwidth}\centering
@@ -721,12 +721,12 @@
 
     Im Schaubild abzulesen sind:
     \begin{align}
-        \omega_{\mathrm{gu}} &= 10^2\Hz \qquad \text{und} \qquad
-            \omega_{\mathrm{go}} = 10^4\Hz\vphantom{\bigg|}\\
+        \omega_{\mathrm{gu}} &= 10^2\mathrm{Hz} \qquad \text{und} \qquad
+            \omega_{\mathrm{go}} = 10^4\mathrm{Hz}\vphantom{\bigg|}\\
         B &\overset{\tiny\ref{eq:def:b}}{=} \Delta f = \frac{\omega_{\mathrm{go}} - \omega_{\mathrm{gu}}}{2\pi}
-            = \frac{9900}{2\pi}\Hz\vphantom{\bigg|}\\
+            = \frac{9900}{2\pi}\mathrm{Hz}\vphantom{\bigg|}\\
         f_{\mathrm{m}} &\overset{\tiny\ref{eq:def:fm}}{=} \frac{\omega_{\mathrm{m}}}{2\pi} 
-            = \frac{\sqrt{\omega_{\mathrm{go}} \cdot \omega_{\mathrm{gu}}}}{2\pi} = \frac{10^3}{2\pi}\Hz\vphantom{\bigg|}
+            = \frac{\sqrt{\omega_{\mathrm{go}} \cdot \omega_{\mathrm{gu}}}}{2\pi} = \frac{10^3}{2\pi}\mathrm{Hz}\vphantom{\bigg|}
     \end{align}
     
     Die Mittenkreisfrequenz $\omega_{\mathrm{m}}$ ist im Phasengang gekennzeichnet.
@@ -795,7 +795,7 @@
 
     Filter höherer Ordnung als 2 durch Kaskadierung von Filtern niedrigerer Ordnung möglich.
 
-    Vgl: \url{https://wiki.mexle.org/elektronische_schaltungstechnik/6_filterschaltungen_ii\#zusammensetzen_des_bandpass_filter} % # escaped in URL
+    Vgl: \href{https://wiki.mexle.org/elektronische_schaltungstechnik/6_filterschaltungen_ii\#zusammensetzen_des_bandpass_filter}{Mexle Wiki} % # escaped in URL
 
     \begin{Merksatz}{}
         %Die Ordnung entspricht der Steilheit aller Flanken summiert in $\pm\ 20\dB/\mathrm{Dek}$.

@@ -785,8 +785,19 @@
 		Das Netzwerk hat $z=8$ Zweige, $k=5$ Knoten. Es müssen daher $k-1=4$ Knotengleichungen und $z-k+1=4$ 
 		Maschengleichungen aufgestellt werden. Knoten 5 hat vier Zweige, die anderen nur drei. Daher wird die 
 		Knotengleichung von Knoten 5 weggelassen.
+
+        \begin{align*}
+			K_1:\qquad& I_1+I_4-I_5=0\\
+			K_2:\qquad& I_2-I_4-I_8=0\\
+			K_3:\qquad& -I_1-I_3+I_6=0\\
+			K_4:\qquad& I_3-I_7+I_8=0\\
+			M_1:\qquad& R_2I_2 + R_4I_4 + R_5I_5 - U_{2} = 0\\
+			M_2:\qquad& R_4I_4 + R_5I_5 - R_7I_7 - R_8I_8 = 0\\
+			M_3:\qquad& -R_1I_1 - R_5I_5 - R_6I_6 + U_{1} = 0\\
+			M_4:\qquad& R_3I_3 + R_6I_6 + R_7I_7 - U_{3} = 0
+		\end{align*}
 	}
-	
+	\b{
 		\begin{align*}
 			\only<1>{K_1:\qquad& I_1+I_4-I_5=0\\
 			K_2:\qquad& I_2-I_4-I_8=0\\
@@ -797,6 +808,7 @@
 			M_3:\qquad& -R_1I_1 - R_5I_5 - R_6I_6 + U_{1} = 0\\
 			M_4:\qquad& R_3I_3 + R_6I_6 + R_7I_7 - U_{3} = 0}
 		\end{align*}
+    }
 
     \speech{KnotMaschGleichung}{1}{Es müssen K minus 1 Knotengleichungen aufgestellt werden. 
     In dem Netzwerk sind K gleich 5 Knoten. Somit werden vier Knotengleichungen aufgestellt.

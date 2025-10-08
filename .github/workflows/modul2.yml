@@ -53,7 +53,7 @@ jobs:
         [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
         chmod 400 ~/.ssh/config
         ssh-add <(echo "${{secrets.SFTP_KEY}}")
-        sftp -o StrictHostKeyChecking=no ${{secrets.SFTP_USERNAME}}@${{secrets.SFTP_SERVER}}:modul-2-energie-und-leistung <<< $'put modul-02-energie-und-leistung/TeXAux/Skript.pdf'
+        sftp -o StrictHostKeyChecking=no ${{secrets.SFTP_USERNAME}}@${{secrets.SFTP_SERVER}}:english/modul-2-energie-und-leistung <<< $'put modul-02-energie-und-leistung/TeXAux/Skript.pdf'
 
     # Compile Slides only if files in this module are changed
     - name: compile Folien
@@ -78,7 +78,7 @@ jobs:
         [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
         chmod 400 ~/.ssh/config
         ssh-add <(echo "${{secrets.SFTP_KEY}}")
-        sftp -o StrictHostKeyChecking=no ${{secrets.SFTP_USERNAME}}@${{secrets.SFTP_SERVER}}:modul-2-energie-und-leistung <<< $'put modul-02-energie-und-leistung/TeXAux/Folien.pdf'
+        sftp -o StrictHostKeyChecking=no ${{secrets.SFTP_USERNAME}}@${{secrets.SFTP_SERVER}}:english/modul-2-energie-und-leistung <<< $'put modul-02-energie-und-leistung/TeXAux/Folien.pdf'
 
     # Compile Handout only if files in this module are changed
     - name: compile Handout
@@ -105,4 +105,4 @@ jobs:
         [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
         chmod 400 ~/.ssh/config
         ssh-add <(echo "${{secrets.SFTP_KEY}}")
-        sftp -o StrictHostKeyChecking=no ${{secrets.SFTP_USERNAME}}@${{secrets.SFTP_SERVER}}:modul-2-energie-und-leistung <<< $'put modul-02-energie-und-leistung/TeXAux/Handout.pdf'
+        sftp -o StrictHostKeyChecking=no ${{secrets.SFTP_USERNAME}}@${{secrets.SFTP_SERVER}}:english/modul-2-energie-und-leistung <<< $'put modul-02-energie-und-leistung/TeXAux/Handout.pdf'

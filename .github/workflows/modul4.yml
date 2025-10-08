@@ -53,7 +53,7 @@ jobs:
         [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
         chmod 400 ~/.ssh/config
         ssh-add <(echo "${{secrets.SFTP_KEY}}")
-        sftp -o StrictHostKeyChecking=no ${{secrets.SFTP_USERNAME}}@${{secrets.SFTP_SERVER}}:modul-4-grundlegende-gleichstromnetzwerke <<< $'put modul-04-grundlegende-gleichstromnetzwerke/TeXAux/Skript.pdf'
+        sftp -o StrictHostKeyChecking=no ${{secrets.SFTP_USERNAME}}@${{secrets.SFTP_SERVER}}:english/modul-4-grundlegende-gleichstromnetzwerke <<< $'put modul-04-grundlegende-gleichstromnetzwerke/TeXAux/Skript.pdf'
 
     # Compile Slides only if files in this module are changed
     - name: compile Folien
@@ -78,7 +78,7 @@ jobs:
         [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
         chmod 400 ~/.ssh/config
         ssh-add <(echo "${{secrets.SFTP_KEY}}")
-        sftp -o StrictHostKeyChecking=no ${{secrets.SFTP_USERNAME}}@${{secrets.SFTP_SERVER}}:modul-4-grundlegende-gleichstromnetzwerke <<< $'put modul-04-grundlegende-gleichstromnetzwerke/TeXAux/Folien.pdf'
+        sftp -o StrictHostKeyChecking=no ${{secrets.SFTP_USERNAME}}@${{secrets.SFTP_SERVER}}:english/modul-4-grundlegende-gleichstromnetzwerke <<< $'put modul-04-grundlegende-gleichstromnetzwerke/TeXAux/Folien.pdf'
 
     # Compile Handout only if files in this module are changed
     - name: compile Handout
@@ -105,4 +105,4 @@ jobs:
         [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
         chmod 400 ~/.ssh/config
         ssh-add <(echo "${{secrets.SFTP_KEY}}")
-        sftp -o StrictHostKeyChecking=no ${{secrets.SFTP_USERNAME}}@${{secrets.SFTP_SERVER}}:modul-4-grundlegende-gleichstromnetzwerke <<< $'put modul-04-grundlegende-gleichstromnetzwerke/TeXAux/Handout.pdf'
+        sftp -o StrictHostKeyChecking=no ${{secrets.SFTP_USERNAME}}@${{secrets.SFTP_SERVER}}:english/modul-4-grundlegende-gleichstromnetzwerke <<< $'put modul-04-grundlegende-gleichstromnetzwerke/TeXAux/Handout.pdf'

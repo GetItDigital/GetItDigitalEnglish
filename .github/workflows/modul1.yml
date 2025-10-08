@@ -79,3 +79,30 @@ jobs:
         chmod 400 ~/.ssh/config
         ssh-add <(echo "${{secrets.SFTP_KEY}}")
         sftp -o StrictHostKeyChecking=no ${{secrets.SFTP_USERNAME}}@${{secrets.SFTP_SERVER}}:modul-1-elektrische-grundgroessen <<< $'put modul-01-elektrische-grundgroessen/TeXAux/Folien.pdf'
+
+    # Compile Handout only if files in this module are changed
+    - name: compile Handout
+      if: steps.changed-files-specific.outputs.any_changed == 'true'
+      id: handout
+      working-directory: ./modul-01-elektrische-grundgroessen
+      run: |
+        perl -pe 's/\\documentclass\[((?:(?!\]).)*)]/\\documentclass\[$1\,handout]/' Folien.tex > Handout.tex # add argument 'handout' to documentclass beamer
+        latexmk -interaction=nonstopmode -file-line-error -pdf --shell-escape -outdir=TeXAux Handout.tex
+    - name: Upload Handout as artifact
+      if: steps.changed-files-specific.outputs.any_changed == 'true'
+      uses: actions/upload-artifact@v4
+      with:
+        name: Modul-01-Handout
+        path: modul-01-elektrische-grundgroessen/TeXAux/Handout.pdf
+    - name: upload to Handout server
+      if: steps.changed-files-specific.outputs.any_changed == 'true'
+      shell: bash
+      run: |
+        echo "Uploading Handout.pdf to server"
+        which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
+        mkdir -p ~/.ssh
+        eval $(ssh-agent -s)
+        [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+        chmod 400 ~/.ssh/config
+        ssh-add <(echo "${{secrets.SFTP_KEY}}")
+        sftp -o StrictHostKeyChecking=no ${{secrets.SFTP_USERNAME}}@${{secrets.SFTP_SERVER}}:modul-1-elektrische-grundgroessen <<< $'put modul-01-elektrische-grundgroessen/TeXAux/Handout.pdf'

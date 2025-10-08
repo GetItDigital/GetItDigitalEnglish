@@ -23,7 +23,7 @@ Wie groß ist die Grenzfrequenz zu wählen?
 \end{align*}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{RC-Hochpass 1. Ordnung}\label{ueb:rchochpass}
 % Übernommen von Prof. Exknowski, FH SWF Hagen, 2024, ET3 (Übung 9, Aufgabe 3), leicht verändert
@@ -77,16 +77,16 @@ Gegeben ist die rechts dargestellte Schaltung mit $L = 20\,\mathrm{mH}$ , einem 
     \begin{align*}
         \underline{Z} &= R + \mathrm{j}\omega L + \frac{1}{\mathrm{j} \omega C} = R + \mathrm{j}\cdot\left(\omega L + \frac{1}{\omega C}\right)
         &&\Rightarrow\quad \omega_0 L - \frac{1}{\omega_0 C} \overset{!}= 0 \\
-        \Rightarrow\quad\omega_0 &= \frac{1}{\sqrt{LC}} = \frac{1}{\sqrt{20\,\mathrm{mH} \cdot 1\,\mu\mathrm{F}}} = 7071,07\,\mathrm{s}^{-1} 
+        \Rightarrow\quad\omega_0 &= \frac{1}{\sqrt{LC}} = \frac{1}{\sqrt{20\,\mathrm{mH} \cdot 1\,\mu\mathrm{F}}} = 7071,07\,\mathrm{s}^{-1}
         &&\Rightarrow\quad f_0 = \frac{\omega_0}{2\pi} = 1125,4\,\mathrm{Hz}
     \end{align*}
     Da die Schaltung eine Reihenschaltung aus einem Widerstand, Kondensator und einer Spule ist, handelt es sich um eine \underline{Spannungsresonanz}.
 
     \item[b)] Die Spannungsteilerregel liefert den Frequenzgang:
     \begin{align*}
-        \frac{\underline{U}_2}{\underline{U}_1} = \underline{F}(\mathrm{j}\omega) 
-            &= \frac{\underline{Z}_{\mathrm{C}}}{\underline{Z}_{\mathrm{R}} + \underline{Z}_{\mathrm{L}} + \underline{Z}_{\mathrm{C}}} \\ 
-            &= \frac{\frac{1}{\mathrm{j}\omega C}}{R + \mathrm{j}\omega L + \frac{1}{\mathrm{j}\omega C}} &&\bigg| \cdot \frac{\mathrm{j}\omega C}{\mathrm{j}\omega C} \\ 
+        \frac{\underline{U}_2}{\underline{U}_1} = \underline{F}(\mathrm{j}\omega)
+            &= \frac{\underline{Z}_{\mathrm{C}}}{\underline{Z}_{\mathrm{R}} + \underline{Z}_{\mathrm{L}} + \underline{Z}_{\mathrm{C}}} \\
+            &= \frac{\frac{1}{\mathrm{j}\omega C}}{R + \mathrm{j}\omega L + \frac{1}{\mathrm{j}\omega C}} &&\bigg| \cdot \frac{\mathrm{j}\omega C}{\mathrm{j}\omega C} \\
             &= \frac{1}{\mathrm{j}\omega CR + \mathrm{j}^2 \omega^2 LC + 1} \\
             &= \frac{1}{1 - \omega^2 LC + \mathrm{j} \omega R C}
     \end{align*}
@@ -112,16 +112,16 @@ Gegeben ist die rechts dargestellte Schaltung mit $L = 20\,\mathrm{mH}$ , einem 
     \midrule
         $A(\omega)$ & $1,000$ & $1,009$ & $1,033$ & $1,087$ & $0,943$ & $0,555$ & $0$ \\
     \bottomrule
-    \end{tabular}    
-    \item[d)] Die Güte eines Reihenschwingkreises gibt die Spannungsüberhöhung über $L$ beziehungsweise $C$ 
-    im Resonanzfall an. 
+    \end{tabular}
+    \item[d)] Die Güte eines Reihenschwingkreises gibt die Spannungsüberhöhung über $L$ beziehungsweise $C$
+    im Resonanzfall an.
     \begin{align*}
         \frac{U_2(\omega_0)}{U_1(\omega_0)} = Q_S &= \frac{X_k}{R} = \frac{\omega_0 L}{R} = \frac{1}{R}\cdot\sqrt{\frac{L}{C}}\\
-        &= \frac{1}{150\,\Omega}\cdot\sqrt{\frac{10\,\mathrm{mH}}{1\,\mu\mathrm{F}}}= 0,\overline{66} % 0,666... 
+        &= \frac{1}{150\,\Omega}\cdot\sqrt{\frac{10\,\mathrm{mH}}{1\,\mu\mathrm{F}}}= 0,\overline{66} % 0,666...
     \end{align*}
     Für $L=10\,\mathrm{mH}$ ist $Q_S < 1$, es kommt also zu keiner Spannungsüberhöhung im Resonanzfall.
 \end{itemize}
-}      
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -159,23 +159,23 @@ $\mathrm{R}_1$, $\mathrm{R}_2$, L, C verwendet werden.
     \item[a)] Das Spannungsteilerverhältnis ergibt sich zu:
     \begin{align*}
         \underline{F}(\mathrm{j}\omega) & = \frac{\underline{U}_2}{\underline{U}_1} \\
-        &= \frac{R_2}{R_1 + \underline{Z}_L || \underline{Z}_C + R_2} 
+        &= \frac{R_2}{R_1 + \underline{Z}_L || \underline{Z}_C + R_2}
         &&\text{mit}\quad \underline{Z}_L || \underline{Z}_C = \frac{\mathrm{j}\omega L \cdot \frac{1}{\mathrm{j}\omega C}}{\mathrm{j}\omega L - \mathrm{j}\frac{1}{\omega C}} = -\mathrm{j}\cdot\left(\frac{1}{\omega C - \frac{1}{\omega L}}\right)\\
         &= \frac{R_2}{R_1 + R_2 - \mathrm{j}\left(\frac{1}{\omega C - \frac{1}{\omega L}}\right)}
     \end{align*}
 
     \item[b)] Der Betrag des Spannungsteilerverhältnisses ergibt sich allgemein zu:
     \begin{equation*}
-        \left| \underline{F}(\mathrm{j}\omega) \right| = A(\omega) 
-        = \frac{\mathrm{R}_2}{\sqrt{(\mathrm{R}_1 + \mathrm{R}_2)^2 + \left(\frac{1}{\omega \mathrm{C} - \frac{1}{\omega \mathrm{L}}}\right)^2}} 
+        \left| \underline{F}(\mathrm{j}\omega) \right| = A(\omega)
+        = \frac{\mathrm{R}_2}{\sqrt{(\mathrm{R}_1 + \mathrm{R}_2)^2 + \left(\frac{1}{\omega \mathrm{C} - \frac{1}{\omega \mathrm{L}}}\right)^2}}
     \end{equation*}
-    Die Parallelschaltung aus $L$ und $C$ verhält sich für $\omega \to 0$ und für $\omega \to \infty$ wie ein Kurzschluss, 
+    Die Parallelschaltung aus $L$ und $C$ verhält sich für $\omega \to 0$ und für $\omega \to \infty$ wie ein Kurzschluss,
     da jeweils eins der beiden Bauelemente in beiden Fällen eine Impedanz gegen Null besitzt.
     Daraus folgt für $\omega \to 0$ und $\omega \to \infty$:
     \begin{equation*}
         A(\omega \to 0) = A(\omega \to \infty) = \frac{R_2}{R_1+R_2}
     \end{equation*}
-    Im Resonanzfall ($\omega = \omega_0 = \sqrt{\frac{1}{LC}}$) heben sich die Admittanzen von $L$ und $C$ (Parallel-Schwingkreis) gegenseitig auf. 
+    Im Resonanzfall ($\omega = \omega_0 = \sqrt{\frac{1}{LC}}$) heben sich die Admittanzen von $L$ und $C$ (Parallel-Schwingkreis) gegenseitig auf.
     Mit $Y_C + Y_L \to 0$ folgt auch $Z_L||Z_C \to \infty$ für $\omega \to \omega_0$.
     \begin{equation*}
         A(\omega_0) = \frac{R_2}{\sqrt{(\mathrm{R}_1 + \mathrm{R}_2)^2 + \infty^2}} = \frac{1}{\infty} = 0
@@ -183,10 +183,10 @@ $\mathrm{R}_1$, $\mathrm{R}_2$, L, C verwendet werden.
 
     Die Phase ergibt sich zu:
     \begin{align*}
-        \varphi(\omega)&= 
+        \varphi(\omega)&=
             \underbrace{
                 \arctan\left(\frac{0}{R_2}\right)
-            }_{\varphi_{\text{Zähler}}} - 
+            }_{\varphi_{\text{Zähler}}} -
             \underbrace{
                 \arctan\left(\frac{-\left(\frac{1}{\omega C - \frac{1}{\omega L}}\right)}{R_1 + R_2}\right)
             }_{\varphi_{\text{Nenner}}}
@@ -209,7 +209,7 @@ $\mathrm{R}_1$, $\mathrm{R}_2$, L, C verwendet werden.
     \item[c)] Die Ausgangsspannung ergibt sich zu:
     \begin{align*}
         \underline{U}_2 &= \underline{F}(\mathrm{j}\omega) \cdot \underline{U}_1 \\
-        u_2(t) &=  A(\omega) \cdot 5\,\mathrm{V} \cdot \cos\left(\omega t + \varphi(\omega)\right) 
+        u_2(t) &=  A(\omega) \cdot 5\,\mathrm{V} \cdot \cos\left(\omega t + \varphi(\omega)\right)
         &&\text{mit}\quad \omega = 2\pi\cdot10\,\mathrm{kHz}\cdot
     \end{align*}
 \end{itemize}
@@ -255,7 +255,7 @@ $\mathrm{R}_1$, $\mathrm{R}_2$, L, C verwendet werden.
     \begin{align*}
         \Im\{\underline{Y}\} = \omega_0 C - \frac{1}{\omega_0 L} \overset{!}{=} 0 \quad \Leftrightarrow \omega_0 &= \frac{1}{\sqrt{LC}} \quad \Rightarrow f_0 = \frac{\omega_0}{2\pi}\\
         |\underline{Z}(\omega_0)| = \frac{1}{%
-            \sqrt{\frac{1}{R^2} + 
+            \sqrt{\frac{1}{R^2} +
                 \Big(\smash{\underbrace{
                     \omega_0 C - \frac{1}{\omega_0 L}
                 }_{={}\mathrlap{0}}}\Big)^2
@@ -270,7 +270,7 @@ $\mathrm{R}_1$, $\mathrm{R}_2$, L, C verwendet werden.
         1 + R^2\cdot\left(\omega C - \frac{1}{\omega L}\right)^2 &= 2 \\
         \left(\omega C - \frac{1}{\omega L}\right)^2 &= \frac{1}{R^2} \\
         \omega C - \frac{1}{\omega L} &= \pm\frac{1}{R} \\
-        %\omega^2 LC - 1 \pm \omega \cdot \frac{L}{R} &= 0 \\ 
+        %\omega^2 LC - 1 \pm \omega \cdot \frac{L}{R} &= 0 \\
         \omega^2 LC \pm \omega \cdot \frac{L}{R} - 1 &= 0 \\
         \omega^2 \pm \omega \cdot \frac{1}{RC} - \frac{1}{LC} &= 0 \\
         x^2 + p \cdot x + q &= 0 \vphantom{\frac{1}{LC}}% p-q Form
@@ -287,12 +287,12 @@ $\mathrm{R}_1$, $\mathrm{R}_2$, L, C verwendet werden.
     \end{align*}
     \item[d)] Bestimmung der Bandbreite über die Resonanzfrequenz und die Güte:
     \begin{align*}
-        B &= \frac{f_0}{Q} 
+        B &= \frac{f_0}{Q}
             & \text{mit}\quad Q &= \sqrt{\frac{C}{L}}\cdot R = \sqrt{\frac{1\ \mu\mathrm{F}}{200\ \mathrm{mH}}} \cdot 300\ \Omega = 0,6708 \\
         B &= \frac{355,88\ \mathrm{Hz}}{0,6708} = 530,5\ \mathrm{Hz}
-            & \text{mit}\quad f_0 &= \frac{1}{2\pi\sqrt{LC}} = \frac{1}{2\pi\sqrt{200\ \mathrm{mH} \cdot 1\ \mu\mathrm{F}}} = 355,88\ \mathrm{Hz} \\ 
+            & \text{mit}\quad f_0 &= \frac{1}{2\pi\sqrt{LC}} = \frac{1}{2\pi\sqrt{200\ \mathrm{mH} \cdot 1\ \mu\mathrm{F}}} = 355,88\ \mathrm{Hz} \\
     \end{align*}
-    \item[e)] Bei logarithmischer Frequenzachse verläuft die Kurve des Impedanzbetrags $|\underline{Z}(\omega)|$  
+    \item[e)] Bei logarithmischer Frequenzachse verläuft die Kurve des Impedanzbetrags $|\underline{Z}(\omega)|$
     symmetrisch um die Resonanzkreisfrequenz $\omega_0$, das heißt $f_{g,o}$ und $f_{g,u}$ liegen dann symmetrisch um $f_0$.
     \begin{equation*}
         \left(\omega C - \frac{1}{\omega L}\right)^2 = \bigg(\underbrace{
@@ -324,15 +324,15 @@ Für die untenstehende hintereinandergeschalteten RC-Glieder gilt $R_1 = R_2 = R
 \begin{itemize}
     \item[a)] Frequenzgang:
     \begin{align*}
-        \underline{F}(\mathrm{j}\omega) 
+        \underline{F}(\mathrm{j}\omega)
             &= \frac{\underline{U}_2}{\underline{U}_1} = \frac{\underline{U}_2}{\underline{U}_m} \cdot \frac{\underline{U}_m}{\underline{U}_1}\\
-        \frac{\underline{U}_m}{\underline{U}_1} 
+        \frac{\underline{U}_m}{\underline{U}_1}
             &= \frac{\underline{Z}_{\mathrm{ers}}}{R + \underline{Z}_{\mathrm{ers}}} = \frac{1}{\frac{R}{\underline{Z}_{\mathrm{ers}}} + 1}\\
-        \underline{Z}_{\mathrm{ers}} 
-            &= \left( R + \frac{1}{\mathrm{j}\omega C} \right) \bigg|\bigg|\, \frac{1}{\mathrm{j}\omega C} 
+        \underline{Z}_{\mathrm{ers}}
+            &= \left( R + \frac{1}{\mathrm{j}\omega C} \right) \bigg|\bigg|\, \frac{1}{\mathrm{j}\omega C}
             %= \left(\frac{ \left( R + \frac{1}{\mathrm{j}\omega C} \right) + \frac{1}{\mathrm{j}\omega C}}{ \left( R + \frac{1}{\mathrm{j}\omega C} \right) \cdot \frac{1}{\mathrm{j}\omega C}} \right)^{-1}
             = \left( \frac{1}{R + \frac{1}{\mathrm{j}\omega C}} + \mathrm{j}\omega C\right)^{-1}\\
-        \frac{\underline{U}_m}{\underline{U}_1} 
+        \frac{\underline{U}_m}{\underline{U}_1}
             &= \frac{1}{R \cdot \left(\frac{1}{R + \frac{1}{\mathrm{j}\omega C}} + \mathrm{j}\omega C\right) + 1} \\
             &= \frac{1}{\frac{R\cdot\mathrm{j}\omega C}{R\cdot\mathrm{j}\omega C + 1} + R\cdot\mathrm{j}\omega C + 1} \\
             &= \frac{R\cdot\mathrm{j}\omega C + 1}{R\cdot\mathrm{j}\omega C + \left( R\cdot\mathrm{j}\omega C + 1 \right)^2} \\
@@ -341,10 +341,10 @@ Für die untenstehende hintereinandergeschalteten RC-Glieder gilt $R_1 = R_2 = R
             &= \frac{1 + \mathrm{j}\Omega}{1 - \Omega^2 + \mathrm{j}3\Omega}
             \qquad \text{mit} \qquad \Omega = \omega C R\\[4pt]
         \frac{\underline{U}_2}{\underline{U}_m}
-            &= \frac{\frac{1}{\mathrm{j}\omega C}}{R + \frac{1}{\mathrm{j}\omega C}} 
+            &= \frac{\frac{1}{\mathrm{j}\omega C}}{R + \frac{1}{\mathrm{j}\omega C}}
             = \frac{1}{1 + \mathrm{j}\omega C R} = \frac{1}{1 + \mathrm{j}\Omega}\\[4pt]
-        \frac{\underline{U}_2}{\underline{U}_1} 
-            &= \frac{\underline{U}_2}{\underline{U}_m} \cdot \frac{\underline{U}_m}{\underline{U}_1} 
+        \frac{\underline{U}_2}{\underline{U}_1}
+            &= \frac{\underline{U}_2}{\underline{U}_m} \cdot \frac{\underline{U}_m}{\underline{U}_1}
             = \frac{1}{1 + \mathrm{j}\omega C R} = \frac{1}{1 + \mathrm{j}\Omega} \cdot \frac{1 + \mathrm{j}\Omega}{1 - \Omega^2 + \mathrm{j}3\Omega} \\
             &= \frac{1}{1 - \Omega^2 + \mathrm{j}3\Omega} = \frac{1}{1 - (\omega C R)^2 + \mathrm{j}3\omega C R}
     \end{align*}
@@ -352,16 +352,16 @@ Für die untenstehende hintereinandergeschalteten RC-Glieder gilt $R_1 = R_2 = R
     \begin{align*}
         \underline{F}(\mathrm{j}\omega) = \frac{\frac{1}{\mathrm{j}\omega C}}{R + \frac{1}{\mathrm{j}\omega C}} = \frac{1}{1 + \mathrm{j}\omega C R} = \frac{1}{1 + \mathrm{j}\Omega}
     \end{align*}
-    Wegen Kopplungseffekten kann der Frequenzgang des einfachen Tiefpasses bei Serienschaltung 
+    Wegen Kopplungseffekten kann der Frequenzgang des einfachen Tiefpasses bei Serienschaltung
     nicht einfach multipliziert werden.
 
     \item[b)] Bode-Diagramm (Amplituden- und Phasengang) für RC-Tiefpassfilter 1. und 2. Ordnung:
     \begin{figure}[H]\centering
         \includegraphics{Tikz/pdf/Uebungen/plot_uebung_rc_filter_2_ord_bodediagramm.pdf}% RC-Tiefpass Vgl. 1. Ordnung, 2. Ordnung
     \end{figure}
-    Die Dämpfung im Sperrbereich beträgt bei 2. Ordnung (blau) das doppelte ($40\,\dB/\mathrm{Dek}$) 
-    im Vergleich zur 1. Ordnung (rot) ($20\,\dB/\mathrm{Dek}$). 
-    Die Phasenverschiebung reicht von $0\degree$ bis $-180\degree$ bei 2. Ordnung, 
+    Die Dämpfung im Sperrbereich beträgt bei 2. Ordnung (blau) das doppelte ($40\,\dB/\mathrm{Dek}$)
+    im Vergleich zur 1. Ordnung (rot) ($20\,\dB/\mathrm{Dek}$).
+    Die Phasenverschiebung reicht von $0\degree$ bis $-180\degree$ bei 2. Ordnung,
     im Gegensatz zur 1. Ordnung, die nur von $0\degree$ bis $-90\degree$ reicht.
     Die Grenzfrequenz verschiebt sich durch die höhere Dämpfung nach links (kleiner für 2. Ordnung).
 \end{itemize}
@@ -388,18 +388,18 @@ Gegeben ist die Serienschaltung aus einer Induktivität $L = 10\,\mathrm{mH}$ un
     % Rechnung
     \begin{align*}
         f&=5\,\mathrm{kHz} ... 50\,\mathrm{kHz} & \underline{Z} &= R + \mathrm{j}\omega L \\
-        f_1 &=  5\,\mathrm{kHz} & \underline{Z}_1 &= 5\,\mathrm{k}\Omega + \mathrm{j} 314,16\,\Omega \\ 
-        f_2 &= 25\,\mathrm{kHz} & \underline{Z}_2 &= 5\,\mathrm{k}\Omega + \mathrm{j} 1570,8\,\Omega \\ 
-        f_3 &= 50\,\mathrm{kHz} & \underline{Z}_3 &= 5\,\mathrm{k}\Omega + \mathrm{j} 3141,6\,\Omega    
+        f_1 &=  5\,\mathrm{kHz} & \underline{Z}_1 &= 5\,\mathrm{k}\Omega + \mathrm{j} 314,16\,\Omega \\
+        f_2 &= 25\,\mathrm{kHz} & \underline{Z}_2 &= 5\,\mathrm{k}\Omega + \mathrm{j} 1570,8\,\Omega \\
+        f_3 &= 50\,\mathrm{kHz} & \underline{Z}_3 &= 5\,\mathrm{k}\Omega + \mathrm{j} 3141,6\,\Omega
     \end{align*}
 
-$\underline{Z}$-Ortskurve: $\Re\{\underline{Z}\}=konst.,\quad \Im\{\underline{Z}\}=var.\\ 
+$\underline{Z}$-Ortskurve: $\Re\{\underline{Z}\}=konst.,\quad \Im\{\underline{Z}\}=var.\\
 \Rightarrow$ Gerade parallel zur Imaginärachse im I. Quadranten.\\
 
 b) %
-Inversion von Geraden im I. Quadranten: \\ Halbkreis im IV. Quadranten.     
+Inversion von Geraden im I. Quadranten: \\ Halbkreis im IV. Quadranten.
 \begin{align*}
-    \underline{Y}&=\frac{1}{\underline{Z}} & 
+    \underline{Y}&=\frac{1}{\underline{Z}} &
     \underline{Y}&= \frac{1}{|\underline{Z}|} \cdot \mathrm{e}^{-\mathrm{j}\varphi_Z}
 \end{align*}
 Maßstab so gewählt, dass $\underline{Z}(0) = 5\,\mathrm{k}\Omega {}\hat{=}{} \underline{Y}(0) = 0,2\,\mathrm{mS}$. \\
@@ -421,21 +421,21 @@ Die Admittanzkurve entspricht dem Kreisabschnitt zwischen $\underline{Y}(f=5\,\m
 \Aufgabe{
 \begin{minipage}{0.7\textwidth}
     Die Admittanz der rechts gezeigten Schaltung soll untersucht werden.\\[5pt]
-    Parallel zu einer Reihenschaltung aus dem Widerstand $R_1$ und der Kapazität $C$ 
+    Parallel zu einer Reihenschaltung aus dem Widerstand $R_1$ und der Kapazität $C$
     befindet sich ein zweiter Widerstand $R_2$.\\[5pt]
     Die Bauteilwerte sind gegeben durch:\\[2pt] % R1=p*R0, R0=5 Ohm, R2=20 Ohm, omega*C=5 Ohm
     $R_1(p) = p \cdot R_0$,\quad $R_0 = 5\,\Omega$,\quad $R_2 = 20\,\Omega$\quad und \quad $\omega C = 5\,\Omega$
 \end{minipage}%
 \begin{minipage}{0.3\textwidth}
     % Schaltbild: R1 in Reihe zu C, zusammen parallel zu R2
-    \includegraphics{Tikz/pdf/Uebungen/circ_uebung_admittanzortskurve_rcs_rp.pdf}% 
+    \includegraphics{Tikz/pdf/Uebungen/circ_uebung_admittanzortskurve_rcs_rp.pdf}%
 \end{minipage}
 \begin{itemize}
     \item[a)] Bestimmen Sie die Admittanz für $p=0$, $p=1$, $p=2$ und $p\to\infty$.
-    \item[b)] Skizzieren Sie den Verlauf der Admittanzortskurve und zeichnen Sie die Werte ein. 
+    \item[b)] Skizzieren Sie den Verlauf der Admittanzortskurve und zeichnen Sie die Werte ein.
     (Empfohlener Darstellungsbereich: $0 + \mathrm{j}0$ bis $0,25\,\mathrm{S}+ \mathrm{j}0,25\,\mathrm{S}$)
     \item[c)] Für welchen Wert von $p$ eilt der Gesamtstrom $\underline{I}$ einer angelegten Wechselspannung $\underline{U}$ um $45\degree$ voraus?
-    Bestimmen Sie zeichnerisch den Wert für $\underline{Y}$. 
+    Bestimmen Sie zeichnerisch den Wert für $\underline{Y}$.
     \item[d)] Überprüfen Sie das Ergebnis aus c) rechnerisch.
 \end{itemize}
 }
@@ -476,7 +476,7 @@ Die Admittanzkurve entspricht dem Kreisabschnitt zwischen $\underline{Y}(f=5\,\m
     \item[d)] Mit $\arctan(45\degree)=\frac{\Im\{\underline{Y}\}}{\Re\{\underline{Y}\}} = 1$ folgt:
     \begin{align*}
         \Re\{\underline{Y}\} &\overset{!}{=} \Im\{\underline{Y}\} \\
-        0,05 + 0,2 \cdot \frac{p}{p^2+1} &\overset{!}{=} 0,2 \cdot \frac{1}{p^2+1}\\ 
+        0,05 + 0,2 \cdot \frac{p}{p^2+1} &\overset{!}{=} 0,2 \cdot \frac{1}{p^2+1}\\
         0,05 \cdot p^2 + 0,2 \cdot p - 0,15 &= 0 \\
         p_{1/2} &= -2 \pm \sqrt{4 + 3} \\
         \text{mit }R_1>0: \qquad p_{45\degree} &= -2 + \sqrt{7} \\
@@ -496,11 +496,11 @@ Die Admittanzkurve entspricht dem Kreisabschnitt zwischen $\underline{Y}(f=5\,\m
 % Messspannung von mittig zwischen Z1 und Z2 über offen bis mittig zwischen Z3 und Z4
 \begin{minipage}{0.5\textwidth}%
     \begin{itemize}
-        \item[a)] Bestimmen Sie allgemein die Gleichung für die Messspannung $\underline{U}_B$. 
+        \item[a)] Bestimmen Sie allgemein die Gleichung für die Messspannung $\underline{U}_B$.
             Bringen Sie das Ergebnis auf einen gemeinsamen Nenner und kürzen Sie, wenn möglich.
-        \item[b)] Im Ausschlagsverfahren soll ein Blindwiderstand gemessen werden. 
-            Im gegebenen Messbereich seien $\underline{Z}_1=\mathrm{j}X_1$ und $\underline{Z}_2=\mathrm{j}X_2$ 
-            (reine Blindwiderstände) und $\underline{Z}_3 = \underline{Z}_4 = R$ (reine Wirkwiderstände). 
+        \item[b)] Im Ausschlagsverfahren soll ein Blindwiderstand gemessen werden.
+            Im gegebenen Messbereich seien $\underline{Z}_1=\mathrm{j}X_1$ und $\underline{Z}_2=\mathrm{j}X_2$
+            (reine Blindwiderstände) und $\underline{Z}_3 = \underline{Z}_4 = R$ (reine Wirkwiderstände).
             Bestimmen Sie die Gleichung für die Messspannung $\underline{U}_B$.
     \end{itemize}
 \end{minipage}%
@@ -523,7 +523,7 @@ Die Admittanzkurve entspricht dem Kreisabschnitt zwischen $\underline{Y}(f=5\,\m
     \begin{align*}
         \underline{U}_B &= U_0 \cdot \left( \frac{\underline{Z}_2}{\underline{Z}_1 + \underline{Z}_2} - \frac{\underline{Z}_4}{\underline{Z}_3 + \underline{Z}_4} \right)\\
         &= U_0 \cdot \left( \frac{\underline{Z}_2\cdot\underline{Z}_3+\redcancel{\underline{Z}_2\cdot\underline{Z}_4}-\underline{Z}_1\cdot\underline{Z}_4-\redcancel{\underline{Z}_2\cdot\underline{Z}_4}}{\left(\underline{Z}_1+\underline{Z}_2\right)\cdot\left(\underline{Z}_3+\underline{Z}_4\right)} \right) \\
-        &= U_0 \cdot \left( \frac{\underline{Z}_2\cdot\underline{Z}_3\ -\ \underline{Z}_1\cdot\underline{Z}_4}{\left(\underline{Z}_1+\underline{Z}_2\right)\cdot\left(\underline{Z}_3+\underline{Z}_4\right)} \right) 
+        &= U_0 \cdot \left( \frac{\underline{Z}_2\cdot\underline{Z}_3\ -\ \underline{Z}_1\cdot\underline{Z}_4}{\left(\underline{Z}_1+\underline{Z}_2\right)\cdot\left(\underline{Z}_3+\underline{Z}_4\right)} \right)
     \end{align*}
     \item[b)] wie a) nur mit $\underline{Z}_1 = \mathrm{j}X_1$, $\underline{Z}_2 = \mathrm{j}X_2$, $\underline{Z}_3 = \underline{Z}_4 = R$.
     % UB=U0*(jX2*R-jX1*R)/(jX1+jX2)*(R+R)
@@ -534,11 +534,11 @@ Die Admittanzkurve entspricht dem Kreisabschnitt zwischen $\underline{Y}(f=5\,\m
         \underline{U}_B &= U_0 \cdot \left( \redcancel{\frac{\mathrm{j}R}{\mathrm{j}R}} \cdot \frac{\mathrm{j}X_2\cdot R - \mathrm{j}X_1\cdot R}{\left(\mathrm{j}X_1+\mathrm{j}X_2\right)\cdot\left(R+R\right)} \right) \\
         &= \frac{U_0}{2}\cdot\frac{X_2-X_1}{X_2+X_1}
     \end{align*}
-    \item[c)] Die Messpannung $\underline{U}_B$ ist unabhängig von der Frequenz, \underline{vorrausgesetzt} 
-    es handelt sich um zwei kapazitive ($X_C \sim \frac{1}{\omega}$) oder um zwei induktive Blindwiderstände ($X_L \sim \omega$). 
-    Dann heben sich die frequenzabhängigen Terme der Reaktanzen $X_1$ und $X_2$ gegenseitig auf. 
+    \item[c)] Die Messpannung $\underline{U}_B$ ist unabhängig von der Frequenz, \underline{vorrausgesetzt}
+    es handelt sich um zwei kapazitive ($X_C \sim \frac{1}{\omega}$) oder um zwei induktive Blindwiderstände ($X_L \sim \omega$).
+    Dann heben sich die frequenzabhängigen Terme der Reaktanzen $X_1$ und $X_2$ gegenseitig auf.
     \item[d)] Für $X_1=X_2$ ist $\underline{U}_B=0$. Beide Spannungsteiler (für $\underline{U}_B^+$ und $\underline{U}_B^-$) ergeben $U_0/2$.
-    \item[e)] Für $X_1=-X_2$ ist die Resonanzbedingung erfüllt (des idealen LC-Reihenschwingkreises aus $X_1$ und $X_2$). 
-            Die Messspannung $\underline{U}_B$ geht gegen unendlich (, da ungedämpft). 
+    \item[e)] Für $X_1=-X_2$ ist die Resonanzbedingung erfüllt (des idealen LC-Reihenschwingkreises aus $X_1$ und $X_2$).
+            Die Messspannung $\underline{U}_B$ geht gegen unendlich (, da ungedämpft).
 \end{itemize}
 }

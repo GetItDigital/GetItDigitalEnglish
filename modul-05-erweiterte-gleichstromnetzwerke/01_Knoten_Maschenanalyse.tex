@@ -1,51 +1,50 @@
 %Knoten- und Maschenanalyse
 \newpage
 
-\newvideofile{KnotMasch}{Knoten- und Maschenanalyse}
+\newvideofile{KnotMasch}{Knot- and Mesh analysis}
 \begin{frame}
-	\fta{Knoten- und Maschenanalyse}
+	\fta{Knot- and Mesh analysis}
 
-	\s{Bei der Betrachtung von elektrischen Netzwerken werden vor allem die Ströme 
-    in Knoten und die Spannungen in Maschen analysiert. Die Analyse von Knoten und 
-    Maschen in elektrischen Netzwerken erfolgt durch die beiden Kirchhoffsche Regeln.}
+	\s{When considering electrical networks, the currents 
+    in nodes and the voltages in meshes are analysed in particular. The analysis of nodes and 
+    meshes in electrical networks is carried out using the two Kirchhoff's rules.}
 
     \b{Die Analyse von Knoten und Maschen in elektrischen Netzwerken erfolgt durch 
     die Kirchhoffschen Regeln.}
 
-    \begin{Lernziele}{Knoten- und Maschenanalyse}
-        Die Studierenden 
-        \begin{enumerate}
-            \item kennen die grundlegenden Definitionen zur Beschreibung eines elektrischen Netzwerkes.
-            \item können die Knotenregel und die Maschenregel auf elektrische Netzwerke anwenden. 
+    \begin{Lernziele}{Knot- and Mesh analysis}
+        The Students
+        \begin{enumerate} 
+            \item know the basic definitions for describing an electrical network.
+            \item can apply the node rule and the mesh rule to electrical networks. 
         \end{enumerate}
     \end{Lernziele}
     \speech{Knotmasch}{1}{
-        Knoten und Maschen sind Definitionen, welche die Analyse von elektrischen Netzwerken 
-        ermöglichen. Dabei werden die Knoten und Maschen eines elektrischen Netzwerkes mithilfe 
-        der Kirchhoffschen Regeln behandelt. Hier soll erklärt werden, was die grundlegenden 
-        Definitionen eines elektrischen Netzwerkes sind und wie die Knoten und Maschen mithilfe 
-        der Kirchhofschen Regeln analysiert werden.}
+        Nodes and meshes are definitions that enable the analysis of electrical networks. 
+        The nodes and meshes of an electrical network are treated using 
+        Kirchhoff's rules. Here we will explain the basic 
+        definitions of an electrical network and how the nodes and meshes are analysed using 
+        Kirchhoff's rules.}
 \end{frame}
-
-
 
 
 %Herleitung Knotenregel
 \begin{frame}
-    \ftb{Stromdichte im freien Raum} \label{Stromdichte}
+    \renewcommand{\figurename}{Figure}
+    \ftb{Current density in free space} \label{Stromdichte}
  
     \s{
-        Gegebenheiten und Begriffe aus der Feldtheorie führen zu den Erklärungen im
-        strukturierten Feldraum. Dazu werden in der Abbildung \ref{BildStromdichte}
-        eine positiv geladene Platte und eine negativ geladene Platte dargestellt,
-        die sich gegenüberstehen. Der Raum zwischen den beiden Platten weist ein
-        Elektrisches Feld $\vec{E}$ und ein Medium mit der Leitfähigkeit $\sigma$ auf. Ladungsträger
-        können sich in dem freien Raum bewegen. Es stellt sich eine gerichtete Bewegung
-        von Ladungsträgern und damit eine Stromdichte $\vec{J}$ zwischen den Platten ein.
-        Die Stromdichte ist dabei in der betrachteten Fläche quellenfrei.
+        Facts and concepts from field theory lead to explanations in
+        structured field space. To this end, Figure \ref{BildStromdichte}
+        shows a positively charged plate and a negatively charged plate
+        facing each other.The space between the two plates has an
+        electric field $\vec{E}$ and a medium with conductivity $\sigma$. Charge carriers
+        can move in the free space. A directed movement
+        of charge carriers and thus a current density $\vec{J}$ between the plates occurs.
+        The current density is source-free in the area under consideration.
     }
 
-    \b{Elektrisches Feld $\vec{E}$ zwischen zwei geladenen Platten:
+    \b{Electrical Field $\vec{E}$ between two charged plates:
     \begin{itemize}
         \item<1->   Raum zwischen den Platten ist mit einem leitfähigen Material $\sigma$ gefüllt
         \item<2->   Stromdichte $\vec{J}$ im elektrischen Feld 
@@ -54,16 +53,15 @@
 
     \fu{
         \input{Tikz/src/elektrischesfeld.tex}
-        }{{\bf Elektrisches Feld zwischen einer positiv geladenen und einer negativ geladenen 
-        Platte.} Die Stromdichte einer Beispielfläche im elektrischen Feld ist quellenfrei. 
+        }{{\bf Electric field between a positively charged and a negatively charged 
+        plate.} The current density of a sample area in the electric field is source-free.
         \label{BildStromdichte}}
 
     \s{
-        Die Quellenfreiheit der Stromdichte wird durch die Gleichung \ref{divJQuellenfreiheit} 
-        verdeutlicht. Hier wird beschrieben, dass keine Quellen oder Senken existieren, da sich 
-        keine feldbildenden Ladungen im Raum befinden. Für diesen Fall ist die Stromdichte 
-        quellenfrei und es fließen dieselbe Anzahl an Ladungen in die Fläche hinein und wieder heraus.
-        Mathematisch wird dies für die Betrachtung im freien Raum in der Kontinuitätsgleichung ausgedrückt:
+        The source-free nature of the current density is illustrated by the equation \ref{divJQuellenfreiheit}.
+        This describes that no sources or sinks exist, as there are no field-forming charges in space.
+        In this case, the current density is source-free and the same number of charges flow into and out of the surface.
+        Mathematically, this is expressed in the continuity equation for consideration in free space:
     }
 
     \only<3->{
@@ -87,44 +85,45 @@
 
 
 \begin{frame}
-	\ftb{Stromdichte im strukturierten Raum}
+    \renewcommand{\figurename}{Figure}
+	\ftb{Current density in structured space}
 
     \s{
-        Im strukturierten Feldraum (vgl. Abbildung \ref{BildLeiterknoten}) gilt ebenfalls die Quellenfreiheit der Stromdichte. 
-        Alle Ladungen, die in den Feldraum eindringen, müssen ihn auch wieder verlassen. 
-        Dies gilt auch für den Fall, dass ein elektrischer Leiter mehr als einen Ableiter 
-        aufweist. Es wird eine Zuleitung mit zwei Ableitungen 
-        angedeutet, bei dem sich die Ladungen auf die beiden Ableitungen aufteilen. Die Zylinder-Mantelflächen
-        $A_1$, $A_2$ und $A_3$ definieren mit den angrenzenden Zylindern einen strukturierten Feldraum. Wie die Ladungen teilen 
-        sich die Stromdichten durch den strukturierten Raum auf. So ergibt sich die Stromdichte
-        $\vec{J_1}$ aus der Summe der abfließenden Stromdichten $\vec{J_2}$ und $\vec{J_3}$. 
+        In a structured field space (see Figure \ref{BildLeiterknoten}), the current density must also be free of sources.
+        All charges that enter the field space must also leave it again.
+        This also applies in cases where an electrical conductor has more than one discharge path
+        . A supply line with two conductors 
+        is indicated, in which the charges are distributed between the two conductors. The cylinder surface areas
+        $A_1$, $A_2$ and $A_3$ define a structured field space with the adjacent cylinders. Just as the charges are distributed, 
+        the current densities are distributed throughout the structured space. Thus, the current density
+        $\vec{J_1}$ is the sum of the outgoing current densities $\vec{J_2}$ and $\vec{J_3}$. 
         
         \begin{columns}
         \column[c]{0.9\textwidth}  
         \fu{
             \input{Tikz/src/strukturierterfeldraum.tex}
-        }{{\bf Strukturierter Feldraum.} Vereinfachte Darstellung eines sich aufteilenden Leiters mit den Stromdichten 
-        $J_1$, $J_2$ und $J_3$ und den Flächen $A_1$, $A_2$ und $A_3$.\label{BildLeiterknoten}}    
+        }{{\bf Structured field space.} Simplified representation of a splitting conductor with current densities 
+        $J_1$, $J_2$ and $J_3$ and areas $A_1$, $A_2$ and $A_3$.\label{BildLeiterknoten}}    
         \end{columns}
 
-        Da der Feldraum im Beispiel durch die Flächen strukturiert und der Querschnitt der 
-        Leitung definiert ist, lassen sich aus der Beziehung zwischen der Stromdichte und der 
-        Fläche die Ströme der Leitungen gemäß Gleichung \ref{GleichungStromberechnung} ermitteln. 
+        Since the field space in the example is structured by the surfaces and the cross-section of the 
+        conductor is defined, the currents of the conductors can be determined from the relationship between the current density and the 
+        surface area according to equation \ref{GleichungStromberechnung}. 
 
         \begin{eq}
             I_1 = \iint_{A}^{} \vec{J_1} d\vec{A}  \label{GleichungStromberechnung}
         \end{eq}
 
-        Der Zusammenhang der Stromdichten zueinander 
-        lässt sich so auf die Ströme übertragen. Der Strom der Zuleitung $I_1$ ergibt sich aus der Summe der
-        beiden Ableitungsströmen $I_2$ und $I_3$. Der Beispielleiter kann auch als vereinfachtes 
-        elektrisches Netzwerk dargestellt werden. Die ermittelten Ströme um den Verbindungspunkt K (Knoten) 
-        werden in der Abbildung \ref{BildKnotennetzwerk} abgebildet. 
+        The relationship between the current densities 
+        can thus be transferred to the currents. The current of the supply line $I_1$ is the sum of the
+        two branch currents $I_2$ and $I_3$. The example conductor can also be represented as a simplified 
+        electrical network. The currents determined around the connection point K (node) 
+        are shown in Figure \ref{FigureNodeNetwork}. 
 
         \fu{
             \input{Tikz/src/knotenstrukturiert.tex}
-        }{{\bf Beispielknoten aus dem strukturierten Raum.} Aus den Stromdichten $J_1$, $J_2$ und $J_3$ ergeben sich um den Knoten K die Ströme 
-        $I_1$, $I_2$ und $I_3$. \label{BildKnotennetzwerk}}
+        }{{\bf Example nodes from the structured space.} The current densities $J_1$, $J_2$ and $J_3$ result in the currents 
+        $I_1$, $I_2$ and $I_3$ around node K. \label{BildKnotennetzwerk}}
     }
 
     \b{
@@ -210,15 +209,14 @@
 
 %Exkurs: Graphentheorie
 \begin{frame}
-    \ftb{Exkurs: Graphentheorie}
+    \ftb{Digression: Graph theory}
     
     \s{
-        In der Mathematik beschäftigt sich die Graphentheorie mit der Beschreibung von
-        Knoten und Kanten, in der Kontenanalyse werden ebenfalls Knoten und Äste definiert. 
-        Durch die Graphentheorie können die Kanten und Knoten, welche in der Abbildung 
-        \ref{GraphentheorieKnoten} dargestellt werden, sowie deren Eigenschaften 
-        miteinander in Beziehung gesetzt werden. Über die Kanten können mehrere Knoten 
-        miteinander verbunden werden.
+        In mathematics, graph theory deals with the description of
+        nodes and edges, while account analysis also defines nodes and branches. 
+        Graph theory allows the edges and nodes shown in Figure 
+        \ref{GraphentheorieKnoten} and their properties 
+        to be related to each other. Multiple nodes can be connected to each other via the edges. 
     }
 
     \b{
@@ -230,11 +228,11 @@
     }
 
     \begin{columns}
-        
+        \renewcommand{\figurename}{Figure}
         \column[c]{0.3\textwidth}    
             \fu{
                 \input{Tikz/src/graphentheorieknoten.tex}
-            }{{\bf Beispielknoten der Graphentheorie.} Knoten mit 4 Kanten zur Erläuterung von Knoten und Kanten in der Graphentheorie.
+            }{{\bf Example nodes in graph theory.} Node with 4 edges to explain nodes and edges in graph theory.
             \label{GraphentheorieKnoten}}      
     \end{columns}
         
@@ -250,18 +248,19 @@
 
 %Netzwerk und Matrix Graphentheorie
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Exkurs: Graphentheorie}
 
     \s{
-        Werden mehrere Knoten mit ihren Kanten miteinander verbunden entsteht ein Graph. Mit diesem 
-        Graph kann exemplarisch ein elektrisches Netzwerk beschrieben werden. 
-        Das Beispiel eines Netzwerkes mit fünf Knoten und den zwischen den Knoten liegenden Kanten
-        wird in der Abbildung \ref{GraphentheorieNetzwerk} gezeigt. Wird ein Weg durch das Netzwerk
-        gesucht ergeben sich unterschiedliche Möglichkeiten. Ein Weg vom Knoten 1 über die Knoten 2,
-        4 und 5 zurück zum Knoten 1 wird rot hinterlegt. Sind Anfang und Ende derselbe Knoten, so wird 
-        dieser Weg in der Graphentheorie auch als Zyklus bezeichnet. Jeder Zyklus, bei dem jeder Knoten 
-        bis auf den Anfang und das Ende nur einmal „besucht“ wird, nennt man einen „Kreis“. In 
-        elektrischen Netzwerken werden diese Kreise auch als Maschen bezeichnet. 
+        When several nodes are connected to each other with edges, a graph is created. This 
+        graph can be used to describe an electrical network, for example. 
+        The example of a network with five nodes and the edges between the nodes
+        is shown in Figure \ref{GraphentheorieNetzwerk}. When searching for a path through the network
+        , there are various possibilities. A path from node 1 via nodes 2,
+        4 and 5 back to node 1 is highlighted in red. If the start and end are the same node, 
+        this path is also referred to as a cycle in graph theory. Any cycle in which each node 
+        is "visited" only once, except for the start and end, is called a "circle". In 
+        electrical networks, these circles are also referred to as meshes. 
     }
 
     \b{
@@ -276,18 +275,18 @@
    
     \fu{
         \input{Tikz/src/graphenteorienetzwerk.tex}            
-    }{{\bf Beispielnetzwerk der Graphentheorie.}
-    Netzwerk mit 5 Knoten und zwischen den Knoten verlaufenden Kanten zur 
-    Erläuterung eines Zyklus in der Graphentheorie. \label{GraphentheorieNetzwerk}}      
+    }{{\bf Example network from graph theory.}
+    Network with 5 nodes and edges running between the nodes to 
+    explain a cycle in graph theory. \label{GraphentheorieNetzwerk}}      
 
 
     \s{
-        Um die Beziehung der Knoten untereinander zu erklären bietet sich in der Mathematik eine 
-        Matrix an. Die Knoten weisen eine differenzierte Anzahl von Kanten auf und nicht alle Knoten sind 
-        miteinander verbunden. Die Adjazenz-Matrix beschreibt die Beziehung der Knoten untereinander. 
-        Eine solche Adjazenz-Matrix wird in der Gleichung \ref{AdjazenzMatrix} für das beschriebene
-        Beispielnetzwerk aufgestellt. Sie beschreibt damit vollständig den Graphen, abgesehen von der grafischen 
-        Repräsentanz in der 2D-Darstellung. 
+        In mathematics, a matrix is a useful tool for explaining the relationship between nodes. 
+        The nodes have a differentiated number of edges, and not all nodes are 
+        connected to each other. The adjacency matrix describes the relationship between the nodes. 
+        Such an adjacency matrix is set up in equation \ref{AdjazenzMatrix} for the
+        example network described. It thus completely describes the graph, apart from the graphical 
+        representation in the 2D display. 
     }
 
     \b{
@@ -329,45 +328,45 @@
     \ftx{Graphentheorie}
 
     \begin{Merksatz}{Graphentheorie}
-        In der Graphentheorie werden Netzwerke mit Kanten und Knoten beschrieben. Bei der Analyse der Netzwerke werden Wege und Zyklen
-        definiert. Ein durchgehender Zyklus mit einem identischen Startpunkt und Endpunkt wird als Kreis bezeichnet. 
+        In graph theory, networks are described using edges and nodes. When analysing networks, paths and cycles are defined.
+        A continuous cycle with an identical starting point and end point is referred to as a circle. 
     \end{Merksatz}
 
     \speech{Graphentheorie}{1}{
-        In der Graphentheorie werden Netzwerke mit Kanten und Knoten beschrieben. Bei der Analyse der Netzwerke werden Wege und Zyklen
-        definiert. Ein durchgehender Zyklus mit einem identischen Startpunkt und Endpunkt wird als Kreis bezeichnet.} 
+        In graph theory, networks are described using edges and nodes. When analysing networks, paths and cycles are defined.
+        A continuous cycle with an identical starting point and end point is referred to as a circle.} 
 \end{frame}
 
 
 \begin{frame} 
-	\ftb{Knoten, Zweig, Masche}
+    \renewcommand{\figurename}{Figure}
+	\ftb{Knot, Branch, Mesh}
 
 	\s{
-		Ein elektrisches Netzwerk besteht aus Knoten, Zweigen und Maschen. Ein Zweig verbindet genau zwei Knoten durch 
-		ein oder mehrere Schaltungselemente miteinander. Durch alle Elemente eines Zweiges fließt der gleiche Strom. 
-		In Abbildung \ref{Netz1} existieren drei Zweige. Ein Zweig mit den Komponenten $R_1$, $R_5$ und $U_\mathrm{q1}$, ein 
-		Zweig mit dem Widerstand $R_4$ und ein Zweig mit den Komponenten $R_2$, $R_3$ und $U_\mathrm{q2}$.
+		An electrical network consists of nodes, branches and meshes. A branch connects exactly two nodes by means of 
+        one or more circuit elements. The same current flows through all elements of a branch. 
+        There are three branches in Figure \ref{Netz1}. One branch with the components $R_1$, $R_5$ and $U_\mathrm{q1}$, one 
+        branch with the resistance $R_4$ and one branch with the components $R_2$, $R_3$ and $U_\mathrm{q2}$.
+        A node is a point at which at least three connections of the circuit elements converge. The current 
+        can therefore split here. The electrical potential is identical for all connected terminals.
+ 
+        In the circuit diagram, a node is indicated by a filled circle. However, if two or more 
+        of these circles are connected to each other by only one line, it is a single node, since the 
+        potential is also the same here. A node is denoted by $K_n$.
 
-		Ein Knoten ist ein Punkt, an dem mindestens drei Anschlüsse der Schaltungselemente zusammenlaufen. Der Strom 
-		kann sich hier also aufteilen. Das elektrische Potential ist hierbei für alle verbundenen Anschlüsse identisch. 
-		Im Schaltplan wird ein Knoten durch einen ausgefüllten Kreis gekennzeichnet. Sind jedoch zwei oder mehrere 
-		dieser Kreise nur durch eine Leitung miteinander verbunden, handelt es sich um einen einzigen Knoten, da das 
-		Potential auch hier gleich ist. Ein Knoten wird mit $K_n$ bezeichnet.
-
-		Eine Masche ist ein geschlossener Weg, der aus mindestens zwei Zweigen besteht. In dem Netz in Abbildung 
-		\ref{Netz1} können drei Maschen definiert werden:
+		A mesh is a closed path consisting of at least two branches. In the net in Figure 
+        \ref{Netz1}, three meshes can be defined:
 			\begin{itemize}
-				\item $M_1$ bestehend aus $R_1$, $R_4$, $R_5$ und $U_\mathrm{q1}$
-				\item $M_2$ bestehend aus $R_2$, $R_3$, $R_4$ und $U_\mathrm{q2}$
-				\item $M_3$ bestehend aus $R_1$, $R_2$, $R_3$, $U_\mathrm{q2}$, $R_5$ und $U_\mathrm{q1}$
+				\item $M_1$ consisting of $R_1$, $R_4$, $R_5$ and $U_\mathrm{q1}$
+				\item $M_2$ consisting of $R_2$, $R_3$, $R_4$ and $U_\mathrm{q2}$
+				\item $M_3$ consisting of $R_1$, $R_2$, $R_3$, $U_\mathrm{q2}$, $R_5$ und $U_\mathrm{q1}$
 			\end{itemize}
-		Eine Masche wird mit $M_\mathrm{n}$ bezeichnet. Die Umlaufrichtung ist dabei von Bedeutung und wird mit einem Pfeil 
-		gekennzeichnet.
+		A mesh is designated by $M_\mathrm{n}$. The direction of rotation is important and is indicated by an arrow.
 	}
 
 	\fu{	
         \input{Tikz/src/Netz1.tex}
-	}{{\bf Gleichstromnetzwerk. }Netzwerk mit {\color{red}Knoten}, Zweigen und {\color{blue}Maschen}\label{Netz1}}
+	}{{\bf Direct current network. }Network with {\color{red}Knots}, Branches and {\color{blue}Meshes}\label{Netz1}}
 
     \speech{Knoten,Zweige,Maschen}{1}{ Im folgenden werden die Definitionen von Knoten, Zweigen und Maschen in elektrischen Netzwerken 
         näher erläutert. Hierfür wird das dargestellte elektrische Netzwerk genutzt. Wie schon im Exkurs zur Graphentheorie ausgeführt, 
@@ -383,10 +382,10 @@
 \end{frame}	
 
 \begin{frame}
-    \ftx{Knoten, Zweige und Maschen}
+    \ftx{Knots, Branches and Meshes}
 
-    \begin{Merksatz}{Knoten, Zweige und Maschen}
-        Elektrische Netzwerke werden analog zur Graphentheorie durch Knoten, Zweige und Maschen beschrieben. 
+    \begin{Merksatz}{Knots, Branches and Meshes}
+        Electrical networks are described by nodes, branches and meshes, analogous to graph theory.
     \end{Merksatz}
 
     \speech{MerkeKZM}{1}{Elektrische Netzwerke werden analog zur Graphentheorie durch Knoten, Zweige und Maschen beschrieben. } 
@@ -395,16 +394,17 @@
 
 
 \begin{frame} 
-	\ftb{Der vollständige Baum}
+    \renewcommand{\figurename}{Figure}
+	\ftb{The complete tree}
 	\s{
-		Für die weitere Analyse des Netzwerkes ist es notwendig, die Netzwerkgleichungen zu ermitteln. Dieses lineare 
-		Gleichungssystem ist aber immer überbestimmt, weshalb es nötig wird, die Anzahl der Gleichungen zu reduzieren. 
-		Dabei ist es wichtig, die linear abhängigen Gleichungen zu identifizieren und zu eliminieren.
-		
-		Die Knoten, Zweige und Maschen eines Netzwerkes können in einem Graph dargestellt werden, der nur die 
-		Verbindungen untereinander darstellt. Zur Darstellung des Graphen werden alle Zweige als Linien dargestellt, 
-		welche die Knoten verbinden. Der Inhalt des Zweiges ist dafür irrelevant. In Abbildung \ref{AbbGraph} ist ein 
-		beispielhaftes Netz mit dem sich ergebenden Graphen dargestellt.}
+		For further analysis of the network, it is necessary to determine the network equations. However, this linear 
+        system of equations is always overdetermined, which is why it is necessary to reduce the number of equations. 
+        It is important to identify and eliminate the linearly dependent equations.
+                
+        The nodes, branches and meshes of a network can be represented in a graph that only shows the 
+        connections between them. To represent the graph, all branches are shown as lines that 
+        connect the nodes. The content of the branch is irrelevant for this purpose. Figure \ref{AbbGraph} shows an 
+        example network with the resulting graph.}
 
 	\fu{
 		\begin{minipage}{0.4\textwidth}
@@ -437,7 +437,7 @@
 				\input{Tikz/src/Graph.tex}
 			}
 		\end{minipage}	
-	}{{\bf Gleichstromnetzwerk und Graph.} Erzeugung des Graphen aus einem zu berechnenden Netzwerk\label{AbbGraph}}
+	}{{\bf Direct current network and graph.} Generation of the graph from a network to be calculated\label{AbbGraph}}
 
     \speech{VollstandigeBaum}{1}{Bei der Analyse von elektrischen Netzwerken kann der vollständige Baum genutzt werden.}
     \speech{VollstandigeBaum}{2}{Der vollständige Baum erklärt dabei ein elektrisches Netzwerk als ein gebilde aus Zweigen und Knoten.}
@@ -445,15 +445,16 @@
 \end{frame}
 
 \begin{frame} 
-	\ftx{Der vollständige Baum}\label{vollstbaum}
+    \renewcommand{\figurename}{Figure}
+	\ftx{The complete tree}\label{vollstbaum}
 	
 	\s{
-		In diesem Graph kann ein vollständiger Baum aufgezeichnet werden, der alle Knoten enthält, aber selbst keine 
-		Masche bildet. Die Baumzweige verbinden also alle Knoten miteinander, bilden aber keine geschlossene Linie. 
-		Die Baumzweige können Abzweigungen bilden, ein Knoten kann also auch mehr als zwei Baumzweige berühren.	In 
-		größeren Netzwerken gibt es mehrere Möglichkeiten für einen vollständigen Baum, die prinzipiell gleichwertig 
-		sind. Bei der Vorstellung der verschiedenen Berechnungsverfahren werden aber abhängig vom Verfahren 
-		bestimmte Kombinationen bevorzugt. Ein vollständiger Baum beinhaltet genau $k-1$ Zweige.
+		In this graph, a complete tree can be drawn that contains all nodes but does not itself form a mesh. 
+        The tree branches connect all nodes to each other but do not form a closed line. 
+        The tree branches can form branches, meaning that a node can also touch more than two tree branches. In 
+        larger networks, there are several possibilities for a complete tree, which are in principle equivalent.
+    However, when presenting the various calculation methods, certain combinations are preferred depending on the method.
+    A complete tree contains exactly $k-1$ branches.
 		}
 	
 	\fu{
@@ -472,7 +473,7 @@
 		\begin{minipage}{0.19\textwidth}
 			\input{Tikz/src/bspbaum4.tex}
 		\end{minipage}
-	}{{\bf Beispielbäume.} Beispiele für verschiedene in rot gezeichnete vollständige Bäume eines Netzes}
+	}{{\bf Example trees.} Examples of different complete trees of a network drawn in red}
 	
 	\b{
 		\begin{itemize}
@@ -482,12 +483,12 @@
 	}
 
 	\s{
-		Die Zweige, die zum Baum gehören, werden Baumzweige (rot), die anderen Verbindungszweige (schwarz) genannt.
-		Um die linear unabhängigen Maschen zu finden, wird zu jedem Verbindungszweig eine Masche gebildet, die außer 
-		dem Verbindungszweig nur Baumzweige enthält.
+		The branches belonging to the tree are called tree branches (red), the other connecting branches (black).
+        To find the linearly independent meshes, a mesh is formed for each connecting branch that contains only tree branches except for 
+        the connecting branch.
 		}
     \begin{itemize}
-        \item<3-> Ein Netzwerk mit $z$ Zweigen und $k$ Knoten enthält $z-k+1$ Verbindungszweige.
+        \item<3-> A network with $z$ branches and $k$ nodes contains $z-k+1$ connecting branches.
     \end{itemize}
 	
     \speech{VollstandigeBaumBsp}{1}{Beim vollständigen Baum gibt es eine vielzahl an möglichen Anordnungen von verwendeten Zweigen.}
@@ -504,10 +505,10 @@
 \begin{frame}
     \ftx{Der vollständige Baum}
 
-    \begin{Merksatz}{Der vollständige Baum}
-        Mithilfe eines vollständigen Baumes werden alle Knoten miteinander durch Baumzweige verbunden. 
-        Es ergeben sich dabei immer k - 1 Baumzweige. 
-        Der vollständige Baum bildet keine Masche. 
+    \begin{Merksatz}{The complete tree}
+        With the help of a complete tree, all nodes are connected to each other by tree branches.
+        This always results in k - 1 tree branches.
+        The complete tree does not form a mesh. 
     \end{Merksatz}
 
     \speech{VollstandigeBaumMrk}{1}{Mithilfe eines vollständigen Baumes werden alle Knoten miteinander durch Baumzweige verbunden.
@@ -518,18 +519,19 @@
 %Knotenregel
 %Knotenregel Summenzeichnen
 \begin{frame}
-    \ftb{Knotenregel}
+    \renewcommand{\figurename}{Figure}
+    \ftb{Knot rule}
 
     \s{
-        Treffen sich mehr als zwei Leitungen an einem Punkt eines elektrischen 
-        Netzwerkes handelt es sich um einen Knotenpunkt K. Die Pfeilrichtung aus 
-        der Sicht des Knotens bestimmt das Vorzeichen des Stromes. Führt ein Strom 
-        in einen Knoten hinein, so zeigt der Strompfeil auf den Knoten und es handelt 
-        sich um eine Einströmung. Zeigt der Strompfeil aus dem Knoten heraus, wird 
-        der Strom aus dem Knoten herausgeführt und es handelt sich um eine Ausströmung. 
-        Die Knotenanalyse ergibt sich aus dem 1. Kirschhoff`schen Gesetz, welches besagt: 
-        Die Summe aller Ströme an einem Knoten ist Null (Gleichung \ref{Knotenregel}). 
-        Dieses Gesetz folgt direkt aus der Kontinuitätsgleichung (vgl. Abschnitt 
+        If more than two lines meet at a point in an electrical 
+        network, this is referred to as a node K. The direction of the arrow from 
+        the perspective of the node determines the sign of the current. If a current 
+        flows into a node, the current arrow points towards the node and this is 
+        referred to as an inflow. If the current arrow points out of the node, 
+        the current flows out of the node and this is an outflow. 
+        The node analysis is based on Kirchhoff's first law, which states:
+        The sum of all currents at a node is zero. (Gleichung \ref{Knotenregel}). 
+        This law follows directly from the continuity equation. (vgl. Abschnitt 
         \nameref{Stromdichte})
     }
 
@@ -544,12 +546,13 @@
     \end{eq}
     
     \s{
-        So müssen sich für jeden Knoten die Summe der Stromstärken aus Einströmungen 
-        und Ausströmungen gegenseitig ausgleichen. In der Abbildung \ref{BildBeispielknoten} sind ein 
-        Knoten K und die Ein- und Ausströmungen eingezeichnet. Bei den Strömen $I_1$ und 
-        $I_2$ handelt es sich um Einströmungen. Die drei Ströme $I_3$, $I_4$ und $I_5$ sind 
-        Ausströmungen. 
-    }
+        Thus, for each node, the sum of the currents from inflows 
+        and outflows must balance each other out. Figure \ref{BildBeispielknoten} shows a 
+        node K and the inflows and outflows. The flows $I_1$ and 
+        $I_2$ are inflows. The three flows $I_3$, $I_4$ and $I_5$ are 
+        outflows.
+ 
+}
 
     \b{
         \begin{itemize}
@@ -559,16 +562,17 @@
 
         \fu{
             \input{Tikz/src/beispielknoten.tex}
-        }{{\bf Beispielknoten.} Knoten für die Knotenanalyse mit zwei einströmenden und 
-        drei ausströmenden Zweigen. \label{BildBeispielknoten}}
+        }{{\bf Example node.} Node for node analysis with two incoming and 
+        three outgoing branches. \label{BildBeispielknoten}}
 
 
 	\s{
-		Werden die Ströme nacheinander aufgetragen und gleich Null gesetzt, ergibt 
-		sich die Gleichung \ref{KnotenregelBeispielknoten}. Je nachdem ob es sich 
-		um eine Einströmung oder eine Ausströmung handelt, wird das Vorzeichen 
-		gewählt. Einströmungen werden mit einem positiven und Ausströmungen mit 
-		einem negativen Vorzeichen behaftet. 
+		If the currents are applied one after the other and set to zero, 
+        the equation \ref{KnotenregelBeispielknoten} is obtained. Depending on whether 
+        it is an inflow or an outflow, the sign is selected. 
+        Inflows are assigned a positive sign and outflows a 
+        negative sign.
+ 
 	}
     
     \b{
@@ -591,9 +595,9 @@
 \begin{frame}
     \ftx{Knotenregel}
 
-    \begin{Merksatz}{Knotenregel}
-        Die Summe der zufließenden Ströme ist gleich der Summe der abfließenden Ströme oder die Summe aller Ströme an einem Knoten
-        ist Null:
+    \begin{Merksatz}{Knot rule}
+        The sum of the incoming flows is equal to the sum of the outgoing flows, or the sum of all flows at a node
+        is zero:
         \begin{eq}
             \sum_{k = 1}^{N}{I_\mathrm{k} = 0} 
         \end{eq}
@@ -607,16 +611,16 @@
 
 %Maschenanalyse
 \begin{frame}
-    \ftb{Maschenregel}
+    \ftb{Mesh rule}
 
     \s{
-		Bewegt sich ein Teilchen zwischen zwei Punkten in einem elektrischen Feld, wird Arbeit verrichtet. 
-		Ist der Startpunkt identisch mit dem Endpunkt, muss ebenso viel Arbeit abgegeben wie aufgenommen werden. 
-		Die Summe der Arbeit ist in diesem Fall gleich Null. Wenn so ein kompletter Maschenumlauf entlang einer 
-		geschlossenen Strecke vollzogen wird, muss die Summe der Teilspannungen ebenfalls gleich Null sein. 
-		Vorausgesetzt wird hier, dass sich keine zeitlich veränderte magnetische Flussdichte ergibt und somit kein 
-		elektrisches Wirbelfeld entsteht (vgl. Gleichung \ref{GleichungRingintegralFeldstärke}). Die Gleichung
-        beschreibt hier das Faradaysche Induktionsgesetz für statische Felder (hier: keine Änderung eines Magnetfeldes).
+		When a particle moves between two points in an electric field, work is done.
+        If the starting point is identical to the end point, the same amount of work must be delivered as absorbed.
+        In this case, the sum of the work is zero. If such a complete mesh cycle is performed along a
+        closed path, the sum of the partial voltages must also be zero.         
+        This assumes that there is no time-varying magnetic flux density and therefore no 
+        electrical eddy field is created (see equation \ref{GleichungRingintegralFeldstärke}). The equation
+        describes Faraday's law of induction for static fields (here: no change in a magnetic field).
     }
 
     \b{
@@ -631,10 +635,9 @@
     \end{eq}
 
     \s{
-        Die Maschenanalyse besagt nach der 2. Kirchhoffschen Regel, dass bei einem 
-        vollständigen Umlauf (Masche) in einem elektrischen Netzwerk die Summe aller 
-        Spannungen gleich Null ist. Dies wird durch die Gleichung \ref{Maschenregel} 
-        verdeutlicht. 
+        According to Kirchhoff's second law, mesh analysis states that for a 
+        complete circuit (mesh) in an electrical network, the sum of all 
+        voltages is equal to zero. This is illustrated by the equation \ref{Maschenregel}. 
     }
 
     \b{\onslide<2->{
@@ -659,30 +662,31 @@
 \end{frame}
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Maschenregel}
     
     \s{
-        Innerhalb einer Masche werden die Spannungen mit einer gleichgerichteten Pfeilrichtung 
-        positiv gezählt, Spannungen mit der Umlaufrichtung entgegengesetzten Pfeilrichtung werden 
-        negativ gezählt. Ausgehend von den Stromverläufen und Potentialen aus der Abbildung
-        \ref{BeispielnetzwerkMaschenanalyse} können die Spannungen der jeweiligen Zweige ermittelt 
-        werden. Oberhalb der Parallelschaltung der Widerstände gibt es keine Potentialdifferenz. 
-        Selbiges gilt für die elektrische Verbindung unterhalb der Parallelschaltung. Der Strom $I_\mathrm{R1}$ 
-        fließt durch den Widerstand $R_\mathrm{1}$. So ergibt sich nach dem ohmschen Gesetz die Spannung $U_\mathrm{R1}$ 
-        über $R_\mathrm{1}$. Äquivalent wird die Spannung $U_\mathrm{R2}$ über $R_\mathrm{2}$ bestimmt.
+        Within a mesh, voltages with an arrow direction in the same direction are counted as positive,
+        while voltages with an arrow direction opposite to the direction of rotation are counted as negative.
+        Based on the current curves and potentials from Figure \ref{BeispielnetzwerkMaschenanalyse}, 
+        the voltages of the respective branches can be determined. 
+        There is no potential difference above the parallel connection of the resistors. 
+        The same applies to the electrical connection below the parallel connection. The current $I_\mathrm{R1}$ 
+        flows through the resistor $R_\mathrm{1}$. According to Ohm's law, this results in the voltage $U_\mathrm{R1}$ 
+        across $R_\mathrm{1}$. Equivalently, the voltage $U_\mathrm{R2}$ across $R_\mathrm{2}$ is determined.
     }
 
 	\fu{
 		\input{Tikz/src/beispielnetzwerkmaschenanalyse.tex}
-	}{{\bf Beispielnetzwerk mit einer Stromquelle und zwei parallelen Widerständen.} In der Masche $M_1$ müssen die Spannungen
-	$U_\mathrm{R1}$ und $U_\mathrm{R2}$ identisch sein und sich ensprechend ihrer Richtungen in der Masche aufheben. \label{BeispielnetzwerkMaschenanalyse}}
+	}{{\bf Example network with one power source and two parallel resistors.} In mesh $M_1$, the voltages
+    $U_\mathrm{R1}$ and $U_\mathrm{R2}$ must be identical and cancel each other out according to their directions in the mesh. \label{BeispielnetzwerkMaschenanalyse}}
 
     \s{
-        Gemäß des vorgestellten Netzwerkes und der Richtung der eingezeichneten Masche $M_\mathrm{1}$ stellt
-        sich der Zusammenhang nach Gleichung \ref{Maschengleichung} ein. Die Spannung $U_\mathrm{R2}$ verläuft 
-        in derselben Richtung, wie die eingezeichnete Masche und wird mit einem positiven Vorzeichen 
-        behaftet. Die Spannung $U_\mathrm{R1}$ verläuft gegenläufig der Masche $M_\mathrm{1}$ und wird somit negativ. 
-        In Summe müssen diese beiden Spannungen null ergeben. 
+        According to the network presented and the direction of the drawn mesh $M_\mathrm{1}$,
+        the relationship according to equation \ref{Maschengleichung} applies. The voltage $U_\mathrm{R2}$ runs 
+        in the same direction as the drawn mesh and is assigned a positive sign . 
+        The voltage $U_\mathrm{R1}$ runs in the opposite direction to the mesh $M_\mathrm{1}$ and is therefore negative. 
+        In total, these two voltages must add up to zero. 
     }
 
     \onslide<2->{
@@ -707,8 +711,8 @@
 \begin{frame}
     \ftx{Maschenregel}
 
-    \begin{Merksatz}{Maschenregel}
-        In einer Masche ist die Summe aller Teilspannungen gleich Null:
+    \begin{Merksatz}{Mesh rule}
+        In a mesh, the sum of all partial stresses is equal to zero.:
         \begin{eq}
             \sum_{k = 1}^{N}{U_k} =0
         \end{eq}
@@ -719,18 +723,18 @@
 
 
 
-\begin{frame} \ftb{Knoten- und Maschenanalyse}
-	\s{Bei der Knoten- und Maschenanalyse wird das vollständige Gleichungssystem bestehend aus Knoten- und Maschengleichungen aufgestellt und anschließend gelöst. Das Verfahren ist einfach, erzeugt jedoch für ein Netzwerk eine Anzahl Gleichungen, die der Anzahl der Zweige entspricht. Das Verfahren hat den folgenden Ablauf:}
+\begin{frame} \ftb{Knot and Mesh analysis}
+	\s{In node and mesh analysis, the complete system of equations consisting of node and mesh equations is set up and then solved. The procedure is simple, but generates a number of equations for a network that corresponds to the number of branches. The procedure is as follows:}
 	\b{Ziel: Berechnung eines vollständigen Netzwerkes.
 	Arbeitsschritte:}
 	
 	\begin{enumerate}
-		\item<2-> Vereinfachen des Netzwerkes.
-		\item<3-> Einzeichnen aller Strompfeile und Erstellen des Graphen.
-		\item<4-> Aufstellen von $k-1$ Knotengleichungen. \s{Eine beliebige Knotengleichung  kann weggelassen werden, da in einem Netzwerk mit $k$ Knoten nur $k-1$ Knotengleichungen linear unabhängig voneinander sind. Prinzipiell ist es egal, welche Knotengleichung unberücksichtigt bleibt. Am geschicktesten wird die komplizierteste Gleichung gestrichen.}
-		\item<5-> Aufstellen der $m=z-k+1$ linear unabhängigen Maschengleichungen. \s{Dabei werden die Gleichungen mit Hilfe des vollständigen Baumes erstellt.}
-		\item<6-> Lösen des Gleichungssystems mit der Dimension $z$.
-		\item<7-> Ggfs. rückgängig machen von Schritt 1.
+		\item<2-> Simplifying the network.
+		\item<3-> Draw all current arrows and create the graph.
+		\item<4-> Set up $k-1$ node equations. \s{Any node equation can be omitted, since in a network with $k$ nodes only $k-1$ node equations are linearly independent of each other. In principle, it does not matter which node equation is omitted. It is best to omit the most complicated equation.}
+		\item<5-> Set up the $m=z-k+1$ linearly independent mesh equations. \s{The equations are created using the complete tree.}
+		\item<6-> Solving the system of equations with the dimension $z$.
+		\item<7-> If necessary, undo step 1.
 	\end{enumerate}
     
     \speech{KnotenMaschenanalyse}{1}{Um ein elektrisches Netzwerk vollständig zu berechnen, werden mehrere Arbeitsschritte empfohlen.}
@@ -746,32 +750,33 @@
 \end{frame}
 
 \begin{frame} 
+    \renewcommand{\figurename}{Figure}
 	\ftx{Knoten- und Maschenanalyse}
 
 	\s{
-		Es wird folgendes Beispielnetzwerk betrachtet:
+		The following example network is considered:
 	}
 
 	\fu{
 		\input{Tikz/src/beispielanalyse.tex}
-	}{\bf Beispielnetzwerk zur Knoten- und Maschenanalyse. \label{BildBeispielAnalyse}}
+	}{\bf Example network for node and mesh analysis. \label{BildBeispielAnalyse}}
 
     \speech{KnotMaschNetzwerk}{1}{Folgend wird gezeigt, wie die Gleichungen zu einem elektrischen Netzwerk erstellt werden. 
     In diesem Netzwerk sind die Strompfeile bereits verzeichnet.}
 \end{frame}
 
-\begin{frame} 
+\begin{frame}
+    \renewcommand{\figurename}{Figure} 
 	\ftx{Knoten- und Maschenanalyse}
 
 	\s{
-		Der zugehörige Graph und die damit festgelegten Maschen werden in der Abbildung \ref{BildKnotenMaschen} 
-        dargestellt. Eine andere Aufstellung der Maschen ist möglich. Wie gezeigt, können Maschen auch über Zweige 
-        hinaus reichen. 
+		The corresponding graph and the meshes defined by it are shown in Figure \ref{BildKnotenMaschen}.
+        A different arrangement of the meshes is possible. As shown, meshes can also extend beyond branches. 
 	}
 
 	\fu{
 		\input{Tikz/src/knotenmaschen.tex}
-		}{{\bf Graph mit Maschen zum Beispiel.} Die Baumzweige werden rot und die Maschen blau gefärbt. \label{BildKnotenMaschen}}
+		}{{\bf Graph with mesh, for example.} The tree branches are coloured red and the mesh blue. \label{BildKnotenMaschen}}
     
     \speech{KnotMaschGraph}{1}{Für das Netzwerk wurde im zugehörigen Grafen die vorgestellte Baumstruktur gewählt. 
     Bei den Maschen wird außer bei der Masche M 2 kein Zweig gekreuzt. 
@@ -782,9 +787,9 @@
 	\ftx{Knoten- und Maschenanalyse}
 	
 	\s{
-		Das Netzwerk hat $z=8$ Zweige, $k=5$ Knoten. Es müssen daher $k-1=4$ Knotengleichungen und $z-k+1=4$ 
-		Maschengleichungen aufgestellt werden. Knoten 5 hat vier Zweige, die anderen nur drei. Daher wird die 
-		Knotengleichung von Knoten 5 weggelassen.
+		The network has $z=8$ branches and $k=5$ nodes. Therefore, $k-1=4$ node equations and $z-k+1=4$ 
+        mesh equations must be set up. Node 5 has four branches, the others only three. Therefore, the 
+        node equation for node 5 is omitted.
 
         \begin{align*}
 			K_1:\qquad& I_1+I_4-I_5=0\\
@@ -831,9 +836,8 @@
 	\ftx{Knoten- und Maschenanalyse}
 
 	\s{
-		Um das Gleichungssystem einfacher lösen zu können, und die Übersichtlichkeit zu erhöhen, kann es in 
-		Matrizenschreibweise dargestellt werden. Mit etwas Übung kann auch sofort die Matrizenschreibweise 
-		benutzt werden.
+		To make the system of equations easier to solve and to increase clarity, it can be represented in 
+        matrix notation. With a little practice, matrix notation can also be used immediately.
 	}
 
 		\begin{equation*}	
@@ -858,9 +862,8 @@
 		\end{equation*}
 		
 	\s{
-		Dieses Gleichungssystem 8. Ordnung kann nun prinzipiell mit den aus der Mathematik bekannten Verfahren gelöst 
-		werden. Das wollen wir aber hier nicht tun, da im folgenden einfachere Verfahren vorgestellt werden, die besser 
-		zu berechnen sind.
+		This 8th order system of equations can now in principle be solved using the methods known from mathematics. 
+        However, we do not want to do that here, as simpler methods are presented below that are easier to calculate.
 	}
 		
     \speech{KnotMaschMatrix}{1}{Die Knotengleichungen und Maschengleichungen lassen sich in einer Matrix zusammenfassen.}
@@ -872,12 +875,13 @@
 \newpage
 %Beispiel
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Beispiel Netzwerkanalyse}
-	\begin{bsp}{Netzwerkanalyse}{}
+	\begin{bsp}{Network analysis}{}
 
     \s{
-        Gegeben ist das elektrische Netzwerk nach Abbildung \ref{BildBeispielaufgabe}. Die folgenden 
-        Aufgaben sollen bearbeitet werden: 
+        The electrical network shown in Figure \ref{BildBeispielaufgabe} is given. The following 
+        tasks are to be completed:
     }
 
     \begin{enumerate}
@@ -889,10 +893,10 @@
             }
             
             \begin{enumerate}
-                \item[a)] Einzeichnen der Ströme und Spannungen
-                \item[b)] Aufstellen der Knotengleichungen
-                \item[c)] Aufstellen der Maschengleichung $M_1$
-                \item[d)] Aufstellen der Maschengleichung $M_2$ ohne den Ausdruck $U_1$
+                \item[a)] Plotting currents and voltages
+                \item[b)] Setting up the node equations
+                \item[c)] Setting up the mesh equation $M_1$
+                \item[d)] Setting up the mesh equation $M_2$ without the expression $U_1$
             \end{enumerate}
 
             \fu{
@@ -901,7 +905,7 @@
             }
 
 			\only<2>{			
-				\item[a)] Angabe der Ströme und Spannungen:
+				\item[a)] Specification of currents and voltages:
 				}
 			\only<2-5>{			
 				\item[] 
@@ -912,7 +916,7 @@
                     \end{figure}
 				}
 			\only<3>{
-				\item[b)] Knotengleichungen:
+				\item[b)] Knot equations:
 				\onslide<3>{
 					\begin{eqa}
 						K_1: I_0-I_1-I_2-I_3&=0 \nonumber\\
@@ -921,7 +925,7 @@
 				}
 			}
 			\only<4>{
-				\item[c)] Aufstellen der Maschengleichung $M_1$ und $M_2$:
+				\item[c)] Setting up the mesh equation $M_1$ and $M_2$:
 				\onslide<4>{
 					\begin{eqa}
 						M_1: U_1+U_\mathrm{R2}-U_\mathrm{R1}&=0 \nonumber\\
@@ -930,7 +934,7 @@
 				}
 			}
             \only<5>{
-				\item[d)] Aufstellen der Maschengleichung $M_2$ ohne den Ausdruck $U_1$ 
+				\item[d)] Setting up the mesh equation $M_2$ without the expression $U_1$
 				\onslide<5>{
 					\begin{eqa}
 						M_1: U_1&=U_\mathrm{R1}-U_\mathrm{R2} \nonumber\\

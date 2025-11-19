@@ -4,23 +4,23 @@
 %Einleitung
 \newvideofile{Superpos}{Superpositionsprinzip}
 \begin{frame}
-	\fta{Superpositionsprinzip}
+	\fta{Principle of superposition}
 
 	\s{ 
-        Nach der grundsätzlichen Analyse von Maschen und Knoten in elektrischen 
-        Netzwerken werden folgend zunehmend kompliziertere elektrische Netzwerke
-        betrachtet. Hierzu wird das Überlagerungsverfahren nach Helmholtz verwendet. 
-        Das Überlagerungsverfahren wird auch als Superpositionsprinzip bezeichnet. 
-        Beim Superpositionsprinzip werden nacheinander alle Quellen einzeln 
-        ausgewertet und die Ergebnisse der einzelnen Berechnungen überlagert. 
+        After a basic analysis of meshes and nodes in electrical 
+        networks, increasingly complex electrical networks are considered.
+        For this purpose, the superposition method according to Helmholtz is used. 
+        The superposition method is also referred to as the principle of superposition.     
+        In the superposition principle, all sources are evaluated individually one after the other 
+        and the results of the individual calculations are superimposed.
     }
 
 
-    \begin{Lernziele}{Superpositionsprinzip}
-        Die Studierenden 
+    \begin{Lernziele}{Principle of superposition}
+        The students 
         \begin{itemize}
-            \item verstehen die Bedingungen der Systemtheorie für die Analyse von Gleichstromnetzwerken. 
-            \item können den Überlagerungssatz (das Superpositionsprinzip) auf elektrische Netzwerke anwenden. 
+            \item understand the conditions of systems theory for the analysis of direct current networks. 
+            \item can apply the superposition principle to electrical networks. 
         \end{itemize}                   
     \end{Lernziele}
 
@@ -34,15 +34,16 @@
 
 %Exkurs Systemtheorie
 \begin{frame}
-    \ftb{Exkurs Systemtheorie}
+    \renewcommand{\figurename}{Figure}
+    \ftb{Digression Systems theory}
 
     \s{
-        Wird in einem Modell lediglich das Einganssignal und das Ausgangssignal betrachtet, wird von
-        einer Blackbox gesprochen. Hier ist keinerlei Information darüber gegeben, was zwischen diesen 
-        beiden Signalen passiert. Die Abbildung \ref{BildBlackBox} beschreibt so ein Modell. Hier 
-        wird eine Black Box betrachtet, welche als Eingansgröße $F_\mathrm{E}$ und als Ausgangsgröße $F_\mathrm{A}$
-        aufweist. In der Blackbox wird das Eingangssignal in das Ausgangssignal transformiert. 
-        Das Bildnis insgesamt wird als System bezeichnet. 
+        If only the input signal and the output signal are considered in a model, this is referred to as
+        a black box. Here, no information is given about what happens between these 
+        two signals. Figure \ref{BildBlackBox} describes such a model. Here, 
+        a black box is considered, which has an input variable $F_\mathrm{E}$ and an output variable $F_\mathrm{A}$.
+        In the black box, the input signal is transformed into the output signal. 
+        The image as a whole is referred to as a system. 
     }
 
     \onslide<1->{
@@ -54,7 +55,7 @@
 
     \fu{
         \input{Tikz/src/blackbox.tex}
-        }{{\bf Blackbox in der Systemtheorie.} Eine Blackbox mit linksseitiger Eingangsgröße und rechtsseitiger Ausgangsgrößen.
+        }{{\bf Black box in systems theory.} A black box with input variables on the left and output variables on the right.
         \label{BildBlackBox}}}
 
     \onslide<2->{
@@ -65,9 +66,9 @@
     }
 
     \s{
-        Ausgehend von der vorgestellten Blackbox lässt sich das Ausgangssignal $F_\mathrm{A}$ in der Abhängigkeit 
-        des Eingangssignals $F_\mathrm{E}$ bestimmen. Diese Transformation lässt sich durch die Gleichung 
-        \ref{GleichungFunktionSystem} beschreiben.
+        Based on the black box presented, the output signal $F_\mathrm{A}$ can be determined as a function 
+        of the input signal $F_\mathrm{E}$. This transformation can be described by equation 
+        \ref{GleichungFunktionSystem}.
     }
 
     \begin{eq}
@@ -82,14 +83,15 @@
 \end{frame}
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Black Box}
 
     \s{
-        Ein elektrisches Netzwerk kann auch als solch ein System betrachtet werden. Das in der Abbildung
-        \ref{BildElektrischesSystem} dargestellte elektrische Netzwerk verfügt über eine Eingangsspannung 
-        $U_\mathrm{E}$ als Eingangsgröße und eine Ausgangsspannung $U_\mathrm{A}$ als Ausgangsgröße. Die Blackbox, welche 
-        das zu transformierende System abbildet, setzt sich aus den beiden Widerständen $R_1$ und $R_2$ 
-        zusammen.  
+        An electrical network can also be considered such a system. The electrical network shown in Figure
+        \ref{BildElektrischesSystem} has an input voltage 
+        $U_\mathrm{E}$ as the input variable and an output voltage $U_\mathrm{A}$ as the output variable. The black box, which 
+        represents the system to be transformed, consists of the two resistors $R_1$ and $R_2$.
+  
     }
 
     \onslide<1->{
@@ -104,15 +106,15 @@
     \fu{
         \input{Tikz/src/spannungsteilerblackbox.tex}
         
-        }{{\bf Spannungsteiler als Blackbox.} Betrachtung eines elektrischen Netzwerkes als Blackbox mit Eingangsspannung und Ausgangsspannung.
+        }{{\bf Voltage divider as a black box.} Consideration of an electrical network as a black box with input voltage and output voltage.
         \label{BildElektrischesSystem}}}
 
     \s{
-        Der Zusammenhang der Abhänigkeit des Ausgangssignals eines Systems vom Eingangssignal aus Gleichung \ref{GleichungFunktionSystem} gilt weiterhin. Das Ausgangssignal 
-        lässt sich als Transformation des Eingangssignales wie in der Gleichung \ref{GleichungNetzwerk} 
-        beschreiben. Das Ausgangssignal ist gleich der Spannung, welche über dem Widerstand $R_2$ abfällt. 
-        Diese Spannung lässt sich aus dem Produkt der Eingangsspannung und dem Widerstandsverhältnis berechnen. 
-        Dieser Zusammenhang wurde auch bereits beim Spannungsteiler im Kapitel 4 behandelt.    
+        The relationship between the output signal of a system and the input signal from Equation \ref{GleichungFunktionSystem} still applies. The output signal 
+        can be described as a transformation of the input signal as in Equation \ref{GleichungNetzwerk}. 
+        The output signal is equal to the voltage drop across resistor $R_2$. 
+        This voltage can be calculated from the product of the input voltage and the resistance ratio.
+        This relationship was also discussed in the section on voltage dividers in Chapter 4.    
     }
 
     \onslide<3->{
@@ -137,20 +139,19 @@
 \end{frame}
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{LTI-Systeme}
 
     \s{
-        \textbf{Kausalität}\\
+        \textbf{Causality}\\
 
-        Beruht eine Ausgangsgröße ausschließlich aus der Transformation einer Eingangsgröße, so ergibt sich
-        ein direktes Verhältnis zwischen Ursache und Wirkung. Dies bedingt auch, dass die Ausgangsgröße vor 
-        einer Anregung keine sich ändernde Systemantwort liefert. Ein System, in welchem diese Bedingungen vorherrschen, 
-        wird als kauseles System bezeichnet (vgl. Abbildung \ref{BildKausalesSystem}). 
-        So zeigt beispielsweise eine Gleichspannungsanregung eines Systems eine zeitlich indifferente
-        Gleichstromantwort. Ein System, welches sich anders verhält, wird als nicht kausales Systeme bezeichnet. 
-        Wenn für $t < t_0$ der Wert des Eingangssignals Null ist, muss der Wert des Ausgangssignals 
-        für denselben Zeitraum ebenfalls Null sein, damit es die Bedingungen eins kausalen Systems
-        erfüllt. 
+        If an output variable is based exclusively on the transformation of an input variable, there is
+        a direct relationship between cause and effect. This also means that the output variable does not provide a changing system response prior to 
+        an excitation. A system in which these conditions prevail is referred to as a causal system (see Figure \ref{BildKausalesSystem}).
+        For example, a DC excitation of a system produces a time-indifferent
+        DC response. A system that behaves differently is referred to as a non-causal system. 
+        If the value of the input signal is zero for $t < t_0$, the value of the output signal 
+        must also be zero for the same period of time in order to fulfil the conditions of a causal system. 
     }
 
     \b{
@@ -177,40 +178,40 @@
             \input{Tikz/src/transformation3.tex}	
 		\end{minipage}
         }
-	}{{\bf Transformation eines kausalen Systems.} Aus $x(t)$ transformiertes System zu $y(t)$ für ein kausales System. \label{BildKausalesSystem}}}
+	}{{\bf Transformation of a causal system.} System transformed from $x(t)$ to $y(t)$ for a causal system. \label{BildKausalesSystem}}}
 
     \s{
-        \textbf{Zeitinvarianz}\\
+        \textbf{Time variance}\\
         
-        Reagiert das Ausgangssignal eines Systems zeitlich immer gleich auf ein Eingangssignal, so wird 
-        von einem zeitinvarianten Systemen gesprochen. Verschiebt sich der Zeitpunkt des Eingangssignals beispielsweise 
-        um $t_0$, so muss weiterhin bei zeitinvarianten Systemen das Ausgangssignal immer gleich, ausgehend vom Eingangssignal,
-        reagieren.
-
-        Die Stabilität eines Systems beschreibt ebenfalls einen Zusammenhang zwischen dem Eingangssignal
-        und dem Ausgangssignal. Stellt sich bei einem Eingangssignal mit endlicher Amplitude ein nicht über
-        alle Grenzen wachsendes Ausgangssignal ein, ist das System stabil. Wächst das Ausgangssignal nach 
-        der Inaktivierung des Eingangssignales weiter, ist das Systen instabil. 
+        If the output signal of a system always responds to an input signal in the same way over time, 
+        this is referred to as a time-invariant system. If the timing of the input signal shifts, for example 
+        by $t_0$, the output signal must still respond in the same way, based on the input signal, in time-invariant systems.
+        
+        The stability of a system also describes a relationship between the input signal
+        and the output signal. If an input signal with finite amplitude produces an output signal that does not grow beyond
+        all limits, the system is stable. If the output signal continues to grow after 
+        the input signal has been deactivated, the system is unstable. 
 
         \begin{eq}
             T(\alpha \cdot u_\mathrm{e})=\alpha \cdot T(u_\mathrm{e})    \label{GleichungLinearität}
         \end{eq}
 
-        \textbf{Linearität}\\
+        \textbf{Linearity}\\
 
-        Ist die Reaktion des Ausgangssignals zu der Anregung des Eingangssinals proportional, wird das
-        System als \textbf{lineares} System beschrieben (Gleichung \ref{GleichungLinearität}). Wirken zwei überlagerte 
-        Eingangssignale in ein System, so können sie in diesem Fall separat betrachtet und aufsummiert werden. Auf diese Weise 
-        können auch die Transformationen der Eingangssignale, wie in der Gleichung \ref{GleichungÜberlagerteSignale},
-        getrennt betrachtet werden. 
+        If the response of the output signal is proportional to the excitation of the input signal, the
+        system is described as a \textbf{linear} system (Equation \ref{GleichungLinearität}). If two superimposed 
+        input signals act on a system, they can be considered separately and added together in this case. In this way, 
+        the transformations of the input signals, as in Equation \ref{GleichungÜberlagerteSignale},
+        can also be considered separately.
+ 
 
         \begin{eq}
             T(u_1+u_2)=T(u_1)+T(u_2)    \label{GleichungÜberlagerteSignale}
         \end{eq}
 
-        Systeme, die sowohl zeitinvariant, als auch linear sind, werden als LTI-Systeme (Linear Time Invariant) 
-        bezeichnet. Die Systeme in diesem betrachteten Modul werden in Näherung als LTI-Systeme betrachtet. Bauelemente,
-        welche Nichtlinearitäten aufweisen, werden beispielsweise im Kapitel über periodische Größen behandelt. 
+        Systems that are both time-invariant and linear are referred to as LTI (Linear Time Invariant) systems.
+        The systems in this module are approximated as LTI systems. Components
+        that exhibit non-linearities are dealt with, for example, in the chapter on periodic quantities. 
     }   
 
     \speech{SuperposLTI}{1}{Ein System lässt sich durch verschiedene Kriterien beschreiben. So zeigen kausale Systeme vor der Anregung keine Systemantwort.}
@@ -224,9 +225,9 @@
 \begin{frame}
     \ftx{LTI-Systeme}
 
-    \begin{Merksatz}{LTI-Systeme}
-        LTI-Systeme stellen lineare und zeitinvariante Systeme dar. Gleichstromnetzwerke müssen als LTI-Systeme betrachtet werden, damit
-        der Überlagerungssatz auf sie angewendet werden kann. 
+    \begin{Merksatz}{LTI-Systems}
+        LTI systems represent linear and time-invariant systems. DC networks must be considered as LTI systems so that
+        the superposition theorem can be applied to them. 
     \end{Merksatz}
 
     \speech{SuperposLTIMrk}{1}{LTI-Systeme stellen lineare und zeitinvariante Systeme dar. Die Gleich-stromnetzwerke müssen als LTI-Systeme betrachtet werden, 
@@ -237,15 +238,16 @@
 
 %Überlagerungssatz
 \begin{frame}
-    \ftb{Überlagerungssatz}
+    \renewcommand{\figurename}{Figure}
+    \ftb{Superposition theorem}
 
     \s{
-        Sind die elektrischen Netzwerke als betrachtete Systeme auf ihre vorhandene Linearität geprüft, 
-        kann der Überlagerungssatz angewendet werden. Hier können verschiedene Quellen von einander getrennt 
-        betrachtet werden. Auf diese Weise werden beim Überlagerungssatz alle Quellen
-        ausgeschaltet und reihenweise die einzelnen Quellen eingeschaltet. Beim Ausschalten von Quellen 
-        werden Stromquellen und Spannungsquellen verschieden umgewandelt. Beim Ausschalten einer idealen
-        Spannungsquelle entsteht nach Abbildung \ref{BildSpannungErsetzen} am Ort der Spannungsquelle ein Kurzschluss. 
+        Once the electrical networks have been checked for linearity as the systems under consideration, 
+        the superposition theorem can be applied. Here, different sources can be considered separately from one another.
+        In this way, the superposition theorem switches off all sources
+        and switches on the individual sources in series. When sources are switched off, 
+        current sources and voltage sources are converted differently. When an ideal
+        voltage source is switched off, a short circuit occurs at the location of the voltage source, as shown in Figure \ref{BildSpannungErsetzen}. 
     }
 
     \b{
@@ -275,12 +277,12 @@
 		\end{minipage}
         \hspace{0.1cm}
         }
-	}{{\bf Umwandlung einer Spannungsquelle.} Wird eine Spannungsquelle deaktiviert, verbleibt ein Kurzschluss. Mit diesem Kurzschluss erfolgt die weitere 
-    Netzwerkberechnung.  \label{BildSpannungErsetzen}}}
+	}{{\bf Conversion of a voltage source.} If a voltage source is deactivated, a short circuit remains. This short circuit is used for further 
+    network calculations.  \label{BildSpannungErsetzen}}}
 
     \s{
-        Eine Stromquelle hinterlässt beim Ausschalten lediglich offene Klemmen (Abbildung \ref{BildStromErsetzen}). 
-        Dieser Leerlauf verhindert die weitere Betrachtung dieses Pfades im Netzwerk. 
+        When switched off, a power source leaves only open terminals (Figure \ref{BildStromErsetzen}). 
+        This idle state prevents further consideration of this path in the network. 
     }
 
     \onslide<4->{
@@ -300,7 +302,7 @@
 		\end{minipage}
         \hspace{0.1cm}
         }
-	}{{\bf Umwandlung einer Stromquelle.} Die Deaktivierung einer Stromquelle hinterlässt offene Klemmen.   \label{BildStromErsetzen}}}
+	}{{\bf Conversion of a power source.} Deactivating a power source leaves terminals open.   \label{BildStromErsetzen}}}
 
     
     \speech{SuperposQuell}{1}{Beim Überlagerungssatz wird ein elektrisches Netzwerk für jede Quelle berechnet. Hierfür wird die Linearität des Systems vorausgesetzt.}
@@ -310,11 +312,11 @@
 \end{frame}
 
 \begin{frame}
-    \ftx{Umwandlung von Quellen}
+    \ftx{Conversion of sources}
 
-    \begin{Merksatz}{Umwandlung von Quellen}
-        Beim Ausschalten von Spannungsquellen und Stromquellen hinterlassen deaktivierte Spannungsquellen einen Kurzschluss und 
-        deaktivierte Stromquellen einen Leerlauf.
+    \begin{Merksatz}{Conversion of sources}
+        When voltage sources and current sources are switched off, deactivated voltage sources leave a short circuit and 
+        deactivated current sources leave an open circuit.
     \end{Merksatz}
 
     \speech{SuperposQuellMrk}{1}{Beim Ausschalten von Spannungsquellen und Stromquellen hinterlassen deaktivierte Spannungsquellen einen Kurzschluss und 
@@ -325,12 +327,12 @@
     \ftx{Zusammenfassung Überlagerungssatz}
 
     \s{
-        Sind bis auf eine Quelle alle anderen Quellen ausgeschaltet,
-        wird das elektrische Netzwerk für die übriggebliebene Quelle analysiert. Das wird dann aufeinanderfolgend 
-        mit jeder Quelle durchgeführt. Am Ende werden die Einzelwirkungen als Summe betrachtet. 
-        Beispielsweise lässt sich der Strom $I_\mathrm{R}$ durch einen Widerstand R, welcher von zwei Quellen $Q_1$ und $Q_2$ 
-        versorgt wird, durch 
-        die Summe der Teilströme der beiden Quellen erklären (vgl. Gleichung \ref{GleichungZweiQuellen}). 
+        If all sources except one are switched off,
+        the electrical network for the remaining source is analysed. This is then carried out sequentially 
+        with each source. 
+        At the end, the individual effects are considered as a sum. 
+        For example, the current $I_\mathrm{R}$ through a resistor R, which is supplied by two sources $Q_1$ and $Q_2$,
+        can be explained by the sum of the partial currents of the two sources (see Equation \ref{GleichungZweiQuellen}). 
     }
 
     \b{
@@ -352,12 +354,13 @@
 \end{frame}
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Beispiel}
 
     \s{
-        Zur Verdeutlichung des Überlagerungssatzes wird in der Abbildung \ref{BildÜberlagerungssatz} ein elektrisches Netzwerk mit zwei 
-        Spannungsquellen und drei Widerständen abgebildet. Um dieses Netzwerk mit mehr als einer Quelle zu berechnen, 
-        wird das Netzwerk für beide Spannungsquellen einzeln betrachtet. 
+        To illustrate the superposition theorem, Figure \ref{BildÜberlagerungssatz} shows an electrical network with two 
+        voltage sources and three resistors. To calculate this network with more than one source, 
+        the network is considered separately for both voltage sources. 
     }
 
     \b{
@@ -369,17 +372,17 @@
         \resizebox{.6\textwidth}{!}{%
 		\input{Tikz/src/ueberlagerungssatz.tex}
 		}%
-    }{{\bf Elektrisches Netzwerk mit zwei Spannungsquellen zur Erklärung des Überlagerungssatzes.} Die Spannungsquellen sollen
-    nacheinander für das elektrische Netzwerk analysiert werden. \label{BildÜberlagerungssatz}}
+    }{{\bf Electrical network with two voltage sources to explain the superposition theorem.} The voltage sources should
+    be analysed one after the other for the electrical network. \label{BildÜberlagerungssatz}}
 
     \s{
-        Das vorgestellte elektrische Netzwerk wird in der Abbildung \ref{BildÜberlagerungssatzQuellen} noch einmal jeweils für die 
-        Berechnung der beiden Spannungsquellen seperat angezeigt. Für die Netzwerkbetrachtung mit der Spannungsquelle
-        $U_1$ wird die Spannungsquelle $U_2$ kurzgeschlossen. Die beiden Widerstände $R_2$ und $R_3$ liegen nun parallel
-        zueinander. Die Spannung von $U_1$ verteilt sich nun über $R_1$ und die Parallelschaltung $R_{23}$. Äquivalent dazu wird
-        bei der Betrachtung des Netzwerkes für die Spannungsquelle $U_2$ die Spannungsquelle $U_1$ kurzgeschlossen. Nun bilden 
-        die beiden Widerstände $R_1$ und $R_2$ eine Parallelschaltung. Die Spannung der Spannungsquelle $U_2$ verteilt sich über 
-        die Parallelschaltung $R_{12}$ und den Widerstand $R_3$. 
+        The electrical network presented is shown again in Figure \ref{BildÜberlagerungssatzQuellen} for the 
+        calculation of the two voltage sources separately. For the network analysis with voltage source
+        $U_1$, voltage source $U_2$ is short-circuited. The two resistors $R_2$ and $R_3$ are now connected in parallel
+        with each other. The voltage of $U_1$ is now distributed across $R_1$ and the parallel connection $R_{23}$. Equivalently,
+        when considering the network for the voltage source $U_2$, the voltage source $U_1$ is short-circuited. Now
+        the two resistors $R_1$ and $R_2$ form a parallel connection. The voltage of the voltage source $U_2$ is distributed across 
+        the parallel connection $R_{12}$ and the resistor $R_3$.
     }
 
     \speech{SuperposAnw}{1}{Die zuvor erklärte Überlagerung wird nun anhand eines elektrischen Netzwerkes mit drei Widerständen und 
@@ -389,19 +392,21 @@
 
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Beispiel Lösung}
 
     \fu{
         \resizebox{0.8\textwidth}{!}{%
 		\input{Tikz/src/ueberlagerungssatzquellen.tex}
 		}%
-    }{{\bf Elektrisches Netzwerk mit zwei Spannungsquellen zur Erklärung des Überlagerungssatzes.} Links wird das Netzwerk für die Analyse
-    der Spannungsquelle $U_1$ und rechts für die Spannungsquelle $U_2$ gezeigt.  \label{BildÜberlagerungssatzQuellen}}
+    }{{\bf Electrical network with two voltage sources to explain the superposition theorem.} On the left, the network for analysing
+    the voltage source $U_1$ is shown, and on the right, the network for analysing the voltage source $U_2$.  \label{BildÜberlagerungssatzQuellen}}
 
     \s{
-        In der Gleichung \ref{GleichungU1} und der Gleichung \ref{GleichungU2} werden die Spannungen für die beiden Spannungsquellen
-        $U_1$ und $U_2$ am Widerstand $R_3$ separat bestimmt. In der Gleichung \ref{GleichungUR3} werden die beiden Spannungen über den 
-        Widerstand $R_3$ dann nach dem Überlagerungssatz aufsummiert.
+        In equation \ref{GleichungU1} and equation \ref{GleichungU2}, the voltages for the two voltage sources
+        $U_1$ and $U_2$ at resistor $R_3$ are determined separately. 
+        In equation \ref{GleichungUR3}, the two voltages across the 
+        resistor $R_3$ are then added together according to the superposition theorem.
     }
     
     
@@ -426,11 +431,11 @@
 
 
 \begin{frame}
-    \ftx{Überlagerungssatz}
+    \ftx{Superposition principle}
 
     \begin{Merksatz}{Überlagerungssatz}
-        Lineare und zeitlich invariante elektrische Netzwerke mit mehr als einer Quelle können als Summe der Teilanalysen von jeder 
-        einzelnen Quelle bestimmt werden. 
+        Linear and time-invariant electrical networks with more than one source can be determined as the sum of the partial analyses of each 
+        individual source. 
     \end{Merksatz}
 
     \speech{SuperposUberMrk}{1}{Lineare und zeitlich invariante elektrische Netzwerke mit mehr als einer Quelle können als Summe der Teilanalysen von jeder 
@@ -439,32 +444,33 @@
 
 \newpage
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Beispiel Superpositionsverfahren}
-    \begin{bsp}{Superpositionsverfahren}{}
+    \begin{bsp}{Superposition method}{}
 
     \s{
-        Gegeben ist das elektrische Netzwerk nach Abbildung \ref{BildBeispielaufgabeSuperposition}. Die folgenden 
-        Aufgaben sollen bearbeitet werden: 
+        The electrical network shown in Figure \ref{BildBeispielaufgabeSuperposition} is given. The following 
+        tasks are to be completed: 
     }
 
         \begin{enumerate}
             \only<1>{	
                 \item[]
-                Anwendung des Superpositionsverfahrens (Überlagerungssatz): 
+                Application of the superposition principle (Superposition theorem): 
                 \begin{enumerate}
-                    \item[a)] Einzeichnen der Ströme und Spannungen
-                    \item[b)] Netzwerkberechnung $I_3$ für $U_\mathrm{g}$
-                    \item[c)] Netzwerkberechnung $I_3$ für $I_\mathrm{g}$
-                    \item[d)] Wie groß ist der Strom $I_3$
+                    \item[a)] Plotting currents and voltages
+                    \item[b)] Network calculation $I_3$ for $U_\mathrm{g}$
+                    \item[c)] Network calculation $I_3$ for $I_\mathrm{g}$
+                    \item[d)] How big is the current? $I_3$
                 \end{enumerate}
 
                 
                 \fu{
                     \input{Tikz/src/superposition1.tex}
-                }{{\bf Beispiel.} Netzwerkanalyse mit Kirchhoffschen Regeln. \label{BildBeispielaufgabeSuperposition}}
+                }{{\bf Example.} Network analysis using Kirchhoff's rules. \label{BildBeispielaufgabeSuperposition}}
                     }
 			\only<2>{			
-				\item[a)] Angabe der Ströme und Spannungen:
+				\item[a)] Specification of currents and voltages:
                 \begin{figure}[H]
                     \resizebox{0.65\textwidth}{!}{%   
                         \input{Tikz/src/superposition2.tex}
@@ -472,7 +478,7 @@
                 \end{figure}
                     }    
 			\only<3>{
-				\item[b)] Netzwerkberechnung $I_3(U_\mathrm{g})$ für $U_\mathrm{g}$:
+				\item[b)] Network calculation $I_3(U_\mathrm{g})$ for $U_\mathrm{g}$:
 				\onslide<3>{
                     \begin{figure}[H]
                         \resizebox{0.65\textwidth}{!}{%  
@@ -488,7 +494,7 @@
 				}
 			}
 			\only<4>{
-				\item[c)] Netzwerkberechnung $I_3(I_\mathrm{g})$ für $I_\mathrm{g}$:
+				\item[c)] Network calculation $I_3(I_\mathrm{g})$ for $I_\mathrm{g}$:
 				\onslide<4>{
                     \begin{figure}[H]
                         \resizebox{0.65\textwidth}{!}{%  
@@ -503,7 +509,7 @@
 				}
 			}
             \only<5>{
-				\item[d)] Wie groß ist der Strom $I_3(U_\mathrm{g},I_\mathrm{g})$? \\ 
+				\item[d)] How strong is the current $I_3(U_\mathrm{g},I_\mathrm{g})$? \\ 
 
 				\onslide<5>{
                     Superposition: \\

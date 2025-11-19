@@ -1,14 +1,15 @@
 \newpage
 \begin{frame}
-	\fta{Knotenpotentialverfahren}
+	\renewcommand{\figurename}{Figure}
+	\fta{Nodal analysis}
 
 	\s{
-		Die Analyse eines elektrischen Netzwerkes kann mitunter aufwendig werden. Mit größer werdendem Netzwerk steigt 
-		auch der Aufwand zur Analyse. Auch reichen unter Umständen die bisher vorgestellten Analysemethoden zu Knoten- 
-		und Maschenanalyse nicht aus, um alle Größen eines elektrischen Netzwerkes zu bestimmen. Hier bietet das 
-		Knotenpotentialverfahren eine Möglichkeit zur Analyse. Beim Knotenpotentialverfahren werden ausgehend von einem 
-		Bezugspotential, mit der Zuordnung 0V, alle übrigen Potentiale bestimmt. Mithilfe des Knotenpotentialverfahrens
-		wird folgend das elektrische Netzwerk aus der Abbildung \ref{BildKnotenpotentialverfahren} analysiert.  
+		Analysing an electrical network can sometimes be a complex task. As the network grows, 
+        so does the complexity of the analysis. In some cases, the analysis methods presented so far for node 
+        and mesh analysis are not sufficient to determine all the variables of an electrical network. In this case, the 
+        node potential method offers a possible solution for analysis. In the nodal analysis, all other potentials are determined based on a 
+        reference potential, with an assignment of 0V. Using the node potential method
+        , the electrical network from Figure \ref{BildKnotenpotentialverfahren} is analysed as follows. 
     }
 
 	\b{
@@ -25,8 +26,8 @@
         \resizebox{0.7\textwidth}{!}{%                                         
         \input{Tikz/src/knotenpotentialverfahren.tex}
         }                                                  
-    }{{\bf Netzwerk für das Knotenpotentialverfahren.} Elektrisches Netzwerk mit einer Spannungsquelle, einer Stromquelle und vier Widerständen. Anhand des Netzwerkes wird 
-    das Knotenpotentialverfahren erläutert. \label{BildKnotenpotentialverfahren}}  
+    }{{\bf Network for Nodal analysis.} Electrical network with a voltage source, a current source and four resistors. The network is used to 
+    explain the Nodal analysis. \label{BildKnotenpotentialverfahren}}  
 	
 \end{frame}
 
@@ -34,26 +35,26 @@
 \newvideofile{Knotpot}{Knotenpotentialverfahren}
 \begin{frame}
 	\ftx{Lernziele Knotenpotentialverfahren}
-	\begin{Lernziele}{Knotenpotentialverfahren}
-        Die Studierenden 
+	\begin{Learning objectives}{Node analysis}
+        The Students
         \begin{itemize}
-			\item kennen die Schritte des Knotenpotentialverfahrens.
-            \item können mit Hilfe des Knotenpotentialverfahrens elektrische Netzwerke analysieren. 
+			\item are familiar with the steps of the nodal analysis
+            \item can analyse electrical networks using the nodal analysis method.
         \end{itemize}                   
-    \end{Lernziele}
+    \end{Learning objectives}
 
 	\speech{KnotpotLernz}{1}{Das Knotenpotentialverfahren ist neben dem Maschenstromverfahren eine Möglichkeit, um elektrische Netzwerke zu analysieren.
 	Hier sollen die notwengien Schritte zur Anwendung des Knotenpotentialverfahrens vorgestellt werden.} 
 \end{frame}
 
 \begin{frame}
-	\ftb{Vorbereitung des Netzwerkes}
+	\renewcommand{\figurename}{Figure}
+	\ftb{Preparation of the network}
 
 	\s{
-		Das Knotenpotentialverfahren arbeitet mit Stromquellen und Leitwerten. Das vorgestellte Netzwerk weist neben der 
-		Stromquelle eine Spannungsquelle und Widerstandswerte auf. Diese gilt es umzuwandeln. Die Spannungsquelle wird 
-		wie in der Abbildung \ref{BildKnot1} zu einer Stromquelle transformiert. Dabei wird aus dem Reihenwiderstand der 
-		Spannungsquelle ein Parallelwiderstand für die Stromquelle. 
+		The nodal analysis method works with current sources and conductance values. In addition to the current source, the network shown has 
+        a voltage source and resistance values. These need to be converted. As shown in Figure \ref{BildKnot1}, the voltage source is transformed into a current source. The series resistance of the 
+        voltage source becomes a parallel resistance for the current source.
 	}
 
 	\onslide<1->{
@@ -67,12 +68,12 @@
         \resizebox{0.7\textwidth}{!}{%                                     
          \input{Tikz/src/knot1.tex}
 		}                                               
-    }{{\bf Umwandlung einer Spannungsquelle.} Umwandlung einer Spannungsquelle mit Reihenwiderstand zur Stromquelle mit 
-	Parallelwiderstand. \label{BildKnot1}}}   
+    }{{\bf Conversion of a voltage source.} Conversion of a voltage source with series resistance to a current source with 
+    parallel resistance. \label{BildKnot1}}}   
 
 	\s{
-		Bei der Umwandlung der Spannungsquellen in Stromquellen müssen auch die Spannungswerte der Spannungsquellen in 
-		Stromwerte überführt werden. Dies erfolgt nach Gleichung \ref{GleichungUmrechnungSpannungsquelle}. 
+		When converting voltage sources into current sources, the voltage values of the voltage sources must also be converted into 
+		current values. This is done according to equation \ref{GleichungUmrechnungSpannungsquelle}. 
 	}
 
 	\onslide<2->{
@@ -87,8 +88,8 @@
 		\end{eq}}
 
 	\s{
-		Da bei dem Knotenpotentialverfahren nicht die Widerstandswerte der Komponenten verwendet werden, sondern die Leitwerte,
-		werden alle Widerstandswerte nach Gleichung \ref{GleichungUmrechnungWiderstand} in Leitwerte umgerechnet. 
+		Since the nodal analysis method does not use the resistance values of the components, but rather the conductance values,
+        all resistance values are converted into conductance values according to equation \ref{GleichungUmrechnungWiderstand}.
 	}	
 
 	\onslide<3->{
@@ -103,16 +104,16 @@
     \end{eq}}
 
 	\s{
-		In der Abbildung \ref{BildKnot2} wird die Umwandlung der Spannungsquellen aus dem angegeben Netzwerk in eine äquivalente 
-		Stromquellen dargestellt. Aus der Spannungsquelle $U_0$ und dem Widerstand $R_0$ wird die Stromquelle $I_\mathrm{q0}$ und dazu 
-		der parallel liegende Leitwert $G_0$. Die restlichen Widerstände werden ebenfalls in Leitwerte überführt.  
+		Figure \ref{BildKnot2} shows the conversion of the voltage sources from the specified network into equivalent 
+		current sources. The voltage source $U_0$ and the resistor $R_0$ become the current source $I_\mathrm{q0}$ and 
+ 		the parallel conductance $G_0$. The remaining resistors are also converted into conductances.
 	
 		\fu{   
         \resizebox{\textwidth}{!}{%                                         
 			\input{Tikz/src/knot2.tex}
         }                                                  
-    }{{\bf Umwandlung des Netzwerkes für das Knotenpotentialverfahren.} Die Spannungsquelle $U_0$ wird zu der Stromquelle $I_\mathrm{q0}$, außerdem werden die 
-	Widerstandsangaben R zu Leitwerten G. \label{BildKnot2}}  
+    }{{\bf Conversion of the network for the nodal analysis method.} The voltage source $U_0$ becomes the current source $I_\mathrm{q0}$, and the 
+    resistance values R become conductances G. \label{BildKnot2}}  
 	}
 
 	\speech{KnotpotVorb}{1}{Beim Knotenpotentialverfahren wird mit Stromquellen gearbeitet. 
@@ -128,9 +129,9 @@
 \begin{frame}
     \ftx{Knotenpotentialverfahren}
 
-    \begin{Merksatz}{Knotenpotentialverfahren}
+    \begin{Key point}{Knotenpotentialverfahren}
         Beim Knotenpotentialverfahren wird ein elektrisches Netzwerk mit Stromquellen und Leitwerten analysiert. 
-    \end{Merksatz}
+    \end{Key point}
 
 	\speech{KnotpotMrk}{1}{Beim Knotenpotentialverfahren wird ein elektrisches Netzwerk mit Stromquellen und Leitwerten analysiert.} 
 \end{frame}

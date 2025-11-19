@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.7.14)  27 OCT 2025 09:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.7.14)  13 NOV 2025 08:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1544,46 +1544,30 @@ No file Skript.nls.
 
 ] (./Inhalt.tex (./00_Einleitung.tex (./Tikz/src/beispielnetzwerk.tex)) (./01_Knoten_Maschenanalyse.tex [1
 
-]
-Overfull \hbox (4.82028pt too wide) in paragraph at lines 46--47
-\OT1/cmr/m/n/10 Gegebenheiten und Be-grif-fe aus der Feld-theo-rie f[]uhren zu den Er-kl[]arungen im struk-tu-rier-ten Feldraum.
- []
+] (./Tikz/src/elektrischesfeld.tex) (./Tikz/src/strukturierterfeldraum.tex) [2]
 
-(./Tikz/src/elektrischesfeld.tex) [2] (./Tikz/src/strukturierterfeldraum.tex) (./Tikz/src/knotenstrukturiert.tex) (./Tikz/src/graphentheorieknoten.tex) [3] (./Tikz/src/graphenteorienetzwerk.tex) [4] (./Tikz/src/Netz1.tex
+LaTeX Warning: Reference `FigureNodeNetwork' on page 3 undefined on input line 127.
+
+(./Tikz/src/knotenstrukturiert.tex) (./Tikz/src/graphentheorieknoten.tex) [3] (./Tikz/src/graphenteorienetzwerk.tex) [4] (./Tikz/src/Netz1.tex
 \absvshift=\dimen379
-) [5] (./Tikz/src/Gleichstromnetzwerk.tex) (./Tikz/src/Graph.tex) (./Tikz/src/bspbaum1.tex) (./Tikz/src/bspbaum2.tex) (./Tikz/src/bspbaum3.tex) (./Tikz/src/bspbaum4.tex) [6]
-Overfull \hbox (1.22305pt too wide) in paragraph at lines 552--553
-[]\OT1/cmr/m/n/10 So m[]ussen sich f[]ur je-den Kno-ten die Sum-me der Stromst[]arken aus Ein-str[]omungen und Aus-str[]omungen
- []
-
-(./Tikz/src/beispielknoten.tex) [7] (./Tikz/src/beispielnetzwerkmaschenanalyse.tex
+) (./Tikz/src/Gleichstromnetzwerk.tex) (./Tikz/src/Graph.tex) [5] (./Tikz/src/bspbaum1.tex) (./Tikz/src/bspbaum2.tex) (./Tikz/src/bspbaum3.tex) (./Tikz/src/bspbaum4.tex) [6] (./Tikz/src/beispielknoten.tex) [7] (./Tikz/src/beispielnetzwerkmaschenanalyse.tex
 \absvshift=\dimen380
 \absvshift=\dimen381
-)
-Underfull \hbox (badness 1509) in paragraph at lines 678--678
-[]\OT1/cmr/m/n/10 Abbildung 2.10: |\OT1/cmr/bx/n/10 Bei-spiel-netz-werk mit ei-ner Strom-quel-le und zwei par-al-le-len Wi-
- []
-
-[8] (./Tikz/src/beispielanalyse.tex) [9] (./Tikz/src/knotenmaschen.tex) [10] [11] (./Tikz/src/beispielaufgabe1.tex) (./Tikz/src/beispielaufgabe2.tex
+) [8] (./Tikz/src/beispielanalyse.tex) (./Tikz/src/knotenmaschen.tex) [9] [10] (./Tikz/src/beispielaufgabe1.tex) (./Tikz/src/beispielaufgabe2.tex
 \absvshift=\dimen382
 \absvshift=\dimen383
 \absvshift=\dimen384
-)) (./02_Superposition.tex [12]
-Overfull \hbox (19.56293pt too wide) in paragraph at lines 16--17
-\OT1/cmr/m/n/10 gend zu-neh-mend kom-pli-zier-te-re elek-tri-sche Netz-wer-ke be-trach-tet. Hier-zu wird das []Uberlagerungsverfahren
- []
-
-(./Tikz/src/blackbox.tex) (./Tikz/src/spannungsteilerblackbox.tex) [13] (./Tikz/src/transformation1.tex) (./Tikz/src/transformation2.tex)
-Overfull \hbox (4.33751pt too wide) in paragraph at lines 8--180
+)) (./02_Superposition.tex [11] (./Tikz/src/blackbox.tex) (./Tikz/src/spannungsteilerblackbox.tex) [12] (./Tikz/src/transformation1.tex) (./Tikz/src/transformation2.tex)
+Overfull \hbox (4.33751pt too wide) in paragraph at lines 8--181
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--180
+Underfull \hbox (badness 10000) in paragraph at lines 8--181
 
  []
 
-(./Tikz/src/transformation3.tex) [14] (./Tikz/src/umwandlungspannungsquelle1.tex) (./Tikz/src/umwandlungspannungsquelle2.tex) (./Tikz/src/umwandlungspannungsquelle3.tex) (./Tikz/src/umwandlungstromquelle1.tex) (./Tikz/src/umwandlungstromquelle2.tex) (./Tikz/src/umwandlungstromquelle3.tex) [15] (./Tikz/src/ueberlagerungssatz.tex) (./Tikz/src/ueberlagerungssatzquellen.tex) [16] [17] (./Tikz/src/superposition1.tex) (./Tikz/src/superposition2.tex
+(./Tikz/src/transformation3.tex) [13] (./Tikz/src/umwandlungspannungsquelle1.tex) (./Tikz/src/umwandlungspannungsquelle2.tex) (./Tikz/src/umwandlungspannungsquelle3.tex) (./Tikz/src/umwandlungstromquelle1.tex) (./Tikz/src/umwandlungstromquelle2.tex) (./Tikz/src/umwandlungstromquelle3.tex) [14] (./Tikz/src/ueberlagerungssatz.tex) (./Tikz/src/ueberlagerungssatzquellen.tex) [15] [16] (./Tikz/src/superposition1.tex) (./Tikz/src/superposition2.tex
 \absvshift=\dimen385
 \absvshift=\dimen386
 \absvshift=\dimen387
@@ -1599,23 +1583,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--180
 \absvshift=\dimen395
 \absvshift=\dimen396
 )
-Underfull \hbox (badness 10000) in paragraph at lines 515--515
+Underfull \hbox (badness 10000) in paragraph at lines 520--520
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 515--515
+Underfull \hbox (badness 10000) in paragraph at lines 520--520
 
  []
 
-[18]) (./03_Knotenpotentialanalyse.tex [19] (./Tikz/src/knotenpotentialverfahren.tex
+[17]) (./03_Knotenpotentialanalyse.tex [18] (./Tikz/src/knotenpotentialverfahren.tex
 \absvshift=\dimen397
 \absvshift=\dimen398
 \absvshift=\dimen399
 \absvshift=\dimen400
 ) (./Tikz/src/knot1.tex
 \absvshift=\dimen401
-) [20] (./Tikz/src/knot2.tex
+) [19] (./Tikz/src/knot2.tex
 \absvshift=\dimen402
 \absvshift=\dimen403
 \absvshift=\dimen404
@@ -1629,12 +1613,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 515--515
 \absvshift=\dimen411
 \absvshift=\dimen412
 \absvshift=\dimen413
-) [21] (./Tikz/src/leitwertmatrix.tex
+) [20] (./Tikz/src/leitwertmatrix.tex
 \absvshift=\dimen414
 \absvshift=\dimen415
 \absvshift=\dimen416
 \absvshift=\dimen417
-) [22] [23] (./Tikz/src/knot4.tex
+) [21] [22] (./Tikz/src/knot4.tex
 \absvshift=\dimen418
 \absvshift=\dimen419
 \absvshift=\dimen420
@@ -1655,13 +1639,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 515--515
 \absvshift=\dimen433
 \absvshift=\dimen434
 \absvshift=\dimen435
-) [24]) (./04_Maschenstromverfahren.tex [25] (./Tikz/src/Netzwerk_Maschenstrom.tex
+) [23]) (./04_Maschenstromverfahren.tex [24] (./Tikz/src/Netzwerk_Maschenstrom.tex
 \absvshift=\dimen436
 \absvshift=\dimen437
 \absvshift=\dimen438
 ) (./Tikz/src/Umwandlung_Stromquelle.tex
 \absvshift=\dimen439
-) [26] (./Tikz/src/Umwandlung_Stromquelle_Netzwerk.tex
+) [25] (./Tikz/src/Umwandlung_Stromquelle_Netzwerk.tex
 \absvshift=\dimen440
 \absvshift=\dimen441
 \absvshift=\dimen442
@@ -1672,11 +1656,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 515--515
 \absvshift=\dimen446
 \absvshift=\dimen447
 \absvshift=\dimen448
-) [27] (./Tikz/src/Festlegung_der_Zweige.tex
+) [26] (./Tikz/src/Festlegung_der_Zweige.tex
 \absvshift=\dimen449
 \absvshift=\dimen450
 \absvshift=\dimen451
-) [28] [29] (./Tikz/src/Beispiel_Maschenanalyse.tex
+) [27] [28] (./Tikz/src/Beispiel_Maschenanalyse.tex
 \absvshift=\dimen452
 \absvshift=\dimen453
 \absvshift=\dimen454
@@ -1697,19 +1681,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 515--515
 \absvshift=\dimen467
 \absvshift=\dimen468
 \absvshift=\dimen469
-) [30])) [31] [32
-
-] (./Aufgaben.tex (./AufgabeKnotenMaschen1.tex (./Tikz/src/A1KnotMasch1.tex
+) [29])) [30] (./Aufgaben.tex (./AufgabeKnotenMaschen1.tex (./Tikz/src/A1KnotMasch1.tex
 \absvshift=\dimen470
 \absvshift=\dimen471
 \absvshift=\dimen472
 \absvshift=\dimen473
-)) (./AufgabeKnotenMaschen2.tex (./Tikz/src/A2KnotMasch2.tex)) (./AufgabeKnotenMaschen3.tex (./Tikz/src/A3KnotMasch3.tex) [33]) (./AufgabeSuperposition1.tex (./Tikz/src/A4Super1.tex
+)) (./AufgabeKnotenMaschen2.tex (./Tikz/src/A2KnotMasch2.tex)) (./AufgabeKnotenMaschen3.tex (./Tikz/src/A3KnotMasch3.tex) [31
+
+]) (./AufgabeSuperposition1.tex (./Tikz/src/A4Super1.tex
 \absvshift=\dimen474
 \absvshift=\dimen475
 )) (./AufgabeKnotenpotential1.tex (./Tikz/src/A5Knot1.tex
 \absvshift=\dimen476
-) [34]) (./AufgabeKnotenpotential2.tex (./Tikz/src/A6Knot2.tex)) (./AufgabeMaschenstrom1.tex (./Tikz/src/A7Masch1.tex) [35]) (./AufgabeMaschenstrom2.tex (./Tikz/src/A8Masch2.tex
+) [32]) (./AufgabeKnotenpotential2.tex (./Tikz/src/A6Knot2.tex)) (./AufgabeMaschenstrom1.tex (./Tikz/src/A7Masch1.tex) [33]) (./AufgabeMaschenstrom2.tex (./Tikz/src/A8Masch2.tex
 \absvshift=\dimen477
 \absvshift=\dimen478
 \absvshift=\dimen479
@@ -1723,7 +1707,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--40
 
  []
 
-[36]) (./AufgabeKnotenMaschen3.tex (./Tikz/src/B3KnotMasch3.tex
+[34]) (./AufgabeKnotenMaschen3.tex (./Tikz/src/B3KnotMasch3.tex
 \absvshift=\dimen480
 \absvshift=\dimen481
 \absvshift=\dimen482
@@ -1747,7 +1731,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--59
 
  []
 
-[37] (./Tikz/src/B4Super1_zwei.tex
+[35] (./Tikz/src/B4Super1_zwei.tex
 \absvshift=\dimen492
 \absvshift=\dimen493
 )
@@ -1770,7 +1754,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--48
 
  []
 
-[38
+[36
 pdfTeX warning (ext4): destination with the same identifier (name{equation.B.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -1905,7 +1889,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--51
 
  []
 
-[39]
+[37]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.B.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1992,7 +1976,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 128--128
 
  []
 
-[40]
+[38]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.B.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2012,7 +1996,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.B.1})
 <to be read again> 
                    \relax 
 l.128 }
-       )) [41]
+       )) [39]
 
 LaTeX Warning: Empty bibliography on input line 64.
 
@@ -2021,25 +2005,29 @@ LaTeX Warning: Empty bibliography on input line 64.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `Skript.out' has not changed.
-(rerunfilecheck)             Checksum: 8BAE8275CC5EA63F4BE9360D2ABB0DE1;8611.
+(rerunfilecheck)             Checksum: 523FBB0695A9F70B1C9B3E1299A6F058;8594.
 Package logreq Info: Writing requests to 'Skript.run.xml'.
 \openout1 = `Skript.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 89005 strings out of 476056
- 2269881 string characters out of 5791604
- 3260527 words of memory out of 5000000
- 109379 multiletter control sequences out of 15000+600000
+ 88979 strings out of 476056
+ 2268949 string characters out of 5791604
+ 3263593 words of memory out of 5000000
+ 109355 multiletter control sequences out of 15000+600000
  566212 words of font info for 69 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  118i,19n,134p,865b,2463s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </root/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb>
-Output written on Skript.pdf (45 pages, 2498418 bytes).
+Output written on Skript.pdf (43 pages, 2494136 bytes).
 PDF statistics:
- 847 PDF objects out of 1000 (max. 8388607)
- 716 compressed objects within 8 object streams
- 250 named destinations out of 1000 (max. 500000)
+ 839 PDF objects out of 1000 (max. 8388607)
+ 710 compressed objects within 8 object streams
+ 248 named destinations out of 1000 (max. 500000)
  552 words of extra memory for PDF output out of 10000 (max. 10000000)
 

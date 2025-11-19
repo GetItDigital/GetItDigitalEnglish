@@ -215,6 +215,44 @@
 \newcommand{\eco}[1]{{\color{orange}#1}} 	% orange color
 
 %Lernziel
+\newtcolorbox{Learning objectives}[1]{enhanced,
+	before skip=1cm,
+	after skip=1cm,
+	colframe=GETgreen,
+	colbacktitle=GETgreen,
+	colback=white!95!black,
+	boxrule=0.5mm,
+	title={Learning objectives: #1},
+	attach boxed title to top left={xshift=1.14cm,yshift*=-\tcboxedtitleheight/2}, varwidth boxed title*=-3cm,
+	boxed title style={
+		frame code={
+			\path[left color=tcbcolback,right color=tcbcolback,
+				middle color=tcbcolback]
+				([xshift=1.6mm]frame.north west)[rounded corners=0.5mm]
+				-- ([xshift=1.6mm]frame.north east)
+				-- ([xshift=-1mm]frame.south east)
+				-- ([xshift=-1mm]frame.south west)
+				-- cycle;
+			\path[left color=tcbcolback,right color=tcbcolback,
+				middle color=tcbcolback]
+				([xshift=-3mm]frame.north west)[rounded corners=0.5mm]
+				-- ([xshift=0.3mm]frame.north west)
+				-- ([xshift=-2.2mm]frame.south west)
+				-- ([xshift=-5.5mm]frame.south west)
+				-- cycle;
+			\path[left color=tcbcolback,right color=tcbcolback,
+				middle color=tcbcolback]
+				([xshift=-7.6mm]frame.north west)[rounded corners=0.5mm]
+				-- ([xshift=-4.3mm]frame.north west)
+				-- ([xshift=-6.8mm]frame.south west)
+				-- ([xshift=-10.1mm]frame.south west)
+				-- cycle;
+		},interior engine=empty,
+	},fonttitle=\bfseries
+}
+
+
+%Lernziel
 \newtcolorbox{Lernziele}[1]{enhanced,
 	before skip=1cm,
 	after skip=1cm,
@@ -250,6 +288,7 @@
 		},interior engine=empty,
 	},fonttitle=\bfseries
 }
+
 
 %Merksatz
 \newtcolorbox{Merksatz}[1]{enhanced,
@@ -288,6 +327,42 @@
 	},fonttitle=\bfseries
 }
 
+%Merksatz
+\newtcolorbox{Key point}[1]{enhanced,
+	before skip=1cm,
+	after skip=1cm,
+	colframe=GETgreen,
+	colbacktitle=GETgreen,
+	colback=GETgreen!5!white,
+	boxrule=0.5mm,
+	title={Key point: #1},
+	attach boxed title to top left={xshift=1.14cm,yshift*=-\tcboxedtitleheight/2}, varwidth boxed title*=-3cm,
+	boxed title style={
+		frame code={
+			\path[left color=tcbcolback,right color=tcbcolback,
+				middle color=tcbcolback]
+				([xshift=1.6mm]frame.north west)[rounded corners=0.5mm]
+				-- ([xshift=1.6mm]frame.north east)
+				-- ([xshift=-1mm]frame.south east)
+				-- ([xshift=-1mm]frame.south west)
+				-- cycle;
+			\path[left color=tcbcolback,right color=tcbcolback,
+				middle color=tcbcolback]
+				([xshift=-3mm]frame.north west)[rounded corners=0.5mm]
+				-- ([xshift=0.3mm]frame.north west)
+				-- ([xshift=-2.2mm]frame.south west)
+				-- ([xshift=-5.5mm]frame.south west)
+				-- cycle;
+			\path[left color=tcbcolback,right color=tcbcolback,
+				middle color=tcbcolback]
+				([xshift=-7.6mm]frame.north west)[rounded corners=0.5mm]
+				-- ([xshift=-4.3mm]frame.north west)
+				-- ([xshift=-6.8mm]frame.south west)
+				-- ([xshift=-10.1mm]frame.south west)
+				-- cycle;
+		},interior engine=empty,
+	},fonttitle=\bfseries
+}
 
 % logarithmische Achsen für den Bode-Plot
 \pgfplotsset{

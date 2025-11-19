@@ -1,6 +1,8 @@
 \begin{frame}
 	\fta{Introduction}
 
+	\renewcommand{\figurename}{Figure}
+
 	\s{        
 		While the calculations for series connections without parallel-connected 
 		components are relatively straightforward, the analysis of 
@@ -16,24 +18,23 @@
 		}
 
 	\begin{itemize}
-		\item Knoten- und Maschenregel
+		\item Node and mesh rule
 		\item Superposition
-		\item Knotenpotentialanalyse
-		\item Maschenstromanalyse
+		\item Node potential analysis
+		\item Mesh current analysis
 	\end{itemize}
 
 	\s{
-		Auch die Analyse von elektrischen Netzwerken mit mehr als einer Strom- 
-		oder Spannungsquelle ist nicht trivial. Die Bestimmung aller Ströme und 
-		Spannungen des elektrischen Netzwerkes aus Abbildung \ref{BildEinleitungsnetzwerk} 
-		ist allein durch die Berechnungen von Serienschaltungen und Parallelschaltungen nicht 
-		möglich. 
+		The analysis of electrical networks with more than one current 
+        or voltage source is also not trivial. Determining all currents and 
+        voltages in the electrical network shown in Figure \ref{BildEinleitungsnetzwerk} 
+        is not possible by calculating series and parallel connections alone. 
 		}
  
 	\fu{
 		\resizebox{.5\textwidth}{!}{%
 		\input{Tikz/src/beispielnetzwerk.tex}%
 		}
-	}{{\bf Beispielnetzwerk.} Elektrisches Gleichstromnetzwerk mit einer Vielzahl an Widerständen,
-	Stromquellen und Spannungsquellen. \label{BildEinleitungsnetzwerk}}
+	}{{\bf Example Network.} Direct current electrical network with a plurality of resistors,
+    current sources and voltage sources. \label{BildEinleitungsnetzwerk}}
 \end{frame}

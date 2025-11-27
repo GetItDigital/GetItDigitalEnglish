@@ -127,26 +127,25 @@
 
 
 \begin{frame}
-    \ftx{Knotenpotentialverfahren}
+    \ftx{Nodal analysis}
 
-    \begin{Key point}{Knotenpotentialverfahren}
-        Beim Knotenpotentialverfahren wird ein elektrisches Netzwerk mit Stromquellen und Leitwerten analysiert. 
+    \begin{Key point}{Nodal analysis}
+        In the nodal analysis method, an electrical network with current sources and conductances is analysed. 
     \end{Key point}
 
 	\speech{KnotpotMrk}{1}{Beim Knotenpotentialverfahren wird ein elektrisches Netzwerk mit Stromquellen und Leitwerten analysiert.} 
 \end{frame}
 
 
-
-
 \begin{frame}
-	\ftb{Bestimmung der Knoten und der Knotenpotentiale}
+	\renewcommand{\figurename}{Figure}
+	\ftb{Determination of nodes and node potentials}
 
 	\s{
-		Nun müssen die Knoten bestimmt werden. Hierzu legen wir einen Bezugsknoten mit dem Index 0, also $K_0$, fest. 
-		Weiter werden alle Knoten fortlaufend nummeriert. Das elektrische Netzwerk mit den nummerierten Knoten wird in der
-		Abbildung \ref{BildKnot3} abgebildet. Die eingezeichneten Knoten ohne Komponenten zwischen den nummerierten Knoten
-		weisen das identische Potential auf und bilden somit einen Knoten.  
+		Now the nodes must be determined. To do this, we define a reference node with the index 0, i.e. $K_0$.
+		Next, all nodes are numbered consecutively. The electrical network with the numbered nodes is shown in
+		Figure \ref{BildKnot3}. The nodes drawn without components between the numbered nodes
+        have the same potential and thus form a node.  
 	}
 
 	\onslide<1->{
@@ -160,15 +159,15 @@
 		\resizebox{0.7\textwidth}{!}{%                                         
 		\input{Tikz/src/knot3.tex}
 		}                                                  
-	}{{\bf Umgewandeltes Netzwerk.} Festlegung des Bezugsknotens $K_0$ und der fortlaufenden Knoten $K_1$ und $K_2$. \label{BildKnot3}}} 
+	}{{\bf Converted network.} Determination of the reference node $K_0$ and the consecutive nodes $K_1$ and $K_2$. \label{BildKnot3}}} 
 
 	\s{
-		Um die Knotenpotentiale festzulegen, werden alle Potentiale der Knoten $K_1$ und $K_2$ auf den Bezugsknoten bezogen. 
-		Zur Durchführung des Knotenpotentialverfahrens werden $k-1$ Gleichungen benötigt. Auf das angegebene Netzwerk bezogen, 
-		ergeben sich somit zwei Gleichungen, welche in vektorieller Schreibweise nach Gleichung \ref{GleichungKnotenpotentiale} 
-		notiert werden. Hier wird das Potential für den Knoten $K_1$ über die Spannung vom Knoten $K_1$ zum Bezugknoten definiert.
-		Daraus ergibt sich die Notation $U_\mathrm{K1-K0}$. Selbiges wird für den Knoten $K_2$ durchgeführt. Hier wird die Spannung 
-		$U_\mathrm{K2-K0}$ definiert. 
+		To determine the node potentials, all potentials of nodes $K_1$ and $K_2$ are referenced to the reference node.
+        $k-1$ equations are required to perform the node potential method. Referring to the specified network, 
+		this results in two equations, which are written in vector notation according to equation \ref{GleichungKnotenpotentiale}.
+		Here, the potential for node $K_1$ is defined by the voltage from node $K_1$ to the reference node.	
+		This results in the notation $U_\mathrm{K1-K0}$. The same is done for node $K_2$. Here, the voltage 
+        $U_\mathrm{K2-K0}$ is defined.
 	}
 
 	\onslide<2->{
@@ -196,15 +195,17 @@
 \end{frame}
 
 \begin{frame}
-	\ftb{Zuordnung der Quellströme}
+	\ftb{Allocation of source currents}
 
 	\s{
-		Für die festgelegten Knoten, abgesehen vom Bezugsknoten, müssen die abfließenden und zufließende Ströme festgehalten werden. 
-		Jede Stromquelle an den Knoten wird notiert. Hier werden zufließende Stromquellen mit einem positiven Vorzeichen und abfließende 
-		Stromquellen mit einem negativen Vorzeichen versehen. Aus dem Knoten $K_1$ fließt der Strom der Stromquelle $-I_\mathrm{q0}$, dieser 
-		Strom wird mit einem negativen Vorzeichen versehen. Aus dem Knoten $K_2$ fließt der Strom der Stromquelle $-I_\mathrm{q2}$ heraus, 
-		dieser wird ebenfalls mit einem negativen Vorzeichen versehen. Nach Gleichung \ref{GleichungQuellströme} ergibt sich der 
-		Vektor für die Quellströme. 
+		For the specified nodes, apart from the reference node, the outgoing and incoming currents must be recorded.
+		Each current source at the nodes is noted. Here, incoming current sources are given a positive sign and outgoing
+		current sources are given a negative sign. 
+		The current from the current source $-I_\mathrm{q0}$ flows out of node $K_1$, and this 
+		current is assigned a negative sign. The current from the current source $-I_\mathrm{q2}$ flows out of node $K_2$, and 
+		this is also assigned a negative sign. According to equation \ref{GleichungQuellströme}, this results in the 
+        vector for the source currents.
+ 
 	}
 
 	\b{
@@ -231,19 +232,22 @@
 \end{frame}
 
 \begin{frame}
-	\ftb{Leitwertmatrix}
+	\renewcommand{\figurename}{Figure}
+	\ftb{Conductance matrix}
 
 	\s{
-		Nach der Umwandlung der Widerstandswerte in Leitwerte, wird mit den Leitwerten die Leitwertmatrix erstellt. Hierzu werden 
-		wieder die Knoten abgesehen vom Bezugsknoten untersucht. Hierfür wird das vorgestellte elektrische Netzwerk noch einmal in 
-		der Abbildung \ref{BildLeitwertmatrix} mit farbig hervorgehobenen Zweigen gezeigt. Über die Hauptdiagonale werden die 
-		Leitwerte der Knoten notiert. Für jeden Knoten werden die Leitwerte der direkt angrenzenden Komponenten aufgeschrieben. 
-		Für den Knoten $K_1$ wären das die an dem blau hervorgehobenen Zweig angrenzenden Leitwerte $G_0$, $G_1$ und $G_3$ und 
-		für den Knoten $K_2$ die Leitwerte $G_2$ und $G_3$. Abseits der Hauptdiagonalen auf den anderen Elementen der Leitwertmatrix 
-		werden die Leitwerte protokolliert, welche direkt zwischen den Knoten liegen. Zwischen den Knoten $K_1$ und $K_2$ liegt auf 
-		direktem Wege der in grün hervorgehobenen Zweig mit dem Leitwert $G_3$. Liegen zwischen den betrachteten Knoten weitere Knoten, 
-		so sind diese nicht direkt miteinander Verbunden und in das Element der Leitwertmatrix wird eine 0 eingetragen. Die auf diese 
-		Weise angefertigte Leitwertmatrix wird in der Gleichung \ref{GleichungLeitwertmatrix} veranschaulicht. 
+        After converting the resistance values into conductance values, the conductance matrix is created using the conductance values. To do this, 
+        the nodes apart from the reference node are examined again. For this purpose, the electrical network presented is shown once more in 
+        Figure \ref{BildLeitwertmatrix} with coloured branches.
+ 		The conductance values of the nodes are noted along the main diagonal. 
+		For each node, the conductance values of the directly adjacent components are written down. 
+        For node $K_1$, these would be the conductance values $G_0$, $G_1$ and $G_3$ adjacent to the branch highlighted in blue, and 
+        for node $K_2$, the conductance values $G_2$ and $G_3$. Away from the main diagonal, the conductance values that lie directly 
+		between the nodes are recorded on the other elements of the conductance matrix. 
+		Between nodes $K_1$ and $K_2$, the branch highlighted in green with the conductance value $G_3$ lies directly between them
+. If 	there are other nodes between the nodes under consideration, 
+        these are not directly connected to each other and a 0 is entered in the element of the conductance matrix. The conductance matrix created in this 
+        way is illustrated in equation \ref{GleichungLeitwertmatrix}. 
 	}
 
 	\b{
@@ -257,7 +261,7 @@
 		\resizebox{0.6\textwidth}{!}{%  
 		\input{Tikz/src/leitwertmatrix.tex}		
 		}
-	}{{\bf Elektrisches Netzwerk mit hervorgehobenen Zweigen.} Erstellung der Leitwertmatrix für das Knotenpotentialverfahren 
+	}{{\bf Electrical network with highlighted connections.} Creation of the conductance matrix for the nodal analysis method 
 	\label{BildLeitwertmatrix}}
 
 	\b{
@@ -314,13 +318,12 @@
 \end{frame}
 
 \begin{frame}
-	\ftb{Gleichungssystem aufstellen}
+	\ftb{Set up a system of equations}
 
 	\s{
-		Nachdem der Vektor der Knotenpotentiale, der Vektor der Quellströme und die Leitwertmatrix bestimmt wurden, wird aus diesen 
-		Gleichungen das Gleichungssystem des Knotenpotentialverfahrens aufgestellt, welches in der Gleichung \ref{GleichungKnot1} 
-		angezeigt wird. 
-	}
+		After the vector of node potentials, the vector of source currents, and the conductance matrix have been determined, these equations are used to 
+        set up the system of equations for the node potential method, which is shown in Equation \ref{GleichungKnot1}.
+}
 
 	\b{
 		\begin{itemize}
@@ -348,12 +351,12 @@
         \end{bmatrix}
     \end{eq} \label{GleichungKnot1}
 
-	\s{
-		Das Gleichungssystem des Knotenpotentialverfahrens kann anschließend exemplarisch mit dem Gaußschen Eliminationsverfahren 
-		gelöst werden. Durch das Umstellen der Gleichung nach den gesuchten Knotenpotentialen können diese identifiziert werden. Ist so 
-		beispielsweise in dem untersuchten Netzwerk die Spannung über den Widerstand $R_1$ berechnet worden, kann der Strom durch 
-		den Widerstand bestimmt werden. Als Alternative zum Gaußschen Eliminationsverfahren wäre noch die Cramersche Regel zu nennen
-		um lineare Gleichungssysteme zu lösen. 
+	\s{        
+		The system of equations of the node potential method can then be solved using the Gauss elimination method 
+        as an example. By rearranging the equation according to the node potentials sought, these can be identified. If, for example,
+ 		the voltage across resistor $R_1$ has been calculated in the network under investigation, the current through 
+        the resistor can be determined. As an alternative to the Gaussian elimination method, Cramér's rule can also be used
+        to solve linear systems of equations. 
 	}
 
 	\speech{KnotpotGleich}{1}{Mithilfe der Leitwertmatrix, dem Spannungsvektor und dem Vektor der Quellströme lässt sich nun 
@@ -365,36 +368,38 @@
 \end{frame}
 
 \begin{frame}
-    \ftx{Beispiel Knotenpotentialverfahren}
+	\renewcommand{\figurename}{Figure}
+
+    \ftx{Example: Nodal analysis}
     \begin{bsp}{Knotenpotentialverfahren}{}
 
     \s{
-        Analyse des elektrischen Netzwerk aus der Abbildung \ref{BildKnot4} mittels des Knotenpotentialverfahrens. 
+        Analysis of the electrical network from Figure \ref{BildKnot4} using the node potential method. 
     }
 
 	\begin{enumerate}
         \only<1>{			
             \item[]
-    Die folgenden Schritte sollen für das Knotenpotentialverfahren bearbeitet werden:
+    The following steps should be carried out for the node potential method:
 
     \begin{itemize}
-        \item[a)] Vorbereitung des Netzwerkes
-		\item[b)] Bestimmung der Knoten und der Knotenpotentiale
-		\item[c)] Zuordnung der Quellströme
-		\item[d)] Aufstellung der Leitwertmatrix
-		\item[e)] Gleichungssystem aufstellen
+        \item[a)] Preparation of the network
+		\item[b)] Determination of nodes and node potentials
+		\item[c)] Allocation of source currents
+		\item[d)] Preparation of the conductivity matrix
+		\item[e)] Set up a system of equations
     \end{itemize}
 
     \fu{  
         \resizebox{0.5\textwidth}{!}{%                                     
         \input{Tikz/src/knot4.tex}
         }                  
-    }{{\bf Beispiel.} Knotenpotentialverfahren an einem elektrischen Netzwerk. \label{BildKnot4}}                                            
+    }{{\bf Beispiel.} Node potential method on an electrical network. \label{BildKnot4}}                                            
 }
 
 
         \only<2>{			
-            \item[a)] Vorbereitung des Netzwerkes:
+            \item[a)] Preparing the network:
 			\begin{figure}[H]
                 \resizebox{0.65\textwidth}{!}{%
                     \input{Tikz/src/knot5.tex}	
@@ -402,7 +407,7 @@
             \end{figure}
             }
         \only<3>{
-            \item[b)] Bestimmung der Knoten und der Knotenpotentiale:
+            \item[b)] Determination of nodes and node potentials:
             \onslide<3>{
 			\begin{figure}[H]
              	\resizebox{0.4\textwidth}{!}{%                                                        
@@ -424,7 +429,7 @@
 			}
         }
         \only<4>{
-            \item[c)] Zuordnung der Quellströme:
+            \item[c)] Allocation of source currents:
             \onslide<4>{
 				\begin{eq}
 					I_\mathrm{K} = 
@@ -439,7 +444,7 @@
             }
         }
         \only<5>{
-            \item[d)] Bestimmung der Leitwertmatrix:
+            \item[d)] Determination of the conductance matrix:
             \onslide<5>{
                 \begin{eq}
 					G_\mathrm{K} =
@@ -454,7 +459,7 @@
             }
         }
         \only<6>{
-            \item[e)] Gleichungssystem aufstellen:
+            \item[e)] Set up a system of equations:
             \onslide<6>{
                 \begin{eq}
                     \begin{bmatrix} 

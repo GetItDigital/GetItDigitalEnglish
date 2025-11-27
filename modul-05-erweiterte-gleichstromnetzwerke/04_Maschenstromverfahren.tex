@@ -2,14 +2,15 @@
 
 \newvideofile{Mastrom}{Maschenstromverfahren}
 \begin{frame}
+    
 	\ftx{Lernziele Maschenstromverfahren}
-	\begin{Lernziele}{Maschenstromverfahren}
-        Die Studierenden 
+	\begin{Key point}{mesh flow method}
+        The Students 
         \begin{itemize}
-			\item kennen die Schritte des Maschenstromverfahrens.
-            \item können mit Hilfe des Maschenstromverfahrens elektrische Netzwerke analysieren. 
+			\item are familiar with the steps of the mesh flow process.
+            \item can analyse electrical networks using the mesh current method. 
         \end{itemize}                   
-    \end{Lernziele}
+    \end{Key point}
 
 	\speech{MastromLernz}{1}{Neben dem Knotenpotentialverfahren bietet das Maschenstromverfahren eine weitere Möglichkeit, 
     um elektrische Netzwerke zu analysieren. 
@@ -17,14 +18,16 @@
 \end{frame}
 
 \begin{frame}
-    \fta{Maschenstromverfahren}
+	\renewcommand{\figurename}{Figure}
+    \fta{Mesh flow method}
 
     \s{
-        Neben der Knotenpotentialanalyse zur Untersuchung von elektrischen Netzwerken kann auch das Maschenstromverfahren
-        zur Berechnung herangezogen werden. Beim Maschenstromverfahren wird ein Gleichungssystem 
-        aufgestellt, mit welchem die Maschenströme ermittelt werden können. Um das Gleichungssystem des Maschenstromverfahrens 
-        aufstellen zu können, müssen einige Vorbereitungen getroffen werden. In den folgenden Schritten soll das elektrische 
-        Netzwerk aus der Abbildung \ref{BildMaschenstromverfahren} mittels des Maschenstromverfahrens berechnet werden. 
+        In addition to node potential analysis for investigating electrical networks, the mesh current method can also be used for calculation. 
+        In the mesh current method, a system of equations 
+        is set up with which the mesh currents can be determined. In order to set up the system of equations for the mesh current method, 
+        some preparations must be made. In the following steps, the electrical 
+        network from Figure \ref{BildMaschenstromverfahren} is to be calculated using the mesh current method.
+ 
     }
 
     \b{
@@ -41,8 +44,8 @@
         \resizebox{0.7\textwidth}{!}{%                                         
         \input{Tikz/src/Netzwerk_Maschenstrom}
         }                                                  
-    }{{\bf Netzwerk für das Maschenstromverfahren.} Elektrisches Netzwerk mit einer Spannungsquelle, einer Stromquelle und drei Widerständen. Anhand des Netzwerkes wird 
-    das Maschenstromverfahren erläutert. \label{BildMaschenstromverfahren}}   
+    }{{\bf Network for the mesh flow method.} Electrical network with a voltage source, a current source and three resistors. The network is used to 
+    explain the mesh current method.. \label{BildMaschenstromverfahren}}   
     
     \speech{MastromSchritte}{1}{Zu beginn sollte wie auch beim Knotenpotentialverfahren das elektrische Netzwerk vorbereitet werden.
     Das beinhaltet unter anderem das Zusammenfassen von Reihen und Parallelschaltungen wie auch das eventuelle Umwandeln der Quellen. 
@@ -54,28 +57,30 @@
 
 
 \begin{frame}
-\ftb{Vorbereitung des Netzwerkes}
+    \renewcommand{\figurename}{Figure}
+\ftb{Preparation of the network}
 
     \s{
-        Das Maschenstromverfahren arbeitet mit Spannungsquellen und Widerstandswerten. Hierfür müssen eventuelle Stromquellen
-        in Spannungsquellen transformiert werden. Diese Art der Umwandlung einer Stromquelle in eine Spannungsquelle wird noch
-        einmal in der Abbildung \ref{BildMasch1} dargestellt. Hier wird aus der Stromquelle und dem parallel liegenden 
-        Innenwiderstand eine Spannungsquelle mit einem in reihe liegenden Innenwiderstand. 
+        The mesh current method works with voltage sources and resistance values. For this purpose, any current sources must be transformed into voltage sources.
+        This type of conversion of a current source into a voltage source is shown once again in Figure \ref{BildMasch1}.
+        Here, the current source and the parallel internal resistance are transformed into a voltage source with a series internal resistance. 
+        Here, the current source and the parallel 
+        internal resistance are converted into a voltage source with a series internal resistance. 
     }
 
 	\b{
 		\begin{itemize}
-			\item Umwandlung der Stromquellen in Spannungsquellen:
+			\item Conversion of current sources into voltage sources:
 		\end{itemize}
 	}    
 
     \fu{                                     
         \input{Tikz/src/Umwandlung_Stromquelle}                                                   
-    }{{\bf Umwandlung einer Stromquelle.} Umwandlung einer Stromquelle mit Parallelwiderstand zur Spannungsquelle mit Serienwiderstand. \label{BildMasch1}}   
+    }{{\bf Conversion of a power source.} Conversion of a current source with parallel resistance to a voltage source with series resistance. \label{BildMasch1}}   
 
     \s{
-        Die Gleichung \ref{GleichungUmrechnungStromquelle} zeigt die Berechnung des Spannungswertes der Spannungsquelle 
-        aus dem angegebenen Stromwert der Stromquelle und dem Widerstandswert des Innenwiderstands. 
+        Equation \ref{GleichungUmrechnungStromquelle} shows the calculation of the voltage value of the voltage source 
+        from the specified current value of the current source and the resistance value of the internal resistance. 
     }
 
     \onslide<2->{
@@ -90,8 +95,8 @@
     \end{eq}}
 
     \s{
-        Außerdem müssen mögliche Leitwerte von elektrischen Widerständen in Widerstandswerte geändert werden. In der Gleichung 
-        \ref{GleichungUmrechnungLeitwert} wird gezeigt, wie der Widerstandswert aus dem Kehrwert des Leitwerts ermittelt wird. 
+        In addition, possible conductance values of electrical resistors must be converted into resistance values. Equation 
+        \ref{GleichungUmrechnungLeitwert} shows how the resistance value is determined from the reciprocal of the conductance. 
     }
 
     \onslide<3->{
@@ -113,16 +118,17 @@
 \end{frame}
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Vorbereitung des Netzwerkes}
 
     \s{
-        In der Abbildung \ref{BildMasch2} wird die Umwandlung der Stromquelle des vorgestellten Netzwerkes in eine Spannungsquelle
-        durchgeführt. Aus der Parallelschaltung der Stromquelle und des Widerstandes $R_2$ wird eine Reihenschaltung bestehend
-        aus der neuen Spannungsquelle und dem Widerstand $R_2$.
+        In Figure \ref{BildMasch2}, the current source of the network shown is converted into a voltage source.
+        The parallel connection of the current source and resistor $R_2$ becomes a series connection consisting
+        of the new voltage source and resistor $R_2$.
     }
 
     \b{
-        Umwandlung der Stromquelle in eine Spannungsquelle:
+        Conversion of the current source into a voltage source:
         \begin{itemize}
             \item Die Stromquelle mit einer Spannungsquelle ersetzen
             \item Aus dem Parallelwiderstand wird ein Reihenwiderstand
@@ -133,21 +139,20 @@
 		\resizebox{\textwidth}{!}{%
         \input{Tikz/src/Umwandlung_Stromquelle_Netzwerk}
         }                                           
-    }{{\bf Umwandlung einer Stromquelle in einem elektrischen Netzwerk.} Umwandlung der Stromquelle mit Parallelwiderstand 
-    des zu berechnenden Netzwerkes in eine Spannungsquelle mit Reihenwiderstand. Die Transformation der Quelle findet im roten 
-    Kreis statt. \label{BildMasch2}}  
+    }{{\bf Conversion of a power source in an electrical network.} Conversion of the current source with parallel resistance 
+    of the network to be calculated into a voltage source with series resistance. The transformation of the source takes place in the red 
+    circle. \label{BildMasch2}}  
     
     \speech{MastromUmw}{1}{Die Umwandlung der Stromquelle in eine Spannungsquelle wird für das angegebene Netzwerk dargestellt.
     Aus dem Parallelwiderstand der Stromquelle wird der Reihenwiderstand für die Spannungsquelle.} 
 \end{frame}
 
 \begin{frame}
-    \ftx{Maschenstromverfahren}
+    \ftx{Mesh flow method}
 
-    \begin{Merksatz}{Maschenstromverfahren}
-        Für das Maschenstromverfahren werden zur Analyse eines elektrischen Netzwerkes Spannungsquellen und Widerstandswerte 
-        benötigt.
-    \end{Merksatz}
+    \begin{Key point}{Mesh flow method}
+        For the mesh current method, voltage sources and resistance values are required to analyse an electrical network.
+    \end{Key point}
 
     \speech{MastromMrk}{1}{Für das Maschenstromverfahren werden zur Analyse eines elektrischen Netzwerkes 
     Spannungsquellen und Widerstandswerte benötigt.} 
@@ -155,12 +160,13 @@
 
 
 \begin{frame}
-\ftb{Maschen definieren}
+    \renewcommand{\figurename}{Figure}
+\ftb{Define meshes}
 
     \s{
-        Für die Maschenstromanalyse müssen die Maschen festgelegt werden. Über den Maschen werden die Maschenströme
-        festgelegt. Außerdem werden den Maschen die Widerstände zugeordnet. In der Abbildung \ref{BildMasch3} wird 
-        das vorgestellte Netzwerk mit den eingezeichneten Maschen $M_1$ und $M_2$ dargestellt. 
+        For mesh current analysis, the meshes must be defined. The mesh currents are determined via the meshes.
+        In addition, the resistances are assigned to the meshes. Figure \ref{BildMasch3} shows 
+        the network presented with the meshes $M_1$ and $M_2$ marked.
     } 
     
     \b{
@@ -173,14 +179,14 @@
         \resizebox{0.7\textwidth}{!}{%                                                 
         \input{Tikz/src/Maschen_im_Netzwerk}
         }                                                            
-    }{{\bf Maschen im elektrischen Netzwerk.} Festlegung der Maschen $M_1$ und $M_2$ sowie der zugehörigen Maschenströme. 
+    }{{\bf Mesh in the electrical network.} Determination of meshes $M_1$ and $M_2$ and the associated mesh flows.  
     \label{BildMasch3}}                                                
 
     \s{
         
-        Durch alle Komponenten welche sich an der Masche $M_1$ befinden, fließt der Maschenstrom $I_\mathrm{M1}$. So wie auch 
-        alle Komponenten an der Masche $M_2$ von dem Maschenstrom $I_\mathrm{M2}$ durchflossen werden. Die beiden Maschenströme
-        $I_\mathrm{M1}$ und $I_\mathrm{M2}$ werden vektoriell in der Gleichung \ref{GleichungMaschenströme} notiert. 
+        The mesh current $I_\mathrm{M1}$ flows through all components located at mesh $M_1$. Similarly, 
+        all components at mesh $M_2$ are traversed by the mesh current $I_\mathrm{M2}$. The two mesh currents
+        $I_\mathrm{M1}$ and $I_\mathrm{M2}$ are noted vectorially in equation \ref{GleichungMaschenströme}. 
     }
 
     \begin{eq}
@@ -198,23 +204,23 @@
 
 
 \begin{frame}
-    \ftb{Widerstandsmatrix bestimmen}
+    \renewcommand{\figurename}{Figure}
+    \ftb{Determine resistance matrix}
 
     \s{
-        In der Masche $M_1$ trifft der Maschenstrom $I_{M1}$ auf die beiden Widerstände $R_0$ und $R_1$. Die Masche $M_1$ wird in 
-        der Abbildung \ref{BildWiderstandsmatrix} in blau dargestellt. Der Maschenstrom $I_{M2}$ der Masche $M_2$ durchfließt die 
-        Widerstände $R_1$ und $R_2$. Der Widerstand $R_1$ ist somit teil der beiden Maschen $M_1$ und $M_2$ und wird von beiden 
-        Maschenströmen durchflossen. Wird ein Widerstand von mehreren Maschenströmen durchflossen gilt dieser als Kopplungswiderstand 
-        zwischen den Maschen. 
-
-        In der Widerstandsmatrix nach Gleichung
-        \ref{GleichungWiderstandsmatrix} werden die Widerstände der Maschen und die Kopplungswiderstände zugeordnet. Hier werden
-        die Umlaufwiderstände aus den Maschen in die Hauptdiagonale eingetragen. Das heißt, dass die Reihenschaltung $R_0 + R_1$ 
-        das Element der ersten Spalte und Zeile für die erste Masche wird. Die Reihenschaltung $R_1 + R_2$ wird in das Element 
-        der zweiten Spalte und Zeile für die zweite Masche eingetragen. In die übrigen Elemente der Widerstandsmatrix werden 
-        die Kopplungswiderstände zwischen den jeweiligen Maschen eingetragen. Der Kopplungswiderstand bekommt ein positives 
-        Vorzeichen, wenn beide Maschenströme in die selbe Richtung fließen und ein negatives, wenn diese entgegengesetzt fließen. 
-        Die Widerstandsmatrix wird in der Wechselstromtechnik auch als Maschenimpedanzmatrix bezeichnet. 
+        In mesh $M_1$, the mesh current $I_{M1}$ encounters the two resistors $R_0$ and $R_1$. Mesh $M_1$ is shown in 
+        blue in Figure \ref{BildWiderstandsmatrix}. The mesh current $I_{M2}$ of mesh $M_2$ flows through the 
+        resistors $R_1$ and $R_2$. Resistor $R_1$ is therefore part of both meshes $M_1$ and $M_2$ and is traversed by both 
+        mesh currents. If a resistor is traversed by several mesh currents, it is considered a coupling resistor 
+        between the meshes.
+        In the resistance matrix according to equation
+        \ref{GleichungWiderstandsmatrix}, the resistances of the meshes and the coupling resistances are assigned. 
+        Here the loop resistances from the meshes are entered in the main diagonal. This means that the series connection $R_0 + R_1$ 
+        becomes the element of the first column and row for the first mesh. The series connection $R_1 + R_2$ is entered in the element 
+        of the second column and row for the second mesh. The coupling resistances between the respective meshes are entered in the remaining elements of the resistance matrix. 
+        The coupling resistance is given a positive 
+        sign if both mesh currents flow in the same direction and a negative sign if they flow in opposite directions.
+        In alternating current technology, the resistance matrix is also referred to as the mesh impedance matrix. 
     }
 
     \b{
@@ -228,7 +234,7 @@
         \resizebox{0.7\textwidth}{!}{%                                                 
         \input{Tikz/src/Festlegung_der_Zweige}
         }                                                            
-    }{{\bf Festlegung der Zweige.} Elektrisches Netzwerk mit hervorgehobenen Zweigen zur Erstellung der Widerstandsmatrix für das Maschenstromverfahren
+    }{{\bf Determination of the branches.} Electrical network with highlighted branches for creating the resistance matrix for the mesh current method
     \label{BildWiderstandsmatrix}}
 
     \b{
@@ -287,14 +293,13 @@
 
 
 \begin{frame}
-    \ftb{Quellenspannungen zuordnen}
+    \ftb{Assign source voltages}
 
     \s{
-        Den Maschen müssen die Spannungsquellen, die sogennanten Quellspannungen zugeordnet werden. In der Masche $M_1$ liegt die 
-        Quellenspannung $U_0$. Die Masche $M_2$ weist die Quellenspannung $U_1$ auf. Bei übereinstimmender Richtung von Spannungspfeil 
-        und Maschenrichtung ergibt sich ein negatives Vorzeichen für die Quellspannungen. Sind die Richtungen von Spannungspfeil und
-        dem Maschenumlauf entgegengesetzt wird das Vorzeichen der Quellspannung positiv. Für den Fall, dass in einer Masche keine Quelle 
-        vohanden ist, wird eine $0$ eingetragen.
+        The mesh must be assigned the stress sources, known as source stresses. The mesh $M_1$ has the 
+        source stress $U_0$. The mesh $M_2$ has the source stress $U_1$. If the direction of the voltage arrow 
+        and the mesh direction are the same, the source voltages have a negative sign. If the directions of the voltage arrow and
+        the mesh circulation are opposite, the sign of the source voltage is positive. If there is no source in a mesh, a $0$ is entered.
     }
 
     \b{
@@ -324,12 +329,12 @@
 
 
 \begin{frame}
-\ftb{Gleichungssystem aufstellen}
+\ftb{Set up a system of equations}
 
 \s{
-    Nach dem ohmschen Gesetz wird die elektrische Spannung als Produkt aus dem elektrischen Widerstand und Strom berechnet. 
-    Bei der Maschenstromanalyse werden zur Berechnung des Vektors der Maschenströme $I_\mathrm{M}$ die Widerstandsmatrix $R_\mathrm{M}$ und der 
-    Vektor der Quellspannungen $U_\mathrm{M}$ verwendet. Das Gleichungssystem wird in der Gleichung \ref{GleichungMasche1} abgebildet.  
+    According to Ohm's law, electrical voltage is calculated as the product of electrical resistance and current.
+    In mesh current analysis, the resistance matrix $R_\mathrm{M}$ and the vector of source voltages $U_\mathrm{M}$ are used to calculate the vector of mesh currents $I_\mathrm{M}$.
+    The system of equations is represented in Equation \ref{GleichungMasche1}.  
     }
 
 \begin{eq}
@@ -353,10 +358,10 @@
 \end{eq}
 
 \s{
-    Die gesuchte Größen werden aus den Maschenströmen berechnet. Beispielsweise werden die Ströme $I_0$, $I_1$ und $I_2$ gesucht.
-    Die Ergebnisse der Maschenströme sind mit den Strömen gleichzusetzen, welche lediglich von einem Maschenstrom durchflossen werden. 
-    In dem vorgestellten elektrischen Netzwerk beträgt der Strom der Masche $M_1: I_\mathrm{M1} = I_0$ und der Masche $M_2: I_\mathrm{M2} = -I_2$. Der
-    Strom durch den Widerstand $R_1$ lässt sich beispielsweise über die Knotengleichung berechnen: $I_1 = I_0 + I_2$.
+    The quantities sought are calculated from the mesh currents. For example, the currents $I_0$, $I_1$ and $I_2$ are sought.
+    The results of the mesh currents are equivalent to the currents that flow through a single mesh current. 
+    In the electrical network shown, the current of mesh $M_1$ is $I_\mathrm{M1} = I_0$ and the current of mesh $M_2$ is $I_\mathrm{M2} = -I_2$. The
+    current through resistor $R_1$ can be calculated using the node equation: $I_1 = I_0 + I_2$.
 }
 
 \speech{MastromGleich}{1}{Nun kann aus der Widerstandsmatrix, 
@@ -379,24 +384,24 @@ Somit sind dann alle Größen des Netzwerkes identifiziert worden.}
 
 \begin{frame}
     \ftx{Beispiel Maschenstromverfahren}
-    \begin{bsp}{Maschenstromverfahren}{}
+    \begin{bsp}{Mesh flow method}{}
 
     \s{
-        Analyse des elektrischen Netzwerk aus der Abbildung \ref{BildMasch4} mittels der Maschenstromanalyse. 
+        Analysis of the electrical network from Figure \ref{BildMasch4} using mesh current analysis. 
     }
 
     \begin{enumerate}
         \only<1>{	
             \item[]
 
-    Für die Maschenstromanalyse sollen die folgenden Schritte bearbeitet werden:
+        The following steps should be carried out for mesh flow analysis:
 
     \begin{itemize}
-        \item[a)] Vorbereitung des Netzwerkes
-		\item[b)] Maschen und Maschenströme definieren
-		\item[c)] Widerstandsmatrix bestimmen
-		\item[d)] Quellspannungen zuordnen
-		\item[e)] Gleichungssystem aufstellen
+        \item[a)] Preparation of the network
+		\item[b)] Define meshes and mesh flows
+		\item[c)] Determine resistance matrix
+		\item[d)] Assign source voltages
+		\item[e)] Set up a system of equations
     \end{itemize}
 
     \fu{  
@@ -409,7 +414,7 @@ Somit sind dann alle Größen des Netzwerkes identifiziert worden.}
 
 
         \only<2>{			
-            \item[a)] Vorbereitung des Netzwerkes:
+            \item[a)] Preparation of the network
 			\begin{figure}[H]
                 \resizebox{0.7\textwidth}{!}{%
                     \input{Tikz/src/Vorbereitung_Netzwerk}	
@@ -417,7 +422,7 @@ Somit sind dann alle Größen des Netzwerkes identifiziert worden.}
                 \end{figure}
             }
         \only<3>{
-            \item[b)] Maschen und Maschenströme definieren:
+            \item[b)] Define meshes and mesh flows
             \onslide<3>{
                 \begin{figure}[H]
                 \resizebox{0.4\textwidth}{!}{%                                                        
@@ -440,7 +445,7 @@ Somit sind dann alle Größen des Netzwerkes identifiziert worden.}
             }
         }
         \only<4>{
-            \item[c)] Widerstandsmatrix bestimmen:
+            \item[c)] Determine resistance matrix
             \onslide<4>{
                 \begin{eq}
                     R_\mathrm{M} =
@@ -455,7 +460,7 @@ Somit sind dann alle Größen des Netzwerkes identifiziert worden.}
             }
         }
         \only<5>{
-            \item[d)] Quellspannungen zuordnen:
+            \item[d)] Assign source voltages
             \onslide<5>{
                 \begin{eq}
                     U_\mathrm{M} = 
@@ -470,7 +475,7 @@ Somit sind dann alle Größen des Netzwerkes identifiziert worden.}
             }
         }
         \only<6>{
-            \item[e)] Gleichungssystem aufstellen:
+            \item[e)] Set up a system of equations
             \onslide<6>{
                 \begin{eq}
                     \begin{bmatrix} 
@@ -498,7 +503,7 @@ Somit sind dann alle Größen des Netzwerkes identifiziert worden.}
                     \end{bmatrix}\nonumber
                 \end{eq} 
                 \pause
-                Ströme Berechnen: 
+                Calculate currents: 
                 \begin{eqa}   
                     I_3 = I_0 - I_1\nonumber\\
                     I_4 = I_3 - I_5\nonumber\\

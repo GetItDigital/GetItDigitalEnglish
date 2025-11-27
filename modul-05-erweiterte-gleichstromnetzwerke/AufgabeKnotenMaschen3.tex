@@ -1,6 +1,6 @@
-\subsection{Knoten- und Maschenanalyse 3}
+\subsection{Knots and meshes analysis 3}
 \Aufgabe{
-    Gegeben ist unten stehendes Netzwerk.
+    The following network is given below.
 
     \begin{figure}[H]
         \resizebox{\textwidth}{!}{%  
@@ -12,18 +12,18 @@
 
     \begin{itemize}
         \item[\bf a)]
-            Markieren und bennen Sie alle Ströme und Spannungen!
+            Mark and label all currents and voltages!
         \item[\bf b)]
-            Stellen Sie die Gleichungen für alle Knoten auf!
+            Set up the equations for all nodes!
         \item[\bf c)]
-            Stellen Sie die Gleichungen für alle Maschen auf!
+            Set up the equations for all meshes!
     \end{itemize}
 }
 
 \Loesung{
 	\begin{itemize}
         \item[\bf a)]
-        Netzwerk mit Strömen und Spannungen:\\
+        Network with currents and voltages:\\
         \begin{figure}[H]
             \resizebox{\textwidth}{!}{%  
             \input{Tikz/src/B3KnotMasch3.tex}
@@ -31,7 +31,7 @@
         \end{figure}
 
 		\item[\bf b)]
-		Knotengleichungen:
+		Knot equations:
         \begin{eqa}
             K_0 : -I_1+I_3-I_5 &=0 \nonumber\\
             K_1 : +I_1-I_3+I_4 &=0 \nonumber\\
@@ -42,7 +42,7 @@
         \end{eqa}
 
         \item[\bf c)]
-        Maschengleichungen:
+        Mesh equations
         \begin{eqa}
             M_1 : U_1-U_\mathrm{Ri}-U_\mathrm{R1}-U_\mathrm{R2}-U_\mathrm{R3} &=0 \nonumber\\
             M_2 : U_\mathrm{R3}+U_\mathrm{R4}+U_\mathrm{R5}+U_\mathrm{R6} &=0 \nonumber\\

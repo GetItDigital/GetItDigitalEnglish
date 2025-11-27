@@ -1,6 +1,6 @@
 \subsection{Superposition 1}
 \Aufgabe{
-    Gegeben ist unten stehendes Netzwerk.
+    The following network is given below.
 
     \begin{figure}[H]
         \resizebox{0.6\textwidth}{!}{%  
@@ -8,23 +8,23 @@
         }\centering                                                           
     \end{figure}
 
-    Bestimmen Sie mit Hilfe des Superpositionsverfahrens die Spannung, die über dem Widerstand $R_L$ abfällt.
-    Befolgen Sie hierzu die folgenden Schritte:
+    Using the superposition method, determine the voltage drop across the resistor $R_L$.
+    To do this, follow these steps:
         
     \begin{itemize}
             \item[\bf a)]
-                Bestimmen Sie den Anteil von $U_g$.
+                Determine the proportion of $U_g$.
             \item[\bf b)]
-                Bestimmen Sie den Anteil von $I_g$.
+                Determine the proportion of $I_g$.
             \item[\bf c)]
-                Führen Sie die Ergebnisse durch den Überlagerungssatz zusammen.
+                Combine the results using the superposition theorem.
     \end{itemize}
     }
 
 \Loesung{
 	\begin{itemize}
         \item[\bf a)]
-        Anteil von $U_g$:\\
+        Proportion of $U_g$:\\
         \begin{figure}[H]
             \resizebox{0.6\textwidth}{!}{%  
             \input{Tikz/src/B4Super1.tex}
@@ -36,7 +36,7 @@
         \end{eq}
 
 		\item[\bf b)]
-		Anteil von $I_g$:\\
+		Proportion of $I_g$:\\
         \begin{figure}[H]
             \resizebox{0.65\textwidth}{!}{%  
             \input{Tikz/src/B4Super1_zwei.tex}
@@ -48,7 +48,7 @@
         \end{eq}
 
         \item[\bf c)]
-        Überlagerungssatz:\\
+        Superposition principle:\\
 
         \begin{eq}
             U_\mathrm{RL} = U_\mathrm{RL}(U_\mathrm{g}) + U_\mathrm{RL}(I_\mathrm{g}) = 

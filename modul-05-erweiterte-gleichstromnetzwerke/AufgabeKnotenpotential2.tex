@@ -1,25 +1,25 @@
-\subsection{Knotenpotentialverfahren 2}
+\subsection{Nodal analysis method 2}
 \Aufgabe{
-    Im folgenden Netzwerk werden zwei parallel verschaltete Ersatzschaltbilder von Batteriezellen dargestellt. 
-    Sie bestehen aus den Spannungsquellen $U_1$ und $U_2$ sowie den Innenwiderständen $R_{i1}$ und $R_{i2}$. 
-    Führen Sie die Analyse mit dem Knotenpotentialverfahren durch. 
+    The following network shows two parallel equivalent circuits of battery cells.
+    They consist of voltage sources $U_1$ and $U_2$ as well as internal resistances $R_{i1}$ and $R_{i2}$.
+    Perform the analysis using the node potential method. 
 
     \begin{center}
         \input{Tikz/src/A6Knot2.tex}
     \end{center}
 
     \begin{enumerate}
-        \item[\bf a)] Formen Sie das Netzwerk um, sodass das Knotenpotentialverfahren anwendbar wird.  
-        \item[\bf b)] Stellen Sie die Kontenadmittanzmatrix (KAM) auf.
-        \item[\bf c)] Stellen Sie den Vektor der Knoteneinströmungen (I) auf.
-        \item[\bf d)] Lösen Sie das Gleichungssystem und berechnen Sie die Spannung $U_0$ zwischen den Klemmen $A$ und $B$.
+        \item[\bf a)] Rearrange the network so that the node potential method can be applied.  
+        \item[\bf b)] Set up the bus admittance matrix.
+        \item[\bf c)] Set up the vector of the node inflows (I).
+        \item[\bf d)] Solve the system of equations and calculate the voltage $U_0$ between terminals $A$ and $B$.
     \end{enumerate}
     }
 
 \Loesung{
 	\begin{itemize}
         \item[\bf a)]
-            Umwandlung:
+            Conversion:
 
             \begin{figure}[H]
                 \input{Tikz/src/B6Knot2.tex}
@@ -37,21 +37,21 @@
             \end{eq}
 
 		\item[\bf b)]
-            Kontenadmittanzmatrix:
+            Bus admittance matrix:
 
             \begin{eq}
                 KAM = (G_\mathrm{i1} + G_\mathrm{i2}) = 208\ m\Omega + 1,25\ \Omega     \nonumber
             \end{eq}
 
         \item[\bf c)]
-            Vektor der Knoteneinströmungen: \\
+            Vector of node inflows: \\
 
             \begin{eq}
                 I = (I_1 + I_2) = 166\ mA + 1,875\ A    \nonumber
             \end{eq}
 
         \item[\bf d)]
-            Gleichungssystem lösen:\\
+            Solve the system of equations:\\
 
             \begin{eqa}
                 KAM \cdot U &= I     \nonumber\\ 

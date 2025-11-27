@@ -1,8 +1,8 @@
-\subsection{Maschenstromverfahren 2}
+\subsection{Mesh analysis 2}
 \Aufgabe{
     
-    Im folgenden Netzwerk wird ein Netzwerk bestehend aus drei Widerständen und zwei Spannungsquellen dargestellt.
-    Führen Sie die Analyse des Netzwerkes mit dem Maschenstromverfahren durch. 
+    The following network shows a network consisting of three resistors and two voltage sources.
+    Perform the analysis of the network using the mesh current method. 
 
     \textbf{Werte:}
     \[
@@ -14,36 +14,36 @@
     \end{center}
         
     \begin{itemize}
-        \item[\bf a)] Vorbereitung des Netzwerkes
-        \item[\bf b)] Maschen und Maschenströme definieren
-        \item[\bf c)] Widerstandsmatrix bestimmen
-        \item[\bf d)] Quellspannungen zuordnen
-        \item[\bf e)] Gleichungssystem aufstellen
+        \item[\bf a)] Preparation of the network
+        \item[\bf b)] Define meshes and mesh flows
+        \item[\bf c)] Determine resistance matrix
+        \item[\bf d)] Assign source voltages
+        \item[\bf e)] Set up a system of equations
     \end{itemize}
     }
 
 \Loesung{
 	\begin{itemize}
         \item[\bf a)]
-        Vorbereitung des Netzwerkes:\\
-        Das Netzwerk besteht aus:
+        Preparing the network:\\
+        The network consists of:
         \begin{itemize}
-            \item Zwei Spannungsquellen: \(U_1\) und \(U_2\),
-            \item Drei Widerständen: \(R_1\), \(R_2\), \(R_3\),
-            \item Drei mögliche Maschen.
+            \item Two Voltage sources: \(U_1\) und \(U_2\),
+            \item Three resistors: \(R_1\), \(R_2\), \(R_3\),
+            \item Three possible stitches.
         \end{itemize}
-        Es sind Spannungsquellen und Widerstandswerte vorhanden.
+        Voltage sources and resistance values are available.
 
 		\item[\bf b)]
-		Maschen und Maschenströme definieren:\\
+		Define meshes and mesh flows:\\
         \begin{itemize}
-            \item \(M_1\): Maschenstrom in der linken Masche,
-            \item \(M_2\): Maschenstrom in der rechten Masche,
-            \item Der Strom \(I_\mathrm{R2}\) durch \(R_2\) ergibt sich zu: \[ I_\mathrm{R2} =  \begin{bmatrix} I_{M1} \\ I_{M2} \end{bmatrix} \]
+            \item \(M_1\): Mesh flow in the left mesh,
+            \item \(M_2\): Mesh flow in the right mesh,
+            \item The current \(I_\mathrm{R2}\) divided by \(R_2\) results in: \[ I_\mathrm{R2} =  \begin{bmatrix} I_{M1} \\ I_{M2} \end{bmatrix} \]
         \end{itemize}
 
         \item[\bf c)]
-        Widerstandsmatrix bestimmen:
+        Determine resistance matrix:
         \[
         \mathbf{R_M} = 
         \begin{bmatrix}
@@ -51,7 +51,7 @@
         -R_2 & R_2 + R_3
         \end{bmatrix}
         \]
-        Einsetzen der Werte:
+        Inserting the values:
         \[
         \mathbf{R_M} = 
         \begin{bmatrix}
@@ -66,18 +66,18 @@
         \]
 
         \item[\bf d)]
-        Quellspannungen zuordnen:\\
+        Assign source voltages:\\
         \begin{eq}
             \mathbf{U_M} = \begin{bmatrix} U_1 \\ -U_2 \end{bmatrix} = \begin{bmatrix} 24\ V \\ -12\ V \end{bmatrix}  \nonumber
         \end{eq}
 
         \item[\bf e)]
-        Gleichungssystem aufstellen:\\
+        Solve a system of equations:\\
 
         \[
         \mathbf{R_M} \cdot \mathbf{I_M} = \mathbf{U_M},
         \]
-        wobei:
+        whereby:
         \[
         \mathbf{R_M} = 
         \begin{bmatrix}
@@ -96,19 +96,19 @@
         \end{bmatrix}.
         \]
 
-        Das Lösen des Gleichungssystems liefert:
+        Solving the system of equations gives:
         \begin{eq}
             I_{M1} = 2{,}79\,\text{mA} \quad \text{und} \quad I_{M2} = -0{,}507\,\text{mA}     \nonumber
         \end{eq}
         
-        Daraus ergeben sich:
+        This results in:
         \begin{eqa}
             I_\mathrm{R1} &= I_\mathrm{M1} = 2,79\ mA    \nonumber \\
             I_\mathrm{R2} &= I_\mathrm{M1} + (-I_\mathrm{M2}) = 2,79\ mA + 0,507\ mA = 3,297\ mA     \nonumber  \\
             I_\mathrm{R3} &= -I_\mathrm{M2} = 0,507\ mA            \nonumber
         \end{eqa}
 
-        und
+        and
 
         \begin{eqa}
             U_\mathrm{R1} &= R_1 \cdot I_\mathrm{R1} = 4,7\ k\Omega \cdot 2,79\ mA = 13,12\ V    \nonumber \\
@@ -116,7 +116,7 @@
             U_\mathrm{R3} &= R_3 \cdot I_\mathrm{R1} = 2,2\ k\Omega \cdot 0,507\ mA = 1,12\ V           \nonumber
         \end{eqa}
 
-        Überprüfung der Maschen:
+        Checking the mesh:
 
         \begin{eqa}
             U_\mathrm{1} &= U_\mathrm{R1} + U_\mathrm{R2} = 24\ V    \nonumber \\

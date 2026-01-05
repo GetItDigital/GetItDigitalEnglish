@@ -1,7 +1,7 @@
 \begin{tikzpicture}
     \begin{axis}[
-            xlabel={Temperatur / $^\circ$C},
-            ylabel={Widerstand / $\Omega$},
+            xlabel={Temperature / $^\circ$C},
+            ylabel={Resistance / $\Omega$},
             xmin=0, xmax=120,
             ymin=0, ymax=11000,
             xtick={0,20,...,120},
@@ -23,7 +23,7 @@
         ] coordinates {
                 (20,10000)(100,1000)
             };
-        \addlegendentry{NTC Widerstand}
+        \addlegendentry{NTC Resistance}
 
         % PTC Widerstand
         \addplot[
@@ -33,7 +33,7 @@
         ] coordinates {
                 (20,1000)(100,10000)
             };
-        \addlegendentry{PTC Widerstand}
+        \addlegendentry{PTC Resistance}
 
         % Punkte auf der Linie markieren
         \addplot[

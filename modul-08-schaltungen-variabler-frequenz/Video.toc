@@ -1,0 +1,51 @@
+\babel@toc {ngerman}{}\relax 
+\beamer@sectionintoc {1}{Repetition}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Frequency dependence of electrical components}{3}{0}{1}
+\beamer@subsubsectionintoc {1}{1}{1}{Behaviour of inductances and capacitances}{6}{0}{1}
+\beamer@subsubsectionintoc {1}{1}{2}{Comparison of linear two-pole elements $R$, $L$ and $C$}{7}{0}{1}
+\beamer@sectionintoc {2}{Frequency response, amplitude response, phase response}{8}{0}{2}
+\beamer@subsectionintoc {2}{1}{Definition of frequency response, amplitude response and phase response}{20}{0}{2}
+\beamer@subsectionintoc {2}{2}{Frequency response using the example of a simple low-pass filter}{25}{0}{2}
+\beamer@subsectionintoc {2}{3}{Boundary behaviour using the example of a simple low-pass filter}{28}{0}{2}
+\beamer@subsectionintoc {2}{4}{Frequency response using the example of a simple high-pass filter}{34}{0}{2}
+\beamer@subsectionintoc {2}{5}{Boundary behaviour using the example of a simple high-pass filter}{35}{0}{2}
+\beamer@subsectionintoc {2}{6}{Comparison of first-order passive filters with $L$ and $R$}{36}{0}{2}
+\beamer@subsectionintoc {2}{7}{Beispiel Filterschaltung: Aufgabe}{37}{0}{2}
+\beamer@sectionintoc {3}{Logarithmic representation, frequency response, cut-off frequency}{42}{0}{3}
+\beamer@subsectionintoc {3}{1}{Logarithmic representation of power functions}{48}{0}{3}
+\beamer@subsectionintoc {3}{2}{Definition of decibel}{49}{0}{3}
+\beamer@subsectionintoc {3}{3}{Cut-off frequency of simple filter circuits}{50}{0}{3}
+\beamer@subsectionintoc {3}{4}{First-order low-pass filter}{53}{0}{3}
+\beamer@subsubsectionintoc {3}{4}{1}{Comparison of linear and logarithmic representations}{60}{0}{3}
+\beamer@subsubsectionintoc {3}{4}{2}{Tiefpass 1. Ordnung, Amplitudengang}{61}{0}{3}
+\beamer@subsubsectionintoc {3}{4}{3}{Tiefpass 1. Ordnung, Phasengang}{62}{0}{3}
+\beamer@subsubsectionintoc {3}{4}{4}{Comparison of first-order low-pass and high-pass filters}{63}{0}{3}
+\beamer@subsectionintoc {3}{5}{Second-order bandpass filter}{64}{0}{3}
+\beamer@subsubsectionintoc {3}{5}{1}{Bandpass 2. Ordnung - Amplitudengang, Detail}{65}{0}{3}
+\beamer@subsubsectionintoc {3}{5}{2}{Bandpass 2. Ordnung - Phasengang, Detail}{66}{0}{3}
+\beamer@subsectionintoc {3}{6}{Order of filters, example filter of higher order}{67}{0}{3}
+\beamer@sectionintoc {4}{Location curve}{68}{0}{4}
+\beamer@subsectionintoc {4}{1}{Definition of location curve}{69}{0}{4}
+\beamer@subsectionintoc {4}{2}{Relationship between pointer diagram and location curve}{73}{0}{4}
+\beamer@subsectionintoc {4}{3}{Impedanzortskurve - RL-Glied , $R$ variabel}{74}{0}{4}
+\beamer@subsectionintoc {4}{4}{Impedance locus curve – RLs element, $\omega $ variable}{75}{0}{4}
+\beamer@subsectionintoc {4}{5}{Admittance locus curve - Inversion of locus curves}{76}{0}{4}
+\beamer@subsectionintoc {4}{6}{Local curves of basic circuits}{77}{0}{4}
+\beamer@sectionintoc {5}{Resonant circuits}{79}{0}{5}
+\beamer@subsectionintoc {5}{1}{Resonance phenomenon}{80}{0}{5}
+\beamer@subsectionintoc {5}{2}{Definition of resonance condition, frequency, quality factor, characteristic impedance}{81}{0}{5}
+\beamer@subsectionintoc {5}{3}{Resonant frequency using the example of ideal LC oscillating circuits}{82}{0}{5}
+\beamer@subsectionintoc {5}{4}{RLC series resonant circuit - resonance behaviour}{83}{0}{5}
+\beamer@subsubsectionintoc {5}{4}{1}{Case differentiation in the pointer diagram}{84}{0}{5}
+\beamer@subsubsectionintoc {5}{4}{2}{Case differentiation in impedance curve}{85}{0}{5}
+\beamer@subsubsectionintoc {5}{4}{3}{Resonance curve and quality factor of an RLC series resonant circuit}{86}{0}{5}
+\beamer@subsubsectionintoc {5}{4}{4}{Voltage resonance using the example of an RLC series resonant circuit}{87}{0}{5}
+\beamer@subsubsectionintoc {5}{4}{5}{Current curve of the RLC series resonant circuit}{89}{0}{5}
+\beamer@subsubsectionintoc {5}{4}{6}{Voltage curve of the RLC series resonant circuit}{91}{0}{5}
+\beamer@subsectionintoc {5}{5}{RLC-Parallelschwingkreis - Resonanzverhalten}{92}{0}{5}
+\beamer@subsubsectionintoc {5}{5}{1}{Case differentiation in the pointer diagram}{93}{0}{5}
+\beamer@subsubsectionintoc {5}{5}{2}{Case differentiation in admittance curve}{94}{0}{5}
+\beamer@subsubsectionintoc {5}{5}{3}{Resonance curve and quality factor of an RLC parallel resonant circuit}{95}{0}{5}
+\beamer@subsubsectionintoc {5}{5}{4}{Current resonance using the example of an RLC parallel resonant circuit}{96}{0}{5}
+\beamer@subsubsectionintoc {5}{5}{5}{Voltage curve of the RLC parallel resonant circuit}{97}{0}{5}
+\beamer@subsubsectionintoc {5}{5}{6}{Stromkurve des RLC-Parallelschwingkreises}{99}{0}{5}

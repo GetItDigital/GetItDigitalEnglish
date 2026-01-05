@@ -10,19 +10,19 @@
 %%%% -----------------
 
 
-\section{Leitfähigkeit und Widerstand}
+\section{Conductivity and resistance}
 \begin{frame}
 	\ftx{Lernziele: Leitfähigkeit und Widerstand}
 	\b{
-		\begin{Lernziele}{Leitfähigkeit und Widerstand} % ToDo: Temperaturabhängigkeit ersetzen durch nur Temperatur (in den Items bereits passiert, weiter noch nicht geprüft)
-			Die Studierenden
+		\begin{Learning objectives}{Leitfähigkeit und Widerstand} % ToDo: Temperaturabhängigkeit ersetzen durch nur Temperatur (in den Items bereits passiert, weiter noch nicht geprüft)
+			The Students
 			\begin{itemize}
 				\item kennen das elektrische Bauelement Widerstand.
 				\item können die unterschiedlichen Bauteilausführungen von Widerständen erklären.
 				\item können anhand des spezifischen Widerstand $\rho$ oder des spezifischen Leitwertes $\kappa$ Berechnungen durchführen.
 				\item können die Unterschiede in der Leitfähigkeit verschiedener Materialien basierend auf deren atomarer Struktur und Temperatur analysieren.
 			\end{itemize}
-		\end{Lernziele}
+		\end{Learning objectives}
 	}
 	\speech{01_Leitfaehigkeit_und_Widerstand}{1}{
 		In dem nun folgenden Abschnitt des Moduls werden wir uns mit der Leitfähigkeit und dem Widerstand beschäftigen. 
@@ -36,12 +36,12 @@
 \begin{frame}
 	\ftx{Leitfähigkeit und Widerstand}
 	\s{% nur im Skript
-		Die Leitfähigkeit oder auch der Leitwert $G$ beschreibt, wie der Name schon impliziert, die Fähigkeit eines Materials elektrischen Strom zu leiten. 
-		Je größer der Wert, desto besser leitet ein Material, sprich, umso einfacher können sich die Ladungsträger im Material bewegen. 
-		Diese Eigenschaft basiert auf den Experimenten eines deutschen Experimentalphysikers Georg Simon Ohm anfang des 19. Jahrhunderts, 
-		in welchen er herausfand, dass sich der Strom proportional zur angelegten Spannung verhält. 
-		Der Kehrwert des Leitwertes ist der heute gebräuchlichere ohm'sche Widerstand $R$. 
-		Der Leitwert $G$ hat die Einheit Siemens (S), der ohmsche Widerstand die Einheit Ohm ($\Omega$).
+		Conductivity, or conductance $G$, describes, as the name implies, the ability of a material to conduct electrical current.
+        The higher the value, the better a material conducts, i.e., the easier it is for charge carriers to move within the material.
+		This property is based on the experiments of German experimental physicist Georg Simon Ohm in the early 19th century, 
+ 		in which he discovered that the current is proportional to the applied voltage.
+		The reciprocal of the conductance is the more commonly used ohmic resistance $R$. 
+		The conductance $G$ has the unit Siemens (S), while the ohmic resistance has the unit ohm. ($\Omega$).
 	}% nur im Skript
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Formeln - Ohm´sches Gesetz %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -63,11 +63,12 @@
 	}
 	
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\b{\includegraphics[width=0.45\textwidth]{wi}}
 		\s{\includegraphics[width=0.5\textwidth]{wi}
-			\caption{\textbf{Unterschiedliche ausführungen von Widerständen.} Darunter Drahtwiderstände, Potentiometer und SMD-Widerstände. Die Bauweise und das Material bestimmen die elektrischen Eigenschaften,
-				wie Widerstandswert, Belastbarkeit und Temperaturkoeffizient.}
+			\caption{\textbf{Unterschiedliche ausführungen von Widerständen.} These include wirewound resistors, potentiometers and SMD resistors. The design and material determine the electrical properties,
+			such as resistance value, load capacity and temperature coefficient.}
 			\label{fig:Widerstands Arten}}
 	\end{figure}
 	
@@ -100,22 +101,22 @@
 	
 	
 	\s{
-		In der Schaltungsentwicklung wird die physikalische Eigenschaft des ohm'schen Widerstandes genutzt, um die gewünschten Funktionen zu realisieren. 
-		Die Abbildung \ref{fig:Widerstands Arten} zeigt verschiedene Ausführungen des Bauelements elektrischer Widerstand. Unabhängig von der Ausführung, 
-		basieren alle ohm'schen Widerstände auf den grundlegenden Prinzipien der Physik, auf welche im Folgenden näher eingegangen wird.
+		In circuit design, the physical property of ohmic resistance is used to achieve the desired functions.
+        Figure \ref{fig:Widerstands Arten} shows different designs of electrical resistors. Regardless of the design, 
+        all ohmic resistors are based on the fundamental principles of physics, which will be discussed in more detail below.
 		
 		
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Lernziele %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		
-		\begin{Lernziele}{Leitfähigkeit und Widerstand}
-			Die Studierenden
+		\begin{Learning objectives}{Leitfähigkeit und Widerstand}
+			The Students
 			\begin{itemize}
-				\item kennen das elektrische Bauelement Widerstand.
-				\item können die unterschiedlichen Bauteilausführungen von Widerständen erklären.
-				\item können anhand des spezifischen Widerstand $\rho$ oder des spezifischen Leitwertes $\kappa$ Berechnungen durchführen.
-				\item können die Unterschiede in der Leitfähigkeit verschiedener Materialien basierend auf deren atomarer Struktur und Temperatur analysieren.
+				\item are familiar with the electrical component known as a resistor.
+				\item can explain the different component designs of resistors.
+				\item can perform calculations using the specific resistance $\rho$ or the specific conductance $\kappa$.
+				\item can analyse the differences in conductivity of various materials based on their atomic structure and temperature.
 			\end{itemize}
-		\end{Lernziele}
+		\end{Learning objectives}
 	}
 	
 	
@@ -124,12 +125,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Lernziele %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Leitfähigkeit %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Die elektrische Leitfähigkeit} % ToDo: Rho ist nicht Delta X durch Delta V, sondern Delta Q durch Delta V.
+\subsection{Electrical conductivity} % ToDo: Rho ist nicht Delta X durch Delta V, sondern Delta Q durch Delta V.
 \begin{frame}[t]
 	\ftx{Die elektrische Leitfähigkeit}
 	
-	Aus Modul 1 ist die Definition der Stromdichte $J$ und des Stromes $I$ bekannt.
-	Durch Einsetzen der Formeln 2 und 3 in Formel 1 ergibt sich die Formel 4:
+	The definition of current density $J$ and current $I$ is known from Module 1.
+	Substituting formulas 2 and 3 into formula 1 yields formula 4:
 	\only<2->{
 		\begin{equation}
 			J=\frac{\Delta I}{\Delta A}
@@ -173,12 +174,12 @@
 	
 \end{frame}
 
-\subsection{Die elektrische Leitfähigkeit}
+\subsection{Electrical conductivity}
 \begin{frame}[t]
 	\ftx{Die elektrische Leitfähigkeit}
 	
-	Durch Einsetzen der aus Modul 1 bekannten Driftgeschwindigkeit $v_{el}$ und der Raumladungsdichte $\rho$ in die Formel 4,
-	ergibt sich die Formel 7 für die Stromdichte.
+	By inserting the drift velocity $v_{el}$ and the space charge density $\rho$ known from Module 1 into Formula 4,
+	Formula 7 for the current density is obtained.
 	\only<2->{
 		\begin{equation}
 			v_{el}=\frac{\Delta x}{\Delta t}
@@ -192,7 +193,7 @@
 			\vec{J}=\rho \cdot \vec{v_{el}}
 		\end{equation}}
 	\only<5->{ \\
-		Da die Geschwindigkeit immer einen Betrag und eine Richtung hat, ist die Stromdichte ebenfalls ein Vektor.
+		Since velocity always has a magnitude and a direction, current density is also a vector.
 	}
 	\vspace{0.1cm}
 	
@@ -218,19 +219,19 @@
 \end{frame}
 
 
-\subsection{Die elektrische Leitfähigkeit}
+\subsection{Electrical conductivity}
 \begin{frame}[t]
 	\ftx{Die elektrische Leitfähigkeit}
 	
-	Die Driftgeschwindigkeit $\vec{v_{el}}$ der freien Ladungsträger verhält sich proportional zum elektrischen Feld $\vec{E}$,
-	jedoch in entgegengesetzter Richtung. Der Proportionalitätsfaktor wird auch als Elektronenbeweglichkeit $\mu_e$ bezeichnet.
+	The drift velocity $\vec{v_{el}}$ of the free charge carriers is proportional to the electric field $\vec{E}$,
+    but in the opposite direction. The proportionality factor is also referred to as electron mobility $\mu_e$.
 	\only<2->{
 		\begin{equation}
 			\vec{v_{el}}=- \mu_e \cdot \vec{E}
 		\end{equation}}
 	\only<3->{ \\
-		Die Raumladungsdichte $\rho$ setzt sich aus der Elementarladung $e^-$ und der Ladungsträgerdichte $n_e$, zusammen.
-		Aufgrund der negativen Ladung von Elektronen, ergibt sich ein negatives Vorzeichen.
+		The space charge density $\rho$ is composed of the elementary charge $e^-$ and the charge carrier density $n_e$.
+		Due to the negative charge of electrons, this results in a negative sign.
 	}
 	\only<4->{
 		\begin{equation}
@@ -238,7 +239,7 @@
 		\end{equation}
 	}
 	\only<5->{ \\
-		Das Einsetzen von $\vec{v_{el}}$ und $\rho$ in die Formel 7 ergibt den folgenden Ausdruck:
+		Substituting $\vec{v_{el}}$ and $\rho$ into formula 7 yields the following expression:
 	}
 	\only<6->{
 		\begin{equation}
@@ -276,22 +277,22 @@
 
 
 
-\subsection{Die elektrische Leitfähigkeit}
+\subsection{Electrical conductivity}
 \begin{frame}[t]
 	\ftx{Die elektrische Leitfähigkeit}
-	Die Minuszeichen heben sich auf und es ergibt sich folgende Formel für die Stromdichte $\vec{J}$:
+	The minus signs cancel each other out, resulting in the following formula for the current density $\vec{J}$:
 	\only<2->{
 		\begin{equation}
 			\vec{J}=n_e \cdot \mu_e \cdot e^- \vec{E}
 		\end{equation}}
 	\only<3->{ \\
-		Die materialabhängigen Komponenten $n_e$ und $\mu_e$ sowie die Naturkonstante $e^-$ ergeben multipliziert die spezifische Leitfähigkeit $\kappa$:
+		The material-dependent components $n_e$ and $\mu_e$ as well as the natural constant $e^-$ multiplied together yield the specific conductivity $\kappa$:
 	}\only<4->{
 		\begin{equation}
 			\kappa = n_e \cdot \mu_e \cdot e^-
 		\end{equation}}
 	\only<5->{ \\
-		Zusammengefasst ergibt diese Darstellung die Beschreibung des ohmschen Gesetzes:
+		In summary, this description results in the description of Ohm's law:
 		\begin{equation}
 			\vec{J}=\kappa \cdot \vec{E} \leftrightarrow \vec{E}=\frac{\vec{J}}{\kappa}
 		\end{equation}
@@ -327,13 +328,13 @@
 		U_{12}=\int_{P_1}^{P_2} \vec{E} \mathrm{d}\vec{s}
 	\end{equation}
 	\only<2->{ \\
-		Da das elektrische Feld parallel zur Leitungslänge verläuft, ergibt sich das Skalarprodukt:
+		Since the electric field runs parallel to the length of the conductor, the scalar product is:
 	}\only<3->{
 		\begin{equation}
 			U_{12}=\int_{x=0}^{x=l} \vec{E} \mathrm{d}\vec{x}
 		\end{equation}}
 	\only<4->{ \\
-		Durch Einsetzen der umgestellten Formel 13 nach $\vec{E}$, folgt:
+		By substituting the rearranged formula 13 into $\vec{E}$, the following follows:
 	}\only<5->{
 		\begin{equation}
 			U_{12}=\int_{0}^{l} \frac{J}{\kappa} \mathrm{d}x
@@ -364,22 +365,22 @@
 \end{frame}
 
 \begin{frame}[t]
-	\ftx{Die elektrische Leitfähigkeit}
+	\ftx{Electrical conductivity}
 	
-	Da es sich um ein homogenes Material handelt ist das $\kappa$ konstant.
+	Since it is a homogeneous material, $\kappa$ is constant.
 	\only<2->{
 		\begin{equation}
 			U_{12}=\frac{1}{\kappa}\cdot\int_{0}^{l} J \mathrm{d}x
 		\end{equation}}
 	\only<3->{ \\
 		
-		Die folgende Formel für die Stromdichte $J$ ist aus Modul 1 bekannt:
+		The following formula for current density $J$ is known from Module 1:
 	}\only<4->{
 		\begin{equation}
 			J=\frac{I}{A}
 		\end{equation}
 	}\only<5->{ \\
-		Duch Einsetzen der Formel ergibt sich folgender Ausdruck:
+		Inserting the formula yields the following expression:
 	}\only<6->{
 		\begin{equation}
 			U_{12}=\frac{1}{\kappa}\cdot\int_{0}^{l} \frac{I}{A} \mathrm{d}x
@@ -477,37 +478,37 @@
 	\end{frame}
 }
 \s{
-	Die elektrische Leitfähigkeit sagt aus, wie gut ein Material Ladungsträger transportieren kann, also wie gut elektrischer Strom durch sie fließt.
-	Sehr gut leitfähige Materialien werden Leiter (im Extremfall auch Supraleiter) genannt, während sehr schlecht leitende Materialien als Isolatoren bezeichnet werden.
-	Zu den leitfähigen Medien zählen Metalle wie Kupfer, Silber, Aluminium und Gold, welche in der Elektrotechnik am häufigsten verwendet werden.
-	Als Isolatoren werden zum Beispiel Kunststoffe (Polyethylen (PE), Polytetrafluorethylen (PTFE oder Teflon), Polyvinylchlorid (PVC) etc.), 
-	speziell für die Anwendung als Isolator hergestellte Mineralöle, Silikone und Epoxidharz (z.B. als Vergussmasse) oder auch Papier verwendet.
-	Des Weiteren gibt es Halbleiter wie Silizium und Germanium, deren Leitfähigkeit zwischen denen von Leitern und Isolatoren einzuordnen sind.
-	Ihre Leitfähigkeit kann durch Dotierung und äußere Einflüsse wie Temperatur und Licht verändert werden.
-	Diese Eigenschaften werden bei Bauteilen wie Dioden oder Transistoren genutzt, um bestimmte Funktionen zu realisieren. 
-	Die verschiedenen Arten und Eigenschaften von Halbleiter sind sehr umfangreich und werden in späteren Modulen behandelt.
-	Vollständigkeitshalber sei noch erwähnt, dass flüssige Medien wie Säuren oder Salzlösungen leitfähig sind und als Elektrolyt bezeichnet werden.
-	Außerdem gibt es auch ionisierte Gase, die frei bewegliche Ladungsträger enthalten und elektrische Ströme leiten können. 
-	Diese leitfähigen Gase werden Plasmen genannt, welche in diesem Modul ebenfalls nicht behandelt werden.
+	Electrical conductivity indicates how well a material can transport charge carriers, i.e. how well electrical current flows through it.
+	Materials with very good conductivity are called conductors (in extreme cases also superconductors), while materials with very poor conductivity are called insulators.
+    Conductive media include metals such as copper, silver, aluminium and gold, which are most commonly used in electrical engineering. Insulators include plastics (polyethylene (PE), polytetrafluoroethylene (PTFE or Teflon), 
+	polyvinyl chloride (PVC), etc.), 
+	mineral oils, silicones and epoxy resin (e.g. as casting compound) specially manufactured for use as insulators, or even paper.
+	There are also semiconductors such as silicon and germanium, whose conductivity falls between that of conductors and insulators.
+	Their conductivity can be altered by doping and external influences such as temperature and light.
+	These properties are used in components such as diodes or transistors to perform certain functions.
+	The different types and properties of semiconductors are very extensive and will be covered in later modules.
+	For the sake of completeness, it should be mentioned that liquid media such as acids or salt solutions are conductive and are referred to as electrolytes.
+	There are also ionised gases that contain freely moving charge carriers and can conduct electric currents.
+	These conductive gases are called plasmas, which are also not covered in this module.
 }
 
-\subsection{Driftverhalten von Elektronen in Leitern}
+\subsection{Drift behaviour of electrons in conductors}
 \begin{frame}
 	\ftx{Driftverhalten von Elektronen in Leitern}
 	
 	
 	% Wieso kommt es zu unterschiedlichen Widerstandswerten? Was ist die Driftgeschwindigkeit? Anstoßen gegen Atomrümpfe
 	\s{
-		In Modul 1 wurde bereits vermittelt, dass der elektrische Stromfluss die gerichtete Bewegung von freien Ladungsträgern ist.
-		Im Fall eines Leiters sind dies die negativen Ladungsträger, also die Elektronen, welche sich frei im Material bewegen können.
-		Die Struktur eines solchen Materials besteht aus einem festen Gitter von Atomrümpfen und frei beweglichen Elektronen.
-		Sowohl die Beweglichkeit der Elektronen $\mu_{\mathrm{e}}$, als deren Anzahl, ist materialabhängig.
-		Im feldfreien Raum bewegen sich diese Elektronen zufällig in alle Richtungen, was zu einem neutralen Zustand führt.
-		Da es sich hierbei um keine gerichtete sondern um eine in alle Richtungen gleichverteilte Bewegung handelt, ist kein Stromfluss feststellbar. 
-		Dennoch führt diese ungerichtet, von der Temperatur abhängige, Bewegung der Ladungsträger zu elektrotechnischen Effekten: 
-		In empfindlichen Schaltungen wird sie als Rauschen wahrgenommen. Die freien Ladungsträger sind sehr viel leichter als die im Gitter verankerten Atomrümpfe, 
-		so dass es bei einem Aufprall eines in Bewegung befindlichen Elektrons auf einen Atomrumpf zu einem unelastischen Stoss kommt und sich die Bewegungsrichtung des Elektrons ändert.
-		Dieses Verhalten ist in Abbildung \ref{fig:Elektronenbewegung} zu sehen.
+		In Module 1, we already learned that electric current flow is the directed movement of free charge carriers.
+		In the case of a conductor, these are the negative charge carriers, i.e. the electrons, which can move freely within the material. 
+		The structure of such a material consists of a solid lattice of atomic nuclei and freely moving electrons.
+		Both the mobility of the electrons $\mu_{\mathrm{e}}$ and their number depend on the material.
+		In a field-free space, these electrons move randomly in all directions, resulting in a neutral state. 
+		Since this is not a directed movement but one that is evenly distributed in all directions, no current flow can be detected. 
+		Nevertheless, this undirected, temperature-dependent movement of the charge carriers leads to electrotechnical effects:
+		In sensitive circuits, it is perceived as noise. The free charge carriers are much lighter than the atomic nuclei anchored in the lattice, 
+		so that when a moving electron collides with an atomic nucleus, an inelastic collision occurs and the direction of motion of the electron changes.
+		This behaviour can be seen in Figure \ref{fig:Elektronenbewegung}.
 	}
 	
 	% % Nachdem das grundlegende Verständnis von Widerständen erklärt wurde, kann das Thema auch auf atomarer Ebene behandelt werden. Diese Betrachtungsweise ist wichtig, um die mathematischen Zusammenhänge besser nachvollziehen zu können 
@@ -530,10 +531,11 @@
 	
 	
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\includesvg[width=0.8\textwidth]{Elektronenbewegung}
-		\s{\caption{\textbf{Ungerichtete Bewegung freier Elektronen.} Zeigt die freien Elektronen (blau) zwischen positiv geladenen Atomrümpfen (rot). Solche Bewegungen sind charakteristisch für Metalle im Ruhezustand,
-				wo die Elektronen sich zufällig bewegen, ohne eine bevorzugte Richtung, solange kein äußeres elektrisches Feld anliegt.}}
+		\s{\caption{\textbf{Undirected movement of free electrons.} Shows the free electrons (blue) between positively charged atomic nuclei (red). Such movements are characteristic of metals at rest,
+		where the electrons move randomly, without a preferred direction, as long as no external electric field is applied.}}
 		\label{fig:Elektronenbewegung}
 	\end{figure}
 	
@@ -545,11 +547,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Grafik Elektronenbewegung ungerichtet %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Driftverhalten %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \s{
-	Sobald sich ein Leiter in einem elektrischen Feld befindet, wirkt auf die Elektronen die Coulomb-Kraft, 
-	so dass sich ihre zufällige Bewegungsrichtung in eine gerichtete Bewegung ändert, welche entgegengesetzt zur Feldrichtung zeigt (Abb.\ref{fig:Elektronenbewegung gerichtet}). 
-	Diese gerichtete Bewegung der Ladungsträger wird als Stromfluss bezeichnet (vgl. Modul 1).
-	Allerdings kommt es auch weiterhin zu Stößen mit den Atomrümpfen. Diese führen letztlich zu einer Abschwächung der gerichteten Bewegung und somit des Stroms (vgl. Abb.\ref{fig:Elektronenbewegung gerichtet}). 
-	Da sich die Atomrümpfe mit steigender Temperatur stärker bewegen, nimmt die Stoßwahrscheinlichkeit der Elektronen bei steigender Temperatur zu.
+	As soon as a conductor is placed in an electric field, the Coulomb force acts on the electrons, 
+    causing their random direction of movement to change into a directed movement that points in the opposite direction to the field (Abb.\ref{fig:Elektronenbewegung gerichtet}). 
+    This directed movement of the charge carriers is referred to as current flow (see Module 1) .
+	However, collisions with the atomic nuclei continue to occur. These ultimately lead to a weakening of the directional motion and thus of the current (see Fig. \ref{fig:Elektronenbewegung gerichtet}).
+	As the atomic nuclei move more rapidly with increasing temperature, the probability of collisions between the electrons and the nuclei increases with increasing temperature.
 	\\
 }
 
@@ -578,10 +580,11 @@
 \end{frame}
 \s{
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\includesvg[width=0.8\textwidth]{Elektronenbewegung_gerichtet}
-		\caption{\textbf{Gerichtete Bewegung von Elektronen.} Unter Einfluss eines elektrischen Feldes $\vec{E}$ bewegen sich die freien Elektronen in einem
-			Leiter entgegen der Feldrichtung, was den elektrischen Stromfluss $I$ erklärt.}
+		\caption{\textbf{Directed movement of electrons.} Under the influence of an electric field $\vec{E}$, 
+		the free electrons in a conductor move in the opposite direction to the field, which explains the electric current flow $I$.}
 		\label{fig:Elektronenbewegung gerichtet}
 	\end{figure}
 }
@@ -591,11 +594,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Grafik Elektronenbewegung gerichtet %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \s{
-	Dieses Verhalten der Elektronen wird auch Driftverhalten genannt, welches stark vom Material anhängt.
-	Da die atomare Zusammensetzung materialabhängig ist, unterscheidet sich auch die Anzahl der freien Elektronen, sowie deren Beweglichkeit $\mu_{\mathrm{e}}$.
-	Diese beiden Eigenschaften werden unter dem Begriff der spezifischen Leitfähigkeit $\kappa$ zusammengefasst. 
-	Mit der spezifischen Leitfähigkeit kann somit die Driftgeschwindigkeit der Elektronen in der Gitterstruktur des Leiters ermittelt werden.
-	Der folgende Abschnitt befasst sich mit eben diesen Eigenschaften.
+	This behaviour of electrons is also called drift behaviour, which depends heavily on the material.
+	Since the atomic composition depends on the material, the number of free electrons and their mobility $\mu_{\mathrm{e}}$ also differ.
+	These two properties are summarised under the term specific conductivity $\kappa$. 
+	The specific conductivity can thus be used to determine the drift velocity of the electrons in the lattice structure of the conductor.
+	The following section deals with these properties.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Driftverhalten %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -603,7 +606,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Mathematik / Berechnung Widerstand %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\ftx{Mathematische Zusammenhänge der Leitfähigkeit}
-	\subsection{Mathematische Zusammenhänge der Leitfähigkeit}
+	\subsection{Mathematical relationships of conductivity}
 	\b{
 	
 		\begin{equation*}
@@ -623,9 +626,9 @@
 	% ToDo: Diese Folie muss für speech evtl. in begin(frame)
 	
 	\s{
-		Die unterschiedlichen atomaren Zusammensetzungen der Materialien führen zu einer materialabhängigen, elektrischen Leitfähigkeit.
-		Die materialspezifische Eigenschaft bestehen aus der spezifischen Leitfähigkeit $\kappa$ (Kappa), bzw. dem spezifischen Widerstand $\rho_\mathrm{R}$ (rho) 
-		welche antiproportional zueinander stehen, sowie dem jeweiligen Temperaturkoeffizient $\alpha$, welcher sich je nach Material unterscheidet.
+		The different atomic compositions of the materials result in material-dependent electrical conductivity.
+		The material-specific properties consist of the specific conductivity $\kappa$ (kappa) or the specific resistance $\rho_\mathrm{R}$ (rho),
+		which are inversely proportional to each other, as well as the respective temperature coefficient $\alpha$, which differs depending on the material.
 		
 		
 		
@@ -651,9 +654,10 @@
 	}% nur im Skript
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende 	- 	Formeln Kappa, Roh	  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\s{
-		Für $\vartheta$ (Theta) wird die Temperatur des Leiters eingetragen. Daraus ergibt sich durch ($\vartheta - 20\mathrm{^\circ C}$) die Temperaturdifferenz des Leiters zwischen der vorhandenen Temperatur des Leiters und den $\mathrm{20^\circ C}$, bei welchen der Referenzwert ermittelt wurde.
-		Werden $20\mathrm{^\circ C}$ für $\vartheta$ (Theta) eingesetzt, fällt auch das $\alpha$ weg und es bleibt der Referenzwert $\rho_\mathrm{20\mathrm{^\circ C}}$ übrig. 
-		In der folgenden Tabelle sind beispielhaft einige Materialien mit deren spezifischen Eigenschaften dargestellt:
+		The temperature of the conductor is entered for $\vartheta$ (theta). This results in ($\vartheta - 20^\circ C$), which is the temperature 
+		difference between the actual temperature of the conductor and the $\mathrm{20^\circ C}$ at which the reference value was determined.
+		If $20^\circ C$ is used for $\vartheta$ (theta), $\alpha$ is also omitted and the reference value $\rho_\mathrm{20^\circ C}$ remains. 
+        The following table shows examples of some materials with their specific properties:
 	}
 	
 	\speech{01_Leitfaehigkeit_und_Widerstand}{43}{
@@ -667,29 +671,30 @@
 %%%
 %%%%%% Einfache Tabelle
 \begin{frame}
+	\renewcommand{\tablename}{Table}
 	\ftx{Spezifische Leitfähigkeiten und Temperaturkoeffizienten}
 	\begin{table}[H]
 		\centering
 		\resizebox{0.8\textwidth}{!}{%
 			\begin{tabular}{@{}l c c@{}}
 				\toprule
-				\textbf{Material}  & {\textbf{Spezifische Leitfähigkeit} [$\kappa$] = S/m} & 
-				{\textbf{Temperaturkoeffizient} [$\alpha$] = 1/K}                                    \\
+				\textbf{Material}  & {\textbf{Specific conductivity} [$\kappa$] = S/m} & 
+				{\textbf{Temperature coefficient} [$\alpha$] = 1/K}                                    \\
 				\midrule
-				Silber             & $6.1\cdot 10^{7}$                                     & 0.0038  \\
-				Kupfer             & $5.8 \cdot 10^{7}$                                    & 0.0038  \\
+				Silver             & $6.1\cdot 10^{7}$                                     & 0.0038  \\
+				Copper             & $5.8 \cdot 10^{7}$                                    & 0.0038  \\
 				Gold               & $4.5 \cdot 10^{7}$                                    & 0.0034  \\
 				Aluminium          & $3.7 \cdot 10^{7}$                                    & 0.004   \\
-				Eisen              & $1.0 \cdot 10^{7}$                                    & 0.0065  \\
-				Graphit            & $3 \cdot 10^{6}$                                      & -0.0002 \\
-				Silizium (dotiert) & {$1 - 10^6$}                                          & -0.075  \\
-				Leitungswasser     & $5.0 \cdot 10^{-3}$                                   & {-}     \\
-				Luft               & $4.0 \cdot 10^{-15}$                                  & {-}     \\
+				Iron               & $1.0 \cdot 10^{7}$                                    & 0.0065  \\
+				Graphite            & $3 \cdot 10^{6}$                                      & -0.0002 \\
+				Silicon (dotiert)  & {$1 - 10^6$}                                          & -0.075  \\
+				Tap water     	    & $5.0 \cdot 10^{-3}$                                   & {-}     \\
+				Air                  & $4.0 \cdot 10^{-15}$                                  & {-}     \\
 				\bottomrule
 			\end{tabular}%
 		}
-		\s{\caption{\textbf{Spezifische Leitfähigkeiten und Temperaturkoeffizienten verschiedener Materialien.} Metalle wie Silber und Kupfer haben hohe Leitfähigkeiten,
-				während isolierende Materialien wie Luft eine sehr geringe Leitfähigkeit besitzen.}}
+		\s{\caption{\textbf{Specific conductivities and temperature coefficients of various materials.} Metals such as silver and copper have high conductivity,
+			while insulating materials such as air have very low conductivity.}}
 		\label{tab:specific_resistance}
 	\end{table}
 	
@@ -715,8 +720,8 @@
 	
 \end{frame}
 \s{
-	Äquivalent zur spezifischen Leitfähigkeit $\kappa$ und zum spezifischen Widerstand $\rho_\mathrm{R}$,
-	kann der entsprechende Widerstand $R$, bzw. Leitwert $G$ eines Körpers bestimmt werden.
+	Equivalent to the specific conductivity $\kappa$ and the specific resistance $\rho_\mathrm{R}$,
+	the corresponding resistance $R$ or conductance $G$ of a body can be determined.
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - G = 1/R %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\begin{equation*}
@@ -728,9 +733,9 @@
 	\end{equation}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - G = 1/R %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
-	Der Wert der elektrischen Leitfähigkeit bzw. des Widerstandes eines Leiters, ergibt sich darüber hinaus aus den geometrischen Eigenschaften.
-	Sowohl die Länge $l$ als auch die Querschnittsfläche $A$ tragen zum Leitwert bzw. Widerstandswert bei.
-	Abbildung \ref{fig:Widerstand} zeigt einen solchen Leiter mit seinen Eigenschaften.
+	The electrical conductivity or resistance of a conductor is also determined by its geometric properties.
+	Both the length $l$ and the cross-sectional area $A$ contribute to the conductivity or resistance value.
+	Figure \ref{fig:Widerstand} shows such a conductor with its properties.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Abbildung Leiter %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -740,27 +745,28 @@
 	\ftx{Geometrische Eigenschaften}
 	
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\b{
 			\begin{itemize}
-				\item Länge $l$
-				\item Querschnittsfläche $A$
-				\item Spezifische Leitfähigkeit $\kappa$
+				\item Length $l$
+				\item Cross-sectional area $A$
+				\item Specific conductivity $\kappa$
 			\end{itemize}
 			\includesvg[width=0.9\textwidth]{Widerstand}}
 		\s{\includesvg[width=0.8\textwidth]{Widerstand}
-			\caption{\textbf{Geometrische Darstellung eines Widerstands.} Das elektrische Feld \(\vec{E}\) erzeugt eine Stromdichte
-				\(\vec{J}\) durch den Widerstand. Die Beziehung zwischen der Stromdichte und dem elektrischen Feld wird durch das Ohmsche Gesetz
-				\( \vec{J} = \kappa \cdot \vec{E} \) beschrieben.}}
+			\caption{\textbf{Geometric representation of a resistor.} The electric field \(\vec{E}\) generates a current density
+				\(\vec{J}\) through the resistance. The relationship between the current density and the electric field is described by Ohm's law
+				\( \vec{J} = \kappa \cdot \vec{E} \).}}
 		
 		\label{fig:Widerstand}
 	\end{figure}
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Abbildung Leiter %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\s{
-		Die Stromdichte $\vec{J}$ ergibt sich dabei aus dem elektrischen Feld $\vec{E}$ und der spezifischen Leitfähigkeit $\kappa$.
-		Die Stromdichte ist dabei geometrieunabhängig. Erst zur Berechnung des Stromes $I$ müssen die Länge und die Querschnittsfläche mit einbezogen werden.
-		Mit der folgenden Formel lässt sich der Widerstandswert berechnen:
+		The current density $\vec{J}$ is derived from the electric field $\vec{E}$ and the specific conductivity $\kappa$.
+		The current density is independent of geometry. Only when calculating the current $I$ must the length and cross-sectional area be taken into account.
+		The resistance value can be calculated using the following formula:
 	}
 	
 	\speech{01_Leitfaehigkeit_und_Widerstand}{45}{
@@ -819,43 +825,44 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende 	- 	Formeln R			  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \s{
-	\textbf{Einführung in die Darstellung von Schaltkreisen}
+	\textbf{Introduction to the representation of circuits}
 	
 	
-	In der Elektrotechnik werden zur Darstellung von elektrischen Netzwerken sogenannte Schaltbilder verwendet.
-	Inhalt dieser Schaltbilder sind Schaltsymbole, welche für die elektrischen Eigenschaften bzw. ganze Bauelemente, verwendet werden.
-	Abbildung \ref{fig:erstes_schaltbild} zeigt beispielhaft ein solches Schaltbild.
+	In electrical engineering, so-called circuit diagrams are used to represent electrical networks.
+	These circuit diagrams contain circuit symbols, which are used to represent electrical properties or entire components.
+	Figure \ref{fig:erstes_schaltbild} shows an example of such a circuit diagram.
 }
 \begin{frame}
+	\renewcommand{\figurename}{Figure}
 	\ftx{Einführung in die Darstellung von Schaltkreisen}
 	\begin{figure}[H]
 		\centering
 		\hspace{1cm} % Um es in der Mitte zu haben
 		\input{Tikz/src/01_Leitfaehigkeit/Schaltplan_Reihenschaltung}
 		
-		\s{\caption{\textbf{Schaltplan einer Reihenschaltung.} Die aus einer Gleichspannungsquelle einem Schalter, einem Verbraucher und einem Widerstand besteht.}}
+		\s{\caption{\textbf{Circuit diagram of a series connection.} Consisting of a DC voltage source, a switch, a load and a resistor.}}
 		\label{fig:erstes_schaltbild}
 	\end{figure}
 \end{frame}
 \s{
-	Das Schaltbild besteht aus vier Elementen, welche mit Linien verbunden sind. Es stellt eine Reihenschaltung bestehend aus
-	einer Spannungsquelle, einem Schalter, einer Glühlampe und einem Widerstand, dar. Der Widerstand stellt den Leitungswiderstand der gesamten Leitung dar,
-	während die Verbindungslinien per Definition ideale Verbindungen ohne weitere Eigenschaften darstellen.
-	
-	Des Weiteren ist eine Spannung $U_{\mathrm{q}}$, sowie der Strom $I$ eingezeichnet, welcher jedoch erst fließen kann, wenn der Schalter geschlossen wird.
-	Im Folgenden werden die drei grundlegenden elektrischen Eigenschaften, sowie deren Schaltsymbole tiefer behandelt.
+	The circuit diagram consists of four elements connected by lines. It represents a series connection consisting of
+	a voltage source, a switch, an incandescent lamp and a resistor. The resistor represents the line resistance of the entire line,
+	while the connecting lines represent ideal connections without any other properties by definition.
+			
+	Furthermore, a voltage $U_{\mathrm{q}}$ and the current $I$ are shown, but the current can only flow when the switch is closed.
+	The three basic electrical properties and their circuit symbols are discussed in more detail below.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Widerstand als Bauelement %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\ftx{Widerstand als Bauelement}
-	\subsection{Widerstand als Bauelement}
+	\subsection{Resistance as a component}
 	
 	\s{
-		Mit Hilfe der im vorherigen Abschnitt kennengelernten Methode zu Berechnung des Widerstandes, 
-		kann der Widerstandswert elektrischer Leitungen, oder auch anderer leitender Objekte, ermittelt werden.
-		Sobald ein Widerstandswert bekannt ist, wird dieser in elektrischen Schaltbildern einem Schaltsymbol zugeordnet.
-		So können verschiedene Komponenten und deren Eigenschaften miteinander verbunden werden, um deren Verhalten zu ermitteln.
-		Abbildung \ref{fig:resistor-symbols_} zeigt zwei gängige Schaltzeichen für den Widerstand.
+		Using the method for calculating resistance described in the previous section, 
+        the resistance value of electrical cables or other conductive objects can be determined.
+		Once a resistance value is known, it is assigned to a circuit symbol in electrical circuit diagrams.
+		This allows different components and their properties to be connected to each other in order to determine their behaviour.
+		Figure \ref{fig:resistor-symbols_} shows two common circuit symbols for resistance.
 	}% nur im Skript
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Widerstand EU und US %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -872,10 +879,11 @@
 	}% nur Folie
 	\s{
 		\begin{figure}[H]
+			\renewcommand{\figurename}{Figure}
 			\centering
 			\input{Tikz/src/01_Leitfaehigkeit/Schaltungselement_Widerstand}
 			
-			\caption{\textbf{Schaltungselement für Widerstand.} Europäisches (links) und amerikanisches (rechts).}
+			\caption{\textbf{Circuit element for resistance.} European (left) and American (right).}
 			\label{fig:resistor-symbols_}
 		\end{figure}
 	}
@@ -883,9 +891,9 @@
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Widerstand EU und US 	  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 	\s{
-		Sobald eine Gleichspannungsquelle an einen Widerstand $R$ angeschlossen wird, verhalten sich Strome und Spannungen linear.
-		Abbildung \ref{fig:idealer Widerstand} zeigt den durch den Widerstand fließenden Strom $I_\mathrm{R}$, 
-		sowie die abfallende Spannung $U_\mathrm{R}$.
+		As soon as a DC voltage source is connected to a resistor $R$, the current and voltage behave linearly.
+		Figure \ref{fig:idealer Widerstand} shows the current $I_\mathrm{R}$ flowing through the resistor, 
+		as well as the voltage drop $U_\mathrm{R}$.
 	}
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Widerstand Schaltbild %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -904,10 +912,11 @@
 \s{
 	% Idealer Widerstand
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\input{Tikz/src/01_Leitfaehigkeit/Idealer_Widerstand}
 		
-		\caption{\textbf{Idealer Widerstand.} Zeigt den Spannungsabfall über den Widerstand und den Stromfluss durch ihn.}
+		\caption{\textbf{Ideal resistance.} Shows the voltage drop across the resistor and the current flowing through it.}
 		\label{fig:idealer Widerstand}
 	\end{figure}
 }
@@ -916,11 +925,11 @@
 \begin{frame}
 	\ftx{Widerstand als Bauelement}
 	\s{
-		Das Schaltsymbol des Widerstandes wird in Schaltungen immer als idealer Widerstand berücksichtigt. 
-		Unter Vernachlässigung der Temperaturabhängigkeit trifft dies im Gleichspannungsfall auch weitestgehend zu (Schaltvorgänge ausgenommen).
-		In der Realität gibt es viele Situationen, in denen ein realer Widerstand kein lineares Verhalten aufweisen kann.
-		Verschiedene Quellenarten werden im Abschnitte 1.2 zu Spannungs- und Stromquellen behandelt.
-		Zum Verständnis der Abbildung \ref{fig:ESB realen Widerstand} ist es ratsam, zuvor die Abschnitte 1.3 und 1.4 gelesen zu haben.
+		The circuit symbol for resistance is always considered to be an ideal resistor in circuits.
+		If temperature dependence is neglected, this is largely true in the case of direct current (except for switching operations).
+		In reality, there are many situations in which a real resistor cannot exhibit linear behaviour.			
+		Different types of sources are discussed in sections 1.2 on voltage and current sources.
+		To understand Figure \ref{fig:ESB realen Widerstand}, it is advisable to read sections 1.3 and 1.4 first.
 	}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - realer Widerstand Schaltbild %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\b{
@@ -930,10 +939,11 @@
 	}
 	% Realer Widerstand
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\input{Tikz/src/01_Leitfaehigkeit/Realer_Widerstand}
-		\s{\caption{\textbf{Ersatzschaltbild eines realen Widerstands.} Der ideale Widerstand \( R \) wird durch eine Serien-Induktivität $L_\mathrm{s}$
-				und einen parallelen Kondensator $C_\mathrm{p}$ ergänzt, um parasitäre Effekte zu berücksichtigen.}}
+		\s{\caption{\textbf{Equivalent circuit diagram of a real resistor.} The ideal resistance \( R \) is supplemented by a series inductance $L_\mathrm{s}$
+		and a parallel capacitor $C_\mathrm{p}$ to account for parasitic effects.}}
 		\label{fig:ESB realen Widerstand}
 	\end{figure}
 \end{frame}
@@ -941,14 +951,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - realer Widerstand Schaltbild %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \s{
-	Ausgehend von der Ausführung eines Widerstandes und der Frequenz, bei welcher er betrieben wird, 
-	machen sich sogenante parasitäre Effekte bemerkbar. In Abbildung \ref{fig:ESB realen Widerstand}
-	ist das Ersatzschaltbild eines realen Widerstanders dargestellt. Wird dieser bei höheren Frequenzen betrieben,
-	können die parasitären Eigenschaften (parasitics) überwiegen und zu einem völlig anderen Verhalten führen.
-	Mehr dazu in späteren Modulen.
-	
-	Im Folgenden werden aber immer vollständige Ersatzschaltbilder angenommen. Wird ein Widerstand nur mit seinem Schaltungssymbol dargestellt, 
-	soll dieser als damit vollständig beschrieben angenommen werden. Dies gilt auch für alle im Weiteren hergeleiteten Bauelemente.
+	Based on the design of a resistor and the frequency at which it is operated, 
+    so-called parasitic effects become noticeable. Figure \ref{fig:ESB realen Widerstand}
+	shows the equivalent circuit diagram of a real resistor. If this is operated at higher frequencies,   
+	the parasitic properties (parasitics) can predominate and lead to completely different behaviour.
+    More on this in later modules.
+	However, complete equivalent circuit diagrams are always assumed in the following. If a resistor is only represented by its circuit symbol, 
+	it should be assumed that this is a complete description. This also applies to all components derived in the following.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Für Folie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -985,11 +994,12 @@
 % \end{table}
 
 \s{
-	In der Elektrotechnik werden werden Widerstände, auch Festwiderstände genannt, in der Schaltungsentwicklung verwendet. 
-	Eine der bekanntesten Ausführungen sind die THT-Widerstände (Through-Hole Technology). Obwohl diese Art in vielen Anwendungen von SMD-Bauteilen (Surface-Mount Device) abgelöst worden sind,
-	gibt es immer noch Anwendungsfälle in denen sie Sinn machen. Beispiele sind Prototyping, DIY-Projekte, Leistungsanwendungen oder Leiterplatten mit hohen mechanischen Anforderungen.
-	Die THT-Widerstände sind durch farbige Ringe gekennzeichnet, welche Aufschluss über den Widerstandswert und die Toleranz liefern.
-	Abbildung \ref{fig:Farbkodierung vom Widerstand} zeigt einen THT-Widerstand mit dem dazugehörigen Ableseschema und einer Tabelle zum Ablesen der Werte:
+	In electrical engineering, resistors, also known as fixed resistors, are used in circuit design. 
+    One of the best-known types are THT (through-hole technology) resistors. Although this type has been replaced by SMD (surface-mount device) components in many applications,
+    there are still cases where they make sense. Examples include prototyping, DIY projects, power applications, or printed circuit boards with high mechanical requirements.
+    
+	THT resistors are marked with coloured rings that provide information about the resistance value and tolerance.
+	Figure \ref{fig:Farbkodierung vom Widerstand} shows a THT resistor with the corresponding reading scheme and a table for reading the values:
 }% nur im Skript
 
 
@@ -1006,6 +1016,7 @@
 			\item Widerstandsfarbcodierung
 		\end{itemize}
 		\begin{figure}[H]
+			\renewcommand{\figurename}{Figure}
 			\centering
 			\begin{minipage}[b]{0.5\textwidth}
 				\centering
@@ -1014,42 +1025,43 @@
 						\put(40, 23){\line(1,1){6}}\put(46, 30){1.}
 						\put(44, 23){\line(1,1){6}}\put(50, 30){2.}
 						\put(48, 23){\line(1,1){6}}\put(54, 30){3.}
-						\put(53, 23){\line(1,1){16}}\put(69, 40){Multiplikator}
-						\put(60, 23){\line(1,1){6}}\put(66, 30){Toleranz}
+						\put(53, 23){\line(1,1){16}}\put(69, 40){Multiplicator}
+						\put(60, 23){\line(1,1){6}}\put(66, 30){Tolerance}
 						\put(0, 5){$1 - 5 - 0 - 2 = 150 \cdot 100\,\Omega = 15\,\text{k}\Omega \pm 5\%$}
 					}{}
 			\end{minipage}
 			%\vspace{0.5cm}
 			\begin{minipage}[b]{1\textwidth}
+				\renewcommand{\tablename}{Table}
 				\centering
 				\resizebox{0.45\textwidth}{!}{%
 					\begin{tabular}{|c|c|c|c|c|c|} % Sechs Spalten, alle zentriert
 						\hline % Oberste horizontale Linie
-						\textbf{Farbe}                                & \textbf{1. 2. 3. Band} & \textbf{Multiplikator} & \textbf{Toleranz} \\ % Überschriften für jede Spalte
+						\textbf{Colour}                                & \textbf{1. 2. 3. Band} & \textbf{Multiplikator} & \textbf{Toleranz} \\ % Überschriften für jede Spalte
 						\hline % Horizontale Linie
-						{\cellcolor{black}\textcolor{white}{Schwarz}} & 0                      & {$1\,\Omega$}          & -                 \\ % Daten für die erste Zeile
+						{\cellcolor{black}\textcolor{white}{Black}} & 0                      & {$1\,\Omega$}          & -                 \\ % Daten für die erste Zeile
 						\hline % Horizontale Linie
-						\cellcolor{brown}\textcolor{white}{Braun}     & 1                      & $10\,\Omega$           & $\pm\, 1\,\%$     \\ % Daten für die zweite Zeile
+						\cellcolor{brown}\textcolor{white}{Brown}     & 1                      & $10\,\Omega$           & $\pm\, 1\,\%$     \\ % Daten für die zweite Zeile
 						\hline % Horizontale Linie
-						\cellcolor{red}Rot                            & 2                      & $100\,\Omega$          & $\pm\, 2\,\%$     \\ % Daten für die dritte Zeile
+						\cellcolor{red}Red                            & 2                      & $100\,\Omega$          & $\pm\, 2\,\%$     \\ % Daten für die dritte Zeile
 						\hline % Horizontale Linie
 						\cellcolor{orange}Orange                      & 3                      & $1\,\text{k}\Omega$    & -                 \\ % Daten für die vierte Zeile
 						\hline % Horizontale Linie
-						\cellcolor{yellow}Gelb                        & 4                      & $10\,\text{k}\Omega$   & -                 \\ % Daten für die fünfte Zeile
+						\cellcolor{yellow}Yellow                        & 4                      & $10\,\text{k}\Omega$   & -                 \\ % Daten für die fünfte Zeile
 						\hline % Horizontale Linie
-						\cellcolor{green}Grün                         & 5                      & $100\,\text{k}\Omega$  & $\pm\, 0.5\,\%$   \\ % Daten für die sechste Zeile
+						\cellcolor{green}Green                         & 5                      & $100\,\text{k}\Omega$  & $\pm\, 0.5\,\%$   \\ % Daten für die sechste Zeile
 						\hline % Horizontale Linie
-						\cellcolor{blue}\textcolor{white}{Blau}       & 6                      & $1\,\text{M}\Omega$    & $\pm\, 0.25\,\%$  \\ % Daten für die siebte Zeile
+						\cellcolor{blue}\textcolor{white}{Blue}       & 6                      & $1\,\text{M}\Omega$    & $\pm\, 0.25\,\%$  \\ % Daten für die siebte Zeile
 						\hline % Horizontale Linie
-						\cellcolor{violet}\textcolor{white}{Violett}  & 7                      & $10\,\text{M}\Omega$   & $\pm\, 0.1\,\%$   \\ % Daten für die achte Zeile
+						\cellcolor{violet}\textcolor{white}{Violette}  & 7                      & $10\,\text{M}\Omega$   & $\pm\, 0.1\,\%$   \\ % Daten für die achte Zeile
 						\hline % Horizontale Linie
-						\cellcolor{gray}\textcolor{white}{Grau}       & 8                      & -                      & $\pm\, 0.05\,\%$  \\ % Daten für die neunte Zeile
+						\cellcolor{gray}\textcolor{white}{Grey}       & 8                      & -                      & $\pm\, 0.05\,\%$  \\ % Daten für die neunte Zeile
 						\hline % Horizontale Linie
-						Weiß                                          & 9                      & -                      & -                 \\ % Daten für die zehnte Zeile
+						White                                          & 9                      & -                      & -                 \\ % Daten für die zehnte Zeile
 						\hline % Horizontale Linie
 						\cellcolor{gold}Gold                          & -                      & $0.1\,\Omega$          & $\pm\,5\,\%$      \\ % Daten für die elfte Zeile
 						\hline % Horizontale Linie
-						\cellcolor{silver}Silber                      & -                      & $0.01\,\Omega$         & $\pm\,10\,\%$     \\ % Daten für die zwölfte Zeile
+						\cellcolor{silver}Silver                      & -                      & $0.01\,\Omega$         & $\pm\,10\,\%$     \\ % Daten für die zwölfte Zeile
 						\hline % Untere horizontale Linie
 					\end{tabular}%
 				}
@@ -1065,6 +1077,7 @@
 \end{frame}
 \s{
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\begin{minipage}[b]{0.6\textwidth}
 			\centering
@@ -1073,8 +1086,8 @@
 				\put(40, 23){\line(1,1){6}}\put(46, 30){1.}
 				\put(44, 23){\line(1,1){6}}\put(50, 30){2.}
 				\put(48, 23){\line(1,1){6}}\put(54, 30){3.}
-				\put(53, 23){\line(1,1){16}}\put(69, 40){Multiplikator}
-				\put(60, 23){\line(1,1){6}}\put(66, 30){Toleranz}
+				\put(53, 23){\line(1,1){16}}\put(69, 40){Multiplicator}
+				\put(60, 23){\line(1,1){6}}\put(66, 30){Tolerance}
 				\put(15, 5){$1 - 5 - 0 - 2 = 150 \cdot 100\,\Omega = 15\,\text{k}\Omega \pm 5\%$}
 			}{}
 		\end{minipage}
@@ -1083,36 +1096,36 @@
 			\resizebox{0.6\textwidth}{!}{%
 				\begin{tabular}{|c|c|c|c|c|c|} % Sechs Spalten, alle zentriert
 					\hline % Oberste horizontale Linie
-					\textbf{Farbe}                                & \textbf{1. 2. 3. Band} & \textbf{Multiplikator} & \textbf{Toleranz} \\ % Überschriften für jede Spalte
+					\textbf{Colour}                                & \textbf{1. 2. 3. Band} & \textbf{Multiplicator} & \textbf{Tolerance} \\ % Überschriften für jede Spalte
 					\hline % Horizontale Linie
-					{\cellcolor{black}\textcolor{white}{Schwarz}} & 0                      & {$1\,\Omega$}          & -                 \\ % Daten für die erste Zeile
+					{\cellcolor{black}\textcolor{white}{Black}} & 0                      & {$1\,\Omega$}          & -                 \\ % Daten für die erste Zeile
 					\hline % Horizontale Linie
-					\cellcolor{brown}\textcolor{white}{Braun}     & 1                      & $10\,\Omega$           & $\pm\, 1\,\%$     \\ % Daten für die zweite Zeile
+					\cellcolor{brown}\textcolor{white}{Brown}     & 1                      & $10\,\Omega$           & $\pm\, 1\,\%$     \\ % Daten für die zweite Zeile
 					\hline % Horizontale Linie
-					\cellcolor{red}Rot                            & 2                      & $100\,\Omega$          & $\pm\, 2\,\%$     \\ % Daten für die dritte Zeile
+					\cellcolor{red}Red                            & 2                      & $100\,\Omega$          & $\pm\, 2\,\%$     \\ % Daten für die dritte Zeile
 					\hline % Horizontale Linie
 					\cellcolor{orange}Orange                      & 3                      & $1\,\text{k}\Omega$    & -                 \\ % Daten für die vierte Zeile
 					\hline % Horizontale Linie
-					\cellcolor{yellow}Gelb                        & 4                      & $10\,\text{k}\Omega$   & -                 \\ % Daten für die fünfte Zeile
+					\cellcolor{yellow}Yellow                        & 4                      & $10\,\text{k}\Omega$   & -                 \\ % Daten für die fünfte Zeile
 					\hline % Horizontale Linie
-					\cellcolor{green}Grün                         & 5                      & $100\,\text{k}\Omega$  & $\pm\, 0.5\,\%$   \\ % Daten für die sechste Zeile
+					\cellcolor{green}Green                         & 5                      & $100\,\text{k}\Omega$  & $\pm\, 0.5\,\%$   \\ % Daten für die sechste Zeile
 					\hline % Horizontale Linie
-					\cellcolor{blue}\textcolor{white}{Blau}       & 6                      & $1\,\text{M}\Omega$    & $\pm\, 0.25\,\%$  \\ % Daten für die siebte Zeile
+					\cellcolor{blue}\textcolor{white}{Blue}       & 6                      & $1\,\text{M}\Omega$    & $\pm\, 0.25\,\%$  \\ % Daten für die siebte Zeile
 					\hline % Horizontale Linie
-					\cellcolor{violet}\textcolor{white}{Violett}  & 7                      & $10\,\text{M}\Omega$   & $\pm\, 0.1\,\%$   \\ % Daten für die achte Zeile
+					\cellcolor{violet}\textcolor{white}{Violette}  & 7                      & $10\,\text{M}\Omega$   & $\pm\, 0.1\,\%$   \\ % Daten für die achte Zeile
 					\hline % Horizontale Linie
-					\cellcolor{gray}\textcolor{white}{Grau}       & 8                      & -                      & $\pm\, 0.05\,\%$  \\ % Daten für die neunte Zeile
+					\cellcolor{gray}\textcolor{white}{Grey}       & 8                      & -                      & $\pm\, 0.05\,\%$  \\ % Daten für die neunte Zeile
 					\hline % Horizontale Linie
-					Weiß                                          & 9                      & -                      & -                 \\ % Daten für die zehnte Zeile
+					White                                          & 9                      & -                      & -                 \\ % Daten für die zehnte Zeile
 					\hline % Horizontale Linie
 					\cellcolor{gold}Gold                          & -                      & $0.1\,\Omega$          & $\pm\,5\,\%$      \\ % Daten für die elfte Zeile
 					\hline % Horizontale Linie
-					\cellcolor{silver}Silber                      & -                      & $0.01\,\Omega$         & $\pm\,10\,\%$     \\ % Daten für die zwölfte Zeile
+					\cellcolor{silver}Silver                      & -                      & $0.01\,\Omega$         & $\pm\,10\,\%$     \\ % Daten für die zwölfte Zeile
 					\hline % Untere horizontale Linie
 				\end{tabular}%
 			}
 		\end{minipage}
-		\caption{\textbf{Widerstandsfarbcodierung.} Zeigt die Farbcodes zur Bestimmung des Widerstandswerts und der Toleranz eines Widerstands.}
+		\caption{\textbf{Resistance colour coding.} Shows the colour codes for determining the resistance value and tolerance of a resistor.}
 		\label{fig:Farbkodierung vom Widerstand}
 	\end{figure}
 	
@@ -1122,8 +1135,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - farbige Widerstandstabelle mit Text %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \s{
-	Die THT-Widerstände gibt es in verschiedenen Ausführungen, welche alle ihre Vor- und Nachteile mit sich bringen. 
-	Die Abbildung \ref{fig:Bauarten von Widerständen} zeigt vier Arten, wie diese Umgesetzt werden können.
+	THT resistors are available in various designs, each with their own advantages and disadvantages.
+	Figure \ref{fig:Bauarten von Widerständen} shows four ways in which these can be implemented.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - graue Widerstände %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1137,8 +1150,9 @@
 		\end{itemize}
 	}
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\input{Tikz/src/01_Leitfaehigkeit/Bedrahtete_Widerstaende}
-		\s{\caption{\textbf{Verschiedene Ausführungen von bedrahteten (THT) Widerständen.}}}
+		\s{\caption{\textbf{Various types of through-hole (THT) resistors.}}}
 		\label{fig:Bauarten von Widerständen}
 	\end{figure}
 	
@@ -1152,12 +1166,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Merksatz Widerstand %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\ftx{Merksatz: Widerstand als Bauelement}
-	\begin {Merksatz}{}
+	\begin {Key point}{}
 	% In Ingenieurwissenschaftlichen Disziplinen wird für Temperaturen sehr oft Kelvin verwendet.
 	% Null Kelvin entsprechen -273 Grad Celsius, was dem absoluten Nullpunkt entspricht.
-	Der Widerstandswert eines Materials ist abhängig von dessen geometrischen und spezifischen Eigenschaften.
+	The resistance value of a material depends on its geometric and specific properties.
 	
-	\end {Merksatz}
+	\end {Key point}
 	
 	\speech{01_Leitfaehigkeit_und_Widerstand}{49}{
 		Also wir haben gesehen, dass der Widerstand einer Anordnung oder eines Materials abhängig ist von der Geometrie und von spezifischen Materialeigenschaften, nämlich von der Leitfähigkeit Kappa. Auf diese Leitfähigkeit Kappa wollen wir nun im Folgenden nochmal etwas detaillierter eingehen.
@@ -1170,16 +1184,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Widerstand als reales Bauelement %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - PTC und NTC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{PTC und NTC}
+\subsection{PTC and NTC}
 
 \s{
 	%Die vorherigen Abschnitte beschäftigten sich mit den Grundlagen von Widerständen und ihrer Berechnung. 
-	In diesem Abschnitt geht es um eine spezielle Kategorie von Widerständen, die besonders in temperaturabhängigen Anwendungen Gebrauch finden: 
-	die PTC- und NTC-Widerständen. Die Namen bezieht sich auf deren positiven bzw. negativen Temperaturkoeffizienten $\alpha$, welcher bereits in Abschnitt 1.1.3 eingeführt wurde. 
-	Diese speziellen Widerstände, auch als Thermistoren bekannt, unterscheiden sich von herkömmlichen Widerständen dadurch, 
-	dass ihr Widerstandswert stark von der Temperatur abhängt. %Während normale Widerstände so konstruiert sind, dass ihr Widerstand bei unterschiedlichen Temperaturen weitgehend konstant bleibt, nutzen PTC- und NTC-Widerstände diese Eigenschaft gezielt, 
+	This section deals with a special category of resistors that are particularly useful in temperature-dependent applications:
+    PTC and NTC resistors. The names refer to their positive and negative temperature coefficients $\alpha$, which were already introduced in section 1.1.3. 
+	These special resistors, also known as thermistors, differ from conventional resistors in that 
+	their resistance value is highly dependent on temperature. %Während normale Widerstände so konstruiert sind, dass ihr Widerstand bei unterschiedlichen Temperaturen weitgehend konstant bleibt, nutzen PTC- und NTC-Widerstände diese Eigenschaft gezielt, 
 	% um als Temperatursensoren, Schutzvorrichtungen oder zur Temperaturkompensation in elektrischen Schaltungen eingesetzt zu werden.
-	Abbildung \ref{fig:ntc_ptc_widerstandsdiagramm} zeigt das entgegengesetzte Verhalten beider Widerstandsarten.
+	Figure \ref{fig:ntc_ptc_widerstandsdiagramm} shows the opposite behaviour of both types of resistance.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Diagramm PTC und NTC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1187,10 +1201,11 @@
 	\ftx{Temperaturabhängige Widerstände}
 	% NTC und PTC Diagramm
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\input{Tikz/src/01_Leitfaehigkeit/Diagramm_linearer_NTC_PTC}
-		\s{\caption{\textbf{Diagramm eines linearen NTC- und eines PTC-Widerstands über die Temperatur.} Bei einem NTC sinkt der Widerstand mit steigender Temperatur,
-				während bei einem PTC  der Widerstandswert mit steigender Temperatur ansteigt.}}
+		\s{\caption{\textbf{Diagram of a linear NTC and a PTC resistor over temperature.} With an NTC, the resistance decreases as the temperature rises,
+		while with a PTC, the resistance value increases as the temperature rises.}}
 		\label{fig:ntc_ptc_widerstandsdiagramm}
 	\end{figure}
 	
@@ -1203,10 +1218,10 @@
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Diagramm PTC und NTC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \s{
-	Die PTC-Widerstände haben einen positiven Temperaturkoeffizienten $\alpha$, welcher in Tabelle 1 im Abschnitt 1.1.3 abgelesen werden kann. 
-	Gut leitfähige Materialien haben ein positives $\alpha$, was bedeutet, dass deren Widerstand bei höheren Temperaturen zunimmt. 
-	Somit sind sie im kalten Betrieb leitfähiger, wodurch sie auch "Kaltleiter" genannt werden. 
-	In Abbildung \ref{fig:widerstandsdiagramm_ptc} ist der gleiche PTC-Widerstand bei jeweils unterschiedlichen Temperaturen dargestellt.
+	PTC resistors have a positive temperature coefficient $\alpha$, which can be found in Table 1 in Section 1.1.3.
+    Highly conductive materials have a positive $\alpha$, which means that their resistance increases at higher temperatures. 
+	This makes them more conductive when cold, which is why they are also called ‘cold conductors’. 
+	Figure \ref{fig:widerstandsdiagramm_ptc} shows the same PTC resistor at different temperatures.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Diagramm PTC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1214,9 +1229,10 @@
 	\ftx{Temperaturabhängige Widerstände}
 	%%% Spannung/ Strom Verhältnis über PTC
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\input{Tikz/src/01_Leitfaehigkeit/Diagramm_PTC}
-		\s{\caption{Diagramm eines PTC Widerstandes bei 20°C und bei 80°C}
+		\s{\caption{Diagram of a PTC resistor at 20°C and at 80°C}
 			\label{fig:widerstandsdiagramm_ptc}}
 	\end{figure}
 	
@@ -1227,18 +1243,19 @@
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Diagramm PTC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \s{
-	Das folgende Diagramm zeigt die Erwärmung eines PTC-Widerstandes bei Erhöhung des Stromflusses.
-	Je mehr Strom also durch einen PTC-Widerstand fließt, desto stärker erwärmt er sich.
+	The following diagram shows the heating of a PTC resistor when the current flow increases.
+	The more current flows through a PTC resistor, the more it heats up.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Diagramm Strom - Temperatur Kurve %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\ftx{Temperaturabhängige Widerstände}
 	%%%%% Strom Temperatur verhältnis
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\input{Tikz/src/01_Leitfaehigkeit/Diagramm_Temp_Strom_Widerstand}
-		\s{\caption{\textbf{Diagramm der Temperatur eines Widerstands in Abhängigkeit von der Stromstärke.} Zeigt wie die Temperatur eines Widerstands
-				mit zunehmender Stromstärke ansteigt. Der Widerstandswert kann sich dabei ebenfalls ändern, abhängig von der Temperaturabhängigkeit des Widerstands.}}
+		\s{\caption{\textbf{Diagram showing the temperature of a resistor as a function of current.} Shows how the temperature of a resistor
+		rises with increasing current. The resistance value may also change, depending on the temperature dependence of the resistor.}}
 		\label{fig:strom-temperatur}
 	\end{figure}
 	
@@ -1250,10 +1267,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Diagramm Strom - Temperatur Kurve %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \s{
-	Das genau entgegengesetzte Verhalten weist ein NTC-Widerstand aufgrund seines negativen Temperaturkoeffizienten auf.
-	Typische Materialien mit einem solchen Verhalten sind Grafit oder Silizium. Da diese Widerstände bei zunehmender Temperatur besser leiten, nennt man sie auch Heißleiter.
-	In Abbildung \ref{fig:widerstandsdiagramm_ntc} ist zu erkennen, dass der Widerstand
-	bei einer höheren Temperatur einen geringeren Widerstandswert aufweist.
+	An NTC resistor exhibits the exact opposite behaviour due to its negative temperature coefficient.
+	Typical materials with this behaviour are graphite or silicon. Since these resistors conduct better at higher temperatures, they are also called thermistors.
+	Figure \ref{fig:widerstandsdiagramm_ntc} shows that the resistance
+    has a lower resistance value at a higher temperature.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Diagramm NTC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1261,9 +1278,10 @@
 	\ftx{Temperaturabhängige Widerstände}
 	%%% Spannung/ Strom verhältnis über NTC
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\input{Tikz/src/01_Leitfaehigkeit/Diagramm_NTC}
-		\s{\caption{Diagramm eines NTC Widerstandes bei 20 °C und bei 80 °C}
+		\s{\caption{Diagram of an NTC resistor at 20 °C and at 80 °CC}
 			\label{fig:widerstandsdiagramm_ntc}}
 	\end{figure}
 	\speech{01_Leitfaehigkeit_und_Widerstand}{53}{

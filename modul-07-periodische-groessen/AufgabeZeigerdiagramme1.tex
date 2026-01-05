@@ -1,12 +1,12 @@
-\subsection{Zeigerdiagramme 1}
+\subsection{Pointer diagrams 1}
 \Aufgabe{
 
-Gegeben sei die Spannung $\hat{U} = 325\ V \cdot \mathrm{e}^{\mathrm{j}30^\circ}$.
+Let the voltage be $\hat{U} = 325\ V \cdot \mathrm{e}^{\mathrm{j}30^\circ}$.
 
 \begin{itemize}
-    \item [\bf a)] Zeichnen Sie das Zeigerdiagramm für die Spannung $\hat{U}$ im komplexen Zahlenraum.
-    \item [\bf b)] Berechnen Sie die Real- und Imaginärteile der komplexen Spannung $\hat{U}$.
-    \item [\bf c)] Erklären Sie die Bedeutung des Phasenwinkels in Bezug auf die Wechselspannung.
+    \item [\bf a)] Draw the phasor diagram for the voltage $\hat{U}$ in the complex number space.
+    \item [\bf b)] Calculate the real and imaginary parts of the complex voltage $\hat{U}$.
+    \item [\bf c)] Explain the significance of the phase angle in relation to alternating voltage.
 \end{itemize}
 }
 
@@ -14,9 +14,10 @@ Gegeben sei die Spannung $\hat{U} = 325\ V \cdot \mathrm{e}^{\mathrm{j}30^\circ}
     \begin{itemize}
 
         \item[\bf a)]
-              Zeigerdiagramm für die Spannung $\hat{U}$ \\
+              Pointer diagram for voltage $\hat{U}$ \\
               
               \begin{figure}[H]
+                \renewcommand{\figurename}{Figure}
                   \centering
                   \resizebox{0.3\textwidth}{!}{
                       \input{Tikz/src/Aufgaben/Loesung_Zeigerdiagramme1}
@@ -24,7 +25,7 @@ Gegeben sei die Spannung $\hat{U} = 325\ V \cdot \mathrm{e}^{\mathrm{j}30^\circ}
               \end{figure}
               
         \item[\bf b)] 
-              Die Real- und Imaginärteile der Spannung $\hat{U}$ können mit den folgenden Formeln berechnet werden:
+              The real and imaginary parts of the voltage $\hat{U}$ can be calculated using the following formulas:
               
               \begin{eqa}
                   U_{\text{Re}} &= \hat{U} \cdot \cos(\varphi) = 325 \cdot \cos(30^\circ) \approx 281,46\ V      \nonumber   \\
@@ -32,10 +33,9 @@ Gegeben sei die Spannung $\hat{U} = 325\ V \cdot \mathrm{e}^{\mathrm{j}30^\circ}
               \end{eqa}
               
         \item[\bf c)] 
-              Der Phasenwinkel $\varphi$ beschreibt den zeitlichen Versatz zwischen der Spannung und dem Strom in einem Wechselstromkreis. 
-              Ein positiver Phasenwinkel deutet darauf hin, dass die Spannung der Strom nachfolgt (induktive Last), während ein negativer 
-              Phasenwinkel anzeigt, dass der Strom der Spannung nachfolgt (kapazitive Last). 
-              
+                The phase angle $\varphi$ describes the time lag between the voltage and the current in an alternating current circuit.
+                A positive phase angle indicates that the voltage lags behind the current (inductive load), while a negative phase angle 
+                indicates that the current lags behind the voltage (capacitive load).       
     \end{itemize}
     
 }

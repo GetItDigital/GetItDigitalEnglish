@@ -3,25 +3,25 @@
 \newvideofile{Zeiger}{Zeigerdiagramme}
 
 \begin{frame}
-    \fta{Zeigerdiagramme in der Wechselstromtechnik}
+    \fta{Pointer diagrams in alternating current technology}
     
     \s{
-        In der Wechselstromtechnik finden die komplexen Zahlen unter Anderem als Zeiger Verwendung.  
-        In linearen Netzwerken haben sinusförmige und monofrequente Quellengrößen nur sinusförmige und monofrequente 
-        Spannungen und Ströme zur Folge. Im Stationären Zustand unterscheiden sich die Spannungen und Ströme nur in 
-        ihrer Amplitude und der zugehörigen Phase. Alle Signale haben dabei eine identische Frequenz. Die Stationären
-        und harmonischen Schwingungen können durch ihren Zeitverlauf im Liniendiagramm oder durch komplexe Zahlen durch
-        Zeiger dargestellt werden. Die Beschreibung von Schwingungen durch komplexe Zahlen ermöglicht die Darstellung 
-        durch ruhende Zeiger, wobei nur die relative Lage zueinander ausgedrückt wird. 
+        In alternating current technology, complex numbers are used, among other things, as pointers.  
+        In linear networks, sinusoidal and single-frequency source quantities only result in sinusoidal and single-frequency 
+        voltages and currents. In a steady state, the voltages and currents only differ in 
+        their amplitude and the associated phase. All signals have an identical frequency. Steady-state
+        and harmonic oscillations can be represented by their time course in a line diagram or by complex numbers using
+        pointers. Describing oscillations using complex numbers allows them to be represented 
+        by stationary pointers, whereby only their relative position to each other is expressed.
     }
     
-    \begin{Lernziele}{Zeigerdiagramme}
-        Die Studierenden
+    \begin{Learning objectives}{Pointer diagrams}
+        the students can
         \begin{itemize}
-            \item verstehen die Kenngrößen von periodischen Wechselspannungen.
-            \item können mit den komplexen Drehzeigern der Amplituden umgehen.
+            \item understand the parameters of periodic alternating voltages.
+            \item can handle the complex rotation indicators of the amplitudes.
         \end{itemize}
-    \end{Lernziele}
+    \end{Learning objectives}
     
     \speech{ZeigerLrnz}{1}{Zeigerdiagramme dienen in der Wechselstromtechnik der vereinfachten Berechnung von sinusförmigen Wechselgrößen.
     In diesem Kapitel sollen die Kenngrößen von periodischen Wechselgrößen vermittelt 
@@ -29,22 +29,23 @@
 \end{frame}
 
 \begin{frame}
-    \ftb{Periodische Wechselspannung}
+    \renewcommand{\figurename}{Figure}
+    \ftb{Periodic alternating voltage}
     
     \s{
-        In der Abbildung \ref{BildWechselspannungssignal} wird ein Wechselspannungssignal mit dem Scheitelwert (Amplitudenwert) $\hat{U}$
-        dargestellt. Der Versatz des Wechselspannungssignals auf der Abszisse wird durch den Zeitpunkt $t_\mathrm{0}$
-        ausgedrückt. Der Punkt in dem das Wechselspannungssignal die Ordinate kreuzt gibt den Wechselspannungswert 
-        $U$ zum Zeitpunkt $t=0$ an. 
-        
-        Das Wechselspannungssignal ist periodisch in $T$. Eine Periode wird bei dem angegebenen Wechselspannungsignal
-        durch einen kompletten Durchlauf einer positiven und negativen Halbwelle definiert. So wird ab $t_\mathrm{0}$ nach einer 
-        Periode der Zeitpunkt $t_0+T$ und nach zwei Perioden der Zeitpunkt $t_\mathrm{0+2T}$ erreicht. 
-        
-        Mit der Übertragung der angegebenen Werte auf ein Kreisdiagramm lässt sich der Zusammenhang der Wechselspannung 
-        mit der komplexen Darstellung erklären. Auf diese Weise kann die Wechselspannungsgröße $U(t=0)$ zum Zeitpunkt $0$ 
-        durch die Länge und Ausrichtung des Zeigers beschrieben werden. Der Scheitelwert enspricht der Länge des Zeigers
-        im Kreisdiagramm. Der Winkel $\varphi_\mathrm{u}$ beschreibt den Phasenwinkel zum Zeitpunkt $t=0$. 
+        Figure \ref{BildWechselspannungssignal} shows an alternating voltage signal with a peak value (amplitude value) of $\hat{U}$.
+        The offset of the alternating voltage signal on the abscissa is expressed by the time $t_\mathrm{0}$.
+        The point at which the alternating voltage signal crosses the ordinate indicates the alternating voltage value 
+        $U$ at time $t=0$.
+ 
+        The alternating voltage signal is periodic in $T$. A period is defined for the specified alternating voltage signal
+        by a complete cycle of a positive and negative half-wave. Thus, starting from $t_\mathrm{0}$, after one 
+        period, the time $t_0+T$ is reached, and after two periods, the time $t_\mathrm{0+2T}$ is reached.
+ 
+        By transferring the specified values to a circular diagram, the relationship between the alternating voltage 
+        and the complex representation can be explained. In this way, the alternating voltage magnitude $U(t=0)$ at time $0$ 
+        can be described by the length and orientation of the pointer. The peak value corresponds to the length of the pointer
+        in the circular diagram. The angle $\varphi_\mathrm{u}$ describes the phase angle at time $t=0$.
     }
     
     \b{
@@ -63,8 +64,8 @@
         \resizebox{0.95\textwidth}{!}{
             \input{Tikz/src/Zeigerdiagramme/Periodische_Wechselspannung}
         }
-    }{{\bf Periodische Wechselspannung über der Zeit mit zwei Perioden.} Anhand der Wechselspannung lassen sich z.B. der
-        Amplitudenwert und die Periodedauer ermitteln.   \label{BildWechselspannungssignal}}
+    }{{\bf Periodic alternating voltage over time with two periods.} The alternating voltage can be used to determine, for example, the
+        amplitude value and the period duration.   \label{BildWechselspannungssignal}}
 
     \speech{ZeigerPerd}{1}{Folgend wird eine Sinusförmige und harmonische, also gleichförmige Wechselspannung dargstellt. 
     Der größtmögliche Ausschlag des Spannungssignals wird beim sogenannten Scheitelwert U Dach erreicht.
@@ -78,13 +79,14 @@
 \end{frame}
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Umrechnung der Kreisfrequenz}
     
     \s{
-        Die Kreisfrequenz $\omega$ kann mithilfe der Periodendauer $T$ oder der Frequenz $f$ angegeben werden. Weiter wird die 
-        Kreisfrequenz auch als Winkelgeschwindigkeit beschrieben. Über den 
-        Zusammenhang zwischen der Periodendauer und der Frequenz können die Größen ineinander umgerechnet werden. 
-        Die erläuterten Zusammenhänge werden in den Gleichungen \ref{GleichungKreisfrequenz} beschrieben.
+        The angular frequency $\omega$ can be specified using the period $T$ or the frequency $f$. Furthermore, the 
+        angular frequency is also described as angular velocity. Using the 
+        relationship between the period and the frequency, the quantities can be converted into one another. 
+        The relationships explained are described in equations \ref{GleichungKreisfrequenz}.
     }
     
     \b{
@@ -97,8 +99,8 @@
     
     \begin{eq}
         \omega = \frac{2\pi}{T} 
-        \onslide<2->{\text{\quad mit \quad} f=\frac{1}{T} }
-        \onslide<3->{\text{\quad wird \quad} \omega = 2\pi f \label{GleichungKreisfrequenz}}
+        \onslide<2->{\text{\quad with \quad} f=\frac{1}{T} }
+        \onslide<3->{\text{\quad will be \quad} \omega = 2\pi f \label{GleichungKreisfrequenz}}
     \end{eq}
 
     \speech{ZeigerKreis}{1}{Die Kreisfrequenz Omega lässt sich wie angegeben aus der Periodendauer T errechnen.
@@ -112,12 +114,10 @@
     \ftx{Harmonische Wechselgrößen}
     
     \s{
-        Angenommen der Durchlauf einer kompletten Periode bei einer Frequenz von $50 Hz$ dauert $20 ms$ (vgl. Abbildung \ref{BildZeiten}). 
-        Übertragen auf das Gradmaß und das Radmaß ergeben sich so Winkelangaben für den Durchlauf einer Periode. Der 
-        Winkel nach der kompletten Periode T entspricht dem Umlauf eines vollen Kreises. Der Umlauf eines vollen Kreises
-        entspricht dazu 
-        Die Phasenverschieben $t_\mathrm{0}$
-        lässt sich auch in der Winkeldarstellung als Phasenwinkel $\varphi_\mathrm{N}$ beschreiben. 
+        Assuming that the cycle of a complete period at a frequency of $50 Hz$ takes $20 ms$ (see Figure \ref{BildZeiten}).
+        Applied to the degree measure and the wheel measure, this results in angle specifications for the cycle of a period. The 
+        angle after the complete period T corresponds to the rotation of a full circle. The rotation of a full circle
+        corresponds to the phase shift $t_\mathrm{0}$ can also be described in angular representation as the phase angle $\varphi_\mathrm{N}$.
     }
     
     \b{
@@ -129,7 +129,7 @@
     
     \fu{
         \input{Tikz/src/Zeigerdiagramme/Verschiedene_Massangaben}
-    }{{\bf Verschiedene Maßangaben.} Vegleich zwischen Gradmaß und Radmaß, der Umlauf eines Kreises entspricht $360^o$ oder
+    }{{\bf Various measurements.} Comparison between degrees and radian measure: the circumference of a circle corresponds to $360^o$ or
         $2\pi$. \label{BildZeiten}}
 
     \speech{ZeigerHarm}{1}{Wie bereits angemerkt entspricht die Periodendauer einem Kreisumlauf von zwei Pi oder Dreihundertsechzig grad.}
@@ -142,10 +142,10 @@
 \begin{frame}
     \ftx{Wechselgrößen}
     
-    \begin{Merksatz}{Wechselgrößen}
-        Eine Wechselspannung erklärt einen regelmäßigen Polaritätswechsel mit dem {\bf Amplitudenwert $\hat{U}$} und der 
-            {\bf Periodendauer $T$}.
-    \end{Merksatz}
+    \begin{Key point}{Exchangeable sizes}
+        An alternating voltage explains a regular polarity change with the amplitude value $\hat{U}$ and the 
+    {\bf Periodendauer $T$}.
+    \end{Key point}
     
     \speech{ZeigerMrk1}{1}{Eine Wechselspannung erklärt einen regelmäßigen Polaritätswechsel mit dem Amplitudenwert U Dach und der Periodendauer Tee.}
 \end{frame}
@@ -157,9 +157,9 @@
     \ftx{Zeitabhängige Wechselspannung}
     
     \s{
-        Der zeitabhängige Spannungswert $u(t)$ einer Wechselspannung ist von mehreren Einflussgrößen abhängig.
-        Dazu gehören der Scheitelwert und die Frequenz der Wechselspannung sowie der dazugehörige Phasenwinkel.
-        Über das Verhältnis vom Zeitpunkt t zur Periodendauer lässt sich $u(t)$ bestimmen.
+        The time-dependent voltage value $u(t)$ of an alternating voltage depends on several influencing factors.
+        These include the peak value and frequency of the alternating voltage as well as the corresponding phase angle.
+        $u(t)$ can be determined from the ratio of the time t to the period duration.
     }
     
     \b{
@@ -181,11 +181,12 @@
 
 
 \begin{frame}
-    \ftb{Komplexer Drehzeiger der Amplitude}
+    \renewcommand{\figurename}{Figure}
+    \ftb{Complex rotating pointer of the amplitude}
     
     \s{
-        Der komplexe Spannungswert sowie der komplexe Stromwert können als Zeiger dargestellt werden. 
-        Hier wird auf die Darstellungsart der Polar-Koordinaten zurückgegriffen. 
+        The complex voltage value and the complex current value can be represented as pointers.
+        Here, the polar coordinate representation is used. 
     }
     
     \b{
@@ -199,7 +200,7 @@
     
     \fu{
         \input{Tikz/src/Zeigerdiagramme/Spannungs_und_Stromzeiger}
-    }{{\bf Spannungs- und Stromzeiger.} Ein Spannungszeiger mit dazugehörigen Phasenwinkel und äquivalent dazu ein Stromzeiger mit Phasenwinkel\label{BildSpannung}}
+    }{{\bf Voltage and current indicators.} A voltage vector with associated phase angle and, equivalently, a current vector with phase angle\label{BildSpannung}}
 
     \speech{ZeigerZsm}{1}{Zusammenfassend kann gesagt werden, dass für lienare Netzwerke Sinusförmige und harmonische Quellengrößen gelten.
     In stationären Zuständen unterscheiden sich Spannungen und Ströme lediglich in ihrer Amplitude und Phase.
@@ -208,14 +209,15 @@
 \end{frame}
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Komplexer Drehzeiger der Amplitude}
     
     \s{
-        Eine harmonische Wechselgröße kann als mit konstanter Winkelgeschwindigkeit $\omega$ rotierender Zeiger dargestellt
-        werden. Die Zeitfunktion ist die Projektion des Zeigers auf die reelle Achse. Der rotierende Zeiger wird durch 
-        eine zeitabhängige komplexe Zahl beschrieben. Wie bei den komplexen Zahlen erklärt, können der Imaginärteil 
-        und der Realteil jeweils sparat bestimmt werden. Über die Winkelfunktionen kann der Realteil und der 
-        Imaginärteil der komplexen Spannung berechnet werden. 
+        A harmonic alternating quantity can be represented as a pointer rotating at a constant angular velocity $\omega$.
+        The time function is the projection of the pointer onto the real axis. The rotating pointer is described by a time-dependent complex number. As explained for complex numbers, the imaginary part and the real part can be separated. The time function is the projection of the pointer onto the real axis. The rotating pointer is described by 
+        a time-dependent complex number. As explained for complex numbers, the imaginary part 
+        and the real part can be determined separately. The real part and the 
+        imaginary part of the complex voltage can be calculated using trigonometric functions. 
     }
     
     \b{
@@ -231,8 +233,8 @@
     
     \fu{
         \input{Tikz/src/Zeigerdiagramme/Zeigerdarstellung_komplexe_Wechselspannung}
-    }{{\bf Zeigerdarstellung einer komplexen Wechselspannung.} Wechselspannungszeiger mit der Aufteilung in Realteil und
-        Imaginärteil.}
+    }{{\bf Pointer display of a complex alternating voltage.} Alternating voltage indicator with division into real part and
+        imaginary part.}
 
     \speech{ZeigerDreh}{1}{Folgend wird beispielhaft der komplexe Drehzeiger einer elektrischen Spannung näher erläutert.
     Es werden der Imaginärteil und der Realteil in der komplexen Ebene der Spannung dargestellt.
@@ -248,10 +250,10 @@
 \begin{frame}
     \ftx{Komplexe Drehzeiger von Spannung und Strom}
     
-    \begin{Merksatz}{Komplexe Drehzeiger von Spannung und Strom}
-        Die Wechselgrößen Spannung und Strom werden als komplexe Drehzeiger dargestellt. Die Drehzeiger beschreiben dabei 
-            {\bf Augenblickswerte $u(t)$}, welche sich mit konstanter {\bf Winkelgeschwindigkeit $\omega$} verändern. 
-    \end{Merksatz}
+    \begin{Key point}{Complex rotating pointers for voltage and current}
+        The alternating variables voltage and current are represented as complex rotating pointers. The rotating pointers describe 
+            {\bf instantaneous values $u(t)$}, which, with constant {\bf angular velocity $\omega$} change. 
+    \end{Key point}
 
     \speech{ZeigerMrk2}{1}{Die Wechselgrößen Spannung und Strom werden als komplexe Drehzeiger dargestellt.
     Die Drehzeiger beschreiben dabei Augenblickswerte wie U von T, 
@@ -261,13 +263,14 @@
 
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Spannungszeiger und Stromzeiger von elektrischen Komponenten}
     
     \s{
-        Die Beschreibung von periodischen Größen an elektrischen Komponenten erfolgt durch feste Spannungszeiger und Stromzeiger. 
-        Das Verhalten der verschiedenen Komponenten ist dabei jeweils unterschiedlich. In der Abbildung \ref{BildBauteileZeiger}
-        werden ein Widerstand, ein Kondensator als Kapazität und eine Spule als Induktivität mit ihren zugehörigen Spannungs- und 
-        Stromzeigern dargestellt. Das genaue Verhalten der drei Komponenten wird im folgenden Kapitel näher betrachtet. 
+        Periodic quantities in electrical components are described by fixed voltage indicators and current indicators.
+        The behaviour of the various components differs in each case. Figure \ref{BildBauteileZeiger}
+        shows a resistor, a capacitor as capacitance and a coil as inductance with their associated voltage and 
+        current vectors. The exact behaviour of the three components will be examined in more detail in the following chapter. 
     }
     
     \b{
@@ -283,7 +286,7 @@
         \resizebox{\textwidth}{!}{
             \input{Tikz/src/Zeigerdiagramme/Bauteile_Wechselspannungszeiger}
         }
-    }{{\bf Verschiedene Bauteile und die Wechselspannungszeiger.} Die Bauteile Widerstand, Kondensator und Spule mit zugehörigen Spannungs- und Stromzeigern. \label{BildBauteileZeiger}}
+    }{{\bf Various components and the alternating voltage indicators.} The components resistor, capacitor and coil with associated voltage and current indicators. \label{BildBauteileZeiger}}
 
     \speech{ZeigerKomp}{1}{Folgend ein Überblick über die Spannungszeiger und die Stromzeiger von drei Komponenten eines elektrischen Netzwerkes verschafft.
     Angefangen mit dem elektrischen Widerstand. Die komplexe Spannung und der komplexe Strom zeigen mit einem identischen Phasenwinkel in dieselbe Richtung.

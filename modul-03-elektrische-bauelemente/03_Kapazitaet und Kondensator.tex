@@ -5,24 +5,24 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Kapazität	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	\section{Kapazität und Kondensator}
+	\section{Capacity and capacitor}
 \s{
-In der Elektrotechnik gibt es drei grundlegende Komponenten, mit denen das elektrische Verhalten von Bauteilen beschrieben werden kann.
-Neben dem zuvor behandelten ohmschen Widerstand, gibt es noch die Kapazität und die Induktivität.
-In diesem Abschnitt geht es um die Eigenschaft der Kapazität, sowie dem dazugehörigen Bauteil, dem Kondensator.
-Der darauffolgende Abschnitt behandelt die Induktivität sowie das zugehörige Bauteil, die Spule.
+In electrical engineering, there are three basic components that can be used to describe the electrical behaviour of components.
+In addition to the ohmic resistance discussed above, there are also capacitance and inductance.
+This section deals with the property of capacitance and the associated component, the capacitor.
+The following section deals with inductance and the associated component, the coil.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Lernziele Kapazität	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\ftx{Lernziele: Kapazität und Kondensator}
-\begin{Lernziele}{Kapazität und Kondensator}
-	Die Studierenden
+\begin{Learning objectives}{Kapazität und Kondensator}
+	The Students
 	\begin{itemize}
-	\item können zwischen Kapazität und Kondensator differenzieren.
-	\item kennen die wichtigsten Parameter rund um den Kondensator und die Kapazität.
-	\item können die Kapazität eines Kondensators berechnen.
+	\item can differentiate between capacity and capacitor.
+	\item are familiar with the most important parameters relating to capacitors and capacitance.
+	\item can calculate the capacity of a capacitor.
 \end{itemize}
-\end{Lernziele}
+\end{Learning objectives}
 
 \speech{03_Kapazitaet_und_Kondensator}{1}{
 Im nun folgenden Abschnitt beschäftigen wir uns mit dem Begriff der Kapazität und dem damit verbundenen Bauteil – dem Kondensator. 
@@ -35,18 +35,18 @@ Sie können die Kapazität eines einfachen Plattenkondensators berechnen.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Lernziele Kapazität	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	\subsection{Die elektrische Kapazität $C$}
+	\subsection{Electrical capacity $C$}
 \s{
-	Die elektrische Kapazität ist die Fähigkeit eines Objektes, elektrische Energie in Form eines elektrischen Feldes, zu speichern.
-	Diese Eigenschaft kommt zustande, sobald elektrische Ladungsträger ungleich verteilt sind und sich zwischen den Bereichen
-	ein elektrisches Feld ausbildet. Das Formelzeichen der Kapazität ist $C$ (capacity) während die Einheit in Farad ($F$) angegeben wird.
+	Electrical capacity is the ability of an object to store electrical energy in the form of an electric field.
+	This property occurs when electrical charge carriers are unevenly distributed and an electric field forms between the areas.
+ 	The symbol for capacity is $C$ (capacity), while the unit is given in farads ($F$).
 
 }% nur im Skript
 
 \s{
-Das einfachste und geläufigste Beispiel, an dem die Kapazität erklärt werden kann, ist der Plattenkondensator.
-Bei dieser Art des Kondensators liegen sich zwei leitfähige Platten gegenüber, welche jeweils mit einem anderen Potential beaufschlagt werden.
-In Abbildung \ref{fig:idealer Kondensator} ist ein Kondensator mit idealisiertem Feldverlauf dargestellt.
+The simplest and most common example used to explain capacitance is the plate capacitor.
+In this type of capacitor, two conductive plates are positioned opposite each other, each of which is charged with a different potential.
+Figure \ref{fig:idealer Kondensator} shows a capacitor with an idealised field distribution.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Grafik idealer Kondensator	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
@@ -57,18 +57,19 @@ In Abbildung \ref{fig:idealer Kondensator} ist ein Kondensator mit idealisiertem
 			\end{itemize}
 	}
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\centering
 			\includesvg[width=0.6\textwidth]{Idealer_Plattenkondensator}
-			\s{\caption{\textbf{Idealer Plattenkondensator mit idealisierten Feldverlauf.} Der Kondensator
-			speichert elektrische Energie in einem elektrischen Feld was idealisiert zwischen den Platten dargestellt ist und hat eine konstante Kapazität \( C \), die nur von der Fläche der Platten und dem Abstand zwischen ihnen abhängt.}}
+			\s{\caption{\textbf{Ideal plate capacitor with idealised field distribution.} The capacitor
+			stores electrical energy in an electric field, which is ideally represented between the plates, and has a constant capacitance \( C \) that depends only on the area of the plates and the distance between them.}}
 			\label{fig:idealer Kondensator}
 		\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Grafik idealer Kondensator	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \s{
-Aufgrund der unterschiedlichen Potentiale auf den Platten, bildet sich von der höheren zur geringer geladenen Platte ein elektrisches Feld aus.
-Im idealen Fall wird angenommen, dass sich außerhalb der Kondensatorplatten kein Feld ausbildet.
-In der Realität sammeln sich an den seitlichen Rändern der Platten ebenfalls Ladungsträger, welche zu komplizierteren Feldverteilungen führen.
-In Abbildung \ref{fig:realer Kondensator} ist die Grafik eines solchen realen Plattenkondensators dargestellt.
+Due to the different potentials on the plates, an electric field forms from the higher to the lower charged plate.
+Ideally, it is assumed that no field forms outside the capacitor plates.
+In reality, charge carriers also accumulate at the side edges of the plates, leading to more complex field distributions.
+Figure \ref{fig:realer Kondensator} shows a diagram of such a real plate capacitor.
 }% nur im Skript
 
 \speech{03_Kapazitaet_und_Kondensator}{2}{
@@ -91,10 +92,11 @@ dann baut sich ein elektrisches Feld E auf, das in der Darstellung in rot eingez
 			\end{itemize}
 	}
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\centering
 			\includesvg[width=0.6\textwidth]{Realer_Plattenkondensator}
-			\s{\caption{\textbf{Realer Kondensator mit realem Feldverlauf.} Im Gegensatz zum idealen Kondensator treten
-			  Randfelder und Verluste auf, die die tatsächliche Kapazität und das elektrische Verhalten beeinflussen.}}
+			\s{\caption{\textbf{Real capacitor with real field distribution.} In contrast to the ideal capacitor,
+			edge fields and losses occur, which influence the actual capacity and electrical behaviour.}}
 
 			\label{fig:realer Kondensator}
 		\end{figure}
@@ -151,12 +153,11 @@ Wir können die Formel C = Q / U auch umstellen zu Q = C × U.
 
 \end{frame}
 \s{
-	In vielen Fällen kann das reale Verhalten jedoch vernachlässigt werden, was die Berechnungen deutlich vereinfacht.
-	Aus dem Grund wird im Folgenden nurnoch von idealisierten Kondensatoren ausgegangen.
-
-
-	Die Kapazität ist definiert als das Verhältnis der gespeicherten elektrischen Ladung $Q$ zur angelegten Spannung $U$.
-	Je höher die Kapazität eines Kondensators ist, desto mehr Ladung kann er bei einer gegebenen Spannung speichern.
+	In many cases, however, the real behaviour can be neglected, which greatly simplifies the calculations.
+	For this reason, only idealised capacitors will be considered in the following.
+    
+	Capacitance is defined as the ratio of the stored electrical charge $Q$ to the applied voltage $U$.
+	The higher the capacitance of a capacitor, the more charge it can store at a given voltage.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Formeln Kapazität	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\begin{equation*}
@@ -176,9 +177,9 @@ Wir können die Formel C = Q / U auch umstellen zu Q = C × U.
 	\subsection{Der Kondensator als Bauelement}
 
 \s{
-	Die Eigenschaften der Kapazität werden in verschiedenen Bereichen der Elektrotechnik bewusst genutzt.
-	Die Nutzbarmachung dieser Eigenschaften erfolgt mit Hilfe von Kondensatoren. Es gibt sie in verschiedenen Ausführungen.
-	Abbildung \ref{fig:Verschiedene Kondensatoren} zeigt einige Beispiele von THT- bis hin zu SMD-Bauteilen.
+	The properties of capacitance are deliberately exploited in various areas of electrical engineering.
+	These properties are utilised with the aid of capacitors. They are available in various designs.
+	Figure \ref{fig:Verschiedene Kondensatoren} shows some examples, ranging from THT to SMD components.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Bild versch. Kondensatoren	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -186,17 +187,18 @@ Wir können die Formel C = Q / U auch umstellen zu Q = C × U.
 %%% Quelle einfügen!
 
 \begin{frame}
-	\ftx{Der Kondensator als Bauelement}
+	\ftx{The capacitor as a component}
 	\b{
 		\begin{itemize}
 			\item Verschiedene Arten und Bauformen von Kondensatoren
 		\end{itemize}
 	}
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\includegraphics[width=0.7\textwidth]{ko}
-		\s{\caption{\textbf{Verschiedene Arten und Bauformen von Kondensatoren.} Darunter Keramik- und Elektrolytkondensatoren.
-		 Diese variieren in Größe, Kapazität und Spannung, um unterschiedlichen Anwendungen gerecht zu werden.}}
+		\s{\caption{\textbf{Various types and designs of capacitors.} These include ceramic and electrolytic capacitors.
+		These vary in size, capacity and voltage to suit different applications.}}
 
 		\label{fig:Verschiedene Kondensatoren}
 	\end{figure}
@@ -212,17 +214,17 @@ Das heißt, wenn Sie Kondensatoren haben möchten, die hohe Spannung aushalten u
 	\end{frame}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Bild versch. Kondensatoren	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \s{
-	Darüber hinaus gibt es sie aber auch in deutlich kleineren bzw. deutlich größeren Dimensionen.
-	In der Hochfrequenztechnik werden Kapazitäten beispielsweise lediglich durch das Design der Leiterplatten realisiert,
-	während Kondensatoren für industrielle oder enegietechnische Anwendungen mehrere Zentimeter bis Meter groß werden können.
-
-	Was alle Kondensatoren verbindet, ist ihre Fähigkeit, die Eigenschaft der Kapazität nutzbar zu machen,
-	wie es im folgenden Schaltbild \ref{fig:idealer Kondensator_ESB} dargestellt ist.
-	Dieses Schaltbild repräsentiert jedoch nur die idealisierte, nutzbare Kapazität.
+	However, they are also available in significantly smaller or larger dimensions.
+	In high-frequency technology, for example, capacitance is achieved solely through the design of the printed circuit boards,
+	whilst capacitors for industrial or energy technology applications can be several centimetres to metres in size.
+		
+	What all capacitors have in common is their ability to utilise the property of capacitance,
+	as shown in the following circuit diagram \ref{fig:idealer Kondensator_ESB}.
+	However, this circuit diagram only represents the idealised, usable capacitance.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Schaltzeichen Kapazität U,I	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[t]
-	\ftx{Der Kondensator als Bauelement}
+	\ftx{The capacitor as a component}
 	% idealer Kondensator
 \b{
 	\begin{itemize}
@@ -264,49 +266,51 @@ D.h. die gerade dargestellten Elektrolytkondensatoren, die räumlich sehr groß 
 \end{frame}
 \s{
 	\begin{figure}[h]
+		\renewcommand{\figurename}{Figure}
 		\begin{center}
 		\input{Tikz/src/03_Kapazitaet_Kondensator/Ersatzschaltbild_idealer_Kondensator}
-		\caption{\textbf{Schaltelement eines idealen Kondensators.} Zeigt den Spannungsabfall über dem Kondensator und den Stromfluss durch ihn.}
+		\caption{\textbf{Switching element of an ideal capacitor.} Shows the voltage drop across the capacitor and the current flow through it.}
 
 		\label{fig:idealer Kondensator_ESB}
 		\end{center}
 		\end{figure}
-
+		}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Schaltzeichen Kapazität U,I	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	Für eine realitätsgetreue Nachbildung der Schaltung ist es wichtig den Kondensator als Bauteil vollständig zu beschreiben.
-	Dies wird mit Hilfe eines Ersatzschaltbildes gemacht, welches auch die ungewollten, also parasitären Eigenschaften
-	des Bauteils, nachbildet. Abbildung \ref{fig:realer Kondensator_ESB} zeigt ein solches Ersatzschaltbild.
+	For a realistic simulation of the circuit, it is important to describe the capacitor as a component in its entirety.
+	This is done with the aid of an equivalent circuit diagram, which also simulates the unwanted, i.e. parasitic, properties
+	of the component. Figure \ref{fig:realer Kondensator_ESB} shows such an equivalent circuit diagram.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - ESB Kondensator	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % realer Kondensator
 
 
 		\begin{figure}[H]
+			\renewcommand{\figurename}{Figure}
 			\begin{center}
 			\input{Tikz/src/03_Kapazitaet_Kondensator/Ersatzschaltbild_realer_Kondensator}
-			\caption{\textbf{Ersatzschaltbild eines realen Kondensators.} Der ideale Kondensator $C$ wird durch eine Serien-Induktivität
-			 $L_\mathrm{s}$ und einen Serien-Widerstand $R_\mathrm{s}$ ergänzt, um parasitäre Effekte zu berücksichtigen.}
+			\caption{\textbf{Equivalent circuit diagram of a real capacitor.} The ideal capacitor $C$ is supplemented by a series inductance
+			$L_\mathrm{s}$ and a series resistance $R_\mathrm{s}$ to account for parasitic effects.}
 
 			\label{fig:realer Kondensator_ESB}
 			\end{center}
 			\end{figure}
-}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - ESB Kondensator	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \s{
-	Im Ersatzschaltbild des Kondensators werden nicht nur die nutzbare Kapazität, sondern auch die parasitären Eigenschaften
-	berücksichtigt, die in realen Kondensatoren auftreten. Diese parasitären Eigenschaften entstehen beispielsweise durch die
-	Induktivität der Anschlüsse und die ohmschen Verluste im Material.
-	Das modellierte Ersatzschaltbild ermöglicht es, diese Effekte im Schaltungsentwurf zu berücksichtigen
-	und das Schaltverhalten besser vorherzusagen.
+	The equivalent circuit diagram of the capacitor takes into account not only the usable capacitance, but also the parasitic properties
+    that occur in real capacitors. These parasitic properties arise, for example, from the
+    inductance of the connections and the ohmic losses in the material.
+	The modelled equivalent circuit allows these effects to be taken into account in the circuit design
+    and the switching behaviour to be better predicted.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang Merksatz - Kondensator %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\ftx{Merksatz: Der Kondensator als Bauelement}
-	\begin {Merksatz}{}
-		 Der Kondensator ist der verzweifelte Versuch eine Kapazität nachzubilden.
-	\end {Merksatz}
+	\begin {Key point}{}
+		The capacitor is a desperate attempt to replicate a capacitance.
+	\end {Key point}
 
 	\speech{03_Kapazitaet_und_Kondensator}{9}{
 Wir können uns also merken, dass der Kondensator immer nur der verzweifelte Versuch ist, eine Kapazität nachzubilden. Wir hatten das ja schon beim Widerstand, dass das Bauteil Widerstand eben noch andere Eigenschaften hat, als nur die gewünschte Eigenschaft des ungewünschten Widerstandes. So ist das letztlich beim Kondensator auch. Und diese ungewünschten Eigenschaften fallen insbesondere dann ins Gewicht, wenn sie hingehen zu höheren Frequenzen.    
@@ -315,24 +319,25 @@ Wir können uns also merken, dass der Kondensator immer nur der verzweifelte Ver
 	\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende Merksatz - Kondensator %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Dielektrikum	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Das Dielektrikum}
+\subsection{The dielectric}
 \s{
-Das Dielektrium ist, wie der Name bereits impliziert, ein dielektrisches, also elektrisch nicht leitfähiges Material.
-Da jedes Material aus Atomen besteht und alle Atomrümpfe mit Elektronen versehen sind (Elektronenhülle),
-wirkt sich entsprechend auch ein elektrisch nicht leitfähiges Material auf das Verhalten des elektrischen Feldes aus.
-Sobald ein solches Material zwischen die Platten eines Kondensators eingefügt wird, ändern sich demnach auch die Eigenschaften des Kondensators.
-In Abbildung \ref{fig:idealer Kondensator mit Dielektrikum} ist anhand der unterbrochenen Pfeilung des elektrischen Feldes
-das unterschiedliche Verhalten zu erkennen. Die elektrische Flussdichte D ist eine Hilfsgröße, welche materialunabhängig ist,
-auf welche in Abschnitt 1.3.4 noch eingegangen wird.
+As the name implies, a dielectric is a dielectric material, i.e. one that does not conduct electricity.
+Since every material consists of atoms and all atomic nuclei are surrounded by electrons (electron shell),
+even a material that does not conduct electricity has an effect on the behaviour of the electric field.
+As soon as such a material is inserted between the plates of a capacitor, the properties of the capacitor also change.
+In Figure \ref{fig:idealer Kondensator mit Dielektrikum}, the interrupted arrow of the electric field
+shows the different behaviour. The electric flux density D is an auxiliary quantity that is independent of the material
+and will be discussed in section 1.3.4.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Grafik Dielektrikum	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\ftx{Das Dielektrikum}
 \begin{figure}[H]
+	\renewcommand{\figurename}{Figure}
 	\centering
 		\includesvg[width=0.6\textwidth]{Idealer_Plattenkondensator_Dielektrikum}
-		\s{\caption{\textbf{Idealer Kondensator mit Dielektrikum.} Der Kondensator besteht aus zwei Platten, zwischen denen sich ein Dielektrikum befindet. Das Dielektrikum
-		 ist ein nicht leitendes Material, das die elektrische Feldstärke reduziert und die Kapazität des Kondensators erhöht, indem es die Relative Dielektrizitätskonstante erhört.}}
+		\s{\caption{\textbf{Ideal capacitor with dielectric.} The capacitor consists of two plates with a dielectric between them. The dielectric
+        is a non-conductive material that reduces the electric field strength and increases the capacitance of the capacitor by increasing the relative permittivity.}}
 		\label{fig:idealer Kondensator mit Dielektrikum}
 	\end{figure}
 
@@ -346,8 +351,8 @@ Ich hatte ja bereits gesagt, dass die beiden Platten voneinander isoliert werden
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Grafik Dielektrikum	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \s{
-Die Eigenschaften des Dielektrikums sind materialspezifisch und werden durch die Dielektrizitätszahl $\varepsilon_\mathrm{r}$ quantifiziert.
-In Tabelle \ref{tab:dielektrizität} sind Beispiele einiger Dielektrika und deren $\varepsilon_\mathrm{r}$, aufgeführt:
+The properties of the dielectric are material-specific and are quantified by the dielectric constant $\varepsilon_\mathrm{r}$.
+Table \ref{tab:dielektrizität} lists examples of some dielectrics and their $\varepsilon_\mathrm{r}$:
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Tabelle epsylon	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[t]
@@ -360,26 +365,27 @@ In Tabelle \ref{tab:dielektrizität} sind Beispiele einiger Dielektrika und dere
 	}
 %%%%% Dielektrizitätszahl Einfache Tabelle
 \begin{table}[H]
+	\renewcommand{\tablename}{Table}
 \centering
 \resizebox{0.3\textwidth}{!}{%
 \begin{tabular}{lc}
 \toprule
 \textbf{Material} & \textbf{\boldmath$\varepsilon_\mathrm{r}$} \\
 \midrule
-Vakuum & 1 \\
-Luft (bei STP) & 1.0006 \\
-Kunststoff (PE) & 2.25-2.3 \\
-Glas & 3-10 \\
-Keramik & 5-300 \\
-Silizium & 11.7 \\
-Tantaloxid & 25-30 \\
-Wasser & 81 \\
+Vacuum & 1 \\
+Air (at STP) & 1.0006 \\
+Plastic (PE) & 2.25-2.3 \\
+Glass & 3-10 \\
+Ceramics & 5-300 \\
+Silicon & 11.7 \\
+Tantalum oxide & 25-30 \\
+Water & 81 \\
 \bottomrule
 \end{tabular}%
 }
-\s{\caption{\textbf{Relative Dielektrizitätszahl verschiedener Materialien.} Diese dimensionslose Zahl gibt an,
-wie stark das elektrische Feld in einem Material im Vergleich zum Vakuum beeinflusst wird. Sie ist ein Maß für die Fähigkeit des Materials, elektrische Ladung zu speichern.
-Materialien mit einer höheren Dielektrizitätszahl erhöhen die Kapazität eines Kondensators, da sie die elektrische Feldstärke im Inneren verringern.}}
+\s{\caption{\textbf{Relative permittivity of various materials.} This dimensionless number indicates
+	how strongly the electric field in a material is affected compared to a vacuum. It is a measure of the material's ability to store electrical charge.
+	Materials with a higher dielectric constant increase the capacity of a capacitor because they reduce the electric field strength inside it.}}
 \label{tab:dielektrizität}
 \end{table}
 
@@ -419,10 +425,10 @@ Wir geben diese Möglichkeit der Erhöhung des elektrischen Feldes in einer elek
 % \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Tabelle epsylon	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \s{
-	Zur vollständigen Beschreibung der Materialeigenschaften des Dielektrikums wird neben der Dielektrizitätszahl noch die elektrische Feldkonstante $\varepsilon_\mathrm{0}$ benötigt.
-	Dabei handelt es sich um das dielektrische Verhalten des elektrischen Feldes im Vakuum. Während die Dielektrizitätszahl $\varepsilon_\mathrm{r}$ einheitslos ist,
-	bringt die elektrische Feldkonstante die Einheit $\frac{\text{As}}{\text{Vm}}$ mit. Sie wird mit der relativen Dielektrizitätszahl multipliziert was zusammen
-	die Dielektrizitätskonstante $\varepsilon$ ergibt.
+	In order to fully describe the material properties of the dielectric, the electric field constant $\varepsilon_\mathrm{0}$ is required in addition to the dielectric constant.
+    This refers to the dielectric behaviour of the electric field in a vacuum. While the dielectric constant $\varepsilon_\mathrm{r}$ is dimensionless,
+    the electric field constant has the unit $\frac{\text{As}}{\text{Vm}}$. It is multiplied by the relative dielectric constant, which together
+    gives the dielectric constant $\varepsilon$.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang Formel epsylon und Legende %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
@@ -457,9 +463,9 @@ Wofür brauchen wir jetzt die relative Dielektrizitätszahl? Die brauchen wir zu
 		\boldsymbol\varepsilon = \boldsymbol\varepsilon_\mathrm{0} \cdot \boldsymbol\varepsilon_\mathrm{r}
 	\end{equation}
 	\begin{align*}
-		\boldsymbol\varepsilon &: 			 \text{Dielektrizitätskonstante}\\
-		\boldsymbol\varepsilon_\mathrm{0} &: \text{Elektrische Feldkonstante (8.85421878 $\cdot$ 10}^{-12})\\
-		\boldsymbol\varepsilon_\mathrm{r} &: \text{Relative Dielektrizitätszahl}\\
+		\boldsymbol\varepsilon &: 			 \text{Dielectric constant}\\
+		\boldsymbol\varepsilon_\mathrm{0} &: \text{Electric field constant (8.85421878 $\cdot$ 10}^{-12})\\
+		\boldsymbol\varepsilon_\mathrm{r} &: \text{Relative permittivity}\\
 	\end{align*}
 
 
@@ -467,8 +473,8 @@ Wofür brauchen wir jetzt die relative Dielektrizitätszahl? Die brauchen wir zu
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende Formel epsylon und Legende %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \begin{flushleft} und end{fl..} hilft, falls nicht links zentriert
-	Mit Hilfe dieser Materialeigenschaften des Dielektrikums und den Dimensionen sowie der Entfernung der Kondensatorplatten,
-	kann die Kapazität des Kondensators wie folgt berechnet werden:
+	With the help of these material properties of the dielectric and the dimensions and distance of the capacitor plates,
+    the capacitance of the capacitor can be calculated as follows:
 }
 \begin{frame}
 \ftx{Der Kondensator als Bauelement}
@@ -496,8 +502,8 @@ Wofür brauchen wir jetzt die relative Dielektrizitätszahl? Die brauchen wir zu
 	C = \frac{\boldsymbol\varepsilon \cdot A}{d}
 \end{equation}
 \begin{align*}
-	A &: \text{Querschnittsfläche des Materials } (\text{m}{^2}) \\
-	d &: \text{Abstand der Elektroden (\text{m})}
+	A &: \text{Cross-sectional area of the material } (\text{m}{^2}) \\
+	d &: \text{Distance between electrodes (\text{m})}
 \end{align*}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende Formel C (epsilon) und Legende %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - el. Flussdichte	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -508,7 +514,7 @@ Wie kann man jetzt die Kapazität eines Kondensators, die ja in Farad angegeben 
 \end{frame}
 
 
-\subsection{Die elektrische Flussdichte} %$\vec{D}$}
+\subsection{The electric flux density} %$\vec{D}$}
 
 \begin{frame}[t]
 \ftx{Die elektrische Flussdichte $\vec{D}$}
@@ -547,15 +553,15 @@ Die elektrische Flussdichte D hat dann die Einheit Coulomb pro Quadratmeter. Den
 
 \end{frame}
 \s{
-Die elektrische Flussdichte $\vec{D}$, auch Verschiebungsdichte genannt, steht proportional zum elektrischen Feld $\vec{E}$.
-Ihr Vorteil besteht darin, dass sie materialunabhängig ist, was mathematische Vorteile mit sich bringt.
+The electric flux density $\vec{D}$, also known as displacement density, is proportional to the electric field $\vec{E}$.
+Its advantage is that it is independent of the material, which brings mathematical advantages.
 
 \begin{equation}
 \vec{D} = \boldsymbol\varepsilon \cdot \vec{E} + P
 \end{equation}
 
-Zusätzlich zur Dielektrizitätskonstanten $\varepsilon$ wird die Polarisation des Mediums $P$ addiert. Sie beschreibt das Polarisationsverhalten, welches im Einschaltvorgang abläuft.
-Im statischen Fall kann die Polarisation $P$ oft vernachlässigt werden, was die Gleichung wie folgt vereinfacht.
+In addition to the dielectric constant $\varepsilon$, the polarisation of the medium $P$ is added. It describes the polarisation behaviour that occurs during the switch-on process.
+In static cases, the polarisation $P$ can often be neglected, which simplifies the equation as follows.
 
 \begin{equation*}
 	[D] = 1\,\frac{\text{Coulomb}}{\text{m}^2} = 1\,\frac{\text{C}}{\text{m}^2} = 1\,\frac{\text{As}}{\text{m}^2}
@@ -576,26 +582,26 @@ Im statischen Fall kann die Polarisation $P$ oft vernachlässigt werden, was die
 \textbf{Einführung in die zeitabhängige Vorgänge}
 
 
-Bisher ist bekannt, dass elektrische Felder in leitfähigen Materialien einen Strom $I$ und eine Spannung $U$ verursachen.
-Der Strom $I$ und die Spannung $U$ beschreiben die Felder jedoch nur integral, sie werden also als zeitlich konstant angesehen.
-Im Gegensatz zum Widerstand $R$ gibt es jedoch Bauteile (Kondensatoren und Spulen), die ein zeitlich veränderliches Verhalten aufweisen.
-Der ohm'sche Widerstand $R$ alleine reicht somit nicht aus, um die Verhältnisse bei Netzwerken mit zeitlich veränderlichen Vorgängen zu beschreiben.
-Zur Beschreibung dieser zeitabhängigen Verhalten werden die zeitabhängigen Größen $u(t)$ und $i(t)$ verwendet.
+It is known that electric fields in conductive materials cause a current $I$ and a voltage $U$.
+However, the current $I$ and the voltage $U$ only describe the fields integrally, meaning they are considered to be constant over time.
+In contrast to resistance $R$, there are components (capacitors and coils) that exhibit time-varying behaviour.
+Ohmic resistance $R$ alone is therefore not sufficient to describe the conditions in networks with time-varying processes.
+The time-dependent variables $u(t)$ and $i(t)$ are used to describe this time-dependent behaviour.
 
-Die Herleitung der Zeitabhängigkeiten kann mathematisch folgendermaßen gezeigt werden.
-Aus der Formel \ref{eq:cqu} ist bereits die Grundgleichung des Kondensators bekannt:
+The derivation of the time dependencies can be shown mathematically as follows.
+The basic equation of the capacitor is already known from formula \ref{eq:cqu}:
 
 \begin{equation}
 Q = C \cdot U   \label{eq:qcu}
 \end{equation}
 %%% NEU DAZU %%%
-Zur Beschreibung des zeitlichen Verhaltens des Kondensators, wird die Änderung der Ladung über die Zeit betrachtet
+To describe the temporal behaviour of the capacitor, the change in charge over time is considered.
 
 \begin{equation}
 	\frac{\mathrm{d}Q}{\mathrm{d}t} = C \cdot \frac{\mathrm{d}U}{\mathrm{d}t}
 \end{equation}
 
-$\frac{\mathrm{d}Q}{\mathrm{d}t}$ beschreibt die Änderungsrate der Ladung, welche nach dem Grundgesetz der Elektrotechnik dem Strom $i(t)$ entspricht, der in den Kondensator hinein- oder herausfließt.
+$\frac{\mathrm{d}Q}{\mathrm{d}t}$ describes the rate of change of charge, which, according to the fundamental law of electrical engineering, corresponds to the current $i(t)$ flowing into or out of the capacitor.
 
 %%%%%%%%%%%%%%%%
 % In Modul 2 wurde vermittelt, dass der Stromfluss auch als Änderung der Ladung pro Zeit angesehen werden kann:
@@ -604,26 +610,26 @@ $\frac{\mathrm{d}Q}{\mathrm{d}t}$ beschreibt die Änderungsrate der Ladung, welc
 \frac{\mathrm{d}Q}{\mathrm{d}t} = i(t)
 \end{equation}
 
-Wird nun in der Formel \ref{eq:qcu} die konstante Ladung Q durch die zeitlich veränderliche Größe $i(t)$ ersetzt,
-erhält auch die Spannung eine zeitliche Abhängigkeit.
+If the constant charge Q in formula \ref{eq:qcu} is replaced by the time-varying quantity $i(t)$,
+the voltage also becomes time-dependent.
 
 \begin{equation}
 	i_\mathrm{c}(t) = C \cdot \frac{\mathrm{d}u_\mathrm{c}(t)}{\mathrm{d}t} \label{eq:ict}
 \end{equation}
 
-Durch mathematische Umstellung nach $u_\mathrm{c}(t)$ kann die Spannung in Abhängigkeit des Stromes und der Kapazität dargestellt werden:
+By mathematical conversion to $u_\mathrm{c}(t)$, the voltage can be represented as a function of the current and the capacitance:
 
 \begin{equation}
 	u_\mathrm{c}(t) = \frac{1}{C} \cdot \int i_\mathrm{c}(t) \mathrm{d}t \label{eq:uci}
 \end{equation}
 
-Aus der Gleichung \ref{eq:ict} folgt unmittelbar, dass sich die Spannung an einer Kapazität nicht schlagartig ändern kann,
-da dafür ein unendlich hoher Strom erforderlich wäre.
+It follows directly from equation \ref{eq:ict} that the voltage across a capacitor cannot change abruptly,
+as this would require an infinitely high current.
 
 }
 % Folie Einführung in die zeitabhängige Vorgänge
 \begin{frame}[t]
-	\ftx{Einführung in die zeitabhängige Vorgänge}
+	\ftx{Introduction to time-dependent processes}
 
 \b{
 
@@ -696,14 +702,13 @@ Das ist nichts anderes als das Umstellen der oberen Formel nach UC von T.
 %Im Modul 2 wurde bereits erklärt, dass in beiden Feldern Energie gespeichert und transferiert werden kann.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Übergang zu den zeitabhängigen Vorgängen %%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Schaltverhalten eines Kondensators}
+\subsection{Switching behaviour of a capacitor}
 \s{
-	Das Schaltverhalten beschreibt das Verhalten eines Bauteils bei Änderung der angelegten Spannung.
-	Je nachdem ob eine Spannungsquelle ein- oder ausgeschaltet wird, verhalten sich Strom und Spannung am Bauteil
-	entsprechend seiner Charakteristika. Zur Analyse des zeitlichen Verhaltens von Bauteilen ist zuerst ein Schaltbild notwendig,
-	welches die zu analysierende Schaltung visualisiert. Abbildung \ref{fig:Schaltbild_CR} zeigt ein Schaltbild einer Reihenschaltung
-	einer Kapazität $C$ mit einem Widerstand $R$, welche über einen Schalter mit einer Spannung $U_\mathrm{q}$ versorgt werden können.
-
+	The switching behaviour describes the behaviour of a component when the applied voltage changes.
+	Depending on whether a voltage source is switched on or off, the current and voltage at the component behave
+	according to its characteristics. To analyse the temporal behaviour of components, a circuit diagram is first required,
+    which visualises the circuit to be analysed. Figure \ref{fig:Schaltbild_CR} shows a circuit diagram of a series connection
+    of a capacitance $C$ with a resistance $R$, which can be supplied with a voltage $U_\mathrm{q}$ via a switch.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Mathematik Kondensator	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -720,6 +725,7 @@ Das ist nichts anderes als das Umstellen der oberen Formel nach UC von T.
 	\vspace{-1.5cm}
 % Laden eines Kondensators
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\begin{subfigure}[h]{0.5\textwidth}
 		\centering
@@ -764,11 +770,12 @@ Sowohl der Strom als auch die Spannung an der Kapazität folgen jetzt hier einer
 %%%%% Laden eines Kondensators
 \s{
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\begin{subfigure}[h]{0.9\textwidth}
 		\centering
 			\input{Tikz/src/03_Kapazitaet_Kondensator/Laden_Kondensator_ESB_Schalter}
-			\caption{Darstellung der Reihenschaltung bestehend aus einer Kapazität \(C\), einem Widerstand \(R\) und einem Schalter.}
+			\caption{Representation of the series connection consisting of a capacitance \(C\), a resistor \(R\) and a switch.}
 			\label{fig:Schaltbild_CR}
 		\end{subfigure}
 
@@ -777,33 +784,34 @@ Sowohl der Strom als auch die Spannung an der Kapazität folgen jetzt hier einer
 		\begin{subfigure}[b]{0.9\textwidth}
 			\centering
 			\input{Tikz/src/03_Kapazitaet_Kondensator/Spannungs_Stromverlauf_Kapazitaet_Skript}
-			\caption{Spannungs- und Strom verlauf über der Kapazität bei einer Gleichspannung die zum Zeitpunkt $t = 0$ eingeschaltet wird und zum Zeitpunkt $t_\mathrm{0}$ abgeschaltet wird.}
+			\caption{Voltage and current curve over capacity at a DC voltage that is switched on at time $t = 0$ and switched off at time $t_\mathrm{0}$.}
 			\label{fig:Spannungsverlauf_CR}
 		\end{subfigure}
-		\caption{\textbf{Der Spannungs- und Stromverlauf über der Kapazität.} Das Diagramm zeigt die Reaktion der Kapazität auf die plötzliche Änderung der Spannung und
-		veranschaulicht das typische Lade verhalten.}
+		\caption{\textbf{The voltage and current curve over capacity.} The diagram shows the reaction of the capacitance to the sudden change in voltage and
+		illustrates the typical charging behaviour.}
 		\label{fig:Gesamtdarstellung}
 		\end{figure}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Diagramm mit Schalter	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \s{
-	Im Diagramm \ref{fig:Spannungsverlauf_CR} ist zu sehen, dass sich trotz angelegter Gleichspannung $U_\mathrm{q}$ die Spannung $u_\mathrm{c}(t)$
-	zeitgleich nicht mitändert, sondern eine Trägheit aufweisen. Dieses zeitlich veränderliche Verhalten wird im Schaltbild \ref{fig:Schaltbild_CR}
-	durch die zeitabhängigen Größen $u(t)$ und $i(t)$ ausgedrückt.
+	The diagram \ref{fig:Spannungsverlauf_CR} shows that despite the applied DC voltage $U_\mathrm{q}$, the voltage $u_\mathrm{c}(t)$
+	does not change simultaneously, but exhibits inertia. This time-varying behaviour is expressed in the circuit diagram \ref{fig:Schaltbild_CR}
+    by the time-dependent variables $u(t)$ and $i(t)$.
 
-	In diesem Beispiel ist der Schalter zu Beginn geschlossen und wird bei $t_\mathrm{0} = 5\tau$ geöffnet.
-	Der Kondensator ist anfangs nicht geladen. Im Diagramm ist zu erkennen, dass sich trotzt angelegter Spannung $U_\mathrm{q}$
-	die Spannung über der Kapazität $u_\mathrm{C}(t)$ nicht sprunghaft ändert.
+	In this example, the switch is closed at the start and is opened at $t_0 = 5\tau$.
+	The capacitor is not charged at the start. The diagram shows that, despite the applied voltage $U_q$,
+	the voltage across the capacitance $u_C(t)$ does not change abruptly.
 
-	Dieses Einschaltverhalten resultiert aus der Aufladung der Kapazität. Die Ladungsträger müssen sich dafür auf den Kondensatorplatten
-	ansammeln. Dies geschieht so lange, bis die Spannung zwischen den Platten der angelegten Spannung der Spannungsquelle entspricht.
-	Da die zur Aufladung benötigten Ladungsträger in die Kondensatorplatten wandern müssen, fließt während dieses Vorgangs ein entsprechender Strom $i_\mathrm{C}(t)$.
+	This switch-on behaviour results from the charging of the capacitance. To do this, the charge carriers must accumulate on the capacitor plates.
+ 	This continues until the voltage between the plates corresponds to the voltage applied by the voltage source.
+    Since the charge carriers required for charging must migrate into the capacitor plates, a corresponding current $i_\mathrm{C}(t)$ flows during this process.
 
-	Im Fall einer ideal leitenden Schaltung ohne ohm'schen Widerstand, würden sich die Ladungsträger unendlich schnell auf den Kondensatorplatten ansammeln,
-	was einem unendlich hohen Strom entsprechen würde. Im realen Fall hat der Kondensator bzw. die Hinleitung zum Kondensator, einen ohm'schen Widerstand,
-	welcher die Ladungsträger auf dem Weg zu den Kondensatorplatten ausbremst, also die elektrische Stromstärke reduziert.
-	Daraus folgt der maximal mögliche Strom $I_\mathrm{max}$.
+	In the case of an ideally conductive circuit without ohmic resistance, the charge carriers would accumulate infinitely quickly on the capacitor plates,
+	which would correspond to an infinitely high current. 
+	In reality, the capacitor or the lead to the capacitor has ohmic resistance,
+    which slows down the charge carriers on their way to the capacitor plates, thus reducing the electric current.
+    This results in the maximum possible current $I_\mathrm{max}$.
 
 	\begin{equation}
 		I_\mathrm{max} = \frac{U_\mathrm{q}}{R}
@@ -812,14 +820,15 @@ Sowohl der Strom als auch die Spannung an der Kapazität folgen jetzt hier einer
 	% Da es dabei dennoch zu relativ hohen Stromstärken kommen kann, werden in Schaltungen mit Kondensatoren mit hohen Kapazitäten sogenannten Vorladewiderstand verbaut.
 	% Deren Aufgabe ist es, den maximalen Strom zu begrenzen.
 
-	Sobald der Schalter geöffnet wird, bleibt die Spannung über der Kapazität erhalten.
-	Dies bedeutet, dass die zugeführte Energie in der Kapazität verbleibt und sich im stationären Fall nicht mehr ändert.
-	Dementsprechend fließt bei einer aufgeladenen Kapazität auch kein Strom mehr, was in einem eingeschwungenen Gleichstromnetzwerk einem Leerlauf gleichzusetzen ist.
+	As soon as the switch is opened, the voltage across the capacitance is maintained.
+	This means that the energy supplied remains in the capacitance and no longer changes in the steady state.
+	Accordingly, no current flows when the capacitance is charged, which is equivalent to no-load operation in a steady-state DC network.
 
-	Mit Hilfe der beiden Formeln \ref{eq:ict} und \ref{eq:uci} ist das Verhalten von Strom und Spannung an einer Kapazität vollständig beschrieben,
-	was nun diverse Berechnungen ermöglicht. Ein weiteres Beispiel ist das Schaltverhalten einer Kapazität bei anlegen einer Rechteckspannung.
-	Der Unterschied besteht darin, dass nicht wie in Beispiel \ref{fig:Schaltbild_CR}, eine konstante Spannungsquelle über einen Schalter geschaltet wird,
-	sondern die Spannungsquelle selbst die Eingangsspannung bestimmt.
+
+	With the help of the two formulas \ref{eq:ict} and \ref{eq:uci}, the behaviour of current and voltage at a capacitor is fully described,
+    which now enables various calculations. Another example is the switching behaviour of a capacitor when a square-wave voltage is applied.
+	The difference is that, unlike in example \ref{fig:Schaltbild_CR}, a constant voltage source is not switched via a switch,
+ 	but rather the voltage source itself determines the input voltage.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Schaltbild mit Rechteck	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[t]
@@ -851,11 +860,12 @@ Sowohl der Strom als auch die Spannung an der Kapazität folgen jetzt hier einer
 \s{
 %%%%% Laden- entladen eines Kondensators
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\begin{subfigure}[h]{0.85\textwidth}
 		\centering
 			\input{Tikz/src/03_Kapazitaet_Kondensator/Kapazitaet_Reihenschaltung_Entladen}
-			\caption{Darstellung der Reihenschaltung bestehend aus einer Kapazität \(C\) und einem Widerstand \(R\) an einer rechteckförmigen Spannungsquelle.}
+			\caption{Representation of the series connection consisting of a capacitance \(C\) and a resistance \(R\) at a rectangular voltage source.}
 			\label{fig:Schaltbild_CRR}
 		\end{subfigure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Schaltbild mit Rechteck	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -863,21 +873,21 @@ Sowohl der Strom als auch die Spannung an der Kapazität folgen jetzt hier einer
 		\begin{subfigure}[b]{0.9\textwidth}
 			\centering
 			\input{Tikz/src/03_Kapazitaet_Kondensator/Spannungs_Stromverlauf_Kapazitaet_Entladen_Skript}
-			\caption{Spannungs- und Strom verlauf über der Kapazität bei einer rechteckförmigen Spannung.}
+			\caption{Voltage and current curve over capacity with a rectangular voltage.}
 			\label{fig:Spannungsverlauf}
 		\end{subfigure}
-		\caption{\textbf{Spannungs- und Stromverlauf über der Kapazität.} Das Diagramm zeigt die Reaktion der Kapazität auf eine plötzliche Änderung
-		 der Spannung und veranschaulicht das typische Lade- und Entladeverhalten des Kondensators.}
+		\caption{\textbf{Voltage and current curve over capacity.} The diagram shows the response of the capacitance to a sudden change
+		in voltage and illustrates the typical charging and discharging behaviour of the capacitor.}
 		\label{fig:Gesamtdarstellung}
 		\end{figure}
 }% Nur Skript
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Diagramm mit Rechteck	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \s{
-	Im Gegensatz zum Schalter, versucht die Spannungsquelle im Beispiel \ref{fig:Schaltbild_CRR}
-	ab dem Zeitpunkt $t_\mathrm{0} = 5\tau$ die Systemspannung auf $0$ zu ziehen. Dies führt dazu,
-	dass die Kapazität entladen wird. Dies führt entsprechend zu einem entgegengesetzten Stromfluss $i_\mathrm{C}(t)$,
-	da sich die Ladungsträger von den Kondensatorplatten wegbewegen, um wieder einen neutralen Zustand zu erreichen.
+	In contrast to the switch, the voltage source in example \ref{fig:Schaltbild_CRR} attempts
+	to pull the system voltage to $0$ from the point in time $t_\mathrm{0} = 5\tau$. This leads to
+    the capacitance being discharged. This results in an opposite current flow $i_\mathrm{C}(t)$,
+	as the charge carriers move away from the capacitor plates in order to return to a neutral state.
 	%Neben der Verwendung zur Energiespeicherung, werden Kondensatoren auch für die Filterung von Frequenzen, zur Zeitmessung oder für die Signalverarbeitung genutzt.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Schaltverhalten Kondensator	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -887,16 +897,16 @@ Sowohl der Strom als auch die Spannung an der Kapazität folgen jetzt hier einer
 
 % ToDo: Hillgärtner: Da steht noch, glaube ich, drin, was wir alles noch machen wollten. Dazu finde ich aber nichts. Insofern kann ich auch nichts zu einsprechen.
 
-\begin{bsp}{Berechnungs der Kapazität}{}
+\begin{expl}{Capacity calculation}{}
 \begin{itemize}
 
-	\item Ladung auf Platten $Q = \sigma \cdot A = \varepsilon \cdot E \cdot A$
-	\item Kapazität mit $C = \frac{\varepsilon \cdot A}{d}$ berechnen
-	\item Gespeicherte Energie $W = \frac{1}{2} \cdot C \cdot V^2 $
-	\item Kapazität zweier Kondensatoren mit verschiedenen $\varepsilon_{\mathrm{r}}$ über $\vec{D}$ berechnen
+	\item Charge on plates $Q = \sigma \cdot A = \varepsilon \cdot E \cdot A$
+	\item Calculate capacitance with $C = \frac{\varepsilon \cdot A}{d}$
+	\item Stored energy $W = \frac{1}{2} \cdot C \cdot V^2 $
+    \item Calculate the capacitance of two capacitors with different $\varepsilon_{\mathrm{r}}$ over $\vec{D}$
 
 \end{itemize}
-\end{bsp}
+\end{expl}
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Beispiel Rechnung Kondensator %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,16 +1,16 @@
-\subsection{Komplexe Zahlen 2}
+\subsection{Complex numbers 2}
 \Aufgabe{
-    Es gelte für folgende komplexe Zahlen: \\
+    This applies to the following complex numbers: \\
     $K_1 = 10 + j40$  \\
     $K_2 = 50 \cdot e^{-j40^o}$   \\
     $K_3 = 250 \cdot e^{j\frac{\pi}{4}}$    \\
     
-    Berechnet werden sollen folgende Aufgabenteile:
+    The following parts of the task are to be calculated:
     \begin{itemize}
-        \item [\bf a)] $K_1 - K_2$, Ergebnis in Polarkoordinaten
-        \item [\bf b)] $K_3 + K_2$, Ergebnis in kartesischen Koordinaten
-        \item [\bf c)] $K_1 \cdot K_3$, Ergebnis in Polarkoordinaten
-        \item [\bf d)] $K_1 + K_2$, zeichnerisch im Zeigerdiagramm
+        \item [\bf a)] $K_1 - K_2$, Result in polar coordinates
+        \item [\bf b)] $K_3 + K_2$, result in Cartesian coordinates
+        \item [\bf c)] $K_1 \cdot K_3$, result in polar coordinates
+        \item [\bf d)] $K_1 + K_2$, graphically in the pointer diagram
         \item [\bf e)] $(K_1 - K_2)^2$
         \item [\bf f)] $\sqrt{K_1 + K_3}$
     \end{itemize}
@@ -20,21 +20,21 @@
 \Loesung{
     \begin{itemize}
 
-        \item[\bf a)]   $K_1 - K_2$, Ergebnis in Polarkoordinaten
+        \item[\bf a)]   $K_1 - K_2$, Result in polar coordinates
               
               \begin{eqa}
                   10 + \mathrm{j} \cdot 40 - 50 \cdot \mathrm{e}^{-\mathrm{j}40^\circ} = ? \nonumber 
               \end{eqa}
               
-              $\underline{K}_2$ in kartesische Koordinaten wandeln: 
-              
+              $\underline{K}_2$ convert to Cartesian coordinates:
+
               \begin{eqa}
                   50 \cdot \mathrm{e}^{-\mathrm{j}40^\circ} &= 50 \cdot \cos(-40^\circ) + \mathrm{j} 50 \cdot \sin(-40^\circ)  \nonumber   \\
                   &= 50 \cdot 0,766 + \mathrm{j} 50 \cdot (-0,6427)  \nonumber   \\
                   &= 38,302 - \mathrm{j} 32,1393  \nonumber
               \end{eqa}
               
-              $\underline{K}_2 - \underline{K}_2$ in kartesischen Koordinaten subtrahieren: 
+              $\underline{K}_2 - \underline{K}_2$ Subtract in Cartesian coordinates:
               
               \begin{eqa}
                   \underline{K}_1 - \underline{K}_2 &= (10 + \mathrm{j} \cdot 40) - (38,302 - \mathrm{j} 32,1393) \nonumber   \\
@@ -42,14 +42,14 @@
                   &= -28,3 + \mathrm{j} 72,139    \nonumber
               \end{eqa}
               
-              Ergebnis in Polarkoordinaten: 
-              
+              Result in polar coordinates:
+
               \begin{eqa}
                   \underline{K}_1 - \underline{K}_2 &= \sqrt{\Re^2+\Im^2} \cdot \mathrm{e}^{\mathrm{j}\arctan(\frac{\Im}{\Re})} \nonumber   \\
                   &= 77,49 \cdot \mathrm{e}^{\mathrm{j}111,42^\circ}  \nonumber
               \end{eqa}
               
-        \item[\bf b)] $K_3 + K_2$, Ergebnis in kartesischen Koordinaten
+        \item[\bf b)] $K_3 + K_2$, Result in Cartesian coordinates
               
               \begin{eqa}
                   K_3 &= 250 \cdot e^{j\frac{\pi}{4}} = 176,78 + j176,78  \nonumber   \\
@@ -58,7 +58,7 @@
                   K_3 + K_2 &= 215,08 + j144,63  \nonumber   
               \end{eqa}
               
-        \item[\bf c)] $K_1 \cdot K_3$, Ergebnis in Polarkoordinaten
+        \item[\bf c)] $K_1 \cdot K_3$, Result in polar coordinates
               
               \begin{eqa}
                   \underline{K}_1 &= 10 + \mathrm{j}40   \nonumber   \\
@@ -67,7 +67,7 @@
                   &= 10307,75 \cdot \mathrm{e}^{\mathrm{j}120,96^\circ}  \nonumber  
               \end{eqa}
               
-        \item[\bf d)] $K_1 + K_2$, zeichnerisch im Zeigerdiagramm
+        \item[\bf d)] $K_1 + K_2$, graphically in the pointer diagram
               
               \begin{figure}[H]
                   \centering
@@ -78,12 +78,12 @@
               
         \item[\bf e)] $(K_1 - K_2)^2$
               
-              Ergebnis aus Teil a): 
+              Result from part a):
               \begin{eqa}
                   K_1 - Z_2 = 77,49 \cdot \mathrm{e}^{\mathrm{j}111,42^\circ} \nonumber  
               \end{eqa}
               
-              Regel für das Quadrat einer komplexen Zahl:
+              Rule for the square of a complex number:
               \begin{eqa}
                   (K_1 - K_2)^2 &= 77,49^2 \cdot \mathrm{e}^{\mathrm{j}2 \cdot 111,42^\circ}    \nonumber   \\
                   &= 6004 \cdot \mathrm{e}^{-\mathrm{j}137^\circ} \nonumber 
@@ -96,14 +96,14 @@
                   K_1 + K_3 = 186,78 + j216,78    \nonumber   
               \end{eqa}
               
-              Umwandlung in Polarform:
-              
+              Conversion to polar form:
+
               \begin{eqa}
                   K_1 + K_3 = 286,09 \cdot \mathrm{e}^{\mathrm{j}49,32^\circ}   \nonumber   
               \end{eqa}
               
-              Die Quadratwurzel einer komplexen Zahl in Polarform ergibt:
-              
+              The square root of a complex number in polar form is:
+                            
               \begin{eqa}
                   \sqrt{r \cdot \mathrm{e}^{\mathrm{j}\varphi}} &= \sqrt{r} \frac{\varphi}{2}  \nonumber   \\
                   \sqrt{286,09} \cdot \mathrm{e}^{\mathrm{j}\frac{49,32^\circ}{2}} &= 16,91 \cdot \mathrm{e}^{\mathrm{j}24,66^\circ}  \nonumber

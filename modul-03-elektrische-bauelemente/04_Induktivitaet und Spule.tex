@@ -5,69 +5,71 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Induktivität %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	\section{Induktivität und Spule}
+	\section{Inductance and coil}
 
 	\s{
-	Das Gegenstück zum Kondensator ist die Spule, oder genauer gesagt: Das Gegenstück zur Kapazität $C$ ist die Induktivität $L$.
-	Die Induktivität ist ebenfalls ein Energiespeicher, wobei der Unterschied in der Art der genutzten Felder liegt.
-	Während bei der Kapazität die Energie in Form eines elektrischen Feldes gespeichert wird,
-	geschieht dies bei der Induktivität über das magnetische Feld.
+	The counterpart to the capacitor is the coil, or more precisely: the counterpart to capacitance $C$ is inductance $L$.
+	Inductance is also an energy storage device, but the difference lies in the type of fields used.
+	While capacitance stores energy in the form of an electric field,
+	inductance does so via the magnetic field.
 	}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Lernziele Induktivität %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\ftx{Lernziele: Induktivität und Spule}
-\begin{Lernziele}{Induktivität und Spule}
-		Die Studierenden
+\begin{Learning objectives}{Induktivität und Spule}
+		The Students
 		\begin{itemize}
-		\item können zwischen Induktivität und Spule differenzieren.
-		\item kennen die wichtigsten Parameter rund um die Induktivität und die Spule.
-		\item können die Induktivität einer Spule berechnen.
+		\item can differentiate between inductance and coils.
+		\item know the most important parameters relating to inductance and coils.
+		\item can calculate the inductance of a coil.
 	\end{itemize}
-	\end{Lernziele}
+	\end{Learning objectives}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Lernziele Induktivität %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	\subsection{Die Induktivität $L$} \label{sec:Induktivität}
+	\subsection{The inductance $L$} \label{sec:Induktivität}
 \s{
-	Die Induktivität ist die Fähigkeit eines Objektes, elektrische Energie in Form eines magnetischen Feldes zu speichern.
-	Diese Eigenschaft kommt zustande, sobald ein elektrischer Strom durch einen Leiter fließt um welchen sich entsprechend ein magnetisches Feld ausbildet.
-	Das Formelzeichen der Induktivität ist $L$ (benannt nach dem französischen Physiker Heinrich Lenz), während die Einheit in Henry ($\mathrm{H}$) angegeben wird.
-
-	Das einfachste und geläufigste Beispiel, an dem die Induktivität erklärt werden kann, ist die Spule.
-	Obwohl sich das Phänomen der Induktivität bereits bei einem einfachen Leiter ausbildet, wird dieser Effekt durch den Aufbau einer Spule bewusst verstärkt.
-	In Abbildung \ref{fig:Spule} ist ein Zylinderluftspule mit ihrer magnetischen Flussdichte $\vec{B}$ dargestellt.
+	Inductance is the ability of an object to store electrical energy in the form of a magnetic field.
+	This property occurs when an electric current flows through a conductor, around which a magnetic field forms.
+    The symbol for inductance is $L$ (named after the French physicist Heinrich Lenz), while the unit is given in henries ($\mathrm{H}$).
+    
+	The simplest and most common example used to explain inductance is the coil.
+    Although the phenomenon of inductance already occurs in a simple conductor, this effect is deliberately amplified by the construction of a coil.
+	Figure \ref{fig:Spule} shows a cylindrical air coil with its magnetic flux density $\vec{B}$.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Grafik Spule ohne Kern %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Spule ohne Kern
 \begin{frame}
 	\ftx{Magnetisches Feld einer Zylinderluftspule}
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\centering
 			\includesvg[width=0.6\textwidth]{Magnetisches_Feld_Spule}
-			\s{\caption{\textbf{Darstellung des magnetischen Feldes einer Zylinderluftspule.} Es illustriert die Feldlinien sowohl innerhalb als auch außerhalb der Spule
-			und veranschaulicht, wie sich das Magnetfeld entlang  der Achse der Spule konzentriert und außerhalb der Spule abnimmt.}}
+			\s{\caption{\textbf{Representation of the magnetic field of a cylindrical air coil.} It illustrates the field lines both inside and outside the coil
+			and shows how the magnetic field concentrates along the axis of the coil and decreases outside the coil.}}
 			\label{fig:Spule}
 		\end{figure}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Grafik Spule ohne Kern %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \s{
-Das Thema der magnetischen Größen wird ausführlich in Modul 6 behandelt.
-Zum Verständnis der Funktionsweise einer Spule und der daraus resultierenden Induktivität,
-soll eine kurze Einführung zur Entstehung von Magnetismus helfen.
+The topic of magnetic quantities is covered in detail in Module 6.
+To understand how a coil works and the resulting inductance,
+a brief introduction to the origin of magnetism will help.
 
-Sobald Strom durch einen geraden Leiter fließt, entsteht ein magnetisches Feld konzentrisch um den Leiter herum.
-Abhängig von Stromstärke und Stromrichtung ändert sich auch das magnetische Feld.
-Die Rechte-Faust-Regel dient dabei als Gedankenstütze zur Bestimmung der Richtung und Orientierung des Magnetfeldes.
+As soon as current flows through a straight conductor, a magnetic field is created concentrically around the conductor.
+The magnetic field also changes depending on the current strength and direction.
+The right-hand rule serves as a mnemonic device for determining the direction and orientation of the magnetic field.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Grafik Lenzsche Regel %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\ftx{Die Rechte-Hand-Regel}
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\centering
 			\includesvg[width=1\textwidth]{Rechte-Faust-Regel}
-			\s{\caption{\textbf{Rechte-Hand-Regel zur Bestimmung der Richtung des Magnetfeldes.} Ein stromdurchflossenen Leiter erzeugt ein Magnetfeld das mit
-			hilfe der Rechten-Hand-Regel bestimmt wird. Wenn der Daumen der rechten Hand in die Richtung des Stroms zeigt, dann krümmen sich die übrigen Finger in
-			die Richtung der Feldlinien des Magnetfeldes.}}
+			\s{\caption{\textbf{Right-hand rule for determining the direction of the magnetic field.} A current-carrying conductor generates a magnetic field that is determined
+			using the right-hand rule. If the thumb of the right hand points in the direction of the current, then the remaining fingers curve in
+			the direction of the magnetic field lines.}}
 			\label{fig:Rechtehand}
 		\end{figure}
 \end{frame}
@@ -75,10 +77,10 @@ Die Rechte-Faust-Regel dient dabei als Gedankenstütze zur Bestimmung der Richtu
 
 
 \s{
-Entsprechend der Grafik \ref{fig:Rechtehand} verläuft das Magnetfeld in Richtung der Fingerspitzen konzentrisch um den Leiter herum, sofern man den Daumen in Richtung der technischen Stromrichtung,
-also entgegen der Fließrichtung der Elektronen, ausrichtet. Das Magnetfeld dreht sich von Süd nach Nord und hat eine Flussdichte $\vec{B}$, sowie eine Feldstärke $\vec{H}$.
-Dabei ist zu beachten, dass sich die magnetische Flussdichte $\vec{B}$ analog zur elektrischen Feldstärke $\vec{E}$ , und die magnetische Feldstärke $\vec{H}$ analog zur elektrischen Flussdiche $\vec{D}$, verhält.
-Im Modul 6 wird das Thema Magnetismus ausführlicher behandelt. In diesem Modul geht es primär um das Kennenlernen der Spule und der Induktivität.
+According to the diagram \ref{fig:Rechtehand}, the magnetic field runs concentrically around the conductor in the direction of the fingertips, provided that the thumb is aligned in the direction of the technical current flow,
+i.e. opposite to the direction of electron flow. The magnetic field rotates from south to north and has a flux density $\vec{B}$ and a field strength $\vec{H}$.
+It should be noted that the magnetic flux density $\vec{B}$ behaves analogously to the electric field strength $\vec{E}$, and the magnetic field strength $\vec{H}$ behaves analogously to the electric flux density $\vec{D}$.
+Module 6 deals with the topic of magnetism in more detail. This module is primarily about getting to know the coil and inductance.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -103,36 +105,36 @@ Im Modul 6 wird das Thema Magnetismus ausführlicher behandelt. In diesem Modul 
 	}
 \end{frame}
 \s{
-	Der britische Physiker und Chemiker Michael Faraday führte mitte des 19. Jahrhunderts Experimente durch,
-	bei denen er eine Spule in der Nähe eines Magneten bewegte oder den Strom in einer benachbarten Spule veränderte.
-	Dabei stellte er fest, dass sich die Größe der induzierten Spannung proportional zur Änderungsrate des Magnetfeldes verhält.
+	In the mid-19th century, British physicist and chemist Michael Faraday conducted experiments
+    in which he moved a coil near a magnet or changed the current in an adjacent coil.
+    He found that the magnitude of the induced voltage was proportional to the rate of change of the magnetic field.
 
 	\begin{equation}
 		U_\mathrm{i} \sim \frac{\mathrm{d}\phi}{\mathrm{d}t}
 	\end{equation}
 
-	Faraday stellte fest, dass der Proportionalitätsfaktor von der Anzahl der Wicklungen der Spule abhängt.
+	Faraday discovered that the proportionality factor depends on the number of windings in the coil.
 
 	\begin{equation}
 		U_\mathrm{i}= -N \cdot \frac{\mathrm{d}\phi}{\mathrm{d}t}
 	\end{equation}
 
-	Etwa zur gleichen Zeit entdeckte der amerikanische Physiker Joseph Henry das Phänomen der Selbstinduktion,
-	wobei ein elektrischer Strom in einer Spule eine Spannung in der Spule selbst induzieren kann, wenn der Strom verändert wird.
-	Auch hier wurde ein proportionales Verhalten festgestellt.
+	At around the same time, American physicist Joseph Henry discovered the phenomenon of self-induction,
+    whereby an electric current in a coil can induce a voltage in the coil itself when the current is changed.
+    Here, too, proportional behaviour was observed.
 
 	\begin{equation}
 		U_\mathrm{i} \sim \frac{\mathrm{d}I}{\mathrm{d}t}
 	\end{equation}
 
-	Diese Eigenschaft der Spule die durch das Speichern magnetischer Energie entsteht ist die Induktivität $L$,
-	deren Einheit dem Physiker zu Ehren als Henry $[\mathrm{H}]$ benannt wurde.
+	This property of the coil, which arises from the storage of magnetic energy, is the inductance $L$,
+	whose unit was named Henry $[\mathrm{H}]$ in honour of the physicist.
 
 	\begin{equation}
 		U_\mathrm{i}= -L \cdot \frac{\mathrm{d}I}{\mathrm{d}t}
 	\end{equation}
 
-	Das Minus-Zeichen kommt daher, dass der induzierte Strom nach der Lenz'schen Regel seiner Ursache entgegenwirkt.
+	The minus sign comes from the fact that, according to Lenz's law, the induced current counteracts its cause.
 }% nur im Skript
 
 
@@ -154,14 +156,14 @@ Im Modul 6 wird das Thema Magnetismus ausführlicher behandelt. In diesem Modul 
 \end{frame}
 
 	\s{
-		Analog zum Kondensator, kann auch das zeitabhängige Verhalten für die Spule folgendermaßen ausgedrückt werden:
+		Analogous to the capacitor, the time-dependent behaviour for the coil can also be expressed as follows:
 
 
-	Spannung über der Induktivität
+	Voltage across the inductance
 	\begin{equation}
 		u_\mathrm{L}(t) = L \cdot \frac{di_\mathrm{L}(t)}{dt}
 	\end{equation}
-	Strom durch die Induktivität
+	Current through the inductance
 	\begin{equation}
 		i_\mathrm{L}(t) = \frac{1}{L} \cdot \int u_\mathrm{L}(t) \, dt
 	\end{equation}
@@ -173,34 +175,35 @@ Im Modul 6 wird das Thema Magnetismus ausführlicher behandelt. In diesem Modul 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\subsection{Die Spule als Bauelement}
+\subsection{The coil as a component}
 
 \s{
-Mit dem Wissen über das magnetische Feld kann nun der Aufbau und die Funktionsweise der Spule erklärt werden. Ein einfaches Beispiel dafür ist die Zylinderluftspule.
-Wird ein Leiter zu einer Leiterschleife geformt, bildet sich das Magnetfeld so aus, dass es durch die Schleifenöffnung hindurchgeht.
-Werden nun mehrere Leiterschleifen hintereinander gewickelt, wird das Magnetfeld um den Faktor der Windungszahl verstärkt.
-Diese Anordnung von gewickelten Leiterschleifen ergibt die in Abbildung \ref{fig:Luftspule} gezeigte Zylinderluftspule.
+With knowledge of the magnetic field, the structure and function of the coil can now be explained. A simple example of this is the cylindrical air coil.
+When a conductor is formed into a conductor loop, the magnetic field is formed in such a way that it passes through the loop opening.
+If several conductor loops are wound one behind the other, the magnetic field is amplified by the number of turns.
+This arrangement of wound conductor loops results in the cylindrical air coil shown in Figure \ref{fig:Luftspule}.
 }
 
 \begin{frame}
 	\ftx{Die Spule als Bauelteil}
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\centering
 			\includegraphics[width=0.7\textwidth]{sp}
-			\s{\caption{\textbf{Verschiedene Arten und Bauformen von Spulen.} Darunter Zylinderspulen, Ringkernspulen, Eisenkernspulen und Luftspulen. Eine größere Anzahl von Windungen erhöht die Konzentration des Magnetfelds und steigert die Induktivität der Spule.
-			 Ein Eisenkern kann zusätzlich verwendet werden, um die Magnetfeldlinien zu bündeln und die Effizienz zu verbessern.}}
+			\s{\caption{\textbf{Various types and designs of coils.} These include cylindrical coils, toroidal coils, iron core coils and air coils. A larger number of turns increases the concentration of the magnetic field and increases the inductance of the coil.
+			An iron core can also be used to bundle the magnetic field lines and improve efficiency.}}
 			\label{fig:Luftspule}
 		\end{figure}
 \end{frame}
 \s{
-	Ihren Namen verdankt diese Spule ihrer zylindrischen Form in Längsrichtung und des Mediums Luft im inneren ihrer Wicklungen.
-	Wenn nun ein Strom durch die Spule fließt, überlagern sich die Magnetfelder der einzelnen Wicklungen zu einem stärkeren Magnetfeld. Die Stärke hängt dabei von der Windungszahl
-	und der Stromstärke, sowie der Entfernung zum Leiter, ab. Je nach Orientierung des Stromes und der Wicklungen, entsteht bei einer Zylinderluftspule auf der einen Seite ein
-	Nord- und auf der anderen Seite ein Südpol. Der Verlauf der Magnetfeldlinien in einer Zylinderluftspule entspricht der Abbildung \ref{fig:Spule}. \\
-
-	Was alle Spulen verbindet, ist ihre Fähigkeit, die Eigenschaft der Induktivität nutzbar zu machen,
-	wie es im folgenden Schaltbild \ref{fig:Induktivität_ui} dargestellt ist. Dieses Schaltbild repräsentiert jedoch nur
-	die idealisierte, nutzbare Induktivität.
+	This coil owes its name to its cylindrical shape in the longitudinal direction and the medium of air inside its windings.
+	When a current flows through the coil, the magnetic fields of the individual windings superimpose to form a stronger magnetic field. The strength depends on the number of turns
+    and the current, as well as the distance to the conductor. Depending on the orientation of the current and the windings, a cylinder air coil produces a
+    north pole on one side and a south pole on the other. The course of the magnetic field lines in a cylindrical air coil corresponds to the illustration \ref{fig:Spule}. \\
+    
+	What all coils have in common is their ability to utilise the property of inductance,
+	as shown in the following circuit diagram \ref{fig:Induktivität_ui}. However, this circuit diagram only represents
+	the idealised, usable inductance.
 
 	}% nur im Skript
 
@@ -211,9 +214,10 @@ Diese Anordnung von gewickelten Leiterschleifen ergibt die in Abbildung \ref{fig
 		\ftx{Die Induktivität als Schaltugselement}
 	\s{
 		\begin{figure}[H]
+			\renewcommand{\figurename}{Figure}
 		\centering
 		\input{Tikz/src/04_Induktivitaet_Spule/Spule_EU_AM_Schaltungselement}
-		\caption{\textbf{Schaltungselement für Spule.} Europäischen (links) und amerikanisches (rechts).}
+		\caption{\textbf{Circuit element for coil.} European (left) and American (right).}
 		\label{fig:Induktivität_L_EU}
 	\end{figure}
 	}
@@ -222,9 +226,10 @@ Diese Anordnung von gewickelten Leiterschleifen ergibt die in Abbildung \ref{fig
 % Ideale Spule
 
 	\begin{figure}[h]
+		\renewcommand{\figurename}{Figure}
 		\begin{center}
 		\input{Tikz/src/04_Induktivitaet_Spule/Ersatzschaltbild_ideale_Spule}
-		\s{\caption{\textbf{Schaltzeichen einer idealen Spule.}}}
+		\s{\caption{\textbf{Circuit symbol for an ideal coil.}}}
 		\label{fig:Induktivität_ui}
 		\end{center}
 		\end{figure}
@@ -232,10 +237,10 @@ Diese Anordnung von gewickelten Leiterschleifen ergibt die in Abbildung \ref{fig
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Schaltzeichen Induktivität	U,I  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \s{
-	Für eine realitätsgetreue Nachbildung der Schaltung ist es wichtig die Spule als Bauteil
-	vollständig zu beschreiben. Dies wird mit Hilfe eines Ersatzschaltbildes gemacht, welches auch die
-	ungewollten, also parasitären Eigenschaften des Bauteils, nachbildet. Abbildung \ref{fig:Schaltbild einer realen Spule} zeigt ein solches
-	Ersatzschaltbild.
+	For a realistic simulation of the circuit, it is important to describe the coil as a component
+    in its entirety. This is done with the help of an equivalent circuit diagram, which also simulates the
+    unwanted, i.e. parasitic, properties of the component. Figure \ref{fig:Schaltbild einer realen Spule} shows such an
+    equivalent circuit diagram.
 }% nur im Skript
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - ESB reale Spule	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Reale Spule
@@ -244,8 +249,8 @@ Diese Anordnung von gewickelten Leiterschleifen ergibt die in Abbildung \ref{fig
 	\begin{figure}[H]
 		\centering
 		\input{Tikz/src/04_Induktivitaet_Spule/Ersatzschaltbild_reale_Spule}
-		\s{\caption{\textbf{Ersatzschaltbild einer realen Spule.} Die ideale Spule $L$ wird durch einen Serien-Widerstand $R_\mathrm{s}$
-		und einen parallel geschalteten Kondensator $C_\mathrm{p}$ ergänzt, um parasitäre Effekte zu berücksichtigen.}}
+		\s{\caption{\textbf{Equivalent circuit diagram of a real coil.} The ideal coil $L$ is supplemented by a series resistor $R_\mathrm{s}$
+		and a parallel capacitor $C_\mathrm{p}$ to account for parasitic effects.}}
 		\label{fig:Schaltbild einer realen Spule}
 	\end{figure}
 
@@ -254,31 +259,29 @@ Diese Anordnung von gewickelten Leiterschleifen ergibt die in Abbildung \ref{fig
 
 \s{
 
-Im Ersatzschaltbild einer Spule werden nicht nur die nutzbare Induktivität, sondern auch die
-parasitären Eigenschaften berücksichtigt, die in realen Spulen auftreten. Diese parasitären
-Eigenschaften entstehen beispielsweise durch die Kapazitäten zwischen den Wicklungen und die ohmschen Ver-
-luste im Material. Das modellierte Ersatzschaltbild ermöglicht es, diese Effekte im Schaltungsentwurf
-zu berücksichtigen und das Schaltverhalten besser vorherzusagen.
-
-
+The equivalent circuit diagram of a coil takes into account not only the usable inductance, but also the
+parasitic properties that occur in real coils. These parasitic
+properties arise, for example, from the capacitances between the windings and the ohmic losses
+in the material. The modelled equivalent circuit diagram makes it possible to take these effects into account in the circuit design
+and to better predict the switching behaviour.
 
 }% nur im Skript
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Merksatz Induktivität %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\ftx{Merkesatz: Die Spule als Bauteil}
-	\begin {Merksatz}{}
-Die Spule ist der verzweifelte Versuch, eine Induktivität nachzubilden.
-\end {Merksatz}
+	\begin {Key point}{}
+The coil is a desperate attempt to replicate inductance.
+\end {Key point}
 \end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Merksatz Induktivität %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Permeabilität	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Die Permeabilität}
+\subsection{Permeability}
 \s{
-Ähnlich wie im Fall des Kondensators und der Kapazität, unterscheidet sich auch die Stärke des Magnetfeldes abhängig vom Material.
-Was beim Kondensator das Dielektrikum und die Permitivität sind, wird bei der Spule als ferromagnetisches Material und Permeabilität bezeichnet.
-Ein Beispiel einer Spule mit einem ferromagnetischen Material ist die Ringkernspule \ref{fig:Ringkernspule}.
+Similar to the case of the capacitor and capacitance, the strength of the magnetic field also varies depending on the material.
+What are the dielectric and permittivity in the case of the capacitor are referred to as ferromagnetic material and permeability in the case of the coil.
+An example of a coil with a ferromagnetic material is the toroidal coil \ref{fig:Ringkernspule}..
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Grafik Ringkernspule %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Ringkernspule
@@ -286,48 +289,50 @@ Ein Beispiel einer Spule mit einem ferromagnetischen Material ist die Ringkernsp
 \begin{frame}
 	\ftx{Die Permeabilität}
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\includesvg[width=1\textwidth]{Magnetfeldline_Ringspule}
-		\s{\caption{\textbf{Ringkernspule mit Eisenkern.} Der Eisenkern verstärkt das Magnetfeld und erhöht die Induktivität der Spule. Diese Bauweise minimiert Streufelder und verbessert die Effizienz,
-		 indem sie das Magnetfeld innerhalb des Kerns konzentriert.}}
+		\s{\caption{\textbf{Toroidal coil with iron core.} The iron core strengthens the magnetic field and increases the inductance of the coil. This design minimises stray fields and improves efficiency
+ 		by concentrating the magnetic field within the core.}}
 		\label{fig:Ringkernspule}
 	\end{figure}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Grafik Ringkernspule %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \s{
-Bei der Ringkernspule handelt es sich um einen mit Draht umwickelten Ferritring.
-Innerhalb des Materials findet eine Ausrichtung auf atomarer Ebene statt, was zu einer Verstärkung des Magnetfeldes führt.
-Die Stärke der magnetischen Flussdichte $\vec{B}$ wird dabei neben der Dimensionen und der Stromstärke, von den Materialeigenschaften, insbesondere von der Permeabilität, bestimmt.
+The toroidal coil is a ferrite ring wrapped with wire.
+Alignment takes place at the atomic level within the material, which leads to a strengthening of the magnetic field.
+The strength of the magnetic flux density $\vec{B}$ is determined not only by the dimensions and current strength, but also by the material properties, in particular the permeability.
 
 %%%%% Permeabilitätszahl Tabelle einfach
 
-	Die folgende Tabelle \ref{tab:permeabilität} zeigt die Permeabilitätszahl einiger gängiger Materialien: \\
+	The following table \ref{tab:permeabilität} shows the permeability coefficient of some common materials: \\
 }
 \begin{frame}
 	\ftx{Die Permeabilität}
 
 
 \begin{table}[H]
+	\renewcommand{\tablename}{Table}
 	\centering
 	\resizebox{0.3\textwidth}{!}{%
 	\begin{tabular}{lc}
 	\toprule
 	\textbf{Material} & \textbf{\boldmath$\mu_\mathrm{r}$} \\
 	\midrule
-	Supraleiter 1. Art & $0$\\
-	Vakuum & $1$ \\
-	Luft (bei STP) & $1.00000037$ \\
-	Kupfer & $0.999994$ \\
-	Gold & $0.999964$ \\
-	Aluminium & $1.000022$ \\
-	Eisen & $300-10000$ \\
-	Ferrit & $4-15000$ \\
+	Type I superconductor& $0$\\
+	Vacuum & £1 \\
+	Air (at STP) & £1.00000037 \\
+	Copper & £0.999994 \\
+	Gold & £0.999964 \\
+	Aluminium & £1.000022 \\
+	Iron & $300-10000$ \\
+    Ferrite & $4-15000$ \\
 	\bottomrule
 	\end{tabular}%
 	}
-	\s{\caption{\textbf{Relative Permeabilitätszahl verschiedener Materialien}: Diese dimensionslose Zahl gibt an,
-	 wie stark das magnetische Feld in einem Material im Vergleich zum Vakuum beeinflusst wird. Sie ist ein Maß für die
-	 Fähigkeit des Materials, magnetische Flüsse zu speichern oder zu leiten. Materialien mit einer höheren Permeabilitätszahl
-	 erhöhen die Induktivität von Spulen.}}
+	\s{\caption{\textbf{Relative permeability coefficient of various materials}: This dimensionless number indicates
+     how strongly the magnetic field in a material is affected in comparison to a vacuum. It is a measure of the
+     material's ability to store or conduct magnetic flux. Materials with a higher permeability number
+     increase the inductance of coils.}}
 	\label{tab:permeabilität}
 	\end{table}
 \end{frame}
@@ -362,10 +367,10 @@ Die Stärke der magnetischen Flussdichte $\vec{B}$ wird dabei neben der Dimensio
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Permeabilität	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \s{
-Zur vollständigen Beschreibung der Eigenschaften des ferromagnetischen Materials wird neben der Permeabilitätszahl
-noch die magnetische Feldkonstante $\mu_0$ benötigt. Dabei handelt es sich um das Verhalten des magnetische Feldes im Vakuum.
-Während die Permeabilitätszahl $\mu_r$ einheitslos ist, bringt die magnetische Feldkonstante die Einheit $\mathrm{H/m}$ mit.
-Sie wird mit der relativen Permeabilität des Materials multipliziert was zusammen die Permeabilitätskonstante $\mu$ ergibt.
+In order to fully describe the properties of ferromagnetic material, in addition to the permeability coefficient,
+the magnetic field constant $\mu_0$ is also required. This refers to the behaviour of the magnetic field in a vacuum.
+While the permeability coefficient $\mu_r$ is dimensionless, the magnetic field constant has the unit $\mathrm{H/m}$.
+It is multiplied by the relative permeability of the material, which together gives the permeability constant $\mu$..
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Formeln Mü %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -398,16 +403,16 @@ Sie wird mit der relativen Permeabilität des Materials multipliziert was zusamm
 
 % Erklärungen der Permeabilität
 \begin{align*}
-	\mu			   &: \text{Permeabilitätskonstante}\\
-    \mu_\mathrm{0} &: \text{Magnetische Feldkonstante ($\approx 4\pi \cdot 10^{-7}$)}\\
-    \mu_\mathrm{r} &: \text{Relative Permeabilitätszahl} \\
+	\mu			   &: \text{Permeability constant}\\
+    \mu_\mathrm{0} &: \text{Magnetic field constant ($\approx 4\pi \cdot 10^{-7}$)}\\
+    \mu_\mathrm{r} &: \text{Relative permeability coefficient} \\
 \end{align*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Formeln Mü %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-	Mit Hilfe der Permeabilität, des Stromes, der Windungszahl und der Länge der Spule,
-	kann die magnetische Flussdichte $\vec{B}$ mit der Einheit Tesla $\mathrm{T}$ berechnet werden.
+	With the help of the permeability, the current, the number of turns and the length of the coil,
+    the magnetic flux density $\vec{B}$ can be calculated using the unit Tesla $\mathrm{T}$.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Formeln Induktivität %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -430,10 +435,10 @@ Sie wird mit der relativen Permeabilität des Materials multipliziert was zusamm
 
 	% Erklärung der Symbole und Herleitung der Einheiten
 	\begin{align*}
-		\mu &: \text{Permeabilitätskonstante]} \\
-		I &: \text{Elektrische Stromstärke} \\
-		N &: \text{Anzahl der Windungen} \\
-		l &: \text{Länge des Magnetkreises}
+		\mu &: \text{Permeability constant]} \\
+		I &: \text{Electrical current} \\
+		N &: \text{Number of turns} \\
+		l &: \text{Length of the magnetic circuit}
 	\end{align*}
 
 	\begin{equation*}
@@ -465,10 +470,10 @@ Sie wird mit der relativen Permeabilität des Materials multipliziert was zusamm
 
 	% Erklärung der Symbole und Herleitung der Einheiten
 	\begin{align*}
-		\mu &: \text{Permeabilitätskonstante} \\
-		I &: \text{Elektrische Stromstärke} \\
-		N &: \text{Anzahl der Windungen} \\
-		l &: \text{Länge des Magnetkreises}
+		\mu &: \text{Permeability constant} \\
+		I &: \text{Electrical currente} \\
+		N &: \text{Number of turns} \\
+		l &: \text{Length of the magnetic circuit}
 	\end{align*}
 }
 
@@ -486,7 +491,7 @@ Sie wird mit der relativen Permeabilität des Materials multipliziert was zusamm
 }
 \end{frame}
 \s{
-	Die Induktivität selbst hängt ebenfalls von der Bauform und den verwendeten Materialien ab.
+	The inductance itself also depends on the design and the materials used.
 	\begin{equation*}
 	[L] = 1\, \text{Henry} = 1\, \text{H} = 1\, \frac{\text{Vs}} {\text{A}}
 	\end{equation*}
@@ -497,7 +502,7 @@ Sie wird mit der relativen Permeabilität des Materials multipliziert was zusamm
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - mag. Flussdichte B	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\subsection{Die magnetische Feldstärke}% $\vec{H}$}
+	\subsection{The magnetic field strength}% $\vec{H}$}
 
 \s{
 	\begin{equation}
@@ -514,12 +519,12 @@ Sie wird mit der relativen Permeabilität des Materials multipliziert was zusamm
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Schaltverhalten Spule	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\ftx{Schaltverhalten einer Spule: Aufladen}
-\subsection{Schaltverhalten einer Spule}
+\subsection{Switching behaviour of a coil}
 
 \s{
-Zum besseren Verständnis der Funktion einer Spule wird nun ein zeitlich veränderliches Signal, hier der Einschalt- und Ausschaltvorgang, betrachtet.
-Das grundlegende Prinzip der Induktivität basiert darauf, dass ein zeitlich veränderlicher Strom ein zeitlich veränderliches Magnetfeld erzeugt. Dieses zeitlich veränderliche Magnetfeld
-induziert wiederum einen Induktionsstrom in die Spule selbst. Aufgrund der Lenz'schen Regel wirkt der Induktionsstrom jedoch entgegen seiner Ursache, was einen sprunghaften Anstieg des Stromes verhindert.
+	To better understand how a coil works, let us now consider a time-varying signal, in this case the switch-on and switch-off process.
+	The basic principle of inductance is based on the fact that a time-varying current generates a time-varying magnetic field. This time-varying magnetic field
+	in turn induces an induction current in the coil itself. However, due to Lenz's law, the induction current acts against its cause, which prevents a sudden increase in current.
 % Das grundlegende Prinzip der Induktivität basiert darauf, dass ein zeitlich veränderlicher Strom ein zeitlich veränderliches Magnetfeld erzeugt.
 % Dieses Magnetfeld induziert wiederum eine Spannung in der Spule, die der Änderung des Stromes entgegenwirkt. Dieser Vorgang wird als Selbstinduktion bezeichnet.
 }% nur im Skript
@@ -528,6 +533,7 @@ induziert wiederum einen Induktionsstrom in die Spule selbst. Aufgrund der Lenz'
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Schaltbild zum Schaltverhalten SCHALTER	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \b{
 \begin{figure}[H]
+	\renewcommand{\figurename}{Figure}
 	\centering
 	\begin{subfigure}[h]{0.5\textwidth}
 	\centering
@@ -548,11 +554,12 @@ induziert wiederum einen Induktionsstrom in die Spule selbst. Aufgrund der Lenz'
 
 \s{
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 	\centering
 	\begin{subfigure}[h]{0.9\textwidth}
 	\centering
 		\input{Tikz/src/04_Induktivitaet_Spule/Reihenschaltung_Spule_Aufladen}
-		\caption{Darstellung der Reihenschaltung bestehend aus einer Induktivität \(L\), einem Widerstand \(R\) und einem Schalter.}
+		\caption{Representation of the series connection consisting of an inductance \(L\), a resistor \(R\) and a switch.}
 		\label{fig:Schaltbild_Spule_Schalter}
 	\end{subfigure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Schaltbild zum Schaltverhalten SCHALTER	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -560,13 +567,12 @@ induziert wiederum einen Induktionsstrom in die Spule selbst. Aufgrund der Lenz'
 	\begin{subfigure}[b]{0.9\textwidth}
 		\centering
 		\input{Tikz/src/04_Induktivitaet_Spule/Spule_Aufladen_Verlauf}
-		\caption{Spannungs- und Strom verlauf über der Induktivität bei einer Gleichspannung die zum Zeitpunkt $t = 0$ eingeschaltet
-		 wird und zum Zeitpunkt $t_\mathrm{0}$ abgeschaltet wird.}
+		\caption{Voltage and current waveform across the inductance for a DC voltage that is switched on at time $t = 0$
+		and switched off at time $t_\mathrm{0}$.}
 		\label{fig:Spannungsverlauf}
 	\end{subfigure}
-	\caption{\textbf{Der Spannungs- und Strom verlauf über der Induktivität.} Das Diagramm zeigt die Reaktion der Induktivität
-	auf die plötzliche Änderung der Spannung und
-	veranschaulicht das typische Lade verhalten.}
+	\caption{\textbf{The voltage and current curve across the inductance.} The diagram shows the reaction of the inductance
+		to the sudden change in voltage and illustrates the typical charging behaviour.}
 	\label{fig:Gesamtdarstellung}
 	\end{figure}
 }% Nur Skript
@@ -578,6 +584,7 @@ induziert wiederum einen Induktionsstrom in die Spule selbst. Aufgrund der Lenz'
 %%%%%% Laden- entladen der Spule
 \b{
 \begin{figure}[H]
+	\renewcommand{\figurename}{Figure}
 	\centering
 	\begin{subfigure}[h]{0.5\textwidth}
 	\centering
@@ -597,11 +604,12 @@ induziert wiederum einen Induktionsstrom in die Spule selbst. Aufgrund der Lenz'
 \end{frame}
 \s{
 	\begin{figure}[H]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\begin{subfigure}[h]{0.85\textwidth}
 		\centering
 			\input{Tikz/src/04_Induktivitaet_Spule/Reihenschaltung_Spule_Entladen}
-			\caption{Darstellung der Reihenschaltung bestehend aus einer Induktivität \(L\) und einem Widerstand \(R\) an einer rechteckförmigen Spannungsquelle.}
+			\caption{Representation of the series connection consisting of an inductance \(L\) and a resistor \(R\) connected to a rectangular voltage source.}
 			\label{fig:Schaltbild_Spule_Rechteck}
 		\end{subfigure}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Schaltbild zum Schaltverhalten RECHTECK	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -609,32 +617,32 @@ induziert wiederum einen Induktionsstrom in die Spule selbst. Aufgrund der Lenz'
 		\begin{subfigure}[b]{0.9\textwidth}
 			\centering
 			\input{Tikz/src/04_Induktivitaet_Spule/Spule_Entladen_Verlauf}
-			\caption{Spannungs- und Strom verlauf über der Induktivität bei einer rechteckförmigen Spannung.}
+			\caption{Voltage and current waveform across the inductance with a square wave voltage.}
 			\label{fig:Spannungsverlauf}
 		\end{subfigure}
-		\caption{\textbf{Spannungs- und Stromverlauf über der Induktivität.} Das Diagramm zeigt die Reaktion der Induktivität auf eine plötzliche Änderung
-		 der Spannung und veranschaulicht das typische Lade- und Entladeverhalten der Induktivität.}
+		\caption{\textbf{Voltage and current curve across the inductance.} The diagram shows the reaction of the inductance to a sudden change
+			in voltage and illustrates the typical charging and discharging behaviour of the inductance.}
 		\label{fig:Gesamtdarstellung}
 		\end{figure}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Diagramm zum Schaltverhalten RECHTECK	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Schaltverhalten Spule	 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \s{
-In der praktischen Anwendung ermöglicht die Induktivität die Konstruktion von Komponenten wie Transformatoren, Drosseln und Induktivitäten,
-die in einer Vielzahl von elektrischen und elektronischen Geräten zu finden sind. Von der Filterung von Signalen über die Energieübertragung bis
-hin zur Steuerung elektromagnetischer Interferenzen ist die Induktivität ein Schlüsselelement in der modernen Elektrotechnik.
+In practical applications, inductance enables the construction of components such as transformers, chokes and inductors,
+which are found in a wide range of electrical and electronic devices. From signal filtering and energy transmission to
+the control of electromagnetic interference, inductance is a key element in modern electrical engineering.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Beispiel Rechnung Induktivität %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\ftx{Beispielrechnung Induktivität}
 
-\begin{bsp}{Berechnungs der Induktivität}{}
+\begin{expl}{Calculation of inductance}{}
 	\begin{itemize}
-	\item Berechnung der Induktivität $L$
-	\item Berechnung der magnetischen Flussdichte $\vec{B}$
-	\item Gespeicherte Energie im Magnetfeld $E_\mathrm{m}$ ?
+	\item Calculation of inductance $L$
+	\item Calculation of magnetic flux density $\vec{B}$
+	\item Energy stored in the magnetic field $E_\mathrm{m}$ ?
 	\end{itemize}
-\end{bsp}
+\end{expl}
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Beispiel Rechnung Induktivität %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

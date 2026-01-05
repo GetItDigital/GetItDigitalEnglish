@@ -5,47 +5,48 @@
 
 \begin{frame}
 
-	\section{Einfache Kondensatornetzwerke}
+	\section{Simple capacitor networks}
 	\s{
 	
-		Wie Widerstände lassen sich auch Kapazitäten zu Netzwerken zusammenschließen. Die einfachen Grundschaltungen, welche 
-		wiederum zu beliebig komplexen Netzwerken zusammengeschaltet werden können, werden nachfolgend vorgestellt. 
+		Like resistors, capacitors can also be connected to form networks. The simple basic circuits, which 
+        can in turn be interconnected to form networks of any complexity, are presented below.
 		
-		\subsection{Parallelschaltung von Kapazitäten}
+		\subsection{Parallel connection of capacities}
 		
-		Sind in einer Schaltung mehrere Kapazitäten parallel zueinander geschaltet, lassen sie sich zu einer
-		Gesamtkapazität zusammenfasssen (siehe Abbildung \ref{fig:parallelkondensator}).
+		If several capacitances are connected in parallel in a circuit, they can be combined to form a
+		total capacitance (see Figure \ref{fig:parallelkondensator}).
 		
 		
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\begin{center}
 
 				\input{Tikz/src/4_kondensatornetz/Zusammenfassen_Kapazitaeten_prallel}
 				
 			\end{center}
 			\label{fig:parallelkondensator}
-			\caption{Zusammenfassen von zwei parallel geschalteten Kapazitäten $C_1$ und $C_2$ zu einer Gesamtkapazität $C_\mathrm{ges}$}
+			\caption{ZCombining two capacitances $C_1$ and $C_2$ connected in parallel to form a total capacitance $C_\mathrm{total}$}
 		\end{figure}
 		
-		Dabei liegt an allen Einzelkapazitäten die gleiche Spannung an:
+		The same voltage is applied to all individual capacities:
 		
 		\begin{equation*}
 			U_0 = U_1 = U_2
 		\end{equation*}
 		
-		Die Ladung, welche auf jedem der Einzelkondensatoren gespeichert ist, kann wie folgt bestimmt werden:
+		The charge stored on each of the individual capacitors can be determined as follows:
 		
 		\begin{equation*}
 			Q_k = C_k \cdot U_0
 		\end{equation*}
 		
-		Die Gesamtladung $C_\mathrm{ges}$ auf dem in Abbildung \ref{fig:parallelkondensator} Ersatzschaltbild entsprechend mit
+		The total charge $C_\mathrm{total}$ on the equivalent circuit diagram in Figure \ref{fig:parallelkondensator} corresponds to
 		
 		\begin{equation*}
 			Q_\mathrm{ges} = C_\mathrm{ges} \cdot U_0
 		\end{equation*}
 		
-		Die Gesamtladung setzt sich aus der Summe der Einzelladungen zusammen:
+		The total load is made up of the sum of the individual loads:
 		
 		
 		\begin{equation*}
@@ -58,7 +59,7 @@
 			Q_\mathrm{ges} =  (C_1 + C_2) \cdot U_0 
 		\end{equation*}
 		
-		Ein Quotientenvergleich mit der ursprünglichen Berechnung der Gesamtladung $Q_\mathrm{ges}$ zeigt nun:
+		A comparison of the quotient with the original calculation of the total charge $Q_\mathrm{total}$ now shows:
 		
 		
 		
@@ -66,16 +67,16 @@
 			\rightarrow C_1 + C_2 = C_\mathrm{ges}
 		\end{equation*}
 		
-		Auch für beliebig viele parallelgeschaltete Kapazitäten gilt, dass die Summe der Einzelkapazitäten die Gesamtkapazität ergibt:
+		Even for any number of capacities connected in parallel, the sum of the individual capacities equals the total capacity:
 		
 		
-		\begin{Merksatz}{Gesamtkapazität einer Parallelschaltung}
+		\begin{Key point}{Total capacity of a parallel connection}
 			
 			\begin{equation*}
 				C_\mathrm{ges} = \sum_{k=1}^{n} C_k 
 			\end{equation*}
 			
-		\end{Merksatz}
+		\end{Key point}
 		
 	}
 	
@@ -257,75 +258,69 @@
 
 \begin{frame}
 
-	\subsection{Reihenschaltung von Kapazitäten}
+	\subsection{Series connection of capacitances}
 	
 	\s{
-		Bei der Reihenschaltung von Kapazitäten teilt sich die gesamte an den Eingangsanschlüssen anliegende 
-		Spannung $U_\mathrm{0}$ in die Teilspannungen $U_k$ an den einzelnen Kapazitäten auf (Abbildung \ref{fig:kondensatorreihe}). \\
-		
-		
-		
-		
+		When capacitors are connected in series, the total voltage $U_\mathrm{0}$ applied to the input 
+		terminals is divided into partial voltages $U_k$ across the individual capacitors (Figure \ref{fig:kondensatorreihe}). \\
+
 		
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\begin{center}
 
 				\input{Tikz/src/4_kondensatornetz/Zusammenfassen_Kapazitaeten_Reihe} \\
 			\end{center}
 			\label{fig:kondensatorreihe}
 			
-			\caption{Zusammenfassen von zwei in Reihe geschalteten Kapazitäten $C_1$ und $C_2$ zu einer Gesamtkapazität $C_\mathrm{ges}$}
-			
-			
-			
+			\caption{Combining two capacitances $C_1$ and $C_2$ connected in series to form a total capacitance $C_\mathrm{total}$}
 			
 		\end{figure}
 		
 		
 		
-		Auf den jeweils mit den Anschlussklemmen verbundenen Kondensatorplatten wird eine Ladung $\pm \, Q$ aufgeprägt.
-		Beide Platten des selben Kondensators haben stets betragsgleiche Ladungen, was dazu führt, dass beide Kondensatoren an den Anschlussklemmen
-		der Reihenschaltung auf beiden Platten die Ladung $\pm \, Q$ haben. Die äußere Platte des jeweils nächsten angeschlossenen Kondensators
-		muss betragsmäßig identisch mit umgekehrten Vorzeichen geladen sein, da aus der ursprünglich elektrisch neutralen Verbindung keine 
-		Ladungsträger entweichen oder hinzugefügt werden können. Diesem Schema folgend besitzen alle Kondensatoren
-		einer Reihenschaltung die gleiche Ladung $Q$.
+		A charge of $\pm \, Q$ is applied to the capacitor plates connected to the terminals.
+		Both plates of the same capacitor always have charges of equal magnitude, which means that both capacitors at the terminals
+		of the series connection have a charge of $\pm \, Q$ on both plates. The outer plate of the next connected capacitor
+		must have an identical charge with the opposite sign, as no charge carriers can escape or be added to the originally electrically neutral connection.
+		Following this pattern, all capacitors in a series connection have the same charge $Q$.
 		
-		Ausgehend von der Kondensator-Grundgleichung $Q = C \cdot U$ ergibt sich für die Teilspannungen, welche an den
-		in Abbildung \ref{fig:kondensatorreihe} gezeigten Kondensatoren abfallen:
+		Based on the basic capacitor equation $Q = C \cdot U$, the partial voltages across the
+		capacitors shown in Figure \ref{fig:kondensatorreihe} are:
 		
 		\begin{equation*}
 			U_1 = \frac{Q}{C_1}, \quad \quad U_2 = \frac{Q}{C_2}
 		\end{equation*}
 		
-		Eingesetzt in das Ergebnis des Maschenumlaufs der Ausgangsschaltung ergibt sich:
+		Inserted into the result of the mesh cycle of the output circuit, this gives:
 		
 		\begin{equation*}
 			U_0 = U_1 + U_2 = \left( \frac{1}{C_1} + \frac{1}{C_2} \right) \cdot Q
 		\end{equation*}
 		
-		Die Spannung $U_0$ im Ersatzschaltbild kann wie folgt berechnet werden:
+		The voltage $U_0$ in the equivalent circuit diagram can be calculated as follows:
 		
 		\begin{equation*}
 			U_0 = \frac{1}{C_\mathrm{ges}} \cdot Q
 		\end{equation*}
 		
-		Ein Quotientenvergleich offenbart:
+		A comparison of ratios reveals:
 		
 		\begin{equation*}
 			\frac{1}{C_1} + \frac{1}{C_2} = \frac{1}{C_\mathrm{ges}}
 		\end{equation*}
 		
-		Allgemein gilt für eine Reihenschaltung aus beliebig vielen Kondensatoren:
+		In general, the following applies to a series connection of any number of capacitors:
 		
-		\begin{Merksatz}{Gesamtkapazität einer Reihenschaltung:}
+		\begin{Key point}{Total capacity of a series connection:}
 			\begin{equation}
 				\frac{1}{C_\mathrm{ges}} = \sum_{i = 1}^{n} \frac{1}{C_i}
 			\end{equation}
-		\end{Merksatz}
+		\end{Key point}
 		
 		
-		Bei zwei in Reihe geschalteten Kondensatoren kann die Gesamtkapazität $C_\mathrm{ges}$ analog zur 
-		Parallelschaltung von Widerständen auch mit folgendem Ausdruck ermittelt werden:\\
+		For two capacitors connected in series, the total capacitance $C_\mathrm{total}$ can also be determined using the following expression, analogous to the 
+		parallel connection of resistors:\\
 		
 		\begin{equation*}
 			C_\mathrm{ges} = \frac{C_1 \cdot C_2}{C_1 + C_2}
@@ -449,52 +444,53 @@
 
 \begin{frame}
 
-	\subsection{Spannungsteiler an Kapazitäten}
+	\subsection{Voltage divider on capacitances}
 	
 	\s{
 	
-		Ähnlich wie beim Spannungsteiler an in zwei in Reihe geschalteten Widerständen lässt sich auch das Verhältnis
-		der Teilspannung an zwei in Reihe geschalteten, identisch geladenen Kondensatoren ermitteln (siehe Abbildung \ref{fig:kondensatorteiler}). 
+		Similar to the voltage divider with two resistors connected in series, the ratio
+        of the divided voltage can also be determined for two capacitors with identical charges connected in series (see Figure \ref{fig:kondensatorteiler}). 
 		
 		
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\begin{center}
 
 				\input{Tikz/src/4_kondensatornetz/Spannungsteiler_Kapazitaeten} \\
 			\end{center}
 			\label{fig:kondensatorteiler}
-			\caption{Spannungsteiler an einer Reihenschaltung von zwei Kapazitäten (links) sowie Ersatzschaltbild
-				nach Zusammenfassen der Kapazitäten zu $C_\mathrm{ges}$}
+			\caption{Voltage divider in a series connection of two capacitances (left) and equivalent circuit diagram
+				after combining the capacitances to $C_\mathrm{total}$}
 		\end{figure}
 		
 		
-		Die Spannung $U_1$ kann wie folgt ermittelt werden:
+		The voltage $U_1$ can be determined as follows:
 		
 		\begin{equation*}
 			U_1 = \frac{Q}{C_1}
 		\end{equation*}
 		
-		Die Ladung $Q$ ist unbekannt, jedoch sowohl bei beiden Kondensatoren $C_1$ und $C_2$ als auch in der Ersatzschaltung 
-		bei $C_\mathrm{ges}$ identisch: 
+		The charge $Q$ is unknown, but it is identical for both capacitors $C_1$ and $C_2$ as well as in the equivalent circuit 
+        at $C_\mathrm{total}$:
 		
 		\begin{equation*}
 			Q = C_\mathrm{ges} \cdot U_0 = \frac{C_1 \cdot C_2}{C_1 + C_2} \cdot U_0
 		\end{equation*}
 		
-		Eingesetzt ergibt sich für $U_1$:
+		Substituting, we obtain for $U_1$:
 		
 		\begin{equation*}
 			U_1 = \frac{1}{\cancel{C_1}} \cdot \frac{\cancel{C_1} \cdot C_2}{C_1 + C_2} \cdot U_0 = U_0 \cdot \frac{C_2}{C_1 + C_2}
 		\end{equation*}
 		
 		
-		Der Spannungsteiler für $U_2$ berechnet sich analog:
+		The voltage divider for $U_2$ is calculated analogously:
 		
-		\begin{Merksatz}{}
+		\begin{Key point}{}
 			\begin{equation*}
 				U_1 = \frac{C_2}{C_1 + C_2} \cdot U_0, \quad U_2 = \frac{C_1}{C_1 + C_2} \cdot U_0
 			\end{equation*}
-		\end{Merksatz}
+		\end{Key point}
 		
 		
 	}

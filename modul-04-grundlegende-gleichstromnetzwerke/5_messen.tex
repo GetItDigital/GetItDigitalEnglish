@@ -1,47 +1,49 @@
 \newvideofile{messen}{Messen von Strom und Spannung}
 
-\section{Messen von Strom und Spannung}
+\section{Measuring current and voltage}
 
 
 
 \begin{frame}
 	\ftx{Spannungsmessung im Gleichstromkreis}
-	\subsection{Spannungsmessung im Gleichstromkreis}
+	\subsection{Voltage measurement in a direct current circuit}
 
 	\s{
 
-	Die elekrische Spannung, die über einem Bauelement über einer Zusammenschaltung mehrerer Bauelementen
-	 abfällt, kann mit Hilfe eines Spannungsmessgerätes (auch Voltmeter genannt) ermittelt werden.
-	Dazu muss das Voltmeter \textbf{parallel} zu diesem Bauelement angebracht werden. Eine Unterbrechung des 
-	Stromkreises ist dazu in der Regel nicht notwendig.
+	The electrical voltage that drops across a component or across an interconnection of several components
+    can be determined using a voltage measuring device (also called a voltmeter).
+	To do this, the voltmeter must be connected \textbf{in parallel} to this component. It is usually not necessary to interrupt the 
+	circuit to do this.
 
 	\begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\begin{center}			
 		\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
 
 		\input{Tikz/src/5_messen/Spannung_messen_ideal}
 		\end{center}
 		\label{fig:voltmeterideal}
-		\caption{Eine reale Spannungsquelle (Kasten links) speist einen Lastwiderstand $R_\mathrm{a}$.
-		Die darüber abfallende Spannung wird mit einem idealen Voltmeter (blau) gemessen}	
+		\caption{A real voltage source (box on the left) feeds a load resistor $R_\mathrm{a}$.
+			The voltage drop across it is measured with an ideal voltmeter (blue).}	
 	\end{figure}
 
-	\begin{Merksatz}{Innenwiderstand ideales Voltmeter}
-			Ein ideales Voltmeter (siehe Abbildung \ref{fig:voltmeterideal}) besitzt einen unendlich hohen Innenwiderstand.
+	\begin{Key point}{Innenwiderstand ideales Voltmeter}
+			An ideal voltmeter (see Figure \ref{fig:voltmeterideal}) has an infinitely high internal resistance.
 
-	\end{Merksatz}
+	\end{Key point}
 
-	Folglich fließt kein Strom \glqq am Lastwiderstand vorbei\grqq{} durch das Messgerät, und die Spannungsmessung
-	erfolgt vollständig \textbf{rückwirkungsfrei}.
+	Consequently, no current \glqq flows past the load resistor\grqq{} through the measuring device, and the voltage measurement
+    is performed completely \textbf{without feedback}.
 
-	Ein reales Voltmeter besitzt einen endlichen Innenwiderstand $R_\mathrm{iV}$, welcher parallel
-	zum Voltmeter geschaltet ist (siehe Abbildung \ref{fig:voltmeterreal}). Der durch diesen Innenwiderstand 
-	fließende Strom verfälscht das
-	Messergebnis, weswegen dieser so hoch wie möglich sein sollte. In modernen, elektronischen
-	Spannungsmessgeräten ist er üblicherweise in der Größenordnung von $10^6 \, \Omega$ bis $10^9 \, \Omega$ 
+	A real voltmeter has a finite internal resistance $R_\mathrm{iV}$, which is connected in parallel
+    to the voltmeter (see Figure \ref{fig:voltmeterreal}). The current flowing through this internal resistance 
+    distorts the
+    measurement result, which is why it should be as high as possible. In modern, electronic
+    voltage measuring devices, it is usually in the range of $10^6 \, \Omega$ to $10^9 \, \Omega$.
 	 
 
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 		\begin{center}
 			
 \tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
@@ -56,9 +58,9 @@
 		
 	\end{figure}
 
-	Die um den Messfehler durch den Innenwiderstand $R_\mathrm{iV}$ korrigierte
-	 Spannung $U_\mathrm{korr}$ lässt sich unter Kenntnis des Innenwiderstandes der Spannungsquelle
-	 $R_\mathrm{i}$ wie folgt berechnen:
+	The voltage $U_\mathrm{corr}$, corrected for the measurement error caused by the internal resistance $R_\mathrm{iV}$,
+    can be calculated as follows, given the internal resistance of the voltage source
+    $R_\mathrm{i}$:
 
 	 \begin{equation*}
 		U_{\mathrm{korr}}= U\cdot\left(1+\frac{R_{\mathrm{i}}||R_{\mathrm{a}}}{R_{\mathrm{iV}}}\right)
@@ -214,54 +216,56 @@ Sind sowohl der Innenwiderstand als auch der zu vermessende Widerstand bekannt, 
 
 
 \begin{frame}
-	\subsection{Strommessung im Gleichstromkreis}
+	\subsection{Current measurement in a direct current circuit}
 
 
 
 	\s{
-	Die Stromstärke $I$, welche durch ein Bauelement fließt, lässt sich mit Hilfe eines Strommessgerätes (auch Amperemeter genannt) bestimmen.
-	Im Gegensatz zur Spannungsmessung muss das Amperemeter \textbf{in Reihe} zum Bauelement geschaltet werden. 
-	Eine Unterbrechung des Stromkreises ist dazu erforderlich. \\
+	The current $I$ flowing through a component can be determined using a current measuring device (also called an ammeter).
+	In contrast to voltage measurement, the ammeter must be connected \textbf{in series} to the component.
+	This requires an interruption of the circuit. \\
 
-	\begin{Merksatz}{Innenwiderstand ideales Amperemeter}
-			Ein ideales Ampermeter (siehe Abbildung \ref{fig:amperemeterideal}) hat keinen Innenwiderstand.
-	\end{Merksatz}
+	\begin{Key point}{Innenwiderstand ideales Amperemeter}
+			An ideal ammeter (see Figure \ref{fig:amperemeterideal}) has no internal resistance.
+	\end{Key point}
 
  
-	Folglich kann der Strom rückwirkungsfrei durch es hindurchfließen.
+	Consequently, the current can flow through it without any feedback.
 
 
 	\begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\begin{center}			
 		\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
 
 		\input{Tikz/src/5_messen/Strom_messen_ideal}
 		\end{center}
 		\label{fig:amperemeterideal}
-		\caption{Eine reale Spannungsquelle (Kasten links) speist einen Lastwiderstand $R_\mathrm{a}$.
-		Der durch den Lastwiderstand fließende Strom $I$ von einem idealen Amperemeter (rot) gemessen}	
+		\caption{A real voltage source (box on the left) supplies a load resistor $R_\mathrm{a}$.
+		The current $I$ flowing through the load resistor is measured by an ideal ammeter (red).}	
 	\end{figure}
 
-	Ein \textbf{reales Amperemeter} verfügt über einen in Reihe geschalteten Innenwiderstand $R_\mathrm{iA}$
-	(Abbildung \ref{fig:amperemeterreal}). Auch hier wird das Messergebnis durch diesen Innenwiderstand beeinflusst.
-	Je nach Messbereich liegt dieser bei elektronischen Amperemetern typischerweise im Bereich einiger $\mu \Omega$ bis weniger $\mathrm{m} \Omega$.
+	A \textbf{real ammeter} has an internal resistance $R_\mathrm{iA}$ connected in series
+    (Figure \ref{fig:amperemeterreal}). Here, too, the measurement result is influenced by this internal resistance.
+    Depending on the measuring range, this typically ranges from a few $\mu \Omega$ to less than $\mathrm{m} \Omega$ in electronic ammeters.
 
 
 	\begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\begin{center}			
 		\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
 
 		\input{Tikz/src/5_messen/Strom_messen_real}
 		\end{center}
 		
-		\caption{Messung der Stromstärke $I$ durch einen Lastwiderstand $R_\mathrm{a}$ durch ein 
-		reales Amperemeter mit Innenwiderstand $R_\mathrm{iA}$ (rot)}	
+		\caption{Measurement of the current $I$ through a load resistor $R_\mathrm{a}$ using a 
+			real ammeter with internal resistance $R_\mathrm{iA}$ (red)}	
 		\label{fig:amperemeterreal}
 	\end{figure}
 
-	Unter Kenntnis der Innenwiderstände lässt sich auch beim Amperemeter der Messfehler herausrechnen.
-	Die korrigierte Stromstärke $I_\mathrm{korr}$, bei der der Einfluss des Messgerätes herausgerechnet wird,
-	lässt sich mit Hilfe folgender Formel ermitteln:
+	Knowing the internal resistances, the measurement error can also be calculated for the ammeter.
+	The corrected current $I_\mathrm{corr}$, for which the influence of the measuring device is calculated out,
+	can be determined using the following formula:
 
 	\begin{equation*}
 		I_{\mathrm{korr}}= I\cdot\left(1+\frac{R_{\mathrm{iA}}}{R_{\mathrm{i}}+R_{\mathrm{a}}}\right)
@@ -397,22 +401,22 @@ Unter Kenntnis des Innenwiderstandes und des zu messenden Widerstandes lässt si
 
 
 \begin{frame}
-	\subsection{Strom- und spannungsrichtiges Messen}
+	\subsection{Correct measurement of current and voltage}
 
 
 	\s{
 		
-	Sollen sowohl die Spannung als auch die Stromstärke in einer Schaltung gemessen werden, beeinflussen
-	 sich die realen Messgeräte durch ihre Innenwiderstände gegenseitig. Abhängig von der Qualität der
-	 zur Verfügung stehenden Messgeräte und der Priorisierung der Messgrößen untereinander wird 
-	 zwischen stromrichtiger und spannungsrichtiger Messung unterschieden. \\
+	If both the voltage and the current are to be measured in a circuit,
+    the internal resistances of the actual measuring instruments influence each other. Depending on the quality of the
+    available measuring instruments and the prioritisation of the measured variables among themselves, a 
+    distinction is made between current-correct and voltage-correct measurement. \\
 
-	 \subsubsection{Stromrichtiges Messen}
+	 \subsubsection{Correct measurement of electricity}
 
-	Bei der \textbf{stromrichtigen} Messung (Abbildung \ref{fig:stromrichtig}), welche auch Spannungsfehler-Schaltung
-	 genannt wird, wird ein höherer Fokus auf die genaue Bestimmung der Stromstärke gelegt. 
-	 Bei dieser Schaltung zeigt das Amperemeter den durch den Lastwiderstand fließenden Strom an, das Voltmeter
-	 misst jedoch die Summe der Spannungsabfälle von Amperemeter und Lastwiderstand:
+	In \textbf{current-correct} measurement (Figure \ref{fig:stromrichtig}), also known as voltage error circuitry, greater 
+	emphasis is placed on accurately determining the current.    
+	In this circuit, the ammeter displays the current flowing through the load resistor, but the voltmeter
+    measures the sum of the voltage drops across the ammeter and the load resistor:
 
 	 \begin{equation*}
 		U_\mathrm{mess} = U + U_\mathrm{Amperemeter}
@@ -421,6 +425,7 @@ Unter Kenntnis des Innenwiderstandes und des zu messenden Widerstandes lässt si
 
 	
 	\begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\begin{center}			
 		\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
 
@@ -428,12 +433,12 @@ Unter Kenntnis des Innenwiderstandes und des zu messenden Widerstandes lässt si
 		\end{center}
 		
 		
-		\caption{Stromrichtige Messchaltung zur Bestimmung der Stromstärke $I$ sowie der Spannung $U$ an einem Lastwiderstand $R_\mathrm{a}$}	
+		\caption{Current-correct measuring circuit for determining the current $I$ and the voltage $U$ at a load resistor $R_\mathrm{a}$}	
 		\label{fig:stromrichtig}
 	\end{figure}
 
-	Die Spannungsfehlerschaltung bietet sich tendenziell für Schaltungen mit verhätnismäßig hohen Lastwiderständen an. 
-	Als Faustregel für den Einsatz dieser Messchaltung dient häufig folgende Ungleichung:
+	The voltage fault circuit tends to be suitable for circuits with relatively high load resistances.
+	The following inequality is often used as a rule of thumb for the use of this measuring circuit:
 	\begin{equation*}
 		R_{\mathrm{iA}} \ll R_{\mathrm{a}}
 	\end{equation*}
@@ -533,17 +538,18 @@ Als Faustregel gilt häufig, dass diese Schaltung verwendet wird, wenn der zu me
 \begin{frame}
 
 \s{
-	\subsubsection{Spannungsrichtiges Messen}
-	Im Gegensatz zur stromrichtigen Messchaltung misst das Voltmeter in der spannungsrichtigen Messschaltung
-	 die korrekte am Widerstand abfallende Spannung (siehe Abbildung \ref{fig:spannungsrichtig}). 
-		Das Amperemeter hingegen misst den Strom, welcher durch die Parallelschaltung aus Spannungsmesser und Lastwiderstand fließt.
-		Diese Messanordnung ist zu empfehlen, wenn ein höherer Fokus auf die korrekte Messung der Spannung gelegt werden soll,
-		 oder für die Widerstände gilt: 
+	\subsubsection{Correct voltage measurement}
+	In contrast to the current-correct measurement circuit, the voltmeter in the voltage-correct measurement circuit measures
+    the correct voltage drop across the resistor (see Figure \ref{fig:spannungsrichtig}).
+	The ammeter, on the other hand, measures the current flowing through the parallel connection of the voltmeter and load resistor.
+	This measurement arrangement is recommended if greater emphasis is to be placed on the correct measurement of the voltage,
+    or if the following applies to the resistors: 
 		\begin{equation*}
 			R_{\mathrm{iV}} \gg R_{\mathrm{a}}
 		\end{equation*}
 
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\begin{center}			
 			\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
 	
@@ -551,20 +557,20 @@ Als Faustregel gilt häufig, dass diese Schaltung verwendet wird, wenn der zu me
 	
 			\end{center}
 			\label{fig:spannungsrichtig}
-			\caption{Stromrichtige Messchaltung zur Bestimmung der Stromstärke $I$ sowie der Spannung $U$ an einem Lastwiderstand $R_\mathrm{a}$}	
+			\caption{Current-correct measuring circuit for determining the current $I$ and the voltage $U$ at a load resistor $R_\mathrm{a}$}	
 
 		\end{figure}
 
-		Bei unklaren Verhältnissen, ob die stromrichtige oder die spannungsrichtige Messung verwendet werden sollte,
-		kann folgende Faustregel verwendet werden:
+		If it is unclear whether current-correct or voltage-correct measurement should be used,
+        the following rule of thumb can be applied:
 
-		\begin{Merksatz}{Faustregel für strom-/spannungsrichtiges Messen}
+		\begin{Key point}{Faustregel für strom-/spannungsrichtiges Messen}
 				\begin{itemize}
-			\item Stromrichtig: $R_{\mathrm{a}} > \sqrt{R_{\mathrm{iA}} \cdot R_{\mathrm{iV}}}$
-			\item Spannungsrichtig: $R_{\mathrm{a}} < \sqrt{R_{\mathrm{iA}} \cdot R_{\mathrm{iV}}}$
+			\item Correct current measurement: $R_{\mathrm{a}} > \sqrt{R_{\mathrm{iA}} \cdot R_{\mathrm{iV}}}$
+			\item Correct voltage measurement: $R_{\mathrm{a}} < \sqrt{R_{\mathrm{iA}} \cdot R_{\mathrm{iV}}}$
 		\end{itemize}
 
-		\end{Merksatz}
+		\end{Key point}
 
 	
 }

@@ -5,31 +5,33 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
-\section{Frequenzgang, Amplitudengang, Phasengang}
+\section{Frequency response, amplitude response, phase response}
 \label{sec:frequenzgang}
 \begin{frame}\ftx{\secname}
+    \renewcommand{\figurename}{Figure}
 \s{% Einleitung
-    In diesem Kapitel beschäftigen wir uns mit dem Frequenzgang, Amplitudengang und Phasengang von Zweitoren. 
-    Diese dienen zur Beschreibung des frequenzvariablen Verhaltens elektrischer Netze in Form von Zweitoren wie in Abbildung \ref{fig:zweitor} gezeigt. 
-    Am Beispiel einfacher passiver Filterschaltungen werden wir die Begriffe Frequenz-, Amplituden- und Phasengang einführen und deren Bedeutung und Anwendung erläutern. 
+    In this chapter, we will deal with the frequency response, amplitude response and phase response of two-port networks.  
+    These are used to describe the frequency-dependent behaviour of electrical networks in the form of two-port networks, as shown in Figure \ref{fig:zweitor}. 
+    Using the example of simple passive filter circuits, we will introduce the terms frequency response, amplitude response and phase response and explain their meaning and application.
+ 
 
     \fu{\includegraphics{Tikz/pdf/circ_zweitor.pdf}
     }{Schaltsymbol eines Zweitors (Vierpols) mit Eingang (links) und Ausgang (rechts)\label{fig:zweitor}} % in Folien im folgenden Kapitel (Frequenzgang, Amplitudengang, Phasengang)
 }%\s Ende
-\begin{Lernziele}{Frequenzgang, Amplitudengang, Phasengang}
-    Studierende lernen:
+\begin{Learning objectives}{Frequency response, amplitude response, phase response}
+    Students learn:
     \begin{itemize}
-        \item Frequenzgänge anhand der Schaltungstopologie algebreaisch zu bestimmen
-        \item die Funktionsweise einfacher Hoch- und Tiefpassfiltern zu verstehen
-        \item das Grenzverhalten von Vierpolen anhand ihrer Frequenzgänge zu analysieren
+        \item Determine frequency responses algebraically based on circuit topology
+        \item Understand how simple high-pass and low-pass filters work
+        \item Analyse the limiting behaviour of four-poles based on their frequency responses
     \end{itemize}
-\end{Lernziele}
+\end{Learning objectives}
 \end{frame}
 
 \begin{frame}\ftx{\secname}
 \b{%
     \begin{minipage}[t][3.5cm][t]{\textwidth}% upper half
-        \textbf{Analyse frequenzvariablen Verhaltens elektrischer Netze \only<3->{(Zweitore)}}
+        \textbf{Analysis of frequency-variable behaviour of electrical networks \only<3->{(Two-port networks)}}
         \begin{figure}
             \centering
             \only<beamer:1-2| handout:0>{\includegraphics{Tikz/pdf/circ_zweitor_quelle_last.pdf}}%
@@ -68,7 +70,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection[Definitionen]{Definition Frequenzgang, Amplitudengang und Phasengang}
+\subsection[Definitionen]{Definition of frequency response, amplitude response and phase response}
 \begin{frame}\ftx{\subsecname}
 \begin{columns}[t]
     \column{0.45\textwidth}% left col
@@ -106,11 +108,11 @@
             % Definition Frequenzgang
             \index{Frequenzgang}%
             \index{lineares zeitinvariantes System}%
-            Der \textbf{Frequenzgang} $\underline{F}(\mathrm{j}\omega)$, auch komplexer Amplitudengang genannt, 
-            beschreibt das Verhältnis von Ausgangs- zu Eingangssignal eines linearen zeitinvarainten Systems (LZI-System) bei sinusförmiger Anregung.
-            Er bietet eine Möglichkeit frequenzabhängiges Verhalten von Zweitoren zu untersuchen, 
-            ist ein Spezialfall der Laplace-Übertragungsfunktion aus der Systemtheorie und 
-            wird wie folgt definiert:
+            The \textbf{frequency response} $\underline{F}(\mathrm{j}\omega)$, also known as the complex amplitude response, 
+            describes the ratio of the output signal to the input signal of a linear time-invariant system (LTI system) under sinusoidal excitation. 
+            It offers a way to investigate the frequency-dependent behaviour of two-port networks, 
+            is a special case of the Laplace transfer function from system theory, and 
+            is defined as follows:
 
             \begin{equation}
                 \underline{F}(\mathrm{j}\omega) = \frac{\underline{U}_2}{\underline{U}_1}% F(jw)=U2/U1
@@ -120,19 +122,20 @@
             % Amplituden und Phasenänderung
             \index{Amplitudengang}%
             \index{Phasengang}%
-            Aufgrund der Linearität von LZI-Systemen bleiben Frequenz und Sinusform am Ausgang erhalten. 
-            Amplitude und Phase können sich in Abhängigkeit der Frequenz vom Eingang zum Ausgang ändern. 
-            Erkennbar ist dies insbesondere in der Schreibweise in Polarkoordinaten. 
+            Due to the linearity of LZI systems, the frequency and sine waveform are retained at the output.
+            The amplitude and phase may change from the input to the output depending on the frequency.
+            This is particularly evident in the notation in polar coordinates.
+ 
 
             \begin{equation}
                 \underline{F}(\mathrm{j}\omega) = A(\omega)\cdot\mathrm e^{\mathrm j\varphi(\omega)}% F(jw)=A*exp(jphi)
                 \label{eq:def:Fpolar}
             \end{equation}
-            Der \textbf{Amplitudengang} $A(\omega)$ beschreibt die relative Amplitudenänderung 
-            zwischen Aus- und Eingangsspannung und entspricht dem Betrag des Frequenzganges.
-            Der \textbf{Phasengang} $\varphi(\omega)$ hingegen, beschreibt die absolute Phasenänderung
-            zwischen Aus- und Eingangsspannung und entspricht der Phase des Frequenzganges.
-            Über $\underline{F}(\mathrm{j}\omega)$ können wir beide wie folgt definieren: 
+            The \textbf{amplitude response} $A(\omega)$ describes the relative amplitude change 
+            between output and input voltage and corresponds to the magnitude of the frequency response.
+            The \textbf{phase response} $\varphi(\omega)$, on the other hand, describes the absolute phase change
+            between output and input voltage and corresponds to the phase of the frequency response.
+            Using $\underline{F}(\mathrm{j}\omega)$, we can define both as follows: 
 
             \begin{align}
                 \label{eq:def:A}
@@ -153,25 +156,25 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Frequenzgang am Beispiel eines einfachen Tiefpass-Filters}
+\subsection{Frequency response using the example of a simple low-pass filter}
 \label{sec:frequenzgang:tiefpass:herleitung}
 \begin{frame}[t]\ftx{\subsecname}
 \begin{columns}[T]%
 \column{0.45\textwidth}% left col
     \s{\index{Filter>Tiefpass}%
-        Das Zweitor in Abbildung \ref{circ:filter:rctief} stellt einen einfachen Tiefpass-Filter (kurz Tiefpass) dar.
-        Der Name Tiefpass leitet sich von dem Verhalten her, dass Signale tiefer Frequenzen nahezu unverändert passieren,
-        Signale hoher Frequenzen jedoch stark gedämpft (gefiltert) werden.
-        Die Funktionsweise und das Verhalten des Tiefpasses lassen sich gut mittels einer Frequenzganganalyse veranschaulichen.
+        The two-port network in Figure \ref{circ:filter:rctief} represents a simple low-pass filter (low-pass for short).
+        The name low-pass is derived from the behaviour that low-frequency signals pass through almost unchanged,
+        while high-frequency signals are strongly attenuated (filtered).
+        The functionality and behaviour of the low-pass filter can be clearly illustrated by means of a frequency response analysis.
 
         \fu{\includegraphics{Tikz/pdf/circ_tiefpass_rc_annotated.pdf}}{Schaltbild, RC-Tiefpass 1. Ordnung\label{circ:filter:rctief}}%
 
-        Der gezeigte Tiefpass besteht aus einer Serienschaltung aus $R$ und $C$ mit Eingangsspannung $\underline{U}_1$
-        über beiden Elementen und Ausgangsspannung $\underline{U}_2$ über $C$.
-        Da die Einzelelemente $R$ und $C$ lineare, zeitinvariante (LZI-)Bauteile sind, 
-        ist auch der daraus zusammen gesetzte Tiefpass ein LZI-System.
-        Das bedeutet, dass bei Anregung der Schaltung mit einer sinusförmigen Eingangsspannung $u_1(t)$ (links),
-        die Ausgangsspannung $u_2(t)$ (rechts) ebenfalls sinusförmig ist und die gleiche Frequenz besitzt wie die Eingangsspannung.
+        The low-pass filter shown consists of a series connection of $R$ and $C$ with input voltage $\underline{U}_1$
+        across both elements and output voltage $\underline{U}_2$ across $C$.
+        Since the individual elements $R$ and $C$ are linear, time-invariant (LTI) components, 
+        the low-pass filter composed of them is also an LTI system.
+        This means that when the circuit is excited with a sinusoidal input voltage $u_1(t)$ (left),
+        the output voltage $u_2(t)$ (right) is also sinusoidal and has the same frequency as the input voltage.
     }%
     \b{%
     {\centering
@@ -192,19 +195,21 @@
             u_1(t)& = \hat{U}_1 \cdot \sin(\omega t)\\\xrightarrow{LZI}\ 
             u_2(t)& = \hat{U}_2 \cdot \sin(\omega t + \varphi)
         \end{aligned}\end{equation}%
-        Die LZI-Eigenschaft ist Voraussetzung zur Bestimmung des Frequenzganges und die Anwendung der komplexen Wechselstromrechnung.
-        Zusätzliche Voraussetzung ist die Annahme einer sinusförmigen Anregung im eingeschwungenen Zustand, von der wir zwecks Analyse ausgehen.
-        Statt der Ein- und Ausgangsspannung $u_1(t)$ und $u_2(t)$ im Zeitbereich betrachten wir die entsprechende
-        komplexe Ein- und Ausgangsspannung $\underline{U}_1$ und $\underline{U}_2$ im Frequenzbereich wie im Schaltbild dargestellt.
+        
+        The LZI property is a prerequisite for determining the frequency response and applying complex AC calculations.
+        An additional prerequisite is the assumption of sinusoidal excitation in the steady state, which we use as a basis for our analysis.       
+        Instead of the input and output voltages $u_1(t)$ and $u_2(t)$ in the time domain, we consider the corresponding 
+        complex input and output voltages $\underline{U}_1$ and $\underline{U}_2$ in the frequency domain, as shown in the circuit diagram.
 
-        Der Frequenzgang $\underline{F}(\mathrm{j}\omega)$ entspricht nach Gleichung \ref{eq:def:F} 
-        dem komplexen Spannungsverhältnis von Ausgangs- zu Eingangsspannung $\underline{U}_2/\underline{U}_1$.
-        Gemäß komplexer Spannungsteilerregel entspricht das Spannungsverhältnis dem Verhältnis der Impedanz am Ausgang (Impedanz der Kapazität) und 
-        der Impedanz am Eingang (Summe der Impedanz von Kapazität und Widerstand), kurz $\frac{\underline{Z}_C}{R + \underline{Z}_C}$.
+        According to equation \ref{eq:def:F}, the frequency response $\underline{F}(\mathrm{j}\omega)$ corresponds to 
+        the complex voltage ratio of output to input voltage $\underline{U}_2/\underline{U}_1$.
+        According to the complex voltage divider rule, the voltage ratio corresponds to the ratio of the impedance at the output (capacitance impedance) and 
+        the impedance at the input (sum of the capacitance and resistance impedances), or $\frac{\underline{Z}_C}{R + \underline{Z}_C}$ for short.
 
-        Gleichung \ref{eq:tiefpass:frequenzgang} zeigt den ermittelten Frequenzgang des Tiefpasses.
-        Zur Vereinfachung wurden Nenner und Zähler rationalisiert, der Nenner sortiert und der Term
-        (optional) in kartesische Koordinaten umgeformt. (Vergleich kommentierte Nebenrechnung \ref{eq:tiefpass:frequenzgang:nebenrechnung}):
+        Equation \ref{eq:tiefpass:frequenzgang} shows the determined frequency response of the low-pass filter.
+        For simplification, the denominator and numerator have been rationalised, the denominator sorted and the term
+        (optionally) transformed into Cartesian coordinates. (Compare annotated side calculation \ref{eq:tiefpass:frequenzgang:nebenrechnung}):
+
     }%
     \b{%
         \textbf{Frequenzgang:}%
@@ -230,22 +235,23 @@
     }%
 
     \s{
-        Damit haben wir den $\underline{F}(\mathrm{j}\omega)$ in Abhängigkeit von $\omega$ 
-        und den Bauteilgrößen $C$ und $R$ ermittelt. 
-        Mittels Betragsbildung lässt sich daraus gemäß \eqref{eq:def:A} der Amplitudengang 
-        und durch Phasenberechnung gemäß \eqref{eq:def:phi} der Phasengang bestimmen.
+        We have thus determined $\underline{F}(\mathrm{j}\omega)$ as a function of $\omega$ 
+        and the component values $C$ and $R$. 
+        Using absolute values, we can determine the amplitude response 
+        according to \eqref{eq:def:A} and the phase response by calculating the phase according to \eqref{eq:def:phi}.
         
-        Zur Betragsbildung bietet sich die Form $\frac{1}{1+\mathrm{j}\omega CR}$ an.
-        Da der Betrag im Zähler direkt ablesbar $1$ beträgt, muss nur der Betrag im Nenner 
-        bestimmen werden wie sie in \eqref{eq:tiefpass:ampli} gezeigt ist.
-        Alternativ kann auch die kartesische Form aus \eqref{eq:tiefpass:frequenzgang} in 
-        \eqref{eq:def:A} eingesetzt werden. 
+        The form $\frac{1}{1+\mathrm{j}\omega CR}$ is suitable for calculating the amount.
+        
+        Since the magnitude in the numerator is directly readable as $1$, only the magnitude in the denominator 
+        needs to be determined, as shown in \eqref{eq:tiefpass:ampli}.
+        Alternatively, the Cartesian form from \eqref{eq:tiefpass:frequenzgang} can also be used in \eqref{eq:def:A}.
+ 
 
-        Für den Phasengang $\varphi(\omega)$ bietet sich die kartesische Schreibweise in 
-        der Form $\frac{1-\mathrm{j}\omega CR}{1+(\omega CR)^2}$ an.
-        In dieser lassen sich der Real- und Imaginärteil leicht ablesen. 
-        Der Nenner hat dabei als rein reelle Größe keinen Einfluss auf die Phasenlage 
-        wie in \eqref{eq:tiefpass:phase} gezeigt ist.
+        For the phase shift $\varphi(\omega)$, the Cartesian notation in 
+        the form $\frac{1-\mathrm{j}\omega CR}{1+(\omega CR)^2}$ is suitable.
+        In this notation, the real and imaginary parts can be easily read. 
+        As a purely real quantity, the denominator has no influence on the phase
+        as shown in \eqref{eq:tiefpass:phase}.
     }%
     
     \b{\textbf{Amplituden- und Phasengang:}
@@ -266,8 +272,8 @@
                             &= \arctan\left(-\omega CR\right) \label{eq:tiefpass:phase}
         \end{align}
 
-        Alternativ kann der Phasengang auch aus der nicht kartesischen Form des Frequenzganges bestimmt werden. 
-        Der Phasengang ergibt sich aus der Phasenlage des Zählers subtrahiert mit der Phasenlage des Nenners: 
+        Alternatively, the phase response can also be determined from the non-Cartesian form of the frequency response.
+        The phase response is calculated from the phase angle of the numerator subtracted from the phase angle of the denominator:
         
         \begin{align}
             \varphi(\omega) 
@@ -276,15 +282,15 @@
             &= \arctan\left(-\omega CR\right) \label{eq:tiefpass:phase:alternative}
         \end{align}
 
-        Die Herangehensweise bietet sich vor allem an, wenn sich Betrag und/oder Phase des Zählers direkt ablesen lassen. 
-        Dadurch kann ein Rechenschritt zum Umrechnen in kartesische Koordinaten gespaart werden.
+        This approach is particularly useful if the numerator and/or phase can be read directly from the counter.
+        This saves one calculation step when converting to Cartesian coordinates.
+        
+        The following digression explains in more detail how to consider the numerator and denominator of frequency responses separately:
 
-        Im folgenden Exkurs wird die seperate Betrachtung von Zähler und Nenner von Frequenzgängen näher erläutert:
+        \textbf{Digression: Calculating complex numbers in (Cartesian) Cartesian and polar coordinates }
 
-        \textbf{Exkurs Berechnung komplexer Zahlen in (kartesischen) Descartes- und Polar-Koordinaten}
-
-        Der Frequenzgang nimmt in der Regel die Form eines komplexen gebrochen rationalen Bruches an. 
-        Das bedeutet, dass sowohl Nenner als auch Zähler sich als komplexe Polynome darstellen lassen:
+        The frequency response usually takes the form of a complex fractional rational fraction.
+        This means that both the denominator and the numerator can be represented as complex polynomials:
         
         \begin{equation}
             \label{eq:def:F:komplexgebrochenrationalerbruch}
@@ -297,11 +303,11 @@
                 %\qquad j \in \left[0,...,m\right]
         \end{equation}
         
-        Liegt $\underline{F}(\mathrm{j}\omega)$ nun als komplexer Bruch vor mit Zähler und Nenner in kartesischen Koordinaten, 
-        so können wir $A(\omega)$ und $\varphi(\omega)$ durch seperate Betragsbildung und Phasenberechnung von Zähler und Nenner bestimmen.
-        Hierfür werden die Formeln aus \eqref{eq:def:A} und \eqref{eq:def:phi} für Zähler (Index $Z$) und Nenner (Index $N$) angewandt. 
-        Da Amplituden- und der Phasengang wie in \eqref{eq:def:Fpolar} gezeigt die Polar-Koordinaten (Amplitude und Phase) des Frequenzganges 
-        darstellen ergibt sich folgendes Berechnungsschema:
+        If $\underline{F}(\mathrm{j}\omega)$ is now available as a complex fraction with numerator and denominator in Cartesian coordinates, 
+        we can determine $A(\omega)$ and $\varphi(\omega)$ by separately calculating the magnitude and phase of the numerator and denominator.
+        For this purpose, the formulas from \eqref{eq:def:A} and \eqref{eq:def:phi} are applied for the numerator (index $Z$) and denominator (index $N$).
+        Since the amplitude and phase response, as shown in \eqref{eq:def:Fpolar}, represent the polar coordinates (amplitude and phase) of the frequency response, 
+        the following calculation scheme results:
 
         \begin{align}
             \label{eq:def:F:bruch}
@@ -321,10 +327,10 @@
                             & = \varphi_Z - \varphi_N
         \end{align}
 
-        Im Allgemeinen bietet sich für Multiplikationen und Divisionen komplexer Zahlen die Berechnung in Polarkoordinaten (mit Betrag und Argument) an.
-        Eine Multiplikation/Division führt bei komplexen Zahlen zur Multiplikation/Division der Beträge und Addition/Subtraktion der Argumente.
-        Bei Additionen und Subtraktionen eignet sich die kartesische Form mit Real- und Imaginärteil besser für Berechnungen, 
-        da diese direkt addiert/subtrahiert werden können.
+        In general, polar coordinates (with magnitude and argument) are useful for multiplying and dividing complex numbers.
+        Multiplication/division of complex numbers leads to multiplication/division of the magnitudes and addition/subtraction of the arguments.
+        For addition and subtraction, the Cartesian form with real and imaginary parts is better suited for calculations, 
+        as these can be added/subtracted directly.
     }
 \end{columns}
     \CMT{% COMMENT ANFANG
@@ -342,7 +348,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Grenzverhalten am Beispiel eines einfachen Tiefpass-Filters}
+\subsection{Boundary behaviour using the example of a simple low-pass filter}
 \label{sec:frequenzgang:tiefpass:grenzverhalten}
 \begin{frame}[t]\ftx{\subsecname}
 \b{
@@ -377,13 +383,12 @@
     \end{columns}
 }
 \s{
-    In diesem Kapitel wird das Grenzverhalten des Tiefpass-Filters 1. Ordnung aus dem vorigen Kapitel (s. Abbildung \ref{circ:filter:rctief}) für sehr hohe und sehr niedrige Frequenzen untersucht.
-    Dazu werden die Grenzwerte des Amplitudengangs $A(\omega)$ und des Phasengangs $\varphi(\omega)$ bestimmt, sowie die Ergebnisse beschrieben, interpretiert und grafisch dargestellt.
-    
-    \textbf{Grenzwerte:}
+    This chapter examines the boundary behaviour of the first-order low-pass filter from the previous chapter (see Figure \ref{circ:filter:rctief}) for very high and very low frequencies.
+    To this end, the boundary values of the amplitude response $A(\omega)$ and the phase response $\varphi(\omega)$ are determined, and the results are described, interpreted and presented graphically.    
+    \textbf{Limit values:}
 
-    Für den Amplitudengang aus Gleichung \ref{eq:tiefpass:ampli} ergeben sich
-    für $f \rightarrow 0$ und $f \rightarrow \infty$ die folgenden Grenzwerte:
+    For the amplitude response from equation \ref{eq:tiefpass:ampli}, the following limit values result
+    for $f \rightarrow 0$ and $f \rightarrow \infty$:
 
     \begin{align}
         &&A(\omega) &=\frac{1}{\sqrt{1 + (\omega CR)^2}}    &                                           &                           &   &    &&\nonumber\\
@@ -393,125 +398,128 @@
     %\\\intertext{%
     %    Für den Phasengang aus Gleichung \ref{eq:tiefpass:phase} ergeben sich analog dazu die Grenzwerte:%
     %}%
-    Für den Phasengang aus Gleichung \ref{eq:tiefpass:phase} ergeben sich analog dazu die Grenzwerte:
+    The phase shift from equation \ref{eq:tiefpass:phase} yields the following limit values:
     \begin{align}
         &&\varphi(\omega)   &=\arctan\left(-\omega CR\right)&                                                   &                   &   &           &&\nonumber\\
         &&                  &                               &   \lim_{\omega \rightarrow 0}\varphi(\omega)      &=\arctan(0)        &   &=0\degree  &&\label{eq:tiefpass:phase:lim}\\
         &&                  &                               &   \lim_{\omega \rightarrow \infty}\varphi(\omega) &=\arctan(-\infty)  &   &=-90\degree&&\nonumber
     \end{align}
 
-    An Gleichung \ref{eq:tiefpass:ampli:lim} ist zu erkennen, dass der Tiefpass bei sehr niedrigen Frequenzen kaum dämpft ($A(\omega) \rightarrow 1$), 
-    bei sehr hohen Frequenzen hingegen stark dämpft ($A(\omega) \rightarrow 0$). 
     
-    An Gleichung \ref{eq:tiefpass:phase:lim} ist zu erkennen, dass der Tiefpass bei sehr niedrigen Frequenzen (bei kaum Dämpfung) kaum Phasenverschiebung aufweist ($\varphi(\omega) \rightarrow 0\degree$),
-    bei sehr hohen Frequenzen (starke Dämpfung) hingegen eine Phasenverschiebung bis $-90\degree$ aufweist. 
-
-    \textbf{Erklärung des Grenzverhaltens anhand des Schaltbildes:}
-
-    Das Grenzverhalten bezüglich Amplitudenänderung und Phasenverschiebung lässt sich gut anhand des 
-    Schaltbildes \ref{circ:filter:rctief} erklären. % TODO: Schaltbilder für Grenzfälle mit Spannungspfeilen und Impedanzen einfügen
+    Equation \ref{eq:tiefpass:ampli:lim} shows that the low-pass filter hardly attenuates at very low frequencies ($A(\omega) \rightarrow 1$), 
+    but attenuates strongly at very high frequencies ($A(\omega) \rightarrow 0$).
     
-    Im Grenzfall einer Gleichspannung ($f=0$) am Eingang sperrt die Kapazität ($X_C \rightarrow \infty$). 
-    Ihr Verhalten entspricht hier zwei offenen Klemmen, wodurch die gesamte Eingangsspannung am Ausgang $U_2$ über der Kapazität $C$ anliegt. 
-    Die relative Amplitudenänderung beträgt daher $1$ (ungedämpft) und die Phasenverschiebung $0\degree$ (in Phase). 
+    Equation \ref{eq:tiefpass:phase:lim} shows that the low-pass filter exhibits hardly any phase shift at very low frequencies (with hardly any attenuation) 
+    ($\varphi(\omega) \rightarrow 0\degree$), but exhibits a phase shift of up to $-90\degree$ at very high frequencies (strong attenuation). 
 
-    Bei sehr hohen Frequenzen ($f\rightarrow \infty$) verhält sich die Kapazität wie ein Kurzschluss ($X_C \rightarrow 0$).
-    Damit geht die Ausgangsspannung gegen null (starke Dämpfung, $A\rightarrow 0$) und die Eingangsspannung liegt annäherend vollständig über $R$ an.
-    Eingangsspannung und Strom liegen dadurch näherungsweise in Phase. Die Phasenverschiebung von Ausgangsspannug über der Kapazität
-    zu Eingangsspannung beträgt dadurch näherungsweise $-90\degree$.
+    \textbf{Explanation of the limit behaviour based on the circuit diagram:}
+
+    The boundary behaviour with regard to amplitude change and phase shift can be explained well using the 
+    circuit diagram \ref{circ:filter:rctief}. % TODO: Schaltbilder für Grenzfälle mit Spannungspfeilen und Impedanzen einfügen
     
-    \textbf{Visualisierung:}
+    In the limiting case of a DC voltage ($f=0$) at the input, the capacitance ($X_C \rightarrow \infty$) blocks the current.
+    Its behaviour here corresponds to two open terminals, which means that the entire input voltage is applied to the output $U_2$ across the capacitance $C$.
+    The relative amplitude change is therefore $1$ (undamped) and the phase shift $0\degree$ (in phase).
+
+    At very high frequencies ($f\rightarrow \infty$), the capacitance behaves like a short circuit ($X_C \rightarrow 0$).
+    This causes the output voltage to approach zero (strong attenuation, $A\rightarrow 0$) and the input voltage to be almost entirely across $R$. 
+    The input voltage and current are therefore approximately in phase. The phase shift of the output voltage across the capacitance
+    to the input voltage is therefore approximately $-90\degree$.
+    
+    \textbf{Visualisation:}
 
     % Hinweis zur Visualisierung der Funktionen
-    Um eine Vorstellung des Verhaltens von Amplituden- und Phasengang zu bekommen, können wir die Funktionen graphisch darstellen. 
+    To get an idea of the behaviour of amplitude and phase response, we can plot the functions graphically. 
 
-    Der Amplitudengang $A(\omega)$ und der Phasengang $\varphi(\omega)$ sind in 
-    Abbildung \ref{plot:tiefpass:ampli:mini:lin} und \ref{plot:tiefpass:phase:mini:lin} dargestellt.
-    Beide Graphen sind mit linearen Skalen dargestellt, wobei die Skalierungen beider x-Achsen für $\omega \left[\mathrm{Hz}\right]$ identisch sind. 
-    Eine Veränderung des Faktors $CR$ führt in linearer Darstellung lediglich zu einer Stauchung oder Streckung der Graphen in x-Richtung, 
-    weshalb auf eine explizite Angabe der Werte verzichtet wurde. 
+    The amplitude response $A(\omega)$ and the phase response $\varphi(\omega)$ are shown in 
+    Figures \ref{plot:tiefpass:ampli:mini:lin} and \ref{plot:tiefpass:phase:mini:lin}.
+    Both graphs are shown with linear scales, whereby the scaling of both x-axes for $\omega \left[\mathrm{Hz}\right]$ are identical. 
+    A change in the factor $CR$ in a linear representation merely leads to a compression or stretching of the graphs in the x-direction, 
+    which is why the values were not explicitly specified. 
 
     \begin{figure}[h]\centering
+        \renewcommand{\figurename}{Figure}
         \begin{subfigure}{0.45\textwidth}\centering
             \includegraphics{Tikz/pdf/plot_tiefpass_mini_ampli_lin_samesize.pdf}
-            \caption{Amplitudengang $A(\omega)$, lineare Achsen}
+            \caption{Amplitude response $A(\omega)$, linear axes}
             \label{plot:tiefpass:ampli:mini:lin}
         \end{subfigure}
         \begin{subfigure}{0.45\textwidth}\centering
         \includegraphics{Tikz/pdf/plot_tiefpass_mini_phase_lin_samesize.pdf}
-            \caption{Phasengang $\varphi(\omega)$, lineare Achsen}
+            \caption{Phase shift $\varphi(\omega)$, linear axes}
             \label{plot:tiefpass:phase:mini:lin}
         \end{subfigure}
-        \caption{Lineardarstellung des Amplitudengang und Phasengang eines Tiefpass 1. Ordnung}
+        \caption{Linear representation of the amplitude response and phase response of a first-order low-pass filter}
 %        \caption{Amplitudengang $A(\omega)$ und Phasengang $\varphi(\omega)$ eines Tiefpass 1. Ordnung, lineare Achsen}
         \label{plot:tiefpass:mini:lin}
     \end{figure}
 
     % Hinweis: Logarithmische Skala für Frequenzgang
-    In Kapitel \ref{sec:frequenzganglog} wird die Darstellung des Frequenzganges mit logarithmischer Skala eingeführt.
-    Auch die Definition der \textbf{Grenzfrequenz} $f_g$ (respektive der Grenzkreisfrequenz $\omega_g$) zur Unterteilung 
-    des Frequenzbereichs in einen \textbf{Durchlassbereich} und einen \textbf{Sperrbereich} wird dort erläutert.
+    Chapter \ref{sec:frequenzganglog} introduces the representation of frequency response using a logarithmic scale.
+    The definition of the \textbf{cut-off frequency} $f_g$ (or the cut-off circular frequency $\omega_g$) for dividing 
+    the frequency range into a \textbf{passband} and a \textbf{stopband} is also explained there.
 
-    \textbf{Exkurs zur Herleitung der Graphenform:}
+    \textbf{Digression on the derivation of the graph shape:}
     % Erklärung der Graphenform für A(omega) anhand von Näherungen (Potenzfunktion)
 
-    Die Graphenform des Amplitudengangs $A(\omega)$  in linearer Darstellung lässt sich daran erklären, dass dieser sich 
-    für sehr niedrige Frequenzen ($f \rightarrow 0$) der waagrechten Gerade $A=1$ annähert und 
-    für sehr hohe Frequenzen ($f \rightarrow \infty$) der Potenzfunktion $\frac{1}{\omega CR}$ annähert.
-    Abbildung \ref{plot:tiefpass:ampli:lin:approx} zeigt diese Näherungen für $A(x)=\frac{1}{\sqrt{1+x^2}}$ mit $x=\omega CR$.
-
+    The graph shape of the amplitude response $A(\omega)$  in linear representation can be explained by the fact that it 
+    approaches the horizontal straight line $A=1$ for very low frequencies ($f \rightarrow 0$) and 
+    approaches the power function $\frac{1}{\omega CR}$ for very high frequencies ($f \rightarrow \infty$).
+    Figure \ref{plot:tiefpass:ampli:lin:approx} shows these approximations for $A(x)=\frac{1}{\sqrt{1+x^2}}$ with $x=\omega CR$.
+\renewcommand{\figurename}{Figure}
     \fu{\includegraphics{Tikz/pdf/plot_tiefpass_ampli_lin_approx.pdf}}{
-        Amplitudengang Tiefpass 1. Ordnung, lineare Achsen, Näherungen mit $x=\omega CR$ \label{plot:tiefpass:ampli:lin:approx}
+        Amplitude response of a first-order low-pass filter, linear axes, approximations with $x=\omega CR$ \label{plot:tiefpass:ampli:lin:approx}
     }
 
     % Erklärung der Graphenform für phi(omega) anhand von Tangensfunktion
-    Die Form des Phasenganges lässt sich leicht aus der Form einer (Arcus-)Tangensfunktion ableiten.
-    Abbildung \ref{plot:tiefpass:phase:lin:approx} zeigt die Tangensfunktion und dessen Umkehrfunktion Arcustangens, sowie deren 
-    jeweiligen Spiegelungen an der y-Achse in linearer Darstellung.
-    
+    The shape of the phase response can be easily derived from the shape of a (arc) tangent function.
+    Figure \ref{plot:tiefpass:phase:lin:approx} shows the tangent function and its inverse function, the arc tangent, as well as their 
+    respective reflections on the y-axis in a linear representation.
+\renewcommand{\figurename}{Figure}    
     \fu{\includegraphics{Tikz/pdf/plot_tan_atan_mirror.pdf}}{
-        Phasengang Tiefpass 1. Ordnung, lineare Achsen, Vergleich Tangens/Arcustangens \label{plot:tiefpass:phase:lin:approx}
+        Phase response of a first-order low-pass filter, linear axes, comparison of tangent/arc tangent \label{plot:tiefpass:phase:lin:approx}
     }
 
-    Die Umkehrung der jeweiligen Funktion ist durch Spiegelung des Graphen an der Winkelhalbierenden 
-    (schwarz gestrichelte Gerade) und Tausch der x- und y-Achse erreichbar,
-    vorrausgesetzt die jeweilige Funktion ist stetig monoton wachsend oder stetig monoton fallend. 
-    Der Tangens ist daher zur Bildung des Arcustangens auf den Winkelbereich $-90\degree$ bis $+90\degree$ beschränkt 
-    bei einem Wertebereich von $-\infty$ bis $+\infty$.
-    Aufgrund der nicht darstellbaren Polstellen ist der dargestellte Wertebereich auf $-6$ bis $+6$ beschränkt.
+    The inverse of the respective function can be obtained by reflecting the graph about the bisector 
+    (black dotted line) and swapping the x- and y-axes,
+    provided that the respective function is continuously monotonically increasing or continuously monotonically decreasing.
+    The tangent is therefore limited to the angle range $-90\degree$ to $+90\degree$ for the formation of the arc tangent 
+    with a value range from $-\infty$ to $+\infty$.
+    Due to the non-representable pole points, the value range shown is limited to $-6$ to $+6$.
 
-    Der Phasengang des Tiefpass 1. Ordnung entspricht dem abgebildeten $\arctan(-x)$ für $x=\omega CR >0$. 
-    Da es physikalisch keine negativen Frequenzen gibt, gilt $\omega>0 \rightarrow x>0$, wodurch der Wertebereich des Phasengangs 
-    nur den halben Wertebereich des Arcustangens abdeckt, also von $-90\degree$ bis $0\degree$.
+    The phase response of the first-order low-pass filter corresponds to the plotted $\arctan(-x)$ for $x=\omega CR >0$.  
+    Since there are no negative frequencies in physics, $\omega>0 \rightarrow x>0$ applies, which means that the value range of the phase response 
+    only covers half the value range of the arctangent, i.e. from $-90\degree$ to $0\degree$.
 }%
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Frequenzgang am Beispiel eines einfachen Hochpass-Filters}
+\subsection{Frequency response using the example of a simple high-pass filter}
 \label{sec:frequenzgang:hochpass:herleitung}
 \begin{frame}\ftx{\subsecname}
+    \renewcommand{\figurename}{Figure}
     \begin{columns}
         \column[T]{0.45\textwidth}% left col
             \s{\index{Filter>Hochpass}%
-                Ein Hochpass-Filter (kurz Hochpass) funktioniert ähnlich einem Tiefpass-Filter. 
-                Dem Namen entsprechend passieren beim Hochpass jedoch Signale hoher Frequenzen nahezu ungedämpft (ungefiltert), 
-                während Signale niedriger Frequenzen stark gedämpft (gefiltert) werden.  
+                A high-pass filter (high pass for short) works similarly to a low-pass filter.
+                However, as the name suggests, high-pass filters allow high-frequency signals to pass through almost unattenuated (unfiltered),
+                while low-frequency signals are strongly attenuated (filtered).  
 
                 % Aufbau (Schaltbild)
-                Abbildung \ref{circ:filter:rchoch} zeigt exemplarisch einen RC-Hochpass erster Ordnung, 
-                der im Folgenden näher untersucht wird.
-                Der Hochpass besteht aus einer einfach Serienschaltung von Widerstand $R$ und Kapazität $C$. 
-                Die Eingangsspannung $\underline{U}_1$ liegt über $R$ und $C$ in Reihe an, 
-                während die Ausgangsspannung $\underline{U}_2$ über $R$ abgegriffen wird.
-                Der Aufbau ist identisch mit dem RC-Tiefpass erster Ordnung, 
-                nur dass die Ausgangsspannung über $R$ statt über $C$ anliegt.
+                Figure \ref{circ:filter:rchoch} shows an example of a first-order RC high-pass filter, 
+                which will be examined in more detail below.
+                The high-pass filter consists of a simple series connection of resistor $R$ and capacitor $C$.
+                The input voltage $\underline{U}_1$ is applied across $R$ and $C$ in series, 
+                while the output voltage $\underline{U}_2$ is tapped across $R$.
+                The setup is identical to the first-order RC low-pass filter, 
+                except that the output voltage is applied across $R$ instead of $C$.
    
-                \fu{\includegraphics{Tikz/pdf/circ_hochpass_rc_annotated.pdf}}{Schaltbild, RC-Hochpass 1. Ordnung\label{circ:filter:rchoch}}%
+                \fu{\includegraphics{Tikz/pdf/circ_hochpass_rc_annotated.pdf}}{Circuit diagram, first-order RC high-pass filter\label{circ:filter:rchoch}}%
 
-                Die Herleitung des Frequenzganges erfolgt analog zum Vorgehen beim Tiefpass 
-                in Kapitel \ref{sec:frequenzgang:tiefpass:herleitung}.
-                Da es sich beim Hochpass um ein LZI-System handelt gilt: 
+                The frequency response is derived in the same way as for the low-pass filter 
+                in section \ref{sec:frequenzgang:tiefpass:herleitung}.
+                Since the high-pass filter is an LZI system, the following applies: 
                 \begin{equation}
                 \begin{aligned}
                                         u_1(t)& = \hat{U}_1 \cdot \sin(\omega t)\\
@@ -535,12 +543,12 @@
 
         \column[t]{0.55\textwidth}% right col
             \s{%
-                Das heißt, bei sinusförmiger Eingangsspannung $u_1(t)$, ist auch die Ausgangsspannung $u_2(t)$ 
-                sinusförmig mit gleicher Frequenz wie die Eingangsspannung.
+                This means that for a sinusoidal input voltage $u_1(t)$, the output voltage $u_2(t)$ is also 
+                sinusoidal with the same frequency as the input voltage.
 
-                Der Frequenzgang lässt sich dadurch gemäß Gleichung \ref{eq:def:F} bestimmen,
-                indem die komplexe Wechselspannungen $\underline{U}_2$ am Ausgang und $\underline{U}_1$ am Eingang 
-                ins Verhältnis gesetzt werden. Dadurch erhalten wir:
+                The frequency response can thus be determined according to equation \ref{eq:def:F}
+                by setting the complex alternating voltages $\underline{U}_2$ at the output and $\underline{U}_1$ at the input 
+                in relation to each other. This gives us:
 
                 \begin{equation}
                     \begin{aligned}
@@ -553,7 +561,7 @@
                 \end{equation}
             }%
             \b{%
-                \textbf{Frequenzgang:}%
+                \textbf{Frequency response:}%
                 \begin{align*}% lesser space above than \begin{equation}\begin{align} ... as in skript version below
                     \underline{F}(\mathrm{j}\omega)   & = \frac{\underline{U}_2}{\underline{U}_1} 
                                             = \frac{R}{R + \frac{1}{\mathrm{j}\omega C}} 
@@ -563,7 +571,7 @@
                 \end{align*}
             }%
             \s{%
-                Für den Amplitudengang $A(\omega)$ und den Phasengang $\varphi(\omega)$ ergeben sich die folgenden Gleichungen:
+                The following equations result for the amplitude response $A(\omega)$ and the phase response $\varphi(\omega)$:
             
                 \begin{align}
                     A(\omega)       &= |\underline{F}(\mathrm{j}\omega)| = \left|\frac{1}{1-\mathrm{j}\frac{1}{\omega CR}}\right|
@@ -573,7 +581,7 @@
                 \end{align}
             }%
             \b{%
-                \textbf{Amplituden- und Phasengang:}
+                \textbf{Amplitude and phase response:}
                 \begin{align*} % Leicht gekürzt gegenüber Skriptversion
                     A(\omega)       &= |\underline{F}(\mathrm{j}\omega)| = \frac{|\underline{U}_2|}{|\underline{U}_1|}
                                     &= \frac{1}{\sqrt{1 + \frac{1}{(\omega CR)^2}}} \\
@@ -586,7 +594,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Grenzverhalten am Beispiel eines einfachen Hochpass-Filters}
+\subsection{Boundary behaviour using the example of a simple high-pass filter}
 \label{sec:frequenzgang:hochpass:grenzverhalten}
 \begin{frame}\ftx{\subsecname}
 % beamer links: Schaltbild, lineare Plots A(\omega), \varphi(\omega)
@@ -603,7 +611,7 @@
             \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_hochpass_mini_phase_lin_samesize.pdf}}
             }
         \column{0.55\textwidth}% column rechts 2/2
-            \textbf{Grenzverhalten:} für $f \rightarrow 0$ und $f \rightarrow \infty$
+            \textbf{Limit behaviour:} für $f \rightarrow 0$ und $f \rightarrow \infty$
             % Rechnung
             \begin{align*}
                 \underline{F}(\mathrm{j}\omega)&=A(\omega)\cdot\mathrm e^{\mathrm j\varphi(\omega)} = \frac{1}{1 - \mathrm{j}\frac{1}{\omega CR}} &&\\
@@ -619,15 +627,15 @@
     \end{columns}
 }%
 \s{%
-    Das Grenzverhalten des Hochpass-Filters 1. Ordnung aus Kapitel \ref{sec:frequenzgang:hochpass:herleitung} 
-    wird in diesem Kapitel für sehr hohe und sehr niedrige Frequenzen untersucht.
-    Die Grenzwertbestimmung des Amplitudengangs $A(\omega)$ und des Phasengangs $\varphi(\omega)$ erfolgt analog 
-    zu der des Tiefpass-Filter wie in Kapitel \ref{sec:frequenzgang:tiefpass:grenzverhalten} beschrieben. 
+    The boundary behaviour of the first-order high-pass filter from Chapter \ref{sec:frequenzgang:hochpass:herleitung}
+    is examined in this chapter for very high and very low frequencies.
+    The limit values of the amplitude response $A(\omega)$ and the phase response $\varphi(\omega)$ are determined in the same way 
+    as for the low-pass filter described in Chapter \ref{sec:frequenzgang:tiefpass:grenzverhalten}.
     
-    \textbf{Grenzwerte:}
+    \textbf{Limit value:}
 
-    Für den Amplitudengang aus Gleichung \ref{eq:hochpass:ampli} ergeben sich die folgenden Grenzwerte 
-    für $f \rightarrow 0$ und $f \rightarrow \infty$:
+    The amplitude response from equation \ref{eq:hochpass:ampli} yields the following limit values 
+    for $f \rightarrow 0$ and $f \rightarrow \infty$:
     
     \begin{align}
         &&A(\omega) &=\frac{1}{\sqrt{1 + \left(\frac{1}{\omega CR}\right)^2}}&  &                   &&          &&\nonumber\\
@@ -635,7 +643,7 @@
         &&          &&  \lim_{\omega \rightarrow 0}A(\omega)                    &=\frac{1}{\sqrt{1}}&&=1        &&\nonumber
     \end{align}
     %\\\intertext{%
-    Für den Phasengang aus Gleichung \ref{eq:hochpass:phase} folgt analog dazu:
+    For the phase response from equation \ref{eq:hochpass:phase}, the following applies analogously:
     %}%
     \begin{align}
         &&\varphi(\omega)   &=\arctan\left(\frac{1}{\omega CR}\right)&          &                   &&          &&\nonumber\\
@@ -643,80 +651,82 @@
         &&          &&  \lim_{\omega \rightarrow \infty}\varphi(\omega)          &=\arctan(0)        &&=0\degree &&\nonumber
     \end{align}
 
-    Das heißt, bei sehr niedrigen Frequenzen dämpft der Hochpass stark ($A(\omega) \rightarrow 0$) mit Phasenverschiebung bis $+90\degree$
-    und bei sehr hohen Frequenzen kaum ($A(\omega) \rightarrow 1$) mit Phasenverschiebung bis $0\degree$.
+    This means that at very low frequencies, the high-pass filter attenuates strongly ($A(\omega) \rightarrow 0$) with a phase shift of up to $+90\degree$
+    and at very high frequencies, it attenuates hardly at all ($A(\omega) \rightarrow 1$) with a phase shift of up to $0\degree$.
+    
+    This boundary behaviour can be explained well using the circuit diagram \ref{circ:filter:rchoch}.
+    At DC voltage ($f=0$), the capacitance blocks, causing the entire input voltage to drop across it.
+         
+    At very low frequencies ($f \to 0$), the input voltage is approximately completely across the capacitance. 
+    The current leads the input voltage by up to $+90\degree$, resulting in a positive phase shift 
+    up to $+90\degree$ to the output voltage across the resistor.
+    
+    At very high frequencies ($f \rightarrow \infty$), the capacitance behaves like a short circuit, 
+    causing the input voltage to be approximately completely across the resistor at the output.
+    As a result, the output and input voltages are approximately equal in amplitude and phase.
 
-    Anhand des Schaltbildes \ref{circ:filter:rchoch} lässt sich dieses Grenzverhalten gut erklären.
-    Bei Gleichspannung ($f=0$) sperrt die Kapazität, wodurch die gesamte Eingangsspannung über dieser abfällt.
-     
-    Bei sehr kleinen Frequenzen ($f \to 0$) liegt die Eingangsspannung näherungsweise vollständig über der Kapazität an. 
-    Der Strom eilt der Eingangsspannung bis $+90\degree$ voraus, wodurch sich eine positive Phasenverschiebung 
-    bis $+90\degree$ zur Ausgangsspannung über dem Widerstand ergibt.
+    \textbf{Visualisation:}
 
-    Bei sehr hohen Frequenzen ($f \rightarrow \infty$) verhält sich die Kapazität wie ein Kurzschluss, 
-    wodurch die Eingangsspannung näherungsweise vollständig über dem Widerstand am Ausgang anliegt.
-    Dadurch sind Ausgangs- und Eingangsspannung näherungsweise gleich in Amplitude und in Phase.
-
-    \textbf{Visualisierung:}
-
-    Abbildung \ref{plot:hochpass:mini:lin} zeigt den Amplitudengang $A(\omega)$ und den Phasengang $\varphi(\omega)$ des Hochpass 1. Ordnung in linearer Darstellung
-    mit gleicher Skalierung und gleichem Wertebereich für die x-Achsen.
+    Figure \ref{plot:hochpass:mini:lin} shows the amplitude response $A(\omega)$ and the phase response $\varphi(\omega)$ of the first-order highpass filter in linear representation
+    with the same scaling and the same value range for the x-axes.
 
     \begin{figure}[h]\centering
+        \renewcommand{\figurename}{Figure}
         \begin{subfigure}{0.45\textwidth}\centering
             \includegraphics{Tikz/pdf/plot_hochpass_mini_ampli_lin_samesize.pdf}
-            \caption{Amplitudengang $A(\omega)$, lineare Achsen}
+            \caption{Amplitude response $A(\omega)$, linear axes}
             \label{plot:hochpass:ampli:mini:lin}
         \end{subfigure}
         \begin{subfigure}{0.45\textwidth}\centering
         \includegraphics{Tikz/pdf/plot_hochpass_mini_phase_lin_samesize.pdf}
-            \caption{Phasengang $\varphi(\omega)$, lineare Achsen}
+            \caption{Phase response $\varphi(\omega)$, linear axes}
             \label{plot:hochpass:phase:mini:lin}
         \end{subfigure}
-        \caption{Lineardarstellung des Amplitudengang und Phasengang eines Hochpass 1. Ordnung}
+        \caption{Linear representation of the amplitude response and phase response of a first-order high-pass filter}
 %        \caption{Amplitudengang $A(\omega)$ und Phasengang $\varphi(\omega)$ eines Hochpass 1. Ordnung, lineare Achsen}
         \label{plot:hochpass:mini:lin}
     \end{figure}
 
-    Eine logarithmische Darstellung des Frequenzganges wird in Kapitel \ref{sec:frequenzganglog:vergleichtiefpasshochpass} eingeführt.
+    A logarithmic representation of the frequency response is introduced in Chapter \ref{sec:frequenzganglog:vergleichtiefpasshochpass}.
 }%
 \end{frame}
 
             
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Vergleich passive Filter 1. Ordnung mit $L$ und $R$}
+\subsection{Comparison of first-order passive filters with $L$ and $R$}
 \label{sec:frequenzgang:rlfilter}
 \begin{frame}\ftx{\subsecname}
 \s{%
-    Tiefpass und Hochpass lassen sich auch mit einer Induktivität $L$ und einem Widerstand $R$ realisieren. 
-    In Tabelle \ref{tab:filter:rl:vergleich:circeq} sind die Schaltbilder für RL-Filter 1. Ordnung 
-    und ihre RC-Pendants gegenübergestellt. Zudem ist zu jedem Schaltbild die Formel für den Frequenzgang aufgeführt.
+    Low-pass and high-pass filters can also be implemented using an inductance $L$ and a resistor $R$. 
+    Table \ref{tab:filter:rl:vergleich:circeq} compares the circuit diagrams for first-order RL filters
+    and their RC counterparts. The formula for the frequency response is also listed for each circuit diagram.
 }%
 % BRAILLE TABELLE als Kommentarblock
 % Titel: Vergleich Schaltbild und Frequenzgang für RL- und RC-Filter 1. Ordnung
 % 3 Zeilen, 6 Spalten mit $w=\omega$:
 \b{\s{%
 \begin{tabular}{|c|cc|cc|c|}%
+    \renewcommand{\tablename}{Table}
 \hline
-. % Header
-    & Tiefpass
-    & Frequenzgang
-    & Hochpass
-    & Frequenzgang
-    & Grenzfrequenz \\
+. % Header 
+    & Low-pass filter
+    & Frequency response
+    & High-pass filter
+    & Frequency response
+    & Cut-off frequency \\
 \hline
 RL % Zeile 1
-    & TP U1 über RL mit U2 über R
+    & TP U1 over RL with U2 over R
     & TP $F(jw)=1/(1+j*wL/R)$
-    & HP U1 über RL mit U2 über L
+    & HP U1 over RL with U2 over L
     & HP $F(jw)=1/(1-j*R/(wL))$
     & $w_g = R/L$ \\
 \hline
 RC % Zeile 2
-    & TP U1 über RC mit U2 über C
+    & TP U1 over RC with U2 over C
     & TP $F(jw)=1/(1+j*wRC)$
-    & HP U1 über RC mit U2 über R
+    & HP U1 with RC with U2 over R
     & HP $F(jw)=1/(1-j/(wRC))$
     & $w_g = 1/(RC)$ \\
 \hline
@@ -725,14 +735,15 @@ RC % Zeile 2
 
 % NICHT BRAILLE TABELLE zum TeXen
 \begin{table}[h]\centering
-    \s{\caption{Vergleich Schaltbild und Frequenzgang für RL- und RC-Filter 1. Ordnung}}%
+    \renewcommand{\tablename}{Table}
+    \s{\caption{Comparison of circuit diagram and frequency response for first-order RL and RC filters}}%
     \label{tab:filter:rl:vergleich:circeq}
     \resizeboxsb{1}{1}{% 90% textwidth skript, 100% textwidth beamer
         \begin{tabular}{|c|c l|c l|c|}
             \hline$\vphantom{\Big|}$ % empty cell, vphantom padding for rowheight
-                &   \textbf{Tiefpass}
+                &   \textbf{Low-pass filter}
                 &   $\quad\underline{F}(\mathrm{j}\omega)$
-                &   \textbf{Hochpass}
+                &   \textbf{High-pass filter}
                 &   $\quad\underline{F}(\mathrm{j}\omega)$
                 &   $\omega_g$
             \\\hline\parbox[c][2cm][c]{0.3cm}{\rotatebox[origin=c]{90}{\textbf{RL}}}
@@ -753,11 +764,11 @@ RC % Zeile 2
 \end{table}
 
 \s{%
-    Im Vergleich der Schaltbilder ist zu erkennen, dass die RL- und RC-Varianten sich lediglich in der Anordnung von $L$ und $R$
-    beziehungsweise $R$ und $C$ unterscheiden. 
-    Die Frequenzgänge der RL- und RC-Varianten unterscheiden sich nur im Faktor $\dfrac{L}{R}$ und $CR$ vor $\omega$ voneinander.
-    Wie in Kapitel \ref{sec:frequenzganglog:grenzfrequenz} noch näher erläutert wird, entspricht dieser Faktor dem Kehrwert der Grenzkreisfrequenz 
-    $\omega_g$, welche vollständigkeitshalber mit in der Tabelle aufgeführt ist.
+    A comparison of the circuit diagrams shows that the RL and RC variants differ only in the arrangement of $L$ and $R$
+    and $R$ and $C$, respectively.
+    The frequency responses of the RL and RC variants differ only in the factor $\dfrac{L}{R}$ and $CR$ before $\omega$.
+    As will be explained in more detail in Chapter \ref{sec:frequenzganglog:grenzfrequenz}, this factor corresponds to the reciprocal of the cutoff frequency 
+    $\omega_g$, which is included in the table for the sake of completeness.
 }%
 
 \end{frame}
@@ -795,13 +806,13 @@ RC % Zeile 2
     \end{minipage}	
 \end{minipage}
 \end{bsp}%
-\end{frame}%
+\end{frame}
 %
 %-------------------------------------------------------------------------------------------------%
 %
 \begin{frame}[allowframebreaks]\ftx{\subsecname - Lösung}% EVIL: allowed (auto/manual) framebreaks
-\begin{bsp}{Filterschaltung: Lösung}{}% label as second madatory argument is printed in Folien, can't escape with \b{...} -> no label for this bsp
-\textbf{Lösung a) Frequenzgang allgemein}
+\begin{bsp}{Filter circuit: Solution}{}% label as second madatory argument is printed in Folien, can't escape with \b{...} -> no label for this bsp
+\textbf{Solution a) Frequency response in general}
     \begin{align*}
         \underline{F}(\mathrm{j}\omega) &= \frac{R_1 || \underline{Z}_C}{R_2 + ( R_1 || \underline{Z}_C)} 
         = \left.\frac{\frac{\frac{R_1}{\mathrm{j}\omega C}}{R_1 + \frac{1}{\mathrm{j}\omega C}}}{
@@ -841,17 +852,17 @@ RC % Zeile 2
     \begin{align*}
         &\text{Betrag:}&
             |A(\omega)| &= \frac{R_1}{\sqrt{(R_1+R_2)^2+(\omega CR_1R_2)^2}}&
-            &\text{mit}&
+            &\text{with}&
             |\underline{F}(\mathrm{j}\omega)| &= \frac{\sqrt{a^2+b^2}}{\sqrt{c^2+d^2}}\\
         &\text{Phase:}&
             \varphi(\omega) &= \arctan\left(\frac{-\omega C R_1^2R_2}{R_1(R_1+R_2)}\right)&
-            &\text{mit}&
+            &\text{with}&
             \varphi(\omega) &= \arctan\left(\frac{b'}{a'}\right)\\[+2pt]
         &&
             &= \arctan\left(\frac{-\omega C R_1R_2}{R_1+R_2}\right)\\[-4pt]
         &\text{Altern.:}&
             \varphi(\omega ) &= \arctan(0) - \arctan\left(\frac{\omega CR_1R_2}{R_1+R_2}\right)&
-            &\text{mit}&
+            &\text{with}&
             %\varphi(\omega) &= \arctan\left(\frac{b}{a}\right) - \arctan\left(\frac{d}{c}\right)% too big
             %\varphi(\omega) &= \varphi_{Z} - \varphi_{N}
             %\varphi(\omega) &= \underbrace{\varphi_{Z}}_{\mathclap{\text{\tiny{Zähler}}}} - \underbrace{\varphi_{N}}_{\mathclap{\text{\tiny{Nenner}}}}
@@ -863,7 +874,7 @@ RC % Zeile 2
 % Empty line after this, otherwise frame might break later on
 %--8<---------------cut here---------------end--------------->8---%
 
-\textbf{Lösung b) Grenzverhalten und Skizze}
+\textbf{Solution b) Limit behaviour and sketch}
 
     \noindent%
     \begin{minipage}{\textwidth}
@@ -897,12 +908,12 @@ RC % Zeile 2
 % Empty line after this, otherwise frame might break later on
 %--8<---------------cut here---------------end--------------->8---
 
-\textbf{Lösung c) Bestimmten Arbeitspunkt ermitteln}\vspace{+5pt}
+\textbf{Solution c) Determine specific operating point}\vspace{+5pt}
 
-	Ges.: Frequenz $f_{1}$ bei der $\hat{U}_2 = \frac{1}{2}\hat{U}_1$ und Phasenverschiebung $u_2$ zu $u_1$ bei $f_1$:\b{\hfill}\vspace{-10pt}%
-    \begin{align*}%
+    Total: Frequency $f_{1}$ where $\hat{U}_2 = \frac{1}{2}\hat{U}_1$ and phase shift $u_2$ relative to $u_1$ at $f_1$:\b{\hfill}\vspace{-10pt}%
+        \begin{align*}%
         A(\omega_1) &= \frac{R_1}{\sqrt{(R_1+R_2)^2+(\omega CR_1R_2)^2}} \overset{!}{=} \frac{1}{2} & 
-        &\text{mit}&
+        &\text{with}&
         A(\omega) = \frac{U_2}{U_1} = \frac{\hat{U}_2}{\hat{U}_1} \overset{!}{=} \left.\frac{1}{2}\right|_{f=f_1}
         \\[+2pt]
         &\Rightarrow \frac{(R_1+R_2)^2 + (\omega_1 CR_1R_2)^2}{R_1^2} = 4 &
@@ -914,11 +925,11 @@ RC % Zeile 2
         \omega_1 = \pm \frac{\sqrt{4R_1^2 - (R_1^2 + 2R_1R_2 + R_2^2)}}{CR_1R_2}
         \\[+2pt]
         \omega_1 &= 1,3304\cdot 10^4\ \frac{1}{\mathrm{s}},\ f_1 = 2,117\ \mathrm{kHz} &
-        &\text{mit}&
+        &\text{with}&
         \omega_1 < 0 \text{ unphysikalisch},\ f=\frac{\omega}{2\pi}
         \\
         \varphi(\omega_1) &= \arctan(-1,4967) = -56,25\degree &
-        &\text{mit}&
+        &\text{with}&
         \varphi(\omega) = \arctan\left(\frac{\Im\{\underline{F}\}}{\Re\{\underline{F}\}}\right)
     \end{align*}
 	% Reference for +- symbol with paranthesis around minus, +- mit runden Klammern um das Minus:

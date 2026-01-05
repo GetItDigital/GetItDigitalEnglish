@@ -1,17 +1,17 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.7.14)  27 NOV 2025 08:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.7.14)  17 DEC 2025 17:07
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **/workspace/modul-01-elektrische-grundgroessen/Skript.tex
 (/workspace/modul-01-elektrische-grundgroessen/Skript.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
-runsystem(makeindex -g -s ../Templates/Arbeit.ist TeXAux/Skript.idx)...executed safely (allowed).
+runsystem(makeindex -g -s ../Templates/Arbeit.ist TeXAux/Skript.idx)...executed.
 
-runsystem(cat TeXAux/Skript.nlo | sort | uniq -w 55 | makeindex -i -s nomencl.ist -o TeXAux/Skript.nls)...disabled (restricted).
+runsystem(cat TeXAux/Skript.nlo | sort | uniq -w 55 | makeindex -i -s nomencl.ist -o TeXAux/Skript.nls)...executed.
 
-runsystem(cd TeXAux;gnuplot *.gnuplot;cd ..;)...disabled (restricted).
+runsystem(cd TeXAux;gnuplot *.gnuplot;cd ..;)...executed.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
@@ -863,7 +863,21 @@ Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
 Package: svg 2020/11/26 v2.02k (include SVG pictures)
  (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+) (/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+ (/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+runsystem(uname -s > "Skript.w18")...executed.
+
+ (./Skript.w18)
+runsystem(rm -- "Skript.w18")...executed.
+
 )
 \c@svg@param@lastpage=\count368
 \svg@box=\box103
@@ -1109,57 +1123,58 @@ Package nomencl Info: Writing nomenclature file Skript.nlo on input line 19.
 
 Writing index file Skript.idx
 \c@tcb@cnt@bsp=\count408
+\c@tcb@cnt@expl=\count409
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
  (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count409
+\lrq@indent=\count410
  (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count410
-\c@listtotal=\count411
-\c@listcount=\count412
-\c@liststart=\count413
-\c@liststop=\count414
-\c@citecount=\count415
-\c@citetotal=\count416
-\c@multicitecount=\count417
-\c@multicitetotal=\count418
-\c@instcount=\count419
-\c@maxnames=\count420
-\c@minnames=\count421
-\c@maxitems=\count422
-\c@minitems=\count423
-\c@citecounter=\count424
-\c@maxcitecounter=\count425
-\c@savedcitecounter=\count426
-\c@uniquelist=\count427
-\c@uniquename=\count428
-\c@refsection=\count429
-\c@refsegment=\count430
-\c@maxextratitle=\count431
-\c@maxextratitleyear=\count432
-\c@maxextraname=\count433
-\c@maxextradate=\count434
-\c@maxextraalpha=\count435
-\c@abbrvpenalty=\count436
-\c@highnamepenalty=\count437
-\c@lownamepenalty=\count438
-\c@maxparens=\count439
-\c@parenlevel=\count440
-\blx@tempcnta=\count441
-\blx@tempcntb=\count442
-\blx@tempcntc=\count443
-\c@blx@maxsection=\count444
-\blx@maxsegment@0=\count445
-\blx@notetype=\count446
-\blx@parenlevel@text=\count447
-\blx@parenlevel@foot=\count448
-\blx@sectionciteorder@0=\count449
-\blx@sectionciteorderinternal@0=\count450
-\blx@entrysetcounter=\count451
-\blx@biblioinstance=\count452
+\c@tabx@nest=\count411
+\c@listtotal=\count412
+\c@listcount=\count413
+\c@liststart=\count414
+\c@liststop=\count415
+\c@citecount=\count416
+\c@citetotal=\count417
+\c@multicitecount=\count418
+\c@multicitetotal=\count419
+\c@instcount=\count420
+\c@maxnames=\count421
+\c@minnames=\count422
+\c@maxitems=\count423
+\c@minitems=\count424
+\c@citecounter=\count425
+\c@maxcitecounter=\count426
+\c@savedcitecounter=\count427
+\c@uniquelist=\count428
+\c@uniquename=\count429
+\c@refsection=\count430
+\c@refsegment=\count431
+\c@maxextratitle=\count432
+\c@maxextratitleyear=\count433
+\c@maxextraname=\count434
+\c@maxextradate=\count435
+\c@maxextraalpha=\count436
+\c@abbrvpenalty=\count437
+\c@highnamepenalty=\count438
+\c@lownamepenalty=\count439
+\c@maxparens=\count440
+\c@parenlevel=\count441
+\blx@tempcnta=\count442
+\blx@tempcntb=\count443
+\blx@tempcntc=\count444
+\c@blx@maxsection=\count445
+\blx@maxsegment@0=\count446
+\blx@notetype=\count447
+\blx@parenlevel@text=\count448
+\blx@parenlevel@foot=\count449
+\blx@sectionciteorder@0=\count450
+\blx@sectionciteorderinternal@0=\count451
+\blx@entrysetcounter=\count452
+\blx@biblioinstance=\count453
 \labelnumberwidth=\skip97
 \labelalphawidth=\skip98
 \biblabelsep=\skip99
@@ -1171,9 +1186,9 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \blx@bcfin=\read6
 \blx@bcfout=\write6
 \blx@langwohyphens=\language15
-\c@mincomprange=\count453
-\c@maxcomprange=\count454
-\c@mincompwidth=\count455
+\c@mincomprange=\count454
+\c@maxcomprange=\count455
+\c@mincompwidth=\count456
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
@@ -1181,74 +1196,74 @@ File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count456
-\c@savedafterword=\count457
-\c@annotator=\count458
-\c@savedannotator=\count459
-\c@author=\count460
-\c@savedauthor=\count461
-\c@bookauthor=\count462
-\c@savedbookauthor=\count463
-\c@commentator=\count464
-\c@savedcommentator=\count465
-\c@editor=\count466
-\c@savededitor=\count467
-\c@editora=\count468
-\c@savededitora=\count469
-\c@editorb=\count470
-\c@savededitorb=\count471
-\c@editorc=\count472
-\c@savededitorc=\count473
-\c@foreword=\count474
-\c@savedforeword=\count475
-\c@holder=\count476
-\c@savedholder=\count477
-\c@introduction=\count478
-\c@savedintroduction=\count479
-\c@namea=\count480
-\c@savednamea=\count481
-\c@nameb=\count482
-\c@savednameb=\count483
-\c@namec=\count484
-\c@savednamec=\count485
-\c@translator=\count486
-\c@savedtranslator=\count487
-\c@shortauthor=\count488
-\c@savedshortauthor=\count489
-\c@shorteditor=\count490
-\c@savedshorteditor=\count491
-\c@labelname=\count492
-\c@savedlabelname=\count493
-\c@institution=\count494
-\c@savedinstitution=\count495
-\c@lista=\count496
-\c@savedlista=\count497
-\c@listb=\count498
-\c@savedlistb=\count499
-\c@listc=\count500
-\c@savedlistc=\count501
-\c@listd=\count502
-\c@savedlistd=\count503
-\c@liste=\count504
-\c@savedliste=\count505
-\c@listf=\count506
-\c@savedlistf=\count507
-\c@location=\count508
-\c@savedlocation=\count509
-\c@organization=\count510
-\c@savedorganization=\count511
-\c@origlocation=\count512
-\c@savedoriglocation=\count513
-\c@origpublisher=\count514
-\c@savedorigpublisher=\count515
-\c@publisher=\count516
-\c@savedpublisher=\count517
-\c@language=\count518
-\c@savedlanguage=\count519
-\c@origlanguage=\count520
-\c@savedoriglanguage=\count521
-\c@pageref=\count522
-\c@savedpageref=\count523
+\c@afterword=\count457
+\c@savedafterword=\count458
+\c@annotator=\count459
+\c@savedannotator=\count460
+\c@author=\count461
+\c@savedauthor=\count462
+\c@bookauthor=\count463
+\c@savedbookauthor=\count464
+\c@commentator=\count465
+\c@savedcommentator=\count466
+\c@editor=\count467
+\c@savededitor=\count468
+\c@editora=\count469
+\c@savededitora=\count470
+\c@editorb=\count471
+\c@savededitorb=\count472
+\c@editorc=\count473
+\c@savededitorc=\count474
+\c@foreword=\count475
+\c@savedforeword=\count476
+\c@holder=\count477
+\c@savedholder=\count478
+\c@introduction=\count479
+\c@savedintroduction=\count480
+\c@namea=\count481
+\c@savednamea=\count482
+\c@nameb=\count483
+\c@savednameb=\count484
+\c@namec=\count485
+\c@savednamec=\count486
+\c@translator=\count487
+\c@savedtranslator=\count488
+\c@shortauthor=\count489
+\c@savedshortauthor=\count490
+\c@shorteditor=\count491
+\c@savedshorteditor=\count492
+\c@labelname=\count493
+\c@savedlabelname=\count494
+\c@institution=\count495
+\c@savedinstitution=\count496
+\c@lista=\count497
+\c@savedlista=\count498
+\c@listb=\count499
+\c@savedlistb=\count500
+\c@listc=\count501
+\c@savedlistc=\count502
+\c@listd=\count503
+\c@savedlistd=\count504
+\c@liste=\count505
+\c@savedliste=\count506
+\c@listf=\count507
+\c@savedlistf=\count508
+\c@location=\count509
+\c@savedlocation=\count510
+\c@organization=\count511
+\c@savedorganization=\count512
+\c@origlocation=\count513
+\c@savedoriglocation=\count514
+\c@origpublisher=\count515
+\c@savedorigpublisher=\count516
+\c@publisher=\count517
+\c@savedpublisher=\count518
+\c@language=\count519
+\c@savedlanguage=\count520
+\c@origlanguage=\count521
+\c@savedoriglanguage=\count522
+\c@pageref=\count523
+\c@savedpageref=\count524
 \shorthandwidth=\skip105
 \shortjournalwidth=\skip106
 \shortserieswidth=\skip107
@@ -1272,19 +1287,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count524
-\c@textcitetotal=\count525
-\c@textcitemaxnames=\count526
-\c@biburlbigbreakpenalty=\count527
-\c@biburlbreakpenalty=\count528
-\c@biburlnumpenalty=\count529
-\c@biburlucpenalty=\count530
-\c@biburllcpenalty=\count531
+\c@textcitecount=\count525
+\c@textcitetotal=\count526
+\c@textcitemaxnames=\count527
+\c@biburlbigbreakpenalty=\count528
+\c@biburlbreakpenalty=\count529
+\c@biburlnumpenalty=\count530
+\c@biburlucpenalty=\count531
+\c@biburllcpenalty=\count532
 \biburlbigskip=\muskip21
 \biburlnumskip=\muskip22
 \biburlucskip=\muskip23
 \biburllcskip=\muskip24
-\c@smartand=\count532
+\c@smartand=\count533
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -1294,8 +1309,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count533
-\c@bbx:relatedtotal=\count534
+\c@bbx:relatedcount=\count534
+\c@bbx:relatedtotal=\count535
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1338,18 +1353,31 @@ Package: beamervideo 2023/10/25 Video creation from beamer slides
 \speechouts=\write7
 \speechRenderVideoScript=\write8
 \speechRenderVideoFileList=\write9
-\c@videopage=\count535
-\c@actualvideopage=\count536
-\c@videocounter=\count537
-\c@slidecounter=\count538
+\c@videopage=\count536
+\c@actualvideopage=\count537
+\c@videocounter=\count538
+\c@slidecounter=\count539
 )
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count539
-\@quotereset=\count540
-No file Skript.aux.
+\@quotelevel=\count540
+\@quotereset=\count541
+(./Skript.aux
+
+LaTeX Warning: Label `ElHomFeld' multiply defined.
+
+
+LaTeX Warning: Label `ElHomFeld2' multiply defined.
+
+
+LaTeX Warning: Label `ElHomFeld 3' multiply defined.
+
+
+LaTeX Warning: Label `LadungGeschw' multiply defined.
+
+)
 \openout1 = `Skript.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
@@ -1370,18 +1398,18 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count541
+\scratchcounter=\count542
 \scratchdimen=\dimen377
 \scratchbox=\box109
-\nofMPsegments=\count542
-\nofMParguments=\count543
+\nofMPsegments=\count543
+\nofMParguments=\count544
 \everyMPshowfont=\toks74
-\MPscratchCnt=\count544
+\MPscratchCnt=\count545
 \MPscratchDim=\dimen378
-\MPnumerator=\count545
-\makeMPintoPDFobject=\count546
+\MPnumerator=\count546
+\makeMPintoPDFobject=\count547
 \everyMPtoPDFconversion=\toks75
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1430,14 +1458,15 @@ Package caption Info: End \AtBeginDocument code.
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-\c@lstlisting=\count547
+\c@lstlisting=\count548
 Package hyperref Info: Link coloring ON on input line 26.
+(./Skript.out) (./Skript.out)
 \@outlinefile=\write10
 \openout10 = `Skript.out'.
 
 Package biblatex Info: Trying to load language 'ngerman'...
 Package biblatex Info: ... file 'ngerman.lbx' found.
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
 File: ngerman.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
@@ -1460,7 +1489,7 @@ Package biblatex Info: ... file 'Skript.bbl' found.
 Package biblatex Info: Reference section=0 on input line 26.
 Package biblatex Info: Reference segment=0 on input line 26.
  (../Templates/SkriptTitle.tex
-<../Templates/Bilder/FHAachen-logo2010.png, id=43, 301.125pt x 1026.83624pt>
+<../Templates/Bilder/FHAachen-logo2010.png, id=171, 301.125pt x 1026.83624pt>
 File: ../Templates/Bilder/FHAachen-logo2010.png Graphic file (type png)
 <use ../Templates/Bilder/FHAachen-logo2010.png>
 Package pdftex.def Info: ../Templates/Bilder/FHAachen-logo2010.png  used on input line 5.
@@ -1481,37 +1510,37 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 6.
  (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-<../Templates/Bilder/Logo_Uni_Paderborn.png, id=45, 1284.8pt x 337.26pt>
+<../Templates/Bilder/Logo_Uni_Paderborn.png, id=173, 1284.8pt x 337.26pt>
 File: ../Templates/Bilder/Logo_Uni_Paderborn.png Graphic file (type png)
 <use ../Templates/Bilder/Logo_Uni_Paderborn.png>
 Package pdftex.def Info: ../Templates/Bilder/Logo_Uni_Paderborn.png  used on input line 9.
 (pdftex.def)             Requested size: 131.02632pt x 34.39183pt.
-<../Templates/Bilder/BUW_Logo-weiss-auf-gruen-rgb.png, id=46, 150.0807pt x 60.9477pt>
+<../Templates/Bilder/BUW_Logo-weiss-auf-gruen-rgb.png, id=174, 150.0807pt x 60.9477pt>
 File: ../Templates/Bilder/BUW_Logo-weiss-auf-gruen-rgb.png Graphic file (type png)
 <use ../Templates/Bilder/BUW_Logo-weiss-auf-gruen-rgb.png>
 Package pdftex.def Info: ../Templates/Bilder/BUW_Logo-weiss-auf-gruen-rgb.png  used on input line 13.
 (pdftex.def)             Requested size: 131.02632pt x 53.21004pt.
-<../Templates/Bilder/Fachhochschule_Südwestfalen_logo.png, id=47, 1284.8pt x 316.18124pt>
+<../Templates/Bilder/Fachhochschule_Südwestfalen_logo.png, id=175, 1284.8pt x 316.18124pt>
 File: ../Templates/Bilder/Fachhochschule_Südwestfalen_logo.png Graphic file (type png)
 <use ../Templates/Bilder/Fachhochschule_Südwestfalen_logo.png>
 Package pdftex.def Info: ../Templates/Bilder/Fachhochschule_Südwestfalen_logo.png  used on input line 17.
 (pdftex.def)             Requested size: 131.02632pt x 32.24234pt.
-<../Templates/Bilder/logo-hrw.png, id=48, 753.81625pt x 213.79875pt>
+<../Templates/Bilder/logo-hrw.png, id=176, 753.81625pt x 213.79875pt>
 File: ../Templates/Bilder/logo-hrw.png Graphic file (type png)
 <use ../Templates/Bilder/logo-hrw.png>
 Package pdftex.def Info: ../Templates/Bilder/logo-hrw.png  used on input line 21.
 (pdftex.def)             Requested size: 131.02632pt x 37.16087pt.
-<../Templates/Bilder/FH_Dortmund-logo.png, id=49, 1027.84pt x 370.38374pt>
+<../Templates/Bilder/FH_Dortmund-logo.png, id=177, 1027.84pt x 370.38374pt>
 File: ../Templates/Bilder/FH_Dortmund-logo.png Graphic file (type png)
 <use ../Templates/Bilder/FH_Dortmund-logo.png>
 Package pdftex.def Info: ../Templates/Bilder/FH_Dortmund-logo.png  used on input line 26.
 (pdftex.def)             Requested size: 91.71802pt x 33.0505pt.
-<../Templates/Bilder/dh_nrw.jpg, id=50, 722.7pt x 271.0125pt>
+<../Templates/Bilder/dh_nrw.jpg, id=178, 722.7pt x 271.0125pt>
 File: ../Templates/Bilder/dh_nrw.jpg Graphic file (type jpg)
 <use ../Templates/Bilder/dh_nrw.jpg>
 Package pdftex.def Info: ../Templates/Bilder/dh_nrw.jpg  used on input line 45.
 (pdftex.def)             Requested size: 157.23026pt x 58.96127pt.
-<../Templates/Bilder/mkw.jpg, id=51, 9233.49625pt x 1878.01625pt>
+<../Templates/Bilder/mkw.jpg, id=179, 9233.49625pt x 1878.01625pt>
 File: ../Templates/Bilder/mkw.jpg Graphic file (type jpg)
 <use ../Templates/Bilder/mkw.jpg>
 Package pdftex.def Info: ../Templates/Bilder/mkw.jpg  used on input line 50.
@@ -1523,1356 +1552,1002 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-<../Templates/Bilder/by.png, id=66, 97.0827pt x 33.9669pt>
+<../Templates/Bilder/by.png, id=194, 97.0827pt x 33.9669pt>
 File: ../Templates/Bilder/by.png Graphic file (type png)
 <use ../Templates/Bilder/by.png>
 Package pdftex.def Info: ../Templates/Bilder/by.png  used on input line 60.
 (pdftex.def)             Requested size: 87.34865pt x 30.56215pt.
-[2 <../Templates/Bilder/by.png>])
-No file Skript.toc.
+[2 <../Templates/Bilder/by.png>]) (./Skript.toc)
 \tf@toc=\write11
 \openout11 = `Skript.toc'.
 
-[3]
+ [3]
 No file Skript.nls.
 [4
 
 ] (./Inhalt.tex (./0_Motivation.tex [1
 
-]
-Overfull \hbox (7.50092pt too wide) in paragraph at lines 221--221
-[]\OT1/cmr/m/n/10 Das Ki-lo-gramm ist seit Mai 2019 vom ge-nau de-fi-nier-ten Planck-schen Wir-kungs-quan-tum abh[]angig:
- []
+] [2]
 
-[2]
-Overfull \hbox (11.80748pt too wide) in paragraph at lines 221--221
-[]\OT1/cmr/m/n/10 Ein Kel-vin ent-spricht ei-ner []Anderung der ther-mo-dy-na-mi-schen Tem-pe-ra-tur, die mit ei-ner []Anderung
- []
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 217.
 
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 221.
-
-
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 221.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 217.
 
 Missing character: There is no � in font cmr10!
 
-Overfull \hbox (9.22304pt too wide) in paragraph at lines 221--221
-[]\OT1/cmr/m/n/10 Photometrisches Strah-lungs[]aquivalent ei-ner mo-no-chro-ma-ti-schen Strah-lung der Fre-quenz $540 []$:
+Overfull \hbox (20.49721pt too wide) in paragraph at lines 217--217
+[]\OT1/cmr/m/n/10 Photometric ra-dia-ti-on equi-va-lent of mo-no-chro-ma-tic ra-dia-ti-on of fre-quen-cy $540 []$: $\OML/cmm/m/it/10 K[]\OT1/cmr/m/n/10 (540 []) =
  []
 
 [3]) (./1_Ladung.tex [4]
-
-LaTeX Warning: Reference `fig:bohr' on page 5 undefined on input line 47.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/atommodell_bohr.svg' on input line 77.
-
-
-./1_Ladung.tex:77: Package svg Error: File `atommodell_bohr_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.77 ...svg[width=0.8\textwidth]{atommodell_bohr}}
-                                                  
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/atommodell_bohr_svg-tex.pdf'
-although `Bilder/atommodell_bohr.svg' was found.
-
-
-./1_Ladung.tex:77: Package svg Error: File `atommodell_bohr_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.77 ...svg[width=0.8\textwidth]{atommodell_bohr}}
-                                                  
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/atommodell_bohr_svg-tex.pdf_tex'
-although `Bilder/atommodell_bohr.svg' was found.
-
-[5]
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/ionisierung.svg' on input line 165.
-
-
-./1_Ladung.tex:165: Package svg Error: File `ionisierung_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.165 		}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/ionisierung_svg-tex.pdf'
-although `Bilder/ionisierung.svg' was found.
-
-
-./1_Ladung.tex:165: Package svg Error: File `ionisierung_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.165 		}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/ionisierung_svg-tex.pdf_tex'
-although `Bilder/ionisierung.svg' was found.
-
-
-LaTeX Warning: Reference `fig:linienladung' on page 6 undefined on input line 323.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/linienladung.svg' on input line 323.
-
-
-./1_Ladung.tex:323: Package svg Error: File `linienladung_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.323 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/linienladung_svg-tex.pdf'
-although `Bilder/linienladung.svg' was found.
-
-
-./1_Ladung.tex:323: Package svg Error: File `linienladung_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.323 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/linienladung_svg-tex.pdf_tex'
-although `Bilder/linienladung.svg' was found.
-
-[6]
-
-LaTeX Warning: Reference `fig:flächenladung' on page 7 undefined on input line 323.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/flächenladung.svg' on input line 323.
-
-
-./1_Ladung.tex:323: Package svg Error: File `flächenladung_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.323 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/flächenladung_svg-tex.pdf'
-although `Bilder/flächenladung.svg' was found.
-
-
-./1_Ladung.tex:323: Package svg Error: File `flächenladung_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.323 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/flächenladung_svg-tex.pdf_tex'
-although `Bilder/flächenladung.svg' was found.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/raumladung.svg' on input line 323.
-
-
-./1_Ladung.tex:323: Package svg Error: File `raumladung_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.323 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/raumladung_svg-tex.pdf'
-although `Bilder/raumladung.svg' was found.
-
-
-./1_Ladung.tex:323: Package svg Error: File `raumladung_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.323 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/raumladung_svg-tex.pdf_tex'
-although `Bilder/raumladung.svg' was found.
-
-[7]
-
-LaTeX Warning: Reference `fig:metalle' on page 8 undefined on input line 481.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/metalle.svg' on input line 481.
-
-
-./1_Ladung.tex:481: Package svg Error: File `metalle_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.481 		}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/metalle_svg-tex.pdf'
-although `Bilder/metalle.svg' was found.
-
-
-./1_Ladung.tex:481: Package svg Error: File `metalle_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.481 		}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/metalle_svg-tex.pdf_tex'
-although `Bilder/metalle.svg' was found.
-
-
-LaTeX Warning: Reference `fig:leiter' on page 8 undefined on input line 481.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/leiter_ladung.svg' on input line 481.
-
-
-./1_Ladung.tex:481: Package svg Error: File `leiter_ladung_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.481 		}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/leiter_ladung_svg-tex.pdf'
-although `Bilder/leiter_ladung.svg' was found.
-
-
-./1_Ladung.tex:481: Package svg Error: File `leiter_ladung_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.481 		}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/leiter_ladung_svg-tex.pdf_tex'
-although `Bilder/leiter_ladung.svg' was found.
-
-
-LaTeX Warning: Reference `fig:coulomg' on page 8 undefined on input line 624.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/kraft.svg' on input line 624.
-
-
-./1_Ladung.tex:624: Package svg Error: File `kraft_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.624 		}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/kraft_svg-tex.pdf'
-although `Bilder/kraft.svg' was found.
-
-
-./1_Ladung.tex:624: Package svg Error: File `kraft_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.624 		}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/kraft_svg-tex.pdf_tex'
-although `Bilder/kraft.svg' was found.
-
-
-LaTeX Warning: Reference `eq:coulomb' on page 8 undefined on input line 624.
-
-[8] [9]) (./2_EFeld.tex
-
-LaTeX Warning: Reference `fig:efeld_def' on page 10 undefined on input line 104.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/kraft_e.svg' on input line 104.
-
-
-./2_EFeld.tex:104: Package svg Error: File `kraft_e_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.104 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/kraft_e_svg-tex.pdf'
-although `Bilder/kraft_e.svg' was found.
-
-
-./2_EFeld.tex:104: Package svg Error: File `kraft_e_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.104 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/kraft_e_svg-tex.pdf_tex'
-although `Bilder/kraft_e.svg' was found.
-
-
-LaTeX Warning: Reference `eq:coulomb' on page 10 undefined on input line 104.
-
-
-LaTeX Warning: Reference `eq:e_feld' on page 10 undefined on input line 104.
-
-
-LaTeX Warning: Reference `fig:efeld1' on page 10 undefined on input line 104.
-
-[10]
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/definition_e.svg' on input line 104.
-
-
-./2_EFeld.tex:104: Package svg Error: File `definition_e_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.104 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/definition_e_svg-tex.pdf'
-although `Bilder/definition_e.svg' was found.
-
-
-./2_EFeld.tex:104: Package svg Error: File `definition_e_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.104 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/definition_e_svg-tex.pdf_tex'
-although `Bilder/definition_e.svg' was found.
-
-
-LaTeX Warning: Reference `fig:leiter' on page 11 undefined on input line 275.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/leiter_pos_neg.svg' on input line 275.
-
-
-./2_EFeld.tex:275: Package svg Error: File `leiter_pos_neg_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.275 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/leiter_pos_neg_svg-tex.pdf'
-although `Bilder/leiter_pos_neg.svg' was found.
-
-
-./2_EFeld.tex:275: Package svg Error: File `leiter_pos_neg_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.275 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/leiter_pos_neg_svg-tex.pdf_tex'
-although `Bilder/leiter_pos_neg.svg' was found.
-
-
-LaTeX Warning: Reference `fig:leiterausgleich' on page 11 undefined on input line 275.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/Fehlvorstellung.svg' on input line 275.
-
-
-./2_EFeld.tex:275: Package svg Error: File `Fehlvorstellung_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.275 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/Fehlvorstellung_svg-tex.pdf'
-although `Bilder/Fehlvorstellung.svg' was found.
-
-
-./2_EFeld.tex:275: Package svg Error: File `Fehlvorstellung_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.275 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/Fehlvorstellung_svg-tex.pdf_tex'
-although `Bilder/Fehlvorstellung.svg' was found.
-
-
-LaTeX Warning: Reference `fig:e_vertikal' on page 11 undefined on input line 275.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/feldlinien_senkrecht.svg' on input line 275.
-
-
-./2_EFeld.tex:275: Package svg Error: File `feldlinien_senkrecht_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.275 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf'
-although `Bilder/feldlinien_senkrecht.svg' was found.
-
-
-./2_EFeld.tex:275: Package svg Error: File `feldlinien_senkrecht_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.275 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf_tex'
-although `Bilder/feldlinien_senkrecht.svg' was found.
-
-
-LaTeX Warning: Reference `fig:homogenfeld' on page 11 undefined on input line 509.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/elektr_homogenfeld.svg' on input line 509.
-
-
-./2_EFeld.tex:509: Package svg Error: File `elektr_homogenfeld_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.509  	}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/elektr_homogenfeld_svg-tex.pdf'
-although `Bilder/elektr_homogenfeld.svg' was found.
-
-
-./2_EFeld.tex:509: Package svg Error: File `elektr_homogenfeld_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.509  	}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/elektr_homogenfeld_svg-tex.pdf_tex'
-although `Bilder/elektr_homogenfeld.svg' was found.
-
+Package svg Info: Last page of `./svg-inkscape/atommodell_bohr_svg-tex.pdf' is 7 on input line 77.
+ (./svg-inkscape/atommodell_bohr_svg-tex.pdf_tex
+<./svg-inkscape/atommodell_bohr_svg-tex.pdf, id=289, page=1, 508.469pt x 261.9933pt>
+File: ./svg-inkscape/atommodell_bohr_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/atommodell_bohr_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/atommodell_bohr_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 349.4013pt x 180.03998pt.
+<./svg-inkscape/atommodell_bohr_svg-tex.pdf, id=290, page=2, 508.469pt x 261.9933pt>
+File: ./svg-inkscape/atommodell_bohr_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/atommodell_bohr_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/atommodell_bohr_svg-tex.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 349.4013pt x 180.03998pt.
+<./svg-inkscape/atommodell_bohr_svg-tex.pdf, id=291, page=3, 508.469pt x 261.9933pt>
+File: ./svg-inkscape/atommodell_bohr_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/atommodell_bohr_svg-tex.pdf, page 3>
+Package pdftex.def Info: ./svg-inkscape/atommodell_bohr_svg-tex.pdf , page3 used on input line 60.
+(pdftex.def)             Requested size: 349.4013pt x 180.03998pt.
+<./svg-inkscape/atommodell_bohr_svg-tex.pdf, id=292, page=4, 508.469pt x 261.9933pt>
+File: ./svg-inkscape/atommodell_bohr_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/atommodell_bohr_svg-tex.pdf, page 4>
+Package pdftex.def Info: ./svg-inkscape/atommodell_bohr_svg-tex.pdf , page4 used on input line 65.
+(pdftex.def)             Requested size: 349.4013pt x 180.03998pt.
+<./svg-inkscape/atommodell_bohr_svg-tex.pdf, id=293, page=5, 508.469pt x 261.9933pt>
+File: ./svg-inkscape/atommodell_bohr_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/atommodell_bohr_svg-tex.pdf, page 5>
+Package pdftex.def Info: ./svg-inkscape/atommodell_bohr_svg-tex.pdf , page5 used on input line 68.
+(pdftex.def)             Requested size: 349.4013pt x 180.03998pt.
+<./svg-inkscape/atommodell_bohr_svg-tex.pdf, id=294, page=6, 508.469pt x 261.9933pt>
+File: ./svg-inkscape/atommodell_bohr_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/atommodell_bohr_svg-tex.pdf, page 6>
+Package pdftex.def Info: ./svg-inkscape/atommodell_bohr_svg-tex.pdf , page6 used on input line 70.
+(pdftex.def)             Requested size: 349.4013pt x 180.03998pt.
+<./svg-inkscape/atommodell_bohr_svg-tex.pdf, id=295, page=7, 508.469pt x 261.9933pt>
+File: ./svg-inkscape/atommodell_bohr_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/atommodell_bohr_svg-tex.pdf, page 7>
+Package pdftex.def Info: ./svg-inkscape/atommodell_bohr_svg-tex.pdf , page7 used on input line 72.
+(pdftex.def)             Requested size: 349.4013pt x 180.03998pt.
+) [5 <./svg-inkscape/atommodell_bohr_svg-tex.pdf> <./svg-inkscape/atommodell_bohr_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/atommodell_bohr_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/atommodell_bohr_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/atommodell_bohr_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/atommodell_bohr_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/atommodell_bohr_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/atommodell_bohr_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/atommodell_bohr_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/atommodell_bohr_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/atommodell_bohr_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/atommodell_bohr_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/atommodell_bohr_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/ionisierung_svg-tex.pdf' is 3 on input line 163.
+ (./svg-inkscape/ionisierung_svg-tex.pdf_tex
+<./svg-inkscape/ionisierung_svg-tex.pdf, id=306, page=1, 384.1299pt x 243.25047pt>
+File: ./svg-inkscape/ionisierung_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/ionisierung_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/ionisierung_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 262.05264pt x 165.94632pt.
+<./svg-inkscape/ionisierung_svg-tex.pdf, id=307, page=2, 384.1299pt x 243.25047pt>
+File: ./svg-inkscape/ionisierung_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/ionisierung_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/ionisierung_svg-tex.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 262.05264pt x 165.94632pt.
+<./svg-inkscape/ionisierung_svg-tex.pdf, id=308, page=3, 384.1299pt x 243.25047pt>
+File: ./svg-inkscape/ionisierung_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/ionisierung_svg-tex.pdf, page 3>
+Package pdftex.def Info: ./svg-inkscape/ionisierung_svg-tex.pdf , page3 used on input line 61.
+(pdftex.def)             Requested size: 262.05264pt x 165.94632pt.
+)
+Package svg Info: Last page of `./svg-inkscape/linienladung_svg-tex.pdf' is 1 on input line 324.
+ (./svg-inkscape/linienladung_svg-tex.pdf_tex
+<./svg-inkscape/linienladung_svg-tex.pdf, id=311, page=1, 154.71042pt x 38.18752pt>
+File: ./svg-inkscape/linienladung_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/linienladung_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/linienladung_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 131.02632pt x 32.3424pt.
+)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[6 <./svg-inkscape/ionisierung_svg-tex.pdf> <./svg-inkscape/ionisierung_svg-tex.pdf
 
-LaTeX Warning: Reference `fig:punktladung' on page 11 undefined on input line 509.
+pdfTeX warning: pdflatex (file ./svg-inkscape/ionisierung_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/ionisierung_svg-tex.pdf
 
-[11]
+pdfTeX warning: pdflatex (file ./svg-inkscape/ionisierung_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/flächenladung_svg-tex.pdf' is 2 on input line 324.
+ (./svg-inkscape/flächenladung_svg-tex.pdf_tex
+<./svg-inkscape/flächenladung_svg-tex.pdf, id=323, page=1, 192.0625pt x 96.35301pt>
+File: ./svg-inkscape/flächenladung_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/flächenladung_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/flächenladung_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 174.69731pt x 87.64755pt.
+<./svg-inkscape/flächenladung_svg-tex.pdf, id=324, page=2, 192.0625pt x 96.35301pt>
+File: ./svg-inkscape/flächenladung_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/flächenladung_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/flächenladung_svg-tex.pdf , page2 used on input line 59.
+(pdftex.def)             Requested size: 174.69731pt x 87.64755pt.
+)
+Package svg Info: Last page of `./svg-inkscape/raumladung_svg-tex.pdf' is 2 on input line 324.
+ (./svg-inkscape/raumladung_svg-tex.pdf_tex
+<./svg-inkscape/raumladung_svg-tex.pdf, id=326, page=1, 185.9529pt x 196.3601pt>
+File: ./svg-inkscape/raumladung_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/raumladung_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/raumladung_svg-tex.pdf , page1 used on input line 57.
+(pdftex.def)             Requested size: 174.69731pt x 184.48863pt.
+<./svg-inkscape/raumladung_svg-tex.pdf, id=327, page=2, 185.9529pt x 196.3601pt>
+File: ./svg-inkscape/raumladung_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/raumladung_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/raumladung_svg-tex.pdf , page2 used on input line 59.
+(pdftex.def)             Requested size: 174.69731pt x 184.48863pt.
+)
 
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/feld_Punktladung.svg' on input line 509.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[7 <./svg-inkscape/linienladung_svg-tex.pdf> <./svg-inkscape/flächenladung_svg-tex.pdf
 
-./2_EFeld.tex:509: Package svg Error: File `feld_Punktladung_svg-tex.pdf' is missing.
+pdfTeX warning: pdflatex (file ./svg-inkscape/flächenladung_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/flächenladung_svg-tex.pdf
 
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.509  	}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/feld_Punktladung_svg-tex.pdf'
-although `Bilder/feld_Punktladung.svg' was found.
+pdfTeX warning: pdflatex (file ./svg-inkscape/flächenladung_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/metalle_svg-tex.pdf' is 2 on input line 484.
+ (./svg-inkscape/metalle_svg-tex.pdf_tex
+<./svg-inkscape/metalle_svg-tex.pdf, id=339, page=1, 606.13107pt x 355.40086pt>
+File: ./svg-inkscape/metalle_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/metalle_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/metalle_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 174.69731pt x 102.42911pt.
+<./svg-inkscape/metalle_svg-tex.pdf, id=340, page=2, 606.13107pt x 355.40086pt>
+File: ./svg-inkscape/metalle_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/metalle_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/metalle_svg-tex.pdf , page2 used on input line 59.
+(pdftex.def)             Requested size: 174.69731pt x 102.42911pt.
+)
+Package svg Info: Last page of `./svg-inkscape/leiter_ladung_svg-tex.pdf' is 1 on input line 484.
+ (./svg-inkscape/leiter_ladung_svg-tex.pdf_tex
+<./svg-inkscape/leiter_ladung_svg-tex.pdf, id=343, page=1, 481.82852pt x 113.6172pt>
+File: ./svg-inkscape/leiter_ladung_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/leiter_ladung_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/leiter_ladung_svg-tex.pdf , page1 used on input line 57.
+(pdftex.def)             Requested size: 305.72363pt x 72.09236pt.
+) [8 <./svg-inkscape/raumladung_svg-tex.pdf> <./svg-inkscape/raumladung_svg-tex.pdf
 
+pdfTeX warning: pdflatex (file ./svg-inkscape/raumladung_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/metalle_svg-tex.pdf
 
-./2_EFeld.tex:509: Package svg Error: File `feld_Punktladung_svg-tex.pdf_tex' is missing.
+pdfTeX warning: pdflatex (file ./svg-inkscape/metalle_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/metalle_svg-tex.pdf
 
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.509  	}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/feld_Punktladung_svg-tex.pdf_tex'
-although `Bilder/feld_Punktladung.svg' was found.
+pdfTeX warning: pdflatex (file ./svg-inkscape/metalle_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/leiter_ladung_svg-tex.pdf
 
+pdfTeX warning: pdflatex (file ./svg-inkscape/leiter_ladung_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/kraft_svg-tex.pdf' is 3 on input line 625.
+ (./svg-inkscape/kraft_svg-tex.pdf_tex
+<./svg-inkscape/kraft_svg-tex.pdf, id=359, page=1, 423.86836pt x 64.51677pt>
+File: ./svg-inkscape/kraft_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/kraft_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/kraft_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 305.72363pt x 46.5357pt.
+<./svg-inkscape/kraft_svg-tex.pdf, id=360, page=2, 423.86836pt x 64.51677pt>
+File: ./svg-inkscape/kraft_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/kraft_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/kraft_svg-tex.pdf , page2 used on input line 61.
+(pdftex.def)             Requested size: 305.72363pt x 46.5357pt.
+<./svg-inkscape/kraft_svg-tex.pdf, id=361, page=3, 423.86836pt x 64.51677pt>
+File: ./svg-inkscape/kraft_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/kraft_svg-tex.pdf, page 3>
+Package pdftex.def Info: ./svg-inkscape/kraft_svg-tex.pdf , page3 used on input line 63.
+(pdftex.def)             Requested size: 305.72363pt x 46.5357pt.
+) [9 <./svg-inkscape/kraft_svg-tex.pdf> <./svg-inkscape/kraft_svg-tex.pdf
 
-LaTeX Warning: Reference `fig:anziehende_ladungen' on page 12 undefined on input line 509.
+pdfTeX warning: pdflatex (file ./svg-inkscape/kraft_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/kraft_svg-tex.pdf
 
+pdfTeX warning: pdflatex (file ./svg-inkscape/kraft_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]) (./2_EFeld.tex
+Package svg Info: Last page of `./svg-inkscape/kraft_e_svg-tex.pdf' is 4 on input line 100.
+ (./svg-inkscape/kraft_e_svg-tex.pdf_tex
+<./svg-inkscape/kraft_e_svg-tex.pdf, id=375, page=1, 141.60004pt x 171.95221pt>
+File: ./svg-inkscape/kraft_e_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/kraft_e_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/kraft_e_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 87.34865pt x 106.074pt.
+<./svg-inkscape/kraft_e_svg-tex.pdf, id=376, page=2, 141.60004pt x 171.95221pt>
+File: ./svg-inkscape/kraft_e_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/kraft_e_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/kraft_e_svg-tex.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 87.34865pt x 106.074pt.
+<./svg-inkscape/kraft_e_svg-tex.pdf, id=377, page=3, 141.60004pt x 171.95221pt>
+File: ./svg-inkscape/kraft_e_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/kraft_e_svg-tex.pdf, page 3>
+Package pdftex.def Info: ./svg-inkscape/kraft_e_svg-tex.pdf , page3 used on input line 60.
+(pdftex.def)             Requested size: 87.34865pt x 106.074pt.
+<./svg-inkscape/kraft_e_svg-tex.pdf, id=378, page=4, 141.60004pt x 171.95221pt>
+File: ./svg-inkscape/kraft_e_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/kraft_e_svg-tex.pdf, page 4>
+Package pdftex.def Info: ./svg-inkscape/kraft_e_svg-tex.pdf , page4 used on input line 62.
+(pdftex.def)             Requested size: 87.34865pt x 106.074pt.
+) [10 <./svg-inkscape/kraft_e_svg-tex.pdf> <./svg-inkscape/kraft_e_svg-tex.pdf
 
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/feldlinien.svg' on input line 509.
+pdfTeX warning: pdflatex (file ./svg-inkscape/kraft_e_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/kraft_e_svg-tex.pdf
 
+pdfTeX warning: pdflatex (file ./svg-inkscape/kraft_e_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/kraft_e_svg-tex.pdf
 
-./2_EFeld.tex:509: Package svg Error: File `feldlinien_svg-tex.pdf' is missing.
+pdfTeX warning: pdflatex (file ./svg-inkscape/kraft_e_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/definition_e_svg-tex.pdf' is 2 on input line 100.
+ (./svg-inkscape/definition_e_svg-tex.pdf_tex
+<./svg-inkscape/definition_e_svg-tex.pdf, id=395, page=1, 141.60004pt x 171.9677pt>
+File: ./svg-inkscape/definition_e_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/definition_e_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/definition_e_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 87.34865pt x 106.08356pt.
+<./svg-inkscape/definition_e_svg-tex.pdf, id=396, page=2, 141.60004pt x 171.9677pt>
+File: ./svg-inkscape/definition_e_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/definition_e_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/definition_e_svg-tex.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 87.34865pt x 106.08356pt.
+)
+Package svg Info: Last page of `./svg-inkscape/leiter_pos_neg_svg-tex.pdf' is 5 on input line 272.
+ (./svg-inkscape/leiter_pos_neg_svg-tex.pdf_tex
+<./svg-inkscape/leiter_pos_neg_svg-tex.pdf, id=399, page=1, 365.52074pt x 174.48671pt>
+File: ./svg-inkscape/leiter_pos_neg_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/leiter_pos_neg_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/leiter_pos_neg_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 218.37498pt x 104.24553pt.
+<./svg-inkscape/leiter_pos_neg_svg-tex.pdf, id=400, page=2, 365.52074pt x 174.48671pt>
+File: ./svg-inkscape/leiter_pos_neg_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/leiter_pos_neg_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/leiter_pos_neg_svg-tex.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 218.37498pt x 104.24553pt.
+<./svg-inkscape/leiter_pos_neg_svg-tex.pdf, id=401, page=3, 365.52074pt x 174.48671pt>
+File: ./svg-inkscape/leiter_pos_neg_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/leiter_pos_neg_svg-tex.pdf, page 3>
+Package pdftex.def Info: ./svg-inkscape/leiter_pos_neg_svg-tex.pdf , page3 used on input line 60.
+(pdftex.def)             Requested size: 218.37498pt x 104.24553pt.
+<./svg-inkscape/leiter_pos_neg_svg-tex.pdf, id=402, page=4, 365.52074pt x 174.48671pt>
+File: ./svg-inkscape/leiter_pos_neg_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/leiter_pos_neg_svg-tex.pdf, page 4>
+Package pdftex.def Info: ./svg-inkscape/leiter_pos_neg_svg-tex.pdf , page4 used on input line 62.
+(pdftex.def)             Requested size: 218.37498pt x 104.24553pt.
+<./svg-inkscape/leiter_pos_neg_svg-tex.pdf, id=403, page=5, 365.52074pt x 174.48671pt>
+File: ./svg-inkscape/leiter_pos_neg_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/leiter_pos_neg_svg-tex.pdf, page 5>
+Package pdftex.def Info: ./svg-inkscape/leiter_pos_neg_svg-tex.pdf , page5 used on input line 64.
+(pdftex.def)             Requested size: 218.37498pt x 104.24553pt.
+)
+Package svg Info: Last page of `./svg-inkscape/Fehlvorstellung_svg-tex.pdf' is 3 on input line 272.
+ (./svg-inkscape/Fehlvorstellung_svg-tex.pdf_tex
+<./svg-inkscape/Fehlvorstellung_svg-tex.pdf, id=406, page=1, 593.68523pt x 182.08125pt>
+File: ./svg-inkscape/Fehlvorstellung_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/Fehlvorstellung_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/Fehlvorstellung_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 218.37498pt x 66.97449pt.
+<./svg-inkscape/Fehlvorstellung_svg-tex.pdf, id=407, page=2, 593.68523pt x 182.08125pt>
+File: ./svg-inkscape/Fehlvorstellung_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/Fehlvorstellung_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/Fehlvorstellung_svg-tex.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 218.37498pt x 66.97449pt.
+<./svg-inkscape/Fehlvorstellung_svg-tex.pdf, id=408, page=3, 593.68523pt x 182.08125pt>
+File: ./svg-inkscape/Fehlvorstellung_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/Fehlvorstellung_svg-tex.pdf, page 3>
+Package pdftex.def Info: ./svg-inkscape/Fehlvorstellung_svg-tex.pdf , page3 used on input line 60.
+(pdftex.def)             Requested size: 218.37498pt x 66.97449pt.
+)
 
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.509  	}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/feldlinien_svg-tex.pdf'
-although `Bilder/feldlinien.svg' was found.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+Package svg Info: Last page of `./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf' is 5 on input line 272.
+(./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf_tex
+<./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf, id=411, page=1, 514.99083pt x 153.20537pt>
+File: ./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 218.37498pt x 64.9653pt.
+<./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf, id=412, page=2, 514.99083pt x 153.20537pt>
+File: ./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 218.37498pt x 64.9653pt.
+<./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf, id=413, page=3, 514.99083pt x 153.20537pt>
+File: ./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf, page 3>
+Package pdftex.def Info: ./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf , page3 used on input line 60.
+(pdftex.def)             Requested size: 218.37498pt x 64.9653pt.
+<./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf, id=414, page=4, 514.99083pt x 153.20537pt>
+File: ./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf, page 4>
+Package pdftex.def Info: ./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf , page4 used on input line 62.
+(pdftex.def)             Requested size: 218.37498pt x 64.9653pt.
+<./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf, id=415, page=5, 514.99083pt x 153.20537pt>
+File: ./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf, page 5>
+Package pdftex.def Info: ./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf , page5 used on input line 64.
+(pdftex.def)             Requested size: 218.37498pt x 64.9653pt.
+)
 
-./2_EFeld.tex:509: Package svg Error: File `feldlinien_svg-tex.pdf_tex' is missing.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.509  	}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/feldlinien_svg-tex.pdf_tex'
-although `Bilder/feldlinien.svg' was found.
+[11 <./svg-inkscape/definition_e_svg-tex.pdf> <./svg-inkscape/definition_e_svg-tex.pdf
 
+pdfTeX warning: pdflatex (file ./svg-inkscape/definition_e_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/leiter_pos_neg_svg-tex.pdf
 
-LaTeX Warning: Reference `fig:abstoßendeladungen' on page 12 undefined on input line 509.
+pdfTeX warning: pdflatex (file ./svg-inkscape/leiter_pos_neg_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/leiter_pos_neg_svg-tex.pdf
 
+pdfTeX warning: pdflatex (file ./svg-inkscape/leiter_pos_neg_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/leiter_pos_neg_svg-tex.pdf
 
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/feldlinien_protonen.svg' on input line 509.
+pdfTeX warning: pdflatex (file ./svg-inkscape/leiter_pos_neg_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/leiter_pos_neg_svg-tex.pdf
 
+pdfTeX warning: pdflatex (file ./svg-inkscape/leiter_pos_neg_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/leiter_pos_neg_svg-tex.pdf
 
-./2_EFeld.tex:509: Package svg Error: File `feldlinien_protonen_svg-tex.pdf' is missing.
+pdfTeX warning: pdflatex (file ./svg-inkscape/leiter_pos_neg_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/elektr_homogenfeld_svg-tex.pdf' is 2 on input line 504.
+ (./svg-inkscape/elektr_homogenfeld_svg-tex.pdf_tex
+<./svg-inkscape/elektr_homogenfeld_svg-tex.pdf, id=432, page=1, 337.05063pt x 221.9448pt>
+File: ./svg-inkscape/elektr_homogenfeld_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/elektr_homogenfeld_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/elektr_homogenfeld_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 131.02632pt x 86.27702pt.
+<./svg-inkscape/elektr_homogenfeld_svg-tex.pdf, id=433, page=2, 337.05063pt x 221.9448pt>
+File: ./svg-inkscape/elektr_homogenfeld_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/elektr_homogenfeld_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/elektr_homogenfeld_svg-tex.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 131.02632pt x 86.27702pt.
+)
+Package svg Info: Last page of `./svg-inkscape/feld_Punktladung_svg-tex.pdf' is 1 on input line 504.
+ (./svg-inkscape/feld_Punktladung_svg-tex.pdf_tex
+<./svg-inkscape/feld_Punktladung_svg-tex.pdf, id=436, page=1, 147.09155pt x 147.09158pt>
+File: ./svg-inkscape/feld_Punktladung_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/feld_Punktladung_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/feld_Punktladung_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 113.55258pt x 113.55489pt.
+)
 
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.509  	}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/feldlinien_protonen_svg-tex.pdf'
-although `Bilder/feldlinien_protonen.svg' was found.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[12 <./svg-inkscape/Fehlvorstellung_svg-tex.pdf> <./svg-inkscape/Fehlvorstellung_svg-tex.pdf
 
-./2_EFeld.tex:509: Package svg Error: File `feldlinien_protonen_svg-tex.pdf_tex' is missing.
+pdfTeX warning: pdflatex (file ./svg-inkscape/Fehlvorstellung_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/Fehlvorstellung_svg-tex.pdf
 
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.509  	}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/feldlinien_protonen_svg-tex.pdf_tex'
-although `Bilder/feldlinien_protonen.svg' was found.
+pdfTeX warning: pdflatex (file ./svg-inkscape/Fehlvorstellung_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf
 
-[12]) (./3_Potential.tex
+pdfTeX warning: pdflatex (file ./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf
 
-LaTeX Warning: Reference `eq:e_feld' on page 13 undefined on input line 186.
+pdfTeX warning: pdflatex (file ./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf
 
+pdfTeX warning: pdflatex (file ./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf
 
-LaTeX Warning: Reference `fig:arbeitefeld' on page 13 undefined on input line 186.
+pdfTeX warning: pdflatex (file ./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf
 
+pdfTeX warning: pdflatex (file ./svg-inkscape/feldlinien_senkrecht_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/elektr_homogenfeld_svg-tex.pdf
 
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/homogenfeld_w.svg' on input line 186.
+pdfTeX warning: pdflatex (file ./svg-inkscape/elektr_homogenfeld_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/elektr_homogenfeld_svg-tex.pdf
 
+pdfTeX warning: pdflatex (file ./svg-inkscape/elektr_homogenfeld_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/feldlinien_svg-tex.pdf' is 1 on input line 504.
+ (./svg-inkscape/feldlinien_svg-tex.pdf_tex
+<./svg-inkscape/feldlinien_svg-tex.pdf, id=451, page=1, 525.02399pt x 311.64758pt>
+File: ./svg-inkscape/feldlinien_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/feldlinien_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/feldlinien_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 192.17105pt x 114.0714pt.
+)
+Package svg Info: Last page of `./svg-inkscape/feldlinien_protonen_svg-tex.pdf' is 1 on input line 504.
+ (./svg-inkscape/feldlinien_protonen_svg-tex.pdf_tex
+<./svg-inkscape/feldlinien_protonen_svg-tex.pdf, id=454, page=1, 273.96071pt x 233.76607pt>
+File: ./svg-inkscape/feldlinien_protonen_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/feldlinien_protonen_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/feldlinien_protonen_svg-tex.pdf , page1 used on input line 57.
+(pdftex.def)             Requested size: 174.69731pt x 149.06758pt.
+) [13 <./svg-inkscape/feld_Punktladung_svg-tex.pdf> <./svg-inkscape/feldlinien_svg-tex.pdf
 
-./3_Potential.tex:186: Package svg Error: File `homogenfeld_w_svg-tex.pdf' is missing.
+pdfTeX warning: pdflatex (file ./svg-inkscape/feldlinien_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/feldlinien_protonen_svg-tex.pdf
 
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.186 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/homogenfeld_w_svg-tex.pdf'
-although `Bilder/homogenfeld_w.svg' was found.
+pdfTeX warning: pdflatex (file ./svg-inkscape/feldlinien_protonen_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]) (./3_Potential.tex
 
+LaTeX Warning: Reference `eq:e_field' on page 14 undefined on input line 189.
 
-./3_Potential.tex:186: Package svg Error: File `homogenfeld_w_svg-tex.pdf_tex' is missing.
+Package svg Info: Last page of `./svg-inkscape/homogenfeld_w_svg-tex.pdf' is 4 on input line 189.
+(./svg-inkscape/homogenfeld_w_svg-tex.pdf_tex
+<./svg-inkscape/homogenfeld_w_svg-tex.pdf, id=467, page=1, 407.63841pt x 159.94496pt>
+File: ./svg-inkscape/homogenfeld_w_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/homogenfeld_w_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/homogenfeld_w_svg-tex.pdf , page1 used on input line 57.
+(pdftex.def)             Requested size: 218.37498pt x 85.68562pt.
+<./svg-inkscape/homogenfeld_w_svg-tex.pdf, id=468, page=2, 407.63841pt x 159.94496pt>
+File: ./svg-inkscape/homogenfeld_w_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/homogenfeld_w_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/homogenfeld_w_svg-tex.pdf , page2 used on input line 59.
+(pdftex.def)             Requested size: 218.37498pt x 85.68562pt.
+<./svg-inkscape/homogenfeld_w_svg-tex.pdf, id=469, page=3, 407.63841pt x 159.94496pt>
+File: ./svg-inkscape/homogenfeld_w_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/homogenfeld_w_svg-tex.pdf, page 3>
+Package pdftex.def Info: ./svg-inkscape/homogenfeld_w_svg-tex.pdf , page3 used on input line 61.
+(pdftex.def)             Requested size: 218.37498pt x 85.68562pt.
+<./svg-inkscape/homogenfeld_w_svg-tex.pdf, id=470, page=4, 407.63841pt x 159.94496pt>
+File: ./svg-inkscape/homogenfeld_w_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/homogenfeld_w_svg-tex.pdf, page 4>
+Package pdftex.def Info: ./svg-inkscape/homogenfeld_w_svg-tex.pdf , page4 used on input line 63.
+(pdftex.def)             Requested size: 218.37498pt x 85.68562pt.
+)
+Package svg Info: Last page of `./svg-inkscape/homogenfeld_elektr_arbeit_svg-tex.pdf' is 1 on input line 189.
+ (./svg-inkscape/homogenfeld_elektr_arbeit_svg-tex.pdf_tex
+<./svg-inkscape/homogenfeld_elektr_arbeit_svg-tex.pdf, id=473, page=1, 391.06216pt x 201.72083pt>
+File: ./svg-inkscape/homogenfeld_elektr_arbeit_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/homogenfeld_elektr_arbeit_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/homogenfeld_elektr_arbeit_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 218.37498pt x 112.64584pt.
+)
 
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.186 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/homogenfeld_w_svg-tex.pdf_tex'
-although `Bilder/homogenfeld_w.svg' was found.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[14 <./svg-inkscape/homogenfeld_w_svg-tex.pdf> <./svg-inkscape/homogenfeld_w_svg-tex.pdf
 
-LaTeX Warning: Reference `fig:evsx' on page 13 undefined on input line 186.
+pdfTeX warning: pdflatex (file ./svg-inkscape/homogenfeld_w_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/homogenfeld_w_svg-tex.pdf
 
+pdfTeX warning: pdflatex (file ./svg-inkscape/homogenfeld_w_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/homogenfeld_w_svg-tex.pdf
 
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/homogenfeld_elektr_arbeit.svg' on input line 186.
+pdfTeX warning: pdflatex (file ./svg-inkscape/homogenfeld_w_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 189--189
 
+ []
 
-./3_Potential.tex:186: Package svg Error: File `homogenfeld_elektr_arbeit_svg-tex.pdf' is missing.
+Package svg Info: Last page of `./svg-inkscape/homogenfeld_elektr_arbeit2_svg-tex.pdf' is 3 on input line 189.
+(./svg-inkscape/homogenfeld_elektr_arbeit2_svg-tex.pdf_tex
+<./svg-inkscape/homogenfeld_elektr_arbeit2_svg-tex.pdf, id=497, page=1, 404.75925pt x 204.09572pt>
+File: ./svg-inkscape/homogenfeld_elektr_arbeit2_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/homogenfeld_elektr_arbeit2_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/homogenfeld_elektr_arbeit2_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 218.37498pt x 110.1135pt.
+<./svg-inkscape/homogenfeld_elektr_arbeit2_svg-tex.pdf, id=498, page=2, 404.75925pt x 204.09572pt>
+File: ./svg-inkscape/homogenfeld_elektr_arbeit2_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/homogenfeld_elektr_arbeit2_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/homogenfeld_elektr_arbeit2_svg-tex.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 218.37498pt x 110.1135pt.
+<./svg-inkscape/homogenfeld_elektr_arbeit2_svg-tex.pdf, id=499, page=3, 404.75925pt x 204.09572pt>
+File: ./svg-inkscape/homogenfeld_elektr_arbeit2_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/homogenfeld_elektr_arbeit2_svg-tex.pdf, page 3>
+Package pdftex.def Info: ./svg-inkscape/homogenfeld_elektr_arbeit2_svg-tex.pdf , page3 used on input line 63.
+(pdftex.def)             Requested size: 218.37498pt x 110.1135pt.
+)
 
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.186 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/homogenfeld_elektr_arbeit_svg-tex.pdf'
-although `Bilder/homogenfeld_elektr_arbeit.svg' was found.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[15 <./svg-inkscape/homogenfeld_elektr_arbeit_svg-tex.pdf>]
+Package svg Info: Last page of `./svg-inkscape/energieumwandlung_svg-tex.pdf' is 2 on input line 189.
+ (./svg-inkscape/energieumwandlung_svg-tex.pdf_tex
+<./svg-inkscape/energieumwandlung_svg-tex.pdf, id=513, page=1, 245.23157pt x 140.73167pt>
+File: ./svg-inkscape/energieumwandlung_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/energieumwandlung_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/energieumwandlung_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 218.37498pt x 125.32378pt.
+<./svg-inkscape/energieumwandlung_svg-tex.pdf, id=514, page=2, 245.23157pt x 140.73167pt>
+File: ./svg-inkscape/energieumwandlung_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/energieumwandlung_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/energieumwandlung_svg-tex.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 218.37498pt x 125.32378pt.
+)
+Package svg Info: Last page of `./svg-inkscape/potential_homogenfeld_svg-tex.pdf' is 4 on input line 502.
+ (./svg-inkscape/potential_homogenfeld_svg-tex.pdf_tex
+<./svg-inkscape/potential_homogenfeld_svg-tex.pdf, id=517, page=1, 451.35692pt x 159.94496pt>
+File: ./svg-inkscape/potential_homogenfeld_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/potential_homogenfeld_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/potential_homogenfeld_svg-tex.pdf , page1 used on input line 57.
+(pdftex.def)             Requested size: 218.37498pt x 77.38528pt.
+<./svg-inkscape/potential_homogenfeld_svg-tex.pdf, id=518, page=2, 451.35692pt x 159.94496pt>
+File: ./svg-inkscape/potential_homogenfeld_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/potential_homogenfeld_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/potential_homogenfeld_svg-tex.pdf , page2 used on input line 59.
+(pdftex.def)             Requested size: 218.37498pt x 77.38528pt.
+<./svg-inkscape/potential_homogenfeld_svg-tex.pdf, id=519, page=3, 451.35692pt x 159.94496pt>
+File: ./svg-inkscape/potential_homogenfeld_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/potential_homogenfeld_svg-tex.pdf, page 3>
+Package pdftex.def Info: ./svg-inkscape/potential_homogenfeld_svg-tex.pdf , page3 used on input line 61.
+(pdftex.def)             Requested size: 218.37498pt x 77.38528pt.
+<./svg-inkscape/potential_homogenfeld_svg-tex.pdf, id=520, page=4, 451.35692pt x 159.94496pt>
+File: ./svg-inkscape/potential_homogenfeld_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/potential_homogenfeld_svg-tex.pdf, page 4>
+Package pdftex.def Info: ./svg-inkscape/potential_homogenfeld_svg-tex.pdf , page4 used on input line 63.
+(pdftex.def)             Requested size: 218.37498pt x 77.38528pt.
+)
 
-./3_Potential.tex:186: Package svg Error: File `homogenfeld_elektr_arbeit_svg-tex.pdf_tex' is missing.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.186 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/homogenfeld_elektr_arbeit_svg-tex.pdf_tex'
-although `Bilder/homogenfeld_elektr_arbeit.svg' was found.
+[16 <./svg-inkscape/homogenfeld_elektr_arbeit2_svg-tex.pdf> <./svg-inkscape/homogenfeld_elektr_arbeit2_svg-tex.pdf
 
+pdfTeX warning: pdflatex (file ./svg-inkscape/homogenfeld_elektr_arbeit2_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/homogenfeld_elektr_arbeit2_svg-tex.pdf
 
-LaTeX Warning: Reference `fig:arbeitefeld' on page 13 undefined on input line 186.
+pdfTeX warning: pdflatex (file ./svg-inkscape/homogenfeld_elektr_arbeit2_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/energieumwandlung_svg-tex.pdf
 
+pdfTeX warning: pdflatex (file ./svg-inkscape/energieumwandlung_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/energieumwandlung_svg-tex.pdf
 
-LaTeX Warning: Reference `fig:arbeitefeld' on page 13 undefined on input line 186.
+pdfTeX warning: pdflatex (file ./svg-inkscape/energieumwandlung_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf' is 3 on input line 502.
+ (./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf_tex
+<./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf, id=537, page=1, 393.9043pt x 203.5313pt>
+File: ./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 218.37498pt x 112.83696pt.
+<./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf, id=538, page=2, 393.9043pt x 203.5313pt>
+File: ./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 218.37498pt x 112.83696pt.
+<./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf, id=539, page=3, 393.9043pt x 203.5313pt>
+File: ./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf, page 3>
+Package pdftex.def Info: ./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf , page3 used on input line 63.
+(pdftex.def)             Requested size: 218.37498pt x 112.83696pt.
+)
+Package svg Info: Last page of `./svg-inkscape/potentialdifferenz_svg-tex.pdf' is 6 on input line 733.
+ (./svg-inkscape/potentialdifferenz_svg-tex.pdf_tex
+<./svg-inkscape/potentialdifferenz_svg-tex.pdf, id=545, page=1, 449.93906pt x 159.94496pt>
+File: ./svg-inkscape/potentialdifferenz_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/potentialdifferenz_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/potentialdifferenz_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 218.37498pt x 77.62689pt.
+<./svg-inkscape/potentialdifferenz_svg-tex.pdf, id=546, page=2, 449.93906pt x 159.94496pt>
+File: ./svg-inkscape/potentialdifferenz_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/potentialdifferenz_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/potentialdifferenz_svg-tex.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 218.37498pt x 77.62689pt.
+<./svg-inkscape/potentialdifferenz_svg-tex.pdf, id=547, page=3, 449.93906pt x 159.94496pt>
+File: ./svg-inkscape/potentialdifferenz_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/potentialdifferenz_svg-tex.pdf, page 3>
+Package pdftex.def Info: ./svg-inkscape/potentialdifferenz_svg-tex.pdf , page3 used on input line 60.
+(pdftex.def)             Requested size: 218.37498pt x 77.62689pt.
+<./svg-inkscape/potentialdifferenz_svg-tex.pdf, id=548, page=4, 449.93906pt x 159.94496pt>
+File: ./svg-inkscape/potentialdifferenz_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/potentialdifferenz_svg-tex.pdf, page 4>
+Package pdftex.def Info: ./svg-inkscape/potentialdifferenz_svg-tex.pdf , page4 used on input line 62.
+(pdftex.def)             Requested size: 218.37498pt x 77.62689pt.
+<./svg-inkscape/potentialdifferenz_svg-tex.pdf, id=549, page=5, 449.93906pt x 159.94496pt>
+File: ./svg-inkscape/potentialdifferenz_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/potentialdifferenz_svg-tex.pdf, page 5>
+Package pdftex.def Info: ./svg-inkscape/potentialdifferenz_svg-tex.pdf , page5 used on input line 64.
+(pdftex.def)             Requested size: 218.37498pt x 77.62689pt.
+<./svg-inkscape/potentialdifferenz_svg-tex.pdf, id=550, page=6, 449.93906pt x 159.94496pt>
+File: ./svg-inkscape/potentialdifferenz_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/potentialdifferenz_svg-tex.pdf, page 6>
+Package pdftex.def Info: ./svg-inkscape/potentialdifferenz_svg-tex.pdf , page6 used on input line 66.
+(pdftex.def)             Requested size: 218.37498pt x 77.62689pt.
+)
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Warning: Reference `eq:e_feld' on page 13 undefined on input line 186.
+[17 <./svg-inkscape/potential_homogenfeld_svg-tex.pdf> <./svg-inkscape/potential_homogenfeld_svg-tex.pdf
 
-[13]
+pdfTeX warning: pdflatex (file ./svg-inkscape/potential_homogenfeld_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/potential_homogenfeld_svg-tex.pdf
 
-LaTeX Warning: Reference `fig:arbeitefeld' on page 14 undefined on input line 186.
+pdfTeX warning: pdflatex (file ./svg-inkscape/potential_homogenfeld_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/potential_homogenfeld_svg-tex.pdf
 
+pdfTeX warning: pdflatex (file ./svg-inkscape/potential_homogenfeld_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--186
+pdfTeX warning: pdflatex (file ./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/phi_diff_graph_svg-tex.pdf' is 3 on input line 733.
+ (./svg-inkscape/phi_diff_graph_svg-tex.pdf_tex
+<./svg-inkscape/phi_diff_graph_svg-tex.pdf, id=571, page=1, 410.27556pt x 187.53351pt>
+File: ./svg-inkscape/phi_diff_graph_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/phi_diff_graph_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/phi_diff_graph_svg-tex.pdf , page1 used on input line 59.
+(pdftex.def)             Requested size: 218.37498pt x 99.81863pt.
+<./svg-inkscape/phi_diff_graph_svg-tex.pdf, id=572, page=2, 410.27556pt x 187.53351pt>
+File: ./svg-inkscape/phi_diff_graph_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/phi_diff_graph_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/phi_diff_graph_svg-tex.pdf , page2 used on input line 62.
+(pdftex.def)             Requested size: 218.37498pt x 99.81863pt.
+<./svg-inkscape/phi_diff_graph_svg-tex.pdf, id=573, page=3, 410.27556pt x 187.53351pt>
+File: ./svg-inkscape/phi_diff_graph_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/phi_diff_graph_svg-tex.pdf, page 3>
+Package pdftex.def Info: ./svg-inkscape/phi_diff_graph_svg-tex.pdf , page3 used on input line 65.
+(pdftex.def)             Requested size: 218.37498pt x 99.81863pt.
+)
+Package svg Info: Last page of `./svg-inkscape/wirbelfrei_svg-tex.pdf' is 5 on input line 733.
+ (./svg-inkscape/wirbelfrei_svg-tex.pdf_tex
+<./svg-inkscape/wirbelfrei_svg-tex.pdf, id=577, page=1, 393.66212pt x 175.25787pt>
+File: ./svg-inkscape/wirbelfrei_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/wirbelfrei_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/wirbelfrei_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 218.37498pt x 97.22112pt.
+<./svg-inkscape/wirbelfrei_svg-tex.pdf, id=578, page=2, 393.66212pt x 175.25787pt>
+File: ./svg-inkscape/wirbelfrei_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/wirbelfrei_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/wirbelfrei_svg-tex.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 218.37498pt x 97.22112pt.
+<./svg-inkscape/wirbelfrei_svg-tex.pdf, id=579, page=3, 393.66212pt x 175.25787pt>
+File: ./svg-inkscape/wirbelfrei_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/wirbelfrei_svg-tex.pdf, page 3>
+Package pdftex.def Info: ./svg-inkscape/wirbelfrei_svg-tex.pdf , page3 used on input line 60.
+(pdftex.def)             Requested size: 218.37498pt x 97.22112pt.
+<./svg-inkscape/wirbelfrei_svg-tex.pdf, id=580, page=4, 393.66212pt x 175.25787pt>
+File: ./svg-inkscape/wirbelfrei_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/wirbelfrei_svg-tex.pdf, page 4>
+Package pdftex.def Info: ./svg-inkscape/wirbelfrei_svg-tex.pdf , page4 used on input line 62.
+(pdftex.def)             Requested size: 218.37498pt x 97.22112pt.
+<./svg-inkscape/wirbelfrei_svg-tex.pdf, id=581, page=5, 393.66212pt x 175.25787pt>
+File: ./svg-inkscape/wirbelfrei_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/wirbelfrei_svg-tex.pdf, page 5>
+Package pdftex.def Info: ./svg-inkscape/wirbelfrei_svg-tex.pdf , page5 used on input line 67.
+(pdftex.def)             Requested size: 218.37498pt x 97.22112pt.
+) [18 <./svg-inkscape/potentialdifferenz_svg-tex.pdf> <./svg-inkscape/potentialdifferenz_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/potentialdifferenz_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/potentialdifferenz_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/potentialdifferenz_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/potentialdifferenz_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/potentialdifferenz_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/potentialdifferenz_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/potentialdifferenz_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/potentialdifferenz_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/potentialdifferenz_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/phi_diff_graph_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/phi_diff_graph_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/phi_diff_graph_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/phi_diff_graph_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/phi_diff_graph_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/phi_diff_graph_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/wirbelfrei_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/wirbelfrei_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/wirbelfrei_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/wirbelfrei_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/wirbelfrei_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/wirbelfrei_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/wirbelfrei_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/wirbelfrei_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/wirbelfrei_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/wirbelfrei_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/radialfeld_svg-tex.pdf' is 3 on input line 733.
+ (./svg-inkscape/radialfeld_svg-tex.pdf_tex
+<./svg-inkscape/radialfeld_svg-tex.pdf, id=608, page=1, 235.35188pt x 147.09158pt>
+File: ./svg-inkscape/radialfeld_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/radialfeld_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/radialfeld_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 202.72601pt x 126.70277pt.
+<./svg-inkscape/radialfeld_svg-tex.pdf, id=609, page=2, 235.35188pt x 147.09158pt>
+File: ./svg-inkscape/radialfeld_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/radialfeld_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/radialfeld_svg-tex.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 202.72601pt x 126.70277pt.
+<./svg-inkscape/radialfeld_svg-tex.pdf, id=610, page=3, 235.35188pt x 147.09158pt>
+File: ./svg-inkscape/radialfeld_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/radialfeld_svg-tex.pdf, page 3>
+Package pdftex.def Info: ./svg-inkscape/radialfeld_svg-tex.pdf , page3 used on input line 60.
+(pdftex.def)             Requested size: 202.72601pt x 126.70277pt.
+) [19 <./svg-inkscape/radialfeld_svg-tex.pdf> <./svg-inkscape/radialfeld_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/radialfeld_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/radialfeld_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/radialfeld_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/spannung_svg-tex.pdf' is 2 on input line 1016.
+ (./svg-inkscape/spannung_svg-tex.pdf_tex
+<./svg-inkscape/spannung_svg-tex.pdf, id=623, page=1, 329.79703pt x 240.89659pt>
+File: ./svg-inkscape/spannung_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/spannung_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/spannung_svg-tex.pdf , page1 used on input line 57.
+(pdftex.def)             Requested size: 131.02632pt x 95.70998pt.
+<./svg-inkscape/spannung_svg-tex.pdf, id=624, page=2, 329.79703pt x 240.89659pt>
+File: ./svg-inkscape/spannung_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/spannung_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/spannung_svg-tex.pdf , page2 used on input line 60.
+(pdftex.def)             Requested size: 131.02632pt x 95.70998pt.
+)
+Package svg Info: Last page of `./svg-inkscape/spannung_homogenfeld_svg-tex.pdf' is 4 on input line 1016.
+ (./svg-inkscape/spannung_homogenfeld_svg-tex.pdf_tex
+<./svg-inkscape/spannung_homogenfeld_svg-tex.pdf, id=629, page=1, 471.37567pt x 159.94496pt>
+File: ./svg-inkscape/spannung_homogenfeld_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/spannung_homogenfeld_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/spannung_homogenfeld_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 174.69731pt x 59.27876pt.
+<./svg-inkscape/spannung_homogenfeld_svg-tex.pdf, id=630, page=2, 471.37567pt x 159.94496pt>
+File: ./svg-inkscape/spannung_homogenfeld_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/spannung_homogenfeld_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/spannung_homogenfeld_svg-tex.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 174.69731pt x 59.27876pt.
+<./svg-inkscape/spannung_homogenfeld_svg-tex.pdf, id=631, page=3, 471.37567pt x 159.94496pt>
+File: ./svg-inkscape/spannung_homogenfeld_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/spannung_homogenfeld_svg-tex.pdf, page 3>
+Package pdftex.def Info: ./svg-inkscape/spannung_homogenfeld_svg-tex.pdf , page3 used on input line 60.
+(pdftex.def)             Requested size: 174.69731pt x 59.27876pt.
+<./svg-inkscape/spannung_homogenfeld_svg-tex.pdf, id=632, page=4, 471.37567pt x 159.94496pt>
+File: ./svg-inkscape/spannung_homogenfeld_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/spannung_homogenfeld_svg-tex.pdf, page 4>
+Package pdftex.def Info: ./svg-inkscape/spannung_homogenfeld_svg-tex.pdf , page4 used on input line 62.
+(pdftex.def)             Requested size: 174.69731pt x 59.27876pt.
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[20 <./svg-inkscape/spannung_svg-tex.pdf> <./svg-inkscape/spannung_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/spannung_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/homogenfeld_spannung_graph_svg-tex.pdf' is 2 on input line 1016.
+ (./svg-inkscape/homogenfeld_spannung_graph_svg-tex.pdf_tex
+<./svg-inkscape/homogenfeld_spannung_graph_svg-tex.pdf, id=647, page=1, 405.85379pt x 211.00092pt>
+File: ./svg-inkscape/homogenfeld_spannung_graph_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/homogenfeld_spannung_graph_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/homogenfeld_spannung_graph_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 174.69731pt x 90.8252pt.
+<./svg-inkscape/homogenfeld_spannung_graph_svg-tex.pdf, id=648, page=2, 405.85379pt x 211.00092pt>
+File: ./svg-inkscape/homogenfeld_spannung_graph_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/homogenfeld_spannung_graph_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/homogenfeld_spannung_graph_svg-tex.pdf , page2 used on input line 62.
+(pdftex.def)             Requested size: 174.69731pt x 90.8252pt.
+)
+Package svg Info: Last page of `./svg-inkscape/skalarprodukt_svg-tex.pdf' is 2 on input line 1016.
+ (./svg-inkscape/skalarprodukt_svg-tex.pdf_tex
+<./svg-inkscape/skalarprodukt_svg-tex.pdf, id=650, page=1, 253.24632pt x 91.87477pt>
+File: ./svg-inkscape/skalarprodukt_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/skalarprodukt_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/skalarprodukt_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 218.37498pt x 79.22664pt.
+<./svg-inkscape/skalarprodukt_svg-tex.pdf, id=651, page=2, 253.24632pt x 91.87477pt>
+File: ./svg-inkscape/skalarprodukt_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/skalarprodukt_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/skalarprodukt_svg-tex.pdf , page2 used on input line 59.
+(pdftex.def)             Requested size: 218.37498pt x 79.22664pt.
+) [21 <./svg-inkscape/spannung_homogenfeld_svg-tex.pdf> <./svg-inkscape/spannung_homogenfeld_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/spannung_homogenfeld_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/spannung_homogenfeld_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/spannung_homogenfeld_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/spannung_homogenfeld_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/spannung_homogenfeld_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/homogenfeld_spannung_graph_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/homogenfeld_spannung_graph_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/homogenfeld_spannung_graph_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/homogenfeld_spannung_graph_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/skalarprodukt_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/skalarprodukt_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/skalarprodukt_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/skalarprodukt_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]) (./4_Strom.tex
+Package svg Info: Last page of `./svg-inkscape/strömungsfeld_svg-tex.pdf' is 3 on input line 61.
+ (./svg-inkscape/strömungsfeld_svg-tex.pdf_tex
+<./svg-inkscape/strömungsfeld_svg-tex.pdf, id=673, page=1, 399.16492pt x 220.17259pt>
+File: ./svg-inkscape/strömungsfeld_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/strömungsfeld_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/strömungsfeld_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 262.05264pt x 144.54501pt.
+<./svg-inkscape/strömungsfeld_svg-tex.pdf, id=674, page=2, 399.16492pt x 220.17259pt>
+File: ./svg-inkscape/strömungsfeld_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/strömungsfeld_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/strömungsfeld_svg-tex.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 262.05264pt x 144.54501pt.
+<./svg-inkscape/strömungsfeld_svg-tex.pdf, id=675, page=3, 399.16492pt x 220.17259pt>
+File: ./svg-inkscape/strömungsfeld_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/strömungsfeld_svg-tex.pdf, page 3>
+Package pdftex.def Info: ./svg-inkscape/strömungsfeld_svg-tex.pdf , page3 used on input line 60.
+(pdftex.def)             Requested size: 262.05264pt x 144.54501pt.
+)
+Package svg Info: Last page of `./svg-inkscape/strom_svg-tex.pdf' is 4 on input line 318.
+ (./svg-inkscape/strom_svg-tex.pdf_tex
+<./svg-inkscape/strom_svg-tex.pdf, id=678, page=1, 398.10175pt x 241.55899pt>
+File: ./svg-inkscape/strom_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/strom_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/strom_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 262.05264pt x 159.00923pt.
+<./svg-inkscape/strom_svg-tex.pdf, id=679, page=2, 398.10175pt x 241.55899pt>
+File: ./svg-inkscape/strom_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/strom_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/strom_svg-tex.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 262.05264pt x 159.00923pt.
+<./svg-inkscape/strom_svg-tex.pdf, id=680, page=3, 398.10175pt x 241.55899pt>
+File: ./svg-inkscape/strom_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/strom_svg-tex.pdf, page 3>
+Package pdftex.def Info: ./svg-inkscape/strom_svg-tex.pdf , page3 used on input line 60.
+(pdftex.def)             Requested size: 262.05264pt x 159.00923pt.
+<./svg-inkscape/strom_svg-tex.pdf, id=681, page=4, 398.10175pt x 241.55899pt>
+File: ./svg-inkscape/strom_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/strom_svg-tex.pdf, page 4>
+Package pdftex.def Info: ./svg-inkscape/strom_svg-tex.pdf , page4 used on input line 62.
+(pdftex.def)             Requested size: 262.05264pt x 159.00923pt.
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[22 <./svg-inkscape/strömungsfeld_svg-tex.pdf> <./svg-inkscape/strömungsfeld_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/strömungsfeld_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/strömungsfeld_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/strömungsfeld_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/strom1_svg-tex.pdf' is 3 on input line 318.
+ (./svg-inkscape/strom1_svg-tex.pdf_tex
+<./svg-inkscape/strom1_svg-tex.pdf, id=696, page=1, 361.04901pt x 213.85017pt>
+File: ./svg-inkscape/strom1_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/strom1_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/strom1_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 262.05264pt x 155.21849pt.
+<./svg-inkscape/strom1_svg-tex.pdf, id=697, page=2, 361.04901pt x 213.85017pt>
+File: ./svg-inkscape/strom1_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/strom1_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/strom1_svg-tex.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 262.05264pt x 155.21849pt.
+<./svg-inkscape/strom1_svg-tex.pdf, id=698, page=3, 361.04901pt x 213.85017pt>
+File: ./svg-inkscape/strom1_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/strom1_svg-tex.pdf, page 3>
+Package pdftex.def Info: ./svg-inkscape/strom1_svg-tex.pdf , page3 used on input line 63.
+(pdftex.def)             Requested size: 262.05264pt x 155.21849pt.
+) [23 <./svg-inkscape/strom_svg-tex.pdf> <./svg-inkscape/strom_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/strom_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/strom_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/strom_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/strom_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/strom_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/strom1_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/strom1_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/strom1_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/strom1_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/strom1_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/strom1_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/stromdichte_svg-tex.pdf' is 4 on input line 318.
+ (./svg-inkscape/stromdichte_svg-tex.pdf_tex
+<./svg-inkscape/stromdichte_svg-tex.pdf, id=711, page=1, 470.52812pt x 211.52208pt>
+File: ./svg-inkscape/stromdichte_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/stromdichte_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/stromdichte_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 262.05264pt x 117.80927pt.
+<./svg-inkscape/stromdichte_svg-tex.pdf, id=712, page=2, 470.52812pt x 211.52208pt>
+File: ./svg-inkscape/stromdichte_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/stromdichte_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/stromdichte_svg-tex.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 262.05264pt x 117.80927pt.
+<./svg-inkscape/stromdichte_svg-tex.pdf, id=713, page=3, 470.52812pt x 211.52208pt>
+File: ./svg-inkscape/stromdichte_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/stromdichte_svg-tex.pdf, page 3>
+Package pdftex.def Info: ./svg-inkscape/stromdichte_svg-tex.pdf , page3 used on input line 60.
+(pdftex.def)             Requested size: 262.05264pt x 117.80927pt.
+<./svg-inkscape/stromdichte_svg-tex.pdf, id=714, page=4, 470.52812pt x 211.52208pt>
+File: ./svg-inkscape/stromdichte_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/stromdichte_svg-tex.pdf, page 4>
+Package pdftex.def Info: ./svg-inkscape/stromdichte_svg-tex.pdf , page4 used on input line 63.
+(pdftex.def)             Requested size: 262.05264pt x 117.80927pt.
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package svg Info: Last page of `./svg-inkscape/radialfeld_svg-tex.pdf' is 3 on input line 318.
+(./svg-inkscape/radialfeld_svg-tex.pdf_tex
+File: ./svg-inkscape/radialfeld_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/radialfeld_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/radialfeld_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 202.72601pt x 126.70277pt.
+File: ./svg-inkscape/radialfeld_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/radialfeld_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/radialfeld_svg-tex.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 202.72601pt x 126.70277pt.
+File: ./svg-inkscape/radialfeld_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/radialfeld_svg-tex.pdf, page 3>
+Package pdftex.def Info: ./svg-inkscape/radialfeld_svg-tex.pdf , page3 used on input line 60.
+(pdftex.def)             Requested size: 202.72601pt x 126.70277pt.
+) [24] [25 <./svg-inkscape/stromdichte_svg-tex.pdf> <./svg-inkscape/stromdichte_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/stromdichte_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/stromdichte_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/stromdichte_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/stromdichte_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/stromdichte_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [26])) (./Aufgaben.tex (./Aufgabe1.tex
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
 
  []
 
 
-LaTeX Warning: Reference `fig:zusammenhangEA' on page 14 undefined on input line 186.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/homogenfeld_elektr_arbeit2.svg' on input line 186.
-
-
-./3_Potential.tex:186: Package svg Error: File `homogenfeld_elektr_arbeit2_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.186 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/homogenfeld_elektr_arbeit2_svg-tex.pdf'
-although `Bilder/homogenfeld_elektr_arbeit2.svg' was found.
-
-
-./3_Potential.tex:186: Package svg Error: File `homogenfeld_elektr_arbeit2_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.186 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/homogenfeld_elektr_arbeit2_svg-tex.pdf_tex'
-although `Bilder/homogenfeld_elektr_arbeit2.svg' was found.
-
-
-LaTeX Warning: Reference `fig:ubergang' on page 14 undefined on input line 186.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/energieumwandlung.svg' on input line 186.
-
-
-./3_Potential.tex:186: Package svg Error: File `energieumwandlung_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.186 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/energieumwandlung_svg-tex.pdf'
-although `Bilder/energieumwandlung.svg' was found.
-
-
-./3_Potential.tex:186: Package svg Error: File `energieumwandlung_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.186 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/energieumwandlung_svg-tex.pdf_tex'
-although `Bilder/energieumwandlung.svg' was found.
-
-[14]
-
-LaTeX Warning: Reference `fig:potihomogen' on page 15 undefined on input line 506.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/potential_homogenfeld.svg' on input line 506.
-
-
-./3_Potential.tex:506: Package svg Error: File `potential_homogenfeld_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.506 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/potential_homogenfeld_svg-tex.pdf'
-although `Bilder/potential_homogenfeld.svg' was found.
-
-
-./3_Potential.tex:506: Package svg Error: File `potential_homogenfeld_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.506 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/potential_homogenfeld_svg-tex.pdf_tex'
-although `Bilder/potential_homogenfeld.svg' was found.
-
-
-LaTeX Warning: Reference `fig:potigraph' on page 15 undefined on input line 506.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/homogenfeld_phi_graph.svg' on input line 506.
-
-
-./3_Potential.tex:506: Package svg Error: File `homogenfeld_phi_graph_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.506 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf'
-although `Bilder/homogenfeld_phi_graph.svg' was found.
-
-
-./3_Potential.tex:506: Package svg Error: File `homogenfeld_phi_graph_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.506 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/homogenfeld_phi_graph_svg-tex.pdf_tex'
-although `Bilder/homogenfeld_phi_graph.svg' was found.
-
-
-LaTeX Warning: Reference `eq:potential' on page 15 undefined on input line 506.
-
-
-LaTeX Warning: Reference `fig:potihomogen' on page 15 undefined on input line 506.
-
-
-LaTeX Warning: Reference `eq:potential' on page 15 undefined on input line 742.
-
-
-LaTeX Warning: Reference `fig:potentialdifferenz' on page 15 undefined on input line 742.
-
-[15]
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/potentialdifferenz.svg' on input line 742.
-
-
-./3_Potential.tex:742: Package svg Error: File `potentialdifferenz_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.742 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/potentialdifferenz_svg-tex.pdf'
-although `Bilder/potentialdifferenz.svg' was found.
-
-
-./3_Potential.tex:742: Package svg Error: File `potentialdifferenz_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.742 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/potentialdifferenz_svg-tex.pdf_tex'
-although `Bilder/potentialdifferenz.svg' was found.
-
-
-LaTeX Warning: Reference `fig:potentialdifferenz' on page 16 undefined on input line 742.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/phi_diff_graph.svg' on input line 742.
-
-
-./3_Potential.tex:742: Package svg Error: File `phi_diff_graph_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.742 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/phi_diff_graph_svg-tex.pdf'
-although `Bilder/phi_diff_graph.svg' was found.
-
-
-./3_Potential.tex:742: Package svg Error: File `phi_diff_graph_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.742 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/phi_diff_graph_svg-tex.pdf_tex'
-although `Bilder/phi_diff_graph.svg' was found.
-
-
-LaTeX Warning: Reference `fig:potentialgraph' on page 16 undefined on input line 742.
-
-
-LaTeX Warning: Reference `fig:wirbelfrei' on page 16 undefined on input line 742.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/wirbelfrei.svg' on input line 742.
-
-
-./3_Potential.tex:742: Package svg Error: File `wirbelfrei_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.742 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/wirbelfrei_svg-tex.pdf'
-although `Bilder/wirbelfrei.svg' was found.
-
-
-./3_Potential.tex:742: Package svg Error: File `wirbelfrei_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.742 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/wirbelfrei_svg-tex.pdf_tex'
-although `Bilder/wirbelfrei.svg' was found.
-
-[16]
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/radialfeld.svg' on input line 742.
-
-
-./3_Potential.tex:742: Package svg Error: File `radialfeld_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.742 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/radialfeld_svg-tex.pdf'
-although `Bilder/radialfeld.svg' was found.
-
-
-./3_Potential.tex:742: Package svg Error: File `radialfeld_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.742 	}
-        
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/radialfeld_svg-tex.pdf_tex'
-although `Bilder/radialfeld.svg' was found.
-
-[17]
-
-LaTeX Warning: Reference `fig:defispannung' on page 18 undefined on input line 1021.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/spannung.svg' on input line 1021.
-
-
-./3_Potential.tex:1021: Package svg Error: File `spannung_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1021 	}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/spannung_svg-tex.pdf'
-although `Bilder/spannung.svg' was found.
-
-
-./3_Potential.tex:1021: Package svg Error: File `spannung_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1021 	}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/spannung_svg-tex.pdf_tex'
-although `Bilder/spannung.svg' was found.
-
-
-LaTeX Warning: Reference `eq:potential' on page 18 undefined on input line 1021.
-
-
-LaTeX Warning: Reference `eq:spannung' on page 18 undefined on input line 1021.
-
-
-LaTeX Warning: Reference `fig:spannunghomogen' on page 18 undefined on input line 1021.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/spannung_homogenfeld.svg' on input line 1021.
-
-
-./3_Potential.tex:1021: Package svg Error: File `spannung_homogenfeld_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1021 	}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/spannung_homogenfeld_svg-tex.pdf'
-although `Bilder/spannung_homogenfeld.svg' was found.
-
-
-./3_Potential.tex:1021: Package svg Error: File `spannung_homogenfeld_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1021 	}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/spannung_homogenfeld_svg-tex.pdf_tex'
-although `Bilder/spannung_homogenfeld.svg' was found.
-
-
-LaTeX Warning: Reference `fig:spannunggraph' on page 18 undefined on input line 1021.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/homogenfeld_spannung_graph.svg' on input line 1021.
-
-
-./3_Potential.tex:1021: Package svg Error: File `homogenfeld_spannung_graph_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1021 	}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/homogenfeld_spannung_graph_svg-tex.pdf'
-although `Bilder/homogenfeld_spannung_graph.svg' was found.
-
-
-./3_Potential.tex:1021: Package svg Error: File `homogenfeld_spannung_graph_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1021 	}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/homogenfeld_spannung_graph_svg-tex.pdf_tex'
-although `Bilder/homogenfeld_spannung_graph.svg' was found.
-
-[18]
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/skalarprodukt.svg' on input line 1021.
-
-
-./3_Potential.tex:1021: Package svg Error: File `skalarprodukt_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1021 	}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/skalarprodukt_svg-tex.pdf'
-although `Bilder/skalarprodukt.svg' was found.
-
-
-./3_Potential.tex:1021: Package svg Error: File `skalarprodukt_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1021 	}
-         
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/skalarprodukt_svg-tex.pdf_tex'
-although `Bilder/skalarprodukt.svg' was found.
-
-[19]) (./4_Strom.tex
-
-LaTeX Warning: Reference `fig:stromfeld' on page 20 undefined on input line 63.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/strömungsfeld.svg' on input line 63.
-
-
-./4_Strom.tex:63: Package svg Error: File `strömungsfeld_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.63 }
-      
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/strömungsfeld_svg-tex.pdf'
-although `Bilder/strömungsfeld.svg' was found.
-
-
-./4_Strom.tex:63: Package svg Error: File `strömungsfeld_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.63 }
-      
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/strömungsfeld_svg-tex.pdf_tex'
-although `Bilder/strömungsfeld.svg' was found.
-
-
-LaTeX Warning: Reference `fig:strom' on page 20 undefined on input line 321.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/strom.svg' on input line 321.
-
-
-./4_Strom.tex:321: Package svg Error: File `strom_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.321 }
-       
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/strom_svg-tex.pdf'
-although `Bilder/strom.svg' was found.
-
-
-./4_Strom.tex:321: Package svg Error: File `strom_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.321 }
-       
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/strom_svg-tex.pdf_tex'
-although `Bilder/strom.svg' was found.
-
-[20]
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/strom1.svg' on input line 321.
-
-
-./4_Strom.tex:321: Package svg Error: File `strom1_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.321 }
-       
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/strom1_svg-tex.pdf'
-although `Bilder/strom1.svg' was found.
-
-
-./4_Strom.tex:321: Package svg Error: File `strom1_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.321 }
-       
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/strom1_svg-tex.pdf_tex'
-although `Bilder/strom1.svg' was found.
-
-
-LaTeX Warning: Reference `eq:driftgeschw' on page 21 undefined on input line 321.
-
-[21]
-
-LaTeX Warning: Reference `fig:stromdichte' on page 22 undefined on input line 321.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/stromdichte.svg' on input line 321.
-
-
-./4_Strom.tex:321: Package svg Error: File `stromdichte_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.321 }
-       
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/stromdichte_svg-tex.pdf'
-although `Bilder/stromdichte.svg' was found.
-
-
-./4_Strom.tex:321: Package svg Error: File `stromdichte_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.321 }
-       
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/stromdichte_svg-tex.pdf_tex'
-although `Bilder/stromdichte.svg' was found.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `Bilder/radialfeld.svg' on input line 321.
-
-
-./4_Strom.tex:321: Package svg Error: File `radialfeld_svg-tex.pdf' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.321 }
-       
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/radialfeld_svg-tex.pdf'
-although `Bilder/radialfeld.svg' was found.
-
-
-./4_Strom.tex:321: Package svg Error: File `radialfeld_svg-tex.pdf_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.321 }
-       
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/radialfeld_svg-tex.pdf_tex'
-although `Bilder/radialfeld.svg' was found.
-
-[22])) (./Aufgaben.tex (./Aufgabe1.tex
-Underfull \hbox (badness 10000) in paragraph at lines 34--34
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--34
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--34
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--34
-
- []
-
-
-LaTeX Warning: Command \ss invalid in math mode on input line 34.
+LaTeX Warning: Command \ss invalid in math mode on input line 35.
 
 ) (./Aufgabe2.tex
 Underfull \hbox (badness 10000) in paragraph at lines 15--15
 
  []
 
-[23
+[27
 
 ]) (./Aufgabe3.tex
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 27--27
 
  []
@@ -2890,12 +2565,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--13
 
  []
 
-[24])) (./Aufgaben.tex (./Aufgabe1.tex) (./Aufgabe2.tex) (./Aufgabe3.tex) (./Aufgabe4.tex)) [25]
+[28])) (./Aufgaben.tex (./Aufgabe1.tex) (./Aufgabe2.tex) (./Aufgabe3.tex) (./Aufgabe4.tex)) [29]
 
 LaTeX Warning: Empty bibliography on input line 64.
 
-No file Skript.ind.
-(./Skript.aux)
+(./Skript.ind) (./Skript.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -2905,38 +2579,27 @@ L3 programming layer <2024-01-22>
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `Skript.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Skript.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  737EC5B68339EDF696FF1EE745190760;7036.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                Skript
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `Skript.out' has not changed.
+(rerunfilecheck)             Checksum: 9BB08EE9A03ED6CA95F715E433E0F50A;6822.
 Package logreq Info: Writing requests to 'Skript.run.xml'.
 \openout1 = `Skript.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 78539 strings out of 476056
- 1989718 string characters out of 5791604
- 3180749 words of memory out of 5000000
- 99207 multiletter control sequences out of 15000+600000
- 567256 words of font info for 72 fonts, out of 8000000 for 9000
+ 79270 strings out of 476056
+ 2021477 string characters out of 5791604
+ 3189031 words of memory out of 5000000
+ 99796 multiletter control sequences out of 15000+600000
+ 567615 words of font info for 73 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
- 118i,15n,134p,859b,2463s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 118i,19n,134p,859b,2463s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </root/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb>
-Output written on Skript.pdf (29 pages, 2400932 bytes).
+Output written on Skript.pdf (33 pages, 2529253 bytes).
 PDF statistics:
- 490 PDF objects out of 1000 (max. 8388607)
- 374 compressed objects within 4 object streams
- 187 named destinations out of 1000 (max. 500000)
- 208 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 912 PDF objects out of 1000 (max. 8388607)
+ 638 compressed objects within 7 object streams
+ 191 named destinations out of 1000 (max. 500000)
+ 1159 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,41 +1,40 @@
 %Effektivwert
 
 \begin{frame}
-    \fta{Effektivwert} \label{Kap.Effektivwert}
+    \fta{RMS value} \label{Kap.Effektivwert}
 
     \s{
-        Durch die periodischen Spannungsverläufe weist jeder Zeitschritt einen anderen Spannungswert auf. 
-        Hierbei kann direkt lediglich der Spitzenwert angegeben werden, mit welchem jedoch nicht immer 
-        gearbeitet werden kann. Um eine nützliche Vergleichbarkeit von Spannungswerten zu gewährleisten 
-        wird der Effektivwert herangezogen. Der Effektivwert beschreibt beispielsweise die identische 
-        Leistung, welche an einem Widerstand anfallen würde, würde dieser an einer Gleichstromquelle angeschlossen
-        sein.   
-        Zur weiteren Erklärung des Effektivwertes und der dafür erforderlichen Grundlagen werden in diesem 
-        Kapitel die folgenden Inhalte besprochen:
+        Due to the periodic voltage curves, each time step has a different voltage value. 
+        In this case, only the peak value can be specified directly, but this cannot always be used for calculations. 
+        To ensure useful comparability of voltage values, 
+        the effective value is used. 
+        The RMS value describes, for example, the identical 
+        power that would be generated at a resistor if it were connected to a direct current source.
+        For a further explanation of the RMS value and the necessary fundamentals, this chapter discusses the following topics:
     }
     
-    \begin{Lernziele}{Effektivwert}
-        Die Studierenden
+    \begin{Learning objectives}{RMS value}
+        The students
         \begin{itemize}
-            \item verstehen die Funktion des Effektivwertes.
-            \item kennen die Einflüsse von Amplitude und Kurvenform auf den Effektivwert.
-            \item können den Effektivwert einer Wechselspannung bzw. eines Wechselstromes berechnen. 
+            \item understand the function of the effective value.
+            \item are familiar with the effects of amplitude and waveform on the effective value.
+            \item can calculate the effective value of an alternating voltage or alternating current. 
         \end{itemize}
-    \end{Lernziele}
+    \end{Learning objectives}
 
 \end{frame}
 
 %Grundlagen
 \begin{frame}
-    \ftb{Grundlagen: Quadratischer Mittelwert und Additionstheorem}
+    \ftb{Fundamentals: Mean square and addition theorem}
 
     \s{
-        Neben dem arithmetischen Mittelwert, welcher in der Wechselstromrechnung zur Bestimmung des Mittelwerts
-        genutzt wird, dient der quadratische Mittelwert der Bestimmung des Effektivwerts. Der quadratische Mittelwert 
-        (RMS - Root Mean Square) wird herangezogen, um die Vergleichbarkeit von Wechselspannungsgrößen zu ermöglichen.
-        Hierbei wird eine Funktion f(t) zunächst quadriert. Darauffolgend wird der Mittelwert der quadrierten Funktion 
-        berechnet. Im letzten Schritt folgt das Radizieren des berechneten Mittelwertes. Der mathematische Zusammenhang 
-        des RMS wird in der Gleichung \ref{GleichungEff1}. 
+        In addition to the arithmetic mean, which is used in alternating current calculations to determine the mean value,
+        the quadratic mean is used to determine the RMS value. The quadratic mean 
+        (RMS – root mean square) is used to enable the comparability of alternating voltage values.      
+        First, a function f(t) is squared. Then, the mean value of the squared function 
+        is calculated. The final step is to take the square root of the calculated mean value. The mathematical relationship 
+        of the RMS is shown in equation \ref{GleichungEff1}. 
     }
 
     \b{
@@ -48,12 +47,11 @@
     \end{eq}
 
     \s{
-        Bei der Bildung des Quadratischen Mittelwerts wird auch die Sinusfunktion quadriert. Als Hilfestellung 
-        wird ein Additionstheorem vorgestellt, mit welchem diese Berechnung vereinfacht werden soll. Additionstheoreme
-        beziehen sich auf die Zusammenhänge der Trigonometzrie um eine Funktionen umzuformen. Die Umformung der 
-        quadratischen Sinusfunktion anhand des Additionstheorems wird in der Gleichung \ref{GleichungEff2} dargestellt. 
-        Hier wird aus der quadratischen Sinusfunktion eine Funktion, welche lediglich von einer einfachen Cosinusfunktion 
-        abhängig ist. 
+        When calculating the quadratic mean, the sine function is also squared. To assist with this, 
+        an addition theorem is presented to simplify the calculation. Addition theorems
+        refer to the relationships in trigonometry used to transform a function. The transformation of the 
+        quadratic sine function using the addition theorem is shown in equation \ref{GleichungEff2}.
+        Here, the quadratic sine function becomes a function that depends only on a simple cosine function.
     }
 
     \b{
@@ -67,16 +65,17 @@
 
 %Amplitude und Kurvenform
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftb{Amplitude}
 
     \s{
-        Die Ampltude einer Funktion beschreibt den maximalen Ausschalg während einer Periode. Bei einer Wechselspannung 
-        gibt der Amplitudenwert den höchsten momentanen Spannungswert der Spannung an. 
-        In der Abbildung \ref{BildAmplituden} werden Spannungssignale mit einer Frequenz von $50\,Hz$ und somit mit einer identischen Periodendauer 
-        von $T=20\,ms$ dargestellt. Sie unterscheiden sich dabei beim Amplitudenwerten. Die Scheitelwerte der Amplituden der 
-        dargestellten Spannungen betrgen $\hat{U}_1=1\,V$, $\hat{U}_2=2\,V$ und $\hat{U}_3=4\,V$.
-        Die Amplitude ist eine Art Faktor für die Berechnung des Effektivwertes. So hängt die Höhe des Effektivwertes direkt
-        von dem Amplitudenwert ab.
+        The amplitude of a function describes the maximum deflection during one period. For an alternating voltage, 
+        the amplitude value indicates the highest instantaneous voltage value.
+        In Figure \ref{BildAmplituden}, voltage signals with a frequency of $50\,Hz$ and thus with an identical period duration 
+        of $T=20\,ms$ are shown. They differ in their amplitude values. The peak values of the amplitudes of the 
+        voltages shown are $\hat{U}_1=1\,V$, $\hat{U}_2=2\,V$ and $\hat{U}_3=4\,V$.     
+        The amplitude is a kind of factor for calculating the RMS value. Thus, the height of the RMS value depends directly
+        on the amplitude value.
     }
 
     \b{
@@ -93,13 +92,13 @@
 		\resizebox{0.5\textwidth}{!}{
 			\input{Tikz/src/Effektivwert/Sinusspannungen_untersch_Amplitudenwerte}
 		}
-	}{{\bf Sinusspannungen mit unterschiedlichen Amplitudenwerten.} Gewichtung von den Amplitudenwerten $\hat{U}_1=1\,V$, 
-    $\hat{U}_2=2\,V$ und $\hat{U}_3=4\,V$. \label{BildAmplituden}}
+	}{{\bf Sinusoidal voltages with different amplitude values.} Weighting of amplitude values $\hat{U}_1=1\,V$, 
+    $\hat{U}_2=2\,V$ and $\hat{U}_3=4\,V$. \label{BildAmplituden}}
 
 \end{frame}
 
 \begin{frame}
-    \ftb{Kurvenform} 
+    \ftb{Waveform} 
 
     \s{
         Neben der Amplitude eines Signals ist die Kurvenform des Signals ausschlaggebend für den Effektivwert. 
@@ -113,28 +112,30 @@
     }
 
     \begin{eq}
-        \hat{U} = C \cdot U_\mathrm{Eff}        \label{GleichungKur1}
+        \hat{U} = C \cdot U_\mathrm{RMS}        \label{GleichungKur1}
     \end{eq}
        
     \s{
-        Dieser Scheitelfaktor beträgt für Sinussignale $C_S=\sqrt{2}$, für Dreiecksignale 
-        $C_D=\sqrt{3}$ und für Rechtecksignale $C_R=1$. Somit beträgt der Effektivwert einer Sinusspannung 
-        etwa $70,7$ Prozent des Scheitelwerts der Amplitude. Neben dem Scheitelfaktor als Zusammenhang zwischen
-        Scheitelwert und Effektivwert findet noch der Formfaktor $F$ Anwendung. Der Formfaktor wird als Quotient
-        aus dem Effektivwert und dem Gleichrichtwert definiert. 
+        This crest factor is $C_S=\sqrt{2}$ for sine waves, $C_D=\sqrt{3}$ for triangular waves,
+        and $C_R=1$ for square waves. Thus, the RMS value of a sine wave voltage is
+        approximately 70.7 per cent of the peak value of the amplitude.
+        In addition to the crest factor as the relationship between the peak value and the effective value, 
+        the form factor $F$ is also used. The form factor is defined as the quotient
+        of the RMS value and the rectified value. 
 
         \begin{table}[H]
+            \renewcommand{\tablename}{Table}
             \centering%
-            \caption{{\bf Kurvenformen und Scheitelfaktoren.} Die Scheitelfaktoren für sinusförmige, Dreieck- und Rechtecksignale.}%
+            \caption{{\bf Waveform shapes and crest factors} The crest factors for sinusoidal, triangular and rectangular signals.}%
             \label{Tabelle}%
         \begin{tabular}{ c c c c }
             \hline &&&\\[-6pt]
-            \textbf{Kurvenform:}
+            \textbf{Waveform:}
                 & Sinus
-                & Dreieck
-                & Rechteck \\[+4pt]
+                & Triangle
+                & Rectangle \\[+4pt]
             \hline &&&\\[-6pt]
-            \textbf{Scheitelfaktor (C):}
+            \textbf{Crest factor (C):}
                 & $ \sqrt{2} $ 
                 & $ \sqrt{3} $     
                 & $ 1 $ \\[+4pt]
@@ -171,26 +172,25 @@
 \begin{frame}
     \ftx{Einflüsse auf den Effektivwert}
 
-    \begin{Merksatz}{Einflüsse auf den Effektivwert}
-        Der Effektivwert ist linear proportional zum Scheitelwert. Der Umrechnungfaktor vom Effektivwert zum Scheitelwert 
-        heißt Scheitelfaktor und hängt von der Kurvenform des Singals ab. 
-    \end{Merksatz}
+    \begin{Key point}{Influences on the RMS value}
+        The RMS value is linearly proportional to the peak value. The conversion factor from the RMS value to the peak value 
+        is called the crest factor and depends on the waveform of the signal.
+    \end{Key point}
 \end{frame}
 
 
 \begin{frame}
-    \ftb{Effektivwert}
+    \ftb{RMS value}
 
     \s{
-        Der Effektivwert, beispielsweise einer Sinusspannung, soll für die Leistungsaufnahme als ein Momentanwert verwendet 
-        werden, welcher die gleiche Leistungsaufnahme bewirkt, die dem Leistungswert einer Gleichspannung unter vergleichbaren 
-        Gegebenheiten entsprechen würde. 
-        Der
-        Effektivwert ist auch beim Ohm'schen Gesetz und bei den Kirchhoffschen Gesetzen anwendbar und somit
-        für alle grundlegenden Gesetze geeignet. 
-
-        Anhand eines Wechselstromsignales $i(t)$ soll die Berechnung des Effektivwertes erläutert werden. Wird die Definition 
-        des Stromsignales in die Gleichung \ref{GleichungEff3} eingesetzt, so ergibt sich:
+        The RMS value, for example of a sinusoidal voltage, should be used for the power consumption as an instantaneous value 
+        that causes the same power consumption that would correspond to the power value of a DC voltage under comparable 
+        conditions.
+         
+        The RMS value is also applicable to Ohm's law and Kirchhoff's laws and is therefore
+        suitable for all fundamental laws.
+        The calculation of the RMS value will be explained using an alternating current signal $i(t)$. If the definition 
+        of the current signal is inserted into equation \ref{GleichungEff3}, the result is:
     }
 
     \begin{eq}
@@ -198,47 +198,45 @@
     \end{eq}
 
     \s{
-        Die Quadratur des Scheitelwerts ist nicht zeitabhängig und kann vor das Integralzeichen gezogen werden. Außerdem kann 
-        der Faktor aus dem Additionstheorem aus dem Integral gezogen werden, sodass die nochfolgende Gleichung \ref{GleichungEff4}
-        entsteht:
+        The square root of the peak value is not time-dependent and can be moved outside the integral sign. In addition, 
+        the factor from the addition theorem can be removed from the integral, resulting in the following equation \ref{GleichungEff4}:
     }
 
     \begin{eq}
-        I_\mathrm{Eff}=\sqrt{\frac{\hat{I}^2}{2T}\int_{0}^T {1-\cos(2\omega t) dt}}      \label{GleichungEff4}
+        I_\mathrm{RMS}=\sqrt{\frac{\hat{I}^2}{2T}\int_{0}^T {1-\cos(2\omega t) dt}}      \label{GleichungEff4}
     \end{eq}
 
     \s{
-        Nach der Differenzregel können Differenzen in einem Integranden gesondert bestimmt werden. Auf diese Weise werden
-        in der nachfolgenden Gleichung \ref{GleichungEff5} die Integrale für die beiden Operanden der Differenz seperat 
-        bestimmt. 
+        According to the difference rule, differences in an integrand can be determined separately. In this way
+        in the following equation \ref{GleichungEff5}, the integrals for the two operands of the difference are determined separately. 
     }
 
     \begin{eq}
-        \text{mit} \quad \int_0^T 1 dt = T \quad \text{und} \quad \int_0^T \cos(2 \omega t) dt = 0        \label{GleichungEff5}
+        \text{with} \quad \int_0^T 1 dt = T \quad \text{and} \quad \int_0^T \cos(2 \omega t) dt = 0        \label{GleichungEff5}
     \end{eq}
 
     \s{
-        Durch das Auflösen des Integrals entsteht:
+        Solving the integral yields:
     }
 
     \begin{eq}
-        I_\mathrm{Eff} = \sqrt{\frac{\hat{I}^2}{2T}\cdot (T - 0)}          \label{GleichungEff6}
+        I_\mathrm{RMS} = \sqrt{\frac{\hat{I}^2}{2T}\cdot (T - 0)}          \label{GleichungEff6}
     \end{eq}
 
     \s{
-        Hier lässt sich die Periodendauer $T$ aus dem Zähler und dem Nenner kürzen, sodass folgender Zusammenhang entsteht:
+        Here, the period duration $T$ can be reduced from the numerator and denominator, resulting in the following relationship:
     }
 
     \begin{eq}
-        I_\mathrm{Eff} = \sqrt{\frac{\hat{I}^2}{2}}              \label{GleichungEff7}
+        I_\mathrm{RMS} = \sqrt{\frac{\hat{I}^2}{2}}              \label{GleichungEff7}
     \end{eq}
 
     \s{
-        Nun wird noch aus dem Zähler und dem Nenner getrennt die Wurzel gezogen. Der selbe Zusammenhang lässt sich so auch 
-        für die Spannung definieren:
+        Now the root is taken separately from the numerator and denominator. The same relationship can also be defined 
+        for the voltage:
 
     \begin{eq}
-        I_\mathrm{Eff} = \frac{\hat{I}}{\sqrt{2}}   \qquad \text{und}   \qquad      U_\mathrm{Eff} = \frac{\hat{U}}{\sqrt{2}}        \label{GleichungEff8}
+        I_\mathrm{RMS} = \frac{\hat{I}}{\sqrt{2}}   \qquad \text{and}   \qquad      U_\mathrm{RMS} = \frac{\hat{U}}{\sqrt{2}}        \label{GleichungEff8}
     \end{eq}
     }
 
@@ -248,16 +246,17 @@
 \begin{frame}
     \ftx{Effektivwert einer Sinusschwingung}
 
-    \begin{Merksatz}{Effektivwert einer Sinusschwingung}
-        Für rein sinusförmige Spannungen und Ströme gilt der Scheitelfaktor $\sqrt{2}$:
-        \begin{eq}
-            I_\mathrm{Eff} = \frac{\hat{I}}{\sqrt{2}}   \qquad \text{und}   \qquad      U_\mathrm{Eff} = \frac{\hat{U}}{\sqrt{2}} \nonumber
+    \begin{Key point}{RMS value of a sinusoidal oscillation}
+        For purely sinusoidal voltages and currents, the crest factor $\sqrt{2}$ applies:
+            \begin{eq}
+            I_\mathrm{RMS} = \frac{\hat{I}}{\sqrt{2}}   \qquad \text{and}   \qquad      U_\mathrm{RMS} = \frac{\hat{U}}{\sqrt{2}} \nonumber
         \end{eq}
-    \end{Merksatz}
+    \end{Key point}
 \end{frame}
 
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Komplexer Festzeiger des Effektivwertes}
 
     \s{
@@ -265,11 +264,11 @@
         %Zustand können repräsentative Berechnungen zu jedem Zeitpunkt durchgeführt werden. Die relative Zuordnung 
         %der Ströme und Spannungen bleiben erhalten. Daher kann die Nullphase eliminiert werden.
         
-        In der Abbildung \ref{BildEff1} wird eine Sinusspnnung mit einem Amplitudenwert von $4\,V$ dargestellt. 
-        Dazu wird der zu der Sinusspannung zugehörige Effektivwert bei $4\,V/\sqrt{2}$ eingezeichnet. 
-        Vergleichbar verhält es sich mit den Spannungen im Haushalt. So würde bei einer Spannungsmessung im Haushalt
-        ein Effektivwert von $230\,V$ angezeigt werden. Der Amplitudenwert der eigentlich anliegenden Wechselspannung
-        beträgt dabei allerdings $230\,V\cdot\sqrt{2}$ also $325\,V$. 
+        Figure \ref{BildEff1} shows a sinusoidal voltage with an amplitude value of $4\,V$.
+        The RMS value associated with the sinusoidal voltage is plotted at $4\,V/\sqrt{2}$.
+        The situation is similar with voltages in the home. For example, a voltage measurement in the household
+        would show an RMS value of $230\,V$. However, the amplitude value of the actual alternating voltage
+        is $230\,V\cdot\sqrt{2}$, i.e. $325\,V$.
     }
 
     \b{
@@ -284,7 +283,7 @@
 		\resizebox{0.5\textwidth}{!}{
 			\input{Tikz/src/Effektivwert/Sinusspannung_Formverlauf}	
 		}
-	}{{\bf Formverlauf einer Sinusspannung.} Sinusspannung mit einem Amplitudenwert von $4\,V$ und zugehörigem Effektivwert von $4\,V/\sqrt{2}$. \label{BildEff1}}
+	}{{\bf Waveform of a sinusoidal voltage.} Sine voltage with an amplitude value of $4\,V$ and corresponding RMS value of $4\,V/\sqrt{2}$. \label{BildEff1}}
 
 \end{frame}
 
@@ -292,42 +291,42 @@
 
 \begin{frame}
     \ftx{Beispielaufgabe}
-	\begin{bsp}{Effektivwert}{Effektivwert:}
+	\begin{expl}{RMS value}{Effektivwert:}
 
     \s{
-        Wird die Spannung beispielsweise an einer Haushaltssteckdose gemessen, so wird der Effektivwert von 230V angegeben. 
+        If the voltage is measured at a domestic socket, for example, the RMS value of 230V is specified. 
     }
 
     \begin{enumerate}
         \only<1>{	
             \item[]
             
-            Die folgenden Aufgaben sollen zum besseren Verständnis des Effektivwertes bearbeitet werde: 
-            \begin{itemize}
-                \item[a)] Berechnung des Amplitudenwertes der Spannung an einer Haushaltssteckdose.
-                \item[b)] Berechneng des Effektivwertes davon ausgehend, dass es sich um ein Rechtsecksignal handeln würde.
+            The following tasks should be completed to gain a better understanding of the RMS value: 
+                \begin{itemize}
+                \item[a)] Calculation of the amplitude value of the voltage at a domestic power socket.
+                \item[b)] Calculation of the RMS value assuming that it is a rectangular signal.
             \end{itemize}
         }
 
         \only<2>{	
             \item[a)]
-            Der Amplitudenwert an einer Steckdose mit einem Effektivwert von 230V beträgt: 
-            \begin{eqa}
-                \hat{U} &= I_\mathrm{Eff} \cdot \sqrt{2} = 230V \cdot \sqrt{2}      \nonumber   \\
+            The amplitude value at a socket with an RMS value of 230V is: 
+                \begin{eqa}
+                \hat{U} &= I_\mathrm{RMS} \cdot \sqrt{2} = 230V \cdot \sqrt{2}      \nonumber   \\
                 \hat{U} &= 325,269V         \nonumber
             \end{eqa}  
         }
 
         \only<3>{	
             \item[b)]
-            Der Effektivwert einer Rechteckspannung mit einem Scheitelwert von 325V beträgt: 
-            \begin{eqa}
-                U_\mathrm{Rechteck} &= \frac{\hat{U}}{\sqrt{3}} = \frac{325V}{\sqrt{3}}      \nonumber   \\
-                U_\mathrm{Rechteck} &= 187,639V         \nonumber
+            The RMS value of a square wave voltage with a peak value of 325V is: 
+                \begin{eqa}
+                U_\mathrm{Rectangle} &= \frac{\hat{U}}{\sqrt{3}} = \frac{325V}{\sqrt{3}}      \nonumber   \\
+                U_\mathrm{Rectangle} &= 187,639V         \nonumber
             \end{eqa}  
         }
 
     \end{enumerate}
-    \end{bsp}
+    \end{expl}
 \end{frame}
 \newpage

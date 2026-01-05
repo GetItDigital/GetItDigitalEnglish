@@ -1,0 +1,139 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{xkcd}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=020d69ec2ee5b3f192483936e2c7f561}{%
+           family={xkcd},
+           familyi={x\bibinitperiod}}}%
+      }
+      \strng{namehash}{020d69ec2ee5b3f192483936e2c7f561}
+      \strng{fullhash}{020d69ec2ee5b3f192483936e2c7f561}
+      \strng{bibnamehash}{020d69ec2ee5b3f192483936e2c7f561}
+      \strng{authorbibnamehash}{020d69ec2ee5b3f192483936e2c7f561}
+      \strng{authornamehash}{020d69ec2ee5b3f192483936e2c7f561}
+      \strng{authorfullhash}{020d69ec2ee5b3f192483936e2c7f561}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Webcomic}
+      \field{urlday}{25}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://xkcd.com/
+      \endverb
+      \verb{url}
+      \verb https://xkcd.com/
+      \endverb
+    \endentry
+    \entry{weissgerber2}{book}{}
+      \name{author}{1}{}{%
+        {{hash=97f10051530b3affbf2e656f49831b09}{%
+           family={Weißgerber},
+           familyi={W\bibinitperiod},
+           given={Wilfried},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {dt}%
+      }
+      \list{publisher}{1}{%
+        {Springer Vieweg}%
+      }
+      \strng{namehash}{97f10051530b3affbf2e656f49831b09}
+      \strng{fullhash}{97f10051530b3affbf2e656f49831b09}
+      \strng{bibnamehash}{97f10051530b3affbf2e656f49831b09}
+      \strng{authorbibnamehash}{97f10051530b3affbf2e656f49831b09}
+      \strng{authornamehash}{97f10051530b3affbf2e656f49831b09}
+      \strng{authorfullhash}{97f10051530b3affbf2e656f49831b09}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{10. Auflage}
+      \field{isbn}{978-3-658-21822-2}
+      \field{title}{Elektrotechnik für Ingenieure 2}
+      \field{year}{2018}
+    \endentry
+    \entry{behrends}{book}{}
+      \name{author}{1}{}{%
+        {{hash=e658894ceec15883348c29cdf5959a29}{%
+           family={Behrends},
+           familyi={B\bibinitperiod},
+           given={Ehrhard},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {dt}%
+      }
+      \list{publisher}{1}{%
+        {Springer Spektrum}%
+      }
+      \strng{namehash}{e658894ceec15883348c29cdf5959a29}
+      \strng{fullhash}{e658894ceec15883348c29cdf5959a29}
+      \strng{bibnamehash}{e658894ceec15883348c29cdf5959a29}
+      \strng{authorbibnamehash}{e658894ceec15883348c29cdf5959a29}
+      \strng{authornamehash}{e658894ceec15883348c29cdf5959a29}
+      \strng{authorfullhash}{e658894ceec15883348c29cdf5959a29}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-658-23269-6}
+      \field{title}{Parkettierungen der Ebene - von Escher über Möbius zu Penrose}
+      \field{year}{2019}
+    \endentry
+    \entry{hagmann}{book}{}
+      \name{author}{1}{}{%
+        {{hash=bb4532c9428da69369bca588fcd7472d}{%
+           family={Hagmann},
+           familyi={H\bibinitperiod},
+           given={Hans},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {dt}%
+      }
+      \list{publisher}{1}{%
+        {AULA-Verlag}%
+      }
+      \strng{namehash}{bb4532c9428da69369bca588fcd7472d}
+      \strng{fullhash}{bb4532c9428da69369bca588fcd7472d}
+      \strng{bibnamehash}{bb4532c9428da69369bca588fcd7472d}
+      \strng{authorbibnamehash}{bb4532c9428da69369bca588fcd7472d}
+      \strng{authornamehash}{bb4532c9428da69369bca588fcd7472d}
+      \strng{authorfullhash}{bb4532c9428da69369bca588fcd7472d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{18. Auflage}
+      \field{isbn}{978-3-89104-830-6}
+      \field{title}{Grundlagen der Elektrotechnik}
+      \field{year}{2020}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

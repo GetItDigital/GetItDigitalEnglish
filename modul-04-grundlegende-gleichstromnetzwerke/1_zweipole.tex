@@ -2,30 +2,33 @@
 
 
 \s{
-	\section{Einleitung}
+	\section{Introduction}
 	
-	Elektrische Netzwerke sind in der heutigen Welt omnipräsent. Sie bestehen aus Zusammenschaltungen 
-	von verschiedenen elektrischen Bauteilen, welche durch Verbindungsleitungen miteinander
-	verknüpft sind. In der Realität kommen sie in den verschiedensten Funktionen und Größenordnungen vor. 
-	So kann ein elektrisches Netzwerk sowohl eine kleine elektronische Schaltung innerhalb eines Mikrocontrolers
-	mit einer Größe von einigen Mikrometern darstellen, als auch ein elektrisches Energieverteilungsnetz 
-	mit Ausdehnungen von bis zu einigen 1000 Kilometern abbilden, wie sie symbolisch in den Abbildungen \ref{fig:platine} bzw. \ref{fig:stromnetz} angedeutet sind. 
+	Electrical networks are omnipresent in today's world. They consist of interconnections 
+    of various electrical components that are linked together by connecting lines. 
+	In reality, they come in a wide variety of functions and sizes.
+	An electrical network can be a small electronic circuit within a microcontroller
+    measuring just a few micrometres, or an electrical power distribution network 
+    extending over several thousand kilometres, as symbolically shown in Figures \ref{fig:platine} and \ref{fig:stromnetz}.
+ 
 	
 	
 	
 	
 	\begin{frame} 
 		\begin{minipage}{0.45\textwidth}
+			\renewcommand{\figurename}{Figure}
 			
-			\f{width=\textwidth}{width=0.7\textwidth}{netzklein.png}{Symbolbild eines kleinen elektrischen Netzwerkes auf einer Platine  \label{fig:platine}}
+			\f{width=\textwidth}{width=0.7\textwidth}{netzklein.png}{Symbolic image of a small electrical network on a circuit board  \label{fig:platine}}
 			%	\fo{width=\textwidth}{width=\textwidth}{Magnetisches_Feld_Leiter}{
 			%	\put(60.5, 9){\color{red}$I$}
 			%	}{{\bf Magnetisches Feld um einen stromdurchflossenen Leiter.} Die Rich\-tung des Feldes kann mit der \glqq Rechten-Hand-Regel\grqq\ veranschaulicht werden.}
 		\end{minipage}
 		\hfill\pause
 		\begin{minipage}{0.45\textwidth}
+			\renewcommand{\figurename}{Figure}
 			
-			\f{width=\textwidth}{width=0.7\textwidth}{netzgross.png}{Symbolbild eines großen elektrischen Netzwerkes  \label{fig:stromnetz}}
+			\f{width=\textwidth}{width=0.7\textwidth}{netzgross.png}{Symbolic image of a large electrical network  \label{fig:stromnetz}}
 			%	\fo{width=\textwidth}{width=\textwidth}{Magnetisches_Feld_Leiterschleife}{
 			%	\put(31.5, 18){\color{red}$I$}
 			%	\put(65, 4){\color{red}$I$}
@@ -37,19 +40,17 @@
 	
 	\vspace{10pt}
 	
-	Dieses Kapitel bietet eine Einführung zu grundlegenden Berechnungen in elektrischen Gleichstromnetzwerken.
-	Ziel dieser Berechnung ist es in der Regel, die Spannungen und Ströme in allen Bauteilen des Netzwerkes
-	zu berechnen. Reale Bauteile werden dazu in der Regel vereinfacht als Kombination idealer Zweipole dargestellt
-	(Beispiele: Tabelle \ref{tab:schaltzeichen}). Aus der Verschaltung dieser 
-	Zweipole lässt sich ein vereinfachtes Modell der realen Schaltung aufbauen, welches das grundlegende Verhalten der 
-	Schaltung nachbildet.
-	Dieses Modell bildet die Grundlage zur mathematischen Berechnung der Schaltung.
-	
-	
-	Da in diesem Kapitel ausschließlich lineare Bauteile wie Widerstände oder ideale Gleichspannungsquellen verwendet werden, ist eine analytische 
-	Berechnung grundsätzlich immer möglich. In fortgeschrittenen Modulen werden hingegen nichtlineare Bauelemente
-	wie reale Operationsverstärker oder Dioden eingeführt. In diesem Fall ist oft eine iterative bzw. numerische Herangehensweise
-	notwendig.
+	This chapter provides an introduction to basic calculations in direct current electrical networks.
+	The aim of these calculations is usually to calculate the voltages and currents in all components of the network.
+ 	Real components are usually simplified and represented as a combination of ideal two-pole circuits
+ 	(examples: Table \ref{tab:schaltzeichen}). The interconnection of these 
+    dipoles can be used to construct a simplified model of the real circuit, which replicates the basic behaviour of the 
+    circuit. This model forms the basis for the mathematical calculation of the circuit.
+            
+	Since only linear components such as resistors or ideal DC voltage sources are used in this chapter, an analytical 
+    calculation is always possible. In advanced modules, however, non-linear components
+    such as real operational amplifiers or diodes are introduced. In this case, an iterative or numerical approach is often
+    necessary.
 	
 	
 	
@@ -232,21 +233,21 @@
 
 \newpage
 
-\section{Zweipole und Zählpfeilsysteme}
+\section{Two-terminal elements and reference direction systems}
 
 
 
 \begin{frame}{}
 	\ftx{Lernziele: Zweipole und Zählpfeilsysteme}
 	
-	\begin{Lernziele}{Zweipole und Zählpfeilsysteme}
-		Die Studierenden können
+	\begin{Learning objectives}{Two-terminal elements and reference direction systems}
+		The students can
 		\begin{itemize}
-			\item den Begriff des Zweipols erläutern sowie gängige Zweipole nennen und deren Schaltsymbole verwenden
-			\item das Erzeuger- sowie Verbraucherzählpfeilsystem erläutern und entsprechend der Konventionen anwenden
-			\item die zentralen Elemente des Grundstromkreises erläutern und die Zusammenhänge zwischen diesen erkennen
+			\item explain the concept of two poles, name common two poles and use their circuit symbols
+			\item explain the generator and consumer arrow system and apply it in accordance with conventions
+			\item explain the central elements of the basic circuit and recognise the relationships between them
 		\end{itemize}
-	\end{Lernziele}
+	\end{Learning objectives}
 	
 	\speech{folie5}{1}{Nun also nochmal zusammengefasst die Lernziele dieser Einheit:
 		Nach dieser Lektion könnt ihr,
@@ -263,47 +264,50 @@
 
 
 \begin{frame}
-	\ftb{Zweipole}
+	\ftb{Two-terminal elements}
 	
 	
-	\s{Als Zweipol (Abb. \ref{fig:zweipol}) wird ein Bauelement mit zwei äußeren Anschlussklemmen bezeichnet. Der innere Aufbau dieser
-		Zweipole kann dabei von gänzlich unterschiedlicher Art und Komplexität sein. Beispielsweise ist ein einfacher
-		elektrischer Widerstand, aber auch eine Spannungsquelle (beispielsweise eine Autobatterie) oder ein Haartrockner
-		(sofern dieser nur zwei Anschlussleitungen besitzt) als Zweipol zu sehen.
-		Bauteile mit mehr Anschlussleitungen werden entsprechend als Dreipol (z.B. Kühlschrank mit Schutzleiter), 
-		Vierpol (z.B. Transformator) oder gar Fünfpol (elektrischer Herd mit Drehstromanschluss, Schutzleiter und Neutralleiter) bezeichnet.
+	\s{A two-pole component (Fig. \ref{fig:zweipol}) is a component with two external terminals. The internal structure of these
+		two-pole components can vary greatly in terms of type and complexity. For example, a simple
+		electrical resistor, but also a voltage source (e.g. a car battery) or a hairdryer
+				
+		(provided it only has two connecting wires) can be regarded as a two-pole component.
+		Components with more connecting wires are referred to as three-pole (e.g. refrigerator with protective earth conductor), 
+		four-pole (e.g. transformer) or even five-pole (electric cooker with three-phase connection, protective earth conductor and neutral conductor) components.
 		
-		Unabhängig von der inneren Komplexität kann ein Zweipol im elektrischen Netzwerk vollständig durch die Beziehung von Strom
-		und Spannung an seinen Anschlusspunkten, dem sogenannten \textbf{Klemmenverhalten}, charakterisiert werden. 
-		Zu beachten ist dabei, dass der in Abbildung \ref{fig:zweipol} eingezeichnete Strom $I_1$ eines Zweipols stets genauso groß wie der Strom $I_2$ ist.
-		
-		Die praktische Realisierung der Bauteile wie reale Baumaße, Materialeigenschaften, parasitäre Effekte oder interne
-		inhomogene Feldstärkeverteilungen
-		werden in der Netzwerkberechnung mit Zweipolen vernachlässigt.
+		Regardless of its internal complexity, a two-terminal network in an electrical network can be fully characterised by the relationship between current
+		and voltage at its connection points, known as \textbf{terminal behaviour}.
+		It should be noted that the current $I_1$ of a two-terminal network shown in Figure \ref{fig:zweipol} is always equal to the current $I_2$.
+						
+		The practical implementation of the components, such as actual dimensions, material properties, parasitic effects or internal
+		inhomogeneous field strength distributions, are neglected in the network calculation with two-pole elements.
+
 		
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\begin{center}
 				\input{Tikz/src/1_zweipole/Zweipol_allgemein}
 			\end{center}
-			\caption{Allgemeine Darstellung eines Zweipols mit den gleich großen Stromstärken $I_1$ und $I_2$ sowie der anliegender Spannung $U$}
+			\caption{General representation of a two-terminal network with equal currents $I_1$ and $I_2$ and applied voltage $U$}
 			\label{fig:zweipol}
 		\end{figure}
 		
-		Einige der bereits aus vorherigen Kapiteln bekannte Zweipole sind in Tabelle \ref{tab:schaltzeichen} beispielhaft aufgeführt.
+		Some of the two-pole switches already familiar from previous chapters are listed as examples in Table \ref{tab:schaltzeichen}.
 		
 		\begin{center}
+			\renewcommand{\tablename}{Table}
 			\begin{table}[h!]
 				\centering
 				\begin{tabular}{|c|c|}
 					\hline
-					Zweipol                 & Schaltzeichen                                               \\ \hline
-					ideale Spannungsquelle  & \input{Tikz/src/1_zweipole/Beispiel_ideale_Spannungsquelle} \\ \hline
-					ideale Stromquelle      & \input{Tikz/src/1_zweipole/Beispiel_ideale_Stromquelle}     \\ \hline
-					Kondensator (Kapazität) & \input{Tikz/src/1_zweipole/Beispiel_Kondensator}            \\ \hline
-					ohmscher Widerstand     & \input{Tikz/src/1_zweipole/Beispiel_ohmscher_Widerstand}    \\ \hline
-					Spule (Induktivität)    & \input{Tikz/src/1_zweipole/Beispiel_Spule}                  \\ \hline
+					Two-terminal elements                 & Circuit symbol                                               \\ \hline
+					ideal voltage source  & \input{Tikz/src/1_zweipole/Beispiel_ideale_Spannungsquelle} \\ \hline
+					ideal power source     & \input{Tikz/src/1_zweipole/Beispiel_ideale_Stromquelle}     \\ \hline
+					Capacitor (capacitance) & \input{Tikz/src/1_zweipole/Beispiel_Kondensator}            \\ \hline
+					ohmic resistance     & \input{Tikz/src/1_zweipole/Beispiel_ohmscher_Widerstand}    \\ \hline
+					Coil (inductance)    & \input{Tikz/src/1_zweipole/Beispiel_Spule}                  \\ \hline
 				\end{tabular}
-				\caption{Beispiele verschiedener Zweipole sowie ihrer Schaltzeichen}
+				\caption{Examples of various two-pole devices and their circuit symbols}
 				\label{tab:schaltzeichen}
 			\end{table}
 		\end{center}
@@ -367,7 +371,7 @@
 \end{frame}
 
 
-\subsection{Zählpfeilsysteme}
+\subsection{Reference direction systems}
 
 
 
@@ -377,45 +381,47 @@
 	
 	\s{
 	
-		Die Wahl der Zählrichtungen von Strom und Spannung ist grundsätzlich beliebig. Bei der Berechnung
-		elektrischer Netzwerke wird häufig versucht, die Zählrichtungen so einzuführen, dass die
-		Ströme und Spannungen positiv sind. Das ist für von vornherein bekannte Größen durchaus
-		sinnvoll. Für unbekannte Größen muss die Zählrichtung hingegen willkürlich festgelegt werden. Es wird
-		dadurch nicht ausgedrückt, dass der Strom tatsächlich in der Pfeilrichtung fließt bzw. eine
-		positive Spannung in Pfeilrichtung anliegt. Die tatsächliche Richtung wird dann durch das
-		Vorzeichen der Spannung ausgedrückt.
-		Für eine vorzeichengerechte Beschreibung von Strömen und Spannungen ist also eine
-		Bemaßung mit Zählpfeilen zwingend notwendig.
+		The choice of counting directions for current and voltage is essentially arbitrary. When calculating
+		electrical networks, an attempt is often made to introduce the counting directions in such a way that the
+		currents and voltages are positive. This makes perfect sense for quantities that are known from the outset.
+		For unknown quantities, however, the counting direction must be determined arbitrarily. 
+		This does not
+        mean that the current actually flows in the direction of the arrow or that a
+        positive voltage is present in the direction of the arrow. The actual direction is then expressed by the
+        sign of the voltage.
+        For a sign-correct description of currents and voltages,
+		dimensioning with counting arrows is therefore absolutely necessary.
 		
-		Bei Zweipolen wird zwischen den in Tabelle \ref{tab:zps} vorgestellten zwei unterschiedlichen Zählpfeilsystemen unterschieden:
+		For two-pole systems, a distinction is made between the two different counting arrow systems presented in Table \ref{tab:zps}:
 		
 		
-		\begin{Merksatz}{Verbraucher- und Erzeugerzählpfeilsysteme}
+		\begin{Key point}{Consumer and generator sign conventions}
 			
-			\textbf{Verbraucher-Zählpfeilsytem (VPS)}: Strom und Spannung werden am Zweipol gleichsinnig gezählt. Anzuwenden bei passiven Zweipolen (z.B. Widerständen)\\
+			\textbf{Passive sign convention (PSC)}: Current and voltage are counted in the same direction at the two poles. To be used with passive two-pole devices (e.g. resistors).\\
 			
-			\textbf{Erzeuger-Zählpfeilsystem (EPS)}: Strom und Spannung werden am Zweipol entgegengesetzt gezählt. Anzuwendn bei aktiven Zweipolen (z.B. Spannungsquellen)
+			\textbf{Generator sign convention (GSC)}: Current and voltage are counted in opposite directions at the two poles. To be used with active two-pole devices (e.g. voltage sources).
 			
-		\end{Merksatz}
+		\end{Key point}
 		 
 		
 		\begin{table}[h!]
+			\renewcommand{\tablename}{Table}
 			\centering
 			\begin{tabular}{|c|c|c|c|}
 				\hline
-				Zählpfeilsystem & Erzeugte Leistung & Verbrauchte Leistung & Zählpfeile am Verbraucher                                                      \\ \hline
-				VPS             & $P = -UI$           & $P = UI > 0 $           & \input{Tikz/src/1_zweipole/Vergleich_VPS} \\ \hline
-				EPS             & $P = UI > 0$        & $P = -UI$              & \input{Tikz/src/1_zweipole/Vergleich_EPS} \\ \hline
+				Sign convention & Generated power & Consumed power & Passive sign-convention arrows                                                      \\ \hline
+				PSC             & $P = -UI$           & $P = UI > 0 $           & \input{Tikz/src/1_zweipole/Vergleich_VPS} \\ \hline
+				ASC             & $P = UI > 0$        & $P = -UI$              & \input{Tikz/src/1_zweipole/Vergleich_EPS} \\ \hline
 				%\input{Tikz/src/1_zweipole/Vergleich_VPS_EPS}                                                                                                \\
 			\end{tabular}
-			\caption{Vergleich zwischen Verbraucherzählpfeilsystem (VPS) und Erzeugerzählpfeilsystem (EPS).}
+			\caption{Comparison between the passive sign convention (PSC) and the active sign convention (ASC).}
 			\label{tab:zps}
 		\end{table}
 		
 		
-		\begin{Merksatz}{Zählpfeile}
-			Zählpfeile dienen der Zählweise und sind nicht mit Vektoren zu verwechseln!
-		\end{Merksatz}
+		\begin{Key point}{Sign convention arrows}
+			Reference arrows are used to define current and voltage sign conventions and must not be confused with vectors.
+		\end{Key point}
 		
 	}
 	
@@ -511,43 +517,42 @@
 \begin{frame}
 	\ftx{Der Grundstromkreis}
 	
-	\subsection{Der Grundstromkreis}
+	\subsection{The fundamental circuit}
 	\s{
 	
-		Die zuvor eingeführten Zweipole (oder auch Mehrpole) lassen sich zu einem 
-		elektrischen Netzwerk zusammenschließen.\\
+		The previously introduced two-pole (or multi-pole) systems can be combined to form an 
+		electrical network.\\
 		
 		
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\begin{center}
 
 				\input{Tikz/src/1_zweipole/Elektrischer_Grundstromkreis_Skript}
 				
 			\end{center}
-			\caption{Der elektrische Grundstromkreis mit eingezeichneten Zweigen, Knoten und Maschen}
+			\caption{The basic electrical circuit with branches, nodes and meshes marked}
 			\label{fig:grundstromkreis}
 		\end{figure}
-		Dabei bilden die idealisierten Zweipole \textbf{Zweige}, die wie in Abb. \ref{fig:grundstromkreis}
-		auch aus mehreren direkt hintereinandergeschalteten Zweipolen bestehen können. Durch alle Elemente eines Zweiges fließt
-		der gleiche Strom. Neben dem in Abbildung \ref{fig:grundstromkreis} grün markierten Zweig bilden auch die Zweipolgruppe 
-		$R_1$, $R_2$ und $U_0$ sowie der Kurzschluss in der der Zeichnung jeweils einen weiteren Zweig.\\
+		The idealised two-pole \textbf{branches}, which, as shown in Fig. \ref{fig:grundstromkreis},
+		can also consist of several two-pole elements connected directly in series. The same current flows through all elements of a branch. 
+		In addition to the branch marked in green in Figure \ref{fig:grundstromkreis}, the two-pole group 
+		$R_1$, $R_2$ and $U_0$ as well as the short circuit in the drawing each form another branch.\\
 		
-		Die Verbindungspunkte, an denen sich jeweils mindestens drei Zweige treffen, werden als \textbf{Knoten} oder Knotenpunkte
-		bezeichnet. Ein fließender elektrischer Strom kann sich hier auf die verschiedenen Zweige aufteilen.
-		Das elektrische Potential ist jedoch für alle verbundenen Anschlüsse identisch.
-		Ein Knoten wird im Schaltplan durch einen ausgefüllten Kreis gekennzeichnet und mit $K_n$ genannt. 
-		Geschlossene Pfade von mindestens zwei sich aneinanderreihenden Zweigen innerhalb 
-		eines Netzwerkes werden \textbf{Maschen} genannt und mit $M_n$ abgekürzt. Im Schaltplan wird neben der Bezeichnung der Masche
-		häufig auch eine Umlaufrichtung mit einem Pfeil angedeutet, der die Umlaufrichtung der Masche angibt. 
-		Im hier gezeichneten Grundstromkreis lassen sich neben der eingezeichneten Masche $M_1$ bestehend aus $R_1$, $R_2$, $U_0$ und 
-		dem Kurzschluss zwischen den Knoten $K_1$ und $K_2$
-		zwei weitere Maschen finden: Der grün eingezeichnete Zweig zusammen mit dem Kurzschluss zwischen $K_1$ und $K_2$ bilden 
-		eine Masche $M_2$. Eine weitere Masche $M_3$ außen herum führt außen um die Schaltung herum und enthält alle eingezeichneten
-		Zweipole, nicht jedoch den Kurzschluss zwischen $K_1$ und $K_2$.
-		
-		
-		
-		
+		The connection points where at least three branches meet are called \textbf{nodes} or junctions.
+		A flowing electric current can split up here onto the different branches.
+		However, the electric potential is identical for all connected terminals.	
+		A node is marked in the circuit diagram by a filled circle and is referred to as $K_n$. 
+		Closed paths of at least two branches in a row within 
+		a network are called \textbf{meshes} and are abbreviated as $M_n$. In the circuit diagram, in addition to the designation of the mesh, 
+		a direction of circulation is often indicated by an arrow that shows the direction of circulation of the mesh. 
+		In the basic circuit drawn here, in addition to the drawn mesh $M_1$ consisting of $R_1$, $R_2$, $U_0$ and 
+		the short circuit between nodes $K_1$ and $K_2$: 
+		The branch marked in green together with the short circuit between $K_1$ and $K_2$ form 
+        a mesh $M_2$. Another mesh $M_3$ around the outside leads around the outside of the circuit and contains all the
+        dipoles marked, but not the short circuit between $K_1$ and $K_2$.
+
+
 		
 	}
 	\b{

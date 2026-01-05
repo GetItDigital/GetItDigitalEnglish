@@ -1,21 +1,21 @@
 %Scheinleistung, Wirkleistung und Blindleistung
 \begin{frame}
-    \fta{Scheinleistung, Wirkleistung und Blindleistung}
+    \fta{Apparent power, active power and reactive power}
 
     \s{
-        In der Gleichstrombetrachtung elektrischer Netzwerke ergab sich lediglich eine Wirkleistung an den Komponenten. 
-        In der Wechselstrombetrachtung elektrischer Netzwerke werden durch die resultierenden Blindströme auch Blindleistungen
-        erzeugt. Die sich daraus ergebende Scheinleistung teilt sich auf die Wirkleistung und die Blindleistung auf. 
-        Die folgenden Grundlagen und Leistungsarten, welche durch eine Wechselspannung hervorgerufen werden, werden folgend besprochen:
-    }
+        
+        In the direct current analysis of electrical networks, only active power was found at the components. 
+        In the alternating current analysis of electrical networks, the resulting reactive currents also generate reactive power. 
+        The resulting apparent power is divided between active power and reactive power. 
+        The following fundamentals and types of power caused by alternating voltage are discussed below:    }
 
-    \begin{Lernziele}{Scheinleistung, Wirkleistung und Blindleistung}
-        Die Studierenden
+    \begin{Learning objectives}{Apparent power, active power and reactive power}
+        The students
         \begin{itemize}
-            \item kennen den Unterschied zwischen der Augenblicksleistung, der Wirkleistung und der Blindleistung.
-            \item können die Scheinleistung bestimmen und kategorisieren.
+            \item know the difference between instantaneous power, active power and reactive power.
+            \item can determine and categorise apparent power.
         \end{itemize}
-    \end{Lernziele}
+    \end{Learning objectives}
 
 \end{frame}
 
@@ -23,14 +23,13 @@
 
 
 \begin{frame}
-    \ftb{Grundlagen: Additionstheorem und Arithmetischer Mittelwert}
+    \ftb{Fundamentals: Addition theorem and arithmetic mean}
 
     \s{
-        Für die Berechnung des Effektivwertes wurde bereits ein Additionstheorem vorgestellt. Ein weiteres Additionstheorem 
-        wird in der Gleichung \ref{GleichungAdd1} vorgestellt. Hier wird aus dem Produkt zweier Sinusfunktionen mit unterschiedlichen
-        Argumenten ein Zusammenhang mit Summen und Differenzen in Cosinusfunktionen. Hierdurch wird das Produkt eliminiert und eine 
-        Summe zweier Cosinusfunktion erstellt. Das Integrieren der Summe lässt sich durch das Aufteilen der Summe in zwei separate
-        Integrationvorgänge vereinfachen. 
+        An addition theorem has already been presented for calculating the RMS value. Another addition theorem 
+        is presented in equation \ref{GleichungAdd1}. Here, the product of two sine functions with different
+        arguments is related to sums and differences in cosine functions. This eliminates the product and creates a 
+        sum of two cosine functions. Integrating the sum can be simplified by dividing the sum into two separate integration processes. 
     }
 
     \b{
@@ -42,10 +41,11 @@
     \end{eq}
 
     \s{
-        Mit dem arithmetische Mittelwert einer Funktion soll ein konstanter Wert errechnet werden, welcher nicht mehr zeitabhängig 
-        ist. In der Elektrotechnik soll dieser Wert in bestimmten Fällen, ähnlich wie der Effektivwert bei sinusförmigen Strom- und 
-        Spannungsverläufen, zur besseren Veranschaulichung herangezogen werden. Berechnet wird der arithmetische Mittelwert über 
-        folgende Integralformel:
+        
+        The arithmetic mean of a function is used to calculate a constant value that is no longer time-dependent. 
+        In electrical engineering, this value is used in certain cases, similar to the RMS value for sinusoidal current and 
+        voltage curves, for better illustration. The arithmetic mean is calculated using 
+        the following integral formula:
     }
 
     \b{
@@ -61,10 +61,10 @@
     \end{eq}
 
     \s{
-        In der Formel steht $T$ für die Periodenlänge. Hier ist $t$ dabei ein beliebig wählbarer Zeitpunkt, ab welchem die Betrachtung 
-        starten soll (meistens $t=0$). Vereinfacht ausgedrückt steht im Integral die Fläche zwischen der Funktionskurve und der Abszisse
-        und im Nenner des Bruches die Periodenlänge. Als Beispiel soll eine sogenannte Sägezahnspannung herangezogen werden, welche in 
-        der Abbildung \ref{BildLei1} dargestellt wird. 
+        In the formula, $T$ stands for the period length. Here, $t$ is any freely selectable point in time from which the observation 
+        should start (usually $t=0$). Put simply, the integral represents the area between the function curve and the abscissa
+        and the denominator of the fraction represents the period length. As an example, let us consider a so-called sawtooth voltage, which is shown in 
+        Figure \ref{BildLei1}.
     }
 
     \b{
@@ -79,6 +79,7 @@
     
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Arithmetischer Mittelwert: Beispiel}
 
     \b{
@@ -96,33 +97,33 @@
         \resizebox{0.7\textwidth}{!}{
             \input{Tikz/src/Scheinleistung_Wirkleistung_Blindleistung/Saegezahnspannung_Verlauf}
         }
-    }{{\bf Verlauf einer Sägezahnspannung.} Über die Sägezahnspannung wird die Ermittlung des rot gekennzeichneten 
-    Mittelwertes erläutert. \label{BildLei1}}    
+    }{{\bf Progression of a sawtooth wave.} The sawtooth voltage is used to explain how to determine the mean value marked in red. 
+    \label{BildLei1}}    
 
     \s{
-        Soll der arythmetische Mittelwert errechnet werden, muss zuerst eine Funktion über eine Periode aufgestellt werden.
-        In diesem Fall kann eine Periode folgendermaßen ausgedrückt werden:
+        To calculate the arithmetic mean, a function must first be established over a period.
+        In this case, a period can be expressed as follows:
 
         \begin{eq}
             \overline{u(t)}=\frac{10~V}{T}\cdot t
         \end{eq}
 
-        Diesen Zusammenhang eingefügt in die Gleichung \ref{ArythMittel} und für die Integrationsgrenzen $t=0$ bis $T$ ergibt sich die 
-        Gleichung:
+        Inserting this relationship into equation \ref{ArythMittel} and setting the integration limits $t=0$ to $T$ yields the 
+        equation:
 
         \begin{eq}            
             \overline{u(t)}=\frac{1}{T}\int_{0}^{T} \frac{10~V}{T}\cdot t~dt
         \end{eq}
 
-        Wird das Integral aufgelöst erhält man den arythmetischen Mittelwert für die Sägezahnspannung:
+        When the integral is resolved, the arithmetic mean value for the sawtooth voltage is obtained:
 
         \begin{eq}            
             \overline{u(t)}=\frac{1}{T}\left[\frac{10~V}{T}\cdot\frac{t^2}{2}\right]_0^T=\frac{1}{2}\cdot 10~V
         \end{eq}
 
-        Somit beträgt der arythmetische Mittelwert die Hälfte der maximalen Spannung. Liegt eine ideale Sinusschwingung vor, ist der 
-        arythmetische Mittelwert immer null. Relevant wird der arythmetische Mittelwert, wenn die Leistung von sinusförmigen Strömen 
-        und Spannungen errechnet werden soll.
+        The arithmetic mean is therefore half the maximum voltage. In the case of an ideal sine wave, the 
+        arithmetic mean is always zero. The arithmetic mean is relevant when the power of sinusoidal currents 
+        and voltages is to be calculated.
     }
 
 \end{frame}
@@ -157,13 +158,13 @@
 
 
 \begin{frame}
-    \ftb{Wirkleistung und Blindleistung}
+    \ftb{Active power and reactive power}
 
     \s{
-        Wirkleistung bei Gleichstrom:
-        In elektrischen Gleichstromnetzwerken wird die Leistung nach der bekannten Gleichung $P=U\cdot I$ bestimmt.
-        Bei bekanntem elektrischen Widerstand kann die Gleichung dahingehend umgestellt werden, dass nach dem ohmschen
-        Gesetz entweder die Spannung oder der Stromeliminiert werden.  
+        Active power in direct current:
+        In direct current electrical networks, power is determined using the well-known equation $P=U\cdot I$.
+        If the electrical resistance is known, the equation can be rearranged so that, according to Ohm's law, either the voltage or the current is eliminated.
+        Active power in alternating current:  
     }
 
     \b{
@@ -185,9 +186,9 @@
     \ftx{Wirkleistung Widerstand}
 
     \s{
-        In einem System mit Wechselgrößen ist die Leistung, wie auch die Größen Strom und Spannung, zeitabhängig.
-        In der Gleichung \ref{GleichungLei2} wird dies dadurch ausgedrückt, dass die Formelzeichen klein geschrieben sind
-        und abhängig von der Zeit $t$ sind:
+        In a system with alternating quantities, power, like current and voltage, is time-dependent.
+        In equation \ref{GleichungLei2}, this is expressed by the fact that the symbols are written in lower case
+        and are dependent on time $t$:
     }
 
     \b{
@@ -201,9 +202,9 @@
     \end{eq}
 
     \s{
-        Weil die Größen der Spannung und des Stromes zeitabhängig sind, ist auch diese Funktion der Leistung zeitabhängig.
-        Aufgrund der Zeitabhängigkeit wird auch von der \textbf{Augenblicksleistung} für einen Zeitpunkt t gesprochen. 
-        Die Maßeinheit der elektrischen Augenblicksleistung ist weiterhin das Watt.
+        Because the magnitude of voltage and current are time-dependent, this function of power is also time-dependent.
+        Due to its time dependency, we also refer to \textbf{Augenblicksleistung} for a given point in time t.
+        The unit of measurement for instantaneous electrical power continues to be the watt.
     }   
 
     \b{
@@ -217,13 +218,13 @@
     \end{eq}
 
     \s{
-        Werden die Augenblickswerte der Spannung und des Stromes in die Gleichung \ref{GleichungLei2} der Augenblicksleistung 
-        eingesetzt, so ergibt sich in der folgenden Gleichung \ref{GleichungLei4} die Augenblicksleistung. Hier lässt sich die 
-        Gleichung in einen Vorfaktor, einen konstanten Anteil und einen zeitabhängigen Anteil aufteilen. Der Vorfaktor besteht
-        aus der Hälfte des Produktes der Amplitudenwerte von Spannung und Strom. Der konstante Anteil besteht aus dem ersten 
-        Cosinussummanden, hier sind lediglich die Phasenwinkel von Spannung und Strom ausschlaggebend. Der zeitabhängige Anteil 
-        wird durch den zweiten Cosinus dargestellt. Hier werden neben den Phasenwinkeln auch die Kreisfrequenz und der Zeitpunkt
-        wichtig.  
+        If the instantaneous values of voltage and current are substituted into equation \ref{GleichungLei2} for instantaneous power,
+        the following equation \ref{GleichungLei4} gives the instantaneous power. Here, the 
+        equation can be divided into a leading factor, a constant component and a time-dependent component. The pre-factor consists
+        of half the product of the amplitude values of voltage and current. The constant part consists of the first 
+        cosine summand; here, only the phase angles of voltage and current are decisive. The time-dependent part 
+        is represented by the second cosine. Here, in addition to the phase angles, the angular frequency and the time
+        are also important.  
     }
 
     \b{
@@ -233,8 +234,8 @@
     }
 
     \begin{eqa}
-        \text{allgemein:} \quad p(t) &= u(t) \cdot i(t)  \\
-        \text{sinusförmig:} \quad p(t) &= \frac{\hat{U}\cdot\hat{I}}{2}(\underbrace{\cos(\varphi_\mathrm{U}-\varphi_\mathrm{I})}_\text{konstanter Anteil} + \underbrace{\cos(2\omega t +\varphi_\mathrm{U}+\varphi_\mathrm{I})}_\text{zeitabhängiger Anteil})    \label{GleichungLei4}
+        \text{Generally:} \quad p(t) &= u(t) \cdot i(t)  \\
+        \text{Sinusoidal:} \quad p(t) &= \frac{\hat{U}\cdot\hat{I}}{2}(\underbrace{\cos(\varphi_\mathrm{U}-\varphi_\mathrm{I})}_\text{constant proportion} + \underbrace{\cos(2\omega t +\varphi_\mathrm{U}+\varphi_\mathrm{I})}_\text{time-dependent portion})    \label{GleichungLei4}
     \end{eqa}
     
 \end{frame}
@@ -243,14 +244,13 @@
 \begin{frame}
     \ftx{Augenblicksleistung}
 
-    \begin{Merksatz}{Augenblicksleistung}
-        Die Augenblicksleistung ist das Produkt aus den Aufgeblickswerten der Spannung und des Stromes. 
-
+    \begin{Key point}{Instantaneous power}
+        The instantaneous power is the product of the instantaneous values of voltage and current.
         \begin{eq}
             p(t)=u(t)\cdot i(t)      \nonumber
         \end{eq}
 
-    \end{Merksatz}
+    \end{Key point}
 
 \end{frame}
 
@@ -258,18 +258,18 @@
     \ftx{Mittlere Leistung}
 
     \s{
-        Wird die gesamte Leistung eines Systems über einen idealen ohmschen Widerstand aufgenommen, bedeutet dies, dass die 
-        Spannung in der Strom keine Phasenverschiebung aufweisen. Der Konstante Anteil der Augenblicksleistung ist positiv. 
-        Die Augenblicksleistung pulsiert mit doppelter Frequenz im Vergleich zur Frequenz von Spannung und Strom. Dabei hat 
-        die Leistung stets ein positives Vorzeichen. 
+        If the entire power of a system is absorbed via an ideal ohmic resistor, this means that the 
+        voltage in the current has no phase shift. The constant component of the instantaneous power is positive. 
+        The instantaneous power pulsates at twice the frequency compared to the frequency of the voltage and current. In this case, 
+        the power always has a positive sign.
 
-        Häufig ist es nicht erheblich, wie der genaue zeitliche Verlauf der Augenblicksleistung ist. Vielmehr ist bei Anwendungen 
-        lediglich die im Mittel umgesetzte Leistung, beispielsweise Wärmeanwenungen, von Interesse. Die Mittlere Leistung der 
-        zeitveränderlichen Augenblicksleistung ist nach Gleichung \ref{ArythMittel} definiert. 
-        Für rein sinusförmige Spannungen und Ströme lässt sich eine mittlere Leistung nach Gleichung \ref{GleichungLei5}
-        bestimmen. Die Angaben der Spannung $U$ und des Stromes $I$ bilden die Effektivwerte. Der Winkel $\varphi$ ergibt 
-        sich aus der Phasenverschiebung zwischen der Spannung und dem Strom. Der gesamte Ausdruck  ${\bf\cos(\varphi)}$ wird auch
-        als {\bf Leistungsfaktor} bezeichnet. 
+        Often, the exact temporal course of the instantaneous power is not significant. Rather, in applications 
+        only the average power converted, for example heat applications, is of interest. The average power of the 
+        time-varying instantaneous power is defined by equation \ref{ArythMittel}.
+        For purely sinusoidal voltages and currents, the average power can be determined using equation \ref{GleichungLei5}. 
+        The voltage $U$ and current $I$ values are the RMS value. The angle $\varphi$ results 
+        from the phase shift between the voltage and the current. The entire expression  ${\bf\cos(\varphi)}$ is also
+        referred to as the {\bf Leistungsfaktor}. 
     }
 
     \b{
@@ -286,11 +286,10 @@
     \end{eq}
 
     \s{
-        Ohne die Phasenverschiebung zwischen der Spannung und dem Strom an einem ideale Widerstand ist der Term des 
-        Leistungsfaktors Vernachlässigbar. So lässt sich die mittlere Leistung in der Wechselstromtechnik bei sinusförmigen
-        Spannungs- und Stromverläufen analog zur Gleichstromtechnik auf zwei zeitunabhängige Größen zurückführen. Der 
-        Effektivwert der Spannung und des Stromes werden für rein sinusförmige Größen zur Ermittlung der mittelren Leistung
-        herangezogen.
+        Without the phase shift between the voltage and the current at an ideal resistor, the power factor term is negligible. 
+        Thus, in alternating current technology, the average power can be reduced to two time-independent variables in the case of sinusoidal
+        voltage and current curves, analogous to direct current technology. The RMS value of the voltage and 
+        current are used to determine the average power for purely sinusoidal quantities.
 
         \begin{eq}
             \overline{p}_\mathrm{Ohm} = \frac{\hat{U}}{\sqrt{2}} \cdot \frac{\hat{I}}{\sqrt{2}} = \frac{\hat{U}\cdot\hat{I}}{2} = U \cdot I     \label{GleichungLei6}
@@ -311,16 +310,17 @@
 
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Leistung Induktivität}
     
     \s{
-        Ähnlich verhält es sich mit der Augenblicksleistung an Spulen und Kondensatoren. An einer Induktivität eilt der 
-        Strom der Spannung um 90° nach ($+\pi/2$). Der Verlauf der Spannung und des Stromes an einer Induktivität wird in der Abbildung 
-        \ref{BildInduktiveLast} dargestellt. Dazu wird in grün die Augenblicksleistung an der Induktivität dargestellt. Der 
-        Konstante Anteil der Augenblicksleistung an einer Induktivität beträgt Null. An dem Verlauf lässt sich das Pulsieren 
-        der Augenblicksspannung mit der doppelten Frequenz der Spannung bzw. des Stromes feststellen. Die positiven und 
-        negativen Halbwellen der Augenblicksleistung heben sich gegenseitig im Mittel auf.  Das heißt, dass die aufgenommene 
-        Leistung wieder vollständig abgegeben wird und so von der Induktivität keine Leistung aufgenommen wird. 
+        The situation is similar with the instantaneous power at coils and capacitors. At an inductance, the 
+        current lags the voltage by 90° ($+\pi/2$). The voltage and current waveforms across an inductance are shown in Figure 
+        \ref{BildInduktiveLast}. The instantaneous power across the inductance is shown in green. The 
+        constant component of the instantaneous power across an inductance is zero. The curve shows the pulsation 
+        of the instantaneous voltage with twice the frequency of the voltage or current. The positive and 
+        negative half-waves of the instantaneous power cancel each other out on average.  This means that the power consumed 
+        is completely re-emitted and thus no power is consumed by the inductance. 
     }
 
     \b{
@@ -337,21 +337,22 @@
         \resizebox{0.8\textwidth}{!}{
             \input{Tikz/src/Scheinleistung_Wirkleistung_Blindleistung/Verlauf_induktive_Last}
         }
-    }{{\bf Verlauf des Stromes, der Spannung und der zeitabhängigen Leistung an einer induktive Last.} Die Augenblicksleistung weist die 
-    doppelte Frequenz gegenüber der Spannung bzw. des Stromes auf. Die positiven und negativen Halbwellen heben sich gegenseitig
-    auf, die aufgenommene Leistung wird vollständig wieder abgegeben. \label{BildInduktiveLast}}
+    }{{\bf Curve of current, voltage and time-dependent power at an inductive load.} The instantaneous power has 
+    twice the frequency of the voltage or current. The positive and negative half-waves cancel each other out,
+    and the power consumed is completely re-emitted. \label{BildInduktiveLast}}
 
 \end{frame}
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Leistung Kapazität}
 
     \s{
-        Beim Kondensator verhält es sich dem Prinzip nach äquivalent zur Induktivität. Hier eilt der Strom der Spannung um 90° ($-\pi/2$). 
-        Der konstante Anteil der Augenblicksleistung beträgt Null und die Leistung pulsiert mit doppelter Frequenz um die Nulllinie. 
-        Wie auch bei der Induktivität wird von einer Kapazität die aufgenommene Leistung wieder vollständig abgegeben, sodass im 
-        Mittel keine Leistung aufgenommen wird. Das Verhalten der zeitabhängigen Leistung an einer kapazitiven Last wird in der Abbildung
-        \ref{BildKapazitiveLast} vorgestellt. 
+        
+        In principle, the capacitor behaves in the same way as inductance. Here, the current lags the voltage by 90° ($-\pi/2$). 
+        The constant component of the instantaneous power is zero and the power pulsates at twice the frequency around the zero line.
+        As with inductance, the power absorbed by a capacitor is completely re-emitted, so that on average no power is absorbed. The 
+        behaviour of time-dependent power at a capacitive load is shown in Figure \ref{BildKapazitiveLast}. 
     }
 
     \b{
@@ -368,9 +369,9 @@
         \resizebox{0.8\textwidth}{!}{
             \input{Tikz/src/Scheinleistung_Wirkleistung_Blindleistung/Verlauf_kapazitive_Last}	
         }
-    }{{\bf Verlauf des Stromes, der Spannung und der zeitabhängigen Leistung an einer kapazitiven Last.} Die Augenblicksleistung weist die 
-    doppelte Frequenz gegenüber der Spannung bzw. des Stromes auf. Die positiven und negativen Halbwellen heben sich gegenseitig
-    auf, die aufgenommene Leistung wird vollständig wieder abgegeben. \label{BildKapazitiveLast}}
+    }{{\bf Curve of current, voltage and time-dependent power at a capacitive load.} The instantaneous power has 
+    twice the frequency of the voltage or current. The positive and negative half-waves cancel each other out,
+    and the power consumed is completely re-emitted. \label{BildKapazitiveLast}}
 \end{frame}
 
 
@@ -380,22 +381,21 @@
     \ftx{Blindleistung}
 
     \s{
-        Ist die Augenblicksleistung größer Null, wird Leistung aufgenommen. Entgegengesetzt wird Leistung abgegeben, wenn die 
-        Augenblicksleistung kleiner Null ist. Durch die nicht vorhandene Phasenverschiebung zwischen dem Strom und der Spannung
-        am ohmschen Widerstand ist die mittlere Leistung stets größer null. Der ohmsche Widerstand nimmt also stets Leistung auf. 
-        Die Leistung wird hier als Wirkleistung $P$ bezeichnet, welche für Anwendungen genutzt werden kann. Sie wird anhand der
-        bereits vorgestellten Gleichung \ref{GleichungLei5} für sinusförmige Spannungen und Ströme berechnet. 
-        Die beschriebenen Leistungen erklären Wirkleistungsanteile und Blindleistungsanteile. Die Blindleistung beschreibt dabei 
-        denjenigen Anteil der Leistung, welcher für die Erzeugung von elektrischen und magnetischen Feldern notwenig ist. Ist die 
-        elektrische Impedanz rein induktiv oder kapazitiv, liegt eine Phasenverschiebung von $\pm 90^\circ$ vor. Der rein induktive
-        oder rein kapazitive Zweipol nimmt Leistung auf, welche anschließend wieder vollständig abgegeben wird. Das dadurch 
-        resultierende Mittel der Leistung beträgt immer null. Diese Leistung wird als Blindleistung $Q$ Bezeichnet. Es wird dabei
-        zwischen induktiver und kapazitiver Blindleistung unterschieden. Für die induktive Blindleistung ergibt sich eine positive
-        Phasenverschiebung für die Leistung, was genau dem Verlauf des Sinusfunktion entspricht. Die kapazitive Blindleistung wird 
-        entgegengesetzt verschoben, sodass sich ebenfall eine Sinusfunktion, jedoch mit negativem Vorzeichen definieren lässt. 
-        In den Gleichungen \ref{GleichungLei7} und \ref{GleichungLei8} werden die Gleichungen für die Berechnungen der induktiven
-        und kapazitiven Blindleistung vorgestellt. Die Maßeinheit für die induktive und kapazitive Blindleistung ist das 
-        var (Volt-Ampere-reaktiv).
+        If the instantaneous power is greater than zero, power is absorbed. Conversely, power is delivered when the 
+        instantaneous power is less than zero. Due to the absence of phase shift between the current and voltage
+        at the ohmic resistor, the average power is always greater than zero. The ohmic resistance therefore always consumes power. 
+        The power is referred to here as active power $P$, which can be used for applications. It is calculated using the
+        equation \ref{GleichungLei5} already presented for sinusoidal voltages and currents. 
+        The powers described explain active power components and reactive power components. Reactive power describes 
+        the portion of power that is necessary for the generation of electric and magnetic fields. If the 
+        electrical impedance is purely inductive or capacitive, there is a phase shift of $\pm 90^\circ$. The purely inductive
+        or purely capacitive two-pole absorbs power, which is then completely released again.
+        The resulting mean power is always zero. This power is referred to as reactive power $Q$. A distinction is made
+        between inductive and capacitive reactive power. For inductive reactive power, there is a positive
+        phase shift for the power, which corresponds exactly to the course of the sine function. 
+        The capacitive reactive power is shifted in the opposite direction, so that a sine function can also be defined, but with a negative sign.
+        Equations \ref{GleichungLei7} and \ref{GleichungLei8} present the equations for calculating inductive
+        and capacitive reactive power. The unit of measurement for inductive and capacitive reactive power is the var (volt-ampere reactive).
 
         \begin{eq}
             Q_\mathrm{Ind} = U \cdot I \cos(\varphi + 90^\circ) = U \cdot I \cdot \sin(\varphi)        \label{GleichungLei7}        
@@ -433,14 +433,14 @@
 
     \only<4->{
     \begin{eq}
-        [Q] = 1\ Volt-Ampere-reaktiv = 1\ \mathrm{var} \nonumber
+        [Q] = 1\ Volt-Ampere-reaktive = 1\ \mathrm{var} \nonumber
     \end{eq}
     }
 
     \s{    
-        Bei idealen kapazitiven oder induktiven Widerständen wird keine Energie in Form von Wärme umgesetzt.
-        Es ändert sich lediglich das magnetische oder elektrische Feld, so wird also Energie gespeichert oder 
-        abgegeben.
+        With ideal capacitive or inductive resistors, no energy is converted into heat.
+        Only the magnetic or electric field changes, so energy is stored or 
+        released.
     }
 
 \end{frame}
@@ -450,16 +450,16 @@
 \begin{frame}
     \ftx{Wirkleistung und Blindleistung}
 
-    \begin{Merksatz}{Wirkleistung und Blindleistung}
-        In der komplexen Ebene wird die Leistung durch die Wirkleistung und die Blindleistung erklärt. Die Wirkleistung
-        beschreibt den Realteil und die Blindleistung den Imaginärteil der komplexen Scheinleistung. Die Wirkleistung 
-        und die Blindleistung werden wie folgt definiert:
+    \begin{Key point}{Active power and reactive power}
+        At the complex level, power is explained by active power and reactive power. Active power
+        describes the real part and reactive power the imaginary part of the complex apparent power. Active power 
+        and reactive power are defined as follows:
 
         \begin{eq}
             P = U \cdot I \cdot \cos(\varphi)   \qquad  Q = U \cdot I \cdot \sin(\varphi)   \nonumber
         \end{eq}
 
-    \end{Merksatz}
+    \end{Key point}
 
 \end{frame}
 
@@ -470,15 +470,15 @@
 
 %Scheinleistung
 \begin{frame}
-    \ftb{Scheinleistung}
+    \ftb{Apparent power}
 
     \s{
-        Bisher wurden die Grundlagen der Leistungsbetrachtung von idealen ohmschen und induktiven/kapazitiven Impedanzen 
-        betrachtet. Jedoch treten in den meisten Netzwerken sowohl ohmsche als auch induktive oder kapazitive Impedanzen 
-        auf. In solchen Netzen wird dann unterschieden zwischen Scheinleistung, Wirkleistung und Blindleistung. Die 
-        Scheinleistung steht dabei für die Gesamtleistung des Systems. Um die Scheinleistung zu berechnen, wird mit dem 
-        Maximalwert gerechnet, also wenn keine Phasenverschiebung vorliegen würde. Damit ist dieser Wert gleich der 
-        Leistung eines idealen ohmschen Widerstands:
+        So far, we have looked at the basics of power analysis for ideal ohmic and inductive/capacitive impedances.
+        However, most networks contain both ohmic and inductive or capacitive impedances.
+        In such networks, a distinction is made between apparent power, active power and reactive power. 
+        The apparent power represents the total power of the system. To calculate the apparent power, the 
+        maximum value is used, i.e. when there is no phase shift. This value is therefore equal to the 
+        power of an ideal ohmic resistor:
     }
 
     \b{
@@ -492,16 +492,16 @@
     \end{eq}
 
     \s{
-        Wird die Scheinleistung in der komplexen Ebene betrachtet, kommen die Festzeiger zum Einsatz. Wird die kompexe Spannung 
-        mit dem komplexen Strom multipliziert, würden nach den Regeln des kompexen rechnens die Phasenwinkel addiert werden.
-        Um eine korrekte Leistungsberechnung durchzuführen, muss jedoch eine Differenz zwischen den Phasenwinkeln vorliegen.
-        Um diesem Problem abhilfe zu schaffen, wird mit dem konjugierten komplex Wert des Stroms gerechnet:
+        If the apparent power is considered in the complex plane, the fixed pointers are used. If the complex voltage 
+        is multiplied by the complex current, the phase angles would be added according to the rules of complex arithmetic.
+        However, in order to perform a correct power calculation, there must be a difference between the phase angles.
+        To remedy this problem, the conjugate complex value of the current is used in the calculation:
 
         \begin{eqa}
             \underline{S}&=\underline{U}\cdot \underline{I}^* \nonumber \\
-            mit~~~ \underline{U}&=U\cdot e^{j\varphi_\mathrm{u}} \nonumber \\
-            und~~~ \underline{I}^*&=I\cdot e^{-j\varphi_\mathrm{i}} \\
-            folgt~~~ \underline{S}&=U\cdot e^{j\varphi_\mathrm{u}} \cdot I\cdot e^{-j\varphi_\mathrm{i}}\nonumber  \\
+            with~~~ \underline{U}&=U\cdot e^{j\varphi_\mathrm{u}} \nonumber \\
+            and~~~ \underline{I}^*&=I\cdot e^{-j\varphi_\mathrm{i}} \\
+            follows~~~ \underline{S}&=U\cdot e^{j\varphi_\mathrm{u}} \cdot I\cdot e^{-j\varphi_\mathrm{i}}\nonumber  \\
             &=U\cdot I\cdot e^{j(\varphi_\mathrm{u}-\varphi_\mathrm{i})} \\
             &=U\cdot I\cdot e^{j(\varphi)} \nonumber 
         \end{eqa}
@@ -556,8 +556,8 @@
     \ftx{Leistungsarten}
 
     \s{
-        Über den komplexen Wert der Spannung und den konjugiert komplexen Wert des Stromes lässt sich separat die Wirkleistung
-        und die Blindleistung oder direkt die komplexe Scheinleistung bestimmen:
+        The complex value of the voltage and the conjugate complex value of the current can be used to determine the active power
+        and the reactive power separately, or the complex apparent power directly:
     }
 
     \b{
@@ -571,8 +571,8 @@
     \end{eq}
     
     \s{
-        Außerdem lässt sich über den Leistungsfaktor auch direkt ein Zusammenhang zwischen der Wirkleistung bzw. der Blindleistung 
-        und der Scheinleistung nach Gleichung \ref{GleichungSch1} festlegen. 
+        In addition, the power factor can also be used to directly determine a relationship between the active power or reactive power 
+        and the apparent power according to Equation \ref{GleichungSch1}. 
     }
 
     \b{
@@ -591,37 +591,38 @@
 \begin{frame}
     \ftx{Komplexe Scheinleistung}
 
-    \begin{Merksatz}{Komplexe Scheinleistung}
-        Die komplexe Scheinleistung setzt sich aus der Wirkleistung und der Blindleistung zusammen. Sie kann auf 
-        verschiedene Weisen bestimmt werden: 
+    \begin{Key point}{Komplexe Scheinleistung}
+        The complex apparent power is composed of active power and reactive power. It can be determined in 
+        various ways: 
 
         \begin{eq}
             \underline{S} = \underline{U} \cdot \underline{I}^* = U \cdot I\cdot e^{j(\varphi_\mathrm{u}-\varphi_\mathrm{i})} = P + jQ \nonumber 
         \end{eq}
 
-    \end{Merksatz}
+    \end{Key point}
 \end{frame}
 
 
 
         
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Betriebsdiagramm}
 
     \s{
-        Die Größen Wirkleistung und Blindleistung sind in der komplexen Zahlenebene zu finden. Dabei ist die Wirkleistung ein rein 
-        reeler Wert und die Blindleistung stellt einen rein imaginären Wert dar. Die Scheinleistung, welche auch eine komplexe Größe 
-        ist, kann als Betrag des Weges von Wirk- und Blindleistung dargestellt werden (vgl. Abbildung \ref{BildBetriebsdiagramm}). 
-        Die hier dargestellte Scheinleistung $S$ mit zugehörigen Phasenwinkel $\varphi$ ist im $I.$ Quadranten verortet. Dies wird 
-        durch einen positiven Wirkleistungsanteil und einen positiven Blindleistungsanteil verursacht. Die positive Wirkleistung
-        deutet an, dass von etwas elektrische Leistung aufgenommen wird, also eine elektrische Last darstellt. Deswegen wird hier
-        vom Lastbetrieb gesprochen. Die positive Blindleistung spricht für die vorherschenden Effekte einer Spule und wirkt somit 
-        induktiv. Die Scheinleistung im $I.$ Quadranten wird im induktiven Lastbetrieb betrieben. Wirkt eine negative Wirkleistung 
-        in die Scheinleistung, wird Wirkleistung abgegeben, wie bei einem Generator, welcher Leistung abgibt. Bei einer positiven 
-        Blindleistung liegt hier ein induktiver Generatorbetrieb vor ($II.$ Quadrant). Ist die Blindleistung negativ, überwiegen 
-        kapazitive Effekte. Bei negativer Wirkleistung wird diese Betriebsform kapazitiver Generatorbetrieb genannt ($III.$ Quadrant).
-        Als letztes wird im $IV.$ Quadranten ein kapazitiver Lastbetrieb beschrieben. Hier wirkt eine positive Wirkleistung und eine 
-        negative Blindleistung in die Scheinleistung ein. 
+        The quantities active power and reactive power are found in the complex number plane. Active power is a purely 
+        real value, while reactive power is a purely imaginary value. Apparent power, which is also a complex quantity,
+        can be represented as the sum of active and reactive power (see Figure \ref{BildBetriebsdiagramm}).         
+        The apparent power $S$ shown here with the associated phase angle $\varphi$ is located in the $I$ quadrant. This is 
+        caused by a positive active power component and a positive reactive power component. The positive active power
+        indicates that some electrical power is being consumed, i.e. it represents an electrical load. This is why
+        we refer to load operation here. The positive reactive power indicates the prevailing effects of a coil and thus 
+        has an inductive effect. The apparent power in the first quadrant is operated in inductive load mode. If a negative 
+        active power affects the apparent power, active power is delivered, as in the case of a generator that delivers power. 
+        With positive reactive power, inductive generator operation occurs (quadrant II). If the reactive power is negative, capacitive effects predominate.
+        With negative active power, this type of operation is called capacitive generator operation (quadrant III).
+        Finally, capacitive load operation is described in the $IV.$ quadrant. Here, positive active power and 
+        negative reactive power affect the apparent power. 
     }
 
     \b{
@@ -640,8 +641,8 @@
         \resizebox{0.3\textwidth}{!}{
         \input{Tikz/src/Scheinleistung_Wirkleistung_Blindleistung/Zeigerdiagramm_Leistung}
         }
-    }{{\bf Zeigerdiagramm der Leistung.} Zusammensetzung von Blind-, Wirk- und Scheinleistung in Abhängigkeit der Phasenverschiebung 
-    zwischen Strom und Spannung. Hier eine induktive Last im positiven Imaginärteil. \label{BildBetriebsdiagramm}}
+    }{{\bf Pointer diagram of the Power.} Composition of reactive, active and apparent power depending on the phase shift 
+        between current and voltage. Here, an inductive load in the positive imaginary part. \label{BildBetriebsdiagramm}}
 
 \end{frame}
 
@@ -650,17 +651,17 @@
     \ftx{Blindleistung im Generatorbetrieb}
 
     \s{
-        Die Blindleistung wird unter anderem benötigt, um Magnetfelder in elektrischen Maschinen zu erzeugen. Der 
-        Blindleistungsbedarf entsteht durch Komponenten im System, welche entweder induktiv oder kapazitiv wirken. 
-        Wenn der Strom zur Erzeugung des Magnetfeldes (Erregerstrom) höher ist, als es für die nominale Leistung des 
-        Generators erforderlich wäre, ist ein Generator übererregt. In diesem Fall ist der Generator in der Lage, 
-        Blindleistung in das Netz abzugeben. Die hierdurch erhöhte Blindleistung im Netz führt zu einer Spannungsanhebung. 
-        Steigt der Energiebedarf im Netz, kann diese Gegebenheit dafür genutzt werden, einem Absinken der Netzspannung 
-        entgegenzuwirken. 
-        Andersherum arbeitet ein Generator mit einem geringeren Erregerstrom als benötigt im untererregten Zustand. Der 
-        Generator nimmt hier Blindleistung aus dem Netz auf, um das erforderliche Magnetfeld aufrecht zu halten. Der 
-        Bezug von Blindleistung führt dann wiederum zu einer Spannungsabsenkung im Netz. Bei einer starken untererregung 
-        eines Generators kann es zum Ausfall der elektrischen Maschine kommen. 
+        Reactive power is needed, among other things, to generate magnetic fields in electrical machines. The 
+        reactive power requirement arises from components in the system that have either an inductive or capacitive effect. 
+        If the current required to generate the magnetic field (excitation current) is higher than would be necessary for the nominal power of the 
+        generator, the generator is overexcited. 
+        In this case, the generator is able to 
+        supply reactive power to the grid. The resulting increase in reactive power in the grid leads to a rise in voltage.
+        If the energy demand in the grid increases, this situation can be used to counteract a drop in grid voltage. 
+        Conversely, a generator with a lower excitation current than required operates in an underexcited state. The 
+        generator draws reactive power from the grid in order to maintain the required magnetic field. The 
+        consumption of reactive power then leads to a voltage drop in the grid. Severe underexcitation 
+        of a generator can cause the electrical machine to fail. 
     }
 
     \b{
@@ -682,25 +683,25 @@
     \ftx{Zusammenfassung}
 
     \s{
-        Die Einheiten der drei Leistungsarten sind theoretisch alle vergleichbar. Um zwischen den Leistungsarten zu unterscheiden, 
-        wurden für die Scheinleistung und die Blindleistung neue 
-        Einheiten gewählt, welche physikalisch jedoch dasselbe aussagen. Für die Scheinleistung wurde die Einheit Volt-Ampere [VA] 
-        festgelegt und für die Blindleistung Volt-Ampere-reaktiv [var]. Die Wirkleistung wird in der bekannten Einheit Watt [W] 
-        angegeben.
+        The units of the three types of power are theoretically all comparable. In order to distinguish between the types of power, 
+        new units were chosen for apparent power and reactive power,
+        which physically express the same thing. The unit volt-ampere [VA] was defined for apparent power 
+        and volt-ampere reactive [var] for reactive power. Active power is specified in the familiar unit of watts [W].
 
         %  \begin{center}
         \begin{table}[H]
+            \renewcommand{\tablename}{Table}
             \centering
-            \caption{{\bf Zusammenfassung der Leistungsarten.} Wirkleistung, Blindleistung und Scheinleistung welche durch 
-            Wechselgrößen hervorgerufen werden, aufgelistet mit den Formelzeichen und Einheiten.}
+            \caption{{\bf Summary of power types.} Active power, reactive power and apparent power caused by 
+            alternating quantities, listed with their symbols and units.}
             \label{TabelleLeistungsarten}
                 \begin{tabular}{  c  c  c  c }
                     \hline
-                    \multicolumn{2}{c}{\bf Leistungsart} & \multicolumn{2}{c}{\bf Einheit} \\
+                    \multicolumn{2}{c}{\bf Power type} & \multicolumn{2}{c}{\bf Unit} \\
                     \hline
-                    Wirkleistung & P & W & (Watt) \\
-                    Blindleistung & Q & var & (Volt-Ampere-reaktiv) \\
-                    Scheinleistung & S  & VA & (Volt-Ampere) \\
+                    Active power & P & W & (Watt) \\
+                    Reactive power & Q & var & (Volt-Ampere-reaktive) \\
+                    Apparant power & S  & VA & (Volt-Ampere) \\
                     \hline
                 \end{tabular}
         \end{table}
@@ -733,14 +734,13 @@
 
 
 \begin{frame}
-    \ftb{Leistung und elektrische Energie}
+    \ftb{Power and electrical energy}
 
     \s{
-        Neben der elektrischen Leistung ist auch die elektrische Energie eine genutzte Größe, um beispielsweise Verbräuche 
-        von Haushalten zu erfassen. Hier wird die elektrische Leistung pro Zeiteinheit gemessen. Nach der Definition aus der 
-        Thermodynamik ist die Energie die über einen bestimmten Zeitraum aufgebrachte Leistung. Es wird also gemäß Gleichung
-        \ref{GleichungEne1} die elektrische Leistung während einer Zeit zwischen $t_1$ und $t_2$ aufintegriert um die elektrische
-        Energei zu bestimmen. 
+        In addition to electrical power, electrical energy is also a quantity used, for example, to record consumption 
+        in households. Here, the electrical power per unit of time is measured. According to the definition from 
+        thermodynamics, energy is the power applied over a certain period of time. So, according to equation
+        \ref{GleichungEne1}, the electrical power during a time between $t_1$ and $t_2$ is integrated to determine the electrical energy. 
     }
 
     \b{
@@ -755,9 +755,9 @@
 
 
     \s{
-        Vergleichbar mit der Wirkleistung und der Blindleistung lässt sich auch die Energie in eine Wirkarbeit und eine 
-        Blindarbeit unterteilen. Die Blindarbeit beschreibt dabei denjenigen Anteil der elektrischen Energie, welcher nicht
-        in Nutzenergie, bzw. Wirkarbeit. umgewandelt wird. 
+        Similar to active power and reactive power, energy can also be divided into active work and 
+        reactive work. Reactive work describes the portion of electrical energy that is not
+        converted into useful energy or active work. 
     }
 
     \b{
@@ -771,8 +771,8 @@
     \end{eq}
 
     \s{
-        Im stationären Zustand werden lediglich die Effektivwerte von Spannung und Strom und somit auch von der Scheinleistung,
-        Wirkleistung und Blindleistung betrachtet und sind somit zeitlich konstant. 
+        In a steady state, only the RMS value of voltage and current, and thus also of apparent power,
+        active power and reactive power, are considered and are therefore constant over time. 
     }
 
     \b{
@@ -790,39 +790,37 @@
 
 \begin{frame}
     \ftx{Beispielaufgabe}
-	\begin{bsp}{Leistungsberechnung}{Leistungsberechnung:}
+	\begin{expl}{Power calculation}{Leistungsberechnung:}
 
     \s{
-        An einer Wechselstromlast werden die folgenden Werte für die Wechselspannung und den Wechselstrom gemessen:
+        The following values for the alternating voltage and alternating current are measured on an alternating current load:
     }
-
-
 
     \begin{enumerate}
         \only<1>{	
             \item[]
 
-            Gegeben sind:   \\
+            Given is:   \\
             \begin{eq}
                 \hat{U} = 12\ V      \qquad        \hat{I} = 2A\ \nonumber   \qquad         \varphi = 60\degree \ \nonumber
             \end{eq}
 
-            Die folgenden Aufgaben sollen bearbeitet werden:
+            The following tasks are to be completed:
 
             \begin{itemize}
-                \item[\bf a)] Berechnung von Wirkleistung und Blindleistung.
-                \item[\bf b)] Berechnung der Scheinleistung mit dem konjugierten komplexen Strom.  
+                \item[\bf a)] Calculation of active power and reactive power.
+                \item[\bf b)] Calculation of apparent power using the conjugate complex current.  
             \end{itemize}
         }
         \only<2>{	
             \item[\bf a)]
-            Die Wirkleistung beträgt:
+            The active power is:
             \begin{eqa}
                 P &= U \cdot I \cdot \cos(\varphi) = \frac{\hat{U}}{\sqrt{2}} \cdot \frac{\hat{I}}{\sqrt{2}} \cdot \cos(\varphi)
                 = \frac{12\ V}{\sqrt{2}} \cdot \frac{2\ A}{\sqrt{2}} \cdot \cos(60^o) \nonumber \\
                 P &= 6\ W    \nonumber
             \end{eqa}
-            Die Blindleistung beträgt:
+            The reactive power is:
             \begin{eqa}
                 Q &= U \cdot I \cdot \sin(\varphi) = \frac{\hat{U}}{\sqrt{2}} \cdot \frac{\hat{I}}{\sqrt{2}} \cdot \sin(\varphi)
                 = \frac{12\ V}{\sqrt{2}} \cdot \frac{2\ A}{\sqrt{2}} \cdot \sin(60^o) \nonumber \\
@@ -831,7 +829,7 @@
         } 
         \only<3>{	
             \item[\bf b)]
-            Die Scheinleistung beträgt:
+            The apparent power is:
             \begin{eqa}
                 \underline{S} &= \underline{U} \cdot \underline{I}^* = 
                 \frac{\underline{\hat{U}}}{\sqrt{2}} \cdot \frac{\underline{\hat{I}}^*}{\sqrt{2}} =
@@ -840,7 +838,7 @@
             \end{eqa}
         } 
     \end{enumerate}
-    \end{bsp}
+    \end{expl}
 \end{frame}
 
 \newpage

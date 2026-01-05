@@ -1,37 +1,38 @@
 %\setcounter{section}{-1}% set to Kapitel 0 % Macht Probleme, wenn zuvor schon \section{...} aufgerufen wurde z.B. bei Zusammenfügen von mehreren Modulen
 
-\section{Wiederholung}
+\section{Repetition}
 %\begin{frame}\ftx{\secname}
 % Kapitel 1
 \s{% Skript-only
-    Um das frequenz- und zeitabhängige Verhalten elektrischer Netzwerke zu beschreiben, 
-    werden in diesem Kapitel kurz einige wichtige Grundlagen zusammengefasst. 
-
-    Zur Bearbeitung vorrausgesetzt werden Kenntnisse über elektrische Grundgrößen, 
-    lineare passive Bauteile $R$, $L$ und $C$, Netzwerkberechnungen, 
-    sowie die komplexe Wechselstromrechnung.
+    In order to describe the frequency- and time-dependent behaviour of electrical networks, 
+    this chapter briefly summarises some important fundamentals. 
+    
+    To work through this chapter, you will need knowledge of basic electrical quantities, 
+    linear passive components $R$, $L$ and $C$, network calculations, 
+    and complex alternating current calculations.
 }
 %\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Frequenzabhängigkeit elektrischer Bauelemente}
+\subsection{Frequency dependence of electrical components}
 \begin{frame}\ftx{\subsecname}
+    \renewcommand{\figurename}{Figure}
 \s{% Skript-only
-    Rein ohmsche Widerstände $R$ können elektrische keine Energie speichern. 
-    Spannungen und Ströme sind proportional zueinander und zu jedem Zeitpunkt in Phase.
-    Das Verhalten ist zeit- und frequenzunabhängig.
-
-    Induktivitäten $L$ und Kapazitäten $C$ hingegen können Energie speichern und abgeben.
-    Dieser Vorgang ist inert (träge), benötigt also eine gewisse Zeit. 
-    Dadurch verhalten sie sich frequenzabhängig. 
-
-    Ströme und Spannungen stehen bei Induktivitäten und Kapazititäten in (zeitlich) differentiellem 
-    linearen Verhältnis zueinander. Dadurch entsteht bei beiden Bauteiltypen eine Phasenverschiebung 
-    zwischen Spannung und Strom von betragsmäßig $90\ \degree$.
-
-    Abbildung \ref{fig:bauteile:phasenverschiebung} zeigt die Spannungs- und Stromverläufe für $R$, $L$ und $C$
-    bei Erregung mit einer Wechselspannung $u_q = U \cdot \sin(\omega t)$ zum Vergleich.
+    Purely ohmic resistors $R$ cannot store electrical energy.
+    Voltages and currents are proportional to each other and in phase at all times.
+    
+    This behaviour is independent of time and frequency.
+    Inductances $L$ and capacitances $C$, on the other hand, can store and release energy.
+    This process is inert (sluggish), meaning it takes a certain amount of time.
+        
+    As a result, their behaviour is frequency-dependent. 
+    Currents and voltages in inductors and capacitors are in a (temporal) differential 
+    linear relationship to each other. This results in a phase shift 
+    between voltage and current of $90\ \degree$ for both types of components.
+        
+    Figure \ref{fig:bauteile:phasenverschiebung} shows the voltage and current curves for $R$, $L$ and $C$
+    when excited with an alternating voltage $u_q = U \cdot \sin(\omega t)$ for comparison.
 
     \begin{figure}[H]\centering
         \begin{subfigure}{0.68\textwidth}\centering
@@ -48,19 +49,19 @@
         \end{subfigure}\hfill% newline
         \begin{subfigure}{0.68\textwidth}\centering
             \includegraphics{Tikz/pdf/plot_bauteile_phasenverschiebung_c.pdf}
-            \caption{Strom- und Spannungsverläufe}
+            \caption{Current and voltage curves}
         \end{subfigure}%
         \begin{subfigure}{0.28\textwidth}\centering
             \includegraphics{Tikz/pdf/circ_bauteil_C_u_i.pdf}% C
-            \caption{Schaltsymbole}
+            \caption{Circuit symbols}
         \end{subfigure}
-        \caption{Phasenverschiebung bei $R$, $L$ und $C$}\label{fig:bauteile:phasenverschiebung}
+        \caption{Phase shift at $R$, $L$ and $C$}\label{fig:bauteile:phasenverschiebung}
     \end{figure}
 
-    Aufgrund der Phasenverschiebung bei $L$ und $C$ oszilliert deren Leistung 
-    (Energieaufnahme und -abgabe), ist über eine Periode gemittelt jedoch immer null.
-    Induktivitäten und Kapazitäten können daher keine Wirkleistung, sondern nur Blindleistung
-    verrichten, weshalb sie auch Blindwiderstände genannt werden.
+    Due to the phase shift in $L$ and $C$, their power 
+    (energy absorption and release) oscillates, but averages out to zero over a period.
+    Inductances and capacitances cannot therefore perform active power, only reactive power,
+    which is why they are also called reactive resistances.
 }
 \b{% Folien-only
     %3 AC Plots: u(t), i(t) mit $\varphi$ eingezeichnet für $R$, $L$, $C$
@@ -96,50 +97,53 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Verhalten von Induktivitäten und Kapazitäten}
+\subsubsection{Behaviour of inductances and capacitances}
 \begin{frame}\ftx{\subsubsecname}
 \s{% Skript-only
-    Induktivitäten als ideale Bauteile speichern durch den Effekt der (Selbst-)Induktion Energie im Magnetfeld.
-    Kapazitäten als ideale Bauteile hingegen speichern Energie im elektrischen Feld. 
-    Beschrieben werden beide Effekte durch das Induktion- beziehungsweise das Gaußsche Gesetz.
-
-    Tabelle \ref{tab:vergleich:induktivitaetkapazitaet} listet die wichtigsten Unterschiede 
-    im Verhalten von Induktivitäten und Kapazitäten qulitativ als Übersicht auf.
+    Inductors, as ideal components, store energy in the magnetic field through the effect of (self-)induction.
+    Capacitors, as ideal components, store energy in the electric field.
+    Both effects are described by the law of induction and Gauss's law, respectively.
+        
+    Table \ref{tab:vergleich:induktivitaetkapazitaet} lists the most important differences 
+    in the behaviour of inductors and capacitors in qualitative terms as an overview.
 
     \begin{table*}[h]\centering
-    \caption{Vergleich von Induktivität und Kapazität im Verhalten}
+        \renewcommand{\tablename}{Table}
+    \caption{Comparison of inductance and capacitance in behaviour}
     \label{tab:vergleich:induktivitaetkapazitaet}
     \begin{tabular}{ccc}
-        \toprule&\textbf{Induktivität} &\textbf{Kapazität}\\
+        \toprule&\textbf{Inductance} &\textbf{Capacity}\\
         \midrule
-        \textbf{Gesetz}         &Induktionsgesetz       &Gaußsches Gesetz   \vphantom{$\Big|$}\\
-        \textbf{Energiespeich.} &im Magnetfeld          &im Elektr. Feld    \vphantom{$\Big|$}\\
-        \textbf{stetig}         &Strom                  &Spannung           \vphantom{$\Big|$}\\
-        \textbf{bei Gleichspg.} &Kurzschluss            &offen              \vphantom{$\Big|$}\\
-        \textbf{bei Hochfreq.}  &offen                  &Kurzschluss        \vphantom{$\Big|$}\\
+        \textbf{Law}                &Induction law          &Gauss's law            \vphantom{$\Big|$}\\
+        \textbf{Energy storage}     &in the magnetic field  &in the electric field  \vphantom{$\Big|$}\\
+        \textbf{continuous}         &current                &voltage                \vphantom{$\Big|$}\\
+        \textbf{with DC voltage}    &short circuit          &open                   \vphantom{$\Big|$}\\
+        \textbf{with high frequency}&open                   &short circuit          \vphantom{$\Big|$}\\
         \bottomrule
     \end{tabular}
     \end{table*}
 
-    Die (Selbst-)Induktivität $L$ als Eigenschaft kann vereinfacht als \glqq Trägheit \grqq des Stroms
-    betrachtet werden. Ströme in Induktivitäten sind stetig und eilen der Spannung hinterher.
-    Bei hohen Frequenzen sperrt die Induktivität, bei Gleichspannung verhält sie sich wie ein Kurzschluss.
     
-    Die Kapazität $C$ kann dem gegenüber vereinfacht als \glqq Trägheit \grqq der Spannung betrachtet werden.
-    Spannungen in Kapazitäten sind stetig und eilen dem Strom hinterher. 
-    Bei Gleichstrom sperrt die Kapazität, bei hohen Frequenzen verhält sie sich wie ein Kurzschluss.
+    The (self-)inductance $L$ as a property can be simplified as \glqq inertia \grqq of the current. 
+    Currents in inductors are continuous and lag behind the voltage.
+    At high frequencies, the inductance blocks; at DC voltage, it behaves like a short circuit.
+            
+    In contrast, capacitance $C$ can be simplified as \glqq inertia \grqq of the voltage.
+    Voltages in capacitors are constant and lag behind the current.
+    With direct current, capacitance blocks the current; at high frequencies, it behaves like a short circuit.
 
     \begin{figure}[H]\centering
+        \renewcommand{\figurename}{Figure}
         \begin{subfigure}{0.45\textwidth}\centering
             \includegraphics[width=0.75\textwidth]{./Bilder/Spule.png}
         \end{subfigure}%
         \begin{subfigure}{0.45\textwidth}\centering
             \includegraphics[width=0.75\textwidth]{./Bilder/Kondensator.png}
         \end{subfigure}
-        \caption{Reale Induktivät (Spule, links) und Kapazitäten (Kondensator, rechts)}\label{fig:bauteile:realebauteile}
+        \caption{Real inductance (coil, left) and capacitance (capacitor, right)}\label{fig:bauteile:realebauteile}
     \end{figure}
-    Abbildung \ref{fig:bauteile:realebauteile} zeigt reale Bauteile, die Induktivitäten und Kapazitäten realisieren. 
-    Gezeigt sind eine Spule (Induktivität) und ein Kondensator (Kapazität).
+    Figure \ref{fig:bauteile:realebauteile} shows real components that implement inductance and capacitance.
+    Shown are a coil (inductance) and a capacitor (capacitance).
 }
 \b{% Folien-only
 \begin{columns}
@@ -181,21 +185,22 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Vergleich der linearen Zweipole $R$, $L$ und $C$}
+\subsubsection{Comparison of linear two-pole elements $R$, $L$ and $C$}
 \begin{frame}\ftx{\subsubsecname}
 
-    \s{\ref{tab:vgl:bauteile:rlc} zeigt eine Gegenüberstellung der Größen $R$, $L$ und $C$ und fasst deren wichtigsten Eigenschaften zusammen. }
+    \s{\ref{tab:vgl:bauteile:rlc} shows a comparison of the quantities $R$, $L$ and $C$ and summarises their most important properties. }
 
     \begin{table}[h]\centering%
-    \s{\caption{Vergleich lineare Bauteile $R$, $L$, $C$}\label{tab:vgl:bauteile:rlc}}%
+        \renewcommand{\tablename}{Table}
+    \s{\caption{Comparison of linear components $R$, $L$, $C$}\label{tab:vgl:bauteile:rlc}}%
     \resizebox{\textwidth}{!}{% for beamer page fit
     \begin{tabular}{ |c|c|c|c|c| }
         \hline &&&&\\[-6pt]
-        \textbf{Größe}                          % Col 1
-                & \textbf{Allgemein}            % Col 2
-                & \textbf{El. Widerstand}       % Col 3
-                & \textbf{Induktivität}         % Col 4
-                & \textbf{Kapazität} \\[+4pt]   % Col 5
+        \textbf{Size}                          % Col 1
+                & \textbf{Generally}            % Col 2
+                & \textbf{El. resistance}       % Col 3
+                & \textbf{Inductance}         % Col 4
+                & \textbf{Capacity} \\[+4pt]   % Col 5
         \hline%
         %\textbf{Symbol}
         \includegraphics{Tikz/pdf/circ_bauteil_tabelle_text_symbol.pdf}% Symbol (vertikal zentriert)
@@ -210,37 +215,37 @@
         %        & Spule
         %        & Kondensator \\[+4pt]
         %\hline &&&&\\[-6pt]
-        \textbf{Einheit}
-                & $ \left[\textit{Form.z.}\right] = \mathrm{Einheit} $ 
+        \textbf{Unit}
+                & $ \left[\textit{Form.s.}\right] = \mathrm{Unit} $ 
                 & $ \left[R\right] = \Omega\ \text{(Ohm)} $     
                 & $ \left[L\right] = \mathrm{H}\ \text{(Henry)} $ 
                 & $ \left[C\right] = \mathrm{F}\ \text{(Farad)} $ \\[+4pt]
         \hline &&&&\\[-6pt]
-        \textbf{Zeitbereich}
-                & $ \frac{\d}{\d t} $ bzw. $ \int \d t $ 
+        \textbf{Time domain}
+                & $ \frac{\d}{\d t} $ or $ \int \d t $ 
                 & $ \ecv{u_{\mathrm{R}}} = R \cdot \eci{i_{\mathrm R}} $     
                 & $ \ecv{u_{\mathrm{L}}} = L \cdot \frac{\d}{\d t}\, \eci{i_{\mathrm{L}}} $ 
                 & $ \eci{i_{\mathrm{C}}} = C \cdot \frac{\d}{\d t}\, \ecv{u_{\mathrm{C}}} $ \\[+4pt]
         \hline &&&&\\[-6pt]
-        \textbf{Frequenzb.}
-                & $ \mathrm{j}\omega $ bzw. $ \frac{1}{\mathrm{j}\omega} $
+        \textbf{frequency range}
+                & $ \mathrm{j}\omega $ or $ \frac{1}{\mathrm{j}\omega} $
                 & $ \ecv{\underline{U}_{\mathrm R}} = R                   \cdot \eci{\underline{I}_{\mathrm R}} $ 
                 & $ \ecv{\underline{U}_{\mathrm L}} = \mathrm{j}\omega L  \cdot \eci{\underline{I}_{\mathrm L}} $
                 & $ \eci{\underline{I}_{\mathrm C}} = \mathrm{j}\omega C  \cdot \ecv{\underline{U}_{\mathrm C}} $ \\[+4pt]
         \hline &&&&\\[-6pt]
-        \textbf{Impedanz}
+        \textbf{Impedance}
                 & $ \underline{Z} = \frac{\ecv{\underline{U}}}{\eci{\underline{I}}} $
                 & $ \underline{Z}_{\mathrm R} = R $ 
                 & $ \underline{Z}_{\mathrm L} = \mathrm{j}\omega L $
                 & $ \underline{Z}_{\mathrm C} = -\mathrm{j}\frac{1}{\omega C} $ \\[+4pt]
         \hline &&&&\\[-6pt]
-        \textbf{Wirkanteil}
+        \textbf{Active part}
                 & $ R = \Re\{\underline{Z}\} $
                 & $ R = \frac{U}{I} $
                 & $ 0 $
                 & $ 0 $ \\[+4pt]
                 \hline &&&&\\[-6pt]
-        \textbf{Blindanteil}
+        \textbf{Blind part}
                 & $ X = \Im\{\underline{Z}\} $
                 & $ 0 $
                 & $ X_{\mathrm L} = \omega L $
@@ -258,44 +263,46 @@
 % Beschreibe in Textform wie das Verhalten von Eingangs- zu Ausgangssignalen eines Vierpols 
 % mithilfe des Frequenzgangs (bzw. des Amplituden- und Phasengangs) beschrieben werden kann
 \s{
-\subsection{Zweitore (Vierpole)}
+\subsection{Double-pole (four-pole)}
 \begin{frame}\ftx{\subsecname}
-
+    \renewcommand{\figurename}{Figure}
 
     % Wiederholung Eintor
-    Die Frequenzabhängigkeit von Eintoren (Zweipole) haben wir in Modul 3 bereits untersucht.  
-    Mithilfe der komplexen Wechselstromrechnung konnten wir den frequenzabhängigen Wechselstromwiderstand 
-    (Impedanz) $\underline{Z}$ einzelner Eintore bestimmen. Durch Anwendung der komplexen Strom- 
-    und Spannungsteilerregel konnten wir auch die Gesamt-Impedanz linearer zweipoliger Netzwerke bestimmen. 
-    Das heißt für solche, welche nur aus linearen Bauteilen wie $R$, $L$ und $C$ bestehen. 
+    We already examined the frequency dependence of single ports (dipoles) in Module 3.  
+    Using complex AC calculations, we were able to determine the frequency-dependent AC resistance 
+    (impedance) $\underline{Z}$ of individual single ports. By applying the complex current 
+    and voltage divider rules, we were also able to determine the total impedance of linear two-terminal networks.
+    This applies to networks that consist only of linear components such as $R$, $L$ and $C$.
 
     % Tikzpicture: Vergleich Vierpol und Zweipol
     %
     % Zeichne links einen senkrechten Zweipol mit Spannungs- (U) und Strompfeil (I) jeweils von oben nach unten
     % Zeichne rechts einen Vierpol (Eingangspole links, Ausgangspole rechts) (U1 links oben nach unten, U2 rechts oben nach unten)
     \begin{figure}[h]
+        \renewcommand{\figurename}{Figure}
         \begin{subfigure}{0.48\textwidth}\centering
             \includegraphics{Tikz/pdf/circ_eintor.pdf}
         \end{subfigure}\hfill
         \begin{subfigure}{0.48\textwidth}\centering
             \includegraphics{Tikz/pdf/circ_zweitor.pdf}
         \end{subfigure}
-        \caption{Vergleich: Schaltzeichen eines allgemeinen Zwei- und Vierpols}
+        \caption{Comparison: Circuit symbols for a general two-pole and four-pole circuit}
         \label{fig:vgl:zweipolvierpol}
     \end{figure}
 
     % Einführung Zweitor, wozu
-    Zweitore (Vierpole) sind eine Erweiterung von Eintoren (Zweipolen).
-    Sie verfügen über eine Eingangs- und eine Ausgangsseite mit jeweiligen Eingangs- und Ausgangsgrößen.  
-    Das Zweitormodell eignet sich gut zur Beschreibung von (frequenzabhängigen) Übertragungseigenschaften 
-    von elektrischen Netzwerken. 
+    Two-port (four-terminal) networks are an extension of single-port (two-terminal) networks.
+    They have an input and an output side with respective input and output variables.
+    The two-port model is well suited for describing (frequency-dependent) transmission characteristics
+    of electrical networks. 
 
     \fu{\includegraphics{Tikz/pdf/circ_zweitor_quelle_last.pdf}
-    }{Verbindung einer Last über ein Zweitor mit der Quelle.\label{circ:quellezweitorlast}}% im Foliensatz im nächsten Kapitel (Freuqenzgang, Amplitudengang, Phasengang)
-    
-    Im einfachsten Fall wird wie in \ref{circ:quellezweitorlast} gezeigt, eine Quelle (Eintor) über ein Zweitor 
-    mit einer Last (Eintor) verbunden. 
-    Typische Zweitore sind beispielsweise Verstärker, Filter oder auch Transformatoren. 
+    }{Connection of a load to the source via a two-port network.\label{circ:quellezweitorlast}}% im Foliensatz im nächsten Kapitel (Freuqenzgang, Amplitudengang, Phasengang)
+
+    In the simplest case, as shown in \ref{circ:quellezweitorlast}, a source (single-port) 
+    is connected to a load (single-port) via a two-port.
+    Typical two-ports are, for example, amplifiers, filters or transformers.
+ 
 \end{frame}
 }% end skript only
 

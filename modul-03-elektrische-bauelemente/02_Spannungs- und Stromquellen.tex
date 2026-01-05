@@ -5,29 +5,29 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Einleitung in die Spannungs- und Stromquellen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Spannungs- und Stromquelle}
+\section{Voltage and current source}
 
 \s{
-    Der Betrieb elektrischer Geräte ist im Regelfall mit der Umsetzung von elektrischer Leistung verbunden. 
-    Im Modul 2 zum Thema Energie und Leistung wurde bereits vermittelt, dass Leistung der Verrichtung von Arbeit pro Zeit entspricht
-    und dass dies einer Energieumwandlung gleichzusetzen ist. 
-    Um also elektrische Geräte, in denen ja in jedem Fall Energie umgesetzt wird, betreiben zu können, muss also Energie zugeführt werden.
-    Energie kann nur gewandelt, nicht erzeugt werden. Dennoch wird in der Elektrotechnik das Zuführen von Energie in den zu betrachtenden Stromkreisen mit Hilfe von Strom- bzw. Spannungsquellen beschrieben. 
-    Dabei wird nicht berücksichtigt, dass es sich hierbei um eine Umwandlung von z.B. mechanischer oder chemischer in elektrische Energie handelt. Dies spielt für die Betrachtung im Stromkreis jedoch keine Rolle.
-    Im Folgenden werden die Strom- und Spannungsquellen beschrieben und die jeweiligen Unterschiede erläutert.
+    The operation of electrical devices is usually associated with the conversion of electrical power. 
+    In Module 2 on the topic of energy and power, we already learned that power corresponds to the amount of work done per unit of time
+    and that this is equivalent to energy conversion.
+    In order to operate electrical devices, in which energy is always converted, energy must be supplied. 
+    Energy can only be converted, not generated. Nevertheless, in electrical engineering, the supply of energy to the circuits under consideration is described with the aid of current and voltage sources. 
+    This does not take into account the fact that this involves the conversion of, for example, mechanical or chemical energy into electrical energy. However, this is irrelevant for the consideration of the circuit.
+    The following section describes current and voltage sources and explains the differences between them.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Lernziele für Spannungs- und Stromquellen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
     \ftx{Lernzielle: Spannungs- und Stromquelle}
-    \begin{Lernziele}{Spannungs- und Stromquelle}
-        Die Studierenden können
+    \begin{Learning objectives}{Spannungs- und Stromquelle}
+        The Students can
         \begin{itemize}
-            \item zwischen Spannungs- und Stromquellen unterscheiden und kennen deren Schaltsymbole.
-            \item reale Spannungs- und Stromquellen modellieren.
-            \item Beispiele für verschiedene Quellen benennen.
+            \item distinguish between voltage and current sources and know their circuit symbols.
+            \item model real voltage and current sources.
+            \item name examples of different sources.
         \end{itemize}
-    \end{Lernziele}
+    \end{Learning objectives}
     
     \speech{02_Spannungs_und_Stromquellen}{1}{
         In dem nun folgenden Abschnitt des Moduls werden wir uns mit Spannungs- und Stromquellen beschäftigen. Diese sind wichtig.
@@ -45,11 +45,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Spannungsquellen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Einführung in Spannungsquellen und das Schaltsymbol %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Spannungsquellen}
+\subsection{Voltage sources}
 \s{
-    Die am häufigsten vorkommende Art der Energiequellen für elektrische Systeme ist die Spannungsquelle.
-    Im idealen Fall zeichnet sich dadruch aus, dass sie unabhängig vom angeschlossenen Verbraucher eine konstante Spannung ausgibt.
-    Abbildung \ref{fig:spannungsquelle} zeigt das Schaltsymbol einer idealen Spannungsquelle mit der konstanten Ausgangsspannung $U_{\mathrm{q}}$.
+    The most common type of energy source for electrical systems is the voltage source.
+    Ideally, it is characterised by the fact that it outputs a constant voltage regardless of the connected load.
+    Figure \ref{fig:spannungsquelle} shows the circuit symbol of an ideal voltage source with a constant output voltage $U_{\mathrm{q}}$.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Schaltbild ideale Spannungsquelle %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -66,9 +66,10 @@
         \end{itemize}
     }
     \begin{figure}[H]
+        \renewcommand{\figurename}{Figure}
         \centering
         \input{Tikz/src/02_Spannungs_Stromquellen/Ideale_Spannungsquelle}
-        \s{\caption{\textbf{Ideale allgemeine Spannungsquelle.} Liefert stets eine konstante Spannung $U_\mathrm{q}$, unabhängig von der Last und passt den Strom automatisch an, um die konstante Spannung aufrechzuerhalten.}}
+        \s{\caption{\textbf{Ideal general voltage source.} Always supplies a constant voltage $U_\mathrm{q}$, regardless of the load, and automatically adjusts the current to maintain the constant voltage.}}
         \label{fig:spannungsquelle}
     \end{figure}
     \speech{02_Spannungs_und_Stromquellen}{2}{
@@ -107,28 +108,29 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Schaltbild ideale Spannungsquelle %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \s{
-    In Abbildung \ref{fig:spannungsquelle} führen die Linien ins leere, was als offene Klemmen bezeichnet wird. 
-    Da der Schaltkreis nicht geschlossen ist, fließt auch dementsprechend kein Strom. Würden in dem Fall die Klemmen kurzgeschlossen werden, 
-    dann würde die Quelle versuchen die Spannung aufrecht zu erhalten und es würde ein unendlich hoher Strom fließen. 
-    Warum dies so gefährlich ist, wird im Abschnitt \ref{sec:mod re spannungsquelle} anhand einer realen Spannugsquelle deutlich. 
+    In Figure \ref{fig:spannungsquelle}, the lines lead to nothing, which is referred to as open terminals.
+    Since the circuit is not closed, no current flows. If the terminals were short-circuited in this case,
+    the source would attempt to maintain the voltage and an infinitely high current would flow.
+    Why this is so dangerous is explained in section \ref{sec:mod re spannungsquelle} using a real voltage source as an example.
+ 
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Modellierung realer Spannungsquellen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Modellierung realer Spannungsquellen}
+\subsection{Modelling real voltage sources}
 \label{sec:mod re spannungsquelle}
 %%%
 %%% ggfs. Ergänzung: Modellierung kann bei Wechselgrößen noch deutlich komplexer ausfallen
 %%% dann ggfs. auch bei mod. re. Stromquelle ergänzen
 %%% Erwähnen, dass es sich um ESB handelt
 \s{
-    In Schaltbildern, also der graphischen Darstellung von elektrischen Schaltkreisen, werden immer ideale Bauteile verwendet. 
-    Um das reale Verhalten von Bauelementen korrekt modellieren zu können und somit das reale Schaltungsverhalten möglichst exakt nachbilden zu können, 
-    muss das tatsächliche Verhalten des Bauelements mit Hilfe von idealen Bauteilen nachgebildet werden. 
-    Im Folgenden wird beschrieben, wie das Verhalten einer realen Spannungsquelle mit idealen Bauteilen nachgebildet werden kann.
-    Die technische Umsetzung einer beliebigen Spannungsquelle besteht aus physischen Komponenten, welche alle bestimmte Widerstandswerte aufweisen.
-    All diese Eigenschaften ergeben zusammengefasst den sogenannten Innenwiderstand $R_\mathrm{i}$ einer Quelle.
-    Im Fall der realen Spannungsquelle befindet sich der Innenwiderstand in Reihe mit der idealen Spannungsquelle. 
-    In Abbildung \ref{fig:re spannungsquelle} ist eine modellierte reale Spannungsquelle zu sehen.
+    Ideal components are always used in circuit diagrams, i.e. the graphical representation of electrical circuits.
+    In order to be able to model the real behaviour of components correctly and thus replicate the real circuit behaviour as accurately as possible,
+    the actual behaviour of the component must be replicated with the aid of ideal components.     
+    The following describes how the behaviour of a real voltage source can be replicated using ideal components.
+    The technical implementation of any voltage source consists of physical components, all of which have specific resistance values.
+    All these properties together result in the so-called internal resistance $R_\mathrm{i}$ of a source.
+    In the case of a real voltage source, the internal resistance is in series with the ideal voltage source.
+    Figure \ref{fig:re spannungsquelle} shows a modelled real voltage source.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Schaltbild reale Spannungsquelle %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -146,10 +148,11 @@
         \end{itemize}
     }
     \begin{figure}[H]
+        \renewcommand{\figurename}{Figure}
         \centering
         \centering
         \input{Tikz/src/02_Spannungs_Stromquellen/Reale_Spannungsquelle}
-        \s{\caption{\textbf{Reale Spannungsquelle mit Innenwiderstand.} Die Spannung $U_\mathrm{q}$ wird durch den Innenwiderstand \(R_\mathrm{i}\) beeinflusst und ist an den Ausgangsklemmen dadurch geringer.}}
+        \s{\caption{\textbf{Real voltage source with internal resistance.} The voltage $U_\mathrm{q}$ is influenced by the internal resistance \(R_\mathrm{i}\) and is therefore lower at the output terminals.}}
         \label{fig:re spannungsquelle}
     \end{figure}
     \speech{02_Spannungs_und_Stromquellen}{3}{
@@ -182,36 +185,39 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Schaltbild reale Spannungsquelle %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \s{
-    Im Schaltbild ist zu erkennen, dass sowohl $U_\mathrm{q}$, als auch $U$ beide nach unten zeigen. Dies liegt am Zählpfeilsystem,
-    welches in Modul 4 näher behandelt wird. An dieser Stelle genügt es zu wissen, dass Generatorzählpfeil und Verbraucherzählpfeil
-    entgegengesetzt sind, da die Summe beider Pfeile Null ergeben muss. Wird nun ein Verbraucher angeschlossen, fließt der Strom über
-    den Innenwiderstand $R_\mathrm{i}$ durch den Verbraucher. Es wird also auch Leistung im Innenwiderstand umgesetzt. 
+    The circuit diagram shows that both $U_\mathrm{q}$ and $U$ point downwards. This is due to the counting arrow system,
+    which is discussed in more detail in Module 4. At this point, it is sufficient to know that the generator counting arrow and the consumer counting arrow
+    are opposite, since the sum of both arrows must be zero. If a consumer is now connected, the current flows through
+    the internal resistance $R_\mathrm{i}$ through the consumer. This means that power is also converted in the internal resistance. 
     
-    Betrachten wir im realen Fall erneut das Verhalten bei kurzgeschlossenen Ausgangsklemmen, so wird die gesamte, 
-    von der Quelle abgegebene Leistung, lediglich am Innenwiderstand der Spannungsquelle umgesetzt. 
-    Die Leistung kann durch $P = \frac{U^2}{R_{\mathrm{i}}}$ berechnet werden.
-    Im Regelfall ist die Quelle dafür nicht ausgelegt, was dazu führen würde,
-    dass sich die Energie in sehr viel Wärmeenergie umwandeln, und zur Zerstörung der Quelle führen würde.
+    If we consider the behaviour of short-circuited output terminals in a real-world scenario, the entire 
+    power delivered by the source is converted solely by the internal resistance of the voltage source. 
+    The power can be calculated using $P = \frac{U^2}{R_{\mathrm{i}}}$.
+    As a rule, the source is not designed for this, which would result in
+    the energy being converted into a great deal of heat energy and lead to the destruction of the source.
     
-    Wird am Ausgang der Spannungsquelle eine Last mit einem Widerstand $R_{\mathrm{L}}$ angeschlossen, so fließt ein Strom $I$ durch die Widerstände $R_{\mathrm{i}}$ und $R_{\mathrm{L}}$. 
-    Dieser kann nach dem ohm'schen Gesetz und der im folgenden Modul vorgestellten Zusammenfassung von Widerständen berechnet werden zu $I = \frac{U_{\mathrm{q}}}{(R_{\mathrm{i}} + R_{\mathrm{L}})}$.
-    Dieser Strom führt dazu, dass am Innenwiderstand $R_{\mathrm{i}}$ eine Spannung $U_{\mathrm{R_{\mathrm{i}}}}$ abfällt. Im Modul 2 wurde bereits hergeleitet, 
-    dass die Summe aller Spannungen innerhalb eines geschlossenen Kreises null ergeben muss. Im Modul 4 wird hieraus die so genannte Maschenregel hergeleitet, 
-    mit deren Hilfe sich die Ausgangsspannung $U$ berechnen lässt zu 
+    If a load with a resistance $R_{\mathrm{L}}$ is connected to the output of the voltage source, a current $I$ flows through the resistors $R_{\mathrm{i}}$ and $R_{\mathrm{L}}$.
+    This can be calculated according to Ohm's law and the summary of resistors presented in the following module as $I = \frac{U_{\mathrm{q}}}{(R_{\mathrm{i}} + R_{\mathrm{L}})}$.
+    This current causes a voltage $U_{\mathrm{R_{\mathrm{i}}}}$ to drop across the internal resistance $R_{\mathrm{i}}$. In Module 2, it was already derived that 
+    the sum of all voltages within a closed circuit must be zero. In Module 4, the so-called mesh rule is derived from this, 
+    which can be used to calculate the output voltage $U$ as
+ 
+
     \begin{equation}
         U = U_{\mathrm{q}} - U_{\mathrm{R_{\mathrm{i}}}} = U_{\mathrm{q}} - I \cdot R_{\mathrm{i}} = U_{\mathrm{q}} - U_{\mathrm{q}} \cdot \frac{R_{\mathrm{i}}}{R_{\mathrm{i}} + R_{\mathrm{L}}}
     \end{equation}
     
-    Je kleiner also der Innenwiderstand $R_{\mathrm{i}}$ ist, desto weniger unterscheidet sich die Ausgangsspannung $U$ einer belasteten Spannungsquelle von der Quellspannung $U_\mathrm{q}$. 
-    Ein im Vergleich zum Lastwiderstand $R_{\mathrm{L}}$ möglichst kleiner Innenwiderstand $R_{\mathrm{i}}$ sollte also für ein möglichst ideales Verhalten angestrebt werden. 
-    Dies kann u.a. mit möglichst großen Leiterqueerschnitten innerhalb der Quelle realisiert werden.
+    The smaller the internal resistance $R_{\mathrm{i}}$, the less the output voltage $U$ of a loaded voltage source differs from the source voltage $U_\mathrm{q}$.
+    An internal resistance $R_{\mathrm{i}}$ that is as small as possible in comparison to the load resistance $R_{\mathrm{L}}$ should therefore be aimed for in order to achieve the most ideal behaviour possible. 
+    This can be achieved, among other things, by using the largest possible conductor cross-sections within the source.
+        
+    If the real voltage source, modelled with $U_\mathrm{q}$ and $R_{\mathrm{i}}$, is operated in idle mode, the output voltage $U$ is equal to the source voltage $U_\mathrm{q}$, 
+    since no current flows through the internal resistance and no voltage can drop there.
+
     
-    Wird die reale Spannungsquelle, modelliert mit $U_\mathrm{q}$ und $R_{\mathrm{i}}$, im Leerlauf betrieben, ist die Ausgangsspannung $U$ gleich der Quellspannung $U_\mathrm{q}$, 
-    da kein Strom durch den Innenwiderstand fließt und dort keine Spannung abfallen kann.
-    
-    Beispiele für reale Spannungsquellen sind u.a. Batterien und Akkumulatoren. Dabei wird, wie weiter oben beschrieben, ein möglichst kleiner Innenwiderstand angestrebt. 
-    Eine 12-V-Starterbatterie für Autos hat einen Innenwiderstand von weniger als 10 m$\Omega$. 
-    Auch eine Haushaltssteckdose kann als Spannungsquelle mit 230 V Quellspannung und kleinem Innenwiderstand betrachtet werden.
+    Examples of real voltage sources include batteries and accumulators. As described above, the aim is to achieve the lowest possible internal resistance.
+    A 12 V starter battery for cars has an internal resistance of less than 10 m$\Omega$. 
+    A domestic power socket can also be regarded as a voltage source with a source voltage of 230 V and low internal resistance.
     % Kondensator als Beispiel bringen
 }
 
@@ -219,12 +225,12 @@
 \begin{frame}
     \ftx{Merksatz: Spannungsquelle}
     
-    \begin {Merksatz}{}
+    \begin {Key point}{}
     \begin{itemize}
-        \item Eine Spannungsquelle darf nie kurzgeschlossen werden!
-        \item Bei Spannungsquellen stellt sich immer der Strom ein.
+        \item A voltage source must never be short-circuited!
+        \item With voltage sources, the current always adjusts itself.
     \end{itemize}
-    \end {Merksatz}
+    \end {Key point}
     
     \speech{02_Spannungs_und_Stromquellen}{4}{
         Wir können also für die Spannungsquelle folgende beiden Merksätze zusammenfassen:
@@ -241,11 +247,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Stromquellen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Einführung in Stromquellen und das Schaltsymbol %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Stromquellen}
+\subsection{Current sources}
 \s{
-    Im Vergleich zu den Spannungsquellen sind Stromquellen deutlich weniger vertreten. Sie zeichnen sich dadurch aus,
-    dass sie einen konstanten Strom liefern und sich die Spannung entsprechend einstellt.
-    Abbildung \ref{fig:id stromquelle} zeigt das Schaltsymbol einer idealen Stromquelle mit dem konstanten Ausgangsstrom $I_{\mathrm{q}}$.
+    Compared to voltage sources, current sources are much less common. They are characterised by
+    the fact that they supply a constant current and the voltage adjusts accordingly.
+    Figure \ref{fig:id stromquelle} shows the circuit symbol of an ideal current source with a constant output current. $I_{\mathrm{q}}$.
     
 }% nur im Skript
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Schaltbild ideale Stromquelle %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -257,10 +263,11 @@
         \end{itemize}
     }
     \begin{figure}[H]
+        \renewcommand{\figurename}{Figure}
         \centering
         \input{Tikz/src/02_Spannungs_Stromquellen/Ideale_Stromquelle}
-        \s{\caption{\textbf{Ideale allgemeine Stromquelle.} Liefert stets einen konstanten Strom $I_\mathrm{q}$, unabhängig von der Last und passt die Spannung automatisch an, um den konstanten Strom aufrechtzuerhalten.}}
-        \label{fig:id stromquelle}
+        \s{\caption{\textbf{Ideal general power source.} Always supplies a constant current $I_\mathrm{q}$, regardless of the load, and automatically adjusts the voltage to maintain the constant current.}}
+\label{fig:id stromquelle}
     \end{figure}
     
     \speech{02_Spannungs_und_Stromquellen}{5}{
@@ -272,18 +279,18 @@
     
 \end{frame}
 \s{
-    Der hier dargestellte Fall einer leerlaufenden Stromquelle führt, vergleichbar mit der kurzgeschlossenen Spannungsquelle, zu einer unendlich hohen Leistungsabgabe der Quelle und muss daher vermieden werden.
+    The case of an idle current source shown here leads, similarly to the short-circuited voltage source, to an infinitely high power output from the source and must therefore be avoided.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Modellierung realer Stromquelle %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Modelierung realer Stromquellen}
+\subsection{Modelling real current sources}
 \s{
     %%% auch hier I_K einbauen
     %%% U_L = I_0 * R_i
     %%%
     
-    Genauso wie bei den Spannungsquelle, gibt es in der Realität auch keine idealen Stromquellen.
-    Um das reale Verhalten einer Stromquelle beschreiben zu können, muss auch diese erst modelliert werden.
-    Die Abbildung \ref{fig:re stromquelle} zeigt eine solche modellierte Stromquelle.
+    Just as with voltage sources, there are no ideal current sources in reality.
+    In order to describe the real behaviour of a current source, it must first be modelled.
+    Figure \ref{fig:re stromquelle} shows such a modelled current source.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Schaltbild einer realen Stromquelle %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
@@ -294,9 +301,10 @@
         \end{itemize}
     }
     \begin{figure}[H]
+        \renewcommand{\figurename}{Figure}
         \centering
         \input{Tikz/src/02_Spannungs_Stromquellen/Reale_Stromquelle}
-        \s{\caption{\textbf{Reale Stromquelle mit Innenwiderstand.} Der Strom $I_\mathrm{q}$ wird durch den Innenwiderstand $R_\mathrm{i}$ beeinflusst und ist an den Ausgangsklemmen geringer.}
+        \s{\caption{\textbf{Real current source with internal resistance.} The current $I_\mathrm{q}$ is influenced by the internal resistance $R_\mathrm{i}$ and is lower at the output terminals.}
             
             \label{fig:re stromquelle}}
         
@@ -312,10 +320,10 @@
     %%% Erwähnen, dass es sich um ESB handelt
     
     \s{
-        Das Modell der realen Stromquelle setzt sich dabei ebenfalls aus dem Innenwiderstand $R_\mathrm{i}$ und der idealen Stromquelle zusammen,
-        wobei der Unterschied zur Spannungsquelle darin besteht, dass der Innenwiderstand parallel zur iedalen Stromquelle platziert ist.
-        Auch hier ist der tatsächliche Ausgangsstrom kleiner als der Quellstrom $I_{\mathrm{q}}$. Im Modul 4 wird die Knotenregel eingeführt. 
-        Diese besagt, dass die Summe aller Ströme in einem Knoten (Verzweigungspunkt) gleich null sein muss, so dass sich der Ausgangsstrom $I$ ergibt zu
+    The model of the real current source also consists of the internal resistance $R_\mathrm{i}$ and the ideal current source,
+    where the difference to the voltage source is that the internal resistance is placed in parallel to the ideal current source.   
+    Here, too, the actual output current is smaller than the source current $I_{\mathrm{q}}$. Module 4 introduces the node rule. 
+    This states that the sum of all currents in a node (branch point) must be zero, so that the output current $I$ is given by
         
         
         \begin{equation}
@@ -332,23 +340,23 @@
 \end{frame}
 \s{
 
-    Je größer also der Innenwiderstand $R_{\mathrm{i}}$ ist, desto kleiner wird der Strom $I_{\mathrm{R_{\mathrm{i}}}}$ und desto kleiner ist 
-    die Abweichung zwischen Ausgangsstrom $I$ un dem Quellstrom $I_{\mathrm{q}}$.
+    The greater the internal resistance $R_{\mathrm{i}}$, the smaller the current $I_{\mathrm{R_{\mathrm{i}}}}$ and the smaller the 
+    difference between the output current $I$ and the source current $I_{\mathrm{q}}$.
     
-    Entgegen des dargestellten Schaltbildes darf eine Stromquelle niemals mit offenen Klemmen betrieben werden, da ähnlich wie im Fall der Spannungsquelle
-    die gesamte Leistung im Innenwiderstand umgesetzt werden würde, was zu einer hohen thermischen Belastung und schlussendlich zur Zerstörung der Stromquelle führen würde.
-    Beispiele für reale Stromquellen sind Solarzellen im entsprechenden Betriebszustand oder ein Labornetzteil in der Strombegrenzung.
+    Contrary to the circuit diagram shown, a current source must never be operated with open terminals, as, similar to the case of a voltage source,
+    the entire power would be converted in the internal resistance, which would lead to high thermal stress and ultimately to the destruction of the current source.
+    Examples of real current sources are solar cells in the corresponding operating state or a laboratory power supply in current limiting mode.
     % Spule als Beispiel bringen
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Merksatz Stromquelle %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
     \ftx{Merksatz: Stromquelle}
-    \begin {Merksatz}{}
+    \begin {Key point}{}
     \begin{itemize}
-        \item Eine Stromquelle darf nie im Leerlauf betrieben werden!
-        \item Bei Stromquellen stellt sich immer die Spannung ein.
+        \item A power source must never be operated in idle mode!
+        \item With power sources, the voltage always adjusts itself.
     \end{itemize}
-    \end {Merksatz}
+    \end {Key point}
     
     \speech{02_Spannungs_und_Stromquellen}{7}{
         Somit können wir die folgenden Merksätze zusammenfassen:
@@ -361,12 +369,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende Stromquelle %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang - Umrechnen Strom in Spannungsquelle %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Umrechnung von Spannungs\- und Stromquelle}
+\subsection{Conversion of voltage and current sources}
 \s{
-    Spannungs\- und Stromquellen können bezüglich ihres Klemmenverhaltens ineinander umgerechnet werden. 
-    Voraussetzung dafür ist, dass sowohl der Kurzschlussstrom $I_\mathrm{K}$ als auch die Leerlaufspannung $U_\mathrm{L}$ bei beiden Quellen gleich sind.
-    Abbildung \ref{fig:Umrechnung} zeigt die Überführung der Schaltbilder ineinander.
-    Weiterführende Inhalte zur Umrechnung und Leistungsanpassung folgen in Modul 4. 
+    Voltage and current sources can be converted into each other with regard to their terminal behaviour.
+    The prerequisite for this is that both the short-circuit current $I_\mathrm{K}$ and the open-circuit voltage $U_\mathrm{L}$ are the same for both sources.
+    Figure \ref{fig:Umrechnung} shows the conversion of the circuit diagrams into each other.
+    Further information on conversion and power matching will follow in Module 4.
+ 
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Umrechnen Strom in Spannungsquelle %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -375,6 +384,7 @@
     \ftx{Umwandlung einer Spannungsquelle in eine Stromquelle}
     \b{
         \begin{figure}[H]
+            \renewcommand{\figurename}{Figure}
             \centering
 
                 \input{Tikz/src/02_Spannungs_Stromquellen/Umwandlung_Gleichspannung_Strom}
@@ -413,10 +423,11 @@
 
 \s{
     \begin{figure}[H]
+        \renewcommand{\figurename}{Figure}
         \centering
         \input{Tikz/src/02_Spannungs_Stromquellen/Umwandlung_Gleichspannung_Strom}
-        \caption{\textbf{Umwandlung einer Gleichspannungsquelle in eine Stromquelle.} Der Innenwiderstand der Spannungsquelle wird dabei zum Parallelwiderstand der
-            Stromquelle, wobei die resultierende Stromquelle einen konstanten Strom liefert, der durch den Widerstand bestimmt wird.}
+        \caption{\textbf{Conversion of a DC voltage source into a current source.} The internal resistance of the voltage source becomes the parallel resistance of the
+        current source, whereby the resulting current source supplies a constant current determined by the resistance.}
         \label{fig:Umrechnung}
         
     \end{figure}
@@ -434,26 +445,26 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Einleitung - Verschiedene Spannungs- und Stromquellen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Verschiedene Spannungs- und Stromquellen}
+\subsection{Various voltage and current sources}
 \s{
-    Die zuvor eingeführten Schaltsymbole für Spannungs- und Stromquellen sind allgemeingültig und machen keine spezifischen Aussagen 
-    über die Signalform der Ausgangsgröße. Grundsätzlich wird neben der Unterscheidung zwischen Spannungs- und Stromquellen auch zwischen 
-    Gleich- (DC, Direct Current) und Wechselspannung (AC, Alternating Current) differenziert.
+    The previously introduced circuit symbols for voltage and current sources are universal and do not make any specific statements 
+    about the signal form of the output variable. In addition to the distinction between voltage and current sources, a fundamental distinction is also made between 
+    direct current (DC) and alternating current (AC).
+        
+    The most common form for operating electronic devices is the direct voltage source. It continuously ensures 
+    that charge carriers flow from the negative to the positive pole, which generates a constant electric field from the positive to the negative pole.
     
-    Die gebräuchlichste Form für den Betrieb elektronischer Geräte ist die Gleichspannungsquelle. Sie sorgt kontinuierlich dafür, 
-    dass Ladungsträger vom Minus- zum Pluspol fließen, was ein gleichbleibendes elektrisches Feld vom Plus- zum Minuspol erzeugt.
+    Alternating current (AC) sources, on the other hand, typically have a sinusoidal output voltage or a sinusoidal output current.
+    In the past, high-voltage lines with alternating current have become the standard for transporting energy over long distances,
+    as they were technically simpler and more cost-effective to implement. The most significant advantage of alternating current is the simple 
+    transformation of the voltage. It is also practical because there is no need to pay attention to polarity when connecting consumers.
     
-    Wechselspannungsquellen (AC) hingegen haben typischerweise eine sinusförmige Ausgangsspannung bzw. einen sinusförmigen Ausgangsstrom. 
-    Für den Energietransport über weite Strecken haben sich in der Vergangenheit Hochspannungsleitungen mit Wechselspannung durchgesetzt, 
-    da diese technisch einfacher und kostengünstiger zu realisieren waren. Der bedeutendste Vorteil von Wechselspannung ist die einfache 
-    Transformation der Spannung. Außerdem ist es praktisch, da beim Anschluss von Verbrauchern nicht auf die Verpolung geachtet werden muss.
-    
-    Mittlerweile gibt es jedoch auch erste Umsetzungen des Energietransports in Form von Gleichspannung. 
-    Der Einsatz von Gleichstrom (DC) für lange Übertragungsstrecken, wie bei den HVDC-Leitungen (High Voltage Direct Current) 
-    von der Nordsee nach Süddeutschland, bietet einige Vorteile: Gleichstrom ist effizienter, da er keine Blindleistung erzeugt, was bedeutet, 
-    dass keine zusätzlichen Verluste durch die Kabelkapazität auftreten. Dadurch bleibt die Stromamplitude niedriger, 
-    was zu geringeren Übertragungsverlusten führt und DC besonders für sehr lange Strecken attraktiv macht.
-    In Abbildung \ref{fig:quellen} sind die Schaltzeichen der verschiedenen Quellen dargestellt. \\
+    However, the first implementations of energy transport in the form of direct current voltage are now also available.
+    The use of direct current (DC) for long transmission distances, such as in the HVDC (High Voltage Direct Current) lines
+    from the North Sea to southern Germany, offers a number of advantages: Direct current is more efficient because it does not generate reactive power, which means 
+    that there are no additional losses due to cable capacity. This keeps the current amplitude lower, 
+    resulting in lower transmission losses and making DC particularly attractive for very long distances.
+    Figure \ref{fig:quellen} shows the circuit symbols for the various sources. \\
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Übersicht der verschiedenen Schaltzeichen von Spannungs- und Stromquellen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -464,17 +475,17 @@
             \centering
             \begin{minipage}[t]{0.18\textwidth}
                 \input{Tikz/src/02_Spannungs_Stromquellen/Allgemeine_Spannungsquelle}
-                \caption*{Allgemeine\\ Spannungsquelle}
+                \caption*{General\\ Voltage source}
             \end{minipage}
             \hfill
             \only<2->{\begin{minipage}[t]{0.18\textwidth}
                     \input{Tikz/src/02_Spannungs_Stromquellen/Gleichspannungsquelle}
-                    \caption*{Gleichspannungsquelle}
+                    \caption*{DC voltage source}
                 \end{minipage}
                 \hfill
                 \begin{minipage}[t]{0.18\textwidth}
                     \input{Tikz/src/02_Spannungs_Stromquellen/Wechselspannungsquelle}
-                    \caption*{Wechselspannungsquelle}
+                    \caption*{AC voltage source}
                 \end{minipage}
                 \hfill
                 \begin{minipage}[t]{0.18\textwidth}
@@ -562,26 +573,27 @@
 
 \s{
     \begin{figure}[h]
+        \renewcommand{\figurename}{Figure}
         \centering
         \begin{minipage}[t]{0.18\textwidth}
             \input{Tikz/src/02_Spannungs_Stromquellen/Allgemeine_Spannungsquelle}
-            \caption*{Allgemeine\\ Spannungsquelle}
+            \caption*{General\\ Voltage source}
         \end{minipage}
         \hfill
         \begin{minipage}[t]{0.18\textwidth}
             \input{Tikz/src/02_Spannungs_Stromquellen/Gleichspannungsquelle}
-            \caption*{Gleichspannungsquelle}
+            \caption*{DC Voltage source}
         \end{minipage}
         \hfill
         \begin{minipage}[t]{0.18\textwidth}
             \input{Tikz/src/02_Spannungs_Stromquellen/Wechselspannungsquelle}
-            \caption*{Wechselspannungsquelle}
+            \caption*{AC Voltage source}
         \end{minipage}
         \hfill
         \begin{minipage}[t]{0.18\textwidth}
             \input{Tikz/src/02_Spannungs_Stromquellen/Zeitlich_veraenderliche_Spannungsquelle}
             \captionsetup{justification=raggedright, singlelinecheck=false}
-            \caption*{Zeitlich beliebig veränderliche Spannungsquelle}
+            \caption*{Temporally variable voltage source}
         \end{minipage}
         
         
@@ -592,23 +604,23 @@
         
         \begin{minipage}[t]{0.18\textwidth}
             \input{Tikz/src/02_Spannungs_Stromquellen/Allgemeine_Stromquelle}
-            \caption*{Allgemeine\\ Stromquelle}
+            \caption*{General\\ Current source}
         \end{minipage}
         \hfill
         \hspace{4.2cm}
         \begin{minipage}[t]{0.18\textwidth}
             \input{Tikz/src/02_Spannungs_Stromquellen/Wechselstromquelle}
             \captionsetup{justification=raggedright, singlelinecheck=false}
-            \caption*{Wechselstromquelle}
+            \caption*{AC Current source}
         \end{minipage}
         \hfill
         \begin{minipage}[t]{0.18\textwidth}
             \input{Tikz/src/02_Spannungs_Stromquellen/Zeitlich_veraenderliche_Stromquelle}
             \captionsetup{justification=raggedright, singlelinecheck=false}
-            \caption*{Zeitlich beliebig veränderliche Stromquelle}
+            \caption*{Temporally variable current source}
         \end{minipage}
         
-        \caption{\textbf{Verschiedene Spannungs- und Stromquellen.}}
+        \caption{\textbf{Various voltage and current sources.}}
         \label{fig:quellen}
     \end{figure}
 }
@@ -618,14 +630,14 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Bemerkung zu den Quellen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \s{
-    Es ist zu berücksichtigen, dass Wechselspannungs- und Stromquellen eine sinusförmige Ausgangsspannung bzw. einen sinusförmigen Ausgangsstrom haben, 
-    wohingegen die zeitlich beliebig veränderlichen Quellen jede beliebige Form haben können.
-    Ein Beispiel dafür ist das Rechtecksignal, welches aus dem Ein- und Ausschalten einer Gleichspannungsquelle stammen könnte.
-    Genutzt werden solche Quellen beispielsweise in der mobilen Anwendung der weit verbreiteten Bauart von Elektromotoren, welche auch Synchron, bzw. Asynchronmaschinen genannt werden.
-    Diese Motoren werden in mobilen Anwendungen durch eine Gleichspannungsquelle betrieben, dessen Signalform mithilfe einer Leistungselektronik in das gewünschte Rechtecksignal gewandeln (gepulst) werden
-    und im Motor durch über die Spulenwicklungen aus dem gepulsten Spannungssignal ein sinusförmigen Strom entsteht. Mehr dazu im Modul elektrische Maschinen.
-    Ein weiteres Beispiel für zeitlich beliebige Signale ist die digitale Informationsübertragung in der Nachrichtentechnik, wobei eine Eins dem Highsignal und eine Null einem Lowsignal entspricht,
-    was ebenfalls einem Rechtecksignal gleicht.
+    It should be noted that AC voltage and current sources have a sinusoidal output voltage or sinusoidal output current, 
+    whereas sources that can be varied arbitrarily over time can have any shape.
+    One example of this is the square wave signal, which could originate from switching a DC voltage source on and off.
+    Such sources are used, for example, in mobile applications of the widely used type of electric motors, which are also called synchronous or asynchronous machines.
+    These motors are operated in mobile applications by a DC voltage source, whose signal shape is converted (pulsed) into the desired square wave signal with the aid of power electronics
+    and a sinusoidal current is generated in the motor from the pulsed voltage signal via the coil windings. More on this in the module on electric machines.
+    Another example of signals that can occur at any time is digital information transmission in communications engineering, where a one corresponds to a high signal and a zero to a low signal,
+    which also resembles a square wave signal.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende - Bemerkung zu den Quellen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

@@ -3,17 +3,17 @@
 \newvideofile{Wechsel}{Wechselstromrechnung}
 
 \begin{frame}
-    \fta{Komplexe Wechselstromrechnung}
+    \fta{Complex alternating current calculation}
     
     \s{
-        In Gleichstromnetzwerken wird mit konstanten Spannungsquellen und Stromquellen gearbeitet. Im Gegensatz dazu kommen bei der 
-        komplexen Wechselstromrechnung Quellen mit sinusförmigen Wechselgrößen zum Einsatz. Die elektrische Analyse von Komponenten 
-        in einem Wechselspannungsnetzwerk erfolgt komplex. 
-        Die komplexen Spannungen \underline{U} und Ströme \underline{I} erzeugen zeitabhängige Spannungswerte u(t) und Stromwerte 
-        i(t). Die Gleichung \ref{GleichungURIKomplex} beschreibt den angegebenen Zusammenhang zwischen komplexen und zeitabhängigen
-        Strom- und Spannungswerten für einen ohmschen Widerstand.
-    
-        Komplexe und zeitabhängige Strom- und Spannungsangaben der Wechselstromrechnung:
+        Direct current networks use constant voltage sources and current sources. In contrast, 
+        complex alternating current calculations use sources with sinusoidal alternating quantities. The electrical analysis of components 
+        in an alternating voltage network is complex.
+        The complex voltages \underline{U} and currents \underline{I} generate time-dependent voltage values u(t) and current values 
+        i(t). Equation \ref{GleichungURIKomplex} describes the specified relationship between complex and time-dependent
+        current and voltage values for an ohmic resistor.
+        
+        Complex and time-dependent current and voltage specifications in AC calculation:
     
     
     \begin{eq}
@@ -21,23 +21,22 @@
     \end{eq}
     
     
-        Abgesehen von der komplexität der Wechselstromrechnungen, gelten weiterhin die Regeln zur Berechnung elektrischer Netzwerke,
-        wie Maschen- und Knotenregeln, das Verhalten von Reihen- und Paralellschaltungen und die Knotenpotentialanalyse sowie die 
-        Maschenstromanalyse. Bei all diesen Beispielen ist darauf zu achten, mit den komplexen Wechselgrößen zu rechnen. Für die 
-        Erläuterung von elektrische Netzwerken mit komplexen Wechselgrößen werden im Folgenden diese Tehmengebiete näher betrachtet:
-    
-        Für die Berechnung von elektrische Netzwerken mit Wechselgrößen werden im Folgenden diese Tehmengebiete näher betrachtet:
+        Apart from the complexity of alternating current calculations, the rules for calculating electrical networks still apply,
+        such as mesh and node rules, the behaviour of series and parallel circuits, node potential analysis, and 
+        mesh current analysis. In all these examples, care must be taken to calculate with complex alternating quantities. For the 
+        explanation of electrical networks with complex alternating quantities, the following topics are examined in more detail below:
+        For the calculation of electrical networks with alternating quantities, the following topics are examined in more detail below:
     }
     
     
-    \begin{Lernziele}{Wechselstromrechnung}
-        Die Studierenden
+    \begin{Learning objectives}{Alternating current calculation}
+        The students
         \begin{itemize}
-            \item kennen die komplexe Impedanz und die komplexe Attmitanz.
-            \item verstehen das Verhalten eines Widerstandes, eines Kondensators und einer Spule an einer Wechselspannung.
-            \item kennen Wechselquellen und die dazugehörigen Umwandlungsvorschriften.
+            \item know the complex impedance and complex admittance.
+            \item understand the behaviour of a resistor, a capacitor and an inductor at an alternating voltage.
+            \item know alternating current sources and the associated conversion rules.
         \end{itemize}
-    \end{Lernziele}
+    \end{Learning objectives}
     
     \speech{WechselLrnz}{1}{Wie auch bei Gleichstromnetzwerken wird bei der Wechselstromrechnung mit einem elektrichen Widerstand gearbeitet.
     Jedoch ist der elektrische Widerstand wie schon die Größen von Strom und Spannung bei der Wechselstrombetrachtung eine komplexe Größe.
@@ -47,17 +46,18 @@
 \end{frame}
 
 \begin{frame}
-    \ftb{Impedanz und Attmitanz in der komplexen Ebene}
+    \renewcommand{\figurename}{Figure}
+    \ftb{Impedance and admittance in the complex plane}
     
     \s{
-        Durch eine Phasenverschiebung zwischen der Spannung und dem Strom kommt es zu einer Erzeugung eines Blindanteils der Impedanz. Der Blindanteil lässt sich jedoch 
-        auf der reellen Achse nicht darstellen, weshalb die reelle Achse um eine imaginäre Achse erweitert wird, welche gemeinsam die 
-        komplexe Ebene bilden. Die Abbildung \ref{BildKomplexeImpedanz} zeigt den Zeiger der komplexen Impedanz in der komplexen Ebene 
-        mit Imaginäranteil und Realanteil. 
+        A phase shift between the voltage and the current results in the generation of a reactive component of the impedance. However, the reactive component cannot be represented 
+        on the real axis, which is why the real axis is extended by an imaginary axis, which together form the 
+        complex plane. Figure \ref{BildKomplexeImpedanz} shows the phasor of the complex impedance in the complex plane 
+        with imaginary and real components. 
         
         \fu{
             \input{Tikz/src/Komplexe_Wechselstromrechnung/Komplexe_Impedanz}
-        }{{\bf Zeiger der komplexen Impedanz.} Die Impedanz in der komplexen Ebene mit der Aufteilung in Realanteil R und Imaginäranteil X. \label{BildKomplexeImpedanz}}
+        }{{\bf Complex impedance pointer.} The impedance in the complex plane with the division into real part R and imaginary part X. \label{BildKomplexeImpedanz}}
         
     }
     
@@ -96,16 +96,16 @@
     }
     
     \s{
-        So besteht auch die komplexe Impedanz \underline{Z} nach Gleichung \ref{GleichungImpedanz} aus einem Realteil und aus einem Imaginärteil. Der
-        Realteil besteht aus dem ohmschen Anteil, welcher den Wirkwiderstand einer Impedanz darstellt. Der Wirkwiderstand wird auch als 
-        Resistanz R bezeichnet. Zweiter Bestandteil der Impedanz ist der Imaginärteil, welcher auch als Reaktanz X bezeichnet wird.
-        Die Reaktanz eines elektrischen Netzwerkes setzt sich beisplielsweise aus den kapazitiven und induktiven Auswirkungen zusammen
-        und wird mit der imaginären Einheit j versehen. Die Einheit der komplexen Impedanz ist wie in der Gleichstromtechnik Ohm $\Omega$. 
+        According to equation \ref{GleichungImpedanz}, the complex impedance \underline{Z} also consists of a real part and an imaginary part. The
+        real part consists of the ohmic component, which represents the effective resistance of an impedance. The effective resistance is also referred to as 
+        resistance R. The second component of impedance is the imaginary part, which is also referred to as reactance X.
+        The reactance of an electrical network, for example, consists of the capacitive and inductive effects
+        and is assigned the imaginary unit j. As in direct current technology, the unit of complex impedance is the ohm $\Omega$. 
     }
     
     \only<4>{
         \begin{eq}
-            Impedanz = Resistanz + j \cdot Reaktanz \quad \rightarrow \quad \underline{Z} = R + j \cdot X   \label{GleichungImpedanz}
+            Impedance = Resistance + j \cdot Reactance \quad \rightarrow \quad \underline{Z} = R + j \cdot X   \label{GleichungImpedanz}
         \end{eq}
         \begin{eq}
             [\underline{Z}] = 1\ Ohm = 1\ \Omega \nonumber
@@ -128,9 +128,9 @@
     \ftx{Impedanz und Attmitanz in der komplexen Ebene}
     
     \s{
-        Wie in der Gleichstromtechnik existiert ein Leitwert des elektrischen Widerstandes in der komplexen Wechselstromtechnik.
-        Dieser Kehrwert der komplexen Impedanz wird als Admittanz \underline{Y} bezeichnet (vlg. Gleichung \ref{GleichungImpedanzAttmitanz}). Die Einheit des komplexen Leitwertes bleibt 
-        wie in der Gleichstromtechnik Siemens S. 
+        As in direct current technology, there is a conductance value for electrical resistance in complex alternating current technology.
+        This reciprocal value of the complex impedance is referred to as admittance \underline{Y} (see equation \ref{GleichungImpedanzAttmitanz}). The unit of the complex conductance remains 
+        Siemens S, as in direct current technology.
     }
     
     \b{
@@ -141,9 +141,10 @@
         R = \frac{1}{G} \quad \rightarrow \quad \underline{Z} = \frac{1}{\underline{Y}}   \label{GleichungImpedanzAttmitanz}
     \end{eq}
     
-    \s{
-        Auch die Admittanz lässt sich in einen Wirkleitwert und einen Blindleitwert differenzieren. 
-        Der Wirkleitwert G der Admittanz wird als Konduktanz und der Blindleitwert B der Admittanz wird als Suszeptanz bezeichnet (vgl. Gleichung \ref{GleichungAdmittanz} ). 
+    \s{ 
+        Admittance can also be differentiated into a real conductance and a reactive conductance. 
+        The real conductance G of the admittance is referred to as conductance, and the reactive conductance B of the 
+        admittance is referred to as susceptance (see Equation \ref{GleichungAdmittanz} ).
     }
     
     \onslide<2->{
@@ -152,7 +153,7 @@
     }
     
     \begin{eq}
-        Admittanz = Konduktanz + j \cdot Suszeptanz \quad \rightarrow \quad \underline{Y} = G + j \cdot B           \label{GleichungAdmittanz}
+        Admittance = Conductance + j \cdot Susceptibility \quad \rightarrow \quad \underline{Y} = G + j \cdot B           \label{GleichungAdmittanz}
     \end{eq}
     
     \begin{eq}
@@ -172,12 +173,11 @@
 \begin{frame}
     \ftx{Komplexe Impedanz und komplexe Admittanz}
     
-    \begin{Merksatz}{Komplexe Impedanz und komplexe Admittanz}
-        Der Gleichstromwiderstand wird bei einer {\bf Wechselspannung} zur {\bf komplexen Impedanz} \underline{Z}. Der 
-        Kehrwert des Widerstandes, der Leitwert, wird bei einer Wechselspannung zur {\bf komplexen Admittanz} \underline{Y}.
-    \end{Merksatz}
+    \begin{Key point}{Complex impedance and complex admittance}      
+        The direct current resistance becomes the complex impedance \underline{Z} for an alternating voltage. The 
+        reciprocal of the resistance, the conductance, becomes the complex admittance \underline{Y} for an alternating voltage.    
+    \end{Key point}
 
-    
     \speech{WechselMrk1}{1}{Der Gleichstromwiderstand wird bei einer Wechselspannun zur komplexen Impedanz Z. 
     Der Kehrwert des Widerstandes, der Leitwert, wird bei einer Wechselspannung zur komplexen Admittanz Y.
     Zur Erinnerung.
@@ -186,16 +186,15 @@
 
 
 \begin{frame}
-    \ftb{Komplexer Widerstand}
+    \ftb{Complex resistance}
     
     \s{
-        Der komplexe Widerstand eines ohmschen Verbrauchers besteht aus dem Wirkannteil R und dem Blindanteil des des ohmschen 
-        Widerstandes.
-        Der ohmsche Widerstand R verkörpert die Eigenschaft leitfähiger Materialien elektrische Leistung in thermische Leistung 
-        umzuwandeln. Der Blindanteil des Widerstands wandelt die Leistung der Wechselströme nicht in Wärme um. 
-        Der Blindanteil des elektrischen Widerstands wird als $X_\mathrm{R}$ beziechnet. Da der ideale elektrische Widerstand allerdings rein
-        ohmsch und damit rein Real wirkt, wird in der Regel oft einfach das Formelzeichen R verwendet. Die Gleichung \ref{GleichungWid1}
-        erklärt diese Zusammenhänge. 
+        The complex resistance of an ohmic consumer consists of the active component R and the reactive component of the ohmic resistance.
+        The ohmic resistance R embodies the property of conductive materials to convert electrical power into thermal power.
+        The reactive component of the resistance does not convert the power of alternating currents into heat.         
+        The reactive component of the electrical resistance is denoted as $X_\mathrm{R}$. However, since the ideal electrical resistance is purely
+        resistive and therefore purely real, the symbol R is often used. Equation \ref{GleichungWid1}
+        explains these relationships.
     }
     
     \b{
@@ -211,8 +210,8 @@
     \end{eq}
     
     \s{
-        An den zeitabhängigen Werten für die Spannung und den Strom ergeben sich die Zusammenhänge des idealen ohmschen Widerstandes 
-        nach Gleichung \ref{GleichungWid2}. 
+        The time-dependent values for voltage and current result in the relationships of ideal ohmic resistance 
+        according to equation \ref{GleichungWid2}.
     }
     
     \onslide<4->{
@@ -228,16 +227,17 @@
 \end{frame}
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Komplexer Widerstand}
     
     \s{
-        Ein idealer elektrischer Widerstand ist ein reiner Wirkwiderstand und weist keinerlei Blindwiderstandanteile auf. 
-        Der reale elektrische Widerstand ist mit parasitären Effekten behaftet. Die Schaltbilder eines idealen und eines 
-        realen elektrischen Widerstandes werden in der Abbildung \ref{BildRealerWiderstand} gegenübergestellt. Diese parasitären 
-        Effekte wirken sich induktiv, verdeutlicht durch die Spule, und kapazitiv, verdeutlicht durch die Kapazität, auf die 
-        Schaltung aus. Neben der Frequenzabhängikeit der parasitären Effekte, werden auch die Spannung und der Strom so aufgeteilt,
-        dass nicht mehr die gesamte Leistung am Widerstand abfällt. die Impedanz des idealen elektrischenWiderstands ist nicht 
-        frequenzabhängig.
+        An ideal electrical resistance is a pure active resistance and has no reactive resistance components.
+        Real electrical resistance is subject to parasitic effects. The circuit diagrams of an ideal and a 
+        real electrical resistance are compared in Figure \ref{BildRealerWiderstand}. These parasitic 
+        effects have an inductive effect, illustrated by the coil, and a capacitive effect, illustrated by the capacitance, on the 
+        circuit. In addition to the frequency dependence of the parasitic effects, the voltage and current are also divided in such a way
+        that the entire power no longer drops across the resistor. The impedance of the ideal electrical resistor is not 
+        frequency-dependent.
     }
     
     \b{
@@ -251,8 +251,8 @@
     
     \fu{
         \input{Tikz/src/Komplexe_Wechselstromrechnung/Gegenueberstellung_idealer_realer_Widerstand}
-    }{{\bf Gegenüberstellung eines idealen und eines realen elektrischen Widerstandes.} Der reale Widerstand weist im
-        Gegensatz zum idealen Widerstand seriell induktive und parallel kapazitive Effekte auf. \label{BildRealerWiderstand}}
+    }{{\bf Comparison of ideal and real electrical resistance.} Unlike ideal resistance, real resistance exhibits
+        serial inductive and parallel capacitive effects. \label{BildRealerWiderstand}}
 
     \speech{WechselWiderBauteil}{1}{In der Realität lässt sich diese vereinfachte Darstellung eines ohmschen Widerstandes leider nicht in gänze Nutzen.}
     \speech{WechselWiderBauteil}{2}{Beispielsweise sorgen die Zu und Ableitungen an den Bauteilen in der Pärepherie zu parasitären Effekten, 
@@ -263,12 +263,13 @@
 
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Komplexer Widerstand}
     
     \s{
-        Zwischen der Spannung und dem Strom existiert beim idealen elektrischen Widerstand keine Phasenverschiebung. In der 
-        Abbildung \ref{BildPhasenWiderstand} werden die Sinuswellen für die Spannung und den Strom an einem idealen Widerstand 
-        aufgetragen. Sie liegen ohne Phasenverschiebung übereinander, somit befinden sie sich in Phase. 
+        With ideal electrical resistance, there is no phase shift between the voltage and the current. In 
+        Figure \ref{BildPhasenWiderstand}, the sine waves for the voltage and current are plotted on an ideal resistor. 
+        They lie on top of each other without any phase shift, meaning they are in phase.
     }
     
     \b{
@@ -282,8 +283,8 @@
     
     \fu{
         \input{Tikz/src/Komplexe_Wechselstromrechnung/Sinunsschwingung_Widerstand}
-    }{{\bf Sinuschwingungen an einem Widerstand.} Wechselspannung (blau) und Wechselstrom (rot) an einem idealen Widerstand. Es resultiert an dem
-        Widerstand keine Phasenverschiebung zwischen der Wechselspannung und dem Wechselstrom. \label{BildPhasenWiderstand}}
+    }{{\bf Sine waves on a resistor.} Alternating voltage (blue) and alternating current (red) on an ideal resistor. This results in
+        no phase shift between the alternating voltage and the alternating current at the resistor. \label{BildPhasenWiderstand}}
 
     \speech{WechselWiderPhase}{1}{Die Phasenverschiebung soll trotzdem noch einmal näher betrachtet werden, da sie bei den anderen Bauteilen noch wichtig wird.
     Dargestellt wird die zeitabhängige Spannung U von T.}
@@ -297,10 +298,10 @@
 \begin{frame}
     \ftx{Sinusschwingung an einem Widerstand}
     
-    \begin{Merksatz}{Sinusschwingung an einem Widerstand}
-        Der {\bf elektrische Widerstand} weist zwischen der Wechselspannung und dem zugehörigen Wechselstrom {\bf keine
-                Phasenverschiebung} auf.     
-    \end{Merksatz}
+    \begin{Key point}{Sinusoidal oscillation at a resistor}
+        The {\bf electrical resistance} indicates between the alternating voltage and the corresponding alternating current {\bf no
+        phase shift}.     
+    \end{Key point}
 
     \speech{WechselMrk2Wid}{1}{Der elektrische Widerstand weist zwischen der Wechselspannung 
     und dem Wechselstrom keine Phasenverschiebung auf.}
@@ -308,19 +309,19 @@
 
 
 \begin{frame}
-    \ftb{Kapazität}
+    \ftb{Capacity}
     
     \s{
-        Der Kondesnator als Bauteil in der Elektrotechnik weist die Fähigkeit auf Energie zwischen den zwei Platten in 
-        dem elektrischen Feld zu speichern. Die Größe eines Kondensators wird in der Kapazität C angegeben. Die Einheit 
-        der Kapazität ist das Farad F. Die komplexe Impedanz eines Kondensators lässt sich nach Gleichung \ref{GleichungKap1}
-        berechnen. Im Gegensatz zum idealen Widerstand wirkt der ideale Kondensator im Wechselstromkreis nicht lediglich als
-        Wirkwiderstand. Der reale Kondensator wirkt sowohl durch einen Wirkwanteil, als auch durch einen Blindanteil. Die 
-        Kreisfrequenz $\omega$ ist frequenzabhängig. So ergeben sich bei hohen Frequenzen niedrige Impedanzwerte für den 
-        Kondensator. Andersherum ergeben sich hohe Impedanzwerte bei niedrigen Frequenzen. Der Blindanteil des Kondensators
-        wirkt sich als kapazitive Reaktanz aus. 
-        Es kann beim Kondensator auch mit der komplexen Admittanz gerechnet werden. Die komplexe Admittanz ergibt sich aus
-        dem kehrwert der komplexen Impedanz des Kondensators. 
+        As a component in electrical engineering, the capacitor has the ability to store energy between the two plates in 
+        the electric field. The size of a capacitor is specified in terms of its capacitance C. The unit 
+        of capacitance is the farad F. The complex impedance of a capacitor can be calculated using equation \ref{GleichungKap1}. 
+        In contrast to the ideal resistor, the ideal capacitor in an alternating current circuit does not act solely as an
+        effective resistance. The real capacitor acts both through an effective component and through an reactive component. The 
+        circular frequency $\omega$ is frequency-dependent. This results in low impedance values for the 
+        capacitor at high frequencies. Conversely, high impedance values result at low frequencies. The reactive component of the capacitor
+        acts as capacitive reactance.
+        The capacitor can also be calculated using complex admittance. The complex admittance is derived from
+        the reciprocal of the complex impedance of the capacitor. 
     }
     
     \b{
@@ -332,8 +333,8 @@
     \end{eq}
     
     \s{
-        Der ideale Kondensator wirkt rein im Blindanteil, so wird nach Gleichung \ref{GleichungKap2} aus der komplexen Notation $Z_C$ der 
-        Blindanteil des Kondensators $X_C$ mit zeitabhängiger Spannung und Strom. 
+        The ideal capacitor acts purely in the reactive component, so according to equation \ref{GleichungKap2} from the complex notation $Z_C$, the 
+        reactive component of the capacitor $X_C$ with time-dependent voltage and current.
     }
     
     \onslide<2->{
@@ -346,11 +347,11 @@
     \end{eq}}
     
     \s{
-        Es Wird davon ausgegangen, dass die Wechselspannung an einem Kondensator mit der Phasenverschiebung von 0° anliegt. 
-        Mit dieser Feststellung kann die verursachte Phasenverschiebung des Stromes am Kondensator nach Gleichung \ref{GleichungKap3} festgelegt
-        werden. Durch die Phasenverschiebung des Stromes gleicht der Verlauf einer Cosinusfunktion im Gegensatz zur Sinusfunktion
-        der Spannung. Sollen sowohl die Spannung als auch der Strom durch die Sinusfunktion beschrieben werden, wird die 
-        Phasenverschiebung $\Delta\varphi$ von $\pi/2$ ins Argument mit aufgenommen. 
+        It is assumed that the alternating voltage at a capacitor has a phase shift of 0°. 
+        With this assumption, the phase shift of the current at the capacitor can be determined using equation \ref{GleichungKap3}. 
+        Due to the phase shift of the current, the curve of a cosine function contrasts with the sine function
+        of the voltage. If both the voltage and the current are to be described by the sine function, the 
+        phase shift $\Delta\varphi$ of $\pi/2$ is included in the argument. 
     }
     
     \onslide<3->{
@@ -372,14 +373,15 @@
 \end{frame}
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Kapazität}
     
     \s{
-        Bei Induktivitäten und Kapazitäten kommt es zu einer Phasenverschiebung zwischen der Wechselspannung und dem
-        Wechselstrom. Beim Kondensator bedeutet dies, dass der Strom der Spannung um 90° (Gradmaß) voreilt. Der beschriebene 
-        Sachverhalt der Phasenverschiebung wird in der Abbildung \ref{BildPhasenKondensator} verdeutlicht. Der in rot 
-        dargestellte Strom an einem Kondensator erreicht den Maximalwert um $2\pi$ (Bogenmaß) früher als der blau gefärbte 
-        Maximalwert der Spannung.  
+        With inductors and capacitors, there is a phase shift between the alternating voltage and the
+        alternating current. With capacitors, this means that the current leads the voltage by 90° (degrees). The described 
+        phenomenon of phase shift is illustrated in Figure \ref{BildPhasenKondensator}. The current shown in red 
+        at a capacitor reaches its maximum value $2\pi$ (radians) earlier than the blue-coloured 
+        maximum value of the voltage.  
     }
     
     \b{
@@ -394,7 +396,7 @@
     
     \fu{
         \input{Tikz/src/Komplexe_Wechselstromrechnung/Phasenverschiebung_Kondensator}
-    }{{\bf Phasenverschiebung zwischen Strom und Spannung an einem Kondensator.} Der Strom eilt der Spannung am Kondensator um 90° vor.
+    }{{\bf Phase shift between current and voltage at a capacitor.} The current leads the voltage across the capacitor by 90°.
         \label{BildPhasenKondensator}}
     
     \speech{WechselKapaPhase}{1}{Hier wird nun der Verlauf der Wechselspannung U C an einer Kapazität dargestellt. 
@@ -409,23 +411,24 @@
 \begin{frame}
     \ftx{Sinusschwingung an einem Kondensator}
     
-    \begin{Merksatz}{Sinusschwingung an einem Kondensator}
-        An der idealen Kapazität eilt der Wechselstrom der Wechselspannung um 90° vor. 
-    \end{Merksatz}
+    \begin{Key point}{Sinusoidal oscillation on a capacitor}
+        At the ideal capacity, the alternating current of the alternating voltage leads by 90°.     
+    \end{Key point}
 
     \speech{WechselMrk3Kapa}{1}{An der idealen Kapazität eilt der Wechselstrom der Wechselspannung um 90 Grad vor.}
 \end{frame}
 
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Idealer und realer Kondensator}
     
     \s{
-        In der Regel wird mit idealen Bauteilen und deren Eigenschaften gerechnet. Jedoch weist der reale Kondensator, wie auch 
-        der zuvor beschriebene reale Widerstand, induktive und ohmsche parasitäre Effekte auf. Der ideale Kondensator wird in der 
-        Abbildung \ref{BildRealerKondensator} dem realen Kondensator gegenübergestellt. Die Zu- und Ableitungen weisen induktive 
-        ($L_\mathrm{paras.}$) und ohmsche ($R_\mathrm{paras.2}$) Anteile auf. Außerdem ist der Kondensator einer ständigen 
-        Selbstentladung ausgesetzt. Diese Selbstentladung erfolgt symbolisch über den Paralellwiderstand $R_\mathrm{paras.1}$.
+        As a rule, calculations are based on ideal components and their properties. However, real capacitors, like 
+        the real resistors described above, exhibit inductive and ohmic parasitic effects. The ideal capacitor is compared with the real capacitor in 
+        Figure \ref{BildRealerKondensator}. The input and output lines exhibit inductive 
+        ($L_\mathrm{paras.}$) and ohmic ($R_\mathrm{paras.2}$) components. In addition, the capacitor is subject to constant 
+        self-discharge. This self-discharge occurs symbolically via the parallel resistance $R_\mathrm{paras.1}$.
     }
     
     \b{
@@ -438,8 +441,8 @@
     
     \fu{
         \input{Tikz/src/Komplexe_Wechselstromrechnung/Gegenueberstellung_idealer_realer_Kondensator}
-    }{{\bf Gegenüberstellung eines idealen und eines realen Kondensators.} Der reale Kondensator weist im
-        Gegensatz zum idealen Widerstand seriell induktive und parallel kapazitive Effekte auf. \label{BildRealerKondensator}}
+    }{{\bf Comparison of an ideal and a real capacitor.} Unlike an ideal resistor, a real capacitor exhibits
+        serial inductive and parallel capacitive effects. \label{BildRealerKondensator}}
     
     \speech{WechselKapaBauteil}{1}{}
     \speech{WechselKapaBauteil}{2}{}
@@ -447,16 +450,16 @@
 
 
 \begin{frame}
-    \ftb{Induktivität}
+    \ftb{Inductance}
     
     \s{
-        Die Spule stellt ebenso einen Energiespeicher dar, wie der Kondensator. Nur wird bei der Spule die Energie nicht in einem
-        elektrischen Feld gespiechert, sondern in einem magnetischen Feld nach den Gegebenheiten der Induktionsgesetze. Die Größe
-        einer Spule wird in der Induktivität L angegeben. Die Einheit der Induktivität ist Henry H. Die komplexe Impedanz einer Spule
-        ergibt sich aus der Imaginären Einheit j, der Kreisfrequenz $\omega$ und der Induktivität L (vgl. Gleichung \ref{GleichungInd1}).
-        die komplexe Admittanz wird durch den Kehrwert der Spulenimpedanz berechnet. Das führt zu Zusammenhängen, welche sich entgegen
-        der Impedanzberechnungen bei Kapazitäten entwickeln. Bei hohen frequenzen werden die Impedanzen bei Spulen entsprechend ihrer 
-        Induktivität ebenfalls groß und bei niedrigen Frequenzen entsprechend gering. 
+        The coil is also an energy storage device, just like the capacitor. However, in the case of the coil, 
+        the energy is not stored in an electric field, but in a magnetic field according to the laws of induction. The size of a coil 
+        is given by its inductance L. The unit of inductance is Henry H. The complex impedance of a coil
+        is given by the imaginary unit j, the angular frequency $\omega$ and the inductance L (see Equation \ref{GleichungInd1}).
+        The complex admittance is calculated by the reciprocal of the coil impedance. This leads to relationships that develop contrary to
+        the impedance calculations for capacitances. At high frequencies, the impedances of coils also become large in accordance with their 
+        inductance and correspondingly small at low frequencies. 
     }
     
     \b{
@@ -468,9 +471,9 @@
     \end{eq}
     
     \s{
-        Ebenso wie beim Kondensator wirkt die ideale Spule rein als Blindanteil der Impedanz. In der Gleichung \ref{GleichungInd2}
-        wird auf der linken Seite die komplexe Notation der Spulenimpedanz $Z_L$ verwendet. Auf der rechten Seite wird die Zeitfunktion
-        lediglich mit der Schreibweise des Blindanteils der Spule $X_L$ dargestellt.     
+        As with the capacitor, the ideal coil acts purely as a reactive component of the impedance. In equation \ref{GleichungInd2},
+        the complex notation of the coil impedance $Z_L$ is used on the left-hand side. On the right-hand side, the time function
+        is represented solely by the notation of the reactive component of the coil $X_L$.
     }
     
     \b{
@@ -482,9 +485,9 @@
     \end{eq}
     
     \s{
-        Prinzipiell verhalten sich die Zeitfunktionen von Induktivitäten für die Spannung und den Strom vergleichbar, mit denen Zeitfunktionen
-        von Kapazitäten. Lediglich die Phasenverschiebung des Stromes an Spulen ist der Phasenverschiebung der Kapazitäten entgegengesetzt. 
-        Die Phasenverschiebung $\Delta\varphi$ zwischen der Spannung und dem Strom beträgt an einer Induktivität $\pi/2$. 
+        In principle, the time functions of inductances for voltage and current behave similarly to the time functions
+        of capacitances. Only the phase shift of the current in coils is opposite to the phase shift of capacitors. 
+        The phase shift $\Delta\varphi$ between the voltage and the current at an inductance is $\pi/2$.
     }
     
     \b{
@@ -498,13 +501,14 @@
 \end{frame}
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Induktivität}
     
     \s{
-        Äquivalent zu der Phasenverschiebung an einem Kondensator existiert an der Induktivität ebenfalls eine Phasenverschiebung.
-        Jedoch ist diese Phasenverschiebung des Stromes an der Induktivität der Phasenverschiebung der Kapazität entgegengerichtet.
-        Im konkreten Fall in der Abbildung \ref{BildPhasenSpule} wird gezeigt, dass der der Strom (rot) an einer Induktivität der 
-        Spannung (blau) nacheilt. 
+        Equivalent to the phase shift at a capacitor, there is also a phase shift at the inductance.
+        However, this phase shift of the current at the inductance is opposite to the phase shift of the capacitance.
+        In the specific case shown in Figure \ref{BildPhasenSpule}, it can be seen that the current (red) at an inductance lags behind the 
+        voltage (blue).
     }
     
     \b{
@@ -519,7 +523,7 @@
     
     \fu{
         \input{Tikz/src/Komplexe_Wechselstromrechnung/Phasenverschiebung_Spule}
-    }{{\bf Phasenverschiebung zwischen Strom und Spannung an einer Spule.} Der Strom folgt der Spannung an der Spule um 90° nach.
+    }{{\bf Phase shift between current and voltage at a coil.} The current lags the voltage at the coil by 90°.
         \label{BildPhasenSpule}}
     
 \end{frame}
@@ -529,20 +533,21 @@
 \begin{frame}
     \ftx{Sinusschwingung an einer Spule}
     
-    \begin{Merksatz}{Sinusschwingung an einer Spule}
-        Bei einer idealen Induktivität folgt der Wechselstrom der Wechselspannung um 90° nach.     
-    \end{Merksatz}
+    \begin{Key point}{Sinusoidal oscillation on a coil}
+        With ideal inductance, the alternating current lags the alternating voltage by 90°.     
+    \end{Key point}
 \end{frame}
 
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Ideale und reale Spule}
     
     \s{
-        Wie auch der ohmsche Widerstand und der Kondensator weist die reale Spule parasitäre Effekte auf. Über den Spulendraht 
-        wirkt ein ohmscher Anteil ($R_\mathrm{paras.}$) auf die komplexe Impedanz der Spule ein. Zusätzlich erzeugt die Wicklung 
-        der Spule kapazitive Effekte ($C_\mathrm{paras.}$). In der Abbildung \ref{BildRealeSpule} wird das Ersatzschaltbild einer 
-        idealen Spule und einer realen Spule dargestellt. 
+        Like ohmic resistance and capacitors, real coils exhibit parasitic effects. The coil wire 
+        has an ohmic component ($R_\mathrm{paras.}$) that affects the complex impedance of the coil. In addition, the winding 
+        of the coil generates capacitive effects ($C_\mathrm{paras.}$). Figure \ref{BildRealeSpule} shows the equivalent circuit diagram of an 
+        ideal coil and a real coil.
     }
     
     \b{
@@ -555,21 +560,23 @@
     
     \fu{
         \input{Tikz/src/Komplexe_Wechselstromrechnung/Gegenueberstellung_ideale_reale_Spule}
-    }{{\bf Gegenüberstellung einer idealen und einer realen Spule.} Die reale Spule weist serielle ohmsche und parallele
-        kapazitive parasitäre Effekte auf. \label{BildRealeSpule}}
+    }{{\bf Comparison of an ideal and a real coil.} The real coil exhibits serial ohmic and parallel
+        capacitive parasitic effects. \label{BildRealeSpule}}
     
 \end{frame}
 
 
 \begin{frame}
-    \ftb{Quellen von Wechselgrößen}
+    \renewcommand{\figurename}{Figure}
+    \ftb{Sources of alternating quantities}
     
     \s{
-        Wie bei Quellen von Gleichströmen und Gleichspannungen existieren Wechselquellen mit vergleichbaren Merkmalen. Bei der
-        idealen Wechselspannungsquelle ist die Spannung eingeprägt. Die Wechselspannung ändert sich nicht mit der Abhängigkeit 
-        des Stromes, welcher durch sie hindurchfließt. Die ideale Wechselstromquelle stellt einen eingesprägten Strom zur 
-        Verfügung. Dieser wird nicht durch die angeschlossene Last beeinflusst. Die Schaltungssymbole einer idealen 
-        Wechselspannungsquelle und einer idealen Wechselstromquelle werden in der Abbildung \ref{BildIdealeQuellen} dargestellt. 
+        As with sources of direct current and direct voltage, there are alternating current sources with comparable characteristics. In an
+        ideal alternating voltage source, the voltage is fixed. The alternating voltage does not change depending on 
+        the current flowing through it. 
+        The ideal alternating current source provides a fixed current . 
+        This is not influenced by the connected load. The circuit symbols for an ideal 
+        alternating voltage source and an ideal alternating current source are shown in Figure \ref{BildIdealeQuellen}. 
     }
     
     \b{
@@ -582,20 +589,21 @@
     
     \fu{
         \input{Tikz/src/Komplexe_Wechselstromrechnung/Quellen_Wechselgroessen}
-    }{{\bf Quellen von Wechselgrößen.} Ideale Wechselspannungsquelle und ideale Wechselstromquelle. \label{BildIdealeQuellen}}
+    }{{\bf Sources of alternating quantities.} Ideal AC voltage source and ideal AC current source. \label{BildIdealeQuellen}}
 \end{frame}
 
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Reale Wechselspannungsquelle}
     
     \s{
-        Bei den beiden vorgestellten Wechselquellen werden ideale Quellen abgebildet. Reale Wechselquellen weisen wie auch die 
-        Quellen von Gleichspannungen und Gleichströmen Innenwiderstände auf. Diese Innenwiderstände prägen sich bei Quellen von 
-        Wechselgrößen als komplexe Impedanzen aus. Die reale Wechselspannungsquelle hat also eine komplexe Innenimpedanz 
-        $\underline{Z}_\mathrm{i}$, welche mit einer idealen Wechselspannungsquelle in Serie geschaltet ist. Bei realen 
-        Wechselspannungsquellen ist die Ausgangsspannung $\underline{U}$ von der angeschlossenen Last abhängig. Die Gegenüberstellung
-        einer idealen und einer realen Wechselspannungsquelle ist in der Abbildung \ref{BildIdealSpannung} dargestellt. 
+        The two alternating current sources presented here are ideal sources. Real alternating current sources, like 
+        sources of direct voltage and direct current, have internal resistance. This internal resistance manifests itself in sources of 
+        alternating quantities as complex impedances. The real alternating voltage source therefore has a complex internal impedance
+        $\underline{Z}_\mathrm{i}$, which is connected in series with an ideal alternating voltage source. In real 
+        alternating voltage sources, the output voltage $\underline{U}$ depends on the connected load. The comparison
+        between an ideal and a real alternating voltage source is shown in Figure \ref{BildIdealSpannung}.
     }
     
     \b{
@@ -608,13 +616,13 @@
     
     \fu{
         \input{Tikz/src/Komplexe_Wechselstromrechnung/Gegenueberstellung_ideale_reale_Wechselspannungsquelle}
-    }{{\bf Gegenüberstellung einer idealen und einer realen Wechselspannungsquelle.} Die reale Wechselspannungsquelle weist eine
-        Serienimpedanz $\underline{Z}_\mathrm{i}$ auf. \label{BildIdealSpannung}}
+    }{{\bf Comparison of an ideal and a real alternating voltage source.} The real alternating voltage source has a
+        series impedance $\underline{Z}_\mathrm{i}$. \label{BildIdealSpannung}}
     
     \s{
-        Die Ausgangsspannung einer realen Wechselspannungsquelle lässt sich nach Gleichung \ref{GleichungQuel1} bestimmen. 
-        Hier liegt die Wechselspannung der Wechselspannungsquelle nicht direkt an den Klemmen an. Sie wird durch die Spannung
-        über die Innenimpedanz $Z_\mathrm{i}$ reduziert. 
+        The output voltage of a real AC voltage source can be determined using equation \ref{GleichungQuel1}.
+        Here, the AC voltage of the AC voltage source is not directly applied to the terminals. It is reduced by the voltage
+        across the internal impedance $Z_\mathrm{i}$. 
     }
     
     \only<3>{
@@ -632,10 +640,10 @@
     \ftx{Charakteristik von realen Wechselspannungsquellen}
     
     \s{
-        Reale Wechselspannungsquellen weisen gewisse Charakteristika ohne Last beim Leerlauf und bei einem Kurzschluss auf.
-        Beim Leerlauf liegt zwischen den Klemmen eine unendlich große Impedanz. Es wird kein geschlossener Stromkreis gebildet 
-        und es stellt sich kein Stromfluss ein (Gleichung \ref{GleichungQuel2}). Die gesamte Spannung der Wechselspannungsquelle 
-        liegt an den offenen Klemmen an, siehe Gleichung \ref{GleichungQuel3}.
+        Real AC voltage sources exhibit certain characteristics when unloaded, at no load and in the event of a short circuit. 
+        When idle, there is an infinite impedance between the terminals. No closed circuit is formed 
+        and no current flows (equation \ref{GleichungQuel2}). The entire voltage of the AC source 
+        is applied to the open terminals, see equation \ref{GleichungQuel3}.
     }
     
     \b{
@@ -650,11 +658,11 @@
     \end{eq}
     
     \s{
-        Beim Kurzschluss geht die Impedanz zwischen den Klemmen gegen null und es fällt dort keine Spannung ab. So stellt sich ein 
-        größter möglicher Kurzschlussstrom ein, welcher lediglich durch die Innenimpedanz begrenzt wird (Gleichung \ref{GleichungQuel4}).
-        Die Spannungs der Wechselspannungsquelle wirkt so in Gänze über die Innenimpedanz (Gleichung \ref{GleichungQuel5}). Der 
-        Kurzschlussstrom lässt sich nach Gleichung \ref{GleichungQuel6} aus dem Verhältnis aus der Spannung über die Innenimpedanz 
-        $\underline{U}_\mathrm{i}$ und der Innenimpedanz $\underline{Z}_\mathrm{i}$ bestimmen.
+        In the event of a short circuit, the impedance between the terminals approaches zero and there is no voltage drop. This results in the 
+        maximum possible short-circuit current, which is limited only by the internal impedance (equation \ref{GleichungQuel4}).
+        The voltage of the AC voltage source thus acts in its entirety across the internal impedance (Equation \ref{GleichungQuel5}). The 
+        short-circuit current can be determined according to Equation \ref{GleichungQuel6} from the ratio of the voltage across the internal impedance 
+        $\underline{U}_\mathrm{i}$ and the internal impedance $\underline{Z}_\mathrm{i}$.
     }
     
     \b{
@@ -675,22 +683,22 @@
 
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Beispielaufgabe}
-    \begin{bsp}{Reale Spannungsquelle}{Reale Spannungsquelle:}
+    \begin{expl}{Real Voltage source}{Reale Spannungsquelle:}
         
         \begin{enumerate}
             \only<1>{\item[]	
-            
-                  Eine Reale Spannungsquelle (230\ V, 50\ Hz) verfügt nach der unten stehenden Abbildung über eine Innenimpedanz $\underline{Z}_\mathrm{i}$, welche sich aus 
-                  einer Spule $L=20\ mH$ und einem ohmschen Widerstand $R=10\ m\Omega$ zusammensetzt. 
-                  
+                    A real voltage source (230 V, 50 Hz) has an internal impedance $\underline{Z}_\mathrm{i}$ as shown in the figure below, which consists of 
+                    a coil $L=20\ mH$ and an ohmic resistance $R=10\ m\Omega$.
+                   
                   \fu{
                       \resizebox{0.5\textwidth}{!}{
                           \input{Tikz/src/Komplexe_Wechselstromrechnung/Beispiel_reale_Spannungsquelle}
                       }
-                  }{{\bf Beispiel.} Wechselspannungsquelle mit einer Innenimpedanz aus einer Spule und einem Widerstand. \label{BildBeispielQuelle}}
+                  }{{\bf Example.} Alternating voltage source with an internal impedance consisting of a coil and a resistor. \label{BildBeispielQuelle}}
                   
-                  Bestimmen Sie die {\bf Leerlaufspannung} und den {\bf Kurzschlussstrom} der Wechselspannungsquelle.
+                  Determine the {\bf open-circuit voltage} and the {\bf short-circuit current} AC voltage source.
                   }
                   
                   \only<2>{
@@ -703,13 +711,13 @@
                       \underline{Z}_\mathrm{i} &= 0,01\ \Omega + j 6,28\ \Omega       \nonumber
                   \end{eqa}
                   
-                  {\bf Leerlaufspannung}:
+                  {\bf Open-circuit voltage}:
                   \begin{eqa}
                       \underline{U} &= \underline{U}_\mathrm{0}        \nonumber    \\
                       \underline{U} &= 230\ V \cdot e^{\mathrm{j}0^o}         \nonumber
                   \end{eqa}
                   
-                  {\bf Kurzschlussstrom}:
+                  {\bf Short-circuit current}:
                   \begin{eqa}
                       \underline{I}_\mathrm{k} &= \frac{\underline{U}_\mathrm{0}}{\underline{Z}_\mathrm{i}}           \nonumber        \\
                       \underline{I}_\mathrm{k} &= \frac{230\ V \cdot e^{\mathrm{j}0^o}}{0,01\ \Omega + j 6,28\ \Omega}           \nonumber        \\
@@ -718,18 +726,19 @@
                   }
                   }    
         \end{enumerate}
-    \end{bsp}
+    \end{expl}
 \end{frame}
 
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Reale Wechselstromquelle}
     
     \s{
-        Die reale Wechselstromquelle in der Abbildung \ref{BildIdealStrom} verfügt wie die Wechselspannungsquelle über 
-        eine Innenimpedanz $\underline{Z}_\mathrm{i}$, wobei diese Innenimpedanz nicht wie bei der Wechselspannungsquelle 
-        in serie geschlatet ist, sondern parallel zu einer idealen Wechselstromquelle liegt. Der sich ergebende Ausgangsstrom 
-        $\underline{I}$ der Quelle ist von der angeschlossenen Last, bzw. von der Ausgangsspannung $\underline{U}$ abhängig. 
+        Like the AC voltage source, the real AC source in Figure \ref{BildIdealStrom} has 
+        an internal impedance $\underline{Z}_\mathrm{i}$, whereby this internal impedance is not connected in series as in the AC voltage source, 
+        but rather in parallel to an ideal AC source. The resulting output current 
+        $\underline{I}$ of the source depends on the connected load or the output voltage $\underline{U}$.
     }
     
     \b{
@@ -742,13 +751,13 @@
     
     \fu{
         \input{Tikz/src/Komplexe_Wechselstromrechnung/Quellen_Wechelgroessen2}
-    }{{\bf Quellen von Wechselgrößen.} Ideale Wechselstromquelle und ideale Wechselstromquelle. \label{BildIdealStrom}}
+    }{{\bf Sources of alternating quantities.} Ideal AC source and ideal AC source. \label{BildIdealStrom}}
     
     \s{
-        Der Wechselstrom der idealen Wechselstromquelle wird durch einen Anteil durch die Innenimpedanz reduziert. Der 
-        Ausgangsstrom der realen Wechselstromquelle lässt sich über die Gleichung \ref{GleichungQuel7} bestimmen. Hier 
-        wird ausgehend vom Quellstrom $\underline{I}_\mathrm{0}$ der ausgangsspannungsabhängige ($\underline{U}$) 
-        Wechselstromanteil  $\underline{I}_\mathrm{i}$ durch die Innenimpedanz $\underline{Z}_\mathrm{i}$ abgezogen.
+        The alternating current of the ideal alternating current source is reduced by a portion due to the internal impedance. The 
+        output current of the real alternating current source can be determined using equation \ref{GleichungQuel7}. Here, 
+        starting from the source current $\underline{I}_\mathrm{0}$, the output voltage-dependent ($\underline{U}$) 
+        alternating current component  $\underline{I}_\mathrm{i}$ is subtracted by the internal impedance $\underline{Z}_\mathrm{i}$.
     }
     
     \only<3>{
@@ -764,14 +773,15 @@
 
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Äquivalenz von Wechselquellen}
     
     \s{
-        {\bf Wechselquellenumwandlung} \\
+        {\bf AC conversion} \\
         
         
-        Wechselstrom- und Wechselspannungsquellen können ineinander umgewandelt werden, wenn beide Wechselquellen den identischen
-        Kurzschlussstrom und die gleiche Leerlaufspannung aufweisen. 
+        Alternating current and alternating voltage sources can be converted into each other if both alternating sources have the same
+        short-circuit current and the same open-circuit voltage.
     }
     
     \b{
@@ -780,12 +790,12 @@
     
     \fu{
         \input{Tikz/src/Komplexe_Wechselstromrechnung/Gegenueberstellung_reale_Wechselspannung_Wechselstromquelle}
-    }{{\bf Gegenüberstellung einer realen Wechselspannungsquelle und einer realen Wechselstromquelle.} Die reale Wechselspannungsquelle
-        und die reale Wechselstromquelle sind ineinander umwandelbar. \label{BildQuelleUmwandlung}}
+    }{{\bf Comparison of a real alternating voltage source and a real alternating current source.} The real AC voltage source
+        and the real AC current source are convertible into each other. \label{BildQuelleUmwandlung}}
     
     \s{
-        Beide Wechselquellen sind äquivalent, wenn nach Gleichung \ref{GleichungQuel8} und Gleichung \ref{GleichungQuel9} das ohmsche 
-        Gesetz mit identischen Innenimpedanzen für die Wechselspannungsquelle und die Wechselstromquelle gilt. 
+        Both AC sources are equivalent if, according to Equation \ref{GleichungQuel8} and Equation \ref{GleichungQuel9}, Ohm's law applies 
+        with identical internal impedances for the AC voltage source and the AC current source. 
     }
     
     \b{
@@ -800,9 +810,9 @@
     \end{eq}
     
     \s{
-        Hierbei soll der Kurzschlussstrom $\underline{I}_\mathrm{K}$ gleich dem Quellstrom $\underline{I}_\mathrm{0}$ der 
-        Wechselstromquelle sein, welcher identisch zu dem Ausgangsstrom $\underline{I}$ ist. Die Ausgangswechselspannung
-        $\underline{U}$ der Wechselquellen enspricht der Leerlaufspannung $\underline{U}_\mathrm{L}$.
+        Here, the short-circuit current $\underline{I}_\mathrm{K}$ should be equal to the source current $\underline{I}_\mathrm{0}$ of the 
+        alternating current source, which is identical to the output current $\underline{I}$. The output alternating voltage
+        $\underline{U}$ of the alternating sources corresponds to the open-circuit voltage $\underline{U}_\mathrm{L}$.
     }
     
     \b{
@@ -820,18 +830,18 @@
 
 \begin{frame}
     \ftx{Beispielaufgabe}
-    \begin{bsp}{Wechselquellenumwandlung}{Wechselquellenumwandlung:}
+    \begin{expl}{AC conversion}{Wechselquellenumwandlung:}
         
         \begin{enumerate}
             \only<1>{\item[]
-                  Gegeben ist eine reale Wechselspannungsquelle mit $\underline{U}_\mathrm{0} = 20\ kV \cdot \mathrm{e}^{\mathrm{j}30^o}$ und 
-                  $\underline{Z}_\mathrm{0} = (0,01 + j \cdot 2)\ \Omega$. Wandeln Sie die Wechselspannungsquelle in eine äquivalente 
-                  Wechselstromquelle um, berechnen Sie hierzu den Kurzschlussstrom.\\
+                Given is a real AC voltage source with $\underline{U}_\mathrm{0} = 20\ kV \cdot \mathrm{e}^{\mathrm{j}30^o}$ and 
+                $\underline{Z}_\mathrm{0} = (0.01 + j \cdot 2)\ \Omega$. Convert the alternating voltage source into an equivalent 
+                alternating current source and calculate the short-circuit current.\\
                   }
                   \only<2>{
             \item[] 
                   \onslide<2>{
-                      {\bf Kurzschlussstrom:}
+                      {\bf Short-circuit current:}
                       
                       
                       \begin{eq}
@@ -843,34 +853,35 @@
                   }
         \end{enumerate}
         
-    \end{bsp}
+    \end{expl}
 \end{frame}
 
 
 \begin{frame}
-    \ftb{Komplexer Spannungsteiler und komplexer Stromteiler}
+    \renewcommand{\figurename}{Figure}
+    \ftb{Complex voltage divider and complex current divider}
     
     \s{
-        Wie bei der Betrachtung von Gleichstromnetzwerken gelten die Grundgesetze zur Analyse von Wechselstromnetzen.
-        Die Knotenregel und die Maschenregel sind hier äquivalent anzuwenden. Der bereits vorgestellte Beispielknoten 
-        und die Beispielmasche werden in der Abbildung \ref{BildKnotenMaschenKomplex} mit komplexen Wechselgrößen noch 
-        einmal dargestellt. Hieraus resultiert die Ausformulierung der folgenden Gleichung \ref{KnotenregelKomplex} als 
-        Beispiel der komplexen Knotenregel:
+        As with the consideration of direct current networks, the basic laws for analysing alternating current networks apply.
+        The node rule and the mesh rule are to be applied equivalently here. The example node 
+        and the example mesh already presented are shown once again in Figure \ref{BildKnotenMaschenKomplex} with complex alternating quantities.
+        This results in the formulation of the following equation \ref{KnotenregelKomplex} as an 
+        example of the complex node rule:
         
         \begin{eq}
             \sum_{k = 1}^{N}{\underline{I}_\mathrm{k}} = 0 = \underline{I}_\mathrm{1} + \underline{I}_\mathrm{2} - 
             \underline{I}_\mathrm{3} - \underline{I}_\mathrm{4} - \underline{I}_\mathrm{5}    \label{KnotenregelKomplex}
         \end{eq}
         
-        Sowie die Gleichung \ref{MaschengleichungKomplex} als Beispiel der komplexen Maschenregel:
+        As well as equation \ref{MaschengleichungKomplex} as an example of the complex mesh rule:
         
         \begin{eq}
             \sum_\mathrm{k = 1}^{N}{\underline{U}_\mathrm{k}} = \underline{U}_\mathrm{Z2} - \underline{U}_\mathrm{Z1}
             = 0  \label{MaschengleichungKomplex}
         \end{eq}
         
-        Hier ist im Gegensatz zur Gleichstrombetrachtung, wo ausschließlich mit reellen Werten gerechnet wird, lediglich 
-        darauf zu achten, dass mit komplexen Wechselgrößen gearbeitet wird. 
+        In contrast to direct current analysis, where only real values are used in calculations, here it is only necessary to 
+        ensure that complex alternating quantities are used. 
     }
     
     \b{
@@ -893,36 +904,38 @@
         \resizebox{0.7\textwidth}{!}{
             \input{Tikz/src/Komplexe_Wechselstromrechnung/Knoten_und_Maschenregel}
         }
-    }{{\bf Knotenregel und Maschenregel mit komplexen Wechselgrößen.} Die Knotenregel und die Maschenregel verhalten sich
-        mit komplexen Wechselgrößen identisch wie bei Gleichstromnetzwerken. \label{BildKnotenMaschenKomplex}}
+    }{{\bf Knot rule and mesh rule with complex alternating variables.} The node rule and the mesh rule behave
+        identically with complex alternating quantities as with direct current networks. \label{BildKnotenMaschenKomplex}}
     
     
     
 \end{frame}
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Komplexer Spannungsteiler}
     
     \s{
-        Der komplexe Spannungsteiler dient der Reduzierung einer Gesamtspannung z.B. der Anpassung eines Signalpegels an dem 
-        Eingangsspannungsbereich einer Messschaltung. In der Abbildung \ref{BildKomplxSpannungsteiler1} wird ein komplexer 
-        Spannungsteiler aus zwei komplexen Impedanzen dargestellt. Die komplexe Gesamtspannung $\underline{U}_\mathrm{0}$
-        wird über die beiden Impedanzen $\underline{Z}_\mathrm{1}$ und $\underline{Z}_\mathrm{2}$ in die Teilspannungen 
-        $\underline{U}_\mathrm{1}$ und $\underline{U}_\mathrm{2}$ aufgeteilt.  
+        The complex voltage divider is used to reduce a total voltage, e.g. to adjust a signal level to the 
+        input voltage range of a measuring circuit. Figure \ref{BildKomplxSpannungsteiler1} shows a complex 
+        voltage divider consisting of two complex impedances. The complex total voltage $\underline{U}_\mathrm{0}$         
+        is divided into the partial voltages $\underline{U}_\mathrm{1}$ and $\underline{U}_\mathrm{2}$ via the two 
+        impedances $\underline{Z}_\mathrm{1}$ and $\underline{Z}_\mathrm{2}$.
         
         \fu{
             \resizebox{0.3\textwidth}{!}{
                 \input{Tikz/src/Komplexe_Wechselstromrechnung/Komplexer_Spannungsteiler}
             }
-        }{{\bf Ein komplexer Spannungsteiler bestehend aus zwei Impedanzen in Serie.} Die komplexe Gesamtspannung
-            $\underline{U}_\mathrm{0}$ wird in die Teilspannungen $\underline{U}_\mathrm{1}$ und $\underline{U}_\mathrm{2}$
-            aufgeteilt. \label{BildKomplxSpannungsteiler1}}
+        }{{\bf A complex voltage divider consisting of two impedances in series.} The complex total voltage
+            $\underline{U}_\mathrm{0}$ is divided into the partial voltages $\underline{U}_\mathrm{1}$ and $\underline{U}_\mathrm{2}$
+            \label{BildKomplxSpannungsteiler1}}
         
-        Die Gesamtspannung teilt sich im Verhältnis der komplexen Impedanzen auf (vgl. Gleichung \ref{GleichungTeiler1}). Basierend
-        auf dem komplexen Strom $\underline{I}$, welcher die gesamte Serienschaltung durchströmt, lassen sich die komplexen Teilspannungen
-        $\underline{U}_\mathrm{1}$ und $\underline{U}_\mathrm{2}$ und ihre komplexen Impedanzen $\underline{Z}_\mathrm{1}$ und 
-        $\underline{Z}_\mathrm{2}$ im Verhältnis zu der komplexen Gesamtspannung $\underline{U}_\mathrm{0}$ und der gesamten komplexen 
-        Impedanz $\underline{Z}_\mathrm{1} + \underline{Z}_\mathrm{2}$ bestimmen. 
+        
+        The total voltage is divided in proportion to the complex impedances (see Equation \ref{GleichungTeiler1}). Based
+        on the complex current $\underline{I}$ flowing through the entire series connection, the complex partial voltages
+        $\underline{U}_\mathrm{1}$ and $\underline{U}_\mathrm{2}$ and their complex impedances $\underline{Z}_\mathrm{1}$ and 
+        $\underline{Z}_\mathrm{2}$ can be determined in relation to the complex total voltage $\underline{U}_\mathrm{0}$ and the total complex
+        impedance $\underline{Z}_\mathrm{1} + \underline{Z}_\mathrm{2}$ can be determined. 
         
         \begin{eq}
             \underline{I} = \frac{\underline{U}_\mathrm{0}}{\underline{Z}_\mathrm{1} + \underline{Z}_\mathrm{2}}
@@ -930,18 +943,18 @@
             = \frac{\underline{U}_\mathrm{2}}{\underline{Z}_\mathrm{2}}     \label{GleichungTeiler1}
         \end{eq}
         
-        Durch das Umstellen der Gleichung \ref{GleichungTeiler1} kann das komplexe Teilverhältnis $\underline{T}$ für die Gleichung 
-        \ref{GleichungTeiler2} aufgestellt werden: 
+        By rearranging equation \ref{GleichungTeiler1}, the complex partial ratio $\underline{T}$ for equation 
+        \ref{GleichungTeiler2} can be established: 
         
         \begin{eq}
             \underline{T} = \frac{\underline{U}_\mathrm{2}}{\underline{U}_\mathrm{0}}
             = \frac{\underline{Z}_\mathrm{2}}{\underline{Z}_\mathrm{1} + \underline{Z}_\mathrm{2}}    \label{GleichungTeiler2}
         \end{eq}
         
-        Hier entspricht das Verhältnis aus der komplexen Teilspannung $\underline{U}_\mathrm{2}$ und der komplexen Gesamtspannung 
-        $\underline{U}_\mathrm{0}$ dem Verhältnis aus der komplexen Impedanz $\underline{Z}_\mathrm{2}$ und der gesamten komplexen 
-        Impedanz der Serienschaltung $\underline{Z}_\mathrm{1} + \underline{Z}_\mathrm{2}$. 
-        Das Aufstellen des komplexen Teilverhältnises funktioniert in gleicher Weise für die komplexe Teilspannung $\underline{U}_\mathrm{1}$.
+        Here, the ratio of the complex partial voltage $\underline{U}_\mathrm{2}$ and the complex total voltage 
+        $\underline{U}_\mathrm{0}$ corresponds to the ratio of the complex impedance $\underline{Z}_\mathrm{2}$ and the total complex
+        impedance of the series connection $\underline{Z}_\mathrm{1} + \underline{Z}_\mathrm{2}$. 
+        The complex partial ratio can be established in the same way for the complex partial voltage $\underline{U}_\mathrm{1}$.
     }
     
     \b{
@@ -988,26 +1001,27 @@
 
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Komplexer Spannungsteiler: Anwendungsbeispiel Hochspannungstechnik}
     
     \s{
-        Der komplexe Spannungsteiler findet beispielsweise im ohmsch-kapazitiven Teiler in der Hochspannungstechnik Anwendung. 
-        In der Abbildung \ref{BildKomplxSpannungsteiler2} werden vier verschiedene Teiler dargestellt, welche beispielsweise in 
-        der Hochspannungstechnik verwendet werden. 
+        The complex voltage divider is used, for example, in ohmic-capacitive dividers in high-voltage technology. 
+        Figure \ref{BildKomplxSpannungsteiler2} shows four different dividers that are used, for example, in 
+        high-voltage technology. 
         
         \fu{
             \resizebox{0.5\textwidth}{!}{
                 \input{Tikz/src/Komplexe_Wechselstromrechnung/Gegenueberstellung_Teiler_Hochspannung}
             }
-        }{{\bf Gegenüberstellung von verschiedenen Teilern der Hochspannungstechnik.} Ohmscher Teiler zur Verwendung mit Gleichspannung und
-            der kapazitive Teiler und der gedämpft kapazitive Teiler zur Verwendung mit Wechselspannung. Der ohmsch-kapazitive Teiler ist für 
-            beide Spannungsarten verwendbar. \label{BildKomplxSpannungsteiler2}}
+        }{{\bf Comparison of different dividers in high-voltage technology.} Ohmic divider for use with direct voltage and
+        capacitive divider and damped capacitive divider for use with alternating voltage. The ohmic-capacitive divider can be used for 
+        both types of voltage. \label{BildKomplxSpannungsteiler2}}
         
-        Neben dem ohmsch-kapazitiven Teiler werden noch der ohmsche Teiler, der 
-        kapazitive Teiler und der gedämpft kapazitive Teiler vorgestellt. Der ohmsche Teiler besteht rein aus ohmschen Widerständen, 
-        welche seriell verschaltet sind und der kapazitive Teiler besteht rein aus Kondensatoren. Der gedämpft kapazitive Teiler 
-        besteht aus mehreren Modulen mit einer vorgeschalteten Spule. Die Module setzten sich aus Reihenschaltungen aus einem 
-        ohmschen Widerstand und einem Kondensator zusammensetzten.  
+        In addition to the ohmic-capacitive divider, the ohmic divider, the 
+        capacitive divider and the damped capacitive divider are also presented. The ohmic divider consists purely of ohmic resistors, 
+        which are connected in series, and the capacitive divider consists purely of capacitors. 
+        The damped capacitive divider consists of several modules with an upstream coil. The modules are composed of series connections of an 
+        resistive resistor and a capacitor.  
     }
     
     \b{
@@ -1070,30 +1084,29 @@
 \end{frame}
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Komplexer Spannungsteiler}
     
     \s{
-        Das Einfache Beispiel eines solchen ohmsch-kapazitiven Teilers
-        wird in der Abbildung \ref{BildKomplxSpannungsteiler3} gezeigt. Der ohmsch-kapazitive Teiler setzt sich aus mindestens zwei 
-        in serie geschlateten Parallelschaltungen aus einem ohmschen Widerstand und einem Kondensator, einem sogennanten RC-Glied 
-        zusammen. In der Abbildung \ref{BildKomplxSpannungsteiler3} besteht das erste RC-Glied aus dem Widerstand $R_1$ und dem 
-        Kondensator $C_1$. Das zweite RC-Glied besteht aus dem Widerstand $R_2$ und Kondensator $C_2$. Die komplexe Gesamtspannung 
-        $\underline{U}_\mathrm{0}$ liegt über beide RC-Glieder an. Die komplexe Teilspannung $\underline{U}_\mathrm{2}$ liegt über 
-        dem zweiten RC-Glied an. Das Teilverhältnis hat somit ohmsche und kapazitive Anteile. So liegt durch die Kapazität des 
-        Kondensators ein frequenzabhängiges Teilverhältnis vor. 
+        A simple example of such an ohmic-capacitive divider
+        is shown in Figure \ref{BildKomplxSpannungsteiler3}. The ohmic-capacitive divider consists of at least two 
+        parallel circuits connected in series, each comprising an ohmic resistor and a capacitor, known as an RC element .
+        In Figure \ref{BildKomplxSpannungsteiler3}, the first RC element consists of the resistor $R_1$ and the capacitor $C_1$. The second RC element consists of the resistor $R_2$ and the capacitor $C_2$. The complex total voltage         
+        $\underline{U}_\mathrm{0}$ is applied across both RC elements. The complex partial voltage $\underline{U}_\mathrm{2}$ is applied across 
+        the second RC element. The partial ratio therefore has ohmic and capacitive components. The capacitance of the 
+        capacitor results in a frequency-dependent partial ratio.
         
         \fu{
             \resizebox{0.3\textwidth}{!}{
                 \input{Tikz/src/Komplexe_Wechselstromrechnung/Spannungsteiler_ohmsch-kapazitiv}
             }
-        }{{\bf Ein ohmsch-kapazitiver Spannungsteiler aus zwei RC-Gliedern.} Die RC-Glieder bestehen jeweils aus einer Parallelschaltung
-            eines Widerstandes und eines Kondensators. \label{BildKomplxSpannungsteiler3}}
+        }{{\bf An ohmic-capacitive voltage divider consisting of two RC elements.} The RC elements each consist of a parallel connection
+        of a resistor and a capacitor. \label{BildKomplxSpannungsteiler3}}
         
-        Ein besonderer Zustand liegt vor, wenn der komplexe Spannungsteiler abgeglichen ist. Dieser Zustand beschreibt das identische 
-        Verhältnis der Bauteile zueinander. Dieser Zustand wird durch die Gleichung \ref{GleichungTeiler3} beschrieben. Hier 
-        muss das Produkt aus dem Widerstand $R_1$ und dem Kondensator $C_1$ identisch mit dem Produkt aus dem Widerstand $R_2$ und dem 
-        Kondensator $C_2$ sein. Diese Abgleichbedingung lässt sich in der Praxis durch veränderliche Bauteile, wie Trimmkondensatoren, 
-        realisieren. 
+        A special condition exists when the complex voltage divider is balanced. This condition describes the identical 
+        ratio of the components to each other. This condition is described by equation \ref{GleichungTeiler3}. Here 
+        the product of the resistor $R_1$ and the capacitor $C_1$ must be identical to the product of the resistor $R_2$ and the 
+        capacitor $C_2$. In practice, this balancing condition can be achieved using variable components such as trimmer capacitors. 
         
         \begin{eq}
             R_1 \cdot C_1 = R_2 \cdot C_2   \label{GleichungTeiler3}
@@ -1142,38 +1155,42 @@
 \end{frame}
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Komplexer Spannungsteiler: Anwendungsbeispiel Tastkopf}
     
     \s{
-        Ein weiteres Anwedungsbeispiel für einen ohmsch-kapazitiven Teiler ist der Tastkopf eines Oszilloskops. Solch ein
-        Teiler wird in der Abbildung \ref{BildKomplxSpannungsteiler4} vorgestellt. Im Prinzip unterscheid sich das Bild 
-        nicht erheblich vom ohmsch-kapazitiven Teiler. Jedoch sind hier das erste und das zweite RC-Glied von einander 
-        räumlich getrennt und mit einem Gehäuse umgeben. So steht das erste RC-Glied für den Tastkopf und das zweite 
-        RC-Glied für die beschaltung im Oszilloskop. Mit dem ohmsches Teilverhältnis:
+        Another example of an ohmic-capacitive divider is the probe of an oscilloscope. Such a
+        divider is shown in Figure \ref{BildKomplxSpannungsteiler4}. 
+        In principle, the image does not differ significantly from the ohmic-capacitive divider. However, 
+        here the first and second RC elements are spatially separated from each other 
+        and enclosed in a housing. The first RC element represents the probe and the second 
+        RC element represents the circuitry in the oscilloscope. With the ohmic division ratio:
+
         \begin{eq}
             \frac{\underline{U}_\mathrm{A}}{\underline{U}_\mathrm{E}} = \frac{R_\mathrm{2}}{R_\mathrm{1}+R_\mathrm{2}}
         \end{eq}
         
-        und dem kapazitiven Teilverhältnis:
+        and the capacitive ratio:
         \begin{eq}
             \frac{\underline{U}_\mathrm{A}}{\underline{U}_\mathrm{E}} = \frac{C_\mathrm{2}}{C_\mathrm{1}+C_\mathrm{2}}
         \end{eq}
         
-        kann zum Abgleichen des Tastkopfes das ohmsche und das kapazitive Teilerverhältnis gleichgesetzt werden, da die 
-        Teilerverhältniss identisch sein müssen:
+        To calibrate the probe, the ohmic and capacitive division ratios can be equated, as the 
+        division ratios must be identical:
         \begin{eq}
             \frac{R_\mathrm{2}}{R_\mathrm{1}+R_\mathrm{2}} = \frac{C_\mathrm{2}}{C_\mathrm{1}+C_\mathrm{2}}
         \end{eq}
         
-        Die Abgleichbedingung nach Gleichung \ref{GleichungTeiler3} gilt weiterhin. Über die verstellbare Kapazität $C_1$
-        wird der Abgleich des Teilers vorgenommen. 
+        The adjustment condition according to equation \ref{GleichungTeiler3} still applies. 
+        The divider is adjusted via the adjustable capacitance $C_1$.
+ 
         
         \fu{
             \resizebox{0.3\textwidth}{!}{
                \input{Tikz/src/Komplexe_Wechselstromrechnung/Spannungsteiler_ohmsch-kapazitiv2}
             }
-        }{{\bf Ein ohmsch-kapazitiver Spannungsteiler als Tastkopf eines Oszilloskops.} Über den Kondensator $C_1$ wird der komplexe
-            Spannungsteiler abgeglichen. \label{BildKomplxSpannungsteiler4}}
+        }{{\bf An ohmic-capacitive voltage divider as the probe head of an oscilloscope.} The complex voltage divider is balanced via capacitor $C_1$.
+        The voltage divider is balanced via capacitor $C_1$. \label{BildKomplxSpannungsteiler4}}
         
     }
     
@@ -1232,24 +1249,25 @@
 
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Komplexer Stromteiler}
     
     \s{
-        Der komplexe Stromteiler, wie er in der Abbildung \ref{BildKomplxStromteiler} vorgestellt wird, teilt den komplexen 
-        Gesamtstrom $\underline{I}$ auf in die Teilströme $\underline{I}_\mathrm{1}$ und $\underline{I}_\mathrm{2}$ auf. Die beiden
-        Teilströme $\underline{I}_\mathrm{1}$ und $\underline{I}_\mathrm{2}$ durchfließen die Admittanzen $\underline{Y}_\mathrm{1}$
-        und $\underline{Y}_\mathrm{2}$.
+        The complex current divider, as shown in Figure \ref{BildKomplxStromteiler}, divides the complex 
+        total current $\underline{I}$ into the partial currents $\underline{I}_\mathrm{1}$ and $\underline{I}_\mathrm{2}$. The two
+        partial currents $\underline{I}_\mathrm{1}$ and $\underline{I}_\mathrm{2}$ flow through the admittances $\underline{Y}_\mathrm{1}$
+        and $\underline{Y}_\mathrm{2}$.
         
         \fu{
             \resizebox{0.3\textwidth}{!}{
                 \input{Tikz/src/Komplexe_Wechselstromrechnung/Stromteiler_komplex}
             }
-        }{{\bf Ein komplexer Stromteiler bestehend aus zwei Admittanzen.} Der komplexe Strom $\underline{I}$ teilt sich
-            auf in die Ströme $\underline{I}_\mathrm{1}$ und $\underline{I}_\mathrm{2}$. \label{BildKomplxStromteiler}}
+        }{{\bf A complex current divider consisting of two admittances.} The complex current $\underline{I}$ is divided
+        into the currents $\underline{I}_\mathrm{1}$ and $\underline{I}_\mathrm{2}$. \label{BildKomplxStromteiler}}
         
-        Die komplexe Spannung $\underline{U}$ lässt sich nach Gleichung \ref{GleichungStromteiler1} über das Verhältnis aus 
-        dem Gesamtstrom $\underline{I}$ und der Gesamtadmittanz $\underline{Y}_\mathrm{1} + \underline{Y}_\mathrm{2}$ oder 
-        aus den Verhältnissen der einzelnen Stromzweige:
+        The complex voltage $\underline{U}$ can be calculated according to Equation \ref{GleichungStromteiler1} using the ratio of 
+        the total current $\underline{I}$ and the total admittance $\underline{Y}_\mathrm{1} + \underline{Y}_\mathrm{2}$ or 
+        using the ratios of the individual current branches:
         
         \begin{eq}
             \underline{U} = \frac{\underline{I}_\mathrm{0}}{\underline{Y}_\mathrm{1}+\underline{Y}_\mathrm{2}} = 
@@ -1257,8 +1275,8 @@
             \frac{\underline{I}_\mathrm{2}}{\underline{Y}_\mathrm{2}}   \label{GleichungStromteiler1}
         \end{eq}
         
-        Das Teilerverhältnis lässt sich nach Gleichung \ref{GleichungStromteiler2} für die beiden Stromzweige definieren: 
-        
+        The division ratio can be defined for the two current branches according to equation \ref{GleichungStromteiler2}: 
+
         \begin{eqa}
             \underline{T}_\mathrm{i1} = \frac{\underline{I}_\mathrm{1}}{\underline{I}_\mathrm{0}} = 
             \frac{\underline{Y}_\mathrm{1}}{\underline{Y}_\mathrm{1}+\underline{Y}_\mathrm{2}}  \label{GleichungStromteiler2}  \\ 

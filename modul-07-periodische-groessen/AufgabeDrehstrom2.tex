@@ -1,20 +1,20 @@
-\subsection{Drehstrom 2}
+\subsection{Three-phase current 2}
 \Aufgabe{
-    Es ist ein symmetrisches Drehstromsystem mit folgenden Spannungen gegeben:
+    It is a symmetrical three-phase system with the following voltages:
     
     $\underline{U}_1=230~V$, $\underline{U}_2=230~V\cdot \underline{a}^2$, $\underline{U}_3=230~V\cdot \underline{a}$
     
-    Die Impedanzen haben alle den Wert $Z=10\Omega $
+    The impedances all have a value of $Z=10\Omega $
     
-    Für alle Aufgabenteile gilt: Lösen Sie die Aufgaben mit dem geringstmöglichen Aufwand!
+    The following applies to all parts of the exercise: Solve the exercises with the least possible effort!
     
     \begin{itemize}
-        \item [\bf a)] Zeichnen Sie die dreiphasigen und einphasigen ESB in Stern- und Dreieckschaltung und beschrifften Sie die ESB korrekt!
-        \item [\bf b)] Berechnen Sie den Betrag der Verbraucherspannungen sowohl für die Stern- als auch die Dreieckschaltung!
-        \item [\bf c)] Berechnen Sie die komplexen Verbraucherspannungen in der Dreieckschaltung!
-        \item [\bf d)] Zeichnen Sie die Zeigerdiagramme der Verbaucherspannungen für die Stern- und Dreieckschaltung!
-        \item [\bf e)] Berechnen Sie die komplexen Lastströme für die Sternschaltung und den Betrag der Lastströme für die Dreieckschaltung!
-        \item [\bf f)] Berechnen Sie die Scheinleistung für die Stern- und Dreieckschaltung!
+        \item [\bf a)] Draw the three-phase and single-phase ESBs in star and delta connections and label the ECDs correctly!
+        \item [\bf b)] Calculate the magnitude of the consumer voltages for both the star and delta connections!
+        \item [\bf c)] Calculate the complex consumer voltages in the delta connection!
+        \item [\bf d)] Draw the phasor diagrams of the consumer voltages for the star and delta connections! 
+        \item [\bf e)] Calculate the complex load currents for the star connection and the magnitude of the load currents for the delta connection!
+        \item [\bf f)] Calculate the apparent power for the star and delta connections!
     \end{itemize}
 }
 
@@ -24,14 +24,14 @@
 
         \item[\bf a)]
         
-              ESBs der Sternschaltung:\\
+              ECDs of the star connection:\\
               \resizebox{0.7\textwidth}{!}{%
                   \input{Tikz/src/Aufgaben/Loesung_Drehstrom2_a1}
               }
               
               \input{Tikz/src/Aufgaben/Loesung_Drehstrom2_a2}
               
-              ESBs der Dreieckschaltung:\\
+              ECDs of the triangular circuit:\\
               
               \resizebox{0.7\textwidth}{!}{%
                   \input{Tikz/src/Aufgaben/Loesung_Drehstrom2_a3}
@@ -40,12 +40,11 @@
               \input{Tikz/src/Aufgaben/Loesung_Drehstrom2_a4}
               
         \item[\bf b)]
-              Der Betrag Verbraucherspannungen ist in der Sternschaltung gleich der Quellspannung: 230 V\\
-              Der Betrag Verbraucherspannungen ist in der Dreieckschaltung $\sqrt{3}$ mal größer als in der Sternschaltung: $230 V\cdot \sqrt{3}=398,37 V\approx 400 V$
-              
+            The amount of consumer voltage in a star connection is equal to the source voltage: 230 V.
+            The amount of consumer voltage in a delta connection is $\sqrt{3}$ times greater than in a star connection: $230 V\cdot \sqrt{3}=398.37 V\approx 400 V$.              
         \item[\bf c)]
         
-              Die komplexe Verbaucherspannungen in der Dreieckschaltung errechnet sich aus den Differenzen der Sternspannungen.
+              The complex consumer voltage in the delta connection is calculated from the differences in the star voltages.
               
               \begin{eqa}
                   \underline{U}_\mathrm{L1L2}&=\underline{U}_\mathrm{L1}-\underline{U}_\mathrm{L2}=230 V-230 V\cdot \underline{a}^2 \notag \\
@@ -65,7 +64,7 @@
               
         \item[\bf d)]
         
-              Zeigerdiagramme der Verbaucherspannungen für die Stern- und Dreieckschaltung:\\
+            Pointer diagrams of the consumer voltages for star and delta connections:\\
               
               \begin{figure}
                   \centering
@@ -76,7 +75,7 @@
               
         \item[\bf e)]
         
-              Der Strom wird über das Ohmsche Gesetz berechnet. Für die Sternschaltung gilt:
+              The current is calculated using Ohm's law. The following applies to star connections:
               
               \begin{eqa}
                   \underline{I}_1&=\frac{\underline{U}_\mathrm{L1}}{\underline{Z}}=\frac{230 V}{10\ohm}=23 A \notag \\
@@ -84,38 +83,38 @@
                   \underline{I}_3&=\frac{\underline{U}_\mathrm{L3}}{\underline{Z}}=\frac{230 V\cdot \underline{a}}{10\ohm}=23 A\cdot\underline{a}   \notag
               \end{eqa}
               
-              Bei dem Dreieckstrom wird zwischen dem Strangstrom und dem Dreieckstrom, also dem Strom durch die Verbraucher unterschieden.
-              Der Strom in den Verbauchersträngen kann mit den Spannung über die Verbraucher in der Dreieckschaltung errechnet werden:
+              With delta current, a distinction is made between the phase current and the delta current, i.e. the current through the consumers.
+              The current in the consumer phases can be calculated using the voltage across the consumers in the delta circuit:
               
               \begin{eqa}
                   I_\Dreieck&=\frac{U\Dreieck}{Z}=\frac{400V}{10\ohm}=40 A \notag
               \end{eqa}
               
-              Der Strom im Strang ist wiederum um $\sqrt{3}$ größer, als in den Verbauchersträngen:
+              The current in the strand is again $\sqrt{3}$ greater than in the consumer strands:
               \begin{eqa}
                   I_\mathrm{str}=\sqrt{3}\cdot I_\Dreieck=\sqrt{3}\cdot 40 A=69,28 A \notag
               \end{eqa}
               
-              Dieser Wert entspricht dem dreifachen Wert des Stroms in einer Sternschaltung
+              This value corresponds to three times the value of the current in a star connection.
               
               
         \item[\bf f)]
         
-              Die allgemein Leistungsgleichung ist folgende:
+              The general power equation is as follows:
               
               \begin{eqa}
                   S=\sqrt{3}\cdot U_\Dreieck \cdot I_\mathrm{str} \notag
               \end{eqa}
               
-              Welcher Strom eingesetzt werden muss, hängt von der jeweiligen Schaltung ab.
-              Wie in Aufgabe 5. berechnet ist der Strangstrom in der Dreieckschaltung um den Faktor 3 größer als in der Sternschaltung
+              The current required depends on the circuit in question.
+              As calculated in task 5, the phase current in the delta circuit is three times greater than in the star circuit.
               
-              Für die Sternschaltung gilt:
+              The following applies to star connections:
               \begin{eqa}
                   S=\sqrt{3}\cdot U\cdot I=\sqrt{3}\cdot 400 V \cdot 23 A=15.934 VA \notag
               \end{eqa}
               
-              Und für die Dreieckschaltung gilt:
+              And for the delta connection, the following applies:
               \begin{eqa}
                   S=\sqrt{3}\cdot U\cdot I=\sqrt{3}\cdot 400 V \cdot 3\cdot 23 A=47.804 VA \notag
               \end{eqa}

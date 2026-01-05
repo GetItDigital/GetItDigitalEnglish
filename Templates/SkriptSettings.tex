@@ -113,6 +113,42 @@
 	fonttitle=\bfseries,
 	title={#2},#1,breakable}{bsp}
 
+%Beispiel
+\newtcbtheorem[number within=section]{expl}{Example}{enhanced,
+	before skip=1cm,
+	after skip=1cm,
+	colframe=GETgreen,
+	colbacktitle=GETgreen,
+	colback=white,
+	boxrule=0.5mm,
+	attach boxed title to top left={xshift=1.14cm,yshift*=-\tcboxedtitleheight/2}, varwidth boxed title*=-3cm,
+	boxed title style={frame code={
+					\path[left color=tcbcolback,right color=tcbcolback,
+					middle color=tcbcolback]
+					([xshift=1.6mm]frame.north west)[rounded corners=0.5mm]
+					-- ([xshift=1.6mm]frame.north east)
+					-- ([xshift=-1mm]frame.south east)
+					-- ([xshift=-1mm]frame.south west)
+					-- cycle;
+					\path[left color=tcbcolback,right color=tcbcolback,
+					middle color=tcbcolback]
+					([xshift=-3mm]frame.north west)[rounded corners=0.5mm]
+					-- ([xshift=0.3mm]frame.north west)
+					-- ([xshift=-2.2mm]frame.south west)
+					-- ([xshift=-5.5mm]frame.south west)
+					-- cycle;
+					\path[left color=tcbcolback,right color=tcbcolback,
+					middle color=tcbcolback]
+					([xshift=-7.6mm]frame.north west)[rounded corners=0.5mm]
+					-- ([xshift=-4.3mm]frame.north west)
+					-- ([xshift=-6.8mm]frame.south west)
+					-- ([xshift=-10.1mm]frame.south west)
+					-- cycle;
+				},interior engine=empty,
+		},
+	fonttitle=\bfseries,
+	title={#2},#1,breakable}{expl}
+
 %Highlighting
 \newcommandx*\highlight[5][3=\hfofflower, 4=\hfoffupper,5=2]{\tikzmarkin[blend mode=multiply]{#1}(0,#3)(0,#4)#2\tikzmarkend{#1}}
 % usage: \highlight{markerid}{markercontent}[offset below][offset upper][beamer overlay]

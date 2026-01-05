@@ -1,6 +1,6 @@
 \newvideofile{Kirchhoff}{Die Kirchhoffschen Regeln}
 
-\section{Kirchhoffsche Sätze}
+\section{Kirchhoff's laws}
 
 
 
@@ -8,20 +8,21 @@
 \begin{frame}{}
 	\s{
 	
-		Die im vorherigen Modul eingeführten Bauteilgleichungen, welche den Zusammenhang zwischen Spannung 
-		und Strom an den einzelnen Bauteilen aufzeigen, reichen nicht aus, um sämtliche Spannungen und Ströme 
-		innerhalb eines Netzwerkens zu berechnen. Die Kirchhoffschen Regeln, auch Maschen- bzw. Knotenregel genannt, 
-		liefern die hierzu benötigten Gleichungen. 
+		The component equations introduced in the previous module, which show the relationship between voltage 
+        and current at the individual components, are not sufficient to calculate all voltages and currents 
+        within a network. Kirchhoff's rules, also known as mesh or node rules, 
+        provide the equations required for this.
 	}
 	\ftx{Lernziele: Kirchhoffsche Regeln}
 	
-	\begin{Lernziele}{Kirchhoffsche Regeln}
-		Die Studierenden können
+	\begin{Learning objectives}{Kirchhoff's rules}
+		The students can
 		\begin{itemize}
-			\item die Kernaussagen der Kirchhoffschen Regeln wiedergeben
-			\item die Kirchhoffschen Regeln auf einfache Widerstandsnetzwerke anwenden
+			\item reproduce the key statements of Kirchhoff's rules
+			\item apply Kirchhoff's rules to simple resistance networks
+
 		\end{itemize}
-	\end{Lernziele}
+	\end{Learning objectives}
 	
 	\speech{folie9}{1}{Im vorangegangenen Video wurde der Grundstromkreis mit seinen Maschen, Knoten und Zweigen eingeführt.
 		Jetzt stellt sich die Frage, wie genau sich Strom und Spannung im Netzwerk aufteilen.
@@ -46,49 +47,49 @@
 	
 	
 	
-		\subsection{Knotenregel (1. Kirchhoffsche Regel)}
+		\subsection{Node rule I (1. Kirchhoff rule)}
 		
-		Die Knotenregel sagt aus, dass die Summe aller in einen Knoten hereinfließenden Ströme identisch zu Summe aller herausfließenden Ströme ist:
+        The node rule states that the sum of all currents flowing into a node is identical to the sum of all currents flowing out of it:		
 		
-		
-		\begin{Merksatz}{}
+		\begin{Key point}{}
 			
 			\begin{center}
-				Summe der zufließenden Ströme\\
+				Sum of incoming currents\\
 				=\\
-				Summe der abfließenden Ströme\\
+				Sum of outgoing currents\\
 			\end{center}
 			
-		\end{Merksatz}
+		\end{Key point}
 		
-		Mathematisch ausgedrückt resultiert dies in folgendem Zusammenhang:
+		Mathematically expressed, this results in the following relationship:
 		\begin{equation}
 			\sum I_\mathrm{zu} = \sum I_\mathrm{ab}
 		\end{equation}
 		
-		Dabei ist zu beachten, dass die Ströme entsprechend ihrer Zählpfeilrichtung gewertet werden.
-		In den Knoten hereinfließende Ströme werden positiv, aus dem Knoten herausfließende Ströme
-		werden negativ gezählt. Falls die tatsächliche Richtung eines Stromes im Vorfeld nicht bekannt ist,
-		kann die Zählpfeilrichtung willkürlich festgelegt werden. Die tatsächliche Stromrichtung ergibt sich
-		aus dem Zahlenwert als Rechenergebnis. Ist dieses für einen Strom negativ, sprich $I < 0$, 
-		fließt der reale Strom in die entgegengesetzte Richtung.\\
-		
-		Alternativ lässt sich dieser Zusammenhang auch dadurch ausdrücken, dass die Summe aller Ströme in einem Knoten gleich 0 ist:
+		It should be noted that the currents are evaluated according to their counting arrow direction.
+		Currents flowing into the node are counted as positive, currents flowing out of the node
+		are counted as negative. If the actual direction of a current is not known in advance,
+		the counting arrow direction can be set arbitrarily. The actual current direction is determined
+		from the numerical value as the result of the calculation. If this is negative for a current, i.e. $I < 0$, 
+		the real current flows in the opposite direction.\\
+
+		Alternatively, this relationship can also be expressed by the fact that the sum of all currents in a node is equal to 0:
 		
 		
 		\begin{equation}
 			\sum_{i=1}^{n} = 0
 		\end{equation}
 		
-		Auf den beispielhaften Knoten in Abbildung \ref{fig:knoten} angewendet ergeben sich folgende Gleichungen:
+        Applied to the example nodes in Figure \ref{fig:knoten34}, this results in the following equations:
 		
 		
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\centering
 			{\includesvg[width=0.25\textwidth]{knotenregel1}}
 			
-			{\caption{Einfacher Beispielknoten}}
-			\label{fig:knoten}
+			{\caption{Simple example node}}
+			\label{fig:knoten34}
 		\end{figure}
 		
 		
@@ -102,12 +103,12 @@
 			I_1 - I_2 - I_3 = 0
 		\end{equation*}
 		
-		Der Knoten, auf den sich die Regel bezieht, muss jedoch nicht nur aus einem Punkt bestehen. 
-		Vielmehr ist möglich, sogenannte \textbf{Hüllknoten} zu definieren, die einen Bereich 
-		innerhalb einer Schaltung vollständig umschließen.
-		Angewendet auf den in Abbildung 3.2
-		%\ref{fig:knoten2} 
-		gezeigten Hüllknoten ergibt sich die Gleichung
+		However, the node to which the rule refers does not have to consist of just one point.
+		Instead, it is possible to define so-called \textbf{envelope nodes}, which completely enclose an area
+		within a circuit.
+		Applied to the envelope node shown in Figure 3.2
+		%\ref{fig:knoten2},
+		this results in the equation
 		
 		\begin{equation*}
 			I_1 + I_2 - I_3 - I_4 = 0
@@ -115,30 +116,32 @@
 		
 		
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\begin{center}
 				\input{Tikz/src/2_kirchhoff/Huellknoten_Skript}
 			\end{center}
 			\label{fig:knoten2}
-			\caption{Hüllknoten einer elektrischen Schaltung}
+			\caption{Terminal node of an electrical circuit}
 		\end{figure}
 		
-		Die Knotenregel ist durch die Verallgemeinerung des Ladungserhaltungssatzes für quellenfreie
-		Strömungsfelder nicht nur auf diskrete Bauelemente anwendbar. Vielmehr kann sie auf jede reale
-		Struktur angewendet werden. In Abbildung \ref{fig:huell} ist die in den Draht hereinfließende Stromstärke
-		$I$ folglich genauso hoch wie die gesamte Stromstärke, welche aus der Hüllfläche des Blechausschnitts heraustritt.
+		The node rule is not only applicable to discrete components due to the generalisation of the charge conservation law for source-free
+		flow fields. Rather, it can be applied to any real
+		structure. In Figure \ref{fig:huell}, the current flowing into the wire
+        $I$ is therefore equal to the total current flowing out of the envelope surface of the sheet metal cut-out.
 		
 		
 		
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\centering
 			\s{\includesvg[width=0.6\textwidth]{blechausschnitt}}
 			
-			\s{\caption{An einen Blechausschnitt angeschlossener Draht. Die Stromstärke $I$ fließt in den Draht hinein, während eine
-					Stromdichte $\vec{J}$ aus dem Blechausschnitt herausfließt.}}
+			\s{\caption{Wire connected to a sheet metal cut-out. The current $I$ flows into the wire, while a
+				current density $\vec{J}$ flows out of the sheet metal cut-out.}}
 			\label{fig:huell}
 		\end{figure}
 		
-		Allgemein lässt sich dieser Zusammenhang über das geschlossene Flächenintegral über die Hüllfläche $\vec{A}$ beschreiben:
+		In general, this relationship can be described by the closed surface integral over the envelope surface $\vec{A}$:
 		
 		\begin{equation}
 			\iint_A \vec{J} \cdot d\vec{A} = 0 
@@ -293,19 +296,19 @@
 \begin{frame}
 	\ftx{Beispiel: Parallelschaltung von Widerständen}
 	
-	\subsection{Anwendungsfall Knotenregel: Parallelschaltung von Widerständen}
+	\subsection{Application case node rule: Parallel connection of resistors}
 	
 	\s{
 	
-		Ein grundlegender Anwendungsfall für die Knotenregel ist die Parallelschaltung von Widerständen. 
-		Dabei teilt sich der Strom in einem gemeinsamen Knoten und jeweils ein Teilstrom durchfließt die einzelnen Widerstände.
-		Nach dem Passieren der jeweiligen Wiederstände vereinigen sich die Teilströme wieder, und fließen als Gesamtstrom weiter.
-		Dargestellt ist dies in Beispiel \ref{bsp:knoten}.
+		A basic application for the node rule is the parallel connection of resistors.
+		The current divides at a common node, and a partial current flows through each of the individual resistors.
+		After passing through the respective resistors, the partial currents rejoin and continue to flow as a total current.
+		This is illustrated in example \ref{bsp:knoten}.
 		
-		\begin{bsp}{Parallelschaltung von Widerständen}{knoten}
+		\begin{expl}{Parallel connection of resistors}{knoten}
 			
-			Bei der Parallelschaltung teilen sich die Ströme an den gemeinsamen
-			Knoten auf. Wie groß ist die Stromstärke $I_3$ im Verhältnis zu den Stromstärken $I_0$ bzw. $I_1$ und $I_2$?\\
+				In a parallel circuit, the currents split at the common node.
+				How large is the current $I_3$ in relation to the currents $I_0$, $I_1$ and $I_2$?\\
 			
 			%	\begin{figure}
 			\begin{center}
@@ -331,18 +334,18 @@
 			
 			
 			
-		\end{bsp}
+		\end{expl}
 		
-		Wird einer der Widerstände durch eine ideal leitende Verbindung ersetzt (Leitwert geht gegen
-		unendlich, Widerstand folglich gegen 0), verändert sich der Stromfluss im Bereich
-		zwischen den beiden Knoten (Beispiel \ref{bsp:knoten2}). 
+		If one of the resistors is replaced by an ideally conductive connection (conductance approaches
+		infinity, resistance consequently approaches 0), the current flow in the area
+		between the two nodes changes (example \ref{bsp:knoten2}).. 
 		
 		
 		
-		\begin{bsp}{Parallelschaltung mit Leiter}{knoten2}
+		\begin{expl}{Parallel connection with conductor}{knoten2}
 			
-			Ein Widerstand wird durch eine leitende Verbindung ersetzt.
-			Wie groß sind die Stromstärken  $I_1$ bzw. $I_2$?\\
+			A resistor is replaced by a conductive connection.
+			How large are the currents $I_1$ and $I_2$?\\
 			
 			\begin{center}
 				\input{Tikz/src/2_kirchhoff/Parallelschaltung_Leiter_Skript}
@@ -369,7 +372,7 @@
 			
 			
 			
-		\end{bsp}
+		\end{expl}
 	}
 	\b{
 	
@@ -381,8 +384,8 @@
 			
 			%\vspace{-20pt}
 			
-			Bei der Parallelschaltung teilen sich die Ströme an den gemeinsamen
-			Knoten auf. Wie groß ist der Strom $I_3$?\\
+			In a parallel circuit, the currents split at the common node.
+			How large is the current $I_3$?	\\
 			
 			
 			\column[t]{0.4\textwidth}
@@ -469,39 +472,39 @@
 
 
 \begin{frame}
-	\subsection{Maschenregel (2. Kirchhoffscher Satz)}
+	\subsection{Mesh rule (Kirchhoff's second law)}
 	\s{
 	
-		Der 2. Kirchhoffsche Satz (Maschenregel) besagt, dass die \textbf{Summe aller Spannungen} in einer Masche \textbf{Null} ergibt. 
-		Analog zur Richtung der Ströme muss auch hier zwingend die Richtung der einzelnen Teilspannungen berücksichtigt
-		werden. Zeigt der Richtungspfeil einer Teilspannung entgegen der Umlaufrichtung der Masche, so muss
-		diese Teilspannung mit einem negativen Vorzeichen versehen werden. Ist die Richtung einer anliegenden Spannung
-		nicht bekannt, so kann auch hier eine willkürliche Zählpfeilrichtung angenommen werden. Eine gegensätzlich 
-		anliegende Spannung äußert sich in Rechnungen auch hier mit einem negativen Vorzeichen. 
+		Kirchhoff's second law (mesh rule) states that the \textbf{sum of all voltages} in a mesh is \textbf{zero}.
+		Analogous to the direction of the currents, the direction of the individual partial voltages must also be taken into account here.
+		If the direction arrow of a partial voltage points in the opposite direction to the direction of circulation of the mesh, then
+		this partial voltage must be given a negative sign. If the direction of an applied voltage
+		is not known, then an arbitrary counting arrow direction can also be assumed here. An oppositely 
+		applied voltage is also expressed in calculations with a negative sign. 
 		
-		\begin{Merksatz}{Maschenregel}
+		\begin{Key point}{Mesh rule}
 			
 			\begin{equation}
 				\sum_{k=1}^{n} U_k = 0
 			\end{equation}
 			
 			
-		\end{Merksatz}
+		\end{Key point}
 		
-		Gleichbedeutend mit der obigen Definition lässt sich feststellen, dass die Summe 
-		aller gleichsinnig geschalteten Spannungen an Spannungsquellen der Spannung entspricht, welche
-		an den Verbrauchern abfällt. 
+		Equivalent to the above definition, it can be stated that the sum 
+        of all voltages connected in the same direction at voltage sources corresponds to the voltage that
+        drops across the consumers.
 		
-		\begin{Merksatz}{Maschenregel 2}
-			Spannungssumme an Spannungsquellen = Spannungssumme an Verbrauchern
-		\end{Merksatz}
+		\begin{Key point}{Maschenregel 2}
+			Total voltage at voltage sources = total voltage at consumers
+		\end{Key point}
 		
-		Angewendet auf das in Abbildung \ref{fig:masche} gezeigte Beispielnetzwerk ergeben sich folgende Maschengleichungen:
+		Applied to the example network shown in Figure \ref{fig:masche}, the following mesh equations result:
 		
 		\begin{equation*}
 			U_1+U_2-U_3-U_4 =0
 		\end{equation*}
-		beziehungsweise
+		respectively
 		
 		
 		
@@ -521,20 +524,22 @@
 		
 		
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\begin{center}
 
 				\input{Tikz/src/2_kirchhoff/Netzwerk_Spannung_Wiederstaende}
 				
 			\end{center}
-			\caption{Beispielnetzwerk bestehend aus zwei Spannungsquellen und zwei Widerständen}
+			\caption{Example network consisting of two voltage sources and two resistors}
 			\label{fig:masche}
 		\end{figure}
 		
-		Die Maschengleichung gilt auch, falls in die Masche zusätzliche Ströme eingespeist werden,
-		oder einzelne Zweipole während des Umlaufs um eine geschlossene Masche mehrfach durchlaufen werden.
+		The mesh equation also applies if additional currents are fed into the mesh,
+        or if individual two-poles are passed through several times during the circulation around a closed mesh.
 		
-		Der allgemeine Zusammenhang, jegliche aufintegrierte Spannung entlang einer geschlossene Kontur 0 ergibt, kann
-		nach den Maxwell Gleichungen folgendermaßen beschrieben werden: 
+		The general relationship, whereby any integrated voltage along a closed contour equals 0, can
+        be described as follows according to Maxwell's equations:
+ 
 		
 		\begin{equation}
 			\oint_{s} \vec{E} d\vec{s} = 0
@@ -668,23 +673,23 @@
 
 \begin{frame}
 
-	\subsection{Anwendungsfall Maschenregel: Reihenschaltung von Widerständen}
+	\subsection{Application case mesh rule: Series connection of resistors}
 	
 	\s{
 	
-		Während die Knotenpunkte in elektrischen Netzwerken vor allem für den Strom von Bedeutung sind, sind die Zweige und somit auch Maschen vor allem für
-		die Berechnung der Spannungen von Interesse.
-		Bei einer Reihenschaltung von Widerständen in einem Zweig addieren sich alle Teilspannungen vorzeichenrichtig zu einer Gesamtspannung auf.
-		Ein Anwendungsfall zur Ermittlung einer Teilspannung ist in Beispiel \ref{bsp:reihe} dargestellt.
+		While the nodes in electrical networks are primarily important for current, the branches and thus also the meshes are primarily of interest for
+		calculating voltages. 
+		In a series connection of resistors in a branch, all partial voltages add up to a total voltage with the correct sign.
+        An application case for determining a partial voltage is shown in Example \ref{bsp:reihe}.
 		
 		
 		
-		\begin{bsp}{Reihenschaltungen in Netzwerken}{reihe}
+		\begin{expl}{Series connections in networks}{reihe}
 			
 			
-			Bei der Reihenschaltung addieren sich die Spannungen zu einer
-			Gesamtspannung auf.\\
-			Wie groß ist die Spannung $U_0$?
+			In a series connection, the voltages add up to a
+			total voltage.
+			How large is the voltage $U_0$?
 			
 			\begin{center}
 
@@ -692,7 +697,7 @@
 				
 			\end{center}
 			
-			Masche entgegen dem Uhrzeigersinn aufstellen:
+			Set up the mesh counterclockwise:
 			
 			\begin{equation*}
 				U_2-U_0-U_3 =0
@@ -705,15 +710,15 @@
 			
 			
 			
-		\end{bsp}
+		\end{expl}
 		
 		
-		Die Maschenregel lässt sich auch anwenden, wenn die Masche, auf die sie angewendet wird, eine Unterbrechungsstelle hat (siehe Beispiel \ref{bsp:reihe2}). 
-		
-		\begin{bsp}{Reihenschaltungen mit Unterbrechungsstelle}{reihe2}
+        The mesh rule can also be applied if the mesh to which it is applied has an interruption point (see example \ref{bsp:reihe2}). 
+
+		\begin{expl}{Series connections with interruption point}{reihe2}
 			
 			
-			Eine Verbindung wird unterbrochen. Wie groß ist die Spannung $U_1$ an der Unterbrechungsstelle?
+			A connection is interrupted. How large is the voltage $U_1$ at the point of interruption?
 			
 			\begin{center}
 
@@ -721,7 +726,7 @@
 				
 			\end{center}
 			
-			Masche entgegen dem Uhrzeigersinn aufstellen:
+			Set up the mesh counterclockwise:
 			
 			%\begin{equation*}
 			%U_2+U_1-U_0-U_3 = 0
@@ -731,7 +736,7 @@
 				U_2+U_1-U_0-U_3 = 0
 			\end{equation*}
 			
-			Ermitteln der Spannung $U_2$ mit Hilfes des Ohmschen Gesetzes:
+			Determine the voltage $U_2$ using Ohm's law:
 			
 			
 			\begin{equation*}
@@ -746,14 +751,14 @@
 				\rightarrow U_2 = 0
 			\end{equation*}
 			
-			Einsetzen in Ausgangsgleichung und nach $U_1$ auflösen:		
+			Insert into the initial equation and solve for $U_1$: 	
 			
 			\begin{equation*}
 				U_1 = U_0 + U_3
 			\end{equation*}
 
 			
-		\end{bsp}
+		\end{expl}
 		
 	}
 	

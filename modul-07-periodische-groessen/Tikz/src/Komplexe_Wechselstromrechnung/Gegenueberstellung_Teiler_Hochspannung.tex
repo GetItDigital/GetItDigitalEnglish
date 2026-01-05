@@ -5,7 +5,7 @@
     (0,0) to [short, o-*] (1,0) to [short, -o] (2,0);
     \draw[-latex, thick, draw=voltage] (0,9.8) to node[left, color=voltage] {$\underline{U}_\mathrm{E}$} (0,0.2);
     \draw[-latex, thick, draw=voltage] (2,1.8) to node[right, color=voltage] {$\underline{U}_\mathrm{A}$} (2,0.2);
-    \draw (1,0) node [label=below:Ohmscher Teiler]{};
+    \draw (1,0) node [label=below:Ohmic divider]{};
 
     \draw (4,10) to [short, o-*] (5,10)
     to [R] (5,8) to [R] (5,6) to [R] (5,4) to [R] (5,2) to [R] (5,0)
@@ -18,7 +18,7 @@
     (4,0) to [short, o-o] (7,0) (5,0) to [short, *-*] (6,0);
     \draw[-latex, thick, draw=voltage] (4,9.8) to node[left, color=voltage] {$\underline{U}_\mathrm{E}$} (4,0.2);
     \draw[-latex, thick, draw=voltage] (7,1.8) to node[right, color=voltage] {$\underline{U}_\mathrm{A}$} (7,0.2);
-    \draw (5.5,0) node [label=below:Ohmsch-kapazitiver Teiler]{};
+    \draw (5.5,0) node [label=below:Ohmic capacitive divider]{};
 
     \draw (9,10) to [short, o-] (10,10)
     to [C] (10,8) to [C] (10,6) to [C] (10,4) to [C] (10,2) to [C] (10,0)
@@ -26,7 +26,7 @@
     (9,0) to [short, o-*] (10,0) to [short, -o] (11,0);
     \draw[-latex, thick, draw=voltage] (9,9.8) to node[left, color=voltage] {$\underline{U}_\mathrm{E}$} (9,0.2);
     \draw[-latex, thick, draw=voltage] (11,1.8) to node[right, color=voltage] {$\underline{U}_\mathrm{A}$} (11,0.2);
-    \draw (10,0) node [label=below:Kapazitiver Teiler]{};
+    \draw (10,0) node [label=below:Capacitive divider]{};
 
     \draw (13,10) to [short, o-] (13.5,10) to [L] (14.5,10) to [short] (15,10)
     to [R] (15,8.6) to [C] (15,8) to [R] (15,6.6) to [C] (15,6) to [R] (15,4.6) to [C] (15,4) to [R] (15,2.6) to [C] (15,2) to [R] (15,0.6) to [C] (15,0)
@@ -34,5 +34,5 @@
     (13,0) to [short, o-*] (15,0) to [short, -o] (16,0);
     \draw[-latex, thick, draw=voltage] (13,9.8) to node[left, color=voltage] {$\underline{U}_\mathrm{E}$} (13,0.2);
     \draw[-latex, thick, draw=voltage] (16,1.8) to node[right, color=voltage] {$\underline{U}_\mathrm{A}$} (16,0.2);
-    \draw (14.5,0) node [label=below:Gedämpft kapazitiver Teiler]{};
+    \draw (14.5,0) node [label=below:Damped capacitive divider]{};
 \end{circuitikz}

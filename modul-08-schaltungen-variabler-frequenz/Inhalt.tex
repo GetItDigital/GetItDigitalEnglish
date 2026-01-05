@@ -73,27 +73,27 @@
 %         D U M P   Z O N E   ---    T E S T S   A N D   T R Y O U T S            %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \s{% Skript only
-\section{Nebenrechnungen}
+\section{Additional calculation}
 \begin{frame}{\secname}
 
     % Nebenrechnung 1
-    Frequenzgang eines RC-Tiefpass 1. Ordnung. [Nebenrechnung zu Gleichung \eqref{eq:tiefpass:frequenzgang}]
+    Frequency response of a first-order RC low-pass filter. [Additional calculation for equation \eqref{eq:tiefpass:frequenzgang}]
     \begin{equation}
         \begin{aligned}
             \underline{F}(\mathrm{j}\omega)
                 & = \frac{\underline{U}_2}{\underline{U}_1}
                     %&&\left|\ \right.
                     &&\left|\ =\frac{Z_C}{\left(Z_R + Z_C\right)} \frac{\cdot\redcancel{\underline{I}}}{\cdot\redcancel{\underline{I}}}\right.
-                    &&\ \text{Komplexe Spannungsteilerregel}\\
+                    &&\ \text{Complex voltage divider rule}\\
                 &= \frac{\frac{1}{\mathrm{j}\omega C}}{R + \frac{1}{\mathrm{j}\omega C}}
                     &&\left|\ \cdot \frac{\mathrm{j}\omega C}{\mathrm{j}\omega C}\right.
-                    &&\ \text{Rationalisieren}\\
+                    &&\ \text{Rationalise}\\
                 &= \frac{1}{\mathrm{j}\omega CR + 1}
                     &&\left|\ \vphantom{\frac{0}{0}}\right.
-                    &&\ \text{Umformen}\\
+                    &&\ \text{Transform}\\
                 &= \frac{1}{1 + \mathrm{j}\omega CR}
                     &&\left|\ \cdot \frac{1 - \mathrm{j}\omega CR}{1 - \mathrm{j}\omega CR}\right.
-                    &&\ \text{Optional für kartesische Form}\\
+                    &&\ \text{Optional for Cartesian form}\\
                 &= \frac{1 - \mathrm{j}\omega CR}{1 + (\omega CR)^2}
                 % Alternativ \Big| oder \Bigg| für größere vertikale Striche (absolute Größe)
             \label{eq:tiefpass:frequenzgang:nebenrechnung}

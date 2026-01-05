@@ -1,26 +1,29 @@
 
 \s{ 
-	\section{Einleitung}
-	Der Elektromagnetismus bildet die Grundlage vieler Technologien in unserem täglichen Leben.
-	Die Magnetresonanztomographie ermöglicht zum Beispiel präzise Diagnosen und Therapien in der Medizin. 
-	Die effiziente Erzeugung, Übertragung und Verteilung von elektrischer Energie wird durch Generatoren und Transformatoren gewährleistet. 
-	In der Computertechnik sind magnetische Speicher, wie Festplattenlaufwerke, für die Datenverarbeitung und -speicherung unverzichtbar. 
-	Die Grenzen der Anwendungsgebiete sind jedoch noch nicht erreicht. Zukünftige technologische Entwicklungen wie Quantencomputer, drahtlose Energieversorgung und magnetische Levitation werden diese weiter verschieben. 
-	Ein fundiertes Verständnis magnetischer Größen ist entscheidend für die Weiterentwicklung und Optimierung existierender sowie zukünftiger Technologien.
+	\section{Introduction}
+	Electromagnetism forms the basis of many technologies in our everyday lives.
+	For example, magnetic resonance imaging enables precise diagnoses and therapies in medicine.
+	Generators and transformers ensure the efficient generation, transmission and distribution of electrical energy.
+	In computer technology, magnetic storage devices such as hard drives are indispensable for data processing and storage.
+	However, the limits of their application areas have not yet been reached. Future technological developments such as quantum computers, 
+	wireless power supply and magnetic levitation will push these limits even further. 
+	A sound understanding of magnetic quantities is crucial for the further development and optimisation of existing and future technologies.
 
-	Dieses Kapitel bietet eine Einführung in die elektromagnetischen Wirkweisen und die dazugehörigen magnetischen Größen. 
-	Zunächst wird das magnetische Feld beschrieben, gefolgt von einer Erklärung relevanter Größen für den magnetischen Kreis wie Durchflutung, magnetischer Fluss und magnetischer Widerstand.
-	Anschließend werden die Funktionsweisen der Lorentzkraft, der Induktion und der Induktivität erläutert, gefolgt von der Berechnung des Energieinhalts im magnetischen Feld. Das Kapitel schließt mit einem Exkurs zum Skin-Effekt und Hall-Effekt.
+	This chapter provides an introduction to electromagnetic effects and the associated magnetic quantities.
+	First, the magnetic field is described, followed by an explanation of relevant quantities for the magnetic circuit, such as flux, 
+	magnetic flux and magnetic resistance.
+    It then explains how the Lorentz force, induction and inductance work, followed by a calculation of the energy content in the magnetic field. 
+	The chapter concludes with a digression on the skin effect and Hall effect.
 
-	\begin{Lernziele}{Magnetische Größen}
-		Die Studierenden
+	\begin{Learning objectives}{Magnetic quantities}
+		The Students
 		\begin{itemize}
-			\item kennen die grundlegenden magnetischen Größen im magnetischen Kreis.
-			\item verstehen die physikalischen Wirkprinzipien hinter den einzelnen magnetischen Größen.
-			\item können die Wechselwirkungen der magnetischen Größen zueinander beschreiben.
-			\item können die einzelnen Größen im magnetischen Kreis berechnen.
+			\item know the basic magnetic quantities in the magnetic circuit.
+			\item understand the physical principles behind the individual magnetic quantities.
+			\item can describe the interactions between the magnetic quantities.
+			\item can calculate the individual quantities in the magnetic circuit.
 		\end{itemize}
-	\end{Lernziele}
+	\end{Learning objectives}
 }
 \newvideofile{EinleitungMagnetismus}{Magnetismus}
 
@@ -52,14 +55,13 @@
 	\end{frame}
 }
 
-\begin{frame} \ftx{Magnetismus}
+\begin{frame} \ftx{Magnetism}
 	\s{ 
 		\subsection{Magnetismus}
-		Der Magnetismus ist ein physikalisches Phänomen, das sich in Form von wechselwirkenden Kräften von magnetisierten bzw. magnetisierbaren Festkörpern und bewegten elektrischen Ladungen äußert. Die Kräfte werden mittels eines Magnetfeldes dargestellt. 
-		Zu den geläufigsten Formen des Magnetismus werden der Elektromagnetismus und der Magnetismus von Festkörpern gezählt. Der Ferromagnetismus ist die bekannteste und wichtigste Art magnetisierter Festkörper und beschreibt das magnetische Verhalten einiger metallischer Körper, sogenannter ferromagnetischer Werkstoffe. \index{Ferromagnetismus} 
-		Wie in Abbildung \ref{Magnet1} ersichtlich, besteht ein ferromagnetisches Material wie Eisen, Cobalt oder Nickel aus vielen kleinen Elementarmagneten\index{Elementarmagnet} in sogenannten Weissschen Bezirken\index{Weisssche Bezirke}, die durch Blochwände\index{Blochwände} voneinander getrennt sind. 
-		In einem unmagnetisierten Körper sind diese Weissschen Bezirke willkürlich angeordnet und somit nicht ausgerichtet. Der Körper ist nach außen nicht (oder nur wenig) magnetisiert, da sich die Magnetisierungsrichtungen der einzelnen Bezirke großteils gegenseitig aufheben.
-		
+		Magnetism is a physical phenomenon that manifests itself in the form of interacting forces between magnetised or magnetisable solids and moving electric charges. These forces are represented by a magnetic field.
+        The most common forms of magnetism are electromagnetism and the magnetism of solids. Ferromagnetism is the best known and most important type of magnetised solid and describes the magnetic behaviour of some metallic bodies, known as ferromagnetic materials. \index{Ferromagnetism} 
+        As can be seen in Figure \ref{Magnet1}, a ferromagnetic material such as iron, cobalt or nickel consists of many small elementary magnets\index{elementary magnet} in so-called Weiss domains\index{Weiss domains}, which are separated from each other by Bloch walls\index{Bloch walls}.
+        In a non-magnetised body, these Weiss domains are arranged randomly and are therefore not aligned. The body is not (or only slightly) magnetised on the outside, as the magnetisation directions of the individual domains largely cancel each other out.
 		Durch ein starkes externes Magnetfeld (die benötigte Stärke ist temperatur- und materialabhängig) können die ungeordneten Elementarmagnete parallel ausgerichtet werden. Durch die gleiche Ausrichtung der Weissschen Bezirke wird das Material selbst magnetisch.
 	}
 	
@@ -68,7 +70,7 @@
 		\put(24,0){\line(-1,1){2.8}}\put(24,0){Weisssche Bezirke}
 		\put(30,3.5){\line(-1,1){4.4}}\put(30.3,3.5){Elementarmagnete}
 		\put(36,7){\line(-1,1){3.8}}\put(36.3,7){Blochwände}
-	}{{\bf Aufbau eines Permanentmagneten.} Links sind die  Weissschen Bezirke mit den Elementarmagneten willkürlich ausgerichtet, der Körper ist nicht magnetisiert. Der rechte Körper ist magnetisiert, da dort die Elementarmagnete der Weissschen Bezirke gleichgeordnet ausgerichtet sind.\label{Magnet1}}
+	}{{\bf Structure of a permanent magnet.} On the left, the Weiss domains with the elementary magnets are randomly aligned, and the body is not magnetised. The body on the right is magnetised because the elementary magnets of the Weiss domains are aligned in the same order. \label{Magnet1}}
 }	
 
 	\speech{Ferromagnet_1}{1}{Ferromagnetismus tritt typischerweise in eisenhaltigen Materialien auf. In diesen Materialien finden sich viele kleine Elementar Magnete, die sogenannten Weiß schen Bezirke. Diese Bezirke stellen die kleinsten magnetischen Einheiten dar. Innerhalb eines Bezirks sind alle Elementar Magnete gleich ausgerichtet – sie zeigen in dieselbe Richtung. Die einzelnen Bezirke werden durch sogenannte Blochwände voneinander getrennt.
@@ -76,11 +78,12 @@ In der linken Abbildung sehen wir ein Stück ferromagnetisches Material, das noc
 \end{frame}
 
 \begin{frame}  \ftx{Magnetismus}
+	\renewcommand{\figurename}{Figure}
 \fo{width=\textwidth}{width=\textwidth}{Aufbau_Permanentmagnet}{
-		\put(24,0){\line(-1,1){2.8}}\put(24,0){Weisssche Bezirke}
-		\put(30,3.5){\line(-1,1){4.4}}\put(30.3,3.5){Elementarmagnete}
-		\put(36,7){\line(-1,1){3.8}}\put(36.3,7){Blochwände}
-	}{{\bf Aufbau eines Permanentmagneten.} Links sind die  Weissschen Bezirke mit den Elementarmagneten willkürlich ausgerichtet, der Körper ist nicht magnetisiert. Der rechte Körper ist magnetisiert, da dort die Elementarmagnete der Weissschen Bezirke gleichgeordnet ausgerichtet sind.\label{Magnet1}}
+		\put(24,0){\line(-1,1){2.8}}\put(24,0){White districts}
+		\put(30,3.5){\line(-1,1){4.4}}\put(30.3,3.5){Elementary magnets}
+		\put(36,7){\line(-1,1){3.8}}\put(36.3,7){Block walls}
+	}{{\bf Structure of a permanent magnet.} On the left, the Weiss domains with the elementary magnets are randomly aligned, and the body is not magnetised. The body on the right is magnetised because the elementary magnets of the Weiss domains are aligned in the same order. \label{Magnet1}}
 \speech{Ferromagnet_2}{1}{Auf der rechten Seite sieht die Anordnung anders aus. Hier wurde das gleiche Material einem äußeren Magnetfeld ausgesetzt – zum Beispiel durch die Nähe zu einem starken Permanentmagneten. Dabei richten sich viele der Weiß schen Bezirke parallel zueinander aus. Die Elementar Magnete zeigen nun überwiegend in dieselbe Richtung. Entfernt man das äußere Magnetfeld nun, bleibt diese Ausrichtung bestehen – das Stück Eisen ist nun selbst ein Permanentmagnet.
 Wie stellt man nun einen gezielten Permanentmagneten her. Auch hier nutzt man ferromagnetische Materialien – oft aber Kombinationen, die eine stärkere Magnetisierung erlauben als reines Eisen. Das derzeit stärkste bekannte Material für Permanentmagneten ist Neodüm eisen bor.
 Im Herstellungsprozess wird das Material zunächst erhitzt. Dadurch können sich die Weiß schen Bezirke besser bewegen. Während dieser Phase wird ein starkes externes Magnetfeld angelegt, sodass sich alle Bezirke ausrichten. Anschließend lässt man das Material im Magnetfeld abkühlen. Sobald es fest ist, bleiben die Bezirke in ihrer ausgerichteten Position – und das Material ist dauerhaft magnetisiert.
@@ -89,27 +92,29 @@ Diese Effekte sind vor allem bei sogenannten Permanentmagnetmaschinen wichtig �
 }
 \end{frame}
 
-\subsection{Magnetisches Feld}
-\begin{frame} \ftx{Magnetisches Feld}
+\subsection{Magnetic field}
+\begin{frame} \ftx{Magnetisches Fel}
 	\s{
-		Durch die geordnete Ausrichtung der Weissschen Bezirke entsteht ein außerhalb des Körpers messbares Magnetfeld. Magnetfelder sind Vektorfelder, die eine Krafteinwirkung auf magnetische Materialien im Raum ausüben. 
-		Die Stärke des Magnetfeldes wird über die Größe der magnetischen Feldstärke $ \vec{H}$ beschrieben. Diese vektorielle Größe ordnet dabei jedem Punkt des Raums, auf den das Magnetfeld einwirkt, eine entsprechende Richtung mit einer spezifischen magnetischen Stärke ein. 
-		Magnetfelder und die damit verbundene magnetische Feldstärke werden mittels Feldlinien dargestellt. 
-		Magnetische Feldlinien besitzen charakteristische Eigenschaften:
+		The orderly alignment of the Weiss domains creates a magnetic field that can be measured outside the body. Magnetic fields are vector fields that exert a force on magnetic materials in space.
+		The strength of the magnetic field is described by the magnitude of the magnetic field strength $ \vec{H}$. This vector quantity assigns a corresponding direction with a specific magnetic strength to each point in space on which the magnetic field acts. 
+		Magnetic fields and the associated magnetic field strength are represented by field lines.
+		Magnetic field lines have characteristic properties:
 
 		\begin{itemize}
-			\item Magnetische Feldlinien sind immer geschlossen (Quellenfrei).
-			\item Außerhalb des Magneten verlaufen sie vom Nord- zum Südpol.
-			\item Sie treten immer senkrecht aus der Magnetoberfläche aus bzw. ein.
+			\item Magnetic field lines are always closed (source-free).
+			\item Outside the magnet, they run from the north pole to the south pole.
+			\item They always exit or enter the magnetic surface perpendicularly.
 		\end{itemize}
-		
+
+		\renewcommand{\figurename}{Figure}
+
 		\fo{width=0.8\textwidth}{height=0.65\textheight}{Feldlinien_Permanentmagnet}{
 			\put(75,60){\color{magnetfeld}\makebox[0pt]{N}}
 			\put(75,7.5){\color{magnetfeld}\makebox[0pt]{S}}
-		}{{\bf Feldlinien eines Permanentmagneten.} Links wurden die Feldlinien mit Hilfe von Metallspänen über einem Magnenten visualisert. Die rechte Grafik stellt die Eigenschaften magnetischer Feldlinien dar: Geschlossenheit, Verlauf außerhalb des Magneten von Nord nach Süd, senkrechter Austritt aus dem Magneten. \label{Magnet2}}
-		\begin{Merksatz}{Magnetfeld} 
-			Magnetfelder sind Vektorfelder, die an jedem Punkt des Raums, auf den sie einwirken, eine für den Punkt spezifische Richtung mit einer spezifischen Stärke besitzen. Die Stärke und Richtung werden mittels der magnetischen Feldstärke $ \vec{H}$ beschrieben.
-		\end{Merksatz}
+		}{{\bf Field lines of a permanent magnet.} On the left, the field lines were visualised using metal filings above a magnet. The graphic on the right shows the properties of magnetic field lines: closed, running from north to south outside the magnet, exiting the magnet perpendicularly. \label{Magnet2}}
+		\begin{Key point}{Magnetic field} 
+			Magnetic fields are vector fields that have a specific direction and strength at each point in space where they exert their influence. The strength and direction are described by the magnetic field strength $ \vec{H}$.
+		\end{Key point}
 		
 	}
 	\b{

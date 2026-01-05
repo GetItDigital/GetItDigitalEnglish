@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.7.14)  26 NOV 2025 15:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.7.14)  27 NOV 2025 09:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1109,57 +1109,58 @@ Package nomencl Info: Writing nomenclature file Skript.nlo on input line 19.
 
 Writing index file Skript.idx
 \c@tcb@cnt@bsp=\count408
+\c@tcb@cnt@expl=\count409
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
  (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count409
+\lrq@indent=\count410
  (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count410
-\c@listtotal=\count411
-\c@listcount=\count412
-\c@liststart=\count413
-\c@liststop=\count414
-\c@citecount=\count415
-\c@citetotal=\count416
-\c@multicitecount=\count417
-\c@multicitetotal=\count418
-\c@instcount=\count419
-\c@maxnames=\count420
-\c@minnames=\count421
-\c@maxitems=\count422
-\c@minitems=\count423
-\c@citecounter=\count424
-\c@maxcitecounter=\count425
-\c@savedcitecounter=\count426
-\c@uniquelist=\count427
-\c@uniquename=\count428
-\c@refsection=\count429
-\c@refsegment=\count430
-\c@maxextratitle=\count431
-\c@maxextratitleyear=\count432
-\c@maxextraname=\count433
-\c@maxextradate=\count434
-\c@maxextraalpha=\count435
-\c@abbrvpenalty=\count436
-\c@highnamepenalty=\count437
-\c@lownamepenalty=\count438
-\c@maxparens=\count439
-\c@parenlevel=\count440
-\blx@tempcnta=\count441
-\blx@tempcntb=\count442
-\blx@tempcntc=\count443
-\c@blx@maxsection=\count444
-\blx@maxsegment@0=\count445
-\blx@notetype=\count446
-\blx@parenlevel@text=\count447
-\blx@parenlevel@foot=\count448
-\blx@sectionciteorder@0=\count449
-\blx@sectionciteorderinternal@0=\count450
-\blx@entrysetcounter=\count451
-\blx@biblioinstance=\count452
+\c@tabx@nest=\count411
+\c@listtotal=\count412
+\c@listcount=\count413
+\c@liststart=\count414
+\c@liststop=\count415
+\c@citecount=\count416
+\c@citetotal=\count417
+\c@multicitecount=\count418
+\c@multicitetotal=\count419
+\c@instcount=\count420
+\c@maxnames=\count421
+\c@minnames=\count422
+\c@maxitems=\count423
+\c@minitems=\count424
+\c@citecounter=\count425
+\c@maxcitecounter=\count426
+\c@savedcitecounter=\count427
+\c@uniquelist=\count428
+\c@uniquename=\count429
+\c@refsection=\count430
+\c@refsegment=\count431
+\c@maxextratitle=\count432
+\c@maxextratitleyear=\count433
+\c@maxextraname=\count434
+\c@maxextradate=\count435
+\c@maxextraalpha=\count436
+\c@abbrvpenalty=\count437
+\c@highnamepenalty=\count438
+\c@lownamepenalty=\count439
+\c@maxparens=\count440
+\c@parenlevel=\count441
+\blx@tempcnta=\count442
+\blx@tempcntb=\count443
+\blx@tempcntc=\count444
+\c@blx@maxsection=\count445
+\blx@maxsegment@0=\count446
+\blx@notetype=\count447
+\blx@parenlevel@text=\count448
+\blx@parenlevel@foot=\count449
+\blx@sectionciteorder@0=\count450
+\blx@sectionciteorderinternal@0=\count451
+\blx@entrysetcounter=\count452
+\blx@biblioinstance=\count453
 \labelnumberwidth=\skip97
 \labelalphawidth=\skip98
 \biblabelsep=\skip99
@@ -1171,9 +1172,9 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \blx@bcfin=\read6
 \blx@bcfout=\write6
 \blx@langwohyphens=\language15
-\c@mincomprange=\count453
-\c@maxcomprange=\count454
-\c@mincompwidth=\count455
+\c@mincomprange=\count454
+\c@maxcomprange=\count455
+\c@mincompwidth=\count456
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
@@ -1181,74 +1182,74 @@ File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count456
-\c@savedafterword=\count457
-\c@annotator=\count458
-\c@savedannotator=\count459
-\c@author=\count460
-\c@savedauthor=\count461
-\c@bookauthor=\count462
-\c@savedbookauthor=\count463
-\c@commentator=\count464
-\c@savedcommentator=\count465
-\c@editor=\count466
-\c@savededitor=\count467
-\c@editora=\count468
-\c@savededitora=\count469
-\c@editorb=\count470
-\c@savededitorb=\count471
-\c@editorc=\count472
-\c@savededitorc=\count473
-\c@foreword=\count474
-\c@savedforeword=\count475
-\c@holder=\count476
-\c@savedholder=\count477
-\c@introduction=\count478
-\c@savedintroduction=\count479
-\c@namea=\count480
-\c@savednamea=\count481
-\c@nameb=\count482
-\c@savednameb=\count483
-\c@namec=\count484
-\c@savednamec=\count485
-\c@translator=\count486
-\c@savedtranslator=\count487
-\c@shortauthor=\count488
-\c@savedshortauthor=\count489
-\c@shorteditor=\count490
-\c@savedshorteditor=\count491
-\c@labelname=\count492
-\c@savedlabelname=\count493
-\c@institution=\count494
-\c@savedinstitution=\count495
-\c@lista=\count496
-\c@savedlista=\count497
-\c@listb=\count498
-\c@savedlistb=\count499
-\c@listc=\count500
-\c@savedlistc=\count501
-\c@listd=\count502
-\c@savedlistd=\count503
-\c@liste=\count504
-\c@savedliste=\count505
-\c@listf=\count506
-\c@savedlistf=\count507
-\c@location=\count508
-\c@savedlocation=\count509
-\c@organization=\count510
-\c@savedorganization=\count511
-\c@origlocation=\count512
-\c@savedoriglocation=\count513
-\c@origpublisher=\count514
-\c@savedorigpublisher=\count515
-\c@publisher=\count516
-\c@savedpublisher=\count517
-\c@language=\count518
-\c@savedlanguage=\count519
-\c@origlanguage=\count520
-\c@savedoriglanguage=\count521
-\c@pageref=\count522
-\c@savedpageref=\count523
+\c@afterword=\count457
+\c@savedafterword=\count458
+\c@annotator=\count459
+\c@savedannotator=\count460
+\c@author=\count461
+\c@savedauthor=\count462
+\c@bookauthor=\count463
+\c@savedbookauthor=\count464
+\c@commentator=\count465
+\c@savedcommentator=\count466
+\c@editor=\count467
+\c@savededitor=\count468
+\c@editora=\count469
+\c@savededitora=\count470
+\c@editorb=\count471
+\c@savededitorb=\count472
+\c@editorc=\count473
+\c@savededitorc=\count474
+\c@foreword=\count475
+\c@savedforeword=\count476
+\c@holder=\count477
+\c@savedholder=\count478
+\c@introduction=\count479
+\c@savedintroduction=\count480
+\c@namea=\count481
+\c@savednamea=\count482
+\c@nameb=\count483
+\c@savednameb=\count484
+\c@namec=\count485
+\c@savednamec=\count486
+\c@translator=\count487
+\c@savedtranslator=\count488
+\c@shortauthor=\count489
+\c@savedshortauthor=\count490
+\c@shorteditor=\count491
+\c@savedshorteditor=\count492
+\c@labelname=\count493
+\c@savedlabelname=\count494
+\c@institution=\count495
+\c@savedinstitution=\count496
+\c@lista=\count497
+\c@savedlista=\count498
+\c@listb=\count499
+\c@savedlistb=\count500
+\c@listc=\count501
+\c@savedlistc=\count502
+\c@listd=\count503
+\c@savedlistd=\count504
+\c@liste=\count505
+\c@savedliste=\count506
+\c@listf=\count507
+\c@savedlistf=\count508
+\c@location=\count509
+\c@savedlocation=\count510
+\c@organization=\count511
+\c@savedorganization=\count512
+\c@origlocation=\count513
+\c@savedoriglocation=\count514
+\c@origpublisher=\count515
+\c@savedorigpublisher=\count516
+\c@publisher=\count517
+\c@savedpublisher=\count518
+\c@language=\count519
+\c@savedlanguage=\count520
+\c@origlanguage=\count521
+\c@savedoriglanguage=\count522
+\c@pageref=\count523
+\c@savedpageref=\count524
 \shorthandwidth=\skip105
 \shortjournalwidth=\skip106
 \shortserieswidth=\skip107
@@ -1272,19 +1273,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count524
-\c@textcitetotal=\count525
-\c@textcitemaxnames=\count526
-\c@biburlbigbreakpenalty=\count527
-\c@biburlbreakpenalty=\count528
-\c@biburlnumpenalty=\count529
-\c@biburlucpenalty=\count530
-\c@biburllcpenalty=\count531
+\c@textcitecount=\count525
+\c@textcitetotal=\count526
+\c@textcitemaxnames=\count527
+\c@biburlbigbreakpenalty=\count528
+\c@biburlbreakpenalty=\count529
+\c@biburlnumpenalty=\count530
+\c@biburlucpenalty=\count531
+\c@biburllcpenalty=\count532
 \biburlbigskip=\muskip21
 \biburlnumskip=\muskip22
 \biburlucskip=\muskip23
 \biburllcskip=\muskip24
-\c@smartand=\count532
+\c@smartand=\count533
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -1294,8 +1295,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count533
-\c@bbx:relatedtotal=\count534
+\c@bbx:relatedcount=\count534
+\c@bbx:relatedtotal=\count535
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1338,17 +1339,17 @@ Package: beamervideo 2023/10/25 Video creation from beamer slides
 \speechouts=\write7
 \speechRenderVideoScript=\write8
 \speechRenderVideoFileList=\write9
-\c@videopage=\count535
-\c@actualvideopage=\count536
-\c@videocounter=\count537
-\c@slidecounter=\count538
+\c@videopage=\count536
+\c@actualvideopage=\count537
+\c@videocounter=\count538
+\c@slidecounter=\count539
 )
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count539
-\@quotereset=\count540
+\@quotelevel=\count540
+\@quotereset=\count541
 (./Skript.aux)
 \openout1 = `Skript.aux'.
 
@@ -1372,16 +1373,16 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count541
+\scratchcounter=\count542
 \scratchdimen=\dimen377
 \scratchbox=\box109
-\nofMPsegments=\count542
-\nofMParguments=\count543
+\nofMPsegments=\count543
+\nofMParguments=\count544
 \everyMPshowfont=\toks74
-\MPscratchCnt=\count544
+\MPscratchCnt=\count545
 \MPscratchDim=\dimen378
-\MPnumerator=\count545
-\makeMPintoPDFobject=\count546
+\MPnumerator=\count546
+\makeMPintoPDFobject=\count547
 \everyMPtoPDFconversion=\toks75
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1430,7 +1431,7 @@ Package caption Info: End \AtBeginDocument code.
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-\c@lstlisting=\count547
+\c@lstlisting=\count548
 Package hyperref Info: Link coloring ON on input line 26.
 (./Skript.out) (./Skript.out)
 \@outlinefile=\write10
@@ -2016,15 +2017,15 @@ Package logreq Info: Writing requests to 'Skript.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 88917 strings out of 476056
- 2267043 string characters out of 5791604
- 3263554 words of memory out of 5000000
- 109293 multiletter control sequences out of 15000+600000
+ 88985 strings out of 476056
+ 2268759 string characters out of 5791604
+ 3265146 words of memory out of 5000000
+ 109361 multiletter control sequences out of 15000+600000
  566212 words of font info for 69 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  118i,19n,134p,865b,2463s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </root/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb>
-Output written on Skript.pdf (43 pages, 2490171 bytes).
+Output written on Skript.pdf (43 pages, 2490149 bytes).
 PDF statistics:
  839 PDF objects out of 1000 (max. 8388607)
  710 compressed objects within 8 object streams

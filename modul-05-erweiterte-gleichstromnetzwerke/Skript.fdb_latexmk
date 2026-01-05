@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber Skript"] 1761555551.18484 "Skript.bcf" "Skript.bbl" "Skript" 1764169816.48957 0
-  "Skript.bcf" 1764169815.3695 106909 16598c1598a6ca3eff5b7d8c33210845 "pdflatex"
+["biber Skript"] 1761555551.18484 "Skript.bcf" "Skript.bbl" "Skript" 1764235905.97546 0
+  "Skript.bcf" 1764235904.96034 106909 16598c1598a6ca3eff5b7d8c33210845 "pdflatex"
   (generated)
   "Skript.bbl"
   "Skript.blg"
   (rewritten before read)
-["makeindex Skript.idx"] 1764164368.16419 "Skript.idx" "Skript.ind" "Skript" 1764169816.48408 0
-  "Skript.idx" 1764169798.49355 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex Skript.idx"] 1764235697.09826 "Skript.idx" "Skript.ind" "Skript" 1764235905.97093 0
+  "Skript.idx" 1764235890.28879 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "Skript.ilg"
   "Skript.ind"
   (rewritten before read)
-["pdflatex"] 1764169793.78003 "/workspace/modul-05-erweiterte-gleichstromnetzwerke/Skript.tex" "Skript.pdf" "Skript" 1764169816.49798 0
+["pdflatex"] 1764235886.78668 "/workspace/modul-05-erweiterte-gleichstromnetzwerke/Skript.tex" "Skript.pdf" "Skript" 1764235905.9825 0
   "../Templates/Bilder/BUW_Logo-weiss-auf-gruen-rgb.png" 1761555383.23005 12587 f9b4b61ad717e37270a722a482d8283f ""
   "../Templates/Bilder/FHAachen-logo2010.png" 1761555383.23005 25532 2befbcd9bf8303d5a5b58ea6d4eb50dd ""
   "../Templates/Bilder/FH_Dortmund-logo.png" 1761555383.23106 44864 e73985364c5d1fe7742cec36436afc6a ""
@@ -22,8 +22,8 @@
   "../Templates/Bilder/logo-hrw.png" 1761555383.23406 16423 a2a2df242c4627d7167991c7173498e8 ""
   "../Templates/Bilder/mkw.jpg" 1761555383.24309 1865277 dc619145bfc5fb9a5496ba2d6ceffb99 ""
   "../Templates/Settings.tex" 1763020926.76978 17623 ca545815a70256fafea665a70d555b4c ""
-  "../Templates/SkriptSettings.tex" 1764164418.19423 6701 6a8ffc29fb9f87a7e0f647e0c55be6bb ""
-  "../Templates/SkriptTitle.tex" 1761555383.24565 2138 debb52e1d31978aec08ee6da90d688d9 ""
+  "../Templates/SkriptSettings.tex" 1764235630.75749 8013 99c1328ce6588decc1184a85bfe9d829 ""
+  "../Templates/SkriptTitle.tex" 1764170415.72416 2128 728149f7e338cea549bae18448008ef4 ""
   "../Video/beamervideo.sty" 1761555383.28828 7315 30f131dc2147dd42474a879e00157a51 ""
   "/etc/texmf/web2c/texmf.cnf" 1752506391 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/root/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk" 1761555549.37914 11524 0a3f8b16dc767cffe7d86565227c455a ""
@@ -431,8 +431,8 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1752506440 7306986 026904c1bb866d0cef5b46f31166b15a ""
   "/workspace/modul-05-erweiterte-gleichstromnetzwerke/Skript.tex" 1764166623.79953 1751 eef12c918e1586007d82a05ea0790b9b ""
   "00_Einleitung.tex" 1761902179.54123 1397 21eb2fdf7ea6638da1c2e42970cefc32 ""
-  "01_Knoten_Maschenanalyse.tex" 1763541687.46549 45914 e8781ed23eeea4b19696d3ddf8fc3e25 ""
-  "02_Superposition.tex" 1763541233.38428 26540 d8598b49d655aca00db448a572c6a57e ""
+  "01_Knoten_Maschenanalyse.tex" 1764235865.14946 45913 d1ddfb49d8dba671e7d64525606151f2 ""
+  "02_Superposition.tex" 1764235865.14894 26560 0b70f8b83aa36d9ea7d5d273417e6ab3 ""
   "03_Knotenpotentialanalyse.tex" 1764166031.28318 20667 cda758a9d209b45b81560490a337d0e6 ""
   "04_Maschenstromverfahren.tex" 1764166257.38192 22780 a9181c459957a8362353475ec727896c ""
   "AufgabeKnotenMaschen1.tex" 1764166921.84917 874 68ce51723be082cc50199715dfce6876 ""
@@ -446,14 +446,14 @@
   "Aufgaben.tex" 1761555383.60665 432 09a0990cddc26e57673d6e08f953b5e9 ""
   "Inhalt.tex" 1761555383.60864 372 f28520345ee2660ad8a3ada87fc207c1 ""
   "Modulsettings.tex" 1761555383.60964 395 6f88e6721b3d4153d55c232e93c324c5 ""
-  "Skript.aux" 1764169815.33208 23209 0df1ccaf62e85177b4aa563515c22497 "pdflatex"
+  "Skript.aux" 1764235904.9251 23203 4338d90ecbebc94a886b87c64d6b6370 "pdflatex"
   "Skript.bbl" 1761555552.00909 466 ee04f40f768daeed26442158e95aba61 "biber Skript"
-  "Skript.ind" 1764164368.17906 0 d41d8cd98f00b204e9800998ecf8427e "makeindex Skript.idx"
+  "Skript.ind" 1764235697.11156 0 d41d8cd98f00b204e9800998ecf8427e "makeindex Skript.idx"
   "Skript.nls" 0 -1 0 ""
-  "Skript.out" 1764169815.34961 8369 af5faa78b1c944e8e388417871099c7e "pdflatex"
-  "Skript.run.xml" 1764169815.37691 2361 b706e927034ccb85e4d82481054f3827 "pdflatex"
+  "Skript.out" 1764235904.94268 8369 af5faa78b1c944e8e388417871099c7e "pdflatex"
+  "Skript.run.xml" 1764235904.96644 2361 b706e927034ccb85e4d82481054f3827 "pdflatex"
   "Skript.tex" 1764166623.79953 1751 eef12c918e1586007d82a05ea0790b9b ""
-  "Skript.toc" 1764169815.37849 3776 19553f837bc21ca11fde6b3309ad48e9 "pdflatex"
+  "Skript.toc" 1764235904.96851 3776 19553f837bc21ca11fde6b3309ad48e9 "pdflatex"
   "Tikz/src/A1KnotMasch1.tex" 1761555383.64761 1242 9cc86b8a4af16bcac78688eb447f6460 ""
   "Tikz/src/A2KnotMasch2.tex" 1761555383.64861 672 e252414b0e0969a0e978046196db25a2 ""
   "Tikz/src/A3KnotMasch3.tex" 1761555383.64917 861 f6534eb9716d3851f5d1921a94ce80b0 ""

@@ -1,17 +1,17 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.7.14)  26 NOV 2025 15:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.7.14)  3 JAN 2026 15:50
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **/workspace/modul-07-periodische-groessen/Skript.tex
 (/workspace/modul-07-periodische-groessen/Skript.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
-runsystem(makeindex -g -s ../Templates/Arbeit.ist TeXAux/Skript.idx)...executed safely (allowed).
+runsystem(makeindex -g -s ../Templates/Arbeit.ist TeXAux/Skript.idx)...executed.
 
-runsystem(cat TeXAux/Skript.nlo | sort | uniq -w 55 | makeindex -i -s nomencl.ist -o TeXAux/Skript.nls)...disabled (restricted).
+runsystem(cat TeXAux/Skript.nlo | sort | uniq -w 55 | makeindex -i -s nomencl.ist -o TeXAux/Skript.nls)...executed.
 
-runsystem(cd TeXAux;gnuplot *.gnuplot;cd ..;)...disabled (restricted).
+runsystem(cd TeXAux;gnuplot *.gnuplot;cd ..;)...executed.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
@@ -863,7 +863,21 @@ Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
 Package: svg 2020/11/26 v2.02k (include SVG pictures)
  (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+) (/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+ (/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+runsystem(uname -s > "Skript.w18")...executed.
+
+ (./Skript.w18)
+runsystem(rm -- "Skript.w18")...executed.
+
 )
 \c@svg@param@lastpage=\count368
 \svg@box=\box103
@@ -1109,57 +1123,58 @@ Package nomencl Info: Writing nomenclature file Skript.nlo on input line 19.
 
 Writing index file Skript.idx
 \c@tcb@cnt@bsp=\count408
+\c@tcb@cnt@expl=\count409
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
  (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count409
+\lrq@indent=\count410
  (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count410
-\c@listtotal=\count411
-\c@listcount=\count412
-\c@liststart=\count413
-\c@liststop=\count414
-\c@citecount=\count415
-\c@citetotal=\count416
-\c@multicitecount=\count417
-\c@multicitetotal=\count418
-\c@instcount=\count419
-\c@maxnames=\count420
-\c@minnames=\count421
-\c@maxitems=\count422
-\c@minitems=\count423
-\c@citecounter=\count424
-\c@maxcitecounter=\count425
-\c@savedcitecounter=\count426
-\c@uniquelist=\count427
-\c@uniquename=\count428
-\c@refsection=\count429
-\c@refsegment=\count430
-\c@maxextratitle=\count431
-\c@maxextratitleyear=\count432
-\c@maxextraname=\count433
-\c@maxextradate=\count434
-\c@maxextraalpha=\count435
-\c@abbrvpenalty=\count436
-\c@highnamepenalty=\count437
-\c@lownamepenalty=\count438
-\c@maxparens=\count439
-\c@parenlevel=\count440
-\blx@tempcnta=\count441
-\blx@tempcntb=\count442
-\blx@tempcntc=\count443
-\c@blx@maxsection=\count444
-\blx@maxsegment@0=\count445
-\blx@notetype=\count446
-\blx@parenlevel@text=\count447
-\blx@parenlevel@foot=\count448
-\blx@sectionciteorder@0=\count449
-\blx@sectionciteorderinternal@0=\count450
-\blx@entrysetcounter=\count451
-\blx@biblioinstance=\count452
+\c@tabx@nest=\count411
+\c@listtotal=\count412
+\c@listcount=\count413
+\c@liststart=\count414
+\c@liststop=\count415
+\c@citecount=\count416
+\c@citetotal=\count417
+\c@multicitecount=\count418
+\c@multicitetotal=\count419
+\c@instcount=\count420
+\c@maxnames=\count421
+\c@minnames=\count422
+\c@maxitems=\count423
+\c@minitems=\count424
+\c@citecounter=\count425
+\c@maxcitecounter=\count426
+\c@savedcitecounter=\count427
+\c@uniquelist=\count428
+\c@uniquename=\count429
+\c@refsection=\count430
+\c@refsegment=\count431
+\c@maxextratitle=\count432
+\c@maxextratitleyear=\count433
+\c@maxextraname=\count434
+\c@maxextradate=\count435
+\c@maxextraalpha=\count436
+\c@abbrvpenalty=\count437
+\c@highnamepenalty=\count438
+\c@lownamepenalty=\count439
+\c@maxparens=\count440
+\c@parenlevel=\count441
+\blx@tempcnta=\count442
+\blx@tempcntb=\count443
+\blx@tempcntc=\count444
+\c@blx@maxsection=\count445
+\blx@maxsegment@0=\count446
+\blx@notetype=\count447
+\blx@parenlevel@text=\count448
+\blx@parenlevel@foot=\count449
+\blx@sectionciteorder@0=\count450
+\blx@sectionciteorderinternal@0=\count451
+\blx@entrysetcounter=\count452
+\blx@biblioinstance=\count453
 \labelnumberwidth=\skip97
 \labelalphawidth=\skip98
 \biblabelsep=\skip99
@@ -1171,9 +1186,9 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \blx@bcfin=\read6
 \blx@bcfout=\write6
 \blx@langwohyphens=\language15
-\c@mincomprange=\count453
-\c@maxcomprange=\count454
-\c@mincompwidth=\count455
+\c@mincomprange=\count454
+\c@maxcomprange=\count455
+\c@mincompwidth=\count456
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
@@ -1181,74 +1196,74 @@ File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count456
-\c@savedafterword=\count457
-\c@annotator=\count458
-\c@savedannotator=\count459
-\c@author=\count460
-\c@savedauthor=\count461
-\c@bookauthor=\count462
-\c@savedbookauthor=\count463
-\c@commentator=\count464
-\c@savedcommentator=\count465
-\c@editor=\count466
-\c@savededitor=\count467
-\c@editora=\count468
-\c@savededitora=\count469
-\c@editorb=\count470
-\c@savededitorb=\count471
-\c@editorc=\count472
-\c@savededitorc=\count473
-\c@foreword=\count474
-\c@savedforeword=\count475
-\c@holder=\count476
-\c@savedholder=\count477
-\c@introduction=\count478
-\c@savedintroduction=\count479
-\c@namea=\count480
-\c@savednamea=\count481
-\c@nameb=\count482
-\c@savednameb=\count483
-\c@namec=\count484
-\c@savednamec=\count485
-\c@translator=\count486
-\c@savedtranslator=\count487
-\c@shortauthor=\count488
-\c@savedshortauthor=\count489
-\c@shorteditor=\count490
-\c@savedshorteditor=\count491
-\c@labelname=\count492
-\c@savedlabelname=\count493
-\c@institution=\count494
-\c@savedinstitution=\count495
-\c@lista=\count496
-\c@savedlista=\count497
-\c@listb=\count498
-\c@savedlistb=\count499
-\c@listc=\count500
-\c@savedlistc=\count501
-\c@listd=\count502
-\c@savedlistd=\count503
-\c@liste=\count504
-\c@savedliste=\count505
-\c@listf=\count506
-\c@savedlistf=\count507
-\c@location=\count508
-\c@savedlocation=\count509
-\c@organization=\count510
-\c@savedorganization=\count511
-\c@origlocation=\count512
-\c@savedoriglocation=\count513
-\c@origpublisher=\count514
-\c@savedorigpublisher=\count515
-\c@publisher=\count516
-\c@savedpublisher=\count517
-\c@language=\count518
-\c@savedlanguage=\count519
-\c@origlanguage=\count520
-\c@savedoriglanguage=\count521
-\c@pageref=\count522
-\c@savedpageref=\count523
+\c@afterword=\count457
+\c@savedafterword=\count458
+\c@annotator=\count459
+\c@savedannotator=\count460
+\c@author=\count461
+\c@savedauthor=\count462
+\c@bookauthor=\count463
+\c@savedbookauthor=\count464
+\c@commentator=\count465
+\c@savedcommentator=\count466
+\c@editor=\count467
+\c@savededitor=\count468
+\c@editora=\count469
+\c@savededitora=\count470
+\c@editorb=\count471
+\c@savededitorb=\count472
+\c@editorc=\count473
+\c@savededitorc=\count474
+\c@foreword=\count475
+\c@savedforeword=\count476
+\c@holder=\count477
+\c@savedholder=\count478
+\c@introduction=\count479
+\c@savedintroduction=\count480
+\c@namea=\count481
+\c@savednamea=\count482
+\c@nameb=\count483
+\c@savednameb=\count484
+\c@namec=\count485
+\c@savednamec=\count486
+\c@translator=\count487
+\c@savedtranslator=\count488
+\c@shortauthor=\count489
+\c@savedshortauthor=\count490
+\c@shorteditor=\count491
+\c@savedshorteditor=\count492
+\c@labelname=\count493
+\c@savedlabelname=\count494
+\c@institution=\count495
+\c@savedinstitution=\count496
+\c@lista=\count497
+\c@savedlista=\count498
+\c@listb=\count499
+\c@savedlistb=\count500
+\c@listc=\count501
+\c@savedlistc=\count502
+\c@listd=\count503
+\c@savedlistd=\count504
+\c@liste=\count505
+\c@savedliste=\count506
+\c@listf=\count507
+\c@savedlistf=\count508
+\c@location=\count509
+\c@savedlocation=\count510
+\c@organization=\count511
+\c@savedorganization=\count512
+\c@origlocation=\count513
+\c@savedoriglocation=\count514
+\c@origpublisher=\count515
+\c@savedorigpublisher=\count516
+\c@publisher=\count517
+\c@savedpublisher=\count518
+\c@language=\count519
+\c@savedlanguage=\count520
+\c@origlanguage=\count521
+\c@savedoriglanguage=\count522
+\c@pageref=\count523
+\c@savedpageref=\count524
 \shorthandwidth=\skip105
 \shortjournalwidth=\skip106
 \shortserieswidth=\skip107
@@ -1272,19 +1287,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count524
-\c@textcitetotal=\count525
-\c@textcitemaxnames=\count526
-\c@biburlbigbreakpenalty=\count527
-\c@biburlbreakpenalty=\count528
-\c@biburlnumpenalty=\count529
-\c@biburlucpenalty=\count530
-\c@biburllcpenalty=\count531
+\c@textcitecount=\count525
+\c@textcitetotal=\count526
+\c@textcitemaxnames=\count527
+\c@biburlbigbreakpenalty=\count528
+\c@biburlbreakpenalty=\count529
+\c@biburlnumpenalty=\count530
+\c@biburlucpenalty=\count531
+\c@biburllcpenalty=\count532
 \biburlbigskip=\muskip21
 \biburlnumskip=\muskip22
 \biburlucskip=\muskip23
 \biburllcskip=\muskip24
-\c@smartand=\count532
+\c@smartand=\count533
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -1294,8 +1309,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count533
-\c@bbx:relatedtotal=\count534
+\c@bbx:relatedcount=\count534
+\c@bbx:relatedtotal=\count535
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1338,17 +1353,17 @@ Package: beamervideo 2023/10/25 Video creation from beamer slides
 \speechouts=\write7
 \speechRenderVideoScript=\write8
 \speechRenderVideoFileList=\write9
-\c@videopage=\count535
-\c@actualvideopage=\count536
-\c@videocounter=\count537
-\c@slidecounter=\count538
+\c@videopage=\count536
+\c@actualvideopage=\count537
+\c@videocounter=\count538
+\c@slidecounter=\count539
 )
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count539
-\@quotereset=\count540
+\@quotelevel=\count540
+\@quotereset=\count541
 (./Skript.aux)
 \openout1 = `Skript.aux'.
 
@@ -1372,16 +1387,16 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count541
+\scratchcounter=\count542
 \scratchdimen=\dimen377
 \scratchbox=\box109
-\nofMPsegments=\count542
-\nofMParguments=\count543
+\nofMPsegments=\count543
+\nofMParguments=\count544
 \everyMPshowfont=\toks74
-\MPscratchCnt=\count544
+\MPscratchCnt=\count545
 \MPscratchDim=\dimen378
-\MPnumerator=\count545
-\makeMPintoPDFobject=\count546
+\MPnumerator=\count546
+\makeMPintoPDFobject=\count547
 \everyMPtoPDFconversion=\toks75
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1430,7 +1445,7 @@ Package caption Info: End \AtBeginDocument code.
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-\c@lstlisting=\count547
+\c@lstlisting=\count548
 Package hyperref Info: Link coloring ON on input line 26.
 (./Skript.out) (./Skript.out)
 \@outlinefile=\write10
@@ -1538,36 +1553,37 @@ No file Skript.nls.
 (./Inhalt.tex (./00_Einleitung.tex (./Tikz/src/Einleitung/Zeigerdiagramm_Spannung_Strom.tex) [1
 
 
-]) (./01_Komplexe Zahlen.tex [2] (./Tikz/src/Komplexe_Zahlen/Zeigerdiagramm_Komplexe_Zahlen.tex) [3] [4
+]) (./01_Komplexe Zahlen.tex [2] (./Tikz/src/Komplexe_Zahlen/Zeigerdiagramm_Komplexe_Zahlen.tex) [3
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.329     \end{eq}
-                  
+l.233 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.329     \end{eq}
-                  
+l.233 
+      ]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.8}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329     \end{eq}
-                  ] (./Tikz/src/Komplexe_Zahlen/Addition_Komplexer_Zahlen.tex) (./Tikz/src/Komplexe_Zahlen/Subtraktion_Komplexer_Zahlen.tex) [5] (./Tikz/src/Komplexe_Zahlen/Multiplikation_Komplexer_Zahlen.tex) [6]) (./02_Zeigerdiagramme.tex (./Tikz/src/Zeigerdiagramme/Periodische_Wechselspannung.tex
-\openout3 = `Skript.Sinus6.gnuplot'.
-
-runsystem(gnuplot Skript.Sinus6.gnuplot)...disabled (restricted).
-
-
-
-Package pgf Warning: Plot data file `Skript.Sinus6.table' not found. on input line 12.
-
-) [7] (./Tikz/src/Zeigerdiagramme/Verschiedene_Massangaben.tex)
-Overfull \hbox (13.64206pt too wide) in paragraph at lines 163--164
-[]\OT1/cmr/m/n/10 Der zeitabh[]angige Span-nungs-wert $\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )$ ei-ner Wech-sel-span-nung ist von meh-re-ren Ein-fluss-gr[]o^^Yen abh[]angig.
- []
-
-(./Tikz/src/Zeigerdiagramme/Spannungs_und_Stromzeiger.tex) [8] (./Tikz/src/Zeigerdiagramme/Zeigerdarstellung_komplexe_Wechselspannung.tex) (./Tikz/src/Zeigerdiagramme/Bauteile_Wechselspannungszeiger.tex
+<to be read again> 
+                   \relax 
+l.238     \begin{eq}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.238     \begin{eq}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.238     \begin{eq}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.238     \begin{eq}
+                     [4] (./Tikz/src/Komplexe_Zahlen/Addition_Komplexer_Zahlen.tex) (./Tikz/src/Komplexe_Zahlen/Subtraktion_Komplexer_Zahlen.tex) [5] (./Tikz/src/Komplexe_Zahlen/Multiplikation_Komplexer_Zahlen.tex) [6]) (./02_Zeigerdiagramme.tex (./Tikz/src/Zeigerdiagramme/Periodische_Wechselspannung.tex) [7] (./Tikz/src/Zeigerdiagramme/Verschiedene_Massangaben.tex) (./Tikz/src/Zeigerdiagramme/Spannungs_und_Stromzeiger.tex) [8] (./Tikz/src/Zeigerdiagramme/Zeigerdarstellung_komplexe_Wechselspannung.tex) (./Tikz/src/Zeigerdiagramme/Bauteile_Wechselspannungszeiger.tex
 \absvshift=\dimen379
 \absvshift=\dimen380
 \absvshift=\dimen381
@@ -1575,201 +1591,60 @@ Overfull \hbox (13.64206pt too wide) in paragraph at lines 163--164
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.200 
+l.199 
       ]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.209     \begin{eq}
+l.208     \begin{eq}
                     
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.209     \begin{eq}
+l.208     \begin{eq}
                     
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.209     \begin{eq}
+l.208     \begin{eq}
                     
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.209     \begin{eq}
-                     (./Tikz/src/Komplexe_Wechselstromrechnung/Gegenueberstellung_idealer_realer_Widerstand.tex) (./Tikz/src/Komplexe_Wechselstromrechnung/Sinunsschwingung_Widerstand.tex
-\openout3 = `Skript.Sinus31.gnuplot'.
-
-runsystem(gnuplot Skript.Sinus31.gnuplot)...disabled (restricted).
-
-
-
-Package pgf Warning: Plot data file `Skript.Sinus31.table' not found. on input line 7.
-
-\openout3 = `Skript.Sinus32.gnuplot'.
-
-runsystem(gnuplot Skript.Sinus32.gnuplot)...disabled (restricted).
-
-
-Package pgf Warning: Plot data file `Skript.Sinus32.table' not found. on input line 11.
-
-) [13] [14] (./Tikz/src/Komplexe_Wechselstromrechnung/Phasenverschiebung_Kondensator.tex
-\openout3 = `Skript.Sinus33.gnuplot'.
-
-runsystem(gnuplot Skript.Sinus33.gnuplot)...disabled (restricted).
-
-
-
-Package pgf Warning: Plot data file `Skript.Sinus33.table' not found. on input line 11.
-
-\openout3 = `Skript.Sinus34.gnuplot'.
-
-runsystem(gnuplot Skript.Sinus34.gnuplot)...disabled (restricted).
-
-
-Package pgf Warning: Plot data file `Skript.Sinus34.table' not found. on input line 16.
-
-) (./Tikz/src/Komplexe_Wechselstromrechnung/Gegenueberstellung_idealer_realer_Kondensator.tex) [15] (./Tikz/src/Komplexe_Wechselstromrechnung/Phasenverschiebung_Spule.tex
-\openout3 = `Skript.Sinus35.gnuplot'.
-
-runsystem(gnuplot Skript.Sinus35.gnuplot)...disabled (restricted).
-
-
-
-Package pgf Warning: Plot data file `Skript.Sinus35.table' not found. on input line 11.
-
-\openout3 = `Skript.Sinus36.gnuplot'.
-
-runsystem(gnuplot Skript.Sinus36.gnuplot)...disabled (restricted).
-
-
-Package pgf Warning: Plot data file `Skript.Sinus36.table' not found. on input line 16.
-
-) (./Tikz/src/Komplexe_Wechselstromrechnung/Gegenueberstellung_ideale_reale_Spule.tex) [16] (./Tikz/src/Komplexe_Wechselstromrechnung/Quellen_Wechselgroessen.tex) (./Tikz/src/Komplexe_Wechselstromrechnung/Gegenueberstellung_ideale_reale_Wechselspannungsquelle.tex
+l.208     \begin{eq}
+                     (./Tikz/src/Komplexe_Wechselstromrechnung/Gegenueberstellung_idealer_realer_Widerstand.tex) (./Tikz/src/Komplexe_Wechselstromrechnung/Sinunsschwingung_Widerstand.tex) [13] (./Tikz/src/Komplexe_Wechselstromrechnung/Phasenverschiebung_Kondensator.tex) [14] (./Tikz/src/Komplexe_Wechselstromrechnung/Gegenueberstellung_idealer_realer_Kondensator.tex) [15] (./Tikz/src/Komplexe_Wechselstromrechnung/Phasenverschiebung_Spule.tex) (./Tikz/src/Komplexe_Wechselstromrechnung/Gegenueberstellung_ideale_reale_Spule.tex) [16] (./Tikz/src/Komplexe_Wechselstromrechnung/Quellen_Wechselgroessen.tex) (./Tikz/src/Komplexe_Wechselstromrechnung/Gegenueberstellung_ideale_reale_Wechselspannungsquelle.tex
 \absvshift=\dimen382
 ) [17] (./Tikz/src/Komplexe_Wechselstromrechnung/Beispiel_reale_Spannungsquelle.tex) [18] (./Tikz/src/Komplexe_Wechselstromrechnung/Quellen_Wechelgroessen2.tex) (./Tikz/src/Komplexe_Wechselstromrechnung/Gegenueberstellung_reale_Wechselspannung_Wechselstromquelle.tex
 \absvshift=\dimen383
-) [19]
-Underfull \hbox (badness 1742) in paragraph at lines 830--843
-[]\OT1/cmr/m/n/10 Gegeben ist ei-ne rea-le Wech-sel-span-nungs-quel-le mit $[][] = 20 \OML/cmm/m/it/10 kV \OMS/cmsy/m/n/10 ^^A \OT1/cmr/m/n/10 e[]$ und
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 830--843
+)
+Underfull \hbox (badness 10000) in paragraph at lines 840--853
 
  []
 
-[20] (./Tikz/src/Komplexe_Wechselstromrechnung/Knoten_und_Maschenregel.tex
+[19] (./Tikz/src/Komplexe_Wechselstromrechnung/Knoten_und_Maschenregel.tex
 \absvshift=\dimen384
 \absvshift=\dimen385
-) (./Tikz/src/Komplexe_Wechselstromrechnung/Komplexer_Spannungsteiler.tex) [21] (./Tikz/src/Komplexe_Wechselstromrechnung/Gegenueberstellung_Teiler_Hochspannung.tex) (./Tikz/src/Komplexe_Wechselstromrechnung/Spannungsteiler_ohmsch-kapazitiv.tex) [22] (./Tikz/src/Komplexe_Wechselstromrechnung/Spannungsteiler_ohmsch-kapazitiv2.tex) [23] (./Tikz/src/Komplexe_Wechselstromrechnung/Stromteiler_komplex.tex) [24]) (./04_Effektivwert.tex [25] (./Tikz/src/Effektivwert/Sinusspannungen_untersch_Amplitudenwerte.tex
-\openout3 = `Skript.Sinus1.gnuplot'.
-
-runsystem(gnuplot Skript.Sinus1.gnuplot)...disabled (restricted).
-
-
-
-Package pgf Warning: Plot data file `Skript.Sinus1.table' not found. on input line 16.
-
-\openout3 = `Skript.Sinus2.gnuplot'.
-
-runsystem(gnuplot Skript.Sinus2.gnuplot)...disabled (restricted).
-
-
-Package pgf Warning: Plot data file `Skript.Sinus2.table' not found. on input line 17.
-
-\openout3 = `Skript.Sinus3.gnuplot'.
-
-runsystem(gnuplot Skript.Sinus3.gnuplot)...disabled (restricted).
-
-
-Package pgf Warning: Plot data file `Skript.Sinus3.table' not found. on input line 18.
-
-) [26] [27] (./Tikz/src/Effektivwert/Sinusspannung_Formverlauf.tex
-\openout3 = `Skript.Sinus3.gnuplot'.
-
-runsystem(gnuplot Skript.Sinus3.gnuplot)...disabled (restricted).
-
-
-
-Package pgf Warning: Plot data file `Skript.Sinus3.table' not found. on input line 14.
-
-) [28]) (./05_Scheinleistung_Wirkleistung_Blindleistung.tex (./Tikz/src/Scheinleistung_Wirkleistung_Blindleistung/Saegezahnspannung_Verlauf.tex) [29] [30] [31
+) (./Tikz/src/Komplexe_Wechselstromrechnung/Komplexer_Spannungsteiler.tex) [20] (./Tikz/src/Komplexe_Wechselstromrechnung/Gegenueberstellung_Teiler_Hochspannung.tex) [21] (./Tikz/src/Komplexe_Wechselstromrechnung/Spannungsteiler_ohmsch-kapazitiv.tex) (./Tikz/src/Komplexe_Wechselstromrechnung/Spannungsteiler_ohmsch-kapazitiv2.tex) [22] (./Tikz/src/Komplexe_Wechselstromrechnung/Stromteiler_komplex.tex) [23]) (./04_Effektivwert.tex (./Tikz/src/Effektivwert/Sinusspannungen_untersch_Amplitudenwerte.tex) [24] [25] (./Tikz/src/Effektivwert/Sinusspannung_Formverlauf.tex) [26] [27]) (./05_Scheinleistung_Wirkleistung_Blindleistung.tex (./Tikz/src/Scheinleistung_Wirkleistung_Blindleistung/Saegezahnspannung_Verlauf.tex) [28] [29] [30
 pdfTeX warning (ext4): destination with the same identifier (name{equation.6.11}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.298     }
-           ] (./Tikz/src/Scheinleistung_Wirkleistung_Blindleistung/Verlauf_induktive_Last.tex
-\openout3 = `Skript.Sinus11.gnuplot'.
-
-runsystem(gnuplot Skript.Sinus11.gnuplot)...disabled (restricted).
-
-
-
-Package pgf Warning: Plot data file `Skript.Sinus11.table' not found. on input line 13.
-
-\openout3 = `Skript.Sinus12.gnuplot'.
-
-runsystem(gnuplot Skript.Sinus12.gnuplot)...disabled (restricted).
-
-
-Package pgf Warning: Plot data file `Skript.Sinus12.table' not found. on input line 14.
-
-\openout3 = `Skript.Sinus13.gnuplot'.
-
-runsystem(gnuplot Skript.Sinus13.gnuplot)...disabled (restricted).
-
-
-Package pgf Warning: Plot data file `Skript.Sinus13.table' not found. on input line 18.
-
-) (./Tikz/src/Scheinleistung_Wirkleistung_Blindleistung/Verlauf_kapazitive_Last.tex
-\openout3 = `Skript.Sinus14.gnuplot'.
-
-runsystem(gnuplot Skript.Sinus14.gnuplot)...disabled (restricted).
-
-
-
-Package pgf Warning: Plot data file `Skript.Sinus14.table' not found. on input line 13.
-
+l.324     }
+           ] (./Tikz/src/Scheinleistung_Wirkleistung_Blindleistung/Verlauf_induktive_Last.tex) (./Tikz/src/Scheinleistung_Wirkleistung_Blindleistung/Verlauf_kapazitive_Last.tex
 \openout3 = `Skript.Sinus15.gnuplot'.
 
-runsystem(gnuplot Skript.Sinus15.gnuplot)...disabled (restricted).
+runsystem(gnuplot Skript.Sinus15.gnuplot)...executed.
 
-
-Package pgf Warning: Plot data file `Skript.Sinus15.table' not found. on input line 14.
-
-\openout3 = `Skript.Sinus16.gnuplot'.
-
-runsystem(gnuplot Skript.Sinus16.gnuplot)...disabled (restricted).
-
-
-Package pgf Warning: Plot data file `Skript.Sinus16.table' not found. on input line 18.
-
-) [32] [33]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.6.15}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.490     \begin{eq}
-                    
-pdfTeX warning (ext4): destination with the same identifier (name{equation.6.15}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.490     \begin{eq}
-                    
-pdfTeX warning (ext4): destination with the same identifier (name{equation.6.15}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.490     \begin{eq}
-                    
-pdfTeX warning (ext4): destination with the same identifier (name{equation.6.15}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.490     \begin{eq}
-                     [34
+) [31] [32
 pdfTeX warning (ext4): destination with the same identifier (name{equation.6.15}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.604 
-      ] (./Tikz/src/Scheinleistung_Wirkleistung_Blindleistung/Zeigerdiagramm_Leistung.tex) [35]
+l.508     }
+           
+pdfTeX warning (ext4): destination with the same identifier (name{equation.6.15}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.508     }
+           ] (./Tikz/src/Scheinleistung_Wirkleistung_Blindleistung/Zeigerdiagramm_Leistung.tex) [33]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.6.20}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1789,75 +1664,45 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.6.20}
 <to be read again> 
                    \relax 
 l.752     \begin{eq}
-                    
-Underfull \hbox (badness 10000) in paragraph at lines 816--816
+                     [34]
+Underfull \hbox (badness 10000) in paragraph at lines 814--814
 
  []
 
-[36] [37]) (./06_Drehstrom.tex (./Tikz/src/Drehstrom/Drei_Phasen_Drehstrom.tex
-\openout3 = `Skript.Sinus21.gnuplot'.
-
-runsystem(gnuplot Skript.Sinus21.gnuplot)...disabled (restricted).
-
-
-
-Package pgf Warning: Plot data file `Skript.Sinus21.table' not found. on input line 14.
-
-\openout3 = `Skript.Sinus22.gnuplot'.
-
-runsystem(gnuplot Skript.Sinus22.gnuplot)...disabled (restricted).
-
-
-Package pgf Warning: Plot data file `Skript.Sinus22.table' not found. on input line 15.
-
-\openout3 = `Skript.Sinus23.gnuplot'.
-
-runsystem(gnuplot Skript.Sinus23.gnuplot)...disabled (restricted).
-
-
-Package pgf Warning: Plot data file `Skript.Sinus23.table' not found. on input line 16.
-
-) [38] [39] (./Tikz/src/Drehstrom/Zeigerdiagramm_Drehstromoperator.tex) [40] (./Tikz/src/Drehstrom/ESB_Drehstromsystem.tex
+[35]) (./06_Drehstrom.tex (./Tikz/src/Drehstrom/Drei_Phasen_Drehstrom.tex) [36] [37] (./Tikz/src/Drehstrom/Zeigerdiagramm_Drehstromoperator.tex) [38] (./Tikz/src/Drehstrom/ESB_Drehstromsystem.tex
 \absfshift=\dimen386
 \absfshift=\dimen387
 \absfshift=\dimen388
 \absfshift=\dimen389
-)
-Overfull \hbox (0.29636pt too wide) in paragraph at lines 262--263
-[]\OT1/cmr/m/n/10 Au^^Yenleiter-Spannung (ver-ket-te-te Span-nung) U: Span-nung zwi-schen zwei Lei-tern ($\OML/cmm/m/it/10 U[]$\OT1/cmr/m/n/10 , $\OML/cmm/m/it/10 U[]$\OT1/cmr/m/n/10 ,
- []
-
-[41] (./Tikz/src/Drehstrom/Dreisphasiges_ESB.tex
+) [39] (./Tikz/src/Drehstrom/Dreisphasiges_ESB.tex
 \absfshift=\dimen390
 \absfshift=\dimen391
 \absfshift=\dimen392
 ) (./Tikz/src/Drehstrom/Einphasiges_ESB.tex
 \absfshift=\dimen393
-) [42] [43] (./Tikz/src/Drehstrom/Zeigerdiagramm_Herleitung_Stern_Dreieck.tex) (./Tikz/src/Drehstrom/Stern-Dreieck_dreiphasiges_ESB.tex
+) [40] [41]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.7.12}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.482     }
+            (./Tikz/src/Drehstrom/Zeigerdiagramm_Herleitung_Stern_Dreieck.tex) (./Tikz/src/Drehstrom/Stern-Dreieck_dreiphasiges_ESB.tex
 \absfshift=\dimen394
 \absfshift=\dimen395
 \absfshift=\dimen396
-) [44
-pdfTeX warning (ext4): destination with the same identifier (name{equation.7.12}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.520 
-      ] (./Tikz/src/Drehstrom/Stern-Dreieck_einphasiges_ESB.tex
+) [42] (./Tikz/src/Drehstrom/Stern-Dreieck_einphasiges_ESB.tex
 \absfshift=\dimen397
-) [45] [46] (./Tikz/src/Drehstrom/Stern_Dreieck_vereinfachtes_ESB.tex
+) [43] [44] (./Tikz/src/Drehstrom/Stern_Dreieck_vereinfachtes_ESB.tex
 \absfshift=\dimen398
 \absvshift=\dimen399
 \absfshift=\dimen400
 \absvshift=\dimen401
 \absfshift=\dimen402
 \absvshift=\dimen403
-) [47] [48] [49]) (./07_Mehrphasensysteme.tex [50] [51] (./Tikz/src/Mehrphasensysteme/Zeigerdiagramme_unsymmetrisches_System.tex) [52] [53] (./Tikz/src/Mehrphasensysteme/Transformierte_Spannungsquelle_ESB.tex) [54] [55] (./Tikz/src/Mehrphasensysteme/Transformierte_Last_ESB.tex) [56] (./Tikz/src/Mehrphasensysteme/Transformierte_Leitung_ESB.tex
+) [45] [46]) (./07_Mehrphasensysteme.tex [47] [48] (./Tikz/src/Mehrphasensysteme/Zeigerdiagramme_unsymmetrisches_System.tex) [49] [50] (./Tikz/src/Mehrphasensysteme/Transformierte_Spannungsquelle_ESB.tex) [51] [52] (./Tikz/src/Mehrphasensysteme/Transformierte_Last_ESB.tex) [53] (./Tikz/src/Mehrphasensysteme/Transformierte_Leitung_ESB.tex
 \absfshift=\dimen404
 \absfshift=\dimen405
 \absfshift=\dimen406
-))) [57] [58
-
-] (./Aufgaben.tex (./AufgabeKomplexeZahlen1.tex
+))) [54] (./Aufgaben.tex (./AufgabeKomplexeZahlen1.tex
 Underfull \hbox (badness 10000) in paragraph at lines 17--17
 
  []
@@ -1872,28 +1717,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
-[59]) (./AufgabeWechselstromrechnung2.tex) (./AufgabeEffektivwert1.tex
-Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[55
 
- []
-
-) (./AufgabeLeistung1.tex (./Tikz/src/Aufgaben/Leistungsberechnung1.tex
-\openout3 = `Skript.Sinus14.gnuplot'.
-
-runsystem(gnuplot Skript.Sinus14.gnuplot)...disabled (restricted).
-
-
-
-Package pgf Warning: Plot data file `Skript.Sinus14.table' not found. on input line 13.
-
+]) (./AufgabeWechselstromrechnung2.tex) (./AufgabeEffektivwert1.tex) (./AufgabeLeistung1.tex (./Tikz/src/Aufgaben/Leistungsberechnung1.tex
 \openout3 = `Skript.Sinus15.gnuplot'.
 
-runsystem(gnuplot Skript.Sinus15.gnuplot)...disabled (restricted).
+runsystem(gnuplot Skript.Sinus15.gnuplot)...executed.
 
-
-Package pgf Warning: Plot data file `Skript.Sinus15.table' not found. on input line 14.
-
-) [60]) (./AufgabeDrehstrom1.tex) (./AufgabeDrehstrom2.tex [61]) (./AufgabeMehrphasen1.tex)) (./Aufgaben.tex (./AufgabeKomplexeZahlen1.tex
+) [56]) (./AufgabeDrehstrom1.tex) (./AufgabeDrehstrom2.tex [57]) (./AufgabeMehrphasen1.tex)) (./Aufgaben.tex (./AufgabeKomplexeZahlen1.tex
 Underfull \hbox (badness 10000) in paragraph at lines 88--88
 
  []
@@ -1923,7 +1754,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--88
 
  []
 
-[62]
+[58]
 Underfull \hbox (badness 10000) in paragraph at lines 88--88
 
  []
@@ -1933,7 +1764,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--88
 
  []
 
-[63] (./Tikz/src/Aufgaben/Loesung_Komplexe_Zahlen_f1.tex)
+[59] (./Tikz/src/Aufgaben/Loesung_Komplexe_Zahlen_f1.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 19--88
 
  []
@@ -1943,27 +1774,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--88
 
  []
 
-) (./AufgabeKomplexeZahlen2.tex [64] (./Tikz/src/Aufgaben/Loesung_Komplexe_Zahlen_2d.tex) [65]) (./AufgabeZeigerdiagramme1.tex
+) (./AufgabeKomplexeZahlen2.tex [60] (./Tikz/src/Aufgaben/Loesung_Komplexe_Zahlen_2d.tex) [61]) (./AufgabeZeigerdiagramme1.tex
 Underfull \hbox (badness 10000) in paragraph at lines 41--41
 
  []
 
-(./Tikz/src/Aufgaben/Loesung_Zeigerdiagramme1.tex)) (./AufgabeWechselstromrechnung1.tex) (./AufgabeWechselstromrechnung2.tex [66]
-Underfull \hbox (badness 10000) in paragraph at lines 114--114
+(./Tikz/src/Aufgaben/Loesung_Zeigerdiagramme1.tex)) (./AufgabeWechselstromrechnung1.tex) (./AufgabeWechselstromrechnung2.tex [62]
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
 
  []
 
 (./Tikz/src/Aufgaben/Loesung_Komplexe_Wechselstromrechnung_2c.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 114--114
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--114
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
 
  []
 
-(./Tikz/src/Aufgaben/Loesung_Komplexe_Wechselstromrechnung_2d.tex) [67]) (./AufgabeEffektivwert1.tex
+(./Tikz/src/Aufgaben/Loesung_Komplexe_Wechselstromrechnung_2d.tex) [63]) (./AufgabeEffektivwert1.tex
 pdfTeX warning (ext4): destination with the same identifier (name{equation.B.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2043,7 +1874,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.B.1})
 <to be read again> 
                    \relax 
 l.51 }
-       [68]) (./AufgabeLeistung1.tex
+       [64]) (./AufgabeLeistung1.tex
 pdfTeX warning (ext4): destination with the same identifier (name{equation.B.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2085,29 +1916,29 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.B.1})
 l.74 }
       ) (./AufgabeDrehstrom1.tex) (./AufgabeDrehstrom2.tex (./Tikz/src/Aufgaben/Loesung_Drehstrom2_a1.tex) (./Tikz/src/Aufgaben/Loesung_Drehstrom2_a2.tex
 \absvshift=\dimen407
- [69])
-Underfull \hbox (badness 10000) in paragraph at lines 125--125
+ [65])
+Underfull \hbox (badness 10000) in paragraph at lines 124--124
 
  []
 
 (./Tikz/src/Aufgaben/Loesung_Drehstrom2_a3.tex) (./Tikz/src/Aufgaben/Loesung_Drehstrom2_a4.tex
 \absvshift=\dimen408
-) [70]
-Underfull \hbox (badness 10000) in paragraph at lines 125--125
+) [66]
+Underfull \hbox (badness 10000) in paragraph at lines 124--124
 
  []
 
-(./Tikz/src/Aufgaben/Loesung_Drehstrom2_d_Zeigerfiagramm.tex) [71]) (./AufgabeMehrphasen1.tex (./Tikz/src/Aufgaben/Loesung_Mehrphasensysteme1_a.tex)
+(./Tikz/src/Aufgaben/Loesung_Drehstrom2_d_Zeigerfiagramm.tex) [67]) (./AufgabeMehrphasen1.tex (./Tikz/src/Aufgaben/Loesung_Mehrphasensysteme1_a.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 80--80
 
  []
 
-[72] (./Tikz/src/Aufgaben/Loesung_Mehrphasensysteme1_d.tex)
+[68] (./Tikz/src/Aufgaben/Loesung_Mehrphasensysteme1_d.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 80--80
 
  []
 
-)) [73]
+)) [69]
 
 LaTeX Warning: Empty bibliography on input line 64.
 
@@ -2117,24 +1948,24 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `Skript.out' has not changed.
-(rerunfilecheck)             Checksum: 9F8424D977987944787D7C16E3BC7767;13101.
+(rerunfilecheck)             Checksum: 35F01E3902B7A7D5BF4D6F7D98DBC1B8;13619.
 Package logreq Info: Writing requests to 'Skript.run.xml'.
 \openout1 = `Skript.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 88432 strings out of 476056
- 2284534 string characters out of 5791604
- 3251080 words of memory out of 5000000
- 108519 multiletter control sequences out of 15000+600000
+ 88929 strings out of 476056
+ 2295090 string characters out of 5791604
+ 3254649 words of memory out of 5000000
+ 109003 multiletter control sequences out of 15000+600000
  566558 words of font info for 70 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  118i,19n,134p,854b,2631s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </root/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0700.600pk> </root/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb>
-Output written on Skript.pdf (77 pages, 2676166 bytes).
+Output written on Skript.pdf (73 pages, 2686903 bytes).
 PDF statistics:
- 1409 PDF objects out of 1440 (max. 8388607)
- 1231 compressed objects within 13 object streams
- 506 named destinations out of 1000 (max. 500000)
+ 1391 PDF objects out of 1440 (max. 8388607)
+ 1217 compressed objects within 13 object streams
+ 502 named destinations out of 1000 (max. 500000)
  708 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,25 +1,25 @@
 \begin{frame}
-    \fta{Mehrphasensysteme - Mitsystem, Gegensystem und Nullsystem}
+    \fta{Multiphase systems – positive system, negative system and zero system}
 
     \s{
-        Im Kapitel Drehstrom wurde erläutert, wie sich die Spannungen, die Ströme und die Leistungen in verschiedenen dreiphäsigen Systemen zusammensetzen.
-        In dem besonderen Fall von symmetrischen Verbrauchern konnte gezeigt werden, dass relativ einfach eine Netzberechnung druchgeführt werden kann.
-        Vor allem die vereinfachte Darstellung durch die einphasigen Ersatzschaltbilder hilft bei der Berechnung.
-        Durch unsymmetrische Verbraucher können diese Vereinfachungen nicht angenommen werden und führen dazu, dass umfassendere Netzberechnungen auch schon bei kleinen Netzen unübersichtlich und aufwändig werden.
-        Unsymmetrien treten z.B. durch Netzfehler wie ein einpoliger Kurzschluss, durch Schalthandlungen, oder unsymmetrische Belastung der einzelnen Phasen auf.
-        Die Zusammenhänge von auslösenden Ereignissen und den Ergebnissen sind allein anhand von Zahlenwerten schwer nachvollziehbar.
-        Um auch umfassende und unsymmetrische Netze berechnen zu können, kann mit einer Transformation des bekannten Systems in drei neue Systeme abhilfe geschaffen werden.
-        Dafür werden die drei folgenden Systeme näher betrachtet: 
+        The chapter on three-phase current explained how voltages, currents and power are composed in various three-phase systems.
+        In the special case of symmetrical consumers, it was shown that a network calculation can be carried out relatively easily.
+        The simplified representation using single-phase equivalent circuits is particularly helpful for the calculation.
+        These simplifications cannot be applied to unbalanced loads, which means that even for small networks, more comprehensive network calculations become confusing and time-consuming.
+        Imbalances occur, for example, due to network faults such as a single-pole short circuit, switching operations or unbalanced loads on the individual phases.
+        The relationships between triggering events and the results are difficult to understand based on numerical values alone.
+        In order to be able to calculate comprehensive and unbalanced networks, the known system can be transformed into three new systems.
+        The following three systems are examined in more detail for this purpose:
     }
 
-    \begin{Lernziele}{Mehrphasensysteme}
-        Die Studierenden
+    \begin{Learning objectives}{Mehrphasensysteme}
+        The students
         \begin{itemize}
-            \item verstehen die Funktionen von Mit-, Gegen- und Nullsystem. 
-            \item können die Drehstromleistung der verschiedenen Systeme berechnen.
-            \item können Ersatzschaltbilder für symmetrische Quellen, Lasten und Leitungen erstellen. 
+            \item understand the functions of shunt, counter and zero systems.
+            \item can calculate the three-phase power of the various systems.
+            \item can create equivalent circuit diagrams for symmetrical sources, loads and lines. 
         \end{itemize}
-    \end{Lernziele}
+    \end{Learning objectives}
    
 \end{frame}
 
@@ -45,25 +45,24 @@
 
 
 \begin{frame}
-    \ftb{Mit-, Gegen- und Nullsystem}
+    \ftb{Positive-, negative-, and zero-sequence systems}
 
     \s{
-        Grundlegend ist das Ziel der Transformation, ein unsymmetrisches System von n Zeigern in n Systeme mit symmetrischer Zeigeranordnung zu überführen.
-        Für ein Drehstromsystem bedeutet das, dass drei Systeme geschaffen werden sollen.
-        Jeder Leiter, also $L_1$, $L_2$ und $L_3$ soll ersetzt werden durch ein System was eine symmetrische Zeigeranordnung hat.
-        Grundlage der Transformationsvorschrift ist der bereits bekannte Drehoperator $\underline{a}$ und $\underline{a}^2$ (vgl. Gleichung \ref{Drehoperator}).
-        Für den Strom in den jeweiligen Leitern lassen sich so die Symmetriebedingungen aufstellen (Hier ist anzumerken, dass alles was für den Strom gilt an Zusammenhängen auch für die Spannung gilt!):
-        
+        The fundamental goal of the transformation is to convert an asymmetrical system of n vectors into n systems with a symmetrical vector arrangement.
+        For a three-phase system, this means that three systems must be created.
+        Each conductor, i.e. $L_1$, $L_2$ and $L_3$, must be replaced by a system with a symmetrical vector arrangement.         
+        The transformation rule is based on the already known rotation operator $\underline{a}$ and $\underline{a}^2$ (see equation \ref{Drehoperator}).
+        The symmetry conditions for the current in the respective conductors can be established as follows (it should be noted here that everything that applies to the current also applies to the voltage!):        
         \begin{eqa}
             \underline{I}_{\mathrm{L1}}&=\underline{I}_{0}+\underline{I}_{1}+\underline{I}_{2} \nonumber \\
             \underline{I}_{\mathrm{L2}}&=\underline{I}_{0}+\underline{a}^2\cdot \underline{I}_{1}+\underline{a}\cdot\underline{I}_{2} \label{ZerlegungL2} \\
             \underline{I}_{\mathrm{L3}}&=\underline{I}_{0}+\underline{a}\cdot\underline{I}_{1}+\underline{a}^2\cdot\underline{I}_{2} \nonumber
         \end{eqa}
 
-        Die Indizes den rechten Seiten der Gleichungen stehen für die drei Systeme: Mitsystem (1), Gegensystem (2) und Nullsystem (0).
-        Schaut man sich die Werte des Mitsystems an, dann ergeben sich durch die Drehoperatoren rechtsdrehende Phasenströme.
-        Bei dem Gegensystem sind die transformierten Phasenströme linksdrehend angeordnet und bei dem Nullsystem sind alle Komponenten gleichgerichtet.
-        Grundsätzlich tritt das Nullsystem nur dann auf, wenn die Summe aller Ströme des Ausgangssystems ungleich Null sind.
+        The indices on the right-hand side of the equations represent the three systems: positive system (1), negative system (2) and zero system (0).
+        If we look at the values of the positive system, the rotation operators result in clockwise phase currents.          
+        In the counter-system, the transformed phase currents are arranged in a left-rotating manner, and in the zero system, all components are aligned in the same direction.
+        In principle, the zero system only occurs when the sum of all currents in the output system is not equal to zero.
     }
 
     \b{
@@ -87,9 +86,10 @@
 \begin{frame}
     \ftx{Grundlagen - Zerlegungsgleichungen}
     \s{
-    Im nächsten Schritt werden die sogenannten Zerlegungsgleichungen (Gleichungen \ref{ZerlegungL2}) so umgestellt, dass das Verhältnisse vom Strom des Mit- Gegen- Nullsystemes zu den Leiterströmen des Ursprungssytem aufzeigt wird.
+    In the next step, the so-called decomposition equations (equations \ref{ZerlegungL2}) are rearranged to show the ratio of the current of the zero-sequence system to the conductor currents of the original system.
+    
+    For the current in the zero-sequence system, the following applies by addition:
 
-    Für den Strom im Nullsystem gilt durch Addition:
 
     \begin{eqa}
         \underline{I}_{\mathrm{L1}}+\underline{I}_{\mathrm{L2}}+\underline{I}_{\mathrm{L3}}&=3\cdot\underline{I}_0+\underline{I}_1\cdot(1+\underline{a}^2+\underline{a})+\underline{I}_2\cdot(1+\underline{a}+\underline{a}^2) \notag \\
@@ -98,8 +98,8 @@
     \end{eqa}
 
     
-    Für die Ermittlung des Stroms des Mitsystems werden zuerst die Gleichungen so multipliziert, dass die Vorfaktoren vor dem Mitstrom 1 ergeben.
-    Danach werden die Zerlegungsgleichungen wieder addiert.
+    To determine the current of the secondary system, the equations are first multiplied so that the pre-factors before the secondary current add up to 1.
+    hen the decomposition equations are added together again.
 
     $\underline{a}^3=1$  ;  $\underline{a}^4=\underline{a}$  ;  $\underline{a}^5=\underline{a}^2$  ;  ...
 
@@ -115,8 +115,8 @@
         \Leftrightarrow \underline{I}_{1}&=\frac{1}{3}\cdot(\underline{I}_{\mathrm{L1}}+\underline{a}\cdot\underline{I}_{\mathrm{L2}}+\underline{a}^2\cdot\underline{I}_{\mathrm{L3}}) \notag
     \end{eqa}
 
-    Zum Schluss wird noch der Strom für das Gegensystem berechnet.
-    Dabei wird das gleiche Prinzip angewendet, wie beim Mitsystem: Erst wird der Vorfaktor angepasst, dann alle Zerlegungsgleichungen addiert:
+    Finally, the current for the counter-system is calculated.
+    The same principle is applied as for the system: first, the pre-factor is adjusted, then all decomposition equations are added:
 
     \begin{eqa}
         \underline{I}_{\mathrm{\mathrm{L1}}}&=\underline{I}_{0}+\underline{I}_{1}+\underline{I}_{2} \\
@@ -130,21 +130,20 @@
         \Leftrightarrow \underline{I}_{2}&=\frac{1}{3}\cdot(\underline{I}_{\mathrm{L1}}+\underline{a}^2\cdot\underline{I}_{\mathrm{L2}}+\underline{a}\cdot\underline{I}_{\mathrm{L3}}) \notag
     \end{eqa}
 
-    So ergeben sich für die Ströme aller System folgende Gleichungen:
-    
+    This results in the following equations for the currents of all systems:
+
     \begin{eqa}
         \underline{I}_0&=\frac{1}{3}\cdot(\underline{I}_{\mathrm{L1}}+\underline{I}_{\mathrm{L2}}+\underline{I}_{\mathrm{L3}}) \\
         \underline{I}_{1}&=\frac{1}{3}\cdot(\underline{I}_{\mathrm{L1}}+\rlap{\underline{a}}\phantom{a^2}\cdot\underline{I}_{\mathrm{L2}}+\underline{a}^2\cdot\underline{I}_{\mathrm{L3}}) \\
         \underline{I}_{2}&=\frac{1}{3}\cdot(\underline{I}_{\mathrm{L1}}+\underline{a}^2\cdot\underline{I}_{\mathrm{L2}}+\rlap{\underline{a}}\phantom{a^2}\cdot\underline{I}_{\mathrm{L3}})
     \end{eqa}
 
-    Schaut man sich diese drei Gleichungen genau an, sieht man, dass der Leiter L1 in keiner der drei Gleichungen einen Drehoperator als Vorfaktor hat.
-    Deshalb soll der L1 Leiter als Bezugsleiter gewählt werden.
-    Das bedeutet, dass das der Leiter ist, durch den eine Unsymmetrie im Originalsystem auftritt (z.B. durch einen einpoligen Erdkurzschluss).
-    Die vorhanden Restsymmetrien im Originalsystem können dann einfacher über die anderen Leiter betrachtet werden
-    Es kann natürlich jeder Leiter als Bezugsleiter genommen werden, da grundsätzlich jeder Leiter einem Index (L1, L2, L3) frei zugeordnet werden kann.
-    So kann jedoch die anfänglich festgelegte Vorderung erfüllt werden: Die Symmetrien der realen Netze und Betriebsmittel müssen vorteilhaft genutzt werden!
-    }
+    If you look closely at these three equations, you will see that conductor L1 does not have a rotation operator as a leading factor in any of the three equations.
+    Therefore, conductor L1 should be selected as the reference conductor.
+    This means that this is the conductor through which an imbalance occurs in the original system (e.g. due to a single-pole earth fault).  
+    The remaining symmetries in the original system can then be more easily considered via the other conductors
+    Of course, any conductor can be taken as the reference conductor, since each conductor can be freely assigned an index (L1, L2, L3).
+    However, this allows the initial requirement to be met: the symmetries of the real networks and equipment must be used to advantage!    }
 
     \b{
         \begin{itemize}
@@ -201,29 +200,29 @@
 \end{frame}
     
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Zeigerdiagramm eines unsymmetrischen Stroms im Dreiphasensystem und die Transformationen}
     
 \s{
-    Beispielhaft kann ein unsymmetrischer Strom im Dreiphasensytem und die Transformation folgendermaßen aussehen:
+    As an example, an unbalanced current in a three-phase system and the transformation may look as follows:
 }
 
     \fu{\resizebox{0.6\textwidth}{!}{%
         \input{Tikz/src/Mehrphasensysteme/Zeigerdiagramme_unsymmetrisches_System}
     }
-    }{{\bf Zeigerdiagramme eines unsymmetrischen Systems.} Transformationen aus einem Originalsystem in Mit-, Gegen- und 
-    Nullsystem. \label{ZeigerUnsym}}
+    }{{\bf Pointer diagrams of an unbalanced system.} Transformations from an original system into a positive, negative and
+    zero system. \label{ZeigerUnsym}}
 
 \end{frame}
 
     \begin{frame}
         \ftx{Grundlagen - Matrixschreibweise}
     \s{
-        Abb. \ref{ZeigerUnsym} zeigt das Zeigerdiagramm einer unsymmetrischen Belastung.
-        Im Originalsystem ist an den Zeigern zu erkennen, dass sowohl die Winkel, wie auch die Amplituden vom symmetrischen Zustand abweichen.
-        Durch die Transformation in die drei Systeme erhält man wiederum symmetrische Zeiger, mit denen dann einfacher gerechnet werden kann.
-        An den Drehoperatoren und dem Vorfaktor von $\frac{1}{3}$ ist mit den Zeigern gut zu erkennen, wie sich die transformierten Ströme verhalten.
-            
-        Um die Transformationsgleichungen nicht immer vollständig hinschreiben zu müssen, können die Gleichungen auch in Matrixschreibweise geschrieben werden:
+        Fig. \ref{ZeigerUnsym} shows the phasor diagram of an unbalanced load.
+        In the original system, the phasors show that both the angles and the amplitudes deviate from the symmetrical state.
+        The transformation into the three systems results in symmetrical phasors, which are easier to calculate with.           
+        The rotation operators and the prefactor of $\frac{1}{3}$ make it easy to see from the vectors how the transformed currents behave.
+        To avoid having to write out the transformation equations in full every time, the equations can also be written in matrix notation:
 
     \begin{eqa}
         \begin{bmatrix}
@@ -245,8 +244,8 @@
         \end{bmatrix}       \label{TraFoMatrix}
     \end{eqa}
  
-    Die Schreibweise kann noch weiter vereinfacht werden, wenn der Term mit den Drehoperatoren und der Term mit Vorfaktor in einer Matrix zusammengfasst wird.
-    Diese Matrix wird auch Symmetrierungsmatrix genannt:
+    The notation can be simplified further by combining the term with the rotation operators and the term with the leading factor into a matrix.
+    This matrix is also called the symmetrisation matrix:
 
     \begin{eqa} 
         \begin{bmatrix}
@@ -260,7 +259,7 @@
         \end{bmatrix}
         \end{eqa}
 
-    In der Kompaktschreibweise erhält man so folgende Form:
+    In compact notation, this gives the following form:
 
     \begin{eqa}
         \begin{bmatrix}
@@ -276,7 +275,7 @@
         \end{bmatrix}
     \end{eqa}
 
-    Gemäß den Rechenregeln für Matrizen kann mit der Inversen von $\begin{bmatrix}\underline{T}\end{bmatrix}$ die Rücktransformation erfolgen:
+    According to the rules for calculating matrices, the inverse of $\begin{bmatrix}\underline{T}\end{bmatrix}$ can be used to perform the inverse transformation:
 
     \begin{eqa}
         \begin{bmatrix}
@@ -374,7 +373,7 @@
         \end{bmatrix}
     \end{eqa}
     \begin{itemize}
-        \item Gemäß den Rechenregeln für Matrizen kann mit der Inversen von $\begin{bmatrix}\underline{T}\end{bmatrix}$ die Rücktransformation erfolgen:
+        According to the rules for calculating matrices, the inverse of $\begin{bmatrix}\underline{T}\end{bmatrix}$ can be used to perform the inverse transformation:
     \end{itemize}
     \begin{eqa}
         \begin{bmatrix}
@@ -415,22 +414,22 @@
 \begin{frame}
     \ftx{Systemarten}
 
-    \begin{Merksatz}{Mit-, Gegen- und Nullsystem}
+    \begin{Key point}{Positive-, negative-, and zero-sequence systems}
         Ein System wird zur Analyse in die drei Systeme: Mitsystem, Gegensystem und Nullsystem transformiert. \\
-        Das {\bf Mitsystem} wird mit dem Index 1 versehen: \qquad  $\underline{I}_1$ \\
-        Das {\bf Gegensystemsystem} wird mit dem Index 2 versehen: \qquad $\underline{I}_2$ \\
-        Das {\bf Nullsystem} wird mit dem Index 0 versehen: \qquad $\underline{I}_0$ 
-    \end{Merksatz}
+        The {\bf Positive system} is assigned the index 1: \qquad  $\underline{I}_1$ \\
+        The {\bf Negative system} is assigned the index 2: \qquad $\underline{I}_2$ \\
+        The {\bf Zero system} is assigned the index 0: \qquad $\underline{I}_0$ 
+    \end{Key point}
 \end{frame}
 
 
 
 \begin{frame}
-    \ftb{Drehstromleistung}
+    \ftb{Three-phase power}
 
 \s{
-    Wie die Leistung berechnet wird, wurde bereits im Kapitel Drehstrom erläutert.
-    Auch hier kann die Gleichung zur Leistungsberechnung zur Vereinfachung in Matrizenschreibweise ausgedrückt werden:
+    How power is calculated has already been explained in the chapter on three-phase current.
+    Here too, the equation for calculating power can be expressed in matrix notation for simplicity:
 }
 \b{
     \begin{itemize}
@@ -466,10 +465,10 @@
     
 
 \s{
-    Mit den gegebenen Drehoperatoren können die Ströme und Spannungen in einem symmetrische System auf jeweils eine Phase bezogen werden 
+    With the given rotation operators, the currents and voltages in a symmetrical system can be related to one phase each.
     ($\underline{U}_{\mathrm{L2}}=\underline{a}^2\cdot\underline{U}_{\mathrm{L1}}, \underline{U}_{\mathrm{L3}}=\underline{a}\cdot\underline{U}_{\mathrm{L1}}$)
 
-    Daraus ergibt sich für die Leistung die bekannte Vereinfachung:
+    This results in the familiar simplification for power:
 }
 \b{
     \begin{itemize}
@@ -487,7 +486,7 @@
     \ftx{Drehstromleistung und Komponentenleistung}
 
 \s{
-    Nun kann mit der Matrixschreibweise die Transformation in die neuen Systeme berechnet werden:
+    Now, using matrix notation, the transformation into the new systems can be calculated:
 }
 \b{
     \begin{itemize}
@@ -614,28 +613,28 @@
 \end{frame}
 
 \begin{frame}
-    \ftb{Ersatzschaltbilder}
+    \ftb{Equivalent circuit diagram}
 \s{
-    ESB dienen grundlegend immmer der einfacheren Betrachtung und einem erleichterten Verständniss der Komponenten.
-    Es sollen sich nun verschiedene Betriebsmittel angeschaut werden und wie sich die Transformationen in verschiedenen Netzsituationen verhalten.
+    ECDs fundamentally serve to simplify the observation and understanding of components.
+    We will now examine various operating resources and how the transformations behave in different network situations.
 }
 \b{
     \begin{itemize}
-        \item ESB dienen grundlegend immmer der einfacheren Betrachtung und einem erleichterten Verständniss der Komponenten
-        \item Es sollen sich nun verschiedene Betriebsmittel angeschaut werden und wie sich die Transformationen in verschiedenen Netzsituationen verhalten
+        \item ESBs fundamentally serve to simplify the viewing and understanding of components.
+        \item We will now look at various operating resources and how the transformations behave in different network situations.
     \end{itemize}
 }
 \end{frame}
 
 \begin{frame}
-        \ftc{Symmetrische Spannungsquelle}
+        \ftc{Symmetrical voltage source}
 \s{
-    Symmetrische Spannungsquellen findet man z.B. bei der Netzeinspeisung und auch bei Synchronmaschienen.
-    Im ersten Schritt wird sich das Ausgangssystems angeschaut.
-    Die Zusammenhänge zwischen der Sternspannung und den einzelnen Phasen ist bereits aus dem Kapitel ??? bekannt.
-    Mit der Formel für die Transformation (vgl. \ref{TraFoMatrix}) lässt sich nun rechnerisch zeigen, dass in einem solchen symmetrischen Fall die Spannungen des Gegen- und Nullsystems 0 ergeben.
+    Symmetrical voltage sources can be found, for example, in mains supply and also in synchronous machines.
+    The first step is to look at the output system.    
+    The relationships between the star voltage and the individual phases are already known from the chapter ???.
+    Using the formula for the transformation (cf. \ref{TraFoMatrix}), it can now be shown mathematically that in such a symmetrical case, the voltages of the counter and zero systems are 0.
 
-    Lediglich im Mitsystem tritt eine treibende Spannung, in Höhe der Sternspannung auf:
+    Only in the neutral system does a driving voltage occur, equal to the star voltage:
 }
 \b{
     \begin{itemize}
@@ -683,7 +682,7 @@
         \ftx{Symmetrische Spannungsquelle}
         
   \s{
-    Löst man die Gleichungen für die transformierten Systeme auf erhält man die Spannungsergebnisse:
+    Solving the equations for the transformed systems yields the following stress results:
   }
   \b{
     \begin{itemize}
@@ -697,11 +696,12 @@
     \end{eqa}
 
 \end{frame}
+\renewcommand{\figurename}{Figure}
     \begin{frame}
         \ftx{Symmetrische Spannungsquelle}
   \s{
-    Mit den Ergebnissen des Gegen- und Nullsystems kann bildlich gesagt werden, dass diese kurzgeschlossen sind.
-    So können für die drei transformierten Systeme die jeweiligen ESB erstellt werden:
+    With the results of the counter and zero systems, it can be said figuratively that these are short-circuited.
+    Thus, the respective ECDs can be created for the three transformed systems:
   }
   \b{
     \begin{itemize}
@@ -711,25 +711,24 @@
   }
     \fu{
         \input{Tikz/src/Mehrphasensysteme/Transformierte_Spannungsquelle_ESB}
-    }{{\bf Ersatzschaltbilder der transformierten Spannungsquelle.} Bei der symmetrischen Spannungsquelle verfügt nur das ESB 
-    des Mitsystems über die Spannungsquelle. \label{ESBSymQuellen}}
+    }{{\bf Equivalent circuit diagrams of the transformed voltage source.} In the case of a symmetrical voltage source, only the ECD 
+    of the mitsystem has the voltage source. \label{ESBSymQuellen}}
 
     \s{
-        In der Abbildung \ref{ESBSymQuellen} soll nochmal deutlich hervorgehoben werden, dass einerseits drei einzelne System 
-        gebildet werden und weiter, dass in dem spezial Fall der symmetrischen Quellen nur in einem der Systeme eine Spannung 
-        auftaucht.
+        In Figure \ref{ESBSymQuellen}, it should be clearly emphasised once again that, on the one hand, three individual systems are formed 
+        and, furthermore, that in the special case of symmetrical sources, a voltage only occurs in one of the systems.
     }
     
 \end{frame}
 
 \begin{frame}
-    \ftc{Symmetrische Last}
+    \ftc{Symmetrical load}
 \s{
-    Für die Betrachtung der Lasten soll eine Sternschaltung mit Rückleiter gewählt werden. 
-    Es wird in jedem Leiter, auch im Rückleiter, eine Impedanz Z angenommen.
-    Für den symmetrischen Fall werden die Impedanzen als gleich groß angenommen, lediglich die Impedanz im Rückleiter kann von den anderen abweichen und bekommt einen eigenen Index.
-
-    Für das Originalsystem werden die Gleichung für die Spannung folgendermaßen aufgestellt:
+    A star connection with a return conductor should be selected for the consideration of the loads.
+    An impedance Z is assumed in each conductor, including the return conductor.
+    For the symmetrical case, the impedances are assumed to be equal; only the impedance in the return conductor may differ from the others and is given its own index.
+    
+    For the original system, the equation for the voltage is set up as follows:
 }
 \b{
     \begin{itemize}
@@ -749,7 +748,7 @@
     \begin{frame}
         \ftx{Symmetrische Last}
     \s{
-    Auch hier kann mittels Matrixschreibweise vereinfacht werden:
+    Here, too, matrix notation can be used to simplify the expression:
     }
     \b{
         \begin{itemize}
@@ -776,7 +775,7 @@
         \end{bmatrix}
     \end{eqa}
 
-    Mit...
+    With...
     
     \begin{eqa}
         \begin{bmatrix}
@@ -790,7 +789,7 @@
         \end{bmatrix}
       \end{eqa}
 
-      ...ergibt sich
+      ...results in
 
       \begin{eqa}
         \begin{bmatrix}
@@ -810,7 +809,7 @@
       \begin{frame}
         \ftx{Symmetrische Last}
       \s{
-      Wird mit den Transformationsgleichungen umgeformt folgt:
+      If transformed using the transformation equations, the following applies:
       }
       \b{
         \begin{itemize}
@@ -839,11 +838,10 @@
     \end{eqa}
 
     \s{
-    Bei den symmetrischen Spannungsquellen konnte aus der Transformation die Spannung abhängig vom Originalsystem errechnet werden.
-    Das gleiche soll auf für die Impedanzen für die Verbraucher geschafft werden.
-    Dafür müssen die aufgestellten Gleichunge noch so umgeformt werden, dass sich ein Verhältnis von transformierten Impedanzen und Impedanzen des Originalsystem ergibt.
-    Um das zu erreichen werden beide Seiten erst mit $\begin{bmatrix}\underline{T}\end{bmatrix}$ erweitert und dann auf Grundlage des Ohmschen-Gesetzes umgestellt.
-    }
+    For symmetrical voltage sources, the voltage could be calculated from the transformation depending on the original system.
+    The same should be done for the impedances for the consumers.  
+    To do this, the equations must be transformed in such a way that a ratio of transformed impedances and impedances of the original system is obtained.
+    To achieve this, both sides are first expanded with $\begin{bmatrix}\underline{T}\end{bmatrix}$ and then rearranged based on Ohm's law.    }
     \b{
         \begin{itemize}
             \item Wie bei den Spannungsquellen soll aus der Transformation die Spannung abhängig vom Originalsystem errechnet werden
@@ -917,7 +915,7 @@
         \ftx{Symmetrische Last}
    
     \s{
-    Wird die Matrixoperation der letzten Gleichung durchgeführt, dann ergibt sich der gewünschte Zusammenhanhg von Original- und Transformationssystem.
+    Performing the matrix operation of the last equation yields the desired relationship between the original and transformation systems.
     }
     \b{
         \begin{itemize}
@@ -938,10 +936,11 @@
 
 \end{frame}
     \begin{frame}
+        \renewcommand{\figurename}{Figure}
         \ftx{Symmetrische Last}
    
     \s{
-    Nun können auch für die symmetrischen Lasten die jeweiligen ESB der transformierten Systeme aufgestellt werden:
+    Now, the respective ECDs of the transformed systems can also be established for the symmetrical loads:
     }
     \b{
         \begin{itemize}
@@ -952,31 +951,31 @@
     }
     \fu{
        \input{Tikz/src/Mehrphasensysteme/Transformierte_Last_ESB}
-    }{{\bf Ersatzschaltbilder der transformierten Last.} Bei der symmetrischen Last weisen die drei Systeme alle eine 
-    symmetrische Impedanz auf, jedoch verfügt das Nullsystem zusätzlich noch über die dreifache Impedanz für einen 
-    Rückleiter. \label{ESBSymLasten}}
+    }{{\bf Equivalent circuit diagrams of the transformed load.} With a symmetrical load, the three systems all have a 
+    symmetrical impedance, but the zero system also has three times the impedance for a 
+    return conductor. \label{ESBSymLasten}}
 
     \s{
-    In Abb. \ref{ESBSymLasten} treten im Mit- und Gegensystem die gleichen Impedanzen auf.
-    Sollten die Verbraucher im Dreieck verschaltet sein, müssten die Impedanzen mit den bekannten Verhältnissen in Sterngrößen umgerechnet werden.
-    Für die Nullimpedanzen gilt, dass Ströme nur fließen, wenn auch in der Realität eine Verbindung zu einem Stern besteht.
-    Dann treten die Impedanzen im Rückleiter mit dreifachem Wert auf.
+    In Fig. \ref{ESBSymLasten}, the same impedances occur in the positive and negative systems.
+    If the consumers are connected in a delta configuration, the impedances would have to be converted to star values using the known ratios.
+    For zero impedances, currents only flow if there is actually a connection to a star.
+    Then the impedances in the return conductor occur with triple the value.
     }
   
   
 \end{frame}
 
 \begin{frame}
-    \ftc{Symmetrische Leitungen}
+    \ftc{Symmetrical lines}
 
     \s{
-    Die Leitung ist die Verbindung zwischen der Spannungsquelle und den Verbrauchern.
-    Bisher wurden in den Betrachtungen zum Drehstrom nur unterschieden zwischen Erzeugung und Verbrauchern.
-    Mit den Leitungen kommt nun eine zusätzliche Komponente hinzu, die separat betrachtet werden soll.
-    Leitungen weisen grundsätzlich Eigenimpedanzen, Koppelimpedanzen und Leiter-Erde-Impedanzen auf. Die Leiter-Erde-Impedanzen können jedoch vernachlässigt werden.
-    So hat jeder Leiter eine Eigenimpedanzen und zwei Koppelimpedanzen, also zu den jeweils anderen Leitern.
-    Die Spannung für diese Berechnung wird definiert als Differenz der Spannungen am Anfang und am Ende der Leitung.
-    So lässt sich die Matrix-Gleichung für ein Leitungssystem aufstellen:
+    The line is the connection between the voltage source and the consumers.
+    Until now, considerations regarding three-phase current have only distinguished between generation and consumers.
+    With the lines, an additional component is now added that must be considered separately.
+    Lines generally have their own impedances, coupling impedances and conductor-earth impedances. However, the conductor-earth impedances can be neglected.
+    Each conductor has an intrinsic impedance and two coupling impedances, i.e. to the other conductors.
+    The voltage for this calculation is defined as the difference between the voltages at the beginning and end of the line.
+    This allows the matrix equation for a line system to be set up:
     }
 
     \b{
@@ -1012,7 +1011,7 @@
         \ftx{Symmetrische Leitungen}
   
 \s{
-    Daraus kann wieder eine Kompaktschreibweise abgeleitet werden (Mit $U_{\mathrm{L1A}}-U_{\mathrm{L1B}}=U_{\mathrm{L1}}$, ...):
+    From this, a compact notation can be derived (with $U_{\mathrm{L1A}}-U_{\mathrm{L1B}}=U_{\mathrm{L1}}$, ...):
 }
 \b{
     \begin{itemize}
@@ -1034,10 +1033,9 @@
     \end{eqa}
 
     \s{
-    Es liegt nun eine sehr ähnliche Gleichung vor, wie die bei den symmetrischen Verbrauchern.
-    Auch hier soll die Gleichung so umgeformt werden, dass eine direkte Abhängigkeit von Originalsystem und Transformationssystem vorliegt.
-    Da die Gleichung grundlegend gleich aufgebaut ist, können die gleichen Erweiterungen und Umformungen durchgeführt werden, wie bereits bei den symmetrischen Verbrauchern:
-    }
+    We now have an equation that is very similar to the one for symmetrical consumers.
+    Here, too, the equation must be transformed so that there is a direct dependency between the original system and the transformation system.
+    Since the equation has the same basic structure, the same extensions and transformations can be carried out as for symmetrical consumers:    }
     \b{
         \begin{itemize}
             \item Die Gleichung ist nun sehr ähnlich wie bei den symmetrischen Verbrauchern
@@ -1056,22 +1054,23 @@
         \end{bmatrix}
       \end{eqa}
 \s{
-    Wichtig ist bei der Umformung immer, dass die umgeformte Impedanzmatrix nur aus Werten auf der Hauptdiagonale besteht, damit es nur direkte Zusammenhänge zwischen den einzenlen Leitern und den Transformationssytemen gibt.
+    When transforming, it is always important that the transformed impedance matrix consists only of values on the main diagonal so that there are only direct connections between the individual conductors and the transformation systems.
 }
 
 \end{frame}
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Symmetrische Leitungen}
     
 
     \fu{
         \input{Tikz/src/Mehrphasensysteme/Transformierte_Leitung_ESB}
-    }{{\bf Ersatzschaltbilder der transformierten Leitung.} ESB einer symmetrischen Leitung mit den drei Phasen $L_\mathrm{1}$,
-    $L_\mathrm{2}$ und $L_\mathrm{3}$ sowie gestrichelt die angedeutete Leitung der Sternpunktbehandlung. \label{ESBSymLeitung}}
+    }{{\bf Equivalent circuit diagrams of the transformed line.} ESB of a symmetrical line with the three phases $L_\mathrm{1}$,
+    $L_\mathrm{2}$ and $L_\mathrm{3}$ as well as the dotted line indicating the star point treatment. \label{ESBSymLeitung}}
 
     \s{
-    Abb. \ref{ESBSymLeitung} zeigt das ESB der drei Systeme für symmetrische Leitungen.
-    Die gestrichelte Leitung soll die Sternpunktbehandlung auf Erzeugungs- und Verbraucherseite widerspiegeln zur Referenz der Sternspannungen.
+    Fig. \ref{ESBSymLeitung} shows the ESB of the three systems for symmetrical lines.
+    The dashed line is intended to reflect the neutral point treatment on the generation and consumption side for reference to the star voltages.
     }
     \b{
     \begin{itemize}

@@ -1,23 +1,22 @@
 \newvideofile{E_Feld}{Das elektrische Feld}
-\section{Das elektrische Feld}
+\section{The electric fieldd}
 
  
-
 \begin{frame}{}
 
-	\begin{Lernziele}{Das elektrische Feld}
-        Die Studierenden 
+	\begin{Learning objectives}{Das elektrische Feld}
+        The students can
         \begin{itemize}
-			\item entwickeln ein "Gefühl" für elektrische Felder
-			\item elektrische Felder beschreiben und für einfache Ladungsanordnungen berechnen
-			\item das Verhalten elektrischer Felder an Leitern charakterisieren
+			\item develop a ‘feel’ for electric fields
+			\item describe electric fields and calculate them for simple charge configurations
+			\item characterise the behaviour of electric fields on conductors
 			
 			
 	%		\item die elektrische Spannung aus anderen Feldgrößen errechnen 
 	%		\item Bestimmung des Zusammenhanges zwischen Ladung, elektrischer Flussdichte, Feldstärke und Permittivität im 
 	%		Homogenfeld
         \end{itemize}
-    \end{Lernziele}
+    \end{Learning objectives}
 
 	\speech{Lernziele_Efeld}{1}{In diesem Video wird das elektrische Feld eingeführt. Eines der übergelagerten Lernziele ist die Entwicklung eines Feldgefühls für elektrische Felder. 
 	Ihr mögt euch zunächst einmal fragen, wieso ein solches Feldgefühl wichtig ist, zumal es heutzutage zahlreiche Programme zur Simulation der verschiedensten Felder gibt. 
@@ -31,40 +30,39 @@
 
 
 \begin{frame}
-	\ftb{Charakterisierung des elektrischen Feldes}
+	\ftb{Characterisation of the electric field}
 
-	\s{Wie gezeigt haben elektrische Ladungen einen direkten Einfluss auf andere Ladungen.
-	Dies geschieht dadurch, dass sie die Eigenschaften des Raums um sich herum verändern. Diese Veränderungen 
-	können durch ein Feldmodell 
-	beschrieben werden. Der Feldbegriff ist in der Physik von fundamentaler Bedeutung. Beispiele
-	hierfür sind das Temperaturfeld, in dem die Temperatur abhängig von seinem Ort durch eine skalare Größe
-	 beschrieben wird.
-	Neben solchen skalaren Feldern gibt es auch Vektorfelder, in denen jedem Ort neben einer Größe auch
-	eine Richtung, in die sie wirkt, zugeschrieben wird. Beispiele hierfür sind das Gravitationsfeld oder ein
-	Strömungsfeld, welches beispielsweise die Richtung und Geschwindigkeit von Wasserteilchen beschreibt.
-
-	Das \textbf{elektrische Feld} wird durch \textbf{Größe} (in Newton) sowie die \textbf{Richtung} 
-	der \textbf{Kraft} $\vec{F_\mathrm{E}}$ auf eine positive Probeladung $Q_2$ beschrieben und 
-	durch Feldlinien charakterisiert. Dargestellt wird diese Anordnung in Abbildung \ref{fig:efeld_def}.
+	\s{As shown, electric charges have a direct influence on other charges.
+    This occurs because they alter the properties of the space around them. These changes 
+    can be described by a field model.
+ 	he concept of a field is of fundamental importance in physics. Examples
+	of this are the temperature field, in which the temperature is described by a scalar quantity depending on its location.
+    
+	In addition to such scalar fields, there are also vector fields in which each location is assigned not only a quantity but also
+    a direction in which it acts. Examples of this are the gravitational field or a
+    flow field, which describes, for example, the direction and velocity of water particles.
+    
+	The \textbf{electric field} is described by \textbf{magnitude} (in newtons) and the \textbf{direction} 
+    of the \textbf{force} $\vec{F_\mathrm{E}}$ on a positive test charge $Q_2$ and 
+    characterised by field lines. This arrangement is shown in Figure \ref{fig:efeld_def}.
 
 	\begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\centering
 	
 		\includesvg[width=0.2\textwidth]{kraft_e}
-		\caption{Anziehende Kraftwirkung $F_2$ einer Probeladung $Q_2$ in Richtung ruhender Ladung $Q_1$}
+		\caption{Attractive force $F_2$ of a test charge $Q_2$ in the direction of a stationary charge $Q_1$}
 		\label{fig:efeld_def}
 	\end{figure}
 
 
-
-
-	Die elektrische Feldstärke ist also:
+	The electric field strength is therefore:
 
 
 	%\begin{equation*}
-	\begin{Merksatz}{}
-		$\mathrm{Elektrische \, Feldst\ddot{a}rke} = \frac{\mathrm{Kraft \, auf \, Ladung}}{\mathrm{Ladung}} $
-	\end{Merksatz}	
+	\begin{Key point}{}
+		$\mathrm{Electric \, field \, strength} = \frac{\mathrm{Kraft \, auf \, Ladung}}{\mathrm{Ladung}} $
+	\end{Key point}	
 	%\end{equation*}
 \phantom{.}
 
@@ -79,11 +77,11 @@
 	\end{equation}
 
 
-	Nachteilig an dieser Definition erscheint auf den ersten Blick, dass die elektrische Feldstärke von der
-	Probeladung $Q_2$ abhängig zu sein scheint. 
-	Durch Einsetzen des Coulombschen Gesetzes (Gleichung \ref{eq:coulomb}) in Gleichung \ref{eq:e_feld} lässt sich jedoch zeigen, 
-	dass die Kraft $F_2$ immer proportional zur Probeladung $Q_2$ steigt. Ihr Verhältnis liefert also immer den
-	gleichen Betrag für die elektrische Feldstärke, und diese wird, wie in Abbildung \ref{fig:efeld1} gezeigt, unabhängig von der Probeladung:
+	At first glance, a disadvantage of this definition appears to be that the electric field strength seems to depend on the
+    test charge $Q_2$. 
+	However, by inserting Coulomb's law (equation \ref{eq:coulomb}) into equation \ref{eq:e_feld}, it can be shown 
+    that the force $F_2$ always increases proportionally to the test charge $Q_2$. Their ratio therefore always yields the
+    same value for the electric field strength, which, as shown in Figure \ref{fig:efeld1}, becomes independent of the test charge:
 
 
 	\begin{equation}
@@ -93,14 +91,12 @@
 
 
 	\begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\centering
-	
 		\includesvg[width=0.2\textwidth]{definition_e}
-		\caption{Das durch $Q_1$ hervorgerufene elektrische Feld ist unabhängig von jeglicher Probeladung}
+		\caption{The electric field caused by $Q_1$ is independent of any sample charge.}
 		\label{fig:efeld1}
 	\end{figure}
-	
-
 	}
 
 
@@ -222,56 +218,57 @@ $ [E] =  \frac{\mathrm{N}}{\mathrm{C}} =  \frac{\mathrm{V}}{\mathrm{m}} $
 
 
 \begin{frame}
-	\ftb{Elektrische Leiter und elektrostatische Felder I}
+	\ftb{Electrical conductors and electrostatic fields I}
 
-	\s{Im vorherigen Kapitel wird die Wirkung von Punktladungen auf das elektrische Feld untersucht. 
-	Da im Alltag elektrische Felder jedoch häufig von geladenen, elektrischen Leitern (wie Metallen) ausgehen,
-	werden sie hier gesondert aufgeführt. 
-
-	Liegt ein Elektronenüberschuss vor, wird - wie in Abbildung \ref{fig:leiter} dargestellt - die positive Probeladung $Q$ 
-	 in Richtung der Plattenoberflächen angezogen. Auch die Feldlinien $\vec{E}$ des elektrischen Feldes verlaufen in Richtung der 
-	 Leiteroberfläche. Im Falle eines Elektronenmangels wird die Probeladung abgestoßen, auch die Feldlinien führen vom positiven Leiter weg.
+	\s{The previous chapter examines the effect of point charges on the electric field.
+	However, since electric fields in everyday life often originate from charged electrical conductors (such as metals),
+	they are listed separately here.
+	If there is an excess of electrons, the positive test charge $Q$ is attracted towards the plate surfaces, as shown in Figure \ref{fig:leiter}.   
+	is attracted towards the plate surfaces. The field lines $\vec{E}$ of the electric field also run in the direction of the 
+    conductor surface. In the case of an electron deficiency, the test charge is repelled and the field lines also lead away from the positive conductor.
 
 
 	\begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\includesvg[width=0.5\textwidth]{leiter_pos_neg}
-		\caption{Richtung der elektrischen Feldstärke $\vec{E}$ von einem negativ (links) sowie positiv (rechts) 
-		geladenen Leiter auf eine positive Probeladung}
+		\caption{Direction of the electric field strength $\vec{E}$ from a negatively (left) and positively (right) 
+		charged conductor to a positive test charge}
 		\label{fig:kraftwirkung}
 	\end{figure}
 
 
-	Da die Elektronen innerhalb eines Leiters frei beweglich sind, würden diese im Falle eines elektrischen Feldes innerhalb 
-	eines Leiters durch dieses Feld angezogen (oder abgestoßen) werden, bis sich das Feld innerhalb des Leiters 
-	ausgeglichen hat (siehe Abbildung \ref{fig:leiterausgleich}). Folglich kann in diesem Fall kein elektrisches Feld 
-	innerhalb eines Leiters existieren
-
+	Since electrons are freely mobile within a conductor, in the case of an electric field within 
+    a conductor, they would be attracted (or repelled) by this field until the field within the conductor 
+    has balanced out (see Figure \ref{fig:leiterausgleich}). Consequently, in this case, no electric field can 
+    exist within a conductor.
 
 	\begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\includesvg[width=0.5\textwidth]{Fehlvorstellung}
-		\caption{Freier Ladungsträger wird durch das elektrische Feld augenblicklich an den Leiterrand gezogen. Innerhalb des Leiters kann deshalb kein
-		elektrostatisches Feld existieren.}
+		\caption{Free charge carriers are instantly attracted to the edge of the conductor by the electric field. Therefore, no electrostatic field can exist within the conductor.
+        electrostatic field.}
 		\label{fig:leiterausgleich}
 	\end{figure}
 
-	Dies führt zu der Erkenntnis, dass die elektrischen Feldlinien zwangsläufig \textbf{senkrecht} auf der
-	Oberfläche von Leitern stehen müssen (siehe Abbildung \ref{fig:e_vertikal}). Eine schräg stehende Feldlinie ließe sich sonst vektoriell
-	 in eine senkrecht und eine horizontal auf der Leiteroberfläche verlaufende Komponente zerlegen. Da diese 
-	 horizontale Komponente augenblicklich durch die sich bewegenden Ladungsträger ausgleichen wird, kann 
-	 sie nicht existieren. Dieser Effekt tritt ausschließlich bei elektrisch leitenden Materialien auf, in nicht leitenden Materialien
-	  (sogenannten Isolatoren) gibt es keine beweglichen Ladungsträger, welche die horizontale Komponente ausgleichen können.
+	This leads to the realisation that the electric field lines must necessarily be \textbf{perpendicular} to the
+    surface of conductors (see Figure \ref{fig:e_vertikal}). Otherwise, an oblique field line could be vectorially
+    decomposed into a component running perpendicular and a component running horizontally on the conductor surface. Since this 
+    horizontal component is instantly balanced by the moving charge carriers, it cannot 
+    exist. This effect occurs exclusively in electrically conductive materials; in non-conductive materials
+    (so-called insulators), there are no moving charge carriers that can balance the horizontal component.
 
 
 	 \begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\includesvg[width=0.5\textwidth]{feldlinien_senkrecht}
-		\caption{Durch die Eliminierung der horizontalen Komponente $\vec{E_2}$ des elektrischen Feldes bleibt ausschließlich die vertikale Komponente $\vec{E_1}$ bestehen, welche senkrecht auf der Leiteroberfläche steht. }
+		\caption{By eliminating the horizontal component $\vec{E_2}$ of the electric field, only the vertical component $\vec{E_1}$ remains, 
+		which is perpendicular to the conductor surface.}
 		\label{fig:e_vertikal}
 	\end{figure}
 
-	
 	}
 	
 	
@@ -420,44 +417,46 @@ Ladungsträger, welche eine horizontale Komponente ausgleichen könnten.}
 
 
 
-\subsection{Beispiele elektrischer Felder}
+\subsection{Examples of electric fields}
 
 \begin{frame}
 	\ftx{Beispiele elektrischer Felder I}
 
-	\s{Das einfachste elektrische Feld ist das \textbf{Homogenfeld}. In diesem Feld sind sowohl
-	 der Betrag als auch die Richtung der elektrischen Feldstärke $\vec{E}$ an jedem Punkt konstant. Eine sich in diesem Feld
-	  befindliche Probeladung erfährt also an jeder Stelle die gleiche Kraftwirkung.
-	 Erzeugen lässt sich ein solches Feld wie in Abbildung \ref{fig:homogenfeld} dargestellt beispielsweise zwischen zwei  parallelen Metallplatten, welche
-	  mit unterschiedlichen Ladungen $Q$ aufgeladen sind. Die Feldlinien verlaufen grundsätzlich von der 
-	  positiv aufgeladenen zur negativ aufgeladenen Metallplatte. Häufig wird die Dichte, in der die
-	   Feldlinien eingezeichnet sind, als Maß für die Stärke des elektrischen Feldes verwendet. 
-	   Je dichter die Feldlinien eingezeichnet sind, desto stärker ist das elektrische Feld an dieser Stelle.
+	\s{The simplest electric field is the \textbf{homogeneous field}. In this field, both
+    the magnitude and the direction of the electric field strength $\vec{E}$ are constant at every point. A test charge located in this field
+    therefore experiences the same force at every point.
+    Such a field can be generated, as shown in Figure \ref{fig:homogenfeld}, for example between two parallel metal plates that are charged with different charges $Q$. 
+	The field lines generally run from the 
+    positively charged to the negatively charged metal plate. The density with which the
+    field lines are drawn is often used as a measure of the strength of the electric field. 
+    The denser the field lines are drawn, the stronger the electric field is at that point.
 
 	  \begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\includesvg[width=0.3\textwidth]{elektr_homogenfeld}
-		\caption{Ein elektrisches Homogenfeld zwischen zwei unterschiedlich geladenen Metallplatten}
+		\caption{An electric homogeneous field between two differently charged metal plates}
 		\label{fig:homogenfeld}
 	\end{figure}
 
 
-	Das elektrische Feld einer Punktladung wird auch als \textbf{Radialfeld} (siehe Abbildung \ref{fig:punktladung}) bezeichnet. Unter der
-	idealisierten Annahme, dass sich unendlich weit entfert eine Hülle mit 
-	entgegengesetzter Ladung befindet, breiten sich die Feldlinien geradelinig aus. 
-	In ihrer symmetrischen Anordnung zeigen sie bei positiven Punktladungen in Richtung der negativen Hülle,
-	bei negativen Punktladungen in Richtung der Punktladung. 
+	The electric field of a point charge is also referred to as the \textbf{radial field} (see Figure \ref{fig:punktladung}).
+ 	Under the idealised assumption that there is a shell with opposite charge infinitely far away,
+ 	the field lines propagate in a straight line.
+	In their symmetrical arrangement, they point in the direction of the negative shell for positive point charges,
+	and in the direction of the point charge for negative point charges. 
 
 	\begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\includesvg[width=0.26\textwidth]{feld_Punktladung}
-		\caption{Radiales elektrische Feld einer positiven Punktladung. }
+		\caption{Radial electric field of a positive point charge. }
 		\label{fig:punktladung}
 	\end{figure}
 
 
-	Die elektrische Feldstärke $\vec{E}$ ist direkt proportional zur Ladung $Q$, verringert sich 
-	jedoch mit zunehmendem Abstand $r$ von ihr quadratisch. Errechnet werden kann ihr Betrag über:
+	The electric field strength $\vec{E}$ is directly proportional to the charge $Q$, but decreases 
+    quadratically with increasing distance $r$ from it. Its magnitude can be calculated using:
 
 
 	\begin{equation}
@@ -465,44 +464,40 @@ Ladungsträger, welche eine horizontale Komponente ausgleichen könnten.}
 	\end{equation}
 
 
-	
-
-		
-
-
-	Die mit zunehmendem Abstand $r$ von der Punktladung schwächer werdende elektrische Feldstärke
-	zeigt sich neben dem mathematischen Zusammenhang auch in dem größer werdenden Abstand zwischen den Feldlinien.
+	The electrical field strength, which weakens with increasing distance $r$ from the point charge,
+ 	is evident not only in the mathematical relationship but also in the increasing distance between the field lines.
 
 
-	Kompliziertere elektrische Felder ergeben sich schon beim Hinzufügen einer zweiten Punktladung. 
-	Im Fall von zwei betragsgleichen Ladungen unterschiedlichen Vorzeichens 
-	(Abbildung \ref{fig:anziehende_ladungen}) ergibt sich zwischen den Ladungen ein
-	nahezu gleichmäßiges Feld, während es weiter außen bedeutend schwächer wird. 
+	More complicated electric fields arise when a second point charge is added.
+	In the case of two charges of equal magnitude but opposite sign
+	(Figure \ref{fig:anziehende_ladungen}), an almost uniform field exists between the charges, 
+	while it becomes significantly weaker further out.
+ 
 
 	\begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\includesvg[width=0.44\textwidth]{feldlinien}
-		\caption{Das elektrische Feld von zwei betragsgleichen Ladungen unterschiedlichen Vorzeichens}
+		\caption{The electric field of two charges of equal magnitude but opposite sign}
 		\label{fig:anziehende_ladungen}
 	\end{figure}
 
-	Der Fall mit zwei identischen Punktladungen zeigt wie in Abbildung \ref{fig:abstoßendeladungen} eine Besonderheit des elektrischen Feldes. 
-	Während sich die Feldlinien im Rest des Raumes erwartbar von den positiven Ladungen 
-	wegzeigen, gibt es zwischen den Punktladungen einen freien Raum ohne Feldlinien.
-	Dies liegt daran, dass sich die entgegengesetzten Feldlinien in diesem Zwischenraum gegenseitig kompensieren. 
-	Im Punkt zwischen beiden Ladungen liegt keine elektrische Feldstärke vor, auf der Ebene zwischen den Ladungen
-	neutralisieren sich die jeweiligen horizontalen Kompenenten, und es liegt lediglich ein elektrisches Feld in der jeweiligen 
-	vertikalen Richtung vor.
+	The case with two identical point charges shows a special feature of the electric field, as illustrated in Figure \ref{fig:abstoßendeladungen}.
+	While the field lines in the rest of the space point away from the positive charges, as expected,
+	there is a free space between the point charges without any field lines.
+	This is because the opposing field lines in this space between the charges cancel each other out. 
+    There is no electric field strength at the point between the two charges; on the plane between the charges,
+	the respective horizontal components neutralise each other, and there is only an electric field in the respective 
+	vertical direction.
 
 	
 	\begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\includesvg[width=0.4\textwidth]{feldlinien_protonen}
-		\caption{Das elektrische Feld von zwei betragsgleichen Ladungen gleichen Vorzeichens}
+		\caption{The electric field of two charges of equal magnitude and the same sign}
 		\label{fig:abstoßendeladungen}
 	\end{figure}
-
-%
 
 	\newpage
 
@@ -615,9 +610,9 @@ Neben diesem mathematischen Zusammenhang lässt sich bei größerem Radius auch 
 
 	}
 	\speech{beispiele_felder2}{1}{
-		Kompliziertere elektrische Felder ergeben sich schon beim Hinzufügen einer zweiten Punktladung. 
-	Im Fall von zwei betragsgleichen Ladungen unterschiedlichen Vorzeichens 
-	ergibt sich im Bereich zwischen den Ladungen ein nahezu gleichmäßiges Feld, während es weiter außen bedeutend schwächer wird}
+		More complicated electric fields arise when a second point charge is added.
+		In the case of two charges of equal magnitude but opposite sign,
+		the field between the charges is almost uniform, while it becomes significantly weaker further away.}
 	\silence{1}
 
 	\speech{beispiele_felder2}{2}{

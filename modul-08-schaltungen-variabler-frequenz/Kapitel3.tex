@@ -2,53 +2,57 @@
 %           - Impedanzortskurven
 %           - Admittanzortskurven
 %           - Ortskurven Grundschaltungen
-\section{Ortskurven}
+\section{Location curve}
 \begin{frame}\ftx{\secname}
 \index{Ortskurve}%
 \s{%
-    Die Darstellung von Ortskurven ist ein Mittel zur Visualisierung der parameterabhängigen Veränderung von komplexen Größen. 
-    Zur Analyse des frequenzvariablen Verhaltens von Eintoren bieten sich Impedanz- und Admittanzortskurven an. 
-    In diesen kann die Veränderung der Impedanz respektive der Admittanz in Abhängigkeit der (Kreis-)Frequenz dargestellt werden.
+    The representation of locus curves is a means of visualising the parameter-dependent change in complex variables.
+    Impedance and admittance locus curves are useful for analysing the frequency-dependent behaviour of single-port networks.
+    These curves can be used to represent the change in impedance or admittance as a function of (circular) frequency.
 }%
-    \begin{Lernziele}{Ortskurven}
-        Studierende lernen:
+    \begin{Learning objectives}{Locus curve}
+        Students learn:
         \begin{itemize}
-            \item Ortskurven kennen und mögliche Anwendungsbereiche kennen.
-            \item Ortskurven prinzipiell zu konstruieren und zu interpretieren.
-            \item Impedanz- und Admittanzortskurven von Grundschaltungen kennen.
+            \item Know locus curves and possible areas of application.
+            \item Construct and interpret locus curves in principle.
+            \item Know impedance and admittance locus curves of basic circuits.
         \end{itemize}
-    \end{Lernziele}
+    \end{Learning objectives}
 \end{frame}
 
-\subsection{Definition Ortskurve}
+\subsection{Definition of location curve}
 \begin{frame}[t]\ftx{\subsecname}
+    \renewcommand{\figurename}{Figure}
 \s{%
-    Eine Ortskurve ist die graphische Darstellungen einer komplexen Größe $\underline{z}$ % komplexer Zeiger statt Größe ? 
-    in Abhängigkeit eines reellen Parameters $p$ in der komplexen Ebene\cite[Vgl. ]{weissgerber2}:
+    A locus curve is the graphical representation of a complex quantity $\underline{z}$ % complex pointers instead of quantity ?
+    as a function of a real parameter $p$ in the complex plane\cite[See ]{weissgerber2}:
    \begin{equation}\begin{aligned}
         \label{eq:def:ortskurve}
         \underline{z}(p) 
             &= \Re\{\underline{z}(p)\} + \mathrm{j}\Im\{\underline{z}(p)\} 
                 &&\text{mit }\underline{z}\in\mathbb{C};\ p\in\mathbb{R}
     \end{aligned}\end{equation}%
-    Ortskurven werden in vielen verschiedenen Bereichen angewandt, um mögliche Zustände eines Systems zu visualisieren.
-    Abbildung \ref{fig:ortskurve:stromortskurve:asm} zeigt exemplarisch die Stromortskurve einer Asynchronmaschine in der komplexen Ebene, 
-    auch Heylandkreis oder Ossannakreis genannt. [QUELLE:XYZ] Zu Erkennen ist der komplexe Statorstrom $\underline{I}_s$
-    in Abhängigkeit des Schlupfes $s$. 
-    Die Darstellungsform eignet sich beispielsweise zur Visualisierung verschiedener Betriebszustände, 
-    im Fall der Asynchronmaschine sind das der Motor-, Brems- und Generatorbetrieb.
+    Locus curves are used in many different areas to visualise possible states of a system.
+    Figure \ref{fig:ortskurve:stromortskurve:asm} shows an example of the current locus curve of an asynchronous machine in the complex plane, 
+    also known as the Heyland circle or Ossanna circle. [SOURCE:XYZ] The complex stator current $\underline{I}_s$
+    can be seen as a function of the slip $s$.
+    This form of representation is suitable, for example, for visualising different operating states.
+    In the case of the asynchronous machine, these are motor, brake and generator operation.
     \fu{\includegraphics{Tikz/pdf/plot_stromortskurve_asynchronmaschine.pdf}}{%
-        Beispiel Stromortskurve einer Asynchrommaschine mit Betriebszuständen\label{fig:ortskurve:stromortskurve:asm}%
+        Example of the current-frequency curve of an asynchronous machine with operating states\label{fig:ortskurve:stromortskurve:asm}%
     }%
-    Im Beispiel der Stromortskurve einer Asynchronmaschine lassen sich zudem verschiedene Leistungswerte graphisch ermitteln
-    wie in Abbildung \ref{fig:ortskurve:stromortskurve:asm:leistung} exemplarisch dargestellt ist. 
-    Die Beispiele dienen der Veranschaulichung der Definition und möglicher Anwendungsbereiche von Ortskurven,
-    weshalb von einer Herleitung beider Beispiele abgesehen wird. 
+    In the example of the current locus curve of an asynchronous machine, various power values can also be determined graphically
+    as shown in Figure \ref{fig:ortskurve:stromortskurve:asm:leistung}.
+    The examples serve to illustrate the definition and possible areas of application of locus curves,
+    which is why we will refrain from deriving both examples.
+ 
     \fu{\includegraphics{Tikz/pdf/plot_stromortskurve_asynchronmaschine_leistung.pdf}}{%
-        Beispiel Stromortskurve einer Asynchrommaschine mit Leistungsgrößen\label{fig:ortskurve:stromortskurve:asm:leistung}%
+        Example of the current-frequency curve of an asynchronous machine with power variables\label{fig:ortskurve:stromortskurve:asm:leistung}%
     }%
-    Ortskurven eignen sich gut zur Visualisierung von Systemzuständen, -größen und deren Einfluss aufeinander.
+    
+    Locus curves are well suited for visualising system states, variables and their influence on each other.
 }
+
 
 \b{%
     \centering
@@ -70,26 +74,26 @@
     \end{minipage}%
     \end{minipage}\hfill\vspace{5pt}%
 
-    \only<2-| handout:2->{\textbf{Beispiel:} Stromortskurve einer Asynchrommaschine für $\underline{I}_s(s)$}
+    \only<2-| handout:2->{\textbf{Example:} Stromortskurve einer Asynchrommaschine für $\underline{I}_s(s)$}
 }
 \end{frame}
 
 
-\subsection{Zusammenhang Zeigerdiagramm und Ortskurve}
+\subsection{Relationship between pointer diagram and location curve}
 \begin{frame}\ftx{\subsecname}
 \index{Zeigerdiagramm}
     \s{
-        Ein Zeiger im Zeigerdiagramm stellt eine komplexe Größe stationär in der komplexen Ebene dar.
-        Die Darstellungsform dient der Visualisierung von Phasenverschiebungen und Betragsverhältnissen.
-        Typische Größen für Wechselstromkreise sind unter anderem Spannung, Strom, Leistung und Impedanz.
-
-        Ortskurven beschreiben die Bahn, die ein Zeiger bei Variation eines Parameters durchläuft.
-        Die Ortskurve kann so als Verallgemeinerung eines Zeigers im Zeigerdiagramm verstanden werden. \cite[Vgl.]{weissgerber2}% VGL REF: Weißgerber, Elektrotechnik für Ingenieure, Kapitel 5 Ortskurven       
-        Übliche Parameter sind Frequenz und Bauteilgrößen. %Übliche Größen sind Impedanz und Admittanz.
-
-        Die Hervorhebung einzelner Zeiger mit Angabe des variierenden Parameters kann 
-        den Verlauf der Ortskurve verdeutlichen und die Interpretation erleichtern.
-        Positionsänderungsrate und -richtung geben Aufschluss über die Dynamik des Systems.
+        A pointer in the phasor diagram represents a complex quantity stationary in the complex plane.
+        This form of representation serves to visualise phase shifts and magnitude ratios.
+        Typical quantities for alternating current circuits include voltage, current, power and impedance.
+        
+        Locus curves describe the path that a pointer travels when a parameter varies.
+        The locus curve can thus be understood as a generalisation of a pointer in the pointer diagram. \cite[Compare]{weissgerber2}% VGL REF: Weißgerber, Elektrotechnik für Ingenieure, Chapter 5 Locus Curves       
+        Common parameters are frequency and component quantities. Common quantities are impedance and admittance.
+        
+        Highlighting individual pointers with an indication of the varying parameter can 
+        clarify the course of the locus curve and facilitate interpretation.
+        The rate and direction of change in position provide information about the dynamics of the system.
     }%
     %\b{% Visualisierung allgemeiner <1>Zeiger, <2>Zeigerschar und <3>Ortskurve
     %    %Todo: Visualisierung Zeiger $\to$ Zeigerschar (Ortskurve) 
@@ -98,90 +102,92 @@
     \b{
         Zeigerdiagramm:\\\quad Zeigt Größe in komplexer Ebene als Zeiger (eines Punktes). 
     }%
-    \begin{Merksatz}{Ortskurve}
-        Zeigt Größe in komplexer Ebene parameterabhängig als Kurve (Punkteschar).
-    \end{Merksatz}
+    \begin{Key point}{Location curve}
+        Displays size in a complex plane as a curve (set of points) depending on parameters.
+    \end{Key point}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \s{
-\subsection{Impedanzortskurve}
+\subsection{impedance locus curve}
 \begin{frame}\ftx{\subsecname}
+    \renewcommand{\figurename}{Figure}
 
-    In Impedanzortskurven wird die Impedanz eines Systems in Abhängigkeit eines Parameters dargestellt.
+    Impedance locus curves show the impedance of a system as a function of a parameter.
+    
+    Example \ref{bsp:ortskurve:z:rvar} shows an impedance locus curve for a variable component size.
+    
+    Example \ref{bsp:ortskurve:z:fvar} shows an impedance locus curve for variable frequency.
 
-    Beispiel \ref{bsp:ortskurve:z:rvar} zeigt eine Impedanzortskurve für eine variable Bauteilgröße.
-
-    Beispiel \ref{bsp:ortskurve:z:fvar} zeigt eine Impedanzortskurve für variable Frequenz.
-
-\begin{bsp}{
-    Impedanzortskurve RL-Glied, Widerstand variabel}{ortskurve:z:rvar}% Überschrift, Label
-    Konstruktion der Impedanzortskurve einer RL-Serienschaltung für variablen Widerstand $R$.
-    Die Schaltung ist in Abbildung \ref{fig:circ:rls:Rvar} abgebildet.
+\begin{expl}{
+    Impedance locus curve RL circuit, variable resistance}{ortskurve:z:rvar}% Heading, label
+    Construction of the impedance locus curve of an RL series circuit for variable resistance $R$.
+    The circuit is shown in Figure \ref{fig:circ:rls:Rvar}.
 
     % alttext: Schaltbild R und L in Serie, Beschriftung R und jwL
     \fu{\includegraphics{Tikz/pdf/circ_rls_impedanzen.pdf}}{RL-Glied (Serienschaltung)\label{fig:circ:rls:Rvar}}
 
-    Die Impedanz des RL-Gliedes ist gegeben durch:
+    The impedance of the RL element is given by:
 
     \begin{equation*}
         \underline{Z} = R + \mathrm{j}\omega L
     \end{equation*}
 
-    Sei $R$ variabel und beschrieben als ($p$-fache) Vielfache eines Referenzwiderstandes $R_0$ 
-    mit $p$ im geschlossenen Intervall $[0,3]$, so gilt:
+    If $R$ is variable and described as ($p$-fold) multiples of a reference resistance $R_0$ 
+    with $p$ in the closed interval $[0,3]$, then the following applies:
 
     \begin{equation*}
         R(p) = p \cdot R_0 \quad\text{mit } p \in [0,3]
     \end{equation*}
 
-    Seien $\omega$ und $L$ konstant, sowie die Reaktanz $\omega L$ gleich einer Referenzreaktanz $X_0$:
+    Let $\omega$ and $L$ be constant, and let the reactance $\omega L$ be equal to a reference reactance $X_0$:
 
     \begin{equation*}
         \omega L = X_0 \quad \text{mit } \omega,\ L = konst.
     \end{equation*}
 
-    Impedanz $\underline{Z}$ in Abhängigkeit von $p$:
+    Impedance $\underline{Z}$ as a function of $p$:
 
     \begin{equation*}
         \underline{Z}(p) = p \cdot R_0 + \mathrm{j}X_0
     \end{equation*}
 
     \fu{\includegraphics{Tikz/pdf/plot_ortskurve_RLs_Rvar.pdf}}% R=p*R0, p in [0,3]; wL=konst.
-        {Impedanzortskurve RL-Glied (Serie)\label{fig:plot:rls:Rvar}}
+        {Impedance locus curve RL element (Series)\label{fig:plot:rls:Rvar}}
 
-\end{bsp}
+\end{expl}
 
-\begin{bsp}{Impedanzortskurve RL-Glied, Frequenz variabel}{ortskurve:z:fvar}% Überschrift, Label
+\begin{expl}{Impedance locus curve RL element, variable frequency}{ortskurve:z:fvar}% Überschrift, Label
+    \renewcommand{\figurename}{Figure}
 
-    Konstruktion der Impedanzortskurve der RL-Serienschaltung in Abbildung \ref{fig:circ:RLs:wLvar} 
-    für variable Frequenz $f$ und oder variable Induktivität $L$.
-    Aufbau wie in Beispiel \ref{bsp:ortskurve:z:rvar}, jedoch mit variabler Frequenz $\omega$.
+    Construction of the impedance locus curve of the RL series connection in Figure \ref{fig:circ:RLs:wLvar}
+    for variable frequency $f$ and/or variable inductance $L$.
+    Setup as in Example \ref{bsp:ortskurve:z:rvar}, but with variable frequency $\omega$.
 
     \fu{\includegraphics{Tikz/pdf/circ_rls_impedanzen.pdf}}{RL-Glied (Serienschaltung)\label{fig:circ:RLs:wLvar}}
 
-    Gesamtimpedanz allgemein: 
+    Total impedance in general: 
     \begin{align*}
         \underline{Z}   &= R + \mathrm{j}\omega L \\
                         &= R + \mathrm{j}X
     \end{align*}
 
-    Die Gesamt-Reaktanz $X$ des RL-Gliedes ist proportional zu $\omega$ und proportional zu $L$.
-    Das heißt eine Veränderung von $\omega$ hat den selben Einfluss wie eine Veränderung von $L$ 
-    auf die Impedanz des RL-Gliedes.
+    The total reactance $X$ of the RL element is proportional to $\omega$ and proportional to $L$.
+    This means that a change in $\omega$ has the same effect as a change in $L$ 
+    on the impedance of the RL element.
     
-    Mit $X$ als Vielfache $p$ einer Referenz-Reaktanz $X_0$ und $R=R_0$ gilt:
+    With $X$ as a multiple $p$ of a reference reactance $X_0$ and $R=R_0$, the following applies:
 
     \begin{equation*}
         \underline{Z} = R_0 + p \cdot \mathrm{j}X_0 
     \end{equation*}
 
-    In der komplexen Ebene dargestellt:
+    Shown at a complex level:
     \fu{\captionsetup{labelformat=empty}%
         \includegraphics{Tikz/pdf/plot_ortskurve_RLs_wLvar.pdf}}% wL=p*w0L0, p in [0,3]; R=konst.
-        {RL-Glied (Serienschaltung)}
+        {RL element (series connection)}
 
-\end{bsp}
+\end{expl}
 \end{frame}
 }% end skript only, 
 % note: column environment breaks bsp-box -> \s{frame with bsp-box}, \b{frame with columns}
@@ -207,7 +213,7 @@
 \end{columns}
 \end{frame}
 
-\subsection{Impedanzortskurve - RLs-Glied, $\omega$ variabel}
+\subsection{Impedance locus curve – RLs element, $\omega$ variable}
 \begin{frame}\ftx{\subsecname}
 \begin{columns}
     \column{0.5\textwidth}\centering
@@ -230,31 +236,31 @@
 }% end beamer only
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Admittanzortskurve - Inversion von Ortskurven}
+\subsection{Admittance locus curve - Inversion of locus curves}
+\renewcommand{\figurename}{Figure}
 \begin{frame}\ftx{\subsecname}
 
 \s{
-    Analog zur Impedanzkurve bezeichnet eine Admittanzkurve die Ortskurve einer Admittanz. 
-    Die Admittanz $\underline{Y}$ entspricht algebraisch dem Kehrwert der Impedanz $\underline{Z}$ und vice versa:
+    Analogous to the impedance curve, an admittance curve describes the location curve of an admittance.
+    The admittance $\underline{Y}$ corresponds algebraically to the reciprocal of the impedance $\underline{Z}$ and vice versa:
 
     \begin{equation}
         \underline{Y} = \frac{1}{\underline{Z}} \quad \leftrightarrow \quad \underline{Z} = \frac{1}{\underline{Y}}
     \end{equation}
 
-    Die Umformung von Impedanz zu Admittanz und umgekehrt ist jeweils ein Spezialfall der Möbius-Transformation.
+    The conversion of impedance to admittance and vice versa is a special case of the Möbius transformation.
 
-    Für die Beziehung zwischen Admittanz- und Impedanzortskurven gelten daher folgende allgemeinen Eigenschaften von Möbius-Transformation:
-    \cite[Vgl. ]{behrends}
+    The following general properties of Möbius transformation therefore apply to the relationship between admittance and impedance locus curves:
+    \cite[Compare ]{behrends}
 
     \begin{itemize}
-        \item Winkeltreue: $\angle(\underline{Z_1},\underline{Z_2}) = \angle(\underline{Y_1},\underline{Y_2}) \qquad \text{mit } \underline{Y}_i = \underline{Z}_i^{-1},\ i \in [1,2]$ 
-        \item Kreisverwandschaft: Kreise und Geraden werden auf Kreise und Geraden abgebildet
+        \item Angle preservation: $\angle(\underline{Z_1},\underline{Z_2}) = \angle(\underline{Y_1},\underline{Y_2}) \qquad \text{with } \underline{Y}_i = \underline{Z}_i^{-1},\ i \in [1,2]$
+        \item Circle similarity: Circles and straight lines are mapped onto circles and straight lines
     \end{itemize}
 
-    Die Kehrwertbildung entspricht im speziellen der Inversion, einem Elementartyp der Möbius-Transformation. 
-    Eine Inversion von Ortskurven führt zu den in Tabelle \ref{tab:moebiusinversion} 
-    aufgelisteten geometrischen Umformungen von Kreisen und Geraden. 
-    Abbildung \ref{fig:plot:moebiusinversion} zeigt exemplarisch die Inversion eines Gitters durch den Ursprung.
+    The formation of the reciprocal value corresponds in particular to inversion, an elementary type of Möbius transformation.
+    An inversion of locus curves leads to the geometric transformations of circles and straight lines listed in Table \ref{tab:moebiusinversion}.
+    Figure \ref{fig:plot:moebiusinversion} shows an example of the inversion of a lattice through the origin.
 }
     % alttext:
     % Gerade durch Ursprung zu Gerade durch Ursprung
@@ -263,55 +269,57 @@
     % Kreis nicht durch Ursprung zu Kreis nicht durch Ursprung
     \definecolor{Gray}{gray}{0.97}
     \begin{table}[H]\centering
-        \s{\caption{Typische Formen bei Inversion von Ortskurven}
+        \renewcommand{\figurename}{Figure}
+        \renewcommand{\tablename}{Table}
+        \s{\caption{Typical shapes in the inversion of local curves}
             \label{tab:moebiusinversion}}
         \begin{tabular}[h]{|r|r|}
             \hline\rowcolor{Gray}
-                \textbf{ursprüngliche Ortskurve} &
-                \textbf{invertierte Ortskurve} \\
+                \textbf{original local curve} &
+                \textbf{inverted locus curve} \\
             \hline
-                Gerade \phantom{nicht} durch den Ursprung &
-                Gerade \phantom{nicht} durch den Ursprung \\
+                Line \quad{not} through the origin &
+                Line \quad{not} through the origin \\
             \hline
-                Gerade nicht durch den Ursprung &
-                Kreis\quad \phantom{nicht} durch den Ursprung \\
+                Not through the origin &
+                Circle\quad \phantom{not} through the origin \\
             \hline
-                Kreis\quad \phantom{nicht} durch den Ursprung &
-                Gerade nicht durch den Ursprung \\
+                Circle\quad \phantom{not} through the origin &
+                Line\quad not through the origin \\
             \hline
-                Kreis\quad nicht durch den Ursprung &
-                Kreis\quad nicht durch den Ursprung \\
+                Circle\quad not through the origin &
+                Circle\quad not through the origin \\
             \hline
         \end{tabular}
     \end{table}
     \fu{\includegraphics{Tikz/pdf/plot_ortskurven_inversion.pdf}}{%
-        Beispiel Möbius-Transformation, Inversion von Gitter\protect\footnotemark\label{fig:plot:moebiusinversion}%
+        Example: Möbius transformation, inversion of lattice\protect\footnotemark\label{fig:plot:moebiusinversion}%
     }
-    \footnotetext{Angelehnt an MoebiusInversion.svg von Chrislb, CC-BY-SA-2.0-DE, 2005, \url{https://commons.wikimedia.org/wiki/File:MoebiusInversion.svg}}
+    \footnotetext{Based on MoebiusInversion.svg by Chrislb, CC-BY-SA-2.0-DE, 2005, \url{https://commons.wikimedia.org/wiki/File:MoebiusInversion.svg}}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Ortskurven von Grundschaltungen}
+\subsection{Local curves of basic circuits}
 \begin{frame}\ftx{\subsecname}
 \s{
-    Tabelle \ref{tab:ortskurven:grundschaltungen} zeigt eine Übersicht der Impedanz- und Admittanzortskurven 
-    für die vier Grundschaltungen RL- und RC-Glied jeweils in Serien- und Parallelschaltung. 
-
-    Ortskurven schwingungsfähiger LC- und RLC-Glieder unterscheiden sich von den hier dargestellen Ortskurven dadurch, 
-    dass der Blindanteil der Impedanz bzw. Admittanz je nach Frequenzbereich sowohl induktiv als auch kapazitiv sein kann,
-    je nachdem welcher Anteil überwiegt.
+    Table \ref{tab:ortskurven:grundschaltungen} shows an overview of the impedance and admittance locality curves 
+    for the four basic circuits RL and RC elements in series and parallel connection.
+     
+    Location curves for oscillatory LC and RLC elements differ from the location curves shown here in that 
+    the reactive component of the impedance or admittance can be either inductive or capacitive, depending on the frequency range,
+    depending on which component predominates.
 }
 % TABELLE
 % Note: \resizebox{Breite}{Höhe}{Content}
 \begin{table}\centering
-    \s{\caption{Ortskurven der Grundschaltungen RL- und RC-Glied}
+    \s{\caption{Local curves of the basic circuits RL and RC element}
         \label{tab:ortskurven:grundschaltungen}
     }
     \begin{tabular}[h]{|c|c|c|}
         % Tabellenteil 1
         \hline\s{$\vphantom{\bigg|}$}% Headerrow a bit bigger, oneliner-text vertically centered
-        \textbf{Grundschaltung} & \textbf{$\mathbf{\underline{Z}}$-Ortskurve} & \textbf{$\mathbf{\underline{Y}}$-Ortskurve}
+        \textbf{Basic-circuit} & \textbf{$\mathbf{\underline{Z}}$-Locus-curve} & \textbf{$\mathbf{\underline{Y}}$-Locus-curve}
         \\\hline% RL-Serie
         % \parbox[...][Höhe][...]{Breite}{Content}
         \parbox[c][4cm][c]{3.75cm}{\centering\includegraphics{Tikz/pdf/circ_ortskurve_minimal_R_RL.pdf}}% Schaltbild

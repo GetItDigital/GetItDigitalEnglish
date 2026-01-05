@@ -33,22 +33,22 @@
 \end{frame}
 
 \begin{frame}
-    \ftb{Komplexe Zahlenebene}
+    \ftb{Complex number plane}
 
     \s{
-        Um den Aufbau von Zeigerdiagrammen zu Überblicken ist ein grundlegendes Verständnis über die komplexe 
-        Zahlenebene nötig. Für die elementaren Rechenoperationen reichen die natürlichen Zahlen mit Null und die 
-        rationalen Zahlen aus. Die rationalen Zahlen können als endliche oder periodische Dezimalzahlen dargestellt 
-        werden. Die irrationalen Zahlen lassen sich hingegen als Dezimalzahlen darstellen, welche unendliche viele
-        Stellen aufweisen und dabei nicht periodisch sind. Die reellen Zahlen setzen sich aus den rationalen Zahlen
-        und den irrationalen Zahlen zusammen. Allerdings ist beispielsweise das Wurzelziehen aus einer negativen Zahl 
-        in der reellen Zahlenebene nicht möglich. Hierfür wird die komplexe Zahlenebene eingeführt. in der komplexen 
-        Zahlenebene wird der Raum der reellen Zahlen um die imaginäre Einheit j erweitert. So ergibt in der komplexen
-        Zahlenebene das Wurzelziehen aus -1 die imaginäre Einheit j. 
+        In order to understand the structure of pointer diagrams, a basic understanding of the complex 
+        number system is necessary. For elementary arithmetic operations, natural numbers including zero and 
+        rational numbers are sufficient. Rational numbers can be represented as finite or periodic decimal numbers.
+        Irrational numbers, on the other hand, can be represented as decimal numbers that have an infinite number of
+        digits and are not periodic. Real numbers are composed of rational numbers
+        and irrational numbers. However, it is not possible to take the square root of a negative number 
+        in the real number system. For this purpose, the complex number system is introduced. In the complex 
+        number system, the real number space is extended by the imaginary unit j. Thus, in the complex
+        number system, taking the square root of -1 results in the imaginary unit j.
     }
 
     \b{
-        In der komplexen Zahlenebene wird die imaginäre Einheit j eingeführt, um mit komplexen Zahlen zu rechnen.
+        In the complex number plane, the imaginary unit j is introduced in order to perform calculations with complex numbers.
     }
 
 
@@ -59,8 +59,8 @@
 
     \onslide<2->{
 
-        Das Quadrieren der imaginären Einheit ergibt wiederum -1. 
-    
+        Squaring the imaginary unit again gives -1. 
+
     \begin{eq}
         \mathrm{j}^2=-1
     \end{eq}}
@@ -75,11 +75,11 @@
     \ftx{Darstellung von komplexen Zahlen}
 
     \s{
-        Eine komplexe Zahl \underline{Z} beschreibt einen Ort in der komplexen Ebene. Um in einem zweidimensionalen
-        Koordinatensystem einen Ort eindeutig festzulegen werden zwei Koordinaten benötigt. Die beiden Koordinaten zur 
-        Beschreibung einer komplexen Zahl \underline{Z} werden in der komplexen Ebene als Realteil und Imaginärteil 
-        beschrieben (vgl. Gleichung \ref{GleichungKomplexeZahlen}). Komplexe Zahlen werden meist durch einen Unterstrich 
-        gekennzeichnet, wobei der Realteil und der Imaginärteil reelle Zahlen darstellen. 
+        A complex number \underline{Z} describes a location in the complex plane. To uniquely define a location in a two-dimensional
+        coordinate system, two coordinates are required. 
+        The two coordinates for describing a complex number \underline{Z} are described in the complex plane as the real part and the imaginary part
+        (see Equation \ref{GleichungKomplexeZahlen}). Complex numbers are usually indicated by an underscore,
+        whereby the real part and the imaginary part represent real numbers. 
     }
 
     \b{
@@ -87,7 +87,7 @@
     }
 
     \begin{eq}
-        \underline{Z}=Realteil+\mathrm{j} \cdot Imagin"arteil  \label{GleichungKomplexeZahlen}
+        \underline{Z}=Real part+\mathrm{j} \cdot Imaginary\ part \label{GleichungKomplexeZahlen}
     \end{eq}
 
     \onslide<2->{
@@ -107,18 +107,19 @@
 
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \ftx{Darstellung von komplexen Zahlen}
 
     \s{
-        In der Komplexene Ebene wird der Realteil auf die Abszisse und der Imaginärteil auf die Ordinate aufgetragen. 
-        Es werden die Abkürzungen Re = Realteil und Im = Imaginärteil verwendet. Das Koordinatensystem einer komplexen 
-        Ebene wird in der Abbildung \ref{BildKomplexeEbene} erläutert. Der Ort der komplexen Zahl kann durch 
-        Richtungspfeile, welche auch als Vektoren oder Zeiger bezeichnet werden, dargestellt werden. Die Darstellung
-        der komplexen Zahl in kartesischen Koordinaten erfolgt durch die Zerlegung in Realteil der komplexen Zahl 
-        Re(\underline{Z}) und Imaginärteil der komplexen Zahl Im(\underline{Z}) kombiniert mit der imaginären Einheit j. 
-        Komplexe Zahlen können auch in Polar-Koordinaten dargestellt werden. Dies erfolgt durch den Betrag $|\underline{Z}|$
-        der komplexen Zahl \underline{Z} und durch den Winkel $\varphi$, den der Zeiger der komplexen Zahl mit der reellen Achse 
-        einschließt. 
+        In the complex plane, the real part is plotted on the abscissa and the imaginary part on the ordinate. 
+        The abbreviations Re = real part and Im = imaginary part are used. The coordinate system of a complex 
+        plane is explained in Figure \ref{BildKomplexeEbene}. 
+        The location of the complex number can be represented by 
+        direction arrows, also known as vectors or pointers. The representation
+        of the complex number in Cartesian coordinates is achieved by decomposing it into the real part of the complex number 
+        Re(\underline{Z}) and the imaginary part of the complex number Im(\underline{Z}) combined with the imaginary unit j.
+        Complex numbers can also be represented in polar coordinates. This is done by the magnitude $|\underline{Z}|$
+        of the complex number \underline{Z} and by the angle $\varphi$ that the pointer of the complex number encloses with the real axis. 
     }
 
     \b{
@@ -132,9 +133,9 @@
 
     \fu{
         \input{Tikz/src/Komplexe_Zahlen/Zeigerdiagramm_Komplexe_Zahlen}
-    }{{\bf Zeigerdiagramm einer komplexen Zahl.} Eine komplexe Zahl $\underline{Z}$, welche sich durch $Re(\underline{Z})$ und $Im(\underline{Z})$
-    in kartesischen Koordinaten und durch den Betrag der komplexen Zahl $|\underline{Z}|$ sowie den zugehörigen Winkel
-    $\varphi$ in Polar-Kooradinaten darstellen lässt. \label{BildKomplexeEbene}}
+    }{{\bf Pointer diagram of a complex number.} A complex number $\underline{Z}$, which can be represented by $Re(\underline{Z})$ and $Im(\underline{Z})$
+    in Cartesian coordinates and by the magnitude of the complex number $|\underline{Z}|$ and the corresponding angle
+    $\varphi$ in polar coordinates. \label{BildKomplexeEbene}}
 
     \speech{KomplxDarstEbn}{1}{Folgend wird die komplexe Ebene dargestellt. Hier wird der Realteil auf der Abszisse und der Imaginärteil auf der Ordinate aufgetragen.}
     \speech{KomplxDarstEbn}{2}{Eine komplexe Zahl Zett kann in der komplexen Ebene dargestellt werden. Nach der zuvor getroffenen Definition, 
@@ -148,26 +149,27 @@
     \ftx{Koordinatentransformation}
 
     \s{
-        Die beiden Darstellungsformen lassen sich ineinander transformieren. Behilflich ist hier die Euler'sche Formel. 
-        Die Euler'sche Formel zeigt, dass sich der Ordinatenwert und der Abszissenwert des Einheitskreises
-        durch die trigonometrischen Funktionen Kosinus und Sinus berechnen lassen. Die Euler'sche Formel wird in der Gleichung 
-        \ref{GleichungEuler} dargestellt. 
+        The two forms of representation can be transformed into each other. Euler's formula is helpful here.
+        Euler's formula shows that the ordinate value and the abscissa value of the unit circle
+        can be calculated using the trigonometric functions cosine and sine. 
+        Euler's formula is represented in equation \ref{GleichungEuler}.
 
         \begin{eq}
             \mathrm{e}^{\mathrm{j} \cdot \chi} = \cos(\chi) + \mathrm{j} \cdot \sin(\chi)    \label{GleichungEuler}
         \end{eq}
     
-        Unter Verwendung der Euler'schen Formel können durch die Hinzunahme des Betrages der komplexen Zahl die Polar-Koordinaten
-        in kartesische Koordinaten transformiert werden. Dies wird durch die Gleichung \ref{GleichungKartesisch} erläutert. 
-    
+        Using Euler's formula, the polar coordinates
+        can be transformed into Cartesian coordinates by adding the absolute value of the complex number. This is explained by equation \ref{GleichungKartesisch}.
+     
         \begin{eq}
             \underline{Z} = |\underline{Z}| \cdot \cos(\varphi) + \mathrm{j} \cdot |\underline{Z}| \cdot \sin(\varphi) = \Re(\underline{Z}) + \mathrm{j} \cdot \Im(\underline{Z}) \label{GleichungKartesisch}
         \end{eq}
     
-        Über den Satz des Pythagoras lässt sich aus den bekannten Realteil und Imaginärteil der Betrag der komplexen Zahl
-        für die Polar-Koordianten bestimmen. Der dazugehörige Winkel ergibt sich aus dem arctan mit dem Verhältnis aus Imaginärteil
-        zu Realteil im Argument. Mit diesen Informationen kann eine komplexe Zahl wie in der Gleichung \ref{GleichungPolar} 
-        in Polar-Koordinaten transformiert werden. 
+        Using Pythagoras' theorem, the real and imaginary parts of the complex number can be used to determine the magnitude of the complex number
+        for the polar coordinates. The corresponding angle is obtained from the arctan with the ratio of the imaginary part
+        to the real part in the argument. With this information, a complex number such as in equation \ref{GleichungPolar} 
+        can be transformed into polar coordinates.
+ 
     
         \begin{eq}
             \underline{Z} = \sqrt{(\Re(\underline{Z}))^2+(\Im(\underline{Z}))^2} \cdot \mathrm{e}^{\mathrm{j} \cdot \arctan(\frac{\Im(\underline{Z})}{\Re(\underline{Z})}) } = |\underline{Z}| \cdot \mathrm{e}^{\mathrm{j} \cdot \varphi} \label{GleichungPolar}
@@ -201,20 +203,20 @@
 \begin{frame}
     \ftx{Darstellungsformen komplexer Zahlen}
 
-    \begin{Merksatz}{Darstellungsformen komplexer Zahlen}
-        Kartesische Darstellung:
+    \begin{Key point}{Representations of complex numbers}
+        Cartesian representation:
         \begin{eq}
             \underline{Z} = \Re(\underline{Z}) + j \cdot \Im(\underline{Z}) \nonumber
         \end{eq}
-        Polarform:
+        Polar form:
         \begin{eq}
             \underline{Z} = |\underline{Z}| \cdot e^{j \cdot \varphi}   \nonumber
         \end{eq}
-        Trigonometrische Darstellung:
+        Trigonometric representation:
         \begin{eq}
             \underline{Z} = |\underline{Z}| (\cos(\varphi) + j \cdot \sin(\varphi))   \nonumber
         \end{eq}
-    \end{Merksatz}
+    \end{Key point}
 
     \speech{KomplxMrk1}{1}{Komplexe Zahlen lassen sich über den Realteil und Imaginärteil in Kartesischen Koordinaten,
     über die Polarform mit dem Betrag und dem zugehörigen Winkel,
@@ -225,9 +227,8 @@
     \ftx{Grundrechenarten und Operationen}
 
     \s{
-        Zu den Operationen bei komplexen Zahlen zählt die Konjugation. Beim Konjugieren einer komplexen Zahl wird der 
-        j durch -j ersetzt (Negation des Imaginärteils). Die Konjugation wird wie in Gleichung \ref{GleichungKonj} dargestellt mit einem
-        Stern gekennzeichnet. 
+        Conjugation is one of the operations on complex numbers. When conjugating a complex number, the 
+        j is replaced by -j (negation of the imaginary part). As shown in Equation \ref{GleichungKonj}, conjugation is indicated by an asterisk.
     }
 
     \b{
@@ -239,9 +240,9 @@
     \end{eq}
 
     \s{
-        Der Betrag einer komplexen Zahl lässt sich durch die Multiplikation der komplexen Zahl mit ihrer Konjugierten
-        bestimmen (vgl. Gleichung \ref{GleichungBetrag}). Statt des Betrages, welcher eine Wurzel enthält, wird auch das Betragsquadrat 
-        verwendet. Es stellt ebenfalls ein Maß für den Abstand der Zahl zum Ursprung dar, ist aber einfacher zu berechnen.
+        The magnitude of a complex number can be determined by multiplying the complex number by its conjugate
+        (see Equation \ref{GleichungBetrag}). Instead of the magnitude, which contains a root, the square of the magnitude is also used.
+        It also represents a measure of the distance of the number from the origin, but is easier to calculate.
     }
 
     \onslide<2->{
@@ -262,9 +263,9 @@
 \begin{frame}
     \ftx{Grundrechenarten und Operationen}
     \s{
-        Bei der Addition und der Subtraktion von komplexen Zahlen empfiehlt es sich, diese zunächst in kartesiche 
-        Koordianten umzuwandeln. Auf diese Weise lassen sich der Realteil und der Imaginärteil der komplexen Zahl
-        separat miteinander verrechnen. 
+        When adding and subtracting complex numbers, it is advisable to first convert them into Cartesian coordinates. 
+        This allows the real part and the imaginary part of the complex number
+        to be calculated separately.
     }
     \b{
         Addition und Subtraktion:
@@ -275,10 +276,9 @@
     \end{eqa}
 
     \s{
-        Die Darstellung in Polar-Koordinaten empfiehlt sich für die Verrechnungen von komplexen Zahlen durch Multiplikation
-        und Division. Die Multiplikation von komplexen Zahlen setzt sich auf dem Produkt der Beträge und der Summe der jeweiligen
-        Winkel zusammen (vgl. Gleichung \ref{GleichungMultiplikation}). Bei der Division werden die Beträge dividiert und die Winkel 
-        voneinander subtrahiert (vgl. Gleichung \ref{GleichungDivision}). 
+        The representation in polar coordinates is recommended for calculating complex numbers by multiplication
+        and division. The multiplication of complex numbers is composed of the product of the magnitudes and the sum of the respective
+        angles (see Equation \ref{GleichungMultiplikation}). In division, the magnitudes are divided and the angles are subtracted from each other (see Equation \ref{GleichungDivision}). 
     }
 
     \onslide<2->{
@@ -305,10 +305,10 @@
 \begin{frame}
     \ftx{Grundrechenarten komplexer Zahlen}
 
-    \begin{Merksatz}{Grundrechenarten komplexer Zahlen}
-        Für die {\bf Addition und Subtraktion} wird in der Regel die {\bf kartesische Darstellungsform} für komplexen Zahlen verwendet.
-        Bei der {\bf Multiplikation und Division} von komplexen Zahlen wird die {\bf Polarform} gewählt. 
-    \end{Merksatz}
+    \begin{Key point}{Basic arithmetic operations with complex numbers}
+        For {\bf addition and subtraction}, the {\bf Cartesian representation} is generally used for complex numbers.
+        For {\bf multiplication and division} of complex numbers, the {\bf polar form} is chosen.
+    \end{Key point}
 
     \speech{KomplxMrk2}{1}{Für die Addition und die Subtraktion wird in der Regel die kartesische Darstellungsform für komplexen Zahlen verwendet.
     Bei der Multiplikation und der Division von komplexen Zahlen wird die Polarform zur Berechnung gewählt.}
@@ -318,8 +318,8 @@
 \begin{frame}
     \ftx{Grundrechenarten und Operationen}
     \s{
-        Da die Division zunächst nur für reelle Zahlen außer Null definiert ist, wird die komplexe Zahl im Nenner so erweitert, dass 
-        dieser reell wird.
+        Since the division is initially only defined for real numbers other than zero, the complex number in the denominator is extended so that 
+        it becomes real.
     }
     \b{
         Division durch konjugiert komplexe Erweiterung:
@@ -329,8 +329,8 @@
     \end{eq}
 
     \s{
-        Durch die Addition einer komplexen Zahl mit ihrer konjugiert komplexen hebt sich ihr Imaginärteil auf (vgl. Gleichung \ref{GleichungRealteil}). 
-        Entsprechend verschwindet durch die Subtraktion der Realteil (vgl. Gleichung \ref{GleichungImaginärteil}).
+        Adding a complex number to its conjugate cancels out its imaginary part (see equation \ref{GleichungRealteil}). 
+        Similarly, subtracting the real part cancels it out (see equation \ref{GleichungImaginärteil}).    
     }
 
     \onslide<2->{
@@ -352,17 +352,18 @@
 
 
 \begin{frame}
-    \ftb{Graphische Darstellung und Rechnungen mit komplexen Zahlen}
+    \renewcommand{\figurename}{Figure}
+    \ftb{Graphical representation and calculations with complex numbers}
 
     \s{
-        Mithilfe von Zeigerdiagrammen lassen sich komplexe Zahlen auch zeichnerisch lösen. Werden die komplexen
-        Zahlen wie empfohlen in der kartesischen Form dargestellt, können die Bestandteile der Realteile und der 
-        Imaginärteile direkt abgelesen werden und in ein Koordinatensystem eingestragen werden. Die komplexen Zahlen 
-        werden beispielsweise in der Abbildung \ref{BildKomplexRechnung} eingetragenen. Bei der Addition von komplexen Zahlen wird entweder
-        $Z_\mathrm{1}$ an $Z_\mathrm{2}$ gesetzt oder umgekehrt. Denn bei der Addition gilt weiterhin das Kommutativgesetz. Hier werden durch 
-        die gestrichelten Pfeile die Parallelverschiebungen von $Z_\mathrm{1}$ und $Z_\mathrm{2}$ angegeben. Die Verschiebungen enden beide an 
-        der selben Koordinate. Hier können separat der Realteil und der Imaginärteil aus der Summe der beiden komplexen 
-        Zahlen abgelesen werden. 
+        Complex numbers can also be solved graphically using pointer diagrams. If the complex
+        numbers are represented in Cartesian form as recommended, the components of the real parts and the 
+        imaginary parts can be read directly and entered into a coordinate system. The complex numbers 
+        are entered, for example, in Figure \ref{BildKomplexRechnung}. When adding complex numbers, either 
+        $Z_\mathrm{1}$ is set to $Z_\mathrm{2}$ or vice versa. This is because the commutative law still applies to addition. Here, 
+        the dashed arrows indicate the parallel shifts of $Z_\mathrm{1}$ and $Z_\mathrm{2}$. Both shifts end at 
+        the same coordinate. Here, the real part and the imaginary part can be read separately from the sum of the two complex 
+        numbers.
     }
 
     \b{
@@ -376,7 +377,7 @@
 
     \fu{
         \input{Tikz/src/Komplexe_Zahlen/Addition_Komplexer_Zahlen}
-    }{{\bf Addition von komplexen Zahlen.} Zeichnerische Lösung einer Addition von zwei komplexen Zahlen im Zeigerdiagramm. \label{BildKomplexRechnung}}
+    }{{\bf Addition of complex numbers.} Graphical solution for adding two complex numbers in a phasor diagram. \label{BildKomplexRechnung}}
 
     \speech{KomplxGraphAdd}{1}{Gezeigt wird die Komplexe Ebene mit der Aufteilung in Realteil und Imaghinärteil.
     Außerdem werden die Zahlen Zett eins in rot und Zett zwei in blau dargestellt.
@@ -391,11 +392,11 @@
     \ftx{Zeigerdiagramme - Subtraktion}
 
     \s{
-        Die zeichnerische Lösung der Subtraktion von komplexen Zahlen erfolgt vergleichbar mit der Addition. 
-        Zu beachten ist dabei, dass wie in anderen Zahlensystemen bei der Subtraktion von zwei komplexen Zahlen
-        das Kommutativgesetz nicht gilt. Wird von der komplexen Zahl $Z_\mathrm{2}$ $Z_\mathrm{1}$ subtrahiert, ändert sich die Richtung
-        von $Z_\mathrm{1}$. Hier erfolgt dann wieder die Parallelverschiebung, allerdings lediglich von $Z_\mathrm{1}$. An dem sich ergebenen
-        neuen Vektor können dann wieder der Realteil und der Imaginärteil abgelesenw erden. 
+        The graphical solution for subtracting complex numbers is similar to that for addition.
+        It should be noted that, as in other number systems, the commutative law does not apply when subtracting two complex numbers. 
+        If the complex number $Z_\mathrm{2}$ is subtracted from $Z_\mathrm{1}$, the direction
+        of $Z_\mathrm{1}$ changes. Here, the parallel shift occurs again, but only for $Z_\mathrm{1}$. The resulting
+        new vector can then be read again as the real part and the imaginary part.
     }
 
     \b{
@@ -410,7 +411,7 @@
 
     \fu{
         \input{Tikz/src/Komplexe_Zahlen/Subtraktion_Komplexer_Zahlen}
-    }{{\bf Subtraktion von komplexen Zahlen.} Zeichnerische Lösung einer Subtraktion von zwei komplexen Zahlen im Zeigerdiagramm.}
+    }{{\bf Subtraction of complex numbers.} Graphical solution for subtracting two complex numbers in a phasor diagram.}
 
     \speech{KomplxGraphSub}{1}{Ähnlich wie bei der Addition wird bei der Subtraktion von komplexen Zahlen vorgegangen.
     Wieder wird die komplexe Ebene mit dem Realteil und dem Imaginärteil dargestellt.
@@ -426,11 +427,11 @@
     \ftx{Zeigerdiagramme - Multiplikation}
 
     \s{
-        Die in der Abbildung \ref{BildMultiplikation} dargestellten komplexen Zahlen $\underline{Z}_\mathrm{1}$ und $\underline{Z}_\mathrm{2}$ werden zur 
-        Multiplikation in Polar-Koordinaten abgebildet. Durch die zuvor beschriebenen Rechnenregeln der Multiplikation 
-        für komplexe Zahlen können die Werte für die für das Ergebnis $\underline{Z}_\mathrm{3}$ bestimmt werden. Die Multiplikation
-        aus den Zeigerlängen gibt die Länge des Produktes an. Die Summe aus den beiden komplexen Zahlen den Winkel der neuen
-        komplexen Zahl an. 
+        The complex numbers $\underline{Z}_\mathrm{1}$ and $\underline{Z}_\mathrm{2}$ shown in Figure \ref{BildMultiplikation} are represented for 
+        multiplication in polar coordinates. Using the previously described calculation rules for multiplication 
+        of complex numbers, the values for the result $\underline{Z}_\mathrm{3}$ can be determined. The multiplication
+        of the pointer lengths gives the length of the product. The sum of the two complex numbers gives the angle of the new
+        complex number.
     }
 
     \b{
@@ -445,7 +446,7 @@
     
     \fu{
         \input{Tikz/src/Komplexe_Zahlen/Multiplikation_Komplexer_Zahlen}
-    }{{\bf Multiplikation von komplexen Zahlen.} Zeichnerische Lösung einer Multiplikation von zwei komplexen Zahlen in Polar-Koordinaten im Zeigerdiagramm. \label{BildMultiplikation}}
+    }{{\bf Multiplication of complex numbers.} Graphical solution for multiplying two complex numbers in polar coordinates in a pointer diagram. \label{BildMultiplikation}}
 
     \speech{KomplxGraphMulti}{1}{Bei der grafischen Multiplikation ist ein wenig Rechnen notwendig.
     Hier werden die komplexen Zahln Zett eins und Zett zwei in der komplexen Ebene in ihrer Polarform dargestellt.}

@@ -1,21 +1,21 @@
-\newvideofile{strom}{Die elektrische Stromstärke}
+\newvideofile{strom}{The electric current}
 
 
-\section{Die elektrische Stromstärke}
+\section{The electric current}
 
 \begin{frame}
 	\ftx{Lernziele: Die Elektrische Stromstärke}
 
-	\begin{Lernziele}{Die Elektrische Stromstärke}
-        Die Studierenden können
+	\begin{Learning objectives}{Die Elektrische Stromstärke}
+        The Students can
         \begin{itemize}
-			\item die Begriffe der elektrischen Stromstärke und der elektrischen Stromdichte erläutern und
-			anwenden
-            \item die elektrische Stromstärke sowie die elektrische Stromdichte in einfachen Anordnungen berechnen
-            \item die Driftgeschwindigkeit von Elektronen in einfachen Anordnungen bestimmen
+			\item Explain and apply the concepts of electric current and electric current density.
+            Apply
+            \item calculate the electric current and electric current density in simple arrangements
+            \item determine the drift velocity of electrons in simple arrangements
 
         \end{itemize}
-    \end{Lernziele}
+    \end{Learning objectives}
 		\speech{lernziele_strom}{1}{In diesem Video werden wir uns die elektrische Stromstärke einmal genauer anschauen.
 			Am Ende dieser Lerneinheit solltet ihr die Begriffe der elektrischen Stromstärke und der elektrischen Stromdichte erläutern und
 			anwenden können, aber auch die elektrische Stromstärke sowie die elektrische Stromdichte in einfachen Anordnungen berechnen. 
@@ -25,40 +25,38 @@
 \end{frame}
 
 
-\subsection{Das elektrische Strömungsfeld}
+\subsection{The electric flow field}
 
 \s{
 
-Die vorherigen Kapitel beziehen sich ausschließlich auf ruhende Ladungsträger.
-Folglich wird dieser Teilbereich der Elektrotechnik als Elektrostatik bezeichnet.
+The previous chapters refer exclusively to stationary charge carriers.
+Consequently, this subfield of electrical engineering is referred to as electrostatics.
 
 
 
-Auf molekularer Ebene bewegen sich die freien Elektronen in einem elektrischen Leiter ständig in zufällige Richtungen.
-Im Mittel gleicht sich die Bewegung der einzelnen Elektronen jedoch aus. 
-Liegt an einem Leiter ein elektrisches Feld $\vec{E}$ an, so werden die frei 
-beweglichen Elektronen in diesem in Richtung der positiv geladenen Elektrode angezogen (siehe Abbildung \ref{fig:stromfeld}).
-Zusätzlich zur zufälligen, ungerichteten Bewegung wird eine \textbf{gerichtete Bewegungskomponente} hinzugefügt.
-Liegt eine solche gerichtete Bewegung von Teilchen vor, wird von einem \textbf{Strömungsfeld} gesprochen.
+At the molecular level, the free electrons in an electrical conductor constantly move in random directions.
+On average, however, the movement of the individual electrons balances out.
+If an electric field $\vec{E}$ is applied to a conductor, the free
+moving electrons in it are attracted towards the positively charged electrode (see Figure \ref{fig:stromfeld}) .
+In addition to the random, undirected motion, a \textbf{directed motion component} is added.
+If such a directed motion of particles occurs, it is referred to as a \textbf{flow field}.
 
 
  \begin{figure}[h!]
+	\renewcommand{\figurename}{Figure}
 	\centering
 	\includesvg[width=0.6\textwidth]{strömungsfeld}
-	\caption{Elektrischer Leiter mit eingeprägter elektrischer Feldstärke $\vec{E}$. Die Driftbewegung der Elektronen $\vec{v}_\mathrm{el}$ verläuft in entgegengesetzter Richtung zur Feldstärke.}
+	\caption{Electrical conductor with an impressed electric field strength $\vec{E}$. 
+	The drift motion of the electrons $\vec{v}_\mathrm{el}$ proceeds in the opposite direction to the field strength.}
 	\label{fig:stromfeld}
 \end{figure}
 
 
- Neben Elektronen in Leitern kann ein elektrisches Strömungsfeld auch durch geladene Ionen in Gasen
-  oder Flüssigkeiten hervorgerufen werden.
-
-Im Fall einer im zeitlichen Mittel konstanten Ladungsträgerbewegung, was im abgebildeten
- Leiter durch ein konstantes elektrisches Feld erreicht wird, liegt ein stationäres elektrisches
-  Strömungsfeld vor.
-
-
-
+In addition to electrons in conductors, an electric flow field can also be caused by charged ions in gases
+or liquids.
+In the case of a charge carrier movement that is constant on average over time, which is achieved in the conductor shown
+by a constant electric field, a stationary electric
+flow field is present.
 
 }
 
@@ -113,27 +111,28 @@ durch ein konstantes elektrisches Feld erreicht wird, liegt also ein stationäre
 
 
 
-\subsection{Der elektrische Strom}
+\subsection{Electric current}
 
 
 \s{
-Als elektrische Stromstärke $I$ wird die gerichtete Bewegung (Driftbewegung) von elektrischen Ladungsträgern bezeichnet.
-Die Richtung der elektrischen Stromstärke ist so definiert, dass sie vom höheren Potential (positiv geladene Elektrode)
-zum niedrigeren Potential verläuft. Damit verläuft sie in die gleiche Richtung wie die elektrische Feldstärke,
-jedoch in die zur Driftgeschwindigkeit der Elektronen entgegengesetzen Richtung (siehe Abbildung \ref{fig:strom}). 
+Electrical current $I$ refers to the directed movement (drift movement) of electrical charge carriers.
+The direction of the electric current is defined as running from the higher potential (positively charged electrode)
+to the lower potential. It therefore runs in the same direction as the electric field strength,
+but in the opposite direction to the drift velocity of the electrons (see Figure \ref{fig:strom}). 
 
 
  \begin{figure}[h!]
+	\renewcommand{\figurename}{Figure}
 	\centering
 	\includesvg[width=0.6\textwidth]{strom}
-	\caption{Elektrischer Leiter mit elektrischer Feldstärke $\vec{E}$ und resultierender elektrischer Stromstärke $I$.}
+	\caption{Electrical conductor with electric field strength $\vec{E}$ and resulting electric current $I$.}
 	\label{fig:strom}
 \end{figure}
 
 
-Die Elektronen erreichen eine feldstärkeabhängige
-Driftgeschwindigkeit $\vec{v}_\mathrm{el}$. Zusammenstöße mit den Metallatomen aus der Gitterstruktur behindern
-die freie Bewegung der Elektronen, und wirken dieser als eine Art Widerstand entgegen. 
+The electrons reach a field strength-dependent
+drift velocity $\vec{v}_\mathrm{el}$. Collisions with the metal atoms from the lattice structure impede
+the free movement of the electrons and counteract it as a kind of resistance.
 
 
 \begin{equation}
@@ -148,9 +147,9 @@ die freie Bewegung der Elektronen, und wirken dieser als eine Art Widerstand ent
 	[ \vec{v}_\mathrm{el} ]  = \frac{\mathrm{m}}{\mathrm{s}}
 \end{equation*}
 
-Der Proportionalitätsfaktor $b_\mathrm{el}$ zwischen der 
-Driftgeschwindigkeit $\vec{v}_\mathrm{el}$ und der elektrischen Feldstärke $\vec{E}$ wird als 
-Elektronenbeweglichkeit bezeichnet.
+The proportionality factor $b_\mathrm{el}$ between the 
+drift velocity $\vec{v}_\mathrm{el}$ and the electric field strength $\vec{E}$ is referred to as 
+electron mobility.
 
 \begin{equation*}
 	[b_\mathrm{el}] = \frac{\mathrm{m}^2}{\mathrm{Vs}}
@@ -159,38 +158,39 @@ Elektronenbeweglichkeit bezeichnet.
 
 
 
-Neben der Driftgeschwindigkeit $\vec{v}_\mathrm{el}$ ist auch die Anzahl der Elektronen $N_\mathrm{el}$
-sowie deren Ladungsmenge $\Delta Q$ zur Ermittlung der elektrischen Stromstärke $I$ relevant.
+In addition to the drift velocity $\vec{v}_\mathrm{el}$, the number of electrons $N_\mathrm{el}$
+and their charge quantity $\Delta Q$ are also relevant for determining the electric current $I$.
 
 \begin{figure}[h!]
+	\renewcommand{\figurename}{Figure}
 	\centering
 	\includesvg[width=0.6\textwidth]{strom1}
-	\caption{Illustration der Elektronenbewegung durch einen elektrischen Leiter}
+	\caption{Illustration of the movement of electrons through an electrical conductor}
 	\label{fig:strom1}
 \end{figure}
 
  
-Die Ladungsmenge $\Delta Q$ entspricht
+The charge quantity $\Delta Q$ corresponds to
 
 \begin{equation*}	
 	\Delta Q = e \cdot N_\mathrm{el} = e \cdot n_\mathrm{el} \cdot V_1 \,
 \end{equation*}
 
-wobei $n_\mathrm{el}$ die Dichte der Ladungsträger im Volumen $V_1$ angibt.
+where $n_\mathrm{el}$ indicates the density of charge carriers in volume $V_1$.
 
-Mit $V_1 = \Delta s \cdot A$ und $\Delta s = v_\mathrm{el}  \cdot \Delta t$ ergibt sich: 
+With $V_1 = \Delta s \cdot A$ and $\Delta s = v_\mathrm{el}  \cdot \Delta t$, we get:
 
 \begin{equation*}	
 	\Delta Q =  e \cdot n_\mathrm{el} \cdot v_\mathrm{el} \cdot \Delta t \cdot A
 \end{equation*}
 
-Über die Definition der Driftgeschwindigkeit (\ref{eq:driftgeschw}) führt dies zu:
+Using the definition of drift velocity (\ref{eq:driftgeschw}), this leads to:
 
 \begin{equation*}	
 	\Delta Q =  e \cdot n_\mathrm{el} \cdot b_\mathrm{el} \cdot E \cdot \Delta t \cdot A \, ,
 \end{equation*}
 
-woraus sich die Änderung der Ladungsmenge $\Delta Q$ pro Zeiteinheit $\Delta t$ herleiten lässt:
+from which the change in charge quantity $\Delta Q$ per unit of time $\Delta t$ can be derived:
 
 \begin{equation*}	
 	\frac{\Delta Q}{\Delta t} =  e \cdot n_\mathrm{el} \cdot b_\mathrm{el} \cdot E \cdot A
@@ -199,9 +199,9 @@ woraus sich die Änderung der Ladungsmenge $\Delta Q$ pro Zeiteinheit $\Delta t$
 
 
 
-\subsection{Definition der elektrischen Stromstärke}
+\subsection{Definition of electrical current}
 
-Diese so ermittelte Ladungsänderung über die Zeit wird als \textbf{elektrische Stromstärke} $I$ bezeichnet:
+The change in charge over time determined in this way is referred to as \textbf{electric current} $I$:
 
 \begin{equation}
 	I = \frac{\Delta Q}{\Delta t}
@@ -216,38 +216,38 @@ Diese so ermittelte Ladungsänderung über die Zeit wird als \textbf{elektrische
 
 
 
-Aus dieser Definition der Stromstärke folgt, dass eine über einen Zeitraum aufaddierte elektrische 
-Stromstärke die in dieser Zeit transporte Ladungsmenge $Q$ ergibt:
+From this definition of current, it follows that the electrical current accumulated over a period of time 
+results in the amount of charge $Q$ transported during that time.:
 
 \begin{equation}
 	Q = \int_{t_1}^{t_2} i(t) \, \mathrm{d} t	
 \end{equation}
 
-Neben der gesamten elektrischen Stromstärke $I$ ist oft auch der auf den Leiterquerschnitt bezogene Strom von Interesse.
-Zur Berechnung dieser \textbf{Stromdichte} $J$ wird die Stromstärke $\Delta I$ durch ein elementar kleines Flächenelement $\Delta A$
-betrachtet: 
+In addition to the total electric current $I$, the current relative to the conductor cross-section is often also of interest.
+To calculate this \textbf{current density} $J$, the current $\Delta I$ is considered through an elementary small area element $\Delta A$: 
 
 \begin{equation}
 	J = \frac{\Delta I}{\Delta A}
 \end{equation}
 
-Ist die elektrische Stromstärke $I$ über eine Fläche gleichmäßig verteilt, lässt sich dies vereinfachen:
+If the electric current $I$ is evenly distributed across a surface, this can be simplified:
 
 \begin{equation}
 	J = \frac{I}{A}
 \end{equation}
 
-Da die Stromstärke $I$ über den gesamten Leiter hinweg identisch bleibt, ändert sich bei einer 
-Querschnittsverkleinerung des Leiters auch die resultierende elektrische Stromdichte $J$ (siehe Abbildung \ref{fig:stromdichte}).
+Since the current $I$ remains identical across the entire conductor, a 
+reduction in the cross-sectional area of the conductor also changes the resulting electric current density $J$ (see Figure \ref{fig:stromdichte}).
 
 \begin{figure}[h!]
+	\renewcommand{\figurename}{Figure}
 	\centering
 	\includesvg[width=0.6\textwidth]{stromdichte}
-	\caption{Zusammenhang zwischen der Stromdichte $J_1$ bei Querschnitt $A_1$ und $J_2$ bei $A_2$}
+	\caption{Correlation between the current density $J_1$ at cross-section $A_1$ and $J_2$ at $A_2$}
 	\label{fig:stromdichte}
 \end{figure}
 
-Hier gilt:
+The following applies here:
 
 \begin{equation*}
 	J_1 \cdot A_1 = J_2 \cdot A_2 = I
@@ -257,10 +257,10 @@ Hier gilt:
 
 
 
-\begin{bsp}{}{}
+\begin{expl}{}{}
 
-	Durch eine Kupferleitung mit dem Querschnitt $A = 1 \mathrm{mm}^2$ fließt ein Strom von $I = 8 \mathrm{A}$. 
-	Ein $\mathrm{mm}^3$ enthält etwa $ 8,5 \cdot 10^{19}$ Atome. Jeweils 1 Elektron pro Atom sei am Ladungstransport beteiligt.
+	A current of $I = 8 \mathrm{A}$ flows through a copper wire with a cross-sectional area of $A = 1 \mathrm{mm}^2$.
+	One $\mathrm{mm}^3$ contains approximately $ 8.5 \cdot 10^{19}$ atoms. Let us assume that 1 electron per atom is involved in charge transport.
 
 	\begin{center}
 		\includesvg[width=0.5\textwidth]{radialfeld}
@@ -269,18 +269,18 @@ Hier gilt:
 
 	
 
-	Mit welcher Driftgeschwindigkeit bewegen sich die Elektronen im Mittel durch die Leitung?
+	What is the average drift velocity of the electrons through the wire?
 
 	\begin{equation*}
 		\vec{v}_\mathrm{el} = - b_\mathrm{el} \cdot \vec{E}
 	\end{equation*}
 
-	Da sich die negativ geladenen Elektronen entgegen der Feldrichtung $\vec{E}$ (und somit auch entgegen der
-	 technischen Stromrichtung $I$) bewegen, ist die Richtung der Driftgeschwindigkeit ausreichend beschrieben,
-	 und es genügt, den Betrag $v_\mathrm{el}$ zu berechen.
+	Since the negatively charged electrons move in the opposite direction to the field direction $\vec{E}$ (and thus also in the opposite direction to the
+    technical current direction $I$), the direction of the drift velocity is sufficiently described,
+    and it is sufficient to calculate the magnitude $v_\mathrm{el}$.
 
 
-	mit dem Zusammenhang
+	With the connection
 
 	\begin{equation*}
 	 I = e \cdot n_\mathrm{el} \cdot b_\mathrm{el} \cdot E  \cdot A\\
@@ -289,7 +289,7 @@ Hier gilt:
 
 	
 
-	ergibt sich:
+	results in:
 
 \begin{equation*}
 	v_\mathrm{el} = \cancel{b_\mathrm{el}} \cdot \frac{I}{e \cdot n_\mathrm{el} \cdot \cancel{b_\mathrm{el}} \cdot A}
@@ -306,17 +306,14 @@ Einsetzen der Zahlenwerte:
 	v_\mathrm{el} = 0,59 \frac{\mathrm{mm}}{s} 
 \end{equation*}	
 
-Die Elektronen bewegen sich im Mittel also mit 0,59 mm/s. Da sich innerhalb des Leiters die elektrische Feldstärke
-jedoch mit Lichtgeschwindigkeit fortbewegt, setzen sich alle Elektronen des Leiters praktisch gleichzeitig in Bewegen.
-Vergleichbar ist dies mit einem vollständig mit Murmeln gefüllten Rohr. Im Moment des hereinschiebens einer weiteren 
-Murmel fällt auf der anderen Seite eine Murmel heraus, obwohl sich die einzelnen Murmeln nur langsam bewegen. 
+The electrons therefore move at an average speed of 0.59 mm/s. However, since the electric field strength within the conductor
+travels at the speed of light, all the electrons in the conductor start moving at practically the same time.
+This can be compared to a tube completely filled with marbles. The moment another marble is pushed in, 
+a marble falls out on the other side, even though the individual marbles are moving slowly.
 
 
 
-
-
-
-\end{bsp}
+\end{expl}
 
 }
 

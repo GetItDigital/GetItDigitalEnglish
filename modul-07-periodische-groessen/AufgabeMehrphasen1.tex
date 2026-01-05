@@ -1,14 +1,14 @@
-\subsection{Mehrphasensysteme 1}
+\subsection{Multiphase systems 1}
 \Aufgabe{
-    Gegeben ist ein unsymmetrisches System mit folgenden Spannungen:
+    Given is an unbalanced system with the following voltages:
     
     $\underline{U}_\mathrm{L1}=230 V$, $\underline{U}_\mathrm{L2}=460 V\cdot e^{-j45^\circ}$, $\underline{U}_\mathrm{L1}=345 V\cdot e^{j120^\circ}$
     
     \begin{itemize}
-        \item [a)] Zeichen Sie das Zeigerdiagramm des Originalsystems!
-        \item [b)] Stellen Sie die Zerlegungsgleichungen für die Spannungen auf!
-        \item [c)] Berechnen Sie die Spannungen der transformierten Systeme!
-        \item [d)] Zeichen Sie die Zeigerdiagramme der transformierten Systeme!
+        \item [a)] Draw the phasor diagram of the original system!
+        \item [b)] Set up the decomposition equations for the voltages!
+        \item [c)] Calculate the voltages of the transformed systems!
+        \item [d)] Draw the phasor diagrams of the transformed systems!
     \end{itemize}
 }
 
@@ -18,7 +18,7 @@
 
         \item[\bf a)]
         
-              Zeigerdiagramm des Originalsystems: \\
+              Pointer diagram of the original system: \\
               \begin{figure}[H]
                   \centering
                   \resizebox{0.6\textwidth}{!}{%
@@ -34,7 +34,7 @@
               \end{eqa}
               
         \item[\bf c)]
-              Für das Nullsystem:
+              For the zero system:
               
               \begin{eqa}
                   \underline{U}_0&=\frac{1}{3}\cdot(\underline{U}_{\mathrm{L1}}+\underline{U}_{\mathrm{L2}}+\underline{U}_{\mathrm{L3}}) \notag \\
@@ -43,7 +43,7 @@
                   &=127,59V-j8,83=127,9\cdot e^{-j3,56^\circ} \notag
               \end{eqa}
               
-              Für das Mitsystem:
+              For the positive system:
               
               \begin{eqa}
                   \underline{U}_{1}&=\frac{1}{3}\cdot(\underline{U}_{\mathrm{L1}}+\underline{a}\cdot\underline{U}_{\mathrm{L2}}+\underline{a}^2\cdot\underline{U}_{\mathrm{L3}}) \notag \\
@@ -53,7 +53,7 @@
               \end{eqa}
               
               
-              Für das Gegensystem:
+              For the negative system:
               
               \begin{eqa}
                   \underline{U}_{2}&=\frac{1}{3}\cdot(\underline{U}_{\mathrm{L1}}+\underline{a}^2\cdot\underline{U}_{\mathrm{L2}}+\underline{a}\cdot\underline{U}_{\mathrm{L3}}) \notag \\
@@ -64,7 +64,7 @@
               
         \item[\bf d)]
         
-              Zeigerdiagramme der transformierten Systeme: \\
+              Pointer diagrams of the transformed systems: \\
               \begin{figure}[H]
                   \centering
                   \resizebox{0.8\textwidth}{!}{
@@ -72,9 +72,9 @@
                   }
               \end{figure}
               
-              Anmerkung: Das Erstellen der Zeigerdiagramme ist ein guter Weg um die errechneten Ergebnisse aus 3. zu überprüfen.
-              Die Wege der Zeiger, die aus dem Originalsystem genommen werden, müssen da enden, wo auch der Zeiger des transformierten Systems hinführt.
-              Stimmen die Endpunkte nicht überein, wurde in einer der Rechnungen ein Fehler gemacht.
+                Note: Creating the pointer diagrams is a good way to check the results calculated in step 3.
+                The paths of the pointers taken from the original system must end where the pointer of the transformed system leads.
+                If the end points do not match, an error has been made in one of the calculations.
               
     \end{itemize}
 }

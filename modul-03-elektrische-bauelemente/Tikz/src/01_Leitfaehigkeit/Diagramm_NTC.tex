@@ -1,7 +1,7 @@
 \begin{tikzpicture}
     \begin{axis}[
-            xlabel={Spannung / V},
-            ylabel={Stromstärke / A},
+            xlabel={Voltage / V},
+            ylabel={Electric Current / A},
             xmin=0, xmax=3,
             ymin=0, ymax=3,
             xtick={0,1,2,3},
@@ -24,7 +24,7 @@
         ] coordinates {
                 (0,0)(3,3)
             };
-        \addlegendentry{NTC Widerstand bei 20°C}
+        \addlegendentry{NTC Resistance at 20°C}
 
         % Temperaturabhängiger Widerstand (Steigung 1/1.4)
         \addplot[
@@ -34,7 +34,7 @@
         ] coordinates {
                 (0,0)(3,3/0.6)
             };
-        \addlegendentry{NTC Widerstand bei 80°C}
+        \addlegendentry{NTC Resistance at 80°C}
         % Punkt bei 1.5 A für idealen Widerstand
         \addplot[
             color=black,

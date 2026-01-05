@@ -1,18 +1,18 @@
-\section{Energie im magnetischen Feld}
+\section{Energy in the magnetic field}
 \begin{frame} \ftx{Energie im magnetischen Feld} 
-	\s{Um die Energie, die in einer Spule gespeichert ist, zu berechnen, wird die in der Abbildung \ref{AbbSpule1} illustrierte Ringkernspule an eine Gleichspannungsquelle angeschlossen. Zum Zeitpunkt $t = 0$ wird die Spannungsquelle eingeschaltet. Die Spannung an der Spule ist dadurch zu jedem Zeitpunkt $t > 0$ gleich der Quellenspannung $U$. 
-	Der durch die Spule geleitene Strom wird nach Gleichung \ref{GLInduktivitaet2} linear ansteigen. Die dadurch zugeführte Energie erzeugt eine Flussdichte im Spulenkern. 
-	Um die Energie zu berechnen, die der Spule zugeführt wird, kann bekannte Gleichung der elektrischen Leistung \ref{GlArbeit} umgeformt werden und anschließend die Spannung durch Gleichung \ref{GLInduktivitaet2} ersetzt werden. 
-	Als Ergebnis dieser Umformung erhält die Änderung der magnetischen Energie $\mathrm{d}W_{\mathrm{L}}$, welche aus der Multiplikation von Induktivität $L$, dem Strom durch die Induktität $i_{\mathrm{L}}$ und der Änderungsrate des Stroms durch die Induktität $\mathrm{d}i_{\mathrm{L}}$ errechnet (siehe Gleichung \ref{GlÄnderungmagnetischeEnergie}).
+	\s{To calculate the energy stored in a coil, the toroidal coil illustrated in Figure \ref{AbbSpule1} is connected to a DC voltage source. At time $t = 0$, the voltage source is switched on. The voltage across the coil is therefore equal to the source voltage $U$ at every point in time $t > 0$. 
+    The current flowing through the coil will increase linearly according to equation \ref{GLInduktivitaet2}. The energy supplied in this way generates a flux density in the coil core. 
+ 	To calculate the energy supplied to the coil, the known equation for electrical power \ref{GlArbeit} can be transformed and then the voltage can be replaced by equation \ref{GLInduktivitaet2}.
+    As a result of this transformation, the change in magnetic energy $\mathrm{d}W_{\mathrm{L}}$ is obtained, which is calculated from the multiplication of inductance $L$, the current through the inductance $i_{\mathrm{L}}$ and the rate of change of the current through the inductance $\mathrm{d}i_{\mathrm{L}}$ (see equation \ref {GlÄnderungmagnetischeEnergie}).
 	
-		
+\renewcommand{\figurename}{Figure}		
 	% \f{width=0.5\textwidth}{width=0.5\textwidth}{Spule}{Ringkernspule mit einer angelegten Spannung \label{AbbSpule1}{\tiny(Quelle: \cite[Abbildung 6.26]{Albach})}}	
 
 		\fo{width=0.35\textwidth}{width=0.35\textwidth}{Ringspule_MagFeld}{
 			\put(6, 53){\color{current}$I$}
 			\put(11, 1){\color{current}$I$}
 			\put(76, 15){\color{magnetfeld}$\ell_{\mathrm{m}}$}
-		}{{\bf Geschlossene Ringkernspule.} \label{AbbSpule1}}	
+		}{{\bf Closed toroidal coil.} \label{AbbSpule1}}	
 	}	
 	\b{
 		\begin{figure}[htbp]
@@ -48,8 +48,8 @@
 				\d W_{\mathrm{m}}&=u_{\mathrm{L}}\cdot i_{\mathrm{L}} \cdot \d t = L\cdot \frac{\d i}{\d t}\cdot i_{\mathrm{L}}\cdot \d t = L\cdot i_{\mathrm{L}} \cdot \d i_{\mathrm{L}} \label{GlÄnderungmagnetischeEnergie}
 		\end{eqa}
 
-	Die Gesamtenergie ist das Integral über $\d W_{\mathrm{m}}$ vom Anfangswert $i_{\mathrm{L}}=0$ bis zum statischen Endwert $i_{\mathrm{L}} = I$. 
-	Unter der Voraussetzung einer konstanten Induktivität $L$ gilt dann:
+	The total energy is the integral over $\d W_{\mathrm{m}}$ from the initial value $i_{\mathrm{L}}=0$ to the static final value $i_{\mathrm{L}} = I$.
+	Assuming a constant inductance $L$, the following applies:
 	
 	\begin{equation}
 	W_m = L \cdot \int_0^{I_L} i_L \cdot \d i_L = \frac{1}{2} \cdot L \cdot I^2 = \frac{1}{2} \cdot N \cdot \varPhi \cdot I
@@ -60,11 +60,11 @@
 
 \end{frame}
 \begin{frame} \ftx{Energie im magnetischen Feld} 
-	\s{Die magnetische Energie kann auch aus den Feldgrößen durch Integration mit der magnetischen Flussdichte errechnet werden:
+	\s{The magnetic energy can also be calculated from the field magnitudes by integration with the magnetic flux density:
 	\begin{equation}
 		W_{\mathrm{m}} = \ell_{\mathrm{m}}\cdot A\cdot \int\limits_0^{B_L} H\d B = \ell_{\mathrm{m}}\cdot A \cdot \frac{B_{\mathrm{L}}^2}{2\cdot \mu_{\mathrm{r}}\cdot \mu_0} 
 	\end{equation}}
-	\b{Berechnung über die Feldgrößen:
+	\b{Calculation based on field sizes:
 	\begin{equation}
 		\begin{aligned}
 		\onslide<1->{W_{\mathrm{m}} &= \ell_{\mathrm{m}}\cdot A\cdot \int\limits_0^{B_L} H\d B \\
@@ -73,7 +73,7 @@
 		\end{aligned}
 	\end{equation}}
 	\pause
-	\s{Bei einem Elektromagneten hat die Energiedichte im Luftspalt (also die Energie pro Volumen des Luftspalts) eine besondere Bedeutung: Sie steht für die \glqq Kraft des Elektromagneten\grqq. Die maximale Kraftwirkung befindet sich genau am Übergang vom Luftspalt zum Eisenkern -- entspricht also einem theoretisch unendlich schmalen Luftspalt. Da der Luftspalt, wie der Name schon sagt, meistens mit Luft gefüllt ist, ist im Normalfall $\mu_{\mathrm{r}} = 1$ und kann weggelassen werden.
+	\s{In an electromagnet, the energy density in the air gap (i.e. the energy per volume of the air gap) is particularly important: it represents the \glqq force of the electromagnet\grqq. The maximum force is exerted precisely at the transition from the air gap to the iron core – corresponding to a theoretically infinitely narrow air gap. Since the air gap, as the name suggests, is usually filled with air, $\mu_{\mathrm{r}} = 1$ in normal cases and can be omitted.
 	
 	\begin{eq}
 		\frac{W_{\mathrm{m}}}{V} = \frac{B_{\mathrm{L}}^2}{2\cdot \mu_0} = \frac{F}{A}

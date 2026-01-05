@@ -1,7 +1,7 @@
 
 \newvideofile{Netzwerke}{Einfache Widerstandsnetzwerke}
 
-\section{Einfache Widerstandsnetzwerke}
+\section{Simple resistor networks}
 
 
 
@@ -9,25 +9,25 @@
 \begin{frame}{}
 	\s{
 	
-		Elektrische Netzwerke setzen sich häufig aus einfacheren Teilschaltungen zusammen. Oft ist es hilfreich, diese Teilschaltungen 
-		zu identifizieren, zu vereinfachen und anschließend zur Gesamtschaltung zusammenzufassen. Solche Zusammenfassungen von Bauelementen
-		sind grundsätzlich zulässig, sofern sich das \textbf{Klemmverhalten}, also das Verhalten zwischen Strom und Spannung 
-		zwischen den Anschlusspunkten, nicht ändert. 
+		Electrical networks are often composed of simpler sub-circuits. It is often helpful to identify these sub-circuits,
+ 		simplify them, and then combine them into the overall circuit. Such combinations of components
+		are generally permissible, provided that the \textbf{terminal behaviour}, i.e. the behaviour between current and voltage 
+		between the connection points, does not change. 
 	}
 	
 	
 	
 	\ftx{Lernziele: Einfache Gleichstromsnetzwerke}
 	
-	\begin{Lernziele}{Einfache Widerstandsnetzwerke}
-		Die Studierenden können
+	\begin{Learning objectives}{Simple resistance networks}
+		The students can
 		\begin{itemize}
-			\item Teilschaltungen in gleichstromnetzwerken identifizieren
-			\item Widerstandsnetzwerke vereinfachen und zusammenfassen
-			\item Kurzschluss- sowie Leerlaufdaten bestimmen
-			\item Überlagerungsverfahren anwenden
+			\item Identify subcircuits in direct current networks
+			\item Simplify and summarise resistance networks
+			\item Determine short-circuit and no-load data
+			\item Apply superposition methods
 		\end{itemize}
-	\end{Lernziele}
+	\end{Learning objectives}
 	
 	\speech{folie15}{1}{Im vorangegangenen Video wurden die Kirchhoffschen Regeln eingeführt.
 		Jetzt wollen wir sie auf einfache Gleichstromnetzwerke anwenden, und uns diese Netzwerke dabei ein wenig genauer ansehen.
@@ -49,29 +49,30 @@
 	
 	\s{
 	
-		\subsection{Reihenschaltung von Widerständen}
+		\subsection{Series connection of resistors}
 		
-		In einer Reihenschaltung werden alle Bauelemente vom gleichen Strom $I$ durchflossen 
-		(siehe Abbildung \ref{fig:reihenschaltung}). 
+		In a series connection, the same current $I$ flows through all components 
+        (see Figure \ref{fig:reihenschaltung}). 
 		
 		
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\begin{center}
 				\input{Tikz/src/3_widerstandsnetz/Reihenschaltung_Wiederstaende_1}
-				\caption{Reihenschaltung von zwei Widerständen und einer Spannungsquelle}
+				\caption{Series connection of two resistors and a voltage source}
 				
 				\label{fig:reihenschaltung}
 			\end{center}
 		\end{figure}
 		
-		Das Anwenden der Maschenregel (hier: Umlaufrichtung gegen den Uhrzeigersinn) führt zu folgender Maschengleichnung:
+		Applying the mesh rule (here: counterclockwise direction of rotation) leads to the following mesh equation:
 		
 		\begin{equation*}
 			U_0 - U_1 - U_2 =0 
 		\end{equation*}
 		
-		Mit Hilfe des Ohmschen Gesetzes können die Teilspannungen $U_1$ und $U_2$ als Produkt aus Stromstärke und Widerstand dargestellt werden:
-		
+        With the help of Ohm's law, the partial voltages $U_1$ and $U_2$ can be represented as the product of current and resistance:
+
 		
 		\begin{equation*}
 			U_0 - R_1 \cdot I - R_2 \cdot I = 0
@@ -80,41 +81,43 @@
 			U_0 - (R_1+R_2) \cdot I = 0
 		\end{equation*}
 		
-		Die Widerstände $R_1$ und $R_2$ lassen sich in diesem Beispiel durch Addition ihrer Widerstandswerte
-		zu $R_1 + R_2 = R_\mathrm{ges}$ zusammenfassen (Abbildung \ref{fig:rges}).
+		In this example, resistors $R_1$ and $R_2$ can be combined by adding their resistance values
+		to $R_1 + R_2 = R_\mathrm{total}$ (Figure \ref{fig:rges}).
 		
 		
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\begin{center}
 				\input{Tikz/src/3_widerstandsnetz/Reihenschaltung_Wiederstaende_2}
 				
-				\caption{Zusammenfassen von $R_1$ und $R_2$ zu $R_\mathrm{ges}$}
+				\caption{Combining $R_1$ and $R_2$ to form $R_\mathrm{total}$}
 				
 				\label{fig:rges}
 			\end{center}
 		\end{figure}
 		
-		Allgemein lässt sich die Gesamtspannung $U_\mathrm{ges}$ nach diesem Prinzip folgendermaßen zusammenfassen:
+		In general, the total voltage $U_\mathrm{ges}$ can be summarised according to this principle as follows:
 		
 		\begin{equation}
 			U_\mathrm{ges} = \sum_{k=1}^{n} U_k = \sum_{k=1}^{n} R_k \cdot I = R_\mathrm{ges} \cdot I
 			\label{eq:gesamtwiderstand}
 		\end{equation}
 		
-		Ein Koeffizientenvergleich der letzten beiden Terme von Gleichung \ref{eq:gesamtwiderstand} liefert das allgemeingültige 
-		Ergebnis, um Widerstände in einer Reihenschaltung zusammenzufassen:
+		A comparison of the coefficients of the last two terms of equation \ref{eq:gesamtwiderstand} yields the generally valid 
+		result for combining resistors in a series connection:
 		
-		\begin{Merksatz}{Gesamtwiderstand einer Reihenschaltung}{}
+		\begin{Key point}{Total resistance of a series connection}{}
 			\begin{equation}
 				R_\mathrm{ges} = \sum_{k=1}^{n} R_k
 			\end{equation}
-		\end{Merksatz}
+		\end{Key point}
 		
-		Betrachtet man statt der Widerstandswerte $R$ die Leitwerte $G = 1/R$ der Widerstände, ergibt sich für den Gesamtleitwert
-		einer Reihenschaltung: 
+		If, instead of the resistance values $R$, we consider the conductance values $G = 1/R$ of the resistors, the total conductance
+        of a series connection is:
+
 		
 		
-		\begin{Merksatz}{Gesamtleitwert einer Reihenschaltung}{}
+		\begin{Key point}{Total conductance of a series connection}{}
 			
 			
 			\begin{equation}
@@ -127,7 +130,7 @@
 			%	\end{equation}
 			
 			
-		\end{Merksatz}
+		\end{Key point}
 		
 		
 		
@@ -283,23 +286,19 @@
 	
 	\s{
 	
-		\subsection{Parallelschaltung von Widerständen}
+		\subsection{Parallel connection of resistors}
 		
-		In einer Parallelschaltung von Widerständen liegt an allen Bauelementen die selbe Spannung an (siehe Abbildung \ref{fig:parallelschaltung}):
-		
-		
-		
-		
-		
+        In a parallel connection of resistors, the same voltage is applied to all components (see Figure \ref{fig:parallelschaltung}):		
 		
 		
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\begin{center}
 
 				\input{Tikz/src/3_widerstandsnetz/Parallelschaltung_Wiederstaende_1}
 				
 			\end{center}
-			\caption{Parallelschaltung von zwei Widerständen und einer Spannungsquelle}
+			\caption{Parallel connection of two resistors and a voltage source}
 			\label{fig:parallelschaltung}
 			
 			
@@ -310,8 +309,8 @@
 			U_\mathrm{1} = U_\mathrm{2} = U_0
 		\end{equation*}
 		
-		Durch das Anwenden der Knotenregel lässt sich zeigen, dass sich der Gesamtstrom $I_0$ vor den Widerständen in die Teilströme 
-		$I_1$ und $I_2$ aufteilt:
+		By applying the node rule, it can be shown that the total current $I_0$ before the resistors is divided into the partial currents 
+        $I_1$ and $I_2$:
 		
 		
 		%\begin{equation}
@@ -326,26 +325,26 @@
 		\end{equation}
 		
 		
-		Wie bei der Reihenschaltung im Kapitel 4.1 ist es auch bei der Parallelschaltung von Widerständen 
-		häufig von Vorteil, diese zu einem Gesamtwiderstand $R_\mathrm{ges}$ zusammenzufassen (siehe Abbildung \ref{fig:parallelzusammen}): 
+		As with series connection in Section 4.1, it is often advantageous to combine resistors connected in parallel 
+        into a total resistance $R_\mathrm{total}$ (see Figure \ref{fig:parallelzusammen}):
 		
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\begin{center}
 
 				\input{Tikz/src/3_widerstandsnetz/Parallelschaltung_Wiederstaende_2}
 				
 			\end{center}
-			\caption{Zusammenfassung der parallel geschalteten Widerstände $R_1$ und $R_2$ aus Abbildung \ref{fig:parallelschaltung} zu $R_\mathrm{ges}$}
+			\caption{Summary of the parallel-connected resistors $R_1$ and $R_2$ from Figure \ref{fig:parallelschaltung} to $R_\mathrm{total}$}
 			\label{fig:parallelzusammen}
 		\end{figure}
 		
-		Mit Hilfe des Ohmschen Gesetzes können die unbekannten Teilströme $I_1$ und $I_2$ aus der Knotenregel (Gleichung \ref{eq:gesamtwiderstand2}) quantifiziert werden:
-		
+        With the help of Ohm's law, the unknown partial currents $I_1$ and $I_2$ can be quantified from the node rule (equation \ref{eq:gesamtwiderstand2}):		
 		\begin{equation*}
 			I_1 = \frac{U_0}{R_1}, \quad I_2 = \frac{U_0}{R_2}
 		\end{equation*}
 		
-		Eingesetzt in Gleichung \ref{eq:gesamtwiderstand2} ergibt sich:
+		Inserted into equation \ref{eq:gesamtwiderstand2}, this gives:
 		
 		
 		
@@ -363,16 +362,16 @@
 		\end{equation*}
 		
 		
-		Ein Koeffizientenvergleich mit dem auf Abbildung \ref{fig:parallelzusammen} angewandten Ohmschen Gesetz 
+		A coefficient comparison with Ohm's law applied to Figure \ref{fig:parallelzusammen} 
 		( $I_0 = U_0 \cdot \frac{1}{R_\mathrm{ges}}$)
 		
-		liefert für $R_\mathrm{ges}$ im gezeigten Fall von zwei parallel geschalteten WIderständen:
+		provides for $R_\mathrm{total}$ in the case shown of two resistors connected in parallel:
 		
 		\begin{equation*}
 			\frac{1}{R_\mathrm{ges}} =  \frac{1}{R_1}+\frac{1}{R_2}
 		\end{equation*}
 		
-		Das Ausmultiplizieren dieses Ausdrucks ergibt die in Rechnungen häufig genutzte Form:
+		Multiplying out this expression gives the form frequently used in calculations:
 		
 		\begin{equation}
 			R_\mathrm{ges} = \frac{R_1\cdot R_2}{R_1 + R_2}
@@ -380,10 +379,10 @@
 		\end{equation}
 		
 		
-		Der Gesamtwiderstand einer Parallelschaltung aus beliebig vielen Widerständen lässt sich mit Hilfe der allgemeinen Formel
-		für Parallelschaltungen ermitteln:
+		The total resistance of a parallel connection of any number of resistors can be determined using the general formula
+		for parallel connections:
 		
-		\begin{Merksatz}{Gesamtwiederstand einer Parallelschaltung}
+		\begin{Key point}{Total resistance of a parallel connection}
 			
 			\begin{equation}
 				\frac{1}{R_\mathrm{ges}} = \sum_{k=1}^{n} \frac{1}{R_k}
@@ -392,15 +391,15 @@
 			%	\begin{equation}
 			%		\frac{1}{R_ges} = \sum_{k=1}^{n} \frac{1}{R_k} 
 			%	\end{equation}
-		\end{Merksatz}
+		\end{Key point}
 		
 		
-		Da der elektrische Leitwert durch den Kehrwert des Widerstandes $G=1/R$ beschrieben wird, ist der Gesamtleitwert einer 
-		Parallelschaltung von Widerständen oft leichter zu berechnen:
+		Since electrical conductance is described by the reciprocal of resistance, $G=1/R$, the total conductance of a 
+		parallel connection of resistors is often easier to calculate:
 		
 		
 		
-		\begin{Merksatz}{Gesamtleitwert einer Parallelschaltung}
+		\begin{Key point}{Total conductance of a parallel connection}
 			
 			\begin{equation}
 				G_\mathrm{ges} = \sum_{k=1}^{n} G_k 
@@ -408,13 +407,13 @@
 			%	\begin{equation}
 			%		\frac{1}{R_ges} = \sum_{k=1}^{n} \frac{1}{R_k} 
 			%	\end{equation}
-		\end{Merksatz}
+		\end{Key point}
 		
-		\begin{bsp}{Parallelschaltung von Widerständen}{parallelschaltung}
+		\begin{expl}{Parallel connection of resistors}{parallelschaltung}
 			
-			Die drei Widerstände $R_1 = 1 \, \mathrm{k}\Omega$, $R_2 = 10 \, \mathrm{k}\Omega$, $R_3 = 100 \, \mathrm{k}\Omega$
-			werden wie in folgender Abbildung gezeigt parallel geschaltet. Wie groß ist der Gesamtwiderstand $R_\mathrm{ges}$ dieser 
-			Parallelschaltung?
+			The three resistors $R_1 = 1 \, \mathrm{k}\Omega$, $R_2 = 10 \, \mathrm{k}\Omega$, $R_3 = 100 \, \mathrm{k}\Omega$
+			are connected in parallel as shown in the following figure. What is the total resistance $R_\mathrm{total}$ of this 
+			parallel connection?
 			
 			
 			\begin{center}
@@ -424,7 +423,7 @@
 				
 			\end{center}
 			
-			Aufstellen der Gleichung für $R_\mathrm{ges}$ nach Gleichung \ref{eq:rparallel}:
+			Set up the equation for $R_\mathrm{total}$ according to equation \ref{eq:rparallel}:
 			
 			
 			
@@ -432,7 +431,7 @@
 				R_\mathrm{ges} = \frac{1}{\sum_{n} \frac{1}{R_n}} = \frac{1}{\frac{1}{R_1} + \frac{1}{R_2}+ \frac{1}{R_3}}
 			\end{equation*}
 			
-			Einsetzen der Zahlenwerte und Lösung mittels Taschenrechner:
+			Inserting the numerical values and solving using a calculator:
 			
 			\begin{equation*}
 				R_\mathrm{ges} = \frac{1}{\frac{1}{1\cdot 10^3 \, \Omega} + \frac{1}{10\cdot 10^3 \, \Omega} + \frac{1}{100 \cdot 10^3 \, \Omega}}
@@ -445,7 +444,7 @@
 			
 			
 			
-		\end{bsp}
+		\end{expl}
 		
 		
 	}
@@ -612,39 +611,42 @@
 
 \begin{frame}
 
-	\subsection{Spannungsteiler an Widerständen}
+	\subsection{Voltage divider on resistors}
 	
 	\s{
 	
-		Ein Anwendungsfall der Reihenschaltung von zwei Widerständen ist der Spannungsteiler. Er wird genutzt, um eine 
-		Eingangsspannung $U_0$ in zwei kleinere Teilspannungen aufzuteilen, und so eine genau definierte Ausgangsspannung $U_2$ bereitzustellen.
+		One application of connecting two resistors in series is the voltage divider. It is used to divide an 
+		input voltage $U_0$ into two smaller partial voltages, thus providing a precisely defined output voltage $U_2$.
 		
 		
 		
-		\subsubsection{Der unbelastete Spannungsteiler}
+		\subsubsection{The unbalanced voltage divider}
 		
-		Zunächst sei der in Abbildung \ref{fig:spannungsteiler} dargestellte Spannungsteiler unbelastet,
-		d.h. es ist kein Lastwiderstand an den offenen Klemmen angeschlossen.
-		Alle Bauelemente werden vom gleichen Strom $I$ durchflossen:
+		First, the voltage divider shown in Figure \ref{fig:spannungsteiler} is unloaded,
+        i.e. no load resistor is connected to the open terminals.
+        All components are traversed by the same current $I$:
+
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\begin{center}
 
 				\input{Tikz/src/3_widerstandsnetz/Spannungsteiler_unbelastet}
-				\caption{Unbelasteter Spannungsteiler}
+				\caption{Unloaded voltage divider}
 				\label{fig:spannungsteiler}
 			\end{center}
 		\end{figure}
+
 		\begin{equation*}
 			I = \frac{U_1}{R_1} = \frac{U_2}{R_2}
 		\end{equation*}
 		
-		Durch Zusammenfassen der Reihenschaltung aus Widerständen ergibt sich:
+		By combining the series connection of resistors, the following result is obtained:
 		
 		\begin{equation*}
 			I = \frac{U_0}{R_1+R_2}
 		\end{equation*}
 		
-		Durch Gleichsetzen der beiden Spannungsterme ergibt sich die Verhältnisgleichung: 
+		Equating the two voltage terms yields the ratio equation: 
 		
 		
 		
@@ -652,21 +654,21 @@
 			\frac{U_2}{R_2} = \frac{U_0}{R_1+R_2}
 		\end{equation*}
 		
-		Isolieren der Ausgangsspannung auf der linken Seite des Gleichheitsszeichens führt letztendlich 
-		zur allgemeine Gleichung für den unbelasteten Spannungsteiler:
+		Isolating the output voltage on the left side of the equal sign ultimately leads 
+		to the general equation for the unloaded voltage divider:
 		
-		\begin{Merksatz}{Unbelasteter Spannungsteiler}
+		\begin{Key point}{Unloaded voltage divider}
 			\begin{equation}
 				U_2 = U_0 \cdot \frac{R_2}{R_1+R_2}
 			\end{equation}
-		\end{Merksatz}
+		\end{Key point}
 		
 		
-		\begin{bsp}{Unbelasteter Spannungsteiler}{Spannungsteiler}
+		\begin{expl}{Unbelasteter Spannungsteiler}{Spannungsteiler}
 			
-			Eine Eingangsspannung von $U_0 = 24$ V soll mit einem Spannungsteiler auf $U_2 = 6$ V reduziert werden.
-			Wie ist das Verhältnis der Widerstände von $R_2$ zu $R_1$ zu wählen?
-			Wie groß sind die Widerstände $R_1$ und $R_2$ zu wählen, wenn der Gesamtstrom $I = 10$ mA betragen soll?
+			An input voltage of $U_0 = 24$ V is to be reduced to $U_2 = 6$ V using a voltage divider.
+			What should the ratio of the resistances $R_2$ to $R_1$ be?
+			How large should the resistances $R_1$ and $R_2$ be if the total current is to be $I = 10$ mA?
 			
 			\begin{equation*}
 				\frac{U_2}{U_0} = \frac{6 \, \mathrm{V}}{24 \, \mathrm{V}} = 0,25 = \frac{R_2}{R_1+R_2}
@@ -685,7 +687,7 @@
 			\end{equation*}
 			
 			
-			Der Widerstand $R_1$ muss also drei mal so groß wie der Widerstand $R_2$ gewählt werden.\\
+			The resistance $R_1$ must therefore be selected to be three times greater than the resistance $R_2$.\\
 			
 			
 			
@@ -701,45 +703,43 @@
 			
 			
 			
-		\end{bsp}
+		\end{expl}
 		
-		\subsubsection{Der belastete Spannungsteiler}
+		\subsubsection{The loaded voltage divider}
 		
-		Wird die Ausgangsseite des Spannungsteilers wie in Abbildung \ref{fig:belspannungsteiler} belastet, also beispielsweise ein Lastwiderstand $R_\mathrm{L}$ hinzugefügt,
-		so ergibt sich - von der Spannungsquelle aus gesehen - eine Parallelschaltung der Widerstände $R_2$ und $R_\mathrm{L}$.
-		
-		Wird der Ersatzwiderstand $R_\mathrm{neu}$ dieser Parallelschaltung über 
-		$\frac{1}{R_\mathrm{neu}} = \frac{1}{R_2} + \frac{1}{R_\mathrm{L}}$ ermittelt, ändert sich das Verhältnis der Widerstände des Spannungsteilers, 
-		und folglich auch die Ausgangsspannung. Diese Änderung muss bei der Auslegung eines belasteten Spannungsteilers mit beachtet werden.
+		If the output side of the voltage divider is loaded as shown in Figure \ref{fig:belspannungsteiler}, i.e. a load resistor $R_\mathrm{L}$ is added, then - from 
+		the perspective of the voltage source - this results in a parallel connection of the resistors $R_2$ and $R_\mathrm{L}$.
+                
+		If the equivalent resistance $R_\mathrm{new}$ of this parallel connection is determined via 
+        $\frac{1}{R_\mathrm{new}} = \frac{1}{R_2} + \frac{1}{R_\mathrm{L}}$, the ratio of the resistances of the voltage divider changes, 
+        and consequently also the output voltage. This change must be taken into account when designing a loaded voltage divider.
 		
 		
 		
 		
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\begin{center}
 
 				\input{Tikz/src/3_widerstandsnetz/Spannungsteiler_belastet}
-				\caption{Mit dem Widerstand $R_\mathrm{L}$ belasteter Spannungsteiler}
+				\caption{Voltage divider loaded with resistance $R_\mathrm{L}$}
 				\label{fig:belspannungsteiler}
 			\end{center}
 		\end{figure}
 		
 		
-		
-		
-		
-		\begin{bsp}{Belasteter Spannungsteiler}{Spannungsteiler}
+		\begin{expl}{Belasteter Spannungsteiler}{Spannungsteiler}
 			
-			Ein Spannungsteiler soll eine Eingangsspannung von $U_0 = 20$ V auf die Ausgangsspannung von $U_2 = 5$ V reduzieren. 
-			Der Spannungsteiler wird mit $R_\mathrm{L} = 200 \, \Omega$ belastet.
-			Vorgegeben ist der Widerstand $R_1 = 300 \, \Omega$.
+			A voltage divider is designed to reduce an input voltage of $U_0 = 20$ V to an output voltage of $U_2 = 5$ V.
+			The voltage divider is loaded with $R_\mathrm{L} = 200 \, \Omega$.
+			The resistance $R_1 = 300 \, \Omega$ is specified.
 			
-			Wie groß muss $R_2$ dimensioniert werden, um die gewünschte Ausgangsspannung zu erreichen?\\
+			How large must $R_2$ be in order to achieve the desired output voltage?\\
 			
 			\phantom{.}\\
 			
 			
-			Zunächst muss der benötigte Gesamtwert $R_\mathrm{neu}$ der Parallelschaltung aus $R_\mathrm{L}$ und $R_2$ berechnet werden:
+			First, the required total value $R_\mathrm{new}$ of the parallel connection of $R_\mathrm{L}$ and $R_2$ must be calculated:
 			
 			\begin{equation*}
 				U_2 = U_0 \cdot \frac{R_\mathrm{neu}}{R_1+R_\mathrm{neu}}
@@ -757,7 +757,7 @@
 				\rightarrow R_\mathrm{neu} = 100 \, \Omega
 			\end{equation*}
 			
-			Der Widerstand $R_1$ ist mit Hilfe der Formel für Parallelschaltungen zu berechnen:
+			The resistance $R_1$ can be calculated using the formula for parallel circuits:
 			
 			\begin{equation*}
 				100 \, \Omega = \frac{R_\mathrm{L} \cdot R_2}{R_\mathrm{L} + R_2} = \frac{200 \, \Omega \cdot R_2}{200 \, \Omega + R_2}
@@ -773,7 +773,7 @@
 			
 			
 			
-		\end{bsp}
+		\end{expl}
 		
 		
 		
@@ -917,51 +917,51 @@
 
 	\s{
 	
-		\subsection{Stromteiler in Widerstandsnetzwerken}
+		\subsection{Current dividers in resistor networks}
 		
-		Eine wie in Abbildung \ref{fig:stromteiler} dargestellte Parallelschaltung von zwei Widerständen teilt einen in eine
-		Schaltung fließenden Strom $I_0$ in zwei Teilströme $I_1$ sowie $I_2$. Eine solche Schaltung wird als Stromteiler bezeichnet.
+		A parallel connection of two resistors, as shown in Figure \ref{fig:current divider}, divides a current $I_0$ flowing in a circuit into two partial currents $I_1$ and $I_2$. Such a circuit is called a current divider.
+		The current $I_0$ flowing in the circuit is divided by the resistors $R_1$ and $R_2$ according to the formula:
 		
 		\begin{figure}[h!]
-			
+			\renewcommand{\figurename}{Figure}
 			\begin{center}
 				\input{Tikz/src/3_widerstandsnetz/Stromteiler}
 			\end{center}
 			\label{fig:stromteiler}
-			\caption{Stromteiler der Stromstärke $I_0$ in die Teilstromstärken $I_1$ und $I_2$, bestehend aus den parallel geschalteten Widerständen $R_1$ und $R_2$}
+			\caption{Current divider of current strength $I_0$ into partial current strengths $I_1$ and $I_2$, consisting of resistors $R_1$ and $R_2$ connected in parallel.}
 			
 		\end{figure}
 		
-		An allen Bauelementen dieser Schaltung liegt die identische Ausgangsspannung $U_0$ an. Mit Hilfe des Ohmschen Gesetzes
-		lässt sich diese Spannung über den Widerständen $R_1$ und $R_2$ auch als Produkt von Widerstandswert und der Stromstärke umschreiben:
+		All components of this circuit have the identical output voltage $U_0$. Using Ohm's law,
+ 		this voltage across resistors $R_1$ and $R_2$ can also be described as the product of the resistance value and the current:
 		
 		\begin{equation*}
 			U_0 = I_1 \cdot R_1 =  I_2 \cdot R_2 
 		\end{equation*}
 		
-		Durch das wie in Abbildung \ref{fig:parallelzusammen} beschriebene Zusammenfassen der Widerstände $R_1$ und $R_2$ zu $R_\mathrm{ges}$
-		lässt sich der Gesamtstrom $I_0$ in Abhängigkeit der Ausgangsspannung $U_0$ ermitteln:
+		By combining resistors $R_1$ and $R_2$ to form $R_\mathrm{total}$ as described in Figure \ref{fig:parallelzusammen},
+		the total current $I_0$ can be determined as a function of the output voltage $U_0$:
 		
 		\begin{equation*}
 			U_0 = I_0 \cdot R_\mathrm{ges}
 		\end{equation*}
 		
-		Durch Gleichsetzen der beiden Stromterme ergibt sich folgendes Verhältnis zwischen $I_0$ und $I_2$
+		Equating the two current terms yields the following relationship between $I_0$ and $I_2$
 		
 		\begin{equation*}
 			I_2 \cdot R_2 = I_0 \cdot R_\mathrm{ges}
 		\end{equation*}
 		
-		Die Parallelschaltung $R_\mathrm{ges}$ lässt sich wie in Gleichung \ref{eq:r2parallel} gezeigt direkt aus den beiden Widerstandswerten
-		$R_1$ und $R_2$ errechnen:
+		The parallel connection $R_\mathrm{total}$ can be calculated directly from the two resistance values
+		$R_1$ and $R_2$ as shown in equation \ref{eq:r2parallel}:
 		
 		\begin{equation*}
 			I_2 \cdot R_2 = I_0 \cdot \frac{R_1 \cdot R_2}{R_1 + R_2}
 		\end{equation*}
 		
-		Das Kürzen von $R_2$ resultiert im Teilungsverhältnis der elektrischen Stromstärke am Stromteiler:
+		The reduction of $R_2$ results in the division ratio of the electric current at the current divider:
 		
-		\begin{Merksatz}{Stromteiler einer Parallelschaltung}
+		\begin{Key point}{Stromteiler einer Parallelschaltung}
 			
 			\begin{equation}
 				I_2 = I_0 \cdot \frac{R_1}{R1 + R_2}
@@ -969,7 +969,7 @@
 			%	\begin{equation}
 			%		I_2 = I_0 \cdot \frac{R_1}{R1 + R_2}
 			%	\end{equation}
-		\end{Merksatz}
+		\end{Key point}
 		
 		
 	}
@@ -1089,7 +1089,7 @@
 
 
 \begin{frame}
-	\subsection{Besondere Betriebszustände aktiver Zweipole}
+	\subsection{Special operating conditions for active two-pole systems}
 	
 	
 	
@@ -1232,18 +1232,18 @@
 	\s{
 	
 	
-		Aktive Zweipole lassen sich zu \textbf{Ersatzspannungsquellen} beziehungsweise \textbf{Ersatzstromquellen} zusammenfassen.
-		Dies kann vor allem zur Vereinfachung 
-		von elektrischen Netzwerken dienlich sein.
+		Active two-pole circuits can be grouped together as \textbf{equivalent voltage sources} or \textbf{equivalent current sources}.
+		This can be particularly useful for simplifying
+		electrical networks.
 		
-		\subsubsection{Kurzschluss- und Leerlaufversuch an der Ersatzspannungsquelle}
+		\subsubsection{Short-circuit and no-load test on the replacement voltage source}
 		
-		\paragraph{Die reale Spannungsquelle}\\
+		\paragraph{The real source of tension}\\
 		
 		\phantom{text}\\
 		
-		Eine \textbf{reale Spannungsquelle} besteht wie bereits aus Modul 3 \textit{Elektrische Bauelemente} bekannt aus einer 
-		idealen Spannungsquelle $U_0$ sowie einem Innenwiderstand $R_\mathrm{i}$.
+		As already known from Module 3 \textit{Electrical Components}, a \textbf{real voltage source} consists of an 
+        ideal voltage source $U_0$ and an internal resistance $R_\mathrm{i}$.
 		
 	}
 	
@@ -1251,10 +1251,11 @@
 	\s{
 		\index{asdöäÖä}
 		\begin{figure}[h]
+			\renewcommand{\figurename}{Figure}
 			\begin{minipage}[b]{0.45\linewidth}
 				\centering
 				\input{Tikz/src/3_widerstandsnetz/reale_Spannungsquelle}
-				\caption{Aus einer idealen Spannungsquelle $U_0$ und einem Innenwiderstand $R_\mathrm{i}$ bestehende reale Spannungsquelle}
+				\caption{Real voltage source consisting of an ideal voltage source $U_0$ and an internal resistance $R_\mathrm{i}$}
 				\label{fig:first}
 			\end{minipage}
 			\hspace{0.1\linewidth}
@@ -1262,7 +1263,7 @@
 				\centering
 				
 				\input{Tikz/src/3_widerstandsnetz/reale_Spannungsquelle_belastet}
-				\caption{Mit einem Lastwiderstand $R_\mathrm{a}$ belastete reale Spannungsquelle \color{white}
+				\caption{Real voltage source loaded with a load resistance $R_\mathrm{a}$ \color{white}
 					..............................}
 				\label{fig:second}
 			\end{minipage}
@@ -1272,8 +1273,7 @@
 	
 	\s{
 	
-		Ist die reale Spannungsquelle unbelastet, also kein Bauteil an den Ausgangsklemmen angeschlossen, fließt kein Strom $I$(siehe Abbildung \ref{fig:first}).
-		
+        If the real voltage source is unloaded, i.e. no component is connected to the output terminals, no current $I$ flows (see Figure \ref{fig:first}).		
 		\begin{equation*}
 			I = 0 
 		\end{equation*}
@@ -1282,24 +1282,24 @@
 			\rightarrow U_\mathrm{Ri} = R_\mathrm{i} \cdot I = 0
 		\end{equation*}
 		
-		Da die Spannung über dem Innenwiderstand $R_\mathrm{i}$ 0 Volt beträgt, gilt für die Klemmspannung $U$:
+		Since the voltage across the internal resistance $R_\mathrm{i}$ is 0 volts, the following applies to the terminal voltage $U$:
 		
 		\begin{equation*}
 			U = U_0
 		\end{equation*}
 		
-		Wird die reale Spannungsquelle wie in Abbildung \ref{fig:second} gezeigt mit einem Widerstand $R_\mathrm{a}$ belastet,
-		fließt ein Strom $I > 0$ durch die Leitung.
+		If the real voltage source is loaded with a resistor $R_\mathrm{a}$ as shown in Figure \ref{fig:second},
+		a current $I > 0$ flows through the line.
 		
-		Folglich fällt an dem Innenwiderstand $R_\mathrm{i}$ eine Spannung $U_\mathrm{Ri} = R_\mathrm{i} \cdot I$ ab, und die Klemmspannung
-		beträgt
+		Consequently, a voltage $U_\mathrm{Ri} = R_\mathrm{i} \cdot I$ drops across the internal resistance $R_\mathrm{i}$, and the terminal voltage
+		is
 		
 		\begin{equation*}
 			U = U_0 - U_\mathrm{Ri}
 		\end{equation*}
 		
-		Um den Spannungsabfall innerhalb der Spannungsquelle zu reduzieren, sollte der 
-		Innenwiderstand $R_\mathrm{i}$ möglichst klein gehalten werden:
+		To reduce the voltage drop within the voltage source, the 
+		internal resistance $R_\mathrm{i}$ should be kept as low as possible:
 		
 		\begin{equation*}
 			U_0 << I \cdot R_\mathrm{i}
@@ -1313,21 +1313,22 @@
 		
 		
 		
-		Jeder aktive Zweipol mit mindestens einer Quelle und beliebig vielen Widerständen kann zu einer
-		Ersatzspannungsquelle (Abbildung \ref{fig:testiiiii}) zusammengefasst werden. Wie bei einer realen Spannungsquelle genügt die Bestimmung einer
-		idealen Spannungsquelle $U_0$ sowie eines zusammengefassten Innenwiderstandes $R_\mathrm{i}$, um die 
-		Ersatzspannungsquelle vollständig zu charakterisieren.
-		Sie verfügt nach außen hin über ein vollständig gleichwertiges Klemmverhalten wie die originale Schaltung an
-		ihren zwei Anschlussklemmen.
+		Each active two-terminal network with at least one source and any number of resistors can be combined into a
+        equivalent voltage source (Figure \ref{fig:testiiiii}). As with a real voltage source, it is sufficient to determine an
+		ideal voltage source $U_0$ and a combined internal resistance $R_\mathrm{i}$ to 
+		fully characterise the equivalent voltage source.
+		Externally, it has completely equivalent terminal behaviour to the original circuit at
+		its two connection terminals.
 		
 		
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			
 			\begin{center}
 
 				\input{Tikz/src/3_widerstandsnetz/Ersatzspannungsquelle}
 			\end{center}
-			\caption{Die Ersatzspannungsquelle (gestrichelter Kasten) verfügt über das gleiche Ersatzschaltbild wie eine reale Spannungsquelle}
+			\caption{The equivalent voltage source (dashed box) has the same equivalent circuit diagram as a real voltage source.}
 			
 			
 			%\caption{Testiii}
@@ -1345,35 +1346,37 @@
 		%		U_0 = U_\mathrm{Ri} + U = I \cdot R_\mathrm{i} + U
 		%	\end{equation*}
 		
-		Wie bei einer belasteten realen Spannungsquelle ist die resultierende Ausgangsspannung $U$
-		sowohl vom Innenwiderstand $R_\mathrm{i}$ als auch vom Belastungsstrom $I$ abhängig (Abbildung \ref{fig:kennliniespannung}):
+		As with a loaded real voltage source, the resulting output voltage $U$
+		depends on both the internal resistance $R_\mathrm{i}$ and the load current $I$ (Figure \ref{fig:kennliniespannung}):
 		
 		\begin{equation*}
 			U = U_0 - I \cdot R_\mathrm{i}
 		\end{equation*}
 		
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\centering
 			\s{\includesvg[width=0.6\textwidth]{kennlinie_ersatzspannungsquelleskript}}
 			
-			\s{\caption{Die an den Klemmen der Ersatzspannungsquelle anliegende Spannung $U$ in Abhängigkeit von der resultierenden Stromstärke $I$}}
+			\s{\caption{The voltage $U$ applied to the terminals of the replacement voltage source as a function of the resulting current $I$}}
 			\label{fig:kennliniespannung}
 		\end{figure}
 		
 		
 		
 		
-		Die zur Charakterisierung notwendigen Parameter $U_0$ und $R_\mathrm{i}$ können mit Hilfe von zwei
-		Versuchen ermittelt werden: dem Kurzschlussversuch sowie dem Leerlaufversuch.
-		
-		Beim Leerlaufversuch werden die beiden Klemmen der Ersatzspannungsquelle offen gelassen (Abbildung \ref{fig:leerlauf1}). 
+		The parameters $U_0$ and $R_\mathrm{i}$ required for characterisation can be determined using two
+		tests: the short-circuit test and the no-load test.
+
+		In the no-load test, the two terminals of the equivalent voltage source are left open (Figure \ref{fig:leerlauf1}). 
 		
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\begin{center}
 
 				\input{Tikz/src/3_widerstandsnetz/Ermittlung_Leerlaufspannung}
 			\end{center}
-			\caption{Ermittlung der Leerlaufspannung $U_\mathrm{L}$ einer Ersatzspannungsquelle}
+			\caption{Determination of the open-circuit voltage $U_\mathrm{L}$ of an equivalent voltage source}
 			\label{fig:leerlauf1}
 			
 			
@@ -1383,42 +1386,42 @@
 		Da durch die offenen Klemmen der Strom $I$ durch den Widerstand $R_\mathrm{i}$ null Ampere beträgt, fällt auch keine Spannung über ihn ab.
 		Die Leerlaufspannung ist also mit der Spannung $U_0$ identisch:
 		
-		\begin{Merksatz}{Leerlaufspannung einer Ersatzspannungsquelle}{}
+		\begin{Key point}{Open-circuit voltage of an equivalent voltage source}{}
 			\begin{equation*}
 				U_0 = U_\mathrm{L}
 			\end{equation*}
-		\end{Merksatz}
+		\end{Key point}
 		
-		Beim Kurzschlussversuch werden die beiden Klemmen des aktiven Zweipols direkt kurzgeschlossen, sprich eine
-		ideal leitende Verbindung zwischen ihnen hergestellt (Abbildung \ref{fig:kurzschluss1}).
+		In the short-circuit test, the two terminals of the active two-pole are directly short-circuited, i.e. an
+		ideally conductive connection is established between them (Figure \ref{fig:kurzschluss1}).
 		
 		
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\begin{center}
 
 				\input{Tikz/src/3_widerstandsnetz/Ermittlung_Kurzschlussstrom}
 			\end{center}
-			\caption{Ermittlung des Kurzschlussstromes $I_\mathrm{K}$ einer Ersatzspannungsquelle}
+			\caption{Determination of the short-circuit current $I_\mathrm{K}$ of an equivalent voltage source}
 			\label{fig:kurzschluss1}
 			
 			
 		\end{figure}
 		
-		Über dem so erzeugten Kurzschluss kann keine Ausgangsspannung $U$ anliegen:
+		No output voltage $U$ can be applied across the short circuit thus created:
 		
 		\begin{equation*}
 			U = 0
 		\end{equation*}
 		
-		Folglich fällt die gesamte von $U_0$ generierte Spannung am Innenwiderstand $R_\mathrm{i}$ ab.
-		Dem Ohmschen Gesetz folgend bestimmt dieser damit den Kurzschlussstrom $I_\mathrm{K}$. 
+		Consequently, the entire voltage generated by $U_0$ drops across the internal resistance $R_\mathrm{i}$.
+		According to Ohm's law, this determines the short-circuit current $I_\mathrm{K}$. 
 		
 		\begin{equation*}
 			U_\mathrm{Ri} = U_\mathrm{L} =R_\mathrm{Ri} \cdot I_\mathrm{K}
 		\end{equation*}
 		
-		Der Kurzschlussstrom $I_\mathrm{K}$ beträgt folglich:
-		
+        The short-circuit current $I_\mathrm{K}$ is therefore:		
 		
 		
 		
@@ -1426,20 +1429,19 @@
 			I_\mathrm{K} = \frac{U_\mathrm{L}}{R_\mathrm{i}}
 		\end{equation*}
 		
-		Somit kann der Innenwiderstand $R_\mathrm{i}$ folgendermaßen berechnet werden:
-		
-		\begin{Merksatz}{Innenwiderstand einer Ersatzspannungsquelle}{}
+        The internal resistance $R_\mathrm{i}$ can therefore be calculated as follows:
+
+		\begin{Key point}{Internal resistance of an equivalent voltage source}{}
 			
 			\begin{equation*}
 				R_\mathrm{i} = \frac{U_\mathrm{L}}{I_\mathrm{K}}
 			\end{equation*}
 			
-		\end{Merksatz}
+		\end{Key point}
 		
-		\textbf{Achtung:} $U_\mathrm{L}$ und $I_\mathrm{K}$ sind in zwei vollkommen unabhängigen Versuchen bestimmte Größen, 
-		die nicht gleichzeitig auftreten. Die Formel sieht also nur wie Ohmsches Gesetz am Widerstand $R_\mathrm{i}$ aus,
-		ist es aber nicht. 
-		
+		\textbf{Attention:} $U_\mathrm{L}$ und $I_\mathrm{K}$ are certain quantities in two completely independent experiments that 
+        do not occur simultaneously. The formula therefore only looks like Ohm's law at resistance $R_\mathrm{i}$,
+        but it is not.
 
 		
 		
@@ -1447,7 +1449,7 @@
 	
 	
 	
-	\ftx{Die Ersatzspannungsquelle}
+	\ftx{The replacement voltage source}
 	
 	
 	\b{
@@ -1898,45 +1900,46 @@
 
 	\s{
 	
-		\subsubsection{Kurzschluss- und Leerlaufversuch an der Ersatzstromquelle}
+		\subsubsection{Short-circuit and no-load test on the emergency power source}
 		
-		\paragraph{Die reale Stromquelle}\\
+		\paragraph{The real power source}\\
 		
 		\phantom{text}\\
 		
 		
 		
 		
-		Auch eine \textbf{reale Stromquelle} besteht aus einer 
-		idealen Stromquelle $U_0$ sowie einem Innenwiderstand $R_\mathrm{i}$
-		(siehe Abbildung \ref{fig:stromq}). Dieser ist im Gegensatz zur realen Spannungsquelle 
-		jedoch parallel anstatt in Reihe zur Quelle geschaltet.
+		A \textbf{real current source} also consists of an 
+        ideal current source $U_0$ and an internal resistance $R_\mathrm{i}$
+        (see Figure \ref{fig:stromq}). However, in contrast to the real voltage source, this is 
+        connected in parallel rather than in series with the source.
 		
 		
 		
 		\begin{figure}[h!]
-			
+			\renewcommand{\figurename}{Figure}		
 			\centering
 			\input{Tikz/src/3_widerstandsnetz/reale_Stromquelle}
-			\caption{Aus einer idealen Stromquelle $I_0$ und einem Innenwiderstand $R_\mathrm{i}$ bestehende reale Stromquelle, welche mit einem Widerstand $R_\mathrm{a}$ belastet ist}
+			\caption{Real current source consisting of an ideal current source $I_0$ and an internal resistance $R_\mathrm{i}$, which is loaded with a resistance $R_\mathrm{a}$}
 			\label{fig:stromq}
 			
 		\end{figure}
 		
 		
-		Abhängig von der sich einstellenden Ausgangsspannung $U$ fließt durch den endlichen Innenwiderstand 
-		$R_\mathrm{i}$ der Strom $I_\mathrm{Ri} = U / R_\mathrm{Ri}$, der Ausgangsstrom $I$ ergibt 
-		sich also zu
+		Depending on the output voltage $U$ that occurs, the current $I_\mathrm{Ri} = U / R_\mathrm{Ri}$ flows through the finite internal resistance 
+        $R_\mathrm{i}$, so the output current $I$ is 
+		given by
 		
-		\begin{Merksatz}{Ausgangsstrom einer realen Stromquelle}
+		\begin{Key point}{Output current of a real current source}
 			
 			\begin{equation*}
 				I = I_0 - \frac{U}{R_\mathrm{i}}
 			\end{equation*}
 			
-		\end{Merksatz}
+		\end{Key point}
 		
-		Um die Reduktion den Ausgangsstroms $I$ durch den Innenwiderstand zu reduzieren, sollte dieser möglichst groß gewählt werden:
+        In order to reduce the output current $I$ through the internal resistance, this should be selected as large as possible:
+		
 		
 		\begin{equation*}
 			I_0 >> \frac{U}{R_\mathrm{i}}
@@ -1954,32 +1957,32 @@
 	
 	\s{
 	
-		\paragraph{Die Ersatzstromquelle}\\
+		\paragraph{The backup power source}\\
 		\phantom{text}\\
 		
 		
 		
 		
-		Alternativ zur Ersatzspannungsquelle kann ein aktiver Zweipol auch als Ersatzstromquelle dargestellt werden
-		(Abbildung \ref{fig:ersatzstromquelle2}). Auch sie kann durch eine ideale Stromquelle $I_0$ sowie einen zusammengefassten 
-		Innenwiderstand $R_\mathrm{i}$ vollständig charakterisiert werden.
+		As an alternative to the replacement voltage source, an active two-pole can also be represented as a replacement current source
+		(Figure \ref{fig:ersatzstromquelle2}). It can also be fully characterised by an ideal current source $I_0$ and a combined 
+		internal resistance $R_\mathrm{i}$.
 		
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\begin{center}
 
 				\input{Tikz/src/3_widerstandsnetz/Ersatzstromquelle}
 				
 			\end{center}
 			
-			\caption{Die Ersatzstromquelle (gestrichelter Kasten) verfügt über das gleiche Ersatzschaltbild wie eine reale Stromquelle}
+			\caption{The replacement current source (dashed box) has the same equivalent circuit diagram as a real current source.}
 			\label{fig:ersatzstromquelle2}
 		\end{figure}
 		
-		Analog zur Ersatzspannungsquelle können auch hier die Parameter $I_0$ sowie $R_\mathrm{i}$ mit Hilfe des 
-		Leerlauf- und Kurzschlussversuchs bestimmt werden.  
-		
-		Beim \textbf{Leerlaufversuch} fließt der gesamte Strom $I_0$ durch den Innenwiderstand. An den dazu parallel anliegenden
-		Klemmen stellt sich die folgende Leerlaufspannung $U_\mathrm{L}$ ein:
+		Similar to the equivalent voltage source, the parameters $I_0$ and $R_\mathrm{i}$ can also be determined here using the 
+        open-circuit and short-circuit tests.  
+        
+		In the \textbf{open-circuit test}, the entire current $I_0$ flows through the internal resistance. The following open-circuit voltage $U_\mathrm{L}$ is established at the terminals connected in parallel:
 		
 		\begin{equation*}
 			U_\mathrm{L} = R_\mathrm{i} \cdot I_0
@@ -1987,40 +1990,41 @@
 		
 		
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\centering
 			\includesvg[width=0.6\textwidth]{kennlinie_ersatzstromquelleskript}
 			
-			\caption{Die aus der Ersatzstromquelle herausfließende Stromstärke $I$ in Abhängigkeit der sich einstellenden Spannung $U$}
+			\caption{The current $I$ flowing out of the backup power source as a function of the voltage $U$}
 			\label{fig:kennliniestrom}
 		\end{figure}
 		
 		
 		
-		Beim \textbf{Kurzschlussversuch} werden die beiden Klemmen der Ersatzstromquelle kurzgeschlossen. 
-		Da die Spannung über dem Kurzschluss und somit
-		auch über dem dazu parallelgeschalteten Innenwiderstand null Volt beträgt, fließt durch 
-		$R_\mathrm{i}$ kein Strom.
+		In the \textbf{short-circuit experiment}, the two terminals of the equivalent current source are short-circuited. 
+        Since the voltage across the short circuit and thus
+        also across the internal resistance connected in parallel is zero volts, no current flows through 
+        $R_\mathrm{i}$.
+
+		The entire current $I_0$ therefore flows through the short circuit:
 		
-		Der gesamte Strom $I_0$ fließt also durch den Kurzschluss:
 		
 		
-		
-		\begin{Merksatz}{Kurzschlussstrom einer Ersatzstromquelle}{}
+		\begin{Key point}{Short-circuit current of a backup power source}{}
 			\begin{equation*}
 				I_0 = I_\mathrm{K}
 			\end{equation*}
-		\end{Merksatz}
+		\end{Key point}
 		
 		
 		
 		
-		Mit $U_\mathrm{L} = R_\mathrm{i} \cdot I_0$ kann nun der Innenwiderstand bestimmt werden:
+		With $U_\mathrm{L} = R_\mathrm{i} \cdot I_0$, the internal resistance can now be determined:
 		
-		\begin{Merksatz}{Innenwiderstand einer Ersatzstromquelle}{}
+		\begin{Key point}{Internal resistance of an equivalent current source}{}
 			\begin{equation*}
 				R_\mathrm{i} = \frac{U_\mathrm{L}}{I_\mathrm{K}}
 			\end{equation*}
-		\end{Merksatz}	
+		\end{Key point}	
 		
 	}
 	\b{
@@ -2282,48 +2286,48 @@
 
 
 
-	\subsubsection{Umwandlung von Spannungs- und Stromquellen}
+	\subsubsection{Conversion of voltage and current sources}
 	\s{
-		Bei der Netzwerkanalyse kann es sinnvoll sein, Stromquellen in Spannungsquellen oder
-		Spannungsquellen in Stromquellen umzuwandeln. Dies funktioniert sowohl für reale Strom- bzw. Spannungsquellen,
-		als auch für Ersatzstrom- bzw. Ersatzspannungsquellen identisch. Dabei bleibt der Wert des Innenwiderstandes 
-		$R_\mathrm{i}$ identisch, seine Position im Ersatzschildbild ändert sich jedoch (siehe Abbildung \ref{fig:umwandlung})
+		In network analysis, it can be useful to convert current sources into voltage sources or
+		voltage sources into current sources. This works identically for real current and voltage sources,
+		as well as for equivalent current and voltage sources. The value of the internal resistance 
+		$R_\mathrm{i}$ remains the same, but its position in the equivalent circuit diagram changes (see Figure \ref{fig:umwandlung})
 		
 		\begin{figure}[h!]
-			
+			\renewcommand{\figurename}{Figure}
 			\begin{center}
 
 				\input{Tikz/src/3_widerstandsnetz/Umwandlung_Ersatzstromquelle_Ersatzspannungsquelle}
 				
 			\end{center}
 			\label{fig:umwandlung}
-			\caption{Umwandlung einer Ersatzstromquelle (links) in eine Ersatzspannungsquelle (rechts) und umgekehrt}
+			\caption{Conversion of a backup power source (left) into a backup voltage source (right) and vice versa}
 		\end{figure}
 		
 		
-		Die Leerlaufspannung beziehungsweise der Kurzschlussstrom bleiben bei der Umwandlung der Quelle erhalten
-		und werden auf die jeweils andere Quelle umgerechnet.
+		The open-circuit voltage and short-circuit current remain unchanged during the conversion of the source
+		and are converted to the other source.
 		
-		\textbf{Achtung}: Die Zählpfeile von ineinader umgewandelten Strom- und Spannungsquellen sind entgegengesetzt gerichtet!
+		\textbf{Attention}: The counting arrows of current and voltage sources converted into each other are directed in opposite directions!
 		
 		
-		Beim Umwandeln einer Stromquelle in eine Spannungsquelle beträgt die Spannung $U_0$:
+		When converting a current source into a voltage source, the voltage $U_0$ is:
 		
-		\begin{Merksatz}{Spannung einer umgewandelten Spannungsquelle}{}
+		\begin{Key point}{Voltage of a converted voltage source}{}
 			\begin{equation*}
 				U_0 = I_0 \cdot R_\mathrm{i}
 			\end{equation*}
 			
-		\end{Merksatz}
+		\end{Key point}
 		
-		Die Stromstärke $I_0$ beträgt beim Umwandeln einer Spannungsquelle in eine Stromquelle:
+		The current $I_0$ when converting a voltage source into a current source is:
 		
-		\begin{Merksatz}{Strom einer umgewandelten Stromquelle}{}
+		\begin{Key point}{Current from a converted current source}{}
 			\begin{equation*}
 				I_0 = \frac{U_0}{R_\mathrm{i}}
 			\end{equation*}
 			
-		\end{Merksatz}
+		\end{Key point}
 		
 	}
 	

@@ -1,12 +1,12 @@
-\s{\fta{Einführung}
-Halbleiterbauelemente bilden das Rückgrat der modernen Elektronik und sind entscheidend für die Funktionsweise zahlreicher 
-elektronischer Geräte wie Computer, Mobiltelefone und Solarzellen. Diese Bauelemente nutzen die besonderen 
-Eigenschaften von Materialien, die weder gute Leiter noch gute Isolatoren sind, sondern dazwischen liegen -- die sogenannten 
-Halbleiter. Im Folgenden wird auf ihre Funktionsweise eingegangen, beginnend mit dem Bändermodell, das die Energiezustände
-in Festkörpern beschreibt. Auf Grundlage verschiedener Eigenschaften werden weitere Halbleitermaterialien sowie deren Anwendungen erläutert.
-Ein grundlegendes Konzept, das eine Schlüsselrolle spielt, ist der pn-Übergang, der die Basis für 
-eine Vielzahl von Bauelementen bildet. In diesem Kontext werden im zweiten Teil verschiedene Halbleiterbauelemente wie Dioden 
-und Transistoren thematisiert sowie ihre Funktionen erläutert. 
+\s{\fta{Introduction}
+Semiconductor devices form the backbone of modern electronics and are crucial to the functioning of numerous 
+electronic devices such as computers, mobile phones and solar cells. These devices exploit the special 
+properties of materials that are neither good conductors nor good insulators, but lie somewhere in between – so-called 
+semiconductors. The following section discusses how they work, starting with the band model, which describes the energy states
+in solids. Based on various properties, other semiconductor materials and their applications are explained.
+A fundamental concept that plays a key role is the pn junction, which forms the basis for 
+a wide range of components. In this context, the second part discusses various semiconductor components such as diodes 
+and transistors and explains their functions. 
 
 
 
@@ -23,9 +23,10 @@ und Transistoren thematisiert sowie ihre Funktionen erläutert.
 %}
 
 \begin{figure}[H]
+    \renewcommand{\figurename}{Figure}
     \centering
     \includegraphics[width=.8\textwidth]{Bilder/kap1/AufnahmenHalbleiterWiki.png}
-    \caption{\textbf{Beispielfotos typischer Halbleiterbauelemente.} V.l.n.r.: Feldeffekttransistor, Bipolartransistor, Leuchtdiode, Diode.}  
+    \caption{\textbf{Sample photos of typical semiconductor components.} From left to right: field effect transistor, bipolar transistor, light-emitting diode, diode.}  
     \label{fig:BeispielfotosVerbreiteterHalbleiterbauelemente}
 \end{figure}
 
@@ -39,33 +40,33 @@ und Transistoren thematisiert sowie ihre Funktionen erläutert.
 %Diese Bauelemente werden in der Elektronik für verschiedene Anwendungen genutzt, wie Schalten, Verstärken oder Gleichrichten von elektrischen Signalen.}
 
 
-\begin{Lernziele}{Halbleiter}
+\begin{Learning objectives}{Halbleiter}
     \title{Lernziele: Halbleiter}
-    Die Studierenden können
+    The students can
     \begin{itemize}
-        \item Zusammenhänge zwischen Festkörpern und dem Bändermodell erklären.
-        \item Vorgänge innerhalb von Halbleitern beschreiben.
-        \item verschiedene Halbleitermaterialen und deren Eigenschaften bennen.
+        \item explain the relationships between solids and the band model.
+        \item describe processes within semiconductors.
+        \item name different semiconductor materials and their properties.
     \end{itemize}
-    \end{Lernziele}
+    \end{Learning objectives}
 }
 
 
-\s{\ftb{Bändermodell}
+\s{\ftb{Band model}
 \label{sec:Bändermodell}
-Das Bändermodell ist ein grundlegendes Konzept in der Festkörperphysik, das die physikalischen Eigenschaften von Festkörpern 
-beschreibt. Es bietet eine theoretische Grundlage für das Verständnis der elektrischen, optischen und magnetischen Eigenschaften 
-von Materialien. Das Modell organisiert die Energiezustände von Elektronen in sogenannten Energiebändern. Diese Bänder beeinflussen 
-maßgeblich das elektronische Verhalten des Materials. Das Bändermodell ermöglicht es, komplexe Phänomene wie Leitung, Isolation, 
-Halbleiterverhalten und die Bildung von Oberflächen- und Grenzflächenzuständen zu verstehen und zu erklären. Im folgenden Abschnitt 
-werden die Grundprinzipien erläutert und ein Blick auf den Ladungsträgertransport geworfen.\par
+The band model is a fundamental concept in solid state physics that describes the physical properties of solids.
+It provides a theoretical basis for understanding the electrical, optical and magnetic properties 
+of materials. The model organises the energy states of electrons into so-called energy bands. These bands have a significant influence 
+on the electronic behaviour of the material. The band model makes it possible to understand and explain complex phenomena such as conduction, insulation, 
+semiconductor behaviour and the formation of surface and interface states. The following section 
+explains the basic principles and takes a look at charge carrier transport.
 
-Um das Bändermodell zu verstehen, soll zunächst der Bezug zum aus der Schulphysik bekannten Bohrschen Atommodell hergestellt werden. 
-Im Bohrschen Atommodell werden die Energieniveaus von Elektronen in einem Atom als diskret angenommen. Nach diesem Modell befinden 
-sich Elektronen auf definierten Bahnen um den Atomkern, die als Schalen bezeichnet werden. Jede Schale hat ein charakteristisches 
-Energieniveau. Diese Energieniveaus sind in Bezug auf den Abstand vom Atomkern quantisiert, wobei Elektronen in den inneren 
-Schalen niedrigere Energieniveaus aufweisen als Elektronen in den äußeren Schalen. Der Zusammenhang zwischen dem Bohrschen Atommodell 
-und dem Bändermodell ist in Abbildung~\ref{fig:ZusammenhangBohrschesAtommodellUndBaendermodell} dargestellt.
+To understand the band model, we must first establish a connection to Bohr's atomic model, which is familiar from school physics. 
+In Bohr's atomic model, the energy levels of electrons in an atom are assumed to be discrete. According to this model, 
+electrons are located on defined orbits around the atomic nucleus, which are referred to as shells. Each shell has a characteristic 
+energy level. These energy levels are quantised in relation to the distance from the atomic nucleus, with electrons in the inner 
+shells having lower energy levels than electrons in the outer shells. The relationship between the Bohr atomic model 
+and the band model is shown in Figure~\ref{fig:ZusammenhangBohrschesAtommodellUndBaendermodell}.
 }
 
 %\speech{
@@ -89,6 +90,7 @@ und dem Bändermodell ist in Abbildung~\ref{fig:ZusammenhangBohrschesAtommodellU
 %Abbildung 2
 \s{
     \begin{figure}[H]
+        \renewcommand{\figurename}{Figure}
         \begin{minipage}[t]{0.48\textwidth}
             \begin{figure}[H]
                 \centering
@@ -101,9 +103,9 @@ und dem Bändermodell ist in Abbildung~\ref{fig:ZusammenhangBohrschesAtommodellU
                 \includesvg[width=0.4\textwidth]{Bilder/kap1/ZusammenhangBohrscheAtommodellundBaendermodell/ZusammenhangBohrscheAtommodellundBaendermodell_2}
             \end{figure}
         \end{minipage}
-        \caption{\textbf{Zusammenhang zwischen dem Bohrschen Atommodell und Bändermodell.} Darstellung des Zusammenhangs 
-                zwischen dem Abstand von Elektronen zum Kern und der Höhe des zugehörigen diskreten Energieniveaus. Links: Bohrsches 
-                Atommodell eines Si-Atoms. Rechts: Bändermodell eines Si-Atoms mit den möglichen Energieniveaus.}  
+        \caption{\textbf{Connection between Bohr's atomic model and the band model.} Illustration of the relationship 
+                between the distance of electrons from the nucleus and the height of the corresponding discrete energy level. Left: Bohr's 
+                atomic model of a silicon atom. Right: Band model of a silicon atom with the possible energy levels.}  
         \label{fig:ZusammenhangBohrschesAtommodellUndBaendermodell}
     \end{figure}
 }
@@ -116,19 +118,20 @@ und dem Bändermodell ist in Abbildung~\ref{fig:ZusammenhangBohrschesAtommodellU
 %}
 
 
-\s{Bei einem einzelnen Atom sind die möglichen Energiezustände eindeutig definiert. Werden mindestens zwei Atome zusammengeführt, sodass sie elektrisch 
-miteinander wechselwirken, überlappen sich deren Energiezustände. Aufgrund des Pauli-Prinzips, welches auch Ausschlussprinzip genannt wird, können zwei 
-Elektronen allerdings nicht genau denselben Zustand annehmen, weshalb sich die Zustände minimal zueinander verschieben. Mit steigender Anzahl an Atomen 
-steigt auch die Anzahl der verschiedenen Energiezustände in einem Festkörper. Da diese Niveaus sehr nahe beieinander liegen, werden sie zu den Energiebändern 
-zusammengefasst. Dieser Zusammenhang ist in Abbildung~\ref{fig:UebergangVonEnergieniveausZuBaendern} dargestellt.}
+\s{In a single atom, the possible energy states are clearly defined. If at least two atoms are brought together so that they interact electrically,
+their energy states overlap. However, due to the Pauli principle, also known as the exclusion principle, two 
+electrons cannot assume exactly the same state, which is why the states shift minimally in relation to each other. 
+As the number of atoms increases, so does the number of different energy states in a solid. Since these levels are very close to each other, they are grouped together into energy bands.
+This relationship is shown in Figure~\ref{fig:UebergangVonEnergieniveausZuBaendern}.}
 %Abbildung 3
 \s{
 \begin{figure}[H]
+    \renewcommand{\figurename}{Figure}
     \centering
     \includesvg[width=0.6\textwidth]{Bilder/kap1/UebergangVonEnergieniveausZuBaendern}
-    \caption{\textbf{Übergang von Energieniveaus zu Bändern.} Zusammenhang zwischen den möglichen 
-    Energiezuständen in Abhängigkeit zur Anzahl der Atome. V.l.n.r.: Energiezustände von Elektronen 
-    bei einem Einzelatom, zwei Atomen (Molekül) und einem Festkörper.}  
+    \caption{\textbf{Transition from energy levels to bands.} ZRelationship between the possible 
+    energy states depending on the number of atoms. From left to right: Energy states of electrons 
+    in a single atom, two atoms (molecule) and a solid.}  
     \label{fig:UebergangVonEnergieniveausZuBaendern}
 \end{figure}
 }
@@ -163,24 +166,23 @@ zusammengefasst. Dieser Zusammenhang ist in Abbildung~\ref{fig:UebergangVonEnerg
 %Die Abbildung verdeutlicht, wie sich mit zunehmender Anzahl von Atomen die individuellen diskreten Energieniveaus in breitere Energiezonen aufteilen, was zur Bildung von Valenz- und Leitungsbändern in Festkörpern führt. Dies ist ein fundamentales Konzept in der Halbleiterphysik.}
 
 
-\s{Elektronen können nur feste Werte innerhalb der Energiebänder annehmen. In den Lücken zwischen den Bändern können sich keine Ladungsträger frei bewegen. 
-Diese Lücken werden als „verbotener Bereich“ oder Bandlücke bezeichnet. Die Größe dieser Lücken bestimmt die elektrischen Eigenschaften des Materials. 
-Die Energiedifferenz zwischen den Bändern entspricht der Energie, die bei Absorption oder Emission von Photonen aufgenommen oder abgegeben wird.}
-
+\s{Electrons can only assume fixed values within the energy bands. No charge carriers can move freely in the gaps between the bands.
+These gaps are referred to as the ‘forbidden region’ or band gap. The size of these gaps determines the electrical properties of the material.
+The energy difference between the bands corresponds to the energy absorbed or emitted during the absorption or emission of photons.
+}
 
 %\speech{
 %    Elektronen können nur feste Werte innerhalb der Energiebänder annehmen. In den Lücken zwischen den Bändern können sich keine Ladungsträger frei bewegen. 
 %    Diese Lücken werden als „verbotener Bereich“ oder Bandlücke bezeichnet. Die Größe dieser Lücken bestimmt die elektrischen Eigenschaften des Materials. 
 %    Die Energiedifferenz zwischen den Bändern entspricht der Energie, die bei Absorption oder Emission von Photonen aufgenommen oder abgegeben wird.    
 %}
-\s{\ftc{Einteilung von Materialien}
-Zwei Bänder sind besonders relevant für den Ladungstransport und somit für die elektrischen Eigenschaften: das Valenzband (VB) und das Leitungsband (LB). 
-Das Valenzband ist das Band, das die höchsten Energieniveaus enthält, die von Elektronen besetzt sind, wenn das Material bei einer Temperatur von ${0}\,\mathrm{K}$ vorliegt. 
-Diese Elektronen sind eng an die Atomkerne gebunden und tragen nicht zum elektrischen Strom bei. Das Leitungsband liegt oberhalb des Valenzbands und enthält 
-leere Zustände, in denen Elektronen leicht angeregt werden können, beispielsweise durch eine Erhöhung der Temperatur. Elektronen im Leitungsband können sich 
-relativ frei durch das Material bewegen und ermöglichen somit den elektrischen Stromfluss. Die drei grundlegenden Klassen Leiter, Halbleiter und Isolatoren lassen 
-sich durch den Abstand (Bandlücke) dieser beiden relevanten Bänder definieren. In der folgenden Abbildung ist das Bändermodell eines Materials bei ${0}\,\mathrm{K}$ dargestellt, 
-mit den relevanten Größen und Bezeichnungen.
+\s{\ftc{Classification of materials}
+Two bands are particularly relevant for charge transport and thus for electrical properties: the valence band (VB) and the conduction band (CB).
+The valence band is the band that contains the highest energy levels occupied by electrons when the material is at a temperature of ${0}\,\mathrm{K}$.
+These electrons are tightly bound to the atomic nuclei and do not contribute to the electric current. The conduction band lies above the valence band and contains 
+empty states in which electrons can be easily excited, for example by increasing the temperature. Electrons in the conduction band can 
+move relatively freely through the material, thus enabling the flow of electric current. The three basic classes of conductors, semiconductors and insulators can be defined by the distance (band gap) between these two relevant bands. The following figure shows the band model of a material at ${0}\,\mathrm{K}$, 
+with the relevant quantities and designations.
 
 %\speech{
 %Einteilung von Materialien
@@ -196,10 +198,11 @@ mit den relevanten Größen und Bezeichnungen.
 
 %Abbildung 4
 \begin{figure}[H]
+    \renewcommand{\figurename}{Figure}
     \centering
     \includesvg[width=0.6\textwidth]{Bilder/kap1/BaendermodelleinesMaterialsbei0K}
-    \caption{\textbf{Bändermodell eines Materials bei $0\,\mathrm{K}$.} Darstellung der Energiebänder mit zugehöriger 
-    Beschriftung sowie deren alternativen Bezeichnungen.}  
+    \caption{\textbf{Band model of a material at $0\,\mathrm{K}$.} Representation of the energy bands with corresponding 
+    labelling and their alternative designations.}  
     \label{fig:BandermodellEinesMaterialsBei0K}
 \end{figure}
 
@@ -213,24 +216,23 @@ mit den relevanten Größen und Bezeichnungen.
 %Pfeile und Beschriftungen markieren die verschiedenen Energieniveaus und deren alternative Bezeichnungen.  
 %}
 
-Die Besetzung der Bänder mit Elektronen hängt neben der Temperatur von weiteren Faktoren ab. Vor allem durch gezielte Verunreinigung mit Fremdatomen, sogenannter Dotierung, 
-kann die Leitfähigkeit beeinflusst werden. Die Fremdatome bringen freie Ladungsträger ein und führen zu zusätzlichen Energieniveaus innerhalb der Bandlücke, von denen aus 
-zum Beispiel leichter Ladungsträger das Band wechseln können (siehe Abschnitt~\ref{sec:Ladungsträgertransport}). Neben den bisher gezeigten Energieniveaus ist das Ferminiveau eine weitere wichtige Größe. 
-Dieses gibt den Energiewert an, bei dem Elektronen eine Aufenthaltswahrscheinlichkeit von $\sfrac{1}{2}$ aufweisen. Bei einem undotierten Halbleiter liegt das Niveau mittig zwischen 
-Valenz- und Leitungsband, bei dotierten Halbleitern verschiebt sich das Niveau in Richtung des jeweiligen Dotierbands.
-}
+The occupation of the bands with electrons depends on other factors besides temperature. Conductivity can be influenced primarily by targeted contamination with foreign atoms, a process known as doping.
+The foreign atoms introduce free charge carriers and lead to additional energy levels within the band gap, from which, for example, light charge carriers can change bands (see section~\ref{sec:Ladungsträgertransport}). 
+In addition to the energy levels shown so far, the Fermi level is another important quantity. 
+This indicates the energy value at which electrons have a probability of $\sfrac{1}{2}$ of being present. In an undoped semiconductor, the level lies midway between 
+the valence and conduction bands, while in doped semiconductors, the level shifts towards the respective doping band.}
 
-\s{\textbf{Leiter} sind Materialien, deren Valenz- und Leitungsbänder aneinandergrenzen oder überlappen, was bedeutet, dass Elektronen leicht zwischen den Bändern wechseln können. 
-Diese Nähe ermöglicht eine hohe Leitfähigkeit, da Elektronen sich frei durch das Material bewegen können. Metalle wie Kupfer und Aluminium sind typische Beispiele für Leiter. }
+\s{\textbf{Conductors} are materials whose valence and conduction bands are adjacent or overlap, meaning that electrons can easily move between the bands.
+This proximity enables high conductivity, as electrons can move freely through the material. Metals such as copper and aluminium are typical examples of conductors. }
 
-\s{\textbf{Halbleiter} haben eine kleine Bandlücke, die zwischen der des Leiters und der des Isolators liegt. Diese Bandlücke ist so groß, dass in dem Material bei niedrigen Temperaturen 
-kein elektrischer Strom fließt, da Elektronen nicht genügend Energie haben, um ins Leitungsband angeregt zu werden. Mit steigender Temperatur oder durch das Einbringen von Fremdatomen 
-kann die Leitfähigkeit jedoch deutlich erhöht werden. Halbleiter wie Silizium und Germanium sind häufig eingesetzte Materialien in der Elektronikindustrie. }
+\s{\textbf{Semiconductors} have a small band gap that lies between that of conductors and insulators. This band gap is so large that no electric current flows in the material at low temperatures,
+as electrons do not have enough energy to be excited into the conduction band. However, conductivity can be significantly increased by raising the temperature or introducing foreign atoms. 
+Semiconductors such as silicon and germanium are frequently used materials in the electronics industry. }
 
-\s{\textbf{Isolatoren} haben eine große Bandlücke, die dazu führt, dass das Valenzband vollständig besetzt ist und das Leitungsband leer ist. Dadurch können Elektronen nur schwer ins 
-Leitungsband angeregt werden, selbst bei hohem Energieeintrag. Isolatoren wie Glas und Keramik zeigen daher eine sehr geringe Leitfähigkeit.}
+\s{\textbf{Insulators} have a large band gap, which means that the valence band is completely filled and the conduction band is empty. This makes it difficult for electrons to be excited into the 
+conduction band, even with high energy input. Insulators such as glass and ceramics therefore exhibit very low conductivity.}
 
-\s{Im Folgenden sind beispielhaft die Bändermodelle mit den Valenz- und Leitungsbändern der drei genannten Klassen dargestellt.}
+\s{The following are examples of band models with the valence and conduction bands of the three classes mentioned above.}
 
 %\speech{
 %    Die Besetzung der Bänder mit Elektronen hängt neben der Temperatur von weiteren Faktoren ab. Vor allem durch gezielte Verunreinigung mit Fremdatomen, sogenannter Dotierung, 
@@ -254,9 +256,10 @@ Leitungsband angeregt werden, selbst bei hohem Energieeintrag. Isolatoren wie Gl
 %Abbildung 5
 \s{
 \begin{figure}[H]
+    \renewcommand{\figurename}{Figure}
     \centering
     \includesvg[width=\textwidth]{Bilder/kap1/BaendermodellverschiedenerMaterialien}
-    \caption{\textbf{Bändermodell verschiedener Halbleitermaterialien.} V.l.n.r.: Leiter ohne und mit Überlappung, Halbleiter und Isolator.}  
+    \caption{\textbf{Band model of various semiconductor materials.} From left to right: conductor without and with overlap, semiconductor and insulator.}  
     \label{fig:BaendermodellVerschiedenerMaterialien}
 \end{figure}
 }
@@ -281,26 +284,27 @@ Leitungsband angeregt werden, selbst bei hohem Energieeintrag. Isolatoren wie Gl
 %Diese Abbildung verdeutlicht die fundamentalen Unterschiede zwischen Leitern, Halbleitern und Isolatoren auf Basis ihrer Energiebandstruktur.}
 
 \s{
-\begin{Merksatz}{}
+\begin{Key point}{}
     \begin{itemize}
-        \item Ladungsträger können nur definierte Energieniveaus im Festkörper besetzen.
-        \item Bei $T=\mathrm{0\,K}$ ist das Valenzband das höchste besetzte Energieniveau, das darüberliegende Leistungsband beinhaltet keine freien Ladungsträger.
-        \item Materialien können über die Bandlücke, Leiter, Halbleiter und Isolatoren kategorisiert werden. 
+        \item Charge carriers can only occupy defined energy levels in the solid state.
+        \item At $T=\mathrm{0\,K}$, the valence band is the highest occupied energy level; the conduction band above it contains no free charge carriers.
+        \item Materials can be categorised as band gap, conductors, semiconductors, and insulators. 
     \end{itemize}
-\end{Merksatz}
+\end{Key point}
 }
 
-\s{\ftb{Halbleitermaterialien}
-Die Gitterstrukturen von Halbleitermaterialien spielen eine entscheidende Rolle im Bezug auf deren elektronischen und mechanischen Eigenschaften. 
-Im Folgenden werden die Gitterstrukturen von Silizium und Galliumarsenid (GaAs) betrachtet. Silizium ist aufgrund seiner hohen Verfügbarkeit und 
-dem damit verbundenen geringen Preis das am weitesten verbreitete Halbleitermaterial. Darüber hinaus lässt es sich sehr gut verarbeiten 
-und seine elektrischen Eigenschaften lassen sich gut beeinflussen. Galliumarsenid hingegen dient als Beispiel für einen Verbindungshalbleiter 
-aus einem Element der III. und V. Hauptgruppe des Periodensystems, entsprechend wird ein solcher Halbleiter auch als III/V-Verbindungshalbleiter 
-bezeichnet. Die einzelnen Elemente weisen kein Halbleiterverhalten auf, erst bei besonderer Anordnung und besonderem Atomverhältnis bildet sich das 
-Halbleiterverhalten aus.\par
-Silizium hat eine Diamantgitterstruktur, bei der jedes Siliziumatom von vier benachbarten Atomen in einer tetraedrischen Anordnung umgeben ist. 
-Diese Struktur führt zu einer stabilen und robusten Kristallstruktur, die eine hohe mechanische Stabilität aufweist. Darüber hinaus ermöglicht die 
-Anordnung eine hohe Beweglichkeit der freien Elektronen in alle Raumrichtungen. 
+\s{\ftb{semiconductor materials}
+The lattice structures of semiconductor materials play a decisive role in terms of their electronic and mechanical properties.
+The lattice structures of silicon and gallium arsenide (GaAs) are considered below. Silicon is the most widely used semiconductor material due to its high availability and 
+the associated low price. In addition, it is very easy to process 
+and its electrical properties can be easily influenced. Gallium arsenide, on the other hand, serves as an example of a compound semiconductor 
+consisting of an element from the III and V main groups of the periodic table; accordingly, such a semiconductor is also referred to as a III/V compound semiconductor.
+The individual elements do not exhibit semiconductor behaviour; only when arranged in a specific way and with a specific atomic ratio does the 
+semiconductor behaviour develop.
+Silicon has a diamond lattice structure in which each silicon atom is surrounded by four neighbouring atoms in a tetrahedral arrangement.
+This structure results in a stable and robust crystal structure with high mechanical stability. In addition, the
+arrangement allows high mobility of the free electrons in all spatial directions.
+ 
 }
 
 %\speech{
@@ -321,9 +325,10 @@ Anordnung eine hohe Beweglichkeit der freien Elektronen in alle Raumrichtungen.
 %Bildunterschrift bearbeitet
 \s{
 \begin{figure}[H]
+    \renewcommand{\figurename}{Figure}
     \centering
     \includesvg[scale=.25]{Bilder/kap1/Gitterstrukturen/GitterSi}
-    \caption{\textbf{Diamantgitterstruktur von Silizium.} Resultierende Gitterstruktur von Silizium.}   
+    \caption{\textbf{Diamond lattice structure of silicon.} Resulting lattice structure of silicon.}   
     \label{fig:DiamanttgitterstrukturVonSilizium}
 \end{figure}
 }
@@ -338,13 +343,14 @@ Anordnung eine hohe Beweglichkeit der freien Elektronen in alle Raumrichtungen.
 %Diese Gitterstruktur ist die Grundlage für die einzigartigen elektrischen und mechanischen Eigenschaften von Silizium, insbesondere für seine Anwendung in der Halbleitertechnologie.}
 
 
-\s{ Im Gegensatz dazu sind bei Galliumarsenid die Gallium- und Arsenatome so angeordnet, dass sie zwei ineinander verschobene kubisch 
-flächenzentrierte Gitter darstellen, die sogenannte Zinkblende-Gitterstruktur. Die resultierende Anordnung ist identisch mit der 
-Diamantgitterstruktur, jedoch mit dem regelmäßigen Wechsel zwischen zwei Ionenarten. Diese Struktur ermöglicht eine geringe Bandlücke, 
-was zu einer geringen Anregungsenergie führt, die notwendig ist, um Elektronen zwischen Valenz- und Leistungsband zu verschieben.
+\s{ In contrast, in gallium arsenide, the gallium and arsenic atoms are arranged in such a way that they form two interlocking cubic 
+face-centred lattices, known as the zinc blende lattice structure. The resulting arrangement is identical to the 
+diamond lattice structure, but with regular alternation between two types of ions. This structure allows for a small band gap, 
+resulting in low excitation energy required to shift electrons between the valence and conduction bands.
 
 %Abbildung 7
 \begin{figure}[H]
+    \renewcommand{\figurename}{Figure}
     \begin{minipage}[c]{0.5\textwidth}
         \centering
         \includesvg[scale=.25]{Bilder/kap1/Gitterstrukturen/GitterGaAs_1}
@@ -353,8 +359,8 @@ was zu einer geringen Anregungsenergie führt, die notwendig ist, um Elektronen 
         \centering
         \includesvg[scale=.25]{Bilder/kap1/Gitterstrukturen/GitterGaAs_2}
     \end{minipage}
-    \caption{\textbf{Zinkblende-Gitterstruktur von GaAs.} Links: Zwei ineinander verschobene kubisch flächenzentrierte Gitter 
-    von verschiedenen Materialien. Rechts: Resultiernde Zinkblende-Gitterstruktur.}  
+    \caption{\textbf{Zinc blende lattice structure of GaAs.} Left: Two interlocking cubic face-centred lattices 
+    made of different materials. Right: Resulting zinc blende lattice structure.}  
     \label{fig:Zinkblende-GitterstrukturVonGaAs}
 \end{figure}}
 
@@ -382,23 +388,23 @@ was zu einer geringen Anregungsenergie führt, die notwendig ist, um Elektronen 
 
 
 \s{
-    \begin{Merksatz}{}
+    \begin{Key point}{}
         \begin{itemize}
-            \item Silizium ist das am weitesten verbreitete Halbleitermaterial.
-            \item Verbindungshalbleiter bestehen aus zwei Materialen, die in bestimmter Kombination Halbleiterverhalten aufweisen.
-            \item Silizium ist aus der IV. Hauptguppe des Periodensystem, Verbindungshalbleiter typischerweise aus der III. und V. Hauptgruppe. 
+            \item Silicon is the most widely used semiconductor material.
+            \item Compound semiconductors consist of two materials that exhibit semiconductor behaviour in certain combinations.
+            \item Silicon is from the IV main group of the periodic table, compound semiconductors are typically from the III and V main groups. 
         \end{itemize}
-    \end{Merksatz}
+    \end{Key point}
 }
 
-\s{Die folgende Tabelle bietet einen Überblick über einige der wichtigsten Halbleitermaterialien und Verbindungshalbleiter sowie ihre wesentlichen 
-Eigenschaften und Anwendungen. Diese Materialien spielen eine entscheidende Rolle in der modernen Elektrotechnik und werden in einer 
-Vielzahl von Anwendungen eingesetzt, von Mikrochips und Solarzellen bis hin zu Hochfrequenzschaltungen und LED-Beleuchtung. Die Tabelle enthält 
-Informationen über die Bandlücke, Ladungsträgerdichte (Eigenleitungsdichte), Elektronen- und Löcherbeweglichkeit sowie charakteristische Eigenschaften und Anwendungen 
-jedes Materials. Bei der Beweglichkeit handelt es sich um die Geschwindigkeit, mit der sich die Ladungsträger aufgrund eines elektrischen Feldes 
-durch ein Medium bewegen. Bei Löchern handelt es sich um quasipartielle Zustände, die als positive Ladungsträger betrachtet werden. Es handelt 
-sich hierbei nicht um tatsächliche positive Ladungsträger, sondern um lokale Bereiche, die aufgrund eines fehlenden Elektrons als positiv geladen 
-betrachtet werden können.}
+\s{The following table provides an overview of some of the most important semiconductor materials and compound semiconductors, as well as their key 
+properties and applications. These materials play a crucial role in modern electrical engineering and are used in a 
+wide range of applications, from microchips and solar cells to high-frequency circuits and LED lighting. The table contains 
+information about the band gap, charge carrier density (intrinsic conductivity), electron and hole mobility, and characteristic properties and applications 
+of each material. Mobility is the speed at which charge carriers move through a medium due to an electric field. 
+Holes are quasi-partial states that are considered positive charge carriers. They are 
+not actual positive charge carriers, but rather local areas that can be considered positively charged due to a missing electron.
+}
 
 %\speech{
 %    Die folgende Tabelle bietet einen Überblick über einige der wichtigsten Halbleitermaterialien und Verbindungshalbleiter sowie ihre wesentlichen 
@@ -414,6 +420,7 @@ betrachtet werden können.}
 %Tabelle 1
 \s{
     \begin{table}[H]
+        \renewcommand{\tablename}{Table}
         \centering 
         \begin{tabular}{ |p{1.7cm}|p{1.1cm}|p{1.2cm}|p{1.1cm}|p{1.1cm}|p{3.5cm}|p{2.4cm}| }
             \hline
@@ -422,23 +429,23 @@ betrachtet werden können.}
             $\boldsymbol{n}$ \newline $\left(\mathrm{\frac{1}{cm^3}}\right)$ & 
             $\boldsymbol{\mu_\mathrm{e}}$ \newline $\left(\mathrm{\frac{cm^2}{V\cdot s}}\right)$ & 
             $\boldsymbol{\mu_\mathrm{p}}$ \newline $\left(\mathrm{\frac{cm^2}{V\cdot s}}\right)$ & 
-            \textbf{Eigenschaften} & \textbf{Anwendungen}\\
+            \textbf{Properties} & \textbf{Applications}\\
             \hline
-            Silizium (Si)  & \centering $1,1$ & \centering  $1\cdot10^{10}$ & \centering  $1500$ & \centering  $450$ & Häufigste Halbleitermaterial & Mikrochips,\newline Solarzellen,\newline Sensoren \\
+            silicon (Si)  & \centering $1,1$ & \centering  $1\cdot10^{10}$ & \centering  $1500$ & \centering  $450$ & Most common semiconductor materials & microchips,\newline Solar cells,\newline Sensors \\
             \hline
-            Germanium (Ge) & \centering $0,7$ & \centering  $2\cdot10^{13}$ & \centering  $3900$ & \centering  $1900$ &  Früher häufig in elektronischen Geräten verwendet & Transistoren, Infarot-Detektoren \\
+            Germanium (Ge) & \centering $0,7$ & \centering  $2\cdot10^{13}$ & \centering  $3900$ & \centering  $1900$ &  Previously frequently used in electronic devices & Transistors, infrared detectors \\
             \hline
-            Gallium- arsenid (GaAs) & \centering $1,43$ & \centering  $2\cdot10^6$ & \centering  $8500$ & \centering  $400$ & Direkter Band\-über\-gang, Einsatz bei hohen Frequenzen  & Hoch\-frequenz\-schaltungen, LEDs, \newline Laserdioden \\
+            Gallium- arsenide (GaAs) & \centering $1,43$ & \centering  $2\cdot10^6$ & \centering  $8500$ & \centering  $400$ & Direct bandpass, use at high frequencies  & high-frequency circuits, LEDs, \newline Laser diodes \\
             \hline
-            Indium- phosphid (InP) & \centering $1,35$ & \centering  $1\cdot10^{16}$ & \centering  $5000$ & \centering  $200$ &  Direkter Band\-über\-gang, Hohe Lichtabsorption bei Wellenlängen im Bereich von $\mathrm{1,3-1,55\,\mu m}$  & Optoelektronik, Solarzellen \\
+            Indium- phosphide (InP) & \centering $1,35$ & \centering  $1\cdot10^{16}$ & \centering  $5000$ & \centering  $200$ &  Direct band transition, high light absorption at wavelengths in the range of $\mathrm{1.3-1.55\,\mu m}$  & optoelectronics, solar cells \\
             \hline 
-            Gallium- nitrid (GaN) & \centering $3,4$ & \centering  $1\cdot10^{-10}$ & \centering  $380$ & \centering  $-$ &  Hohe thermische und chemische Stabilität, Hohe  elektronische Durchbruchsfeldstärke  & Leistungs\-elektro\-nik, LED-Beleuchtung, Displays \\
+            Gallium- nitride (GaN) & \centering $3,4$ & \centering  $1\cdot10^{-10}$ & \centering  $380$ & \centering  $-$ &  High thermal and chemical stability, high  electronic breakdown field strength  & power electronics, LED lighting, displays \\
             \hline
-            Silizium- karbid (SiC) & \centering $3,0$ & \centering  $1\cdot10^{-7}$ & \centering  $500$ & \centering  $-$ &  Extrem hohe thermische Stabilität,  Hohe elektronische Durchbruchsfeldstärke  & Leistungs- elektronik, Hochtemperaturanwendung \\ 
+            Silizium- karbide (SiC) & \centering $3,0$ & \centering  $1\cdot10^{-7}$ & \centering  $500$ & \centering  $-$ &  Extremely high thermal stability, high electronic breakdown field strength & power electronics, high-temperature application \\ 
             \hline
         \end{tabular}
-        \caption{\textbf{Eigenschaften verschiedener Halbleitermaterialien.} Auflistung von physikalischen Größen wie der Bandlücke ($E_\mathrm{G}$), 
-        Eigenleitungsdichte ($n$) bei $T=\mathrm{300\,K}$, Elektronenbeweglichkeit ($\mu_\mathrm{e}$) und Löcherbeweglichkeit ($\mu_\mathrm{p}$).}
+        \caption{\textbf{Properties of various semiconductor materials.} List of physical quantities such as the band gap ($E_\mathrm{G}$), 
+        intrinsic conductivity ($n$) at $T=\mathrm{300\,K}$, electron mobility ($\mu_\mathrm{e}$) and hole mobility ($\mu_\mathrm{p}$).}
         \label{tab:EigenschaftenVerschiedenerHalbleitermaterialien}
     \end{table}
 }
@@ -463,14 +470,14 @@ betrachtet werden können.}
 %}
 
 
-\s{\ftb{Ladungsträgertransport
+\s{\ftb{Load carrier transport
 \label{sec:Ladungsträgertransport}}
-Bei einer Temperatur von $\mathrm{0\,K}$ (absoluter Nullpunkt) weisen Halbleiter wie Silizium ein vollständig besetztes Valenzband mit 
-dem Energieniveau $E_\mathrm{V}$ und ein leeres Leitungsband mit dem Energieniveau $E_\mathrm{L}$ auf. 
-Dies bedeutet, dass alle Elektronen im Valenzband gebunden und keine freien Ladungsträger vorhanden sind. Das Bändermodell zeigt eine deutliche 
-Bandlücke zwischen dem Valenz- und dem Leitungsband. Wenn die Temperatur über $\mathrm{0\,K}$ erhöht wird, steigt die 
-Beweglichkeit der Elektronen im Kristallgitter. Einige Elektronen im Valenzband können durch thermische Anregung Energie erhalten und in das Leitungsband 
-übergehen, wodurch freie Elektronen und Löcher erzeugt werden. Diese freien Ladungsträger tragen zur Leitfähigkeit des Halbleiters bei.}
+At a temperature of $\mathrm{0\,K}$ (absolute zero), semiconductors such as silicon have a completely filled valence band with 
+the energy level $E_\mathrm{V}$ and an empty conduction band with the energy level $E_\mathrm{L}$. 
+This means that all electrons are bound in the valence band and there are no free charge carriers. The band model shows a distinct 
+band gap between the valence band and the conduction band. When the temperature is raised above $\mathrm{0\,K}$, the 
+mobility of the electrons in the crystal lattice increases. Some electrons in the valence band can gain energy through thermal excitation and 
+transition to the conduction band, creating free electrons and holes. These free charge carriers contribute to the conductivity of the semiconductor.}
 
 %\speech{
 %    Ladungsträgertransport.
@@ -485,6 +492,7 @@ Beweglichkeit der Elektronen im Kristallgitter. Einige Elektronen im Valenzband 
 %Abbildung 8 
 \s{
     \begin{figure}[H]
+        \renewcommand{\figurename}{Figure}
         \begin{minipage}[c]{0.48\textwidth}
             \begin{figure}[H]
                 \raggedright
@@ -497,7 +505,7 @@ Beweglichkeit der Elektronen im Kristallgitter. Einige Elektronen im Valenzband 
                 \includesvg[width=0.9\textwidth]{Bilder/kap1/GitterstrukturUndBaendermodellVonSi/GitterstrukturUndBaendermodellVonSi_2}
             \end{figure}
         \end{minipage}
-        \caption{\textbf{Gitterstruktur und Bändermodell von Si.} Vereinfachte 2D-Betrachtung des Si-Gitters. Links: Reines Silizium bei $T={0}\,\mathrm{K}$. Rechts: Reines Silizium bei $T>{0}\,\mathrm{K}$.}  
+        \caption{\textbf{Lattice structure and band model of Si.} Simplified 2D view of the silicon lattice. Left: Pure silicon at $T={0}\,\mathrm{K}$. Right: Pure silicon at $T>{0}\,\mathrm{K}$.}  
         \label{fig:GitterstrukturUndBaendermodellVonSi}
     \end{figure}
 }
@@ -522,11 +530,11 @@ Beweglichkeit der Elektronen im Kristallgitter. Einige Elektronen im Valenzband 
 %Diese Darstellung veranschaulicht, wie Temperaturerhöhung dazu führt, dass Elektronen ins Leitungsband angehoben werden, wodurch Silizium von einem isolierenden in einen leitenden Zustand übergeht.}
 
 
-\s{Bei der Zugabe von Phosphor zu Silizium führt dies dazu, dass das Phosphoratom fünf Valenzelektronen einbringt (n-dotiert), eins mehr als Silizium. Das in 
-diesem Fall überschüssige Elektron wird locker an das Kristallgitter gebunden und kann leicht von äußeren Energiequellen entfernt werden, wodurch es zu einem 
-Donator von freien Elektronen wird. Diese Elektronen befinden sich im Donatorband ($E_\mathrm{D}$), unmittelbar unterhalb des Leitungsbands. Bei einer Temperatur über $\mathrm{0\,K}$ 
-verfügen die Elektronen aufgrund der thermischen Anregung über ausreichend Energie, um die Bandlücke zu überwinden und ins Leitungsband zu gelangen. Die 
-durch den Phosphor bereitgestellten Elektronen erleichtern diesen Prozess. Daher erhöht sich die Leitfähigkeit des Materials.}
+\s{When phosphorus is added to silicon, the phosphorus atom contributes five valence electrons (n-doped), one more than silicon. In 
+this case, the excess electron is loosely bound to the crystal lattice and can be easily removed by external energy sources, making it a 
+donor of free electrons. These electrons are located in the donor band ($E_\mathrm{D}$), immediately below the conduction band. At temperatures above $\mathrm{0\,K}$, 
+thermal excitation gives the electrons enough energy to overcome the band gap and enter the conduction band. The 
+electrons provided by the phosphorus facilitate this process. This increases the conductivity of the material.}
 
 %\speech{
 %    Bei der Zugabe von Phosphor zu Silizium führt dies dazu, dass das Phosphoratom fünf Valenzelektronen einbringt (n-dotiert), eins mehr als Silizium. Das in 
@@ -538,6 +546,7 @@ durch den Phosphor bereitgestellten Elektronen erleichtern diesen Prozess. Daher
 %Abbildung 9
 \s{
     \begin{figure}[H]
+        \renewcommand{\figurename}{Figure}
         \begin{minipage}[c]{0.48\textwidth}
             \begin{figure}[H]
                 \raggedright
@@ -550,7 +559,7 @@ durch den Phosphor bereitgestellten Elektronen erleichtern diesen Prozess. Daher
                 \includesvg[width=0.9\textwidth]{Bilder/kap1/GitterstrukturUndBaendermodellVonN-dotiertesSi/GitterstrukturUndBaendermodellVonN-dotiertesSi_2}
             \end{figure}
         \end{minipage}
-        \caption{\textbf{Gitterstruktur und Bändermodell von n-dotiertem Si.} Links: N-dotierts Silizium bei $T={0}\,\mathrm{K}$. Rechts: N-dotierts Silizium bei $T>{0}\,\mathrm{K}$.}  
+        \caption{\textbf{Lattice structure and band model of n-doped Si.} Left: N-doped silicon at $T={0}\,\mathrm{K}$. Right: N-doped silicon at $T>{0}\,\mathrm{K}$.}  
         \label{fig:GitterstrukturUndBaendermodellVonN-DotiertesSi}
     \end{figure}
 }
@@ -575,10 +584,10 @@ durch den Phosphor bereitgestellten Elektronen erleichtern diesen Prozess. Daher
 %Diese Abbildung verdeutlicht, dass durch die Dotierung mit Phosphor zusätzliche Elektronen in das Siliziumgitter eingebracht werden, die bei Raumtemperatur leicht ins Leitungsband übergehen und die elektrische Leitfähigkeit erhöhen.}
 
 
-\s{Bei der Zugabe von Bor zu Silizium (p-dotiert) hat das Boratom nur drei Valenzelektronen, eins weniger als Silizium. Dadurch entsteht im Kristallgitter ein 
-Loch im Valenzband, das als Akzeptor von Elektronen wirkt. Bei ${0}\,\mathrm{K}$ sind jedoch keine thermisch erzeugten Löcher vorhanden. Bei einer Temperatur über ${0}\,\mathrm{K}$ führt 
-die thermische Energie dazu, dass Elektronen aus dem Valenzband ins Akzeptorband ($E_\mathrm{A}$) gelangen, wodurch Löcher im Valenzband zurückbleiben. Diese Löcher wirken wie 
-positive Ladungsträger und erhöhen die Leitfähigkeit des Materials. 
+\s{When boron is added to silicon (p-doped), the boron atom has only three valence electrons, one less than silicon. This creates a 
+hole in the valence band of the crystal lattice, which acts as an electron acceptor. At ${0}\,\mathrm{K}$, however, there are no thermally generated holes. At temperatures above ${0}\,\mathrm{K}$, 
+the thermal energy causes electrons to move from the valence band to the acceptor band ($E_\mathrm{A}$), leaving holes in the valence band. These holes act as 
+positive charge carriers and increase the conductivity of the material.
 }
 %\speech{
 %    Bei der Zugabe von Bor zu Silizium (p-dotiert) hat das Boratom nur drei Valenzelektronen, eins weniger als Silizium. Dadurch entsteht im Kristallgitter ein
@@ -589,6 +598,7 @@ positive Ladungsträger und erhöhen die Leitfähigkeit des Materials.
 %Abbildung 10
 \s{
     \begin{figure}[H]
+        \renewcommand{\figurename}{Figure}
         \begin{minipage}[c]{0.48\textwidth}
             \begin{figure}[H]
                 \raggedright
@@ -601,7 +611,7 @@ positive Ladungsträger und erhöhen die Leitfähigkeit des Materials.
                 \includesvg[width=0.9\textwidth]{Bilder/kap1/GitterstrukturUndBaendermodellVonP-dotiertesSi/GitterstrukturUndBaendermodellVonP-dotiertesSi_2}
             \end{figure}
         \end{minipage}
-        \caption{\textbf{Gitterstruktur und Bändermodell von p-dotiertem Si.} Links: P-dotierts Silizium bei $T={0}\,\mathrm{K}$. Rechts: P-dotierts Silizium bei $T>{0}\,\mathrm{K}$.}  
+        \caption{\textbf{Lattice structure and band model of p-doped Si.} Left: P-doped silicon at $T={0}\,\mathrm{K}$. Right: P-doped silicon at $T>{0}\,\mathrm{K}$.}  
         \label{fig:GitterstrukturUndBaendermodellVonP-DotiertesSi}
     \end{figure}
 } 
@@ -626,13 +636,13 @@ positive Ladungsträger und erhöhen die Leitfähigkeit des Materials.
 %Diese Abbildung verdeutlicht, dass durch die Dotierung mit Bor zusätzliche Löcher in das Siliziumgitter eingebracht werden, die bei Raumtemperatur als bewegliche positive Ladungsträger fungieren und die elektrische Leitfähigkeit erhöhen.}
 
 \s{
-    \begin{Merksatz}{}
+    \begin{Key point}{}
         \begin{itemize}
-            \item Durch thermische Anregung können freie Elektronen entstehen, die zum Ladungsträgertransport beitragen. 
-            \item Dotierung ist das gezielte Einbringen von Fremdatomen mit mehr oder weniger Valenzelektronen als das Ausgangsmaterial.
-            \item Für n-Dotierung kann Phosphor und für p-Dotierung Bor genutzt werden.
+            \item Thermal excitation can generate free electrons, which contribute to charge carrier transport.
+            \item Doping is the targeted introduction of foreign atoms with more or less valence electrons than the starting material.
+            \item Phosphorus can be used for n-doping and boron for p-doping.
             \end{itemize}
-    \end{Merksatz}
+    \end{Key point}
 }
 
 %\speech{
@@ -643,15 +653,15 @@ positive Ladungsträger und erhöhen die Leitfähigkeit des Materials.
 %}
 
 
-\s{\newpage Neben den zuvor genannten Vorgängen innerhalb des Kristallgitters, die den Ladungsträgertransport durch zusätzliche Ladungsträger ermöglichen, 
-sind zwei weitere wichtige Größen der Driftstrom und Diffusionsstrom. Driftstrom in einem Halbleiter tritt aufgrund der Bewegung geladener 
-Teilchen unter dem Einfluss eines äußeren elektrischen Feldes auf. Wenn ein elektrisches Feld an einem Halbleiter angelegt wird, wirkt eine Kraft 
-auf die freien Ladungsträger (Elektronen und Löcher), die sie, je nach Vorzeichen oder Ladung,in Feldrichtung beschleunigt oder verlangsamt.  
-Für Elektronen im Leitungsband bedeutet dies, dass sie unter dem Einfluss des elektrischen Feldes in Richtung der positiven Elektrode (Anode) 
-driften. Für Löcher im Valenzband bedeutet dies eine Drift in Richtung der negativen Elektrode (Kathode). 
-Für eine bessere Vergleichbarkeit wird in der folgenden Abbildung das Loch als positiver Ladungsträger dargestellt. Die Driftgeschwindigkeit der Ladungsträger 
-hängt von der Stärke des angelegten elektrischen Feldes und von der Beweglichkeit der Ladungsträger im Halbleitermaterial ab. Es ist wichtig zu 
-beachten, dass der Driftstrom nur einen Teil des Gesamtstroms in einem Halbleiter ausmacht.}
+\s{\newpage In addition to the aforementioned processes within the crystal lattice, which enable charge carrier transport through additional charge carriers, 
+two other important variables are drift current and diffusion current. Drift current in a semiconductor occurs due to the movement of charged 
+particles under the influence of an external electric field.
+When an electric field is applied to a semiconductor, a force acts on the free charge carriers (electrons and holes), accelerating or decelerating them in the direction of the field, depending on their sign or charge.  
+For electrons in the conduction band, this means that they drift towards the positive electrode (anode) under the influence of the electric field.
+For holes in the valence band, this means a drift towards the negative electrode (cathode). 
+For better comparability, the hole is shown as a positive charge carrier in the following figure. The drift velocity of the charge carriers 
+depends on the strength of the applied electric field and on the mobility of the charge carriers in the semiconductor material. It is important to 
+note that the drift current only accounts for part of the total current in a semiconductor.}
 
 %\speech{
 %    Neben den zuvor genannten Vorgängen innerhalb des Kristallgitters, die den Ladungsträgertransport durch zusätzliche Ladungsträger ermöglichen,
@@ -668,9 +678,10 @@ beachten, dass der Driftstrom nur einen Teil des Gesamtstroms in einem Halbleite
 %Abbildung 11
 \s{
     \begin{figure}[H]
+        \renewcommand{\figurename}{Figure}
         \centering
         \includesvg[width=0.3\textwidth]{Bilder/kap1/DriftstromInnerhalbEinesHalbleiters}
-        \caption{\textbf{Driftstrom innerhalb eines Halbleiters.} Darstellung mit der Geschwingigkeit $v$ der Ladungsträger aufgrund der elektrischen Feldstärke $E$.}  
+        \caption{\textbf{Drift current within a semiconductor.} Representation with the velocity $v$ of the charge carriers due to the electric field strength $E$.}  
         \label{fig:DriftstromInnerhalbEinesHalbleiters}
     \end{figure}
 }
@@ -688,12 +699,13 @@ beachten, dass der Driftstrom nur einen Teil des Gesamtstroms in einem Halbleite
 %- Der Driftstrom ist eine fundamentale Transportart von Ladungsträgern in Halbleitern und spielt eine zentrale Rolle in der Funktion von Halbleiterbauelementen wie Dioden und Transistoren.}
 
 
-\s{Der andere Teil des Stroms entsteht durch Diffusion, was die Bewegung von Ladungsträgern aufgrund von Konzentrationsunterschieden darstellt. 
-In vielen Halbleiterbauelementen wie Dioden und Transistoren wirken Drift- und Diffusionsströme zusammen, um das Verhalten des Bauelements 
-zu bestimmen. Beim Diffusionsstrom bewegen sich freie Elektronen oder Löcher von Bereichen hoher Konzentration zu Bereichen niedriger Konzentration, 
-ähnlich wie bei der Diffusion von Teilchen in einem Konzentrationsgradienten. Im Falle von Elektronen in einem n-dotierten Halbleiter bewegen sich 
-Elektronen von Regionen mit hoher Elektronenkonzentration zu Regionen mit niedriger Elektronenkonzentration. Umgekehrt bewegen sich bei einem 
-p-dotierten Halbleiter Löcher von Regionen hoher Lochkonzentration zu Regionen niedriger Lochkonzentration.}
+\s{The other part of the current is caused by diffusion, which is the movement of charge carriers due to concentration differences.
+In many semiconductor devices, such as diodes and transistors, drift and diffusion currents work together to determine the behaviour of the device.
+In diffusion current, free electrons or holes move from areas of high concentration to areas of low concentration, 
+similar to the diffusion of particles in a concentration gradient. In the case of electrons in an n-doped semiconductor, 
+electrons move from regions of high electron concentration to regions of low electron concentration. Conversely, in a 
+p-doped semiconductor, holes move from regions of high hole concentration to regions of low hole concentration.
+}
 
 %\speech{Der andere Teil des Stroms entsteht durch Diffusion, was die Bewegung von Ladungsträgern aufgrund von Konzentrationsunterschieden darstellt.
 % In vielen Halbleiterbauelementen wie Dioden und Transistoren wirken Drift- und Diffusionsströme zusammen, um das Verhalten des Bauelements
@@ -705,10 +717,11 @@ p-dotierten Halbleiter Löcher von Regionen hoher Lochkonzentration zu Regionen 
 %Abbildung 12
 \s{
     \begin{figure}[H]
+        \renewcommand{\figurename}{Figure}
         \centering
         \includesvg[width=0.8\textwidth]{Bilder/kap1/DiffusionsstromInnerhalbEinesHalbleiters}
-        \caption{\textbf{Diffusionsstrom innerhalb eines Halbleiters.} Diffusion von Elektronen in einem 
-        n-dotierten Halbleiter in Richtung einer geringeren Konzentration. Mit der Länge $\mathrm{L}$ des Halbleiters, der Ladungsträgerkonzentration $n$ und der Position $x$.}  
+        \caption{\textbf{Diffusion current within a semiconductor.} Diffusion of electrons in an 
+        n-doped semiconductor towards a lower concentration. With the length $\mathrm{L}$ of the semiconductor, the charge carrier concentration $n$ and the position $x$.}  
         \label{fig:DiffusionsstromInnerhalbEinesHalbleiters}
     \end{figure}
 }
@@ -735,13 +748,13 @@ p-dotierten Halbleiter Löcher von Regionen hoher Lochkonzentration zu Regionen 
 %Diese Abbildung verdeutlicht den Diffusionsstrom, der in Halbleitern aufgrund von Konzentrationsunterschieden auftritt. Der Ladungsträgerfluss erfolgt immer in Richtung der niedrigeren Konzentration, bis ein Gleichgewichtszustand erreicht ist. Dieser Mechanismus ist entscheidend für viele Halbleiterbauelemente, insbesondere für Dioden und pn-Übergänge.}
 
 
-\s{Abschließend wird in diesem Abschnitt der Ladungstransport im Bänderdiagramm bei einer angelegten Spannung betrachtet. Bislang wurde das 
-Bänderdiagramm ausschließlich im Zustand des thermodynamischen Gleichgewichts analysiert. Es wird der allgemeine Fall betrachtet, in dem 
-ein Strom durch den Halbleiter fließt. Als Beispiel dient ein homogener, n-dotierter Halbleiter. Anfänglich liegt keine Spannung am Halbleiter 
-an, wodurch auch kein elektrischer Strom fließt. Das Bänderdiagramm über den Ort x zeigt daher einen Verlauf ähnlich dem in Abbildung \ref{fig:EinflussVonSpannungenAufHalbleiter} links, 
-wobei mögliche Randeffekte an den Kontakten nicht berücksichtigt sind. Die Bänder eines Halbleiters ohne angelegte Spannung sind horizontal 
-ausgerichtet. Sobald jedoch eine Spannung angelegt wird, verschiebt sich das Bänderdiagramm, was dazu führt, dass die Elektronen in Richtung 
-niedrigerer Energie wandern.}
+\s{Finally, this section examines charge transport in the band diagram when a voltage is applied. Until now, the 
+band diagram has been analysed exclusively in a state of thermodynamic equilibrium. The general case is considered, in which 
+a current flows through the semiconductor. A homogeneous, n-doped semiconductor serves as an example. Initially, no voltage is applied to the semiconductor, 
+which means that no electric current flows. The band diagram over the location x therefore shows a curve similar to that in Figure \ref{fig:EinflussVonSpannungenAufHalbleiter} on the left, 
+where possible edge effects at the contacts are not taken into account. The bands of a semiconductor without applied voltage are aligned horizontally. 
+However, as soon as a voltage is applied, the band diagram shifts, causing the electrons to migrate towards 
+lower energy.}
 
 %\speech{Abschließend wird in diesem Abschnitt der Ladungstransport im Bänderdiagramm bei einer angelegten Spannung betrachtet. Bislang wurde das
 %Bänderdiagramm ausschließlich im Zustand des thermodynamischen Gleichgewichts analysiert. Es wird der allgemeine Fall betrachtet, in dem
@@ -753,6 +766,7 @@ niedrigerer Energie wandern.}
 %Abbildung 13
 \s{
     \begin{figure}[H]
+        \renewcommand{\figurename}{Figure}
         \begin{minipage}[c]{0.48\textwidth}
             \begin{figure}[H]
                 \centering
@@ -766,8 +780,8 @@ niedrigerer Energie wandern.}
             \end{figure}
         \end{minipage}
 
-        \caption{\textbf{Einfluss von Spannungen auf Halbleiter.} Links: Festkörper und Bändermodell 
-        ohne angelegte Spannung. Rechts: Verschiebung des Bändermodells aufgrund einer angelegten Spannung.}  
+        \caption{\textbf{Influence of voltages on semiconductors.} Left: Solid state and band model
+        without applied stress. Right: Displacement of the band model due to applied stress.}  
         \label{fig:EinflussVonSpannungenAufHalbleiter}
     \end{figure}
 }
@@ -795,14 +809,14 @@ niedrigerer Energie wandern.}
 
 
 \s{
-    \begin{Merksatz}{}
+    \begin{Key point}{}
         \begin{itemize}
-            \item Driftstrom ist der Ladungsträgertransport aufgrund eines elektrischen Feldes.
-            \item Diffusionsstrom ist die Bewegung von Ladungsträgern aufgrund eines Konzentrationsunterschiedes.
-            \item Drift- und Diffusionsstrom ergeben zusammen den Gesamtstrom.
-            \item Eine externe Spannung führt zu einer Verschiebung des Bändermodells. 
+            \item Drift current is the transport of charge carriers due to an electric field.
+            \item Diffusion current is the movement of charge carriers due to a difference in concentration.
+            \item Drift current and diffusion current together make up the total current.
+            \item An external stress causes a shift in the band model. 
             \end{itemize}
-    \end{Merksatz}
+    \end{Key point}
 }
 
 %\speech{
@@ -812,18 +826,19 @@ niedrigerer Energie wandern.}
 %    - Drift- und Diffusionsstrom ergeben zusammen den Gesamtstrom.
 %    - Eine externe Spannung führt zu einer Verschiebung des Bändermodells.
 %}
-
-\s{\ftb{pn-Übergang}
+ 
+\s{\ftb{pn-junction}
 \label{sec:pn-Übergang}
-Der pn-Übergang ist das zentrale Element von Halbleiterbauelementen wie Dioden und Transistoren. Er entsteht durch die Verbindung von zwei 
-unterschiedlich dotierten Halbleiterschichten, einer p-dotierten und einer n-dotierten Schicht. Der Übergang zwischen diesen Schichten wird 
-als pn-Übergang bezeichnet. Im pn-Übergang kommt es zur Diffusion von freien Ladungsträgern: Elektronen aus der n-dotierten Schicht diffundieren 
-zur p-dotierten Schicht und Löcher aus der p-dotierten Schicht diffundieren zur n-dotierten Schicht. Dieser Diffusionsprozess führt dazu, dass 
-sich im Über\-gangs\-be\-reich eine sogenannte Raumladungszone (RLZ) bildet. In Abbildung \ref{fig:VorgaengeInnerhalbDesPn-Uebergangs} ist dieser Vorgang dargestellt. Die RLZ ist eine schmale 
-Region um den pn-Übergang herum, in der positive Ionen aus der n-Schicht und negative Ionen aus der p-Schicht verbleiben, 
-nachdem die Diffusion abgeschlossen ist. In dieser Zone gibt es keine freien Ladungsträger, da die positiven und negativen Ladungen sich 
-gegenseitig neutralisieren. Dadurch entsteht ein elektrisches Feld ($\vec{E}$), das sowohl einen Driftstrom erzeugt als auch die Diffusion von weiteren 
-Ladungsträgern unterdrückt. Die Raumladungszone wirkt wie eine Sperrschicht und verhindert den Stromfluss in Sperrrichtung.} 
+The pn junction is the central element of semiconductor devices such as diodes and transistors. It is created by connecting two 
+differently doped semiconductor layers, a p-doped layer and an n-doped layer. The transition between these layers is 
+called a pn junction. Free charge carriers diffuse in the pn junction: electrons from the n-doped layer diffuse 
+to the p-doped layer and holes from the p-doped layer diffuse to the n-doped layer. This diffusion process leads to 
+the formation of a so-called space charge region (SCR) in the junction region. This process is illustrated in Figure \ref{fig:VorgaengeInnerhalbDesPn-Uebergangs}. The SCZ is a narrow 
+region around the pn junction in which positive ions from the n layer and negative ions from the p layer remain 
+after diffusion is complete. There are no free charge carriers in this zone, as the positive and negative charges 
+neutralise each other. This creates an electric field ($\vec{E}$) that generates a drift current and suppresses the diffusion of further 
+charge carriers. The space charge zone acts as a barrier layer and prevents current flow in the reverse direction.
+} 
 
 %\speech{
 %    Der pn-Übergang ist das zentrale Element von Halbleiterbauelementen wie Dioden und Transistoren. Er entsteht durch die Verbindung von zwei
@@ -841,9 +856,10 @@ Ladungsträgern unterdrückt. Die Raumladungszone wirkt wie eine Sperrschicht un
 %Abbildung 14
 \s{
     \begin{figure}[H]
+        \renewcommand{\figurename}{Figure}
         \centering
         \includesvg[width=0.7\textwidth]{Bilder/kap1/VorgaengeInnerhalbDesPN-Uebergangs}
-        \caption{\textbf{Vorgänge innerhalb des pn-Übergangs.} Drift und Diffusion von Ladungsträgern im Halbleiter, zurückbleibende Ionen in der RLZ. }
+        \caption{\textbf{Processes within the pn junction.} Drift and diffusion of charge carriers in the semiconductor, ions remaining in the RLZ.}
         \label{fig:VorgaengeInnerhalbDesPn-Uebergangs}
     \end{figure}
 }
@@ -875,12 +891,12 @@ Ladungsträgern unterdrückt. Die Raumladungszone wirkt wie eine Sperrschicht un
 %
 %Diese Prozesse sind die Grundlage für die Funktion von Dioden und anderen pn-Übergangs-basierten Halbleiterbauelementen.}
 
-\s{Wenn eine Spannung in Durchlassrichtung angelegt wird (siehe Abbildung \ref{fig:EinflussVonSpannungenAufPn-Uebergang} links), wird die RLZ verkleinert und der Übergang wird leitend. 
-Elektronen aus der n-dotierten Seite wandern zur p-dotierten Seite, während Löcher von der p-dotierten Seite zur n-dotierten Seite diffundieren. 
-Dadurch entsteht ein Stromfluss durch den pn-Übergang. Andersherum vergrößert eine Spannung entgegen der Durchlassrichtung die RLZ 
-(siehe Abbildung \ref{fig:EinflussVonSpannungenAufPn-Uebergang} rechts). Die freien Ladungsträger werden durch die Spannungsquelle ausgeglichen. Der pn-Übergang ist daher ein Schlüsselelement 
-in Halbleiterbauelementen, das die Richtung und Stärke des Stromflusses steuert. Seine Eigenschaften werden durch die Dotierungskonzentration, die Größe 
-der Raumladungszone und die angelegte Spannung beeinflusst.}
+\s{When a voltage is applied in the forward direction (see Figure \ref{fig:EinflussVonSpannungenAufPn-Uebergang} on the left), the RLZ is reduced and the junction becomes conductive.
+Electrons from the n-doped side migrate to the p-doped side, while holes diffuse from the p-doped side to the n-doped side. 
+This creates a current flow through the pn junction. Conversely, a voltage applied in the reverse direction increases the RLZ
+(see Figure \ref{fig:EinflussVonSpannungenAufPn-Uebergang} on the right). The free charge carriers are balanced by the voltage source. The pn junction is therefore a key element 
+in semiconductor devices that controls the direction and strength of the current flow. Its properties are influenced by the doping concentration, the size 
+of the space charge zone and the applied voltage.}
 
 %\speech{Wenn eine Spannung in Durchlassrichtung angelegt wird (siehe Abbildung 15 links), wird die RLZ verkleinert und der Übergang wird leitend. Elektronen aus der n-dotierten Seite wandern zur p-dotierten Seite, während Löcher von der p-dotierten
 %Seite zur n-dotierten Seite diffundieren. 
@@ -892,6 +908,7 @@ der Raumladungszone und die angelegte Spannung beeinflusst.}
 %Abbildung 15  
 \s{
     \begin{figure}[H]
+        \renewcommand{\figurename}{Figure}
         \begin{minipage}[c]{0.48\textwidth}
             \begin{figure}[H]
                 \centering
@@ -904,8 +921,8 @@ der Raumladungszone und die angelegte Spannung beeinflusst.}
                 \includesvg[width=0.6\textwidth]{Bilder/kap1/EinflussvonSpannungenaufpn-Uebergang/EinflussvonSpannungenaufpn-Uebergang_2}
             \end{figure}
         \end{minipage}
-        \caption{\textbf{Einfluss von Spannungen auf pn-Übergang.} Raumladungszone bei verschiedenen angelegten 
-        Spannungen. Links: Spannung in Durchlassrichtung. Rechts: Spannung in Sperrrichtung.}  
+        \caption{\textbf{Influence of voltages on pn junction.} Space charge zone at different applied 
+        voltages. Left: voltage in forward direction. Right: voltage in reverse direction.}  
         \label{fig:EinflussVonSpannungenAufPn-Uebergang}
     \end{figure}
 }
@@ -935,13 +952,13 @@ der Raumladungszone und die angelegte Spannung beeinflusst.}
 
 
 \s{
-    \begin{Merksatz}{}
+    \begin{Key point}{}
         \begin{itemize}
-            \item Der pn-Übergang kombiniert eine p- und n-dotierte Halbleiterschicht.
-            \item Im Übergangsbereich, Raumladungszone genannt, sind keine freien Ladungsträger.
-            \item In Durchlassrichtung wird die RLZ verkleinert, in Sperrrichtung wird diese vergrößert. 
+            \item The pn junction combines a p-doped and n-doped semiconductor layer.
+            \item There are no free charge carriers in the transition region, known as the space charge zone.
+            \item In the flow direction, the RLZ is reduced, and in the reverse direction, it is increased. 
             \end{itemize}
-    \end{Merksatz}
+    \end{Key point}
 }
 %\speech{
 %    Merke dir:

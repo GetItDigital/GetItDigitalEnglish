@@ -1,25 +1,25 @@
 \newvideofile{Potential}{Das elektrische Potential}
 
-\section{Das elektrische Potential}
+\section{The electrical potential}
 
 
 
 \begin{frame}
 	\ftx{Lernziele: Das elektrische Potential}
 
-	\begin{Lernziele}{Das elektrische Potential}
-        Die Studierenden können
+	\begin{Learning objectives}{Das elektrische Potential}
+        The Students can
         \begin{itemize}
-			\item Verschiebearbeit von Ladungen im elektrischen Feld berechnen
-			\item Äquipotentialflächen bestimmen und einzeichnen
-			\item elektrische Spannungen aus gegebenen Feldgrößen bestimmen
+			\item Calculate displacement work of charges in an electric field
+			\item Determine and draw equipotential surfaces
+			\item determine electrical voltages from given field sizes
 			
 			
 	%		\item die elektrische Spannung aus anderen Feldgrößen errechnen 
 	%		\item Bestimmung des Zusammenhanges zwischen Ladung, elektrischer Flussdichte, Feldstärke und Permittivität im 
 	%		Homogenfeld
         \end{itemize}
-    \end{Lernziele}
+    \end{Learning objectives}
 	\speech{lernziele_potential}{1}{In diesem Video werden wir uns anschauen, was es heißt, Arbeit in einem elektrischen Feld zu verrichten, und werden daraufhin das elektrische Potential einführen.
 	Ihr solltet also lernen, wie man die Verschiebearbeit von Ladungen im elektrischen Feld berechnet, wie man Äquipotentialflächen bestimmt, und wie sich letztendlich eine 
 	elektrische Spannung aus gegebenen Feldgrößen ermitteln lässt.}
@@ -30,7 +30,7 @@
 
 
 
-\subsection{Arbeit im elektrischen Feld}
+\subsection{Work in an electric field}
 
 
 
@@ -42,47 +42,49 @@
 
 	\s{
 
-	Befindet sich eine Ladung innerhalb eines elektrischen Feldes, so wird eine Kraft 
-	auf sie ausgeübt. Wird die Ladung nun innerhalb des Feldes bewegt, muss eine Arbeit verrichtet werden.
-	Analog ist hier das Gravitationsfeld zu sehen, bei dem eine Arbeit verrichtet werden muss, wenn eine Masse angehoben wird,
-	also die potentielle Energie des Objektes erhöht wird.
-	Dieser Abschnitt ist als kurzer Vorgriff auf Modul 2 \textit{Energie und Leistung} zu sehen, in welchem
-	 die elektrische Arbeit genau definiert wird.
+	If a charge is located within an electric field, a force is exerted on it.
+	If the charge is then moved within the field, work must be done.
+	The gravitational field can be viewed analogously here, in that work must be done when a mass is lifted,
+	i.e. the potential energy of the object is increased.
+    
+	This section should be seen as a brief preview of Module 2 \textit{Energy and Power}, in which
+    electrical work is defined precisely.
+	The sign of the work done depends on whether the work is done on the system under consideration (here: potential energy of the test charge $Q$ in the electric field $\vec{E}$)
+    
+	or to the generator of this work. 
+    This script refers to the generator. If the generator has to perform work to increase the potential energy of the system, the work done is considered negative.
+	If work is released by the system, i.e. the potential energy of the sample charge decreases, the work is positive.
 
-	 
-	Das Vorzeichen einer verrichteten Arbeit ist abhängig davon, ob die Arbeit auf das betrachtete System (hier: Potentielle Energie der Probeladung $Q$ im elektrischen Feld $\vec{E}$)
-	oder auf den Erzeuger dieser Arbei bezogen wird. 
-	In diesem Skript wird sich auf den Erzeuger bezogen. Muss dieser eine Arbeit verrichten, um die potentielle Energie des Systems zu erhöhen, ist die verrichtete Arbeit als negativ anzusehen.
-	Wird eine Arbeit vom System freigesetzt, sprich die potentielle Energie der Prodeladung sinkt, ist die Arbeit positiv.
 
 
+	Physically speaking, the work is the product of the force required to move the charge 
+    multiplied by the distance travelled. Using the knowledge from 
+    Section 4.1 that the electric field strength is the quotient of the force on a charge per charge (see equation \ref{eq:e_field}),
+    the work required to move the charge can be determined.
 
-	Physikalisch gesehen ist die Arbeit das Produkt aus der Kraft, die benötigt wird, um die Ladung 
-	zu bewegen, multipliziert mit der zurückgelegten Wegstrecke. Mit der Erkenntnis aus 
-	Kapitel 4.1, dass die elektrische Feldstärke der Quotient aus der Kraft auf eine Ladung pro Ladung ist
-	 (siehe Gleichung \ref{eq:e_feld}),
-	lässt sich die zum Bewegen der Ladung benötigte Arbeit ermitteln.
+    Below, we will calculate the work $W$ released by the positive test charge $Q$ from Figure \ref{fig:arbeitefeld}
+	when it moves along the field lines in the direction of the negatively charged conductor plate.
 
-	Nachfolgend soll berechnet werden, welche Arbeit $W$ bei der positiven Probeladung $Q$ aus Abbildung \ref{fig:arbeitefeld} freigesetzt wird,
-	wenn sie sich entlang der Feldlinien in Richtung der negativ geladenen Leiterplatte bewegt.
 
 	\begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\includesvg[width=0.5\textwidth]{homogenfeld_w}
-		\caption{Probeladung $Q$ in einem elektrischen Homogenfeld $\vec{E}$}
+		\caption{Test charge $Q$ in an electric homogeneous field $\vec{E}$}
 		\label{fig:arbeitefeld}
 	\end{figure}
 
 
 	
-	Die Verlauf der elektrischen Feldstärke sowie Richtung von $\vec{E}$ gegenüber dem Weg $x$ lässt sich wie in Abbildung \ref{fig:evsx} gezeigt darstellen.
+	The course of the electric field strength and direction of $\vec{E}$ relative to the path $x$ can be represented as shown in Figure \ref{fig:evsx}.
 
 
 
 	\begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\includesvg[width=0.5\textwidth]{homogenfeld_elektr_arbeit}
-		\caption{Feldstärke $E(x)$ im betrachteten Aufbau aus Abbildung \ref{fig:arbeitefeld}}
+		\caption{Field strength $E(x)$ in the structure shown in Figure \ref{fig:arbeitefeld}}
 		\label{fig:evsx}
 	\end{figure}
 
@@ -93,15 +95,15 @@
 	W = \int_{d}^{0}  \vec{F} \, d \vec{x} 
 \end{equation*}
 
-Da die Richtung des elektrischen Feldes $\vec{E}$ der Raumrichtung $x$ 
-entgegengesetzt ist, führt ein Eliminieren der Vektorpfeile zu einem negativen Vorzeichen vor dem Integral.
-Durch Einsetzen der Kraft $F$ in Gleichung \ref{eq:e_feld} ergibt sich:
+Since the direction of the electric field $\vec{E}$ is opposite to the spatial direction $x$,
+eliminating the vector arrows results in a negative sign in front of the integral.
+Substituting the force $F$ into equation \ref{eq:e_feld} yields:
 
 \begin{equation*}
 	W = - Q \int_{d}^{0} E \cdot \mathrm{d}x 
 \end{equation*}
 
-Lösen des Integrals und Einsetzen der Integrationsgrenzen ergibt:
+Solving the integral and inserting the limits of integration yields:
 
 \begin{equation*}
 	 W = -Q \cdot E \, [x]_d^0 = -Q \cdot E (0-d) 
@@ -111,38 +113,37 @@ Lösen des Integrals und Einsetzen der Integrationsgrenzen ergibt:
 	 W = Q \cdot E \cdot d
 \end{equation*}
 
-Die Differenz der zu- oder abgeführten Arbeit einer Ladung im elektrischen Feld beträgt also:
+The difference between the work done or removed by a charge in an electric field is therefore:
 
 \begin{equation}
 	\Delta W = Q \cdot E \cdot \Delta x 
 \end{equation}
 
-\begin{bsp}{}{}
+\begin{expl}{}{}
 
-	Für die in Abbildung \ref{fig:arbeitefeld} dargestellte Probeladung soll erreichnet werden, wie viel Energie auf ihrem Weg vom
-    Startpunkt zur negativen Platte freigesetzt wird.\\
+	For the sample charge shown in Figure \ref{fig:arbeitefeld}, the aim is to determine how much energy is released on its way from the
+	starting point to the negative plate.\\
 \phantom{text}\\
 
-	Die Probeladung betrage $Q= 1 \mu \mathrm{C}$, der Abstand zur Platte betrage 0,1 m und das 
-	elektrische Feld sei $E= 200$ V/m.
+	The test charge is $Q= 1 \mu \mathrm{C}$, the distance to the plate is 0.1 m, and the 
+    electric field is $E= 200$ V/m.
 
-	Die Arbeit $W$ berechnet sich dann zu 
+	The work $W$ is then calculated as 
 
 	\begin{equation*}
 		W= Q \cdot E \cdot d = 1 \cdot 10^{-6} \mathrm{C} \cdot 200 \mathrm{V/m} \cdot 0,1 \mathrm{m} = 2 \cdot 10^{-5} \mathrm{J} 
 	\end{equation*}
-\end{bsp}
+\end{expl}
 
-Analog zu einem Objekt im Gravitationsfeld führt das elektrische Feld einer Ladung Energie zu.
-Dadurch wird diese beschleunigt, und die potentielle Energie wird in kinetische Energie
- umgewandelt.
+Similar to an object in a gravitational field, the electric field of a charge causes energy.
+This accelerates the charge, and the potential energy is converted into kinetic Energy.
 
 
- Es ist unmittelbar einsichtig, dass der Betrag der im elektrischen Feld
-gespeicherten und nutzbaren potentiellen Energie der Probeladung
-$Q$ vom Ort $x$ der Probeladung linear abhängig ist (siehe Abbildung \ref{fig:zusammenhangEA}). Verfügt die Probeladung
- bereits im Vorfeld über eine kinetische Energie, oder geht das elektrische Feld über den betrachteten Abschnitt hinaus,
- lässt sich die Gleichung um den zusätzlichen Term $W_0$ erweitern:
+It is immediately apparent that the amount of potential energy stored in the electric field
+and usable by the test charge
+$Q$ is linearly dependent on the location $x$ of the test charge (see Figure \ref{fig:zusammenhangEA}). If the test charge
+already has kinetic energy in advance, or if the electric field extends beyond the section under consideration,
+the equation can be expanded by the additional term $W_0$:
 
 
  \begin{equation}
@@ -152,30 +153,32 @@ $Q$ vom Ort $x$ der Probeladung linear abhängig ist (siehe Abbildung \ref{fig:z
 
 
  \begin{figure}[h!]
+	\renewcommand{\figurename}{Figure}
 	\centering
 	\includesvg[width=0.5\textwidth]{homogenfeld_elektr_arbeit2}
-	\caption{Linearer Zusammenhang zwischen dem Ort $x$ und der potentiellen Energie $W(x)$ der Probeladung.}
+	\caption{Linear relationship between the position $x$ and the potential energy $W(x)$ of the test charge.}
 	\label{fig:zusammenhangEA}
 \end{figure}
 
 
  
 
-Der Übergang zwischen der im elektrischen Feld gespeicherten potentiellen Energie in die kinetische Energie
-der Probeladung kann über das Schaubild in Abbildung \ref{fig:ubergang} dargestellt werden.
+The transition from the potential energy stored in the electric field to the kinetic energy
+of the sample charge can be illustrated using the diagram in Figure \ref{fig:ubergang}.
 
 \begin{figure}[h!]
+	\renewcommand{\figurename}{Figure}
 	\centering
 	\includesvg[width=0.5\textwidth]{energieumwandlung}
-	\caption{Übergang von potentieller Energie im elektrischen Feld zu potentieller Energie in der Probeladung}
+	\caption{Transition from potential energy in the electric field to potential energy in the test charge}
 	\label{fig:ubergang}
 \end{figure}
 
 
 
 
- Zur allgemeinen Beschreibung muss die technisch nutzbare Feldenergie unabhängig von der Probeladung $Q$ sein.
-Dazu wird die potentielle Energie auf ein Arbeitspotential normiert. 
+ For general description purposes, the technically usable field energy must be independent of the sample charge $Q$.
+ To this end, the potential energy is normalised to a working potential.
 
  \begin{equation*}
 	\frac{W(x)}{Q} =  E \cdot x + \frac{W_0}{Q}
@@ -418,17 +421,17 @@ Dazu wird die potenzielle Energie durch die Ladung Q geteilt, und auf ein allgem
 }
 \end{frame}
 
-\subsection{Definition des elektrischen Potentials}
+\subsection{Definition of electrical potential}
 \begin{frame}
 	\ftx{Definition des elektrischen Potentials}
 
 	\s{
 
-	Die potentielle Energie normiert auf die betrachtete Ladung Q ist das \textbf{elektrische Potential} $\varphi$
-	des elektrischen Feldes. Dieses ist für jeden Punkt im Raum unabhängig von weiteren Einflussfaktoren direkt bestimmbar.
-	 Das Potentialfeld ist im Gegensatz zum elektrischen Feld ein Skalarfeld. Das bedeutet, dass jedem Punkt im
-	Raum unabhängig von weiteren Einflussfaktoren ein eindeutiges elektrisches Potential zugeordnet werden kann, 
-	jedoch keine Richtung dieser Größe im Raum vorliegt.
+	The potential energy normalised to the charge Q under consideration is the \textbf{electric potential} $\varphi$
+    of the electric field. This can be determined directly for every point in space, independently of other influencing factors. 
+	In contrast to the electric field, the potential field is a scalar field. This means that a unique electric potential can be assigned to every point in
+    space independently of other influencing factors, 
+    but there is no direction for this quantity in space.
 
 	 \begin{equation}
 		\varphi = \frac{W}{Q}
@@ -439,9 +442,9 @@ Dazu wird die potenzielle Energie durch die Ladung Q geteilt, und auf ein allgem
 
 	
 
-	 Abbildung \ref{fig:potihomogen} zeigt ein elektrisches Homogenfeld, in welches die Potentiallinie eingezeichnet ist, auf welcher sich die
-	Ladung $Q$ gerade befindet. Mit zunehmender Entfernung von der positiven Platte in $x$-Richtung steigt das Potential 
-	 an, und kann wie folgt berechnet werden:
+	Figure \ref{fig:potihomogen} shows an electric homogeneous field in which the potential line on which the
+    charge $Q$ is currently located is plotted. As the distance from the positive plate increases in the $x$ direction, the potential rises 
+    and can be calculated as follows:
 
 	 \begin{equation}
 		\varphi(x) = E \cdot x + \varphi_0
@@ -450,60 +453,54 @@ Dazu wird die potenzielle Energie durch die Ladung Q geteilt, und auf ein allgem
 
 
 	 \begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\includesvg[width=0.5\textwidth]{potential_homogenfeld}
-		\caption{Elektrisches Homogenfeld mit eingezeichneter Potentiallinie $\varphi(x)$}
+		\caption{Electric homogeneous field with potential line plotted $\varphi(x)$}
 		\label{fig:potihomogen}
 	\end{figure}
 
 	
-	 Die Steigung des Potentials  ist durch die elektrische Feldstärke $\vec{E}$ bestimmt. 
-	 Das elektrische Potential $\varphi$ und die elektrische Feldstärke hängen durch den negativen Gradienten des Potentials 
-	 zusammen. Dieser Zusammenhang wird in Abbildung \ref{fig:potigraph} verdeutlicht. 
-	
-
-
-
+	 The gradient of the potential  is determined by the electric field strength $\vec{E}$. 
+     The electric potential $\varphi$ and the electric field strength are related by the negative gradient of the potential. 
+	 This relationship is illustrated in Figure \ref{fig:potigraph}.
  
 
+
 	 \begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\includesvg[width=0.5\textwidth]{homogenfeld_phi_graph}
-		\caption{Zusammenhang zwischen dem elektrischen Potential $\varphi$ und der elektrischen Feldstärke $E$ im Homogenfeld}
+		\caption{Relationship between the electric potential $\varphi$ and the electric field strength $E$ in a homogeneous field}
 		\label{fig:potigraph}
 	\end{figure}
 	
 
-	 Die Beziehung kann im Homogenfeld durch die folgende Gleichung ausgedrückt werden:
+	 The relationship can be expressed in a homogeneous field by the following equation:
 
 	 \begin{equation}
 		E = - \frac{\Delta \varphi}{\Delta x} 
 	 \end{equation}
 
-	 In inhomogenen, dreidimensionalen Feldern gilt die allgemeine Gleichung, bei der der Gradient von $\varphi$ in jede Raumrichtung errechnet wird: 
+	 In inhomogeneous, three-dimensional fields, the general equation applies, in which the gradient of $\varphi$ is calculated in every spatial direction: 
 
 	 \begin{equation}
 		E = - \mathrm{grad} \,\varphi (x,y,z)  = \left( \frac{\partial \varphi}{\partial x}, \frac{\partial \varphi}{\partial y}, \frac{\partial \varphi}{\partial z} \right)
 	 \end{equation}
 
 
-	 Um das elektrische Potential an einem Punkt vollständig zu beschreiben, muss wie in Gleichung \ref{eq:potential} 
-	 aufgeführt als notwendige Randbedingung ein Bezugspotential $\varphi_0$ gewählt werden, welches eindeutig definiert ist. 
-	 Prinzipiell ist dieses Potential beliebig wählbar, in der Regel wird jedoch eine Bezugselektrode gewählt, für die das Potential
-	 gleich null gesetzt wird. Im Fall des in Abbildung \ref{fig:potihomogen} gezeigten Aufbaus wäre dies:
+	 In order to fully describe the electric potential at a point, as shown in equation \ref{eq:potential}, 
+     a reference potential $\varphi_0$ must be selected as a necessary boundary condition, which is clearly defined. 
+     In principle, this potential can be selected arbitrarily, but as a rule, a reference electrode is selected for which the potential
+     is set to zero. In the case of the setup shown in Figure \ref{fig:potihomogen}, this would be:
 
-	 
 
 	 \begin{equation*}
 		\varphi_0 = \varphi(x=0) = 0
 	 \end{equation*}
 
-	 
-
-
-
-
 	}
+
 	\b{
 	\begin{columns}
        \column[c]{0.5\textwidth}
@@ -582,51 +579,44 @@ Dazu wird die potenzielle Energie durch die Ladung Q geteilt, und auf ein allgem
 \end{frame}			
 		
 
-		
-
-
-
-
-
 \begin{frame}
-	\ftb{Zusammenhang zwischen Arbeit und Potential}
+	\ftb{Connection between work and potential}
 	
-	\s{Im homogenen elektrischen Feld ist das Potential $\varphi$ wie Formel \ref{eq:potential} zeigt
-	ausschließlich von der Entfernung $x$ zur Bezugselektrode abhängig.
-	Dies bedeutet, dass alle Flächen, die senkrecht zum Feld stehen, ein konstantes Potential haben. 
-	Solche Flächen werden als Äquipotentialflächen bezeichnet, wie sie in Abbildung \ref{fig:potentialdifferenz} mit Hilfe der grünen Linien dargestellt sind.
-	Es muss keine Arbeit verrichtet werden, um eine Ladung entlang einer solchen Fläche zu bewegen.
+	\s{In a homogeneous electric field, the potential $\varphi$ is, as shown in formula \ref{eq:potential},
+	exclusively dependent on the distance $x$ to the reference electrode.
+	This means that all surfaces perpendicular to the field have a constant potential. 
+    Such surfaces are called equipotential surfaces, as shown in Figure \ref{fig:potentialdifferenz} by the green lines.
+	No work needs to be done to move a charge along such a surface.
 
 
 	\begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\includesvg[width=0.5\textwidth]{potentialdifferenz}
-		\caption{Elektrisches Homogenfeld, in dem sich eine Probeladung $Q$ von der Äquipotentiallinie $\varphi(x_1)$ auf 
-	die Äquipotentiallinie $\varphi(x_2)$ bewegt}
+		\caption{Electric homogeneous field in which a test charge $Q$ moves from the equipotential line $\varphi(x_1)$ to 
+    	the equipotential line $\varphi(x_2)$.}
 		\label{fig:potentialdifferenz}
 	\end{figure}
 
 
-	Die potentielle Energie $W_{12}$ einer Probeladung $Q$, die durch das elektrische Feld von einem Punkt $x_1$ nach $x_2$
-	bewegt wird, kann durch die Potentialdifferenz zwischen diesen Punkten beschrieben werden. Die Reihenfolge der Indizes der
-	 Arbeit $W_{12}$ beschreibt dabei die Bewegungsrichtung.
+	The potential energy $W_{12}$ of a test charge $Q$ moved by the electric field from point $x_1$ to $x_2$
+    can be described by the potential difference between these points. The order of the indices of the
+    work $W_{12}$ describes the direction of movement.
+	
+	If a test charge is moved from the equipotential surface $\varphi(x_1)$ to $\varphi(x_2)$ as shown in Figure \ref{fig:potentialdifferenz},
+    it absorbs the following energy:
 
-	Wird eine Probeladung wie in Abbildung \ref{fig:potentialdifferenz} gezeigt von der Äquipotentialfläche $\varphi(x_1)$ nach $\varphi(x_2)$ bewegt,
-	nimmt sie dabei die folgende Energie auf:
 
 	\begin{equation*}
 		W_{12} = Q \cdot (\varphi_1 - \varphi_2)
 	\end{equation*}
 
-
-
-
-	
 	
 	\begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\includesvg[width=0.5\textwidth]{phi_diff_graph}
-		\caption{Darstellung des Potentialverlaufs $\varphi(x)$ innerhalb des elektrischen Homogenfeldes}
+		\caption{Representation of the potential curve $\varphi(x)$ within the electric homogeneous field}
 		\label{fig:potentialgraph}
 	\end{figure}
 
@@ -634,32 +624,32 @@ Dazu wird die potenzielle Energie durch die Ladung Q geteilt, und auf ein allgem
 
 
 
-	Bei der in Abbildung \ref{fig:potentialgraph} getroffenen Wahl der Bezugsfläche von $\varphi_2 = 0$ ergibt sich für die zugeführte Arbeit 
-	das Ergebnis:
+	With the choice of reference surface $\varphi_2 = 0$ made in Figure \ref{fig:potentialgraph}, the result for the work supplied is:
 
 	\begin{equation*}
 		W_{12} = Q \cdot (\varphi_1 - 0) = Q \cdot \varphi_1
 	\end{equation*}
 
 
-	Mit Hilfe des nachfolgenden Gedankenexperimentes lässt sich eine weitere zentrale Eigenschaft des elektrischen Feldes aufzeigen.
-
-	Wie in Abbildung \ref{fig:wirbelfrei} gezeigt wird eine Probeladung $Q$ in einem Homogenfeld 
-	zwischen den Punkten 1-4 in einem geschlossenem Umlauf bewegt. Die bei diesem Vorgang zu verrichtenden Teilenergien werden betrachtet.
-	So wird bei einer Bewegung vom Punkt 1 zu Punkt 2 eine Arbeit von $W_{12} = Q \cdot (\varphi_1 - \varphi_2)$ verrichtet, 
-	und von Punkt 4 zu Punkt 1 die Energie $W_{41} = Q \cdot (\varphi_4 - \varphi_1)$.
+	The following thought experiment illustrates another key property of the electric field.
+	
+	As shown in Figure \ref{fig:wirbelfrei}, a test charge $Q$ is moved in a closed circuit between points 1-4 in a homogeneous field.
+ 	The partial energies required for this process are considered.
+	Thus, when moving from point 1 to point 2, work of $W_{12} = Q \cdot (\varphi_1 - \varphi_2)$ is performed, 
+    and from point 4 to point 1, energy $W_{41} = Q \cdot (\varphi_4 - \varphi_1)$ is performed.
 
 
 	\begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\includesvg[width=0.5\textwidth]{wirbelfrei}
-		\caption{Darstellung des Potentialverlaufs $\varphi(x)$ innerhalb des elektrischen Homogenfeldes}
+		\caption{Representation of the potential profile $\varphi(x)$ within the electric homogeneous field}
 		\label{fig:wirbelfrei}
 	\end{figure}
 
 
 
-	Die für einen gesamten Umlauf benötigte Energie ergibt sich durch die Aufsummierung der vier Teilenergien: 
+	The energy required for a complete cycle is calculated by adding up the four partial energies:
 
 	
 	\begin{equation*}
@@ -669,7 +659,7 @@ Dazu wird die potenzielle Energie durch die Ladung Q geteilt, und auf ein allgem
 		\end{split}
 	\end{equation*}
 
-	Da die Ladung $Q$ in allen Termen identisch ist, ergibt sich durch das Ausklammern von $Q$:
+	Since the charge $Q$ is identical in all terms, factoring out $Q$ yields:
 
 
 	\begin{equation*}
@@ -681,23 +671,23 @@ Dazu wird die potenzielle Energie durch die Ladung Q geteilt, und auf ein allgem
 		\rightarrow W_\mathrm{ges} = Q \cdot 0 = 0
 	\end{equation*}
 
-	Für einen geschlossenen Umlauf einer Probeladung im Homogenfeld ist also keine Energie erforderlich,
-	 da sie ausschließlich vom Anfangs- und Endpunkt der Bewegung, nicht jedoch vom gewählten Weg abhängig ist. 
+	No energy is required for a closed cycle of a test charge in a homogeneous field,
+    as it depends solely on the starting and ending points of the movement, but not on the chosen path. 
 
-	Folglich wird beim elektrischen Feld auch von einem \textbf{wirbelfreien Quellenfeld} gesprochen.
-	Dies bedeutet, dass die Feldlinien keine geschlossenen Linien bilden, sondern jeweils einen Anfang (auf positiven Ladungen)
-	und einen Endpunkt (auf negativen Ladungen) haben.
+	Consequently, the electric field is also referred to as a \textbf{vortex-free source field}.
+	This means that the field lines do not form closed lines, but each have a starting point (on positive charges)
+	and an end point (on negative charges).
+		
+	This observation applies not only to homogeneous fields, but to all electrostatic fields.
+
+
+
 	
-	Diese Betrachtung gilt nicht nur für das Homogenfeld, sondern trifft auf jedes elektrostatische Feld zu.
-
-
-
-	
 	
 
 
-	\begin{bsp}{Arbeit im Radialfeld}{}
-		In folgendem Beispiel soll die Probeladung $Q_1$ vom Abstand $r_1$ auf den Abstand $r_2$ an die Feste Ladung Q herangeführt werden.
+	\begin{expl}{Work in the radial field}{}
+		In the following example, the test charge $Q_1$ is to be moved from a distance $r_1$ to a distance $r_2$ to the fixed charge Q.
 
 		\begin{center}
 		\includesvg[width=0.5\textwidth]{radialfeld}	
@@ -707,7 +697,7 @@ Dazu wird die potenzielle Energie durch die Ladung Q geteilt, und auf ein allgem
 		
 		
 
-		$Q$ betrage 1 C, $Q_1$ 1 mC. Welche Arbeit ist erforderlich, wenn $r_1 = 1$ m und $r_2 = 50$ cm seien?
+		$Q$ is 1 C, $Q_1$ is 1 mC. What work is required if $r_1 = 1$ m and $r_2 = 50$ cm??
 
 		\[
 W_{12} = Q_1 \int_{r_1}^{r_2} \vec{E} \cdot d\vec{r}
@@ -718,25 +708,26 @@ W_{12} = Q_1 \int_{r_1}^{r_2} \left( \frac{Q}{4 \pi \varepsilon_0 r^2} \right) d
 \[
 W_{12} = Q_1 \cdot \frac{Q}{4 \pi \varepsilon_0} \int_{r_1}^{r_2} \frac{1}{r^2} dr
 \]
-Die Stammfunktion von $\frac{1}{r^2}$ beträgt $-\frac{1}{r}$.
+The primitive function of $\frac{1}{r^2}$ is $-\frac{1}{r}$.
 \[
 W_{12} = Q_1 \cdot \frac{Q}{4 \pi \varepsilon_0} \left( -\frac{1}{r} \bigg|_{r_1}^{r_2} \right) = Q_1 \cdot \frac{Q}{4 \pi \varepsilon_0} \left( -\frac{1}{r_2} + \frac{1}{r_1} \right)
 \]
-wobei $\frac{Q}{4 \pi \varepsilon_0} \frac{1}{r}$ dem Potential $\varphi(r)$ entspricht.
+where $\frac{Q}{4 \pi \varepsilon_0} \frac{1}{r}$ corresponds to the potential $\varphi(r)$.
 
 \[
 W_{12} = Q_1 \cdot (\varphi(r_1) - \varphi(r_2))
 \]
 
-Einsetzen der gegebenen Werte:
+Inserting the given values:
 \[
 W_{12} = (1 \cdot 10^{-3} \, \text{C}) \cdot \frac{1 \, \text{C}}{4 \pi \varepsilon_0} \left( \frac{1}{1 \, \text{m}} - \frac{1}{0{,}5 \, \text{m}} \right)
 \]
 \[
 W_{12} = -8,98755 \times 10^{6} \, \text{J}
 \]
-Folglich müssen etwa 8,99 Megajoule aufgewendet werden, um die Ladung $Q_1$ zu verschieben. 
-	\end{bsp}	
+Consequently, approximately 8.99 megajoules must be expended to move the charge $Q_1$.
+ 
+	\end{expl}	
 
 
 	}
@@ -899,14 +890,14 @@ Diese Betrachtung gilt nicht nur für das Homogenfeld, sondern ist für jedes be
 
 
 \begin{frame}
-	\ftb{Definition der elektrischen Spannung}
+	\ftb{Definition of electrical voltage}
 
 	\s{
 
-	Die aus dem elektrischen Feld für einen technischen Prozess nutzbare
-	Energie ist durch die  \textbf{Potentialdifferenz} zwischen Anfangs- und
-	Endpunkt des Weges gegeben.  Durch ihre fundamentale Bedeutung in der Elektrotechnik wird sie mit einem
-	Namen und Formelbuchstaben bedacht, und wird als \textbf{elektrische Spannung} $U$ bezeichnet: 
+	The energy that can be utilised from the electric field for a technical process
+    is given by the  \textbf{potential difference} between the starting point and
+    end point of the path.  Due to its fundamental importance in electrical engineering, it is given a
+    name and formula letter, and is referred to as \textbf{electrical voltage} $U$: 
 
 	\begin{equation}
 		U_{12} = \varphi_1 - \varphi_2
@@ -917,39 +908,41 @@ Diese Betrachtung gilt nicht nur für das Homogenfeld, sondern ist für jedes be
 		[U] = \text{V} \ (\text{Volt})
 	 \end{equation*}
 
-	 Durch die Reihenfolge der Indizes wird - analog zur Potentialdifferenz - die Zählrichtung des Spannungspfeiles angegeben.
-	 In Abbildung \ref{fig:defispannung} beschreibt die Spannung $U_{12}$ also die Potentialdifferenz zwischen den Potientialen $\varphi_1$ und $\varphi_2$.
-	 Durch die Eigenschaften der Äquipotentialflächen ist es hierbei vollkommen unerheblich, von welchem Punkt von $\varphi_1$ gestartet wird
-	 und welcher Punkt auf $\varphi_2$ das Ziel darstellt. Auch der Pfad, welcher zwischen den Punkten gewählt wird, ist für die Spannung zwischen
-	 den Punkten unerheblich.
+	The order of the indices indicates the direction of the voltage arrow, analogous to the potential difference.
+	In Figure \ref{fig:defispannung}, the voltage $U_{12}$ describes the potential difference between the potentials $\varphi_1$ and $\varphi_2$.
+	Due to the properties of equipotential surfaces, it is completely irrelevant which point of $\varphi_1$ is started from
+    and which point on $\varphi_2$ is the destination. The path chosen between the points is also irrelevant for the voltage between
+    the points.
 	 
 
 	 \begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\includesvg[width=0.3\textwidth]{spannung}
-		\caption{Spannung $U_{12}$ zwischen den beiden Äquipotentiallinien $\varphi_1$ und $\varphi_2$}
+		\caption{Voltage $U_{12}$ between the two equipotential lines $\varphi_1$ und $\varphi_2$}
 		\label{fig:defispannung}
 	\end{figure}
 
 	 
 
-	 Der Zusammenhang zwischen der elektrischen Feldstärke und dem Potential ist bereits aus Gleichung \ref{eq:potential} 
-	 bekannt und wird (bei einem Bezugspotential von $\varphi_0 = 0)$ mit $\varphi (x) = E \cdot x$ angegeben.
+	 The relationship between the electric field strength and the potential is already known from equation \ref{eq:potential}
+	 and is given (for a reference potential of $\varphi_0 = 0)$ by $\varphi (x) = E \cdot x$.
 	 
-	 Eingesetzt in die Definition der Spannung (Gleichung \ref{eq:spannung}) ergibt sich:
+	 Inserted into the definition of voltage (equation \ref{eq:spannung}), this results in:
 
 	 \begin{equation*}
 		 U = \varphi(x= d) - \varphi(x= 0) = E \cdot d - E \cdot 0
 	 \end{equation*}
 
-	Die elektrische Spannung $U$ kann in einem wie in Abbildung \ref{fig:spannunghomogen} dargestellten Homogenfeld wie folgt berechnet werden,
-	  sofern die Wegstrecke $d$ parallel zu den Feldlinien liegt:
+	The electrical voltage $U$ can be calculated in a homogeneous field as shown in Figure \ref{fig:spannunghomogen} as follows,
+	provided that the distance $d$ is parallel to the field lines:
 
 	 
 	  \begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\includesvg[width=0.4\textwidth]{spannung_homogenfeld}
-		\caption{Elektrische Spannung $U$ im Homogenfeld}
+		\caption{Electrical voltage $U$ in a homogeneous field}
 		\label{fig:spannunghomogen}
 	\end{figure}
 
@@ -962,33 +955,34 @@ Diese Betrachtung gilt nicht nur für das Homogenfeld, sondern ist für jedes be
 	\end{equation}
 
 	
-	Alternativ kann aus einer gegebenen Spannung $U$ bei bekannter Wegstrecke $d$ auch die elektrische Feldstärke berechnet werden:
+	Alternatively, the electric field strength can also be calculated from a given voltage $U$ and a known distance $d$:
 	
 	\begin{equation}
 		E = \frac{U}{d}
 	   \end{equation}
 
-	In Abbildung \ref{fig:spannunggraph} lässt sich erkennen, dass die Spannung nichts anderes als die über die Wegstrecke $d$ aufintegrierte Feldstärke $E$ ist.
+	Figure \ref{fig:spannunggraph} shows that the voltage is nothing more than the integrated field strength $E$ over the distance $d$.
 	
 
 	\begin{figure}[h!]
+		\renewcommand{\figurename}{Figure}
 		\centering
 		\includesvg[width=0.4\textwidth]{homogenfeld_spannung_graph}
-		\caption{Zusammenhang zwischen elektrischer Spannung $U$ und elektrischem Homogenfeld $E$}
+		\caption{Relationship between electrical voltage $U$ and electrical homogeneous field $E$}
 		\label{fig:spannunggraph}
 	\end{figure}
 
 
 
-	Während dieses Integral im Homogenfeld durch eine Multiplikation von elektrischem Feld $E$ und Wegstrecke $d$ ermittelt
-	werden kann, ist dies bei inhomogenen Feldern nur durch das Lösen des Integrals möglich:
+	While this integral can be determined in a homogeneous field by multiplying the electric field $E$ and the distance $d$,
+ 	in inhomogeneous fields this is only possible by solving the integral:
 	
 	\begin{equation}
 		U_{12} =\int_{1}^{2} \vec{E} \cdot d \vec{s}
 	\end{equation}
 
-	Zu beachten ist hierbei, dass es sich bei dem Produkt $\vec{E} \cdot \mathrm{d} \vec{s}$ um Vektoren handelt. Zeigen sie in die
-	gleiche Richtung, dürfen die Vektorpfeile eliminiert werden, andernfalls muss das Skalarprodukt verwendet werden: 
+	It should be noted here that the product $\vec{E} \cdot \mathrm{d} \vec{s}$ consists of vectors. If they point in the
+    same direction, the vector arrows can be eliminated; otherwise, the scalar product must be used:
 
 
 		\begin{equation*}
@@ -997,9 +991,10 @@ Diese Betrachtung gilt nicht nur für das Homogenfeld, sondern ist für jedes be
 
 
 		\begin{figure}[h!]
+			\renewcommand{\figurename}{Figure}
 			\centering
 			\includesvg[width=0.5\textwidth]{skalarprodukt}
-			\caption{Skalarprodukt aus Feldstärke $\vec{E}$ und Wegstück d$\vec{s}$}
+			\caption{Scalar product of field strength $\vec{E}$ and path segment d$\vec{s}$}
 			\label{fig:skalarprodukt}
 		\end{figure}
 	

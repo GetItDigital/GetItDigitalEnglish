@@ -6,3 +6,17 @@ Videotiteltext.tex
 */TTS/*.txt
 .vscode/
 *\*.*
+* aux
+* log
+* fls
+* nav
+* out
+* snm
+* gz
+* toc
+* idx
+* ind
+* ilg
+* xml
+* fdb_latexmk
+* bbl

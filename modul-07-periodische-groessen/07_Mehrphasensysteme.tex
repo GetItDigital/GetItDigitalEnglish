@@ -17,10 +17,10 @@
         \begin{itemize}
             \item understand the functions of shunt, counter and zero systems.
             \item can calculate the three-phase power of the various systems.
-            \item can create equivalent circuit diagrams for symmetrical sources, loads and lines. 
+            \item can create equivalent circuit diagrams for symmetrical sources, loads and lines.
         \end{itemize}
     \end{Learning objectives}
-   
+
 \end{frame}
 
 
@@ -30,7 +30,7 @@
     \ftx{Methode der symmetrischen Komponenten}
     \b{
         Um eine solche Transformation sinnvoll einzusetzen, sollten gewisse Forderungen erfüllt werden:
-        
+
     \begin{itemize}
         \item [1.]Die Berechnung im transformierten System müssen einfacher sein als im Originalsystem
         \item [2.]Die Symmetrien der realen Netze und Betriebsmittel müssen vorteilhaft genutzt werden
@@ -50,9 +50,9 @@
     \s{
         The fundamental goal of the transformation is to convert an asymmetrical system of n vectors into n systems with a symmetrical vector arrangement.
         For a three-phase system, this means that three systems must be created.
-        Each conductor, i.e. $L_1$, $L_2$ and $L_3$, must be replaced by a system with a symmetrical vector arrangement.         
+        Each conductor, i.e. $L_1$, $L_2$ and $L_3$, must be replaced by a system with a symmetrical vector arrangement.
         The transformation rule is based on the already known rotation operator $\underline{a}$ and $\underline{a}^2$ (see equation \ref{Drehoperator}).
-        The symmetry conditions for the current in the respective conductors can be established as follows (it should be noted here that everything that applies to the current also applies to the voltage!):        
+        The symmetry conditions for the current in the respective conductors can be established as follows (it should be noted here that everything that applies to the current also applies to the voltage!):
         \begin{eqa}
             \underline{I}_{\mathrm{L1}}&=\underline{I}_{0}+\underline{I}_{1}+\underline{I}_{2} \nonumber \\
             \underline{I}_{\mathrm{L2}}&=\underline{I}_{0}+\underline{a}^2\cdot \underline{I}_{1}+\underline{a}\cdot\underline{I}_{2} \label{ZerlegungL2} \\
@@ -60,7 +60,7 @@
         \end{eqa}
 
         The indices on the right-hand side of the equations represent the three systems: positive system (1), negative system (2) and zero system (0).
-        If we look at the values of the positive system, the rotation operators result in clockwise phase currents.          
+        If we look at the values of the positive system, the rotation operators result in clockwise phase currents.
         In the counter-system, the transformed phase currents are arranged in a left-rotating manner, and in the zero system, all components are aligned in the same direction.
         In principle, the zero system only occurs when the sum of all currents in the output system is not equal to zero.
     }
@@ -74,7 +74,7 @@
         \begin{eqa}
             \underline{I}_{\mathrm{L1}}&=\underline{I}_{0}+\underline{I}_{1}+\underline{I}_{2} \\
             \underline{I}_{\mathrm{L2}}&=\underline{I}_{0}+\underline{a}^2\cdot \underline{I}_{1}+\underline{a}\cdot\underline{I}_{2} \\
-            \underline{I}_{\mathrm{L3}}&=\underline{I}_{0}+\underline{a}\cdot\underline{I}_{1}+\underline{a}^2\cdot\underline{I}_{2} 
+            \underline{I}_{\mathrm{L3}}&=\underline{I}_{0}+\underline{a}\cdot\underline{I}_{1}+\underline{a}^2\cdot\underline{I}_{2}
         \end{eqa}
         Hier ist anzumerken, dass alles was für den Strom gilt an Zusammenhängen auch für die Spannung gilt!
     }
@@ -87,7 +87,7 @@
     \ftx{Grundlagen - Zerlegungsgleichungen}
     \s{
     In the next step, the so-called decomposition equations (equations \ref{ZerlegungL2}) are rearranged to show the ratio of the current of the zero-sequence system to the conductor currents of the original system.
-    
+
     For the current in the zero-sequence system, the following applies by addition:
 
 
@@ -97,7 +97,7 @@
         \Leftrightarrow      \underline{I}_0&=\frac{1}{3}\cdot(\underline{I}_{\mathrm{L1}}+\underline{I}_{\mathrm{L2}}+\underline{I}_{\mathrm{L3}})
     \end{eqa}
 
-    
+
     To determine the current of the secondary system, the equations are first multiplied so that the pre-factors before the secondary current add up to 1.
     hen the decomposition equations are added together again.
 
@@ -106,7 +106,7 @@
     \begin{eqa}
         \underline{I}_{\mathrm{L1}}&=\underline{I}_{0}+\underline{I}_{1}+\underline{I}_{2} \\
         \underline{a}\cdot\underline{I}_{\mathrm{L2}}&=\underline{a}\cdot\underline{I}_{0}+\underline{a}^3\cdot \underline{I}_{1}+\underline{a}^2\cdot\underline{I}_{2} \\
-        \underline{a}^2\cdot\underline{I}_{\mathrm{L3}}&=\underline{a}^2\cdot\underline{I}_{0}+\underline{a}^3\cdot\underline{I}_{1}+\underline{a}\cdot\underline{I}_{2}   
+        \underline{a}^2\cdot\underline{I}_{\mathrm{L3}}&=\underline{a}^2\cdot\underline{I}_{0}+\underline{a}^3\cdot\underline{I}_{1}+\underline{a}\cdot\underline{I}_{2}
     \end{eqa}
 
     \begin{eqa}
@@ -121,7 +121,7 @@
     \begin{eqa}
         \underline{I}_{\mathrm{\mathrm{L1}}}&=\underline{I}_{0}+\underline{I}_{1}+\underline{I}_{2} \\
         \underline{a}^2\cdot\underline{I}_{\mathrm{\mathrm{L2}}}&=\underline{a}^2\cdot\underline{I}_{0}+\underline{a}^4\cdot \underline{I}_{1}+\underline{a}^3\cdot\underline{I}_{2} \\
-        \underline{a}\cdot\underline{I}_{\mathrm{\mathrm{L3}}}&=\underline{a}\cdot\underline{I}_{0}+\underline{a}^2\cdot\underline{I}_{1}+\underline{a}^3\cdot\underline{I}_{2}   
+        \underline{a}\cdot\underline{I}_{\mathrm{\mathrm{L3}}}&=\underline{a}\cdot\underline{I}_{0}+\underline{a}^2\cdot\underline{I}_{1}+\underline{a}^3\cdot\underline{I}_{2}
     \end{eqa}
 
     \begin{eqa}
@@ -140,7 +140,7 @@
 
     If you look closely at these three equations, you will see that conductor L1 does not have a rotation operator as a leading factor in any of the three equations.
     Therefore, conductor L1 should be selected as the reference conductor.
-    This means that this is the conductor through which an imbalance occurs in the original system (e.g. due to a single-pole earth fault).  
+    This means that this is the conductor through which an imbalance occurs in the original system (e.g. due to a single-pole earth fault).
     The remaining symmetries in the original system can then be more easily considered via the other conductors
     Of course, any conductor can be taken as the reference conductor, since each conductor can be freely assigned an index (L1, L2, L3).
     However, this allows the initial requirement to be met: the symmetries of the real networks and equipment must be used to advantage!    }
@@ -166,17 +166,17 @@
     \begin{itemize}
                 \item Um die addierten Ströme für den Strom des Mitsystems umzustellen, muss ein Zwischenschritt gemacht werden
                 \item Es soll zuerst der Drehoperator aus dem Vorfaktor gerechnet werden, indem mit dem passend Drehoperatoren multipliziert wird:
-    \end{itemize}            
+    \end{itemize}
     \begin{eqa}
         \underline{I}_{\mathrm{L1}}&=\underline{I}_{0}+\underline{I}_{1}+\underline{I}_{2} \\
         \underline{a}\cdot\underline{I}_{\mathrm{L2}}&=\underline{a}\cdot\underline{I}_{0}+\underline{a}^3\cdot \underline{I}_{1}+\underline{a}^2\cdot\underline{I}_{2} \\
-        \underline{a}^2\cdot\underline{I}_{\mathrm{L3}}&=\underline{a}^2\cdot\underline{I}_{0}+\underline{a}^3\cdot\underline{I}_{1}+\underline{a}\cdot\underline{I}_{2}   
+        \underline{a}^2\cdot\underline{I}_{\mathrm{L3}}&=\underline{a}^2\cdot\underline{I}_{0}+\underline{a}^3\cdot\underline{I}_{1}+\underline{a}\cdot\underline{I}_{2}
     \end{eqa}
     \begin{eqa}
         \underline{I}_{\mathrm{L1}}+\underline{a}\cdot\underline{I}_{\mathrm{L2}}+\underline{a}^2\cdot\underline{I}_{\mathrm{L3}}&=\underline{I}_{0}\cdot(1+\underline{a}+\underline{a}^2)+3\cdot\underline{I}_{1}+\underline{I}_{2}\cdot(1+\underline{a}^2+\underline{a})  \\
         &=3\cdot\underline{I}_{1}  \notag\\
         \Leftrightarrow \underline{I}_{1}&=\frac{1}{3}\cdot(\underline{I}_{L1}+\underline{a}\cdot\underline{I}_{L2}+\underline{a}^2\cdot\underline{I}_{L3}) \notag
-    \end{eqa} 
+    \end{eqa}
     }
     \end{frame}
 
@@ -189,7 +189,7 @@
         \begin{eqa}
             \underline{I}_{\mathrm{\mathrm{L1}}}&=\underline{I}_{0}+\underline{I}_{1}+\underline{I}_{2} \\
             \underline{a}^2\cdot\underline{I}_{\mathrm{\mathrm{L2}}}&=\underline{a}^2\cdot\underline{I}_{0}+\underline{a}^4\cdot \underline{I}_{1}+\underline{a}^3\cdot\underline{I}_{2} \\
-            \underline{a}\cdot\underline{I}_{\mathrm{\mathrm{L3}}}&=\underline{a}\cdot\underline{I}_{0}+\underline{a}^2\cdot\underline{I}_{1}+\underline{a}^3\cdot\underline{I}_{2}   
+            \underline{a}\cdot\underline{I}_{\mathrm{\mathrm{L3}}}&=\underline{a}\cdot\underline{I}_{0}+\underline{a}^2\cdot\underline{I}_{1}+\underline{a}^3\cdot\underline{I}_{2}
         \end{eqa}
         \begin{eqa}
             \underline{I}_{\mathrm{L1}}+\underline{a}^2\cdot\underline{I}_{\mathrm{L2}}+\underline{a}\cdot\underline{I}_{\mathrm{L3}}&=(1+\underline{a}^2+\underline{a})\underline{I}_{0}+(1+\underline{a}+\underline{a}^2)\cdot\underline{I}_{1}+3\cdot\underline{I}_{2}  \\
@@ -198,11 +198,11 @@
         \end{eqa}
     }
 \end{frame}
-    
+
 \begin{frame}
     \renewcommand{\figurename}{Figure}
     \ftx{Zeigerdiagramm eines unsymmetrischen Stroms im Dreiphasensystem und die Transformationen}
-    
+
 \s{
     As an example, an unbalanced current in a three-phase system and the transformation may look as follows:
 }
@@ -220,7 +220,7 @@
     \s{
         Fig. \ref{ZeigerUnsym} shows the phasor diagram of an unbalanced load.
         In the original system, the phasors show that both the angles and the amplitudes deviate from the symmetrical state.
-        The transformation into the three systems results in symmetrical phasors, which are easier to calculate with.           
+        The transformation into the three systems results in symmetrical phasors, which are easier to calculate with.
         The rotation operators and the prefactor of $\frac{1}{3}$ make it easy to see from the vectors how the transformed currents behave.
         To avoid having to write out the transformation equations in full every time, the equations can also be written in matrix notation:
 
@@ -228,13 +228,13 @@
         \begin{bmatrix}
             \underline{I}_0 \\
             \underline{I}_1 \\
-            \underline{I}_2 
+            \underline{I}_2
         \end{bmatrix}
         = \frac{1}{3} \cdot
         \begin{bmatrix}
             1 & 1 & 1 \\
             1 & \underline{a} & \underline{a}^2 \\
-            1 & \underline{a}^2 & \underline{a} 
+            1 & \underline{a}^2 & \underline{a}
         \end{bmatrix}
         \cdot
         \begin{bmatrix}
@@ -243,11 +243,11 @@
             \underline{I}_{\mathrm{L3}}
         \end{bmatrix}       \label{TraFoMatrix}
     \end{eqa}
- 
+
     The notation can be simplified further by combining the term with the rotation operators and the term with the leading factor into a matrix.
     This matrix is also called the symmetrisation matrix:
 
-    \begin{eqa} 
+    \begin{eqa}
         \begin{bmatrix}
             \underline{T}
         \end{bmatrix}
@@ -255,7 +255,7 @@
         \begin{bmatrix}
             1 & 1 & 1 \\
             1 & \underline{a} & \underline{a}^2 \\
-            1 & \underline{a}^2 & \underline{a} 
+            1 & \underline{a}^2 & \underline{a}
         \end{bmatrix}
         \end{eqa}
 
@@ -263,15 +263,15 @@
 
     \begin{eqa}
         \begin{bmatrix}
-            \underline{I}_{012}    
+            \underline{I}_{012}
         \end{bmatrix}
         =
         \begin{bmatrix}
-            \underline{T}    
+            \underline{T}
         \end{bmatrix}
         \cdot
         \begin{bmatrix}
-            \underline{I}_{\mathrm{L1L2L3}}    
+            \underline{I}_{\mathrm{L1L2L3}}
         \end{bmatrix}
     \end{eqa}
 
@@ -287,7 +287,7 @@
         \begin{bmatrix}
             1 & 1 & 1 \\
             1 & \underline{a}^2 & \underline{a} \\
-            1 & \underline{a} & \underline{a}^2 
+            1 & \underline{a} & \underline{a}^2
         \end{bmatrix}
         \cdot
         \begin{bmatrix}
@@ -299,15 +299,15 @@
 
     \begin{eqa}
         \begin{bmatrix}
-            \underline{I}_{\mathrm{L1L2L3}}    
+            \underline{I}_{\mathrm{L1L2L3}}
         \end{bmatrix}
         =
         \begin{bmatrix}
-            \underline{T}    
+            \underline{T}
         \end{bmatrix}^{-1}
         \cdot
         \begin{bmatrix}
-            \underline{I}_{012}    
+            \underline{I}_{012}
         \end{bmatrix}
     \end{eqa}
 
@@ -321,13 +321,13 @@
             \begin{bmatrix}
                 \underline{I}_0 \\
                 \underline{I}_1 \\
-                \underline{I}_2 
+                \underline{I}_2
             \end{bmatrix}
             = \frac{1}{3} \cdot
             \begin{bmatrix}
                 1 & 1 & 1 \\
                 1 & \underline{a} & \underline{a}^2 \\
-                1 & \underline{a}^2 & \underline{a} 
+                1 & \underline{a}^2 & \underline{a}
             \end{bmatrix}
             \cdot
             \begin{bmatrix}
@@ -339,7 +339,7 @@
         \begin{itemize}
             \item Die Schreibweise kann noch weiter vereinfacht werden, wenn der Term mit den Drehoperatoren und der Term mit Vorfaktor in einer Matrix zusammengfasst wird:
         \end{itemize}
-        \begin{eqa} 
+        \begin{eqa}
             \begin{bmatrix}
                 \underline{T}
             \end{bmatrix}
@@ -347,7 +347,7 @@
             \begin{bmatrix}
                 1 & 1 & 1 \\
                 1 & \underline{a} & \underline{a}^2 \\
-                1 & \underline{a}^2 & \underline{a} 
+                1 & \underline{a}^2 & \underline{a}
             \end{bmatrix}
             \end{eqa}
     }
@@ -356,57 +356,57 @@
 \begin{frame}
     \ftx{Grundlagen - Matrixschreibweise}
     \b{
-    \begin{itemize}
-        \item Werden die Gleichungen zusammengesetzt erhalt man in der Kompaktschreibweise folgende Gleichung:
-    \end{itemize}
-    \begin{eqa}
-        \begin{bmatrix}
-            \underline{I}_{012}    
-        \end{bmatrix}
-        =
-        \begin{bmatrix}
-            \underline{T}    
-        \end{bmatrix}
-        \cdot
-        \begin{bmatrix}
-            \underline{I}_{\mathrm{L1L2L3}}    
-        \end{bmatrix}
-    \end{eqa}
-    \begin{itemize}
-        According to the rules for calculating matrices, the inverse of $\begin{bmatrix}\underline{T}\end{bmatrix}$ can be used to perform the inverse transformation:
-    \end{itemize}
-    \begin{eqa}
-        \begin{bmatrix}
-            \underline{I}_{\mathrm{L1}} \\
-            \underline{I}_{\mathrm{L2}} \\
-            \underline{I}_{\mathrm{L3}}
-        \end{bmatrix}
-        = \frac{1}{3} \cdot
-        \begin{bmatrix}
-            1 & 1 & 1 \\
-            1 & \underline{a}^2 & \underline{a} \\
-            1 & \underline{a} & \underline{a}^2 
-        \end{bmatrix}
-        \cdot
-        \begin{bmatrix}
-            \underline{I}_0 \\
-            \underline{I}_1\\
-            \underline{I}_2
-        \end{bmatrix}
-    \end{eqa}
-    \begin{eqa}
-        \begin{bmatrix}
-            \underline{I}_{\mathrm{L1L2L3}}    
-        \end{bmatrix}
-        =
-        \begin{bmatrix}
-            \underline{T}    
-        \end{bmatrix}^{-1}
-        \cdot
-        \begin{bmatrix}
-            \underline{I}_{012}    
-        \end{bmatrix}
-    \end{eqa}
+        \begin{itemize}
+            \item Werden die Gleichungen zusammengesetzt erhalt man in der Kompaktschreibweise folgende Gleichung:
+        \end{itemize}
+        \begin{eqa}
+            \begin{bmatrix}
+                \underline{I}_{012}
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+                \underline{T}
+            \end{bmatrix}
+            \cdot
+            \begin{bmatrix}
+                \underline{I}_{\mathrm{L1L2L3}}
+            \end{bmatrix}
+        \end{eqa}
+        \begin{itemize}
+            \item According to the rules for calculating matrices, the inverse of $\begin{bmatrix}\underline{T}\end{bmatrix}$ can be used to perform the inverse transformation:
+        \end{itemize}
+        \begin{eqa}
+            \begin{bmatrix}
+                \underline{I}_{\mathrm{L1}} \\
+                \underline{I}_{\mathrm{L2}} \\
+                \underline{I}_{\mathrm{L3}}
+            \end{bmatrix}
+            = \frac{1}{3} \cdot
+            \begin{bmatrix}
+                1 & 1 & 1 \\
+                1 & \underline{a}^2 & \underline{a} \\
+                1 & \underline{a} & \underline{a}^2
+            \end{bmatrix}
+            \cdot
+            \begin{bmatrix}
+                \underline{I}_0 \\
+                \underline{I}_1\\
+                \underline{I}_2
+            \end{bmatrix}
+        \end{eqa}
+        \begin{eqa}
+            \begin{bmatrix}
+                \underline{I}_{\mathrm{L1L2L3}}
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+                \underline{T}
+            \end{bmatrix}^{-1}
+            \cdot
+            \begin{bmatrix}
+                \underline{I}_{012}
+            \end{bmatrix}
+        \end{eqa}
     }
 \end{frame}
 
@@ -418,7 +418,7 @@
         Ein System wird zur Analyse in die drei Systeme: Mitsystem, Gegensystem und Nullsystem transformiert. \\
         The {\bf Positive system} is assigned the index 1: \qquad  $\underline{I}_1$ \\
         The {\bf Negative system} is assigned the index 2: \qquad $\underline{I}_2$ \\
-        The {\bf Zero system} is assigned the index 0: \qquad $\underline{I}_0$ 
+        The {\bf Zero system} is assigned the index 0: \qquad $\underline{I}_0$
     \end{Key point}
 \end{frame}
 
@@ -462,7 +462,7 @@
 \end{frame}
 \begin{frame}
     \ftx{Drehstromleistung und Komponentenleistung}
-    
+
 
 \s{
     With the given rotation operators, the currents and voltages in a symmetrical system can be related to one phase each.
@@ -535,7 +535,7 @@
         \cdot
         \begin{bmatrix}
             \underline{I}_{012}
-        \end{bmatrix}^*   \\         
+        \end{bmatrix}^*   \\
         \underline{S}_{\mathrm{L1L2L3}}
         &=
         \begin{bmatrix}
@@ -630,7 +630,7 @@
         \ftc{Symmetrical voltage source}
 \s{
     Symmetrical voltage sources can be found, for example, in mains supply and also in synchronous machines.
-    The first step is to look at the output system.    
+    The first step is to look at the output system.
     The relationships between the star voltage and the individual phases are already known from the chapter ???.
     Using the formula for the transformation (cf. \ref{TraFoMatrix}), it can now be shown mathematically that in such a symmetrical case, the voltages of the counter and zero systems are 0.
 
@@ -680,7 +680,7 @@
 \end{frame}
     \begin{frame}
         \ftx{Symmetrische Spannungsquelle}
-        
+
   \s{
     Solving the equations for the transformed systems yields the following stress results:
   }
@@ -692,7 +692,7 @@
     \begin{eqa}
         \underline{U}_0&=\frac{1}{3}\cdot{U}_{\Stern}\cdot(1+\underline{a}^2+\underline{a})=0 \\
         \underline{U}_1&=\frac{1}{3}\cdot{U}_{\Stern}\cdot(1+\underline{a}\cdot\underline{a}^2+\underline{a}^2\cdot\underline{a})=U_{\Stern} \\
-        \underline{U}_2&=\frac{1}{3}\cdot{U}_{\Stern}\cdot(1+\underline{a}^2\cdot\underline{a}^2+\underline{a}\cdot\underline{a})=0 
+        \underline{U}_2&=\frac{1}{3}\cdot{U}_{\Stern}\cdot(1+\underline{a}^2\cdot\underline{a}^2+\underline{a}\cdot\underline{a})=0
     \end{eqa}
 
 \end{frame}
@@ -711,14 +711,14 @@
   }
     \fu{
         \input{Tikz/src/Mehrphasensysteme/Transformierte_Spannungsquelle_ESB}
-    }{{\bf Equivalent circuit diagrams of the transformed voltage source.} In the case of a symmetrical voltage source, only the ECD 
+    }{{\bf Equivalent circuit diagrams of the transformed voltage source.} In the case of a symmetrical voltage source, only the ECD
     of the mitsystem has the voltage source. \label{ESBSymQuellen}}
 
     \s{
-        In Figure \ref{ESBSymQuellen}, it should be clearly emphasised once again that, on the one hand, three individual systems are formed 
+        In Figure \ref{ESBSymQuellen}, it should be clearly emphasised once again that, on the one hand, three individual systems are formed
         and, furthermore, that in the special case of symmetrical sources, a voltage only occurs in one of the systems.
     }
-    
+
 \end{frame}
 
 \begin{frame}
@@ -727,7 +727,7 @@
     A star connection with a return conductor should be selected for the consideration of the loads.
     An impedance Z is assumed in each conductor, including the return conductor.
     For the symmetrical case, the impedances are assumed to be equal; only the impedance in the return conductor may differ from the others and is given its own index.
-    
+
     For the original system, the equation for the voltage is set up as follows:
 }
 \b{
@@ -776,7 +776,7 @@
     \end{eqa}
 
     With...
-    
+
     \begin{eqa}
         \begin{bmatrix}
             \underline{Z}_{\mathrm{L1L2L3}}
@@ -839,7 +839,7 @@
 
     \s{
     For symmetrical voltage sources, the voltage could be calculated from the transformation depending on the original system.
-    The same should be done for the impedances for the consumers.  
+    The same should be done for the impedances for the consumers.
     To do this, the equations must be transformed in such a way that a ratio of transformed impedances and impedances of the original system is obtained.
     To achieve this, both sides are first expanded with $\begin{bmatrix}\underline{T}\end{bmatrix}$ and then rearranged based on Ohm's law.    }
     \b{
@@ -913,7 +913,7 @@
 
       \begin{frame}
         \ftx{Symmetrische Last}
-   
+
     \s{
     Performing the matrix operation of the last equation yields the desired relationship between the original and transformation systems.
     }
@@ -938,7 +938,7 @@
     \begin{frame}
         \renewcommand{\figurename}{Figure}
         \ftx{Symmetrische Last}
-   
+
     \s{
     Now, the respective ECDs of the transformed systems can also be established for the symmetrical loads:
     }
@@ -951,8 +951,8 @@
     }
     \fu{
        \input{Tikz/src/Mehrphasensysteme/Transformierte_Last_ESB}
-    }{{\bf Equivalent circuit diagrams of the transformed load.} With a symmetrical load, the three systems all have a 
-    symmetrical impedance, but the zero system also has three times the impedance for a 
+    }{{\bf Equivalent circuit diagrams of the transformed load.} With a symmetrical load, the three systems all have a
+    symmetrical impedance, but the zero system also has three times the impedance for a
     return conductor. \label{ESBSymLasten}}
 
     \s{
@@ -961,8 +961,8 @@
     For zero impedances, currents only flow if there is actually a connection to a star.
     Then the impedances in the return conductor occur with triple the value.
     }
-  
-  
+
+
 \end{frame}
 
 \begin{frame}
@@ -1009,7 +1009,7 @@
 \end{frame}
     \begin{frame}
         \ftx{Symmetrische Leitungen}
-  
+
 \s{
     From this, a compact notation can be derived (with $U_{\mathrm{L1A}}-U_{\mathrm{L1B}}=U_{\mathrm{L1}}$, ...):
 }
@@ -1061,7 +1061,7 @@
 \begin{frame}
     \renewcommand{\figurename}{Figure}
     \ftx{Symmetrische Leitungen}
-    
+
 
     \fu{
         \input{Tikz/src/Mehrphasensysteme/Transformierte_Leitung_ESB}
@@ -1080,4 +1080,3 @@
 }
 
 \end{frame}
-

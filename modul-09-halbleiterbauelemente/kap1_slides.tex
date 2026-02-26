@@ -20,7 +20,7 @@
 
 %Einführung
 \begin{frame}
-     \b{\fta{Einführung}
+     \b{\fta{Introduction}
      \begin{figure}[H]
         \renewcommand{\figurename}{Figure}
         \centering
@@ -37,9 +37,9 @@
 \begin{frame}
 \b{\fta{Einführung}
 \begin{itemize}
-    \item Halbleiterbauelemente sind zentral für die Funktion zahlreicher elektronischer Geräte wie Computer, Mobiltelefone und Solarzellen.
-    \item Sie basieren auf Materialien, die weder gute Leiter noch gute Isolatoren sind. Ihre Funktionsweise kann mithilfe des Bändermodells erklärt werden.
-    \item In diesem Kapitel werden die Grundlagen der Halbleitertechnik erläutert.
+    \item Semiconductor devices are central to the functioning of numerous electronic devices such as computers, mobile phones, and solar cells.
+    \item They are based on materials that are neither good conductors nor good insulators. Their mode of operation can be explained using the band model.
+    \item This chapter explains the fundamentals of semiconductor technology.
 \end{itemize}}
 \speech{Einfuehrung}{3}{Halbleiter sind die Grundlage moderner Elektronik - vom Smartphone bis zur Solaranlage.
 Sie haben eine besondere Eigenschaft: Sie liegen in ihrer Leitfähigkeit genau zwischen Leitern und Isolatoren.
@@ -51,7 +51,7 @@ Mit dem Bändermodell, das uns zeigt, welche Energiezustände Elektronen in eine
 \newvideofile{Baendermodell}{Band model}
 \begin{frame}
 \b{\begin{columns}
-    \frametitle{Das Bändermodell}
+    \frametitle{Band model}
     \column[c]{0.3\textwidth}
     \begin{figure}[H]
         \renewcommand{\figurename}{Figure}
@@ -98,12 +98,13 @@ Auch hier geht es um mögliche Energieniveaus - aber jetzt denken wir nicht mehr
 
 %UebergangVonEnergieniveausZuBaendern
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \b{
-    \frametitle{Das Bändermodell}
+    \frametitle{Band modell}
     \begin{figure}[H]
         \centering
         \includesvg[width=\textwidth]{Bilder/kap1/UebergangVonEnergieniveausZuBaendern}
-        \caption{\textbf{Übergang von Energieniveaus zu Bändern} Zusammenhang zwischen den möglichen Energiezustände in Abhängigkeit zur Anzahl der Atome. V.l.n.r. Energiezustände von Elektronen bei einem Einzelatom, 2 Atomen (Molekül) und einem Festkörper.}  
+        \caption{\textbf{Übergang von Energieniveaus zu Bändern} Relationship between possible energy states depending on the number of atoms. From left to right: energy states of electrons in a single atom, two atoms (molecule), and a solid.}  
         %\label{fig:UebergangVonEnergieniveausZuBaendern}
     \end{figure}
 
@@ -119,12 +120,13 @@ Auch hier geht es um mögliche Energieniveaus - aber jetzt denken wir nicht mehr
 
 %Bändermodell Eines Materials bei 0K
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \b{
-    \frametitle{Einteilung von Materialien}
+    \frametitle{Classification of materials}
     \begin{figure}[H]
         \centering
         \includesvg[width=\textwidth]{Bilder/kap1/BaendermodelleinesMaterialsbei0K}
-        \caption{\textbf{Bändermodell eines Materials bei 0 K} Darstellung der Energiebänder mit zugehöriger Beschriftung sowie deren alternativen Bezeichnungen.}  
+        \caption{\textbf{Band model of a material at 0 K} Representation of the energy bands with corresponding labels and their alternative names.}  
         %\label{fig:BandermodellEinesMaterialsBei0K}
     \end{figure}
     }
@@ -137,12 +139,13 @@ Die Größe dieser Lücke entscheidet darüber, ob ein Material ein Leiter, ein 
 
 %Bändermodell verschiedener Halbleitermaterialien
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \b{
-    \frametitle{Einteilung von Materialien}
+    \frametitle{Classification of materials}
     \begin{figure}[H]
         \centering
         \includesvg[width=\textwidth]{Bilder/kap1/BaendermodellverschiedenerMaterialien}
-        \caption{\textbf{Bändermodell verschiedener Halbleitermaterialien} V.l.n.r.: Leiter ohne und mit Überlappung, Halbleiter und Isolator}  
+        \caption{\textbf{Band model of various semiconductor materials} From left to right: Conductor without and with overlap, semiconductor, and insulator}  
         %\label{fig:BaendermodellVerschiedenerMaterialien}
     \end{figure}
     }
@@ -158,17 +161,17 @@ Der Energieaufwand, um ein Elektron ins Leitungsband zu bringen, ist hier so hoc
 %Merke
 \begin{frame}
     \b{
-    \frametitle{Einteilung von Materialien}
-    \textbf{Merke:}
+    \frametitle{Classification of materials}
+    \textbf{Key point:}
     \begin{itemize}
         \onslide<1->{
-        \item Ladungsträger können nur definierte Energieniveaus im Festkörper besetzen.
+        \item Charge carriers can only occupy defined energy levels in the solid state.
         }
         \onslide<2->{
-        \item Bei $T=\mathrm{0\,K}$ ist das Valenzband das höchste besetzte Energieniveau, das darüberliegende Leistungsband beinhaltet keine freien Ladungsträger.
+        \item At $T=\mathrm{0\,K}$, the valence band is the highest occupied energy level; the conduction band above it contains no free charge carriers.
         }
         \onslide<3->{
-        \item Materialien können über die Bandlücke Kategorisiert werden. 
+        \item Materials can be categorized via the band gap. 
         }
     \end{itemize}}
     \speech{Einteilung_Materialien}{3}{Merken wir uns:
@@ -182,13 +185,14 @@ Der Energieaufwand, um ein Elektron ins Leitungsband zu bringen, ist hier so hoc
 
 %Diamant-Gitterstruktur von Silizium
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \b{
-    \frametitle{Halbleitermaterialien}
+    \frametitle{Semiconductor materials}
     \begin{figure}[H]
         \centering
         \includesvg[width=0.4\textwidth]{Bilder/kap1/Gitterstrukturen/GitterSi}
         %\includegraphics[width=0.5\textwidth]{Bilder/kap1/Diamant-GitterstrukturVonSilizium.png}
-        \caption{\textbf{Diamantgitterstruktur von Silizium}}  
+        \caption{\textbf{Diamond lattice structure of silicon}}  
         %\label{fig:Diamant-GitterstrukturVonSilizium}
     \end{figure}
     }
@@ -202,8 +206,9 @@ Der Energieaufwand, um ein Elektron ins Leitungsband zu bringen, ist hier so hoc
 
 %Zinkblende-Gitterstruktur von GaAs
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \b{
-    \frametitle{Halbleitermaterialien}
+    \frametitle{Semiconductor materials}
     \begin{figure}[H]
         \centering
         %\includegraphics[width=0.5\textwidth]{Bilder/kap1/Zinkblende-GitterstrukturVonGaAs.png}
@@ -215,7 +220,7 @@ Der Energieaufwand, um ein Elektron ins Leitungsband zu bringen, ist hier so hoc
             \centering
             \includesvg[width=0.7\textwidth]{Bilder/kap1/Gitterstrukturen/GitterGaAs_2}
         \end{minipage}
-        \caption{\textbf{Zinkblende-Gitterstruktur von GaAs}}  
+        \caption{\textbf{Zinc blende lattice structure of GaAs}}  
         %\label{fig:Zinkblende-GitterstrukturVonGaAs}
     \end{figure}
     }
@@ -229,17 +234,17 @@ Der Energieaufwand, um ein Elektron ins Leitungsband zu bringen, ist hier so hoc
 %Merke
 \begin{frame}
     \b{
-    \frametitle{Halbleitermaterialien}
-    \textbf{Merke:}
+    \frametitle{Semiconductor materials}
+    \textbf{Key point:}
     \begin{itemize}
         \onslide<1->{
-        \item Silizium ist das am weitesten verbreitete Halbleitermaterial.
+        \item Silicon is the most widely used semiconductor material.
         }
         \onslide<2->{
-        \item Verbindungshalbleiter bestehen aus zwei Materialen die in bestimmter Kombination Halbleiterverhalten aufweisen.
+        \item Compound semiconductors consist of two materials that exhibit semiconductor behavior in a specific combination.
         }
         \onslide<3->{
-        \item Silizium ist aus der IV. Hauptguppe des Periodensystem, Verbindungshalbleiter typischerweise aus der III. und V. Hauptguppe.
+        \item Silicon is from group IV of the periodic table, compound semiconductors are typically from groups III and V.
         }
     \end{itemize}}
     \speech{Halbleitermaterialien}{3}{Was solltest du dir merken?
@@ -250,22 +255,23 @@ Erst ihre spezielle Kombination ergibt ein stabiles Gitter mit Halbleitereigensc
 
 %Tabelle Halbleiter Folie 1
 \begin{frame}
+    \renewcommand{\tablename}{Table}
     \b{
-        \frametitle{Halbleitermaterialien}
+        \frametitle{Semiconductor materials}
         \begin{table}[H]
             \centering 
             \begin{tabular}{|p{1.7cm}|p{1.2cm}|p{2cm}|p{2.2cm}|p{2.2cm}|p{2.3cm}|}
                 \hline
-                \textbf{Material} & \textbf{Band- \newline lücke \newline (eV)} & \textbf{Ladungs- \newline trägerdichte \newline (cm$^{-3}$)} & \textbf{Elektronen- \newline beweglichkeit \newline (cm$^2$/Vs)} & \textbf{Löcher- \newline beweglichkeit \newline (cm$^2$/Vs)} & \textbf{Anwendungen}\\
+                \textbf{Material} & \textbf{Band- \newline gap \newline (eV)} & \textbf{Charge- \newline carrier density \newline (cm$^{-3}$)} & \textbf{Electron- \newline mobility \newline (cm$^2$/Vs)} & \textbf{Hole- \newline mobility \newline (cm$^2$/Vs)} & \textbf{Applications}\\
                 \hline
-                Si  & 1,1 & $10^{10} - 10^{15}$ & 1500 & 450 & Mikrochips, \newline Solarzellen, Sensoren \\
+                Si  & 1,1 & $10^{10} - 10^{15}$ & 1500 & 450 & Microchips, \newline Solar cells, sensors \\
                 \hline
-                Ge & 0,7 & $10^{13} - 20^{19}$ & 3900 & 1900 & Transistoren, \newline Infarot-Detektoren \\
+                Ge & 0,7 & $10^{13} - 20^{19}$ & 3900 & 1900 & Transistors, \newline Infrared detectors \\
                 \hline
-                GaAs & 1,43 & $10^6 - 10^8$ & 8500 & 400 & Hochfrequenz- schaltungen, LEDs, Laserdioden \\
+                GaAs & 1,43 & $10^6 - 10^8$ & 8500 & 400 & High-frequency circuits, LEDs, laser diodes \\
                 \hline
                 \end{tabular}
-                \caption{Eigenschaften verschiedener Halbleitermaterialien}
+                \caption{Properties of various semiconductor materials}
                 %\label{tab:EigenschaftenVerschiedenerHalbleitermaterialien}
         \end{table}
     }
@@ -276,22 +282,23 @@ Erst ihre spezielle Kombination ergibt ein stabiles Gitter mit Halbleitereigensc
 
 %Tabelle Halbleiter Folie 1
 \begin{frame}
+    \renewcommand{\tablename}{Table}
     \b{
-        \frametitle{Halbleitermaterialien}
+        \frametitle{Semiconductor materials}
         \begin{table}[H]
             \centering 
             \begin{tabular}{|p{1.7cm}|p{1.2cm}|p{2cm}|p{2.2cm}|p{2.2cm}|p{2.3cm}|}
                 \hline
-                \textbf{Material} & \textbf{Band- \newline lücke \newline (eV)} & \textbf{Ladungs- \newline trägerdichte \newline (cm$^{-3}$)} & \textbf{Elektronen- \newline beweglichkeit \newline (cm$^2$/Vs)} & \textbf{Löcher- \newline beweglichkeit \newline (cm$^2$/Vs)} & \textbf{Anwendungen}\\
+                \textbf{Material} & \textbf{Band- \newline gap \newline (eV)} & \textbf{Charge- \newline carrier density \newline (cm$^{-3}$)} & \textbf{Electron- \newline mobility \newline (cm$^2$/Vs)} & \textbf{Hole- \newline mobility \newline (cm$^2$/Vs)} & \textbf{Applications}\\
                 \hline
-                InP & 1,35 & $10^{16} - 10^{17}$ & 5000 - 7000 & 200 - 400 & Optoelektronik, \newline Solarzellen \\
+                InP & 1,35 & $10^{16} - 10^{17}$ & 5000 - 7000 & 200 - 400 & Optoelectronics, \newline solar cells \\
                 \hline 
-                GaN & 3,4 & $10^{13} - 10^{17}$ & 1000 - 2000 & 50- 200 & Leistungs- \newline elektronik, LED-Beleuchtung, Displays \\
+                GaN & 3,4 & $10^{13} - 10^{17}$ & 1000 - 2000 & 50- 200 & Power- \newline electronics, LED lighting, displays \\
                 \hline
-                SiC & 3,0 & $10^{12} - 10^{16}$ & 800 - 1200 & 200 - 400 & Leistungs- \newline eletronik, \newline Hochtemperatur- \newline anwendung \\ 
+                SiC & 3,0 & $10^{12} - 10^{16}$ & 800 - 1200 & 200 - 400 & Power- \newline electronics, \newline high-temperature- \newline applications \\ 
                 \hline
                 \end{tabular}
-                \caption{Eigenschaften verschiedener Halbleitermaterialien}
+                \caption{Properties of various semiconductor materials}
                 %\label{tab:EigenschaftenVerschiedenerHalbleitermaterialien}
         \end{table}
     }
@@ -314,14 +321,15 @@ Erst ihre spezielle Kombination ergibt ein stabiles Gitter mit Halbleitereigensc
 %Gitterstruktur und Bändermodell von Si - Abbildung 8
 \newvideofile{Ladungstraegertransport}{Ladungsträgertransport}
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \b{
-    \frametitle{Ladungsträgertransport}
+    \frametitle{Charge carrier transport}
     \onslide<1->{
     \begin{minipage}[t]{0.48\textwidth}
         \begin{figure}[H]
             \centering
             \includesvg[width=\textwidth]{Bilder/kap1/GitterstrukturUndBaendermodellVonSi/GitterstrukturUndBaendermodellVonSi_1}
-            \caption{\textbf{Gitterstruktur und Bändermodell von Si} reines Silizium bei T $=$ 0 K}  
+            \caption{\textbf{Lattice structure and band model of Si} pure silicon at T = 0 K}  
             \label{fig:GitterstrukturUndBaendermodellVonSi-1}
         \end{figure}
     \end{minipage}
@@ -331,7 +339,7 @@ Erst ihre spezielle Kombination ergibt ein stabiles Gitter mit Halbleitereigensc
         \begin{figure}[H]
             \centering
             \includesvg[width=\textwidth]{Bilder/kap1/GitterstrukturUndBaendermodellVonSi/GitterstrukturUndBaendermodellVonSi_2}
-            \caption{\textbf{Gitterstruktur und Bändermodell von Si} reines Silizium bei T $>$ 0 K}  
+            \caption{\textbf{Lattice structure and band model of Si} pure silicon at T > 0 K}  
             \label{fig:GitterstrukturUndBaendermodellVonSi-2}
         \end{figure}
     \end{minipage}
@@ -347,13 +355,14 @@ Erst ihre spezielle Kombination ergibt ein stabiles Gitter mit Halbleitereigensc
 
 %Gitterstruktur und Bändermodell von n-dotiertem Si - Abbildung 9
 \begin{frame}
-    \b{\frametitle{Ladungsträgertransport}
+    \renewcommand{\figurename}{Figure}
+    \b{\frametitle{Charge carrier transport}
     \onslide<1->{
         \begin{minipage}[t]{0.48\textwidth}
             \begin{figure}[H]
                 \centering
                 \includesvg[width=\textwidth]{Bilder/kap1/GitterstrukturUndBaendermodellVonN-dotiertesSi/GitterstrukturUndBaendermodellVonN-dotiertesSi_1}
-                \caption{\textbf{Gitterstruktur und Bändermodell von n-dotiertem Si} n-dotierts Silizium bei T $=$ 0 K.}  
+                \caption{\textbf{Lattice structure and band model of n-doped Si} N-doped silicon at T $=$ 0 K.}  
                 \label{fig:GitterstrukturUndBaendermodellVonN-DotiertesSi-1}
             \end{figure}
         \end{minipage}
@@ -363,7 +372,7 @@ Erst ihre spezielle Kombination ergibt ein stabiles Gitter mit Halbleitereigensc
             \begin{figure}[H]
                 \centering
                 \includesvg[width=\textwidth]{Bilder/kap1/GitterstrukturUndBaendermodellVonN-dotiertesSi/GitterstrukturUndBaendermodellVonN-dotiertesSi_2}
-                \caption{\textbf{Gitterstruktur und Bändermodell von n-dotiertem Si} n-dotierts Silizium bei T $>$ 0 K.}  
+                \caption{\textbf{Lattice structure and band model of n-doped Si} N-doped silicon at T $>$ 0 K.}  
                 \label{fig:GitterstrukturUndBaendermodellVonN-DotiertesSi-2}
             \end{figure}
         \end{minipage}
@@ -379,13 +388,14 @@ Erst ihre spezielle Kombination ergibt ein stabiles Gitter mit Halbleitereigensc
 
 %Gitterstruktur und Bändermodell von p-dotiertem Si
 \begin{frame}
-    \b{\frametitle{Ladungsträgertransport}
+    \renewcommand{\figurename}{Figure}
+    \b{\frametitle{Charge carrier transport}
     \onslide<1->{
     \begin{minipage}[t]{0.48\textwidth}
         \begin{figure}[H]
             \centering
             \includesvg[width=\textwidth]{Bilder/kap1/GitterstrukturUndBaendermodellVonP-dotiertesSi/GitterstrukturUndBaendermodellVonP-dotiertesSi_1}
-            \caption{\textbf{Gitterstruktur und Bändermodell von p-dotiertem Si} p-dotierts Silizium bei T $=$ 0 K.}  
+            \caption{\textbf{Lattice structure and band model of p-doped Si} p-doped silicon at T $=$ 0 K.}  
             \label{fig:GitterstrukturUndBaendermodellVonP-DotiertesSi-1}
         \end{figure}
     \end{minipage}
@@ -395,7 +405,7 @@ Erst ihre spezielle Kombination ergibt ein stabiles Gitter mit Halbleitereigensc
         \begin{figure}[H]
             \centering
             \includesvg[width=\textwidth]{Bilder/kap1/GitterstrukturUndBaendermodellVonP-dotiertesSi/GitterstrukturUndBaendermodellVonP-dotiertesSi_2}
-            \caption{\textbf{Gitterstruktur und Bändermodell von p-dotiertem Si} p-dotierts Silizium bei T $>$ 0 K.}  
+            \caption{\textbf{Lattice structure and band model of p-doped Si} p-doped silicon at T $>$ 0 K.}  
             \label{fig:GitterstrukturUndBaendermodellVonP-DotiertesSi-2}
         \end{figure}
     \end{minipage}
@@ -412,15 +422,15 @@ Erst ihre spezielle Kombination ergibt ein stabiles Gitter mit Halbleitereigensc
 %Merke
 \begin{frame}
     \b{
-    \frametitle{Ladungsträgertransport}
-    \textbf{Merke:}
+    \frametitle{Charge carrier transport}
+    \textbf{Key point:}
     \begin{itemize}
         \onslide<1->{
-        \item Durch thermische Anregung können freie Elektronen entstehen, die zum Ladungsträgertransport beitragen. 
+        \item Thermal excitation can generate free electrons that contribute to charge carrier transport. 
         } \onslide<2->{
-        \item Dotierung ist das gezielte Einbringen von Fremdatomen mit oder weniger Valenzelektronen als das Ausgangsmaterial.
+        \item Doping is the targeted introduction of foreign atoms with fewer valence electrons than the starting material.
         } \onslide<3->{
-        \item Für n-Dotierung kann Phosphor und für p-Dotierung Bor genutzt werden.
+        \item Phosphorus can be used for n-doping and boron for p-doping.
         }
     \end{itemize}}
     \speech{Ladungstraegertransport}{4}{Zusammengefasst:
@@ -435,12 +445,13 @@ Erst ihre spezielle Kombination ergibt ein stabiles Gitter mit Halbleitereigensc
 
 %Driftstrom Innerhalb Eines Halbleiters
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \b{
-    \frametitle{Ladungsträgertransport}
+    \frametitle{Charge carrier transport}
     \begin{figure}[H]
         \centering
         \includesvg[width=0.5\textwidth]{Bilder/kap1/DriftstromInnerhalbEinesHalbleiters}
-        \caption{\textbf{Driftstrom innerhalb eines Halbleiters}}  
+        \caption{\textbf{Drift current within a semiconductor}}  
         %\label{fig:DriftstromInnerhalbEinesHalbleiters}
     \end{figure}
     }
@@ -454,12 +465,13 @@ Erst ihre spezielle Kombination ergibt ein stabiles Gitter mit Halbleitereigensc
 
 %Diffusions Innerhalb Eines Halbleiters
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \b{
-    \frametitle{Ladungsträgertransport}
+    \frametitle{Charge carrier transport}
     \begin{figure}[H]
         \centering
         \includesvg[width=0.8\textwidth]{Bilder/kap1/DiffusionsstromInnerhalbEinesHalbleiters}
-        \caption{\textbf{Diffusionsstrom innerhalb eines Halbleiters}}  
+        \caption{\textbf{Diffusion current within a semiconductor}}  
         %\label{fig:DiffusionsstromInnerhalbEinesHalbleiters}
     \end{figure}
     }
@@ -472,12 +484,13 @@ Erst ihre spezielle Kombination ergibt ein stabiles Gitter mit Halbleitereigensc
 
 %Einfluss von Spannungen auf Halbleiter
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \b{
-    \frametitle{Ladungsträgertransport}
+    \frametitle{Charge carrier transport}
     \begin{figure}[H]
         \centering
         \includesvg[width=0.8\textwidth]{Bilder/kap1/EinflussvonSpannungenaufHalbleiter}
-        \caption{\textbf{Einfluss von Spannungen auf Halbleiter}}  
+        \caption{\textbf{Influence of voltages on semiconductors}}  
         %\label{fig:EinflussVonSpannungenAufHalbleiter}
     \end{figure}
     }
@@ -492,17 +505,17 @@ Erst ihre spezielle Kombination ergibt ein stabiles Gitter mit Halbleitereigensc
 %Merke
 \begin{frame}
     \b{
-    \frametitle{Ladungsträgertransport}
-    \textbf{Merke:}
+    \frametitle{Charge carrier transport}
+    \textbf{Key point:}
     \begin{itemize}
         \onslide<1->{
-        \item Driftstrom ist der Ladungsträgertransport auf Grund eines elektrischen Feldes.
+        \item Drift current is the transport of charge carriers due to an electric field.
         } \onslide<2->{
-        \item Diffusionsstrom ist die Bewegung von Ladungsträgern auf Grund eines Konzentrationsunterschiedes.
+        \item Diffusion current is the movement of charge carriers due to a difference in concentration.
         } \onslide<3->{
-        \item Drift- und Diffusionsstrom ergeben zusammen den Gesamtstrom.
+        \item Drift current and diffusion current together make up the total current.
         } \onslide<4->{
-        \item Eine externe Spannung führt zu einer Verschiebung des Bändermodells. 
+        \item An external stress causes a shift in the band model. 
         }
     \end{itemize}}
     \speech{Ladungstraegertransport}{8}{Fassen wir kurz zusammen:
@@ -516,12 +529,13 @@ Erst ihre spezielle Kombination ergibt ein stabiles Gitter mit Halbleitereigensc
 \newvideofile{pn-Uebergang}{pn-Übergang}
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \b{
-    \frametitle{pn-Übergang}
+    \frametitle{pn-Junction}
     \begin{figure}[H]
         \centering
         \includesvg[width=\textwidth]{Bilder/kap1/FolienVorgaengeInnerhalbeinesPNUebergangs1}
-        \caption{\textbf{Vorgänge innerhalb eines pn-Übergangs.}}  
+        \caption{\textbf{Processes within a pn junction.}}  
         %\label{fig:VorgaengeInnerhalbEinesPn-Uebergangs1}  
     \end{figure}
     }
@@ -532,20 +546,21 @@ Erst ihre spezielle Kombination ergibt ein stabiles Gitter mit Halbleitereigensc
 \end{frame}
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \b{
-    \frametitle{pn-Übergang}
+    \frametitle{pn-Junction}
     \begin{figure}[H]
         \centering
         \includesvg[width=0.6\textwidth]{Bilder/kap1/FolienVorgaengeInnerhalbeinesPNUebergangs2}
-        \caption{\textbf{Vorgänge innerhalb eines pn-Übergangs.} }  
+        \caption{\textbf{Processes within a pn junction.} }  
     \end{figure}
           \begin{itemize}
             \onslide<1->{
-        \item Durch die Bindung der Löcher und Elektronen an deren Atome begrenzt den Diffusionsstrom.
+        \item The binding of holes and electrons to their atoms limits the diffusion current.
             } \onslide<2->{
-        \item Der Bereich in der Mitte nennt sich Raumladungszone (RLZ). Dort sind keine freien Ladungsträger, da die Elektronen und Löcher sich gegenseitig neutralisieren.
+        \item The area in the middle is called the space charge zone (SCZ). There are no free charge carriers there, as the electrons and holes neutralize each other.
             } \onslide<3->{
-        \item Es entsteht ein elektrisches Feld zwischen den p- und n-dotierten Bereichen.
+        \item An electric field is created between the p- and n-doped areas.
             }
     \end{itemize}
     }
@@ -558,12 +573,13 @@ Erst ihre spezielle Kombination ergibt ein stabiles Gitter mit Halbleitereigensc
 
 %Vorgänge innerhalb des pn-Übergangs.
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \b{
-    \frametitle{pn-Übergang}
+    \frametitle{pn-Junction}
     \begin{figure}[H]
         \centering
         \includesvg[width=\textwidth]{Bilder/kap1/VorgaengeInnerhalbDesPN-Uebergangs}
-        \caption{\textbf{Vorgänge innerhalb des pn-Übergangs.}}  
+        \caption{\textbf{Processes within the pn junction.}}  
         %\label{fig:VorgaengeInnerhalbDesPn-Uebergangs}
     \end{figure}
     }
@@ -576,12 +592,13 @@ Erst ihre spezielle Kombination ergibt ein stabiles Gitter mit Halbleitereigensc
 
 %Einfluss von Spannungen auf pn-Übergang.
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \b{
-    \frametitle{pn-Übergang}
+    \frametitle{pn-Junction}
     \begin{figure}[H]
         \centering
         \includesvg[width=0.7\textwidth]{Bilder/kap1/EinflussvonSpannungenaufpn-Uebergang}
-        \caption{\textbf{Einfluss von Spannungen auf pn-Übergang.} Raumladungszone bei verschiedenen angelegten Spannungen. Links: Spannung in Durchlassrichtung. Rechts: Spannung entgegen der Durchlassrichtung, Sperrrichtung}  
+        \caption{\textbf{Influence of voltages on pn junction.} Space charge region at different applied voltages. Left: voltage in the forward direction. Right: voltage against the forward direction, reverse direction.}  
         %\label{fig:EinflussVonSpannungenAufPn-Uebergang}
     \end{figure}
     }
@@ -594,16 +611,17 @@ Erst ihre spezielle Kombination ergibt ein stabiles Gitter mit Halbleitereigensc
 
 %Merke
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \b{
-    \frametitle{pn-Übergang}
-    \textbf{Merke:}
+    \frametitle{pn-Junction}
+    \textbf{Key point:}
     \begin{itemize}
         \onslide<1->{
-        \item Der pn-Übergang kombiniert eine p- und n-dotierte Halbleiterschicht.
+        \item The pn junction combines a p- and n-doped semiconductor layer.
         } \onslide<2->{
-        \item Im Übergangsbereich sind keine freien Ladungsträger, der Bereich wird Raumladungszone genannt.
+        \item There are no free charge carriers in the transition region; this region is called the space charge region.
         } \onslide<3->{
-        \item In Durchlassrichtung wird die RLZ verkleinert, in Sperrrichtung wird diese vergrößert.  
+        \item In the flow direction, the RLZ is reduced, and in the reverse direction, it is increased.  
         }
     \end{itemize}}
     \speech{pn-Uebergang}{5}{Was du dir merken solltest:

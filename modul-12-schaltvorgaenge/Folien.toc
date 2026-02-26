@@ -1,0 +1,33 @@
+\babel@toc {ngerman}{}\relax 
+\beamer@sectionintoc {1}{Introduction to switching operations}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Settlement procedures}{5}{0}{1}
+\beamer@subsectionintoc {1}{2}{Switching operations}{9}{0}{1}
+\beamer@subsectionintoc {1}{3}{Examples of switching operations}{10}{0}{1}
+\beamer@subsectionintoc {1}{4}{Comparison of ideal and real switches}{11}{0}{1}
+\beamer@sectionintoc {2}{Fundamentals of calculating switching operations}{15}{0}{2}
+\beamer@subsectionintoc {2}{1}{Definitions}{16}{0}{2}
+\beamer@subsectionintoc {2}{2}{Calculation methods for switching operations}{17}{0}{2}
+\beamer@subsectionintoc {2}{3}{Differential equations}{18}{0}{2}
+\beamer@subsubsectionintoc {2}{3}{1}{Properties and general form}{23}{0}{2}
+\beamer@subsubsectionintoc {2}{3}{2}{Order of differential equations}{24}{0}{2}
+\beamer@subsectionintoc {2}{4}{Calculation method in the time domain}{25}{0}{2}
+\beamer@subsubsectionintoc {2}{4}{1}{Decomposition of compensation processes and solution of inhomogeneous differential equations}{30}{0}{2}
+\beamer@subsubsectionintoc {2}{4}{2}{Calculation of the homogeneous solution}{34}{0}{2}
+\beamer@subsubsectionintoc {2}{4}{3}{Calculation of the particular solution}{44}{0}{2}
+\beamer@subsubsectionintoc {2}{4}{4}{Summary}{45}{0}{2}
+\beamer@sectionintoc {3}{Calculate switching operations in the time domain}{46}{0}{3}
+\beamer@subsectionintoc {3}{1}{With direct voltage}{47}{0}{3}
+\beamer@subsubsectionintoc {3}{1}{1}{In terms of capacity}{51}{0}{3}
+\beamer@subsubsectionintoc {3}{1}{2}{For Inductances}{68}{0}{3}
+\beamer@subsectionintoc {3}{2}{With sinusoidal excitation}{76}{0}{3}
+\beamer@subsubsectionintoc {3}{2}{1}{In terms of capacity}{80}{0}{3}
+\beamer@subsubsectionintoc {3}{2}{2}{For Inductors}{94}{0}{3}
+\beamer@subsectionintoc {3}{3}{RLC series resonant circuits}{103}{0}{3}
+\beamer@subsubsectionintoc {3}{3}{1}{Case differentiation for RLC series resonant circuits}{105}{0}{3}
+\beamer@subsubsectionintoc {3}{3}{2}{Aperiodic case in the RLC series resonant circuit}{108}{0}{3}
+\beamer@subsubsectionintoc {3}{3}{3}{Aperiodic boundary case in the RLC series resonant circuit}{112}{0}{3}
+\beamer@subsubsectionintoc {3}{3}{4}{Periodic case for the RLC series resonant circuit}{115}{0}{3}
+\beamer@subsectionintoc {3}{4}{Digressions on series resonant circuits}{118}{0}{3}
+\beamer@subsubsectionintoc {3}{4}{1}{Derivation of the homogeneous solution in the periodic case}{118}{0}{3}
+\beamer@subsubsectionintoc {3}{4}{2}{Digression: Case differentiation for RLC series resonant circuits, zero points}{121}{0}{3}
+\beamer@subsubsectionintoc {3}{4}{3}{Decay constant, natural and resonance circuit frequency, quality factor}{122}{0}{3}

@@ -1,8 +1,8 @@
-\subsection{Ausgangsspannung einer zweistufigen OP-Schaltung bestimmen\label{Aufg15}}
+\subsection{Determine the output voltage of a two-stage operational amplifier circuit\label{Aufg15}}
 % Alt: Aufgabe 15
 \Aufgabe{
-    Gegeben ist die folgende Schaltung. Berechnen Sie die Ausgangsspannung \( U_\mathrm{a} \). \\
-Die Widerstandswerte lauten: \\
+    Given is the following circuit. Calculate the output voltage \( U_\mathrm{a} \). \\
+The resistance values are: \\
 $
 R_\mathrm{1} = \mathrm{10\,k\Omega},\\
 R_\mathrm{2} = \mathrm{30\,k\Omega},\\
@@ -36,12 +36,12 @@ $
 }
 
 \Loesung{
-    Die Ausgangsspannung nach dem ersten Operationsverstärker (\( U_\mathrm{a1} \)) ergibt sich zu:
+    The output voltage after the first operational amplifier (\( U_\mathrm{a1} \)) is calculated as follows:
     \begin{align*}
         U_\mathrm{a1} &= (U_\mathrm{E1} - U_\mathrm{E2}) \cdot \frac{R_\mathrm{2}}{R_\mathrm{1}} \\
         U_\mathrm{a1} &= \frac{\mathrm{30\,k\Omega}}{\mathrm{10\,k\Omega}} \cdot (U_\mathrm{E1} - U_\mathrm{E2})
     \end{align*}
-    Daraus ergibt sich für die gesamte Ausgangsspannung (\( U_\mathrm{a} \)):
+    This results in the following for the total output voltage (\( U_\mathrm{a} \)):
     \begin{align*}
         U_\mathrm{a} &= - \frac{R_\mathrm{4}}{R_\mathrm{3}} \cdot U_\mathrm{a1} \\
         U_\mathrm{a} &= - \frac{\mathrm{10\,k\Omega}}{\mathrm{30\,k\Omega}} \cdot \frac{\mathrm{30\,k\Omega}}{\mathrm{10\,k\Omega}} \cdot (U_\mathrm{E1} - U_\mathrm{E2}) \\
@@ -68,5 +68,5 @@ $
 %        
 %        Die Ausgangsspannung ist somit die Summe der beiden Eingangsspannungen U E1 und U E2.
 %        }
-Siehe: Abschnitt \ref{fig: Verschaltung Verstaerker} und Tabelle \ref{tab:Grundschaltungen}
+See section: \ref{fig: Verschaltung Verstaerker} and Table \ref{tab:Grundschaltungen}
 }

@@ -1,13 +1,13 @@
-\subsection{Ermittlung der Betriebsgrenzen einer Zenerdiode\label{Aufg7}}
+\subsection{Determination of the operating limits of a Zener diode\label{Aufg7}}
 % Alt: Aufgabe 7
 \Aufgabe{
-  Gegeben ist die folgende Schaltung mit einer Zenerdiode und zwei Widerständen. 
-  Die eingesetzte Zenerdiode besitzt eine Zenerspannung von \( U_\mathrm{Z} = \mathrm{8\,V} \). 
-  Die maximale Verlustleistung der Diode beträgt \( P_\mathrm{tot}=\mathrm{8\,W} \). 
-  Die Diode arbeitet im stabilisierenden Bereich, wenn der Strom durch sie mindestens \( \mathrm{5\,mA} \) beträgt. 
-  Zusätzlich sind die folgenden Werte gegeben:
+  The following circuit with a Zener diode and two resistors is given.
+  The Zener diode used has a Zener voltage of \( U_\mathrm{Z} = \mathrm{8\,V} \). 
+  The maximum power dissipation of the diode is \( P_\mathrm{tot}=\mathrm{8\,W} \). 
+  The diode operates in the stabilising range when the current through it is at least \( \mathrm{5\,mA} \). 
+  In addition, the following values are given:
   $U_\mathrm{E}=20\,\mathrm{V}\pm 10\%$ und $R_\mathrm{V} = 10\,\Omega$.\\
-  Welchen minimalen und maximalen Widerstandswert darf der Lastwiderstand \( R_\mathrm{L} \) nicht unter- bzw. überschreiten, damit die Diode einerseits im stabilisierenden Bereich arbeitet und andererseits nicht überlastet wird?
+  What are the minimum and maximum resistance values that the load resistance \( R_\mathrm{L} \) must not fall below or exceed in order for the diode to operate in the stabilising range on the one hand and not be overloaded on the other?
   
   \begin {figure} [H]
      \centering
@@ -25,12 +25,12 @@
     \label{fig:LsgZDiodeGrenzen}
   \end{figure}
 
-  Gegeben sind:
+  Given is:
 \begin{equation*}
     U_\mathrm{max} = \mathrm{22\,V} \text{ und } U_\mathrm{min} = \mathrm{18\,V}
 \end{equation*}
 
-\textbf{Fall 1:} Bei \( U_\mathrm{max} = \mathrm{22\,V} \)
+\textbf{Fall 1:} At \( U_\mathrm{max} = \mathrm{22\,V} \)
 \begin{gather*}
     U_\mathrm{RV} = \mathrm{22\,V} - \mathrm{8\,V} = \mathrm{14\,V} \\
     I = \frac{\mathrm{14\,V}}{\mathrm{10\,\Omega}} = \mathrm{1{,}4\,A} \\
@@ -40,7 +40,7 @@
     R_\mathrm{L} = \frac{\mathrm{8\,V}}{\mathrm{0{,}4\,A}} = \mathrm{20\,\Omega} \Rightarrow R_\mathrm{L,\ max} = \mathrm{20\,\Omega}
 \end{gather*}
 
-\textbf{Fall 2:} Bei \( U_\mathrm{min} = \mathrm{18\,V} \)
+\textbf{Fall 2:} At \( U_\mathrm{min} = \mathrm{18\,V} \)
 \begin{gather*}
     U_\mathrm{RV} = \mathrm{18\,V} - \mathrm{8\,V} = \mathrm{10\,V} \\
     I = \frac{\mathrm{10\,V}}{\mathrm{10\,\Omega}} = \mathrm{1\,A} \\
@@ -93,7 +93,7 @@
 % Zusammenfassung:
 % - Der Lastwiderstand R L muss zwischen 8 Ohm und 20 Ohm liegen, damit die Zenerdiode im stabilisierenden Bereich bleibt und nicht überlastet wird.
 % }
-Siehe: Abschnitt \ref{sec:SpezielleDioden}
+See section: \ref{sec:SpezielleDioden}
 }
 
 

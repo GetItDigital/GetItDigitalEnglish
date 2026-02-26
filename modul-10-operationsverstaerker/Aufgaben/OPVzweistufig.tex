@@ -1,7 +1,7 @@
-\subsection{Berechnung der Ausgangsspannung einer zweistufigen OP-Schaltung\label{Aufg6}}
+\subsection{Calculation of the output voltage of a two-stage operational amplifier circuit\label{Aufg6}}
 % Alt: Aufgabe 6
 \Aufgabe{
-    Berechnen Sie $U_\mathrm{A}$ mit folgenden Werten: \newline
+    Calculate $U_\mathrm{A}$ with the following values: \newline
     $R_1 = \mathrm{10\,k\Omega}$, $R_2 = \mathrm{20\,k\Omega}$, $R_3 = \mathrm{30\,k\Omega}$, $R_4 = \mathrm{10\,k\Omega}$, $R_5 = \mathrm{20\,k\Omega}$
 
     \begin {figure} [H]
@@ -31,7 +31,7 @@
 }
 
 \Loesung{
-    Formel:
+    Formula:
     \begin{equation}
         U_\mathrm{N1} = - \left( \frac{R_\mathrm{N}}{R_\mathrm{1}} U_\mathrm{E1} + \frac{R_\mathrm{N}}{R_2} U_\mathrm{E2} + \frac{R_\mathrm{N}}{R_\mathrm{3}} U_\mathrm{E3} \right)
     \end{equation}
@@ -39,26 +39,26 @@
         U_\mathrm{A} = -\frac{R_\mathrm{6}}{R_\mathrm{5}} U_\mathrm{N1}
     \end{equation}
 
-Berechnung:
+Calculation:
 
-Berechnung von $U_\mathrm{N1}$
+Calculation of $U_\mathrm{N1}$
     \begin{align*}
         U_\mathrm{N1} &= - \left( \frac{10\,\mathrm{k}\Omega}{10\,\mathrm{k}\Omega} U_\mathrm{E1} + \frac{10\,\mathrm{k}\Omega}{20\,\mathrm{k}\Omega} U_\mathrm{E2} + \frac{10\,\mathrm{k}\Omega}{30\,\mathrm{k}\Omega} U_\mathrm{E3} \right) \\
         &= - \left( U_\mathrm{E1} + 0,5 U_\mathrm{E2} + \frac{1}{3} U_\mathrm{E3} \right)
     \end{align*}
 
-Berechnung von $U_\mathrm{A}$
+Calculation of $U_\mathrm{A}$
     \begin{align*}
         U_\mathrm{A} &= -2 \cdot U_\mathrm{N1} \\
         &= -2 \left( - \left( U_\mathrm{E1} + 0,5 U_\mathrm{E2} + \frac{1}{3} U_\mathrm{E3} \right) \right) \\
         &= 2 \left( U_\mathrm{E1} + 0,5 U_\mathrm{E2} + \frac{1}{3} U_\mathrm{E3} \right)
     \end{align*}
 
-Die Ausgangsspannung $U_\mathrm{A}$ beträgt also:
+The output voltage $U_\mathrm{A}$ is therefore:
     \begin{align*}
         U_\mathrm{A} &= 2 U_\mathrm{E1} + U_\mathrm{E2} + \frac{2}{3} U_\mathrm{E3}
     \end{align*}
-    Siehe: Abschnitt \ref{fig: Verschaltung Verstaerker} und Tabelle \ref{tab:Grundschaltungen}
+    See section: \ref{fig: Verschaltung Verstaerker} and Table \ref{tab:Grundschaltungen}
 
 %    \speech{
 %        Berechnung der Ausgangsspannung einer zweistufigen Operationsverstärkerschaltung  

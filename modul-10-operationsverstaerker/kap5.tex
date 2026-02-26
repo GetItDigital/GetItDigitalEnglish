@@ -1,21 +1,21 @@
 \begin{frame}
-    \fta{Operationsverstärker als Analogrechner}
+    \fta{Operational amplifiers as analogue computers}
     \s{
-    Neben dem Einsatz von Operationsverstärkern in Messverstärkern, werden OPVs auch in Analogrechnern eingesetzt.
-    Das mag in der Zeit hochperformanter Prozessoren nicht mehr relevant wirken, hat aber durchaus Vorteile. So kann die Berechnungszeit mithilfe von Operationsverstärkern deutlich reduziert werden.
-    Das macht vor allem in Anwendungen Sinn, in denen nur eine Rechenoperation (Multiplikation, Addition o.ä.) durchgeführt werden soll, aber so gut wie keine Latenzen auftreten dürfen.
-    Dies ist heutzutage noch häufig in der Regelungstechnik der Fall. 
-    
-    Es sollen im Rahmen dieses Kapitels folgende Kompetenzen erworben werden:
+    In addition to their use in measuring amplifiers, OPVs are also used in analogue computers.
+    This may no longer seem relevant in the age of high-performance processors, but it does have advantages. For example, operational amplifiers can significantly reduce calculation time.
+    This is particularly useful in applications where only one arithmetic operation (multiplication, addition, etc.) is to be performed, but where virtually no latency is permitted.
+    This is still often the case in control engineering today.
+     
+    The following skills are to be acquired within the scope of this chapter:
     \s{
-        \begin{Lernziele}{Operationsverstärker}
+        \begin{Learning objectives}{Operationsverstärker}
             \title{Lernziele: Operationsverstärker als Analogrechner}
-            Die Studierenden können
+            The students can
             \begin{itemize}
-                \item geeignete Operationsverstärkerschaltungen für eine Problemlösung angegeben.
-                \item Widerstandsverhältnisse berechnen.
+                \item Specify suitable operational amplifier circuits for solving a problem.
+                \item Calculate resistance ratios.
             \end{itemize}
-        \end{Lernziele}
+        \end{Learning objectives}
     }
 %\speech{Operationsverstärker als Analogrechner}{1}{
 %    Neben dem Einsatz von Operationsverstärkern in Messverstärkern, werden OPVs auch in Analogrechnern eingesetzt.
@@ -29,58 +29,59 @@
 %    Die Studierenden können geeignete Operationsverstärkerschaltungen für eine Problemlösung angeben und Widerstandsverhältnisse berechnen. 
 %    Sie können mithilfe von Operationsverstärkerschaltungen einen Analogrechner aufbauen und die Funktionsweise erklären.
 %}
-    Im Folgenden sollen ein Beispiel vorgestellt werden, das zeigen soll, wie mithilfe der in der Tabelle gegebenen Operationsverstärkergrundschaltungen 
-    ein Analogrechner aufgebaut werden kann.
+    The following section presents an example that shows how an analogue computer can be constructed using the basic operational 
+    amplifier circuits given in the table.
 
-    \begin{bsp}{Beispiel Analogrechner}{Beispiel Analogrechner}
-        Es soll eine Schaltung entworfen werden, die folgende Funktion umsetzt:
+    \begin{expl}{Beispiel Analogrechner}{Beispiel Analogrechner}
+        \renewcommand{\figurename}{Figure}
+        A circuit is to be designed that implements the following function:
         \begin{equation}
             U_{\textnormal{A}} = \int U_{\textnormal{E1}} dt +x \cdot U_{\textnormal{E1}} - 2\cdot U_{\textnormal{E2}} 
         \end{equation}
         
-        \textbf{Lösung}\\
-        Zunächst muss die Gleichung in zwei Teilprobleme zerlegt werden, die mithilfe von Operationsverstärkerschaltungen gelöst werden können.
-        Das erste Teilproblem bildet die Integration des Eingangssignals $U_{E1}$. Dazu soll zunächst eine Integratorschaltung verwendet werden.
-        Das zweite Teilproblem bildet die Addition der Signale. Dafür kann ein Summierer verwendet werden.
-        Durch eine Kombination von einer Integratorschaltung und einem Summierer ist also das gewünschte Verhalten zu erreichen. Ist es mit dieser Schaltung möglich x=0 zu wählen?
+        \textbf{Solution}\\
+        First, the equation must be broken down into two sub-problems that can be solved using operational amplifier circuits.
         
+        The first sub-problem is the integration of the input signal $U_{E1}$. To do this, an integrator circuit should first be used.
+        The second sub-problem is the addition of the signals. A summing amplifier can be used for this.
+        The desired behaviour can therefore be achieved by combining an integrator circuit and a summing amplifier. Is it possible to select x=0 with this circuit?        
             \fu{
             \resizebox{0.6\textwidth}{!}{\input{Tikz/src/Analogrechner.tex}}
-            }{Schaltung zur Lösung der Analogrechneraufgabe
+            }{Circuit for solving the analogue computer task
             \label{fig:Analogrechner}}
 
         \begin{equation}
             U_{\textnormal{A}} = \underbrace{\left[ -\frac{1}{R_1 \cdot C} \int_{0}^{t} U_{\textnormal{E1}}~dt -\frac{R_2}{R_1} \cdot U_{\textnormal{E1}} \right]}_{Formel~des~Integrators} \underbrace{\cdot\left(-\frac{R_5}{R_3}\right)-\frac{R_5}{R_4}\cdot U_{\textnormal{E2}}}_{Formel~des~Summierers} 
         \end{equation}
-        Dies kann nun wie folgt umgeformt werden
+        This can now be transformed as follows
         \begin{equation}
             U_{\textnormal{A}} = \underbrace{\frac{R_5}{R_1 \cdot R_3 \cdot C}}_{\stackrel{!}{=}1} \int_{0}^{t} U_{\textnormal{E1}}~dt + \underbrace{\frac{R_2 R_5}{R_1 R_3}}_{\stackrel{!}{=}x} U_{\textnormal{E1}} -\underbrace{\frac{R_5}{R_4}}_{\stackrel{!}{=}2} \cdot U_{\textnormal{E2}} 
         \end{equation}
 
-        Wie der Formel zu entnehmen ist, müssen nun die Bauteilwerte nur noch so gewählt werden, dass sich die richtigen Vorfaktoren ergeben.
-        Eine Wahl von x=0 ist nur möglich, wenn der Widerstand $R_2$ weggelassen wird. In diesem Fall ergibt sich ein \glqq idealer\grqq{}, der in der Realität so allerdings in der Regel nicht aufgebaut wird. 
-
-    \end{bsp}
+        As can be seen from the formula, the component values now only need to be selected so that the correct pre-factors are obtained.
+        A choice of x=0 is only possible if the resistor $R_2$ is omitted. In this case, the result is an \glqq ideal\grqq{}, which, however, is not usually constructed in reality.
+ 
+    \end{expl}
    %% \f{width=1\textwidth}{width=\textwidth}{kap5/Analogrechner.tex}{Schaltung zur Lösung der Analogrechneraufgabe \label{fig:Analogrechner Skript}} 
 
 
     }
-	\b{\frametitle{Operationsverstärker als Analogrechner}
-        Es soll eine Schaltung entworfen werden, die folgende Funktion umsetzt:
+	\b{\frametitle{Operational amplifiers as analogue computers}
+        A circuit is to be designed that implements the following function:
         \begin{equation}
             U_{\textnormal{A}} = \int U_{\textnormal{E1}} +x \cdot U_{\textnormal{E1}} - 2\cdot U_{\textnormal{E2}} 
         \end{equation}
 
-        Wie kann das erreicht werden? Überlegen Sie sich zunächst, welche Grundschaltungen hierfür zu kombinieren sind. 
+        How can this be achieved? First, consider which basic circuits need to be combined to achieve this.  
         }
 \end{frame}
 
 \begin{frame}
     \b{
-        \frametitle{Lösungsschritt 1: Verstärkerschaltung}
-        Zunächst muss die obere Gleichung in zwei Teilprobleme zerlegt werden, die mithilfe von Operationsverstärkerschaltungen gelöst werden können.
-        Das erste Teilproblem bildet die Integration des Eingangssignals $U_{E1}$. Dazu soll zunächst eine Integratorschaltung verwendet werden.
-        Das zweite Teilproblem bildet die Addition der Signale. Dafür kann ein Summierer verwendet werden.
+        \frametitle{Solution step 1: Amplifier circuit}
+        First, the above equation must be broken down into two sub-problems that can be solved using operational amplifier circuits.
+        The first sub-problem is the integration of the input signal $U_{E1}$. To do this, an integrator circuit should first be used.
+        The second sub-problem is the addition of the signals. A summing amplifier can be used for this.
         \begin{figure}[ht]
             \centering
             \fu{
@@ -88,24 +89,24 @@
             }{Schaltung zur Lösung der Analogrechneraufgabe
             \label{fig:Analogrechner2}}
         \end{figure}
-        Durch eine Kombination von einer Integratorschaltung und einem Summierer ist also das gewünschte Verhalten zu erreichen. Ist es mit dieser Schaltung möglich x=0 zu wählen?
+        The desired behaviour can therefore be achieved by combining an integrator circuit and a summing circuit. Is it possible to select x=0 with this circuit?
         }
 \end{frame}
 
 \begin{frame}
     \b{   
-        \frametitle{Lösungsschritt 2: Rechnung}
+        \frametitle{Solution step 2: Calculation}
        
         \begin{equation}
             U_{\textnormal{A}} = \underbrace{\left[ -\frac{1}{R_1 \cdot C} \int_{0}^{t} U_{\textnormal{E1}}~dt -\frac{R_2}{R_1} \cdot U_{\textnormal{E1}} \right]}_{Formel~des~Integrators} \underbrace{\cdot\left(-\frac{R_5}{R_3}\right)-\frac{R_5}{R_4}\cdot U_{\textnormal{E2}}}_{Formel~des~Summierers} 
         \end{equation}
-        Dies kann nun wie folgt umgeformt werden
+        This can now be transformed as follows
         \begin{equation}
             U_{\textnormal{A}} = \underbrace{\frac{R_5}{R_1 \cdot R_3 \cdot C}}_{\stackrel{!}{=}1} \int_{0}^{t} U_{\textnormal{E1}}~dt + \underbrace{\frac{R_2 R_5}{R_1 R_3}}_{\stackrel{!}{=}x} U_{\textnormal{E1}} -\underbrace{\frac{R_5}{R_4}}_{\stackrel{!}{=}2} \cdot U_{\textnormal{E2}} 
         \end{equation}
 
-        Wie der Formel zu entnehmen ist, müssen nun die Bauteilwerte nur noch so gewählt werden, dass sich die richtigen Vorfaktoren ergeben.
-        Eine Wahl von x=0 ist nur möglich, wenn der Widerstand $R_2$ weggelassen wird. 
+        As can be seen from the formula, the component values now only need to be selected so that the correct pre-factors are obtained.
+        A choice of x=0 is only possible if the resistor $R_2$ is omitted.
     }
 \end{frame}
 

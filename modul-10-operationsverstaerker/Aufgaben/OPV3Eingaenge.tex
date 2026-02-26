@@ -1,8 +1,8 @@
-\subsection{Berechnung einer OP-Schaltung mit drei Eingängen\label{Aufg16}}
+\subsection{Calculation of an OP circuit with three inputs\label{Aufg16}}
 % Alt: Aufgabe 16
 \Aufgabe{
-    Gegeben ist die unten abgebildete Schaltung. Bestimmen Sie die Ausgangsspannung \( U_\mathrm{A} \). \\
-    Die Widerstandswerte lauten: \\
+    The circuit shown below is given. Determine the output voltage \( U_\mathrm{A} \). \\
+    The resistance values are: \\
     $
     R_\mathrm{1} = \mathrm{10\,k\Omega},\\
     R_\mathrm{2} = \mathrm{20\,k\Omega},\\
@@ -40,13 +40,13 @@
 }
 
 \Loesung{
-	Ausgangsspannung nach 1. OPV mit folgender Formel berechnen ($U_{a1}$):
+	Calculate the output voltage after the first operational amplifier using the following formula ($U_{a1}$):
     \begin{align*}
         U_\mathrm{A1} = - (U_\mathrm{E1} \cdot \frac{R_4}{R_1} + U_\mathrm{E2} \cdot \frac{R_4}{R_2} + U_\mathrm{E3} \cdot \frac{R_4}{R_3}) \\
         U_\mathrm{A1} = - (U_\mathrm{E1} \cdot \frac{10}{10} + U_\mathrm{E2} \cdot \frac{10}{20} + U_\mathrm{E3} \cdot \frac{10}{30}) \\
         U_\mathrm{A1} = - (U_\mathrm{E1} + \frac{1}{2} \cdot U_\mathrm{E2} + \frac{1}{3} \cdot U_\mathrm{E3}) \\
     \end{align*}
-    Daraus egibt sich für die gesamte Ausgangsspannung ($U_\mathrm{A}$):
+    This results in the following for the total output voltage ($U_\mathrm{A}$):
     \begin{align*}
         U_\mathrm{A} = - \frac{R_6}{R_5} \cdot U_\mathrm{a1} \\
         U_\mathrm{A} = - \frac{40}{20} \cdot (- (U_\mathrm{E1} + \frac{1}{2} \cdot U_\mathrm{E2} + \frac{1}{3} \cdot U_\mathrm{E3})) \\
@@ -74,5 +74,5 @@
   %      
  %       Die Ausgangsspannung ist somit eine gewichtete Summe der Eingangsspannungen U E1, U E2 und U E3 mit den entsprechenden Verstärkungsfaktoren.
 %        }
-Siehe: Abschnitt \ref{fig: Verschaltung Verstaerker} und Tabelle \ref{tab:Grundschaltungen}
+See section: \ref{fig: Verschaltung Verstaerker} and Table \ref{tab:Grundschaltungen}
 }

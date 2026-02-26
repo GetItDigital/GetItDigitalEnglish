@@ -1,12 +1,11 @@
-\subsection{Schaltungsentwurf eines Operationsverstärkers mit zwei Eingangssignalen\label{Aufg11}}
+\subsection{Circuit design of an operational amplifier with two input signals\label{Aufg11}}
 % Alt: Aufgabe 11
 \Aufgabe{
-    Zwischen der Ausgangsspannung $U_\mathrm{a}$ und den Eingangsspannungen $U_\mathrm{1}$ und $U_\mathrm{2}$ besteht der folgende 
-    funktionale Zusammenhang:
-    $U_\mathrm{a} = -5 \ U_\mathrm{1} - 0,8 \ U_\mathrm{2}$
-    Geben Sie eine mit Operationsverstärker(n) und Widerständen aufgebaute Schaltung zur Realisierung 
-    dieses funktionalen Zusammenhangs an. Die Operationsverstärker dürfen als ideale Operationsverstärker 
-    angenommen werden. Geben Sie Werte der verwendeten Widerstände an!
+    The following functional relationship exists between the output voltage $U_\mathrm{a}$ and the input voltages $U_\mathrm{1}$ and $U_\mathrm{2}$:  
+    $U_\mathrm{a} = -5 \ U_\mathrm{1} - 0.8 \ U_\mathrm{2}$.  
+
+    Design a circuit using operational amplifier(s) and resistors to realize this functional relationship. Assume the operational amplifiers are ideal. Specify the values of the resistors used!
+
 
    % \speech{ Lösung für Aufgabe 11.
    % Die Aufgabe gibt eine Funktionsgleichung für die Ausgangsspannung in Abhängigkeit von zwei Eingangsspannungen vor. Ziel ist es, eine Schaltung mit Operationsverstärker und Widerständen zu entwerfen, die diese Funktionsgleichung realisiert.
@@ -32,18 +31,18 @@
 
 \Loesung{
 
-Der gegebene funktionale Zusammenhang zwischen der Ausgangsspannung $U_\mathrm{a}$ und den Eingangsspannungen $U_1$ und $U_2$ lautet:
+The given functional relationship between the output voltage $U_\mathrm{a}$ and the input voltages $U_1$ and $U_2$ is:
 $
 U_\mathrm{a} = -5 U_1 - 0,8 U_2
 $
 
-\textbf{1. Schaltungsbeschreibung}
+\textbf{1. Circuit description}
 
-Zur Realisierung dieses Zusammenhangs nutzen wir eine Summierschaltung mit einem invertierenden Operationsverstärker. Die Ausgangsspannung des invertierenden Summierers lautet:
+To implement this relationship, we use a summing circuit with an inverting operational amplifier. The output voltage of the inverting summing amplifier is:
 $
 U_\mathrm{a} = -\left( \frac{R_\mathrm{F}}{R_1} U_1 + \frac{R_\mathrm{F}}{R_2} U_2 \right)
 $
-Vergleich mit der Vorgabe:
+Comparison with the target:
 $
 - \left( \frac{R_\mathrm{F}}{R_1} \right) = -5 \quad \Rightarrow \quad \frac{R_\mathrm{F}}{R_1} = 5
 $
@@ -57,35 +56,35 @@ $
 \label{fig:LsgOPV2Signale}
 \end{figure}
 
-\textbf{2. Wahl der Widerstandswerte}
+\textbf{2. Selection of resistance values}
 
-Wir setzen $R_\mathrm{F} = 10\,\mathrm{k}\Omega$ (typischer Wert im Bereich 1–100 k$\Omega$):
+We set $R_\mathrm{F} = 10\,\mathrm{k}\Omega$ (typical value in the range 1–100 k$\Omega$):
 \begin{itemize}
-    \item \textbf{Berechnung von $R_1$}:
+    \item \textbf{Calculation of $R_1$}:
     $
     \frac{R_\mathrm{F}}{R_1} = 5 \quad \Rightarrow \quad R_1 = \frac{R_\mathrm{F}}{5} = \frac{10\,\mathrm{k}\Omega}{5} = 2\,\mathrm{k}\Omega
     $
-    \item \textbf{Berechnung von $R_2$}:
+    \item \textbf{Calculation of $R_2$}:
     $
     \frac{R_\mathrm{F}}{R_2} = 0,8 \quad \Rightarrow \quad R_2 = \frac{R_\mathrm{F}}{0,8} = \frac{10\,\mathrm{k}\Omega}{0,8} = 12,5\,\mathrm{k}\Omega
     $
 \end{itemize}
 
-\textbf{3. Realisierung der Schaltung}
+\textbf{3. Implementation of the circuit}
 
-Die verwendeten Widerstände:
+The resistors used:
 \begin{align*}
     R_\mathrm{F} &= 10\,\mathrm{k}\Omega \\
     R_1 &= 2\,\mathrm{k}\Omega \\
     R_2 &= 12,5\,\mathrm{k}\Omega
 \end{align*}
 
-\textbf{4. Schaltbild der realisierten Schaltung}
+\textbf{4. Circuit diagram of the implemented circuit}
 
-Die Schaltung besteht aus einem Operationsverstärker, dessen invertierender Eingang mit den Widerständen $R_1$ und $R_2$ verbunden ist, die Eingangsspannungen $U_1$ und $U_2$ einspeisen. Der nicht-invertierende Eingang liegt auf Masse.
+The circuit consists of an operational amplifier whose inverting input is connected to resistors $R_1$ and $R_2$, which feed in input voltages $U_1$ and $U_2$. The non-inverting input is connected to ground.
 
-\textbf{Zusammenfassung:}
+\textbf{Summary:}
 
-Die gewünschte Funktionsgleichung $U_\mathrm{a} = -5 U_1 - 0,8 U_2$ wird mit der beschriebenen Schaltung und den berechneten Widerstandswerten realisiert.
-Siehe: Abschnitt \ref{fig: Verschaltung Verstaerker} und Tabelle \ref{tab:Grundschaltungen}
+The desired functional equation $U_\mathrm{a} = -5 U_1 - 0.8 U_2$ is realised using the circuit described and the calculated resistance values.
+See section: \ref{fig: Verschaltung Verstaerker} and Table \ref{tab:Grundschaltungen}
 }

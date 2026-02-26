@@ -4,33 +4,33 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section[Einführung]{Einführung in Schaltvorgänge}
+\section[Einführung]{Introduction to switching operations}
 \label{sec:einfuehrung}
 \newvideofile{Einfuehrung}{Einführung in Schaltvorgänge}
 \begin{frame}\ftx{\secname}
 \s{%
 	% Einführung 
-	Schaltvorgänge sind Ausgleichsvorgänge, welche unmittelbar nach dem Schalten in elektrischen Netzwerken auftreten.
-	Wie der Begriff \glqq elektrische Schaltung\grqq\ im Deutschen vermuten lässt, spielt das Schalten eine große Rolle in der Elektrotechnik. 
-	Selbst elektrische Netzwerke, in denen nicht geschalten wird, werden gemeinhin als Schaltungen bezeichnet.
-
-	% Beispiele
-	Schalter finden vielfältig Anwendung unter anderem in der Leistungselektronik, der Informations-, der Kommunikations- 
-	und der Regelungstechnik. Dabei kommt es nach jedem effektiven Schalten zu Ausgleichsvorgängen, 
-	die mitunter erwünschte oder unerwünschte Effekte hervorrufen können.
+	Switching operations are compensation processes that occur immediately after switching in electrical networks.
+	As the term \glqq electrical circuit\grqq\ suggests, switching plays an important role in electrical engineering.
+	Even electrical networks in which no switching takes place are commonly referred to as circuits.
+		
+	% Examples
+    Switches are used in a variety of applications, including power electronics, information technology, communications 
+    and control engineering. After each effective switching operation, balancing processes occur, 
+    which can sometimes cause desirable or undesirable effects.
 
 	% Themen Eingrenzung
-	In diesem Modul liegt der Fokus auf der Untersuchung dieser Ausgleichsvorgänge.
+	This module focuses on the investigation of these compensation processes.
 }
-\begin{Lernziele}{\v{Video - }Einführung}
-	Studierende lernen: 
+\begin{Learning objectives}{\v{Video - }Introduction}
+	The students learn:
 	\begin{itemize}
-		\item Schaltvorgänge als nicht-stationäre Zustände nach Schaltaktionen kennen % Wissen
-		\item Schaltvorgänge im Kontext anderer Ausgleichsvorgänge zu verstehen % Verstehen
-		\item Herausforderungen und Möglichkeiten bei Schaltvorgängen kennen % Wissen, Anwenden (Beispiele Praxis, LE, Filter, Verzögerungen, ...)
-		\item das Schaltverhalten von idealen und realen Schaltern zu unterscheiden % Verstehen
+		\item Recognise switching operations as non-stationary states following switching actions % Knowledge
+		\item Understand switching operations in the context of other compensation processes % Understanding
+		\item Recognise challenges and opportunities associated with switching operations % Knowledge, application (practical examples, LE, filters, delays, etc.)
+        \item Distinguish between the switching behaviour of ideal and real switches % Understanding
 	\end{itemize}
-\end{Lernziele}
+\end{Learning objectives}
 \speech{EinfuehrungLernziele}{1}{%
 Sehr geehrte Studierende,
 herzlich willkommen zum Video Einführung in Schaltvorgänge.
@@ -49,29 +49,30 @@ Zudem lernen Sie Unterschiede im Verhalten von idealen und realen Schaltern kenn
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Ausgleichsvorgänge}
+\subsection{Settlement procedures}
 \label{sec:einfuehrung:ausgleichsvorgaenge}
 \begin{frame}\ftx{\subsecname}
+	\renewcommand{\figurename}{Figure}
 \s{%
 	% Vorstellung: Ausgleichsvorgänge
-	Ausgleichsvorgänge sind allgemein Vorgänge, in denen ein System nach einer Störung einem Gleichgewichtszustand zustrebt.
+	Compensation processes are generally processes in which a system strives to achieve a state of equilibrium after a disturbance.
 	
 	% Analogien
-	Ein Blick in die Physik zeigt, dass Ausgleichsvorgänge auf mannigfaltige Art und Weise in vielen Bereichen vorkommen. 
-	Nach dem zweiten Hauptsatz der Thermodynamik strebt ein System stets einem Gleichgewichtszustand zu.
-	Demnach kann jeder Vorgang bei entsprechenden Systemgrenzen als Ausgleichsvorgang betrachtet werden.
-	Ein Stückweit lassen sich Schaltvorgänge mittels Analogien zu anderen Ausgleichsvorgängen beschreiben.  
+	A look at physics shows that balancing processes occur in many different ways in many areas.
+	According to the second law of thermodynamics, a system always strives to achieve a state of equilibrium.
+	Accordingly, every process can be regarded as a balancing process within the corresponding system boundaries.
+    To a certain extent, switching processes can be described using analogies to other balancing processes.
 	% Alle Vorgänge? 2. Satz Thermodynamik -> Makroskopisch? ... Mh...
 	
 	% Beispiele
-	Beispiele für Ausgleichsvorgänge sind das Erhitzen einer Flüssigkeit, das Ausschwingen eines Pendels oder der Regelvorgang eines Regelkreises.
+    Examples of compensation processes include heating a liquid, the oscillation of a pendulum, or the control process of a control loop.
 
 	\begin{figure}[H]\centering
 		% Bild: Bartolomeo Pinelli, Ausschnitt aus \textit{A Peasant Family Cooking over a Campfire}, CC0 1.0. \url{https://commons.wikimedia.org/w/index.php?curid=81414513}
 		\includegraphics[width=0.3\textwidth]{Bilder/Ausschnitt_A_Peasant_Family_Cooking_over_a_Campfire_by_Bartolomeo_Pinelli_CC0_1.0.png} % 320x319px
-		\caption{Erhitzen einer Flüssigkeit\protect\footnotemark}\label{fig:einfuehrung:ausgleichsvorgang:temperaturausgleich}
+		\caption{Heating a liquid\protect\footnotemark}\label{fig:einfuehrung:ausgleichsvorgang:temperaturausgleich}
 	\end{figure}
-	\footnotetext{Bartolomeo Pinelli, Ausschnitt aus \textit{A Peasant Family Cooking over a Campfire}, Lizenz CC0 1.0\newline\qquad\url{https://commons.wikimedia.org/w/index.php?curid=81414513}}
+	\footnotetext{Bartolomeo Pinelli, Excerpt from \textit{A Peasant Family Cooking over a Campfire}, Licence CC0 1.0\newline\qquad\url{https://commons.wikimedia.org/w/index.php?curid=81414513}}
 		
 	%Beispiel aperiodisch (DGL 1. Ordnung):\\
 	%	Temperaturausgleich. Warum? Energieniveaus anschaulich und Irreversibilität (Entropiesteigerung) (klassisch)
@@ -97,23 +98,23 @@ Zudem lernen Sie Unterschiede im Verhalten von idealen und realen Schaltern kenn
 
 	\begin{minipage}{\textwidth}% Untere Hälfte
 		\begin{minipage}[t]{0.48\textwidth}\centering
-			\underline{Analogie: Wasser erhitzen}\footnotemark
+			\underline{Analogy: Heating water}\footnotemark
 			\vspace{2mm}
 
 			\includegraphics[width=0.4\textwidth]{Bilder/Ausschnitt_A_Peasant_Family_Cooking_over_a_Campfire_by_Bartolomeo_Pinelli_CC0_1.0.png}%
 			\pause
 		\end{minipage}%
 		\begin{minipage}[t]{0.48\textwidth}%\centering
-			\underline{Ursachen für Ausgleichsvorgänge:}
+			\underline{Reasons for balancing transactions:}
 			\vspace{2mm}
 			\begin{itemize}
-				\item Schalthandlungen
-				\item DC: Änderung d. Spannung/Strom
-				\item AC: Änderung d. Frequenz/Amplitude/Phase
+				\item Switching operations
+				\item DC: Change in voltage/current
+				\item AC: Change in frequency/amplitude/phase
 			\end{itemize}
 		\end{minipage}
 	\end{minipage}
-	\footnotetext{Bild: Bartolomeo Pinelli, Ausschnitt aus \textit{A Peasant Family Cooking over a Campfire}, Lizenz CC0 1.0\newline\qquad\url{https://commons.wikimedia.org/w/index.php?curid=81414513}}
+	\footnotetext{Image: Bartolomeo Pinelli, detail from \textit{A Peasant Family Cooking over a Campfire}, Licence CC0 1.0\newline\qquad\url{https://commons.wikimedia.org/w/index.php?curid=81414513}}
 }%
 \speech{EinfuehrungAusgleichsvorgaenge}{1}{%
 Was sind nun Schaltvorgänge? Um diese Frage zu beantworten, fangen wir mit einem kleinem Beispiel an.
@@ -146,7 +147,7 @@ Zum Beispiel durch Schalthandlungen, bei DC-Netzwerken durch Änderung von Spann
 \end{frame}
 
 \b{% Beamer only, extra frame
-\begin{frame}\ftx{\subsecname\,- Beispiele}
+\begin{frame}\ftx{\subsecname\,- Examples}
 	\includegraphics[width=\textwidth]{Bilder/Ausgleichsvorgaenge_Beispiele_ET3_S_Exknowski_FH_SWF.png}% Provisorisch mit Genehmigung von Prof. Exknowski
 \speech{EinfuehrungAusgleichsvorgaengeBeispiele}{1}{%
 Hier sind weitere Beispiele für ähnliches Systemverhalten. Auch Einschwingvorgänge bei Regelungsprozessen können als Ausgleichsvorgänge betrachtet werden. 
@@ -168,43 +169,44 @@ Während der Ausgleichsvorgänge strebt die betrachtete Systemgröße einen stat
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Schaltvorgänge}
+\subsection{Switching operations}
 \label{sec:einfuehrung:schaltvorgaenge}
 \begin{frame}\ftx{\subsecname}
+	\renewcommand{\figurename}{Figure}
 \s{
 	% Def: Schaltvorgang, Prämisse (idealer Schalter)
-	Als Schaltvorgänge werden Ausgleichsvorgänge unmittelbar \underline{nach} dem Schalten bezeichnet.
-	Diese sind Hauptgegenstand des Moduls, wobei hierfür stehts von idealen Schaltern ausgegangen wird.
+	Switching operations are defined as compensation operations immediately \underline{following} switching.
+	These are the main subject of the module, whereby ideal switches are always assumed.
 
 	% Bild: Schaltvorgang DC, AC
-	Abbildung \ref{fig:plot:transient_persistent} zeigt exemplarisch den Zeitverlauf einer 
-	Systemgröße $s(t)$ (z.B. Strom oder Spannung) während eines Schaltvorgangs. 
-	Zum Vergleich sind für das Zuschalten einer Anregung zwei Fälle dargestellt:
-	einmal für eine Gleichgröße (DC) und einmal für eine Wechselgröße (AC).
+	Figure \ref{fig:plot:transient_persistent} shows an example of the time curve of a 
+    system variable $s(t)$ (e.g. current or voltage) during a switching operation. 
+    For comparison, two cases are shown for the connection of an excitation:
+	one for a direct current (DC) and one for an alternating current (AC).
 }
 % Bsp. Einschwingvorgang nach Schalten als Schaltvorgang. Vgl. DC und AC 
-\b{\centering Beispiel Schaltvorgang bei Gleich- und Wechselspannung.
+\b{\centering Example of switching operation with DC and AC voltage.
 }%
 \fu{\includegraphics{Tikz/pdf/plot_transient_persistent.pdf}}%
-	{Vergleich: Ausgleichsvorgang AC, DC\label{fig:plot:transient_persistent}}
+	{Comparison: AC and DC balancing process\label{fig:plot:transient_persistent}}
 \s{
 	% Bild-Erklärung: Vorgänge, Zustände
 	% stationär -> Schalten (instantan) -> Schaltvorgang (transient) -> stationärer Zustand (persistent)
-	Der dargestellte Schaltvorgang beginnt mit dem Schalten bei $t=0$ (gestrichelte Grenze, links) 
-	und endet mit Erreichen eines stationären Zustands (persistent) (gestrichelte Grenze, mittig).
-	Der stationäre Zustand von $s(t)$ entspricht
-	bei Anregung mit Gleichgröße (DC) ebenfalls einer Gleichgröße (konstant) und
-	bei Anregung mit Wechselgröße (AC) ebenfalls einer Wechselgröße (periodisch). 
-
-	Der in Abb. \ref{fig:plot:transient_persistent} dargestellte Vorgang beim Übergang (transient) 
-	von Schalten bis Erreichen eines stationären Zustands kann hier auch als 
-	Ausgleichsvorgang (allgemein), Schaltvorgang (speziell) oder Einschwingvorgang (speziell) bezeichnet werden. 
+	The switching process shown begins with switching at $t=0$ (dashed boundary, left)
+	and ends when a steady state (persistent) is reached (dashed boundary, centre).	
+	The steady state of $s(t)$ corresponds to a constant value (DC) when excited with a constant value and
+    a periodic value (AC) when excited with an alternating value.
+ 
+	The process shown in Fig. \ref{fig:plot:transient_persistent} during the transition (transient) 
+    from switching to reaching a steady state can also be referred to here as 
+    a balancing process (in general), a switching process (in particular) or a transient process (in particular).
 
 	% Abgrenzung: Vorgänge beim Schalten (realer Schalter)
-	Ausgleichsvorgänge \underline{während} dem Schalten, wie sie bei realen Schaltern auftreten,
-	werden nicht als Schaltvorgänge bezeichnet und in diesem Modul nicht näher untersucht. 
-	Eine kurze Erläuterung findet sich jedoch vollständigkeitshalber in Abschnitt \ref{sec:einfuehrung:schalteridealvsreal} 
-	beim Vergleich idealer und realer Schalter.
+	Compensation processes \underline{during} switching, as they occur in real switches,
+    are not referred to as switching processes and are not examined in detail in this module. 
+    However, for the sake of completeness, a brief explanation can be found in section \ref{sec:einfuehrung:schalteridealvsreal} 
+	when comparing ideal and real switches.
+
 }%
 \speech{EinfuehrungSchaltvorgaenge}{1}{%
  Hier sehen wir zwei Beispiele von Schaltvorgängen. Diese sind nichts anderes als Ausgleichsvorgänge in elektrischen Schaltungen,
@@ -226,43 +228,44 @@ Während der Ausgleichsvorgänge strebt die betrachtete Systemgröße einen stat
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Beispiele für Schaltvorgänge}
+\subsection{Examples of switching operations}
 \label{sec:einfuehrung:beispieleschaltvorgaenge}
 \begin{frame}\ftx{\subsecname}
 % Anwendungsbereiche von Schaltungstechnik: Leistungselektronik, Kommunikationstechnik(?), ...
 \b{% Beamer only
-\textbf{Beispiel aus der Leistungselektronik:} 
+\textbf{Example from power electronics:} 
 
 \begin{minipage}{0.38\textwidth}\centering
 	\includegraphics[width=\textwidth]{Bilder/Tiefsetzsteller_Schaltung_GET2_J_Böcker_Uni_Paderborn_cut.png}
-	Tiefsetzsteller mit Glättungskondensator\footnotemark
+	Step-down converter with smoothing capacitor\footnotemark
 \end{minipage}%
 \begin{minipage}{0.58\textwidth}\centering
 	\includegraphics[width=0.9\textwidth]{Bilder/Tiefsetzsteller_Zeitverläufe_GET2_J_Böcker_Uni_Paderborn_cut_edit.png}
 \end{minipage}
-\footnotetext{Schaltbild und Zeitverlauf: Joachim Böcker, GET2, Universität Paderborn, modifiziert (gekürzt)}
+\footnotetext{Schematic diagram and time sequence: Joachim Böcker, GET2, University of Paderborn, modified (abridged)}
 
-Stromrichter (engl. \textit{power converter}) wandeln elektrische in elektrische Energie um 
-Die Wandlung (z.B. Spannung, Strom, Frequenz) erfolgt durch getaktetes Schalten.\vspace{5pt}
+Power converters convert electrical energy into electrical energy.
+The conversion (e.g. voltage, current, frequency) is achieved by means of clocked switching. \vspace{5pt}
 
-\textbf{Andere Beispiele:}\\
-Ein-/Ausschalten, AD-/DA-Converter, Fahrradlicht mit Kondensator, ...
+\textbf{Other examples:}\\
+Switching on/off, AD/DA converter, bicycle light with capacitor, ...
 }% end Beamer only
 \s{% Skript only
-	Prinzipiell kommt es bei jedem Schalten in elektrischen Netzwerken zu Schaltvorgängen. 
+	In principle, switching operations occur every time a switch is made in electrical networks.
+         
+	Typical examples are converters (power converters) in power electronics,
+    which convert electrical energy into another form of electrical energy.
+    By selectively switching semiconductor components (e.g. transistors, thyristors)
+    the voltage, current or frequency can be changed.
+	In each clock cycle, capacitances and inductances are alternately charged and discharged. 
 	
-	Typische Beispiele sind Umrichter (engl. \textit{power converter}) in der Leistungselektronik,
-	welche elektrische Energie in eine andere Form elektrischer Energie umwandeln. 
-	Durch gezieltes Schalten von Halbleiterbauelementen (z.B. Transistoren, Thyristoren) 
-	kann die Spannung, der Strom oder die Frequenz verändert werden. 
-	In jedem Taktzyklus werden Kapazitäten und Indukivitäten abwechselnd geladen und entladen. 
-	
-	Abbildung \ref{fig:circ:pulldown} zeigt beispielhaft eine Tiefsetzsteller (Buck-Converter) mit Glättungskondensator.
-	Dieser wandelt eine Gleichspannung $U_1$ in eine niedrigere Gleichspannung $U_2$ um. 
-	Daneben sind in Abbildung \ref{fig:plot:pulldown} die zeitlichen Verläufe von Spannungen und Strömen
-	jeweils am Eingang und am Ausgang des Tiefsetzstellers dargestellt.
+	Figure \ref{fig:circ:pulldown} shows an example of a buck converter with a smoothing capacitor.	
+	This converts a DC voltage $U_1$ into a lower DC voltage $U_2$. 
+	Figure \ref{fig:plot:pulldown} also shows the time curves of voltages and currents
+	at the input and output of the buck converter.
 
 	\begin{figure}[H]\centering
+		\renewcommand{\figurename}{Figure}
 		\begin{subfigure}{0.5\textwidth}\centering
 			\includegraphics[width=\textwidth]{Bilder/Tiefsetzsteller_Schaltung_GET2_J_Böcker_Uni_Paderborn_cut.png}
 			\caption{Schaltbild eines Tiefsetzstellers (Buck-Converter)}
@@ -270,23 +273,20 @@ Ein-/Ausschalten, AD-/DA-Converter, Fahrradlicht mit Kondensator, ...
 		\end{subfigure}%
 		\begin{subfigure}{0.5\textwidth}\centering
 			\includegraphics[width=0.9\textwidth]{Bilder/Tiefsetzsteller_Zeitverläufe_GET2_J_Böcker_Uni_Paderborn_cut_edit.png}
-			\caption{Zeitverlauf von $u(t)$ und $i(t)$ am Tiefsetzsteller}
+			\caption{Time course of $u(t)$ and $i(t)$ at the setpoint}
 			\label{fig:plot:pulldown}
 		\end{subfigure}
-		\caption{Beispiel: Schaltvorgänge am Tiefsetzsteller\protect\footnotemark}
+		\caption{Example: Switching operations on the step-down converter\protect\footnotemark}
 	\end{figure}
-	\footnotetext{Quelle: Schaltbild und Zeitverlauf (modifiziert, gekürzt): Joachim Böcker, GET2, Universität Paderborn}
+	\footnotetext{Source: Circuit diagram and time sequence (modified, abridged): Joachim Böcker, GET2, Universität Paderborn}
 
-	Ohne nähere Rechnung ist erkennbar, dass die Ausgangsspannung auch im stationären Betrieb nicht konstant ist.
-	Die Ausgangsspannung über dem Glättungskondensator schwankt, da sich die Kapazität in jeder Schaltperiode 
-	etwas entlädt und wieder auflädt. 
-	
-	Mithilfe der Methoden aus diesem Modul lassen sich solche Schaltvorgänge berechnen und analysieren. 
-	Zum besseren Verständnis werden in Kapitel \ref{sec:schaltvorgaengezeitbereich} jedoch einfachere Beispiele von
-	Schaltvorgänge ohne periodisches Schalten betrachtet.
-
-	Andere Beispiele für Schaltvorgänge sind das Ein- und Ausschalten von Geräten,
-	Analog-Digital- und Digital-Analog-Wandlung, das Aufladen eines Kondensators durch ein Fahrradlicht.
+	Without detailed calculation, it is apparent that the output voltage is not constant even in steady-state operation.
+	The output voltage across the smoothing capacitor fluctuates because the capacitance discharges and recharges slightly in each switching period.
+	The methods described in this module can be used to calculate and analyse such switching processes.
+		
+	For a better understanding, however, simpler examples of switching processes without periodic switching are considered in Chapter \ref{sec:schaltvorgaengezeitbereich}.
+    Other examples of switching processes are the switching on and off of devices,
+	analogue-to-digital and digital-to-analogue conversion, and the charging of a capacitor by a bicycle light.
 }%
 	%Bei elektrischen Schaltvorgängen: Schalter (Ein/Aus), Relais, Transistoren, ...
 	%
@@ -319,38 +319,39 @@ die Änderung von Eingangssignalen bei A D und bei D A Convertern und Fahrradlam
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Vergleich idealer und realer Schalter}
+\subsection{Comparison of ideal and real switches}
 \label{sec:einfuehrung:schalteridealvsreal}
 \begin{frame}\ftx{\subsecname}
+	\renewcommand{\figurename}{Figure}
 \s{
 	% Intro: Reales Schalten
-	Zur Vereinfachung wird in diesem Modul stets von idealen Schaltern ausgegangen.
-	Um die Grenzen dieser Annahme zu verstehen, wird im Folgenden der Unterschied zwischen idealen und realen Schaltern erläutert.
-	Hierfür wird wie im Schaltbild in Abbildung \ref{fig:circ:switch} gezeigt ist, die Schalterspannung über einem Schalter betrachtet.
-	Der Schalter ist hierfür an eine lineare Gleichspannungsquelle mit Spannung $U_q$ angeschlossen.
-}
+	For simplicity, this module always assumes ideal switches.
+	To understand the limitations of this assumption, the difference between ideal and real switches is explained below.
+	As shown in the circuit diagram in Figure \ref{fig:circ:switch}, the switch voltage across a switch is considered.
+    For this purpose, the switch is connected to a linear DC voltage source with voltage $U_q$.}
 \begin{figure}[H]\centering
 	\includegraphics{Tikz/pdf/circ_switch_ideal.pdf}
-	\s{\caption{Schaltbild, Schalterspannung}}\b{\par Schalterspannung $\ecv{u(t)}$}
+	\s{\caption{Circuit diagram, switch voltage}}\b{\par Switch voltage $\ecv{u(t)}$}
 	\label{fig:circ:switch}
 \end{figure}
 \s{
 	% Abbildung: Ideal vs. Real
-	Abbildung \ref{fig:plot:schalter} zeigt die Schalterspannung im Durchlass- und im Sperrbetrieb und in den Übergangsphasen beim Öffnen oder Schließen des Schalters.
-	Links ist der Spannungsverlauf für einen idealen Schalter dargestellt, rechts für einen realen Schalter.
+	Figure \ref{fig:plot:schalter} shows the switch voltage in forward and reverse operation and in the transition phases when opening or closing the switch.
+	On the left is the voltage curve for an ideal switch, on the right for a real switch.
 }
 \begin{figure}[H]\centering
+	\renewcommand{\figurename}{Figure}
 	\begin{subfigure}{0.48\textwidth}\centering
 		\includegraphics{Tikz/pdf/plot_switch_ideal.pdf}
-		\s{\caption{Spannung bei idealem Schalter}}\b{\par Ideal: verlustlos, instantan}
+		\s{\caption{Voltage at ideal switch}}\b{\par Ideal: lossless, instantaneous}
 		\label{fig:plot:schalter:ideal}
 	\end{subfigure}\pause
 	\begin{subfigure}{0.48\textwidth}\centering
 		\includegraphics{Tikz/pdf/plot_switch_real.pdf}
-		\s{\caption{Spannung bei realem Schalter}}\b{\par Real: Verluste, Latenzen}
+		\s{\caption{Voltage at real switch}}\b{\par Real: Losses, latencies}
 		\label{fig:plot:schalter:real}
 	\end{subfigure}
-	\s{\caption{Vergleich: Schaltverläufe bei idealem und realem Schalter}}
+	\s{\caption{Comparison: switching sequences for ideal and real switches}}
 	\label{fig:plot:schalter}
 \end{figure}
 %i(t),u(t)			ideal
@@ -388,20 +389,20 @@ Die Latenzen und Verluste resultieren auf ohmschen, kapazitiven und induktiven p
 \begin{frame}\ftx{\subsecname}
 \s{
 	% Beschreibung: Ideal vs. Real
-	Ein idealer Schalter wechselt beim Schalten instantan und verlustlos 
-	von einem leitenden Zustand ($R=0$) zu einem sperrenden Zustand ($G=0$) oder umgekehrt
-	wie in Abbildung \ref{fig:plot:schalter:ideal} dargestellt ist.
-	Ein realer Schalter hingegen leitet oder sperrt nicht instantan
-	wie in Abb. \ref{fig:plot:schalter:real} vereinfacht dargestellt ist. 
-	Stattdessen treten Latenzen und Verluste auf.
-	Im Durchlassbetrieb liegt immernoch eine kleine Spannung an (Durchlasswiderstand $R>0$)
-	und im Sperrbetrieb fließt immernoch ein kleiner Strom (Sperrleitwert $G>0$).
-	Dadurch kommt es zu Verlusten im Schalter, insbesondere während der Übergangsphasen, wenn sowohl Spannung als auch Strom anliegen.
-	
+	An ideal switch changes instantaneously and without loss 
+    from a conductive state ($R=0$) to a blocking state ($G=0$) or vice versa
+    as shown in Figure \ref{fig:plot:schalter:ideal}.
+	A real switch, on the other hand, does not conduct or block instantaneously
+    as shown in a simplified form in Fig. \ref{fig:plot:schalter:real}.
+	Instead, latencies and losses occur.
+	In forward mode, a small voltage is still present (forward resistance $R>0$)
+    and in reverse mode, a small current still flows (reverse conductance $G>0$).
+	This results in losses in the switch, especially during the transition phases when both voltage and current are present.
+
 	% Erklärung
-	Die Latenzen und Verluste realer Schalter resultieren aus deren resistiven, induktiven und kapazitiven Eigenschaften.
-	Aufgrund dieser Eigenschaften ist Schalten real betrachtet - schalterintern - immer mit Ausgleichsvorgängen verbunden.
-	In der Praxis werden solche Effekte, wenn unerwünscht, als parasitär bezeichnet.
+	The latencies and losses of real switches result from their resistive, inductive and capacitive properties.
+	Due to these properties, switching is always associated with compensation processes when viewed in real terms – within the switch.
+	In practice, such effects are referred to as parasitic when undesirable.
 	
 	% Beispiel: MOSFET
 	Abbildung \ref{fig:circ:mosfet} zeigt exemplarisch einen MOSFET als Schalter zur Veranschaulichung. 
@@ -409,19 +410,20 @@ Die Latenzen und Verluste resultieren auf ohmschen, kapazitiven und induktiven p
 }
 % Ref: http://fmh-studios.de/theorie/mosfet/schaltverhalten/
 \begin{figure}[H]\centering
+	\renewcommand{\figurename}{Figure}
 	\begin{subfigure}{0.48\textwidth}\centering
 		\includegraphics{Tikz/pdf/circ_mosfet_ideal.pdf}
-		\s{\caption{MOSFET, ohne Kapazitäten (ideal)}}\b{Ideal: keine parasitären Effekte}
+		\s{\caption{MOSFET, without capacitance (ideal)}}\b{Ideal: no parasitic effects}
 		\label{fig:circ:mosfet:ideal}
 	\end{subfigure}%
 	\onslide<2->{%
 	\begin{subfigure}{0.48\textwidth}\centering
 		\includegraphics{Tikz/pdf/circ_mosfet_capacitive_effects.pdf}
-		\s{\caption{MOSFET, inkl. Kapazitäten (real)}}\b{Real: mit parasitären Kapazitäten}
+		\s{\caption{MOSFET, including capacitances (real)}}\b{Real: with parasitic capacities}
 		\label{fig:circ:mosfet:kapazitiv}
 	\end{subfigure}
 	}% end onslide
-	\s{\caption{Vergleich: Schaltung mit MOSFET, ohne (ideal) und mit kapazitiver Effekte (real)}}
+	\s{\caption{Comparison: Circuit with MOSFET, without (ideal) and with capacitive effects (real)}}
 	\label{fig:circ:mosfet}
 \end{figure}
 	%Alt. Bildbeschreibung:
@@ -435,20 +437,19 @@ Die Latenzen und Verluste resultieren auf ohmschen, kapazitiven und induktiven p
 \s{
 
 	% Erklärung Latenzen, Abgrenzung
-	Die kapazitiven Effekte zwischen den Anschlüssen des MOSFETs führen zu einer Verzögerung beim Schalten,
-	da die jeweiligen Kapazitäten während des Schaltens erst geladen beziehungsweise entladen werden müssen.
-	Das MOSFET-Beispiel dient lediglich zur Veranschaulichung der Unterschiede zwischen idealen und realen Schaltern.
-	Ausgleichsvorgänge während Schaltaktionen werden in diesem Modul nicht weiter betrachtet.
-	Mit Schaltvorgängen sind immer die Ausgleichsvorgänge \underline{nach} dem Schalten gemeint.
-}%
+	The capacitive effects between the terminals of the MOSFET cause a delay in switching,
+    as the respective capacitances must first be charged or discharged during switching.
+	The MOSFET example serves only to illustrate the differences between ideal and real switches.
+    Compensation processes during switching operations are not considered further in this module.
+	Switching operations always refer to the compensation processes \underline{after} switching.}%
 \b{%
-	\makebox[2cm][l]{\textbf{Hier:}} Ausgleichsvorgänge \makebox[1.5cm][c]{\underline{nach}} Schalten (Schaltvorgänge) im Fokus
+	\makebox[2cm][l]{\textbf{Here:}} Settlement procedures \makebox[1.5cm][c]{\underline{after}} Switching (switching operations) in focus
 	%\\\qquad$\rightarrow$ Annahme idealer Schalter %(verlustlos, instantan)
 	\\[+4pt]%
-	\makebox[2cm][l]{\textbf{Real:}} Ausgleichsvorgänge \makebox[1.5cm][c]{\underline{während}} Schalten
+	\makebox[2cm][l]{\textbf{Real:}} Settlement procedures \makebox[1.5cm][c]{\underline{during}} switching
 	%\\\qquad$\rightarrow$ Schaltverluste und Latenzen
 	\\[+4pt]%
-	\makebox[2cm][l]{\textbf{Eingrenz.:}} Annahme idealer Schalter 
+	\makebox[2cm][l]{\textbf{Confine.:}} Assumption of ideal switches 
 }%
 \speech{EinfuehrungSchalterIdealVsReal2}{1}{%
 Links sehen wir das Schaltbild eines MOSFET Schalters mit Gain, Drain und Source Anschlüssen.

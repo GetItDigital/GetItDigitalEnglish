@@ -50,7 +50,7 @@
     
     This section first describes the state of a free oscillation and that of a forced oscillation. 
     In subchapter \ref{sec:resonanzkreise:definition}, the condition for resonance is defined mathematically
-    and calculated in the following chapter in example \ref{bsp:resonanz:lc} for a series and parallel oscillating circuit.
+    and calculated in the following chapter in example \ref{expl:resonanz:lc} for a series and parallel oscillating circuit.
 
     % Ein Beispiel aus der Mechanik ist ein Pendel, bei welchem Energie zwischen kinetischer Energie und Lageenergie und und her pendelt. 
     % Schlechtes Beispiel? Frequenz abhängig von Winkel der Auslenkung außer bei Zykloider (?) Bahn ... Vgl. Zykloid Pendel oder so
@@ -142,18 +142,18 @@
         \resizebox*{!}{0.35\textheight}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_frei.pdf}}%ignores minipage's height
     \end{minipage}\hfill%
     \begin{minipage}[c][4cm][c]{0.38\textwidth}\centering% middle
-        Freie Schwingung:\newline
+        Free oscillation:\newline
         \resizebox*{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_zeitverlauf_RLCs_gedaempft.pdf}}
     \end{minipage}\hfill%
     \begin{minipage}[c][4cm][c]{0.35\textwidth}% right
-        Randbedingung:
+        Boundary condition:
         \begin{equation*}\begin{aligned}
             u(t=0) &= U_0\\
             i(t=0) &= 0%\ \mathrm{A}
         \end{aligned}\end{equation*}
-        \quad mit Eigenkreisfrequenz $\omega_d$,
+        \quad with natural frequency $\omega_d$,
 
-        \quad abklingend (gedämpft)
+        \quad subsiding (subdued)
     \end{minipage}
 \end{minipage}
 
@@ -262,31 +262,31 @@
     \column[c]{0.02\textwidth}\rotatebox{90}{\textbf{Grundtypen}}
     \column[c]{0.3\textwidth}
 
-    Reihen-Resonanzkreis
+    Series resonant circuit
     \resizebox{!}{0.8\textwidth}{\includegraphics{Tikz/pdf/circ_schwingkreis_lcs.pdf}}
 
-    Parallel-Resonanzkreis
+    Parallel resonant circuit
     \resizebox{!}{0.8\textwidth}{\includegraphics{Tikz/pdf/circ_schwingkreis_lcp.pdf}}
 
     \column[c]{0.6\textwidth}
     \begin{align*}
-        \textbf{Resonanzbedingung} && \Im\{\underline{Z}\} &\overset{!}{=} 0
+        \textbf{Resonance condition} && \Im\{\underline{Z}\} &\overset{!}{=} 0
             \vphantom{\bigg|}\\
-        \textbf{Resonanzfrequenz} && f_0% &\quad\text{mit }\omega_0=2\pi f_0
+        \textbf{Resonance frequency} && f_0% &\quad\text{mit }\omega_0=2\pi f_0
             \vphantom{\bigg|}\\
-        \textbf{Kennwiderstand} && X_k &= |X_{L,0}| = |X_{C,0}|
+        \textbf{Characteristic impedance} && X_k &= |X_{L,0}| = |X_{C,0}|
             \vphantom{\bigg|}\\
-        \textbf{Kennleitwert} && B_k &= \frac{1}{X_k}% = |B_{L,0}| = |B_{C,0}|
+        \textbf{Characteristic value} && B_k &= \frac{1}{X_k}% = |B_{L,0}| = |B_{C,0}|
             \vphantom{\bigg|}\\
-        \textbf{Güte} && Q &= \frac{|Q_{L,0}|}{P_{0}} = \frac{|Q_{C,0}|}{P_{0}}
+        \textbf{Quality factor} && Q &= \frac{|Q_{L,0}|}{P_{0}} = \frac{|Q_{C,0}|}{P_{0}}
             \vphantom{\bigg|}\\
         %\textbf{seriell, Güte} && Q_s &= \frac{X_k}{R} = \frac{U_{L,0}}{U}
         %    \vphantom{\bigg|}\\
         %\textbf{parallel, Güte} && Q_p &= \frac{Y_k}{G} = \frac{I_{L,0}}{I}
         %    \vphantom{\bigg|}\\
-        \textbf{Eigenfrequenz}&& f_d &\quad\text{(gedämpft)}
+        \textbf{Natural frequency}&& f_d &\quad\text{(damped)}
             \vphantom{\bigg|}\\
-        \textbf{Eigenfrequenz}&& f_0 &\quad\text{(ungedämpft)}
+        \textbf{Natural frequency}&& f_0 &\quad\text{(undamped)}
             \vphantom{\bigg|}
     \end{align*}
 
@@ -301,7 +301,7 @@
 \index{Schwingkreis>LC-Reihenschwingkreis}%
 \index{Schwingkreis>LC-Parallelschwingkreis}%
 \s{%Start Skript only
-    In example \ref{bsp:resonanz:lc}, the resonance circuit frequency 
+    In example \ref{expl:resonanz:lc}, the resonance circuit frequency 
     for ideal LC series and LC parallel oscillating circuits is determined.
     
     The examples use calculations to illustrate why resonance is caused by voltages in series resonant circuits
@@ -376,15 +376,15 @@ with $R$, $L$ and $C$ all in series or all in parallel.
 \b{%Start Beamer only
 \noindent\begin{minipage}{0.5\textwidth}\centering%Linke Spalte
     \begin{tabular}{l|c}
-        \rotatebox[origin=l]{90}{\quad in Reihe}
+        \rotatebox[origin=l]{90}{\quad in Series}
         &\resizebox{!}{0.4\textheight}{\includegraphics{Tikz/pdf/circ_schwingkreis_lcs_komplex.pdf}}
-        \\\rotatebox[origin=c]{90}{spannungsbezogen}
+        \\\rotatebox[origin=c]{90}{voltage-related}
         &$\begin{aligned}
             \underline{U}
             &= \underline{I} \cdot \left(\mathrm{j}\omega L + \frac{1}{\mathrm{j}\omega C}\right) \\
-            &= \underline{I} \cdot \mathrm{j}\bigg(\underbrace{\omega L - \frac{1}{\omega C}}_{=\mathrlap{\,0\ \mathrm{Resonanz}}}\bigg) \\
+            &= \underline{I} \cdot \mathrm{j}\bigg(\underbrace{\omega L - \frac{1}{\omega C}}_{=\mathrlap{\,0\ \mathrm{Resonance}}}\bigg) \\
             &\omega_0 L - \frac{1}{\omega_0 C} = 0 \\
-            \Rightarrow \underline{I} &\rightarrow \infty \quad \text{für} \quad \underline{U} = konst.
+            \Rightarrow \underline{I} &\rightarrow \infty \quad \text{für} \quad \underline{U} = const.
         \end{aligned}$
     \end{tabular}
 \end{minipage}\hfill%
@@ -395,11 +395,11 @@ with $R$, $L$ and $C$ all in series or all in parallel.
         \\$\begin{aligned}
             \underline{I}
             &= \underline{U} \cdot \left(\mathrm{j}\omega C + \frac{1}{\mathrm{j}\omega L}\right) \\
-            &= \underline{U} \cdot \mathrm{j} \bigg(\underbrace{\omega C - \frac{1}{\omega L}}_{=\mathrlap{\,0\ \mathrm{Resonanz}}}\bigg)\\
+            &= \underline{U} \cdot \mathrm{j} \bigg(\underbrace{\omega C - \frac{1}{\omega L}}_{=\mathrlap{\,0\ \mathrm{Resonance}}}\bigg)\\
             &\omega_0 C - \frac{1}{\omega_0 L} = 0 \\
-            \Rightarrow \underline{U} &\rightarrow \infty\quad \text{für} \quad \underline{I} = konst.
+            \Rightarrow \underline{U} &\rightarrow \infty\quad \text{für} \quad \underline{I} = const.
         \end{aligned}$
-        &\rotatebox[origin=c]{90}{strombezogen}
+        &\rotatebox[origin=c]{90}{electricity-related}
     \end{tabular}
 \end{minipage}\vspace{-2.5mm}
 \begin{equation*}
@@ -422,7 +422,7 @@ with $R$, $L$ and $C$ all in series or all in parallel.
     title=\textbf{Resonance condition (allg.)},center title,colbacktitle=GETgreen!5!white,coltitle=black,titlerule=0.5pt,left=2pt,right=2pt]
     \centering
     Phase shift between\newline
-    $\underline{U}$ und $\underline{I}$ entspricht $\varphi = 0$.\newline
+    $\underline{U}$ and $\underline{I}$ corresponds to $\varphi = 0$.\newline
     Or:
     \begin{equation*}
         \Im\left\{\frac{\underline{U}}{\underline{I}}\right\} =
@@ -432,37 +432,37 @@ with $R$, $L$ and $C$ all in series or all in parallel.
 \end{minipage}\hfill%
 \begin{minipage}{0.55\textwidth}
     \begin{equation*}
-        \underline{Z} = R + \mathrm{j}\Big(\underbrace{\omega L - \frac{1}{\omega C}}_{=\mathrlap{\ 0\quad\text{für}\ \omega=\omega_0}}\Big)
+        \underline{Z} = R + \mathrm{j}\Big(\underbrace{\omega L - \frac{1}{\omega C}}_{=\mathrlap{\ 0\quad\text{for}\ \omega=\omega_0}}\Big)
     \end{equation*}
     \begin{tcolorbox}[colback=white,colframe=GETgreen!25!black,
         toprule=0.5pt,bottomrule=0.5pt,rightrule=0.5pt,leftrule=0.5pt,
         top=2pt,bottom=2pt,left=2pt,right=2pt,middle=2pt]
-        Fall 1: $\mathbf{\displaystyle{\omega < \omega_0}}$ 
+        Case 1: $\mathbf{\displaystyle{\omega < \omega_0}}$ 
         \tcblower
-        $\rightarrow\left(\omega L - \frac{1}{\omega C}\right) < 0$ \hfill ohmsch-kapazitiv
+        $\rightarrow\left(\omega L - \frac{1}{\omega C}\right) < 0$ \hfill ohmic-capacitive
     \end{tcolorbox}
 
     \begin{tcolorbox}[colback=white,colframe=GETgreen!25!black,
         toprule=0.5pt,bottomrule=0.5pt,rightrule=0.5pt,leftrule=0.5pt,
         top=2pt,bottom=2pt,left=2pt,right=2pt,middle=2pt]
-        Fall 2: $\mathbf{\displaystyle{\omega = \omega_0}}$ \hfill (Resonanzfall)
+        Case 2: $\mathbf{\displaystyle{\omega = \omega_0}}$ \hfill (Resonance case)
         \tcblower
-        $\rightarrow\left(\omega L - \frac{1}{\omega C}\right) = 0$ \hfill rein ohmsch
+        $\rightarrow\left(\omega L - \frac{1}{\omega C}\right) = 0$ \hfill purely ohmic
     \end{tcolorbox}
 
     \begin{tcolorbox}[colback=white,colframe=GETgreen!25!black,
         toprule=0.5pt,bottomrule=0.5pt,rightrule=0.5pt,leftrule=0.5pt,
         top=2pt,bottom=2pt,left=2pt,right=2pt,middle=2pt]
-        Fall 3: $\mathbf{\displaystyle{\omega > \omega_0}}$ 
+        Case 3: $\mathbf{\displaystyle{\omega > \omega_0}}$ 
         \tcblower
-        $\rightarrow\left(\omega L - \frac{1}{\omega C}\right) > 0$ \hfill ohmsch-induktiv
+        $\rightarrow\left(\omega L - \frac{1}{\omega C}\right) > 0$ \hfill ohmic-inductive
     \end{tcolorbox}
 \end{minipage}
 }%
 \s{%
     This subchapter examines the resonance behaviour of an RLC series resonant circuit as an example.
     The resonant circuit is shown in Figure \ref{fig:circ:rlcs} and corresponds to the ideal LC series resonant circuit
-    from Example \ref{bsp:resonanz:lc} with an additional ohmic resistance $R$ in series.
+    from Example \ref{expl:resonanz:lc} with an additional ohmic resistance $R$ in series.
 
     \fu{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2.pdf}}{Circuit diagram of an RLC series resonant circuit\label{fig:circ:rlcs}}
 
@@ -573,19 +573,19 @@ with $R$, $L$ and $C$ all in series or all in parallel.
 \begin{minipage}{0.6\textwidth}
 \begin{align*}\underline{U}
     &= \underline{U}_R\ +\ \underline{U}_L\ +\ \underline{U}_C&
-        \underline{I} &= konst.\\
+        \underline{I} &= const.\\
     &= \underline{I} \cdot \big[R + \mathrm{j}\big(\underbrace{\omega L - \frac{1}{\omega C}}_{=\mathrlap{\ \Im\{\underline{Z}\}}}\big)\big]&
         \omega_0 &= \frac{1}{\sqrt{LC}}
 \end{align*}
 \end{minipage}\vfill
 \begin{minipage}{\textwidth}\centering
-    \begin{minipage}{0.3\textwidth}\centering \rotatebox{90}{Fall 1 \quad ohmic-capacitive}
+    \begin{minipage}{0.3\textwidth}\centering \rotatebox{90}{Case 1 \quad ohmic-capacitive}
     \resizebox{!}{0.5\textheight}{\includegraphics{Tikz/pdf/plot_zeigerdiagramm_rlcs_2.pdf}}\newline $\qquad\omega < \omega_0$
     \end{minipage}\hfill%
-    \begin{minipage}{0.3\textwidth}\centering \rotatebox{90}{Fall 2 \quad purely ohmic}
+    \begin{minipage}{0.3\textwidth}\centering \rotatebox{90}{Case 2 \quad purely ohmic}
     \resizebox{!}{0.5\textheight}{\includegraphics{Tikz/pdf/plot_zeigerdiagramm_rlcs_3.pdf}}\newline $\qquad\omega = \omega_0$
     \end{minipage}\hfill%
-    \begin{minipage}{0.3\textwidth}\centering \rotatebox{90}{Fall 3 \quad ohmic-inductive}
+    \begin{minipage}{0.3\textwidth}\centering \rotatebox{90}{Case 3 \quad ohmic-inductive}
     \resizebox{!}{0.5\textheight}{\includegraphics{Tikz/pdf/plot_zeigerdiagramm_rlcs_1.pdf}}\newline $\qquad\omega > \omega_0$
     \end{minipage}
 \end{minipage}
@@ -679,11 +679,11 @@ approaches the inductive curve with $\lim_{\omega\rightarrow \infty}|Z|=|X_L|$.
 \begin{minipage}{0.3\textwidth}%
 \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2.pdf}}
 \begin{align*}
-    \intertext{\small Resonanzbedingung}
+    \intertext{\small Resonance condition}
     \onslide<1->{\Im\{\underline{Z}\} &\overset{!}= 0}\\
-    \intertext{\small Resonanzfrequenz}
+    \intertext{\small Resonance frequency}
     \onslide<1->{\omega_0 &= \frac{1}{\sqrt{LC}}}\\
-    \intertext{\small Resonanzimpedanz}
+    \intertext{\small Resonant impedance}
     \onslide<1->{\underline{Z}_0 &= R}
 \end{align*}
 \end{minipage}\hfill%
@@ -788,9 +788,9 @@ The higher the quality factor (resonance sharpness), the steeper the transition 
 \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2.pdf}}
 \begin{align*}
     \underline{Z} &= R + \mathrm{j}\left(\omega L - \frac{1}{\omega C}\right)\\
-        \intertext{normiert}
+        \intertext{standardized}
     \frac{\underline{Z}}{X_k} &= \frac{1}{Q} + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)\\
-        \intertext{Güte und Kennwiderstand}
+        \intertext{Quality and char. resistance}
     Q &= \frac{X_k}{R} \qquad X_k = \sqrt{\frac{L}{C}}
 \end{align*}
 \end{minipage}\hfill%
@@ -922,21 +922,21 @@ The higher the quality factor (resonance sharpness), the steeper the transition 
 \begin{minipage}{0.3\textwidth}%
 \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2_const_u.pdf}}
 \begin{align*}
-        \intertext{Spannungsteiler (Bsp.)}
+        \intertext{Voltage divider (e.g.)}
     \frac{\underline{U}_L}{\underline{U}} &= \frac{\mathrm{j}\left(\frac{\omega}{\omega_0}\right)}{\frac{1}{Q}+\mathrm{j}\left(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\right)}\\
-        \intertext{Güte und Überspannung}
+        \intertext{Quality and overvoltage}
     Q &= \frac{X_k}{R} = \frac{U_{L,0}}{U} = \frac{U_{C,0}}{U}
 \end{align*}
 \end{minipage}\hfill%
 \begin{minipage}{0.65\textwidth}\centering
     \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcs_spannung_resonanz.pdf}}\newline% TODO RENAME
-    $U_q(\omega_0) \Rightarrow$ Überspannung!
+    $U_q(\omega_0) \Rightarrow$ Overvoltage!
 \end{minipage}
 }
 \end{frame}
 
 \b{%
-\begin{frame}{Nebenrechnung}
+\begin{frame}{Additional calculation}
 \begin{minipage}{0.3\textwidth}%
     \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2_const_u.pdf}}
     \begin{align*}
@@ -956,7 +956,7 @@ The higher the quality factor (resonance sharpness), the steeper the transition 
             \cdot \frac{\mathrm{j}\omega L}{R+\mathrm{j}\left(\omega L-\frac{1}{\omega C}\right)}\\
         \frac{\underline{U}_C}{\underline{U}} &= \frac{\underline{I}}{\underline{I}}
             \cdot \frac{\frac{1}{\mathrm{j}\omega C}}{R+\mathrm{j}\left(\omega L-\frac{1}{\omega C}\right)}\\
-        \intertext{normiert}
+        \intertext{standardized}
         \frac{\underline{U}_R}{\underline{U}} &= 
             \frac{\sfrac{1}{Q}}{\frac{1}{Q}+\mathrm{j}\left(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\right)}\\
         \frac{\underline{U}_L}{\underline{U}} &=
@@ -1021,16 +1021,16 @@ The higher the quality factor (resonance sharpness), the steeper the transition 
     \begin{minipage}{0.3\textwidth}%
     \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2_const_u.pdf}}
     \begin{align*}
-        \intertext{Strom}
+        \intertext{Current}
         \underline{I} &= \frac{I_0}{1 + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)Q}\\
-        \intertext{Maximalstrom, Güte}
+        \intertext{Maximum current, Quality factor}
         \underline{I}_0 &= \frac{\underline{U}_q}{R}
         \qquad Q = \frac{X_k}{R}        
     \end{align*}
     \end{minipage}\hfill%
     \begin{minipage}{0.65\textwidth}\centering
         \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcs_stromkurve_uq_guete.pdf}}
-        \par Strom maximal bei $\omega_0$
+        \par Maximum current at $\omega_0$
 
         Limitation by $R$
     \end{minipage}
@@ -1070,17 +1070,17 @@ The higher the quality factor (resonance sharpness), the steeper the transition 
     \begin{minipage}{0.3\textwidth}%
     \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcs_komplex_2_const_i.pdf}}
     \begin{align*}
-        \intertext{Stromquelle}
+        \intertext{Current source}
         \underline{I} &= I_q\\
-        \intertext{Spannung}
+        \intertext{Voltage}
         \underline{U} &= I_q \cdot \underline{Z}\\
-        \intertext{Impedanz}
+        \intertext{Impedance}
         \underline{Z} &= R + \mathrm{j}X
     \end{align*}
     \end{minipage}\hfill%
     \begin{minipage}{0.65\textwidth}\centering
         \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcs_impedanzkurve_guete.pdf}}\newline
-        Spannungskurve $\sim$ Impedanzkurve
+        Voltage curve $\sim$ Impedance curve
     \end{minipage}
 }%
 \s{%
@@ -1104,7 +1104,7 @@ The higher the quality factor (resonance sharpness), the steeper the transition 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Viel Copy-Paste von Kapitel "RLC-Serienschwingkreis - Resonanzverhalten"
-\subsection{RLC-Parallelschwingkreis - Resonanzverhalten}\label{sec:resonanzkreise:rlcp}
+\subsection{RLC parallel resonant circuit - resonance behavior}\label{sec:resonanzkreise:rlcp}
 \renewcommand{\figurename}{Figure}
 \index{Schwingkreis>RLC-Parallelschwingkreis}%
 \begin{frame}\ftx{\subsecname}%
@@ -1113,11 +1113,11 @@ The higher the quality factor (resonance sharpness), the steeper the transition 
         \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2.pdf}}\newline
         
         \begin{tcolorbox}[colback=white,colframe=GETgreen!25!black,toprule=0.5pt,rightrule=0.5pt,bottomrule=0.5pt,leftrule=0.5pt,
-            title=\textbf{Resonanzbedingung (allg.)},center title,colbacktitle=GETgreen!5!white,coltitle=black,titlerule=0.5pt,left=2pt,right=2pt]
+            title=\textbf{Resonance condition (gener.)},center title,colbacktitle=GETgreen!5!white,coltitle=black,titlerule=0.5pt,left=2pt,right=2pt]
             \centering
-            Phasenverschiebung zwischen\newline
-            $\underline{U}$ und $\underline{I}$ entspricht $\varphi = 0$.\newline
-            Oder:
+            Phase shift between\newline
+            $\underline{U}$ and $\underline{I}$ corresponds to $\varphi = 0$.\newline
+            Or:
             \begin{equation*}
                 \Im\left\{\frac{\underline{I}}{\underline{U}}\right\} =
                 \Im\left\{\underline{Y}\right\} \overset{!}{=} 0
@@ -1126,37 +1126,37 @@ The higher the quality factor (resonance sharpness), the steeper the transition 
         \end{minipage}\hfill%
         \begin{minipage}{0.55\textwidth}
             \begin{equation*}
-                \underline{Y} = G + \mathrm{j}\Big(\underbrace{\omega C - \frac{1}{\omega L}}_{=\mathrlap{\ 0\quad\text{für}\ \omega=\omega_0}}\Big)
+                \underline{Y} = G + \mathrm{j}\Big(\underbrace{\omega C - \frac{1}{\omega L}}_{=\mathrlap{\ 0\quad\text{for}\ \omega=\omega_0}}\Big)
             \end{equation*}
             \begin{tcolorbox}[colback=white,colframe=GETgreen!25!black,
                 toprule=0.5pt,bottomrule=0.5pt,rightrule=0.5pt,leftrule=0.5pt,
                 top=2pt,bottom=2pt,left=2pt,right=2pt,middle=2pt]
-                Fall 1: $\mathbf{\displaystyle{\omega < \omega_0}}$ 
+                Case 1: $\mathbf{\displaystyle{\omega < \omega_0}}$ 
                 \tcblower
-                $\rightarrow\left(\omega C - \frac{1}{\omega L}\right) < 0$ \hfill ohmsch-induktiv
+                $\rightarrow\left(\omega C - \frac{1}{\omega L}\right) < 0$ \hfill ohmic-inductive
             \end{tcolorbox}
         
             \begin{tcolorbox}[colback=white,colframe=GETgreen!25!black,
                 toprule=0.5pt,bottomrule=0.5pt,rightrule=0.5pt,leftrule=0.5pt,
                 top=2pt,bottom=2pt,left=2pt,right=2pt,middle=2pt]
-                Fall 2: $\mathbf{\displaystyle{\omega = \omega_0}}$ \hfill (Resonanzfall)
+                Case 2: $\mathbf{\displaystyle{\omega = \omega_0}}$ \hfill (Resonance case)
                 \tcblower
-                $\rightarrow\left(\omega C - \frac{1}{\omega L}\right) = 0$ \hfill rein ohmsch
+                $\rightarrow\left(\omega C - \frac{1}{\omega L}\right) = 0$ \hfill purely ohmic
             \end{tcolorbox}
         
             \begin{tcolorbox}[colback=white,colframe=GETgreen!25!black,
                 toprule=0.5pt,bottomrule=0.5pt,rightrule=0.5pt,leftrule=0.5pt,
                 top=2pt,bottom=2pt,left=2pt,right=2pt,middle=2pt]
-                Fall 3: $\mathbf{\displaystyle{\omega > \omega_0}}$ 
+                Case 3: $\mathbf{\displaystyle{\omega > \omega_0}}$ 
                 \tcblower
-                $\rightarrow\left(\omega C - \frac{1}{\omega L}\right) > 0$ \hfill ohmsch-kapazitiv
+                $\rightarrow\left(\omega C - \frac{1}{\omega L}\right) > 0$ \hfill ohmic-capacitive
             \end{tcolorbox}
         \end{minipage}
         }%
         \s{%
             This subchapter examines the resonance behaviour of an RLC parallel resonant circuit.
             The resonant circuit is shown in Figure \ref{fig:circ:rlcp} and corresponds to the ideal LC parallel resonant circuit
-            from Example \ref{bsp:resonanz:lc} with an additional parallel ohmic resistance $R$.
+            from Example \ref{expl:resonanz:lc} with an additional parallel ohmic resistance $R$.
             
             The investigation is analogous to that for the RLC series resonant circuit in Chapter \ref{sec:resonanzkreise:rlcs}.
             In the parallel resonant circuit, the admittance $\underline{Y}$ is primarily considered.
@@ -1219,19 +1219,19 @@ The higher the quality factor (resonance sharpness), the steeper the transition 
     \begin{minipage}{0.6\textwidth}%
     \begin{align*}\underline{I}
         &= \underline{I}_R\ +\ \underline{I}_L\ +\ \underline{I}_C&
-            \underline{U} &= konst.\\
+            \underline{U} &= const.\\
         &= \underline{U} \cdot \big[G + \mathrm{j}\big(\underbrace{\omega C - \frac{1}{\omega L}}_{=\mathrlap{\ \Im\{\underline{Y}\}}}\big)\big]&
             \omega_0 &= \frac{1}{\sqrt{LC}}
     \end{align*}
     \end{minipage}\vfill
     \begin{minipage}{\textwidth}\centering
-        \begin{minipage}{0.3\textwidth}\centering \rotatebox{90}{Fall 1 \quad ohmsch-induktiv}
+        \begin{minipage}{0.3\textwidth}\centering \rotatebox{90}{Case 1 \quad ohmic-inductive}
         \resizebox{!}{0.5\textheight}{\includegraphics{Tikz/pdf/plot_zeigerdiagramm_rlcp_2.pdf}}\newline $\qquad\omega < \omega_0$
         \end{minipage}\hfill%
-        \begin{minipage}{0.3\textwidth}\centering \rotatebox{90}{Fall 2 \quad rein ohmsch}
+        \begin{minipage}{0.3\textwidth}\centering \rotatebox{90}{Case 2 \quad purely ohmic}
         \resizebox{!}{0.5\textheight}{\includegraphics{Tikz/pdf/plot_zeigerdiagramm_rlcp_3.pdf}}\newline $\qquad\omega = \omega_0$
         \end{minipage}\hfill%
-        \begin{minipage}{0.3\textwidth}\centering \rotatebox{90}{Fall 3 \quad ohmsch-kapazitiv}
+        \begin{minipage}{0.3\textwidth}\centering \rotatebox{90}{Case 3 \quad ohmic-capacitive}
         \resizebox{!}{0.5\textheight}{\includegraphics{Tikz/pdf/plot_zeigerdiagramm_rlcp_1.pdf}}\newline $\qquad\omega > \omega_0$
         \end{minipage}
     \end{minipage}
@@ -1325,11 +1325,11 @@ The higher the quality factor (resonance sharpness), the steeper the transition 
     \begin{minipage}{0.3\textwidth}%
     \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2.pdf}}
     \begin{align*}
-        \intertext{\small Resonanzbedingung}
+        \intertext{\small Resonance condition}
         \onslide<1->{\Im\{\underline{Y}\} &\overset{!}= 0}\\
-        \intertext{\small Resonanzfrequenz}
+        \intertext{\small Resonance frequency}
         \onslide<1->{\omega_0 &= \frac{1}{\sqrt{LC}}}\\
-        \intertext{\small Resonanzadmittanz}
+        \intertext{\small Resonance admittance}
         \onslide<1->{\underline{Y}_0 &= G}
     \end{align*}
     
@@ -1430,9 +1430,9 @@ The higher the quality factor (resonance sharpness), the steeper the transition 
     \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2.pdf}}
     \begin{align*}
         \underline{Y} &= G + \mathrm{j}\left(\omega C - \frac{1}{\omega L}\right)\\
-            \intertext{normiert}
+            \intertext{standardized}
         \frac{\underline{Y}}{B_k} &= \frac{1}{Q} + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)\\
-            \intertext{Güte und Kennleitwert}
+            \intertext{Quality factor and char. value}
         Q &= \frac{B_k}{G} \qquad B_k = \sqrt{\frac{C}{L}}
     \end{align*}
     \end{minipage}\hfill%
@@ -1536,15 +1536,15 @@ The higher the quality factor (resonance sharpness), the steeper the transition 
     \begin{align*}    % I_C = Iq * (Bk * w/w0)/(sqrt(G^2 + Bk^2 * (w/w0 - w0/w)^2)) 
         \underline{U} &= \underline{U}_R = \underline{U}_L = \underline{U}_C \\
         \underline{I} &= \underline{I}_R + \underline{I}_L + \underline{I}_C = \underline{I}_q\\
-            \intertext{Stromteiler (Bsp.)}
+            \intertext{Current divider (Bsp.)}
         \frac{\underline{I}_C}{\underline{I}} &= \frac{\mathrm{j}\left(\frac{\omega}{\omega_0}\right)}{\frac{1}{Q}+\mathrm{j}\left(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\right)}\\
-            \intertext{Güte und Überstrom}
+            \intertext{Quality factor and overcurrent}
         Q &= \frac{B_k}{G} = \frac{I_{C,0}}{I} = \frac{I_{L,0}}{I}
     \end{align*}
     \end{minipage}\hfill%
     \begin{minipage}{0.65\textwidth}\centering
         \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcp_strom_resonanz.pdf}}% 
-        \par Stromqelle $I_q(\omega_0) \Rightarrow$ Überstrom!
+        \par Current source $I_q(\omega_0) \Rightarrow$ Overcurrent!
     \end{minipage}
     }
     \end{frame}
@@ -1608,18 +1608,18 @@ The higher the quality factor (resonance sharpness), the steeper the transition 
     \begin{minipage}{0.3\textwidth}%
     \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2_const_i.pdf}}
     \begin{align*}
-        \intertext{Spannung}
+        \intertext{Voltage}
         %\underline{I} &= \frac{\underline{U}_q}{\underline{Z}}\\
         \underline{U} &= \frac{U_0}{1 + \mathrm{j}\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)Q}\\
-        \intertext{Maximalspannung, Güte}
+        \intertext{Maximum voltage, Quality factor}
         \underline{U}_0 &= \frac{\underline{I}_q}{G}
         \qquad Q = \frac{B_k}{G}        
     \end{align*}
     \end{minipage}\hfill%
     \begin{minipage}{0.65\textwidth}\centering
         \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcp_spannungskurve_iq_guete.pdf}}
-        \par Spannung maximal bei $\omega_0$
-        \par Begrenzung durch $G$
+        \par Maximum voltage at $\omega_0$
+        \par Limitation by $G$
     \end{minipage}
 }
 \end{frame}
@@ -1657,17 +1657,17 @@ The higher the quality factor (resonance sharpness), the steeper the transition 
     \begin{minipage}{0.3\textwidth}
     \resizebox{1.1\textwidth}{!}{\includegraphics{Tikz/pdf/circ_schwingkreis_rlcp_komplex_2_const_u.pdf}}
     \begin{align*}
-        \intertext{Spannungsquelle}
+        \intertext{Voltage source}
         \underline{U} &= U_q\\
-        \intertext{Strom}
+        \intertext{Current}
         \underline{I} &= U_q \cdot \underline{Y}\\
-        \intertext{Admittanz}
+        \intertext{Admittance}
         \underline{Y} &= G + \mathrm{j}B
     \end{align*}
     \end{minipage}\hfill%
     \begin{minipage}{0.65\textwidth}\centering
         \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_rlcp_admittanzkurve_guete.pdf}}\newline
-        Stromkurve $\sim$ Admittanzkurve
+        Current curve $\sim$ Admittance curve
     \end{minipage}
 }
 \s{

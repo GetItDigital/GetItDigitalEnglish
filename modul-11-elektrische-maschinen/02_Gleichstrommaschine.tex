@@ -2,29 +2,29 @@
 \nomenclature[F]{$n$}{Drehzahl \nomunit{$\frac{1}{\text{min}}$}}
 
 \newvideofile{gleichstrommaschine}{Gleichstrommaschine}
-\section{Gleichstrommaschine}
+\section{Direct current machine}
 \s{
-	Gleichstrommaschinen sind Elektromaschinen, die mit Gleichstrom betrieben werden und sowohl als Motoren als auch als Generatoren verwendet werden können. Sie zeichnen sich durch eine präzise Steuerbarkeit der Drehzahl und des Drehmoments aus, was sie ideal für Anwendungen mit variabler Geschwindigkeit und Last macht. Gleichstrommaschinen haben einen hohen Anlaufdrehmoment und ermöglichen eine einfache Umkehrung der Drehrichtung. Sie werden häufig in Elektrofahrzeugen, industriellen Steuerungsanlagen und batteriebetriebenen Geräten eingesetzt.
+    DC machines are electric machines that operate on direct current and can be used both as motors and generators. They are characterised by precise controllability of speed and torque, making them ideal for applications with variable speed and load. DC machines have high starting torque and allow easy reversal of the direction of rotation. They are often used in electric vehicles, industrial control systems and battery-powered devices.
 }
 
-\begin{frame}\ftx{Gleichstrommaschine Vorteile / Nachteile}
+\begin{frame}\ftx{Direct current machine Advantages / Disadvantages}
 	\begin{minipage}{0.45\textwidth}
-	\textbf{Vorteile:}
+	\textbf{Advantages:}
 	\begin{itemize}
-		\item Einfacher und kostengünstiger \\ Aufbau der Stromrichter
-		\item Hohe Regeldynamik
-		\item Direkter Betrieb der Maschine mit \\ Akkumulatoren möglich
-		\item Große Überlastfähigkeit
+		\item Simpler and more cost-effective \\ Design of the power converter
+		\item High control dynamics
+		\item Direct operation of the machine with \\ accumulators possible
+		\item High overload capacity
 	\end{itemize}\pause
 	\end{minipage}\hfill 
 	\raisebox{3ex}{
 	\begin{minipage}{0.45\textwidth}
-	\textbf{Nachteile:}
+	\textbf{Disadvantages:}
 	\begin{itemize}
-		\item Hoher Konstruktionsaufwand
-		\item Wartungsintensiv (Bürsten)
-		\item Geringe Leistungsdichte
-		\item Kosten
+		\item High construction costs
+		\item High maintenance (brushes)
+		\item Low power density
+		\item Expenses
 	\end{itemize}
 	\end{minipage}
 	}
@@ -32,15 +32,15 @@
 	\speech{Gleichstrommaschine1}{2}{Ein wesentlicher Nachteil der Gleichstrommaschine ist der hohe Konstruktionsaufwand und die damit verbundenen hohen Kosten. Die Leistungsdichte ist durch den Aufbau deutlich geringer als bei den anderen Maschinentypen. Ein weiterer wesentlicher Nachteil ist der Verschleiß der zwingend notwendigen Bürsten, die eine regelmäßige Wartung oder wenn das nicht möglich ist, eine geringe Lebensdauer bedeuten.}
 \end{frame}
 
-\begin{frame} \ftx{Elektrische Maschinen}
-	\subsection{Exkurs Prinzip des Elektromotors\label{KapExkursLorentz}}
+\begin{frame} \ftx{Electrical machinery}
+	\renewcommand{\figurename}{Figure}
+	\subsection{Digression: Principle of the electric motor\label{KapExkursLorentz}}
 	\s{	
-		Zu Beginn werden die im Modul 6 vorgestellten Prinzipien aufgefrischt. Die Abbildung \ref{AbbLorentzSchleife} zeigt in drei Schaubildern kurzgefasst die Wirkweise eines Elektromotors. Zum grundlegenden Aufbau eines Elektromotors gehören ein feststehender Teil, Ständer\index{Ständer} oder Stator\index{Stator} genannt, und ein sich drehender Teil, auch Läufer\index{Läufer} oder Rotor\index{Rotor} genannt.
-		In den drei Abbildungen ist eine Leiterspule in einem Hufeisenmagnet zu sehen. Der Hufeisenmagnet bildet hier den Strator und eine um die eigene Achse bewegliche Leiterspule stellt den Rotor dar. 
-		Das erste Schaubild illustriert den isolierten Verlauf der magnetischen Feldinien des Hufeisenmagnets. Sie verlaufen innerhalb des Hufeisenmagneten vertikal von Nord- zum Südpol. 
-		Das zweite Schaubild zeigt den isolierten Verlauf der magnetischen Feldlinien der stromdurchflossen Leiterschleife. Durch den Stromfluss entstehen an der Leiterschleife zwei entgegenwirkende Wirbelfelder. 
-		Im dritten Schaubild wird die Wechselwirkung des Hufeisenmagneten (Statorfeld) und der stromdurchflossenen Leiterschleife (Rotorfeld) aufgezeigt. Die beiden Felder überlageren sich. Die aus der Überlagerung resultierende Lorentzkraft bringt gemäß der Rechten-Hand-Regel die Leiterschleife zum rotieren. Aus der elektromagnetischen Energie entsteht mechanische Energie.
-	}
+		First, the principles presented in Module 6 will be reviewed. Figure \ref{AbbLorentzSchleife} shows three diagrams that summarise how an electric motor works. The basic structure of an electric motor consists of a stationary part, called the stator, and a rotating part, called the rotor.
+        The three figures show a conductor coil in a horseshoe magnet. The horseshoe magnet forms the stator and a conductor coil that can move around its own axis represents the rotor.
+		The first diagram illustrates the isolated course of the magnetic field lines of the horseshoe magnet. They run vertically from the north to the south pole within the horseshoe magnet. 
+        The second diagram shows the isolated course of the magnetic field lines of the current-carrying conductor loop. The flow of current creates two opposing eddy fields at the conductor loop.
+        The third diagram shows the interaction between the horseshoe magnet (stator field) and the current-carrying conductor loop (rotor field). The two fields overlap. The Lorentz force resulting from the overlap causes the conductor loop to rotate according to the right-hand rule. Electromagnetic energy is converted into mechanical energy.	}
 	\fu{
 		\begin{minipage}{0.25\textwidth}
 			\foo{width=0.9\textwidth}{width=0.9\textwidth}{Lorentzkraft_Feldverlaeufe5}{
@@ -66,74 +66,80 @@
 				\put(-35, 47){\color{gray}$\Rightarrow$}
 			}{}
 		\end{minipage} 
-	}{{\bf Prinzip des Elektromotors.} Die Lorentzkraft bringt die sich im Magnetfeld befindende stromdurchflossene Leiterschleife in eine Drehbewegung. \label{AbbLorentzSchleife}}
+	}{{\bf Principle of the electric motor.} The Lorentz force causes the current-carrying conductor loop in the magnetic field to rotate. \label{AbbLorentzSchleife}}
 
-	\s{Die Lorentzkraft kann mit der aus Modul 6 bekannten Formel berechnet werden:}
+	\s{The Lorentz force can be calculated using the formula familiar from Module 6:}
 	\begin{eq}
 		F =B\cdot I\cdot \ell\cdot N
 	\end{eq}
 
 \end{frame}
 
-\begin{frame} \ftx{Beispiel: Kraft einer Gleichstrommaschine}
-	\begin{bsp}{Kraft einer Gleichstrommaschine}{}
-		Ein Gleichstrommotor hat im Luftspalt eine magnetische Flussdichte von $B=0,8\,\mathrm{T}$. Unter den Polen befinden sich insgesamt $N=400$ Ankerdrähte, die mit einem Strom von $I=10\,\mathrm{A}$ durchflossen werden. Die wirksame Leiterlänge ist $\ell=150\,\mathrm{mm}$.
+\begin{frame} \ftx{Example: Power of a direct current machine}
+	\begin{expl}{Power of a direct current machine}{}
+        A direct current motor has a magnetic flux density of $B=0.8\,\mathrm{T}$ in the air gap. There are a total of $N=400$ armature wires under the poles, through which a current of $I=10\,\mathrm{A}$ flows. The effective conductor length is $\ell=150\,\mathrm{mm}$.
 
-		Berechnen Sie die Kraft $F$ am Umfang des Ankers.\pause
+		Calculate the force $F$ at the circumference of the anchor.\pause
 		\begin{align*}
 			F & =B\cdot I\cdot \ell\cdot N\\
 			  & =0,8\,\frac{\mathrm{Vs}}{\mathrm{m}^2}\cdot 10\,\mathrm{A}\cdot0,15\,\mathrm{m}\cdot 400\\
 			  & =480\,\frac{\mathrm{kg}\cdot\mathrm{m}^2\cdot\mathrm{s}\cdot\mathrm{A}\cdot\mathrm{m}}{\mathrm{s}^3\cdot\mathrm{A}\cdot\mathrm{m}^2} = 480\,\mathrm{N}		
 		\end{align*}
 
-	\end{bsp}
+	\end{expl}
 \end{frame}
 
 \s{
-	\subsection{Aufbau und Gehäusekonstruktion}\index{Gleichstrommaschine>Aufbau}
+	\subsection{Structure and housing design}\index{Gleichstrommaschine>Aufbau}
 }
-\begin{frame}\ftx{Aufbau}
+\begin{frame}\ftx{Structure}
+	\renewcommand{\figurename}{Figure}
 	\s{
-		Der Aufbau der Gleichstrommaschine wird anhand dreier Abbildungen dargestellt. Abbildung \ref{GrafikGleichstrommaschine} zeigt ein diagonales Schnittmodell der Gleichstrommaschine, das eine allgemeine Übersicht über die Komponenten von Stator und Rotor gibt. Zur detailierteren Veranschaulichung des Aufbaus werden die Abbildung \ref{QuerschnittGleichstrommaschine} mit Fokus auf dem Stator und Abbildung \ref{FotoRotor} zur Veranschaulichung des Rotors einer Gleichstrommaschine herangezogen. 
 
-		\nomenclature[F]{$p$}{Polpaarzahl}
+	The construction of the DC machine is illustrated using three figures. Figure \ref{GrafikGleichstrommaschine} shows a diagonal sectional model of the DC machine, providing a general overview of the components of the stator and the rotor. For a more detailed illustration of the structure, Figure \ref{QuerschnittGleichstrommaschine}, focusing on the stator, and Figure \ref{FotoRotor}, illustrating the rotor of a DC machine, are used.
+
+
+		\nomenclature[F]{$p$}{Pole pair number}
 	}
 	\fo{width=0.6\textwidth}{height=0.85\textheight}{gleichstrommaschine1}{
-		\put(70,0){\line(-1,1){38}}\put(70.3,0){Kommutatorlamellen}
-		\put(86,8){\line(-1,1){56}}\put(86.3,8){Erregerpole mit Wicklung}
-		\put(90,16){\line(-1,1){45}}\put(90,16){Wicklungen des Rotors}
-		\put(95,24){\line(-1,1){28}}\put(95.3,24){Rotorzylinder}
-		\put(105,32){\line(-1,1){28}}\put(105.3,32){Lager}
-	}{{\bf Grafik einer aufgeschnittenen Gleichstrommaschine.}  \label{GrafikGleichstrommaschine}}
+		\put(70,0){\line(-1,1){38}}\put(70.3,0){Commutator segments}
+		\put(86,8){\line(-1,1){56}}\put(86.3,8){Excitation poles with winding}
+		\put(90,16){\line(-1,1){45}}\put(90,16){Rotor windings}
+		\put(95,24){\line(-1,1){28}}\put(95.3,24){Rotor cylinder}
+		\put(105,32){\line(-1,1){28}}\put(105.3,32){Bearing}
+	}{{\bf Diagram of a cross-section of a direct current machine.}  \label{GrafikGleichstrommaschine}}
 \end{frame}
 	
 
-\begin{frame}\ftx{Aufbau}
+\begin{frame}\ftx{Structure}
+	\renewcommand{\figurename}{Figure}
 	\fo{width=0.8\textwidth}{height=0.85\textheight}{Aufbau1}{
-		\put(27,20){\line(1,1){16}}\put(-5,20){Wendepole mit Wicklung}
-		\put(30.5,15){\line(1,1){22}}\put(-5,15){Rotorzylinder mit Wicklung}
+		\put(27,20){\line(1,1){16}}\put(-5,20){Reversing pole with winding}
+		\put(30.5,15){\line(1,1){22}}\put(-5,15){Rotor cylinder with winding}
 		\put(40,5){\line(1,1){17}}\put(9.5,5){Kompensations\-wicklung}
-		\put(40.5,0){\line(1,1){14}}\put(9.5,0){Pol mit Erregerwicklung}
-		\put(85,5){\line(-1,1){14}}\put(85.3, 5){Polschuh}
-		\put(85,0){\line(-1,1){8}}\put(85.3,0){Ständerjoch}
-	}{{\bf Grundlegender Aufbau einer Gleichstrommaschine.} Hier mit nur einem Polpaar (Polpaarzahl $p=1$). \label{QuerschnittGleichstrommaschine}} 
+		\put(40.5,0){\line(1,1){14}}\put(9.5,0){Pole with excitation winding}
+		\put(85,5){\line(-1,1){14}}\put(85.3, 5){Pole shoe}
+		\put(85,0){\line(-1,1){8}}\put(85.3,0){Stand yoke}
+	}{{\bf Basic structure of a direct current machine. Here with only one pole pair.} (Pole pair number $p=1$). \label{QuerschnittGleichstrommaschine}} 
 	\s{	
-		Die Komponenten des Strators, auch Ständer genannt, werden im frontalen Querschnitt einer Gleichstrommaschine (Abbildung \ref{QuerschnittGleichstrommaschine}) gut veranschaulicht. Eine der grundlegende Komponente ist die Erregerwicklungen \index{Erregerwicklung}, die um ein Polschuh gewunden, einen Pol darstellt. Die Pole haben die Aufgabe, ein Magnetfeld, Erregerfeld genannt, zu erzeugen.
+		The components of the stator, also called the stationary part, are clearly illustrated in the frontal cross-section of a DC machine (Figure \ref{QuerschnittGleichstrommaschine}). One of the fundamental components is the field windings \index{field winding}, which, wound around a pole shoe, form a magnetic pole. The poles are responsible for generating a magnetic field, known as the excitation field.
 
-		Da ein magnetisches Feld immer einen Nord- und einen Südpol beinhaltet, werden die Pole paarweise gegenüber eingebaut. Die daraus resultierende Kenngröße, die Polpaarzahl, gibt Aufschluss über die Betriebseigenschaften der Gleichstrommaschine. 
-		Eine höhere Polpaarzahl verringert die Drehzahl, erhöht jedoch das Drehmoment. Bei Kleinstmaschinen können die Erregerwicklungen durch Permanentmagnete ersetzt werden. 
-		Bei größeren Maschinen (ca. über 1 kW) sind zusätzlich Wendepolwicklungen vorhanden, die hier jedoch vernachlässigt werden.
-	}
+		Since a magnetic field always consists of a north and a south pole, the poles are installed in opposing pairs. The resulting characteristic quantity, the number of pole pairs, provides information about the operating characteristics of the DC machine.  
+		A higher number of pole pairs reduces the rotational speed but increases the torque. In very small machines, the field windings can be replaced by permanent magnets.  
+		In larger machines (approximately above 1 kW), additional interpole windings are present; however, these are neglected here.
+}
 \end{frame}
 
-\begin{frame} \ftx{Rotor und Kommutator}
+\begin{frame} \ftx{Rotor and commutator}
+	\renewcommand{\figurename}{Figure}
 	\s{	
-		In der Abbildung \ref{FotoRotor} sind die Komponenten des Rotors gut ersichtlich. Im Allgemeinen wird der Rotor auch Anker oder als Läufer bezeichnet. Die Funktion des Rotors beteht dahin die elektromagnetische Energie durch Rotationen um die eigene Achse in mechanische Energie (und umgekehrt) zu wandlen. 
-		Hierzu ist der Rotor an einer Motorwelle befestigt, die die mechanische Energie überträgt. Das Kugellager am Ende der Motorwelle verringert dabei die Reibungsverluste bei der Energieübertragung. 
-		Um den Rotor in Bewegung zu bringen, ist das Zusammenwirken von Kommutator und Rotorwicklung wichtig. Die Rotorwicklung, auch Ankerwicklung bezeichnet, hat die Aufgabe ein magnetisches Feld, das Ankerfeld, zu erzeugen. Erst durch die Interaktion des Ankerfelds mit dem Erregerfeld wird ein Drehmoment auf den Rotor ausgeübt und setzt diesen in Bewegung. 
-		Die Blechwände, um die die Spulen gewickelt sind, bestehen aus isolierenden Blechen, um Wirbelströme in den Wicklungen zu reduzieren. 
-		Der Kommutator\index{Kommutator} oder Stromwender\index{Stromwender} hat die Funktion die Rotorwicklung getaktet mit Storm zu versorgen. Er besteht aus mehrenen voneinanderen getrennte Lamellen, die jeweils mit einem Strang der Rotorwicklung verbunden. 
-		Der Strom wird nun über am Strator angebrachten Kohlebürsten an die Kommutatorlamellen geleitet. Durch die Drehung der Lamellen unter den Bürsten wirkt der Kommutator als mechanischer Schalter und sorgt dafür, dass die Stromrichtung in den Rotorwicklungen die sich jeweils unter den Hauptpolen befinden gleich bleibt.
+		
+	In Figure \ref{FotoRotor}, the components of the rotor are clearly visible. In general, the rotor is also referred to as the armature or the rotating part. The function of the rotor is to convert electromagnetic energy into mechanical energy by rotation about its own axis (and vice versa).
+	For this purpose, the rotor is mounted on a motor shaft, which transmits the mechanical energy. The ball bearing at the end of the motor shaft reduces friction losses during energy transmission.
+	To set the rotor in motion, the interaction between the commutator and the rotor winding is essential. The rotor winding, also called the armature winding, is responsible for generating a magnetic field, known as the armature field. Only through the interaction of the armature field with the excitation field is a torque exerted on the rotor, causing it to rotate.
+	The laminated cores around which the coils are wound consist of insulated steel sheets in order to reduce eddy currents in the windings.
+	The commutator\index{commutator}, also called current reverser\index{current reverser}, has the function of supplying the rotor winding with current in a commutated manner. It consists of several mutually insulated segments (lamellae), each of which is connected to one branch of the rotor winding.
+	The current is supplied to the commutator segments via carbon brushes mounted on the stator. Due to the rotation of the segments beneath the brushes, the commutator acts as a mechanical switch and ensures that the direction of current in the rotor windings located under the main poles remains constant.
 	}
 	\fo{width=0.8\textwidth}{width=0.75\textwidth}{Rotor_Gleichstrommaschine_kl}{
 		\put(87,45){\line(-1,1){10}}\put(87,45){Welle}
@@ -141,25 +147,29 @@
 		\put(48,10){\line(-1,1){10}}\put(48,10){Wicklungen}
 		\put(35,5){\line(-1,1){10}}\put(35.3,5){Kommutator}
 		\put(23,0){\line(-1,1){10}}\put(23.3,0){Lager}
-	}{{\bf Foto eines Rotors.} Zu erkennen sind hier die charakteristischen Bauelemente. \index{Gleichstrommaschine>Rotor}\label{FotoRotor}}  
+	}{{\bf Photo of a rotor.} The characteristic structural elements can be seen here. \index{Gleichstrommaschine>Rotor}\label{FotoRotor}}  
 \end{frame}
 
-\s{\subsection{Magnetische Felder}\index{Gleichstrommaschine>Felder}}
-\begin{frame}\ftx{Erregerfeld}
-	\s{Für die Lorentzkraft ist das magnetische Feld entscheidend, in dem sich der Leiter bewegt. Dieses Feld wird durch den Stator mit den Erregerwicklungen erzeugt und ist im Bereich des Rotors näherungsweise parallel und homogen.
+\s{\subsection{Magnetic fields}\index{Gleichstrommaschine>Felder}}
+\begin{frame}\ftx{Excitation field}
+	\renewcommand{\figurename}{Figure}
+    \s{The magnetic field in which the conductor moves is decisive for the Lorentz force. This field is generated by the stator with the excitation windings and is approximately parallel and homogeneous in the area of the rotor.
 	}
 	\fo{width=0.6\textwidth}{height=0.85\textheight}{Erregerfeld}{
 		\put(50,97){\color{magnetfeld}\makebox[0pt]{N}}
 		\put(50,0){\color{magnetfeld}\makebox[0pt]{S}}
-	}{{\bf Erregerfeld einer Gleichstrommaschine.} Schematische Darstellung in der Vorderansicht.}	
+	}{{\bf Excitation field of a direct current machine.} Schematic representation in front view.}	
 \end{frame}
  
 
-\begin{frame}\ftx{Induzierte Spannung}
-\s{\subsection{Berechnung des Drehmoments}}
+\begin{frame}\ftx{Induced voltage}
+\s{\subsection{Calculation of torque}}
 	\s{
-		In Modul 6 und Kapitel \ref{KapExkursLorentz} ist bereits die Kraftwirkung auf einen stromdurchflossenen Leiter im Magnetfeld erklärt worden. Um das Drehmoment der Gleichstrommaschine zu berechnen, wird zuerst die induzierte Spannung ermittelt (siehe Modul 6). Dreht sich der Rotor einer erregten Gleichstrommaschine, wird in jeder Leiterschleife des Ankers eine Spannung induziert. Nach dem Induktionsgesetz (Gleichung \ref{GlInduktionsgesetz}) ist die Höhe der induzierten Spannung (Quellenspannung) $U_\mathrm{q}$ vom magnetischen Fluss $\varPhi$ und der zeitlichen Änderung, in diesem Fall der Drehzahl $n$ bzw. der damit verküpften Kreisfrequenz $\omega = 2\pi\cdot n$ abhängig.
-		Werden hierzu noch die spezifischen geometrischen Gegebenheiten des Rotors in Form der Ankerkonstanten $K$ multipiziert, so ergibt das Produkt aus diesen Kenngrößen die induzierte Spannung $U_\mathrm{q}$ der Gleichstrommaschine (siehe Gleichung \ref{GlInduzierteSpannungGM})
+		
+	In Module 6 and Chapter \ref{KapExkursLorentz}, the force acting on a current-carrying conductor in a magnetic field has already been explained. To calculate the torque of the DC machine, the induced voltage is first determined (see Module 6). When the rotor of an excited DC machine rotates, 
+	a voltage is induced in each conductor loop of the armature. According to the law of induction (Equation \ref{GlInduktionsgesetz}), the magnitude of the induced voltage (source voltage) $U_\mathrm{q}$ depends on the magnetic flux $\varPhi$ and its time variation, in this case the rotational speed $n$ or the associated angular frequency $\omega = 2\pi\cdot n$.
+	If the specific geometric properties of the rotor are additionally taken into account in the form of the armature constant $K$, then the product of these characteristic quantities yields the induced voltage $U_\mathrm{q}$ of the DC machine (see Equation \ref{GlInduzierteSpannungGM}).
+
 	}
 
 	\begin{eq}
@@ -167,15 +177,16 @@
 	\end{eq}
 	\b{
 		\begin{itemize}
-		\item Induzierte Spannung (Quellenspannung): $U_\mathrm{q}$ [V]
-		\item Ankerkonstante: $K$ [1]\index{Ankerkonstante} \nomenclature[F]{$K$}{Ankerkonstante der Gleichstrommaschine}
-		\item Fluss: $\varPhi$ [Vs]
-		\item Winkelgeschwindigkeit: $\omega_\mathrm{mech}$ [rad/s]
+		\item Induced voltage (source voltage): $U_\mathrm{q}$ [V]  
+		\item Armature constant: $K$ [1]\index{Armature constant} \nomenclature[F]{$K$}{Armature constant of the DC machine}  
+		\item Flux: $\varPhi$ [Vs]  
+		\item Angular velocity: $\omega_\mathrm{mech}$ [rad/s]
+
 	\end{itemize}	
 	}	\pause
 	
 	\s{ 
-		Wenn sowohl die elektrischen als auch mechanischen Verluste vernachlässigt wird, kann die induzierte Spannung kann auch direkt über die sogenannte innere Leistung $P_\mathrm{i}$ angegeben werden. Diese entspricht dann sowohl der elektrischen Leistung $U_\mathrm{q}\cdot I_\mathrm{A}$, als auch der mechanischen Leistung $P_\mathrm{mech}$, welche sich aus dem Produkt des inneren Drehmoments $M_\mathrm{i}$ und der Winkelgeschwindigkeit $\omega$ errechnet.
+        If both electrical and mechanical losses are neglected, the induced voltage can also be specified directly via the so-called internal power $P_\mathrm{i}$. This then corresponds to both the electrical power $U_\mathrm{q}\cdot I_\mathrm{A}$ and the mechanical power $P_\mathrm{mech}$, which is calculated from the product of the internal torque $M_\mathrm{i}$ and the angular velocity $\omega$.
 	}
 	\begin{eq}
 		P_\mathrm{i} = U_\mathrm{q}\cdot I_\mathrm{A} =  P_\mathrm{mech} = M_\mathrm{i}\cdot \omega \label{GlGMWirkungsgrad}
@@ -183,33 +194,33 @@
 
 	\b{
 		\begin{itemize}
-			\item innere elektrische Leistung: $P_\mathrm{i}$ [W]
+			\item internal electrical power: $P_\mathrm{i}$ [W]
 		\end{itemize}
 	}
 \end{frame}
 	
-\begin{frame}\ftx{Inneres Moment}
-	\s{Wird diese Erkenntnis nun in Gleichung \ref{GlInduzierteSpannungGM} eingesetzt, errechnet sich das inner Drehmoment $M_\mathrm{i}$ aus dem Produkt der Ankerkonstante $K$, den magnetischen Fluss $\varPhi$ und dem Ankerstrom $I_\mathrm{A}$}	
-	\begin{eq}
+\begin{frame}\ftx{Inner moment}
+    \s{If this finding is now inserted into equation \ref{GlInduzierteSpannungGM}, the internal torque $M_\mathrm{i}$ is calculated from the product of the armature constant $K$, the magnetic flux $\varPhi$ and the armature current $I_\mathrm{A}$}
+   	\begin{eq}
 		M_\mathrm{i} = K \cdot \varPhi \cdot I_\mathrm{A} \label{GlMomentGM} 
 	\end{eq}
 	\b{
 		\begin{itemize}
-			\item Inneres elektrisches Moment:  $M_\mathrm{i}$ [Nm]
-			\item Ankerkonstante: $K$ [1]
-			\item Fluss: $\varPhi$ [Vs]
-			\item Ankerstrom: $I_\mathrm{A}$  [A]
+			\item Internal electric moment:  $M_\mathrm{i}$ [Nm]
+			\item Anchor constant: $K$ [1]
+			\item Flux: $\varPhi$ [Vs]
+			\item Anchor current: $I_\mathrm{A}$  [A]
 		\end{itemize}\pause
 	}
 	\s{
-		Im Motorbetrieb ist das Drehmoment an der Welle der Maschine das innere Drehmoment $M_\mathrm{i}$ abzüg\-lich der Verluste $M_\mathrm{V}$. Das Maschinenmoment kann auch durch den Wirkungsgrad $\eta_1$ ausgedrückt werden. Dieser Wirkungsgrad vernachlässigt allerdings die elektrischen Verluste durch den Ankerwiderstand und der Erregung.
+    In motor operation, the torque at the machine shaft is the internal torque $M_\mathrm{i}$ minus the losses $M_\mathrm{V}$. The machine torque can also be expressed by the efficiency $\eta_1$. However, this efficiency disregards the electrical losses due to the armature resistance and excitation.
 	}
 	\begin{eq}
 		M = M_\mathrm{i} - M_\mathrm{V}\qquad \qquad M = \eta_1\cdot M_\mathrm{i}\label{GLMomentWirkungsgradGM}
 	\end{eq}
 	\begin{itemize}
-		\item Verlustmoment: $M_\mathrm{V}$ [Nm]
-		\item Wirkungsgrad:  $\eta$ [1]
+		\item Loss moment: $M_\mathrm{V}$ [Nm]
+		\item Efficiency:  $\eta$ [1]
 	\end{itemize}
 
 \end{frame}
@@ -217,20 +228,22 @@
 
 
 
-\s{\subsection{Fremderregte Gleichstrommaschine}}
-\begin{frame}\ftx{Fremderregte Gleichstrommaschine}
-	\s{Der Erregerkreis im Stator der Gleichstrommaschine und der Rotorkreis, der über den Kommutator mit Strom versorgt wird, sind prinzipiell unabhängig voneinander. Wenn beide Stromkreise von unterschiedlichen Spannungsquellen versorgt werden, wird die Maschine fremderregt genannt. \index{Gleichstrommaschine>Fremderregt} Das Ersatzschaltbild ist in Abbildung \ref{AbbGMFremderregt} dargestellt.}
+\s{\subsection{Externally excited DC machine}}
+\begin{frame}\ftx{Externally excited direct current machine}
+	\renewcommand{\figurename}{Figure}
+
+\s{The excitation circuit in the stator of the DC machine and the rotor circuit, which is supplied with current via the commutator, are in principle independent of each other. If both circuits are supplied by different voltage sources, the machine is referred to as separately excited. \index{DC machine>Separately excited} The equivalent circuit is shown in Figure \ref{AbbGMFremderregt}.}
 	\fu{
 		\input{Tikz/src/ersatzschaltbild_fremderegte_Gleichstromm}
-	}{{\bf Ersatzschaltbild einer fremderregten Gleichstrommaschine.} \label{AbbGMFremderregt}}
-	\s{Der Erregerkreis besteht aus der Induktivität der Erregerwicklung $L_\mathrm{E}$ und dem Kupferwiderstand $R_\mathrm{E}$ der Spule. Im Ankerkreis wird die Wicklung als Kreis mit angedeuteten Schleifringen dargestellt, da sie einerseits eine Induktivität, als auch eine Spannungsquelle darstellt. Auch der Anker hat einen ohmschen Widerstand $R_\mathrm{A}$.
-	
-	Der Maschenumlauf im Rotorkreis ergibt:}
+	}{{\bf Equivalent circuit diagram of a separately excited DC machine.} \label{AbbGMFremderregt}}
+    \s{The excitation circuit consists of the inductance of the excitation winding $L_\mathrm{E}$ and the copper resistance $R_\mathrm{E}$ of the coil. In the armature circuit, the winding is represented as a circuit with indicated slip rings, as it represents both an inductance and a voltage source. The armature also has an ohmic resistance $R_\mathrm{A}$.
+
+	The mesh circulation in the rotor circle results in:}
 	\begin{eq}
 		U_\mathrm{A} = U_\mathrm{q} + I_\mathrm{A}\cdot R_\mathrm{A}
 	\end{eq}
 	
-	\s{Durch Einsetzen von Gleichung \ref{GlInduzierteSpannungGM} und \ref{GlMomentGM} ergibt sich die Drehzahl/Drehmoment- und Ankerstromkennlinie für die fremderregte Gleichstrommaschine:}
+    \s{Substituting equations \ref{GlInduzierteSpannungGM} and \ref{GlMomentGM} yields the speed/torque and armature current characteristic curve for the separately excited DC machine:}
 	\s{
 		\begin{eq}
 			n = \frac{U_\mathrm{A}}{2\pi K\cdot \varPhi} - \frac{R_\mathrm{A}\cdot M_\mathrm{i}}{2\pi(K\cdot \varPhi)^2}\label{GlfremderregteGM1}
@@ -245,38 +258,39 @@
 \end{frame}
 
 
-\begin{frame}\ftx{Beispiel: Fremderregte Gleichstrommaschine}
+\begin{frame}\ftx{Example: Separately excited DC machine}
 	\s{
-		\begin{bsp}{Fremderregte Gleichstrommaschine}{}
-			Eine fremderregte Gleichstrommaschine mit der Ankerkonstante $K=\frac{1}{2\pi}$ hat bei der Spannung $U_\mathrm{A}=400\,\text{V}$ eine Leerlaufdrehzahl von $n=1200\,\frac{1}{\text{min}}$. Der Ankerwiderstand beträgt $R_\mathrm{A}=2,3\,\Omega$. 
+		\begin{expl}{Externally excited direct current machine}{}
+
+			A separately excited DC machine with the armature constant $K=\frac{1}{2\pi}$ has a no-load speed of $n=1200\,\frac{1}{\text{min}}$ at an armature voltage of $U_\mathrm{A}=400\,\text{V}$. The armature resistance is $R_\mathrm{A}=2.3\,\Omega$.
 			\begin{itemize}
-				\item [a)] Wie groß ist der Erregerfluss $\varPhi$?
+				\item [a)] How large is the pathogen flow? $\varPhi$?
 				
-				Im Leerlauf ist das innere Moment $M_\mathrm{i}$ gleich Null. Gleichung \ref{GlfremderregteGM1} vereinfacht sich daher zu:
-				\begin{align*}
+                At idle speed, the internal torque $M_\mathrm{i}$ is equal to zero. Equation \ref{GlfremderregteGM1} is therefore simplified to:				\begin{align*}
 					n&=\frac{U_\mathrm{A}}{2\pi K\cdot \varPhi}\\
 					\varPhi&=\frac{U_\mathrm{A}}{2\pi K\cdot n} = \frac{400\,\text{V}}{\frac{2\pi}{2\pi}\cdot 1200 \,\frac{1}{\text{min}}\cdot \frac{1}{60\,\frac{\text{s}}{\text{min}}}}  = 20\,\text{Vs}
 				\end{align*}
 				
-				\item[b)] Wie schnell dreht die Maschine bei einem inneren Drehmoment von $M_\mathrm{i}=10\,\text{Nm}$?
+				\item[b)] How fast does the machine rotate at an internal torque of $M_\mathrm{i}=10\,\text{Nm}$?
 				\begin{align*}
 					n &= \frac{U_\mathrm{A}}{2\pi K\cdot \varPhi} - \frac{R_\mathrm{A}\cdot M_\mathrm{i}}{2\pi(K\cdot \varPhi)^2}\\
 					 &= \frac{400\,\text{V}}{\frac{2\pi}{2\pi}\cdot 20\,\text{Vs}} - \frac{2,3\,\Omega \cdot 10\,\text{Nm}}{2\pi(\frac{1}{2\pi}\cdot 20\,\text{Vs})^2}\\
 					 &= 20\,\frac{1}{\text{s}} - 0,362 \,\frac{1}{\text{s}} = 19,638\,\frac{1}{\text{s}} =  1178,3\,\frac{1}{\text{min}}
 				\end{align*}
-				\item[c)] Wie groß ist der Ankerstrom?
+				\item[c)] How big is the anchor current?
 				\begin{align*}
 					I_\mathrm{A} &= \frac{M_\mathrm{i}}{K\cdot \varPhi} = \frac{10\,\text{Nm}}{\,\frac{1}{2\pi}\cdot 20\,\text{Vs}\,} = 3,61\,\text{A}
 				\end{align*}
 			\end{itemize}
-		\end{bsp}
+		\end{expl}
 	}
 	\b{
-		Eine fremderregte Gleichstrommaschine mit der Ankerkonstante $K=\frac{1}{2\pi}$ hat bei der Spannung $U_\mathrm{A}=400\,\text{V}$ eine Leerlaufdrehzahl von $n=1200\,\frac{1}{\text{min}}$. Der Ankerwiderstand beträgt $R_\mathrm{A}=2,3\,\Omega$. 
+
+		A separately excited DC machine with the armature constant $K=\frac{1}{2\pi}$ has a no-load speed of $n=1200\,\frac{1}{\text{min}}$ at an armature voltage of $U_\mathrm{A}=400\,\text{V}$. The armature resistance is $R_\mathrm{A}=2.3\,\Omega$.
 		\begin{itemize}
-			\item [a)] Wie groß ist der Erregerfluss $\varPhi$? \pause	
+			\item [a)] How large is the pathogen flow? $\varPhi$? \pause	
 					
-				Im Leerlauf ist das innere Moment $M_\mathrm{i}$ gleich Null. Der lastabhängige Drehzahlabfall entfällt daher:
+				When idling, the internal torque $M_\mathrm{i}$ is zero. The load-dependent speed drop therefore does not apply:
 				\begin{align*}
 					n&=\frac{U_\mathrm{A}}{2\pi K\cdot \varPhi}\\
 					\varPhi&=\frac{U_\mathrm{A}}{2\pi K\cdot n} = \frac{400\,\text{V}}{\frac{2\pi}{2\pi}\cdot 1200 \,\frac{1}{\text{min}}\cdot \frac{1}{60\,\frac{\text{s}}{\text{min}}}}  = 20\,\text{Vs}
@@ -285,15 +299,15 @@
 	}
 \end{frame}
 \b{
-	\begin{frame}\ftx{Beispiel}
+	\begin{frame}\ftx{Example}
 		\begin{itemize}
-			\item[b)] Wie schnell dreht die Maschine bei einem inneren Drehmoment von $M_\mathrm{i}=10\,\text{Nm}$?\pause
+			\item[b)] How fast does the machine rotate at an internal torque of $M_\mathrm{i}=10\,\text{Nm}$?\pause
 				\begin{align*}
 					n &= \frac{U_\mathrm{A}}{2\pi K\cdot \varPhi} - \frac{R_\mathrm{A}\cdot M_\mathrm{i}}{2\pi(K\cdot \varPhi)^2}\\
 					&= \frac{400\,\text{V}}{\frac{2\pi}{2\pi}\cdot 20\,\text{Vs}} - \frac{2,3\,\Omega \cdot 10\,\text{Nm}}{2\pi(\frac{1}{2\pi}\cdot 20\,\text{Vs})^2}\\
 					&= 20\,\frac{1}{\text{s}} - 0,362 \,\frac{1}{\text{s}} = 19,638\,\frac{1}{\text{s}} =  1178,3\,\frac{1}{\text{min}}
 				\end{align*}\pause
-			\item[c)] Wie groß ist der Ankerstrom?
+			\item[c)] How big is the anchor current?
 				\begin{align*}
 				I_\mathrm{A} &= \frac{M_\mathrm{i}}{K\cdot \varPhi} = \frac{10\,\text{Nm}}{\,\frac{1}{2\pi}\cdot 20\,\text{Vs}\,} = 3,61\,\text{A}
 				\end{align*}
@@ -304,25 +318,26 @@
 
 
 
-\s{\subsection{Reihenschlussmaschine}}
-\begin{frame}\ftx{Reihenschlussmaschine}
-	\s{Bei der Reihenschlussmaschine sind Erreger- und Rotorkreis in Reihe miteinander verbunden. Der Erregerstrom ist daher gleich dem Ankerstrom. Diese Art von Motor wird häufig in einfachen Elektrogeräten an Wechselspannung eingesetzt und wird daher auch Universalmotor genannt. Als Gleichstrommaschine wurde sie früher vor allem in Traktionsantrieben zum Beispiel von Straßenbahnen eingesetzt. Heutzutage sind diese allerdings wegen des besseren Wirkungsgrades durch Drehstromantriebe mit Umrichter ersetzt.}
+\s{\subsection{Series closure machine}}
+\begin{frame}\ftx{Series closure machine}
+	\renewcommand{\figurename}{Figure}
+    \s{In a series-wound motor, the field circuit and rotor circuit are connected in series. The field current is therefore equal to the armature current. This type of motor is often used in simple electrical appliances with alternating current and is therefore also called a universal motor. As a direct current motor, it was previously used primarily in traction drives, for example in trams. Nowadays, however, these have been replaced by three-phase drives with converters due to their higher efficiency.}
 	\begin{columns}
 		\column[c]{0.45\textwidth}
 			\fu{
 				\input{Tikz/src/ersatzschaltbild_Reihenschlussm}
-			}{{\bf Ersatzschaltbild einer Reihenschlussmaschine.} \label{AbbGMReihenschluss}}
+			}{{\bf Equivalent circuit diagram of a series-wound machine.} \label{AbbGMReihenschluss}}
 			\begin{itemize}
-				\item Auch für Wechselspannung einsetzbar
-				\item hohes Anzugsmoment
+				\item Can also be used for alternating voltage
+				\item high tightening torque
 			\end{itemize}
-			\s{Im Gegensatz zur fremderregten Gleichstrommaschine, deren Drehzahl-Drehmomentenkennlinie nach Gleichung \ref{GlfremderregteGM1} eine Gerade ist, verhält sich die Reihenschlussmaschine nichtlinear. Ohne Belastung ist die Drehzahl theoretisch unendlich, die Maschine wird also so stark beschleunigen, bis sie sich selbst durch die Fliehkraft zerstört. Die Maschine \glqq geht durch\grqq. Bei den Anwendungen als Traktionsantrieb kommt ein Leerlauf aber nie vor, das große Anlaufmoment ist hingegen gewünscht.}
-		\column[c]{0.55\textwidth}\pause
+            \s{Unlike externally excited DC machines, whose speed-torque characteristic curve is a straight line according to equation \ref{GlfremderregteGM1}, series-wound machines behave non-linearly. Without load, the speed is theoretically infinite, meaning that the machine will accelerate until it destroys itself through centrifugal force. The machine \glqq goes through\grqq. However, in traction drive applications, idling never occurs; instead, a high starting torque is desired.}
+			\column[c]{0.55\textwidth}\pause
 			\s{
 				\fu{
 					\input{Tikz/src/drehmomentkennlinie_reihenschluss}
 					
-				}{{\bf Drehzahl-Drehmomentenkennlinien.} Kennlinie einer fremderregten Gleichstrommaschine sowie einer Reihenschlussmaschine.}
+				}{{\bf Speed-torque characteristics.} Characteristic curve of a separately excited DC machine and a series-wound machine.}
 			}
 			\b{
 				\fu{
@@ -336,8 +351,8 @@
 					\draw[dashed] (3.6,0) -- (3.6,5);
 					\draw (3.6,0) node[below] {$M_\mathrm{n}$};
 					\draw (0,2.5) node[left] {$n_\mathrm{n}$};
-					\draw[red] (0,2.8) -- (10,1.966666)  (5.5,4.5) -- (5.7,4.5) node[right]{Fremderregt};
-					\draw[blue] (5.5,3.8) -- (5.7,3.8) node[right]{Reihenschluss};
+					\draw[red] (0,2.8) -- (10,1.966666)  (5.5,4.5) -- (5.7,4.5) node[right]{Externally excited};
+					\draw[blue] (5.5,3.8) -- (5.7,3.8) node[right]{Series closure};
 					\end{tikzpicture}
 				}{Kennlinien von Gleichstrommaschinen}
 			}	

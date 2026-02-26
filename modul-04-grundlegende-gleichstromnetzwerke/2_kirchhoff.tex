@@ -13,7 +13,7 @@
         within a network. Kirchhoff's rules, also known as mesh or node rules, 
         provide the equations required for this.
 	}
-	\ftx{Lernziele: Kirchhoffsche Regeln}
+	\ftx{Learning objectives: Kirchhoff's rules}
 	
 	\begin{Learning objectives}{Kirchhoff's rules}
 		The students can
@@ -41,7 +41,7 @@
 
 
 \begin{frame}
-	\ftx{Knotenregel I (1. Kirchhoffsche Regel)}
+	\ftx{Node rule I (Kirchhoff's 1st law)}
 	
 	\s{
 	
@@ -80,7 +80,7 @@
 			\sum_{i=1}^{n} = 0
 		\end{equation}
 		
-        Applied to the example nodes in Figure \ref{fig:knoten34}, this results in the following equations:
+        Applied to the example nodes in Figure \ref{fig:knoten}, this results in the following equations:
 		
 		
 		\begin{figure}[h!]
@@ -89,7 +89,7 @@
 			{\includesvg[width=0.25\textwidth]{knotenregel1}}
 			
 			{\caption{Simple example node}}
-			\label{fig:knoten34}
+			\label{fig:knoten}
 		\end{figure}
 		
 		
@@ -165,25 +165,22 @@
 			\column[t]{0.58\textwidth}
 			
 			\vspace{-20pt}
-			\begin{Merksatz}{}
+			\begin{Key point}{}
 				\begin{center}
-					Summe zufließender Ströme\\
+					Total inflows\\
 					
 					=\\
 					
-					Summe abfließender Ströme\\
+					Total outflows\\
 				\end{center}
 				
-			\end{Merksatz}
+			\end{Key point}
 			
 			%	\vspace{5pt}
 			
 			
-			
-			
-			
 			\begin{equation*}
-				\sum I_\mathrm{zu} = \sum I_\mathrm{ab}
+				\sum I_\mathrm{in} = \sum I_\mathrm{out}
 			\end{equation*}
 			
 			\phantom{.}\\
@@ -193,7 +190,7 @@
 			
 			\only<2->{
 			
-				Alternativ: zufließende Ströme positiv, abfließende Ströme negativ zählen:\\
+				Alternatively: count incoming currents as positive and outgoing currents as negative:\\
 				
 				
 				\begin{equation*}
@@ -235,11 +232,11 @@
 
 \begin{frame}
 	\b{
-		\ftx{Knotenregel II}
+		\ftx{Knot rule II}
 		
 		\begin{columns}
 			\column[t]{0.5\textwidth}
-			Anwendung auf Hüllknoten:
+			Application to envelope nodes:
 			
 			\vspace{-5pt}
 			
@@ -260,7 +257,7 @@
 			\column[t]{0.5\textwidth}
 			\pause
 			
-			Anwendung auf geometrische Strukturen:
+			Application to geometric structures:
 			
 			\begin{figure}[h!]
 				\centering
@@ -294,7 +291,7 @@
 
 
 \begin{frame}
-	\ftx{Beispiel: Parallelschaltung von Widerständen}
+	\ftx{Example: Parallel connection of resistors}
 	
 	\subsection{Application case node rule: Parallel connection of resistors}
 	
@@ -303,7 +300,7 @@
 		A basic application for the node rule is the parallel connection of resistors.
 		The current divides at a common node, and a partial current flows through each of the individual resistors.
 		After passing through the respective resistors, the partial currents rejoin and continue to flow as a total current.
-		This is illustrated in example \ref{bsp:knoten}.
+		This is illustrated in example \ref{expl:knoten}.
 		
 		\begin{expl}{Parallel connection of resistors}{knoten}
 			
@@ -338,7 +335,7 @@
 		
 		If one of the resistors is replaced by an ideally conductive connection (conductance approaches
 		infinity, resistance consequently approaches 0), the current flow in the area
-		between the two nodes changes (example \ref{bsp:knoten2}).. 
+		between the two nodes changes (example \ref{expl:knoten2}).. 
 		
 		
 		
@@ -422,8 +419,8 @@
 			\vspace{-10pt}
 			
 			
-			Ein Widerstand wird durch eine leitende Verbindung ersetzt.
-			Wie groß ist der Strom $I_2$?\\
+			A resistor is replaced by a conductive connection.
+			How strong is the current? $I_2$?\\
 			
 			\column[t]{0.4\textwidth}
 			
@@ -495,7 +492,7 @@
         of all voltages connected in the same direction at voltage sources corresponds to the voltage that
         drops across the consumers.
 		
-		\begin{Key point}{Maschenregel 2}
+		\begin{Key point}{Mesh rule 2}
 			Total voltage at voltage sources = total voltage at consumers
 		\end{Key point}
 		
@@ -551,26 +548,25 @@
 	
 	
 	\b{
-		\ftx{Maschenregel (2. Kirchhoffscher Satz)}
+		\ftx{Mesh rule (Kirchhoff's second law)}
 		\begin{columns}
 			\column[t]{0.65\textwidth}
 			
 			\vspace{-70pt}
 			
-			Bei geschlossenem Maschenumlauf:
+			With closed mesh circulation:
 			\vspace{-5pt}
 			%\hspace{-40pt}
-			\begin{Merksatz}{}
+			\begin{Key point}{}
 				
 				\begin{center}
 
-
-					Summe der Spannungsquellen\\
+					Sum of voltage sources\\
 					\quad \quad\ \quad =\\
-					Spannungssumme an Verbrauchern
+					Total voltage at consumers
 					
 				\end{center}
-			\end{Merksatz}
+			\end{Key point}
 			
 			\column[c]{0.35\textwidth}
 			
@@ -595,8 +591,8 @@
 			\vspace{-25pt}
 			
 			
-			Oder:\\
-			Bei geschlossenem Maschenumlauf Teilspannung vorzeichenrichtig aufsummieren.\\
+			Or:\\
+			With the mesh circulation closed, add up the partial stresses with the correct sign.
 			
 			\vspace*{-20pt}
 			
@@ -619,7 +615,7 @@
 			
 			\pause
 			
-			Allgemeine Beschreibung nach den Maxwell Gleichungen:
+			General description according to Maxwell's equations:
 			
 			\vspace{10pt}
 			
@@ -680,7 +676,7 @@
 		While the nodes in electrical networks are primarily important for current, the branches and thus also the meshes are primarily of interest for
 		calculating voltages. 
 		In a series connection of resistors in a branch, all partial voltages add up to a total voltage with the correct sign.
-        An application case for determining a partial voltage is shown in Example \ref{bsp:reihe}.
+        An application case for determining a partial voltage is shown in Example \ref{expl:reihe}.
 		
 		
 		
@@ -713,7 +709,7 @@
 		\end{expl}
 		
 		
-        The mesh rule can also be applied if the mesh to which it is applied has an interruption point (see example \ref{bsp:reihe2}). 
+        The mesh rule can also be applied if the mesh to which it is applied has an interruption point (see example \ref{expl:reihe2}). 
 
 		\begin{expl}{Series connections with interruption point}{reihe2}
 			
@@ -766,15 +762,14 @@
 	
 	\b{
 		
-		\ftx{Beispiel: Reihenschaltung von Widerständen}
+		\ftx{Example: Series connection of resistors}
 		\begin{columns}
 			\column[t]{0.6\textwidth}
 			
 			\vspace{-50pt}
-			Bei der Reihenschaltung addieren sich die Spannungen zu einer
-			Gesamtspannung auf.\\
-			Wie groß ist die Spannung $U_0$?
-			
+			In a series connection, the voltages add up to a
+			total voltage.\\
+			How high is the voltage? $U_0$?
 			
 			\column[c]{0.4\textwidth}
 			
@@ -801,8 +796,8 @@
 			\column[t]{0.6\textwidth}
 			\pause
 			
-			Eine Verbindung wird unterbrochen. Wie groß ist die Spannung $U_1$ an
-			der Unterbrechungsstelle?
+			A connection is interrupted. How large is the voltage $U_1$ at
+			the point of interruption?
 			
 			\column[t]{0.4\textwidth}
 			

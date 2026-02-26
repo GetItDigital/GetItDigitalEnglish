@@ -1,35 +1,35 @@
-\subsection{Untersuchung eines Aufwärtswandlers zur Spannungsanhebung\label{Aufg28}}
+\subsection{Investigation of a step-up converter for voltage boosting\label{Aufg28}}
 % Alt: Praktikumsaufgabe 14
 \Aufgabe{
-    Mit einem Aufwärtswandler können kleine Gleichspannungen (z. B. aus einer Batterie) in eine höhere Gleichspannung umgesetzt werden.  
-    Untersuchen Sie die Funktionsweise eines Aufwärtswandlers, indem Sie die Schaltung analysieren.
+    An upward converter can be used to convert small DC voltages (e.g. from a battery) into a higher DC voltage.
+    Examine how an upward converter works by analysing the circuit.
     
     Gegeben:
     \begin{itemize}
-        \item Eingangsspannung: $U_\mathrm{E} = 1\,\mathrm{V}$
-        \item Induktivität: $L = 900\,\mathrm{\mu H}$
-        \item Diode: Ideale Diode (keine Spannungsabfälle berücksichtigt)
-        \item Kondensator: $C = 470\,\mathrm{\mu F}$
-        \item Schalter: Wird periodisch geöffnet und geschlossen
+        \item Input voltage: $U_\mathrm{E} = 1\,\mathrm{V}$
+        \item inductance: $L = 900\,\mathrm{\mu H}$
+        \item Diode: Ideal diode (no voltage drops taken into account)
+        \item capacitor: $C = 470\,\mathrm{\mu F}$
+        \item Switch: Opens and closes periodically
     \end{itemize}
     
     \begin{itemize}
-        \item[a)] Erklären Sie die Funktionsweise des Aufwärtswandlers in den zwei Phasen:  
+        \item[a)] Explain how the step-up converter works in two phases:  
             \begin{itemize}
-                \item \textit{Phase 1: Schalter geschlossen}
-                \item \textit{Phase 2: Schalter geöffnet}
+                \item \textit{Phase 1: Switch closed}
+                \item \textit{Phase 2: Switch open}
             \end{itemize}
-        \item[b)] Leiten Sie die Formel für die Ausgangsspannung $U_\mathrm{A}$ in Abhängigkeit des Tastverhältnisses $D$ her:
+        \item[b)] Derive the formula for the output voltage $U_\mathrm{A}$ as a function of the duty cycle $D$:
             \[
             U_\mathrm{A} = \frac{U_\mathrm{E}}{1 - D}
             \]
-        \item[c)] Berechnen Sie $U_\mathrm{A}$ für verschiedene Tastverhältnisse $D$:
+        \item[c)] Calculate $U_\mathrm{A}$ for different duty cycles $D$:
             \begin{itemize}
                 \item $D = 0{,}3$
                 \item $D = 0{,}5$
                 \item $D = 0{,}7$
             \end{itemize}
-        \item[d)] Was passiert, wenn $D$ gegen $1$ geht? Welche praktischen Begrenzungen gibt es?
+        \item[d)] What happens when $D$ approaches $1$? What practical limitations are there?
     \end{itemize}
     \begin{figure} [H]
     \centering
@@ -39,52 +39,52 @@
 }
 
 \Loesung{
-    \textbf{a) Erklärung der Funktionsweise des Aufwärtswandlers} \\[0.2cm]
-    Der Aufwärtswandler arbeitet in zwei Phasen:
+    \textbf{a) Explanation of how the step-up converter works} \\[0.2cm]
+    The step-up converter operates in two phases:
 
     \begin{itemize}
-        \item \textbf{Phase 1 (Schalter geschlossen):}  
-        Die Induktivität $L$ wird mit Strom geladen und speichert Energie in ihrem Magnetfeld.  
-        Die Diode sperrt, sodass kein Strom zum Ausgang fließt.
+        \item \textbf{Phase 1 (switch closed):}  
+        The inductance $L$ is charged with current and stores energy in its magnetic field.  
+        The diode blocks the current, so that no current flows to the output.
         
-        \item \textbf{Phase 2 (Schalter geöffnet):}  
-        Der gespeicherte magnetische Fluss der Induktivität bricht zusammen, wodurch die Induktivität eine Spannung induziert.  
-        Diese Spannung addiert sich zur Eingangsspannung und lädt den Kondensator $C$ auf eine höhere Spannung auf.  
-        Der Ausgang erhält nun eine höhere Spannung als die Eingangsspannung.
+        \item \textbf{Phase 2 (switch open):}  
+        The stored magnetic flux of the inductance collapses, causing the inductance to induce a voltage.  
+        This voltage adds to the input voltage and charges the capacitor $C$ to a higher voltage.  
+        The output now receives a higher voltage than the input voltage.
     \end{itemize}
 
-    \textbf{b) Herleitung der Ausgangsspannungsformel} \\[0.2cm]
-    Im stationären Zustand gilt das Verhältnis zwischen Ein- und Ausgangsspannung:
+    \textbf{b) Derivation of the output voltage formula} \\[0.2cm]
+    In a steady state, the ratio between input and output voltage applies:
     \[
     U_\mathrm{A} = \frac{U_\mathrm{E}}{1 - D}
     \]
-    wobei $D$ das Tastverhältnis ist (Verhältnis der Zeit, in der der Schalter geschlossen ist).
+    where $D$ is the duty cycle (ratio of the time during which the switch is closed).
 
-    \textbf{c) Berechnung der Ausgangsspannung für verschiedene $D$} \\[0.2cm]
-    Gegeben ist $U_\mathrm{E} = 1\,\mathrm{V}$.
+    \textbf{c) Calculation of the output voltage for different $D$} \\[0.2cm]
+    Given is $U_\mathrm{E} = 1\,\mathrm{V}$.
 
     \begin{itemize}
-        \item Für $D = 0{,}3$:
+        \item For $D = 0{,}3$:
         \[
         U_\mathrm{A} = \frac{1\,\mathrm{V}}{1 - 0{,}3} = \frac{1\,\mathrm{V}}{0{,}7} = 1{,}43\,\mathrm{V}
         \]
-        \item Für $D = 0{,}5$:
+        \item For $D = 0{,}5$:
         \[
         U_\mathrm{A} = \frac{1\,\mathrm{V}}{1 - 0{,}5} = \frac{1\,\mathrm{V}}{0{,}5} = 2\,\mathrm{V}
         \]
-        \item Für $D = 0{,}7$:
+        \item For $D = 0{,}7$:
         \[
         U_\mathrm{A} = \frac{1\,\mathrm{V}}{1 - 0{,}7} = \frac{1\,\mathrm{V}}{0{,}3} = 3{,}33\,\mathrm{V}
         \]
     \end{itemize}
 
-    \textbf{d) Grenzen für $D \to 1$} \\[0.2cm]
-    Theoretisch würde $U_\mathrm{A} \to \infty$, wenn $D$ gegen $1$ geht.  
-    In der Praxis gibt es jedoch Begrenzungen durch:
+    \textbf{d) Limits for $D \to 1$} \\[0.2cm]
+    Theoretically, $U_\mathrm{A} \to \infty$ if $D$ approaches $1$.
+    In practice, however, there are limitations due to:
     \begin{itemize}
-        \item Die Sättigung der Induktivität
-        \item Verluste durch Widerstände, Diode und Schalter
-        \item Begrenzte Schaltfrequenzen
+        \item Inductance saturation
+        \item Losses due to resistors, diodes and switches
+        \item Limited switching frequencies
     \end{itemize}
-    Typische Werte für $D$ liegen in der Regel unter 0,8, um einen stabilen Betrieb zu gewährleisten.
+    Typical values for $D$ are usually below 0.8 to ensure stable operation.
 }

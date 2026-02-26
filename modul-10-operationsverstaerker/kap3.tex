@@ -1,10 +1,10 @@
 \b{\begin{frame}
-    \fta{Prinzip der Gegenkopplung}
-        Es soll ein Leistungsverstärker aufgebaut werden, der geeignet ist, das Signal eines Handys so zu verstärken, dass ein Lautsprecher damit betrieben werden kann.
-        Das Eingangsspannungsniveau ist 1~V und es soll ein 4~$\mathrm{\Omega}$ Lautsprecher betrieben werden. 
-        Wie groß muss die Spannung am Ausgang des Verstärkers sein, damit der Lautsprecher bei 1 kHz 25~W aufnimmt. 
-        Wie kann hier vorgegangen werden, wenn eine Operationsverstärkerschaltung für die Lösung genutzt werden soll? \par
-        \fu{\resizebox{\textwidth}{!}{\input{Tikz/src/OPVBeispielproblem.tex}}}{Schaltung des Beispielproblems mit einer Signalquelle auf der Eingangsseite und einer komplexen Last auf der Ausgangsseite \label{fig:Beispielproblem 1 Folien}}.
+    \fta{Principle of negative feedback}
+        A power amplifier is to be constructed that is capable of amplifying the signal from a mobile phone so that it can be used to operate a loudspeaker.
+        The input voltage level is 1~V and a 4~$\mathrm{\Omega}$ loudspeaker is to be operated. 
+        How high must the voltage at the output of the amplifier be so that the loudspeaker absorbs 25~W at 1 kHz?
+        How can this be achieved if an operational amplifier circuit is to be used for the solution? \par        
+        \fu{\resizebox{\textwidth}{!}{\input{Tikz/src/OPVBeispielproblem.tex}}}{Circuit of the example problem with a signal source on the input side and a complex load on the output side \label{fig:Beispielproblem 1 Folien}}.
 \end{frame}}
 
 %\speech {1}{
@@ -13,20 +13,20 @@
 %}
 
 \begin{frame}
-    \s{\fta{Prinzip der Gegenkopplung}
-    Nachdem die vorherigen Kapitel zunächst den inneren Aufbau des Verstärkers und das sich daraus ergebenden Modell sowie die im idealen Modell nicht beschriebenen, realen Effekte thematisierten, soll es in diesem Unterkapitel um die Beschaltung des Operationsverstärkers gehen. 
+    \s{\fta{Principle of negative feedback}
+    After the previous chapters initially addressed the internal structure of the amplifier and the resulting model, as well as the real effects not described in the ideal model, this subchapter will deal with the circuitry of the operational amplifier. 
     
-    Es sollen im Rahmen dieses Kapitels folgende Kompetenzen erworben werden:
+    The following skills should be acquired within the scope of this chapter:    
     \s{
-        \begin{Lernziele}{Operationsverstärker}
+        \begin{Learning objectives}{Operationsverstärker}
             \title{Lernziele: Prinzip der Gegenkopplung}
-            Die Studierenden können
+            The students can
             \begin{itemize}
-                \item verschiedene Operationsverstärkerschaltungen und mögliche Einsatzgebiete nennen.
-                \item die Funktion von vorliegenden Operationsverstärkerschaltungen bestimmen und mithilfe der Kirchhoff'schen Gesetze die Verstärkung berechnen.
-                \item wichtige Eigenschaften von Operationsverstärkerschaltungen benennen.
+                \item Name various operational amplifier circuits and possible areas of application.
+                \item Determine the function of existing operational amplifier circuits and calculate the gain using Kirchhoff's laws.
+                \item Name important properties of operational amplifier circuits.
             \end{itemize}
-        \end{Lernziele}
+        \end{Learning objectives}
     }
 
 %\speech{1}{
@@ -36,45 +36,48 @@
 %    Sie können wichtige Eigenschaften von Operationsverstärkerschaltungen benennen.    
 %}
 
-    Dazu soll ein Problem dargestellt werden, für dessen Lösung ein Operationsverstärker verwendet werden soll. Anhand dieses Problems soll die Verwendung von Operationsverstärkern Schritt für Schritt motiviert werden. \par
-    \begin{bsp}{ Teil 1: Entwicklung einer Verstärkerschaltung für Musiksignale}{ Beispiel Verstaerkung }
-        Bei der Entwicklung von Hi-Fi-Geräten müssen Verstärker an die Last (also den Lautsprecher) angepasst werden.
-        Dazu wird ein Leistungsverstärker (d.h. eine Endstufe) benötigt. Eine solche Endstufe, die geeignet ist, das Signal eines Handys so zu verstärken, dass ein Lautsprecher damit betrieben werden kann soll hier aufgebaut werden.
-        Ein vereinfachtes Ersatzschaltbild des Lautsprechers ist durch eine Induktivität mit einem in Reihe geschalteten Widerstand gegeben (siehe Abbildung \ref{fig:Beispielproblem 1}). 
-        Das Eingangsspannungsniveau ist 1~V und es soll ein 4~$\mathrm{\Omega}$ Lautsprecher betrieben werden (4~$\mathrm{\Omega}$ bedeutet, dass der Lautsprecher bei 1~kHz eine Impedanz von 4~$\Omega$ aufweist). 
-        Wie groß muss die Spannung am Ausgang des Verstärkers sein, damit der Lautsprecher bei 1~kHz 25~W aufnimmt. 
-        Wie kann hier vorgegangen werden, wenn eine Operationsverstärkerschaltung für die Lösung genutzt werden soll? \par
+        To this end, a problem will be presented for which an operational amplifier is to be used to find a solution. This problem will be used to motivate the use of operational amplifiers step by step. \par    
+        
+        \begin{expl}{ Part 1: Development of an amplifier circuit for music signals}{ Beispiel Verstaerkung }
+        \renewcommand{\figurename}{Figure}
+        When developing hi-fi devices, amplifiers must be matched to the load (i.e., the speaker).  
+        For this purpose, a power amplifier (i.e., a final stage) is required. Such an amplifier, capable of boosting the signal from a mobile phone to drive a speaker, is to be built here.  
+        A simplified equivalent circuit of the speaker is represented by an inductance in series with a resistor (see Figure \ref{fig:Beispielproblem 1}).  
+        The input voltage level is 1~V, and a 4~$\mathrm{\Omega}$ speaker is to be driven (4~$\mathrm{\Omega}$ means that the speaker has an impedance of 4~$\Omega$ at 1~kHz).
+        Determine the required output voltage of the amplifier so that the speaker consumes 25~W at 1~kHz.  
+        How can this be approached if an operational amplifier circuit is used for the solution? \par
     
-        \textbf{Lösung}\\
-        Zunächst muss dazu die Spannung berechnet werden, die der Verstärker ausgeben soll. 
+        \textbf{Solution}\\
+        First, the voltage that the amplifier is to output must be calculated.
         \begin{equation}
             U_{\textnormal{A}} = \sqrt{P \cdot R} = \sqrt{25~\mathrm{W} \cdot 4~\mathrm{\Omega}} = 10~\textnormal{V}
         \end{equation}
-        Wie kann nun mithilfe eines Operationsverstärkers der mit einem \glqq ?\grqq{} gekennzeichneten Teil der Schaltung ersetzt werden, um eine notwendige Verstärkung von 10 zu erreichen (siehe Abbildung \ref{fig:Beispielproblem 1}). 
-        \fu{\resizebox{0.6\textwidth}{!}{\input{Tikz/src/OPVBeispielproblem.tex}}}{Schaltung des Beispielproblems mit einer Signalquelle auf der Eingangsseite und einer komplexen Last auf der Ausgangsseite. Es wird für den mit einem Fragezeichen gekennzeichneten Teil der Schaltung zunächst der Verstärkungsfaktor $V=\frac{U_{\textnormal{A}}}{U_{\textnormal{E}}}$ gesucht. \label{fig:Beispielproblem 1}}
-    \end{bsp}}
+        How can an operational amplifier be used to replace the part of the circuit marked with \glqq ?\grqq{} in order to achieve the required gain of 10 (see Figure \ref{fig:Beispielproblem 1})?
+        \fu{\resizebox{0.6\textwidth}{!}{\input{Tikz/src/OPVBeispielproblem.tex}}}{Circuit of the example problem with a signal source on the input side and a complex load on the output side. The amplification factor $V=\frac{U_{\textnormal{A}}}{U_{\textnormal{E}}}$ is first sought for the part of the circuit marked with a question mark. \label{fig:Beispielproblem 1}}
+    \end{expl}}
+
 
     \b{
-        \frametitle{Prinzip der Gegenkopplung - Lösung des Beispielproblems (1)}
-        \textbf{Lösung}\\
-        Zunächst muss dazu die Spannung berechnet werden, die am Ausgang des Verstärkers anliegen soll. 
+        \frametitle{Negative feedback principle solution to the example problem (1)}
+        \textbf{Solution}\\
+        First, the voltage that should be present at the amplifier output must be calculated.
         \begin{equation}
             U_{\textnormal{A}} = \sqrt{P \cdot R} = \sqrt{25~\mathrm{W} \cdot 4~\mathrm{\Omega}} = 10~\textnormal{V}
         \end{equation}
-        Wie kann nun mithilfe eines Operationsverstärkers der mit einem \glqq ?\grqq{} gekennzeichneten Teil der Schaltung ersetzt werden, um eine notwendige Verstärkung von 5 zu erreichen. 
-        \fu{\resizebox{\textwidth}{!}{\input{Tikz/src/OPVBeispielproblem.tex}}}{Schaltung des Beispielproblems mit einer Signalquelle auf der Eingangsseite und einer komplexen Last auf der Ausgangsseite \label{fig:Beispielproblem 1 Folien 2}} 
+        How can an operational amplifier be used to replace the part of the circuit marked with a \glqq ?\grqq{} in order to achieve the required amplification of 5?
+        \fu{\resizebox{\textwidth}{!}{\input{Tikz/src/OPVBeispielproblem.tex}}}{Circuit of the example problem with a signal source on the input side and a complex load on the output side \label{fig:Beispielproblem 1 Folien 2}} 
     }
 \end{frame}
 
 \begin{frame}
     \b{
-            \frametitle{Prinzip der Gegenkopplung - Lösung des Beispielproblems (2)}
+            \frametitle{Negative feedback principle – solution to the example problem (2)}
              \fu{\resizebox{0.28\textwidth}{!}{\input{Tikz/src/Verschaltungdesverstaerkers_ersterTeil.tex}}}{Schaltung des Beispielproblems mit einer Signalquelle auf der Eingangsseite und einer komplexen Last auf der Ausgangsseite \label{fig:Beispielproblem 1 Folien 2 Abbildung 1}} 
         }
     \end{frame}
     \begin{frame}
         \b{
-            \frametitle{Prinzip der Gegenkopplung - Lösung des Beispielproblems (2)}
+            \frametitle{Negative feedback principle – solution to the example problem (2)}
              \fu{\resizebox{0.8\textwidth}{!}{\input{Tikz/src/Verschaltungdesverstaerkers_zweiterTeil.tex}}}{Schaltung des Beispielproblems mit einer Signalquelle auf der Eingangsseite und einer komplexen Last auf der Ausgangsseite \label{fig:Beispielproblem 1 Folien 2 Abbildung 2}} 
         }
     \end{frame}
@@ -112,21 +115,22 @@
 
 \begin{frame}
     \s{\pagebreak
-        Wie aus vorherigen Kapiteln bekannt ist, besitzen Operationsverstärker einen invertierenden und einen nicht-invertierenden Eingang. Existiert zwischen diesen beiden Eingängen eine Spannungsdifferenz, so verstärkt der Operationsverstärker diese Differenz um ein Vielfaches, bis die Spannung die maximale Ausgangsspannung des Operationsverstärkers erreicht (siehe A in Abbildung \ref{fig: Verschaltung Verstaerker}).
-    Die Slew-Rate (zu deutsch: Anstiegsrate) gibt an, wie schnell dieser Anstieg geschehen kann. Wird die Ausgangsspannung nicht auf den Eingang zurückgeführt, steigt die Ausgangspannung, bis das Niveau der Versorgungsspannung erreicht wird. Eine solche Beschaltung des Verstärkers wird als Komperatorschaltung bezeichet.
+    As we know from previous chapters, operational amplifiers have an inverting and a non-inverting input. If there is a voltage difference between these two inputs, the operational amplifier amplifies this difference many times over until the voltage reaches the maximum output voltage of the operational amplifier (see A in Figure \ref{fig: Verschaltung Verstaerker}).
+    The slew rate indicates how quickly this increase can occur. If the output voltage is not fed back to the input, the output voltage increases until it reaches the level of the supply voltage. This type of amplifier circuit is referred to as a comparator circuit.
 
-    Dieses Verhalten ist für die meisten Anwendungen bei denen der Eingangsspannungssignal mit geringer Amplitude verstärkt werden soll, nicht erwünscht. 
-    Stattdessen werden Operationsverstärker meistens in der sogenannten Gegenkopplung (B) betrieben, bei der der Ausgang auf den invertierenden Eingang zurückgeführt wird. 
-    Der in (B) eingezeichnete Schalter sei zunächst geöffnet und der Operationsverstärker werde nicht mit Spannung versorgt. Zum Zeitpunkt 0 s wird der Schalter geschlossen und die Versorgungsspannung des Verstärkers eingeschaltet, wodurch die Rückführung des Ausgangssignals $U_{\textnormal{A}}$ aktiv wird (C). 
-    Durch die Rückkopplung des Ausgangssignal wird so erreicht, dass die Spannung am invertierenden Eingang auf das Spannungsniveau der Ausgangsspannung angeglichen wird. 
-    Die in (C) dargestellte Verstärkerschaltung hat die Verstärkung 1 und wird als Impedanzwandler bezeichnet, da der Verstärker in dieser Schaltungsart aufgrund seiner hohen Eingangsimpedanz verwendet werden kann, um eine Schaltung mit hochohmigem Eingang zu realisieren (dies ist beispielsweise bei Messschaltungen für Spannungsmessungen notwendig). 
-    Für die Lösung des Anwendungsproblems ist diese Schaltung allerdings noch nicht geeignet, da eine Verstärkung von 5 gefordert ist. 
-    Um diese zu erreichen werden in die Verstärkerschaltung nun zusätzlich Widerstände eingebaut (wie in (D) dargestellt ist)\footnote{Es lässt sich feststellen, dass sich für $R_2 = 0$ und $R_1 = \infty$ wieder die Schaltung des Impedanzwandlers ergibt. Der Impedanzwandler ist also ein Spezialfall des nicht-invertierenden Verstärkers.}.      
+    This behaviour is undesirable for most applications in which the input voltage signal with low amplitude is to be amplified.
+    Instead, operational amplifiers are usually operated in what is known as negative feedback (B), in which the output is fed back to the inverting input.
+    The switch shown in (B) is initially open and the operational amplifier is not supplied with voltage. At time 0 s, the switch is closed and the supply voltage of the amplifier is switched on, activating the feedback of the output signal $U_{\text{A}}$ (C).
+    The feedback of the output signal ensures that the voltage at the inverting input is adjusted to the voltage level of the output voltage.
+    The amplifier circuit shown in (C) has a gain of 1 and is referred to as an impedance converter, as the amplifier in this type of circuit can be used to implement a circuit with a high-impedance input due to its high input impedance (this is necessary, for example, in measuring circuits for voltage measurements).
+    However, this circuit is not yet suitable for solving the application problem, as a gain of 5 is required.
+    To achieve this, additional resistors are now incorporated into the amplifier circuit (as shown in (D))\footnote{It can be seen that for $R_2 = 0$ and $R_1 = \infty$, the circuit of the impedance converter is obtained again. The impedance converter is therefore a special case of the non-inverting amplifier.}.
+      
     }
-    \b{\frametitle{Prinzip der Gegenkopplung - Lösung des Beispielproblems (2)}}
+    \b{\frametitle{Negative feedback principle – solution to the example problem (2)}}
     \fu{
         \resizebox{\textwidth}{!}{\input{Tikz/src/Verschaltungdesverstaerkers.tex}}
-        }{Verschaltung eines Verstärkers als Komperator (A), Impedanzwandler (C) und nicht-invertierender Verstärker (D)
+        }{Circuitry of an amplifier as a comparator (A), impedance converter (C) and non-inverting amplifier (D)
         \label{fig: Verschaltung Verstaerker}}       
 \end{frame}
 
@@ -170,28 +174,27 @@
 
 \begin{frame}
     \s{
-    \begin{bsp}{Teil 2: Entwicklung einer Verstärkerschaltung für Musiksignale}{Beispiel Verstaerkung 2}
-        Im letzten Schritt muss ermittelt werden, wie die Widerstände in (D) gewählt werden müssen, damit sich eine Verstärkung von 5 ergibt. Dazu müssen zunächst die Maschengleichungen aufgestellt werden.
-        Eine wichtige Annahme zur Aufstellung dieser Maschengleichung ist, dass davon ausgegangen wird, dass der Verstärker durch die Rückkopplung des Ausgangsignal die beiden Eingangssignale angleicht. 
-        Hier darf also geschrieben werden \glqq Annahme: $U_{\textnormal{dif}}~=~0$~V\grqq{}. 
-        Somit ergibt sich für den invertierenden Eingang $U_{\textnormal{E-}}~=~1$~V.
-        Da weiterhin davon ausgegangen wird, dass kein Strom in die Eingänge hineinfließt gilt $I_{\textnormal{R1}}~=~I_{\textnormal{R2}}$.
-        Die Maschengleichung lautet auf Grundlage dieser Annahmen
+    \begin{expl}{Part 2: Development of an amplifier circuit for music signals}{Beispiel Verstaerkung 2}
+        The final step is to determine how the resistors in (D) must be selected in order to achieve a gain of 5. To do this, the mesh equations must first be established.
+        An important assumption for establishing this mesh equation is that the amplifier equalises the two input signals through the feedback of the output signal.
+        Here, we can write \glqq Assumption: $U_{\text{dif}}~=~0$~V\grqq{}. 
+        This results in $U_{\text{E-}}~=~1$~V for the inverting input.
+        Since it is further assumed that no current flows into the inputs, $I_{\text{R1}}~=~I_{\text{R2}}$.
+        Based on these assumptions, the mesh equation is        
         \begin{equation}
             U_{\textnormal{A}} = U_{\textnormal{R1}} + U_{\textnormal{R2}} = U_{\textnormal{E}} + I_{\textnormal{R2}} \cdot R_{\textnormal{2}} = U_{\textnormal{E}} + \frac{U_{\textnormal{E}}}{R_{\textnormal{1}}} \cdot R_{\textnormal{2}} 
         \end{equation}
 
-        Dadurch ergibt sich das Ein-Ausgangsverhalten im zeitbereich zu folgendem Ausdruck.
+        This results in the following expression for the input-output behaviour in the time domain.
         \begin{equation}
             \frac{U_{\textnormal{A}}}{U_{\textnormal{E}}} = \underbrace{(1+\frac{R_2}{R_1})}_{V}
         \end{equation}
         
 
-        Wird diese Gleichung nach $R_2/R_1$ gelöst, ergibt sich das Verhältnis der Widerstände für das oben beschriebene 
-        Problem zu $R_2/R_1 = 9$. Die Widerstände sollten hier nicht zu groß gewählt werden, da dann der Ausgleichsstrom zwischen
-        Ausgang und Eingang zu klein werden könnte. Das kann zu einem starken Rauschen am Verstärkerausgang führen. Übliche Widerstandswerte sind in der Regel den Beispielschaltungen des Datenblattes eines
-        Operationsverstärkers zu entnehmen. In diesem Fall könnte z.B. $R_2=9~\textnormal{k}\Omega$ und $R_1=1~\textnormal{k}\Omega$ gewählt werden.
-    \end{bsp} 
+        Solving this equation for $R_2/R_1$ gives the ratio of resistances for the problem described above 
+        as $R_2/R_1 = 9$. The resistances should not be chosen too large here, as the balancing current between
+        the output and input could then become too small. This can lead to severe noise at the amplifier output. Typical resistance values can usually be found in the example circuits in the data sheet of an
+        operational amplifier. In this case, for example, $R_2=9~\textnormal{k}\Omega$ and $R_1=1~\textnormal{k}\Omega$ could be selected.    \end{expl} 
 
 %\speech{1}{
 %Beispiel 3.2: Teil 2: Entwicklung einer Verstärkerschaltung für Musiksignale.
@@ -210,11 +213,11 @@
 %Operationsverstärkers zu entnehmen. In diesem Fall könnte z.B. $R_2=9~\textnormal{k}\Omega$ und $R_1=1~\textnormal{k}\Omega$ gewählt werden.
 %}
         \par
-        Ähnnlich wie für die oben dargestellte Schaltung lassen sich auch für alle weiteren Operationsverstärkerschaltungen Übertragungsfunktionen herleiten. Das soll hier allerdings nicht gezeigt werden.
-        Weitere Übertragungsfuktionen für einige ausgewählte Operationsverstärkergrundschaltungen können Tabelle \ref{tab:Grundschaltungen} entnommen werden. 
-        In dieser Tabelle sind die die Schaltungen, die Bodediagramme mit Phasengang (rot) und Amplitudengang (blau) und die Übertragungsfunktionen angegeben. 
-        Nachdem nun die Beschaltung von Verstärkern vorgestellt wurde, soll im Folgenden Kapitel nun noch eine wichtige Eigenschaft von Verstärkerschaltungen thematisiert werden, die sich aus den genutzen Verstärkerbausteinen und der äußeren Verschaltung ergibt: Die Stabilität der Verstärkerschaltung.
-        
+        Similar to the circuit shown above, transfer functions can also be derived for all other operational amplifier circuits. However, this will not be shown here.
+        Further transfer functions for some selected basic operational amplifier circuits can be found in Table \ref{tab:Grundschaltungen}. 
+        This table shows the circuits, the Bode diagrams with phase response (red) and amplitude response (blue), and the transfer functions.
+        Now that the circuitry of amplifiers has been presented, the following chapter will discuss another important property of amplifier 
+        circuits that results from the amplifier components used and the external circuitry: the stability of the amplifier circuit.        
 %\speech {1}{
 % Ähnlich wie für die oben dargestellte Schaltung lassen sich auch für alle weiteren Operationsverstärkerschaltungen Übertragungsfunktionen herleiten. Das soll hier allerdings nicht gezeigt werden.
 %    Weitere Übertragungsfuktionen für einige ausgewählte Operationsverstärkergrundschaltungen können Tabelle \ref{tab:Grundschaltungen} entnommen werden.
@@ -280,16 +283,16 @@
         \end{block}
         %\label{fig:Frequenzgang OPVs}
     }	
-   \b{\frametitle{Prinzip der Gegenkopplung - Lösung des Beispielproblems (3)}
+   \b{\frametitle{Principle of negative feedback - Solution to the example problem (3)}
     \begin{columns}
         \column[c]{0.3\textwidth}
             \begin{center}
                 \input{Tikz/src/Verschaltungdesverstaerkers_letzterTeil.tex}
-                Finale Verstärkerschaltung mit Rückführung
+                Final amplifier circuit with feedback
                 \label{fig:Verschaltung des Verstärkers2}             
             \end{center}        
         \column[c]{0.6\textwidth}
-        Annahme: $U_{\textnormal{Diff}}$~=~0
+        Assumption : $U_{\textnormal{Diff}}$~=~0
         \onslide<1->{
             \begin{equation}
                 U_{A} = U_{R1} + U_{R2} = U_{E} + I_{R2} \cdot R_2 
@@ -304,7 +307,7 @@
             \end{equation}}
         \onslide<3->{
         
-        Weitere OPV-Grundschaltungen sind Skript zu finden.}
+        Further OPV basic circuits can be found in the script.}
         \end{columns} 
     }
  \end{frame}
@@ -312,7 +315,7 @@
 %Folie Nichtinvertierender Verstärker
 \begin{frame}
     \b{
-    \frametitle{Nichtinvertierender Verstärker neu}
+    \frametitle{Non-inverting amplifier new}
     \begin{columns}
         \column{0.48\textwidth}
         \centering
@@ -322,7 +325,7 @@
     \begin{subfigure}{\linewidth}
         \centering
         \resizebox{0.6\linewidth}{!}{\input{Tikz/src/NichtinvertierenderVerstaerker.tex}}
-        \caption{Schaltung eines nichtinvertierenden Verstärkers}
+        \caption{Circuit of a non-inverting amplifier}
     \end{subfigure}
 
     \vspace{0.5cm} 
@@ -330,21 +333,21 @@
     \begin{subfigure}{\linewidth}
         \centering
         \resizebox{0.6\linewidth}{!}{\input{Tikz/src/FrequenzgangNiV.tex}}
-        \caption{Frequenzgang eines nichtinvertierenden Verstärkers}
+        \caption{Frequency response of a non-inverting amplifier}
     \end{subfigure}
 
 \end{figure}
 
         \column{0.48\textwidth}
         \begin{itemize}
-            \item Gleichung:
+            \item Equation:
             \[
             U_{\textnormal{A}} = \left(1+\frac{R_2}{R_1}\right) U_{\textnormal{E}}
             \]
-            \item Phasengleiches Ausgangssignal
-            \item Sehr hochohmiger Eingangswiderstand
-            \item Niederohmiger Ausgangswiderstand
-            \item Anwendungen: z.B. Impedanzwandler
+            \item Phase-aligned output signal
+            \item Very high input resistance
+            \item Low output resistance
+            \item Applications: e.g., impedance converter
         \end{itemize}
     \end{columns}
     }
@@ -353,13 +356,13 @@
 
 \begin{frame}
     \b{
-    \frametitle{Nichtinvertierender Verstärker}
+    \frametitle{Non-inverting amplifier}
     \centering
     \begin{table}[ht]
     \label{tab:NichtinvertierenderVerstaerker}
     \begin{tabular}{|m{0.24\textwidth}|m{0.405\textwidth}|m{0.25\textwidth}|}
     \hline
-    Schaltung & Frequenzgang und Gleichung & Erläuterung und Eigenschaften\\ % Neue Zeile mit Text
+    Circuit & Frequency response and equation & Explanation and properties\\ % Neue Zeile mit Text
     \hline
     \vspace{0.5cm}
     \centering
@@ -370,10 +373,10 @@ U_{\textnormal{A}} = \left(1+\frac{R_2}{R_1}\right) U_{\textnormal{E}}
 \]
     &
 \begin{itemize}
-    \item Phasengleiches Ausgangs-\linebreak signal
-    \item Sehr hochohmiger Eingangswiderstand
-    \item Niederohmiger Ausgangs-\linebreak widerstand
-    \item Anwendungen: z.B. Impedanzwandler
+    \item Phase-aligned output signal
+    \item Very high input resistance
+    \item Low output resistance
+    \item Applications: e.g., impedance converters
 \end{itemize} \\
     \hline
     \end{tabular}
@@ -385,13 +388,13 @@ U_{\textnormal{A}} = \left(1+\frac{R_2}{R_1}\right) U_{\textnormal{E}}
 %Folie Invertierender Verstärker
 \begin{frame}
     \b{
-    \frametitle{Invertierender Verstärker}
+    \frametitle{Non-inverting amplifier}
     \centering
     \begin{table}[ht]
     \label{tab:InvertierenderVerstaerker}
     \begin{tabular}{|m{0.24\textwidth}|m{0.405\textwidth}|m{0.25\textwidth}|}
     \hline
-    Schaltung & Frequenzgang und Gleichung & Erläuterung und Eigenschaften\\ % Neue Zeile mit Text
+    Circuit & Frequency response and equation & Explanation and properties\\ % Neue Zeile mit Text
     \hline
     \vspace{0.5cm}
     \centering
@@ -406,10 +409,10 @@ U_{\textnormal{A}} = \left(1+\frac{R_2}{R_1}\right) U_{\textnormal{E}}
 \]
     &
 \begin{itemize}
-    \item -180$^\circ$ Phasenverschiebung zwischen Ein- zu Ausgang
-    \item $R_1$ bestimmt den Eingangswiderstand
-    \item Niederohmiger Ausgangs-\linebreak widerstand
-    \item Anwendungen: \linebreak z.B. Aktiver Spannungsteiler zum Messen hoher Spannungen, wenn $R_1 > R_2$
+    \item -180$^\circ$ phase shift between input and output
+    \item $R_1$ determines the input resistance
+    \item Low-impedance output resistance
+    \item Applications: \linebreak e.g., active voltage divider for measuring high voltages when $R_1 > R_2$
 \end{itemize} \\
     \hline
     \end{tabular}
@@ -419,7 +422,7 @@ U_{\textnormal{A}} = \left(1+\frac{R_2}{R_1}\right) U_{\textnormal{E}}
 
 \begin{frame}
     \b{
-    \frametitle{Invertierender Verstärker neu}
+    \frametitle{New inverting amplifier}
     \begin{columns}
         \column{0.48\textwidth}
         \centering
@@ -429,7 +432,7 @@ U_{\textnormal{A}} = \left(1+\frac{R_2}{R_1}\right) U_{\textnormal{E}}
     \begin{subfigure}{\linewidth}
         \centering
         \resizebox{0.6\linewidth}{!}{\input{Tikz/src/InvertierenderVerstaerker.tex}}
-        \caption{Schaltung eines invertierenden Verstärkers}
+        \caption{Circuit of an inverting amplifier}
     \end{subfigure}
 
     \vspace{0.5cm} 
@@ -437,21 +440,21 @@ U_{\textnormal{A}} = \left(1+\frac{R_2}{R_1}\right) U_{\textnormal{E}}
     \begin{subfigure}{\linewidth}
         \centering
         \resizebox{0.6\linewidth}{!}{\input{Tikz/src/FrequenzgangInvertierenderVerstaerker.tex}}
-        \caption{Frequenzgang eines invertierenden Verstärkers}
+        \caption{Frequency response of an inverting amplifier}
     \end{subfigure}
 
 \end{figure}
 
         \column{0.48\textwidth}
         \begin{itemize}
-            \item Gleichung:
+            \item Equation:
            \[
     U_{\textnormal{A}} = \frac{R_2}{R_1} U_{\textnormal{E}}
             \]
-    \item -180$^\circ$ Phasenverschiebung zwischen Ein- zu Ausgang
-    \item $R_1$ bestimmt den Eingangswiderstand
-    \item Niederohmiger Ausgangswiderstand
-    \item Anwendungen: z.B. Aktiver Spannungsteiler zum Messen hoher Spannungen, wenn $R_1 > R_2$
+    \item -180° phase shift between input and output
+    \item $R_1$ determines the input resistance
+    \item Low-impedance output resistance
+    \item Applications: e.g., active voltage divider for measuring high voltages when $R_1 > R_2$
         \end{itemize}
     \end{columns}
     }
@@ -460,13 +463,13 @@ U_{\textnormal{A}} = \left(1+\frac{R_2}{R_1}\right) U_{\textnormal{E}}
 %Folie Komparator
 \begin{frame}
     \b{
-    \frametitle{Komparator}
+    \frametitle{Comparator}
     \centering
     \begin{table}[ht]
     \label{tab:Komparator}
     \begin{tabular}{|m{0.24\textwidth}|m{0.405\textwidth}|m{0.25\textwidth}|}
     \hline
-    Schaltung & Frequenzgang und Gleichung & Erläuterung und Eigenschaften\\ % Neue Zeile mit Text
+    Circuit & Frequency response and equation & Explanation and properties\\ % Neue Zeile mit Text
     \hline
     \vspace{0.5cm}
     \centering
@@ -481,8 +484,8 @@ V_1: U_{\textnormal{E+}} > U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
 V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \approx -U_{\textnormal{B}}
 \]
 \end{center}
-    &\textbf{Komparator}\newline
-    Einsatz in Zweipunktreglern und Analog-Digital-Wandlern \\
+    &\textbf{Comparator}\newline
+    Use in two-point controllers and analog-to-digital converters \\
     \hline
     \end{tabular}
     \end{table}
@@ -491,7 +494,7 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
 
 \begin{frame}
     \b{
-    \frametitle{Komparator neu}
+    \frametitle{Comparator new}
     \begin{columns}
         \column{0.48\textwidth}
         \centering
@@ -501,7 +504,7 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
     \begin{subfigure}{\linewidth}
         \centering
         \resizebox{0.6\linewidth}{!}{\input{Tikz/src/Komparator.tex}}
-        \caption{Schaltung eines Komparators}
+        \caption{Circuit of a comparator}
     \end{subfigure}
 
     \vspace{0.5cm} 
@@ -509,21 +512,21 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
     \begin{subfigure}{\linewidth}
         \centering
         \resizebox{0.6\linewidth}{!}{\input{Tikz/src/FrequenzgangKomparator.tex}}
-        \caption{Frequenzgang eines Komparators}
+        \caption{Frequency response of a comparator}
     \end{subfigure}
 
 \end{figure}
 
         \column{0.48\textwidth}
         \begin{itemize}
-            \item Gleichung:
+            \item Equation:
           \[
 V_1: U_{\textnormal{E+}} > U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \approx +U_{\textnormal{B}}
 \]
 \[
 V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \approx -U_{\textnormal{B}}
 \]
-    \item Einsatz in Zweipunktreglern und Analog-Digital-Wandlern
+    \item Use in two-point controllers and analog-to-digital converters
         \end{itemize}
     \end{columns}
     }
@@ -533,13 +536,13 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
 
 \begin{frame}
     \b{
-    \frametitle{Summierer}
+    \frametitle{Summator}
     \centering
     \begin{table}[ht]
     \label{tab:Summierer}
     \begin{tabular}{|m{0.24\textwidth}|m{0.405\textwidth}|m{0.25\textwidth}|}
     \hline
-    Schaltung & Frequenzgang und Gleichung & Erläuterung und Eigenschaften\\ % Neue Zeile mit Text
+    Circuit & Frequency response and equation & Explanation and properties\\ % Neue Zeile mit Text
     \hline
     \vspace{0.5cm}
     \centering
@@ -556,7 +559,7 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
 \end{aligned}
 \]
     & 
-    Der Summierer basiert auf dem invertierenden Verstärker und findet Verwendung in Analogrechnern und beim Mischen von Spannungssignalen \\
+    The summing amplifier is based on the inverting amplifier and is used in analog computers and for mixing voltage signals. \\
     \hline
     \end{tabular}
     \end{table}
@@ -565,7 +568,7 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
 
 \begin{frame}
     \b{
-    \frametitle{Summierer neu}
+    \frametitle{Summarizer new}
     \begin{columns}
         \column{0.48\textwidth}
         \centering
@@ -575,7 +578,7 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
     \begin{subfigure}{\linewidth}
         \centering
         \resizebox{0.6\linewidth}{!}{\input{Tikz/src/Summierer.tex}}
-        \caption{Schaltung eines Summierers}
+        \caption{Circuit of a summing device}
     \end{subfigure}
 
     \vspace{0.5cm} 
@@ -583,7 +586,7 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
     \begin{subfigure}{\linewidth}
         \centering
         \resizebox{0.6\linewidth}{!}{\input{Tikz/src/FrequenzgangSummierer.tex}}
-        \caption{Frequenzgang eines Summierers}
+        \caption{Frequency response of a summing amplifier}
     \end{subfigure}
 
 \end{figure}
@@ -594,7 +597,7 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
           \[
 U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1}} + \underbrace{\frac{R_3} {R_2}}_{V_2} \cdot U_{\textnormal{E2}}
 \]
-    \item Der Summierer basiert auf dem invertierenden Verstärker und findet Verwendung in Analogrechnern und beim Mischen von Spannungssignalen
+    \item The summing amplifier is based on the inverting amplifier and is used in analog computers and for mixing voltage signals.
         \end{itemize}
     \end{columns}
     }
@@ -604,13 +607,13 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
 
 \begin{frame}
     \b{
-    \frametitle{Subtrahierer}
+    \frametitle{Subtractor}
     \centering
     \begin{table}[ht]
     \label{tab:Subtrahierer}
     \begin{tabular}{|m{0.24\textwidth}|m{0.405\textwidth}|m{0.25\textwidth}|}
     \hline
-    Schaltung & Frequenzgang und Gleichung & Erläuterung und Eigenschaften\\ % Neue Zeile mit Text
+    Circuit & Frequency response and equation & Explanation and properties\\ % Neue Zeile mit Text
     \hline
     \vspace{0.5cm}
     \centering
@@ -626,7 +629,7 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
 \end{aligned}
  \]
      &
-     Wenn alle Widerstände gleich groß sind, wird die Differenz der Signale $U_{E1}$ und $U_{E2}$ gebildet, weswegen diese Schaltung als Differenzverstärker bezeichnet wird \\
+    When all resistances are equal, the difference between the signals $U_{E1}$ and $U_{E2}$ is formed, which is why this circuit is referred to as a differential amplifier. \\
     \hline
     \end{tabular}
     \end{table}
@@ -635,7 +638,7 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
 
 \begin{frame}
     \b{
-    \frametitle{Subtrahierer neu}
+    \frametitle{Subtractor new}
     \begin{columns}
         \column{0.48\textwidth}
         \centering
@@ -645,7 +648,7 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
     \begin{subfigure}{\linewidth}
         \centering
         \resizebox{0.6\linewidth}{!}{\input{Tikz/src/Subtrahierer.tex}}
-        \caption{Schaltung eines Subtrahierers}
+        \caption{Circuit of a subtractor}
     \end{subfigure}
 
     \vspace{0.5cm} 
@@ -653,7 +656,7 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
     \begin{subfigure}{\linewidth}
         \centering
         \resizebox{0.6\linewidth}{!}{\input{Tikz/src/FrequenzgangSubtrahierer.tex}}
-        \caption{Frequenzgang eines Subtrahierers}
+        \caption{Frequency response of a subtractor}
     \end{subfigure}
 
 \end{figure}
@@ -661,11 +664,11 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
         \column{0.48\textwidth}
         \raggedleft
         \begin{itemize}
-            \item Gleichung:
+            \item Equation:
           \[
  {U_A} = {U_{{\textnormal{E2}}}} \cdot \underbrace{ \frac{R_1 + R_2}{R_1} \cdot \frac{R_4}{R_3 + R_4}}_{V_2} - U_{\textnormal{E1}} \cdot \underbrace{\frac{R_2}{R_1}}_{V_1}
           \]
-    \item Wenn alle Widerstände gleich groß sind, wird die Differenz der Signale $U_{E1}$ und $U_{E2}$ gebildet, weswegen diese Schaltung als Differenzverstärker bezeichnet wird
+    \item When all resistances are equal, the difference between the signals $U_{E1}$ and $U_{E2}$ is formed, which is why this circuit is referred to as a differential amplifier.
         \end{itemize}
     \end{columns}
     }
@@ -676,13 +679,13 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
 
 \begin{frame}
     \b{
-    \frametitle{Integrierer}
+    \frametitle{Integrator}
     \centering
     \begin{table}[ht]
     \label{tab:Integrierer}
     \begin{tabular}{|m{0.24\textwidth}|m{0.405\textwidth}|m{0.25\textwidth}|}
     \hline
-    Schaltung & Frequenzgang und Gleichung & Erläuterung und Eigenschaften\\ % Neue Zeile mit Text
+    Circuit & Frequency response and equation & Explanation and properties\\ % Neue Zeile mit Text
     \hline
     \vspace{0.5cm}
     \centering
@@ -696,8 +699,8 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
      \end{center} 
      &
     \begin{itemize}
-        \item Nimmt eine Integration des Eingangssignals vor
-        \item Wird als aktives Tiefpassfilter verwendet
+        \item Integrates the input signal
+        \item Used as an active low-pass filter
     \end{itemize} \\
     \hline
     \end{tabular}
@@ -707,7 +710,7 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
 
 \begin{frame}
     \b{
-    \frametitle{Integrierer neu}
+    \frametitle{Integrator new}
     \begin{columns}
         \column{0.48\textwidth}
         \centering
@@ -717,7 +720,7 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
     \begin{subfigure}{\linewidth}
         \centering
         \resizebox{0.6\linewidth}{!}{\input{Tikz/src/Integrierer.tex}}
-        \caption{Schaltung eines Integrierers}
+        \caption{Circuit of an integrator}
     \end{subfigure}
 
     \vspace{0.5cm} 
@@ -725,7 +728,7 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
     \begin{subfigure}{\linewidth}
         \centering
         \resizebox{0.6\linewidth}{!}{\input{Tikz/src/FrequenzgangIntegrierer.tex}}
-        \caption{Frequenzgang eines Integrierers}
+        \caption{Frequency response of an integrator}
     \end{subfigure}
 
 \end{figure}
@@ -733,12 +736,12 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
         \column{0.48\textwidth}
         \raggedleft
         \begin{itemize}
-            \item Gleichung:
+            \item Equation:
            \[
      U_A(t) = - \frac{R_2}{R_1} U_{\textnormal{E}}(t) - \int_0^t \frac{U_{\textnormal{E}}(t)}{R_1 C_1} \, dt
      \]
-        \item Nimmt eine Integration des Eingangssignals vor
-        \item Wird als aktives Tiefpassfilter verwendet     
+        \item Integrates the input signal
+        \item Used as an active low-pass filter     
     \end{itemize}
     \end{columns}
     }
@@ -748,13 +751,13 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
 
 \begin{frame}
     \b{
-    \frametitle{Differenzierer}
+    \frametitle{Differentiator}
     \centering
     \begin{table}[ht]
     \label{tab:Differenzierer}
     \begin{tabular}{|m{0.24\textwidth}|m{0.405\textwidth}|m{0.25\textwidth}|}
     \hline
-    Schaltung & Frequenzgang und Gleichung & Erläuterung und Eigenschaften\\ % Neue Zeile mit Text
+    Circuit & Frequency response and equation & Explanation and properties\\ % Neue Zeile mit Text
     \hline
     \vspace{0.5cm}
     \centering
@@ -769,10 +772,10 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
     \end{multline*}
     \end{center} 
     & 
-    \textbf{Differenzierer}\newline
+    \textbf{Differentiator}\newline
     \begin{itemize}
-        \item Nimmt eine Integration des Eingangssignals vor
-        \item Wird als aktives Hochpassfilter verwendet (zeigt in der Realität meist Bandpassverhalten, wie hier dargestellt)
+        \item Integrates the input signal
+        \item Used as an active high-pass filter (in reality, it usually exhibits band-pass behavior, as shown here))
     \end{itemize} \\
     \hline
     \end{tabular}
@@ -782,7 +785,7 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
 
 \begin{frame}
     \b{
-    \frametitle{Differenzierer neu}
+    \frametitle{Differentiator new}
     \begin{columns}
         \column{0.48\textwidth}
         \centering
@@ -792,7 +795,7 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
     \begin{subfigure}{\linewidth}
         \centering
         \resizebox{0.6\linewidth}{!}{\input{Tikz/src/Differenzierer.tex}}
-        \caption{Schaltung eines Differenzierers}
+        \caption{Circuit of a differentiator}
     \end{subfigure}
 
     \vspace{0.5cm} 
@@ -800,7 +803,7 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
     \begin{subfigure}{\linewidth}
         \centering
         \resizebox{0.6\linewidth}{!}{\input{Tikz/src/FrequenzgangDifferenzierer.tex}}
-        \caption{Frequenzgang eines Differenzierers}
+        \caption{Frequency response of a differentiator}
     \end{subfigure}
 
 \end{figure}
@@ -808,7 +811,7 @@ U_{\textnormal{A}} = \underbrace{\frac{R_3} {R_1}}_{V_1} \cdot U_{\textnormal{E1
         \column{0.48\textwidth}
         \raggedleft
         \begin{itemize}
-            \item Gleichung:
+            \item Equation:
           \[
 U_{\textnormal{A}}(t) = 
 - \frac{R_2}{R_1} \, U_{\textnormal{E}}(t)
@@ -816,8 +819,8 @@ U_{\textnormal{A}}(t) =
 - R_2 C_2 \, \frac{dU_{\textnormal{E}}}{dt}(t)
 \]
 
-        \item Nimmt eine Integration des Eingangssignals vor
-        \item Wird als aktives Hochpassfilter verwendet (zeigt in der Realität meist Bandpassverhalten, wie hier dargestellt)  
+        \item Integrates the input signal
+        \item Used as an active high-pass filter (in reality, usually exhibits band-pass behavior, as shown here)  
     \end{itemize}
     \end{columns}
     }
@@ -827,13 +830,13 @@ U_{\textnormal{A}}(t) =
 
 \begin{frame}
     \b{
-    \frametitle{Logarithmierer}
+    \frametitle{Logarithm calculator}
     \centering
     \begin{table}[ht]
     \label{tab:Logarithmierer}
     \begin{tabular}{|m{0.24\textwidth}|m{0.405\textwidth}|m{0.25\textwidth}|}
     \hline
-    Schaltung & Frequenzgang und Gleichung & Erläuterung und Eigenschaften\\ % Neue Zeile mit Text
+    Circuit & Frequency response and equation & Explanation and properties\\ % Neue Zeile mit Text
     \hline
     \vspace{0.5cm}
     \centering
@@ -847,14 +850,14 @@ U_{\textnormal{A}}(t) =
             U_{\textnormal{T}} = \frac{k_{\textnormal{B}} \cdot T}{e}
             \]
             
-            \(e = \text{Elementarladung}\)
+            \(e = \text{Elementary charge}\)
             
-            \(k_{\textnormal{B}} = \text{Boltzmannkonstante}\)
+            \(k_{\textnormal{B}} = \text{Boltzmann constant}\)
             
-            \(I_{\textnormal{s}} = \text{Sperrstrom der Diode}\)
+            \(I_{\textnormal{s}} = \text{Reverse voltage of the diode}\)
     \end{center} 
     & 
-    Bildet den natürlichen Logarithmus des Eingangssignals \\
+    Forms the natural logarithm of the input signal \\
     \hline
     \end{tabular}
     \end{table}
@@ -862,22 +865,23 @@ U_{\textnormal{A}}(t) =
 \end{frame}
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \b{
-    \frametitle{Logarithmierer neu}
+    \frametitle{New logarithm calculator}
     \begin{columns}
         \column{0.48\textwidth}
         \centering
         \begin{figure}
     \centering
         \input{Tikz/src/Logarithmierer.tex}
-        \caption{Schaltung eines Logarithmierers}
+        \caption{Circuit of a logarithmic converter}
 
 \end{figure}
 
         \column{0.48\textwidth}
         \raggedleft
         \begin{itemize}
-            \item Gleichung:
+            \item Equation:
            \[
     U_{\textnormal{A}} =-U_{\textnormal{T}}\cdot \ln{\left(\frac{U_{\textnormal{E}}}{R_1\cdot I_S}\right)}
     \]
@@ -885,12 +889,12 @@ U_{\textnormal{A}}(t) =
             U_{\textnormal{T}} = \frac{k_{\textnormal{B}} \cdot T}{e}
             \]
             
-            \(e = \text{Elementarladung}\)
+            \(e = \text{Elementary charge}\)
             
-            \(k_{\textnormal{B}} = \text{Boltzmannkonstante}\)
+            \(k_{\textnormal{B}} = \text{Boltzmann constant}\)
             
-            \(I_{\textnormal{s}} = \text{Sperrstrom der Diode}\)
-        \item Bildet den natürlichen Logarithmus des Eingangssignals
+            \(I_{\textnormal{s}} = \text{Reverse voltage of the diode}\)
+        \item Forms the natural logarithm of the input signal
     \end{itemize}
     \end{columns}
     }
@@ -900,13 +904,13 @@ U_{\textnormal{A}}(t) =
 
 \begin{frame}
     \b{
-        \frametitle{Potenzierer}
+        \frametitle{Potentiator}
     \centering
     \begin{table}[ht]
     \label{tab:Potenzierer}
     \begin{tabular}{|m{0.24\textwidth}|m{0.405\textwidth}|m{0.25\textwidth}|}
     \hline
-    Schaltung & Frequenzgang und Gleichung & Erläuterung und Eigenschaften\\ % Neue Zeile mit Text
+    Circuit & Frequency response and equation & Explanation and properties\\ % Neue Zeile mit Text
     \hline
     \vspace{0.5cm}
     \centering
@@ -918,7 +922,7 @@ U_{\textnormal{A}}(t) =
     \]
     \end{center} 
     & 
-    Besitzt einen e-funktionalen Zusammenhang zwischen Ein- und Ausgangsspannung \\
+    Has an e-functional relationship between input and output voltage \\
     \hline
     \end{tabular}
     \end{table}
@@ -926,26 +930,27 @@ U_{\textnormal{A}}(t) =
 \end{frame}
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \b{
-    \frametitle{Potenzierer neu}
+    \frametitle{Potentiator new}
     \begin{columns}
         \column{0.48\textwidth}
         \centering
         \begin{figure}
         \centering
         {\input{Tikz/src/Potenzierer.tex}}
-        \caption{Schaltung eines Potenzierers}
+        \caption{Circuit of a potentiometer}
 
 \end{figure}
 
         \column{0.48\textwidth}
         \raggedleft
         \begin{itemize}
-            \item Gleichung:
+            \item Equation:
            \[
     U_{\textnormal{A}} =-R_1\cdot I_{\textnormal{S}} \cdot e^{\frac{U_{\textnormal{E}}}{U_{\textnormal{T}}}}
     \]
-        \item Besitzt einen e-funktionalen Zusammenhang zwischen Ein- und Ausgangsspannung
+        \item Has an e-functional relationship between input and output voltage
     \end{itemize}
     \end{columns}
     }
@@ -955,13 +960,13 @@ U_{\textnormal{A}}(t) =
 
 \begin{frame}
     \b{
-        \frametitle{Instrumentenverstärker}
+        \frametitle{Instrument amplifier}
     \centering
     \begin{table}[ht]
     \label{tab:Instrumentenverstaerker}
     \begin{tabular}{|m{0.24\textwidth}|m{0.405\textwidth}|m{0.25\textwidth}|}
     \hline
-    Schaltung & Frequenzgang und Gleichung & Erläuterung und Eigenschaften\\ % Neue Zeile mit Text
+    Circuit & Frequency response and equation & Explanation and properties\\ % Neue Zeile mit Text
     \hline
     \vspace{0.5cm}
     \centering
@@ -973,10 +978,10 @@ U_{\textnormal{A}}(t) =
 
 \vspace{1ex}
 \[
-\mathit{a_i} : \text{Amplitude Eingangsspannung i}
+\mathit{a_i} : \text{Amplitude input voltage i}
 \]
 \[
-\mathit{\varphi_i} : \text{Phase Eingangsspannung i}
+\mathit{\varphi_i} : \text{Phase input voltage i}
 \]
 \[
 \mathit{A}_{A} = \sqrt{a_1^2 + a_2^2 + 2a_1a_2 \cos(\varphi_1 - \varphi_2)}
@@ -991,7 +996,7 @@ U_{\textnormal{A}}(t) =
     U_{\textnormal{A}} = (1+ \frac{2R} {R_{\textnormal{g}}}) \cdot \frac{R_3} {R_2} (U_{\textnormal{E2}}-U_{\textnormal{E1}})
 \]
      & 
-    Differenzverstärker mit hoher Eingangsimpedanz und hoher Gleichtaktunterdrückung  
+    Differential amplifier with high input impedance and high common-mode rejection  
  \\
     \hline
     \end{tabular}
@@ -1001,7 +1006,7 @@ U_{\textnormal{A}}(t) =
 
 \begin{frame}
     \b{
-    \frametitle{Instrumentenverstärker neu}
+    \frametitle{New instrument amplifier}
     \begin{columns}
         \column{0.48\textwidth}
         \centering
@@ -1011,7 +1016,7 @@ U_{\textnormal{A}}(t) =
     \begin{subfigure}{\linewidth}
         \centering
         \resizebox{0.6\linewidth}{!}{\input{Tikz/src/Instrumentenverstaerker.tex}}
-        \caption{Schaltung eines Instrumentenverstärkers}
+        \caption{Circuit of an instrument amplifier}
     \end{subfigure}
 
     \vspace{0.5cm} 
@@ -1019,7 +1024,7 @@ U_{\textnormal{A}}(t) =
     \begin{subfigure}{\linewidth}
         \centering
         \resizebox{0.6\linewidth}{!}{\input{Tikz/src/FrequenzgangInstrumenten.tex}}
-        \caption{Frequenzgang eines Instrumentenverstärkers}
+        \caption{Frequency response of an instrument amplifier}
     \end{subfigure}
 
 \end{figure}
@@ -1027,12 +1032,12 @@ U_{\textnormal{A}}(t) =
         \column{0.48\textwidth}
         \raggedleft
         \begin{itemize}
-            \item Gleichung:
+            \item Equation:
          \[
-\mathit{a_i} : \text{Amplitude Eingangsspannung i}
+\mathit{a_i} : \text{Amplitude input voltage i}
 \]
 \[
-\mathit{\varphi_i} : \text{Phase Eingangsspannung i}
+\mathit{\varphi_i} : \text{Phase input voltage i}
 \]
 \[
 \mathit{A}_{A} = \sqrt{a_1^2 + a_2^2 + 2a_1a_2 \cos(\varphi_1 - \varphi_2)}
@@ -1041,12 +1046,12 @@ U_{\textnormal{A}}(t) =
 \mathit{\tan}(\varphi_A) = \frac{a_1 \mathit{\sin}(\varphi_1) + a_2 \mathit{\sin}(\varphi_2)}{a_1 \mathit{\cos}(\varphi_1) + a_2 \mathit{\cos}(\varphi_2)}
 \]
 \[
-    \text{Wenn} : R_2 = R_4 = R
+    \text{When} : R_2 = R_4 = R
 \]
 \[
     U_{\textnormal{A}} = (1+ \frac{2R} {R_{\textnormal{g}}}) \cdot \frac{R_3} {R_2} (U_{\textnormal{E2}}-U_{\textnormal{E1}})
 \]
-        \item Differenzverstärker mit hoher Eingangsimpedanz und hoher Gleichtaktunterdrückung    
+        \item Differential amplifier with high input impedance and high common-mode rejection    
     \end{itemize}
     \end{columns}
     }
@@ -1057,13 +1062,13 @@ U_{\textnormal{A}}(t) =
 
 \begin{frame}
     \b{
-        \frametitle{Impedanzwandler}
+        \frametitle{Impedance converter}
     \centering
     \begin{table}[ht]
     \label{tab:Impedanzwandler}
     \begin{tabular}{|m{0.24\textwidth}|m{0.405\textwidth}|m{0.25\textwidth}|}
     \hline
-    Schaltung & Frequenzgang und Gleichung & Erläuterung und Eigenschaften\\ % Neue Zeile mit Text
+    Circuit & Frequency response and equation & Explanation and properties\\ % Neue Zeile mit Text
     \hline
     \vspace{0.5cm}
     \centering
@@ -1071,14 +1076,14 @@ U_{\textnormal{A}}(t) =
      &
 
 \vspace{1ex}
-Ausgangsspannung $U_\mathrm{A}$ folgt der Eingangsspannung $U_\mathrm{E}$ \newline
-Verstärkung $V = \frac{U_\mathrm{A}}{U_\mathrm{E}} = 1$ 
+Output voltage $U_\mathrm{A}$ follows input voltage $U_\mathrm{E}$ \newline
+Gain $V = \frac{U_\mathrm{A}}{U_\mathrm{E}} = 1$ 
 
      & 
     
-     Auch Spannungsfolger genannt \newline
-     Hoher Eingangswiderstand durch Operationsverstärker \newline
-     Typische Anwendung: Sensoren
+     Also known as voltage followers \newline
+     High input resistance due to operational amplifiers \newline
+     Typical application: sensorsn
 
  \\
     \hline
@@ -1088,26 +1093,27 @@ Verstärkung $V = \frac{U_\mathrm{A}}{U_\mathrm{E}} = 1$
 \end{frame}
 
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \b{
-    \frametitle{Impedanzwandler neu}
+    \frametitle{New impedance converter}
     \begin{columns}
         \column{0.48\textwidth}
         \centering
         \begin{figure}
         \centering
         \input{Tikz/src/Impedanzwandler.tex}
-        \caption{Schaltung eines Impedanzwandlers}
+        \caption{Circuit of an impedance converter}
 
 \end{figure}
 
         \column{0.48\textwidth}
         \centering
         \begin{itemize}
-        \item Ausgangsspannung $U_\mathrm{A}$ folgt der Eingangsspannung $U_\mathrm{E}$ 
-        \item Verstärkung $V = \frac{U_\mathrm{A}}{U_\mathrm{E}} = 1$ 
-        \item Auch Spannungsfolger genannt
-        \item Hoher Eingangswiderstand durch Operationsverstärker
-        \item Typische Anwendung: Sensoren
+        \item Output voltage $U_\mathrm{A}$ follows the input voltage $U_\mathrm{E}$
+        \item Gain $V = \frac{U_\mathrm{A}}{U_\mathrm{E}} = 1$
+        \item Also called a voltage follower
+        \item High input resistance due to operational amplifier
+        \item Typical application: Sensors
     \end{itemize}
     \end{columns}
     }

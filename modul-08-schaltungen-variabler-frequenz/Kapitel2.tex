@@ -115,20 +115,20 @@
         \begin{columns}
             \column[c]{0.5\textwidth}\resizebox*{\textwidth}{!}{
                 \includegraphics{Tikz/pdf/plot_potenzfunktionen_lin_scale.pdf}}
-                \centering \textbf{Lineare Darstellung}
+                \centering \textbf{Linear representation}
                 \begin{itemize}
-                    \item Gerade: $\ f(x) = a \left(x-x_{0}\right) + y_{0}$
-                    \item Add./Subtr. $\rightarrow$ Verschiebung %
-                    \item Mult./Div. $\rightarrow$ Streckung%
+                    \item Straight $\ f(x) = a \left(x-x_{0}\right) + y_{0}$
+                    \item Add./Subtr. $\rightarrow$ Shift %
+                    \item Mult./Div. $\rightarrow$ Stretching%
                     %\item negative x-Werte möglich
                 \end{itemize}
             \column[c]{0.5\textwidth}\resizebox*{\textwidth}{!}{
                 \includegraphics{Tikz/pdf/plot_potenzfunktionen_log_scale.pdf}}
-                \centering \textbf{(Doppelt-)Logarithmische Darstellung}
+                \centering \textbf{(Double logarithmic representation}
                 \begin{itemize}
-                    \item Gerade: $\ f(x) =  \left({x}/{x_{0}}\right)^{\displaystyle a} \cdot y_{0}$
-                    \item Mult./Div. $\rightarrow$ Verschiebung
-                    \item Exponent $\rightarrow$ Streckung
+                    \item Straight: $\ f(x) =  \left({x}/{x_{0}}\right)^{\displaystyle a} \cdot y_{0}$
+                    \item Mult./Div. $\rightarrow$ shift
+                    \item Exponent $\rightarrow$ Stretching
                     %\item keine negativen log. Werte für reelle x, y
                 \end{itemize}
         \end{columns}
@@ -165,9 +165,9 @@
 \b{
     \textbf{Decibel} Auxiliary unit used to indicate logarithmic ratios between two quantities.
 	\begin{align*}% beamer only - without numbering
-        &\textrm{Leistungsgrößen }(\textrm{z.B. }P,\ W)&
+        &\textrm{Power indicators }(\textrm{z.B. }P,\ W)&
             Q_{\mathrm{(P)}} &= \mathrm{log}\frac{P_2}{P_1}\ \operatorname{B} = 10\cdot \mathrm{log}\frac{P_1}{P_2}\ \dB &&\\
-        &\textrm{Leistungswurzelgr.}(\textrm{z.B. }U,\ I)&
+        &\textrm{Power root sizes}(\textrm{z.B. }U,\ I)&
             Q_{\mathrm{(R)}} &= \mathrm{log}\frac{U_2^2}{U_1^2}\ \operatorname{B} = 20\cdot \mathrm{log}\frac{U_1}{U_2}\ \dB &&
     \end{align*}%
 }%
@@ -371,9 +371,9 @@
             \onslide<2->{
                 \textbf{Sections:}
                 \begin{align*}
-                    &\text{Durchlassbereich:} & A(\omega) &> \nicefrac{1}{\sqrt{2}}\\
-                    &\text{Grenzfrequenz:} & A(\omega_g) &= \nicefrac{1}{\sqrt{2}}\\
-                    &\text{Sperrbereich:}    & A(\omega) &< \nicefrac{1}{\sqrt{2}}
+                    &\text{Passage area:} & A(\omega) &> \nicefrac{1}{\sqrt{2}}\\
+                    &\text{Cutoff frequency:} & A(\omega_g) &= \nicefrac{1}{\sqrt{2}}\\
+                    &\text{Blocked area:}    & A(\omega) &< \nicefrac{1}{\sqrt{2}}
                 \end{align*}
             }
         \end{minipage}\hfill%
@@ -480,7 +480,7 @@
             \centering\vspace{0pt}% needed for alignment, otherwise bottom part of tikzpicture (top of minipage) on left alignes with Text on right (top of minipage)
             \includegraphics{Tikz/pdf/circ_tiefpass_rc_annotated.pdf}
 
-            \textbf{RC-Tiefpass 1. Ordnung}%
+            \textbf{1st order RC low-pass filter}%
             \only<beamer>{%
             \begin{align*}% Animation: F(jwRC), A(wRC), phi(wRC) -> A(wg)=1/sqrt(2), wg=1/RC -> F(jw/wg), A(w/wg), phi(w/wg) -> phi(wg)=-45°
                 &&\onslide<1->{\underline{F}(\mathrm{j}\omega) &=
@@ -508,7 +508,7 @@
         \end{minipage}\hfill%
         \begin{minipage}[t]{\dimexpr0.5\textwidth-\Colsep\relax}% rechte Hälfte
             % Animation: Log. Darstellung (A(w), phi(w) -> A(wg), phi(wg))
-            \centering\textbf{Logarithmische Darstellung}%
+            \centering\textbf{Logarithmic representation}%
 
                 \onslide<6->{\includegraphics{Tikz/pdf/plot_tiefpass_detail_amplitudengang_log.pdf}}\hfill
                 \onslide<7->{\includegraphics{Tikz/pdf/plot_tiefpass_detail_phasengang_log.pdf}}
@@ -579,7 +579,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \b{% Beamer only, extra frame for A(w) and for phi(w) -- In Script a bit earlier in this subsection
-\subsubsection{Tiefpass 1. Ordnung, Amplitudengang}
+\subsubsection{First-order low-pass filter, amplitude response}
 \begin{frame}\ftx{\subsubsecname}\centering
     \includegraphics{Tikz/pdf/plot_tiefpass_detail_amplitudengang_log_norm_detail.pdf}
 \end{frame}
@@ -619,10 +619,10 @@
 \b{
     \centering
     \begin{columns}
-        \column{0.5\textwidth}\centering\textbf{Tiefpass}
+        \column{0.5\textwidth}\centering\textbf{Low-pass filter}
         \includegraphics{Tikz/pdf/plot_tiefpass_detail_amplitudengang_log_norm.pdf}\hfill%
         \includegraphics{Tikz/pdf/plot_tiefpass_detail_phasengang_log_norm.pdf}%
-        \column{0.5\textwidth}\centering\textbf{Hochpass}
+        \column{0.5\textwidth}\centering\textbf{High-pass filter}
         \includegraphics{Tikz/pdf/plot_hochpass_detail_amplitudengang_log_norm.pdf}\hfill%
         \includegraphics{Tikz/pdf/plot_hochpass_detail_phasengang_log_norm.pdf}%
     \end{columns}
@@ -755,11 +755,11 @@
 
         \column{0.4\textwidth}\centering% rechte Spalte
             \resizebox{\linewidth}{!}{\includegraphics{Tikz/pdf/circ_bandpass_no_amp.pdf}}\flushleft
-            Grenzfrequenz: (obere, untere)
+            Cutoff frequency: (upper, lower)
                 \begin{equation*}f_{\mathrm{go}},\ f_{\mathrm{gu}} \end{equation*}
-            Bandbreite:
+            Bandwidth:
                 \begin{equation*}B = \Delta f = f_{\mathrm{go}} - f_{\mathrm{gu}}\end{equation*}
-            Mittenfrequenz:
+            Center frequency:
                 \begin{equation*}f_{\mathrm{m}} = \sqrt{f_{\mathrm{go}} \cdot f_{\mathrm{gu}}}\end{equation*}
     \end{columns}
     Frequency response\footnote{For non-reactive series connection from multiplication of individual frequency responses}:%
@@ -770,7 +770,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \b{% Start Beamer-only
-\subsubsection{Bandpass 2. Ordnung - Amplitudengang, Detail}
+\subsubsection{Second-order bandpass filter – amplitude response, detail}
 \begin{frame}\ftx{\subsubsecname}\centering
     \includegraphics{Tikz/pdf/plot_bandpass_amplitudengang.pdf}
 \end{frame}

@@ -40,14 +40,14 @@
     \end{minipage}
     \hspace{0.02\linewidth}% for vertical alignment % ref: https://tex.stackexchange.com/questions/378548/vertical-alignment-of-side-by-side-minipages
     \begin{minipage}[c][4cm][c]{0.48\textwidth}% left col
-        \only<2>{$\mathrlap{\textbf{Wie sieht das Übertragungsverhalten aus?}}$}%
-        \onslide<3->{\textbf{Linear und zeitinvariant (LZI):}}
+        \only<2>{$\mathrlap{\textbf{What is the transmission behavior like?}}$}%
+        \onslide<3->{\textbf{Linear and time-invariant (LTI):}}
         \begin{itemize}
-            \item<4-> Sinusform am Eingang $u_1(\omega t)$
-            \item<5-> $\rightarrow$ Sinusform am Ausgang $u_2(\omega t)$
-            \item<5-> $\rightarrow$ Frequenz gleich $\omega_2 = \omega_1$
-            \item<6-> $\rightarrow$ Phasenverschiebung $\Delta\varphi = ?$
-            \item<6-> $\rightarrow$ Amplitudenverhältnis $\frac{\hat{U}_2}{\hat{U}_1} = ?$
+            \item<4-> Sine waveform at the input$u_1(\omega t)$
+            \item<5-> $\rightarrow$ Sine waveform at the output $u_2(\omega t)$
+            \item<5-> $\rightarrow$ Frequency equal $\omega_2 = \omega_1$
+            \item<6-> $\rightarrow$ Phase shift $\Delta\varphi = ?$
+            \item<6-> $\rightarrow$ Amplitude ratio $\frac{\hat{U}_2}{\hat{U}_1} = ?$
         \end{itemize}
     \end{minipage}
     \hspace{0.02\linewidth}% for vertical alignment
@@ -75,30 +75,30 @@
 \begin{columns}[t]
     \column{0.45\textwidth}% left col
         \b{%
-            \textbf{Zweitor (Vierpol):}
+            \textbf{Secondary (four-pole):}
             \fu{\includegraphics{Tikz/pdf/circ_zweitor.pdf}}{}% im Skript im vorigen Kapitel (Wiederholung)
             \pause%
-            \textbf{Linear, zeitinvariant (LZI)}: 
+            \textbf{Linear, time-invariant (LTI)}: 
             \begin{equation*}\begin{aligned}
                 u_1(t)& = \hat{U}_1 \cdot \sin(\omega t)\\
                 \xrightarrow{LZI}\  u_2(t)& = \hat{U}_2 \cdot \sin(\omega t + \varphi)
             \end{aligned}\end{equation*}%  
             \begin{itemize}
-                \item[] Sinusform bleibt erhalten
-                \item[] Frequenz gleich $\omega_2 = \omega_1$
+                \item[] Sine waveform is maintained
+                \item[] Frequency equal $\omega_2 = \omega_1$
             \end{itemize}%
         }%
     \column{0.55\textwidth}% right col
         \b{%
         \pause%
-            \textbf{Frequenzgang:}%
+            \textbf{Frequency response:}%
             \begin{align*}
                 \underline{F}(\mathrm{j}\omega) &= \frac{\underline{U}_2}{\underline{U}_1} = A(\omega)\cdot\mathrm e^{\mathrm j\varphi(\omega)}\\[-12pt]% onslide breaks line spacing, manual adjustment
-                \onslide<4->{\intertext{\textbf{Amplitudengang:}}%
+                \onslide<4->{\intertext{\textbf{Amplitude response:}}%
                 A(\omega) &= |\underline{F}(\mathrm{j}\omega)| = \frac{|\underline{U}_2|}{|\underline{U}_1|}\\
                 &= \sqrt{\left(\Re\{\underline{F}(\mathrm{j}\omega)\}\right)^2 + \left(\Im\{\underline{F}(\mathrm{j}\omega)\}\right)^2}\\[-12pt]% onslide breaks line spacing, manual adjustment
                 }% end onslide
-                \onslide<5->{\intertext{\textbf{Phasengang:}}%
+                \onslide<5->{\intertext{\textbf{Phase shift:}}%
                 \varphi(\omega) &= \angle \underline{F}(\mathrm{j}\omega) = \angle \underline{U}_2 - \angle \underline{U}_1\\
                 &= \arctan\left(\frac{\Im\{\underline{F}(\mathrm{j}\omega)\}}{\Re\{\underline{F}(\mathrm{j}\omega)\}}\right)%
                 }% end onslide
@@ -157,6 +157,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Frequency response using the example of a simple low-pass filter}
+\renewcommand{\figurename}{Figure}
 \label{sec:frequenzgang:tiefpass:herleitung}
 \begin{frame}[t]\ftx{\subsecname}
 \begin{columns}[T]%
@@ -167,7 +168,7 @@
         while high-frequency signals are strongly attenuated (filtered).
         The functionality and behaviour of the low-pass filter can be clearly illustrated by means of a frequency response analysis.
 
-        \fu{\includegraphics{Tikz/pdf/circ_tiefpass_rc_annotated.pdf}}{Schaltbild, RC-Tiefpass 1. Ordnung\label{circ:filter:rctief}}%
+        \fu{\includegraphics{Tikz/pdf/circ_tiefpass_rc_annotated.pdf}}{Circuit diagram, first-order RC low-pass filter\label{circ:filter:rctief}}%
 
         The low-pass filter shown consists of a series connection of $R$ and $C$ with input voltage $\underline{U}_1$
         across both elements and output voltage $\underline{U}_2$ across $C$.
@@ -182,7 +183,7 @@
     \onslide<1->{\includegraphics{Tikz/pdf/circ_tiefpass_rc_annotated.pdf}}%
     }\vspace{3mm}%
         
-    \textbf{RC-Tiefpass 1. Ordnung}
+    \textbf{1st order RC low-pass filter}
     \begin{equation*}\begin{aligned}
             u_1(t)& = \hat{U}_1 \cdot \sin(\omega t)\\\xrightarrow{LZI}\ 
             u_2(t)& = \hat{U}_2 \cdot \sin(\omega t + \varphi)
@@ -212,7 +213,7 @@
 
     }%
     \b{%
-        \textbf{Frequenzgang:}%
+        \textbf{Frequency response:}%
         \begin{align*}% lesser space above than \begin{equation}\begin{align} ... as in skript version below
             \underline{F}(\mathrm{j}\omega)   & = \frac{\underline{U}_2}{\underline{U}_1} 
                                     = \frac{\frac{1}{\mathrm{j}\omega C}}{R + \frac{1}{\mathrm{j}\omega C}}
@@ -254,7 +255,7 @@
         as shown in \eqref{eq:tiefpass:phase}.
     }%
     
-    \b{\textbf{Amplituden- und Phasengang:}
+    \b{\textbf{Amplitude and phase response:}
         \begin{align*}
             A(\omega)       &= |\underline{F}(\mathrm{j}\omega)| = \frac{|\underline{U}_2|}{|\underline{U}_1|}
                             &= \frac{1}{\sqrt{1 + (\omega CR)^2}} \\%
@@ -364,7 +365,7 @@
             \onslide<6->{\resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_tiefpass_mini_phase_lin_samesize.pdf}}}
             }%
         \column{0.55\textwidth}% column rechts 2/2
-            \b{\textbf{Grenzverhalten:} für $f \rightarrow 0$ und $f \rightarrow \infty$\\[-12pt]%
+            \b{\textbf{Limit behavior:} for $f \rightarrow 0$ and $f \rightarrow \infty$\\[-12pt]%
             }%
             % Rechnung
             \begin{align*}
@@ -533,7 +534,7 @@
                 \includegraphics{Tikz/pdf/circ_hochpass_rc_annotated.pdf}%
                 }\vspace{3mm}%
 
-                \textbf{RC-Hochpass 1. Ordnung}
+                \textbf{1st order RC high pass filter}
 
                 \begin{align*}% less space above than \begin{equation}\begin{align} ... as in skript version above
                                         u_1(t)& = \hat{U}_1 \cdot \sin(\omega t)\\
@@ -611,7 +612,7 @@
             \resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_hochpass_mini_phase_lin_samesize.pdf}}
             }
         \column{0.55\textwidth}% column rechts 2/2
-            \textbf{Limit behaviour:} für $f \rightarrow 0$ und $f \rightarrow \infty$
+            \textbf{Limit behaviour:} for $f \rightarrow 0$ and $f \rightarrow \infty$
             % Rechnung
             \begin{align*}
                 \underline{F}(\mathrm{j}\omega)&=A(\omega)\cdot\mathrm e^{\mathrm j\varphi(\omega)} = \frac{1}{1 - \mathrm{j}\frac{1}{\omega CR}} &&\\
@@ -776,9 +777,9 @@ RC % Zeile 2
 %-------------------------------------------------------------------------------------------------%
 % Aufgabenstellung + Schaltbild in einem Frame:
 
-\subsection{Beispiel Filterschaltung: Aufgabe}
+\subsection{Example filter circuit: Task}
 \begin{frame}\ftx{\subsecname}
-\begin{bsp}{Filterschaltung: Aufgabe}{}% label as second madatory argument is printed in Folien, can't escape with \b{...} -> no label for this bsp
+\begin{expl}{Filterschaltung: Aufgabe}{}% label as second madatory argument is printed in Folien, can't escape with \b{...} -> no label for this bsp
 \noindent%
 \begin{minipage}{\textwidth}
     \begin{minipage}[c]{0.44\textwidth}
@@ -791,27 +792,27 @@ RC % Zeile 2
         \b{\vfill}
     \end{minipage}\hfill
     \begin{minipage}[c]{0.52\textwidth}
-        \textbf{Aufgabe:}\\\b{\vfill}
-        a) Leiten Sie $\underline{F}(\mathrm{j}\omega) = \frac{\underline{U}_2}{\underline{U}_1}$ allgemein her.\\
+        \textbf{Task:}\\\b{\vfill}
+        a) Derive $\underline{F}(\mathrm{j}\omega) = \frac{\underline{U}_2}{\underline{U}_1}$ in general.\\
         \b{\vfill}
-        b) Zeichnen Sie Betrag und Phase von $\underline{F}(\mathrm{j}\omega)$ für:
+        b) Plot the magnitude and phase of $\underline{F}(\mathrm{j}\omega)$ for:
         \begin{itemize}
             \item[] $R_1 = 900\ \Omega$
             \item[] $R_2 = 100\ \Omega$
             \item[] $C = 1,25\ \mu \mathrm{F}$
         \end{itemize}
         \b{\vfill}
-        c) Bei welcher Frequenz $f$ ist $\hat{U}_2 = \frac{1}{2}\hat{U}_1$? \\
-        Welche Phasenverschiebung besitzt $u_2$ nun gegenüber $u_1$?
+        c) At what frequency $f$ is $\hat{U}_2 = \frac{1}{2}\hat{U}_1$? \\
+            What phase shift does $u_2$ now have relative to $u_1$?
     \end{minipage}	
 \end{minipage}
-\end{bsp}%
+\end{expl}%
 \end{frame}
 %
 %-------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[allowframebreaks]\ftx{\subsecname - Lösung}% EVIL: allowed (auto/manual) framebreaks
-\begin{bsp}{Filter circuit: Solution}{}% label as second madatory argument is printed in Folien, can't escape with \b{...} -> no label for this bsp
+\begin{frame}[allowframebreaks]\ftx{\subsecname - Solution}% EVIL: allowed (auto/manual) framebreaks
+\begin{expl}{Filter circuit: Solution}{}% label as second madatory argument is printed in Folien, can't escape with \b{...} -> no label for this bsp
 \textbf{Solution a) Frequency response in general}
     \begin{align*}
         \underline{F}(\mathrm{j}\omega) &= \frac{R_1 || \underline{Z}_C}{R_2 + ( R_1 || \underline{Z}_C)} 
@@ -825,7 +826,7 @@ RC % Zeile 2
             & a,b,c,d &\in \mathbb{R}
         \\[+6pt]
         &= \highlight{hfid_kart}{\frac{R_1(R_1+R_2)-\mathrm{j}\omega CR_1^2R_2}{(R_1+R_2)^2+(\omega CR_1R_2)^2}}[\hfofflowerb][\hfoffupperb][3]
-        \quad\text{(kartesisch)}
+        \quad\text{(Cartesian)}
             &&\hat{=}{} \frac{a'+jb'}{c'}
             & a',b',c' &\in \mathbb{R}
     \end{align*}\vspace{-15pt}%
@@ -850,7 +851,7 @@ RC % Zeile 2
 \end{equation*}%
 }%
     \begin{align*}
-        &\text{Betrag:}&
+        &\text{Amount:}&
             |A(\omega)| &= \frac{R_1}{\sqrt{(R_1+R_2)^2+(\omega CR_1R_2)^2}}&
             &\text{with}&
             |\underline{F}(\mathrm{j}\omega)| &= \frac{\sqrt{a^2+b^2}}{\sqrt{c^2+d^2}}\\
@@ -926,7 +927,7 @@ RC % Zeile 2
         \\[+2pt]
         \omega_1 &= 1,3304\cdot 10^4\ \frac{1}{\mathrm{s}},\ f_1 = 2,117\ \mathrm{kHz} &
         &\text{with}&
-        \omega_1 < 0 \text{ unphysikalisch},\ f=\frac{\omega}{2\pi}
+        \omega_1 < 0 \text{ unphysical},\ f=\frac{\omega}{2\pi}
         \\
         \varphi(\omega_1) &= \arctan(-1,4967) = -56,25\degree &
         &\text{with}&
@@ -934,5 +935,5 @@ RC % Zeile 2
     \end{align*}
 	% Reference for +- symbol with paranthesis around minus, +- mit runden Klammern um das Minus:
 	% https://tex.stackexchange.com/questions/17550/plus-minus-symbol-with-parenthesis-around-the-minus-sign
-\end{bsp}% splitted bsp-box with evil framebreaks to stretch content over multiple frames
+\end{expl}% splitted bsp-box with evil framebreaks to stretch content over multiple frames
 \end{frame}

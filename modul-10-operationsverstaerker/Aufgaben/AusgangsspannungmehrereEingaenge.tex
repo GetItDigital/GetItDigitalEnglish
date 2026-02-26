@@ -1,18 +1,17 @@
-\subsection{Berechnung der Ausgangsspannung mit mehreren Eingangsspannungen\label{Aufg14}}
+\subsection{Calculation of the output voltage with multiple input voltages\label{Aufg14}}
 % Alt: Aufgabe 14
 \Aufgabe{
-    Gegeben ist die abgebildete Schaltung mit einem idealen Operationsverstärker. Die Betriebsspannung 
-beträgt $\pm 15\,\mathrm{V}$.
+    The circuit shown with an ideal operational amplifier is given. The operating voltage 
+is $\pm 15\,\mathrm{V}$.
 \begin{itemize}
-    \item[a)] Die Widerstände sind alle gleich, es gilt $R_1 = R_2 = R_3 = R_\mathrm{F} = \mathrm{1\,k\Omega}$. 
-    Die Spannung $U_\mathrm{E1} = \mathrm{1\,V}$, $U_\mathrm{E2} = \mathrm{2\,V}$, $U_\mathrm{E3} = \mathrm{3\,V}$. 
-    Wie hoch ist die Spannung am Ausgang $U_\mathrm{A}$?
-    \item[b)] Die Eingangsspannungen bleiben gleich groß, nur die Widerstände betragen nun 
-    $R_\mathrm{F} = \mathrm{10\,k\Omega}, R_1=\mathrm{2\,k\Omega}, R_2=\mathrm{5\,k\Omega}, R_3=\mathrm{10\,k\Omega}$. 
-    Wie hoch ist die Spannung am Ausgang U$_A$?
-    \item[c)] Die Eingangsspannungen bleiben gleich groß, nur die Widerstände betragen nun 
-    $R_\mathrm{F} = \mathrm{10\,k\Omega}, R_1 = \mathrm{10\,k\Omega}, R_2 = \mathrm{5\,k\Omega}, R_3 = \mathrm{2\,k\Omega}$. 
-    Wie hoch ist die Spannung am Ausgang $U_\mathrm{A}$?
+    \item[a)] All resistors are equal, with $R_1 = R_2 = R_3 = R_\mathrm{F} = \mathrm{1\,k\Omega}$.  
+    The input voltages are $U_\mathrm{E1} = \mathrm{1\,V}$, $U_\mathrm{E2} = \mathrm{2\,V}$, $U_\mathrm{E3} = \mathrm{3\,V}$.  
+    What is the output voltage $U_\mathrm{A}$?
+    \item[b)] The input voltages remain the same, but the resistors are now $R_\mathrm{F} = \mathrm{10\,k\Omega}$, $R_1=\mathrm{2\,k\Omega}$, $R_2=\mathrm{5\,k\Omega}$, $R_3=\mathrm{10\,k\Omega}$.  
+    What is the output voltage $U_\mathrm{A}$?
+    \item[c)] The input voltages remain the same, but the resistors are now $R_\mathrm{F} = \mathrm{10\,k\Omega}$, $R_1 = \mathrm{10\,k\Omega}$, $R_2 = \mathrm{5\,k\Omega}$, $R_3 = \mathrm{2\,k\Omega}$.  
+    What is the output voltage $U_\mathrm{A}$?
+
 \end{itemize}
 \begin {figure} [H]
    \centering
@@ -49,22 +48,22 @@ beträgt $\pm 15\,\mathrm{V}$.
 
 \Loesung{
 
-Gegeben ist eine Summierschaltung mit einem idealen Operationsverstärker und einer Betriebsspannung von $\pm 15\,\mathrm{V}$.
+Given is a summing circuit with an ideal operational amplifier and an operating voltage of $\pm 15\,\mathrm{V}$.
 
-Die allgemeine Formel für die Ausgangsspannung lautet:
+The general formula for the output voltage is:
 \[
 U_\mathrm{A} = -\left( U_\mathrm{E1} \cdot \frac{R_\mathrm{F}}{R_1} + U_\mathrm{E2} \cdot \frac{R_\mathrm{F}}{R_2} + U_\mathrm{E3} \cdot \frac{R_\mathrm{F}}{R_3} \right)
 \]
 
 
-\textbf{a) Alle Widerstände sind gleich groß: $R_1 = R_2 = R_3 = R_F = 10\,\mathrm{k}\Omega$}
+\textbf{a) All resistances are equal in size.: $R_1 = R_2 = R_3 = R_F = 10\,\mathrm{k}\Omega$}
 
-Eingangsspannungen:
+Input voltages:
 \[
 U_\mathrm{E1} = 1\,\mathrm{V}, \quad U_\mathrm{E2} = 2\,\mathrm{V}, \quad U_\mathrm{E3} = 3\,\mathrm{V}
 \]
 
-Berechnung:
+Calculation:
 \[
 U_\mathrm{A} = -\left( 1\,\mathrm{V} \cdot \frac{10\,\mathrm{k}\Omega}{10\,\mathrm{k}\Omega} + 2\,\mathrm{V} \cdot \frac{10\,\mathrm{k}\Omega}{10\,\mathrm{k}\Omega} + 3\,\mathrm{V} \cdot \frac{10\,\mathrm{k}\Omega}{10\,\mathrm{k}\Omega} \right)
 \]
@@ -73,14 +72,14 @@ U_A = -\left( 1\,\mathrm{V} + 2\,\mathrm{V} + 3\,\mathrm{V} \right) = -6\,\mathr
 \]
 
 
-\textbf{b) Geänderte Widerstände: $R_\mathrm{F} = 10\,\mathrm{k}\Omega$, $R_1 = 2\,\mathrm{k}\Omega$, $R_2 = 5\,\mathrm{k}\Omega$, $R_3 = 10\,\mathrm{k}\Omega$}
+\textbf{b) Modified resistances: $R_\mathrm{F} = 10\,\mathrm{k}\Omega$, $R_1 = 2\,\mathrm{k}\Omega$, $R_2 = 5\,\mathrm{k}\Omega$, $R_3 = 10\,\mathrm{k}\Omega$}
 
-Eingangsspannungen:
+Input voltages:
 \[
 U_\mathrm{E1} = 1\,\mathrm{V}, \quad U_\mathrm{E2} = 2\,\mathrm{V}, \quad U_\mathrm{E3} = 3\,\mathrm{V}
 \]
 
-Berechnung:
+Calculation:
 \[
 U_\mathrm{A} = -\left( 1\,\mathrm{V} \cdot \frac{10\,\mathrm{k}\Omega}{2\,\mathrm{k}\Omega} + 2\,\mathrm{V} \cdot \frac{10\,\mathrm{k}\Omega}{5\,\mathrm{k}\Omega} + 3\,\mathrm{V} \cdot \frac{10\,\mathrm{k}\Omega}{10\,\mathrm{k}\Omega} \right)
 \]
@@ -92,14 +91,14 @@ U_\mathrm{A} = -(5\,\mathrm{V} + 4\,\mathrm{V} + 3\,\mathrm{V}) = -12\,\mathrm{V
 \]
 
 
-\textbf{c) Geänderte Widerstände: $R_\mathrm{F} = 10\,\mathrm{k}\Omega$, $R_1 = 10\,\mathrm{k}\Omega$, $R_2 = 5\,\mathrm{k}\Omega$, $R_3 = 2\,\mathrm{k}\Omega$}
+\textbf{c) Modified resistances: $R_\mathrm{F} = 10\,\mathrm{k}\Omega$, $R_1 = 10\,\mathrm{k}\Omega$, $R_2 = 5\,\mathrm{k}\Omega$, $R_3 = 2\,\mathrm{k}\Omega$}
 
-Eingangsspannungen:
+Input voltages:
 \[
 U_\mathrm{E1} = 1\,\mathrm{V}, \quad U_\mathrm{E2} = 2\,\mathrm{V}, \quad U_\mathrm{E3} = 3\,\mathrm{V}
 \]
 
-Berechnung:
+Calculation:
 \[
 U_\mathrm{A} = -\left( 1\,\mathrm{V} \cdot \frac{10\,\mathrm{k}\Omega}{10\,\mathrm{k}\Omega} + 2\,\mathrm{V} \cdot \frac{10\,\mathrm{k}\Omega}{5\,\mathrm{k}\Omega} + 3\,\mathrm{V} \cdot \frac{10\,\mathrm{k}\Omega}{2\,\mathrm{k}\Omega} \right)
 \]
@@ -110,14 +109,14 @@ U_\mathrm{A} = -\left( 1\,\mathrm{V} \cdot 1 + 2\,\mathrm{V} \cdot 2 + 3\,\mathr
 U_\mathrm{A} = -(1\,\mathrm{V} + 4\,\mathrm{V} + 15\,\mathrm{V}) = -20\,\mathrm{V}
 \]
 
-Da die Betriebsspannung $\pm 15\,\mathrm{V}$ beträgt, wird der Ausgang auf $-15\,\mathrm{V}$ begrenzt.
+Since the operating voltage is $\pm 15\,\mathrm{V}$, the output is limited to $-15\,\mathrm{V}$.
 
 
-\textbf{Zusammenfassung:}
+\textbf{Summary:}
 \begin{itemize}
     \item a) $U_\mathrm{A} = -6\,\mathrm{V}$
     \item b) $U_\mathrm{A} = -12\,\mathrm{V}$
-    \item c) $U_\mathrm{A} = -15\,\mathrm{V}$ (Begrenzung durch Betriebsspannung)
+    \item c) $U_\mathrm{A} = -15\,\mathrm{V}$ (Limitation by operating voltage)
 \end{itemize}
 
    %         \speech{
@@ -142,6 +141,6 @@ Da die Betriebsspannung $\pm 15\,\mathrm{V}$ beträgt, wird der Ausgang auf $-15
  %           b. Ua ist gleich minus 12 Volt. 
  %           c. Ua ist gleich minus 15 Volt aufgrund der Begrenzung durch die Betriebsspannung.
   %          }
-  Siehe: Abschnitt \ref{fig: Verschaltung Verstaerker} und Tabelle \ref{tab:Grundschaltungen}
+  See section: \ref{fig: Verschaltung Verstaerker} and Table \ref{tab:Grundschaltungen}
     
 }

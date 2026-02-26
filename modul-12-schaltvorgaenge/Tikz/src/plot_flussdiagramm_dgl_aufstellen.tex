@@ -18,7 +18,7 @@
         rectangle ++(\localboxwidth,\localboxheight)
         node(ZeitA)[pos=0]{} % nodeID with coordinates left bottom
         node(ZeitAmid)[pos=0.5]{} % nodeID with coordinates midway
-        node[pos=0.5,yshift=0.525cm] {Knoten-/Maschen-Gl.}
+        node[pos=0.5,yshift=0.525cm] {Knot/mesh equation.}
         node[pos=0.5,yshift=-0.275cm]{%
         $\displaystyle{\sum_{j=1}^{n} i_j = 0, \hspace{6pt} \sum_{k=1}^{m} u_k = 0}$
     };
@@ -32,10 +32,10 @@
         rectangle ++(\localboxwidth,\localboxheight)
         node(ZeitB)[pos=0]{} % nodeID with coordinates left bottom
         node(ZeitBmid)[pos=0.5]{} % nodeID with coordinates midway
-        node[pos=0.5,yshift=0.525cm] {Komponenten-Gl.}
+        node[pos=0.5,yshift=0.525cm] {Component Gl.}
         node[pos=0.5,yshift=-0.275cm]{%
-        \small nach Zielgröße auflösen\\
-        \small ggf. $\frac{\mathrm{d}}{\mathrm{d}t}$, $\int\mathrm{d}t$ anwenden
+        \small resolve to target size\\
+        \small ggf. $\frac{\mathrm{d}}{\mathrm{d}t}$, $\int\mathrm{d}t$ apply
     };
 
     \draw[->]( $ (ZeitBmid) + (0.5*\localboxwidth,0) + (0.125*\localboxdistancex,0) $ ) -- ++( $ (0.75*\localboxdistancex,0) $ );
@@ -45,12 +45,12 @@
         rectangle ++(\localboxwidth,\localboxheight)
         node(ZeitC)[pos=0]{} % nodeID with coordinates left bottom
         node(ZeitCmid)[pos=0.5]{} % nodeID with coordinates midway
-        node[pos=0.5,yshift=0.525cm]{Differentialgleichung}
+        node[pos=0.5,yshift=0.525cm]{Differential equation}
         node[pos=0.5,yshift=-0.275cm]{$\displaystyle{\sum_{i=0}^{n} a_i \cdot f^{(i)}  = b} $}
     ;
 
     \draw[->]( $ (ZeitAmid) + (+0.125*\localboxwidth,-0.5*\localboxheight-0.125*\localboxdistancey) $ ) -- ++( $ (0,-0.75*\localboxdistancey) $ )
-        node[midway,left,align=center,xshift=-2pt]{\small Komplexe\\\small Wechselstrom-\\\small rechnung}
+        node[midway,left,align=center,xshift=-2pt]{\small Complex\\\small alternating current-\\\small calculation}
     ;
 
     % Bild A: Knoten-/Maschen-Gleichungen, kompl.
@@ -58,7 +58,7 @@
         rectangle ++(\localboxwidth,\localboxheight)
         node(BildA)[pos=0]{} % nodeID with coordinates left bottom
         node(BildAmid)[pos=0.5]{} % nodeID with coordinates midway
-        node[pos=0.5,yshift=0.525cm]{Knoten-/Maschen-Gl.}
+        node[pos=0.5,yshift=0.525cm]{Knot/mesh equation.}
         node[pos=0.5,yshift=-0.275cm]{%
         $\displaystyle{\sum_{j=1}^{n} \underline{I}_j = 0, \hspace{6pt} \sum_{k=1}^{m} \underline{U}_k = 0}$
     };
@@ -73,10 +73,10 @@
         rectangle ++(\localboxwidth,\localboxheight)
         node(BildB)[pos=0]{} % nodeID with coordinates left bottom
         node(BildBmid)[pos=0.5]{} % nodeID with coordinates midway
-        node[pos=0.5,yshift=0.525cm] {Impedanz-Gl.}
+        node[pos=0.5,yshift=0.525cm] {Impedance equation.}
         node[pos=0.5,yshift=-0.275cm]{%
-        \small nach Zielgröße auflösen\\
-        \small Strom-/Spg.-teiler mögl.
+        \small resolve to target size\\
+        \small Power/voltage divider poss.
     };
 
     \draw[->]( $ (BildBmid) + (0.5*\localboxwidth,0) + (0.125*\localboxdistancex,0) $ ) -- ++( $ (0.75*\localboxdistancex,0) $ );
@@ -86,7 +86,7 @@
         rectangle ++(\localboxwidth,\localboxheight)
         node(BildC)[pos=0]{} % nodeID with coordinates left bottom
         node(BildCmid)[pos=0.5]{} % nodeID with coordinates midway
-        node[pos=0.5,yshift=0.525cm] {Algebraische Gleichung}
+        node[pos=0.5,yshift=0.525cm] {Algebraic equation}
         node[pos=0.5,yshift=-0.275cm]{%
         $\displaystyle{
             \sum_{i=0}^{n}a_i \cdot 
@@ -102,8 +102,8 @@
     %\draw[->](10,-2.5) -- (10,-0.5) node[pos=0.5, right]{$\mathrm{j}\omega\widehat{=}\frac{\mathrm{d}}{\mathrm{d}t}$};
 
     % Trennung Zeit- und Bildbereich
-    \draw( $ (ZeitB) + (0.5*\localboxwidth,-0.25*\localboxdistancey) $ ) node [align=center] {Zeitbereich};
-    \draw( $ (ZeitB) + (0.5*\localboxwidth,-0.75*\localboxdistancey) $ ) node [align=center] {Frequenzbereich};
+    \draw( $ (ZeitB) + (0.5*\localboxwidth,-0.25*\localboxdistancey) $ ) node [align=center] {Time domain};
+    \draw( $ (ZeitB) + (0.5*\localboxwidth,-0.75*\localboxdistancey) $ ) node [align=center] {Frequency range};
     \draw[dotted]( $ (ZeitA) + (+0.75*\localboxwidth,-0.5*\localboxdistancey) $ )--( $ (ZeitC) + (+0.25*\localboxwidth,-0.5*\localboxdistancey) $ );
 
     % Anmerkung: knoten-/maschenweise vorgehen

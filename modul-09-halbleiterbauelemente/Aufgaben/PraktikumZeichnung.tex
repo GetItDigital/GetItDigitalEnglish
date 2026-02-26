@@ -1,21 +1,21 @@
-\subsection{Zeichnung und Berechnung einer Kollektorschaltung\label{Aufg36}}
+\subsection{Drawing and calculation of a collector circuit\label{Aufg36}}
 % Alt: Praktikumsaufgabe 9
 \Aufgabe{
     \begin{itemize}
-        \item[a)] Zeichnen Sie die folgende Schaltung:
-              Beschalten Sie einen npn-Transistor mit einem Basisvorwiderstand von $R_\mathrm{B} = 4,7\,\mathrm{k\Omega}$, einem 
-              Emitterwiderstand von  $R_\mathrm{E} = 1\,\mathrm{k\Omega}$ und einer Spannungsversorgung von $U_\mathrm{0} = 15\,\mathrm{V}$.
-              Schalten Sie eine $10 \,\mathrm{V}$-Z-Diode in Sperrrichtung von der Basis auf Masse. \newline
-              Verwenden Sie nur eine Spannungsversorgung, welche sowohl die Basis als auch den Kollektor versorgt.
-        \item[b)] Berechnen Sie die Emitterspannung $U_\mathrm{E}$, und den Emitterstrom $I_\mathrm{E}$.
-        \item[c)] Berechnen Sie die Leistung am Emitterwiderstand $P_\mathrm{RE}$.
+        \item[a)] Draw the following circuit:
+                Connect an NPN transistor with a base series resistor of $R_\mathrm{B} = 4,7\,\mathrm{k\Omega}$, an 
+                emitter resistance of  $R_\mathrm{E} = 1\,\mathrm{k\Omega}$ und einer Spannungsversorgung von $U_\mathrm{0} = 15\,\mathrm{V}$.
+                Switch on a $10 \,\mathrm{V}$-Z-diode in reverse direction from the base to ground. \newline
+                Only use a power supply that supplies both the base and the collector.
+        \item[b)] Calculate the emitter voltage $U_\mathrm{E}$ and the emitter current. $I_\mathrm{E}$.
+        \item[c)] Calculate the power at the emitter resistor. $P_\mathrm{RE}$.
     \end{itemize}
 }
 
 
 \Loesung{
     \begin{itemize}
-        \item[a)] Schaltung:
+        \item[a)] Circuit:
               \begin{figure}[H]
                   \centering
                   \input{Tikz/src/LsgPraktikumZeichnung.tex}
@@ -23,18 +23,18 @@
               \end{figure}
               
               
-        \item[b)] Berechnung der Emitterspannung $U_\mathrm{E}$ \\
-              Die Zenerdiode fixiert die Basisspannung des Transistors auf $U_\mathrm{Z} = 10\,\mathrm{V}$. 
-              Die Basis-Emitter-Spannung beträgt $U_{BE} = 0,7\,\mathrm{V}$.
+        \item[b)] Calculation of the emitter voltage $U_\mathrm{E}$ \\
+                The Zener diode fixes the base voltage of the transistor at $U_\mathrm{Z} = 10\,\mathrm{V}$. 
+                The base-emitter voltage is $U_{BE} = 0,7\,\mathrm{V}$.
               \begin{gather*}
                   U_\mathrm{E} = U_\mathrm{Z} - U_\mathrm{BE} = 10\,\mathrm{V} - 0,7\,\mathrm{V} = 9,3\,\mathrm{V}                  \\
                   I_\mathrm{E} = \frac{U_\mathrm{E}}{R_\mathrm{E}} = \frac{9,3\,\mathrm{V}}{1\,\mathrm{k\Omega}} = 9,3\,\mathrm{mA}
               \end{gather*}
 
               
-        \item[c)] Berechnung der Leistung am Emitterwiderstand $P_{RE}$ \\
+        \item[c)] Calculation of power at the emitter resistor $P_{RE}$ \\
               $$ P_\mathrm{RE} = I_\mathrm{E}^2 \cdot R_\mathrm{E} = (9,3\,\mathrm{mA})^2 \cdot 1\,\mathrm{k\Omega} = 86,49\,\mathrm{mW} $$
               
     \end{itemize}
-    Siehe: Abschnitt \ref{fig:GrundschaltungenBipolartransistor}
+    See section: \ref{fig:GrundschaltungenBipolartransistor}
 }

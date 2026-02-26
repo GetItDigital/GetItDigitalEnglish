@@ -5,7 +5,7 @@
 
 
 \begin{frame}
-	\ftx{Spannungsmessung im Gleichstromkreis}
+	\ftx{Voltage measurement in a direct current circuit}
 	\subsection{Voltage measurement in a direct current circuit}
 
 	\s{
@@ -27,7 +27,7 @@
 			The voltage drop across it is measured with an ideal voltmeter (blue).}	
 	\end{figure}
 
-	\begin{Key point}{Innenwiderstand ideales Voltmeter}
+	\begin{Key point}{Internal resistance of ideal voltmeter}
 			An ideal voltmeter (see Figure \ref{fig:voltmeterideal}) has an infinitely high internal resistance.
 
 	\end{Key point}
@@ -76,13 +76,13 @@
 		%Für die Messung der Spannung werden Spannungsmesser bzw. Voltmeter verwendet. Diese werden parallel zu den betreffenden Schaltungsknoten geschaltet. Der Stromkreis muss somit nicht
 		%unterbrochen werden. Auch das reale Voltmeter besitzt einen Innenwiderstand, sodass die gemessene Spannung von der eigentlichen Spannung abweicht.
 		%Die Korrekturspannung ergibt sich zu:
-		 \textbf{Spannungsmessung} im Gleichstromkreis:
+		\textbf{Voltage measurement} in a direct current circuit:
 		\begin{itemize}
-			\item Messung mit \textbf{Voltmeter}
-			\item Messgeräts \textbf{parallel} zum Bauteil (keine Unterbrechung des Stromkreises notwendig)
+			\item Measurement with a \textbf{voltmeter}
+			\item Measuring device \textbf{parallel} to the component (no interruption of the circuit necessary)
 			\only<2->{
-			\item reales Voltmeter: \textbf{Innenwiderstand} $R_\mathrm{iV} >> R_\mathrm{mess}$
-			\item um Innenwiderstand korrigierte Messspannung $U_\mathrm{korr}$:
+			\item Real voltmeter: \textbf{Internal resistance} $R_\mathrm{iV} >> R_\mathrm{mess}$
+			\item measured voltage corrected for internal resistance $U_\mathrm{korr}$:
 			\begin{equation*}
 				U_{\mathrm{korr}}= U\cdot\left(1+\frac{R_{\mathrm{i}}||R_{\mathrm{a}}}{R_{\mathrm{iV}}}\right)
 			\end{equation*}
@@ -140,8 +140,8 @@
 
 			\varrmore{U0}{$U_0$};
 			\iarrmore{R}{$I$};
-			\varrmore{R}{$U_\mathrm{mess}$};
-			\node[blue] at (4.2,2.3) {Ideales Voltmeter};
+			\varrmore{R}{$U_\mathrm{meas}$};
+			\node[blue] at (4.2,2.3) {Ideal Voltmeter};
         \end{tikzpicture}
 
 %		\begin{circuitikz}
@@ -189,7 +189,7 @@
 			\iarrmore{R}{$I_\mathrm{R}$};
 			\varrmore{R}{$U$};
 			\iarrmore{R_iV}{$I_\mathrm{R_\mathrm{iV}}$};
-			\node[blue] at (4.2,2.3) {Reales Voltmeter};
+			\node[blue] at (4.2,2.3) {Real Voltmeter};
         \end{tikzpicture}
 	 \end{columns}
 	 \speech{folie32}{1}{Die elektrische Spannung, die über einem Bauelement bei einer Zusammenschaltung mehrerer Bauelemente abfällt, kann mit Hilfe eines Spannungsmessgerätes 
@@ -225,7 +225,7 @@ Sind sowohl der Innenwiderstand als auch der zu vermessende Widerstand bekannt, 
 	In contrast to voltage measurement, the ammeter must be connected \textbf{in series} to the component.
 	This requires an interruption of the circuit. \\
 
-	\begin{Key point}{Innenwiderstand ideales Amperemeter}
+	\begin{Key point}{INominal resistance ideal ammeter}
 			An ideal ammeter (see Figure \ref{fig:amperemeterideal}) has no internal resistance.
 	\end{Key point}
 
@@ -274,7 +274,7 @@ Sind sowohl der Innenwiderstand als auch der zu vermessende Widerstand bekannt, 
 
 
 	}
-	\ftx{Strommessung im Gleichstromkreis}
+	\ftx{Current measurement in a direct current circuit}
 
 	\b{
 
@@ -283,14 +283,13 @@ Sind sowohl der Innenwiderstand als auch der zu vermessende Widerstand bekannt, 
 		%Die Messung des Stroms in einem elektrischen Stromkreis erfolgt mithilfe eines Strommessers bzw. Amperemeters. Dazu wird der Stromkreis an der Stelle, an welcher
 		%der Strom gemessen werden soll, aufgetrennt und das Messgerät eingebracht (sieihe Abbildung). Das Amperemeter muss also in Reihe geschaltet werden. Ein realer Strommesser weist
 		%allerdings einen Innenwiderstand auf, welcher den gemessen Strom verfälscht. Dieser ergibt sich zu:
-		\textbf{Strommessung} im Gleichstromkreis:
+		\textbf{Current measurement} in a direct current circuit:
 		\begin{itemize}
-			\item Messung mit \textbf{Amperemeter}
-			\item Messgerät \textbf{in Reihe} zum Bauteil (Stromkreis auftrennen!)
+			\item Measurement with \textbf{ammeter}
+			\item Measuring device \textbf{in series} with the component (disconnect the circuit!)
 			\only<2->{
-			\item reales Amperemeter: Innenwiderstand $R_{\mathrm{iA}} << R_\mathrm{a}$
-			
-			\item Um den Innenwiderstand $R_{\mathrm{iA}}$ korrigierte Messtromstärke $I_\mathrm{korr}$:
+			\item Real ammeter: Internal resistance $R_{\mathrm{iA}} << R_\mathrm{a}$
+			\item Measured current $I_\mathrm{corr}$ corrected for internal resistance $R_{\mathrm{iA}}$:
 			\begin{equation*}
 				I_{\mathrm{korr}}= I\cdot\left(1+\frac{R_{\mathrm{iA}}}{R_{\mathrm{i}}+R_{\mathrm{a}}}\right)
 			\end{equation*}
@@ -342,7 +341,7 @@ Sind sowohl der Innenwiderstand als auch der zu vermessende Widerstand bekannt, 
             %to[rmeterwa,t=A, -o](5.5,2);
 			\varrmore{U0}{$U_0$};
 			\iarrmore{R}{$I$};
-			\node[red] at (4.2,2.9) {Ideales Amperemeter};
+			\node[red] at (4.2,2.9) {Ideal Amperemeter};
         \end{tikzpicture}
 
 %		\begin{circuitikz}
@@ -380,7 +379,7 @@ Sind sowohl der Innenwiderstand als auch der zu vermessende Widerstand bekannt, 
          %   to[rmeterwa,t=A, -o](5.5,2);
 			\varrmore{U0}{$U_0$};
 			\iarrmore{R}{$I$};
-			\node[red] at (4.2,2.9) {Reales Amperemeter};
+			\node[red] at (4.2,2.9) {Real Amperemeter};
         \end{tikzpicture}
 
 	 \end{columns}
@@ -419,7 +418,7 @@ Unter Kenntnis des Innenwiderstandes und des zu messenden Widerstandes lässt si
     measures the sum of the voltage drops across the ammeter and the load resistor:
 
 	 \begin{equation*}
-		U_\mathrm{mess} = U + U_\mathrm{Amperemeter}
+		U_\mathrm{meas} = U + U_\mathrm{Amperemeter}
 	 \end{equation*}
 
 
@@ -444,26 +443,26 @@ Unter Kenntnis des Innenwiderstandes und des zu messenden Widerstandes lässt si
 	\end{equation*}
 
 	}
-	\ftx{Strom- und spannungsrichtiges Messen I}
+	\ftx{Correct measurement of current and voltage I}
 
 	\b{
 
 		\begin{columns}
 		\column[c]{0.5\textwidth}
-		 Bei \textbf{gleichzeitiger} Messung von Strom und Spannung:
+		 When measuring current and voltage \textbf{simultaneously}:
 		 \begin{itemize}
-			\item gegenseitige \textbf{Beeinflussung} der Innenwiderstände \textbf{der Messgeräte}
+			\item mutual \textbf{influence} of the internal resistances \textbf{of the measuring instruments}
 		 \end{itemize}
 
 
 		 \vspace{5pt}
 			
-		 \textbf{Stromrichtige} Messung:
+		 \textbf{Current-correct} Measurement:
 
 		 \begin{itemize}
-			\item höherer Fokus auf Stromstärke
-			\item $U_\mathrm{mess} = U_\mathrm{Ra} + U_\mathrm{Amperemeter}$ 
-			\item Verwendung, wenn gilt:
+			\item greater focus on current strength
+			\item $U_\mathrm{meas} = U_\mathrm{Ra} + U_\mathrm{Amperemeter}$ 
+			\item use when the following applies:
 		\end{itemize}
 		
 		\begin{equation*}
@@ -564,7 +563,7 @@ Als Faustregel gilt häufig, dass diese Schaltung verwendet wird, wenn der zu me
 		If it is unclear whether current-correct or voltage-correct measurement should be used,
         the following rule of thumb can be applied:
 
-		\begin{Key point}{Faustregel für strom-/spannungsrichtiges Messen}
+		\begin{Key point}{Rule of thumb for correct current/voltage measurement}
 				\begin{itemize}
 			\item Correct current measurement: $R_{\mathrm{a}} > \sqrt{R_{\mathrm{iA}} \cdot R_{\mathrm{iV}}}$
 			\item Correct voltage measurement: $R_{\mathrm{a}} < \sqrt{R_{\mathrm{iA}} \cdot R_{\mathrm{iV}}}$
@@ -576,25 +575,25 @@ Als Faustregel gilt häufig, dass diese Schaltung verwendet wird, wenn der zu me
 }
 
 
-	\ftx{Strom- und spannungsrichtiges Messen II}
+	\ftx{Correct measurement of current and voltage II}
 	\b{
 
 		\begin{columns}
 		\column[c]{0.5\textwidth}
-			\textbf{Spannungsrichtige} Messung:
+			\textbf{Correct voltage} measurement:
 		\begin{itemize}
-			\item höherer Fokus auf Spannung
-			\item $I_\mathrm{mess} = I_\mathrm{Ra} + I_\mathrm{Voltmeter}$ 
-			\item Verwendung, wenn gilt:
+			\item Greater focus on excitement
+			\item $I_\mathrm{meas} = I_\mathrm{Ra} + I_\mathrm{Voltmeter}$ 
+			\item Use when applicable:
 		\end{itemize}
 		 \begin{equation*}
 			R_{\mathrm{iV}} \gg R_{\mathrm{a}}
 		\end{equation*}
  
-		Bei nicht eindeutigen Verhältnissen:
+		In unclear circumstances:
 		\begin {itemize}
-			\item stromrichtiges Messen für  $R_{\mathrm{a}} > \sqrt{R_{\mathrm{iA}} \cdot R_{\mathrm{iV}}}$
-			\item spannungsrichtiges Messen für $R_{\mathrm{a}} < \sqrt{R_{\mathrm{iA}} \cdot R_{\mathrm{iV}}}$
+			\item correct current measurement for  $R_{\mathrm{a}} > \sqrt{R_{\mathrm{iA}} \cdot R_{\mathrm{iV}}}$
+			\item correct voltage measurement for $R_{\mathrm{a}} < \sqrt{R_{\mathrm{iA}} \cdot R_{\mathrm{iV}}}$
 		\end{itemize}
 
 		 \column[c]{0.5\textwidth}

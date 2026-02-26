@@ -1,0 +1,39 @@
+\nomenclatureentry{EAA@[{A}]\begingroup Ampere - elektrischer Strom\nomeqref {2.0}|nompageref}{4}
+\nomenclatureentry{ETT@[{T}]\begingroup Tesla - magnetische Flussdichte \nomunit {$\mathrm {T}=\frac {\mathrm {V}\cdot \mathrm {s}}{\mathrm {m}^2}=\frac {\mathrm {kg}}{\mathrm {s}^2\cdot \mathrm {A}}$}\nomeqref {2.5}|nompageref}{7}
+\nomenclatureentry{FT$t$@[{$t$}]\begingroup Zeit \nomunit{s}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{FL$\ell$@[{$\ell$}]\begingroup Länge \nomunit{m}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{FM$m$@[{$m$}]\begingroup Masse \nomunit{kg}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{FI$I$@[{$I$}]\begingroup elektrischer Strom (zeitlich konstant) \nomunit{A}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{FU$U$@[{$U$}]\begingroup Spannung (zeitlich konstant)\nomunit{V}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{FU$u$@[{$u$}]\begingroup Spannung (zeitlich variabel)\nomunit{V}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{F0$\varPhi$@[{$\varPhi$}]\begingroup magnetischer Fluss \nomunit{Wb}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{FB$B$@[{$B$}]\begingroup magnetische Flussdichte \nomunit{T}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{FN$N$@[{$N$}]\begingroup abstrakte Anzahl (z. B. Anzahl der Wicklungen einer Spule) \nomunit{$1$}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{FE$\vec{e}_{\mathrm{r}}$@[{$\vec{e}_{\mathrm{r}}$}]\begingroup Einheitsvektor in die Richtung r. $|\vec{e}_\mathrm{r}|=1$\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{FM$M$@[{$M$}]\begingroup Drehmoment \nomunit{$\mathrm{Nm}$}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{FA$A$@[{$A$}]\begingroup Fläche \nomunit{$\mathrm{m}^2$}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{FD$d$@[{$d$}]\begingroup Abstand im magnetischen Leitkörper \nomunit{m}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{F0$\varTheta$@[{$\varTheta$}]\begingroup magnetische Durchflutung \nomunit{A}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{FJ$\vec{J}$@[{$\vec{J}$}]\begingroup Stromdichte \nomunit{$\frac{\mathrm{A}}{\mathrm{m}^2}$}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{FL$\ell_{\mathrm{m}}$@[{$\ell_{\mathrm{m}}$}]\begingroup mittlere Feldlinienlänge einer Spule \nomunit{m}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{FH$H$@[{$H$}]\begingroup magnetische Feldstärke \nomunit{$\frac{\mathrm{A}}{\mathrm{m}}$}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{FR$R_{\mathrm{m}}$@[{$R_{\mathrm{m}}$}]\begingroup magnetischer Widerstand \nomunit{$\frac{\mathrm{A}}{\mathrm{V}\cdot\mathrm{s}}$}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{FV$v$@[{$v$}]\begingroup Geschwindigkeit \nomunit{$\frac{\mathrm{m}}{\mathrm{s}}$}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{FW$W$@[{$W$}]\begingroup Arbeit \nomunit{$\mathrm{J}$}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{C0$\mu_{\mathrm{0}}$@[{$\mu_{\mathrm{0}}$}]\begingroup magnetische Feldkonstante \nomunit{$\mu_{\mathrm{0}}=1,256\,637\,062\cdot10^{-6}\,\frac{\mathrm{Vs}}{\mathrm{Am}} \approx 4\pi\cdot10^{-7}\,\frac{\mathrm{Vs}}{\mathrm{Am}}$}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{EWWb@[{Wb}]\begingroup Weber - magnetischer Fluss \nomunit{$\mathrm{Wb}=\mathrm{V}\cdot\mathrm{s}=\frac{\mathrm{kg}\cdot\mathrm{m}^2}{\mathrm{s}^2\cdot\mathrm{A}}$}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{EMm@[{m}]\begingroup Meter - Länge\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{EKkg@[{kg}]\begingroup Kilogramm - Masse\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{ESs@[{s}]\begingroup Sekunde - Zeit\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{ENN@[{N}]\begingroup Newton - Kraft \nomunit{$\mathrm{N}=\frac{\mathrm{kg}\cdot\mathrm{m}}{s^2}$}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{EWW@[{W}]\begingroup Watt - Wirkleistung \nomunit{$\mathrm{W}=\frac{\mathrm{J}}{\mathrm{s}}=\mathrm{A}\cdot\mathrm{V}=\frac{\mathrm{kg}\cdot\mathrm{m}^2}{\mathrm{s}^3}$}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{EVV@[{V}]\begingroup Volt - Spannung \nomunit{$\mathrm{V}=\frac{\mathrm{W}}{\mathrm{A}}=\frac{\mathrm{J}}{\mathrm{C}}=\frac{\mathrm{N}\cdot\mathrm{m}}{\mathrm{A}\cdot\mathrm{s}}=\frac{\mathrm{kg}\cdot\mathrm{m}^2}{\mathrm{s}^3\cdot\mathrm{A}}$}\nomeqref {2.7}|nompageref}{9}
+\nomenclatureentry{ETT@[{T}]\begingroup Tesla - magnetische Flussdichte \nomunit {$\mathrm {T}=\frac {\mathrm {V}\cdot \mathrm {s}}{\mathrm {m}^2}=\frac {\mathrm {kg}}{\mathrm {s}^2\cdot \mathrm {A}}$}\nomeqref {3.1}|nompageref}{9}
+\nomenclatureentry{EHH@[{H}]\begingroup Henry - Induktivität \nomunit{$\mathrm{H}=\frac{\mathrm{V}\cdot\mathrm{s}}{\mathrm{A}}=\frac{\mathrm{kg}\cdot\mathrm{m}^2}{\mathrm{s}^2\cdot\mathrm{A}^2}$}\nomeqref {7.3}|nompageref}{21}
+\nomenclatureentry{FL$L$@[{$L$}]\begingroup Induktivität \nomunit{H}\nomeqref {7.3}|nompageref}{21}
+\nomenclatureentry{FF$F$@[{$F$}]\begingroup Kraft \nomunit{N}\nomeqref {8.3}|nompageref}{22}
+\nomenclatureentry{FP$P$@[{$P$}]\begingroup Wirkleistung \nomunit{W}\nomeqref {8.3}|nompageref}{22}
+\nomenclatureentry{FW$W$@[{$W$}]\begingroup Energie \nomunit{J}\nomeqref {8.3}|nompageref}{22}
+\nomenclatureentry{FF$f$@[{$f$}]\begingroup Frequenz \nomunit{Hz}\nomeqref {9.1}|nompageref}{24}
+\nomenclatureentry{F0$\rho_{\mathrm{R}}$@[{$\rho_{\mathrm{R}}$}]\begingroup spezifischer Widerstand \nomunit{$\frac{\Omega\cdot \mathrm{mm}^2}{\mathrm{m}}$}\nomeqref {9.1}|nompageref}{24}
+\nomenclatureentry{F0$\delta$@[{$\delta$}]\begingroup Eindringtiefe in den Leiter durch den Skin-Effekt (Skin-Tiefe) \nomunit{$\mathrm{m}$}\nomeqref {9.1}|nompageref}{24}

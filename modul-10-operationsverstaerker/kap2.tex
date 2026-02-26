@@ -1,42 +1,41 @@
 \s{\begin{frame}
-    \fta{Modellierung und charakteristische Größen}
-    Der vereinfachte Schaltplan des vorherigen Kapitels eignet sich zwar gut um die interne Funktionsweise zu illustrieren, ist für die Darstellung in größeren Schaltkreisen allerdings ungeeignet. 
-    Um Schaltpläne übersichtlicher zu gestalten werden Operationsverstärker in der Regel durch ein Normsymbol dargestellt. 
-    Der interne Aufbau des Verstärkers wird vernachlässigt und diesem allgemeinen Verstärker charakteristische Eigenschaften zugeordnet.
-    Ähnlich wie bei dem Transistorsymbol kann so der Operationsverstärker in einer Schaltung 
-    vereinfacht dargestellt werden kann. \par
+    \renewcommand{\figurename}{Figure}
+    \fta{Modelling and characteristic variables}
+    The simplified circuit diagram in the previous chapter is well suited for illustrating the internal functioning, but is unsuitable for representation in larger circuits.
+    To make circuit diagrams clearer, operational amplifiers are usually represented by a standard symbol.
+    The internal structure of the amplifier is neglected and characteristic properties are assigned to this general amplifier.
+    Similar to the transistor symbol, the operational amplifier can thus be represented in a simplified form in a circuit.  \par
 
   %  \speech{1}{Modellierung und charakteristische Größen: Der vereinfachte Schaltplan des vorherigen Kapitels eignet sich zwar gut um die interne Funktionsweise zu illustrieren, ist für die Darstellung in größeren Schaltkreisen allerdings ungeeignet.
  %  Um Schaltpläne übersichtlicher zu gestalten werden Operationsverstärker in der Regel durch ein Normsymbol dargestellt. Der interne Aufbau des Verstärkers wird vernachlässigt und diesem allgemeinen Verstärker charakteristische Eigenschaften zugeordnet. Ähnlich wie bei dem Transistorsymbol kann so der Operationsverstärker in einer Schaltung vereinfacht dargestellt werden kann.
 %}    
 
-    Es sollen im Rahmen dieses Kapitels folgende Kompetenzen erworben werden:
+    The following skills are to be acquired within the scope of this chapter:
     \s{
-        \begin{Lernziele}{Operationsverstärker}
+        \begin{Learning objectives}{Operationsverstärker}
             \title{Lernziele: Modellierung und charakteristische Größen}
-            Die Studierenden können
+            The students can
             \begin{itemize}
-                \item Unterschiede zwischen dem vereinfachten Operationsverstärkermodell und realen Operationsverstärkern beschreiben.
-                \item Wichtige Bereiche der Operationsverstärkerkennlinie angeben.
+                \item Describe the differences between the simplified operational amplifier model and real operational amplifiers.
+                \item Specify important areas of the operational amplifier characteristic curve.
+
             \end{itemize}
-        \end{Lernziele}
+        \end{Learning objectives}
     }
 
 %\speech{1}{Es sollen im Rahmen dieses Kapitels folgende Kompetenzen erworben werden:
  %Die Studierenden können Unterschiede zwischen dem vereinfachten Operationsverstärkermodell und realen Operationsverstärkern beschreiben. Sie können wichtige Bereiche der Operationsverstärkerkennlinie angeben.
 %}
 
-    Im Schaltungselement in Abbildung \ref{fig:opv englisch} (links) ist der invertierende Eingang, der 
-    nicht-invertierende Eingang, der Ausgang sowie der Massebezug und die 
-    Anschlüsse für die Versorgungspannungen dargestellt. Dieses Schaltzeichen ist 
-    häufig im angloamerikanischen Raum und älteren Dokumenten zu finden und soll hier 
-    nur aufgrund der Vollständigkeit eingeführt werden. 
-    In diesem Dokument soll das neue Schaltzeichen (rechts) verwendet werden. Ist die Bezugsmasse nicht explizit dargestellt, wird bei dieser Darstellung davon ausgegangen, dass 
-    der Ausgang einen Bezug zur Masse aufweist. 
-    Aus didaktischen Gründen werden die Versorgungspannungen in diesem Dokument allerdings mit angegeben. Der ideale Verstärker besitzt in der rechten, 
-    oberen Ecke darüber hinaus das Unendlichzeichen. Dies bedeutet, dass die Verstärkung nicht 
-    begrenzt ist. Der Vorteil bei diesem Schaltungselement ist, dass auch Verstärker mit Verstärkerbegrenzungen 
-    modelliert werden können. In diesem Fall wird das Symbol für „unendlich“ $\widehat{=}~\infty$ durch einen endlichen Wert ersetzt.
+    The circuit element in Figure \ref{fig:opv englisch} (left) shows the inverting input, the 
+    non-inverting input, the output, the ground reference and the 
+    connections for the supply voltages. This circuit symbol is 
+    often found in Anglo-American countries and older documents and is only included here 
+    for the sake of completeness. 
+    The new circuit symbol (right) should be used in this document. If the reference ground is not explicitly shown, this representation assumes that 
+    the output is referenced to ground.
+    For didactic reasons, however, the supply voltages are also specified in this document. The ideal amplifier also has the infinity symbol in the upper 
+    right corner. This means that the gain is not limited. The advantage of this circuit element is that amplifiers with amplifier limitations can also be modelled. In this case, the symbol for ‘infinity’ $\widehat{=}~\infty$ is replaced by a finite value.
 
 
 %\speech{1}{
@@ -52,7 +51,7 @@
         \centering
         \fu{
             \resizebox{\textwidth}{!}{\input{Tikz/src/AltesVsNeuesSchaltzeichen.tex}}
-            }{Schaltungselement OPV im alt (links) und neu nach DIN EN 60617 Teil 13 (rechts)                
+            }{Circuit element OPV in old (left) and new according to DIN EN 60617 Part 13 (right)               
             \label{fig:opv englisch}}
     \end{figure}
 \end{frame}}
@@ -82,15 +81,14 @@
 %}
 
 \begin{frame}
-    \s{Zwei der vier Anschlüsse\footnote{Die Anschlüsse für die Versorgungspannung werden hier nicht mitgezählt. Die ausgangsseitge hingegen wird als Anschluss verstanden.} des Verstärkers, auch Pole, können unter idealisierten Bedingungen jeweils zu einem sogenannten sogenannten \glqq Tor\grqq{} zusammengefasst werden. 
-    Der Operationsverstärker lässt sich so durch ein sogenanntes Zweitor modellieren. 
-    Dieses zeichnet sich dadurch aus, dass vereinfacht davon ausgegangen werden darf, dass das Übertragungsverhalten vollständig durch die Größen Strom- und Spannung beschrieben werden kann. 
-    Durch die Vereinfachung über das Zweitor kann also der interne Aufbau des Operationsverstärkers vernachlässigt und als „Blackbox“ betrachtet werden. 
-    Die zuvor recht komplizierte, innere Verschaltung der Transistoren kann durch das in Abbildung \ref{fig:opv englisch} dargestelle Bauteil modelliert werden. 
-    Zudem wird bei der Modellierung durch das Zweitor davon ausgegangen, dass kein Strom in die Eingänge des Operationsverstärkers hineinfließt \footnote{Dies ist notwendig, damit die sogenannte Torbedingung erfüllt ist. Die fordert das der Strom in die Eingänge gegengleich sein muss, also $I_+=I_-$.}. 
-      
-    In der folgenden Tabelle sind weitere Eigenschaften aufgeführt, die das Rechnen mit Operationsverstärkern erleichtert. 
-    Zudem sind in der Tabelle klassische Werte eines realen Operationsverstärkers angegeben, die je nach Verstärkertyp leicht variieren können und lediglich die Grenzen des Zweitor-Modells aufzeigen sollen.
+    \s{Two of the four connections\footnote{The connections for the supply voltage are not counted here. The output side, on the other hand, is understood as a connection.} of the amplifier, also known as poles, can be combined under idealised conditions to form a so-called \glqq gate\grqq{}.
+    The operational amplifier can thus be modelled using a so-called two-port model.
+    This is characterised by the fact that, in simplified terms, it can be assumed that the transfer behaviour can be described entirely by the variables current and voltage. 
+    The simplification provided by the two-port model means that the internal structure of the operational amplifier can be neglected and regarded as a ‘black box’.
+    The previously rather complicated internal wiring of the transistors can be modelled by the component shown in Figure \ref{fig:opv englisch}. 
+    In addition, the two-port model assumes that no current flows into the inputs of the operational amplifier \footnote{This is necessary to satisfy the so-called gate condition. This requires that the current in the inputs must be opposite, i.e. $I_+=I_-$.}. 
+    The following table lists additional properties that facilitate calculations with operational amplifiers.
+     The table also shows classic values for a real operational amplifier, which may vary slightly depending on the amplifier type and are only intended to illustrate the limitations of the two-terminal model.
     }
 
 
@@ -104,7 +102,7 @@
 %Zudem sind in der Tabelle klassische Werte eines realen Operationsverstärkers angegeben, die je nach Verstärkertyp leicht variieren können und lediglich die Grenzen des Zweitor-Modells aufzeigen sollen.
 %}
     \b{
-    \fta{Modellierung und charakteristische Größen}
+    \fta{Modelling and characteristic variables}
     \begin{columns}
             \column[c]{0.4\textwidth}
             \begin{figure}[ht]
@@ -117,84 +115,85 @@
             \column[c]{0.6\textwidth}
                 \begin{itemize}
                     \onslide<1->{
-                    \item In Schaltungen wird der Opertionverstärker durch eines der beiden links abgebildeten Symbole dargestellt.
+                    \item In circuits, the operational amplifier is represented by one of the two symbols shown on the left.
                     }\onslide<2->{
-                    \item Der Operationsverstärker lässt sich so durch ein sogenanntes Zweitor modellieren. 
+                    \item The operational amplifier can thus be modelled using a so-called two-port network.
                     }\onslide<3->{
-                    \item Dieses zeichnet sich dadurch aus, dass vereinfacht davon ausgegangen werden darf, dass das Übertragungsverhalten vollständig durch die Größen Strom- und Spannung beschrieben werden kann. 
+                    \item This is characterised by the fact that, in simplified terms, it can be assumed that the transfer behaviour can be described entirely by the variables current and voltage.
                     }\onslide<4->{
-                    \item Durch diese Vereinfachung kann der interne Aufbau des Operationsverstärkers vernachlässigt und als „Black-Box“ betrachtet werden.
+                    \item This simplification allows the internal structure of the operational amplifier to be disregarded and treated as a ‘black box’.
                     }
                 \end{itemize}
             \end{columns}}
 \end{frame}
 
 \begin{frame}
+    \renewcommand{\tablename}{Table}
         \s{
-        \captionof{table}{Ideale und typische Operationsverstärkereigenschaften}
+        \captionof{table}{Ideal and typical operational amplifier characteristics}
         \label{tab:Ideale und typische Operationsverstärkereigenschaften}
         \begin{tabular}{|L{3cm}|L{3cm}|L{3cm}|L{5cm}|}
         \hline
-        \textbf{Bezeichnung} & \textbf{Ideale OPV-Eigenschaften} & \textbf{Typische Werte (z.B. OPA 121)} & \textbf{Erläuterung} \\ 
+        \textbf{Designation} & \textbf{Ideal OPV properties} & \textbf{Typical values (e.g. OPA 121)} & \textbf{Explanation} \\ 
         \hline
-        Leerlaufverstärkung & $V_{\textnormal{Leer}} = \infty$ & $V_{\textnormal{Leer}} = 10^6$ & Verstärkung der zwischen dem Eingängen anliegenden Spannung bei unbeschalteten OPV.\\
+        Open-circuit gain & $V_{\textnormal{Leer}} = \infty$ & $V_{\textnormal{Leer}} = 10^6$ & Amplification of the voltage present between the inputs when the OPV is not connected.\\
         \hline
-        Eingangsimpedanz & $Z_{\textnormal{i}} = \infty$~Ω & $Z_i$ = $10^{13}$~Ω & Der von der Quelle aus betrachtet Lastwiderstand des OPVs. \\  
+        Input impedance & $Z_{\textnormal{i}} = \infty$~Ω & $Z_i$ = $10^{13}$~Ω & The load resistance of the OPV as seen from the source. \\  
         \hline
-        Ausgangsimpedanz & $Z_{\textnormal{a}} = 0$~Ω & $Z_{\textnormal{a}} =~50$ bis $100$~Ω  & Der von einer Last aus betrachtete Widerstand am Ausgang des OPVs.\\
+        Output impedance & $Z_{\textnormal{a}} = 0$~Ω & $Z_{\textnormal{a}} =~50$ up to $100$~Ω  & The resistance at the output of the OPV as seen from a load.\\
         \hline
-        Bandbreite & $B = \infty$~MHz & $B >$ 2~MHz &  Frequenzbereich in dem das Verstärkerverhalten den im Datenblatt angegebenen Verhalten entspricht. \\   
+        Bandwidth & $B = \infty$~MHz & $B >$ 2~MHz &  Frequency range in which the amplifier behaviour corresponds to the behaviour specified in the data sheet. \\   
         \hline
-        Phasenverschiebung & $\varphi$~=~0° & $\varphi >$~0° & Verzögerung des Ausgangs- gegenüber des Eingangssignals. \\
+        Phase shift & $\varphi$~=~0° & $\varphi >$~0° & Delay of the output signal relative to the input signal. \\
         \hline
-        Slew Rate & $\infty$~V & 2~mV bis 1000 V/$\mu$s & Maximaler Spannungsanstieg pro Zeiteinheit.\\
+        Slew Rate & $\infty$~V & 2~mV bis 1000 V/$\mu$s & Maximum voltage increase per unit of time.\\
         \hline
-        Ausgangs-Aussteuerbarkeit & $\infty$ & auf max. $U_{\textnormal{B}}$ begrenzt & Maximaler Ausgangsspannungswert.\\
+        Output controllability & $\infty$ & limited to max. $U_{\textnormal{B}}$ & Maximum output voltage value.\\
         \hline
-        Eingangsruhestrom & $I_{\textnormal{Ruhe}}$ = 0~pA & $I_{\textnormal{Ruhe}} <$ 5~pA & Eingangsseitige Stromaufnahme bei Differenzspannnung $\Delta U_{\textnormal{Diff}}$~=~0. \\
+        Input quiescent current & $I_{\textnormal{Ruhe}}$ = 0~pA & $I_{\textnormal{Ruhe}} <$ 5~pA & Input current consumption at differential voltage $\Delta U_{\textnormal{Diff}}$~=~0. \\
         \hline
-        Eingangsoffsetstrom & $I_{\textnormal{Off}}$ = 0~pA & $I_{\textnormal{Off}} < I_+-I_-$  & Differenz der beiden Eingangsruheströme \\
+        Input offset current & $I_{\textnormal{Off}}$ = 0~pA & $I_{\textnormal{Off}} < I_+-I_-$  & Difference between the two input quiescent currents \\
         \hline
-        Eingangs-Offsetspannung & $U_{\textnormal{Off}}$ = 0~mV & $U_{\textnormal{Off}} < $ 2~mV & Ausgegebene Gleichspannung bei $\Delta U_{\textnormal{Diff}}$~=~0\\
+        Input offset voltage & $U_{\textnormal{Off}}$ = 0~mV & $U_{\textnormal{Off}} < $ 2~mV & Output DC voltage at $\Delta U_{\textnormal{Diff}}$~=~0\\
         \hline
-        Gleichtakt-\linebreak unterdrückung (engl.: Common Mode Rejection) & $CMR = \infty$~dB  & $CMR$~=~86~dB & Gibt an, wie gut der Verstärker Signale unterdrückt, die an beiden Eingängen gleichermaßen anliegen\\
+        Common mode -\linebreak Rejection & $CMR = \infty$~dB  & $CMR$~=~86~dB & Indicates how well the amplifier suppresses signals that are equally present at both inputs.\\
         \hline
         \end{tabular}}
         
-         \b{\fta{Charakteristische Werte}
+         \b{\fta{Characteristic values}
             \begin{tabular}{|L{4cm}|L{4cm}|L{4cm}|}
                 \hline
-                \textbf{Bezeichnung} & \textbf{Ideale OPV- \newline Eigenschaften} & \textbf{Typische Werte \newline (z.B. OPA 121)} \\ 
+                \textbf{Designation} & \textbf{Ideal OPV- \newline properties} & \textbf{Typical values \newline (e.g. OPA 121)} \\ 
                 \hline
-                Leerlaufverstärkung & $V_{\textnormal{Leer}} = \infty$ & $V_{\textnormal{Leer}} = 10^6$\\
+                Open-circuit gain & $V_{\textnormal{Leer}} = \infty$ & $V_{\textnormal{Leer}} = 10^6$\\
                 \hline
-                Eingangsimpedanz & $Z_{\textnormal{i}} = \infty$~Ω & $Z_i$ = $10^{13}$~Ω\\  
+                Input impedance & $Z_{\textnormal{i}} = \infty$~Ω & $Z_i$ = $10^{13}$~Ω\\  
                 \hline
-                Ausgangsimpedanz & $Z_{\textnormal{a}} = 0$~Ω & $Z_{\textnormal{a}} = 50$ bis $100$~Ω\\
+                Output impedance & $Z_{\textnormal{a}} = 0$~Ω & $Z_{\textnormal{a}} = 50$ bis $100$~Ω\\
                 \hline
-                Bandbreite & $B = \infty$~MHz & $B >$ 2~MHz\\   
+                Bandwidth & $B = \infty$~MHz & $B >$ 2~MHz\\   
                 \hline
-                Phasenverschiebung & $\varphi$~=~0° & $\varphi >$~0°\\
+                Phase shift & $\varphi$~=~0° & $\varphi >$~0°\\
                 \hline
-                Slew Rate & $\infty$~V & 2~mV bis 1000 V/$\mu$s\\
+                Slew Rate & $\infty$~V & 2~mV up to 1000 V/$\mu$s\\
                 \hline
-                Ausgangs-Aussteuerbarkeit & $\infty$ & Rail-to-Rail\\
+                Output controllability & $\infty$ & Rail-to-Rail\\
                 \hline
-                Eingangsruhestrom & $I_{\textnormal{Ruhe}}$ = 0~pA & $I_{\textnormal{Ruhe}} <$ 5~pA\\
+                Input quiescent current & $I_{\textnormal{Ruhe}}$ = 0~pA & $I_{\textnormal{Ruhe}} <$ 5~pA\\
                 \hline
-                Eingangsoffsetstrom & $I_{\textnormal{Off}}$ = 0~pA & $I_{\textnormal{Off}} < I_+-I_-$\\
+                Input offset current & $I_{\textnormal{Off}}$ = 0~pA & $I_{\textnormal{Off}} < I_+-I_-$\\
                 \hline
-                Eingangs-Offsetspannung & $U_{\textnormal{Off}}$ = 0~mV & $U_{\textnormal{Off}} < $ 2~mV\\
+                Input offset voltage & $U_{\textnormal{Off}}$ = 0~mV & $U_{\textnormal{Off}} < $ 2~mV\\
                 \hline
-                Gleichtakt-\linebreak unterdrückung & $CMR = \infty$~dB  & $CMR$~=~86~dB\\
+                Common mode-\linebreak Rejection & $CMR = \infty$~dB  & $CMR$~=~86~dB\\
                 \hline
             \end{tabular}}
 \end{frame}
 
 \begin{frame}
     \s{
-        Mit den oben gemachten Angaben kann die Kennlinie eines Operationsverstärkers konstruiert werden. 
-        Diese ist in der folgenden Abbildung dargestellt:
+        The characteristic curve of an operational amplifier can be constructed using the information provided above.
+        This is shown in the following figure:
 
         %\speech{1}{Mit den oben gemachten Angaben kann die Kennlinie eines Operationsverstärkers konstruiert werden. Diese ist in der folgenden Abbildung dargestellt.}
      
@@ -204,17 +203,19 @@
         \label{fig:Kennlinie OPV}}} 
         \end{center}
 
-        In Abbildung \ref{fig:Kennlinie OPV} ist die horizontale Verschiebung der Verstärkerkennlinie zu sehen, die sich durch die Offsetspannung $U_{\textnormal{Off}}$ ergibt. 
-        Darüber hinaus ist zu erkennen, dass der Verstärker in seinem spezifizierten Arbeitsbereich (in grün eingezeichnet) ein lineares Verstärkungsverhalten ggü. der angelegten Eingangsspannung aufweist. 
-        Die Steigung im linearen Bereich ist von der maximalen Verstärkung des genutzten Operationsverstärkers abhängig. 
-        Wird dieser spezifizierte Arbeitsbereich verlassen, weist die Ausgangspannung zunächst einen nichtlinearen Bezug zur Eingangsspannung auf (in gelb eingezeichnet). Die Ausgangsspannung steigt allerdings weiterhin, bis die Sättigung erreicht wird.
-        Im rot markierten Bereich bleibt selbst bei weiterer Erhöhung der Eingangsdifferenzspannung die Ausgangsspannung konstant.
-        Solange also die Ausgangsspannung im Arbeitsbereich des Operationsverstärkers liegt, wird eine konstant verstärkte und mit einem Offset belegte Ausgangsspannung ausgegeben. 
-        Die tatsächlich erreichbare Ausgangsspannung wird über die Größe \glqq Output Voltage Swing\grqq{} angegeben. 
-        Die Differenz zur positiven bzw. negativen Versorgungsspannung ($+U_{\textnormal{B}}$ und $-U_{\textnormal{B}}$) wird als \glqq Headroom\grqq{} bezeichnet. 
-        Der Headroom ist das Resultat eines PN-Übergangs der im Operationsverstärker verbauten Halbleiterbauteile und beträgt aus diesem Grund in der Regel 0,6 - 0,7 V.
-        Der Headroom ist eine wichtige Größe für die Auslegung von Operarationsverstärker. 
-        Operationsverstärker, bei denen dieser Headroom sehr gering ist, werden von den Herstellern zumeist als \glqq Rail-to-Rail\grqq{} Verstärker klassifiziert. 
+        Figure \ref{fig:Kennlinie OPV} shows the horizontal shift of the amplifier characteristic curve resulting from the offset voltage $U_{\text{Off}}$.
+        It can also be seen that the amplifier exhibits linear amplification behaviour with respect to the applied input voltage within its specified operating range (shown in green). 
+        The slope in the linear range depends on the maximum amplification of the operational amplifier used.
+         If this specified operating range is exceeded, the output voltage initially exhibits a non-linear relationship to the input voltage (shown in yellow). However, the output voltage continues to rise until saturation is reached.
+        In the area marked in red, the output voltage remains constant even if the input differential voltage continues to increase.
+        As long as the output voltage is within the operating range of the operational amplifier, a constantly amplified output voltage with an offset is output.   
+        The actual achievable output voltage is specified by the variable \glqq Output Voltage Swing\grqq{}. 
+        The difference to the positive or negative supply voltage ($+U_{\textnormal{B}}$ and $-U_{\textnormal{B}}$) is referred to as \glqq Headroom\grqq{}.
+         The headroom is the result of a PN junction in the semiconductor components used in the operational amplifier and is therefore usually 0.6 - 0.7 V.
+        Headroom is an important parameter for the design of operational amplifiers. 
+        Operational amplifiers with very low headroom are usually classified by manufacturers as \glqq rail-to-rail\grqq{} amplifiers.
+ 
+
 
      %   \speech{
      %       Abbildung 2.2 zeigt die Kennlinie eines Operationsverstärkers.  
@@ -245,10 +246,10 @@
     %        }
                 
 
-        \begin{Merksatz}{}  
-            Um das Rechnen mit Operationsverstärkern zu erleichtern, wird häfuig ein vereinfachtes Modell verwendet. 
-            Es ist wichtig die Grenzen dieses Modells zu kennen und diese bei der Bauteilauswahl und Schaltungsplanung zu berücksichtigen. 
-        \end{Merksatz}
+        \begin{Key point}{}      
+            To simplify calculations with operational amplifiers, a simplified model is often used. 
+            It is important to be aware of the limitations of this model and to take them into account when selecting components and designing circuits.
+         \end{Key point}
         }
 
 %\speech {1}{
@@ -256,19 +257,19 @@
 %Es ist wichtig die Grenzen dieses Modells zu kennen und diese bei der Bauteilauswahl und Schaltungsplanung zu berücksichtigen. 
 %}
     \b{
-    \frametitle{Allgemeine Kennlinie eines Operationsverstärkers}
+    \frametitle{General characteristic curve of an operational amplifier}
     \begin{columns}
             \column[c]{0.5\textwidth}
             \f{width=0.9\textwidth}{width=0.9\textwidth}{kap2/Output_Voltage_Swing.pdf}{Kennlinie eines Operationsverstärkers} 
-            Kennlinie eines Operationsverstärkers            
+            Characteristic curve of an operational amplifier            
             \column[c]{0.4\textwidth}
                 \begin{itemize}
                     \onslide<1->{
                     \item $U_{\textnormal{Off}}$ ist die Offset-Spannung, die zu einer horizontalen Verschiebung der Kennlinie führt.
                     }\onslide<2->{
-                    \item Im spezifizierten Ausgangs-\\spannungsbereich ist die Verstärkung linear.
+                    \item The gain is linear within the specified-\\output voltage range.
                     }\onslide<3->{
-                    \item Der Ausgangsspannungs-\\bereich wird im Datenblatt durch die größe \glqq Output Voltage Swing angegeben\grqq{}.
+                    \item The output voltage range is-\\specified in the data sheet by the value \glqq Output Voltage Swing\grqq{}.
                     }
                 \end{itemize}
             \end{columns}}

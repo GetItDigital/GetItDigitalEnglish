@@ -1,7 +1,7 @@
-\subsection{Gleichrichterschaltung\label{Aufg28}}
+\subsection{Rectifier circuit\label{Aufg28}}
 \Aufgabe{
-  Hier eine Gleichrichterschaltung mit pn-Silizium-Dioden. 
-  Die Spannungsquelle $V_1$ liefert sinusförmige $50 \, \mathrm{Hz}$ Wechselspannung mit einer Amplitude von $5\, \mathrm{V}$.
+  Here is a rectifier circuit with pn silicon diodes.
+  The voltage source $V_1$ supplies a sinusoidal $50,\mathrm{Hz}$ AC voltage with an amplitude of $5,\mathrm{V}$.
   \begin {figure} [H]
   \centering
   \input{Tikz/src/FigKlausurGleichrichter}
@@ -9,14 +9,13 @@
   \end {figure}
   \begin{itemize}
     \item[a)]
-          Welche Gleichspannungen treten über $R_1$,$R_2$ und $R_3$ auf?
+          What DC voltages occur across $R_1$, $R_2$ and $R_3$?
     \item[b)]
-          Welche Funktionen haben die Kondensatoren $C_1$ und $C_2$? 
+          What are the functions of capacitors $C_1$ and $C_2$?
     \item[c)]
-          Was ist der besondere Vorteil dieser Gleichrichterschaltung, z.B. für Anwendungen mit Operationsverstärkern?
+          What is the particular advantage of this rectifier circuit, e.g. for applications with operational amplifiers?
     \item[d)]
-          Skizzieren Sie eine andere Spannungs-Verdopplungs-Schaltung, bei der die maximale positive Gleichsspannung (Ausgangsspannung) gegenüber Massepotential der speisenden Wechselspannung $V_1$ zur Verfügung steht. 
-  \end{itemize}
+          Sketch another voltage doubler circuit in which the maximum positive DC voltage (output voltage) is available with respect to the ground potential of the supplying AC voltage $V_1$.  \end{itemize}
   
   
 }
@@ -25,21 +24,21 @@
   \begin{itemize}
     \item[a)]
           \begin{itemize}
-            \item $U_\mathrm{R1} = 4,3 \, \mathrm{V} \Rightarrow$ da $0,7 \,\mathrm{V}$ über $D_1$ abfallen \\
-            \item $U_\mathrm{R2} = -4,3 \, \mathrm{V} \Rightarrow$ da gleiches für die negative Halbwelle \\
-            \item $U_\mathrm{R3} = 8,6 \,\mathrm{V} \Rightarrow$ da $R_3$ beide Spannungswerte aufnimmt \\
+            \item $U_\mathrm{R1} = 4.3 , \mathrm{V} \Rightarrow$ since $0.7 ,\mathrm{V}$ drop across $D_1$ \\
+            \item $U_\mathrm{R2} = -4.3 , \mathrm{V} \Rightarrow$ since the same applies for the negative half-wave \\
+            \item $U_\mathrm{R3} = 8.6 ,\mathrm{V} \Rightarrow$ since $R_3$ takes up both voltage values \\
           \end{itemize}
 
-    \item[b)] Die Kondensatoren $C_1$ und $C_2$ haben einerseits die Funktionen die Signale zu glätten, sowohl von der negativen als auch der positiven Halbwelle.
+    \item[b)] The capacitors $C_1$ and $C_2$ have the function of smoothing the signals, both from the negative and positive half-wave.
           
-    \item[c)] Der Vorteil dieser Gleichrichtung ist, das sowohl positive als auch negative Spannungen abgegriffen werden können.
+    \item[c)] The advantage of this rectification is that both positive and negative voltages can be tapped.
           
-    \item[d)] Schaltung
+    \item[d)] Circuit
           \begin{figure}[H]
             \centering
             \input{Tikz/src/LsgKlausurGleichrichter}
             \label{fig:LsgKlausurGleichrichter}
           \end{figure}
   \end{itemize}
-  Siehe: Abschnitt \ref{fig:BrueckengleichrichterSchaltung}
+  See section: \ref{fig:BrueckengleichrichterSchaltung}
 }

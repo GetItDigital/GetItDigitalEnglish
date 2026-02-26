@@ -1,8 +1,8 @@
-\subsection{Berechnung des Vorwiderstands einer LED\label{Aufg10}}
+\subsection{Calculating the series resistor for an LED\label{Aufg10}}
 % Alt: Aufgabe 10
 \Aufgabe{
-  Wie bei allen Dioden muss auch bei Leuchtdioden (LEDs) der Strom begrenzt werden. Dazu wird ein Vorwiderstand in Reihe geschaltet, wie in der unten gezeigten Schaltung. \newline
-  Die eingesetzte LED besitzt eine Durchlassspannung von $U_\mathrm{D} = 2,2\,\mathrm{V}$. Die ideale Helligkeit wird bei einem Strom von $I_\mathrm{D} = 30\,\mathrm{mA}$ erreicht. Die Eingangsspannung beträgt $U_\mathrm{0} = 5\,\mathrm{V}$.
+    As with all diodes, the current must also be limited for light-emitting diodes (LEDs). For this purpose, a series resistor is connected in series, as shown in the circuit below. \newline
+    The LED used has a forward voltage of $U_\mathrm{D} = 2.2,\mathrm{V}$. The ideal brightness is achieved at a current of $I_\mathrm{D} = 30,\mathrm{mA}$. The input voltage is $U_\mathrm{0} = 5,\mathrm{V}$.
   
   \begin{figure}[H]
      \centering
@@ -10,9 +10,8 @@
      \label{fig:FigLEDVorwiderstand}
   \end{figure}
 
-    Welchen der folgenden Widerstandswerte würden Sie für $R$ verwenden, um die LED möglichst nahe an ihrem optimalen Betriebspunkt (d.h. mit optimaler Helligkeit) zu betreiben?\\
-    $15\,\Omega$, $33\,\Omega$, $68\,\Omega$, $150\,\Omega$, $180\,\Omega$
-
+    Which of the following resistor values would you use for $R$ to operate the LED as close as possible to its optimal operating point (i.e., at optimal brightness)?\
+    $15,\Omega$, $33,\Omega$, $68,\Omega$, $150,\Omega$, $180,\Omega$
   
 
 %   \speech{ **Aufgabe 10**  
@@ -62,37 +61,38 @@
 
 
 \Loesung{
-Berechnung der Spannung am Vorwiderstand:
+Calculation of the voltage across the series resistor:
 \begin{equation*}
     U_\mathrm{V} = U_\mathrm{0} - U_\mathrm{D} = 5\,\mathrm{V} - 2,2\,\mathrm{V} = 2,8\,\mathrm{V}
 \end{equation*}
 
-Berechnung des optimalen Vorwiderstands für \( I_\mathrm{D} = \mathrm{30\,mA} \):
+Calculation of the optimum series resistor for \( I_\mathrm{D} = \mathrm{30\,mA} \):
 \begin{equation*}
     R_\mathrm{V} = \frac{U_\mathrm{V}}{I_\mathrm{D}} = \frac{2,8\,\mathrm{V}}{30\,\mathrm{mA}} = 93,3\,\Omega
 \end{equation*}
 
-Berechnung des Stroms bei Auswahl eines konkreten Widerstandswertes:
+Calculation of the current when selecting a specific resistance value:
 \begin{equation*}
     I_\mathrm{D} = \frac{U_\mathrm{V}}{R} = \frac{2,8\,\mathrm{V}}{150\,\Omega} = 18,7\,\mathrm{mA}
 \end{equation*}
 
-Berechnung bei zwei Widerständen in Parallelschaltung mit zusätzlichem Serienwiderstand:
+Calculation for two resistors in parallel connection with additional series resistance:
 \begin{gather*}
     R_\mathrm{ges} = \frac{150\,\Omega \cdot 180\,\Omega}{150\,\Omega + 180\,\Omega} + 15\,\Omega = 96,8\,\Omega \\
     I_\mathrm{D} = \frac{2,8\,\mathrm{V}}{96,8\,\Omega} =28,9\,\mathrm{mA}
 \end{gather*}
 
-Alternative Reihenschaltung:
+Alternative series connection:
 \begin{equation*}
     R_\mathrm{ges} = 4 \cdot 15\,\Omega + 33\,\Omega = 93\,\Omega
 \end{equation*}
 
 \textbf{Fazit:}  
-Ein kombinierter Widerstand aus $4 \times 15\,\Omega + 33\,\Omega = 93\,\Omega$ oder eine Parallelschaltung mit $150\,\Omega \,\|\, 180\,\Omega + 15\,\Omega = 96,8\,\Omega$ führt zu einem Strom nahe dem optimalen Wert von  $30\,\mathrm{mA}$. \\
-\textbf{Empfohlene Wahl:} Kombination mit Gesamtwiderstand nahe $93\,\Omega$.
+A combined resistance consisting of $4 \times 15\,\Omega + 33\,\Omega = 93\,\Omega$ or a parallel connection with $150\,\Omega \,\|\, 180\,\Omega + 15\,\Omega = 96,8\,\Omega$ leads to a current close to the optimum value of
+$30\,\mathrm{mA}$. \\
+\textbf{Recommended choice:} Combination with total resistance close to $93\,\Omega$.
 
-  Siehe: Abschnitt \ref{sec:SpezielleDioden}
+  See section: \ref{sec:SpezielleDioden}
 %   \speech{
 % Lösung zu Aufgabe 10:
 

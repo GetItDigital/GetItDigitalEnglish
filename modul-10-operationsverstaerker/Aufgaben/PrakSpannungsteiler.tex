@@ -1,19 +1,19 @@
-\subsection{Analyse eines belasteten Spannungsteilers\label{Aufg26}}
+\subsection{Analysis of a loaded voltage divider\label{Aufg26}}
 % Alt: Praktikumsaufgabe 12
 \Aufgabe{
-        Zeichnen Sie einen Schaltplan bestehend aus einem belasteten Spannungsteiler.  
-        Die Bauteilwerte sind wie folgt gegeben:
+        Draw a circuit diagram consisting of a loaded voltage divider.  
+        The component values are given as follows:
         
         \begin{itemize}
-            \item Widerstände: $R_1 = R_2 = 10\,k\Omega$
-            \item Lastwiderstand: $R_\mathrm{L} = 2{,}2\,\mathrm{k\Omega}$
-            \item Versorgungsspannung: $U_\mathrm{CC} = +15\,\mathrm{V}$
+            \item Resistance: $R_1 = R_2 = 10\,k\Omega$
+            \item Load resistance: $R_\mathrm{L} = 2{,}2\,\mathrm{k\Omega}$
+            \item Supply voltage: $U_\mathrm{CC} = +15\,\mathrm{V}$
         \end{itemize}
         
         \begin{itemize}
-            \item[a)] Berechnen Sie die Ausgangsspannung $U_\mathrm{C}$ ohne Lastwiderstand.
-            \item[b)] Berechnen Sie die Ausgangsspannung $U_\mathrm{C}$ mit dem angeschlossenen Lastwiderstand $\mathrm{R_L}$.
-            \item[c)] Erklären Sie, warum die Spannung $U_\mathrm{C}$ durch den Lastwiderstand absinkt.
+            \item[a)] Calculate the output voltage $U_\mathrm{C}$ without load resistance.
+            \item[b)] Calculate the output voltage $U_\mathrm{C}$ with the connected load resistance. $\mathrm{R_L}$.
+            \item[c)] Explain why the voltage $U_\mathrm{C}$ drops across the load resistor.
         \end{itemize}
     
 }
@@ -25,14 +25,14 @@
             \label{fig:LsgPrakSpannungsteiler}
     \end{figure}
     \begin{itemize}
-        \item[a)] Berechnung der Ausgangsspannung $U_\mathrm{C}$ ohne Lastwiderstand:
+        \item[a)] Calculation of the output voltage $U_\mathrm{C}$ without load resistance:
         \begin{align*}
             U_\mathrm{C} &= \frac{R_2}{R_1 + R_2} \cdot U_\mathrm{CC} \\
             U_\mathrm{C} &= \frac{10\,k\Omega}{10\,k\Omega + 10\,\mathrm{k\Omega}} \cdot 15\,\mathrm{V} \\
             U_\mathrm{C} &= \frac{1}{2} \cdot 15\,\mathrm{V} \\
             U_\mathrm{C} &= 7{,}5\,\mathrm{V}
         \end{align*}
-        \item[b)] Berechnung der Ausgangsspannung $\mathrm{U_C}$ mit dem angeschlossenen Lastwiderstand $\mathrm{R_L}$:
+        \item[b)] Calculation of the output voltage $\mathrm{U_C}$ with the connected load resistance $\mathrm{R_L}$:
         \begin{align*}
             U_\mathrm{C} &= \frac{R_2}{R_1 + R_2 + R_\mathrm{L}} \cdot U_\mathrm{CC} \\
             U_\mathrm{C} &= \frac{10\,\mathrm{k\Omega}}{10\,\mathrm{k\Omega} + 10\,\mathrm{k\Omega} + 2{,}2\,\mathrm{k\Omega}} \cdot 15\,\mathrm{V} \\
@@ -41,8 +41,9 @@
             U_\mathrm{C} &= \frac{150}{22}\,\mathrm{V} \\
             U_\mathrm{C} &\approx 6{,}82\,\mathrm{V}
         \end{align*}
-        \item[c)] Die Spannung $U_\mathrm{C}$ sinkt durch den Lastwiderstand $R_\mathrm{L}$ ab, da dieser einen Spannungsteiler mit den Widerständen $R_1$ und $R_2$ bildet. Der Lastwiderstand $R_\mathrm{L}$ entzieht der Schaltung einen Teil der
-        Spannung, wodurch die Ausgangsspannung $U_\mathrm{C}$ sinkt.
+        \item[c)] The voltage $U_\mathrm{C}$ decreases due to the load resistor $R_\mathrm{L}$, as it forms a voltage divider with resistors $R_1$ and $R_2$. 
+        The load resistor $R_\mathrm{L}$ draws part of the voltage from the circuit, causing the output voltage $U_\mathrm{C}$ to drop.
+
     \end{itemize}
-    Siehe: Abschnitt \ref{fig: Verschaltung Verstaerker} und Tabelle \ref{tab:Grundschaltungen}
+    See section: \ref{fig: Verschaltung Verstaerker} and Table \ref{tab:Grundschaltungen}
 }

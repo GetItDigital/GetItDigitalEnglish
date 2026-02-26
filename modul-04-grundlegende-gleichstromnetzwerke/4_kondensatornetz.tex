@@ -83,25 +83,25 @@
 	
 	
 	\b{
-		\ftx{Parallelschaltung von Kapazitäten}
+		\ftx{Parallel connection of capacities}
 		\begin{columns}
 			\column[t]{0.5\textwidth}
 			\vspace*{-110pt}
 			
-			\textbf{Parallelschaltung}: Spannung aller Kapazitäten identisch: \\
+			\textbf{Parallel connection}: Voltage of all capacitances identical: \\
 			
 			\vspace*{-10pt}
 			\begin{equation*}
 				U_0 = U_1 = U_2	
 			\end{equation*}
 			
-			Ladung pro Kondensator:
+			Charge per capacitor:
 			\begin{equation*}
 				Q_k = C_k \cdot U_k, \quad Q_\mathrm{ges} = C_\mathrm{ges} \cdot U_0
 			\end{equation*}
 			
 			\visible<2->{
-				Gesamtladung $Q_\mathrm{ges}$:
+				Total load $Q_\mathrm{ges}$:
 				
 				\vspace*{-5pt}
 				
@@ -156,7 +156,7 @@
 				
 				\begin{tikzpicture}
 					\draw(0,0) to[short] (2,0)
-					to[C, i, v<, name=C1, l =$C_\mathrm{ges}$] (2,2)
+					to[C, i, v<, name=C1, l =$C_\mathrm{tot}$] (2,2)
 					to[short](2,2)
 					%to[C, i, v>, name=C2] (5,0)
 					to[short](0,2)
@@ -176,13 +176,13 @@
 			
 			
 			\visible<2->{
-				\begin{Merksatz}{}
+				\begin{Key point}{}
 					
 					\begin{equation*}
-						C_\mathrm{ges} = \sum_{k=1}^{n} C_k 
+						C_\mathrm{tot} = \sum_{k=1}^{n} C_k 
 					\end{equation*}
 					
-				\end{Merksatz}
+				\end{Key point}
 			}
 		\end{columns}
 		
@@ -301,20 +301,20 @@
 		The voltage $U_0$ in the equivalent circuit diagram can be calculated as follows:
 		
 		\begin{equation*}
-			U_0 = \frac{1}{C_\mathrm{ges}} \cdot Q
+			U_0 = \frac{1}{C_\mathrm{tot}} \cdot Q
 		\end{equation*}
 		
 		A comparison of ratios reveals:
 		
 		\begin{equation*}
-			\frac{1}{C_1} + \frac{1}{C_2} = \frac{1}{C_\mathrm{ges}}
+			\frac{1}{C_1} + \frac{1}{C_2} = \frac{1}{C_\mathrm{tot}}
 		\end{equation*}
 		
 		In general, the following applies to a series connection of any number of capacitors:
 		
 		\begin{Key point}{Total capacity of a series connection:}
 			\begin{equation}
-				\frac{1}{C_\mathrm{ges}} = \sum_{i = 1}^{n} \frac{1}{C_i}
+				\frac{1}{C_\mathrm{tot}} = \sum_{i = 1}^{n} \frac{1}{C_i}
 			\end{equation}
 		\end{Key point}
 		
@@ -323,7 +323,7 @@
 		parallel connection of resistors:\\
 		
 		\begin{equation*}
-			C_\mathrm{ges} = \frac{C_1 \cdot C_2}{C_1 + C_2}
+			C_\mathrm{tot} = \frac{C_1 \cdot C_2}{C_1 + C_2}
 		\end{equation*}
 
 		
@@ -332,18 +332,18 @@
 	
 	
 	\b{
-		\ftx{Reihenschaltung von Kapazitäten}
+		\ftx{Series connection of capacitances}
 		\begin{columns}
 			\column[t]{0.45\textwidth}
 			%\vspace*{-80pt}
 			
 			\vspace{-110pt}
 			
-			\textbf{Reihenschaltung}: alle Kondensatoren besitzen \textbf{gleiche Ladung} $Q$!\\
-			
+            \textbf{Series connection}: all capacitors have the \textbf{same charge} $Q$!\\
+
 			\vspace*{5pt}
 			
-			Kondensator-Grundgleichung:
+			Basic capacitor equation:
 			
 			\begin{equation*}
 				Q= C \cdot U
@@ -353,19 +353,19 @@
 				U_1 = \frac{Q}{C_1}, \quad U_2 = \frac{Q}{C_2}
 			\end{equation*}
 			
-			Reihenschaltung aus Kapazitäten:
+			Series connection of capacitances:
 			\vspace*{-10pt}
 			
 			\begin{equation*}
 				U_0 = U_1 + U_2 = \bigg( \frac{1}{C_1} + \frac{1}{C_2} \bigg) \cdot Q
 			\end{equation*}
 			
-			Ersatzschaltbild:
+			Equivalent circuit diagram:
 			
 			\vspace*{-10pt}
 			
 			\begin{equation*}
-				U_0 = \frac{1}{C_\mathrm{ges}} \cdot Q
+				U_0 = \frac{1}{C_\mathrm{tot}} \cdot Q
 			\end{equation*}
 			
 			\column[c]{0.55\textwidth}
@@ -386,7 +386,7 @@
 				
 				\draw(4.8,0) to[short, o-] (6,0)
 				to[short](6,0.5)
-				to[C, i, v<, name=Cges, l_ =$C_\mathrm{ges}$] (6,2.5)
+				to[C, i, v<, name=Cges, l_ =$C_\mathrm{tot}$] (6,2.5)
 				to[short](6,3)
 				to[short, -o](4.8,3);
 				
@@ -405,13 +405,13 @@
 			\end{tikzpicture} \\
 			
 			\vspace*{-10pt}
-			\begin{Merksatz}{}
+			\begin{Key point}{}
 				
 				\begin{equation*}
-					\frac{1}{C_\mathrm{ges}} = \sum_{k=1}^{n} \frac{1}{C_k}
+					\frac{1}{C_\mathrm{tot}} = \sum_{k=1}^{n} \frac{1}{C_k}
 				\end{equation*}
 				
-			\end{Merksatz}
+			\end{Key point}
 			
 		\end{columns}
 		
@@ -474,7 +474,7 @@
         at $C_\mathrm{total}$:
 		
 		\begin{equation*}
-			Q = C_\mathrm{ges} \cdot U_0 = \frac{C_1 \cdot C_2}{C_1 + C_2} \cdot U_0
+			Q = C_\mathrm{tot} \cdot U_0 = \frac{C_1 \cdot C_2}{C_1 + C_2} \cdot U_0
 		\end{equation*}
 		
 		Substituting, we obtain for $U_1$:
@@ -498,7 +498,7 @@
 	\b{
 	
 	
-		\ftx{Spannungsteiler an Kapazitäten}
+		\ftx{Voltage divider on capacitances}
 		\begin{columns}
 			\column[t]{0.45\textwidth}
 			\vspace*{-80pt}
@@ -507,31 +507,31 @@
 			
 			
 			\begin{equation*}
-				Q_1 = Q_2 = Q_\mathrm{ges} = Q
+				Q_1 = Q_2 = Q_\mathrm{tot} = Q
 			\end{equation*}
 			
 			\vspace*{-5pt}
 			
 			\begin{equation*}
-				C_\mathrm{ges} = \frac{C_1 \cdot C_2}{C_1 + C_2}
+				C_\mathrm{tot} = \frac{C_1 \cdot C_2}{C_1 + C_2}
 			\end{equation*}
 			
 			\vspace*{-10pt}
 			
 			\begin{equation*}
-				U_0= \frac{1}{C_\mathrm{ges}} \cdot Q \rightarrow Q = C_\mathrm{ges} \cdot U_0
+				U_0= \frac{1}{C_\mathrm{tot}} \cdot Q \rightarrow Q = C_\mathrm{tot} \cdot U_0
 			\end{equation*}
 			
 			\vspace*{-5pt}
 			
 			\begin{equation*}
-				U_1 = \frac{Q}{C_1} \rightarrow U_1 = \frac{C_\mathrm{ges}}{C_1} \cdot U_0
+				U_1 = \frac{Q}{C_1} \rightarrow U_1 = \frac{C_\mathrm{tot}}{C_1} \cdot U_0
 			\end{equation*}
 			
 			\vspace*{-5pt}
 			
 			\begin{equation*}
-				U_2 = \frac{Q}{C_2} \rightarrow U_2 = \frac{C_\mathrm{ges}}{C_2} \cdot U_0
+				U_2 = \frac{Q}{C_2} \rightarrow U_2 = \frac{C_\mathrm{tot}}{C_2} \cdot U_0
 			\end{equation*}
 			
 			
@@ -556,7 +556,7 @@
 				
 				\draw(4.8,0) to[short, o-] (6,0)
 				to[short](6,0.5)
-				to[C, i, v<, name=Cges, l_ =$C_\mathrm{ges}$] (6,2.5)
+				to[C, i, v<, name=Cges, l_ =$C_\mathrm{tot}$] (6,2.5)
 				to[short](6,3)
 				to[short, -o](4.8,3);
 				
@@ -582,11 +582,11 @@
 		
 		\vspace*{-15pt}
 		
-		\begin{Merksatz}{}
+		\begin{Key point}{}
 			\begin{equation*}
 				U_1 = \frac{C_2}{C_1 + C_2} \cdot U_0, \quad U_2 = \frac{C_1}{C_1 + C_2} \cdot U_0
 			\end{equation*}
-		\end{Merksatz}
+		\end{Key point}
 		\speech{folie30}{1}{Ähnlich wie beim Spannungsteiler an in zwei in Reihe geschalteten Widerständen lässt sich auch das Verhältnis der Teilspannung an zwei in Reihe geschalteten,
 			identisch geladenen Kondensatoren ermitteln. Wir wissen, dass sich C gesamt in der nebenstehenden Reihenschaltung zu 
 			C gesamt gleich C1 mal C2 geteilt durch C1 plus C2 ergibt.

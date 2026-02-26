@@ -1,8 +1,8 @@
 \subsection{Einsatz einer Diode zur Leistungsreduzierung\label{Aufg8}}
 % Alt: Aufgabe 8
 \Aufgabe{
-    In einer einfachen Schaltung wird eine Diode zur Leistungsreduktion eingesetzt. Der Widerstand $R_\mathrm{L} = 1\,\mathrm{k\Omega}$ stellt eine Heizlast dar. 
-    Die Netzspannung beträgt $230\,\mathrm{V}$ Effektivwert bei einer Frequenz von $50\,\mathrm{Hz}$.
+    In a simple circuit, a diode is used for power reduction. The resistor $R_\mathrm{L} = 1,\mathrm{k\Omega}$ represents a heating load.
+    The mains voltage is $230,\mathrm{V}$ RMS at a frequency of $50,\mathrm{Hz}$.
     
     \begin{figure}[H]
         \centering
@@ -11,8 +11,8 @@
     \end{figure}
     
     \begin{itemize}
-        \item[a)] Welche mittlere Leistung wird in $R_\mathrm{L}$ und in der Diode umgesetzt, wenn die Diode als idealer Gleichtrichter wirkt (d.h. nur eine Halbwelle durchlässt)?
-        \item[b)] Wie groß wäre die mittlere Leistung bei überbrückter Diode (volle Netzspannung an $R_\mathrm{L}$)?
+        \item[a)] What average power is dissipated in $R_\mathrm{L}$ and in the diode if the diode acts as an ideal rectifier (i.e., only one half-wave is conducted)?
+        \item[b)] What would be the average power if the diode were bypassed (full mains voltage applied to $R_\mathrm{L}$)?
     \end{itemize}
     
     %   \speech{ **Aufgabe 8**  
@@ -63,18 +63,19 @@
 \Loesung{
     \begin{itemize}
         \item[a)]
-        Bei einem idealen Ventil: Nach dem Erreichen der Flussspannung verhält sich die Diode wie ein perfekter Leiter ohne Widerstand. \\
-        Da nur eine Halbwelle der Wechselspannung durchgelassen wird, halbiert sich die Leistung im Lastwiderstand. Die Diode selbst setzt keine Leistung um:
+        
+        In an ideal valve: Once the forward voltage is reached, the diode behaves like a perfect conductor without resistance. \\
+        Since only one half-wave of the alternating voltage is passed through, the power in the load resistor is halved. The diode itself does not convert any power:
         \begin{align*}
             P_\mathrm{D} &= 0\,\mathrm{W}
         \end{align*}
-        Die mittlere Leistung im Lastwiderstand beträgt:
+        The average power in the load resistance is:
         \begin{align*}
             P_\mathrm{RL} &= \frac{1}{2} \cdot \frac{(U_\mathrm{eff})^2}{R_\mathrm{L}} = \frac{1}{2} \cdot \frac{(230\,\mathrm{V})^2}{1\,\mathrm{k\Omega}} = 26,45\,\mathrm{W}
         \end{align*}
     
         \item[b)]
-        Bei überbrückter Diode liegt die volle Wechselspannung am Lastwiderstand an:
+        When the diode is bridged, the full AC voltage is applied to the load resistor:
         \begin{align*}
             P_\mathrm{RL} &= \frac{U_\mathrm{eff}^2}{R_\mathrm{L}} = \frac{230\,\mathrm{V}^2}{1\,\mathrm{k\Omega}} = 52,9\,\mathrm{W}
         \end{align*}
@@ -106,7 +107,7 @@
 
 % Das bedeutet, dass die mittlere Leistung in beiden Fällen \( 52,9 \) Watt beträgt, unabhängig davon, ob die Diode vorhanden ist oder überbrückt wurde.
 % }
-Siehe: Abschnitt \ref{sec:Einweggleichrichter}
+See section: \ref{sec:Einweggleichrichter}
 }
 
 

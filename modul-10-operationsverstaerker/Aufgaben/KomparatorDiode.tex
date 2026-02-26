@@ -1,9 +1,9 @@
-\subsection{Dimensionierung einer Komparatorschaltung mit Diode\label{Aufg7}}
+\subsection{Dimensioning of a comparator circuit with diode\label{Aufg7}}
 % Alt: Aufgabe 7
 \Aufgabe{
-    Dimensionieren Sie die Beschaltung des Komparators so, dass das unten skizzierte Übertragungsverhalten entsteht.
-    Die Durchlassspannung der Diode wird mit $U_\mathrm{D} = \mathrm{0,7\,V}$ angenommen. 
-    Die maximale Verlustleistung des Widerstandes beträgt 1/4\,W.
+    Dimension the circuitry of the comparator so that the transfer behaviour outlined below is achieved.
+    The forward voltage of the diode is assumed to be $U_\mathrm{D} = \mathrm{0,7\,V}$.
+    The maximum power dissipation of the resistor is 1/4\,W.
 \begin{figure}[H]
     \centering
     % Linkes Bild
@@ -47,21 +47,21 @@
 
 
 \Loesung{
-    \textbf{Formel:}
+    \textbf{Formula:}
     \begin{equation}
         P_\mathrm{R} = \frac{U_\mathrm{R}^2}{R}
     \end{equation}
 
-    \textbf{Berechnung:}
+    \textbf{Calculation:}
 
-    Spannung am Widerstand $R$:
+    Voltage across the resistor $R$:
     \begin{align*}
         U_\mathrm{R} &= U_\mathrm{a} - U_\mathrm{D} \\
         &= 14\,\mathrm{V} - 0,7\,\mathrm{V} \\
         &= 13,3\,\mathrm{V}
     \end{align*}
 
-    Berechnung des Widerstands $R$:
+    Calculation of resistance $R$:
     \begin{align*}
         P_\mathrm{R} &= \frac{U_\mathrm{R}^2}{R} \leq \frac{1}{4}\,\mathrm{W} \\
         R &= \frac{U_R^2}{P_{\text{max}}} \\
@@ -70,21 +70,21 @@
         &= 707,56\,\Omega
     \end{align*}
 
-    Normierter Widerstandswert:
+    Formed resistance value:
     \begin{align*}
         R &= 710\,\Omega
     \end{align*}
 
-    Überprüfung der Verlustleistung:
+    Checking the power loss:
     \begin{align*}
         P_\mathrm{R} &= \frac{(13,3\,\mathrm{V})^2}{710\,\Omega} \approx 0,25\,\mathrm{W}
     \end{align*}
 
-    Der Widerstand $R$ sollte den Wert:
+    The resistance $R$ should have the value:
     \begin{align*}
         R &= 710\,\Omega
     \end{align*}
-    haben, um die maximale Verlustleistung nicht zu überschreiten und das gewünschte Übertragungsverhalten zu gewährleisten.
+    In order not to exceed the maximum power dissipation and to ensure the desired transmission behaviour.
 %    \speech{
 %        Berechnung des Widerstands zur Einhaltung der maximalen Verlustleistung  
 %        
@@ -119,6 +119,6 @@
 %        Das Ergebnis zeigt, dass ein Widerstand von 710 Ohm verwendet werden sollte,  
 %        um die maximale Verlustleistung nicht zu überschreiten und das gewünschte Übertragungsverhalten zu gewährleisten.  
 %        }
-Siehe: Abschnitt \ref{fig: Verschaltung Verstaerker} und Tabelle \ref{tab:Grundschaltungen}
+See section: \ref{fig: Verschaltung Verstaerker} and Table \ref{tab:Grundschaltungen}
 
     }

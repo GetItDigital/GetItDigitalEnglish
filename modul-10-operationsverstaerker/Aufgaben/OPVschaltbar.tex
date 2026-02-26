@@ -1,11 +1,11 @@
-\subsection{Verstärkungseinstellung mit schaltbaren Widerständen\label{Aufg13}}
+\subsection{Gain adjustment with switchable resistors\label{Aufg13}}
 % Alt: Aufgabe 13
 \Aufgabe{
-    Um die Verstärkung eines OPs einzustellen, können mithilfe von Schaltern verschiedene 
-    Widerstände am OP zu- und abgeschaltet werden. Berechnen Sie die untenstehenden OP-Schaltungen 
-    in Abhängigkeit der Schalterstellungen S!
+    To adjust the amplification of an operational amplifier, switches can be used to turn various 
+    resistors on and off. Calculate the operational amplifier circuits below 
+    depending on the switch positions S!
     \begin{itemize}
-        \item[ \bf a)] Für die Schaltung in Abbildung 1 (4 Schalterstellungen)
+        \item[ \bf a)] For the circuit in Figure 1 (4 switch positions)
     \end{itemize}
 
     \begin{figure}[H]
@@ -15,7 +15,7 @@
     \end{figure}
 
     \begin{itemize}
-        \item[ \bf b)] Für die Schaltung in Abbildung 2 (2 Schalterstellungen)
+        \item[ \bf b)] For the circuit in Figure 2 (2 switch positions)
     \end{itemize}
 
     \begin{figure}[H]
@@ -90,47 +90,47 @@
 
 \Loesung{
     \begin{itemize}
-        \item[a)] Nicht-invertierender Verstärker
-        
-        Die Verstärkung lässt sich durch zwei Schalter (S1 und S2) verändern. Dadurch ergeben sich insgesamt vier mögliche Kombinationen:
+        \item[a)] Non-inverting amplifier  
+        The gain can be changed using two switches (S1 and S2), resulting in four possible combinations:
 
-        \textbf{1. Fall (S1 geschlossen, S2 offen):}  
-        In diesem Zustand bilden die Widerstände $R_\mathrm{n1}$ und $R_\mathrm{n2}$ eine Serienschaltung. Die Gesamtverstärkung ergibt sich somit zu:
+        \textbf{Case 1 (S1 closed, S2 open):}  
+        In this state, resistors $R_\mathrm{n1}$ and $R_\mathrm{n2}$ form a series connection. The total gain is therefore:  
         \[
         V = 1 + \frac{R_\mathrm{f}}{R_\mathrm{n1} + R_\mathrm{n2}}
         \]
 
-        \textbf{2. Fall (S1 offen, S2 geschlossen):}  
-        In diesem Fall sind der Widerstand $R_\mathrm{f}$ und $R_\mathrm{n1}$ seriell geschaltet. Diese Serienschaltung bildet zusammen mit dem Widerstand $R_\mathrm{n2}$ die Rückkopplungsschleife. Die Verstärkung ist daher:
+        \textbf{Case 2 (S1 open, S2 closed):}  
+        Here, resistor $R_\mathrm{f}$ and $R_\mathrm{n1}$ are in series. This series combination, together with resistor $R_\mathrm{n2}$, forms the feedback loop. The gain is therefore:  
         \[
         V = 1 + \frac{R_\mathrm{f} + R_\mathrm{n1}}{R_\mathrm{n2}}
         \]
 
-        \textbf{3. Fall (S1 und S2 geschlossen):}  
-        Mit beiden Schaltern geschlossen wird der Widerstand $R_\mathrm{n1}$ überbrückt und somit nicht berücksichtigt. Die Verstärkung ergibt sich durch:
+        \textbf{Case 3 (S1 and S2 closed):}  
+        With both switches closed, resistor $R_\mathrm{n1}$ is shorted and thus not considered. The gain is:  
         \[
         V = 1 + \frac{R_\mathrm{f}}{R_\mathrm{n2}}
         \]
 
-        \textbf{4. Fall (S1 und S2 offen):}  
-        Wenn beide Schalter offen sind, fehlt der Rückkopplungspfad vollständig, womit die Verstärkung theoretisch unendlich groß ist:
+        \textbf{Case 4 (S1 and S2 open):}  
+        If both switches are open, the feedback path is missing completely, so the gain is theoretically infinite:  
         \[
         V = \infty
         \]
 
-        \item[b)] Invertierender Verstärker
-        \textbf{1. Zustand (S1 offen):}  
-        Sind $R_\mathrm{f1}$ und $R_\mathrm{f2}$ seriell geschaltet, ergibt sich eine größere Rückkopplung und somit eine höhere Verstärkung. Die Verstärkung errechnet sich wie folgt:
+        \item[b)] Inverting amplifier  
+        \textbf{Case 1 (S1 open):}  
+        If $R_\mathrm{f1}$ and $R_\mathrm{f2}$ are in series, this results in more feedback and thus higher gain. The gain is calculated as:  
         \[
         V = -\frac{R_\mathrm{f1} + R_\mathrm{f2}}{R_\mathrm{n}}
         \]
 
-        \textbf{2. Zustand (S1 geschlossen, S2 offen):}  
-        In diesem Zustand wird der Widerstand $R_\mathrm{f2}$ durch den geschlossenen Schalter kurzgeschlossen und nicht berücksichtigt. Die Verstärkung reduziert sich damit auf:
+        \textbf{Case 2 (S1 closed, S2 open):}  
+        In this state, resistor $R_\mathrm{f2}$ is shorted by the closed switch and not considered. The gain is reduced to:  
         \[
         V = -\frac{R_\mathrm{f1}}{R_\mathrm{n}}
         \]
     \end{itemize}
+
 
  %   \speech{
 %        Lösung für Aufgabe 13.
@@ -161,5 +161,5 @@
 %        
 %        Durch das Ein- und Ausschalten der Schalter kann die Verstärkung der Schaltungen verändert werden, um verschiedene Verstärkungswerte zu erreichen. Die nicht-invertierende Schaltung bietet vier verschiedene Verstärkungen, während die invertierende Schaltung zwei mögliche Verstärkungswerte hat.
 %        }
-Siehe: Abschnitt \ref{fig: Verschaltung Verstaerker} und Tabelle \ref{tab:Grundschaltungen}
+See section: \ref{fig: Verschaltung Verstaerker} and Table \ref{tab:Grundschaltungen}
 }

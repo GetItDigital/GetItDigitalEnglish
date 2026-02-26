@@ -1,13 +1,13 @@
 \begin{frame}
-    \fta{Stabilität von Verstärkerschaltungen}
+    \fta{Stability of amplifier circuits}
     \s{
-    Durch die Rückführung des Ausgangssignals auf das Eingangssignal ergibt sich ein Regelkreis. Dieser Regelkreis ist allerdings nicht immer stabil, d.h. die Rückführung führt nicht dazu, dass die Ausgangsgröße sich nur so lange ändert, wie am Eingang auch eine Differenzspannung vorliegt\footnote{Dies ist eine Vereinfachung. In der Regelungstechnik wird zwischen Lyapunov-Stabilität und BIBO-Stabilität unterschieden (siehe hierzu z.B. \glqq Regelungstechnik\grqq{} von Otto Föllinger)}.
-    Dies wird deutlich, wenn das Ausgangssignal auf den nicht-invertierenden anstatt den invertierenden Eingang zurückgeführt wird. Wird nun eine Spannungssdifferenz an den Eingang angelegt und am Ausgang verstärkt ausgegeben, so führt diese Ausgangsspannung zu einer erneuten Erhöhung der Spannungsdifferenz am Eingang. 
-    Das System ist also nicht stabil. Ein ähnliches Phänomen kann beobachtet werden, wenn in der Verstärkerschaltung Energiespeicher (Kondensatoren oder Spulen) verwendet werden. Eine solche Schaltung weißt immer eine Stabilitätsgrenze auf, die dann erreicht wird, wenn das auf den invertierenden Eingang rückgekoppelte Signal, eine Phasenverschiebung von 180$^{\circ}$ aufweist.
-    In diesem Fall wird die Gegenkopplung zur Mitkopplung und die Schaltung wird instabil. 
-    Das ist aber nicht die einzige Möglichkeit, wie eine Schaltung instabil werden kann. Auch kann die Schaltung ins Schwingen geraten, wenn die Energiespeicher nicht richtig dimensioniert werden. Aus diesem Grund sind Stabilitätsanalysen der entworfenen Schaltungen unerlässlich. 
+    Feedback of the output signal to the input signal results in a control loop. However, this control loop is not always stable, i.e. feedback does not mean that the output variable only changes as long as there is a differential voltage at the input\footnote {This is a simplification. In control engineering, a distinction is made between Lyapunov stability and BIBO stability (see, for example, \glqq Control Engineering\grqq{} by Otto Föllinger)}.
+    This becomes clear when the output signal is fed back to the non-inverting input instead of the inverting input. If a voltage difference is now applied to the input and amplified at the output, this output voltage leads to a renewed increase in the voltage difference at the input. 
+    The system is therefore not stable. A similar phenomenon can be observed when energy storage devices (capacitors or coils) are used in the amplifier circuit. Such a circuit always has a stability limit, which is reached when the signal fed back to the inverting input has a phase shift of 180$^{\circ}$.
+    In this case, the negative feedback becomes positive feedback and the circuit becomes unstable.
+    However, this is not the only way in which a circuit can become unstable. The circuit can also start to oscillate if the energy storage devices are not correctly dimensioned. For this reason, stability analyses of the designed circuits are essential. 
     
-    Es sollen im Rahmen dieses Kapitels folgende Kompetenzen erworben werden:
+    The following skills are to be acquired in this chapter:
 
 
 %\speech{1}{
@@ -20,14 +20,14 @@
 %    Es sollen im Rahmen dieses Kapitels folgende Kompetenzen erworben werden:
 %}
     \s{
-        \begin{Lernziele}{Operationsverstärker}
+        \begin{Learning objectives}{Operational amplifier}
             \title{Lernziele: Stabilität von Verstärkerschaltungen}
-            Die Studierenden können
+            The students can
             \begin{itemize}
-                \item Stabilitätsanalysen durchführen und Ergebnisse der Analyse beurteilen.
-                \item Bauteile in OPV-Schaltungen dem Stabilitätskriterien entsprechend dimensionieren.
+                \item Perform stability analyses and evaluate the results of the analysis.
+                \item Dimension components in OPV circuits according to stability criteria.
             \end{itemize}
-        \end{Lernziele}
+        \end{Learning objectives}
     }
     
 
@@ -35,9 +35,9 @@
 %    Lernziele
 %    Die Studierenden können Stabilitätsanalysen durchführen und Ergebnisse der Analyse beurteilen. Sie können Bauteile in OPV-Schaltungen dem Stabilitätskriterien entsprechend dimensionieren.
 %}
-    Einige der Stabilitätskriterien, die zur Stabilitätsbewertung herangezogen werden sind im Folgenden beschrieben.
-    Die Bewertung der Stabilität von Operationsverstärkerschaltungen ist eine wichtige Fähigkeit für Studierende der Elektrotechnik, egal ob die Schaltungen von Grund auf entworfen oder Fehler in bestehenden Schaltungen behoben werden sollen. 
-    Diese Bewertung stellt sicher, dass Operationsverstärkerschaltungen zuverlässig und effektiv arbeiten, was für ihre Integration in verschiedene elektronische Systeme unerlässlich ist. Im Folgenden wird erläutert, welche Methoden zur Bewertung der Stabilität verwendet werden.
+    Some of the stability criteria used for stability assessment are described below.
+    Assessing the stability of operational amplifier circuits is an important skill for electrical engineering students, whether they are designing circuits from scratch or troubleshooting existing circuits. 
+    This assessment ensures that operational amplifier circuits work reliably and effectively, which is essential for their integration into various electronic systems. The methods used to assess stability are explained below.
 
    %\speech{1}{
    % Einige der Stabilitätskriterien, die zur Stabilitätsbewertung herangezogen werden sind im Folgenden beschrieben.
@@ -46,31 +46,35 @@
    % Im Folgenden wird erläutert, welche Methoden zur Bewertung der Stabilität verwendet werden.
    % }
    } 
-	\b{\frametitle{Stabilität des Operationsverstärker-Regelkreis}
-    Durch die Rückführung des Ausgangssignal ergibt sich ein Regelkreis. Dieser muss auf Stabilität überprüft werden. Dazu werden 3 Methoden vorgstellt:
+	\b{\frametitle{Stability of the operational amplifier control loop}
+    The feedback of the output signal results in a control loop. This must be checked for stability. Three methods are presented for this purpose:
     \begin{itemize}
-    \item Die Frequengangzanalyse auf Grundlage des Bodediagramms
-    \item Die Untersuchung der Übertragungsfunktion auf ihre Pollagen
-    \item Die Analyse des Einschwingverhaltens
+    \item Frequency response analysis based on the Bode diagram
+    \item Examination of the transfer function for its pole locations
+    \item Analysis of the transient response
     \end{itemize}}
 \end{frame}
 
 %Frequenzganganalyse
 \begin{frame}
-    \frametitle{Frequenzgangsanalyse (experimentell/simulativ)}
+    \renewcommand{\figurename}{Figure}
+    \frametitle{Frequency response analysis (experimental/simulative)}
     \s{
-    Eine grundlegende Technik ist die Frequenzganganalyse. 
-    Bei diesem Verfahren wird untersucht, wie sich die Verstärkung und die Phase einer Operationsverstärkerschaltung ändern, wenn die Frequenz des Eingangssignals variiert. Werkzeuge wie Bodediagramme werden häufig zur Visualisierung dieser Reaktion eingesetzt und helfen bei der Identifizierung potenzieller Stabilitätsprobleme wie Verstärkungsspitzen oder Phasenverschiebungen, die zu Instabilität führen könnten.
-    Ein wichtiges Kriterium bildet hier die Phasenreserve. Die Bestimmung dieser Größe ist ein quantitativer Ansatz zur Stabilitätsbewertung. Sie hilft bei der Messung der Stabilitätsspanne innerhalb eines Rückkopplungssystems, indem sie die Phasendifferenz zwischen der tatsächlichen Phasenverschiebung bei der Durchtrittsfrequenz (also 0 dB) und 180$^{\circ}$ betrachtet. Dieser Punkt wird als \glqq kritischer Punkt\grqq{} bezeichnet, da bei einer Phasenverschiebung über 180$^{\circ}$ und einer Verstärkung über 0 dB, die Rückkopplung zur Mitkopplung wird. 
-    Wenn die Phasendifferenz einen bestimmten Schwellenwert überschreitet, in der Regel etwa 45$^{\circ}$, wird davon ausgegangen, dass das System weit genug von der Stabilitätsgrenze entferent ist.
-    Diese Analyse findet normalerweise graphisch auf Grundlage des Bodediagramms statt. 
+    A fundamental technique is frequency response analysis.
+    This method examines how the gain and phase of an operational amplifier circuit change when the frequency of the input signal varies. Tools such as Bode diagrams are often 
+    used to visualise this response and help identify potential stability issues such as gain spikes or phase shifts that could lead to instability.
+    An important criterion here is phase margin. Determining this quantity is a quantitative approach to stability assessment. It helps measure the stability margin within a 
+    feedback system by considering the phase difference between the actual phase shift at the passband frequency (i.e., 0 dB) and 180$^{\circ}$. This point is referred to as the \glqq critical point\grqq{} 
+    because, with a phase shift greater than 180$^{\circ}$ and a gain greater than 0 dB, the feedback becomes positive feedback. 
+    If the phase difference exceeds a certain threshold value, typically around 45$^{\circ}$, it is assumed that the system is far enough away from the stability limit.
+    This analysis is usually performed graphically based on the Bode diagram.
     }
         \begin{center}
-        \b{Bei dieser Methode wird das Bodediagramm im relevanten Frequenzbereich betrachtet.} 
-        \f{width=\textwidth}{width=0.9\textwidth}{Bilder/kap4/Amplitudengang Regelkreis und Phasengang.pdf}{Bestimmung der Phasenreserve auf Grundlage des Bodediagramms} 
+        \b{With this method, the Bode diagram is examined in the relevant frequency range.} 
+        \f{width=\textwidth}{width=0.9\textwidth}{Bilder/kap4/Amplitudengang Regelkreis und Phasengang.pdf}{Determination of phase reserve based on the Bode diagram} 
         \label{fig:Frequenzganganalyse}
     \end{center}
-    \b{Auf dieser Grundlage wird die Phasenlage am 0 dB-Durchtrittspunkt der Amplitude bestimmt. Besteht ein geringer Abstand zu -180° ist das System instabil.}  %Inspiration: https://www.google.com/search?client=firefox-b-d&sca_esv=07fc2a91d39bc3b9&sca_upv=1&sxsrf=ADLYWIJlgSTFsuVgmDjND0631smrCLZH5g:1720507056816&q=phasenreserve&udm=2&fbs=AEQNm0A6bwEop21ehxKWq5cj-cHa02QUie7apaStVTrDAEoT1A_pRBhSGXWPGL0_xk71SHFUmHSJWGPXoD9Kj5_rnHbWMOqF2geje-KRnle5TYvzlu3NqubtU_abXJaIrzdDTfJXR1IEap8k1YruTZC6a9-SgzP6gSnzb0vwoljHMAsMGnOtcGrx634vR4spXb0931ZlkiFj&sa=X&ved=2ahUKEwjcztGfrJmHAxUygP0HHerJD6MQtKgLegQIDRAB&biw=1536&bih=835&dpr=1.25#vhid=kWaDK2aKHZdoUM&vssid=mosaic         
+    \b{On this basis, the phase position at the 0 dB pass point of the amplitude is determined. If there is a small distance to -180°, the system is unstable.}  %Inspiration: https://www.google.com/search?client=firefox-b-d&sca_esv=07fc2a91d39bc3b9&sca_upv=1&sxsrf=ADLYWIJlgSTFsuVgmDjND0631smrCLZH5g:1720507056816&q=phasenreserve&udm=2&fbs=AEQNm0A6bwEop21ehxKWq5cj-cHa02QUie7apaStVTrDAEoT1A_pRBhSGXWPGL0_xk71SHFUmHSJWGPXoD9Kj5_rnHbWMOqF2geje-KRnle5TYvzlu3NqubtU_abXJaIrzdDTfJXR1IEap8k1YruTZC6a9-SgzP6gSnzb0vwoljHMAsMGnOtcGrx634vR4spXb0931ZlkiFj&sa=X&ved=2ahUKEwjcztGfrJmHAxUygP0HHerJD6MQtKgLegQIDRAB&biw=1536&bih=835&dpr=1.25#vhid=kWaDK2aKHZdoUM&vssid=mosaic         
     
 \end{frame}
 
@@ -103,14 +107,14 @@
 
 %Analyse der Übertragungsfunktion
 \begin{frame}
-    \frametitle{Analyse der Übertragungsfunktion (analytisch)}
+    \renewcommand{\figurename}{Figure}
+    \frametitle{Analysis of the transfer function (analytical)}
     \s{
     \par
-    Liegt die Übertragungsfunktion der Operationsverstärkerschaltung vor, kann auch direkt eine Stabilitätsanalyse durchgeführt werden. Dazu werden die Pole der Übertragungsfunktion (z.B. im Laplacebereich) analysiert. Liegen diese in der linken s-Halbebene (also sind alle Pole negativ), weißt die Schaltung ein stabiles Übertragungsverhalten auf.
-    Bei diesem Ansatz sowie bei der Frequnzanalyse (sofern das Bodediagramm nicht experimentell ermittelt wurde) muss beachtet werden, dass die Übertragungsfunktion meist nur für einen bestimmten Frequenzbereich gültig ist, da z.B. die Dynamik des Operationsverstärkers bei diesen Methoden in der Regel nicht berücksichtigt wird.
-    \begin{center}
+    If the transfer function of the operational amplifier circuit is available, a stability analysis can also be performed directly. To do this, the poles of the transfer function (e.g. in the Laplace domain) are analysed. If these are in the left s-half-plane (i.e. all poles are negative), the circuit has stable transfer behaviour.
+    With this approach, as well as with frequency analysis (unless the Bode diagram has been determined experimentally), it must be noted that the transfer function is usually only valid for a certain frequency range, since, for example, the dynamics of the operational amplifier are not usually taken into account in these methods.    \begin{center}
         %\input{Bilder/kap4/Filter.png}
-        \f{width=0.8\textwidth}{width=0.8\textwidth}{Bilder/kap4/Polstellenneu.pdf}{Systemantworten bei verschiedenen Pollagen }
+        \f{width=0.8\textwidth}{width=0.8\textwidth}{Bilder/kap4/Polstellenneu.pdf}{System responses at different poll positions }
         \label{fig:Analyse des Schwingungsverhaltens}             
     \end{center}
     }
@@ -161,28 +165,28 @@
 
 %Analyse der Einschwingverhaltens
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     \pagebreak
-    \frametitle{Analyse des Einschwingverhaltens (experimentell/simulativ)}
+    \frametitle{Analysis of transient behaviour (experimental/simulation)}
     \s{
     \par
-    Eine weitere wichtige Methode ist die Analyse des Einschwingverhaltens. Bei dieser Methode wird ein Spannungssprung auf die Verstärkerschaltung gegeben um zu untersuchen, wie eine Operationsverstärkerschaltung auf plötzliche Änderungen der Eingangssignale reagiert. Durch Beobachtung der Reaktion des Schaltkreises kann so eine Aussage getroffen werden, ob das System zur Instabilität neigt. In der Realität ist dieser Test sehr vorsichtig durchzuführen, da bei 
-    bei einer instabilen Schaltung schnell Bauteile zerstört werden können. Aus diesem Grund wird ein solcher Test heutzutage häufig rein simulativ durchgeführt. Als Faustregel lässt sich hier sagen: Wenn die Schaltung nach einer Anregung durch einen Einheitssprung gegen einen festen Wert strebt und keine Dauerschwingung ausführt, kann das Einschwingverhalten als stabil angenommen werden.
-    }
+    Another important method is the analysis of transient behaviour. In this method, a voltage jump is applied to the amplifier circuit to examine how an operational amplifier circuit reacts to sudden changes in the input signals. By observing the reaction of the circuit, it is possible to determine whether the system is prone to instability. In reality, this test must be carried out very carefully, as 
+    components can quickly be destroyed in an unstable circuit. For this reason, such tests are now often carried out purely as simulations. As a rule of thumb, if the circuit tends towards a fixed value after excitation by a unit step and does not oscillate continuously, the transient behaviour can be assumed to be stable.    }
 
-    \b{Bei dieser Methode wird die Schaltung mit einem Eingangssignal angeregt und das Ausgangsverhalten beobachtet.} 
+    \b{In this method, the circuit is stimulated with an input signal and the output behaviour is observed.} 
         \begin{center}
         %\input{Bilder/kap4/Filter.png}
-        \f{width=0.8\textwidth}{width=0.8\textwidth}{Bilder/kap4/ubertragunsverhalten-Einschwingverhalten.pdf}{Stabiles und instabiles Einschwingverhalten} %https://link.springer.com/chapter/10.1007/978-3-662-64375-4_52  
+        \f{width=0.8\textwidth}{width=0.8\textwidth}{Bilder/kap4/ubertragunsverhalten-Einschwingverhalten.pdf}{Stable and unstable transient behaviour} %https://link.springer.com/chapter/10.1007/978-3-662-64375-4_52  
         \label{fig:Einschwingverhalten}             
     \end{center}
     \s{
-        Wie dargestellt wurde, ist die Stabilitätsanalyse ein komplexes Thema und soll hier nur angeschnitten werden. An dieser Stelle wird kein Wert auf Vollständigkeit gelegt. 
-        Die genannten Analysemethoden sind Teil der Regelungstechnik und in der einschlägigen Literatur nachzulesen.
+        As explained, stability analysis is a complex topic and will only be touched upon here. No claim is made to completeness at this point.
+        The analysis methods mentioned are part of control engineering and can be found in the relevant literature.
 
-        \begin{Merksatz}{}
-            Durch die Rückführung des Ausgangssignal auf den Eingang ergibt sich ein Regelkreis.
-            Die Stabilität dieses Regelkreises muss simulativ, experimentell oder analytisch überprüft werden. 
-        \end{Merksatz}
+        \begin{Key point}{}
+            Feedback of the output signal to the input results in a control loop.
+            The stability of this control loop must be verified by simulation, experiment or analysis.
+        \end{Key point}
     }
 \end{frame}
 

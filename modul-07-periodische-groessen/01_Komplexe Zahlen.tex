@@ -72,7 +72,7 @@
 
 
 \begin{frame}
-    \ftx{Darstellung von komplexen Zahlen}
+    \ftx{Representation of complex numbers}
 
     \s{
         A complex number \underline{Z} describes a location in the complex plane. To uniquely define a location in a two-dimensional
@@ -83,7 +83,7 @@
     }
 
     \b{
-        Kartesische Koordinaten mit dem Realteil und dem Podukt aus imaginärer Einheit und Imaginärteil:
+        Cartesian coordinates with the real part and the product of the imaginary unit and the imaginary part:
     }
 
     \begin{eq}
@@ -92,7 +92,7 @@
 
     \onslide<2->{
     \b{
-        Der Realteil wird mit $\Re$ und der Imaginärteil mit $\Im$ abgekürzt:
+        The real part is abbreviated with $\Re$ and the imaginary part with $\Im$:
     }
 
     \begin{eq}
@@ -108,7 +108,7 @@
 
 \begin{frame}
     \renewcommand{\figurename}{Figure}
-    \ftx{Darstellung von komplexen Zahlen}
+    \ftx{Representation of complex numbers}
 
     \s{
         In the complex plane, the real part is plotted on the abscissa and the imaginary part on the ordinate. 
@@ -123,11 +123,11 @@
     }
 
     \b{
-        Verwendung der komplexenen Ebene:
+        Use of the complex layer:
         \begin{itemize}
-            \item<1-> Der Realteil $\Re$ wird auf der vertikalen und der Imaginärteil $\Im$ auf der horizontalen Achse aufgetragen
-            \item<2-> Kartesische Koordinaten: $\Re(\underline{Z}) + \mathrm{j} \cdot \Im(\underline{Z})$
-            \item<3-> Polar-Koordinaten: $|\underline{Z}| \cdot e^{j \cdot \varphi_\mathrm{Z}}  $
+            \item<1-> The real part $\Re$ is plotted on the vertical axis and the imaginary part $\Im$ on the horizontal axis.
+            \item<2-> Cartesian coordinates: $\Re(\underline{Z}) + \mathrm{j} \cdot \Im(\underline{Z})$
+            \item<3-> Polar coordinates: $|\underline{Z}| \cdot e^{j \cdot \varphi_\mathrm{Z}}  $
         \end{itemize}
     }
 
@@ -146,7 +146,7 @@
 
 
 \begin{frame}
-    \ftx{Koordinatentransformation}
+    \ftx{Coordinate transformation}
 
     \s{
         The two forms of representation can be transformed into each other. Euler's formula is helpful here.
@@ -178,15 +178,15 @@
 
     \b{
         \begin{itemize}
-            \item Euler'sche Formel: 
+            \item Euler's formula: 
             \begin{eq}
                 \mathrm{e}^{\mathrm{j} \cdot \chi} = \cos(\chi) + \mathrm{j} \cdot \sin(\chi)  
             \end{eq}
-            \item Kartesische Koordianten:
+            \item Cartesian coordinates:
             \begin{eq}
                 \underline{Z} = |\underline{Z}| \cdot \cos(\varphi) + \mathrm{j} \cdot |\underline{Z}| \cdot \sin(\varphi) = \Re(\underline{Z}) + \mathrm{j} \cdot \Im(\underline{Z}) 
             \end{eq}
-            \item Polar-Koordinaten:
+            \item Polar coordinates:
             \begin{eq}
                 \underline{Z} = \sqrt{(\Re(\underline{Z}))^2+(\Im(\underline{Z}))^2} \cdot \mathrm{e}^{\mathrm{j} \cdot \arctan(\frac{\Im(\underline{Z})}{\Re(\underline{Z})}) } = |\underline{Z}| \cdot e^{j \cdot \varphi} 
             \end{eq}
@@ -201,7 +201,7 @@
 
 
 \begin{frame}
-    \ftx{Darstellungsformen komplexer Zahlen}
+    \ftx{Representations of complex numbers}
 
     \begin{Key point}{Representations of complex numbers}
         Cartesian representation:
@@ -224,7 +224,7 @@
 \end{frame}
 
 \begin{frame}
-    \ftx{Grundrechenarten und Operationen}
+    \ftx{Basic arithmetic and operations}
 
     \s{
         Conjugation is one of the operations on complex numbers. When conjugating a complex number, the 
@@ -232,7 +232,7 @@
     }
 
     \b{
-        Konjugation:
+        Conjugation:
     }
 
     \begin{eq}
@@ -247,7 +247,7 @@
 
     \onslide<2->{
     \b{
-        Betrag und Betragsquadtrat
+        Amount and amount squared
     }
 
     \begin{eq}
@@ -261,14 +261,14 @@
 \end{frame}
 
 \begin{frame}
-    \ftx{Grundrechenarten und Operationen}
+    \ftx{Basic arithmetic and operations}
     \s{
         When adding and subtracting complex numbers, it is advisable to first convert them into Cartesian coordinates. 
         This allows the real part and the imaginary part of the complex number
         to be calculated separately.
     }
     \b{
-        Addition und Subtraktion:
+        Addition and subtraction:
     }
     \begin{eqa}
         \underline{Z}_1+\underline{Z}_2 = \Re(\underline{Z}_1) + \Re(\underline{Z}_2) +j \cdot (\Im(\underline{Z}_1) + \Im(\underline{Z}_2)) \\
@@ -283,7 +283,7 @@
 
     \onslide<2->{
     \b{
-        Multiplikation und Division:
+        Multiplication and division:
     }
 
     \begin{eq}
@@ -303,7 +303,7 @@
 
 
 \begin{frame}
-    \ftx{Grundrechenarten komplexer Zahlen}
+    \ftx{Basic arithmetic operations with complex numbers}
 
     \begin{Key point}{Basic arithmetic operations with complex numbers}
         For {\bf addition and subtraction}, the {\bf Cartesian representation} is generally used for complex numbers.
@@ -316,13 +316,13 @@
 
 
 \begin{frame}
-    \ftx{Grundrechenarten und Operationen}
+    \ftx{Basic arithmetic and operations}
     \s{
         Since the division is initially only defined for real numbers other than zero, the complex number in the denominator is extended so that 
         it becomes real.
     }
     \b{
-        Division durch konjugiert komplexe Erweiterung:
+        Division by conjugate complex extension:
     }
     \begin{eq}
         \frac{\underline{Z}_1}{\underline{Z}_2} = \frac{\underline{Z}_1}{\underline{Z}_2} \cdot \frac{\underline{Z}_2^*}{\underline{Z}_2^*} = \frac{\underline{Z}_1 \cdot \underline{Z}_2^*}{|\underline{Z}_2|^*} 
@@ -335,7 +335,7 @@
 
     \onslide<2->{
     \b{
-        Realteil und Imaginärteil berechnen:
+        Calculate the real part and imaginary part:
     }
     \begin{eq}
         \Re(\underline{Z}) = \frac{\underline{Z}+\underline{Z}^*}{2} \label{GleichungRealteil}
@@ -367,11 +367,11 @@
     }
 
     \b{
-        Rechenoperationen im Zeigerdiagramm - Addition:
+        Arithmetic operations in the pointer diagram - Addition:
 
         \begin{itemize}
-            \item[1.] <2-> Parallelverschiebung $Z_\mathrm{2}$ an die Spitze von $Z_\mathrm{1}$
-            \item[2.] <3-> Realteil und Imaginärteil ablesen
+            \item[1.] <2-> Parallel translation $Z_\mathrm{2}$ to the tip of $Z_\mathrm{1}$
+            \item[2.] <3-> Read off the real part and imaginary part
         \end{itemize}
     }
 
@@ -389,7 +389,7 @@
 
 
 \begin{frame}
-    \ftx{Zeigerdiagramme - Subtraktion}
+    \ftx{Pointer diagrams - Subtraction}
 
     \s{
         The graphical solution for subtracting complex numbers is similar to that for addition.
@@ -400,12 +400,12 @@
     }
 
     \b{
-        Rechenoperationen im Zeigerdiagramm - Subtraktion:
+        Arithmetic operations in the pointer diagram - Subtraction:
 
         \begin{itemize}
-            \item[1.] <1-> Zeigerumkehr bei Negation
-            \item[2.] <2-> Zeiger $Z_\mathrm{1}$ verschieben: Fußpunkt von $Z_\mathrm{1}$ zur Spitze von $Z_\mathrm{2}$
-            \item[3.] <3-> Realteil und Imaginärteil ablesen
+            \item[1.] <1-> Pointer reversal for negation
+            \item[2.] <2-> Move pointer $Z_\mathrm{1}$: Base point of $Z_\mathrm{1}$ to tip of $Z_\mathrm{2}$
+            \item[3.] <3-> Read off the real part and imaginary part
         \end{itemize}
     }
 
@@ -424,7 +424,7 @@
 
   
 \begin{frame}
-    \ftx{Zeigerdiagramme - Multiplikation}
+    \ftx{Pointer diagrams - Multiplication}
 
     \s{
         The complex numbers $\underline{Z}_\mathrm{1}$ and $\underline{Z}_\mathrm{2}$ shown in Figure \ref{BildMultiplikation} are represented for 
@@ -435,12 +435,12 @@
     }
 
     \b{
-        Rechenoperationen im Zeigerdiagramm - Multiplikation: (Zeichnung nicht maßstabsgetreu!)
+        Arithmetic operations in the pointer diagram - Multiplication: (Drawing not to scale!)
 
         \begin{itemize}
             \item[1.] <2-> Winkel $\varphi_\mathrm{1}+\varphi_\mathrm{2}$ berechnen und einzeichnen
-            \item[2.] <3-> Länge $Z_1 \cdot Z_\mathrm{2}$ berechnen und eintragen
-            \item[3.] <4-> Realteil und Imaginärteil ablesen
+            \item[2.] <3-> Calculate and enter the length $Z_1 \cdot Z_\mathrm{2}$
+            \item[3.] <4-> Read off the real part and imaginary part
         \end{itemize}
     }
     

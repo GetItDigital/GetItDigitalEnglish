@@ -1,0 +1,72 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Repetition}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Frequency dependence of electrical components}{1}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Behaviour of inductances and capacitances}{2}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Comparison of linear two-pole elements $R$, $L$ and $C$}{2}{subsubsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.2}Double-pole (four-pole)}{2}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Frequency response, amplitude response, phase response}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Definitionen}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Frequency response using the example of a simple low-pass filter}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Boundary behaviour using the example of a simple low-pass filter}{7}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Frequency response using the example of a simple high-pass filter}{9}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Boundary behaviour using the example of a simple high-pass filter}{10}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Comparison of first-order passive filters with $L$ and $R$}{11}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Example filter circuit: Task}{12}{subsection.2.7}%
+\contentsline {section}{\numberline {3}Logarithmic representation, frequency response, cut-off frequency}{14}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Logarithmic representation of power functions}{17}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Definition of decibel}{17}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Cut-off frequency of simple filter circuits}{18}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}First-order low-pass filter}{20}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Comparison of linear and logarithmic representations}{21}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Comparison of first-order low-pass and high-pass filters}{22}{subsubsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.5}Bandpass, Bandstop}{23}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Implementation: Series or parallel connection of low-pass and high-pass filters}{24}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Bode diagram}{24}{subsubsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.6}Order of filters, example filter of higher order}{25}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Location curve}{27}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Definition of location curve}{27}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Relationship between pointer diagram and location curve}{28}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}impedance locus curve}{29}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Admittance locus curve - Inversion of locus curves}{30}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Local curves of basic circuits}{31}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Resonant circuits}{33}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Resonance phenomenon}{33}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Definitionen}{34}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Resonant frequency using the example of ideal LC oscillating circuits}{35}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}RLC series resonant circuit - resonance behaviour}{37}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Case differentiation in the pointer diagram}{38}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Case differentiation in impedance curve}{39}{subsubsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.3}Resonanzkurve und Gütefaktor}{40}{subsubsection.5.4.3}%
+\contentsline {subsubsection}{\numberline {5.4.4}Spannungsresonanz}{42}{subsubsection.5.4.4}%
+\contentsline {subsubsection}{\numberline {5.4.5}Current curve of the RLC series resonant circuit}{45}{subsubsection.5.4.5}%
+\contentsline {subsubsection}{\numberline {5.4.6}Voltage curve of the RLC series resonant circuit}{46}{subsubsection.5.4.6}%
+\contentsline {subsection}{\numberline {5.5}RLC parallel resonant circuit - resonance behavior}{47}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}Case differentiation in the pointer diagram}{48}{subsubsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.2}Case differentiation in admittance curve}{48}{subsubsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.3}Resonanzkurve und Gütefaktor}{49}{subsubsection.5.5.3}%
+\contentsline {subsubsection}{\numberline {5.5.4}Current resonance using the example of an RLC parallel resonant circuit}{51}{subsubsection.5.5.4}%
+\contentsline {subsubsection}{\numberline {5.5.5}Voltage curve of the RLC parallel resonant circuit}{53}{subsubsection.5.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.6}Current curve of the RLC parallel resonant circuit}{55}{subsubsection.5.5.6}%
+\contentsline {section}{\numberline {6}Additional calculation}{55}{section.6}%
+\contentsline {section}{\numberline {A}Exercise tasks}{57}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}RC low-pass filter, 1st order}{57}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}1st order RC high pass filter}{57}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}Frequency response of an RLC series resonant circuit}{57}{subsection.A.3}%
+\contentsline {subsection}{\numberline {A.4}Frequency response of a four-pole circuit consisting of R, L and C}{57}{subsection.A.4}%
+\contentsline {subsection}{\numberline {A.5}RLC parallel resonant circuit}{58}{subsection.A.5}%
+\contentsline {subsection}{\numberline {A.6}Second-order RC filter}{58}{subsection.A.6}%
+\contentsline {subsection}{\numberline {A.7}Impedance and admittance locus curve of an RL element}{58}{subsection.A.7}%
+\contentsline {subsection}{\numberline {A.8}Admittance locus curve of mixed series/parallel connection}{59}{subsection.A.8}%
+\contentsline {subsection}{\numberline {A.9}AC measuring bridge}{59}{subsection.A.9}%
+\contentsline {section}{\numberline {B}Solutions to the exercises}{60}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}RC low-pass filter, 1st order}{60}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}1st order RC high pass filter}{60}{subsection.B.2}%
+\contentsline {subsection}{\numberline {B.3}Frequency response of an RLC series resonant circuit}{60}{subsection.B.3}%
+\contentsline {subsection}{\numberline {B.4}Frequency response of a four-pole circuit consisting of R, L and C}{61}{subsection.B.4}%
+\contentsline {subsection}{\numberline {B.5}RLC parallel resonant circuit}{63}{subsection.B.5}%
+\contentsline {subsection}{\numberline {B.6}Second-order RC filter}{65}{subsection.B.6}%
+\contentsline {subsection}{\numberline {B.7}Impedance and admittance locus curve of an RL element}{67}{subsection.B.7}%
+\contentsline {subsection}{\numberline {B.8}Admittance locus curve of mixed series/parallel connection}{67}{subsection.B.8}%
+\contentsline {subsection}{\numberline {B.9}AC measuring bridge}{68}{subsection.B.9}%
+\contentsline {section}{List of references}{69}{subsection.B.9}%
+\contentsline {section}{Index}{70}{section*.61}%

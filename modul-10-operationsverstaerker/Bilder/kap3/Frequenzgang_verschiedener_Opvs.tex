@@ -1,9 +1,10 @@
 \begin{table}[ht]
-    \caption{Ausgewählte Operationsverstärker-Grundschaltungen}
+    \renewcommand{\tablename}{Table}
+    \caption{Selected basic operational amplifier circuits}
     \label{tab:Grundschaltungen}
     \begin{tabular}{|m{0.24\textwidth}|m{0.405\textwidth}|m{0.33\textwidth}|}
     \hline
-    Schaltung & Frequenzgang und Gleichung & Erläuterung und Eigenschaften\\ % Neue Zeile mit Text
+    Circuit & Frequency response and equation & Explanation and properties\\ % Neue Zeile mit Text
     \hline
     \vspace{0.5cm}
     \centering
@@ -13,12 +14,12 @@
 U_{\textnormal{A}} = \left(1+\frac{R_2}{R_1}\right) U_{\textnormal{E}}
 \]
     &
-    \textbf{Nicht-invertierender Verstärker}
+    \textbf{Non-inverting amplifier}
 \begin{itemize}
-    \item Phasengleiches Ausgangs-\linebreak signal
-    \item Sehr hochohmiger Eingangswiderstand
-    \item Niederohmiger Ausgangs-\linebreak widerstand
-    \item Anwendungen: z.B. Impedanzwandler
+        \item Phase-matched output signal
+        \item Very high input impedance
+        \item Low output impedance
+        \item Applications: e.g. impedance converters
 \end{itemize} \\
     \hline
     \centering
@@ -32,12 +33,12 @@ U_{\textnormal{A}} = \left(1+\frac{R_2}{R_1}\right) U_{\textnormal{E}}
     U_{\textnormal{A}} = \frac{R_2}{R_1} U_{\textnormal{E}}
 \]
     &
-    \textbf{Invertierender Verstärker}
+    \textbf{Inverting amplifier}
 \begin{itemize}
-    \item -180$^\circ$ Phasenverschiebung zwischen Ein- zu Ausgang
-    \item $R_1$ bestimmt den Eingangswiderstand
-    \item Niederohmiger Ausgangs-\linebreak widerstand
-    \item Anwendungen: \linebreak z.B. Aktiver Spannungsteiler zum Messen hoher Spannungen, wenn $R_1 > R_2$
+        \item -180$^\circ$ phase shift between input and output
+        \item $R_1$ determines the input resistance
+        \item Low-impedance output-\linebreak resistance
+        \item Applications:\linebreak e.g. active voltage divider for measuring high voltages when $R_1 > R_2$
 \end{itemize}
 \\ % Zweite Zeile
     \hline
@@ -53,8 +54,8 @@ V_1: U_{\textnormal{E+}} > U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
 V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \approx -U_{\textnormal{B}}
 \]
 \end{center}
-    &\textbf{Komparator}\newline
-    Einsatz in Zweipunktreglern und Analog-Digital-Wandlern
+    &\textbf{Comparator}\newline
+    Use in two-point controllers and analogue-to-digital converters
 \\ % Dritte Zeile
     \hline
 
@@ -74,8 +75,8 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
 \end{aligned}
 \]
     & 
-    \textbf{Summierer}\newline
-    Der Summierer basiert auf dem invertierenden Verstärker und findet Verwendung in Analogrechnern und beim Mischen von Spannungssignalen
+    \textbf{Summariser}\newline
+    The summing amplifier is based on the inverting amplifier and is used in analogue computers and for mixing voltage signals.
     \\ % Vierte Zeile
     \hline
     
@@ -97,9 +98,10 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
 
 
 \begin{table}[ht]
+    \renewcommand{\tablename}{Table}
     \begin{tabular}{|m{0.23\textwidth}|m{0.44\textwidth}|m{0.33\textwidth}|}
      \hline 
-    Schaltung & Frequenzgang und Gleichung & Erläuterung und Eigenschaften \\ % Neue Zeile mit Text
+    Circuit & Frequency response and equation & Explanation and properties \\ % Neue Zeile mit Text
     \hline
     \input{Tikz/src/Subtrahierer.tex}
       &
@@ -113,9 +115,9 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
 \end{aligned}
  \]
      &
-     \textbf{Subtrahierer}\newline
-     Wenn alle Widerstände gleich groß sind, wird die Differenz der Signale $U_{E1}$ und $U_{E2}$ gebildet, weswegen diese Schaltung als Differenzverstärker bezeichnet wird
- \\ % Fünfte Zeile
+     \textbf{Subtractor}\newline
+     When all resistances are equal, the difference between the signals $U_{E1}$ and $U_{E2}$ is formed, which is why this circuit is referred to as a differential amplifier.
+     \\ % Fünfte Zeile
      \hline
 
     \input{Tikz/src/Integrierer.tex}
@@ -127,10 +129,10 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
      \]
      \end{center} 
      &
-    \textbf{Integrierer/Integrator}\newline
+    \textbf{Integrator}\newline
     \begin{itemize}
-        \item Nimmt eine Integration des Eingangssignals vor
-        \item Wird als aktives Tiefpassfilter verwendet
+        \item Integrates the input signal
+        \item Used as an active low-pass filter
     \end{itemize}
       \\ 
       \hline
@@ -145,10 +147,10 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
     \end{multline*}
     \end{center} 
     & 
-    \textbf{Differenzierer}\newline
+    \textbf{Differentiator}\newline
     \begin{itemize}
-        \item Nimmt eine Integration des Eingangssignals vor
-        \item Wird als aktives Hochpassfilter verwendet (zeigt in der Realität meist Bandpassverhalten, wie hier dargestellt)
+        \item Integrates the input signal
+        \item Used as an active high-pass filter (in reality, it usually exhibits band-pass behaviour, as shown here)
     \end{itemize}
     \\
     \hline
@@ -164,7 +166,7 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
     \begin{table}[ht]
         \begin{tabular}{|m{0.285\textwidth}|m{0.395\textwidth}|m{0.33\textwidth}|}
             \hline 
-    Schaltung & Frequenzgang und Gleichung & Erläuterung und Eigenschaften \\ % Neue Zeile mit Text
+    Circuit & Frequency response and equation & Explanation and properties \\ % Neue Zeile mit Text
     \hline
     \input{Tikz/src/Logarithmierer.tex}
     &
@@ -176,15 +178,15 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
             U_{\textnormal{T}} = \frac{k_{\textnormal{B}} \cdot T}{e}
             \]
             
-            \(e = \text{Elementarladung}\)
+            \(e = \text{Elementary charge}\)
             
-            \(k_{\textnormal{B}} = \text{Boltzmannkonstante}\)
+            \(k_{\textnormal{B}} = \text{Boltzmann constant}\)
             
-            \(I_{\textnormal{s}} = \text{Sperrstrom der Diode}\)
+            \(I_{\textnormal{s}} = \text{Reverse voltage of the diode}\)
     \end{center} 
     & 
-    \textbf{Logarithmierer}\newline
-    Bildet den natürlichen Logarithmus des Eingangssignals
+    \textbf{logarithm calculator}\newline
+    Forms the natural logarithm of the input signal
     \\
     \hline
     \input{Tikz/src/Potenzierer.tex}
@@ -195,8 +197,8 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
     \]
     \end{center} 
     & 
-    \textbf{Potenzierer}\newline
-    Besitzt einen e-funktionalen Zusammenhang zwischen Ein- und Ausgangsspannung
+    \textbf{Potentiator}\newline
+    Has an e-functional relationship between input and output voltage
     \\
     \hline
     \input{Tikz/src/Instrumentenverstaerker.tex}
@@ -207,10 +209,10 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
 
 \vspace{1ex}
 \[
-\mathit{a_i} : \text{Amplitude Eingangsspannung i}
+\mathit{a_i} : \text{Amplitude input voltage i}
 \]
 \[
-\mathit{\varphi_i} : \text{Phase Eingangsspannung i}
+\mathit{\varphi_i} : \text{Phase input voltage i}
 \]
 \[
 \mathit{A}_{A} = \sqrt{a_1^2 + a_2^2 + 2a_1a_2 \cos(\varphi_1 - \varphi_2)}
@@ -219,14 +221,14 @@ V_2: U_{\textnormal{E+}} < U_{\textnormal{E-}} \Rightarrow U_{\textnormal{A}} \a
 \mathit{\tan}(\varphi_A) = \frac{a_1 \mathit{\sin}(\varphi_1) + a_2 \mathit{\sin}(\varphi_2)}{a_1 \mathit{\cos}(\varphi_1) + a_2 \mathit{\cos}(\varphi_2)}
 \]
 \[
-    \text{Wenn} : R_2 = R_4 = R
+    \text{When} : R_2 = R_4 = R
 \]
 \[
     U_{\textnormal{A}} = (1+ \frac{2R} {R_{\textnormal{g}}}) \cdot \frac{R_3} {R_2} (U_{\textnormal{E2}}-U_{\textnormal{E1}})
 \]
      & 
-     \textbf{Instrumentenverstärker}\newline
-    Differenzverstärker mit hoher Eingangsimpedanz und hoher Gleichtaktunterdrückung  
+     \textbf{Instrument amplifier}\newline
+    Differential amplifier with high input impedance and high common-mode rejection
 
     \\
     \hline

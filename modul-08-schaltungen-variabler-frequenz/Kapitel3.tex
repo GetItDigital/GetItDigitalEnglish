@@ -56,25 +56,25 @@
 
 \b{%
     \centering
-    \textbf{Def. Ortskurve:} Darstellung eines komplexen Zeigers 
+    \textbf{Def. Local curve:} Representation of a complex pointer 
     $\underline{z}(p) = \Re\{\underline{z}(p)\} + \mathrm{j}\Im\{\underline{z}(p)\}$\newline
-    \hphantom{Def. Ortskurve} in komplexer Ebene in Abhängigkeit eines realen Parameter $p$.
+    \hphantom{Def. Ortskurve} at a complex level depending on a real parameter $p$.
     \begin{minipage}{\textwidth}\centering%
     \begin{minipage}{0.5\textwidth}\centering%
         \only<2-3| handout:2-3>{\resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_stromortskurve_asynchronmaschine.pdf}}}%
         \only<4-| handout:4->{\resizebox{\textwidth}{!}{\includegraphics{Tikz/pdf/plot_stromortskurve_asynchronmaschine_leistung.pdf}}}%
     \end{minipage}\hspace{0.05\textwidth}%
     \begin{minipage}{0.45\textwidth}%\centering
-        \onslide<3-| handout:3->{\textbf{Anwendungsbereiche?}\vspace{1cm}\\}%
-        \onslide<4-| handout:4->{\textbf{Visualisierung von:}\vspace{1mm}\\
-            \quad - Systemzuständen\\
-            \quad - Systemgrößen\\
-            \quad - Einfluss von Systemgrößen
+        \onslide<3-| handout:3->{\textbf{Areas of application?}\vspace{1cm}\\}%
+        \onslide<4-| handout:4->{\textbf{Visualization of:}\vspace{1mm}\\
+            \quad - System states\\
+            \quad - System sizes\\
+            \quad - Influence of system sizes
         }%
     \end{minipage}%
     \end{minipage}\hfill\vspace{5pt}%
 
-    \only<2-| handout:2->{\textbf{Example:} Stromortskurve einer Asynchrommaschine für $\underline{I}_s(s)$}
+    \only<2-| handout:2->{\textbf{Example:} Current-frequency curve of an asynchronous machine for $\underline{I}_s(s)$}
 }
 \end{frame}
 
@@ -100,7 +100,7 @@
     %    %Z.B. Zeiger mit Overlays einblenden, dann Kreis als Kurve (Vgl. Stromortskurve vorher) Ist schöner als nur Text.
     %}
     \b{
-        Zeigerdiagramm:\\\quad Zeigt Größe in komplexer Ebene als Zeiger (eines Punktes). 
+        Pointer diagram:\\\quad Shows magnitude in the complex plane as a pointer (of a point). 
     }%
     \begin{Key point}{Location curve}
         Displays size in a complex plane as a curve (set of points) depending on parameters.
@@ -115,9 +115,9 @@
 
     Impedance locus curves show the impedance of a system as a function of a parameter.
     
-    Example \ref{bsp:ortskurve:z:rvar} shows an impedance locus curve for a variable component size.
+    Example \ref{expl:ortskurve:z:rvar} shows an impedance locus curve for a variable component size.
     
-    Example \ref{bsp:ortskurve:z:fvar} shows an impedance locus curve for variable frequency.
+    Example \ref{expl:ortskurve:z:fvar} shows an impedance locus curve for variable frequency.
 
 \begin{expl}{
     Impedance locus curve RL circuit, variable resistance}{ortskurve:z:rvar}% Heading, label
@@ -162,7 +162,7 @@
 
     Construction of the impedance locus curve of the RL series connection in Figure \ref{fig:circ:RLs:wLvar}
     for variable frequency $f$ and/or variable inductance $L$.
-    Setup as in Example \ref{bsp:ortskurve:z:rvar}, but with variable frequency $\omega$.
+    Setup as in Example \ref{expl:ortskurve:z:rvar}, but with variable frequency $\omega$.
 
     \fu{\includegraphics{Tikz/pdf/circ_rls_impedanzen.pdf}}{RL-Glied (Serienschaltung)\label{fig:circ:RLs:wLvar}}
 
@@ -192,7 +192,7 @@
 }% end skript only, 
 % note: column environment breaks bsp-box -> \s{frame with bsp-box}, \b{frame with columns}
 \b{
-\subsection{Impedanzortskurve - RL-Glied , $R$ variabel}
+\subsection{Impedance locus curve - RL element, $R$ variable}
 \begin{frame}\ftx{\subsecname}
 \begin{columns}
     \column{0.5\textwidth}\centering
@@ -204,8 +204,8 @@
 
     \begin{align*}
         \underline{Z} &= p \cdot R_0 + \mathrm{j}X_0\\
-        \text{mit}\ p &\in [0,3]\\
-        R_0,\ X_0 &= konst.
+        \text{with}\ p &\in [0,3]\\
+        R_0,\ X_0 &= const.
     \end{align*}
 
     \column[c]{0.5\textwidth}
@@ -213,7 +213,7 @@
 \end{columns}
 \end{frame}
 
-\subsection{Impedance locus curve – RLs element, $\omega$ variable}
+\subsection{Impedance locus curve - RLs element, $\omega$ variable}
 \begin{frame}\ftx{\subsecname}
 \begin{columns}
     \column{0.5\textwidth}\centering
@@ -369,7 +369,7 @@
         \\\hline
     \end{tabular}
 \end{table}
-\b{\frametitle{\subsecname{} - in Reihe}} 
+\b{\frametitle{\subsecname{} - in Series}} 
 \end{frame}
 \b{%Start beamer only - Tabellenteil 2
 \begin{frame}

@@ -1,9 +1,10 @@
-\subsection{Grundverhalten eines npn-Bipolartransistors\label{Aufg35}}
+\subsection{Basic behaviour of an NPN bipolar transistor\label{Aufg35}}
 % Alt: Praktikumsaufgabe 8
 \Aufgabe{
-    Analysieren Sie das Grundverhalten eines Bipolartransistors in einer Basisschaltung.
-    Der npn-Transistor weist einen Stromverstärkungsfaktor von $\beta = 100$ auf, 
-    es wird ein Basisstrom von $I_\mathrm{B} = 20\,\mathrm{\mu A}$ angenommen. 
+    Analyse the basic behaviour of a bipolar transistor in a basic circuit.
+    The npn transistor has a current gain factor of $\beta = 100$. 
+    A base current of $I_\mathrm{B} = 20\,\mathrm{\mu A}$ is assumed.
+
     
     \begin{figure}[H]
         \centering
@@ -13,31 +14,30 @@
     
     
     \begin{itemize}
-        \item[a)] Berechnen Sie den Kollektorstrom $I_\mathrm{C}$.
-        \item[b)] Bestimmen Sie die Kollektor-Emitter-Spannung $U_\mathrm{CE}$, wenn der Kollektorwiderstand $R_\mathrm{4} = 1\,\mathrm{k\Omega}$ und die Versorgungsspannung $U_\mathrm{2} = 12\,\mathrm{V}$ beträgt.
+        \item[a)] Calculate the collector current $I_\mathrm{C}$.
+        \item[b)] Determine the collector-emitter voltage $U_\mathrm{CE}$ when the collector resistance is $R_\mathrm{4} = 1\,\mathrm{k\Omega}$ and the supply voltage $U_\mathrm{2} = 12\,\mathrm{V}$ amounts to.
     \end{itemize}
 }
 
-
 \Loesung{
     \begin{itemize}
-        \item[a)] Berechnung des Kollektorstroms $I_\mathrm{C}$
-              Der Kollektorstrom eines Bipolartransistors ergibt sich aus der Beziehung:
+        \item[a)] Calculation of the collector current $I_\mathrm{C}$
+                The collector current of a bipolar transistor is calculated using the following equation:
               $$ I_\mathrm{C} = \beta \cdot I_\mathrm{B} $$
-              mit den gegebenen Werten:
+              with the given values:
               \begin{equation*}
                   I_\mathrm{C} = 100 \cdot 20\,\mathrm{\mu A} = 2\,\mathrm{mA}
               \end{equation*}
               
               
-        \item[b)] Bestimmung der Kollektor-Emitter-Spannung $U_\mathrm{CE}$
-              Die Kollektor-Emitter-Spannung ergibt sich aus der Gleichung:
+        \item[b)] Determination of the collector-emitter voltage $U_\mathrm{CE}$
+                The collector-emitter voltage is calculated using the following equation:
               $$ U_\mathrm{CE} = U_\mathrm{CC} - I_\mathrm{C} \cdot R_\mathrm{4} $$
-              Einsetzen der Werte:
+              Applying the values:
               \begin{equation*}
                   U_\mathrm{CE} = 12\,\mathrm{V} - (2\,\mathrm{mA} \cdot 1\,\mathrm{k\Omega}) = 12\,\mathrm{V} - 2\,\mathrm{V}  = 10\,\mathrm{V}
               \end{equation*}
               
     \end{itemize}
-    Siehe: Abschnitt \ref{fig:UebersichtBipolartransistoren}
+    See section: \ref{fig:UebersichtBipolartransistoren}
 }

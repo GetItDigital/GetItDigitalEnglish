@@ -1,16 +1,17 @@
-\section{Asynchronmaschine}
+\section{Asynchronous machine}
 \newvideofile{asynchronmaschine}{Asynchronmaschine}
-\s{Die Asynchronmaschine ist ebenfalls eine Drehfeldmaschine. Der Stator ist identisch zum Stator der Synchronmaschine, der Rotor ist hingegen in der häufigsten Version dieses Maschinentyps, beim sogenannten Käfigläufer, passiv.}
-\begin{frame}\ftx{Asynchronmaschine Aufbau}\index{Asynchronmaschine>Aufbau}\s{\subsection{Aufbau}}
+\s{The asynchronous machine is also a rotating field machine. The stator is identical to the stator of the synchronous machine, whereas the rotor is passive in the most common version of this machine type, the so-called squirrel cage rotor.}
+\begin{frame}\ftx{Asynchronous machine design}\index{Asynchronmaschine>Aufbau}\s{\subsection{Aufbau}}
+	\renewcommand{\figurename}{Figure}
 	\fo{width=0.65\textwidth}{height=0.9\textheight}{Aufbau_Asynchron_Kaefig1}{
-		\uncover<1->{\put(79,0){\line(-1,1){29.5}}\put(79.2,0){Gehäuse mit Blechpaket}}
-		\uncover<3->{\put(79,6){\line(-1,1){27}}\put(79.3,6){Drehstromwicklung}}
-		\uncover<2->{\put(90,12){\line(-1,1){40}}\put(90.3,12){Läuferkäfig}}
-		\uncover<2->{\put(90,18){\line(-1,1){32}}\put(90.3,18){Blechpaket}}
-		\uncover<4->{\put(103,36){\line(-1,1){10}}\put(103.3,36){Flügelhaube}}
-		\uncover<4->{\put(103,42){\line(-1,1){27}}\put(103.3,42){Lüfterflügel}}
+		\uncover<1->{\put(79,0){\line(-1,1){29.5}}\put(79.2,0){Enclosure with sheet metal package}}
+		\uncover<3->{\put(79,6){\line(-1,1){27}}\put(79.3,6){Three-phase winding}}
+		\uncover<2->{\put(90,12){\line(-1,1){40}}\put(90.3,12){Runner cage}}
+		\uncover<2->{\put(90,18){\line(-1,1){32}}\put(90.3,18){Sheet metal package}}
+		\uncover<4->{\put(103,36){\line(-1,1){10}}\put(103.3,36){Wing cowling}}
+		\uncover<4->{\put(103,42){\line(-1,1){27}}\put(103.3,42){Fan blade}}
 
-	}{{\bf Aufbau einer Käfigläufer-Asynchronmaschine.} Die Bleche des Rotorzylinders wurden der Anschaulichkeit halber zur Hälfte beschnitten, um den Käfig freizulegen.}
+	}{{\bf Structure of a cage rotor asynchronous machine.} For clarity, half of the rotor cylinder plates have been cut away to reveal the cage.}
 
 	\speech{AufbauASM}{1}{Die Asynchronmaschine ist wie die Synchronmaschine eine sogenannte Drehfeldmaschine. Der Stator ist identisch zum Stator der Synchronmaschine, der Rotor ist hingegen in der häufigsten Version dieses Maschinentyps, dem sogenannten Käfigläufer, passiv.}
 	\speech{AufbauASM}{2}{Der Rotor besteht aus einem zylindrischen Blechpaket, das mit Kurzschlussstäben, dem sogenannten Läuferkäfig, versehen ist.}
@@ -18,51 +19,54 @@
 	\speech{AufbauASM}{4}{Das Gehäuse verfügt normalerweise über ein angebautes Lüfterrad, das mit der gleichen Drehzahl der Maschine dreht und dafür sorgt, dass die Maschine während des Betriebs gekühlt wird.}
 \end{frame}
 
-\begin{frame}\ftb{\index{Käfigläufer}Käfigläufer}
+\begin{frame}\ftb{\index{Cage rotor}Cage rotor}
 	\begin{itemize}
-		\item In den Nuten des Läuferblechpaketes liegen leitfähige Stäbe.
-		\item Stirnseitig sind die Stäbe durch Kurzschlussringe miteinander verbunden.
-		\item Zusammen bilden diese Komponenten einen Käfig (ähnlich Hamsterkäfig).
-		\item Stäbe werden geschrägt ausgeführt zur Reduktion von Oberwellen im umlaufenden magnetischen Feld.
+		\item Conductive rods are located in the grooves of the runner plate package.
+		\item The rods are connected to each other at the front by short-circuit rings.
+		\item Together, these components form a cage (similar to a hamster cage).
+		\item The rods are designed at an angle to reduce harmonics in the rotating magnetic field.
 	\end{itemize}
-		\f{width=0.5\textwidth}{height=0.6\textheight}{Aufbau_Asynchron_Kaefig2}{{\bf Käfig eines Asynchronrotors.} Zur Hälfte mit Blechpaket gezeigt.}
+		\f{width=0.5\textwidth}{height=0.6\textheight}{Aufbau_Asynchron_Kaefig2}{{\bf Cage of an asynchronous rotor.} Shown with half of the sheet metal package.}
 \end{frame}
 
 
-\begin{frame}	\ftb{Anlauf der ASM}\index{Asynchronmaschine>Anlauf}
+\begin{frame}	\ftb{Start-up of the ASM}\index{Asynchronmaschine>Anlauf}
 	\begin{itemize}
-		\item Der Stator erzeugt im Ständer eine umlaufende magnetische Wanderwelle mit der Winkelgeschwindigkeit:
+		\item The stator generates a rotating magnetic traveling wave in the stationary part with the angular velocity:
 		$\omega_\mathrm{s} = \frac{\omega_0}{p}$.\pause
-		\item Der ruhende Läufer sieht ein veränderliches Feld mit der Frequenz $\omega_\mathrm{s}$.\pause
-		\item Das magnetische Drehfeld durchsetzt den Läufer und induziert eine Spannung mit der Frequenz $\omega_\mathrm{s}$.\pause
-		\item Aus der Spannungsinduktion resultiert ein Stromfluss, da die Läuferwicklungen kurzgeschlossen sind.\pause
-		\item Der induzierte Rotorstrom wirkt der von ihm gesehenen Änderung des Statorfeldes entgegen (Lenzsche Regel).\pause
-		\item Statorfeld und Rotorstrom wechselwirken durch die Lorentzkraft- es kommt zur Ausbildung eins Drehmoments.\pause
-		\item Das Drehmoment wirkt in Richtung des Ständerdrehfelds.\pause
-		\item Der Läufer beginnt sich zu drehen.
+		\item The stationary rotor experiences a time-varying field with the frequency $\omega_\mathrm{s}$.\pause
+		\item The rotating magnetic field penetrates the rotor and induces a voltage with the frequency $\omega_\mathrm{s}$.\pause
+		\item The induced voltage results in a current flow, since the rotor windings are short-circuited.\pause
+		\item The induced rotor current opposes the change of the stator field perceived by it (Lenz’s law).\pause
+		\item The stator field and the rotor current interact via the Lorentz force, leading to the formation of a torque.\pause
+		\item The torque acts in the direction of the stator’s rotating magnetic field.\pause
+		\item The rotor begins to rotate.
+
 	\end{itemize}
 \end{frame}
 
-\begin{frame}	\ftb{Betrieb der ASM}    \index{Asynchronmaschine>Funktionsprinzip}
+\begin{frame}	\ftb{Operation of the ASM}    \index{Asynchronmaschine>Funktionsprinzip}
 	\begin{itemize}
-		\item Mit steigender Drehzahl des Läufers sieht dieser eine immer langsamere Änderung des Statorfeldes:
+		\item As the rotor speed increases, the rotor perceives an increasingly slower change of the stator field:
 		$\omega_\mathrm{r} = \omega_\mathrm{s} - \omega_\mathrm{mech}$.\pause
-		\item Mit steigender Drehzahl sinkt sowohl der Betrag als auch die Frequenz der induzierten Spannung im Rotor.\pause
-		\item Der Betrag des Drehmoments sinkt.\pause
-		\item Drehen sich der Läufer und Ständerfeld mit der gleichen Frequenz, ist die synchrone Drehzahl erreicht.\pause
-		\item Die Läuferwicklungen sehen keine Änderung des Feldes.\pause
-		\item Induzierter Strom und Moment der Maschine werden zu Null.\pause
-		\item Durch Reibungseffekte wird der Rotor wieder abgebremst - es kommt zur erneuten Ausbildung eines Moments.\pause
-		\item Im Gleichgewichtszustand stellt sich eine Drehzahl knapp unter der synchronen ein.
+		\item With increasing speed, both the magnitude and the frequency of the induced voltage in the rotor decrease.\pause
+		\item The magnitude of the torque decreases.\pause
+		\item When the rotor and the stator field rotate at the same frequency, synchronous speed is reached.\pause
+		\item The rotor windings no longer experience a change in the magnetic field.\pause
+		\item The induced current and the torque of the machine become zero.\pause
+		\item Due to friction effects, the rotor is slowed down again, leading to the renewed formation of torque.\pause
+		\item In the steady-state condition, a speed slightly below the synchronous speed is established.
+
 	\end{itemize}
 \end{frame}
 
 
-\begin{frame}\ftb{Drehzahl/Drehmomenten-Kennlinie}
+\begin{frame}\ftb{Speed/torque characteristic curve}
+	\renewcommand{\figurename}{Figure}
 	\begin{columns}
 		\column[c]{0.3\textwidth}
-			\b{Schlupf:}
-			\s{Die Drehzahl/Drehmomenten-Kennlinie ist bei der Asynchronmaschine nichtlinear und kann in mehrere Abschnitte unterteilt werden. Häufig wird die Kennlinie wie in Abbildung \ref{kloss} gezeigt über den Schlupf $s$ aufgetragen. Der Schlupf\index{Schlupf} bezeichnet die prozentuale Abweichung der mechanischen Drehgeschwindigkeit des Rotors $n_\mathrm{r}$ von der elektrischen Drehgeschwindigkeit $n_\mathrm{s}$ des speisenden Netzes im Stator.}
+			\b{Slippage:}
+            \s{The speed/torque characteristic curve of an asynchronous machine is non-linear and can be divided into several sections. The characteristic curve is often plotted as shown in Figure \ref{kloss} using the slip $s$. The slip\index{Slip} refers to the percentage deviation of the mechanical rotational speed of the rotor $n_\mathrm{r}$ from the electrical rotational speed $n_\mathrm{s}$ of the supplying network in the stator.}
 			\nomenclature[F]{$s$}{Schlupf der Asynchronmaschine}
 			\nomenclature[F]{$\omega_\mathrm{s}$}{Synchrone Drehfrequenz des speisenden Netzes \nomunit{$\frac{1}{\mathrm{s}}$}}
 			\nomenclature[F]{$\omega_\mathrm{r}$}{Drehfrequenz des Rotors \nomunit{$\frac{1}{\mathrm{s}}$}}
@@ -70,11 +74,10 @@
 				s = \frac{\omega_\mathrm{s} - \omega_\mathrm{r}}{\omega_\mathrm{s}}
 			\end{eq}
 
-			\s{Ein Schlupf von $s=1$ ($100\%$) entspricht daher dem Stillstand der Maschine oder Drehzahl $n=0$, ein Schlupf von $s=0$ entspricht dem netzsynchronen Betrieb, der jedoch bei der Asynchronmaschine niemals auftreten kann, da das Drehmoment in dem Fall Null wird.}
-
+            \s{A slip of $s=1$ ($100\%$) therefore corresponds to the machine being at a standstill or a speed of $n=0$, while a slip of $s=0$ corresponds to mains-synchronous operation, which can never occur with an asynchronous machine, however, as the torque would be zero in this case.}
 			\uncover<2->{
-				\s{Die Drehzahl/Drehmomenten-Kennlinie wird auch als Klosssche Kennlinie bezeichnet und kann durch die Gleichung \ref{GlKloss} ausgedrückt werden:}
-				\b{Klosssche Gleichung}
+				\s{The speed/torque characteristic curve is also known as the Klosssche characteristic curve and can be calculated using the equation \ref{GlKloss} ausgedrückt werden:}
+				\b{Kloss's equation}
 				\begin{eq}
 					M = \frac{2\cdot M_\mathrm{K}}{\frac{s_\mathrm{K}}{s} + \frac{s}{s_\mathrm{K}}}\label{GlKloss}
 				\end{eq}
@@ -83,8 +86,8 @@
 			}
 			\uncover<3>{
 
-				\s{Der Schlupf entspricht bei großen Maschinen in sehr guter Näherung den prozentualen Verlusten der Maschine:}
-				\b{Schlupf entspricht den prozentualen Verlusten:}
+				\s{For large machines, the slip corresponds very closely to the percentage losses of the machine:}
+				\b{Slippage corresponds to the percentage losses:}
 				\begin{eq}
 					\eta \approx 1-s
 				\end{eq}
@@ -93,7 +96,7 @@
 		\s{
 			\fu{
 				\input{Tikz/src/klosssche_kennlinie.tex}
-				}{{\bf Klossche Kennlinie.} Drehzahl/Drehmomenten-Kennlinie einer Asynchronmaschine. \label{kloss}}
+				}{{\bf Kloss characteristic curve.} Speed/torque characteristic curve of an asynchronous machine. \label{kloss}}
 		}
 		\b{
 			\fu{
@@ -107,12 +110,12 @@
 				\draw[dashed, color=blue] (-0.5,0) node[below] {${s_K}$} -- (-0.5,2.5);
 				\draw[dashed, color=blue] (0.5,0) node[above] {} -- (0.5,-2.5);
 				\draw[dashed, color=blue] (-4.75,0) node[below] {${s = 1}$} -- (-4.75,1);
-				\draw[color=blue] (-4.75,-0.55) node[below] {(Stillstand)};
-				\draw (-6.5,0.4) node[above] {Bremse};
+				\draw[color=blue] (-4.75,-0.55) node[below] {(Standstill)};
+				\draw (-6.5,0.4) node[above] {brake};
 				\draw (-2,0) node[above] {Motor};
 				\draw (2,0) node[below] {Generator};
-				\draw (-2.4,-4) node[above] {untersyn.: $s > 0$};
-				\draw (2.25,-4) node[above] {übersyn.: $s < 0$};
+				\draw (-2.4,-4) node[above] {undersyn.: $s > 0$};
+				\draw (2.25,-4) node[above] {oversyn.: $s < 0$};
 				\end{tikzpicture}
 				}{Klossche Kennlinie}
 		}
@@ -121,22 +124,22 @@
 \end{frame}
 
 
-\begin{frame}\ftx{Beispiel: Asynchronmaschine}
-	\begin{bsp}{Asynchronmaschine}{}
-		Ein Drehstrom-Asynchronmotor hat die folgenden Typenschildangaben:
+\begin{frame}\ftx{Example: Asynchronous machine}
+	\begin{expl}{asynchronous machine}{}
+		A three-phase asynchronous motor has the following information on its nameplate:
 		\begin{columns}
 			\column[c]{0.5\textwidth}
 				\begin{itemize}
-					\item Nennleistung: $10\,$kW
-					\item Nenndrehzahl: $1440\,\frac{\mathrm{U}}{\mathrm{min}}$
+					\item Rated power: $10\,$kW
+					\item Rated speed: $1440\,\frac{\mathrm{U}}{\mathrm{min}}$
 				\end{itemize}
 			\column[c]{0.5\textwidth}
 				\begin{itemize}
-					\item Frequenz: $50\,$Hz
-					\item Kippschlupf: 25\%
+					\item Frequency: $50\,$Hz
+					\item Breakdown torque: 25\%
 				\end{itemize}
 		\end{columns}\b{\vspace{0.3cm}}
-		Berechnen Sie das Nennmoment, das Kippmoment und das Anlaufmoment.
+		Calculate the rated torque, the tipping torque and the starting torque.
 		\s{
 			\begin{align*}
 				P_\mathrm{N} &= M_\mathrm{N}\cdot \omega_\mathrm{N} = M_\mathrm{N}\cdot 2\pi n_\mathrm{N}\\
@@ -145,7 +148,7 @@
 				&=\frac{2\pi \cdot 1500 \,\frac{1}{60\,\mathrm{s}} - 2\pi\cdot 1440\,\frac{1}{60\,\mathrm{s}}}{2\pi \cdot 1500 \,\frac{1}{60\,\mathrm{s}}}\\
 				& = 0,04
 			\end{align*}
-			Für die Berechnung der weiteren Momente wird Gleichung \ref{GlKloss} für die Fälle Nennbetrieb und Stillstand ausgerechnet.
+			To calculate the other moments, equation \ref{GlKloss} is calculated for the cases of nominal operation and standstill.
 			\begin{align*}
 				M &= \frac{2\cdot M_\mathrm{K}}{\frac{s_\mathrm{K}}{s} + \frac{s}{s_\mathrm{K}}}\\
 				M_\mathrm{K} &= \frac{M_\mathrm{N}}{2}\cdot\left(\frac{s_\mathrm{K}}{s_\mathrm{N}} + \frac{s_\mathrm{N}}{s_\mathrm{K}}\right)\\
@@ -174,5 +177,5 @@
 				\end{align*}
 		}
 		}
-	\end{bsp}
+	\end{expl}
 \end{frame}

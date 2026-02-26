@@ -19,7 +19,7 @@
 \end{frame}
 	}
 	
-\begin{frame} \ftx{Magnetischer Fluss und Flussdichte}
+\begin{frame} \ftx{Magnetic flux and flux density}
 	\index{Magnetische Flussdichte}\index{Flussdichte}\index{Magnetischer Fluss}
 	\s{
         Magnetic flux is analogous to electric current in an electric circuit. Contrary to the terminology, however, there is no flow of magnetic particles; rather, it is 
@@ -84,21 +84,21 @@
 								\onslide<3->{
 									\draw[color=blue, smooth, domain=0:6] plot[id=hysterese1] function{(((x-6.1)**3)/50)+4.485};
 									\draw[->, color=blue, thick] (1, 1.82) -- (1.05, 1.91);
-									\draw (6, 4.85) node[left] {Sättigung};
-									\draw[color=blue] (2.2, -1.5) node[right] {Neukurve};
+									\draw (6, 4.85) node[left] {Saturation};
+									\draw[color=blue] (2.2, -1.5) node[right] {New curve};
 								}
 								% Magnetisierung bleibt bei Reduktion erhalten (Punkt Br)
 								\onslide<4->{
 									\draw[color=red, smooth] plot[id=hysterese2] function{9/(1+0.4*exp(-1.1*x))-4.5};
 									\draw[->, color=red, thick] (-0.55, 0.7) -- (-0.61, 0.55);
-									\draw (-6, -4.85) node[right] {Sättigung};
+									\draw (-6, -4.85) node[right] {Saturation};
 									\draw (-0.2, 1.9) node[left] {$B_{\mathrm{r}}$} -- (0.2, 1.9);
 								}
 								% Gilt ebenso in andere Richtung -> Hystereseschleife
 								\onslide<5->{
 									\draw[color=red, smooth] plot[id=hysterese3] function{9/(1+2.5*exp(-1.1*x))-4.5};
 									\draw[->, color=red, thick] (0.55, -0.7) -- (0.61, -0.55);
-									\draw[color=red] (2.2, -2.3) node[right] {Hystereseschleife};
+									\draw[color=red] (2.2, -2.3) node[right] {Hysteresis loop};
 									\draw (-0.2, -1.9) -- (0.2, -1.9);
 									
 								}
@@ -124,7 +124,7 @@
 					\end{eq}
 					
 					\onslide<2->{
-						Magnetischer Fluss: \par $\varPhi\quad \left[\mathrm{Wb}\right]$
+						Magnetic flux: \par $\varPhi\quad \left[\mathrm{Wb}\right]$
 						\begin{align*}
 							\varPhi & = \iint\limits_A \vec{B}\cdot\d \vec{A} \\
 							\vec{B} & = \frac{\varPhi}{\vec{A}}
@@ -132,21 +132,21 @@
 				}
 				\only<3->{%
 					
-					Hartmagnetisch: \\
+					Hard magnetic: \\
 					$H_{\mathrm{c}} > 10\cdot 10^{3}\,\frac{\mathrm{A}}{\mathrm{m}}$\\
-					z. B. Permanentmagnete\\
+					e.g. permanent magnets\\
 					\vspace{0.5cm}
-					Weichmagnetisch:\\
+					Soft magnetic:\\
 					$H_{\mathrm{c}} < 500\,\frac{\mathrm{A}}{\mathrm{m}}$\\
-					z. B. Aktoren\\
+					e.g. actuators\\
 					\vspace{0.5cm}
 				}
 				\only<4->{
-					Remanenzflußdichte $B_{\mathrm{r}}$\\
+					Remanence flux density $B_{\mathrm{r}}$\\
 					\vspace{0.5cm}
 				}
 				\only<6->{
-					Koerzitivfeldstärke $H_{\mathrm{c}}$
+					Coercive field strength $H_{\mathrm{c}}$
 				}
 				
 			\end{column}
@@ -169,7 +169,7 @@
 
 \end{frame}
 
-\begin{frame} \ftx{Beispiel: Magnetische Flussdichte}
+\begin{frame} \ftx{Example: Magnetic flux density}
 	\begin{expl}{Magnetic flux density}{}
         Inside a tightly wound toroidal coil, a magnetic field strength of $H=100\,\frac{\mathrm{A}}{\mathrm{m}}$ is to be generated. The coil has an average radius of $5\,\mathrm{cm}$.		\begin{enumerate}
 			\item Calculate the required current $I$ if the coil has $N=200$ windings.\pause
@@ -192,7 +192,7 @@
 
 \section{Magnetic resistance}
 
-\begin{frame} \ftx{Magnetischer Widerstand}\index{Magnetic resistance}
+\begin{frame} \ftx{Magnetic resistance}\index{Magnetic resistance}
 
 	\s{
 		Magnetic tension, also known as flux, was already discussed in chapter \ref{durchflutung}, and magnetic flux, which is the equivalent of electric current, was discussed in chapter \ref{Flussdichte}. It therefore stands to reason that, in a magnetic circuit, there is also magnetic resistance\index{Magnetic resistance}, which is equivalent to ohmic resistance. It has the formula symbol $R_{\mathrm{m}}$ and the unit $\frac{\mathrm{A}}{\mathrm{V}\mathrm{s}}$ and is also called reluctance \index{Reluctance}.
@@ -227,9 +227,9 @@
 \end{frame}
 
 \subsection{The magnetic circle}
-\begin{frame} \ftx{Magnetischer Kreis}\index{Magnetischer Kreis}		
+\begin{frame} \ftx{Magnetic circuit}\index{Magnetischer Kreis}		
 	\b{
-		Analog zum elektrischen Ohmschen Gesetz gilt für den magnetischen Kreis:
+		Analogous to Ohm's law for electricity, the following applies to magnetic circuits:
 		\begin{eqa}
 			\varTheta &= R_{\mathrm{m}}\cdot \varPhi
 		\end{eqa}

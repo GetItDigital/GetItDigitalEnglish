@@ -1,9 +1,9 @@
-\subsection{Schaltverhalten eines Transistors\label{Aufg14}}
+\subsection{Switching behaviour of a transistor\label{Aufg14}}
 % Alt: Aufgabe 14
 \Aufgabe{
-    Gegeben ist die abgebildete Transistorschaltung mit den folgenden Parametern: 
+    Given is the transistor circuit shown with the following parameters:
     $U_0=\mathrm{5\,V}$ und $U_L=\mathrm{15\,V}$.
-    Damit der gezeigte Siliziumtransistor schaltet, benötigt er einen Basisstrom von \( I_\mathrm{B}=\mathrm{50\,\mu A} \), um in den leitenden Zustand zu gelangen.
+    In order for the silicon transistor shown to switch, it requires a base current of \( I_\mathrm{B}=\mathrm{50\,\mu A} \), to reach the conductive state.
     
     \begin{figure}[H]
         \centering
@@ -12,9 +12,9 @@
     \end{figure}
     
     \begin{itemize}
-        \item[a)] Wie groß muss der Vorwiderstand \( R_\mathrm{V} \) gewählt werden, damit der Transistor durchschaltet?
-        \item[b)] Der Transistor hat einen Stromverstärkungsfaktor \( \beta = 180 \) und einen Kollektorwiderstand \( R_\mathrm{C} = \mathrm{200\,\Omega} \).
-              Wie groß sind der Kollektorstrom \( I_\mathrm{C} \) und der Spannungsabfall zwischen Kollektor und Emitter \( U_\mathrm{CE} \)?
+        \item[a)] How large must the series resistor \( R_\mathrm{V} \) be selected so that the transistor switches on?
+        \item[b)] The transistor has a current gain factor \( \beta = 180 \) and a collector resistance \( R_\mathrm{C} = \mathrm{200\,\Omega} \).
+              How large are the collector current \( I_\mathrm{C} \) and the voltage drop between the collector and emitter? \( U_\mathrm{CE} \)?
     \end{itemize}
     
     % \speech{Aufgabe 14  
@@ -42,30 +42,30 @@
 \Loesung{
 \begin{itemize}
     \item[a)]
-          Berechnung des Vorwiderstands für den Basisstrom:
+          Calculation of the series resistance for the base current:
           \begin{equation*}
               R_\mathrm{V}  = \frac{U}{I} = \frac{\mathrm{5\,V} - \mathrm{0{,}6\,V}}{\mathrm{50\,\mu A}} = \frac{\mathrm{4{,}4\,V}}{\mathrm{50\,\mu A}} = \mathrm{88\,k\Omega}
           \end{equation*}
           
     \item[b)]
-          Berechnung des Kollektorstroms mit Stromverstärkungsfaktor:
+          Calculation of the collector current with current amplification factor:
           \begin{gather*}
               \beta = \frac{I_\mathrm{C}}{I_\mathrm{B}} \\
               I_\mathrm{C} = \beta \cdot I_\mathrm{B} = 180 \cdot \mathrm{50\,\mu A} = \mathrm{9\,mA}
           \end{gather*}
           
-          Berechnung des Spannungsabfalls am Kollektorwiderstand:
+          Calculation of the voltage drop across the collector resistor:
           \begin{equation*}
               U_\mathrm{RC} = I_\mathrm{C} \cdot R_\mathrm{C} = \mathrm{9\,mA} \cdot \mathrm{200\,\Omega} = \mathrm{1{,}8\,V}
           \end{equation*}
           
-          Berechnung der Spannung zwischen Kollektor und Emitter:
+          Calculation of the voltage between collector and emitter:
           \begin{equation*}
               U_\mathrm{CE} = \mathrm{15\,V} - \mathrm{1{,}8\,V} = \mathrm{13{,}2\,V}
           \end{equation*}
 \end{itemize}
 
-    Siehe: Abschnitt \ref{sec:Bipolartransistor} und \ref{fig:StroemeUndSpannungenBeimBipolartransistor}
+    See section: \ref{sec:Bipolartransistor} und \ref{fig:StroemeUndSpannungenBeimBipolartransistor}
 %     \speech{
 % **Aufgabe 14 – Berechnung des Basiswiderstands und der Verstärkung eines npn-Transistors**
 

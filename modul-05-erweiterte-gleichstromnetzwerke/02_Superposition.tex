@@ -49,7 +49,7 @@
     \onslide<1->{
     \b{
     \begin{itemize}    
-		\item Betrachtung einer Blackbox als System mit Eingangsgrößen und Ausgangsgrößen.
+		\item Consideration of a black box as a system with input variables and output variables.
     \end{itemize}
     }
 
@@ -61,7 +61,7 @@
     \onslide<2->{
     \b{
     \begin{itemize}    
-		\item Transformation des Eingangssignals $F_\mathrm{E}$ in ein Ausgangssignal $F_\mathrm{A}$.
+		\item Transformation of the input signal $F_\mathrm{E}$ into an output signal $F_\mathrm{A}$.
     \end{itemize}
     }
 
@@ -97,8 +97,8 @@
     \onslide<1->{
     \b{
         \begin{itemize}    
-            \item Beschreibung einer Black Box als elektrischen Netzwerk mit einer Eingangsspannung
-            und einer Ausgangsspannung.
+            \item  Description of a black box as an electrical network with an input voltage
+            and an output voltage.
         \end{itemize}
     }}
 
@@ -120,7 +120,7 @@
     \onslide<3->{
     \b{
         \begin{itemize}    
-            \item Transformation der Eingangsspannung $U_\mathrm{E}$ in eine Ausgangsspannung $U_\mathrm{A}$.
+            \item Transformation of the input voltage $U_\mathrm{E}$ into an output voltage $U_\mathrm{A}$.
         \end{itemize}
     }
 
@@ -140,7 +140,7 @@
 
 \begin{frame}
     \renewcommand{\figurename}{Figure}
-    \ftx{LTI-Systeme}
+    \ftx{LTI-Systems}
 
     \s{
         \textbf{Causality}\\
@@ -156,10 +156,10 @@
 
     \b{
         \begin{itemize}    
-            \item<1-> Kausale Systeme zeigen keine Sytemantwort vor der Anregung
-            \item<2-> Zeitinvariante Systeme reagieren immer gleich auf ein Eingangssignal, unabhängig vom Zeitpunkt
-            \item<2-> Lineares System $\rightarrow$ endliche Ausgangsamplitude bei endlicher Eingangsamplitude
-            \item<3-> Zeitinvariante und lineare System werden als LTI-Systeme kategorisiert
+            \item<1-> Causal systems do not exhibit a system response prior to excitation.
+            \item<2-> Time-invariant systems always respond identically to an input signal, regardless of the timing.
+            \item<2-> Linear system $\rightarrow$ finite output amplitude for finite input amplitude
+            \item<3-> Time-invariant and linear systems are categorised as LTI systems.
         \end{itemize}
     }
 
@@ -251,12 +251,12 @@
     }
 
     \b{
-        Bedinungen und Ausführung des Überlagerungssatzes: 
+        Conditions and execution of the overlay set:
         \begin{itemize}
-            \item<1-> Vorausgesetzte Linearität
-            \item<2-> Ausschalten der Quellen
-            \item<3-> Ideale Spannungsquelle wird durch einen Kurzschluss ersetzt
-            \item<4-> Ideale Stromquelle wird durch offene Klemmen, einen Leerlauf, ersetzt
+            \item<1-> Assumed linearity
+            \item<2-> Switching off the sources
+            \item<3-> Ideal voltage source replaced by a short circuit
+            \item<4-> Ideal power source is replaced by open terminals, an open circuit
         \end{itemize}
     }
 
@@ -314,17 +314,17 @@
 \begin{frame}
     \ftx{Conversion of sources}
 
-    \begin{Merksatz}{Conversion of sources}
+    \begin{Key point}{Conversion of sources}
         When voltage sources and current sources are switched off, deactivated voltage sources leave a short circuit and 
         deactivated current sources leave an open circuit.
-    \end{Merksatz}
+    \end{Key point}
 
     \speech{SuperposQuellMrk}{1}{Beim Ausschalten von Spannungsquellen und Stromquellen hinterlassen deaktivierte Spannungsquellen einen Kurzschluss und 
         deaktivierte Stromquellen einen Leerlauf.}
 \end{frame}
 
 \begin{frame}
-    \ftx{Zusammenfassung Überlagerungssatz}
+    \ftx{Summary of superposition theorem}
 
     \s{
         If all sources except one are switched off,
@@ -336,11 +336,11 @@
     }
 
     \b{
-        Annahme: 
+        Assumption : 
         \begin{itemize}
-            \item Der Widerstand $R$ wird durch die beiden Quellen $Q_1$ und $Q_2$ versorgt
-            \item Separate Berechnung des Stromes durch $R$ 
-            \item Gesamtstrom durch $R$ ergibt sich aus der Summe der Ströme aus den beiden Quellen:
+            \item The resistor $R$ is supplied by the two sources $Q_1$ and $Q_2$.
+            \item Separate calculation of the current through $R$ 
+            \item The total current through $R$ is calculated from the sum of the currents from the two sources:
         \end{itemize}
     }
 
@@ -364,7 +364,7 @@
     }
 
     \b{
-        Berechnung eines Beispielnetzwerks:  
+        Calculation of a sample network:
 
     }
 
@@ -393,7 +393,7 @@
 
 \begin{frame}
     \renewcommand{\figurename}{Figure}
-    \ftx{Beispiel Lösung}
+    \ftx{Example solution}
 
     \fu{
         \resizebox{0.8\textwidth}{!}{%
@@ -433,10 +433,10 @@
 \begin{frame}
     \ftx{Superposition principle}
 
-    \begin{Merksatz}{Überlagerungssatz}
+    \begin{Key point}{Superposition principle}
         Linear and time-invariant electrical networks with more than one source can be determined as the sum of the partial analyses of each 
         individual source. 
-    \end{Merksatz}
+    \end{Key point}
 
     \speech{SuperposUberMrk}{1}{Lineare und zeitlich invariante elektrische Netzwerke mit mehr als einer Quelle können als Summe der Teilanalysen von jeder 
         einzelnen Quelle bestimmt werden. }
@@ -445,8 +445,8 @@
 \newpage
 \begin{frame}
     \renewcommand{\figurename}{Figure}
-    \ftx{Beispiel Superpositionsverfahren}
-    \begin{bsp}{Superposition method}{}
+    \ftx{Example: Superposition method}
+    \begin{expl}{Superposition method}{}
 
     \s{
         The electrical network shown in Figure \ref{BildBeispielaufgabeSuperposition} is given. The following 
@@ -486,10 +486,10 @@
                         }\centering                                                           
                     \end{figure}
 					\begin{eqa}
-						K_1: I_\mathrm{ges}&=I_1+I_3 \nonumber\\                        
-                        I_\mathrm{ges}&=\frac{U_\mathrm{g}}{R_\mathrm{ges}}=\frac{U_\mathrm{g}}{R_\mathrm{i}+\frac{R_1\cdot(R_2+R_3)}{R_1+R_2+R_3}} \nonumber\\
-                        \frac{I_3}{I_\mathrm{ges}}&=\frac{R_1}{R_1+R_2+R_3} \nonumber\\
-                        I_3(U_\mathrm{g})&=I_\mathrm{ges}\cdot\frac{R_1}{R_1+R_2+R_3}=\frac{U_\mathrm{g}}{R_\mathrm{i}+\frac{R_1\cdot(R_2+R_3)}{R_1+R_2+R_3}}\cdot\frac{R_1}{R_1+R_2+R_3}\nonumber
+						K_1: I_\mathrm{tot}&=I_1+I_3 \nonumber\\                        
+                        I_\mathrm{tot}&=\frac{U_\mathrm{g}}{R_\mathrm{tot}}=\frac{U_\mathrm{g}}{R_\mathrm{i}+\frac{R_1\cdot(R_2+R_3)}{R_1+R_2+R_3}} \nonumber\\
+                        \frac{I_3}{I_\mathrm{tot}}&=\frac{R_1}{R_1+R_2+R_3} \nonumber\\
+                        I_3(U_\mathrm{g})&=I_\mathrm{tot}\cdot\frac{R_1}{R_1+R_2+R_3}=\frac{U_\mathrm{g}}{R_\mathrm{i}+\frac{R_1\cdot(R_2+R_3)}{R_1+R_2+R_3}}\cdot\frac{R_1}{R_1+R_2+R_3}\nonumber
 					\end{eqa}
 				}
 			}
@@ -502,8 +502,8 @@
                         }\centering                                                           
                     \end{figure}
 					\begin{eqa}
-						K_2: I_\mathrm{ges}&=I_\mathrm{g}=I_2-I_3 \nonumber\\                        
-                        \frac{-I_3}{I_\mathrm{ges}}&=\frac{R_2}{(R_1||R_\mathrm{i})+R_2+R_3} \nonumber\\
+						K_2: I_\mathrm{tot}&=I_\mathrm{g}=I_2-I_3 \nonumber\\                        
+                        \frac{-I_3}{I_\mathrm{tot}}&=\frac{R_2}{(R_1||R_\mathrm{i})+R_2+R_3} \nonumber\\
                         I_3(I_\mathrm{g})&=-I_\mathrm{g}\cdot\frac{R_2}{(R_1||R_\mathrm{i})+R_2+R_3}\nonumber
 				    \end{eqa}
 				}
@@ -521,7 +521,7 @@
 			}
 		\end{enumerate}
 
-    \end{bsp}
+    \end{expl}
 
     \speech{SuperposBsp}{1}{Anhand des folgenden Beispieles sollen die Eklärungen zum Superpositionsprinzip noch einmal verfestigt werden.
     Hierzu sollen zu dem angezeigten elektrischen Netzwerk die Ströme und Spannungen eingezeichnet werden. 

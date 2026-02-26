@@ -1,9 +1,9 @@
-\subsection{Dimensionierung des Vorwiderstands einer Zenerdiode\label{Aufg5}}
+\subsection{Dimensioning the series resistor of a Zener diode\label{Aufg5}}
 % Alt: Aufgabe 5
 \Aufgabe{
-  Die Zenerspannung der Diode beträgt $U_\mathrm{D}=6\,\mathrm{V}$ und die Diode darf eine maximale Verlustleistung von \(P_\mathrm{tot}=\mathrm{400\,mW} \) nicht überschreiten. 
-  Die maximale Eingangsspannung beträgt \( U_0 = \mathrm{12\,V} \). \\
-  Wie groß muss der Widerstand \( R \) mindestens sein, damit die Diode nicht zerstört wird?
+  The Zener voltage of the diode is $U_\mathrm{D}=6\,\mathrm{V}$ and the diode must not exceed a maximum power dissipation of \(P_\mathrm{tot}=\mathrm{400\,mW} \). 
+  The maximum input voltage is \( U_0 = \mathrm{12\,V} \). \\
+  What is the minimum value of resistance \( R \) required to prevent the diode from being destroyed?
 
 \begin {figure} [H]
    \centering
@@ -49,23 +49,22 @@
 
 
 \Loesung{
-    Die Spannung am Widerstand ergibt sich zu:
+    The voltage across the resistor is calculated as follows:
     \begin{align*}
         U_\mathrm{R} &= U_0 - U_\mathrm{D} = \mathrm{12\,V} - \mathrm{6\,V} = \mathrm{6\,V}
     \end{align*}
-    Die maximale Verlustleistung der Diode ist:
-    \begin{align*}
+    The maximum power dissipation of the diode is:    \begin{align*}
         P_\mathrm{tot} &= U_\mathrm{D} \cdot I = \mathrm{400\,mW}
     \end{align*}
-    Daraus folgt der maximale Strom durch die Diode:
+    This results in the maximum current through the diode:
     \begin{align*}
         I &= \frac{\mathrm{400\,mW}}{\mathrm{6\,V}} = \mathrm{66{,}7\,mA}
     \end{align*}
-    Um diesen Strom nicht zu überschreiten, ergibt sich der Mindestwert für den Widerstand:
+    In order not to exceed this current, the minimum value for the resistance is:
     \begin{align*}
         R &= \frac{U_\mathrm{R}}{I} = \frac{\mathrm{6\,V}}{\mathrm{66{,}7\,mA}} \approx \mathrm{90\,\Omega}
     \end{align*}
-  Siehe: Abschnitt \ref{sec:SpezielleDioden}
+ See section: \ref{sec:SpezielleDioden}
 
 %   \speech{
 % **Lösung zu Aufgabe 5**  

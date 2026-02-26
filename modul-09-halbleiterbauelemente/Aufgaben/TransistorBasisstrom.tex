@@ -1,7 +1,7 @@
-\subsection{Ermittlung von Basis-Emitter-Spannung und Basisstrom\label{Aufg12}}
+\subsection{Determination of base-emitter voltage and base current\label{Aufg12}}
 % Alt: Aufgabe 12
 \Aufgabe{
-  Gegeben ist die abgebildete Transistorschaltung mit den folgenden Parametern: $U_0=\mathrm{5\,V}$ ,
+  Given is the transistor circuit shown with the following parameters: $U_0=\mathrm{5\,V}$ ,
   $U_L=\mathrm{15\,V}$, $R_\mathrm{V}=\mathrm{100\,k\Omega}$ und $R_\mathrm{V}=\mathrm{500\,\Omega}$.
   
   \begin{figure}[H]
@@ -11,27 +11,27 @@
   \end{figure}
 
   \begin{itemize}
-    \item[a)] Wie groß ist die Spannung $U_\mathrm{BE}$ näherungsweise, wenn es sich um einen Siliziumtransistor handelt?
-    \item[b)] Wie groß ist der Strom $I_\mathrm{B}$?
+    \item[a)] What is the approximate voltage $U_\mathrm{BE}$ for a silicon transistor?
+    \item[b)] How big is the current $I_\mathrm{B}$?
   \end{itemize}
 }
 
 \Loesung{
   \begin{itemize}
     \item[a)]
-          Diese Spannung ist eine materialbedingte Eigenschaft des Silizium-Transistors und bleibt nahezu konstant, unabhängig von der Basisspannung \( U_\text{B} \).
-          Ein npn-Transistor hat im leitenden Zustand eine typische Basis-Emitter-Spannung von:
+          This voltage is a material-related property of the silicon transistor and remains almost constant, regardless of the base voltage \( U_\text{B} \).
+          An npn transistor has a typical base-emitter voltage in the conductive state of:
           \begin{equation*}
             U_\text{BE} \approx 0,6\,\text{V} \text{ bis } 0,7\,\text{V}
           \end{equation*}
           
-          Obwohl \( U_\text{0} = 5\,\text{V} \) ist, begrenzt der Transistor die Spannung \( U_{BE} \) auf ca. \( 0,6\,\text{V} \), sobald der Transistor leitend ist.  
-          Der überschüssige Spannungsabfall wird durch andere Ströme und Bauteile der Schaltung ausgeglichen.
-          
+          Although \( U_\text{0} = 5\,\text{V} \), the transistor limits the voltage \( U_{BE} \) to approx. \( 0.6\,\text{V} \) as soon as the transistor is conductive.  
+          The excess voltage drop is compensated for by other currents and components in the circuit.
+
     \item[b)]
           \begin{align*}
             I_\text{B} = \frac{5\,\text{V} - 0,6\,\text{V}}{100\,\text{k}\Omega} = 44\,\mu\text{A}
           \end{align*}
   \end{itemize}
-  Siehe: Abschnitt \ref{sec:Bipolartransistor} und \ref{fig:StroemeUndSpannungenBeimBipolartransistor}
+  See section: \ref{sec:Bipolartransistor} und \ref{fig:StroemeUndSpannungenBeimBipolartransistor}
 }

@@ -1,16 +1,16 @@
-\subsection{Ausgangsspannung eines Operationsverstärkers mit mehreren Eingängen berechnen\label{Aufg5}}
+\subsection{Calculate the output voltage of an operational amplifier with multiple inputs\label{Aufg5}}
 % Alt: Aufgabe 5
 \Aufgabe{
-    Gegeben ist die abgebildete Schaltung mit einem idealen Operationsverstärker. Die Betriebsspannung beträgt 
-    $\mathrm{\pm15\,V}$.
+    The depicted circuit with an ideal operational amplifier is given. The supply voltage is $\mathrm{\pm15\,V}$.
     \begin{itemize}
-    \item[a)] Die Widerstände sind alle gleich, es gilt $R_1 = R_2 = R_3 = R_\mathrm{F} = 10\,\mathrm{k\Omega}$. Die Spannung $U_\mathrm{E1} = \mathrm{1\,V}$, $U_\mathrm{E2} = \mathrm{2\,V}$, 
-    $U_\mathrm{E3} = \mathrm{3\,V}$. Wie hoch ist die Spannung am Ausgang $U_\mathrm{A}$?
-    \item[b)] Die Eingangsspannungen bleiben gleich groß, nur die Widerstände betragen nun $R_\mathrm{F} = \mathrm{10\,k\Omega}$, $R_\mathrm{1} = \mathrm{2\,k\Omega}$,
-     $R_\mathrm{2} = \mathrm{5\,k\Omega}$, $R_\mathrm{3} = \mathrm{10\,k\Omega}$. Wie hoch ist die Spannung am Ausgang $U_\mathrm{A}$?
-    \item[c)] Die Eingangsspannungen bleiben gleich groß, nur die Widerstände betragen nun $R_\mathrm{F} = \mathrm{10\,k\Omega}$, $R_\mathrm{1} = \mathrm{10\,k\Omega}$, 
-    $R_\mathrm{2} = \mathrm{5\,k\Omega}$, $R_\mathrm{3} = \mathrm{2\,k\Omega}$. Wie hoch ist die Spannung am Ausgang $U_\mathrm{A}$?
+    \item[a)] All resistors are equal: $R_1 = R_2 = R_3 = R_\mathrm{F} = 10\,\mathrm{k\Omega}$. The input voltages are $U_\mathrm{E1} = \mathrm{1\,V}$, $U_\mathrm{E2} = \mathrm{2\,V}$, $U_\mathrm{E3} = \mathrm{3\,V}$. 
+    What is the output voltage $U_\mathrm{A}$?
+    \item[b)] The input voltages remain the same, but the resistors are now $R_\mathrm{F} = \mathrm{10\,k\Omega}$, $R_\mathrm{1} = \mathrm{2\,k\Omega}$, $R_\mathrm{2} = \mathrm{5\,k\Omega}$, $R_\mathrm{3} = \mathrm{10\,k\Omega}$. 
+    What is the output voltage $U_\mathrm{A}$?
+    \item[c)] The input voltages remain the same, but the resistors are now $R_\mathrm{F} = \mathrm{10\,k\Omega}$, $R_\mathrm{1} = \mathrm{10\,k\Omega}$, $R_\mathrm{2} = \mathrm{5\,k\Omega}$, $R_\mathrm{3} = \mathrm{2\,k\Omega}$. 
+    What is the output voltage $U_\mathrm{A}$?
     \end{itemize}
+
     \begin {figure} [H]
    \centering
    \input{Tikz/src/FigOPVmehrereEingaenge.tex}
@@ -46,7 +46,7 @@
 }
 
 \Loesung{
-	Formel:
+	Formula:
     \begin{eqa}
         U_\mathrm{A} = - (U_\mathrm{E1} \cdot \frac{R_\mathrm{F}}{R_1} + U_\mathrm{{E2}} \cdot \frac{R_\mathrm{F}}{R_2} + U_\mathrm{E3} \cdot \frac{R_\mathrm{F}}{R_3})
     \end{eqa}
@@ -63,9 +63,9 @@
         \begin{align*}
             U_\mathrm{A} =\mathrm{ - (1\,V \cdot \frac{10\,k\Omega}{10\,k\Omega} + 2\,V \cdot \frac{10\,k\Omega}{5\,k\Omega} + 3\,V \cdot \frac{10\,k\Omega}{2\,k\Omega}) = -20\,V}
         \end{align*}
-        Anmerkung: $-20\,\mathrm{V}$ nicht möglich, da die Betriebsspannung $\mathrm{\pm 15\,V}$ beträgt. Dies führt dazu, dass der niedrigste Wert $\mathrm{-15\,V}$ sein kann.
+        Note: $-20\,\mathrm{V}$ is not possible because the supply voltage is $\mathrm{\pm 15\,V}$. This means the lowest possible value is $-15\,V$.
     \end{itemize}
-    Siehe: Abschnitt \ref{fig: Verschaltung Verstaerker} und Tabelle \ref{tab:Grundschaltungen}
+    See section: \ref{fig: Verschaltung Verstaerker} and Table \ref{tab:Grundschaltungen}
 
 %    \speech{
 %        Berechnung der Ausgangsspannung einer Operationsverstärkerschaltung mit mehreren Eingängen  

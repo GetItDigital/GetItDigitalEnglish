@@ -1,10 +1,10 @@
-\subsection{Bestimmung des Arbeitspunkts und der Leistung einer Diode\label{Aufg4}}
+\subsection{Determining the operating point and power of a diode\label{Aufg4}}
 % Alt: Aufgabe 4
 \Aufgabe{
-  Eine Diode hat die folgende Kennlinie im 
-  Durchlassbereich. Sie wird in Reihe mit einer 
-  idealen Spannungsquelle $U_0=1\,\mathrm{V}$ und einem 
-  Widerstand mit dem Wert von $R=200\,\Omega$ geschaltet.
+  A diode has the following characteristic curve in the 
+  forward direction. It is connected in series with an 
+  ideal voltage source $U_0=1\,\mathrm{V}$ and a 
+  resistor with a value of $R=200\,\Omega$.
 
     \begin{figure}[H]
         \centering
@@ -22,12 +22,12 @@
 
     \begin{itemize}
         \item[a)]
-        Welcher Strom $I$ und welche Spannung $U_\mathrm{D}$ 
-        stellen sich ein? Lösen Sie das Problem graphisch.
+        What current $I$ and what voltage $U_\mathrm{D}$ 
+        are established? Solve the problem graphically.
         \item[b)]
-        Welche elektrische Leistung wird an der Diode umgesetzt?
+        What electrical power is converted at the diode?
         \item[c)]
-        Wie muss $R$ gewählt werden, damit sich ein Strom von $3\,\mathrm{mA}$ einstellt? 
+        How must $R$ be selected so that a current of $3\,\mathrm{mA}$ is established?
     \end{itemize}
 %     \speech{ **Aufgabe 4**  
 % Eine **Diode mit gegebener Kennlinie im Durchlassbereich** wird in **Reihe mit einer idealen Spannungsquelle** \( U_0 = 1V \) und einem **Widerstand \( R = 200\Omega \)** geschaltet.
@@ -67,12 +67,12 @@
 \Loesung{
     \begin{itemize}
         \item[a)]
-        Im ersten Schritt wird die Wirkung der Spannungsquelle auf den Widerstand $R$ betrachtet. 
-        Bei $U_0=1\,\mathrm{V}$ fließen durch den Widerstand $R$ ein Strom von $I_\mathrm{R}=\frac{U_0}{R}=\frac{1\,\mathrm{V}}{200\,\Omega}=5\,\mathrm{mA}$. 
-        Es kann die Widerstandgerade vom Ursprung aus zu dem Punkt ($1\,\mathrm{V}$, $5\,\mathrm{mA}$) eingezeichnet werden (linke Abbildung).\\
-        Gemäß des Aufbaus der Schaltung muss die Widerstandsgerade im nächsten Schritt gespiegelt werden, es entsteht die rechte Darstellung.
-        Der Schnittpunkt beider Linien entspricht dem Arbeitspunkt ($U_\text{AP}$, $I_\text{AP}$), dieser lautet: ($0,75\,\mathrm{V}$, $1,2\,\mathrm{mA}$). 
-                
+        In the first step, the effect of the voltage source on the resistor $R$ is considered.
+        At $U_0=1\,\mathrm{V}$, a current of $I_\mathrm{R}=\frac{U_0}{R}=\frac{1\,\mathrm{V}}{200\,\Omega}=5\,\mathrm{mA}$ flows through the resistor $R$.
+        The resistance line can be drawn from the origin to the point ($1\,\mathrm{V}$, $5\,\mathrm{mA}$) (left figure).\\
+        According to the circuit design, the resistance line must be mirrored in the next step, resulting in the right-hand figure.
+        The intersection of both lines corresponds to the operating point ($U_\text{AP}$, $I_\text{AP}$), which is: ($0.75\,\mathrm{V}$, $1.2\,\mathrm{mA}$).
+                 
         \begin{minipage}{\linewidth}
             \begin{figure}[H]
                 \centering
@@ -88,13 +88,13 @@
         \end{minipage}
                     
         \item[b)]
-        Die Leistung ergibt sich aus dem zuvor ermittelten Arbeitspunkt.
+        The power is calculated from the previously determined operating point.
         \begin{equation*}
             P = U_\text{AP} \cdot I_\text{AP} = 0,75 \, \text{V} \cdot 1,2 \, \text{mA} = 0,9 \, \text{mW}
         \end{equation*}
         
         \item[c)]
-        Ausgehend vom Punkt ($1\,\mathrm{V}, 0\,\mathrm{mA}$) zum Schnittpunkt mit der Diodenkennlinie bei $I=3\,\mathrm{mA}$ ergibt sich die gesuchte Widerstandsgerade.
+        Starting from the point ($1\,\mathrm{V}, 0\,\mathrm{mA}$) to the intersection with the diode characteristic curve at $I=3\,\mathrm{mA}$, we obtain the desired resistance line.
         
         \begin{minipage}{\linewidth}
             \begin{figure}[H]
@@ -103,7 +103,7 @@
             \end{figure}
         \end{minipage}
         
-        Es kann der Schnittpunkt ($0,86\,\mathrm{V}, 3\,\mathrm{mA}$) abegelesen werden.
+        The intersection point ($0.86 V, 3 mA$) can be read off.
     
         \begin{gather*}
             U_\mathrm{R} = U_0 - U_\mathrm{D} = 1 \, \mathrm{V} - 0,86 \, \mathrm{V} = 0,14 \, \mathrm{V} \\
@@ -111,7 +111,7 @@
             R = \frac{U_{\text{R}}}{I} = \frac{0,14 \, \text{V}}{3 \, \text{mA}} = 46,67 \, \Omega
         \end{gather*}
     \end{itemize}
-Siehe: Abschnitt \ref{fig:Diodenkennlinie}
+See section: \ref{fig:Diodenkennlinie}
 
 
 % \speech{

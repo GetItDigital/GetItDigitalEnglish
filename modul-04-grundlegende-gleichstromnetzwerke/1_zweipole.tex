@@ -63,27 +63,25 @@
 \begin{frame}
 
 	\b{
-		\fta{Elektrische Netzwerke}
+		\fta{Electrical networks}
 		
 		\begin{columns}
 			\column[t]{0.5\textwidth}
 			
-			Elektrische Netzwerke bestehen aus: 
+			Electrical networks consist of: 
 			\begin{itemize}
-				\item Zwei- oder Mehrpolen: Elemente mit zwei oder mehreren el. Anschlüssen
-				\item Verbunden durch ideal leitende Verbindungen
+				\item Two-pole or multi-pole: Elements with two or more electrical connections
+				\item Connected by ideal conductive connections
 			\end{itemize}
 			
 			\phantom{.}\\
 			
-			Diese können zu Systemen unterschiedlichster Größen geschaltet werden:
+			These can be connected to systems of various sizes:
 			
 			\begin{itemize}
-				\item Energieverteilnetze \>1000 km Ausdehnung
-				\item Elektronische Schaltungen im Mikrometerbereich (Mikrocontroler)
+				\item Energy distribution networks >1000 km in length
+				\item Electronic circuits in the micrometer range (microcontrollers)
 			\end{itemize}
-			
-			
 			
 			
 			\column[t]{0.5\textwidth}
@@ -179,35 +177,35 @@
 \begin{frame}
 
 	\b{
-		\ftx{Elektrische Netzwerke}
+		\ftx{Electrical networks}
 		\begin{columns}
 			\column[t]{0.45\textwidth}
 			
-			Ziel: Berechnung der elektrischen Größen in einer Schaltung
+			Objective: Calculation of electrical quantities in a circuit
 			
 			\vspace{5pt}
 			\begin{itemize}
-				\item Vereinfachung der realen Bauteile zu idealen Zweipolen
-				\item Darstellung der Zweipole durch Ersatzschaltbilder (siehe Tabelle)\\
-				      $\rightarrow$ bilden Grundlage zur mathematischen Berechnung		
-				\item Ersatzschaltbild modelliert grundlegendes Verhalten der realen elektrischen Schaltung
+				\item Simplification of real components to ideal two-pole circuits
+				\item Representation of two-pole circuits using equivalent circuit diagrams (see table)\\
+					$\rightarrow$ form the basis for mathematical calculations
+				\item Equivalent circuit diagrams model the basic behavior of real electrical circuits
 				      
 			\end{itemize}
 			
 			\column[t]{0.55\textwidth}
 			
-			Beispiele für Zweipole:
+			Examples of two poles:
 			
 			
 			\begin{center}
 				\begin{tabular}{|c|c|}
 					\hline
-					Zweipol                 & Schaltzeichen                                               \\ \hline
-					ideale Spannungsquelle  & \input{Tikz/src/1_zweipole/Beispiel_ideale_Spannungsquelle} \\ \hline
-					ideale Stromquelle      & \input{Tikz/src/1_zweipole/Beispiel_ideale_Stromquelle}     \\ \hline
-					Kondensator (Kapazität) & \input{Tikz/src/1_zweipole/Beispiel_Kondensator}            \\ \hline
-					ohmscher Widerstand     & \input{Tikz/src/1_zweipole/Beispiel_ohmscher_Widerstand}    \\ \hline
-					Spule (Induktivität)    & \input{Tikz/src/1_zweipole/Beispiel_Spule}                  \\ \hline
+					Dipole                 	& Circuit symbol                                              \\ \hline
+					Ideal voltage source  	& \input{Tikz/src/1_zweipole/Beispiel_ideale_Spannungsquelle} \\ \hline
+					ideal current source    & \input{Tikz/src/1_zweipole/Beispiel_ideale_Stromquelle}     \\ \hline
+					Capacitor (capacitance) & \input{Tikz/src/1_zweipole/Beispiel_Kondensator}            \\ \hline
+					ohmic resistance     	& \input{Tikz/src/1_zweipole/Beispiel_ohmscher_Widerstand}    \\ \hline
+					Coil (inductance)	  	& \input{Tikz/src/1_zweipole/Beispiel_Spule}                  \\ \hline
 				\end{tabular}
 			\end{center}
 		\end{columns}
@@ -238,7 +236,7 @@
 
 
 \begin{frame}{}
-	\ftx{Lernziele: Zweipole und Zählpfeilsysteme}
+	\ftx{Learning objectives: Two-pole and counting arrow systems}
 	
 	\begin{Learning objectives}{Two-terminal elements and reference direction systems}
 		The students can
@@ -318,13 +316,13 @@
 		\begin{columns}
 			\column[t]{0.7\textwidth}
 			
-			Allgemein:\\
+			Generally:\\
 			\phantom{.}\\
 			\begin{itemize}
-				\item Zwei äußere Anschlüsse
-				\item Klemmströme $I_1$ und $I_2$ sind gleich groß ($I_1=I_2 = I$)
-				\item Klemmverhalten (Verhältnis von $I$ und $U$)
-				\item Reale Baumaße, Materialeigenschaften, Feldstärkenverteilung im Bauteil werden vernachlässigt
+				\item Two external connections
+				\item Clamping currents $I_1$ and $I_2$ are equal in magnitude ($I_1=I_2 = I$)
+				\item Clamping behaviour (ratio of $I$ and $U$)
+                \item Actual construction dimensions, material properties, and field strength distribution in the component are neglected.
 			\end{itemize}
 			
 			\column[t]{0.3\textwidth}
@@ -338,11 +336,11 @@
 		\phantom{text}\\
 		
 		
-		\textbf{Aktiver Zweiphl}: enthält Strom/Spannungsquelle(n) und ggfs. Widerstände, Kondensatoren, Spulen...\\
+        \textbf{Active two-phase}: contains current/voltage source(s) and, if necessary, resistors, capacitors, coils...\\
+
 		
-		
-		\textbf{Passiver Zweipol}: Enthält keine Quellen, sondern ausschließlich Widerstände, Kondensatoren, Spulen...
-		
+        \textbf{Passive two-pole}: Contains no sources, only resistors, capacitors, coils...
+
 		\begin{columns}
 			\column[t]{0.6\textwidth}
 			
@@ -375,9 +373,8 @@
 
 
 
-
 \begin{frame}
-	\ftx{Zählpfeilsysteme}
+	\ftx{Sign convention}
 	
 	\s{
 	
@@ -399,7 +396,7 @@
 			
 			\textbf{Passive sign convention (PSC)}: Current and voltage are counted in the same direction at the two poles. To be used with passive two-pole devices (e.g. resistors).\\
 			
-			\textbf{Generator sign convention (GSC)}: Current and voltage are counted in opposite directions at the two poles. To be used with active two-pole devices (e.g. voltage sources).
+			\textbf{Active sign convention (GSC)}: Current and voltage are counted in opposite directions at the two poles. To be used with active two-pole devices (e.g. voltage sources).
 			
 		\end{Key point}
 		 
@@ -430,10 +427,10 @@
 	\b{
 		Zählpfeilrichtung theoretisch beliebig, jedoch Konventionen: 
 		\begin{itemize}
-			\item Verbraucher-Zählpfeilsytem (VPS): Strom und Spannung \textbf{gleichsinnig}\\
-			      (passive Zweipole, z.B. Widerständen)
-			\item Erzeuger-Zählpfeilsystem (EPS): Strom und Spannung \textbf{entgegengesetzt}\\
-			      (aktive Zweipole, z.B. Spannungsquellen)
+			\item Passive sign convention (PSC): Current and voltage \textbf{In the same way}\\
+			      (passive two-pole devices, e.g. resistors)
+			\item Generator sign convention (GSC): Current and voltage \textbf{Opposite}\\
+			      (active two-pole devices, e.g. voltage sources)
 		\end{itemize}
 		
 		
@@ -442,9 +439,9 @@
 			\centering
 			\begin{tabular}{|c|c|c|c|}
 				\hline
-				Zählpfeilsystem & Erzeugte Leistung & Verbrauchte Leistung & Zählpfeile am Verbraucher                                                      \\ \hline
-				VPS             & $P = -UI$           & $P = UI > 0$           & \input{Tikz/src/1_zweipole/Vergleich_VPS} \\ \hline
-				EPS             & $P = UI > 0$        & $P = -UI$              & \input{Tikz/src/1_zweipole/Vergleich_EPS} \\ \hline
+				sign convention & Generated power & Consumed power & Passive sign-convention arrows                                                      \\ \hline
+				PSC             & $P = -UI$           & $P = UI > 0$           & \input{Tikz/src/1_zweipole/Vergleich_VPS} \\ \hline
+				ASC             & $P = UI > 0$        & $P = -UI$              & \input{Tikz/src/1_zweipole/Vergleich_EPS} \\ \hline
 				%\input{Tikz/src/1_zweipole/Vergleich_VPS_EPS}                                                                                                \\
 			\end{tabular}
 			
@@ -515,7 +512,7 @@
 %\end{frame}
 
 \begin{frame}
-	\ftx{Der Grundstromkreis}
+	\ftx{The basic circuit}
 	
 	\subsection{The fundamental circuit}
 	\s{
@@ -559,16 +556,16 @@
 	
 		\begin{columns}
 			\column[c]{0.5\textwidth}
-			Die wichtigsten Begriffe sind in der Abbildung dargestellt:
+			The most important terms are shown in the illustration:
 			\only<2->{\begin{itemize}
 
-					\item idealsierte Zweipole bilden \textbf{Zweige} des Netzwerks
+					\item idealised two-poles form \textbf{branches} of the network
 					      
-					      \only<3->{\item Verbindung der einzelnen Zweige über \textbf{Knoten} $K_n$ }
-					      \only<4->{\item geschlossene Kette von Zweigen bildet \textbf{Masche} $M_n$ }
+					      \only<3->{\item Connection of the individual branches via \textbf{Knots} $K_n$ }
+					      \only<4->{\item Forms a closed chain of branches \textbf{Mesh} $M_n$ }
 				\end{itemize}
 			}
-			\only<7->{Wie teilen sich Strom und Spannung in einem Netzwerk auf?}
+			\only<7->{How are current and voltage distributed in a network?}
 			\column[c]{0.5\textwidth}
 			\input{Tikz/src/1_zweipole/Elektrischer_Grundstromkreis_Folien}
 		\end{columns}

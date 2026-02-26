@@ -1,12 +1,12 @@
-\subsection{Untersuchung eines einfachen Gleichrichters\label{Aufg31}}
+\subsection{Investigation of a simple rectifier\label{Aufg31}}
 % Alt: Praktikumsaufgabe 3
 \Aufgabe{
 
-    Analysieren Sie den folgenden Gleichrichter. Zusätzlich sind die folgenden Parameter gegeben:
+    Analyse the following rectifier. The following parameters are also given:
     
     $\hat{u}_\mathrm{E} = 5\,\mathrm{V}$,
     $R_\mathrm{L} = 1\,\mathrm{k\Omega}$
-    und eine Diodendurchlassspannung von $U_\mathrm{f} = 0,7\,\mathrm{V}$.
+    and a diode forward voltage of $U_\mathrm{f} = 0,7\,\mathrm{V}$.
     
     \begin{figure}[H]
         \centering
@@ -15,34 +15,34 @@
     \end{figure}
     
     \begin{itemize}
-        \item[a)] Berechnen Sie die Ausgangsspannung $U_\mathrm{A}$.
-        \item[b)] Bestimmen Sie den durch den Lastwiderstand $R_\mathrm{L}$ fließenden Strom $I_\mathrm{L}$.
+        \item[a)] Calculate the output voltage $U_\mathrm{A}$.
+        \item[b)] Determine the current $I_\mathrm{L}$ flowing through the load resistor $R_\mathrm{L}$.
     \end{itemize}
 }
 
 
 \Loesung{
     \begin{itemize}
-        \item[a)] Berechnung der Ausgangsspannung $U_\mathrm{A}$ \\[0.2cm]
-              Die gegebene Schaltung besteht aus einer Diode in Vorwärtsrichtung und einem Lastwiderstand.  
-              Die Ausgangsspannung $U_\mathrm{A}$ entspricht der Eingangsspannung abzüglich der Diodendurchlassspannung:
+        \item[a)]   Calculation of the output voltage $U_\mathrm{A}$ \\[0.2cm]
+                    The given circuit consists of a diode in the forward direction and a load resistor.
+                    The output voltage $U_\mathrm{A}$ corresponds to the input voltage minus the diode forward voltage:
               \[
                   U_\mathrm{A} = U_\mathrm{E} - U_\mathrm{f}
               \]
-              Einsetzen der Werte:
+              Applying the values:
               \[
                   U_\mathrm{A} = 5\,\mathrm{V} - 0{,}7\,\mathrm{V} = 4{,}3\,\mathrm{V}
               \]
               
-        \item[b)] Bestimmung des Laststroms $I_\mathrm{L}$ \\[0.2cm]
-              Der durch den Lastwiderstand $R_\mathrm{L}$ fließende Strom berechnet sich nach dem Ohmschen Gesetz:
+        \item[b)]   Determination of the load current $I_\mathrm{L}$ \\[0.2cm]
+                    The current flowing through the load resistance $R_\mathrm{L}$ is calculated according to Ohm's law:
               \[
                   I_\mathrm{L} = \frac{U_\mathrm{A}}{R_\mathrm{L}}
               \]
-              Einsetzen der Werte:
+              Applying the values:
               \[
                   I_\mathrm{L} = \frac{4{,}3\,\mathrm{V}}{1\,\mathrm{k\Omega}} = 4{,}3\,\mathrm{mA}
               \]
     \end{itemize}
-    Siehe: Abschnitt \ref{sec:Einweggleichrichter}
+    See section: \ref{sec:Einweggleichrichter}
 }

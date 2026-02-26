@@ -1,17 +1,16 @@
 %Lernziele 1
 \begin{frame}
     \b{
-        \begin{Lernziele}{Operationsverstärker}
+        \begin{Learning objectives}{Operational amplifier}
             \title{Lernziele: Operationsverstärker}
-            Die Studierenden können
+            The students can
             \begin{itemize}
-                \item den Aufbau eines einfachen Operationsverstärkers angeben.
-                \item das Funktionsprinzip eines Operationalverstärkers erläutern.
-                \item verschiedene Operationsverstärkerschaltungen und mögliche Einsatzgebiete nennen. 
-                \item Unterschiede zwischen dem vereinfachten Operationsverstärkermodell und realen Operationsverstärkern beschreiben und wichtige Bereiche der Operationsverstärkerkennlinie angeben.
-                \item die Funktion von vorliegenden Operationsverstärkerschaltungen bestimmen und mithilfe der Kirchhoff'schen Gesetze die Verstärkung berechnen.
-            \end{itemize}
-        \end{Lernziele}    
+                \item Describe the structure of a simple operational amplifier.
+                \item Explain the operating principle of an operational amplifier. 
+                \item Name different operational amplifier circuits and possible areas of application. 
+                \item Describe the differences between the simplified operational amplifier model and real operational amplifiers and specify important areas of the operational amplifier characteristic curve.
+                \item Determine the function of existing operational amplifier circuits and calculate the gain using Kirchhoff's laws.            \end{itemize}
+        \end{Learning objectives}    
     }
 
    % \speech{Lernziele}{1}{
@@ -29,16 +28,16 @@
 %Lernziele 2
 \begin{frame}
 \b{
-    \begin{Lernziele}{Operationsverstärker}
+    \begin{Learning objectives}{Operational amplifier}
         \title{Lernziele: Operationsverstärker}
-        Die Studierenden können
+        The students can
         \begin{itemize}
-            \item geeignete Operationsverstärkerschaltungen für eine Problemlösung angegeben, Widerstandsverhältnisse berechnen und die Schaltung aufzeichnen.
-            \item wichtige Eigenschaften von Operationsverstärkerschaltungen benennen.
-            \item Stabilitätsanalysen durchführen und Ergebnisse der Analyse beurteilen.
-            \item auf Grundlage von Datenblättern Vor- und Nachteile von Operationsverstärkern für bestimmte Einsatzzwecke benennen und geeignete Komponenten für vorliegende Problemstellungen auswählen.
+            \item Specify suitable operational amplifier circuits for a problem solution, calculate resistance ratios, and record the circuit.
+            \item Name important properties of operational amplifier circuits.
+            \item Perform stability analyses and evaluate the results of the analysis.
+            \item Based on data sheets, name the advantages and disadvantages of operational amplifiers for specific applications and select suitable components for the problems at hand.
         \end{itemize}
-    \end{Lernziele}    
+    \end{Learning objectives}    
 }
 \end{frame}
 
@@ -51,21 +50,21 @@
 
 %Einführungsfolie
 \begin{frame}
+    \renewcommand{\figurename}{Figure}
     %\listoftodos
     %Skript
-    \fta{Einführung, Aufbau und Funktionsweise von Operationsverstärkern}
+    \fta{Introduction, structure and function of operational amplifiers}
     \ftx{Einführung}
-    \s{Im vorherigen Modul wurde erläutert, wie mit Hilfe von ein- und mehrstufigen Transistorverstärkern,
-    Signale mit geringen Eingangsamplituden verstärkt werden können. Diese Verstärkerschaltungen wurden 
-    vor allem in der Mess-, Steuer- und Regelungstechnik eingesetzt und bis in die 1950er Jahre diskret 
-    aus Elektronenröhren oder Transistoren aufgebaut. Die Entwicklung der „integrated curcuits“ ermöglichte 
-    ab Ende der 1960er Jahre die Miniaturisierung von Schaltungen und dadurch die Bereitstellung 
-    von modularen Bausteinen für die Hardwareentwicklung. Dies galt auch für die in den 1940er Jahren entwickelte 
-    Differenzverstärker, die aufgrund ihres zunächst sehr verbreiteten Einsatzes in Analogrechnern auch als 
-    „operational amplifier“ (zu deutsch „Operationsverstärker“ von „Operator“) bezeichnet werden. 
-    Die Grundlagen zum Thema „Operationsverstärker“ werden in diesem Modul vermittelt. 
-
-    Es sollen im Rahmen dieses Kapitels folgende Kompetenzen erworben werden:
+    \s{The previous module explained how single-stage and multi-stage transistor amplifiers can be used to
+    amplify signals with low input amplitudes. These amplifier circuits were 
+    primarily used in measurement and control technology and, until the 1950s, were constructed discretely 
+    from electron tubes or transistors. The development of integrated circuits enabled 
+    the miniaturisation of circuits from the end of the 1960s onwards, thereby providing 
+    modular components for hardware development.
+    This also applied to the differential amplifiers developed in the 1940s, which, due to their initially widespread use in analogue computers, are also referred to as operational amplifiers (from ‘operator’).     
+    This module covers the basics of operational amplifiers. 
+    
+    The following skills are to be acquired in this chapter:
 
 
     % \speech{Einführung Operationsverstärker}{1}{
@@ -85,14 +84,14 @@
 
 
     \s{
-        \begin{Lernziele}{Operationsverstärker}
+        \begin{Learning objectives}{Operationsverstärker}
             \title{Lernziele: Operationsverstärker}
-            Die Studierenden können
+            The students can
             \begin{itemize}
-                \item den Aufbau eines einfachen Operationsverstärkers angeben.
-                \item das Funktionsprinzip eines Operationsverstärkers erläutern.
+                \item describe the structure of a simple operational amplifier.
+                \item explain the operating principle of an operational amplifier.
             \end{itemize}
-        \end{Lernziele}
+        \end{Learning objectives}
     }
 
     %\speech{Einführung Operationsverstärker}{1}{
@@ -101,16 +100,17 @@
 
 
 
-    \ftb{Aufbau und Funktionsweise}
-    Operationsverstärker (auch kurz als OPV oder OpAmp bezeichnet) zeichnen sich dadurch aus, 
-    dass sie als Universalverstärker aufgebaut sind und ihre Funktion maßgeblich durch äußere Beschaltung bestimmt 
-    wird. So lassen sich mit dem gleichen Baustein Spannungen  verstärken, Rechenoperationen wie Additionen, Subtraktionen 
-    oder Integrationen durchführen und Signale schalten. Solche Operationalverstärker sind beispielsweise in der Mess- und 
-    Regelungstechnik, der Signalverarbeitung und der Signalformung unerlässlich. Im Folgenden ist ein aus diskreten 
-    Transistoren aufgebauter Operationsverstärker und ein integrierter Schaltkreis dargestellt.
-	Durch die direkte Kopplung der Verstärkerstufen können Operationsverstärker
-    Gleich- und Wechselspannungen verstärken und werden aus diesem Grund der Gruppe 
-    der Gleichspannungsverstärker zugeordnet. 
+    \ftb{Structure and functionality}
+    Operational amplifiers (also referred to as OPV or OpAmp for short) are characterised by the fact that 
+    they are designed as universal amplifiers and their function is largely determined by external circuitry.
+    This means that the same component can be used to amplify voltages , perform arithmetic operations such as addition, subtraction 
+    or integration, and switch signals. Such operational amplifiers are indispensable in measurement and 
+    control technology, signal processing and signal shaping, for example. The following shows an operational amplifier constructed from discrete 
+    transistors and an integrated circuit.
+    Due to the direct coupling of the amplifier stages, operational amplifiers
+    can amplify DC and AC voltages and are therefore classified as 
+    DC voltage amplifiers.
+ 
 
     %\speech{Einführung Operationsverstärker}{1}{
     %Operationsverstärker (auch kurz als OPV oder OpAmp bezeichnet) zeichnen sich dadurch aus, dass sie als Universalverstärker aufgebaut sind und ihre Funktion maßgeblich durch äußere Beschaltung bestimmt wird. So lassen sich mit dem gleichen Baustein Spannungen  verstärken, Rechenoperationen wie Additionen, Subtraktionen oder Integrationen durchführen und Signale schalten. Solche Operationalverstärker sind beispielsweise in der Mess- und Regelungstechnik, der Signalverarbeitung und der Signalformung unerlässlich. Im Folgenden ist ein aus diskreten Transistoren aufgebauter Operationsverstärker und ein integrierter Schaltkreis dargestellt. 
@@ -119,10 +119,10 @@
 
     %Abbildungen DIP Package OPV und Diskret Skript
     \begin{minipage}[t]{0.5\textwidth}
-        \f{width=0.6\textwidth}{width=0.8\textwidth}{kap1/OpAmpDiskret.png}{Diskret aufgebauter Operationsverstärker {\tiny(Quelle: Analog Devices, Wikipedia, Lizenz CC-BY-SA)}} % https://de.wikipedia.org/wiki/Operationsverst%C3%A4rker#/media/Datei:Discrete_opamp.png
+        \f{width=0.6\textwidth}{width=0.8\textwidth}{kap1/OpAmpDiskret.png}{Discrete operational amplifier {\tiny(Quelle: Analog Devices, Wikipedia, Licence CC-BY-SA)}} % https://de.wikipedia.org/wiki/Operationsverst%C3%A4rker#/media/Datei:Discrete_opamp.png
     \end{minipage}    
     \begin{minipage}[t]{0.5\textwidth}
-        \f{width=0.67\textwidth}{width=0.8\textwidth}{kap1/OpAmpPackage.png}{Operationsverstärker monolithisch in Dual in-line package (DIP) {\tiny(Quelle: Wollschaf, Wikipedia, (GNU-Lizenz für freie Dokumentation – mit Namensnennung))}} % https://de.wikipedia.org/wiki/Datei:Integrated_Circuit.jpg
+        \f{width=0.67\textwidth}{width=0.8\textwidth}{kap1/OpAmpPackage.png}{Operational amplifier, monolithic, in dual in-line package (DIP) {\tiny(Quelle: Wollschaf, Wikipedia, (GNU Free Documentation Licence – with attribution))}} % https://de.wikipedia.org/wiki/Datei:Integrated_Circuit.jpg
     \end{minipage}  
 %    \speech{
 %       Abbildung 1.1 zeigt einen diskret aufgebauten Operationsverstärker. Die Darstellung ist in Schwarz-Weiß gehalten und gibt einen detaillierten Einblick in die interne Struktur der elektronischen Bauteile. Mehrere kleine zylindrische Bauteile, wahrscheinlich Kondensatoren, sind sichtbar, zusammen mit einer Vielzahl von Widerständen und anderen diskreten Komponenten, die auf einer Leiterplatte angeordnet sind. In der unteren Hälfte sind zwei herausragende Metallpins erkennbar, die zur externen Verbindung dienen. Das gesamte Bild hat eine leicht körnige Struktur, die auf eine makroskopische Aufnahme hinweist.
@@ -139,16 +139,16 @@
                 \f{width=0.4\textwidth}{width=0.8\textwidth}{kap1/OpAmpPackage.png}{Operationsverstärker monolithisch in Dual in-line package (DIP) {\tiny(Quelle: Wollschaf, Wikipedia, (GNU-Lizenz für freie Dokumentation – mit Namensnennung))}} % https://de.wikipedia.org/wiki/Datei:Integrated_Circuit.jpg
                 \column[c]{0.6\textwidth}
                 %Beamer
-                \frametitle{Historie und Aufbau}
+                \frametitle{History and structure}
                     \begin{itemize}
                     \onslide<1->{
-                    \item Mehrstufige Transistorverstärker können genutzt werden, um Signale zu verstärken (siehe Kap. Halbleiter).}
+                    \item Multi-stage transistor amplifiers can be used to amplify signals (see chapter on semiconductors).}
                     \onslide<2->{
-                    \item Nach diesem Prinzip entworfene Schaltungen wurden bis zur Entwicklung der integrierten Schaltkreise (IC) diskret als Universalverstärker aufgebaut.}
+                    \item Circuits designed according to this principle were constructed discretely as universal amplifiers until the development of integrated circuits (ICs).}
                     \onslide<3->{
-                    \item Heute werden Universalverstärker monolithisch aufgebaut. Ihr Verhalten für den gewünschten Einsatzzweck wird maßgeblich durch die äußere Beschaltung bestimmt.}
+                    \item Today, universal amplifiers are constructed monolithically. Their behavior for the desired application is largely determined by the external circuitry.}
                     \onslide<4->{
-                    \item Sie werden in der Regel aufgrund ihres ursprünglichen Einsatzes in Analogrechnern als \glqq Operationsverstärker\grqq{} bezeichnet.}
+                    \item They are usually referred to as \glqq operational amplifiers\grqq{} due to their original use in analog computers.}
                 \end{itemize}
             \end{columns}}
     
@@ -160,7 +160,7 @@
 
 \begin{frame}
     \b{
-    \frametitle{Komparator}
+    \frametitle{Comparator}
     \begin{figure}[H]
     \centering
     % Linkes Bild
@@ -180,13 +180,13 @@
 
 \begin{frame}
    \b{
-    \frametitle{Funktionsweise von Operationsverstärkern}
-    Die Funktionsweise lässt sich gut an folgender Schaltung nachvollziehen. Was passiert, wenn an dieser Schaltung eine positve Differenzspannung angelegt wird?
+    \frametitle{How operational amplifiers work}
+    The following circuit illustrates how this works. What happens when a positive differential voltage is applied to this circuit?
     \begin{figure}[ht]
         \centering
         \fu{
             \resizebox{0.7\textwidth}{!}{\input{Tikz/src/Funktionsweise_OPV_ohnePfeile.tex}}
-            }{Verhalten eines vereinfachten Operationsverstärkers bei Anlegen einer positiven Differenzspannung am Eingang 
+            }{Obtaining a simplified operational amplifier when applying a positive differential voltage at the input 
             \label{fig:Funktionsweise OPV Folien ohne Pfeile}}
     \end{figure}
    } 
@@ -235,20 +235,22 @@
 
 
 \begin{frame}
-    \s{Die Funktionsweise lässt sich gut an einem vereinfachten Ersatzschaltbild erklären (siehe Abbildung~\ref{fig:Funktionsweise OPV 1}). 
-    In dieser Abbildung ist ein vereinfachtes Ersatzschaltbild eines OPVs aus Bipolartransistoren dargestellt. 
-    Heute werden Operationsverstärker vermehrt aus Feldeffekttransistoren (FET) aufgebaut. 
-    Die Umsetzung der Verstärkerschaltungen mit FETs erfolgt aber sehr ähnlich zu Bipolartransistoren, weswegen die Funktionsweise hier mit einer Art von Transistoren gezeigt werden soll. 
-    Die NPN-Transistoren $T_1$ und $T_2$ sind identisch und bilden den Eingang des Operationsverstärkers. Zwischen dem mit „+“ gekennzeichneten Eingang und dem mit „-“ gekennzeichneten Eingang wird die zu verstärkende Differenzspannung $U_{\textnormal{Diff}}$ angelegt\footnote{Alle in diesem Modul vorkommenden Ströme und Spannungen können zeitlich veränderlich sein und werden im Folgenden nur aufgrund der Übersichtlichkeit nicht mit $U_{\textnormal{E/A/...}}(t)$ sondern mit $U_{\textnormal{E/A/...}}$ bezeichnet}. 
-    Die Eingänge werden als nicht-invertierender Eingang „+“ und invertierender Eingang „-“ bezeichnet. 
-    Dieser Differenzverstärker am Eingang des OPVs ist in Abbildung~\ref{fig:Funktionsweise OPV 1} rot umrandet. 
-    Der Transistor $T_3$ funktioniert durch die Verschaltung mit den Dioden $D_1$ und $D_2$ wie 
-    eine Stromquelle. Die zwei Dioden sorgen für eine Regulierung der Basis-Spannung an $T_3$ (dieser Teil der Schaltung ist lila markiert).
+    \renewcommand{\figurename}{Figure}
+    \s{The mode of operation can be easily explained using a simplified equivalent circuit diagram (see Figure~\ref{fig:Funktionsweise OPV 1}).
+    This figure shows a simplified equivalent circuit diagram of an OPV made up of bipolar transistors.
+    Today, operational amplifiers are increasingly constructed from field-effect transistors (FETs).
+     
+    However, the implementation of amplifier circuits with FETs is very similar to that with bipolar transistors, which is why the mode of operation is shown here using one type of transistor. 
+    The NPN transistors $T_1$ and $T_2$ are identical and form the input of the operational amplifier. The differential voltage $U_{\text{Diff}}$ to be amplified is applied between the input marked ‘+’ and the input marked ‘-’. All currents and voltages occurring in this module can vary over time and are not designated with $U_{\text{E/A/... .}}(t)$ but with $U_{\text{E/A/...}}$ for clarity. 
+    The inputs are referred to as the non-inverting input ‘+’ and the inverting input ‘-’. 
+    This differential amplifier at the input of the OPV is outlined in red in Figure~\ref{fig:Funktionsweise OPV 1}. 
+    The transistor $T_3$ functions as a current source when connected to diodes $D_1$ and $D_2$. 
+    The two diodes regulate the base voltage at $T_3$ (this part of the circuit is marked in purple).
     
-    Wenn die nicht-invertierte Eingangsspannung steigt (A), sinkt der Widerstand des Transistors $T_2$. 
-    Dies führt zu einer Reduktion der Spannung an dessen Kollektor und zu einem Anstieg am Emitter~(B). Da die Basis des Transistors $T_4$ mit dem Kollektor von $T_2$ verbunden ist, verursacht dies einen entsprechende Spannungsreduktion an der Basis von $T_4$ (C). 
-    Infolgedessen wird der Kollektor-Emitter-Pfad des PNP-Transistors $T_4$ hochohmiger, so dass mehr Strom durch den Lastwiderstand $R_{\textnormal{L}}$ fließt~(D). 
-    Dadurch erhöht sich der Spannungsabfall über $R_{\textnormal{L}}$ und somit die Spannung am Ausgang $U_{\textnormal{A}}$ (die Ausgangsstufe des Verstärkers ist gelb markiert).
+    When the non-inverted input voltage increases (A), the resistance of transistor $T_2$ decreases.
+    This leads to a reduction in voltage at its collector and an increase at the emitter (B). Since the base of transistor $T_4$ is connected to the collector of $T_2$, this causes a corresponding reduction in voltage at the base of $T_4$ (C).
+    As a result, the collector-emitter path of the PNP transistor $T_4$ becomes more high-impedance, so that more current flows through the load resistor $R_{\textnormal{L}}$ (D).
+    This increases the voltage drop across $R_{\textnormal{L}}$ and thus the voltage at the output $U_{\textnormal{A}}$ (the output stage of the amplifier is marked in yellow).
     
     %Figure 1.3 im Skript
     \begin{minipage}{\textwidth}        
@@ -256,21 +258,21 @@
         \fu{
             \resizebox{0.6\textwidth}{!}{\input{Tikz/src/Funktionsweise_OPV_1.tex}}
             } 
-            {Verhalten eines vereinfachten Operationsverstärkers bei Anlegen einer positiven Differenzspannung am Eingang. Die blauen Pfeile geben an, wie sich das Potential am Schaltungsknoten ggü. eines ausgeglichenen Eingangs $U_{\textnormal{Diff}}$~=~0 verschiebt.
+            {Behaviour of a simplified operational amplifier when a positive differential voltage is applied to the input. The blue arrows indicate how the potential at the circuit node shifts relative to a balanced input $U_{\textnormal{Diff}}$~=~0.
             \label{fig:Funktionsweise OPV 1}}
     \end{minipage}
     }
     
     \b{ %Figure 1.3 auf Folien
-        \frametitle{Funktionsweise von Operationsverstärkern}
+        \frametitle{How operational amplifiers work}
         \begin{figure}[ht]
                 \centering
                 \fu{
                 \resizebox{0.7\textwidth}{!}{\input{Tikz/src/Funktionsweise_OPV_1_Teil1.tex}}
-                }{Verhalten eines vereinfachten Operationsverstärkers bei Anlegen einer positiven Differenzspannung am Eingang.
+                }{Behavior of a simplified operational amplifier when a positive differential voltage is applied to the input.
                 \label{fig:Funktionsweise OPV 1 Folien Teil 1}}
         \end{figure}   
-        Eine positive Differenzspannung (A) führt zu einer Reduktion des Widerstands von $T_2$, was zu einer Spannungsreduktion an dessen Kollektor und einem Anstieg am Emitter führt (B). $T_3$ fungiert als Stromquelle.}
+        A positive differential voltage (A) leads to a reduction in the resistance of $T_2$, which results in a voltage reduction at its collector and an increase at the emitter (B). $T_3$ acts as a current source.}
     %\speech{Funktionsweise von Operationsverstärkern Folie 1}{1}{
     % Die Funktionsweise von Operationsverstärkern lässt sich gut an einem vereinfachten Ersatzschaltbild erklären. 
     %Die NPN-Transistoren T1 und T2 sind identisch und bilden den Eingang des Operationsverstärkers. 
@@ -284,7 +286,7 @@
 \end{frame}
 
 \begin{frame}\b{
-    \frametitle{Funktionsweise von Operationsverstärkern}
+    \frametitle{How operational amplifiers work}
     \begin{figure}[ht]
             \centering
             \fu{
@@ -292,18 +294,17 @@
             }{Verhalten eines vereinfachten Operationsverstärkers bei Anlegen einer positiven Differenzspannung am Eingang. Die blauen Pfeile geben an, wie sich das Potential am Schaltungsknoten ggü. eines ausgeglichenen Eingangs $U_{\textnormal{Diff}}$~=~0 verschiebt.
             \label{fig:Funktionsweise OPV 1 Folien Teil 2}}
     \end{figure}   
-Durch die Spannungserhöhung an der Basis von $T_4$ (C) führt der Kollektor-\linebreak Emitter-Pfad von $T_4$ mehr Strom (D), was zu einem erhöhten Spannungsabfall am Lastwiderstand $R_{\textnormal{L}}$ und somit zu einer höheren Ausgangsspannung $U_{\textnormal{A}}$ führt.}
+Due to the voltage increase at the base of $T_4$ (C), the collector-\linebreak emitter path of $T_4$ conducts more current (D), which leads to an increased voltage drop across the load resistor $R_{\text{L}}$ and thus to a higher output voltage $U_{\text{A}}$.}
 \end{frame}
 
 \begin{frame}
-    \s{
-    Erhöht sich dagegen die invertierte Eingangsspannung, verringert sich der Widerstand im Kollektor-Emitter-Pfad des Transistors $T_1$ (siehe Abbildungen \ref{fig:Funktionsweise OPV 2}). 
-    Dies führt zu einer Verringerung der Spannung am Kollektor von $T_1$ und einer gleichzeitigen Erhöhung am Emitter. Da die Emitter 
-    von $T_1$ und $T_2$ miteinander verbunden sind, steigt auch die Spannung am Emitter von $T_2$ an. Dadurch verringert sich die Spannungsdifferenz 
-    zwischen Basis und Emitter von $T_2$, wodurch sein Kollektor-Emitter-Pfad hochohmiger wird. 
-    Infolgedessen steigt die Spannung am Kollektor von $T_2$ an, wodurch sich die Basisspannung von $T_4$ erhöht. Dadurch wird der Transistor $T_4$ resistiver, 
-    was den Stromfluss durch den Widerstand $R_{\textnormal{L}}$ verringert und in der Folge die Spannung an $R_{\textnormal{L}}$ absenkt. Die Ausgangsspannung dieses Operationsverstärkers kann so zwischen $+U_{\textnormal{B}}$ und $-U_{\textnormal{B}}$ gesteuert werden.  
-    %Figure 1.3 im Skript
+    \s{If, on the other hand, the inverted input voltage increases, the resistance in the collector-emitter path of transistor $T_1$ decreases (see Figures \ref{fig:Funktionsweise OPV 2}). 
+    This leads to a decrease in the voltage at the collector of $T_1$ and a simultaneous increase at the emitter. Since the emitters 
+    of $T_1$ and $T_2$ are connected to each other, the voltage at the emitter of $T_2$ also increases. This reduces the voltage difference 
+    between the base and emitter of $T_2$, making its collector-emitter path more high-impedance.
+    As a result, the voltage at the collector of $T_2$ increases, which increases the base voltage of $T_4$. This makes transistor $T_4$ more resistive, 
+    which reduces the current flow through resistor $R_{\text{L}}$ and consequently lowers the voltage at $R_{\text{L}}$. The output voltage of this operational amplifier can thus be controlled between $+U_{\text{B}}$ and $-U_{\text{B}}$.
+      %Figure 1.3 im Skript
 
 
   %  \speech{Funktionsweise von Operationsverstärkern}{1}{
@@ -312,6 +313,7 @@ Durch die Spannungserhöhung an der Basis von $T_4$ (C) führt der Kollektor-\li
   %  }
     %}
     \begin{figure}[ht]
+        \renewcommand{\figurename}{Figure}
             \centering
             \fu{
             \resizebox{0.6\textwidth}{!}{\input{Tikz/src/Funktionsweise_OPV_2.tex}}
@@ -321,7 +323,7 @@ Durch die Spannungserhöhung an der Basis von $T_4$ (C) führt der Kollektor-\li
     }
         %\frametitle{Funktionsweise von Operationsverstärkern}
         \b{
-            \frametitle{Funktionsweise von Operationsverstärkern}
+            \frametitle{How operational amplifiers work}
             \begin{figure}[ht]
                 \centering
                 \fu{
@@ -329,7 +331,7 @@ Durch die Spannungserhöhung an der Basis von $T_4$ (C) führt der Kollektor-\li
                 }{Verhalten eines vereinfachten Operationsverstärkers bei Anlegen einer negativen Differenzspannung am Eingang. Die blauen Pfeile geben an, wie sich das Potential am Schaltungsknoten ggü. eines ausgeglichenen Eingangs $U_{\textnormal{Diff}}$~=~0 verschiebt.
                 \label{fig:Funktionsweise OPV 2 Folien}}
             \end{figure}  
-            Eine höhere invertierte Eingangsspannung  hingegen verringert den Widerstand im Kollektor-Emitter-Pfad von $T_1$. Der dadurch erhöhte Widerstand von $T_4$ verringert den Stromfluss durch $R_{\textnormal{L}}$, wodurch die Spannung $U_{\textnormal{A}}$ ebenfalls sinkt.            }
+            A higher inverted input voltage, on the other hand, reduces the resistance in the collector-emitter path of $T_1$. The resulting increase in resistance of $T_4$ reduces the current flow through $R_{\text{L}}$, which also causes the voltage $U_{\text{A}}$ to drop.}
     %\speech{Funktionsweise von Operationsverstärkern Folie 2}{1}{
     %Wenn sich die invertierte Eingangsspannung erhöht, verringert sich der Widerstand im Kollektor-Emitter-Pfad des Transistors T1. Das führt zu einer niedrigeren Spannung am Kollektor von T1 und einer höheren Spannung am Emitter. Da die Emitter von T1 und T2 miteinander verbunden sind, steigt auch die Spannung am Emitter von T2. Dadurch verringert sich die Spannungsdifferenz zwischen Basis und Emitter von T2, was den Kollektor-Emitter-Pfad von T2 resistiver macht. Infolgedessen steigt die Spannung am Kollektor von T2, was die Basisspannung von T4 erhöht. Dadurch wird T4 resistiver, was den Stromfluss durch den Widerstand RL verringert und die Spannung an RL senkt. So kann die Ausgangsspannung dieses Operationsverstärkers zwischen Ub+ und Ub- gesteuert werden.    
     %}
@@ -358,14 +360,16 @@ Durch die Spannungserhöhung an der Basis von $T_4$ (C) führt der Kollektor-\li
 \begin{frame}
     
     \s{
-        In dieser Schaltung sind bereits einige wichtige Eigenschaften des reellen Operationsverstärkers ablesbar:
-        \begin{Merksatz}{}
+        This circuit already reveals some important characteristics of the real operational amplifier:
+        \begin{Key point}{}
             \begin{enumerate}
-                \item	Die eingangsseitige Stromaufnahme des Verstärkers ist abhängig von den Transistoren $T_1$ und $T_2$. Diese Stromaufnahme ist in der Regel sehr gering und beträgt einige nA bis einige hundert pA. Die geringe Stromaufnahme ergibt sich durch die hochohmige Kollektoreschaltung der beiden Eingangstransistoren. 
-                \item	Die Verstärkung ist durch die Versorgungsspannung nach oben und unten begrenzt. 
-                \item	Der verfügbare Ausgangsstrom ist durch die Betriebsspannungsquelle und den Transistor $T_4$ vorgegeben. 
+                \item	The input current consumption of the amplifier depends on transistors $T_1$ and $T_2$. 
+                This current consumption is usually very low, ranging from a few nA to a few hundred pA. The low current consumption is due to the high-impedance collector circuit of the two input transistors.
+                \item   The gain is limited upwards and downwards by the supply voltage. 
+                \item   The available output current is determined by the operating voltage source and transistor $T_4$.
+ 
             \end{enumerate}
-        \end{Merksatz}
+        \end{Key point}
     %Im Folgenden ist nun ein typischer Verstärker (IC A709) dargestellt. Hier finden sich die bereits im Rahmen des Transistorkapitels behandelten Grundschaltungen wie die Differenzstufe T1, T2, die Differenzstufe mit Darlington Transistoren T6-T8, der Stromspiegel T3,T4 und die Gegentaktendstufe mit komplementären Transistoren T14, T15. 
     % \begin{figure}[ht]
     %     \centering
@@ -376,23 +380,23 @@ Durch die Spannungserhöhung an der Basis von $T_4$ (C) führt der Kollektor-\li
     %   \end{figure} 
     }
 
-    \b{\frametitle{Wichtige Eigenschaften des idealen Verstärkers}
+    \b{\frametitle{Important characteristics of the ideal amplifier}
     \begin{columns}
         \column[c]{0.3\textwidth}
             \resizebox{.7\totalheight}{!}{\input{Tikz/src/Funktionsweise_OPV_1_ohne_marker.tex}}
-            Verstärker bei positiver Differenzspannung
+            Amplifier with positive differential voltage
             \resizebox{.7\totalheight}{!}{\input{Tikz/src/Funktionsweise_OPV_2.tex}}
-            Verstärker bei negativer Differenzspannung
+            Amplifier with negative differential voltage
             \column[c]{0.6\textwidth}
                 %Beamer
-                In dieser Schaltung sind bereits einige wichtige Eigenschaften des reellen Operationsverstärkers ablesbar:
+                This circuit already reveals some important characteristics of the real operational amplifier:
                 \begin{itemize}
                     \onslide<1->{
-                    \item	Die Eingangsseitige Stromaufnahme des Verstärkers ist abhängig von den Transistoren $T_1$ und $T_2$.}
+                    \item	The input current consumption of the amplifier depends on transistors $T_1$ and $T_2$.}
                     \onslide<2->{
-                    \item	Die Verstärkung ist durch die Versorgungsspannung nach oben und unten begrenzt. }
+                    \item	The amplification is limited by the supply voltage at the top and bottom. }
                     \onslide<3->{
-                    \item	Der verfügbare Ausgangsstrom ist durch die Quelle und den Transistor $T_4$ vorgegeben. }
+                    \item	The available output current is determined by the source and transistor $T_4$. }
                 \end{itemize}
             \end{columns}}
         \end{frame}

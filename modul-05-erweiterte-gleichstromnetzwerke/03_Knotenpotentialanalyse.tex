@@ -14,11 +14,11 @@
 
 	\b{
 		\begin{itemize}
-			\item Vorbereitung des Netzwerkes
-			\item Bestimmung der Knoten und der Knotenpotentiale
-			\item Zuordnung der Quellströme
-			\item Aufstellung der Leitwertmatrix
-			\item Aufstellung des Gleichungsystems
+			\item Preparation of the network
+			\item Determination of nodes and node potentials
+			\item Allocation of source currents
+			\item Setting up the conduct value matrix
+			\item Setting up the system of equations
 		\end{itemize}
 	}
 
@@ -34,7 +34,7 @@
 
 \newvideofile{Knotpot}{Knotenpotentialverfahren}
 \begin{frame}
-	\ftx{Lernziele Knotenpotentialverfahren}
+	\ftx{Learning objectives Node potential method}
 	\begin{Learning objectives}{Node analysis}
         The Students
         \begin{itemize}
@@ -60,7 +60,7 @@
 	\onslide<1->{
 	\b{
 		\begin{itemize}
-			\item Umwandlung der Spannungsquelle in eine Stromquelle:
+			\item Conversion of the voltage source into a current source:
 		\end{itemize}
 	}
 
@@ -79,7 +79,7 @@
 	\onslide<2->{
 	\b{
 		\begin{itemize}
-			\item Umrechnung der Spannungsquelle zur Stromquelle:
+			\item Conversion of voltage source to current source:
 		\end{itemize}
 	}
 
@@ -95,7 +95,7 @@
 	\onslide<3->{
 	\b{
 		\begin{itemize}
-			\item Berechnung der Leitwerte:
+			\item Calculation of the conductance values:
 		\end{itemize}
 	}
 
@@ -151,7 +151,7 @@
 	\onslide<1->{
 	\b{
 		\begin{itemize}
-			\item Festlegung des Bezugsknoten $K_0$ und der fortlaufenden Knoten $K_1$ und $K_2$:
+			\item Determination of the reference node $K_0$ and the consecutive nodes $K_1$ and $K_2$:
 		\end{itemize}
 	}
 		
@@ -173,7 +173,7 @@
 	\onslide<2->{
 	\b{
 		\begin{itemize}
-			\item Es werden $k-1$ Gleichungen benötigt. Es ergibt sich der nachfolgende Spannungsvektor:
+			\item $k-1$ equations are required. This results in the following stress vector:
 		\end{itemize}
 	}
 		
@@ -210,9 +210,9 @@
 
 	\b{
 		\begin{itemize}
-			\item Zuordnung der Quellströme für jeden Knoten
-			\item Abfließende Quellströme weisen ein negatives Vorzeichen auf
-			\item Zufließende Quellströme werden positiv notiert
+			\item Assignment of source currents for each node
+			\item Outflowing spring streams have a negative sign.
+			\item Inflowing source streams are noted positively.
 		\end{itemize}
 	}
 
@@ -244,16 +244,16 @@
         For node $K_1$, these would be the conductance values $G_0$, $G_1$ and $G_3$ adjacent to the branch highlighted in blue, and 
         for node $K_2$, the conductance values $G_2$ and $G_3$. Away from the main diagonal, the conductance values that lie directly 
 		between the nodes are recorded on the other elements of the conductance matrix. 
-		Between nodes $K_1$ and $K_2$, the branch highlighted in green with the conductance value $G_3$ lies directly between them
-. If 	there are other nodes between the nodes under consideration, 
+		Between nodes $K_1$ and $K_2$, the branch highlighted in green with the conductance value $G_3$ lies directly between them. 
+		If 	there are other nodes between the nodes under consideration, 
         these are not directly connected to each other and a 0 is entered in the element of the conductance matrix. The conductance matrix created in this 
         way is illustrated in equation \ref{GleichungLeitwertmatrix}. 
 	}
 
 	\b{
 		\begin{itemize}
-			\item<2-> Hauptdiagonale mit den Leitwerten, welche direkt an den Knoten angrenzen
-			\item<3-> Übrige Elemente mit den Leitwerten, welche direkt zwischen den Knoten liegen
+			\item<2-> Main diagonal with the conductance values directly adjacent to the nodes
+			\item<3-> Other elements with the conductance values that lie directly between the nodes
 		\end{itemize}
 	}
 
@@ -327,7 +327,7 @@
 
 	\b{
 		\begin{itemize}
-			\item Lösung des Gleichungssystems mit den Verfahren nach Gauß oder der Cramerschen Regel
+			\item Solving the system of equations using Gauss's method or Cramer's rule
 		\end{itemize}
 	}
 
@@ -371,7 +371,7 @@
 	\renewcommand{\figurename}{Figure}
 
     \ftx{Example: Nodal analysis}
-    \begin{bsp}{Knotenpotentialverfahren}{}
+    \begin{expl}{Node potential method}{}
 
     \s{
         Analysis of the electrical network from Figure \ref{BildKnot4} using the node potential method. 
@@ -394,7 +394,7 @@
         \resizebox{0.5\textwidth}{!}{%                                     
         \input{Tikz/src/knot4.tex}
         }                  
-    }{{\bf Beispiel.} Node potential method on an electrical network. \label{BildKnot4}}                                            
+    }{{\bf Example.} Node potential method on an electrical network. \label{BildKnot4}}                                            
 }
 
 
@@ -489,7 +489,7 @@
             }
         }
     \end{enumerate}    
-\end{bsp}{}{}
+\end{expl}{}{}
 
 \speech{KnotpotBsp}{1}{Die Schritte zur Anwendung des Knotenpotentialverfahrens wurden nun erläutert. 
 Folgend wird anhand des abgebildeten Beispielnetzwerkes noch einmal die grundsätzliche Arbeitsweise wiederholt.

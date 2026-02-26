@@ -1,7 +1,7 @@
-\subsection{Berechnungen in einer Transistorschaltungen\label{Aufg17}}
+\subsection{Calculations in transistor circuits\label{Aufg17}}
 % Alt: Aufgabe 17
 \Aufgabe{
-    Gegeben ist die folgende Schaltung mit dem Ausgangskennlinienfeld eines Transistors.
+    The following circuit with the output characteristic curve of a transistor is given.
     
     \begin{figure}[H]
         \centering
@@ -18,21 +18,21 @@
     
     \begin{itemize}
         \item[a)] Wie groß ist der maximale Kollektorstrom des idealen Transistors (bei $R_\mathrm{CE} = 0\,\Omega$), wenn der Kollektorwiderstand $R_\mathrm{C} = 7,5\,\Omega$ beträgt und die Versorgungsspannung $U_\mathrm{V} = 3\,\mathrm{V}$ ist?
-        \item[b)] Bestimmen Sie  $U_\mathrm{CE}$, $U_\mathrm{RC}$ und $I_\mathrm{C}$ des realen Transistors bei einem Basisstrom von \( I_\mathrm{B} = \mathrm{2\,mA} \). Tragen Sie dazu die Widerstandsgerade in das Kennlinienfeld ein.
-        \item[c)] Für einen neuen Arbeitspunkt fallen nur noch $1,7\,\mathrm{V}$ über dem Kollektorwiderstand $R_\mathrm{C}$ ab, der Basisstrom beträgt weiterhin $2\,\mathrm{mA}$. Bestimmen Sie den neuen Widerstand $R_\mathrm{C}$.
+        \item[a)] What is the maximum collector current of the ideal transistor (for $R_\mathrm{CE} = 0,\Omega$) if the collector resistance is $R_\mathrm{C} = 7.5,\Omega$ and the supply voltage is $U_\mathrm{V} = 3,\mathrm{V}$?
+        \item[c)] For a new operating point, only $1,7,\mathrm{V}$ now drops across the collector resistor $R_\mathrm{C}$, while the base current is still $2,\mathrm{mA}$. Determine the new resistance $R_\mathrm{C}$.
     \end{itemize}
 }
 
 
 \Loesung{
     \begin{itemize}
-        \item[a)] Berechnung des maximalen Kollektorstroms bei idealem Transistor (\( R_\mathrm{CE} = 0 \)):
+        \item[a)] Calculation of the maximum collector current for an ideal transistor (\( R_\mathrm{CE} = 0 \)):
               \begin{equation*}
                   I_\mathrm{C}  = \frac{U_\mathrm{V}}{R_\mathrm{C}} = \frac{3\,\mathrm{V}}{7,5\,\Omega} = 400\,\mathrm{mA}
               \end{equation*}
               
               
-        \item[b)] Bestimmung der Spannungen und des Kollektorstroms laut Kennlinienfeld:
+        \item[b)] Determination of voltages and collector current according to characteristic curve field:
               \begin{figure}[H]
                   \centering
                   \includesvg[width=0.7\textwidth]{Bilder/Aufgaben/LsgTransistorKennlinien}
@@ -44,11 +44,11 @@
                   I_\mathrm{C} = \frac{U_\mathrm{RC}}{R_\mathrm{C}} = \frac{1,8\,\mathrm{V}}{7,5\,\Omega} = 240\,\mathrm{mA}
               \end{gather*}
               
-        \item[c)] Berechnung des neuen Widerstandswerts bei gleichem $I_\mathrm{C}$ und neuer Spannung $U_\mathrm{RC} = 1,7\,\mathrm{V}$:
+        \item[c)] Calculation of the new resistance value for the same $I_\mathrm{C}$ and new voltage $U_\mathrm{RC} = 1,7\,\mathrm{V}$:
               \begin{equation*}
                   R_\mathrm{C} = \frac{U_\mathrm{RC}}{I_\mathrm{C}} = \frac{1,7\,\mathrm{V}}{240\,\mathrm{mA}} = 7,08\,\Omega
               \end{equation*}
     \end{itemize}
     
-    Siehe: Abschnitt \ref{sec:ElektrischesVerhaltenBipolartransistor}
+    See section: \ref{sec:ElektrischesVerhaltenBipolartransistor}
 }

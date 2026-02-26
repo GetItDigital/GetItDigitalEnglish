@@ -1,46 +1,48 @@
-\section{Synchronmaschine}
-\s{Die Synchronmaschine ist eine Drehfeldmaschine, die folglich mit einem dreiphasigen Drehstrom (siehe Modul 7) im Statorkreis betrieben wird. Der Rotor kann entweder permanent (mit Dauermagneten) oder durch einen Gleichstromkreis erregt werden. Dieser Maschinentyp wird in Kraftwerken zur Stromgewinnung eingesetzt, da er aber über einen sehr hohen Wirkungsgrad verfügt, wird er auch in der modernen Antriebstechnik in kleineren Leistungsklassen immer häufiger eingesetzt. Ein wesentlicher Nachteil besteht jedoch darin, dass die Synchronmaschine immer durch eine Leistungselektronik geregelt werden muss, da sie an einem einfachen Drehstromnetz nicht anläuft.}
+\section{synchronous machine}
+\s{The synchronous machine is a rotating field machine, which is therefore operated with a three-phase alternating current (see Module 7) in the stator circuit. The rotor can be excited either permanently (with permanent magnets) or by a direct current circuit. This type of machine is used in power stations to generate electricity, but as it is highly efficient, it is also increasingly used in modern drive technology in smaller power classes. However, a major disadvantage is that the synchronous machine must always be controlled by power electronics, as it cannot be started up on a simple three-phase network.}
 \vspace{0.5cm}
 
 \begin{frame}
-	\ftx{Synchronmaschine}
-	\b{Die Synchronmaschine dreht netzsynchron mit konstanter Drehzahl}
-	\textbf{Vorteile:}
+	\ftx{Synchronous machine}
+	\b{The synchronous machine rotates at a constant speed in synchronisation with the mains.}
+	\textbf{Advantages:}
 	\begin{itemize}
-		\item Robust und wartungsfrei.
-		\item Hohe Regeldynamik.
-		\item Hohe Leistungsdichte bei geringem Bauvolumen.
-		\item Überlastfähigkeit.
+		\item Robust and maintenance-free.
+		\item High control dynamics.
+		\item High power density with low construction volume.
+		\item Overload capacity.
 	\end{itemize}\pause
-	\textbf{Nachteile:}
+	\textbf{Disadvantages:}
 	\begin{itemize}
-		\item Aufwendige Umrichtertechnik.
-		\item Aufwendige Regelung.
-		\item Gesteuerter Betrieb nur mit großem Aufwand oder gar nicht möglich.
+		\item Complex converter technology.
+		\item Complex control system.
+		\item Controlled operation only possible with great effort or not possible at all.
 	\end{itemize}
 \end{frame}
 
-\s{\subsection{Aufbau}\index{Synchronmaschine>Aufbau}}
+\s{\subsection{Structure}\index{Synchronmaschine>Aufbau}}
 \begin{frame}
-	\ftx{Aufbau einer fremderregten Synchronmaschine}
+	\renewcommand{\figurename}{Figure}
+	\ftx{Structure of a separately excited synchronous machine}
 	\begin{columns}
 		\column[c]{0.55\textwidth}
 		\begin{itemize}
-			\item Drei Statorwicklungen, die 120° zueinander versetzt sind.
-			\item Geblechte Ausführung des Stators, da dieser ein magnetisches Wechselfeld erfährt.
-			\item Im Läufer befindet sich die Erregerwicklung.
-			\item Der Läufer wird teilweise nicht geblecht.
+			\item Three stator windings offset by 120° from each other.
+			\item Laminated stator design, as it is subjected to an alternating magnetic field.
+			\item The exciter winding is located in the rotor.
+			\item The rotor is partially unlaminated.
+
 		\end{itemize}
 		\column[c]{0.45\textwidth}
 		\s{
 			\fo{width=0.7\textwidth}{}{Aufbau_Synchronmaschine1}{
-				\put(83,0){\line(-1,1){37.5}}\put(83.3,0){Statorwicklungen}
-				\put(83,6){\line(-1,1){33.5}}\put(83.3,6){Statorblechpaket}
-				\put(89,18){\line(-1,1){32}}\put(89.3,18){Erregerwicklung}
-				\put(89,24){\line(-1,1){35}}\put(89.3,24){Läufer}
-				\put(100,36){\line(-1,1){26.2}}\put(100.3,36){Lager}
-				\put(100,42){\line(-1,1){26.2}}\put(100.3,42){Gehäuse}
-			}{{\bf Grafik einer aufgeschnittenen fremderregten Synchronmaschine.}}
+				\put(83,0){\line(-1,1){37.5}}\put(83.3,0){Stator windings}
+				\put(83,6){\line(-1,1){33.5}}\put(83.3,6){Stator laminations}
+				\put(89,18){\line(-1,1){32}}\put(89.3,18){Excitation winding}
+				\put(89,24){\line(-1,1){35}}\put(89.3,24){Runner}
+				\put(100,36){\line(-1,1){26.2}}\put(100.3,36){Bearing }
+				\put(100,42){\line(-1,1){26.2}}\put(100.3,42){Case }
+			}{{\bf Diagram of a cross-section of an externally excited synchronous machine.}}
 			\vspace{0.5cm}
 		}
 		\b{
@@ -49,19 +51,20 @@
 	\end{columns}
 \end{frame}
 
-\begin{frame} \ftx{Aufbau einer fremderregten Synchronmaschine}
+\begin{frame} \ftx{Structure of a separately excited synchronous machine}
+	\renewcommand{\figurename}{Figure}
 	\s{
 		\fo{width=0.8\textwidth}{}{Aufbau_Synchronmaschine2}{
-			\put(32.3,16.1){\line(1,1){15}}\put(11,16.1){Statorwicklung 1}
-			\put(86,66){\line(-1,-1){12.7}}\put(86.3,66){Statorwicklung 2}
-			\put(91,10.4){\line(-1,1){12.4}}\put(91.3,10.4){Statorwicklung 3}
-		}{{\bf Aufbau einer fremderregten Synchronmaschine.} Die um 120° zueinander versetzten Statorwicklungen sind hier farbig veranschaulicht.}
+			\put(32.3,16.1){\line(1,1){15}}\put(11,16.1){Stator winding 1}
+			\put(86,66){\line(-1,-1){12.7}}\put(86.3,66){Stator winding 2}
+			\put(91,10.4){\line(-1,1){12.4}}\put(91.3,10.4){Stator winding 3}
+		}{{\bf Structure of a separately excited synchronous machine.} The stator windings, offset by 120° from each other, are illustrated here in colour.}
 	}
 	\b{
 		\foo{}{width=0.75\textwidth}{Aufbau_Synchronmaschine2}{
-			\put(32.3,16.1){\line(1,1){15}}\put(6.3,16.1){Statorwicklung 1}
-			\put(86,66){\line(-1,-1){12.7}}\put(86.3,66){Statorwicklung 2}
-			\put(91,10.4){\line(-1,1){12.4}}\put(91.3,10.4){Statorwicklung 3}
+			\put(32.3,16.1){\line(1,1){15}}\put(6.3,16.1){Stator winding 1}
+			\put(86,66){\line(-1,-1){12.7}}\put(86.3,66){Stator winding 2}
+			\put(91,10.4){\line(-1,1){12.4}}\put(91.3,10.4){Stator winding 3}
 		}{}
 	}
 	
@@ -69,7 +72,8 @@
 
 
 
-\begin{frame}\ftb{Feldverläufe}
+\begin{frame}\ftb{Field gradients}
+	\renewcommand{\figurename}{Figure}
 	\s{
 		\fo{width=\textwidth}{}{Synchronmaschine_Feldverlaeufe}{
 			\put(10.23,23.3){\input{Tikz/src/synchronmaschine_feldverlaeufe_drehfeld}
@@ -78,7 +82,7 @@
 			\put(12.5, 21.5){\color{statorw1}$I_1$} \put(38, 21.5){\color{statorw1}$I_1$} \put(63.6, 21.5){\color{statorw1}$I_1$} \put(89.3, 21.5){\color{statorw1}$I_1$}
 			\put(21, 1.5){\color{statorw2}$I_2$} \put(47, 1.5){\color{statorw2}$I_2$} \put(73, 1.5){\color{statorw2}$I_2$} \put(98, 1.5){\color{statorw2}$I_2$}
 			\put(0, 1.5){\color{statorw3}$I_3$} \put(25.5, 1.5){\color{statorw3}$I_3$} \put(51, 1.5){\color{statorw3}$I_3$} \put(77, 1.5){\color{statorw3}$I_3$}
-		}{{\bf Richtung des Drehfeldvektors.} Der Rotor dreht sich synchron zu den sinusförmigen, um 120$\degree$ zueinander versetzten Drehfeldern des Stators.}
+		}{{\bf Direction of the rotating field vector.} The rotor rotates synchronously with the sinusoidal rotating fields of the stator, which are offset by 120 degrees.}
 	}
 	\b{
 		\foo{}{height=0.8\textheight}{Synchronmaschine_Feldverlaeufe_a1}{
@@ -110,7 +114,7 @@
 \end{frame}
 
 \b{ % Quasi-Animation für Vorlesungsdatei
-	\begin{frame}\ftb{Feldverläufe}
+	\begin{frame}\ftb{Field gradients}
 		\foo{}{height=0.8\textheight}{Synchronmaschine_Feldverlaeufe_a2}{
 			\put(-47,60){\begin{tikzpicture}[domain=0:12, samples=360, scale=0.838]
 					\foreach \n in {1,...,4}{
@@ -137,7 +141,7 @@
 			\put(-1, 3){\color{statorw3}$I_3$}
 		}{}
 	\end{frame}
-	\begin{frame}\ftb{Feldverläufe}
+	\begin{frame}\ftb{Field gradients}
 		\foo{}{height=0.8\textheight}{Synchronmaschine_Feldverlaeufe_a3}{
 			\put(-47,60){\begin{tikzpicture}[domain=0:24, samples=360, scale=0.838]
 					\foreach \n in {1,...,4}{
@@ -164,7 +168,7 @@
 			\put(-1, 3){\color{statorw3}$I_3$}
 		}{}
 	\end{frame}
-	\begin{frame}\ftb{Feldverläufe}
+	\begin{frame}\ftb{Field gradients}
 		\foo{}{height=0.8\textheight}{Synchronmaschine_Feldverlaeufe_a1}{
 			\put(-47,60){\begin{tikzpicture}[domain=0:36, samples=360, scale=0.838]
 					\foreach \n in {1,...,4}{
@@ -194,30 +198,32 @@
 }
 
 
-\begin{frame}\ftx{Feldverläufe}
-	\s{Bei der Synchronmaschine bewirkt die magnetische Kopplung zwischen Stator und Rotor das Drehmoment. Im Motorbetrieb folgt das Rotorfeld dem Statorfeld. Die mechanische Drehzahl muss daher immer gleich der elektrischen Drehfrequenz sein. Zwischen dem Stator und dem Rotor befindet sich der lastabhängige sogenannte Polradwinkel\index{Polradwinkel} $\vartheta$. \nomenclature[F]{$\vartheta$}{Polradwinkel der Synchronmaschine \nomunit{$\degree$}} Bei $\vartheta=90\degree$ ist das Drehmoment am größten. Wird im Motorbetrieb der Polradwinkel durch eine zu hohe Belastung größer als $90\degree$, sinkt das erzeugte Drehmoment und die Maschine \glqq kippt\grqq -- das heißt, sie bleibt schlagartig stehen.}
+\begin{frame}\ftx{Field gradients}
+    \s{In a synchronous machine, the magnetic coupling between the stator and rotor generates the torque. In motor operation, the rotor field follows the stator field. The mechanical speed must therefore always be equal to the electrical rotational frequency. Between the stator and the rotor is the load-dependent pole angle $\vartheta$. \nomenclature[F]{$\vartheta$}{Pole angle of the synchronous machine \nomunit{$\degree$}} The torque is greatest at $\vartheta=90\degree$. If, during motor operation, the pole wheel angle exceeds $90\degree$ due to excessive load, the torque generated decreases and the machine \glqq stalls\grqq -- that is, it comes to an abrupt halt.}
 	\begin{itemize}
-		\item Der Statorfluss entsteht durch die Überlagerung der Flüsse der drei Wicklungen.
-		      \uncover<2>{\item Der Läuferfluss entsteht durch die Erregerwicklung.}
+		\item The stator flux is created by the superposition of the fluxes of the three windings.
+		      \uncover<2>{\item The current flow is generated by the excitation winding.}
 	\end{itemize}
 	
 \end{frame}
 
-\begin{frame}\ftx{Drehmoment}
+\begin{frame}\ftx{Torque}
+	\renewcommand{\figurename}{Figure}
 	\fu{
 		\input{Tikz/src/drehmomentkennlinie_synchron}
-	}{{\bf Drehmomentkennlinie in Abhängigkeit vom Polradwinkel.}}
+	}{{\bf Torque characteristic curve as a function of pole wheel angle.}}
 \end{frame}
 
 
-\s{\subsection{Ersatzschaltbild \index{Synchronmaschine>Ersatzschaltbild}}}
+\s{\subsection{Equivalent circuit diagram \index{Synchronmaschine>Ersatzschaltbild}}}
 \begin{frame}
-	\ftx{Einphasiges ESB}
-	\s{Im Netzbetrieb ist die Klemmenspannung $U_1$ und die Frequenz $\omega$ fest vorgegeben. Das ist ein häufiger Betriebsfall für die Synchronmaschine.}
-	\b{Komplexes einphasiges ESB des Vollpolgenerators (z.B. im Netzbetrieb):}
+	\renewcommand{\figurename}{Figure}
+	\ftx{Single-phase ESB}
+    \s{In mains operation, the terminal voltage $U_1$ and the frequency $\omega$ are fixed. This is a common operating condition for synchronous machines.}
+	\b{Complex single-phase ESB of the full-pole generator (e.g. in grid operation):}
 	\fu{
 		\input{Tikz/src/ESB_vollpolgenerator}
-		}{{\bf Komplexes einphasiges ESB eines Vollpolgenerators.} Beispielsweise im Netzbetrieb.}
+		}{{\bf Complex single-phase ESB of a full-pole generator.} For example, in grid operation.}
 \end{frame}
 
 

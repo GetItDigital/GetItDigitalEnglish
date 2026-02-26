@@ -7,7 +7,7 @@
     \draw (E.out)  node[ocirc](newOut){} node[right,yshift=-0.5cm]{};
     \draw (E.-) node[ocirc](newMinus){} node[left]{};
     \draw (E.+) node[ocirc](newPlus){} node[left]{};
-    \node at (6,-2) {\textbf{neues Schaltzeichen}};
+    \node at (6,-2) {\textbf{New circuit symbol}};
     \draw (E.up) -- ++(0,0.2) node[ocirc]{} node[above]{$+U_B$};
     \draw (E.down) -- ++(0,-0.2) node[ocirc]{} node[below]{$-U_B$};
     
@@ -25,7 +25,7 @@
     \draw (amerOpAmp.out) node[ocirc](oldOut){} node[right,yshift=-0.5cm]{};
     \draw (amerOpAmp.-) node[ocirc](oldMinus){} node[left]{};
     \draw (amerOpAmp.+) node[ocirc](oldPlus){} node[left]{};
-    \node at (0,-2) {\textbf{altes Schaltzeichen}};
+    \node at (0,-2) {\textbf{Old circuit symbol}};
     
  % Ground-Symbol und Spannungspfeil für altes Schaltzeichen
  \draw[-{Triangle[width=3pt,length=4pt]}, color=spannung] ($(oldOut) + (0, -0.1)$) -- ($(oldOut) + (0, -1)$) node[midway, right] {$U_A$};

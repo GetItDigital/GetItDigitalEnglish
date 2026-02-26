@@ -1,8 +1,8 @@
-\subsection{Analyse des Arbeitsbereichs eines Transistors\label{Aufg16}}
+\subsection{Analysis of the operating range of a transistor\label{Aufg16}}
 % Alt: Aufgabe 16
 \Aufgabe{
-    Der Stromverstärkungsfaktor des verwendeten Siliziumtransistors beträgt $ \beta = 150$ und die Versorgungsspannung liegt bei $U_\mathrm{V} = 15\,\mathrm{V}$. Die Schaltung soll so dimensioniert werden, dass der Kollektorstrom $I_\mathrm{C} = 2\,\mathrm{mA}$ beträgt.
-    
+    The current amplification factor of the silicon transistor used is $ \beta = 150$ and the supply voltage is $U_\mathrm{V} = 15\,\mathrm{V}$. The circuit should be dimensioned so that the collector current is $I_\mathrm{C} = 2\,\mathrm{mA}$.
+
     \begin{figure}[H]
         \centering
         \input{Tikz/src/FigTransistorArbeitsbereich.tex}
@@ -10,32 +10,33 @@
     \end{figure}
     
     \begin{itemize}
-        \item[a)] Dimensionieren Sie den Widerstand $R_3$ so, dass bei einer Spannung am Ausgang von $U_\mathrm{A}=3\,\mathrm{V}$ der Strom durch $R_3$ genau $75\%$ des Emitterstroms beträgt.
-        \item[b)] Bestimmen Sie die Widerstände $R_1$ und $R_2$, unter der Annahme, dass die Kollektor-Basis-Spannung $U_\mathrm{BE} = 0,6\,\mathrm{V}$ beträgt und durch $R_2$ etwa das 9-fache des Basisstroms $I_\mathrm{B}$ fließt.
+        \item[a)] Dimension the resistor $R_3$ so that, at an output voltage of $U_\mathrm{A}=3\,\mathrm{V}$, the current through $R_3$ is exactly $75\%$ of the emitter current.
+        \item[b)] Determine the resistances $R_1$ and $R_2$, assuming that the collector-base voltage $U_\mathrm{BE} = 0.6\,\mathrm{V}$ and that approximately 9 times the base current $I_\mathrm{B}$ flows through $R_2$.
+        
     \end{itemize}
 }
 
 
 \Loesung{
     \begin{itemize}
-        \item[a)] Berechnung des Basisstroms über den Stromverstärkungsfaktor:
+        \item[a)] Calculation of the base current using the current amplification factor:
               \begin{gather*}
                   I_\mathrm{B} = \frac{I_\mathrm{C}}{\beta} = \frac{\mathrm{2\,mA}}{150} = \mathrm{13,3\,\mu A} \\
                   I_\mathrm{E} = I_\mathrm{C} + I_\mathrm{B} = \mathrm{2\,mA} + \mathrm{13,3\,\mu A} = \mathrm{2,013\,mA} \\
                   I_\mathrm{R_3} = 0,75 \cdot I_\mathrm{E} = 0,75 \cdot \mathrm{2{,}013\,mA} = \mathrm{1,51\,mA}          \\
                   R_3  = \frac{\mathrm{3\,V}}{\mathrm{1,51\,mA}} = \mathrm{1,99\,k\Omega}
               \end{gather*}
-        \item[b)] Berechnung des Stroms durch \( R_2 \):
+        \item[b)] Calculation of the current through \( R_2 \):
               \begin{gather*}
                   I_{R_2}  = 9 \cdot I_\mathrm{B} = 9 \cdot \mathrm{13,3\,\mu A} = \mathrm{0,12\,mA}                                                              \\
                   R_2 = \frac{U_\mathrm{a} + U_\mathrm{BE}}{I_\mathrm{R_2}} = \frac{\mathrm{3\,V} + \mathrm{0,6\,V}}{\mathrm{0,12\,mA}} = \mathrm{30\,k\Omega}
               \end{gather*}
               
-              Berechnung des Stroms durch $R_1$, welcher gleich $I_\mathrm{R_2}$ ist:
+              Calculation of the current through $R_1$, which is equal to $I_\mathrm{R_2}$:
               \begin{gather*}
                   R_1  = \frac{U_\mathrm{BE}}{I_\mathrm{R_1}} = \frac{0,6\,\mathrm{V}}{0,12\,\mathrm{mA}} = 5,6\,\mathrm{k\Omega}
               \end{gather*}
     \end{itemize}
     
-    Siehe: Abschnitt \ref{sec:ElektrischesVerhaltenBipolartransistor}
+    See section: \ref{sec:ElektrischesVerhaltenBipolartransistor}
 }

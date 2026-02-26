@@ -17,7 +17,7 @@
 	
 	
 	
-	\ftx{Lernziele: Einfache Gleichstromsnetzwerke}
+	\ftx{Learning objectives: Simple direct current networks}
 	
 	\begin{Learning objectives}{Simple resistance networks}
 		The students can
@@ -45,7 +45,7 @@
 
 
 \begin{frame}
-	\ftx{Reihenschaltung von Widerständen}
+	\ftx{Series connection of resistors}
 	
 	\s{
 	
@@ -96,10 +96,10 @@
 			\end{center}
 		\end{figure}
 		
-		In general, the total voltage $U_\mathrm{ges}$ can be summarised according to this principle as follows:
+		In general, the total voltage $U_\mathrm{tot}$ can be summarised according to this principle as follows:
 		
 		\begin{equation}
-			U_\mathrm{ges} = \sum_{k=1}^{n} U_k = \sum_{k=1}^{n} R_k \cdot I = R_\mathrm{ges} \cdot I
+			U_\mathrm{tot} = \sum_{k=1}^{n} U_k = \sum_{k=1}^{n} R_k \cdot I = R_\mathrm{tot} \cdot I
 			\label{eq:gesamtwiderstand}
 		\end{equation}
 		
@@ -108,7 +108,7 @@
 		
 		\begin{Key point}{Total resistance of a series connection}{}
 			\begin{equation}
-				R_\mathrm{ges} = \sum_{k=1}^{n} R_k
+				R_\mathrm{tot} = \sum_{k=1}^{n} R_k
 			\end{equation}
 		\end{Key point}
 		
@@ -121,7 +121,7 @@
 			
 			
 			\begin{equation}
-				\frac{1}{G_\mathrm{ges}} = \sum_{k=1}^{n} \frac{1}{G_k}
+				\frac{1}{G_\mathrm{tot}} = \sum_{k=1}^{n} \frac{1}{G_k}
 			\end{equation}
 			%	\begin{equation}
 			
@@ -157,7 +157,7 @@
 			
 			\vspace*{-60pt}
 			
-			Maschenregel:
+			Mesh rule:
 			
 			$U_0 - U_1 - U_2 =0 $\\
 			
@@ -167,14 +167,14 @@
 			
 			
 			
-			Ohmsches Gesetz:
+			Ohm's law:
 			
 			$U_1 = R_1 \cdot I \quad \quad  U_2 = R_2 \cdot I$\\
 			
 			\phantom{.}\\
 			
 			\visible<2->{
-			Der Strom $I$ fließt durch alle Bauelemente:
+			The current $I$ flows through all components:
 			
 			$U_0 - R_1 \cdot I - R_2 \cdot I = 0$\\
 			
@@ -210,7 +210,7 @@
 				to[short](3,0) 
 				to[short](3,0.5) 
 				
-				to[R ,i ,v< , name =R1  , l =$R_\mathrm{ges}$] (3,2.5)
+				to[R ,i ,v< , name =R1  , l =$R_\mathrm{tot}$] (3,2.5)
 				to[short](3,3) 
 				%		to[short](2.5,3) 
 				%		to[R ,i ,v< , name =R2  , l =$R_2$]  (0.5,3)
@@ -219,16 +219,16 @@
 				to[V, v, i, name=V1] (0,0.5)
 				to[short](0,0); 
 				
-				\varrmore{R1}{$U_\mathrm{ges}$};
+				\varrmore{R1}{$U_\mathrm{tot}$};
 				%	 \varrmore{R2}{$U_2$};
 				\varrmore{V1}{$U_0$};		
 				\iarrmore{V1}{$I$};			
 			\end{tikzpicture}
 			
 			
-			$U_0 - R_\mathrm{ges} \cdot I = 0$\\
+			$U_0 - R_\mathrm{tot} \cdot I = 0$\\
 			
-			$R_\mathrm{ges} = R_1 + R_2$
+			$R_\mathrm{tot} = R_1 + R_2$
 			
 			
 		\end{columns}
@@ -236,21 +236,21 @@
 		\begin{columns}
 			\column[c]{0.5\textwidth}
 			\visible<2->{
-			Gesamtwiderstand einer Reihenschaltung von Widerständen:
+			Total resistance of a series connection of resistors:
 			\vspace{-15pt}
-			\begin{Merksatz}{}
-				$R_\mathrm{ges} = \sum_{k=1}^{n} R_k$
-			\end{Merksatz}
+			\begin{Key point}{}
+				$R_\mathrm{tot} = \sum_{k=1}^{n} R_k$
+			\end{Key point}
 			}
 			\column[c]{0.5\textwidth}
 			
 			\visible<3->{
 			
-				Gesamtleitwert einer Reihenschaltung von Widerständen:
+				Total conductance of a series connection of resistors:
 				\vspace{-15pt}
-				\begin{Merksatz}{}
-					$\frac{1}{G_\mathrm{ges}} = \sum_{k=1}^{n} \frac{1}{G_k}$
-				\end{Merksatz}
+				\begin{Key point}{}
+					$\frac{1}{G_\mathrm{tot}} = \sum_{k=1}^{n} \frac{1}{G_k}$
+				\end{Key point}
 				
 			}
 		\end{columns}
@@ -281,7 +281,7 @@
 
 
 \begin{frame}
-	\ftx{Parallelschaltung von Widerständen}
+	\ftx{Parallel connection of resistors}
 	
 	
 	\s{
@@ -363,18 +363,18 @@
 		
 		
 		A coefficient comparison with Ohm's law applied to Figure \ref{fig:parallelzusammen} 
-		( $I_0 = U_0 \cdot \frac{1}{R_\mathrm{ges}}$)
+		( $I_0 = U_0 \cdot \frac{1}{R_\mathrm{tot}}$)
 		
 		provides for $R_\mathrm{total}$ in the case shown of two resistors connected in parallel:
 		
 		\begin{equation*}
-			\frac{1}{R_\mathrm{ges}} =  \frac{1}{R_1}+\frac{1}{R_2}
+			\frac{1}{R_\mathrm{tot}} =  \frac{1}{R_1}+\frac{1}{R_2}
 		\end{equation*}
 		
 		Multiplying out this expression gives the form frequently used in calculations:
 		
 		\begin{equation}
-			R_\mathrm{ges} = \frac{R_1\cdot R_2}{R_1 + R_2}
+			R_\mathrm{tot} = \frac{R_1\cdot R_2}{R_1 + R_2}
 			\label{eq:r2parallel}
 		\end{equation}
 		
@@ -385,7 +385,7 @@
 		\begin{Key point}{Total resistance of a parallel connection}
 			
 			\begin{equation}
-				\frac{1}{R_\mathrm{ges}} = \sum_{k=1}^{n} \frac{1}{R_k}
+				\frac{1}{R_\mathrm{tot}} = \sum_{k=1}^{n} \frac{1}{R_k}
 				\label{eq:rparallel}
 			\end{equation}
 			%	\begin{equation}
@@ -402,7 +402,7 @@
 		\begin{Key point}{Total conductance of a parallel connection}
 			
 			\begin{equation}
-				G_\mathrm{ges} = \sum_{k=1}^{n} G_k 
+				G_\mathrm{tot} = \sum_{k=1}^{n} G_k 
 			\end{equation}
 			%	\begin{equation}
 			%		\frac{1}{R_ges} = \sum_{k=1}^{n} \frac{1}{R_k} 
@@ -428,17 +428,17 @@
 			
 			
 			\begin{equation*}
-				R_\mathrm{ges} = \frac{1}{\sum_{n} \frac{1}{R_n}} = \frac{1}{\frac{1}{R_1} + \frac{1}{R_2}+ \frac{1}{R_3}}
+				R_\mathrm{tot} = \frac{1}{\sum_{n} \frac{1}{R_n}} = \frac{1}{\frac{1}{R_1} + \frac{1}{R_2}+ \frac{1}{R_3}}
 			\end{equation*}
 			
 			Inserting the numerical values and solving using a calculator:
 			
 			\begin{equation*}
-				R_\mathrm{ges} = \frac{1}{\frac{1}{1\cdot 10^3 \, \Omega} + \frac{1}{10\cdot 10^3 \, \Omega} + \frac{1}{100 \cdot 10^3 \, \Omega}}
+				R_\mathrm{tot} = \frac{1}{\frac{1}{1\cdot 10^3 \, \Omega} + \frac{1}{10\cdot 10^3 \, \Omega} + \frac{1}{100 \cdot 10^3 \, \Omega}}
 			\end{equation*}
 			
 			\begin{equation*}
-				\rightarrow R_\mathrm{ges} = 900,9 \, \Omega
+				\rightarrow R_\mathrm{tot} = 900,9 \, \Omega
 			\end{equation*}
 			
 			
@@ -454,11 +454,11 @@
 			\column[t]{0.42\textwidth}
 			
 			%\phantom{.}\\
-			Maschenregel: $U_\mathrm{R1} = U_\mathrm{R2} = U_0$\\
+			Mesh rule: $U_\mathrm{R1} = U_\mathrm{R2} = U_0$\\
 			
-			Knotenregel: $I_0 - I_1 - I_2 = 0$\\
+			Knot rule: $I_0 - I_1 - I_2 = 0$\\
 			
-			Ohmsches Gesetz: $I_1 = \frac{U_0}{R_1}$ % $I_2 = \frac{U_0}{R_2}$ 
+			Ohm's law: $I_1 = \frac{U_0}{R_1}$ % $I_2 = \frac{U_0}{R_2}$ 
 			
 			
 			\begin{equation*}
@@ -513,7 +513,7 @@
 			
 			\begin{tikzpicture}
 				\draw(0,3) to[short] (2.5,3)
-				to[R=$R_\mathrm{ges}$, i>^, v, name=Rges] (2.5,0)
+				to[R=$R_\mathrm{tot}$, i>^, v, name=Rges] (2.5,0)
 				to[short] (0,0);
 				\draw(0,3) to[V, v, i, name=U0] (0,0);
 				
@@ -554,26 +554,26 @@
 		\begin{columns}
 			\column[t]{0.5\textwidth}
 			\visible<2->{
-				\begin{Merksatz}{}{}
+				\begin{Key point}{}{}
 					%	\vspace*{-10pt}
 					\vspace*{-5pt}
 					\begin{equation*}
-						\frac{1}{R_\mathrm{ges}} = \sum_{k=1}^{n} \frac{1}{R_k}
+						\frac{1}{R_\mathrm{tot}} = \sum_{k=1}^{n} \frac{1}{R_k}
 					\end{equation*}
 					
 					%	\begin{equation*}
 					%		\frac{1}{R_\mathrm{ges}} = \sum_{k=1}^{n} \frac{1}{R_k}
 					%	\end{equation*}
-				\end{Merksatz}
+				\end{Key point}
 				
 			}
 			\column[t]{0.5\textwidth}
 			
-			\begin{Merksatz}{}{}
+			\begin{Key point}{}{}
 				\begin{equation*}
-					G_\mathrm{ges} = \sum_{k=1}^{n} G_k
+					G_\mathrm{tot} = \sum_{k=1}^{n} G_k
 				\end{equation*}
-			\end{Merksatz}
+			\end{Key point}
 		\end{columns}
 		\speech{folie17}{1}{Nachdem wir gerade die Reihenschaltung betrachtet haben, betrachten wir nun die Parallelschaltung. Eine Parallelschaltung zeichnet sich dadurch aus,
 			dass sich der Strom zwischen den Zweigen des Netzwerks aufteilen kann. Mit der Knotenregel lässt sich diese Aufteilung bestimmen.
@@ -664,7 +664,7 @@
 		\end{Key point}
 		
 		
-		\begin{expl}{Unbelasteter Spannungsteiler}{Spannungsteiler}
+		\begin{expl}{Unloaded voltage divider}{Spannungsteiler}
 			
 			An input voltage of $U_0 = 24$ V is to be reduced to $U_2 = 6$ V using a voltage divider.
 			What should the ratio of the resistances $R_2$ to $R_1$ be?
@@ -728,7 +728,7 @@
 		\end{figure}
 		
 		
-		\begin{expl}{Belasteter Spannungsteiler}{Spannungsteiler}
+		\begin{expl}{Loaded voltage divider}{Spannungsteiler}
 			
 			A voltage divider is designed to reduce an input voltage of $U_0 = 20$ V to an output voltage of $U_2 = 5$ V.
 			The voltage divider is loaded with $R_\mathrm{L} = 200 \, \Omega$.
@@ -782,15 +782,15 @@
 	
 	
 	\b{
-		\ftx{Spannungsteiler in Widerstandsnetzwerken}
+		\ftx{Voltage dividers in resistor networks}
 		
 		\begin{columns}
 			\column[c]{0.47\textwidth}
 			
 			%\vspace*{-5pt}
 			
-			Reihenschaltung teilt Spannung $U_0$ auf,\\
-			Strom in allen Bauteilen identisch
+			Series connection divides voltage $U_0$,\\
+			Current identical in all components
 			
 			\begin{equation*}
 				I = \frac{U_1}{R_1} = \frac{U_2}{R_2}
@@ -802,14 +802,14 @@
 			
 			
 			
-			Reihenschaltung von Widerständen:
+			Series connection of resistors:
 			
 			\begin{equation*}
 				I = \frac{U_0}{R_1+R_2}
 			\end{equation*}
 			
 			
-			Beziehung zwischen Gesamtspannung $U_0$ und Teilspannung $U_2$:
+			Relationship between total voltage $U_0$ and partial voltage $U_2$:
 			
 			
 			\begin{equation*}
@@ -860,19 +860,19 @@
 			
 			
 			
-			\begin{Merksatz}{}
+			\begin{Key point}{}
 				$U_2 = U_0 \cdot \frac{R_2}{R_1+R_2}$
-			\end{Merksatz}
+			\end{Key point}
 			
 			
 			
 			\visible<2->{
 			
 				\vspace*{-15pt}
-				gilt nur für \textbf{unbelasteten Spannungsteiler}
-				(Belastungsstrom=0)!
+				Only applies to \textbf{unloaded voltage dividers}
+				(load current = 0)!
 				
-				Belastungsfall: $R_2$ und $R_\mathrm{L}$ zusammenfassen!
+				Load case: Combine $R_2$ and $R_\mathrm{L}$!
 				
 			}
 			
@@ -919,7 +919,7 @@
 	
 		\subsection{Current dividers in resistor networks}
 		
-		A parallel connection of two resistors, as shown in Figure \ref{fig:current divider}, divides a current $I_0$ flowing in a circuit into two partial currents $I_1$ and $I_2$. Such a circuit is called a current divider.
+		A parallel connection of two resistors, as shown in Figure \ref{fig:stromteiler}, divides a current $I_0$ flowing in a circuit into two partial currents $I_1$ and $I_2$. Such a circuit is called a current divider.
 		The current $I_0$ flowing in the circuit is divided by the resistors $R_1$ and $R_2$ according to the formula:
 		
 		\begin{figure}[h!]
@@ -943,13 +943,13 @@
 		the total current $I_0$ can be determined as a function of the output voltage $U_0$:
 		
 		\begin{equation*}
-			U_0 = I_0 \cdot R_\mathrm{ges}
+			U_0 = I_0 \cdot R_\mathrm{tot}
 		\end{equation*}
 		
 		Equating the two current terms yields the following relationship between $I_0$ and $I_2$
 		
 		\begin{equation*}
-			I_2 \cdot R_2 = I_0 \cdot R_\mathrm{ges}
+			I_2 \cdot R_2 = I_0 \cdot R_\mathrm{tot}
 		\end{equation*}
 		
 		The parallel connection $R_\mathrm{total}$ can be calculated directly from the two resistance values
@@ -973,31 +973,31 @@
 		
 		
 	}
-	\ftx{Stromteiler in Widerstandsnetzwerken}
+	\ftx{Current dividers in resistor networks}
 	
 	
 	\b{
 		\begin{columns}
 			\column[t]{0.5\textwidth}
 			
-			Parallelschaltung teilt Strom $I_0$ auf,
-			Spannung an allen Bauteilen identisch
+			Parallel connection divides current $I_0$,
+			voltage identical across all components
 			%	\vspace*{-5pt}
 			
 			\begin{equation*}
 				U_0 = I_1 \cdot R_1 = I_2 \cdot R_2
 			\end{equation*}
 			
-			Parallelschaltung von Widerständen: 
+			Parallel connection of resistors: 
 			%\vspace*{-10pt}
 			
 			\begin{equation*}
-				U_0 = I_0 \cdot R_\mathrm{ges}
+				U_0 = I_0 \cdot R_\mathrm{tot}
 			\end{equation*}
 			\vspace*{-10pt}
 			
 			\begin{equation*}
-				I_2 \cdot R_2 = I_0 \cdot R_\mathrm{ges}
+				I_2 \cdot R_2 = I_0 \cdot R_\mathrm{tot}
 			\end{equation*}
 			
 			%	\vspace*{-10pt}
@@ -1044,18 +1044,18 @@
 			\vspace*{-10pt}
 			
 			\begin{equation*}
-				R_\mathrm{ges} = \frac{R_1 \cdot R_2}{R_1+R_2}
+				R_\mathrm{tot} = \frac{R_1 \cdot R_2}{R_1+R_2}
 			\end{equation*}
 			
 			\vspace*{-20pt}
 			
-			\begin{Merksatz}
+			\begin{Key point}
 
 				\begin{equation*}
 					I_2 = I_0 \cdot \frac{R_1}{R_1 + R_2}
 				\end{equation*}
 				
-			\end{Merksatz}
+			\end{Key point}
 			
 			
 			
@@ -1093,7 +1093,7 @@
 	
 	
 	
-	\ftx{Die reale Spannungsquelle}
+	\ftx{The real source of tension}
 	
 	
 	
@@ -1103,11 +1103,11 @@
 			\column[t]{0.5\textwidth}
 			
 			
-			Besitzt Innenwiderstand $R_\mathrm{i}$\\
+			Possesses internal resistance $R_\mathrm{i}$\\
 			
 			\phantom{text}\\
 			
-			Unbelastete reale Spannungsquelle: 
+			Unloaded real voltage source:
 			
 			\begin{equation*}
 				I = 0 \rightarrow U_\mathrm{Ri} = 0
@@ -1121,7 +1121,7 @@
 			
 			\only<2->{
 			
-				Belastete reale Spannungsquelle:
+				Loaded real voltage source:
 				
 				\begin{equation*}
 					I > 0 \rightarrow U_\mathrm{Ri} > 0
@@ -1133,7 +1133,7 @@
 					U = U_0 - U_\mathrm{Ri} < U_0
 				\end{equation*}
 				
-				Innenwiderstand möglichst klein:
+				Internal resistance as low as possible:
 				\vspace*{-5pt}
 				
 				\begin{equation*}
@@ -1307,7 +1307,7 @@
 		
 		
 		
-		\paragraph{Die Ersatzspannungsquelle}\\
+		\paragraph{The replacement voltage source}\\
 		
 		\phantom{text}\\
 		
@@ -1458,12 +1458,12 @@
 			\column[t]{0.5\textwidth}
 			
 			
-			Jeder \textbf{aktive} Zweipol als \textbf{Ersatzspannungsquelle} darstellbar\\
+			Each \textbf{active} two-pole can be represented as a \textbf{substitute voltage source}\\
 			
 			\phantom{text}\\
 			
-			\textbf{Ideale Spannungsquelle} $U_0$ und 
-			\textbf{Innenwiderstand} $R_i$
+			\textbf{Ideal voltage source} $U_0$ and 
+			\textbf{Internal resistance} $R_i$
 			
 			\begin{equation*}
 				U_0 = U_\mathrm{Ri} + U
@@ -1475,7 +1475,7 @@
 			
 			\visible<2->{
 			
-				Verringerung der Spannung am Ausgang: 
+				Reduction of voltage at the output: 
 				
 				\begin{equation*}
 					U = U_0 -I \cdot R_\mathrm{i}
@@ -1559,7 +1559,7 @@
 \end{frame}
 
 \begin{frame}
-	\ftx{Besondere Betriebszustände der Ersatzspannungsquelle}
+	\ftx{Special operating conditions of the backup voltage source}
 	
 	
 	
@@ -1568,10 +1568,10 @@
 		\begin{columns}
 			\column[t]{0.6\textwidth}
 			
-			Ermittlung von $U_0$ und $R_\mathrm{i}$ über \textbf{Kurzschluss-} und \textbf{Leerlaufversuch}:
+			Determination of $U_0$ and $R_\mathrm{i}$ via \textbf{short circuit} and \textbf{no-load test}:
 			\vspace*{5pt}
 			
-			Kurzschluss: $R_a = 0$, $I = I_\mathrm{K}$ = Kurzschlussstrom\\
+			Short circuit: $R_a = 0$, $I = I_\mathrm{K}$ = short-circuit current\\
 			
 			\vspace*{-10pt}
 			\begin{equation*}
@@ -1587,7 +1587,7 @@
 			
 			\only<2->{
 			
-				Leerlauf: $R_\mathrm{a} \rightarrow \infty$, $U = U_\mathrm{L} = $ Leerlaufspannung
+				No load: $R_\mathrm{a} \rightarrow \infty$, $U = U_\mathrm{L} = $ no-load voltage
 				
 				\vspace*{-10pt}
 				\begin{equation*}
@@ -1601,11 +1601,11 @@
 				
 				\vspace*{-25pt}
 				
-				\begin{Merksatz}{}
+				\begin{Key point}{}
 					\begin{equation*}
 						U_0 = U_\mathrm{L}, \quad R_\mathrm{i} = \frac{U_\mathrm{L}}{I_\mathrm{K}}
 					\end{equation*}
-				\end{Merksatz}
+				\end{Key point}
 				
 			}
 			
@@ -1658,9 +1658,9 @@
 			\begin{tikzpicture}
 
 				\draw (0,0) rectangle (1.5,1.5);
-				\node at (0.6,1.2) {Kurz-};
-				\node at (0.7,0.8) {schluss-};
-				\node at (0.7,0.4) {versuch};
+				\node at (0.6,1.2) {Short-};
+				\node at (0.7,0.8) {circuit-};
+				\node at (0.7,0.4) {test};
 				
 				
 				
@@ -1689,9 +1689,9 @@
 			\begin{tikzpicture}
 
 				\draw (0,0) rectangle (1.5,1.5);
-				\node at (0.6,1.2) {Leer-};
-				\node at (0.6,0.8) {lauf-};
-				\node at (0.75,0.4) {versuch};
+				\node at (0.6,1.2) {Idle-};
+				\node at (0.6,0.8) {test};
+				%\node at (0.75,0.4) {versuch};
 				
 				\draw (1.5, 1.25) to[short, -*] (2, 1.25) node[right] {};
 				\draw (1.5, 0.25) to[short,i, name=in, -*] (2, 0.25) node[right] {};
@@ -1740,7 +1740,7 @@
 
 
 
-	\ftx{Die reale Stromquelle}
+	\ftx{The real current source}
 	
 	
 	
@@ -1751,9 +1751,9 @@
 			
 			
 			
-			\textbf{Ideale} Stromquelle: 
+			\textbf{Ideale} Current source: 
 			
-			Innenwiderstand unendlich: 
+			Internal resistance infinite: 
 			
 			\begin{equation*}
 				I_\mathrm{Ri} = 0 
@@ -1768,9 +1768,9 @@
 			\only<2->{
 			
 			
-				\textbf{Reale} Stromquelle:
+				\textbf{Reale} Current source:
 				
-				Besitzt Innenwiderstand $R_\mathrm{i} < \infty \, \Omega$ \\
+				Possesses internal resistance $R_\mathrm{i} < \infty \, \Omega$ \\
 				\begin{equation*}
 					I_\mathrm{Ri} > 0 
 				\end{equation*}
@@ -1781,7 +1781,7 @@
 					I = I_0 - I_\mathrm{Ri} < I_0
 				\end{equation*}
 				
-				Innenwiderstand möglichst groß:
+				Internal resistance as high as possible:
 				
 				\begin{equation*}
 					I_0 >> U / R_\mathrm{i}
@@ -1803,7 +1803,7 @@
 			
 			\begin{tikzpicture}
 
-				\node at (1.6,3.3) {Ideale Stromquelle};
+				\node at (1.6,3.3) {Ideal current source};
 				\draw[white] (3.75, 4) to[short,v>, name=volti] (3.75, -1.0) node[right] {};
 				\varrmore{volti}{};
 				\node[voltage] at (3.2,1.4) {$U$};
@@ -1841,7 +1841,7 @@
 			\vspace*{-32pt}
 			
 			\begin{tikzpicture}
-				\node at (1.6,3.3) {Reale Stromquelle};
+				\node at (1.6,3.3) {Real current source};
 				\draw[white] (3.75, 4) to[short,v>, name=volti] (3.75, -1.0) node[right] {};
 				\varrmore{volti}{};
 				\node[voltage] at (3.2,1.4) {$U$};
@@ -1952,7 +1952,7 @@
 	
 	
 	
-	\ftx{Die Ersatzstromquelle}
+	\ftx{The backup current source}
 	
 	
 	\s{
@@ -2033,12 +2033,12 @@
 			\column[t]{0.55\textwidth}
 			
 			
-			Jeder \textbf{aktive} Zweipol als \textbf{Ersatzstromquelle} darstellbar\\
+			Each \textbf{active} two-pole can be represented as a \textbf{replacement current source}\\
 			
 			\phantom{text}\\
 			
-			Ideale Stromquelle $I_0$ mit 
-			\textbf{Innenwiderstand} $R_i$
+			Iideal current source $I_0$ with 
+			\textbf{internal resistance} $R_i$
 			
 			\begin{equation*}
 				I_0 = I_\mathrm{Ri} + I
@@ -2048,7 +2048,7 @@
 				I_0 =\frac{U}{R_\mathrm{i}} + I
 			\end{equation*}
 			
-			Verringerung des Ausgangsstrom abh. von $U$:
+			Reduction of output current depending on $U$:
 			
 			\begin{equation*}
 				I = I_0 - \frac{U}{R_\mathrm{i}}
@@ -2116,7 +2116,7 @@
 
 
 \begin{frame}
-	\ftx{Besondere Betriebszustände der Ersatzstromquelle}
+	\ftx{Special operating conditions of the backup power source}
 	
 	
 	
@@ -2125,11 +2125,12 @@
 		\begin{columns}
 			\column[t]{0.6\textwidth}
 			
-			Ermittlung von $I_0$ und $R_\mathrm{i}$ über \textbf{Kurzschluss-} und \textbf{Leerlaufversuch}:
+            Determination of $I_0$ and $R_\mathrm{i}$ via \textbf{short circuit} and \textbf{no-load test}:
+			
 			\vspace*{5pt}
 			
-			Kurzschluss: $R_a = 0$, $I = I_\mathrm{K}$ = Kurzschlussstrom\\
-			
+            Short circuit: $R_a = 0$, $I = I_\mathrm{K}$ = short-circuit current\\
+
 			\vspace*{-10pt}
 			\begin{equation*}
 				U = 0 \rightarrow I_\mathrm{Ri} = 0
@@ -2143,7 +2144,7 @@
 			
 			\only<2->{
 			
-				Leerlauf: $R_\mathrm{a} \rightarrow \infty$, $U = U_\mathrm{L} = $ Leerlaufspannung
+				Idling: $R_\mathrm{a} \rightarrow \infty$, $U = U_\mathrm{L} = $ Open-circuit voltage
 				
 				\vspace*{-10pt}
 				\begin{equation*}
@@ -2157,11 +2158,11 @@
 				
 				\vspace*{-20pt}
 				
-				\begin{Merksatz}{}
+				\begin{Key point}{}
 					\begin{equation*}
 						I_0 = I_\mathrm{K}, \quad R_\mathrm{i} = \frac{U_\mathrm{L}}{I_\mathrm{K}}
 					\end{equation*}
-				\end{Merksatz}
+				\end{Key point}
 				
 			}
 			
@@ -2213,9 +2214,9 @@
 			\begin{tikzpicture}
 
 				\draw (0,0) rectangle (1.5,1.5);
-				\node at (0.6,1.2) {Kurz-};
-				\node at (0.7,0.8) {schluss-};
-				\node at (0.7,0.4) {versuch};
+				\node at (0.6,1.2) {Short-};
+				\node at (0.7,0.8) {circuit-};
+				\node at (0.7,0.4) {test};
 				
 				
 				
@@ -2243,9 +2244,9 @@
 			\begin{tikzpicture}
 
 				\draw (0,0) rectangle (1.5,1.5);
-				\node at (0.6,1.2) {Leer-};
-				\node at (0.6,0.8) {lauf-};
-				\node at (0.75,0.4) {versuch};
+				\node at (0.6,1.2) {Idle-};
+				\node at (0.6,0.8) {test-};
+				%\node at (0.75,0.4) {versuch};
 				
 				\draw (1.5, 1.25) to[short, -*] (2, 1.25) node[right] {};
 				\draw (1.5, 0.25) to[short,i, name=in, -*] (2, 0.25) node[right] {};
@@ -2308,7 +2309,7 @@
 		The open-circuit voltage and short-circuit current remain unchanged during the conversion of the source
 		and are converted to the other source.
 		
-		\textbf{Attention}: The counting arrows of current and voltage sources converted into each other are directed in opposite directions!
+		\textbf{Attention}: The Sign Conventions of current and voltage sources converted into each other are directed in opposite directions!
 		
 		
 		When converting a current source into a voltage source, the voltage $U_0$ is:
@@ -2336,33 +2337,32 @@
 	\b{
 	
 	
-		\ftx{Umwandlung von Spannungs- und Stromquellen}
+		\ftx{Conversion of voltage and current sources}
 		\begin{columns}
 			\column[t]{0.6\textwidth}
 			%Umwandlung teilweise vorteilhaft
 			
-			\textbf{Innenwiderstand} $R_\mathrm{i}$ bleibt identisch,\\
-			Schaltung ändert sich\\
+			\textbf{Internal resistance} $R_\mathrm{i}$ remains identical,\\
+			Circuit changes\\
 			
 			\phantom{.}\\
 			
-			\textbf{Leerlaufspannung} und \textbf{Kurzschlussstrom} auf andere Quelle umrechnen:\\
-			
+			Convert \textbf{open-circuit voltage} and \textbf{short-circuit current} to another source:			
 			\phantom{text}\\
 			
-			Stromquelle in Spannungsquelle:
+			Current source in voltage source:
 			
 			\begin{equation*}
 				U_0 = I_0 \cdot R_\mathrm{i}
 			\end{equation*}
 			
-			Spannungsquelle in Stromquelle:
+			Voltage source in current source:
 			
 			\begin{equation*}
 				I_0 = \frac{U_0}{R_\mathrm{i}}
 			\end{equation*}
 			
-			Zählpfeile der Quellen sind entgegengesetzt gerichtet! 
+			The sign Conventions of the sources point in opposite directions! 
 
 			\column[t]{0.4\textwidth}
 			

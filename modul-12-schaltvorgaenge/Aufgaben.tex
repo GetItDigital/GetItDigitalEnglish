@@ -5,17 +5,17 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Einschaltverhalten eines RC-Übertragungsgliedes}
+\subsection{Switch-on behaviour of an RC transmission element}
 \Aufgabe{
-Gegeben ist das rechts dargestellte Übertragungsglied (Zweitor). 
-Untersucht wird das Einschwingverhalten der Spannung $u_2$ am Ausgang 
-bei Anschließen einer idealen Gleichspannungsquelle $U_q$.\\
+The transfer element (two-stage) shown on the right is given.
+The transient behaviour of the voltage $u_2$ at the output is examined
+when an ideal DC voltage source is connected. $U_q$.\\
 \begin{minipage}[b]{0.5\textwidth}% links
-    Die Schaltung ist vor dem Schaltzeitpunkt $t=0$ im stationären Zustand mit $u_2(t<0) = 0$.
+    Before the switching point $t=0$, the circuit is in a steady state with $u_2(t<0) = 0$.
     \begin{itemize}
-        \item[a)] Stellen Sie die DGL für $u_C$ für $t \geq 0$ auf.
-        \item[b)] Bestimmen Sie die Funktion $u_C(t)$ für $t \geq 0$ inklusive aller Konstanten. 
-        \item[c)] Bestimmen Sie die Funktion $u_2$ für $t \geq 0$ aus der Lösung b) für $u_C(t)$. Vereinfachen Sie soweit wie möglich.
+        \item[a)] Set up the ODE for $u_C$ for $t \geq 0$.
+        \item[b)] Determine the function $u_C(t)$ for $t \geq 0$, including all constants.
+        \item[c)] Determine the function $u_2$ for $t \geq 0$ from the solution b) for $u_C(t)$. Simplify as much as possible.
     \end{itemize}
 \end{minipage}%
 \begin{minipage}[b]{0.5\textwidth}% rechts
@@ -24,27 +24,27 @@ bei Anschließen einer idealen Gleichspannungsquelle $U_q$.\\
     \end{figure}
 \end{minipage}
 \begin{itemize}
-    \item[d)] Skizzieren Sie qualitativ die Zeitverläufe der Spannungen $u_2$, $u_{R_2}$ und $u_C$ 
-    vom stationären Zustand für $t<0$ bis die dargestellten Größen eingeschwungen sind ($t=5\tau$).  
-    Kennzeichnen Sie Zeitkonstanten, Anfangs- und Endwerte der Verläufe. 
+    \item[d)] Sketch the qualitative time curves of the voltages $u_2$, $u_{R_2}$ and $u_C$ 
+    from the steady state for $t<0$ until the represented variables have stabilised ($t=5\tau$).  
+    Identify the time constants, initial and final values of the curves.
 \end{itemize}
 }
 \Loesung{
 \begin{itemize}
-\item[a)] DGL für $u_C(t \geq 0)$:
+\item[a)] ODE for $u_C(t \geq 0)$:
     \begin{align*}
         R_1 \cdot \eci{i} + R_2 \cdot \eci{i} + \ecv{u_C} &= \ecv{U_q} \\
         \underbrace{(R_1 + R_2) \cdot C}_{\ =\tau} \cdot \dt\, \ecv{u_C} + \ecv{u_C} &= \ecv{U_q}
     \end{align*}
-\item[b)] Zeitverlauf $u_C$ für $t\geq0$:
+\item[b)] Time course $u_C$ for $t\geq0$:
     \begin{align*}
-        \ecv{u_{C,\mathrm{f}}}=\ecv{u_{C,\mathrm{h}}} &= K \cdot e^{-\frac{t}{\tau}}  &&\text{mit } \tau = (R_1 + R_2) \cdot C  \\
+        \ecv{u_{C,\mathrm{f}}}=\ecv{u_{C,\mathrm{h}}} &= K \cdot e^{-\frac{t}{\tau}}  &&\text{with } \tau = (R_1 + R_2) \cdot C  \\
         \ecv{u_{C,\mathrm{e}}}=\ecv{u_{C,\mathrm{p}}} &= \ecv{U_q} \\
         \ecv{u_C} = \ecv{u_{C,\mathrm{f}}} + \ecv{u_{C,\mathrm{e}}} &= K \cdot \mathrm{e}^{-\frac{t}{\tau}} + \ecv{U_q} \\
         \ecv{u_C}(0) &= K \cdot \redcancel{e^{0}} + \ecv{U_q} \overset{!}{=} 0 &&\Longrightarrow K = - \ecv{U_q} \\
         \ecv{u_C}(t) &= \left(1 - \mathrm{e}^{-\frac{t}{\tau}}\right) \cdot \ecv{U_q}
     \end{align*}
-\item[c)] Spannung $u_2(t)$ aus $u_C(t)$ für $t \geq 0$:
+\item[c)] Voltage $u_2(t)$ from $u_C(t)$ for $t \geq 0$:
 \begin{align*}
     \ecv{u_2} &= \eci{i} \cdot R_2 + \ecv{u_C} \\
     &= C \cdot R_2 \cdot \dt\, \ecv{u_C} + \ecv{u_C} \\
@@ -57,7 +57,7 @@ bei Anschließen einer idealen Gleichspannungsquelle $U_q$.\\
 \end{itemize}
 \begin{minipage}{0.5\textwidth}
 \begin{itemize}
-    \item[d)] Skizze für $\ecv{u_C}$, $\ecv{u_2}$ und $\ecv{u_{R_2}}$.
+    \item[d)] Sketch for $\ecv{u_C}$, $\ecv{u_2}$ and $\ecv{u_{R_2}}$.
     \begin{align*}
         \ecv{u_{R_2}}(0^-) &= \ecv{u_2}(0^-) = 0 \\
         \ecv{u_{R_2}}(0^+) &= \ecv{u_2}(0^+) = \frac{R_2}{R_1+R_2} \cdot \ecv{U_q}%\\
@@ -76,31 +76,31 @@ bei Anschließen einer idealen Gleichspannungsquelle $U_q$.\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Einschaltverhalten (DC) eines verlustbehafteten Kondensators\label{AufgEinschaltverhalten1}}
+\subsection{Switch-on behaviour (DC) of a lossy capacitor\label{AufgEinschaltverhalten1}}
 \Aufgabe{
     % Übernommen von Prof. Exknowski, FH SWF Hagen, 2024, ET3 (Übung 6, Aufgabe 2), leicht verändert
-    Das Einschaltverhalten der dargestellten Schaltung soll untersucht werden.
+    The switch-on behaviour of the circuit shown is to be investigated.
     \begin{figure}[H]\centering
         \includegraphics{Tikz/pdf/Uebungen/circ_uebung_einschaltverhalten_rc_schaltung.pdf}% U_q an R1 in Reihe mit (R2 parallel zu C) ab t=0
     \end{figure}
 
-    Zum Zeitpunkt $t = 0$ wird der Schalter umgelegt, so dass die Gleichspannung $U_q$ an der Schaltung anliegt. Die Kapazität ist vor dem Schaltzeitpunkt vollständig entladen.
+    At time $t = 0$, the switch is flipped so that the DC voltage $U_q$ is applied to the circuit. The capacitance is completely discharged before the switching point.
     \begin{itemize}
-        \item[a)] Bestimmen Sie die Gleichung für die Spannung an der Kapazität $u_C(t)$ für $t \geq 0$. 
-        \item[b)] Zeichnen Sie den zeitlichen Verlauf der Spannungen $u_C(t)$ und $u_{R1}(t)$ sowie des Stromes $i_C(t)$. Kennzeichnen Sie charakteristische Punkte.
-        \item[c)] Nach vollständigem Aufladen der Kapazität $C$ auf $U_{0}$ wird der Schalter wieder in Ausgangsposition gebracht. 
-        Wie lange braucht die Kapazität $C$, um auf $10\,\%$ der Spannung $U_{0}$ zu entladen? 
-        \item[d)] Die Kapazität wird wie in c) entladen, allerdings mit offenem Schalter (Leerlauf). 
-        Wie lange dauert der Entladevorgang (von $U_0$ bis $10\,\%\cdot U_0$)? 
-        Vergleichen Sie die Dauer mit der aus c). 
+        \item[a)] Determine the equation for the voltage across the capacitor $u_C(t)$ for $t \geq 0$.  
+        \item[b)] Plot the time course of the voltages $u_C(t)$ and $u_{R1}(t)$ as well as the current $i_C(t)$. Mark characteristic points.  
+        \item[c)] After the capacitor $C$ is fully charged to $U_{0}$, the switch is returned to its initial position.  
+        How long does it take for the capacitor $C$ to discharge to $10\,\%$ of the voltage $U_{0}$?  
+        \item[d)] The capacitor is discharged as in c), but with the switch open (no-load).  
+        How long does the discharge process take (from $U_0$ to $10\,\%\cdot U_0$)?  
+        Compare the duration with that from c).
     \end{itemize}
 \newpage % ACHTUNG <- PAGEBREAK (LAYOUT)
 }
 \Loesung{
     % Übernommen von Prof. Exknowski, FH SWF Hagen, 2024, ET3 (Übung 6, Aufgabe 2), leicht verändert
- a) ESB ($t \geq 0$): $U_q$ an Schaltung: $R_1$ in Serie mit Parallelschaltung aus $R_2$ und $C$.
+a) Initial state ($t \geq 0$): $U_q$ applied to the circuit: $R_1$ in series with a parallel combination of $R_2$ and $C$.
 
- \underline{1. DGL aufstellen für $u_C$ ($t \geq 0$)}
+ \underline{1. Set up the differential equation for $u_C$ ($t \geq 0$)}
  \begin{align*}
     u_{R1} + u_C &= U_q &  u_{R_1} &= R_1 \cdot i_{R1}\\
     R_1 \cdot i_{R1} + u_C &= U_q &  i_{R1} &= i_{R2} + i_C\\
@@ -110,13 +110,13 @@ bei Anschließen einer idealen Gleichspannungsquelle $U_q$.\\
     \underbrace{C \cdot \frac{R_1 \cdot R_2}{R_1+R_2}}_{\tau} \cdot \dt\, u_C + u_C &= U_q \cdot \frac{R_2}{R_1+R_2}
  \end{align*}
 
- \underline{2. Homogene Lösung und 3. Partikuläre Lösung ($t \to \infty$)}
+ \underline{2. Homogeneous solution and 3. Particulate solution ($t \to \infty$)}
  \begin{align*}
     u_{C,h} &= K \cdot \mathrm{e}^{\lambda t} = K \cdot \mathrm{e}^{-\frac{t}{\tau}} & \tau &= C \cdot \frac{R_1 \cdot R_2}{R_1+R_2} \\[2pt]
     u_{C,p} &= U_q \cdot \frac{R_2}{R_1+R_2} & &\text{$C$ entspricht Leerlauf}
 \end{align*}
 
-\underline{4. Überlagerung und 5. Konstante $K$ bestimmen}
+\underline{4. Determine superposition and 5th constant $K$}
 \begin{align*}
     u_C(t) = u_{C,h} + u_{C,p} &= K \cdot \mathrm{e}^{-\frac{t}{\tau}} + U_q \cdot \frac{R_2}{R_1+R_2} \\
     u_C(0) &= K \cdot \redcancel{\mathrm{e}^{0}} + U_q \cdot \frac{R_2}{R_1+R_2} \overset{!}{=} 0 &
@@ -128,7 +128,7 @@ bei Anschließen einer idealen Gleichspannungsquelle $U_q$.\\
     b) % Berechnungen für Skizzen
     % Aufladevorgang RC Spannung mit Tau
     % AxisEnv 1: Spannung am Kondensator
-    Skizze $u_C(t)$, $u_{R_1}$ und $i_C$ mit $u_C(t)$ aus a):
+    Sketch $u_C(t)$, $u_{R_1}$ and $i_C$ with $u_C(t)$ from a):
     \begin{align*}
         u_{R1}(t) &= U_q - u_C(t) \\
             &= U_q - U_q \cdot \frac{R_2}{R_1+R_2} \cdot \left( 1 - \mathrm{e}^{-\frac{t}{\tau}} \right) \\
@@ -140,32 +140,32 @@ bei Anschließen einer idealen Gleichspannungsquelle $U_q$.\\
     \end{align*}
 \end{minipage}%
 \begin{minipage}[t]{0.48\textwidth}\centering
-    Zeitverläufe:\\
+    Time sequences:\\
     \includegraphics{Tikz/pdf/Uebungen/plot_uebung_einschaltverhalten_rc_schaltung.pdf}% Skizzen zu Aufgabenteil b) uC, uR1, iC
 \end{minipage}
 \begin{itemize}
-\item[c)] Entladen von $C$ über Parallelschaltung aus $R_1$ und $R_2$ für $t'\geq0$ bis $U_0 \cdot 10\,\%$ \\
-Entlade-Zeitkonstante: $\tau_1= \tau = C \cdot \frac{R_1 \cdot R_2}{R_1+R_2}$:
+\item[c)] Discharging of $C$ through the parallel combination of $R_1$ and $R_2$ for $t' \geq 0$ until $U_0 \cdot 10\,\%$ \\ 
+Discharge time constant: $\tau_1= \tau = C \cdot \frac{R_1 \cdot R_2}{R_1+R_2}$:
 \begin{align*}
     u_C(t') = U_0 \cdot \mathrm{e}^{-\frac{t'}{\tau}} &\overset{!}{=} U_0 \cdot 10\,\% \\
     \mathrm{e}^{-\frac{t'}{\tau}} &= \frac{1}{10} \\
     -\frac{t'}{\tau} &= \ln\left(\frac{1}{10}\right) = -\ln\left(10\right) \\
     t' &= \ln\left(10\right) \cdot \tau \approx 2,3025 \cdot \tau
 \end{align*}
-\item[d)] Entladen von $C$ über $R_2$, wenn Schalter öffnet (Leerlauf) für $t'\geq0$ bis $U_0 \cdot 10\,\%$.\\
-Lösung wie bei Aufgabe c) nur mit Entlade-Zeitkonstante $\tau_2 = R_2 \cdot C$. \\
-Die Kapazität entlädt langsamer als in Aufgabe c) ($\tau_2 > \tau$), da $R_2 > R_1||R_2$.
+\item[d)] Discharging of $C$ through $R_2$, when the switch is open (no-load) for $t' \geq 0$ until $U_0 \cdot 10\,\%$.\\
+Solution as in task c), but with discharge time constant $\tau_2 = R_2 \cdot C$.\\
+The capacitor discharges more slowly than in task c) ($\tau_2 > \tau$), since $R_2 > R_1||R_2$.
 \end{itemize}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Übung 7, Prof. Exnowski
-\subsection{Schaltverhalten einer RL-Serienschaltung}\label{Einschaltverhalten RL-Serie}
+\subsection{Switching behaviour of an RL series connection}\label{Einschaltverhalten RL-Serie}
 \Aufgabe{
     % Übernommen von Prof. Exknowski, FH SWF Hagen, 2024, ET3 (Übung 7, Aufgabe 1), leicht verändert
-    Das Schaltverhalten, der in der linken Abbildung dargestellten Schaltung, soll untersucht werden.\\
-    Der Verlauf der Spannung $u_1(t)$ ist in der rechten Abbildung dargestellt.
+    The switching behaviour of the circuit shown in the left-hand figure is to be investigated.\\
+    The voltage curve $u_1(t)$ is shown in the right-hand figure.
 
 \begin{minipage}{\textwidth}\centering
     \begin{minipage}{0.25\textwidth}\centering
@@ -177,40 +177,41 @@ Die Kapazität entlädt langsamer als in Aufgabe c) ($\tau_2 > \tau$), da $R_2 >
     \end{minipage}
 \end{minipage}
     
-    Vor dem Zeitpunkt $t=0$ war die Spannung $u_1 = 0$, so dass zum Zeitpunkt $t=0$ keine Energie in der Spule gespeichert ist. Weiterhin gilt $t_1 \gg 5\tau$.
+    Before time $t=0$, the voltage $u_1 = 0$, so that at time $t=0$ no energy is stored in the coil. Furthermore, $t_1 \gg 5\tau$.
 
     \begin{itemize}
-        \item[a)] Es soll der Aufladevorgang ($0<t<t_1$) betrachtet werden. Es gilt $\tau = 1\,ms$ und $R=100\,\Omega$. Wie groß ist die Induktivität $L$?
-        \item[b)] Es soll weiterhin der Aufladevorgang ($0<t<t_1$) betrachtet werden. Gegeben ist nun die Spannung $U_0=1\,kV$. Wie groß ist der Strom durch die Spule $i_L$ zum Zeitpunkt $t=3\tau$?
-        \item[c)] Es wird weiterhin der Aufladevorgang betrachtet. Nun gilt jedoch: $R = 5\,\Omega$, $L=100\,mH$ und $U_0=2,8\,kV$.
-        \begin{itemize}
-        \item Nach welcher Zeit $t_0$ ist der Einschwingvorgang abgeschlossen?
-        \item Wie groß sind der Spulenstrom $i_L$ und die Spulenspannung $u_L$ nach $t=50\,ms$?
-        \end{itemize}
-        \item[d)] Nun soll der Entladevorgang ($t>t_1$) betrachtet werden. Es gelten die Werte aus dem vorangehenden Aufgabenteil. Wie groß sind Spulenstrom $i_L$ und Spulenspannung $u_L$ nach $t=t_1 +50\,ms$?
-        \item[e)] Zeichnen Sie die zeitlichen Verläufe der Spulenspannung $u_L$, des Stromes $i_L$, sowie der Spannung $u_R$. Kennzeichnen Sie die Zeitkonstante $\tau$, sowie weitere charakteristische Punkte. Nehmen Sie an $t_1 = 120\,ms$.
-        \end{itemize}
+        \item[a)] Consider the charging process ($0<t<t_1$). Given are $\tau = 1\,\text{ms}$ and $R=100\,\Omega$. What is the inductance $L$?  
+        \item[b)] Continue to consider the charging process ($0<t<t_1$). Now the voltage is given as $U_0=1\,\text{kV}$. What is the current through the inductor $i_L$ at time $t=3\tau$?  
+        \item[c)] Continue to consider the charging process. Now: $R = 5\,\Omega$, $L=100\,\text{mH}$, and $U_0=2.8\,\text{kV}$.  
+    \begin{itemize}
+        \item After what time $t_0$ is the transient response completed?  
+        \item What are the inductor current $i_L$ and inductor voltage $u_L$ after $t=50\,\text{ms}$?  
+    \end{itemize}
+        \item[d)] Now consider the discharging process ($t>t_1$). The values from the previous charging part apply. What are the inductor current $i_L$ and inductor voltage $u_L$ at $t=t_1 +50\,\text{ms}$?  
+        \item[e)] Plot the time courses of the inductor voltage $u_L$, the current $i_L$, and the resistor voltage $u_R$. Mark the time constant $\tau$ and other characteristic points. Assume $t_1 = 120\,\text{ms}$.  
+\end{itemize}
+
 }
 
 \Loesung{
     % Übernommen von Prof. Exknowski, FH SWF Hagen, 2024, ET3 (Übung 7, Aufgabe 1), leicht verändert
     \begin{align*}
-        \text{DGL (allgemein):}&& \frac{L}{R}\cdot\dt\, i &= \frac{U_1}{R_1} \quad\text{(Einschalten)}\\
-        \text{Lösungsansatz:}&& i &= \frac{U_0}{R}\cdot(1-e^{-\frac{t}{\tau}})\quad\text{mit}\quad\tau=\frac{L}{R}
+        \text{ODE (general):}&& \frac{L}{R}\cdot\dt\, i &= \frac{U_1}{R_1} \quad\text{(Switch on)}\\
+        \text{Solution approach:}&& i &= \frac{U_0}{R}\cdot(1-e^{-\frac{t}{\tau}})\quad\text{with}\quad\tau=\frac{L}{R}
     \end{align*}
         \\
         
-    a) Induktivität berechnen.\\[-2em]
+    a) Calculate inductance.\\[-2em]
         \begin{center}
             $\tau=\frac{L}{R}$\qquad$L=\tau\cdot R=1\,ms\cdot 100\,\Omega=0,1\,H$
         \end{center}
-    b) Aufladevorgang, Spulenstrom $i_L$ zum Zeitpunkt $t=3\tau$.\\[-1em]
+    b) Charging process, coil current $i_L$ at time $t=3\tau$.\\[-1em]
         \begin{align*}
             i(t=3\cdot\tau) &= \frac{U_0}{R}(1-e^{-\frac{t}{\tau}})\\
             &=\frac{1\,kV}{100\,\Omega}\cdot(1-e^{-3}) = 10\,A\cdot0,95\\
             &=9,5\,A
         \end{align*}    
-    c) Zeit bis zum Abschluss des Einschwingvorgangs, Spulen -Strom und -Spannung nach $50\,ms$.\\[-1em]
+    c) Time until completion of the settling process, coil current and voltage after $50\,ms$.\\[-1em]
         \begin{align*}
         \tau&=\frac{L}{R}=\frac{0,1\,H}{5\,\Omega}=0,02\,s=20\,ms\\\\
         i(t=50\,ms)&=\frac{U_0}{R}\cdot(1-e^{-\frac{t}{\tau}})\\
@@ -221,10 +222,10 @@ Die Kapazität entlädt langsamer als in Aufgabe c) ($\tau_2 > \tau$), da $R_2 >
         u_L(t=50\,ms)&=2,8\,kV\cdot e^{-\frac{50\,ms}{20\,ms}}=229,8\,V\\
         t_0&=5\cdot\tau=5\cdot20\,ms=100\,ms
         \end{align*}
-    d) Entladevorgang, Spulen -Strom und -Spannung nach $t = t_1 + 50\,ms$.\\[-1em]
+    d) Discharge process, coil current and voltage after $t = t_1 + 50\,ms$.\\[-1em]
         \begin{align*}
-            \text{DGL (Entladevorgang):}&& \frac{L}{R}\cdot\dt\, i+i &=0\\
-            \text{Lösungsansatz:}&& i &= \frac{U_0}{R}\cdot e^{-\frac{t}{\tau}}\quad\text{mit}\quad\tau=\frac{L}{R}\\
+            \text{ODE (Unloading process):}&& \frac{L}{R}\cdot\dt\, i+i &=0\\
+            \text{Approach to a solution:}&& i &= \frac{U_0}{R}\cdot e^{-\frac{t}{\tau}}\quad\text{mit}\quad\tau=\frac{L}{R}\\
         \end{align*}
         \begin{align*}
             u_L&=L\cdot\dt i = \frac{L}{R}\cdot u_0\cdot (-\frac{1}{\tau})\cdot e^{-\frac{t}{\tau}}\\
@@ -232,26 +233,25 @@ Die Kapazität entlädt langsamer als in Aufgabe c) ($\tau_2 > \tau$), da $R_2 >
             i(50\,ms)&=\frac{2,8\,kV}{5\Omega}\cdot e^{-\frac{50\,ms}{20\,ms}}=46\,A\\
             u_L(50\,ms)&=-2,8\,kV\cdot e^{-\frac{50\,ms}{20\,ms}}=-230\,V
         \end{align*}
-    e) Zeitliche Verläufe von $u_L, i_L, u_R$.\\[-2em]
+    e) Temporal progression of $u_L, i_L, u_R$.\\[-2em]
     \begin{center}
         \includegraphics{Tikz/pdf/Uebungen/plot_uebung_7.1_a.pdf}
     \end{center}
 }
 
-\subsection{Einschaltverhalten einer RL-Serienschaltung}\label{Einschaltverhalten_RL-Serie}
+\subsection{Switch-on behaviour of an RL series connection}\label{Einschaltverhalten_RL-Serie}
 % Übernommen von Prof. Exknowski, FH SWF Hagen, 2024, ET3 (Übung 7, Aufgabe 2), leicht verändert
 \Aufgabe{
-
-Das Einschaltverhalten einer Serienschaltung aus ohmschem Widerstand $R$ und Induktivität\\
- $L=100\,mH$ soll untersucht werden. Zum Zeitpunkt $t=0$ wird an die Serienschaltung eine Spannung $u=U_0 = 35\,V$ angelegt. Für $t\leq0$ gilt $u=0$. Die Spulenspannung zum Zeitpunkt $t_1=3\,ms$ ist bekannt und beträgt $u_L(t_1)= 26\,V$.\\[2ex]
-Bestimmen Sie die Zeitkonstante $\tau$, den Widerstand $R$, sowie die Spannung $u_R(t=5\,ms)$.
+The switch-on behavior of a series circuit consisting of a resistive resistor $R$ and an inductance $L=100\,\text{mH}$ is to be examined. 
+At time $t=0$, a voltage $u=U_0 = 35\,\text{V}$ is applied to the series circuit. For $t \leq 0$, $u=0$. The inductor voltage at time $t_1=3\,\text{ms}$ is known and amounts to $u_L(t_1)=26\,\text{V}$.\\[2ex]
+Determine the time constant $\tau$, the resistance $R$, and the voltage $u_R(t=5\,\text{ms})$.
 }
 
 \Loesung{%
 
     \begin{align*}
-        \text{DGL:}&&\quad\frac{L}{R}\cdot\dt i+i&=\frac{U_0}{R}\\
-        \text{Lösung:}&&i&=\frac{U_0}{R}\cdot(1-e^{-\frac{t}{\tau}})\quad\text{mit}\quad \tau = \frac{L}{R}
+        \text{ODE:}&&\quad\frac{L}{R}\cdot\dt i+i&=\frac{U_0}{R}\\
+        \text{Solution:}&&i&=\frac{U_0}{R}\cdot(1-e^{-\frac{t}{\tau}})\quad\text{with}\quad \tau = \frac{L}{R}
     \end{align*}
     \begin{align*}
         u_L &= L\cdot\dt i =U_0\cdot e^{-\frac{t}{\tau}}\\
@@ -270,11 +270,11 @@ Bestimmen Sie die Zeitkonstante $\tau$, den Widerstand $R$, sowie die Spannung $
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{ET3 Ü8 Schaltverhalten eines RC-Netzwerks}\label{AufgSchaltverhaltenRCNetzwerk}
+\subsection{ET3 Ü8 Switching behaviour of an RC network}\label{AufgSchaltverhaltenRCNetzwerk}
 \Aufgabe{
     % Übernommen von Prof. Exknowski, FH SWF Hagen, 2024, ET3 (Übung 8), leicht verändert
     \begin{minipage}{0.6\textwidth}
-        Der Schalter in der rechts dargestellten Schaltung wird zum Zeitpunkt $t=0$ geschlossen. 
+        The switch in the circuit shown on the right is closed at time $t=0$.
         \\
         
         \begin{tabular}{lll}
@@ -284,9 +284,9 @@ Bestimmen Sie die Zeitkonstante $\tau$, den Widerstand $R$, sowie die Spannung $
         \end{tabular}
         \\
         
-        Bestimmen Sie den zeitlichen Verlauf des Stromes $i_3$ durch den Widerstand $R_3$ und zeichnen Sie diesen als Funktion von der Zeit (Liniendiagramm) für $-\tau<t<5\tau$. \\
+        Determine the time course of the current $i_3$ through the resistor $R_3$ and plot it as a function of time (line graph) for $-\tau<t<5\tau$. \\
         
-        Das Netzwerk sei zum Zeitpunkt $-\tau$ in einem stationären Zustand. Dabei ist $\tau$ die Zeitkonstante des Netzwerks.
+        The network is in a steady state at time $-\tau$. Here, $\tau$ is the time constant of the network.
     \end{minipage}
     \hspace{0.3cm}
     \begin{minipage}{0.38\textwidth}
@@ -295,14 +295,14 @@ Bestimmen Sie die Zeitkonstante $\tau$, den Widerstand $R$, sowie die Spannung $
     \end{minipage}
 }
 \Loesung{
-DGL für $\ecv{u_C}$ aufstellen und darüber mit $\eci{i_3}=\frac{\ecv{u_C}}{R_3}$ den Strom $\eci{i_3}$ bestimmen.\\ 
-$R_1$ und $R_2$ nach dem Schaltzeitpunkt ($t>0$) als Parallelschaltung $R_{12}$ zusammenfassen.
+Set up the ODE for $\ecv{u_C}$ and determine the current $\eci{i_3}$ via $\eci{i_3}=\frac{\ecv{u_C}}{R_3}$.\\
+Combine $R_1$ and $R_2$ as a parallel connection $R_{12}$ after the switching instant ($t>0$).
 
-\textbf{1. DGL} für $\ecv{u_C}$ ($t > 0$) mit $\eci{i_3}=\frac{\ecv{u_C}}{R_3}$: 
+\textbf{1st ODE} for $\ecv{u_C}$ ($t > 0$) with $\eci{i_3}=\frac{\ecv{u_C}}{R_3}$: 
 \begin{align*}
-    \ecv{U_q} &= \ecv{u_{12}} + \ecv{u_C} &&\text{mit}\quad \ecv{u_{12}} \mathrlap{\text{ über Parallelschaltung aus $R_1$ und $R_2$}}\\
-    &= R_{12} \cdot \eci{i_{12}} + \ecv{u_C} &&\text{mit}\quad R_{12}=R_1||R_2,& \eci{i_{12}}&=\eci{i_C}+\eci{i_3}\\
-    &= R_{12} \cdot (\eci{i_C} + \eci{i_3}) + \ecv{u_C} &&\text{mit}\quad \eci{i_{C}}=C\cdot\dt\,\ecv{u_C},& \eci{i_3}&=\frac{\ecv{u_C}}{{R_3}}\\
+    \ecv{U_q} &= \ecv{u_{12}} + \ecv{u_C} &&\text{with}\quad \ecv{u_{12}} \mathrlap{\text{ via parallel connection of $R_1$ and $R_2$}}\\
+    &= R_{12} \cdot \eci{i_{12}} + \ecv{u_C} &&\text{with}\quad R_{12}=R_1||R_2,& \eci{i_{12}}&=\eci{i_C}+\eci{i_3}\\
+    &= R_{12} \cdot (\eci{i_C} + \eci{i_3}) + \ecv{u_C} &&\text{with}\quad \eci{i_{C}}=C\cdot\dt\,\ecv{u_C},& \eci{i_3}&=\frac{\ecv{u_C}}{{R_3}}\\
     &= R_{12} \cdot (C \cdot \dt\,\ecv{u_C} + \frac{\ecv{u_C}}{{R_3}}) + \ecv{u_C}\\
     &= C \cdot R_{12} \cdot \dt\,\ecv{u_C} + \left( \frac{R_{12}}{{R_3}} + 1 \right) \cdot \ecv{u_C}& &\bigg|\ \cdot R_3\\
     \ecv{U_q} \cdot R_3
@@ -310,21 +310,21 @@ $R_1$ und $R_2$ nach dem Schaltzeitpunkt ($t>0$) als Parallelschaltung $R_{12}$ 
     \ecv{U_q} \cdot \frac{R_3}{R_{12}+R_3}
     &= \underbrace{C \cdot \frac{R_{12} \cdot R_3}{R_{12} + R_3}}_{\tau} \cdot \dt\,\ecv{u_C} + \ecv{u_C}& &\Longrightarrow\quad \tau=C \cdot \frac{R_{12} \cdot R_3}{R_{12} + R_3} 
 \end{align*}
-\textbf{3. Homogene Lösung} (flüchtig) und \textbf{2. Partikuläre Lösung} ($t \to \infty$, eingeschwungen):
+\textbf{3. Homogeneous solution} (fleeting) and \textbf{2. Particular solution} ($t \to \infty$, settled in):
 \begin{align*}
-    \ecv{u_{C,\mathrm{h}}} &= K \cdot \mathrm{e}^{-\frac{t}{\tau}}& &\text{mit}\quad \tau=C \cdot \frac{R_{12} \cdot R_3}{R_{12} + R_3} \\
-    \ecv{u_{C,\mathrm{p}}} &= \ecv{U_q} \cdot \frac{R_3}{R_{12}+R_3}& &\text{$C_1$ entspricht Leerlauf}
+    \ecv{u_{C,\mathrm{h}}} &= K \cdot \mathrm{e}^{-\frac{t}{\tau}}& &\text{with}\quad \tau=C \cdot \frac{R_{12} \cdot R_3}{R_{12} + R_3} \\
+    \ecv{u_{C,\mathrm{p}}} &= \ecv{U_q} \cdot \frac{R_3}{R_{12}+R_3}& &\text{$C_1$ corresponds to idle}
 \end{align*}
-\textbf{4. Überlagerung} und \textbf{5. Konstante(n) bestimmen}:
+\textbf{4. superposition} and \textbf{5. Determine constant(s)}:
 \begin{align*}
     \ecv{u_C} &= \ecv{u_{C,\mathrm{h}}} + \ecv{u_{C,\mathrm{p}}}\\
-    \ecv{u_C}(t=0) &= K \cdot \redcancel{\mathrm{e}^{0}} + \ecv{U_q} \cdot \frac{R_3}{R_{12}+R_3} \overset{!}{=} \ecv{U_q}& &\text{(Anfangsbedingung)}\\
+    \ecv{u_C}(t=0) &= K \cdot \redcancel{\mathrm{e}^{0}} + \ecv{U_q} \cdot \frac{R_3}{R_{12}+R_3} \overset{!}{=} \ecv{U_q}& &\text{(Initial condition)}\\
     \Rightarrow K &= \ecv{U_q} \cdot \left( 1 - \frac{R_3}{R_{12}+R_3} \right)\\
     &= \ecv{U_q} \cdot \frac{R_{12}}{R_{12}+R_3}\\[2pt]
     \ecv{u_C} &= \ecv{U_q} \cdot \left( 1 - \frac{R_3}{R_{12}+R_3} \right) \cdot \mathrm{e}^{-\frac{t}{\tau}} + \ecv{U_q} \cdot \frac{R_3}{R_{12}+R_3}& &\bigg| :R_3\\[2pt]
     \eci{i_3} &= \ecv{U_q} \cdot \left( \frac{1}{R_3} - \frac{1}{R_{12}+R_3} \right) \cdot \mathrm{e}^{-\frac{t}{\tau}} + \ecv{U_q} \cdot \frac{1}{R_{12}+R_3}
 \end{align*}
-Zeitkonstante $\tau$ sowie Anfangs- und Endwerte des Stromes $i_3$ für Skizze:\\
+Time constant $\tau$ and initial and final values of the current $i_3$ for sketch:\\
 \begin{minipage}{0.5\textwidth}% Grenzwerte
 \begin{align*}
     R_{12} &= R_1||R_2 = \frac{1,2\,\mathrm{k}\Omega \cdot 2\,\mathrm{k}\Omega}{1,2\,\mathrm{k}\Omega + 2\,\mathrm{k}\Omega} = 750\,\Omega\\[2pt]
@@ -342,36 +342,36 @@ Zeitkonstante $\tau$ sowie Anfangs- und Endwerte des Stromes $i_3$ für Skizze:\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Schaltvorgang bei Wechselspannung}\label{AufgWechselspannungSchalten}
+\subsection{Switching process for alternating voltage}\label{AufgWechselspannungSchalten}
 \Aufgabe{
-    Zum Zeitpunkt $t=t_0$ wird in der gezeigten Schaltung die Wechselspannung $u_1(t)$ an 
-    die Gesamtschaltung aus $R_1$ in Reihe zur Parallelschaltung aus $R_2$ und $C$ angelegt. 
-    Für $t<t_0$ ist die Schaltung im stationären Zustand.
-    Die Quellenspannung ist gegeben durch $u_1(t) = \hat{U}_1 \cdot \sin(\omega t)$.
+    At time $t=t_0$, the alternating voltage $u_1(t)$ is applied to 
+    the entire circuit consisting of $R_1$ in series with the parallel connection of $R_2$ and $C$.
+    For $t<t_0$, the circuit is in a steady state.
+    The source voltage is given by $u_1(t) = \hat{U}_1 \cdot \sin(\omega t)$.    
     \begin{figure}[H]\centering
         \includegraphics{Tikz/pdf/Uebungen/circ_uebung_einschaltverhalten_rs_rlp.pdf}
     \end{figure}
     \begin{itemize}
-    \item[a)] Welcher Strom $i_{L,e}(t)$ stellt sich im eingeschwungenen Zustand bei der Induktivität ein? \\
-    Bestimmen Sie die Amplitude und den Nullphasenwinkel des Stromes.
-    \item[b)] Stellen Sie die DGL von $i_L(t)$ für $t \geq t_0$ auf.
-    Welche Zeitkonstante ergibt sich für den flüchtigen Zustand?  
-    Hinweis (DGL):\qquad $\tau \cdot \frac{\mathrm{d}}{\mathrm{d}t}\, i_L + i_L = \text{störterm}$
-    \item[c)] Wann muss geschalten werden, damit der flüchtige Zustand von $i_L(t)$ minimal wird? 
-        Bei welchen möglichen Schaltzeitpunkten wird dieser maximal? 
-        Geben Sie die Antwort mithilfe der Phasenverschiebung $\varphi$ zwischen $u_1(t)$ und $i_L(t)$ an.
-    \item[d)] Sei zum Schaltzeitpunkt $t_0$ der eingeschwungene Zustand von $i_{L,e}(t)$ 
-    bei seinem negativen Scheitelwert. Die Zeitkonstante $\tau$ beträgt eine Periodendauer $T=\frac{2\pi}{\omega}$.
-    Bestimmen Sie das Strommaximum während des Einschwingvorgangs.
+    \item[a)] What current $i_{L,e}(t)$ occurs in the steady state at the inductance? \\
+    Determine the amplitude and zero phase angle of the current.
+    \item[b)] Set up the ODE of $i_L(t)$ for $t \geq t_0$.
+    What is the time constant for the transient state?
+    Note (ODE):\qquad $\tau \cdot \frac{\mathrm{d}}{\mathrm{d}t}\, i_L + i_L = \text{disturbance}$
+    \item[c)] When must switching occur in order to minimise the transient state of $i_L(t)$?
+    At which possible switching times does this become maximum?
+    Give the answer using the phase shift $\varphi$ between $u_1(t)$ and $i_L(t)$.
+    \item[d)] At the switching instant $t_0$, let the steady-state value of $i_{L,e}(t)$ be at its negative peak. 
+    The time constant $\tau$ equals one period $T=\frac{2\pi}{\omega}$.  
+    Determine the current maximum during the transient response.
     \end{itemize}
 }
 \Loesung{
     \begin{itemize}
-    \item[a)] Eingeschwungener Zustand ($t \to \infty$) mit komplexer Wechselstromrechnung:
+    \item[a)] Steady state ($t \to \infty$) with complex alternating current calculation:
     \begin{align*}
         \eci{\underline{I}_{L,e}} &= \frac{\ecv{\underline{U}_L}}{\underline{Z}_L}
         = \frac{\ecv{\underline{U}_1}}{\underline{Z}_L} \cdot \frac{R_2 || \underline{Z}_L}{R_1 + R_2 || \underline{Z}_L} 
-        \qquad\text{mit}\quad
+        \qquad\text{with}\quad
         \ecv{\underline{U}_1} = \ecv{\hat{U}_1} \cdot \mathrm{e}^{\mathrm{j}0} = \ecv{\hat{U}_1}\\
         &= \frac{\ecv{\hat{U}_1}}{\underline{Z}_L} \cdot \frac{\frac{R_2\cdot\underline{Z}_L}{R_2+\underline{Z}_L}}{R_2 + \frac{R_1\cdot\underline{Z}_L}{R_2+\underline{Z}_L}}
         \qquad \bigg| \cdot\frac{R_2+\underline{Z}_L}{R_2+\underline{Z}_L}\\
@@ -380,9 +380,9 @@ Zeitkonstante $\tau$ sowie Anfangs- und Endwerte des Stromes $i_3$ für Skizze:\
         \varphi &= 0 + \redcancel{\arctan\left(\frac{0}{R_2}\right)} - \arctan\left(\frac{\omega L \cdot(R_1+R_2)}{R_1 \cdot R_2}\right) \\
         &= - \arctan\left(\frac{\omega L \cdot(R_1+R_2)}{R_1 \cdot R_2}\right),\qquad -\frac{\pi}{2} \leq \varphi \leq 0 \\
         \eci{\hat{I}_{L,e}} &= \ecv{\hat{U}_1} \cdot \frac{R_2}{\sqrt{\left(R_1\cdot R_2\right)^2 + \left(\omega L\cdot (R_1+R_2)\right)^2}}\\
-        \eci{i_{L,e}}(t) &= \eci{\hat{I}_{L,e}} \cdot \sin(\omega t + \varphi) \qquad \text{Strom eilt nach }\ecv{u_1}\text{ mit }\varphi<0 
+        \eci{i_{L,e}}(t) &= \eci{\hat{I}_{L,e}} \cdot \sin(\omega t + \varphi) \qquad \text{current lags }\ecv{u_1}\text{ with }\varphi<0 
     \end{align*}
-    \item[b)] DGL für $i_L(t)$ ($t \geq t_0$):
+    \item[b)] ODE for $i_L(t)$ ($t \geq t_0$):
     \begin{align*}
         \ecv{u_1} &= \ecv{u_{R_1}} + \ecv{u_L} \\
         &= R_1 \cdot (\eci{i_2} + \eci{i_L}) + L \cdot \dt\, \eci{i_L}\\
@@ -392,36 +392,36 @@ Zeitkonstante $\tau$ sowie Anfangs- und Endwerte des Stromes $i_3$ für Skizze:\
         \frac{\ecv{u_1}}{R_1} &= \underbrace{L \cdot \left( \frac{1}{R_1} + \frac{1}{R_2} \right)}_{\ =\tau} \cdot \dt\, \eci{i_L} + \eci{i_L}\\ 
         \tau &= L \cdot \left( \frac{1}{R_1} + \frac{1}{R_2} \right) = \frac{L}{R_1||R_2}
     \end{align*}
-    \item[c)] Schaltzeitpunkte für minimalen und maximalen flüchtigen Zustand ($t_{min},\ t_{max}$). \\ 
-    Kein Einschwingen, wenn 
-    $\eci{i_{L,f}}=0 \Leftrightarrow \eci{i_L}=\eci{i_{L,e}} \Leftrightarrow \eci{i_L}(t_0)=\eci{i_{L,e}}(t_0)$ gilt. \\
+    \item[c)] Time points for minimum and maximum volatile state ($t_{min},\ t_{max}$). \\
+    No settling if 
+    $\eci{i_{L,f}}=0 \Leftrightarrow \eci{i_L}=\eci{i_{L,e}} \Leftrightarrow \eci{i_L}(t_0)=\eci{i_{L,e}}(t_0)$ applies. \\
     
-    D.h. für verschwindenden flüchtigen Zustand (kein Einschwingvorgang) folgt:
+    That is, for a vanishing transient state (no settling process), the following applies:
     \begin{align*}
         %\intertext{D.h. für verschwindenden flüchtigen Zustand (kein Einschwingvorgang) folgt:}
-        &\text{AB:}&\eci{i_L}(t_0) = \eci{i_{L,e}}(t_0) &= \eci{\hat{I}_{L,e}} \cdot \sin(\omega t_0 + \varphi) \overset{!}= 0 &
+        &\text{IC:}&\eci{i_L}(t_0) = \eci{i_{L,e}}(t_0) &= \eci{\hat{I}_{L,e}} \cdot \sin(\omega t_0 + \varphi) \overset{!}= 0 &
             &\Rightarrow \eci{i_L}(t')=\eci{i_{L,e}}(t') \Leftrightarrow \eci{i_{L,f}}(t')=0\\
         &&\Leftrightarrow \omega t_0 + \varphi &\overset{!}{=} 0 + n\cdot \pi &
-            &\text{mit} \quad n \in \mathbb{N} \\
+            &\text{with} \quad n \in \mathbb{N} \\
         &&t_{min} &= \frac{n\cdot \pi - \varphi}{\omega} &
-            &\text{entspricht Nulldurchgängen von $\eci{i_{L,e}}$}\\
+            &\text{corresponds to zero crossings of $\eci{i_{L,e}}$}\\
         \end{align*}
-        Und für maximalen flüchtigen Zustand (Schaltzeitpunkt $90\degree$ versetzt) folgt:
+        And for maximum transient state (switching point offset by $90\degree$), the following applies:
         \begin{align*}
         %\intertext{Und für maximalen flüchtigen Zustand (Schaltzeitpunkt $90\degree$ versetzt) folgt:}
         &&t_{max} &= \frac{n\cdot \pi - \varphi}{\omega} + \frac{T}{4} &
-            &\text{entspricht Extremstellen von $\eci{i_{L,e}}$}
+            &\text{corresponds to extreme points of $\eci{i_{L,e}}$}
     \end{align*}
-    \item[d)] Strommaximum während des Einschwingvorgangs gesucht. 
-    Schaltzeitpunkt $t_0$ bei negativem Scheitelwert von $i_{L,e}$. 
-    Sei $t' = t - t_0$, d.h. $t'=0$ zum Schaltzeitpunkt, so folgt:
+    \item[d)] Maximum current during the transient process sought.
+        Switching time $t_0$ at negative peak value of $i_{L,e}$.
+        Let $t' = t - t_0$, i.e. $t'=0$ at the switching time, then the following applies:
     \begin{align*}
         \eci{i_L}(t') &= \eci{i_{L,h}}(t') + \eci{i_{L,e}}(t') \\
         &= K \cdot \mathrm{e}^{-\frac{t'}{\tau}} - \eci{\hat{I}_{L,e}} \cdot \cos(\omega t')\\
         \text{AB:}\quad \eci{i_L}(t'=0) &= K - \eci{\hat{I}_{L,e}}  \overset{!}{=}0 \quad \Rightarrow \quad K = \eci{\hat{I}_{L,e}}\\
         \eci{i_L}(t') &= \eci{\hat{I}_{L,e}} \cdot \left( \mathrm{e}^{-\frac{t'}{\tau}} - \cos(\omega t') \right) \\
         \end{align*}
-        Maximum bei positivem Scheitelwert ($180\degree$ nach $t_0$):
+        Maximum at positive peak value ($180\degree$ to $t_0$):
         \begin{align*}
         %\intertext{Maximum bei positivem Scheitelwert ($180\degree$ nach $t_0$):}
         \eci{i_{L,max}} &= \eci{i_L}(t' = \frac{\pi}{\omega}) \\

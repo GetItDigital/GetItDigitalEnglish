@@ -1,13 +1,14 @@
-\subsection{Komparatorschaltung zur Akku-Überwachung berechnen\label{Aufg10}}
+\subsection{Calculate comparator circuit for battery monitoring\label{Aufg10}}
 % Alt: Aufgabe 10
 \Aufgabe{
-    Zur Überwachung des Ladezustandes eines Akkus soll ein Komparator eingesetzt werden. Der Komparator soll umschalten, wenn eine Batteriespannung
-    $U_\mathrm{bat}$ von $6\,\mathrm{V}$ unterschritten wird. Der Widerstand $R_1$ beträgt $10\,\mathrm{k\Omega}$. Die Betriebsspannung des Komparators beträgt $\pm 15\,\mathrm{V}$.
+    A comparator is to be used to monitor the charge status of a battery. The comparator should switch over when the battery voltage $U_\mathrm{bat}$ falls below $6\,\mathrm{V}$. 
+    The resistor $R_1$ is $10\,\mathrm{k\Omega}$. The operating voltage of the comparator is $\pm 15\,\mathrm{V}$.
+
     \begin{itemize}
-        \item [a)] Wie groß muss der Widerstand $R_2$ gewählt werden?
-        \item [b)] Zur Anzeige des Ladezustands soll eine LED verwendet werden. Erweitern Sie die Schaltung um die Ladungsanzeige per LED.
-        \item [c)] Durch die LED mit der Flussspannung von 2,2 V darf maximal ein Strom von 20 mA fließen. Wie groß muss der Vorwiderstand gewählt werden? 
-        \item [d)] Die Spannung am Spannungsteiler ist abhängig von der Betriebsspannung. Welche anderen geeigneten Bauelemente existieren für die Erzeugung der Referenzspannung? Nennen und zeichnen Sie ein Beispiel.
+        \item [a)] What value must the resistor $R_2$ have?  
+        \item [b)] To indicate the charge level, an LED is to be used. Extend the circuit to include a charge indicator using an LED.  
+        \item [c)] A maximum current of 20 mA may flow through the LED with a forward voltage of 2.2 V. What value must the series resistor have?  
+        \item [d)] The voltage at the voltage divider depends on the supply voltage. What other suitable components exist for generating the reference voltage? Name and draw an example.
     \end{itemize}
     \begin{figure}[H]
     \centering
@@ -57,50 +58,50 @@
 
 \Loesung{
 \begin{itemize}
-    \item[a)] Berechnung des Widerstands $R_2$
+    \item[a)] Calculation of resistance $R_2$
 
-    Der Komparator soll umschalten, wenn die Batteriespannung $U_{\text{bat}}$ unter $6\,\mathrm{V}$ fällt. Das Verhältnis der Widerstände $R_1$ und $R_2$ im Spannungsteiler muss so gewählt werden, dass am nicht-invertierenden Eingang die Referenzspannung $U_{\text{ref}} = 6\,\mathrm{V}$ anliegt:
+    The comparator should switch when the battery voltage $U_{\text{bat}}$ falls below $6\,\mathrm{V}$. The ratio of resistors $R_1$ and $R_2$ in the voltage divider must be selected so that the reference voltage $U_{\text{ref}} = 6\,\mathrm{V}$ is applied to the non-inverting input:
     \[
     U_{\text{ref}} = \frac{R_2}{R_1 + R_2} \cdot U_\mathrm{B}
     \]
-    mit $U_\mathrm{B} = 15\,\mathrm{V}$ und $R_1 = 10\,\mathrm{k}\Omega$.
-    Einsetzen:
+    with $U_\mathrm{B} = 15\,\mathrm{V}$ and $R_1 = 10\,\mathrm{k}\Omega$.
+    Insert:
     \[
     6\,\mathrm{V} = \frac{R_2}{10\,\mathrm{k}\Omega + R_2} \cdot 15\,\mathrm{V}
     \]
-    Umstellen nach $R_2$:
+    Convert to $R_2$:
     \[
     R_2 = \frac{6\,\mathrm{V} \cdot 10\,\mathrm{k}\Omega}{15\,\mathrm{V} - 6\,\mathrm{V}} = 6,66\,\mathrm{k}\Omega
     \]
 
-    \item[b)] Erweiterung der Schaltung um eine LED-Anzeige:
+    \item[b)] Adding an LED display to the circuit:
 
-    Die LED soll anzeigen, wenn die Batteriespannung unter $6\,\mathrm{V}$ fällt. Dazu wird die LED mit Vorwiderstand $R_V$ an den Ausgang des Komparators geschaltet.
+    The LED should indicate when the battery voltage falls below $6\,\mathrm{V}$. To do this, the LED is connected to the output of the comparator with a series resistor $R_V$.
 
-    \item Schaltverhalten der Schaltung:
+    \item Switching behaviour of the circuit:
 
     \begin{itemize}
-        \item \textbf{Leere Batterie ($U_{\text{bat}} = 5\,\mathrm{V}$):}
+        \item \textbf{Battery empty ($U_{\text{bat}} = 5\,\mathrm{V}$):}
         \begin{align*}
             U_+ &= 6\,\mathrm{V} - U_{\text{bat}} \\
             U_+ &= 6\,\mathrm{V} - 5\,\mathrm{V} = 1\,\mathrm{V}
         \end{align*}
-        Da $U_+ < U_{\text{ref}}$, schaltet der Komparator um:
+        Since $U_+ < U_{\text{ref}}$, the comparator switches:
         \[
         U_\mathrm{A} = -15\,\mathrm{V}
         \]
-        Die LED leuchtet.
+        The LED is lit.
 
-        \item \textbf{Volle Batterie ($U_{\text{bat}} = 7\,\mathrm{V}$):}
+        \item \textbf{Full battery ($U_{\text{bat}} = 7\,\mathrm{V}$):}
         \begin{align*}
             U_+ &= 6\,\mathrm{V} - U_{\text{bat}} \\
             U_+ &= 6\,\mathrm{V} - 7\,\mathrm{V} = -1\,\mathrm{V}
         \end{align*}
-        Da $U_+ > U_{\text{ref}}$, schaltet der Komparator:
+        Since $U_+ > U_{\text{ref}}$, the comparator switches:
         \[
         U_\mathrm{A} = 15\,\mathrm{V}
         \]
-        Die LED bleibt aus.
+        The LED remains off.
     \end{itemize}
 
     \begin{figure}[H]
@@ -109,20 +110,20 @@
         \label{fig:LsgAkkuUeberwachung1}
     \end{figure}
 
-    \item[c)] Dimensionierung des Vorwiderstands $R_\mathrm{V}$
+    \item[c)] Dimensioning of the series resistor $R_\mathrm{V}$
 
-    Gegeben:
+    Given:
     \begin{itemize}
-        \item Flussspannung der LED: $U_\mathrm{F} = 2,2\,\mathrm{V}$
-        \item Strom durch die LED: $I_\mathrm{F} = 20\,\mathrm{mA}$
-        \item Ausgangsspannung des Komparators: $U_\mathrm{A} = 15\,\mathrm{V}$
+        \item LED forward voltage: $U_\mathrm{F} = 2,2\,\mathrm{V}$
+        \item Current through the LED: $I_\mathrm{F} = 20\,\mathrm{mA}$
+        \item Output voltage of the comparator: $U_\mathrm{A} = 15\,\mathrm{V}$
     \end{itemize}
 
-    Der Vorwiderstand $R_\mathrm{V}$ berechnet sich aus:
+    The series resistor$R_\mathrm{V}$ is calculated from:
     \[
     R_\mathrm{V} = \frac{U_\mathrm{A} - U_\mathrm{F}}{I_\mathrm{F}}
     \]
-    Einsetzen der Werte:
+    Applying the values:
     \[
     R_\mathrm{V} = \frac{15\,\mathrm{V} - 2,2\,\mathrm{V}}{20\,\mathrm{mA}} = \frac{13,8\,\mathrm{V}}{0,02\,\mathrm{A}} = 690\,\Omega
     \]
@@ -143,14 +144,14 @@
         \label{fig:BeideLoesungen}
     \end{figure}
 
-    \item[d)] Alternative Spannungsreferenz:
+    \item[d)] Alternative voltage reference:
 
-    Da die Spannung des Spannungsteilers abhängig von der Betriebsspannung ist, könnte eine Zener-Diode als Referenzelement verwendet werden. Eine Zener-Diode stellt eine konstante Referenzspannung unabhängig von Schwankungen der Versorgungsspannung bereit.
+    Since the voltage of the voltage divider depends on the operating voltage, a Zener diode could be used as a reference element. A Zener diode provides a constant reference voltage regardless of fluctuations in the supply voltage.
 
-    \item Beispiel-Schaltung:
+    \item Example circuit:
     \begin{itemize}
-        \item Die Zener-Diode wird mit einem Vorwiderstand an die Betriebsspannung $+15\,\mathrm{V}$ angeschlossen.
-        \item Die Referenzspannung wird direkt von der Kathode der Zener-Diode abgegriffen.
+        \item The Zener diode is connected to the operating voltage $+15\,\mathrm{V}$ with a series resistor.
+        \item The reference voltage is tapped directly from the cathode of the Zener diode.
     \end{itemize}
 \end{itemize}
 \begin{figure}[H]
@@ -158,7 +159,7 @@
     \input{Tikz/src/LsgAkkuUeberwachung4.tex}
     \label{fig:LsgAkkuUeberwachung4}
 \end{figure}
-Siehe: Abschnitt \ref{fig: Verschaltung Verstaerker} und Tabelle \ref{tab:Grundschaltungen}
+See section: \ref{fig: Verschaltung Verstaerker} and table \ref{tab:Grundschaltungen}
 %\speech{
 %    Lösung für Aufgabe 10
 %    

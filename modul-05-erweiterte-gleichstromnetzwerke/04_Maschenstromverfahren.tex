@@ -3,7 +3,7 @@
 \newvideofile{Mastrom}{Maschenstromverfahren}
 \begin{frame}
     
-	\ftx{Lernziele Maschenstromverfahren}
+	\ftx{Learning objectives Mesh flow method}
 	\begin{Key point}{mesh flow method}
         The Students 
         \begin{itemize}
@@ -32,11 +32,11 @@
 
     \b{
 		\begin{itemize}
-			\item Vorbereitung des Netzwerkes
-			\item Maschen definieren
-			\item Widerstandsmatrix bestimmen
-			\item Quellenspannungen zuordnen
-			\item Gleichungssystem aufstellen
+			\item Preparation of the network
+			\item Define meshes
+			\item Determine resistance matrix
+			\item Assign source voltages
+			\item set up a system of equationsn
 		\end{itemize}
 	}
 
@@ -86,7 +86,7 @@
     \onslide<2->{
 	\b{
 		\begin{itemize}
-			\item Umrechnung der Stromwerte zu Spannungswerten:
+			\item Conversion of current values to voltage values:
 		\end{itemize}
 	}
 
@@ -102,7 +102,7 @@
     \onslide<3->{
 	\b{
 		\begin{itemize}
-			\item Berechnung der Leitwerte:
+			\item Calculation of conductance values:
 		\end{itemize}
 	}
 
@@ -119,7 +119,7 @@
 
 \begin{frame}
     \renewcommand{\figurename}{Figure}
-    \ftx{Vorbereitung des Netzwerkes}
+    \ftx{Preparation of the network}
 
     \s{
         In Figure \ref{BildMasch2}, the current source of the network shown is converted into a voltage source.
@@ -130,8 +130,8 @@
     \b{
         Conversion of the current source into a voltage source:
         \begin{itemize}
-            \item Die Stromquelle mit einer Spannungsquelle ersetzen
-            \item Aus dem Parallelwiderstand wird ein Reihenwiderstand
+            \item Replace the power source with a voltage source
+            \item The parallel resistor becomes a series resistor.
         \end{itemize}
     }
 
@@ -171,7 +171,7 @@
     
     \b{
 		\begin{itemize}
-			\item Festlegung der Maschen und Maschenströme
+			\item Determination of meshes and mesh flows
 		\end{itemize}
 	}
 
@@ -225,8 +225,8 @@
 
     \b{
 		\begin{itemize}
-			\item<2-> Hauptdiagonale mit den Widerstandswerten, welche direkt an den Maschen liegen
-			\item<3-> Übrige Elemente mit den Widerstandswerten, welche direkt zwischen beteiligten Maschen liegen
+			\item<2-> Main diagonal with the resistance values directly adjacent to the meshes
+			\item<3-> Other elements with resistance values that lie directly between the meshes involved
 		\end{itemize}
 	}
 
@@ -383,8 +383,8 @@ Somit sind dann alle Größen des Netzwerkes identifiziert worden.}
 
 
 \begin{frame}
-    \ftx{Beispiel Maschenstromverfahren}
-    \begin{bsp}{Mesh flow method}{}
+    \ftx{Example: Mesh flow method}
+    \begin{expl}{Mesh flow method}{}
 
     \s{
         Analysis of the electrical network from Figure \ref{BildMasch4} using mesh current analysis. 
@@ -408,7 +408,7 @@ Somit sind dann alle Größen des Netzwerkes identifiziert worden.}
         \resizebox{0.4\textwidth}{!}{%                                     
         \input{Tikz/src/Beispiel_Maschenanalyse}
         }                  
-    }{{\bf Beispiel.} Maschenstromanalyse an einem elektrischen Netzwerk. \label{BildMasch4}}                                            
+    }{{\bf Example.} Mesh current analysis on an electrical network. \label{BildMasch4}}                                            
     
         }
 
@@ -513,7 +513,7 @@ Somit sind dann alle Größen des Netzwerkes identifiziert worden.}
             }
         }
     \end{enumerate}
-\end{bsp}{}{}
+\end{expl}{}{}
 
 \speech{MastromBsp}{1}{Die Schritte zur Anwendung des Maschenstromverfahrens wurden nun erläutert. 
 Folgend wird anhand des abgebildeten Beispielnetzwerkes noch einmal die grundsätzliche Arbeitsweise wiederholt.

@@ -1,11 +1,11 @@
-\subsection{Transistor-Verbundverstärker\label{Aufg27}}
+\subsection{Transistor composite amplifier\label{Aufg27}}
 % Alt: Klausuraufgabe 2
 \Aufgabe{
-  Zwei npn-Bipolartransistoren bilden zusammen einen rauscharmen Verstärker für Signale im Bereich unter $1\, \mathrm{\mu V}$.
-  Die Versorgungsspannung beträgt $U_1=10\,\mathrm{V}$. Am Kollektor des Transistors $\mathrm{T_2}$ liegt eine Spannung von $4\,\mathrm{V}$ gegenüber Masse an.
-  Im Arbeitspunkt von $T_1$ und $T_2$ kann für die Basis-Emitter-Spannungen jeweils $U_\mathrm{BE}=600\,\mathrm{mV}$ angenommen werden.
-  Die Kollektorströme $\mathrm{I_{C}}$ sind sehr groß gegenüber den Basisströmen $I_\mathrm{B}$ anzunehmen, daher gilt näherungsweise $I_\mathrm{C} = I_\mathrm{E}$.
-  Zusätzlich sind die folgenden Parameter gegeben:
+      Two npn bipolar transistors together form a low-noise amplifier for signals in the range below $1,\mathrm{\mu V}$.
+      The supply voltage is $U_1 = 10,\mathrm{V}$. At the collector of transistor $\mathrm{T_2}$, a voltage of $4,\mathrm{V}$ with respect to ground is present.
+      At the operating point of $T_1$ and $T_2$, a base–emitter voltage of $U_\mathrm{BE} = 600,\mathrm{mV}$ can be assumed for each transistor.
+      The collector currents $\mathrm{I_C}$ are assumed to be much larger than the base currents $I_\mathrm{B}$; therefore, to a good approximation, $I_\mathrm{C} = I_\mathrm{E}$.
+      In addition, the following parameters are given:
 
   $R_1 = 10\, \mathrm{k\Omega}$,
   $R_2 = 10\, \mathrm{k\Omega}$,
@@ -24,29 +24,30 @@
   \end {figure}
 
   \begin{itemize}
-    \item[a)]
-          Wie groß ist der maximale Strom durch $R_2$ im Arbeitspunkt ($I_\mathrm{R2}=I_\mathrm{C,\,T2}$)?
-    \item[b)]
-          Wie groß ist der Strom durch $R_3$ näherungsweise, wenn $R_4 >> R_3$?
-    \item[c)]
-          Wie groß ist die Spannung, die über $R_3$ abfällt?
-    \item[d)]
-          Wie groß ist die Gleichspannung an der Basis von $T_2$ ($U_\mathrm{B,\,T2}=U_\mathrm{CE,\,T1}$)?
-    \item[e)]
-          Wie groß ist der Strom durch $R_1$ ($I_\mathrm{R1}=I_\mathrm{C,\,T1}$)?
-    \item[f)]
-          Erläutern Sie die Arbeitspunktstabiliserung der gesamten Schaltung auf Grund der Gegenkopplung über $R_4$.
-    \item[g)]
-          Wie groß ist die Steilheit $S$ von $T_\mathrm{1}$, wenn zusätzlich $U_\mathrm{T} = 26\, \mathrm{mV}$ gegeben ist?
-    \item[h)]
-          Wie groß ist die Spannungsverstärkung $A_\mathrm{V} = \frac{\Delta U_\mathrm{CE}}{\Delta U_\mathrm{BE}}$, der ersten Transistorstufe?
-    \item[i)]
-          Wie groß ist die Spannungsverstärkung $A_\mathrm{V}$ der zweiten Transistorstufe, unter Verwendung der Definition $A_\mathrm{V,T2}=\frac{\Delta U_\mathrm{C}}{\Delta U_\mathrm{B}}$?
-          Zur Lösung müssen zusätzlich die Widerstände $R_2$ und $R_3$ berücksichtigt werden.
-    \item[j)]
-          Wie groß ist die Spannungsverstärkung der beiden Stufen $T_\mathrm{1}$ und $T_\mathrm{2}$ zusammen?
-    \item[k)]
-          Zeichnen Sie das Kleinsignal-Ersatzschaltbild der gesamten Schaltung. Ersetzen Sie darin die beiden Transistoren im Arbeitspunkt jeweils durch eine steuerbare Stromquelle $S=\beta\cdot i_\mathrm{B}$ und einen differentiellen Eingangswiderstand $r_\mathrm{BE}$.
+      \item[a)]
+      What is the maximum current through $R_2$ at the operating point ($I_\mathrm{R2} = I_\mathrm{C,,T2}$)?
+      \item[b)]
+      What is the approximate current through $R_3$ if $R_4 \gg R_3$?
+      \item[c)]
+      What is the voltage drop across $R_3$?
+      \item[d)]
+      What is the DC voltage at the base of $T_2$ ($U_\mathrm{B,,T2} = U_\mathrm{CE,,T1}$)?
+      \item[e)]
+      What is the current through $R_1$ ($I_\mathrm{R1} = I_\mathrm{C,,T1}$)?
+      \item[f)]
+      Explain the operating point stabilization of the entire circuit due to the negative feedback via $R_4$.
+      \item[g)]
+      What is the transconductance $S$ of $T_1$ if additionally $U_\mathrm{T} = 26,\mathrm{mV}$ is given?
+      \item[h)]
+      What is the voltage gain $A_\mathrm{V} = \frac{\Delta U_\mathrm{CE}}{\Delta U_\mathrm{BE}}$ of the first transistor stage?
+      \item[i)]
+      What is the voltage gain $A_\mathrm{V}$ of the second transistor stage, using the definition $A_\mathrm{V,T2} = \frac{\Delta U_\mathrm{C}}{\Delta U_\mathrm{B}}$?
+      To solve this, the resistors $R_2$ and $R_3$ must also be taken into account.
+      \item[j)]
+      What is the voltage gain of the two stages $T_1$ and $T_2$ together?
+      \item[k)]
+      Draw the small-signal equivalent circuit of the entire circuit. In doing so, replace both transistors at the operating point by a controlled current source $S = \beta \cdot i_\mathrm{B}$ and a differential input resistance $r_\mathrm{BE}$.
+
   \end{itemize}
 }
 
@@ -80,8 +81,8 @@
                   \end{align*}
                   
             \item[f)]
-                  Eine Erhöhung von $I_\mathrm{C}$ führt zu einem Spannungsanstieg über $R_4$, dadurch sinkt die Basisspannung von $T_\mathrm{1}$, was $I_\mathrm{C}$ wieder reduziert.
-                  Die negative Rückkopplung stabilisiert den Arbeitspunkt.
+                  An increase in $I_\mathrm{C}$ leads to a rise in the voltage across $R_4$, which in turn reduces the base voltage of $T_\mathrm{1}$, thereby reducing $I_\mathrm{C}$ again.
+                  The negative feedback stabilizes the operating point.
                         
             \item[g)]
                   \begin{align*}
@@ -103,7 +104,7 @@
                         -5 \cdot -315 = 1575 \approx 1600
                   \end{align*}
                   
-            \item[k)] Ersatzschaltbild\\
+            \item[k)] Equivalent circuit diagram\\
                   \begin{minipage}{\linewidth}
                         \begin{figure}[H]
                               \centering
@@ -112,5 +113,5 @@
                   \end{minipage}
       \end{itemize}
       
-      Siehe: Abschnitt \ref{sec:DarlingtonTransistor}
+      See section: \ref{sec:DarlingtonTransistor}
 }

@@ -9,16 +9,16 @@
     in nodes and the voltages in meshes are analysed in particular. The analysis of nodes and 
     meshes in electrical networks is carried out using the two Kirchhoff's rules.}
 
-    \b{Die Analyse von Knoten und Maschen in elektrischen Netzwerken erfolgt durch 
-    die Kirchhoffschen Regeln.}
+    \b{The analysis of nodes and meshes in electrical networks is carried out using 
+    Kirchhoff's rules.}
 
-    \begin{Lernziele}{Knot- and Mesh analysis}
+    \begin{Learning objectives}{Knot- and Mesh analysis}
         The Students
         \begin{enumerate} 
             \item know the basic definitions for describing an electrical network.
             \item can apply the node rule and the mesh rule to electrical networks. 
         \end{enumerate}
-    \end{Lernziele}
+    \end{Learning objectives}
     \speech{Knotmasch}{1}{
         Nodes and meshes are definitions that enable the analysis of electrical networks. 
         The nodes and meshes of an electrical network are treated using 
@@ -46,9 +46,9 @@
 
     \b{Electrical Field $\vec{E}$ between two charged plates:
     \begin{itemize}
-        \item<1->   Raum zwischen den Platten ist mit einem leitfähigen Material $\sigma$ gefüllt
-        \item<2->   Stromdichte $\vec{J}$ im elektrischen Feld 
-        \item<3->   Quellenfreiheit der Stromdichte (Kontinuitätsgleichung)
+        \item<1->   The space between the plates is filled with a conductive material $\sigma$.
+        \item<2->   Current density $\vec{J}$ in the electric field
+        \item<3->   Source-free current density (continuity equation)
     \end{itemize}}
 
     \fu{
@@ -118,7 +118,7 @@
         can thus be transferred to the currents. The current of the supply line $I_1$ is the sum of the
         two branch currents $I_2$ and $I_3$. The example conductor can also be represented as a simplified 
         electrical network. The currents determined around the connection point K (node) 
-        are shown in Figure \ref{FigureNodeNetwork}. 
+        are shown in Figure \ref{BildKnotennetzwerk}. 
 
         \fu{
             \input{Tikz/src/knotenstrukturiert.tex}
@@ -128,13 +128,13 @@
 
     \b{
     
-    Definierter Feldraum:
+    Defined field space:
 
     \begin{minipage}[t]{0.7\textwidth}
         \begin{itemize}
-            \item<2-> Bekannte Flächen und Stromdichten
-            \item<3-> Strom
-            \item<4-> Netzwerk
+            \item<2-> Known areas and current densities
+            \item<3-> Current
+            \item<4-> Network
         \end{itemize}
     \end{minipage}
     \begin{minipage}[t]{0.29\textwidth}
@@ -220,10 +220,10 @@
     }
 
     \b{
-        Beziehung zwischen Knoten und Ästen in der Graphentheorie:
+        Relationship between nodes and branches in graph theory:
         \begin{itemize}
-            \item<2-> Kanten $\rightarrow$ Äste
-            \item<3-> Knoten
+            \item<2-> Edges $\rightarrow$ Branches
+            \item<3-> Knots
         \end{itemize}
     }
 
@@ -249,7 +249,7 @@
 %Netzwerk und Matrix Graphentheorie
 \begin{frame}
     \renewcommand{\figurename}{Figure}
-    \ftx{Exkurs: Graphentheorie}
+    \ftx{Digression: Graph theory}
 
     \s{
         When several nodes are connected to each other with edges, a graph is created. This 
@@ -266,9 +266,9 @@
     \b{
         Graph:
         \begin{itemize}
-            \item<2-> Weg
-            \item<3-> Weganfang = Wegende $\rightarrow$ Zyklus
-            \item<4-> Kein kreuzender Zyklus $\rightarrow$ Kreis
+            \item<2-> Path
+            \item<3-> Start of path = End of path $\rightarrow$ Cycle
+            \item<4-> No crossing cycle $\rightarrow$ circle
         \end{itemize}
     }
 
@@ -291,7 +291,7 @@
 
     \b{
         \onslide<5->{
-            Zugehörige Adjazenz-Matrix:
+            Associated adjacency matrix:
         }
     }
 
@@ -325,12 +325,12 @@
 \end{frame}
 
 \begin{frame}
-    \ftx{Graphentheorie}
+    \ftx{Graph theory}
 
-    \begin{Merksatz}{Graphentheorie}
+    \begin{Key point}{Graph theory}
         In graph theory, networks are described using edges and nodes. When analysing networks, paths and cycles are defined.
         A continuous cycle with an identical starting point and end point is referred to as a circle. 
-    \end{Merksatz}
+    \end{Key point}
 
     \speech{Graphentheorie}{1}{
         In graph theory, networks are described using edges and nodes. When analysing networks, paths and cycles are defined.
@@ -384,9 +384,9 @@
 \begin{frame}
     \ftx{Knots, Branches and Meshes}
 
-    \begin{Merksatz}{Knots, Branches and Meshes}
+    \begin{Key point}{Knots, Branches and Meshes}
         Electrical networks are described by nodes, branches and meshes, analogous to graph theory.
-    \end{Merksatz}
+    \end{Key point}
 
     \speech{MerkeKZM}{1}{Elektrische Netzwerke werden analog zur Graphentheorie durch Knoten, Zweige und Maschen beschrieben. } 
 \end{frame}
@@ -477,8 +477,8 @@
 	
 	\b{
 		\begin{itemize}
-			\item<2-> \red{Baumzweige} $\rightarrow$ k-1 des vollständigen Baumes
-			\item<2-> die übrigen Zweige sind Verbindungszweige
+			\item<2-> \red{Tree branches} $\rightarrow$ k-1 of the complete tree
+			\item<2-> the remaining branches are connecting branches
 		\end{itemize}
 	}
 
@@ -505,11 +505,11 @@
 \begin{frame}
     \ftx{The complete tree}
 
-    \begin{Merksatz}{The complete tree}
+    \begin{Key point}{The complete tree}
         With the help of a complete tree, all nodes are connected to each other by tree branches.
         This always results in k - 1 tree branches.
         The complete tree does not form a mesh. 
-    \end{Merksatz}
+    \end{Key point}
 
     \speech{VollstandigeBaumMrk}{1}{Mithilfe eines vollständigen Baumes werden alle Knoten miteinander durch Baumzweige verbunden.
     Es ergeben sich dabei immer k minus 1 Baumzweige. Der vollständige Baum bildet keine Masche.}
@@ -537,7 +537,7 @@
 
     \b{ 
         \begin{itemize}
-            \item Die Summe aller Ströme an einem Knoten ist gleich Null.
+            \item The sum of all currents at a node is equal to zero.
         \end{itemize}
     }
 
@@ -556,7 +556,7 @@
 
     \b{
         \begin{itemize}
-            \item Beispielnetzwerk:
+            \item Example network:
         \end{itemize}
     }
 
@@ -577,7 +577,7 @@
     
     \b{
         \begin{itemize}
-            \item Summe aus Einströmungen und Ausströmungen gleich null:
+            \item Sum of inflows and outflows equals zero:
         \end{itemize}
     }
     
@@ -593,15 +593,15 @@
 \end{frame}
 
 \begin{frame}
-    \ftx{Knotenregel}
+    \ftx{Knot rule}
 
-    \begin{Merksatz}{Knot rule}
+    \begin{Key point}{Knot rule}
         The sum of the incoming flows is equal to the sum of the outgoing flows, or the sum of all flows at a node
         is zero:
         \begin{eq}
             \sum_{k = 1}^{N}{I_\mathrm{k} = 0} 
         \end{eq}
-    \end{Merksatz}
+    \end{Key point}
 
     \speech{KnotenregelMrk}{1}{Die Summe der zufließenden Ströme ist gleich der Summe der abfließenden Ströme oder die Summe aller Ströme 
     an einem Knoten ist Null.}
@@ -624,9 +624,9 @@
     }
 
     \b{
-        Ringintegral über der Feldstärke: 
+        Ring integral over the field strength: 
         \begin{itemize}
-            \item Bedingung: Keine zeitlich veränderte magnetische flussdichte und somit kein elektrisches Wirbelfeld. 
+            \item Condition: No time-varying magnetic flux density and therefore no electric eddy field.
         \end{itemize}
     }
 
@@ -641,9 +641,9 @@
     }
 
     \b{\onslide<2->{
-        Maschenregel:
+        Mesh rule:
         \begin{itemize}
-            \item Bei einem vollständigen Umlauf in einem elektrischen Netzwerk ist die Summe aller Spannungen gleich null. 
+            \item In a complete circuit in an electrical network, the sum of all voltages is equal to zero. 
         \end{itemize}}
     }
 
@@ -663,7 +663,7 @@
 
 \begin{frame}
     \renewcommand{\figurename}{Figure}
-    \ftx{Maschenregel}
+    \ftx{Mesh rule}
     
     \s{
         Within a mesh, voltages with an arrow direction in the same direction are counted as positive,
@@ -711,12 +711,12 @@
 \begin{frame}
     \ftx{Maschenregel}
 
-    \begin{Merksatz}{Mesh rule}
+    \begin{Key point}{Mesh rule}
         In a mesh, the sum of all partial stresses is equal to zero.:
         \begin{eq}
             \sum_{k = 1}^{N}{U_k} =0
         \end{eq}
-    \end{Merksatz}
+    \end{Key point}
 
     \speech{MaschenregelMrk}{1}{In einer Masche ist die Summe aller Teilspannungen gleich Null}
 \end{frame}
@@ -725,8 +725,8 @@
 
 \begin{frame} \ftb{Knot and Mesh analysis}
 	\s{In node and mesh analysis, the complete system of equations consisting of node and mesh equations is set up and then solved. The procedure is simple, but generates a number of equations for a network that corresponds to the number of branches. The procedure is as follows:}
-	\b{Ziel: Berechnung eines vollständigen Netzwerkes.
-	Arbeitsschritte:}
+	\b{Objective: Calculation of a complete network.
+	Steps of a procedure:}
 	
 	\begin{enumerate}
 		\item<2-> Simplifying the network.
@@ -767,7 +767,7 @@
 
 \begin{frame}
     \renewcommand{\figurename}{Figure} 
-	\ftx{Knoten- und Maschenanalyse}
+	\ftx{Knot and mesh analysis}
 
 	\s{
 		The corresponding graph and the meshes defined by it are shown in Figure \ref{BildKnotenMaschen}.
@@ -876,7 +876,7 @@
 %Beispiel
 \begin{frame}
     \renewcommand{\figurename}{Figure}
-    \ftx{Beispiel Netzwerkanalyse}
+    \ftx{Example network analysis}
 	\begin{expl}{Network analysis}{}
 
     \s{
@@ -889,7 +889,7 @@
         \only<1>{		
             \item[] 
             \b{
-                Gegeben ist das angegebene elektrische Netzwerk. Die folgenden Aufgaben sollen bearbeitet werden: 
+                The specified electrical network is given. The following tasks are to be completed:
             }
             
             \begin{enumerate}

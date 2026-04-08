@@ -41,7 +41,7 @@
 		In power supply networks (see Figure \ref{Abbversorgungsnetz}), there are several voltage levels. The extra-high voltage level, which in Europe is predominantly $380\,$kV, serves as the transmission network for transporting electrical power over long distances, i.e., several hundred kilometers, even across national borders. Large power plants are directly connected at this level. The high-voltage level\index{High voltage} ($110\,$kV or $220\,$kV) is referred to as the distribution network and is used to connect cities and large industrial consumers. The medium-voltage level\index{Medium voltage} ($5$–$35\,$kV) provides the connection of local distribution transformers for supplying individual streets. While the higher voltage levels are usually implemented using overhead lines, the medium-voltage network is predominantly realized with underground cables. In rural areas, however, overhead lines are also used at this level.
 }
 
-	\s{\f{width=\textwidth}{width=\textwidth}{Stromversorgung_gesamt.pdf}{\bf{Structure of the public electricity supply. \label{Abbversorgungsnetz}}} Das Stromnetz ist in mehrere Spannungsebenen unterteilt, die den Transport und die Verteilung der Energie ermöglichen.}
+	\s{\f{width=\textwidth}{width=\textwidth}{Stromversorgung_gesamt.pdf}{\bf{Structure of the public electricity supply. \label{Abbversorgungsnetz}}} The power grid is divided into several voltage levels that enable the transmission and distribution of energy.}
 	\b{\f{}{height=0.85\textheight}{Stromversorgung_p1}{}}
 
 	\speech{OeffentlicheVersorgung}{1}{Ein wichtiges Anwendungsfeld von Transformatoren ist die öffentliche Energieversorgung. Durch Hochtransformieren der Spannung sinken die Verluste bei der Stromübertragung. Erst mit Transformatoren wird eine flächendeckende Energieversorgung möglich, da Kraftwerke die Verbraucher über weite Distanzen hinweg effizient mit Energie versorgen können.
@@ -131,7 +131,7 @@
 					\frac{\underline{U}_1}{\underline{U}_2} &= \frac{-N_1\cdot \frac{\d \varPhi}{\d t}}{-N_2\cdot \frac{\d \varPhi}{\d t}} = \frac{N_1}{N_2} = \textit{ü}
 				\end{eqa}
 			}
-			\nomenclature[F]{\textit{ü}}{Übersetzungsverhältnis eines Transformators}
+			\nomenclature[F]{\textit{ü}}{Transformation ratio of a transformer}
 		\end{columns}
 	}
 	\s{
@@ -174,7 +174,7 @@
 		\column[c]{0.62\textwidth}
 		\fu{
 			\input{Tikz/src/aufbau_Trafo}
-		}{{\bf Schematischer Aufbau des Transformators.} Zwei Spulen sind mittels eines ferromagnetischen Kerns miteinander gekopppelt. Die Windungszahlen bestimmen dabei das Übersetzungsverhältnis der Spannung. \label{AbbTrafoAufbau}}
+		}{{\bf Schematic structure of the transformer.} Two coils are coupled by means of a ferromagnetic core. The number of turns determines the voltage transformation ratio. \label{AbbTrafoAufbau}}
 
 		\s{In the circuit diagram of the ideal transformer, the magnetically coupled coils are represented as adjacent black rectangles (see Figure \ref{AbbTrafoESBIdeal}). The two lines between the coils indicate that they are connected by a continuous magnetically conductive core. The dots on the respective coils provide information about the winding direction. They can be located at the bottom or at the top. If they are at the same height, the phase position of the two coils is the same. If they are at different heights, this means that the winding direction is reversed, resulting in a phase shift of $180\degree$.}
 
@@ -311,7 +311,7 @@
 					\underline{I}_1 = \underline{I}^\prime_2 + \underline{I}_\mu &= \frac{N_2}{N_1}\cdot \underline{I}_2 + \underline{I}_\mu \label{Glstromumrechnung}
 				\end{eqa}
 			}
-		
+
 		\onslide<3->{
 			\b{
 				\begin{description}
@@ -340,8 +340,8 @@
 			\b{The ideal transformer on the right is usually omitted.}
 		}
 	\end{columns}
-	\nomenclature[F]{$L_\mathrm{h}$}{Hauptinduktivität eines Transformators}
-	\nomenclature[F]{$L_\sigma$}{Streuinduktivität eines Transformators}
+	\nomenclature[F]{$L_\mathrm{h}$}{Main inductance of a transformer}
+	\nomenclature[F]{$L_\sigma$}{Stray inductance of a transformer}
 	\speech{realerTrafo}{1}{Zur besseren Übersicht und als Berechnungsgrundlage des realen Transformators bedienen wir uns zunächst des bekannten Ersatzschaltbilds des idealen Transformators des galvanisch getrennten Systems. Der Primär- und der Sekundärstromkreis mit ihren jeweiligen Spannungsgrößen, U1 und U2, sowie Stromgrößen, I1 und I2, sind visuell separiert. Im Folgenden werden alle für die Berechnung des realen Transformators notwendigen Größen schrittweise auf die Primärseite gebracht und umgerechnet. Auch die zuvor erwähnten Verluste werden nun mit berücksichtigt.}
 	\speech{realerTrafo}{2}{Die Sekundärspannung und der Sekundärstrom werden zunächst auf die Primärseite transformiert. Hierzu werden im Ersatzschaltbild zunächst die Größen, U2 komplex, und, i2 komplex, als Transformationsgrößen, U Strich 2 komplex, und, i Strich Zwei komplex, auf der Primärseite dargestellt. Rechnerisch verhält sich die Sekundärspannung, U2 komplex, gleich der Primärspannung, U Eins komplex, da die Sekundärspannung, U2 komplex, wie in der Berechnung des idealen Transformators mit dem Übersetzungsverhältnis, N1 durch N2, multipliziert wird. Analog hierzu verhält sich der Sekundärstrom, i Strich 2 komplex, gleich dem Primärstrom, i Strich 1 komplex, jedoch mit dem Unterschied, dass der Sekundärstrom mit dem umgekehrten Übersetzungsverhältnis, N2 durch N1, multipliziert wird.}
 	\speech{realerTrafo}{3}{Als nächstes wird das Ersatzschaltbild um die Hauptinduktivität, L H, und dem Magnetisierungsstrom, i Mü komplex, erweitert. Die Hauptinduktivität erzeugt das magnetische Hauptfeld, welches die Primärseite mit der Sekundärseite verbindet. Es spiegelt somit die energetische Übertragung von der Primärseite zu Sekundärseite wider. Zur Erzeugung des magnetischen Hauptfeldes wird ein Strom benötigt. Dieser wird als Magnetisierungsstrom bezeichnet und wird beim Aufbau des magnetischen Feldes verbraucht. Folglich stellt der Magnetisierungsstrom einen Verlust dar, welcher nicht im Sekundärstrom umgesetzt wird. Dementsprechend wird der Magnetisierungsstrom, i Mü komplex, in der Berechnung zum transformierten Sekundärstrom, i Strich Zwei komplex, hinzu addiert.}

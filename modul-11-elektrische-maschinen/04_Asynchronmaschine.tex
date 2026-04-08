@@ -1,7 +1,7 @@
 \section{Asynchronous machine}
 \newvideofile{asynchronmaschine}{Asynchronmaschine}
 \s{The asynchronous machine is also a rotating field machine. The stator is identical to the stator of the synchronous machine, whereas the rotor is passive in the most common version of this machine type, the so-called squirrel cage rotor.}
-\begin{frame}\ftx{Asynchronous machine design}\index{Asynchronmaschine>Aufbau}\s{\subsection{Aufbau}}
+\begin{frame}\ftx{Asynchronous machine design}\index{Asynchronous machine>Structure}\s{\subsection{Structure}}
 	\renewcommand{\figurename}{Figure}
 	\fo{width=0.65\textwidth}{height=0.9\textheight}{Aufbau_Asynchron_Kaefig1}{
 		\uncover<1->{\put(79,0){\line(-1,1){29.5}}\put(79.2,0){Enclosure with sheet metal package}}
@@ -67,22 +67,22 @@
 		\column[c]{0.3\textwidth}
 			\b{Slippage:}
             \s{The speed/torque characteristic curve of an asynchronous machine is non-linear and can be divided into several sections. The characteristic curve is often plotted as shown in Figure \ref{kloss} using the slip $s$. The slip\index{Slip} refers to the percentage deviation of the mechanical rotational speed of the rotor $n_\mathrm{r}$ from the electrical rotational speed $n_\mathrm{s}$ of the supplying network in the stator.}
-			\nomenclature[F]{$s$}{Schlupf der Asynchronmaschine\nomunit{$1$}}
-			\nomenclature[F]{$\omega_\mathrm{s}$}{Synchrone Drehfrequenz des speisenden Netzes \nomunit{$\frac{1}{\mathrm{s}}$}}
-			\nomenclature[F]{$\omega_\mathrm{r}$}{Drehfrequenz des Rotors \nomunit{$\frac{1}{\mathrm{s}}$}}
+			\nomenclature[F]{$s$}{Slip of the asynchronous machine\nomunit{$1$}}
+			\nomenclature[F]{$\omega_\mathrm{s}$}{Synchronous rotational frequency of the supplying network \nomunit{$\frac{1}{\mathrm{s}}$}}
+			\nomenclature[F]{$\omega_\mathrm{r}$}{Rotational frequency of the rotor \nomunit{$\frac{1}{\mathrm{s}}$}}
 			\begin{eq}
 				s = \frac{\omega_\mathrm{s} - \omega_\mathrm{r}}{\omega_\mathrm{s}}
 			\end{eq}
 
             \s{A slip of $s=1$ ($100\%$) therefore corresponds to the machine being at a standstill or a speed of $n=0$, while a slip of $s=0$ corresponds to mains-synchronous operation, which can never occur with an asynchronous machine, however, as the torque would be zero in this case.}
 			\uncover<2->{
-				\s{The speed/torque characteristic curve is also known as the Klosssche characteristic curve and can be calculated using the equation \ref{GlKloss} ausgedrückt werden:}
+				\s{The speed/torque characteristic curve is also known as the Kloss characteristic curve and can be calculated using equation \ref{GlKloss}:}
 				\b{Kloss's equation}
 				\begin{eq}
 					M = \frac{2\cdot M_\mathrm{K}}{\frac{s_\mathrm{K}}{s} + \frac{s}{s_\mathrm{K}}}\label{GlKloss}
 				\end{eq}
-				\nomenclature[F]{$s_\mathrm{K}$}{Kippschlupf der Asynchronmaschine\nomunit{$1$}}
-				\nomenclature[F]{$M_\mathrm{K}$}{Kippmoment der Asynchronmaschine \nomunit{$\mathrm{Nm}$}}
+				\nomenclature[F]{$s_\mathrm{K}$}{Breakdown slip of the asynchronous machine\nomunit{$1$}}
+				\nomenclature[F]{$M_\mathrm{K}$}{Breakdown torque of the asynchronous machine \nomunit{$\mathrm{Nm}$}}
 			}
 			\uncover<3>{
 
@@ -117,7 +117,7 @@
 				\draw (-2.4,-4) node[above] {undersyn.: $s > 0$};
 				\draw (2.25,-4) node[above] {oversyn.: $s < 0$};
 				\end{tikzpicture}
-				}{Klossche Kennlinie}
+				}{Kloss characteristic curve}
 		}
 
 	\end{columns}

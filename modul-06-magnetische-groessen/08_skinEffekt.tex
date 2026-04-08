@@ -2,9 +2,9 @@
 \begin{frame} \ftx{Skin-effect}
     \s{
         The skin effect describes the phenomenon whereby the current flow in a conductor carrying alternating current shifts from the core to its outer edge. This effect is based on the principle of induction and therefore only occurs in alternating current transmission.
-        
+
         Alternating current causes constantly changing magnetic fields. These magnetic fields counteract the cause according to Lenz's law and are more pronounced inside the conductor than at the edges. This results in a weakening of the electric field inside the conductor, so that the current is transmitted to the edge of the conductor.  The extent to which the alternating current penetrates the conductor is described by the skin depth $\delta$ (delta). As the frequency increases, the field weakening in the core increases. Table \ref{Skin-Tiefe} illustrates the effects of the skin effect using the example of a copper conductor. While the skin depth is 29.7 mm at a frequency of 5 Hz, it shrinks to 2.97 mm at a frequency of 500 Hz.
-   
+
     }
 
     \begin{minipage}{0.45\textwidth}
@@ -15,7 +15,7 @@
     \end{minipage}
     \hfill
     \begin{minipage}{0.45\textwidth}
-        \b{            
+        \b{
             Alternating current only utilises the surface of a conductor.\pause
 
             \begin{eq}
@@ -35,22 +35,22 @@
                     $5\,\mathrm{Hz}$          & $29,7\,\mathrm{mm}$\\
                     $50\,\mathrm{Hz}$         & $9,38\,\mathrm{mm}$\\
                     $500\,\mathrm{Hz}$       & $2,97\,\mathrm{mm}$\\
-                    $500\,\mathrm{kHz}$       & $93,8\,\mu\mathrm{m}$         
+                    $500\,\mathrm{kHz}$       & $93,8\,\mu\mathrm{m}$
                 \end{tabular}%
                 \s{\vspace{1.5cm}}
         \end{table}
     \end{minipage}
-    \s{    
+    \s{
         \vspace{0.5cm}
 
-        To calculate the skin effect, the skin depth $\delta$ is determined. The skin depth is calculated by dividing the square root of the specific resistance $\rho_\mathrm{R}$ by the product of the frequency $f$, the number pi $\pi$ and the material-dependent magnetic permeability $\mu$ (see Equation \ref{GlSkinTiefe}).        
+        To calculate the skin effect, the skin depth $\delta$ is determined. The skin depth is calculated by dividing the square root of the specific resistance $\rho_\mathrm{R}$ by the product of the frequency $f$, the number pi $\pi$ and the material-dependent magnetic permeability $\mu$ (see Equation \ref{GlSkinTiefe}).
         \begin{eq}
             \delta = \sqrt{\frac{\rho_\mathrm{R}}{\pi \cdot \mu \cdot f}} \label{GlSkinTiefe}
         \end{eq}
         \begin{Key point}{Skin-Effekt}
             The skin effect causes alternating current to be displaced to the edge of the conductor.
         \end{Key point}
-        
+
     }
 \end{frame}
 
@@ -63,7 +63,7 @@
             \item Absolute magnetic permeability: $\mu = 4\pi \cdot 10^{-7} \, \frac{\mathrm{Vs}}{\mathrm{Am}}$
             \item Specific resistance: $\rho_{R} = 0,01721 \, \frac{\Omega\cdot\mathrm{mm}^2}{\mathrm{m}}$
         \end{itemize}
-        Calculate the skin depth $\delta$ of the conductor.      
+        Calculate the skin depth $\delta$ of the conductor.
         \begin{align*}
             \onslide<2-> {\delta &= \sqrt{\frac{\rho_\mathrm{R}}{\pi \cdot \mu \cdot f}}} \\
             \onslide<3-> {\delta &= \sqrt{\frac{0,01721 \, \frac{\Omega\cdot\mathrm{mm}^2}{\mathrm{m}}}{\pi\cdot 4\pi \cdot 10^{-7} \, \frac{\mathrm{Vs}}{\mathrm{Am}} \cdot 50 \, \mathrm{Hz}}}} \\
@@ -72,8 +72,6 @@
     \end{expl}
 \end{frame}
 
-\nomenclature[FF]{$f$}{Frequenz \nomunit{Hz}}
+\nomenclature[FF]{$f$}{Frequenz \nomunit{$\mathrm{Hz}$}}
 \nomenclature[F0]{$\rho_{\mathrm{R}}$}{spezifischer Widerstand \nomunit{$\frac{\Omega\cdot \mathrm{mm}^2}{\mathrm{m}}$}}
 \nomenclature[F0]{$\delta$}{Eindringtiefe in den Leiter durch den Skin-Effekt (Skin-Tiefe) \nomunit{$\mathrm{m}$}}
-
-
